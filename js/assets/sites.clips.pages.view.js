@@ -1694,8 +1694,8 @@ webpackJsonp([47], {
             }(o.Component),
             w = Object(m.d)("ClipsRecommendations")(Object(l.a)(E)(P)),
             R = n("ynxC"),
-            I = n("RH2O"),
-            D = n("Aj/L"),
+            D = n("RH2O"),
+            I = n("Aj/L"),
             F = n("zCIC"),
             x = n("0B06"),
             j = n("0Ssf"),
@@ -1907,8 +1907,8 @@ webpackJsonp([47], {
                     autoReportInteractive: !0
                 })], t)
             }(o.Component));
-        var W = Object(I.b)(function(e) {
-                var t = Object(D.c)(e);
+        var W = Object(D.b)(function(e) {
+                var t = Object(I.c)(e);
                 return {
                     userLogin: t && t.login
                 }
@@ -4097,8 +4097,8 @@ webpackJsonp([47], {
             P = n("MAZT"),
             w = n("uTyw"),
             R = n("zCIC"),
-            I = n("SZoP"),
-            D = n("2KeS"),
+            D = n("SZoP"),
+            I = n("2KeS"),
             F = n("lK86"),
             x = function(e) {
                 function t() {
@@ -4119,7 +4119,7 @@ webpackJsonp([47], {
                     }, e))
                 }, t
             }(a.Component),
-            j = Object(D.d)(Object(l.d)("GiftRecipientIneligibleMessage"), Object(u.a)(F, {
+            j = Object(I.d)(Object(l.d)("GiftRecipientIneligibleMessage"), Object(u.a)(F, {
                 options: function(e) {
                     return {
                         variables: {
@@ -4225,7 +4225,7 @@ webpackJsonp([47], {
                         isEsportChannel: this.props.isEsportChannel
                     })
                 }, t.prototype.getFormattedDisplayName = function() {
-                    return this.state.selectedUser ? Object(I.a)(this.state.selectedUser.login, this.state.selectedUser.name) : ""
+                    return this.state.selectedUser ? Object(D.a)(this.state.selectedUser.login, this.state.selectedUser.name) : ""
                 }, t.prototype.getErrorMessage = function() {
                     return a.createElement(k._8, {
                         fullWidth: !0,
@@ -4235,7 +4235,7 @@ webpackJsonp([47], {
                 }, t.prototype.getUserResultContent = function() {
                     var e = this;
                     return this.props.userResults ? this.props.userResults.results.map(function(t) {
-                        var n = Object(I.a)(t.login || "", t.name || "");
+                        var n = Object(D.a)(t.login || "", t.name || "");
                         return a.createElement(k._6, {
                             tabIndex: -1,
                             "data-ts_selectable": !0,
@@ -6035,8 +6035,8 @@ webpackJsonp([47], {
             })(N),
             w = n("lfvs"),
             R = n("Hs3O"),
-            I = (n("ukY1"), n("F1v6")),
-            D = function(e) {
+            D = (n("ukY1"), n("F1v6")),
+            I = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6151,7 +6151,7 @@ webpackJsonp([47], {
                     }, o)))))
                 }, t
             }(s.Component),
-            F = Object(l.compose)(Object(u.a)(I, {
+            F = Object(l.compose)(Object(u.a)(D, {
                 options: function() {
                     return {
                         variables: {
@@ -6160,7 +6160,7 @@ webpackJsonp([47], {
                         }
                     }
                 }
-            }), Object(f.d)("BlueBarComponent"))(D),
+            }), Object(f.d)("BlueBarComponent"))(I),
             x = n("dnng");
         n.d(t, "c", function() {
             return P
@@ -7283,7 +7283,7 @@ webpackJsonp([47], {
                     return Object(l.d)("Thank you for your concern", "ReportModalWizard")
                 }
             },
-            I = {
+            D = {
                 getDescription: function() {
                     return Object(l.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                 },
@@ -7292,11 +7292,11 @@ webpackJsonp([47], {
                 type: S.Info,
                 value: "end card"
             },
-            D = {
-                socialMedia: r.__assign({}, I, {
+            I = {
+                socialMedia: r.__assign({}, D, {
                     items: [C.endBlurb_socialmedia]
                 }),
-                violence: r.__assign({}, I, {
+                violence: r.__assign({}, D, {
                     items: [C.endBlurb_threat]
                 }),
                 legal: {
@@ -7420,7 +7420,7 @@ webpackJsonp([47], {
                 }),
                 socialMedia: r.__assign({}, A, {
                     items: [C.input_link, C.input_connection, C.input_description],
-                    nextCard: D.socialMedia,
+                    nextCard: I.socialMedia,
                     value: "social media tell us more"
                 })
             },
@@ -7538,7 +7538,7 @@ webpackJsonp([47], {
             },
             Q = F,
             K = A,
-            $ = I,
+            $ = D,
             Y = {
                 video: x.identifyUser,
                 whisper: L,
@@ -7556,7 +7556,7 @@ webpackJsonp([47], {
                 "community member": j.content,
                 "on twitch": U.content,
                 "another site": G.externalSite,
-                "twitch event": D.twitchEvent,
+                "twitch event": I.twitchEvent,
                 "brigading/raids": B.socialMedia,
                 threatening: G.external_violence,
                 "hateful/harassing": G.external_abusive,
@@ -7572,12 +7572,12 @@ webpackJsonp([47], {
                 "committing violence": V.violence,
                 abusive: V.content,
                 "inappropriate content": z,
-                "intellectual property": D.legal,
-                "violating developer agreement": D.legal
+                "intellectual property": I.legal,
+                "violating developer agreement": I.legal
             },
             J = {
-                selfharm: D.selfharm,
-                harm: D.violence,
+                selfharm: I.selfharm,
+                harm: I.violence,
                 other: $
             },
             X = {
@@ -10035,8 +10035,8 @@ webpackJsonp([47], {
             }(a.Component),
             w = Object(o.compose)(Object(c.a)(N), Object(d.d)("PrimeInstructions"))(P),
             R = n("dnng"),
-            I = n("2KeS"),
-            D = (n("nFc2"), function(e) {
+            D = n("2KeS"),
+            I = (n("nFc2"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.setRef = function(e) {
@@ -10079,7 +10079,7 @@ webpackJsonp([47], {
                     }))
                 }, t
             }(a.Component)),
-            F = Object(I.d)(Object(d.d)("CopyButton"))(D),
+            F = Object(D.d)(Object(d.d)("CopyButton"))(I),
             x = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -10115,7 +10115,7 @@ webpackJsonp([47], {
                     }))) : null
                 }, t
             }(a.Component),
-            j = Object(I.d)(Object(d.d)("CopyableItem"))(x),
+            j = Object(D.d)(Object(d.d)("CopyableItem"))(x),
             L = (n("yqdF"), function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -16102,8 +16102,8 @@ webpackJsonp([47], {
             P = n("UvtE"),
             w = n("Hjbq"),
             R = n("j0cR"),
-            I = n("HW6M"),
-            D = n("BwgW"),
+            D = n("HW6M"),
+            I = n("BwgW"),
             F = n("knr3"),
             x = n("OAwv"),
             j = n("eBiB"),
@@ -16294,24 +16294,24 @@ webpackJsonp([47], {
                         t !== n && (n === this.state.playerRefID && this.state.playerPaused ? this.togglePause(!1) : n === this.state.playerRefID || this.state.playerPaused || this.togglePause(!0))
                     }
                 }, t.prototype.render = function() {
-                    var e = I("video-player", {
+                    var e = D("video-player", {
                             "video-player--theatre": this.props.theatreModeEnabled,
                             "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible && !this.state.isFullScreen,
                             "video-player--logged-in": this.props.isLoggedIn,
                             "video-player--fullscreen": this.state.isFullScreen
                         }),
-                        t = I("video-player__container", {
+                        t = D("video-player__container", {
                             "video-player__container--clips": G.a.includes(this.playerType)
                         });
                     return r.createElement("div", {
-                        className: I(e),
+                        className: D(e),
                         "data-test-selector": "video-player"
                     }, r.createElement("div", {
                         className: t,
                         ref: this.attachRef
                     }))
                 }, t.prototype.componentWillUnmount = function() {
-                    this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(V.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(V.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(V.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Play, this.onPlayerPlay), this.player.removeEventListener(B.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(V.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(V.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(B.a.Seeked, this.onSeek), this.player.removeEventListener(B.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(V.a.OpenStream, this.onOpenStream), this.player.removeEventListener(B.a.Pause, this.onPause), this.player.removeEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), D.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
+                    this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(V.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(V.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(V.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Play, this.onPlayerPlay), this.player.removeEventListener(B.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(V.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(V.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(B.a.Seeked, this.onSeek), this.player.removeEventListener(B.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(V.a.OpenStream, this.onOpenStream), this.player.removeEventListener(B.a.Pause, this.onPause), this.player.removeEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), I.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
                         vodID: void 0
                     })
                 }, t.prototype.trackMiniPlayerAction = function(e, t) {
@@ -16328,7 +16328,7 @@ webpackJsonp([47], {
                         vodID: this.props.vodID
                     })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(z.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
                     var t = new window.Twitch.Player(this.playerRef, e);
-                    this.player = t, t.addEventListener(V.a.PlayerReady, this.onPlayerReady), t.addEventListener(V.a.Online, this.onStreamStatusOnline), t.addEventListener(V.a.Offline, this.onStreamStatusOffline), t.addEventListener(B.a.Ended, this.onStreamStatusOffline), t.addEventListener(B.a.Play, this.onPlayerPlay), t.addEventListener(B.a.Playing, this.onPlayerPlaying), t.addEventListener(B.a.Seeked, this.onSeek), t.addEventListener(B.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(V.a.TheatreChange, this.onTheatreChange), t.addEventListener(V.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(V.a.ClipsModerationOpen, this.onClipsModerationOpen), t.addEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(V.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(V.a.OpenStream, this.onOpenStream), t.addEventListener(B.a.Pause, this.onPause), t.addEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), D.extensionService.registerPlayer(this.player), D.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
+                    this.player = t, t.addEventListener(V.a.PlayerReady, this.onPlayerReady), t.addEventListener(V.a.Online, this.onStreamStatusOnline), t.addEventListener(V.a.Offline, this.onStreamStatusOffline), t.addEventListener(B.a.Ended, this.onStreamStatusOffline), t.addEventListener(B.a.Play, this.onPlayerPlay), t.addEventListener(B.a.Playing, this.onPlayerPlaying), t.addEventListener(B.a.Seeked, this.onSeek), t.addEventListener(B.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(V.a.TheatreChange, this.onTheatreChange), t.addEventListener(V.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(V.a.ClipsModerationOpen, this.onClipsModerationOpen), t.addEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(V.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(V.a.OpenStream, this.onOpenStream), t.addEventListener(B.a.Pause, this.onPause), t.addEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), I.extensionService.registerPlayer(this.player), I.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
                 }, t.prototype.registerBufferingEvent = function() {
                     return this.props.latencyTracking.registerCustomEvent({
                         benchmark: 1e3,
@@ -18398,7 +18398,7 @@ webpackJsonp([47], {
                                 consentGiven: t
                             })
                         }, e.canInitializeEvidon = function(t) {
-                            return !!(e.isGDPRConsentEnabled() && t.data && t.data.requestInfo && (t.data.requestInfo.isFromEEA || e.hasQueryParamOverride()))
+                            return !!(e.isGDPRConsentEnabled() && t.gdprData && t.gdprData.requestInfo && (t.gdprData.requestInfo.isFromEEA || e.hasQueryParamOverride()))
                         }, e.isGDPRConsentEnabled = function() {
                             return e.hasQueryParamOverride() || Object(u.b)()
                         }, e
@@ -18406,7 +18406,7 @@ webpackJsonp([47], {
                     return i.__extends(n, t), n.prototype.componentDidMount = function() {
                         this.canInitializeEvidon(this.props) && this.initializeEvidon()
                     }, n.prototype.componentDidUpdate = function(e) {
-                        var t = this.props.data && !this.props.data.loading && (!e.data || e.data.loading);
+                        var t = this.props.gdprData && !this.props.gdprData.loading && (!e.gdprData || e.gdprData.loading);
                         t && this.canInitializeEvidon(this.props) && this.initializeEvidon()
                     }, n.prototype.componentWillUnmount = function() {
                         d.a.removeListeners({
@@ -18414,7 +18414,7 @@ webpackJsonp([47], {
                         })
                     }, n.prototype.render = function() {
                         var t = this.isGDPRConsentEnabled(),
-                            n = this.props.data && this.props.data.requestInfo,
+                            n = this.props.gdprData && this.props.gdprData.requestInfo,
                             a = n && !n.isFromEEA && !this.hasQueryParamOverride(),
                             o = a || (t ? this.state.consentGiven : Object(u.a)()),
                             s = {
@@ -18432,6 +18432,7 @@ webpackJsonp([47], {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
                 }), Object(l.a)(p, {
+                    name: "gdprData",
                     options: function(e) {
                         return {
                             skip: !e.firstPageLoaded
@@ -18983,7 +18984,7 @@ webpackJsonp([47], {
                 hasErrored: !1,
                 hasSucceeded: !1
             },
-            I = function(e) {
+            D = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.renderSuccess = function() {
@@ -19040,7 +19041,7 @@ webpackJsonp([47], {
                     })
                 }, t
             }(r.Component),
-            D = b({
+            I = b({
                 props: function(e) {
                     return {
                         deleteClips: function() {
@@ -19068,7 +19069,7 @@ webpackJsonp([47], {
                         }
                     }
                 }
-            })(I);
+            })(D);
         n.d(t, "a", function() {
             return c
         }), n.d(t, "b", function() {
@@ -19078,7 +19079,7 @@ webpackJsonp([47], {
         }), n.d(t, "e", function() {
             return P
         }), n.d(t, "c", function() {
-            return D
+            return I
         })
     },
     sq7i: function(e, t) {
@@ -20550,4 +20551,4 @@ webpackJsonp([47], {
     zAvr: function(e, t) {},
     zU1d: function(e, t) {}
 });
-//# sourceMappingURL=sites.clips.pages.view-7c863f5e0b7493564c827cba2eb2238c.js.map
+//# sourceMappingURL=sites.clips.pages.view-22d899682404200175947557bff527ed.js.map

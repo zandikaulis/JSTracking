@@ -47529,7 +47529,7 @@ webpackJsonp([82], {
                                 consentGiven: t
                             })
                         }, e.canInitializeEvidon = function(t) {
-                            return !!(e.isGDPRConsentEnabled() && t.data && t.data.requestInfo && (t.data.requestInfo.isFromEEA || e.hasQueryParamOverride()))
+                            return !!(e.isGDPRConsentEnabled() && t.gdprData && t.gdprData.requestInfo && (t.gdprData.requestInfo.isFromEEA || e.hasQueryParamOverride()))
                         }, e.isGDPRConsentEnabled = function() {
                             return e.hasQueryParamOverride() || Object(u.b)()
                         }, e
@@ -47537,7 +47537,7 @@ webpackJsonp([82], {
                     return i.__extends(n, t), n.prototype.componentDidMount = function() {
                         this.canInitializeEvidon(this.props) && this.initializeEvidon()
                     }, n.prototype.componentDidUpdate = function(e) {
-                        var t = this.props.data && !this.props.data.loading && (!e.data || e.data.loading);
+                        var t = this.props.gdprData && !this.props.gdprData.loading && (!e.gdprData || e.gdprData.loading);
                         t && this.canInitializeEvidon(this.props) && this.initializeEvidon()
                     }, n.prototype.componentWillUnmount = function() {
                         d.a.removeListeners({
@@ -47545,7 +47545,7 @@ webpackJsonp([82], {
                         })
                     }, n.prototype.render = function() {
                         var t = this.isGDPRConsentEnabled(),
-                            n = this.props.data && this.props.data.requestInfo,
+                            n = this.props.gdprData && this.props.gdprData.requestInfo,
                             a = n && !n.isFromEEA && !this.hasQueryParamOverride(),
                             o = a || (t ? this.state.consentGiven : Object(u.a)()),
                             s = {
@@ -47563,6 +47563,7 @@ webpackJsonp([82], {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
                 }), Object(l.a)(p, {
+                    name: "gdprData",
                     options: function(e) {
                         return {
                             skip: !e.firstPageLoaded
@@ -49915,4 +49916,4 @@ webpackJsonp([82], {
         e.exports = n
     }
 }, [5]);
-//# sourceMappingURL=core-22cd1ef7a172b9c11f1d829685044fd9.js.map
+//# sourceMappingURL=core-2542394a3fce9dbc2bc5b04d0d88cf6f.js.map
