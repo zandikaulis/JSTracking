@@ -1260,16 +1260,16 @@ window.SiteOptions = {
         },
         "3468778b-76fe-4cdf-add6-1be0dceea214": {
             "name": "TWILIGHT_DASHBOARD_LIVE",
-            "v": 3841,
+            "v": 3848,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "disabled"
             }, {
-                "weight": 80,
+                "weight": 0,
                 "value": "twilight"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "ember"
             }]
         },
