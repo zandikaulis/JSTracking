@@ -1,4 +1,4 @@
-webpackJsonp([122], {
+webpackJsonp([120], {
     "4I9D": function(e, t) {},
     B65D: function(e, t, a) {
         "use strict";
@@ -11,8 +11,8 @@ webpackJsonp([122], {
             s = a("6sO2"),
             l = a("zCIC"),
             c = a("Th9g"),
-            u = a("j7/Y"),
-            d = a("w9tK"),
+            d = a("j7/Y"),
+            u = a("w9tK"),
             h = a("vH/s"),
             m = a("CSlQ");
         ! function(e) {
@@ -22,7 +22,7 @@ webpackJsonp([122], {
             p = {
                 "data-test-selector": "dashboard-activity-filter-select"
             },
-            f = function(e) {
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleTypeChange = function(e) {
@@ -31,13 +31,13 @@ webpackJsonp([122], {
                 }
                 return n.__extends(t, e), t.prototype.render = function() {
                     var e = this.props.filterAction || r.All;
-                    return i.createElement(g._8, {
+                    return i.createElement(g._35, {
+                        padding: 2,
+                        borderBottom: !0
+                    }, i.createElement(g._8, {
                         className: "activity-page__select",
                         flexGrow: 0,
-                        flexShrink: 0,
-                        padding: {
-                            bottom: 1
-                        }
+                        flexShrink: 0
                     }, i.createElement(g._30, n.__assign({
                         name: "activity_type",
                         onChange: this.handleTypeChange,
@@ -51,13 +51,13 @@ webpackJsonp([122], {
                         value: r.GameCategory
                     }, Object(s.d)("Game / Category", "DashboardActivity")), i.createElement("option", {
                         value: r.StreamTitle
-                    }, Object(s.d)("Stream Title", "DashboardActivity"))))
+                    }, Object(s.d)("Stream Title", "DashboardActivity")))))
                 }, t
             }(i.PureComponent),
             v = {
                 "data-test-selector": "dashboard-activity-no-data"
             },
-            _ = {
+            f = {
                 "data-test-selector": "dashboard-activity-list-select"
             },
             b = "https://static-cdn.jtvnw.net/emoticons/v1/90076/3.0",
@@ -73,38 +73,52 @@ webpackJsonp([122], {
                         var n, o = Object(s.h)(new Date(t.created_at)),
                             l = "https://static-cdn.jtvnw.net/user-default-pictures/27103734-3cda-44d6-a384-f2ab71e4bb85-profile_image-300x300.jpg",
                             c = "unknown user",
-                            u = i.createElement(i.Fragment, null, c);
+                            d = i.createElement(g.Q, {
+                                bold: !0
+                            }, c);
                         if (e.props.filterAction === r.All || t.action === e.props.filterAction) {
-                            switch (t.action) {
+                            switch (t.actor && (l = t.actor.logo, c = t.actor.display_name, d = i.createElement(g.Q, {
+                                bold: !0,
+                                type: g._49.Span
+                            }, i.createElement(g.O, {
+                                to: "/" + t.actor.name
+                            }, c))), t.action) {
                                 case r.AdBreaks:
-                                    n = Object(s.d)("ran a {seconds}s Commercial Break", {
+                                    n = Object(s.d)("{actor} ran a {seconds}s Commercial Break", {
+                                        actor: d,
                                         seconds: t.action_value
                                     }, "DashboardActivity");
                                     break;
                                 case r.StreamTitle:
-                                    n = Object(s.d)("changed Stream Title to {resultingTitle} from {originalTitle}", {
+                                    n = Object(s.d)("{actor} changed Stream Title to {resultingTitle} from {originalTitle}", {
+                                        actor: d,
                                         resultingTitle: t.action_value,
                                         originalTitle: i.createElement("del", null, t.action_value_prev)
                                     }, "DashboardActivity");
                                     break;
                                 case r.GameCategory:
-                                    n = Object(s.d)("changed Game/Category to {resultingGameCategory} from {originalGameCategory}", {
+                                    n = Object(s.d)("{actor} changed Game/Category to {resultingGameCategory} from {originalGameCategory}", {
+                                        actor: d,
                                         resultingGameCategory: t.action_value,
                                         originalGameCategory: i.createElement("del", null, t.action_value_prev)
                                     }, "DashboardActivity");
                                     break;
                                 case r.AddEditor:
-                                    n = i.createElement(i.Fragment, null, Object(s.d)("added an Editor", "DashboardActivity"), " ", t.action_value);
+                                    n = Object(s.d)("{actor} added an editor {editor}", {
+                                        actor: d,
+                                        editor: t.action_value
+                                    }, "DashboardActivity");
                                     break;
                                 case r.RemoveEditor:
-                                    n = i.createElement(i.Fragment, null, Object(s.d)("removed an Editor", "DashboardActivity"), " ", t.action_value);
+                                    n = Object(s.d)("{actor} removed an editor {editor}", {
+                                        actor: d,
+                                        editor: t.action_value
+                                    }, "DashboardActivity");
                                     break;
                                 default:
                                     n = ""
                             }
-                            return t.actor && (l = t.actor.logo, c = t.actor.display_name, u = i.createElement(g.O, {
-                                to: "/" + t.actor.name
-                            }, c)), i.createElement(g._35, {
+                            return i.createElement(g._35, {
                                 key: "audit" + a,
                                 alignItems: g.c.Center,
                                 display: g.R.Flex,
@@ -129,9 +143,6 @@ webpackJsonp([122], {
                                 flexGrow: 1,
                                 flexShrink: 1
                             }, i.createElement(g._8, null, i.createElement(g.Q, {
-                                bold: !0,
-                                fontSize: g.V.Size5
-                            }, u)), i.createElement(g._8, null, i.createElement(g.Q, {
                                 color: g.K.Alt,
                                 fontSize: g.V.Size5
                             }, n))), i.createElement(g._8, {
@@ -147,7 +158,7 @@ webpackJsonp([122], {
                         className: "activity-page__list",
                         flexGrow: 0,
                         flexShrink: 0
-                    }, _), t)
+                    }, f), t)
                 }, t.prototype.renderNotEnoughDataPlaceholder = function() {
                     return i.createElement(g._35, n.__assign({
                         className: "activity-page__no-data",
@@ -229,33 +240,41 @@ webpackJsonp([122], {
                     })
                 }, t.prototype.render = function() {
                     var e = this.state.requestState;
-                    if (e === S.Loading || e === S.Error) return i.createElement(g._8, {
+                    if (e === S.Loading || e === S.Error) return i.createElement(C.a, null, i.createElement(g._8, {
                         margin: {
                             top: 3,
                             bottom: 1
                         }
                     }, i.createElement(g._14, {
-                        height: 448
-                    }));
+                        height: 448,
+                        width: 1040
+                    })));
                     var t = this.state.list,
                         a = this.state.requestState === S.Success && this.state.list && this.state.list.audits.length > 0;
                     return i.createElement(C.a, null, i.createElement(g._35, {
                         className: "activity-page",
                         background: g.n.Base,
-                        elevation: 1,
-                        padding: 2
-                    }, i.createElement(f, {
+                        elevation: 1
+                    }, i.createElement(_, {
                         filterAction: this.state.filterAction,
                         onActionChange: this.handleActionChange,
                         enabled: a
-                    }), i.createElement(E, {
+                    }), i.createElement(g._8, {
+                        className: "activity-page__scrollable"
+                    }, i.createElement(l.b, {
+                        suppressScrollX: !0
+                    }, i.createElement(g._8, {
+                        padding: {
+                            x: 2
+                        }
+                    }, i.createElement(E, {
                         audits: t.audits,
                         filterAction: this.state.filterAction
                     }), i.createElement(l.a, {
                         enabled: a,
                         loadMore: this.loadMore,
                         orientation: c.b.Down
-                    })))
+                    }))))))
                 }, t.prototype.loadAudits = function() {
                     return n.__awaiter(this, void 0, void 0, function() {
                         var e, t, a, r;
@@ -295,8 +314,8 @@ webpackJsonp([122], {
                 }, t
             }(i.PureComponent),
             D = Object(o.compose)(Object(m.d)("ActivityPage", {
-                destination: d.a.ChannelDashboardActivity
-            }), Object(u.a)({
+                destination: u.a.ChannelDashboardActivity
+            }), Object(d.a)({
                 location: h.PageviewLocation.Directory
             }))(w);
         a.d(t, "ActivityPage", function() {
@@ -304,4 +323,4 @@ webpackJsonp([122], {
         }), a.d(t, "PublicProps", function() {})
     }
 });
-//# sourceMappingURL=pages.dashboard-activity-98a6103ddb2c170c327bf690cce50dba.js.map
+//# sourceMappingURL=pages.dashboard-activity-e273a8b14a9808801088a72bf5d0c756.js.map

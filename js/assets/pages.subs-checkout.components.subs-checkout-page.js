@@ -1,4 +1,4 @@
-webpackJsonp([45], {
+webpackJsonp([43], {
     "+/J2": function(e, t, n) {
         var r = n("xA5w");
         e.exports = function(e, t) {
@@ -274,10 +274,10 @@ webpackJsonp([45], {
             S = n.n(x),
             N = n("EAav"),
             P = n.n(N),
-            O = n("tWfJ"),
-            C = n.n(O),
-            T = n("WE8T"),
-            D = n.n(T),
+            C = n("tWfJ"),
+            O = n.n(C),
+            D = n("WE8T"),
+            T = n.n(D),
             A = n("6hIG"),
             I = n.n(A),
             F = n("siAa"),
@@ -286,8 +286,8 @@ webpackJsonp([45], {
             j = n.n(R),
             L = n("lL4Y"),
             z = n.n(L),
-            B = n("KVSr"),
-            U = n.n(B),
+            U = n("KVSr"),
+            B = n.n(U),
             G = n("9pOZ"),
             W = n.n(G),
             H = n("NXs7"),
@@ -318,7 +318,7 @@ webpackJsonp([45], {
                         if ("xsolla_v3" === this.props.paymentProvider) return {
                             src: W.a,
                             srcSet: {
-                                "1x": U.a,
+                                "1x": B.a,
                                 "2x": W.a
                             },
                             alt: Object(s.d)("Xsolla icon", "PaymentMethodImage")
@@ -348,10 +348,10 @@ webpackJsonp([45], {
                                         };
                                     default:
                                         return {
-                                            src: C.a,
+                                            src: O.a,
                                             srcSet: {
-                                                "1x": C.a,
-                                                "2x": D.a
+                                                "1x": O.a,
+                                                "2x": T.a
                                             },
                                             alt: e
                                         }
@@ -382,10 +382,10 @@ webpackJsonp([45], {
                                 };
                             default:
                                 return {
-                                    src: C.a,
+                                    src: O.a,
                                     srcSet: {
-                                        "1x": C.a,
-                                        "2x": D.a
+                                        "1x": O.a,
+                                        "2x": T.a
                                     },
                                     alt: e
                                 }
@@ -1576,7 +1576,7 @@ webpackJsonp([45], {
                     margin: {
                         bottom: 1
                     }
-                }, o.createElement(g.Q, null, Object(c.d)("Access to VODs", "ChannelSubscriptionBenefits"))), e.badges.length && o.createElement(o.Fragment, null, o.createElement(g._2, {
+                }, o.createElement(g.Q, null, Object(c.d)("Access to VODs", "ChannelSubscriptionBenefits"))), e.badges.length > 0 && o.createElement(o.Fragment, null, o.createElement(g._2, {
                     margin: {
                         bottom: 1
                     }
@@ -1594,7 +1594,7 @@ webpackJsonp([45], {
                     }, o.createElement(p.a, {
                         badge: e
                     }))
-                }))), e.emotes.length && o.createElement(o.Fragment, null, o.createElement(g._2, {
+                }))), e.emotes.length > 0 && o.createElement(o.Fragment, null, o.createElement(g._2, {
                     margin: {
                         bottom: 1
                     }
@@ -1896,10 +1896,10 @@ webpackJsonp([45], {
                     interval: e.productPriceInterval
                 })))))
             },
-            O = n("3iBR"),
-            C = n("D0Fd"),
-            T = n("+6x9"),
-            D = n("CWW0"),
+            C = n("3iBR"),
+            O = n("D0Fd"),
+            D = n("+6x9"),
+            T = n("CWW0"),
             A = n("PGoF"),
             I = (n("iLMR"), "skin-selector"),
             F = "igc-selector",
@@ -1910,7 +1910,7 @@ webpackJsonp([45], {
                     return t.renderHeroSkins = function() {
                         if (!t.props.data.loading && !t.props.data.error) {
                             var e = t.props.data.user.tournament ? t.props.data.user.tournament.rewards.insider.heroSkins.map(function(e) {
-                                return e.id === D.b ? o.createElement(g._2, {
+                                return e.id === T.b ? o.createElement(g._2, {
                                     margin: {
                                         top: 1,
                                         bottom: 1
@@ -1920,7 +1920,7 @@ webpackJsonp([45], {
                                     flexDirection: g.T.Row,
                                     alignItems: g.c.Center,
                                     "data-test-selector": I
-                                }, o.createElement("li", null, o.createElement(T.a, {
+                                }, o.createElement("li", null, o.createElement(D.a, {
                                     imageURL: e.imageURL
                                 }))) : o.createElement(g._2, {
                                     margin: {
@@ -1931,9 +1931,9 @@ webpackJsonp([45], {
                                     flexDirection: g.T.Row,
                                     alignItems: g.c.Center,
                                     "data-test-selector": I
-                                }, o.createElement("li", null, o.createElement(C.a, {
+                                }, o.createElement("li", null, o.createElement(O.a, {
                                     imageURL: e.imageURL,
-                                    size: C.b.Small
+                                    size: O.b.Small
                                 })))
                             }) : null;
                             return o.createElement(g._2, {
@@ -2036,7 +2036,7 @@ webpackJsonp([45], {
                         className: "ticket-description__banner-image",
                         padding: 3
                     }, o.createElement("img", {
-                        src: O.c + "/owl-2017/all-access-logo.svg",
+                        src: C.c + "/owl-2017/all-access-logo.svg",
                         alt: Object(c.d)("Overwatch League All-Access Pass on Twitch", "EsportsTicketDescription"),
                         height: "80px"
                     })), o.createElement(g._35, {
@@ -2111,7 +2111,7 @@ webpackJsonp([45], {
             }))(R),
             L = n("CSlQ"),
             z = n("5Kxe"),
-            B = function(e) {
+            U = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.isTurboProduct = "turbo" === t.props.productName, t
@@ -2215,7 +2215,7 @@ webpackJsonp([45], {
                     configurable: !0
                 }), t
             }(o.Component),
-            U = Object(s.compose)(Object(L.d)("TicketDescription"), Object(u.a)(z, {
+            B = Object(s.compose)(Object(L.d)("TicketDescription"), Object(u.a)(z, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2223,12 +2223,12 @@ webpackJsonp([45], {
                         }
                     }
                 }
-            }))(B);
+            }))(U);
         var G = Object(r.b)(function(e) {
             return {
                 sessionUser: Object(a.c)(e)
             }
-        })(U);
+        })(B);
         n.d(t, "a", function() {
             return G
         })
@@ -3990,12 +3990,12 @@ webpackJsonp([45], {
                     }, this.props.isGift ? Object(p.d)("Gift A Subscription", "PurchaseSubInfo") : Object(p.d)("Start Your Subscription", "PersonalSubPurchaseInfo"))
                 }, t
             }(l.Component);
-        var x, S, N, P, O = Object(r.b)(function(e) {
+        var x, S, N, P, C = Object(r.b)(function(e) {
                 return {
                     sessionUser: Object(s.c)(e)
                 }
             })(w),
-            C = (n("jJiV"), function() {
+            O = (n("jJiV"), function() {
                 return l.createElement(_._35, {
                     className: "checkout-error-brick",
                     background: _.n.Base,
@@ -4018,8 +4018,8 @@ webpackJsonp([45], {
                     }
                 }, l.createElement(_.Q, null, Object(p.d)("Something went wrong, and your payment could not be processed at this time. Please try again later.", "PaymentsErrorBrick"))))
             }),
-            T = n("8m9s"),
-            D = n("Ejve"),
+            D = n("8m9s"),
+            T = n("Ejve"),
             A = n("ryON"),
             I = n.n(A),
             F = n("hmTn"),
@@ -4028,8 +4028,8 @@ webpackJsonp([45], {
             j = n.n(R),
             L = n("MQyO"),
             z = n.n(L),
-            B = n("ekbR"),
-            U = n.n(B),
+            U = n("ekbR"),
+            B = n.n(U),
             G = n("p2Aq"),
             W = n.n(G),
             H = n("SgWI"),
@@ -4903,10 +4903,10 @@ webpackJsonp([45], {
                         name: N.Xsolla,
                         button: {
                             label: ge.MoreMethods(),
-                            src: U.a,
+                            src: B.a,
                             alt: ge.MoreMethods(),
                             srcSet: {
-                                "1x": U.a,
+                                "1x": B.a,
                                 "2x": W.a
                             }
                         },
@@ -5128,7 +5128,7 @@ webpackJsonp([45], {
                     }, Object(p.d)("Use Existing Payment Method", "Wallet"))))
                 }, Object.defineProperty(t.prototype, "showForExperiment", {
                     get: function() {
-                        return "yes" === p.o.experiments.getAssignment("TWILIGHT_PAY__SAVED_PAYMENT_METHODS") || p.a.buildType !== D.a.Production
+                        return "yes" === p.o.experiments.getAssignment("TWILIGHT_PAY__SAVED_PAYMENT_METHODS") || p.a.buildType !== T.a.Production
                     },
                     enumerable: !0,
                     configurable: !0
@@ -5213,8 +5213,8 @@ webpackJsonp([45], {
                 }, t));
                 var t
             },
-            Oe = n("CIox"),
-            Ce = function(e) {
+            Ce = n("CIox"),
+            Oe = function(e) {
                 return l.createElement(_.Q, null, Object(p.d)("You have purchased a {price} Overwatch League All-Access Pass for <x:strong>{recipientDisplayName}</x:strong>", {
                     price: Object(p.e)(e.invoicePrice / 100, {
                         style: "currency",
@@ -5230,7 +5230,7 @@ webpackJsonp([45], {
                     }
                 }, "GiftSubReceipt"))
             },
-            Te = (n("pOYM"), function(e) {
+            De = (n("pOYM"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.goBackToChannel = function() {
@@ -5266,7 +5266,7 @@ webpackJsonp([45], {
                         bold: !0
                     }, Object(p.d)("Gift Status", "GiftSubReceipt"))), l.createElement(_._8, {
                         display: _.R.InlineBlock
-                    }, l.createElement(_.Q, null, Object(p.d)("Active", "GiftSubReceipt")))), l.createElement(_._35, {
+                    }, l.createElement(_.Q, null, Object(p.d)("Active", "GiftSubReceipt")))), this.props.invoicePrice && l.createElement(_._35, {
                         borderBottom: !0,
                         padding: {
                             y: 3
@@ -5291,7 +5291,7 @@ webpackJsonp([45], {
                         displayName: this.props.productOwnerDisplayName
                     }, "GiftSubReceipt"))))
                 }, t.prototype.getGiftSubReceiptInfo = function() {
-                    return this.props.isEsportChannel ? l.createElement(Ce, {
+                    if (this.props.invoicePrice) return this.props.isEsportChannel ? l.createElement(Oe, {
                         recipientDisplayName: this.props.recipientDisplayName,
                         invoicePrice: this.props.invoicePrice,
                         invoiceCurrency: this.props.invoiceCurrency
@@ -5313,7 +5313,7 @@ webpackJsonp([45], {
                     }, "GiftSubReceipt"))
                 }, t
             }(l.PureComponent)),
-            De = Object(Oe.f)(Te),
+            Te = Object(Ce.f)(De),
             Ae = n("j6Ui");
         ! function(e) {
             e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
@@ -5545,7 +5545,7 @@ webpackJsonp([45], {
                     }, "PersonalSubReceipt"))))
                 }, t
             }(l.Component)),
-            Le = Object(Oe.f)(je);
+            Le = Object(Ce.f)(je);
         n("gKy9");
         ! function(e) {
             e.Week = "WEEK", e.Month = "MONTH", e.Year = "YEAR", e.OneTime = "ONE_TIME"
@@ -5665,11 +5665,11 @@ webpackJsonp([45], {
                     if (t.props.data.subscriptionProduct && t.props.data.subscriptionProduct.owner && t.state.giftSubPurchased && t.state.giftPurchaseInfo) {
                         var r = t.props.data.subscriptionProduct.owner.id || "",
                             a = Object(b.a)(r, t.props.sessionUser);
-                        return l.createElement(De, {
+                        return l.createElement(Te, {
                             recipientDisplayName: t.props.recipientDisplayName,
                             productOwnerDisplayName: t.props.data.subscriptionProduct.owner.displayName || "",
                             productOwnerLogin: t.props.data.subscriptionProduct.owner.login || "",
-                            invoicePrice: t.state.giftPurchaseInfo.invoice_total.price,
+                            invoicePrice: t.state.giftPurchaseInfo.invoice_total && t.state.giftPurchaseInfo.invoice_total.price,
                             invoiceCurrency: "USD",
                             isEsportChannel: a
                         })
@@ -5695,7 +5695,9 @@ webpackJsonp([45], {
                 }, t
             }
             return c.__extends(t, e), t.prototype.componentDidMount = function() {
-                this.props.latencyTracking.reportInteractive()
+                this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+            }, t.prototype.componentDidUpdate = function(e) {
+                (e.data.loading && !this.props.data.loading || this.props.data.error) && this.props.latencyTracking.reportInteractive()
             }, t.prototype.render = function() {
                 if (this.props.data.loading) return l.createElement(_._10, {
                     fillContent: !0
@@ -5758,7 +5760,7 @@ webpackJsonp([45], {
                     breakpointLarge: {
                         display: _.R.Flex
                     }
-                }, l.createElement(T.a, {
+                }, l.createElement(D.a, {
                     productName: this.props.productName,
                     isGift: this.props.isGift && this.canGift
                 })), l.createElement(_._8, {
@@ -5779,7 +5781,7 @@ webpackJsonp([45], {
                         },
                         textAlign: _._45.Left
                     }
-                }, l.createElement(O, {
+                }, l.createElement(C, {
                     channel: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.owner && this.props.data.subscriptionProduct.owner.id,
                     isGift: this.props.isGift
                 })), l.createElement(_._8, {
@@ -5787,7 +5789,7 @@ webpackJsonp([45], {
                     breakpointLarge: {
                         display: _.R.Hide
                     }
-                }, l.createElement(T.a, {
+                }, l.createElement(D.a, {
                     productName: this.props.productName,
                     isGift: this.props.isGift && this.canGift
                 })), this.purchased && this.renderReceipt(), !this.purchased && l.createElement(l.Fragment, null, e && "689376" !== e.id && l.createElement(_._8, {
@@ -5798,7 +5800,7 @@ webpackJsonp([45], {
                     margin: {
                         y: 2
                     }
-                }, l.createElement(C, null)), this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && l.createElement(we, {
+                }, l.createElement(O, null)), this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && l.createElement(we, {
                     handleCompletePurchase: this.completePurchase,
                     productName: this.props.productName,
                     trackPaymentFormInteraction: this.trackPaymentFormInteraction,
@@ -5847,7 +5849,7 @@ webpackJsonp([45], {
                 }
             })], t)
         }(l.Component);
-        var Be = Object(r.b)(function(e) {
+        var Ue = Object(r.b)(function(e) {
                 return {
                     isLoggedIn: Object(s.d)(e),
                     sessionUser: Object(s.c)(e)
@@ -5859,7 +5861,7 @@ webpackJsonp([45], {
                     }
                 }, e)
             })(ze),
-            Ue = n("tnNl"),
+            Be = n("tnNl"),
             Ge = n("+exw"),
             We = function(e) {
                 function t() {
@@ -5874,7 +5876,7 @@ webpackJsonp([45], {
                         position: _._15.Relative,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, l.createElement(Ue.a, null), l.createElement(_._8, {
+                    }, l.createElement(Be.a, null), l.createElement(_._8, {
                         padding: {
                             top: 5
                         },
@@ -5889,7 +5891,7 @@ webpackJsonp([45], {
                                     fillContent: !0
                                 });
                                 var e = this.props.data && this.props.data.recipient || null;
-                                return l.createElement(Be, {
+                                return l.createElement(Ue, {
                                     productName: this.props.match.params.productName,
                                     isGift: !(!e || !e.id),
                                     recipientID: e && e.id,
@@ -6816,32 +6818,6 @@ webpackJsonp([45], {
             return Math.round((c - u) / i)
         }
     },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var r, a = n("TToO"),
-            i = n("GiK3"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(r || (r = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, r.Off);
-                    return e === r.On || e === r.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(i.Component),
-            c = s;
-        n.d(t, "a", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return c
-        })
-    },
     "QU+n": function(e, t) {
         var n = {
             kind: "Document",
@@ -7083,29 +7059,21 @@ webpackJsonp([45], {
     },
     TeXj: function(e, t, n) {
         "use strict";
-        t.c = function(e, t, n) {
+        t.b = function(e, t, n) {
             void 0 === n && (n = !1);
-            return l(i, e, t, n)
-        }, t.a = u, t.b = function(e, t, n) {
+            return s(a, e, t, n)
+        }, t.a = function(e, t, n) {
             void 0 === n && (n = !1);
-            var i = r.b.get(s, a.a.Off),
-                o = t && t.roles && t.roles.isStaff || !1;
-            return u(e, t, n) && (i === a.a.On || i === a.a.StaffOnly && o)
-        }, t.d = function(e, t) {
-            return l(c, e, t)
+            return s(i, e, t, n)
+        }, t.c = function(e, t) {
+            return s(o, e, t)
         };
         var r = n("6sO2"),
-            a = n("QRuM"),
-            i = "esport_channel_page_whitelist",
-            o = "esport_insider_pass_whitelist",
-            s = "esport_insider_pass_gifting_launch",
-            c = "esports_room_cheering_whitelist";
+            a = "esport_channel_page_whitelist",
+            i = "esport_insider_pass_whitelist",
+            o = "esports_room_cheering_whitelist";
 
-        function u(e, t, n) {
-            return void 0 === n && (n = !1), l(o, e, t, n)
-        }
-
-        function l(e, t, n, a) {
+        function s(e, t, n, a) {
             void 0 === a && (a = !1);
             var i = r.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || a;
@@ -8746,8 +8714,8 @@ webpackJsonp([45], {
                         year: null
                     }
                 }(N.date, n),
-                O = P.year,
-                C = function(e, t) {
+                C = P.year,
+                O = function(e, t) {
                     if (null === t) return null;
                     var n, r, a, i;
                     if (0 === e.length) return (r = new Date(0)).setUTCFullYear(t), r;
@@ -8769,9 +8737,9 @@ webpackJsonp([45], {
                         return S(t, i, c)
                     }
                     return null
-                }(P.restDateString, O);
-            if (C) {
-                var T, D = C.getTime(),
+                }(P.restDateString, C);
+            if (O) {
+                var D, T = O.getTime(),
                     A = 0;
                 return N.time && (A = function(e) {
                     var t, n, r;
@@ -8783,7 +8751,7 @@ webpackJsonp([45], {
                         return n % 24 * a + r * i + 1e3 * o
                     }
                     return null
-                }(N.time)), N.timezone ? (I = N.timezone, T = (F = E.exec(I)) ? 0 : (F = w.exec(I)) ? (M = 60 * parseInt(F[2], 10), "+" === F[1] ? -M : M) : (F = x.exec(I)) ? (M = 60 * parseInt(F[2], 10) + parseInt(F[3], 10), "+" === F[1] ? -M : M) : 0) : (T = new Date(D + A).getTimezoneOffset(), T = new Date(D + A + T * i).getTimezoneOffset()), new Date(D + A + T * i)
+                }(N.time)), N.timezone ? (I = N.timezone, D = (F = E.exec(I)) ? 0 : (F = w.exec(I)) ? (M = 60 * parseInt(F[2], 10), "+" === F[1] ? -M : M) : (F = x.exec(I)) ? (M = 60 * parseInt(F[2], 10) + parseInt(F[3], 10), "+" === F[1] ? -M : M) : 0) : (D = new Date(T + A).getTimezoneOffset(), D = new Date(T + A + D * i).getTimezoneOffset()), new Date(T + A + D * i)
             }
             var I, F, M;
             return new Date(e)
@@ -9080,4 +9048,4 @@ webpackJsonp([45], {
             }(r || (r = {}))
     }
 });
-//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-6d0bf2de3496a7c4d2fa50a3d6333dbe.js.map
+//# sourceMappingURL=pages.subs-checkout.components.subs-checkout-page-79f3a7415cbec525c1c263d4a3b5ef90.js.map

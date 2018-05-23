@@ -1,4 +1,4 @@
-webpackJsonp([95], {
+webpackJsonp([93], {
     "+5Qw": function(e, t) {},
     "+V/3": function(e, t, n) {
         "use strict";
@@ -6485,118 +6485,6 @@ webpackJsonp([95], {
     BlKL: function(e, t) {},
     Bsuy: function(e, t) {},
     CGWe: function(e, t) {},
-    CU3k: function(e, t) {
-        var n = {
-            kind: "Document",
-            definitions: [{
-                kind: "OperationDefinition",
-                operation: "query",
-                name: {
-                    kind: "Name",
-                    value: "ChannelPage__ChannelViewersCount"
-                },
-                variableDefinitions: [{
-                    kind: "VariableDefinition",
-                    variable: {
-                        kind: "Variable",
-                        name: {
-                            kind: "Name",
-                            value: "login"
-                        }
-                    },
-                    type: {
-                        kind: "NonNullType",
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "String"
-                            }
-                        }
-                    }
-                }],
-                directives: [],
-                selectionSet: {
-                    kind: "SelectionSet",
-                    selections: [{
-                        kind: "Field",
-                        name: {
-                            kind: "Name",
-                            value: "user"
-                        },
-                        arguments: [{
-                            kind: "Argument",
-                            name: {
-                                kind: "Name",
-                                value: "login"
-                            },
-                            value: {
-                                kind: "Variable",
-                                name: {
-                                    kind: "Name",
-                                    value: "login"
-                                }
-                            }
-                        }],
-                        directives: [],
-                        selectionSet: {
-                            kind: "SelectionSet",
-                            selections: [{
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "id"
-                                },
-                                arguments: [],
-                                directives: []
-                            }, {
-                                kind: "Field",
-                                name: {
-                                    kind: "Name",
-                                    value: "stream"
-                                },
-                                arguments: [],
-                                directives: [],
-                                selectionSet: {
-                                    kind: "SelectionSet",
-                                    selections: [{
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "id"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }, {
-                                        kind: "Field",
-                                        name: {
-                                            kind: "Name",
-                                            value: "viewersCount"
-                                        },
-                                        arguments: [],
-                                        directives: []
-                                    }]
-                                }
-                            }]
-                        }
-                    }]
-                }
-            }],
-            loc: {
-                start: 0,
-                end: 113
-            }
-        };
-        n.loc.source = {
-            body: "query ChannelPage__ChannelViewersCount($login: String!) {\nuser(login: $login) {\nid\nstream {\nid\nviewersCount\n}\n}\n}",
-            name: "GraphQL request",
-            locationOffset: {
-                line: 1,
-                column: 1
-            }
-        };
-        e.exports = n
-    },
     D6l4: function(e, t, n) {
         "use strict";
         var a, i;
@@ -6611,118 +6499,6 @@ webpackJsonp([95], {
             function(e) {
                 e.Badge = "badge_update", e.Balance = "balance_update"
             }(i || (i = {}))
-    },
-    D9fv: function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return s
-        }), t.b = function() {
-            var e = a.o.intl.getLanguageCode(),
-                t = function(t) {
-                    return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
-                };
-            return i.slice().sort(function(e, n) {
-                var a = t(e),
-                    i = t(n);
-                return a !== i ? a - i : a + ":" + e.label < i + ":" + n.label ? -1 : 1
-            }).concat(r(!0))
-        };
-        var a = n("6sO2"),
-            i = [{
-                code: "ar",
-                label: "العربية"
-            }, {
-                code: "bg",
-                label: "Български"
-            }, {
-                code: "cs",
-                label: "Čeština"
-            }, {
-                code: "da",
-                label: "Dansk"
-            }, {
-                code: "de",
-                label: "Deutsch"
-            }, {
-                code: "el",
-                label: "Ελληνικά"
-            }, {
-                code: "en",
-                label: "English"
-            }, {
-                code: "es",
-                label: "Español"
-            }, {
-                code: "fi",
-                label: "Suomi"
-            }, {
-                code: "fr",
-                label: "Français"
-            }, {
-                code: "hu",
-                label: "Magyar"
-            }, {
-                code: "it",
-                label: "Italiano"
-            }, {
-                code: "ja",
-                label: "日本語"
-            }, {
-                code: "ko",
-                label: "한국어"
-            }, {
-                code: "nl",
-                label: "Nederlands"
-            }, {
-                code: "no",
-                label: "Norsk"
-            }, {
-                code: "pl",
-                label: "Polski"
-            }, {
-                code: "pt",
-                label: "Português"
-            }, {
-                code: "ro",
-                label: "Română"
-            }, {
-                code: "ru",
-                label: "Русский"
-            }, {
-                code: "sk",
-                label: "Slovenčina"
-            }, {
-                code: "sv",
-                label: "Svenska"
-            }, {
-                code: "th",
-                label: "ภาษาไทย"
-            }, {
-                code: "tr",
-                label: "Türkçe"
-            }, {
-                code: "vi",
-                label: "Tiếng Việt"
-            }, {
-                code: "zh-hk",
-                label: "中文(粵語)"
-            }, {
-                code: "zh",
-                label: "中文"
-            }];
-
-        function r(e) {
-            return void 0 === e && (e = !1), [{
-                code: "asl",
-                label: "American Sign Language"
-            }, {
-                code: "other",
-                label: e ? Object(a.d)("Other", "broadcaster-languages") : "Other"
-            }]
-        }
-        var s = new Set(i.concat(r()).map(function(e) {
-            return e.code
-        }))
     },
     DbMg: function(e, t) {},
     Dc1A: function(e, t) {
@@ -11588,6 +11364,32 @@ webpackJsonp([95], {
         };
         e.exports = n
     },
+    QRuM: function(e, t, n) {
+        "use strict";
+        var a, i = n("TToO"),
+            r = n("GiK3"),
+            s = n("6sO2");
+        ! function(e) {
+            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
+        }(a || (a = {}));
+        var o = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = s.b.get(this.props.name, a.Off);
+                    return e === a.On || e === a.StaffOnly && this.props.isStaff ? this.props.children : null
+                }, t
+            }(r.Component),
+            l = o;
+        n.d(t, "a", function() {
+            return a
+        }), n.d(t, "c", function() {
+            return o
+        }), n.d(t, "b", function() {
+            return l
+        })
+    },
     "QU+n": function(e, t) {
         var n = {
             kind: "Document",
@@ -15864,7 +15666,7 @@ webpackJsonp([95], {
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isEsportGiftingApproved ? l.createElement(H, {
+                    return this.props.isEsportChannel ? l.createElement(H, {
                         onBack: this.props.onBack,
                         subscriptionProducts: this.props.subscriptionProducts,
                         giftRecipient: this.props.giftRecipient,
@@ -16125,7 +15927,6 @@ webpackJsonp([95], {
                     isEsportChannel: Object(y.a)(this.props.data.channelUser.id, this.props.sessionUser)
                 })
             }, t.prototype.renderSubGiftSelect = function() {
-                var e = Object(y.b)(this.props.data.channelUser.id, this.props.sessionUser);
                 return l.createElement(C._8, null, l.createElement(G.a, {
                     subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
                     isGift: !0
@@ -16144,7 +15945,7 @@ webpackJsonp([95], {
                     subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
                     giftRecipient: this.props.data.targetUser.login,
                     reportSubMenuAction: this.trackBuyGiftSubEvent,
-                    isEsportGiftingApproved: e
+                    isEsportChannel: Object(y.a)(this.props.data.channelUser.id, this.props.sessionUser)
                 })))
             }, t.prototype.renderChatActions = function() {
                 var e = [];
@@ -18024,50 +17825,6 @@ webpackJsonp([95], {
             }
         };
         e.exports = n
-    },
-    j7j0: function(e, t, n) {
-        "use strict";
-        var a = n("TToO"),
-            i = n("GiK3"),
-            r = n("6sO2"),
-            s = n("7vx8"),
-            o = n("WIs4"),
-            l = n("aMxy"),
-            c = n("HZww"),
-            d = n("CSlQ"),
-            u = n("Odds"),
-            p = n("CU3k"),
-            m = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                    this.props.latencyTracking.reportInteractive()
-                }, t.prototype.render = function() {
-                    return !this.props.data.loading && !this.props.data.error && this.props.data.user && this.props.data.user.stream && this.props.data.user.stream.id ? i.createElement(u._34, {
-                        value: Object(r.e)(this.props.data.user.stream.viewersCount || 0),
-                        label: Object(r.d)("Watching Now", "ChannelViewersCount"),
-                        icon: u._25.GlyphLive,
-                        "data-a-target": "channel-viewers-count"
-                    }) : null
-                }, t = a.__decorate([Object(s.a)(p), Object(o.a)(function(e) {
-                    return {
-                        query: p,
-                        skip: e.data.loading || !e.data.user || !e.data.user.id,
-                        variables: {
-                            login: e.login
-                        },
-                        topic: e.data.user ? Object(c.y)(e.data.user.id) : "",
-                        type: l.PubsubMessageType.ViewCount,
-                        mutator: function(e, t) {
-                            return t.user && t.user.stream ? (t.user.stream.viewersCount = e.viewers, t) : t
-                        }
-                    }
-                }), Object(d.d)("ChannelViewersCount")], t)
-            }(i.Component);
-        n.d(t, "a", function() {
-            return m
-        })
     },
     jIAO: function(e, t, n) {
         "use strict";
@@ -22252,4 +22009,4 @@ webpackJsonp([95], {
     },
     zbFZ: function(e, t) {}
 });
-//# sourceMappingURL=pages.channel-surfing-ab6cde435127926d20f535c4eb73b595.js.map
+//# sourceMappingURL=pages.channel-surfing-0986bb1075e788fde656c78737d6e712.js.map

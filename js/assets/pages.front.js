@@ -530,25 +530,28 @@ webpackJsonp([51], {
             E = n("sEID"),
             N = n("jetF"),
             T = n("7vx8"),
-            O = n("J4ib");
+            O = n("J4ib"),
+            I = n("Kckb");
         ! function(e) {
             e.AR = "AR", e.ASL = "ASL", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.ES = "ES", e.FI = "FI", e.FR = "FR", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.OTHER = "OTHER", e.PL = "PL", e.PT = "PT", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH"
         }(i || (i = {})),
         function(e) {
             e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
         }(a || (a = {}));
-        var I = n("Odds"),
-            F = n("6fIs"),
-            L = function(e) {
+        var F = n("Odds"),
+            L = n("6fIs"),
+            R = [a.Delete, a.DeleteAll],
+            x = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.renderMenuItem = function(e) {
+                    return n.clipsMaintenance = Object(I.a)(), n.renderMenuItem = function(e) {
                         var t = n.menuData.get(e);
-                        return e && t ? c.createElement(I._6, {
+                        return e && t ? c.createElement(F._6, {
                             key: t.display,
                             onClick: t.destinationHandler,
-                            "data-a-target": "clip-moderation-button-" + t.display
-                        }, c.createElement(I._8, {
+                            "data-a-target": "clip-moderation-button-" + t.display,
+                            disabled: n.clipsMaintenance && R.includes(e)
+                        }, c.createElement(F._8, {
                             padding: {
                                 x: 1,
                                 y: .5
@@ -599,16 +602,16 @@ webpackJsonp([51], {
                         o = i || r || n,
                         s = r || n,
                         l = [a.Report];
-                    return o && l.push(a.Delete), s && (l.push(a.DeleteAll), t.curator && t.broadcaster && (l.push(a.Ban), l.push(a.Timeout))), c.createElement(I._8, {
+                    return o && l.push(a.Delete), s && (l.push(a.DeleteAll), t.curator && t.broadcaster && (l.push(a.Ban), l.push(a.Timeout))), c.createElement(F._8, {
                         className: "moderation-menu"
-                    }, c.createElement(N.a, null, c.createElement(I.v, {
-                        type: I.B.Hollow,
-                        icon: I._25.More,
+                    }, c.createElement(N.a, null, c.createElement(F.v, {
+                        type: F.B.Hollow,
+                        icon: F._25.More,
                         ariaLabel: Object(O.d)("More Options", "ModerationMenu"),
                         "data-a-target": "moderation-menu-button"
-                    }), c.createElement(I.q, {
-                        direction: I.r.TopRight
-                    }, c.createElement(I._8, {
+                    }), c.createElement(F.q, {
+                        direction: F.r.TopRight
+                    }, c.createElement(F._8, {
                         padding: {
                             y: .5
                         }
@@ -618,11 +621,11 @@ webpackJsonp([51], {
                     return e.map(function(e) {
                         return t.renderMenuItem(e)
                     })
-                }, t = l.__decorate([Object(T.a)(F), Object(g.d)("ModerationMenu")], t)
+                }, t = l.__decorate([Object(T.a)(L), Object(g.d)("ModerationMenu")], t)
             }(c.Component),
-            R = n("WNmM"),
-            x = (n("MjlB"), 2e3),
-            D = function(e) {
+            D = n("WNmM"),
+            P = (n("MjlB"), 2e3),
+            A = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -641,7 +644,7 @@ webpackJsonp([51], {
                             t.setState({
                                 isShowingBalloon: !1
                             })
-                        }, x), Object(R.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(_.b.CopyInput))
+                        }, P), Object(D.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(_.b.CopyInput))
                     }, t.dismissBalloon = function() {
                         t.setState({
                             isShowingBalloon: !1
@@ -663,29 +666,29 @@ webpackJsonp([51], {
                             onClick: this.props.closeModal,
                             "data-a-target": "clip-modal-game-link"
                         }, this.props.clip.game.name)
-                    }, "ClipsViewModalContent") : t, c.createElement(I._35, {
+                    }, "ClipsViewModalContent") : t, c.createElement(F._35, {
                         className: "clips-view-modal-content",
-                        background: I.n.Base
-                    }, c.createElement(I._8, {
+                        background: F.n.Base
+                    }, c.createElement(F._8, {
                         padding: {
                             bottom: 2
                         }
-                    }, c.createElement(I.k, {
-                        ratio: I.l.Aspect16x9
+                    }, c.createElement(F.k, {
+                        ratio: F.l.Aspect16x9
                     }, c.createElement("iframe", {
                         src: this.props.clip.embedURL,
                         width: "100%",
                         height: "100%",
                         allowFullScreen: !0
-                    }))), c.createElement(I._8, {
+                    }))), c.createElement(F._8, {
                         padding: {
                             x: 2,
                             bottom: 2
                         }
-                    }, c.createElement(I._8, {
-                        display: I.R.Flex,
-                        flexWrap: I.U.NoWrap
-                    }, c.createElement(I._8, {
+                    }, c.createElement(F._8, {
+                        display: F.R.Flex,
+                        flexWrap: F.U.NoWrap
+                    }, c.createElement(F._8, {
                         flexGrow: 1,
                         margin: {
                             right: 1
@@ -695,90 +698,90 @@ webpackJsonp([51], {
                     }, c.createElement(y.a, {
                         text: this.props.clip.url,
                         icon: !0,
-                        iconAsset: I._25.Link,
+                        iconAsset: F._25.Link,
                         onSelection: this.copyClipURL,
                         "data-a-target": "clip-share-input"
-                    }, c.createElement(I.q, {
+                    }, c.createElement(F.q, {
                         show: this.state.isShowingBalloon,
-                        direction: I.r.TopRight
-                    }, c.createElement(I._6, {
+                        direction: F.r.TopRight
+                    }, c.createElement(F._6, {
                         onClick: this.dismissBalloon
-                    }, c.createElement(I._8, {
+                    }, c.createElement(F._8, {
                         padding: 1
-                    }, c.createElement(I.Q, {
+                    }, c.createElement(F.Q, {
                         bold: !0
                     }, Object(u.d)("Link copied to clipboard", "ClipsViewModalContent")))))))), c.createElement(E.a, {
                         clip: this.props.clip,
                         pageType: this.props.pageType
-                    }), c.createElement(L, {
+                    }), c.createElement(x, {
                         clip: this.props.clip,
                         updateModalViewState: this.props.updateModalViewState
-                    }))), c.createElement(I._8, {
+                    }))), c.createElement(F._8, {
                         padding: {
                             x: 2,
                             bottom: 2
                         },
-                        display: I.R.Flex,
-                        flexWrap: I.U.NoWrap,
-                        justifyContent: I._7.Between,
+                        display: F.R.Flex,
+                        flexWrap: F.U.NoWrap,
+                        justifyContent: F._7.Between,
                         fullWidth: !0,
-                        overflow: I._11.Hidden
-                    }, c.createElement(I._8, {
+                        overflow: F._11.Hidden
+                    }, c.createElement(F._8, {
                         flexGrow: 1,
                         ellipsis: !0
-                    }, c.createElement(I._2, {
+                    }, c.createElement(F._2, {
                         ellipsis: !0
-                    }, c.createElement(I._35, {
-                        display: I.R.Flex,
-                        fontSize: I.V.Size5
-                    }, c.createElement(I._8, {
+                    }, c.createElement(F._35, {
+                        display: F.R.Flex,
+                        fontSize: F.V.Size5
+                    }, c.createElement(F._8, {
                         ellipsis: !0
-                    }, this.props.clip.title), c.createElement(I._8, {
+                    }, this.props.clip.title), c.createElement(F._8, {
                         flexShrink: 0
-                    }, c.createElement(I.Q, {
-                        type: I._49.Span,
-                        color: I.K.Alt2
+                    }, c.createElement(F.Q, {
+                        type: F._49.Span,
+                        color: F.K.Alt2
                     }, " • ", Object(u.d)("{created, date, medium}", {
                         created: new Date(this.props.clip.createdAt)
-                    }, "ClipsViewModalContent"))))), c.createElement(I._2, {
+                    }, "ClipsViewModalContent"))))), c.createElement(F._2, {
                         ellipsis: !0
-                    }, c.createElement(I._35, {
-                        color: I.K.Alt2
+                    }, c.createElement(F._35, {
+                        color: F.K.Alt2
                     }, e, e && !!this.props.clip.curator && c.createElement("span", null, " • "), this.props.clip.curator && Object(u.d)("Clipped by {curator}", {
                         curator: c.createElement(k.a, {
                             to: "/" + this.props.clip.curator.login,
                             onClick: this.props.closeModal,
                             "data-a-target": "clip-modal-curator-link"
                         }, this.props.clip.curator.login)
-                    }, "ClipsViewModalContent")))), c.createElement(I._35, {
-                        display: I.R.Flex,
+                    }, "ClipsViewModalContent")))), c.createElement(F._35, {
+                        display: F.R.Flex,
                         padding: {
                             bottom: 2,
                             left: 2
                         },
-                        fontSize: I.V.Size5,
-                        color: I.K.Alt2,
+                        fontSize: F.V.Size5,
+                        color: F.K.Alt2,
                         flexShrink: 0
-                    }, c.createElement(I._8, {
+                    }, c.createElement(F._8, {
                         margin: {
                             right: .5
                         },
-                        alignItems: I.c.Center,
-                        display: I.R.Flex
-                    }, c.createElement(I._24, {
-                        asset: I._25.GlyphViews
+                        alignItems: F.c.Center,
+                        display: F.R.Flex
+                    }, c.createElement(F._24, {
+                        asset: F._25.GlyphViews
                     })), Object(u.d)("{viewCount, number} views", {
                         viewCount: this.props.clip.viewCount
                     }, "ClipsViewModalContent"))))
                 }, t = l.__decorate([Object(g.d)("ClipsViewModalContent")], t)
             }(c.Component),
-            P = n("Hjbq");
-        var A = Object(r.b)(null, function(e) {
+            V = n("Hjbq");
+        var j = Object(r.b)(null, function(e) {
                 return Object(o.b)({
-                    reportPlayerInstanceStarted: P.b
+                    reportPlayerInstanceStarted: V.b
                 }, e)
-            })(D),
-            V = (n("GOrw"), function(e) {
+            })(A),
+            M = (n("GOrw"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.onKeyDown = function(e) {
@@ -795,33 +798,33 @@ webpackJsonp([51], {
                 }, t.prototype.render = function() {
                     var e = null,
                         t = null;
-                    this.props.clipIndex > 0 && (e = c.createElement(I._8, {
-                        position: I._15.Absolute,
-                        display: I.R.Flex,
-                        alignItems: I.c.Stretch,
+                    this.props.clipIndex > 0 && (e = c.createElement(F._8, {
+                        position: F._15.Absolute,
+                        display: F.R.Flex,
+                        alignItems: F.c.Stretch,
                         className: "clip-carousel-button clip-carousel-button--left"
-                    }, c.createElement(I.w, {
+                    }, c.createElement(F.w, {
                         ariaLabel: Object(u.d)("Previous clip", "ClipsViewModalNavigation"),
-                        type: I.y.Primary,
-                        icon: I._25.AngleLeft,
+                        type: F.y.Primary,
+                        icon: F._25.AngleLeft,
                         onClick: this.updateClipBackward,
                         "data-test-selector": "clips-view-modal-navigation-back"
                     })));
                     var n = this.props.getClips();
-                    return this.props.loadMoreClips && n.length - this.props.clipIndex < 4 && this.props.loadMoreClips(), this.props.clipIndex < n.length - 1 && (t = c.createElement(I._8, {
-                        position: I._15.Absolute,
-                        display: I.R.Flex,
-                        alignItems: I.c.Stretch,
+                    return this.props.loadMoreClips && n.length - this.props.clipIndex < 4 && this.props.loadMoreClips(), this.props.clipIndex < n.length - 1 && (t = c.createElement(F._8, {
+                        position: F._15.Absolute,
+                        display: F.R.Flex,
+                        alignItems: F.c.Stretch,
                         className: "clip-carousel-button clip-carousel-button--right"
-                    }, c.createElement(I.w, {
+                    }, c.createElement(F.w, {
                         ariaLabel: Object(u.d)("Next clip", "ClipsViewModalNavigation"),
-                        type: I.y.Primary,
-                        icon: I._25.AngleRight,
+                        type: F.y.Primary,
+                        icon: F._25.AngleRight,
                         onClick: this.updateClipForward,
                         "data-test-selector": "clips-view-modal-navigation-forward"
-                    }))), c.createElement(I._8, {
+                    }))), c.createElement(F._8, {
                         className: "clips-view-modal-navigation"
-                    }, e, c.createElement(A, {
+                    }, e, c.createElement(j, {
                         clip: this.props.clip,
                         updateModalViewState: this.props.updateModalViewState,
                         pageType: this.props.pageType,
@@ -834,7 +837,7 @@ webpackJsonp([51], {
                 }, t.prototype.updateClipIndex = function(e) {
                     var t = Math.max(0, e),
                         n = this.props.getClips();
-                    n.length - t < 4 && this.props.loadMoreClips && this.props.loadMoreClips(), t < n.length && this.props.showModal(G, {
+                    n.length - t < 4 && this.props.loadMoreClips && this.props.loadMoreClips(), t < n.length && this.props.showModal(H, {
                         getClips: this.props.getClips,
                         clip: n[t],
                         clipIndex: t,
@@ -843,14 +846,14 @@ webpackJsonp([51], {
                     })
                 }, t
             }(c.Component)),
-            j = Object(g.d)("ClipsViewModalNavigation")(V);
-        var M = Object(r.b)(null, function(e) {
+            U = Object(g.d)("ClipsViewModalNavigation")(M);
+        var G = Object(r.b)(null, function(e) {
                 return Object(o.b)({
                     showModal: s.d,
                     closeModal: s.c
                 }, e)
-            })(j),
-            U = (n("/+aa"), function(e) {
+            })(U),
+            B = (n("/+aa"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -907,7 +910,7 @@ webpackJsonp([51], {
                                 break
                             }
                         default:
-                            e = c.createElement(M, {
+                            e = c.createElement(G, {
                                 getClips: this.props.getClips,
                                 clip: this.props.clip,
                                 clipIndex: this.props.clipIndex,
@@ -916,7 +919,7 @@ webpackJsonp([51], {
                                 pageType: this.props.pageType
                             }), n["clips-modal-view--wide"] = !0
                     }
-                    return c.createElement(I._8, {
+                    return c.createElement(F._8, {
                         className: d(n)
                     }, e, c.createElement(m.a, {
                         closeOnBackdropClick: !0,
@@ -924,13 +927,13 @@ webpackJsonp([51], {
                     }))
                 }, t = l.__decorate([Object(g.d)("ClipsViewModal")], t)
             }(c.Component));
-        var G = Object(r.b)(null, function(e) {
+        var H = Object(r.b)(null, function(e) {
             return Object(o.b)({
                 showModal: s.d
             }, e)
-        })(U);
+        })(B);
         n.d(t, "a", function() {
-            return G
+            return H
         })
     },
     "24qG": function(e, t) {},
@@ -2271,212 +2274,6 @@ webpackJsonp([51], {
             }
         };
         e.exports = n
-    },
-    "9u8h": function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return o
-        });
-        var i = n("TToO"),
-            a = n("6sO2"),
-            r = n("Aj/L"),
-            o = function() {
-                function e() {}
-                return e.get = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "GET"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.getOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, i.__assign({}, t, {
-                                        method: "GET"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.put = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.putOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, i.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.post = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.postOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, i.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.delete = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.deleteOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, i.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, a.sent()]
-                            }
-                        })
-                    })
-                }, e.request = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        var a, r, o, s;
-                        return i.__generator(this, function(l) {
-                            switch (l.label) {
-                                case 0:
-                                    return t = this.constructOptions(t, n), a = t.headers ? t.headers["Content-Type"] : void 0, r = this.serialize(t.body, a), o = i.__assign({}, t, {
-                                        body: r
-                                    }), [4, this._fetch(e, o)];
-                                case 1:
-                                    return s = l.sent(), [4, this.constructLegacyAPIResponse(s)];
-                                case 2:
-                                    return [2, l.sent()]
-                            }
-                        })
-                    })
-                }, e.requestOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        var a, r;
-                        return i.__generator(this, function(o) {
-                            switch (o.label) {
-                                case 0:
-                                    return o.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
-                                case 1:
-                                    if ((a = o.sent()).error || a.requestError) throw new Error("Error while making request");
-                                    return r = i.__assign({}, a, {
-                                        body: a.body
-                                    }), [2, Promise.resolve(r)];
-                                case 2:
-                                    throw o.sent();
-                                case 3:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, e.getAPIURL = function(e) {
-                    return new URL(e, a.o.config.apiBaseURL)
-                }, e.constructLegacyAPIResponse = function(e) {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, a, r;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    t = {
-                                        status: e.status
-                                    }, i.label = 1;
-                                case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, e.json()];
-                                case 2:
-                                    return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
-                                case 3:
-                                    return a = i.sent(), e.headers && e.headers.get && (r = e.headers.get("Content-Type")) && -1 !== r.indexOf("application/json") && (t.requestError = a), [3, 4];
-                                case 4:
-                                    return [2, t]
-                            }
-                        })
-                    })
-                }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return [4, fetch(this.getAPIURL(e).toString(), t)];
-                                case 1:
-                                    return [2, n.sent()]
-                            }
-                        })
-                    })
-                }, e.constructOptions = function(e, t) {
-                    return e = Object.assign({}, e, {
-                        headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
-                    })
-                }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
-                        contentType: t
-                    }), null) : null
-                }, e.getDefaultHeaders = function(e, t) {
-                    var n = a.o.store.getState(),
-                        i = {
-                            Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
-                            "Accept-Language": "en-us",
-                            "Client-ID": a.o.config.legacyClientID,
-                            "X-Requested-With": "XMLHttpRequest"
-                        };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
-                    var o = Object(r.c)(n);
-                    return o && (i.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (i["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        i[e] && delete i[e]
-                    }), i
-                }, e.logger = a.o.logger.withCategory("legacy-api"), e
-            }()
     },
     Av7x: function(e, t) {
         var n = {
@@ -4091,8 +3888,8 @@ webpackJsonp([51], {
                 }), Object(y.d)("FollowedGames")], t)
             }(o.Component),
             B = n("RH2O"),
-            q = n("o5l+"),
-            H = n("zCIC"),
+            H = n("o5l+"),
+            q = n("zCIC"),
             W = n("HM6l"),
             z = n("86JD");
         var Q = Object(B.b)(function(e) {
@@ -4102,8 +3899,8 @@ webpackJsonp([51], {
             })(R),
             K = n("oIkB"),
             Y = n("VFqp"),
-            X = n("cYgC"),
-            $ = n("ojlS"),
+            $ = n("cYgC"),
+            X = n("ojlS"),
             J = n("C/8M"),
             Z = n("EImC"),
             ee = function(e) {
@@ -4119,7 +3916,7 @@ webpackJsonp([51], {
                 return {
                     feed_type: "rec"
                 }
-            })(X.a),
+            })($.a),
             ie = {
                 limit: 5
             },
@@ -4151,7 +3948,7 @@ webpackJsonp([51], {
                         composerLocation: Y.b.HomePage
                     }), o.createElement(ne, {
                         items: this.props.data.currentUser.pulseFeed.items || []
-                    }), o.createElement(H.a, {
+                    }), o.createElement(q.a, {
                         enabled: !this.props.data.loading && !this.props.data.error,
                         loadMore: this.props.loadMore,
                         contentLength: this.props.data.currentUser.pulseFeed.items.edges.length,
@@ -4190,7 +3987,7 @@ webpackJsonp([51], {
                             }
                         })
                     }
-                }), Object(c.a)($, {
+                }), Object(c.a)(X, {
                     props: function(e) {
                         return {
                             createPost: function(t, n, i) {
@@ -4406,7 +4203,7 @@ webpackJsonp([51], {
                                 left: 2
                             }
                         }
-                    }, o.createElement(H.c, {
+                    }, o.createElement(q.c, {
                         bottomPixelThreshold: 20,
                         disableStickinessBelowWidth: 1127,
                         disableStickiness: this.state.pulseDataError
@@ -4440,7 +4237,7 @@ webpackJsonp([51], {
                         margin: {
                             bottom: 1
                         }
-                    }, o.createElement(G, null)), o.createElement(q.a, null, o.createElement(oe, null)), o.createElement(_._8, {
+                    }, o.createElement(G, null)), o.createElement(H.a, null, o.createElement(oe, null)), o.createElement(_._8, {
                         display: _.R.Hide,
                         breakpointMedium: {
                             display: _.R.Block
@@ -5209,7 +5006,7 @@ webpackJsonp([51], {
         ! function(e) {
             e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
         }(Me || (Me = {}));
-        var qe = function(e) {
+        var He = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5246,9 +5043,7 @@ webpackJsonp([51], {
                     }
                 }, t.prototype.render = function() {
                     var e = this;
-                    if (this.props.data.loading && !this.props.data.shelves) return this.renderLoading();
-                    if (this.props.data.error) return this.renderError();
-                    if (!this.props.data.shelves || !this.props.data.shelves.edges) return null;
+                    if (!this.props.data.shelves || !this.props.data.shelves.edges) return this.props.data.loading ? this.renderLoading() : this.props.data.error ? this.renderError() : null;
                     var t = this.props.data.shelves.edges.map(function(t, n) {
                         return o.createElement(Be, {
                             key: t.node.id,
@@ -5305,7 +5100,7 @@ webpackJsonp([51], {
                     })
                 }, t
             }(o.Component),
-            He = Object(f.d)(Object(c.a)(de, {
+            qe = Object(f.d)(Object(c.a)(de, {
                 options: function(e) {
                     return {
                         fetchPolicy: "network-only",
@@ -5350,7 +5145,7 @@ webpackJsonp([51], {
                         }
                     })
                 }
-            }), Object(y.d)("RecommendedContent"))(qe),
+            }), Object(y.d)("RecommendedContent"))(He),
             We = 2,
             ze = 2,
             Qe = function(e) {
@@ -5372,7 +5167,7 @@ webpackJsonp([51], {
                     }, t
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    var e = this.state.initialItemsToFetch > 0 && this.state.initialRequestID ? o.createElement(He, {
+                    var e = this.state.initialItemsToFetch > 0 && this.state.initialRequestID ? o.createElement(qe, {
                         itemsToDisplay: this.state.itemsToDisplay,
                         initialItemsToFetch: this.state.initialItemsToFetch,
                         initialRequestID: this.state.initialRequestID
@@ -5454,8 +5249,8 @@ webpackJsonp([51], {
                     }, e)))
                 }, t
             }(o.Component),
-            Xe = n("Av7x"),
-            $e = (n("GH5m"), function(e) {
+            $e = n("Av7x"),
+            Xe = (n("GH5m"), function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -5511,13 +5306,13 @@ webpackJsonp([51], {
                 destination: m.a.Index
             }), Object(u.a)({
                 location: g.PageviewLocation.FrontPage
-            }), Object(c.a)(Xe, {
+            }), Object(c.a)($e, {
                 options: {
                     variables: {
                         limit: 18
                     }
                 }
-            }))($e),
+            }))(Xe),
             Ze = function(e) {
                 return o.createElement(d.a, {
                     name: "TWILIGHT_DISCOVERY_FRONTPAGE_MVP",
@@ -5862,6 +5657,13 @@ webpackJsonp([51], {
             return E
         })
     },
+    Kckb: function(e, t, n) {
+        "use strict";
+        t.a = function() {
+            return "variant1" === i.o.experiments.getAssignment("TWILIGHT_CLIPS_ON_THE_BRAIN")
+        };
+        var i = n("6sO2")
+    },
     L46p: function(e, t) {
         var n = {
             kind: "Document",
@@ -6069,7 +5871,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(130).then(n.bind(null, "tk3B"))];
+                                return [4, n.e(128).then(n.bind(null, "tk3B"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6081,7 +5883,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(129).then(n.bind(null, "e/M0"))];
+                                return [4, n.e(127).then(n.bind(null, "e/M0"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6093,7 +5895,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(128).then(n.bind(null, "Dan5"))];
+                                return [4, n.e(126).then(n.bind(null, "Dan5"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6105,7 +5907,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(127).then(n.bind(null, "sQp1"))];
+                                return [4, n.e(125).then(n.bind(null, "sQp1"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6117,7 +5919,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(126).then(n.bind(null, "+kKy"))];
+                                return [4, n.e(124).then(n.bind(null, "+kKy"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -6129,7 +5931,7 @@ webpackJsonp([51], {
                     return i.__generator(this, function(e) {
                         switch (e.label) {
                             case 0:
-                                return [4, n.e(125).then(n.bind(null, "2NJ8"))];
+                                return [4, n.e(123).then(n.bind(null, "2NJ8"))];
                             case 1:
                                 return [2, e.sent().items]
                         }
@@ -14735,4 +14537,4 @@ webpackJsonp([51], {
     },
     yF5J: function(e, t) {}
 });
-//# sourceMappingURL=pages.front-33add0f3bd2266ef949025274451d09b.js.map
+//# sourceMappingURL=pages.front-a48d6db92b93e460da2fe0cf33794c44.js.map

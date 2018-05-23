@@ -1,4 +1,4 @@
-webpackJsonp([40], {
+webpackJsonp([38], {
     "+/J2": function(e, t, n) {
         var a = n("xA5w");
         e.exports = function(e, t) {
@@ -445,9 +445,9 @@ webpackJsonp([40], {
         })(V);
         n("+72U");
         n.d(t, "a", function() {
-            return q
+            return K
         });
-        var q = function(e) {
+        var K = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
             }
@@ -2705,212 +2705,6 @@ webpackJsonp([40], {
             var n = Number(t);
             return a(e, -n)
         }
-    },
-    "9u8h": function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return i
-        });
-        var a = n("TToO"),
-            r = n("6sO2"),
-            s = n("Aj/L"),
-            i = function() {
-                function e() {}
-                return e.get = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.request(e, a.__assign({}, t, {
-                                        method: "GET"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.getOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, a.__assign({}, t, {
-                                        method: "GET"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.put = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.request(e, a.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.putOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, a.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.post = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.request(e, a.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.postOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, a.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.delete = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.request(e, a.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.deleteOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, a.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.request = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        var r, s, i, o;
-                        return a.__generator(this, function(d) {
-                            switch (d.label) {
-                                case 0:
-                                    return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, s = this.serialize(t.body, r), i = a.__assign({}, t, {
-                                        body: s
-                                    }), [4, this._fetch(e, i)];
-                                case 1:
-                                    return o = d.sent(), [4, this.constructLegacyAPIResponse(o)];
-                                case 2:
-                                    return [2, d.sent()]
-                            }
-                        })
-                    })
-                }, e.requestOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), a.__awaiter(this, void 0, void 0, function() {
-                        var r, s;
-                        return a.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    return i.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
-                                case 1:
-                                    if ((r = i.sent()).error || r.requestError) throw new Error("Error while making request");
-                                    return s = a.__assign({}, r, {
-                                        body: r.body
-                                    }), [2, Promise.resolve(s)];
-                                case 2:
-                                    throw i.sent();
-                                case 3:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, e.getAPIURL = function(e) {
-                    return new URL(e, r.o.config.apiBaseURL)
-                }, e.constructLegacyAPIResponse = function(e) {
-                    return a.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r, s;
-                        return a.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    t = {
-                                        status: e.status
-                                    }, a.label = 1;
-                                case 1:
-                                    return a.trys.push([1, 3, , 4]), [4, e.json()];
-                                case 2:
-                                    return n = a.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
-                                case 3:
-                                    return r = a.sent(), e.headers && e.headers.get && (s = e.headers.get("Content-Type")) && -1 !== s.indexOf("application/json") && (t.requestError = r), [3, 4];
-                                case 4:
-                                    return [2, t]
-                            }
-                        })
-                    })
-                }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), a.__awaiter(this, void 0, void 0, function() {
-                        return a.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return [4, fetch(this.getAPIURL(e).toString(), t)];
-                                case 1:
-                                    return [2, n.sent()]
-                            }
-                        })
-                    })
-                }, e.constructOptions = function(e, t) {
-                    return e = Object.assign({}, e, {
-                        headers: a.__assign({}, this.getDefaultHeaders(e, t), e.headers)
-                    })
-                }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
-                        contentType: t
-                    }), null) : null
-                }, e.getDefaultHeaders = function(e, t) {
-                    var n = r.o.store.getState(),
-                        a = {
-                            Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
-                            "Accept-Language": "en-us",
-                            "Client-ID": r.o.config.legacyClientID,
-                            "X-Requested-With": "XMLHttpRequest"
-                        };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (a["Content-Type"] = "application/json; charset=UTF-8");
-                    var i = Object(s.c)(n);
-                    return i && (a.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (a["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        a[e] && delete a[e]
-                    }), a
-                }, e.logger = r.o.logger.withCategory("legacy-api"), e
-            }()
     },
     A2zO: function(e, t, n) {
         var a = n("Be26");
@@ -5501,7 +5295,7 @@ webpackJsonp([40], {
                 }
 
                 function Z(e, t) {
-                    return e.isValid() ? (t = q(t, e.localeData()), B[t] = B[t] || function(e) {
+                    return e.isValid() ? (t = K(t, e.localeData()), B[t] = B[t] || function(e) {
                         var t, n, a, r = e.match(J);
                         for (t = 0, n = r.length; t < n; t++) G[r[t]] ? r[t] = G[r[t]] : r[t] = (a = r[t]).match(/\[[\s\S]/) ? a.replace(/^\[|\]$/g, "") : a.replace(/\\/g, "");
                         return function(t) {
@@ -5512,7 +5306,7 @@ webpackJsonp([40], {
                     }(t), B[t](e)) : e.localeData().invalidDate()
                 }
 
-                function q(e, t) {
+                function K(e, t) {
                     var n = 5;
 
                     function a(e) {
@@ -5521,8 +5315,8 @@ webpackJsonp([40], {
                     for (U.lastIndex = 0; n >= 0 && U.test(e);) e = e.replace(U, a), U.lastIndex = 0, n -= 1;
                     return e
                 }
-                var K = /\d/,
-                    Q = /\d\d/,
+                var Q = /\d/,
+                    q = /\d\d/,
                     X = /\d{3}/,
                     $ = /\d{4}/,
                     ee = /[+-]?\d{6}/,
@@ -5597,7 +5391,7 @@ webpackJsonp([40], {
                     return this.localeData().monthsShort(this, e)
                 }), V("MMMM", 0, 0, function(e) {
                     return this.localeData().months(this, e)
-                }), O("month", "M"), C("month", 8), ce("M", te), ce("MM", te, Q), ce("MMM", function(e, t) {
+                }), O("month", "M"), C("month", 8), ce("M", te), ce("MM", te, q), ce("MMM", function(e, t) {
                     return t.monthsShortRegex(e)
                 }), ce("MMMM", function(e, t) {
                     return t.monthsRegex(e)
@@ -5651,7 +5445,7 @@ webpackJsonp([40], {
                     return e <= 9999 ? "" + e : "+" + e
                 }), V(0, ["YY", 2], 0, function() {
                     return this.year() % 100
-                }), V(0, ["YYYY", 4], 0, "year"), V(0, ["YYYYY", 5], 0, "year"), V(0, ["YYYYYY", 6, !0], 0, "year"), O("year", "y"), C("year", 1), ce("Y", de), ce("YY", te, Q), ce("YYYY", se, $), ce("YYYYY", ie, ee), ce("YYYYYY", ie, ee), pe(["YYYYY", "YYYYYY"], Ye), pe("YYYY", function(e, t) {
+                }), V(0, ["YYYY", 4], 0, "year"), V(0, ["YYYYY", 5], 0, "year"), V(0, ["YYYYYY", 6, !0], 0, "year"), O("year", "y"), C("year", 1), ce("Y", de), ce("YY", te, q), ce("YYYY", se, $), ce("YYYYY", ie, ee), ce("YYYYYY", ie, ee), pe(["YYYYY", "YYYYYY"], Ye), pe("YYYY", function(e, t) {
                     t[Ye] = 2 === e.length ? a.parseTwoDigitYear(e) : k(e)
                 }), pe("YY", function(e, t) {
                     t[Ye] = a.parseTwoDigitYear(e)
@@ -5694,7 +5488,7 @@ webpackJsonp([40], {
                         r = Je(e + 1, t, n);
                     return (Ne(e) - a + r) / 7
                 }
-                V("w", ["ww", 2], "wo", "week"), V("W", ["WW", 2], "Wo", "isoWeek"), O("week", "w"), O("isoWeek", "W"), C("week", 5), C("isoWeek", 5), ce("w", te), ce("ww", te, Q), ce("W", te), ce("WW", te, Q), ye(["w", "ww", "W", "WW"], function(e, t, n, a) {
+                V("w", ["ww", 2], "wo", "week"), V("W", ["WW", 2], "Wo", "isoWeek"), O("week", "w"), O("isoWeek", "W"), C("week", 5), C("isoWeek", 5), ce("w", te), ce("ww", te, q), ce("W", te), ce("WW", te, q), ye(["w", "ww", "W", "WW"], function(e, t, n, a) {
                     t[a.substr(0, 1)] = k(e)
                 });
                 V("d", 0, "do", "day"), V("dd", 0, 0, function(e) {
@@ -5717,9 +5511,9 @@ webpackJsonp([40], {
                 });
                 var Ve = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_");
                 var Ze = "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_");
-                var qe = "Su_Mo_Tu_We_Th_Fr_Sa".split("_");
-                var Ke = _e;
+                var Ke = "Su_Mo_Tu_We_Th_Fr_Sa".split("_");
                 var Qe = _e;
+                var qe = _e;
                 var Xe = _e;
 
                 function $e() {
@@ -5758,7 +5552,7 @@ webpackJsonp([40], {
                     return "" + this.hours() + R(this.minutes(), 2)
                 }), V("Hmmss", 0, 0, function() {
                     return "" + this.hours() + R(this.minutes(), 2) + R(this.seconds(), 2)
-                }), tt("a", !0), tt("A", !1), O("hour", "h"), C("hour", 13), ce("a", nt), ce("A", nt), ce("H", te), ce("h", te), ce("k", te), ce("HH", te, Q), ce("hh", te, Q), ce("kk", te, Q), ce("hmm", ne), ce("hmmss", ae), ce("Hmm", ne), ce("Hmmss", ae), pe(["H", "HH"], ke), pe(["k", "kk"], function(e, t, n) {
+                }), tt("a", !0), tt("A", !1), O("hour", "h"), C("hour", 13), ce("a", nt), ce("A", nt), ce("H", te), ce("h", te), ce("k", te), ce("HH", te, q), ce("hh", te, q), ce("kk", te, q), ce("hmm", ne), ce("hmmss", ae), ce("Hmm", ne), ce("Hmmss", ae), pe(["H", "HH"], ke), pe(["k", "kk"], function(e, t, n) {
                     var a = k(e);
                     t[ke] = 24 === a ? 0 : a
                 }), pe(["a", "A"], function(e, t, n) {
@@ -5824,7 +5618,7 @@ webpackJsonp([40], {
                             doy: 6
                         },
                         weekdays: Ve,
-                        weekdaysMin: qe,
+                        weekdaysMin: Ke,
                         weekdaysShort: Ze,
                         meridiemParse: /[ap]\.?m?\.?/i
                     },
@@ -6013,7 +5807,7 @@ webpackJsonp([40], {
                             var t, n, r, s, i, o = "" + e._i,
                                 d = o.length,
                                 u = 0;
-                            for (r = q(e._f, e._locale).match(J) || [], t = 0; t < r.length; t++) s = r[t], (n = (o.match(he(s, e)) || [])[0]) && ((i = o.substr(0, o.indexOf(n))).length > 0 && c(e).unusedInput.push(i), o = o.slice(o.indexOf(n) + n.length), u += n.length), G[s] ? (n ? c(e).empty = !1 : c(e).unusedTokens.push(s), Le(s, n, e)) : e._strict && !n && c(e).unusedTokens.push(s);
+                            for (r = K(e._f, e._locale).match(J) || [], t = 0; t < r.length; t++) s = r[t], (n = (o.match(he(s, e)) || [])[0]) && ((i = o.substr(0, o.indexOf(n))).length > 0 && c(e).unusedInput.push(i), o = o.slice(o.indexOf(n) + n.length), u += n.length), G[s] ? (n ? c(e).empty = !1 : c(e).unusedTokens.push(s), Le(s, n, e)) : e._strict && !n && c(e).unusedTokens.push(s);
                             c(e).charsLeftOver = d - u, o.length > 0 && c(e).unusedInput.push(o), e._a[ke] <= 12 && !0 === c(e).bigHour && e._a[ke] > 0 && (c(e).bigHour = void 0), c(e).parsedDateParts = e._a.slice(0), c(e).meridiem = e._meridiem, e._a[ke] = function(e, t, n) {
                                 var a;
                                 if (null == n) return t;
@@ -6212,10 +6006,10 @@ webpackJsonp([40], {
                 Ut.fn = Et.prototype, Ut.invalid = function() {
                     return Ut(NaN)
                 };
-                var qt = Vt(1, "add"),
-                    Kt = Vt(-1, "subtract");
+                var Kt = Vt(1, "add"),
+                    Qt = Vt(-1, "subtract");
 
-                function Qt(e) {
+                function qt(e) {
                     var t;
                     return void 0 === e ? this._locale._abbr : (null != (t = mt(e)) && (this._locale = t), this)
                 }
@@ -6244,13 +6038,13 @@ webpackJsonp([40], {
                     return this.weekYear() % 100
                 }), V(0, ["GG", 2], 0, function() {
                     return this.isoWeekYear() % 100
-                }), en("gggg", "weekYear"), en("ggggg", "weekYear"), en("GGGG", "isoWeekYear"), en("GGGGG", "isoWeekYear"), O("weekYear", "gg"), O("isoWeekYear", "GG"), C("weekYear", 1), C("isoWeekYear", 1), ce("G", de), ce("g", de), ce("GG", te, Q), ce("gg", te, Q), ce("GGGG", se, $), ce("gggg", se, $), ce("GGGGG", ie, ee), ce("ggggg", ie, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
+                }), en("gggg", "weekYear"), en("ggggg", "weekYear"), en("GGGG", "isoWeekYear"), en("GGGGG", "isoWeekYear"), O("weekYear", "gg"), O("isoWeekYear", "GG"), C("weekYear", 1), C("isoWeekYear", 1), ce("G", de), ce("g", de), ce("GG", te, q), ce("gg", te, q), ce("GGGG", se, $), ce("gggg", se, $), ce("GGGGG", ie, ee), ce("ggggg", ie, ee), ye(["gggg", "ggggg", "GGGG", "GGGGG"], function(e, t, n, a) {
                     t[a.substr(0, 2)] = k(e)
                 }), ye(["gg", "GG"], function(e, t, n, r) {
                     t[r] = a.parseTwoDigitYear(e)
-                }), V("Q", 0, "Qo", "quarter"), O("quarter", "Q"), C("quarter", 7), ce("Q", K), pe("Q", function(e, t) {
+                }), V("Q", 0, "Qo", "quarter"), O("quarter", "Q"), C("quarter", 7), ce("Q", Q), pe("Q", function(e, t) {
                     t[ge] = 3 * (k(e) - 1)
-                }), V("D", ["DD", 2], "Do", "date"), O("date", "D"), C("date", 9), ce("D", te), ce("DD", te, Q), ce("Do", function(e, t) {
+                }), V("D", ["DD", 2], "Do", "date"), O("date", "D"), C("date", 9), ce("D", te), ce("DD", te, q), ce("Do", function(e, t) {
                     return e ? t._dayOfMonthOrdinalParse || t._ordinalParse : t._dayOfMonthOrdinalParseLenient
                 }), pe(["D", "DD"], De), pe("Do", function(e, t) {
                     t[De] = k(e.match(te)[0])
@@ -6258,9 +6052,9 @@ webpackJsonp([40], {
                 var nn = N("Date", !0);
                 V("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), O("dayOfYear", "DDD"), C("dayOfYear", 4), ce("DDD", re), ce("DDDD", X), pe(["DDD", "DDDD"], function(e, t, n) {
                     n._dayOfYear = k(e)
-                }), V("m", ["mm", 2], 0, "minute"), O("minute", "m"), C("minute", 14), ce("m", te), ce("mm", te, Q), pe(["m", "mm"], ve);
+                }), V("m", ["mm", 2], 0, "minute"), O("minute", "m"), C("minute", 14), ce("m", te), ce("mm", te, q), pe(["m", "mm"], ve);
                 var an = N("Minutes", !1);
-                V("s", ["ss", 2], 0, "second"), O("second", "s"), C("second", 15), ce("s", te), ce("ss", te, Q), pe(["s", "ss"], Te);
+                V("s", ["ss", 2], 0, "second"), O("second", "s"), C("second", 15), ce("s", te), ce("ss", te, q), pe(["s", "ss"], Te);
                 var rn, sn = N("Seconds", !1);
                 for (V("S", 0, 0, function() {
                         return ~~(this.millisecond() / 100)
@@ -6278,7 +6072,7 @@ webpackJsonp([40], {
                         return 1e5 * this.millisecond()
                     }), V(0, ["SSSSSSSSS", 9], 0, function() {
                         return 1e6 * this.millisecond()
-                    }), O("millisecond", "ms"), C("millisecond", 16), ce("S", re, K), ce("SS", re, Q), ce("SSS", re, X), rn = "SSSS"; rn.length <= 9; rn += "S") ce(rn, oe);
+                    }), O("millisecond", "ms"), C("millisecond", 16), ce("S", re, Q), ce("SS", re, q), ce("SSS", re, X), rn = "SSSS"; rn.length <= 9; rn += "S") ce(rn, oe);
 
                 function on(e, t) {
                     t[we] = k(1e3 * ("0." + e))
@@ -6291,7 +6085,7 @@ webpackJsonp([40], {
                 function ln(e) {
                     return e
                 }
-                un.add = qt, un.calendar = function(e, t) {
+                un.add = Kt, un.calendar = function(e, t) {
                     var n = e || St(),
                         r = Nt(n, this).startOf("day"),
                         s = a.calendarFormat(this, r) || "sameElse",
@@ -6344,7 +6138,7 @@ webpackJsonp([40], {
                     return this.isSame(e, t) || this.isBefore(e, t)
                 }, un.isValid = function() {
                     return f(this)
-                }, un.lang = Xt, un.locale = Qt, un.localeData = $t, un.max = Ht, un.min = xt, un.parsingFlags = function() {
+                }, un.lang = Xt, un.locale = qt, un.localeData = $t, un.max = Ht, un.min = xt, un.parsingFlags = function() {
                     return _({}, c(this))
                 }, un.set = function(e, t) {
                     if ("object" == typeof e)
@@ -6380,7 +6174,7 @@ webpackJsonp([40], {
                             this.milliseconds(0)
                     }
                     return "week" === e && this.weekday(0), "isoWeek" === e && this.isoWeekday(1), "quarter" === e && this.month(3 * Math.floor(this.month() / 3)), this
-                }, un.subtract = Kt, un.toArray = function() {
+                }, un.subtract = Qt, un.toArray = function() {
                     var e = this;
                     return [e.year(), e.month(), e.date(), e.hour(), e.minute(), e.second(), e.millisecond()]
                 }, un.toObject = function() {
@@ -6607,9 +6401,9 @@ webpackJsonp([40], {
                         if (!n && this._weekdaysParse[a].test(e)) return a
                     }
                 }, _n.weekdaysRegex = function(e) {
-                    return this._weekdaysParseExact ? (l(this, "_weekdaysRegex") || $e.call(this), e ? this._weekdaysStrictRegex : this._weekdaysRegex) : (l(this, "_weekdaysRegex") || (this._weekdaysRegex = Ke), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex)
+                    return this._weekdaysParseExact ? (l(this, "_weekdaysRegex") || $e.call(this), e ? this._weekdaysStrictRegex : this._weekdaysRegex) : (l(this, "_weekdaysRegex") || (this._weekdaysRegex = Qe), this._weekdaysStrictRegex && e ? this._weekdaysStrictRegex : this._weekdaysRegex)
                 }, _n.weekdaysShortRegex = function(e) {
-                    return this._weekdaysParseExact ? (l(this, "_weekdaysRegex") || $e.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (l(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = Qe), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
+                    return this._weekdaysParseExact ? (l(this, "_weekdaysRegex") || $e.call(this), e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex) : (l(this, "_weekdaysShortRegex") || (this._weekdaysShortRegex = qe), this._weekdaysShortStrictRegex && e ? this._weekdaysShortStrictRegex : this._weekdaysShortRegex)
                 }, _n.weekdaysMinRegex = function(e) {
                     return this._weekdaysParseExact ? (l(this, "_weekdaysRegex") || $e.call(this), e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex) : (l(this, "_weekdaysMinRegex") || (this._weekdaysMinRegex = Xe), this._weekdaysMinStrictRegex && e ? this._weekdaysMinStrictRegex : this._weekdaysMinRegex)
                 }, _n.isPM = function(e) {
@@ -6754,7 +6548,7 @@ webpackJsonp([40], {
                                 }.apply(null, l)
                         }(this, !e, t);
                     return e && (n = t.pastFuture(+this, n)), t.postformat(n)
-                }, zn.toISOString = In, zn.toString = In, zn.toJSON = In, zn.locale = Qt, zn.localeData = $t, zn.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", In), zn.lang = Xt, V("X", 0, 0, "unix"), V("x", 0, 0, "valueOf"), ce("x", de), ce("X", /[+-]?\d+(\.\d{1,3})?/), pe("X", function(e, t, n) {
+                }, zn.toISOString = In, zn.toString = In, zn.toJSON = In, zn.locale = qt, zn.localeData = $t, zn.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", In), zn.lang = Xt, V("X", 0, 0, "unix"), V("x", 0, 0, "valueOf"), ce("x", de), ce("X", /[+-]?\d+(\.\d{1,3})?/), pe("X", function(e, t, n) {
                     n._d = new Date(1e3 * parseFloat(e, 10))
                 }), pe("x", function(e, t, n) {
                     n._d = new Date(k(e))
@@ -10138,15 +9932,15 @@ webpackJsonp([40], {
             G = n("NXs7"),
             V = n("0nzt"),
             Z = n("l7ua"),
-            q = (n("SWLI"), {
+            K = (n("SWLI"), {
                 light: "#000",
                 dark: "#fff"
             }),
-            K = {
+            Q = {
                 light: "#a49fad",
                 dark: "#898395"
             },
-            Q = function() {
+            q = function() {
                 return {
                     cvv: !1,
                     first_name: !1,
@@ -10165,7 +9959,7 @@ webpackJsonp([40], {
                         recurlyReady: !1,
                         updatingPaymentMethod: !1,
                         errorMessage: "",
-                        errorState: Q()
+                        errorState: q()
                     }, t.handleSubmit = function() {
                         t.setState(function(e) {
                             return {
@@ -10199,7 +9993,7 @@ webpackJsonp([40], {
                         })
                     }, t.handleValidationError = function(e) {
                         if (e.code === Z.a.Validation || e.code === Z.a.InvalidParameter) {
-                            var n = Q();
+                            var n = q();
                             e.fields && e.fields.forEach(function(e) {
                                 n[e] = !0
                             }), t.setState({
@@ -10208,7 +10002,7 @@ webpackJsonp([40], {
                             })
                         } else e.code && t.setState({
                             errorMessage: Object(m.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCard"),
-                            errorState: Q()
+                            errorState: q()
                         })
                     }, t.handleFirstName = function(e) {
                         t.setState({
@@ -10366,9 +10160,9 @@ webpackJsonp([40], {
                                 style: {
                                     height: "auto",
                                     fontSize: "12px",
-                                    fontColor: this.props.darkModeEnabled ? q.dark : q.light,
+                                    fontColor: this.props.darkModeEnabled ? K.dark : K.light,
                                     placeholder: {
-                                        color: this.props.darkModeEnabled ? K.dark : K.light
+                                        color: this.props.darkModeEnabled ? Q.dark : Q.light
                                     }
                                 }
                             },
@@ -11680,12 +11474,12 @@ webpackJsonp([40], {
         ! function(e) {
             e.Amazon = "amazon", e.CreditCard = "credit_card", e.Paypal = "paypal"
         }(Ee || (Ee = {}));
-        var qe;
+        var Ke;
         n("r7/5");
         ! function(e) {
             e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
-        }(qe || (qe = {}));
-        var Ke, Qe, Xe = function() {
+        }(Ke || (Ke = {}));
+        var Qe, qe, Xe = function() {
                 return Object(m.d)("Twitch Turbo", "TransactionHistoryTab")
             },
             $e = function(e) {
@@ -11720,21 +11514,21 @@ webpackJsonp([40], {
                         if ("Turbo" === e.name) return Object(m.d)("Turbo - Subscription", "TransactionHistoryTab");
                         if (e.tier) {
                             if (t.gift) switch (e.tier) {
-                                case qe.Tier1:
+                                case Ke.Tier1:
                                     return Object(m.d)("Gift Subscription - Tier 1", "TransactionHistoryTab");
-                                case qe.Tier2:
+                                case Ke.Tier2:
                                     return Object(m.d)("Gift Subscription - Tier 2", "TransactionHistoryTab");
-                                case qe.Tier3:
+                                case Ke.Tier3:
                                     return Object(m.d)("Gift Subscription - Tier 3", "TransactionHistoryTab");
                                 default:
                                     return "-"
                             }
                             switch (e.tier) {
-                                case qe.Tier1:
+                                case Ke.Tier1:
                                     return Object(m.d)("Channel Subscription - Tier 1", "TransactionHistoryTab");
-                                case qe.Tier2:
+                                case Ke.Tier2:
                                     return Object(m.d)("Channel Subscription - Tier 2", "TransactionHistoryTab");
-                                case qe.Tier3:
+                                case Ke.Tier3:
                                     return Object(m.d)("Channel Subscription - Tier 3", "TransactionHistoryTab");
                                 default:
                                     return Object(m.d)("Channel Subscription - One Time", "TransactionHistoryTab")
@@ -11846,10 +11640,10 @@ webpackJsonp([40], {
             tt = n("T2Gu");
         ! function(e) {
             e.PurchaseDateDesc = "PURCHASE_DATE_DESC", e.PurchaseDateAsc = "PURCHASE_DATE_ASC", e.PriceDesc = "PRICE_DESC", e.PriceAsc = "PRICE_ASC"
-        }(Ke || (Ke = {})),
+        }(Qe || (Qe = {})),
         function(e) {
             e.All = "ALL", e.Subscriptions = "SUBSCRIPTIONS"
-        }(Qe || (Qe = {}));
+        }(qe || (qe = {}));
         var nt = 15,
             at = "no-transactions-text-selector",
             rt = function(e) {
@@ -11955,7 +11749,7 @@ webpackJsonp([40], {
                                 switch (a.label) {
                                     case 0:
                                         return e = this.state.dateSortType, t = e === g._32.Default || e === g._32.Ascending ? g._32.Descending : g._32.Ascending, n = u.__assign({}, this.state.currentFilters, {
-                                            sortBy: t === g._32.Descending ? Ke.PurchaseDateDesc : Ke.PurchaseDateAsc
+                                            sortBy: t === g._32.Descending ? Qe.PurchaseDateDesc : Qe.PurchaseDateAsc
                                         }), [4, this.props.getFilteredQuery(n)];
                                     case 1:
                                         return a.sent(), this.setState({
@@ -11974,7 +11768,7 @@ webpackJsonp([40], {
                                 switch (a.label) {
                                     case 0:
                                         return e = this.state.costSortType, t = e === g._32.Default || e === g._32.Ascending ? g._32.Descending : g._32.Ascending, n = u.__assign({}, this.state.currentFilters, {
-                                            sortBy: t === g._32.Descending ? Ke.PriceDesc : Ke.PriceAsc
+                                            sortBy: t === g._32.Descending ? Qe.PriceDesc : Qe.PriceAsc
                                         }), [4, this.props.getFilteredQuery(n)];
                                     case 1:
                                         return a.sent(), this.setState({
@@ -12145,8 +11939,8 @@ webpackJsonp([40], {
                             after: "0",
                             filters: {
                                 userID: e.data.currentUser.id,
-                                sortBy: Ke.PurchaseDateDesc,
-                                type: Qe.All
+                                sortBy: Qe.PurchaseDateDesc,
+                                type: qe.All
                             }
                         }
                     }
@@ -15741,4 +15535,4 @@ webpackJsonp([40], {
             }(a || (a = {}))
     }
 });
-//# sourceMappingURL=pages.payments-77a9900ca091c82b864604ca2b23a0f4.js.map
+//# sourceMappingURL=pages.payments-b6d4dac9b1a5a0a36f2f23718aa794be.js.map

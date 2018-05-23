@@ -1,4 +1,4 @@
-webpackJsonp([110], {
+webpackJsonp([108], {
     "0blB": function(e, t) {},
     "7XNA": function(e, t) {
         var n = {
@@ -662,4 +662,4 @@ webpackJsonp([110], {
     r3tw: function(e, t) {},
     zaS7: function(e, t) {}
 });
-//# sourceMappingURL=pages.prime.components.twitch-prime-linking-12ef0ccee4adcf671d103aaf4729c398.js.map
+//# sourceMappingURL=pages.prime.components.twitch-prime-linking-fdcdcadb0548ef255b1a47720c5a18fa.js.map

@@ -1,4 +1,4 @@
-webpackJsonp([62], {
+webpackJsonp([63], {
     "+V/3": function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
@@ -6,16 +6,16 @@ webpackJsonp([62], {
         }), n.d(t, "d", function() {
             return r
         }), n.d(t, "e", function() {
-            return s
-        }), n.d(t, "b", function() {
             return a
+        }), n.d(t, "b", function() {
+            return s
         }), n.d(t, "a", function() {
             return o
         });
         var i = "subscribe_to_channel",
             r = "turbo",
-            s = "visit_url",
-            a = "none",
+            a = "visit_url",
+            s = "none",
             o = "broadcaster"
     },
     "16B9": function(e, t) {},
@@ -30,212 +30,6 @@ webpackJsonp([62], {
         }), n.o(r, "PageviewMedium") && n.d(t, "PageviewMedium", function() {
             return r.PageviewMedium
         })
-    },
-    "9u8h": function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
-            return a
-        });
-        var i = n("TToO"),
-            r = n("6sO2"),
-            s = n("Aj/L"),
-            a = function() {
-                function e() {}
-                return e.get = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "GET"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.getOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, i.__assign({}, t, {
-                                        method: "GET"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.put = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.putOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, i.__assign({}, t, {
-                                        method: "PUT"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.post = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.postOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, i.__assign({}, t, {
-                                        method: "POST"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.delete = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.request(e, i.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.deleteOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(r) {
-                            switch (r.label) {
-                                case 0:
-                                    return [4, this.requestOrThrow(e, i.__assign({}, t, {
-                                        method: "DELETE"
-                                    }), n)];
-                                case 1:
-                                    return [2, r.sent()]
-                            }
-                        })
-                    })
-                }, e.request = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        var r, s, a, o;
-                        return i.__generator(this, function(u) {
-                            switch (u.label) {
-                                case 0:
-                                    return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, s = this.serialize(t.body, r), a = i.__assign({}, t, {
-                                        body: s
-                                    }), [4, this._fetch(e, a)];
-                                case 1:
-                                    return o = u.sent(), [4, this.constructLegacyAPIResponse(o)];
-                                case 2:
-                                    return [2, u.sent()]
-                            }
-                        })
-                    })
-                }, e.requestOrThrow = function(e, t, n) {
-                    return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, void 0, function() {
-                        var r, s;
-                        return i.__generator(this, function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return a.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
-                                case 1:
-                                    if ((r = a.sent()).error || r.requestError) throw new Error("Error while making request");
-                                    return s = i.__assign({}, r, {
-                                        body: r.body
-                                    }), [2, Promise.resolve(s)];
-                                case 2:
-                                    throw a.sent();
-                                case 3:
-                                    return [2]
-                            }
-                        })
-                    })
-                }, e.getAPIURL = function(e) {
-                    return new URL(e, r.o.config.apiBaseURL)
-                }, e.constructLegacyAPIResponse = function(e) {
-                    return i.__awaiter(this, void 0, void 0, function() {
-                        var t, n, r, s;
-                        return i.__generator(this, function(i) {
-                            switch (i.label) {
-                                case 0:
-                                    t = {
-                                        status: e.status
-                                    }, i.label = 1;
-                                case 1:
-                                    return i.trys.push([1, 3, , 4]), [4, e.json()];
-                                case 2:
-                                    return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
-                                case 3:
-                                    return r = i.sent(), e.headers && e.headers.get && (s = e.headers.get("Content-Type")) && -1 !== s.indexOf("application/json") && (t.requestError = r), [3, 4];
-                                case 4:
-                                    return [2, t]
-                            }
-                        })
-                    })
-                }, e._fetch = function(e, t) {
-                    return void 0 === t && (t = {}), i.__awaiter(this, void 0, void 0, function() {
-                        return i.__generator(this, function(n) {
-                            switch (n.label) {
-                                case 0:
-                                    return [4, fetch(this.getAPIURL(e).toString(), t)];
-                                case 1:
-                                    return [2, n.sent()]
-                            }
-                        })
-                    })
-                }, e.constructOptions = function(e, t) {
-                    return e = Object.assign({}, e, {
-                        headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
-                    })
-                }, e.serialize = function(e, t) {
-                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
-                        contentType: t
-                    }), null) : null
-                }, e.getDefaultHeaders = function(e, t) {
-                    var n = r.o.store.getState(),
-                        i = {
-                            Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
-                            "Accept-Language": "en-us",
-                            "Client-ID": r.o.config.legacyClientID,
-                            "X-Requested-With": "XMLHttpRequest"
-                        };
-                    e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
-                    var a = Object(s.c)(n);
-                    return a && (i.Authorization = "OAuth " + a.authToken, a.legacyCSRFToken && (i["Twitch-Api-Token"] = a.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                        i[e] && delete i[e]
-                    }), i
-                }, e.logger = r.o.logger.withCategory("legacy-api"), e
-            }()
     },
     AnDU: function(e, t) {},
     MjRD: function(e, t) {
@@ -1356,14 +1150,14 @@ webpackJsonp([62], {
         };
         var r = {};
 
-        function s(e) {
+        function a(e) {
             return e.filter(function(e) {
                 if ("FragmentDefinition" !== e.kind) return !0;
                 var t = e.name.value;
                 return !r[t] && (r[t] = !0, !0)
             })
         }
-        i.definitions = i.definitions.concat(s(n("QU+n").definitions)), i.definitions = i.definitions.concat(s(n("cpDk").definitions)), e.exports = i
+        i.definitions = i.definitions.concat(a(n("QU+n").definitions)), i.definitions = i.definitions.concat(a(n("cpDk").definitions)), e.exports = i
     },
     jQFB: function(e, t, n) {
         "use strict";
@@ -1372,8 +1166,8 @@ webpackJsonp([62], {
         });
         var i = n("RH2O"),
             r = n("2KeS"),
-            s = n("+xm8"),
-            a = n("f2i/"),
+            a = n("+xm8"),
+            s = n("f2i/"),
             o = n("Aj/L"),
             u = n("TToO"),
             c = n("GiK3"),
@@ -1426,24 +1220,24 @@ webpackJsonp([62], {
                     }
                 }, c.createElement(S.Q, null, Object(d.d)('To use your free subscription, go to a channel of your choice and select "Subscribe Free"', "AvailablePrimeSubCard"))))
             }),
-            _ = n("SZoP"),
-            B = n("urTJ"),
+            B = n("SZoP"),
+            _ = n("urTJ"),
             E = n("V5M+"),
-            O = n("+8VM"),
-            N = n("9u8h");
-        var C, T;
+            N = n("+8VM"),
+            C = n("9u8h");
+        var O, U;
         n("l6se");
         ! function(e) {
             e.ErrorMessage = "DisableGiftModalErrorMessage", e.CancelButton = "DisableGiftCancelButton", e.ConfirmButton = "DisableGiftConfirmButton"
-        }(C || (C = {})),
+        }(O || (O = {})),
         function(e) {
             e[e.Success = 0] = "Success", e[e.Error = 1] = "Error", e[e.InProgress = 2] = "InProgress", e[e.Unconfirmed = 3] = "Unconfirmed"
-        }(T || (T = {}));
-        var w, U = function(e) {
+        }(U || (U = {}));
+        var P, D = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
-                        requestStatus: T.Unconfirmed
+                        requestStatus: U.Unconfirmed
                     }, t.onConfirmDisableGift = function() {
                         return u.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, i = this;
@@ -1451,30 +1245,30 @@ webpackJsonp([62], {
                                 switch (r.label) {
                                     case 0:
                                         e = this.props.currentUserID, t = this.props.originID, n = this.props.subscriptionProductID, this.setState({
-                                            requestStatus: T.InProgress
+                                            requestStatus: U.InProgress
                                         }), r.label = 1;
                                     case 1:
                                         return r.trys.push([1, 3, , 4]), [4, function(e, t, n) {
                                             return u.__awaiter(this, void 0, void 0, function() {
                                                 var i, r;
-                                                return u.__generator(this, function(s) {
-                                                    switch (s.label) {
+                                                return u.__generator(this, function(a) {
+                                                    switch (a.label) {
                                                         case 0:
                                                             i = {
                                                                 recipient_id: e,
                                                                 origin_id: t,
                                                                 product_id: n
-                                                            }, s.label = 1;
+                                                            }, a.label = 1;
                                                         case 1:
-                                                            return s.trys.push([1, 3, , 4]), [4, N.a.postOrThrow("/v5/subscriptions/gift/cancel", {
+                                                            return a.trys.push([1, 3, , 4]), [4, C.a.postOrThrow("/v5/subscriptions/gift/cancel", {
                                                                 body: i
                                                             }, {
                                                                 version: 5
                                                             })];
                                                         case 2:
-                                                            return s.sent(), [3, 4];
+                                                            return a.sent(), [3, 4];
                                                         case 3:
-                                                            return r = s.sent(), [2, Promise.reject(r)];
+                                                            return r = a.sent(), [2, Promise.reject(r)];
                                                         case 4:
                                                             return [2]
                                                     }
@@ -1483,13 +1277,13 @@ webpackJsonp([62], {
                                         }(e, t, n)];
                                     case 2:
                                         return r.sent(), this.setState({
-                                            requestStatus: T.Success
+                                            requestStatus: U.Success
                                         }, function() {
                                             i.props.onSuccess()
                                         }), [3, 4];
                                     case 3:
                                         return r.sent(), this.setState({
-                                            requestStatus: T.Error
+                                            requestStatus: U.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -1524,16 +1318,16 @@ webpackJsonp([62], {
                         state: this.getConfirmButtonState(),
                         type: S.B.Alert,
                         onClick: this.onConfirmDisableGift,
-                        "data-test-selector": C.ConfirmButton
+                        "data-test-selector": O.ConfirmButton
                     }, Object(d.d)("Disable Benefits", "DisableGiftModal"))), c.createElement(S.v, {
                         onClick: this.props.onCancel,
-                        "data-test-selector": C.CancelButton
-                    }, Object(d.d)("Cancel", "DisableGiftModal"))), c.createElement(O.a, {
+                        "data-test-selector": O.CancelButton
+                    }, Object(d.d)("Cancel", "DisableGiftModal"))), c.createElement(N.a, {
                         closeOnBackdropClick: !0,
                         closeOnPageNavigation: !0
                     }))
                 }, t.prototype.renderErrorDisplay = function() {
-                    return this.state.requestStatus === T.Error ? c.createElement(S._35, {
+                    return this.state.requestStatus === U.Error ? c.createElement(S._35, {
                         borderTop: !0,
                         borderRight: !0,
                         borderBottom: !0,
@@ -1542,27 +1336,27 @@ webpackJsonp([62], {
                             top: 1
                         },
                         className: "disable-gift-modal__error",
-                        "data-test-selector": C.ErrorMessage
+                        "data-test-selector": O.ErrorMessage
                     }, c.createElement(S.Q, null, Object(d.d)("Something went wrong and your request could not be processed at this time. Please try again later.", "DisableGiftModal"))) : null
                 }, t.prototype.getConfirmButtonState = function() {
                     switch (this.state.requestStatus) {
-                        case T.InProgress:
+                        case U.InProgress:
                             return S.A.Loading;
-                        case T.Success:
+                        case U.Success:
                             return S.A.Success;
-                        case T.Unconfirmed:
-                        case T.Error:
+                        case U.Unconfirmed:
+                        case U.Error:
                         default:
                             return S.A.Default
                     }
                 }, t
             }(c.Component),
-            P = n("rCmJ"),
-            D = n("vBst");
+            T = n("rCmJ"),
+            F = n("vBst");
         ! function(e) {
             e.ChangeTierButton = "ChangeTierButton", e.ChangePaymentMethodButton = "ChangePaymentMethodButton", e.DoNotRenewButton = "DoNotRenewButton", e.CancelGiftButton = "CancelGiftButton", e.CancelAndRefundButton = "CancelAndRefundButton"
-        }(w || (w = {}));
-        var F = function(e) {
+        }(P || (P = {}));
+        var w = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1581,7 +1375,7 @@ webpackJsonp([62], {
                         t.props.currentUserID && t.props.subscription.user && t.props.subscription.product && t.props.subscription.originID && t.props.showDisableGiftModal({
                             onCancel: t.props.closeModal,
                             onSuccess: t.props.onDisableGiftSuccess,
-                            formattedChannelDisplayName: Object(_.a)(t.props.subscription.user.login, t.props.subscription.user.displayName),
+                            formattedChannelDisplayName: Object(B.a)(t.props.subscription.user.login, t.props.subscription.user.displayName),
                             currentUserID: t.props.currentUserID,
                             originID: t.props.subscription.originID,
                             subscriptionProductID: t.props.subscription.product.id
@@ -1593,7 +1387,7 @@ webpackJsonp([62], {
                         t = this.renderInteractables();
                     return t.length < 1 ? null : c.createElement(S._8, {
                         position: S._15.Relative
-                    }, c.createElement(P.a, {
+                    }, c.createElement(T.a, {
                         onClickOut: this.onClickOut
                     }, c.createElement(S._52, {
                         label: e
@@ -1620,29 +1414,29 @@ webpackJsonp([62], {
                         return !!e
                     })
                 }, t.prototype.renderChangeTierButton = function() {
-                    if (this.props.subscription.tier !== D.a.Tier3 && this.props.subscription.user) {
+                    if (this.props.subscription.tier !== F.a.Tier3 && this.props.subscription.user) {
                         var e = {
                             linkTo: "/subs/" + this.props.subscription.user.login
                         };
-                        return this.renderInteractable(w.ChangeTierButton, Object(d.d)("Change Subscription Tier", "EditSubscriptionBalloon"), e)
+                        return this.renderInteractable(P.ChangeTierButton, Object(d.d)("Change Subscription Tier", "EditSubscriptionBalloon"), e)
                     }
                     return null
                 }, t.prototype.renderChangePaymentMethodButton = function() {
-                    return this.renderInteractable(w.ChangePaymentMethodButton, Object(d.d)("Change Payment Method", "EditSubscriptionBalloon"), {
+                    return this.renderInteractable(P.ChangePaymentMethodButton, Object(d.d)("Change Payment Method", "EditSubscriptionBalloon"), {
                         linkTo: "/payments"
                     })
                 }, t.prototype.renderDoNotRenewButton = function() {
                     var e = {
                         alert: !0
                     };
-                    return this.props.subscription.product ? (e.linkTo = "/unsubscribe/" + this.props.subscription.product.name, this.renderInteractable(w.DoNotRenewButton, Object(d.d)("Don't Renew Subscription", "EditSubscriptionBalloon"), e)) : null
+                    return this.props.subscription.product ? (e.linkTo = "/unsubscribe/" + this.props.subscription.product.name, this.renderInteractable(P.DoNotRenewButton, Object(d.d)("Don't Renew Subscription", "EditSubscriptionBalloon"), e)) : null
                 }, t.prototype.renderCancelAndRefundButton = function() {
                     if (this.props.subscription.product) {
                         var e = {
                             alert: !0,
                             linkTo: "/unsubscribe/" + this.props.subscription.product.name + "?cancel=true"
                         };
-                        return this.renderInteractable(w.CancelAndRefundButton, Object(d.d)("Cancel And Refund", "EditSubscriptionBalloon"), e)
+                        return this.renderInteractable(P.CancelAndRefundButton, Object(d.d)("Cancel And Refund", "EditSubscriptionBalloon"), e)
                     }
                     return null
                 }, t.prototype.renderDisableGiftButton = function() {
@@ -1650,7 +1444,7 @@ webpackJsonp([62], {
                         alert: !0,
                         onClick: this.onDisableGiftBenefits
                     };
-                    return this.renderInteractable(w.CancelGiftButton, Object(d.d)("Disable Gift Benefits", "EditSubscriptionBalloon"), e)
+                    return this.renderInteractable(P.CancelGiftButton, Object(d.d)("Disable Gift Benefits", "EditSubscriptionBalloon"), e)
                 }, t.prototype.renderInteractable = function(e, t, n) {
                     return c.createElement(S._6, u.__assign({}, n, {
                         ariaLabel: t,
@@ -1663,23 +1457,23 @@ webpackJsonp([62], {
                     }, c.createElement(S.Q, null, t)))
                 }, t
             }(c.Component),
-            j = Object(g.compose)(Object(b.d)("EditSubscriptionBalloon", {
+            I = Object(g.compose)(Object(b.d)("EditSubscriptionBalloon", {
                 autoReportInteractive: !0
-            }))(F);
-        var R = Object(i.b)(void 0, function(e) {
+            }))(w);
+        var j = Object(i.b)(void 0, function(e) {
                 return Object(r.b)({
                     showDisableGiftModal: function(e) {
                         var t = u.__rest(e, []);
-                        return Object(E.d)(U, t)
+                        return Object(E.d)(D, t)
                     },
                     closeModal: E.c
                 }, e)
-            })(j),
-            I = n("7LIQ"),
-            A = n("Tzcg"),
-            M = n("+V/3");
+            })(I),
+            R = n("7LIQ"),
+            M = n("Tzcg"),
+            A = n("+V/3");
 
-        function L(e) {
+        function x(e) {
             return {
                 id: e.id,
                 setID: e.setID,
@@ -1688,12 +1482,12 @@ webpackJsonp([62], {
                 image1x: e.image1x,
                 image2x: e.image2x,
                 image4x: e.image4x,
-                clickAction: M.c,
+                clickAction: A.c,
                 clickURL: e.clickURL || ""
             }
         }
-        var x, G = n("MjRD");
-        (x || (x = {})).HasAdFreeMessage = "HasAdFreeMessage";
+        var L, G = n("MjRD");
+        (L || (L = {})).HasAdFreeMessage = "HasAdFreeMessage";
         var V = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1716,7 +1510,7 @@ webpackJsonp([62], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.reportInteractiveIfReady()
                 }, t.prototype.render = function() {
-                    return c.createElement(S._8, null, c.createElement(P.a, {
+                    return c.createElement(S._8, null, c.createElement(T.a, {
                         onClickOut: this.onClickOut
                     }, c.createElement(S.v, {
                         type: S.B.Text,
@@ -1745,7 +1539,7 @@ webpackJsonp([62], {
                             bottom: 1
                         }
                     }, c.createElement(S.Q, {
-                        "data-test-selector": x.HasAdFreeMessage
+                        "data-test-selector": L.HasAdFreeMessage
                     }, Object(d.d)("Ad-free streams (with limited exceptions)", "SubscriptionBenefitsBalloon"))), this.renderSubscriberBadges(), c.createElement(S._2, {
                         margin: {
                             bottom: 1
@@ -1767,8 +1561,8 @@ webpackJsonp([62], {
                         return e && "subscriber" === e.setID
                     }).sort(this.compareBadgeVersion).forEach(function(t) {
                         if (t) {
-                            var n = L(t);
-                            e.push(c.createElement(B.a, {
+                            var n = x(t);
+                            e.push(c.createElement(_.a, {
                                 key: "subscription-benefit-badge-" + t.id,
                                 badge: n
                             }))
@@ -1794,7 +1588,7 @@ webpackJsonp([62], {
                     var e = this.getEmotesFromProducts();
                     return 0 === e.length ? null : c.createElement(S._8, null, c.createElement(S.Q, null, Object(d.d)("{count, plural, one {# subscriber emote} other {# subscriber emotes}}", {
                         count: e.length
-                    }, "SubscriptionBenefitsBalloon")), c.createElement(I.a, {
+                    }, "SubscriptionBenefitsBalloon")), c.createElement(R.a, {
                         emoteSet: {
                             id: "",
                             emotes: e
@@ -1834,7 +1628,7 @@ webpackJsonp([62], {
                     this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.getSubscribedProductAndTiersBelow = function() {
                     return this.props.data.user && this.props.data.user.subscriptionProducts ? this.props.data.user.subscriptionProducts.filter(function(e) {
-                        return !!(e && e.self && e.self.benefit) && (e.tier !== D.a.Custom && Number(e.tier) || Number(D.a.Tier1)) <= (e.self.benefit.tier !== D.a.Custom && Number(e.self.benefit.tier) || Number(D.a.Tier1))
+                        return !!(e && e.self && e.self.benefit) && (e.tier !== F.a.Custom && Number(e.tier) || Number(F.a.Tier1)) <= (e.self.benefit.tier !== F.a.Custom && Number(e.self.benefit.tier) || Number(F.a.Tier1))
                     }) : []
                 }, t.prototype.getEmotesFromProducts = function() {
                     var e = this.getSubscribedProductAndTiersBelow().filter(function(e) {
@@ -1851,7 +1645,7 @@ webpackJsonp([62], {
                             token: e.token
                         }
                     });
-                    return Object(A.b)(e)
+                    return Object(M.b)(e)
                 }, t
             }(c.Component),
             Q = Object(g.compose)(Object(v.a)(G, {
@@ -1894,7 +1688,7 @@ webpackJsonp([62], {
         function(e) {
             e.TierDisplay = "TierDisplay", e.ExpiryMessage = "ExpiryMessage", e.PaidUpgradeMessage = "PaidUpgradeMessage", e.CancelPaidUpgradeButton = "CancelPaidUpgradeButton"
         }(J || (J = {}));
-        var X, K, Z = function(e) {
+        var K, X, Z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1911,25 +1705,25 @@ webpackJsonp([62], {
                                     case 1:
                                         return e.trys.push([1, 3, , 4]), [4, function(e, t, n, i) {
                                             return u.__awaiter(this, void 0, void 0, function() {
-                                                var r, s;
-                                                return u.__generator(this, function(a) {
-                                                    switch (a.label) {
+                                                var r, a;
+                                                return u.__generator(this, function(s) {
+                                                    switch (s.label) {
                                                         case 0:
                                                             r = {
                                                                 reason: "cancel paid upgrade",
                                                                 gift_purchase_profile_id: i,
                                                                 purchase_profile_id: n
-                                                            }, a.label = 1;
+                                                            }, s.label = 1;
                                                         case 1:
-                                                            return a.trys.push([1, 3, , 4]), [4, N.a.postOrThrow("/kraken/checkout/users/" + e + "/products/" + t + "/purchase/cancel", {
+                                                            return s.trys.push([1, 3, , 4]), [4, C.a.postOrThrow("/kraken/checkout/users/" + e + "/products/" + t + "/purchase/cancel", {
                                                                 body: r
                                                             }, {
                                                                 version: 5
                                                             })];
                                                         case 2:
-                                                            return a.sent(), [3, 4];
+                                                            return s.sent(), [3, 4];
                                                         case 3:
-                                                            return s = a.sent(), [2, Promise.reject(s)];
+                                                            return a = s.sent(), [2, Promise.reject(a)];
                                                         case 4:
                                                             return [2]
                                                     }
@@ -1986,7 +1780,7 @@ webpackJsonp([62], {
                     var e, t, n = null,
                         i = "",
                         r = void 0;
-                    if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) n = this.props.subBenefit.user.bannerImageURL, e = Object(_.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), i = this.props.subBenefit.user.displayName, r = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
+                    if (this.props.subBenefit.user && this.props.subBenefit.user.displayName && this.props.subBenefit.user.login) n = this.props.subBenefit.user.bannerImageURL, e = Object(B.a)(this.props.subBenefit.user.login, this.props.subBenefit.user.displayName), i = this.props.subBenefit.user.displayName, r = "/" + this.props.subBenefit.user.login, t = this.props.subBenefit.user.profileImageURL;
                     else {
                         if (!this.isTurbo) return null;
                         i = e = Object(d.d)("Twitch Turbo", "SubscriptionCard"), r = "/settings/turbo", t = "https://www.twitch.tv/images/xarth/pages/turbo/features_badge.png"
@@ -2025,7 +1819,7 @@ webpackJsonp([62], {
                         display: S.R.Flex,
                         justifyContent: S._7.End,
                         className: "subscription-card__edit-button"
-                    }, c.createElement(R, {
+                    }, c.createElement(j, {
                         subscription: this.props.subBenefit,
                         currentUserID: this.props.currentUserID,
                         onDisableGiftSuccess: this.onGiftDisableSuccess
@@ -2118,13 +1912,13 @@ webpackJsonp([62], {
                     if (this.props.subBenefit.user && this.props.subBenefit.user.self ? t = this.props.subBenefit.user.self.displayBadges.find(function(e) {
                             return null !== e && "subscriber" === e.setID
                         }) : this.isTurbo && this.props.turboBadge && (e = Object(d.d)("Turbo Badge", "SubscriptionCard"), t = this.props.turboBadge), t) {
-                        var n = L(t);
+                        var n = x(t);
                         return c.createElement(S._8, {
                             display: S.R.Flex,
                             margin: {
                                 bottom: .5
                             }
-                        }, c.createElement(B.a, {
+                        }, c.createElement(_.a, {
                             badge: n
                         }), c.createElement(S._2, {
                             margin: {
@@ -2137,7 +1931,7 @@ webpackJsonp([62], {
                     if (this.props.subBenefit.gift && this.props.subBenefit.gift.isGift) {
                         var e = void 0;
                         return e = this.props.subBenefit.gift.gifter ? Object(d.d)("Gift Subscription from {sender}", {
-                            sender: Object(_.a)(this.props.subBenefit.gift.gifter.login, this.props.subBenefit.gift.gifter.displayName)
+                            sender: Object(B.a)(this.props.subBenefit.gift.gifter.login, this.props.subBenefit.gift.gifter.displayName)
                         }, "SubscriptionCard") : Object(d.d)("Gift Subscription", "SubscriptionCard"), c.createElement(S._8, {
                             display: S.R.Flex,
                             margin: {
@@ -2182,11 +1976,11 @@ webpackJsonp([62], {
                                 relative: r
                             }, "SubscriptionCard"), t = S._25.Timeout
                         } else if (this.props.subBenefit.renewsAt) {
-                            var s = new Date(this.props.subBenefit.renewsAt);
-                            i = Object(d.c)(s, {
+                            var a = new Date(this.props.subBenefit.renewsAt);
+                            i = Object(d.c)(a, {
                                 month: "short",
                                 day: "numeric"
-                            }), r = $(s);
+                            }), r = $(a);
                             e = Object(d.d)("Renews on {date} ({relative})", {
                                 date: i,
                                 relative: r
@@ -2259,30 +2053,30 @@ webpackJsonp([62], {
                     for (var e = [], t = !1, n = 0, i = this.props.subscriptions; n < i.length; n++) {
                         var r = i[n];
                         if (r && this.filterSubType(r)) {
-                            var s = c.createElement(ee, {
+                            var a = c.createElement(ee, {
                                 subBenefit: r,
                                 key: "subscription-" + r.id,
                                 turboBadge: this.props.turboBadge,
                                 currentUserID: this.props.currentUserID
                             });
-                            r.purchasedWithPrime ? (t = !0, e.unshift(s)) : e.push(s)
+                            r.purchasedWithPrime ? (t = !0, e.unshift(a)) : e.push(a)
                         }
                     }
-                    return this.props.type === K.Paid && this.props.hasPrime && !t && e.unshift(c.createElement(y, {
+                    return this.props.type === X.Paid && this.props.hasPrime && !t && e.unshift(c.createElement(y, {
                         key: "prime-subscription-available"
                     })), e
                 }, t.prototype.filterSubType = function(e) {
-                    return !!e && (!(this.props.type !== K.Other || !e.product || "324" !== e.product.id) || !(this.props.type === K.Other || !e.user))
+                    return !!e && (!(this.props.type !== X.Other || !e.product || "324" !== e.product.id) || !(this.props.type === X.Other || !e.user))
                 }, t
             }(c.Component),
             ne = Object(g.compose)(Object(b.d)("SubscriptionsManagementTower", {
                 autoReportInteractive: !0
             }))(te),
             ie = n("fEk1");
-        (X || (X = {})).EmptyMessage = "SubscriptionsEmptyMessage",
+        (K || (K = {})).EmptyMessage = "SubscriptionsEmptyMessage",
             function(e) {
                 e.Paid = "Paid", e.Gifts = "Gifts", e.Mobile = "Mobile", e.Other = "Other"
-            }(K || (K = {}));
+            }(X || (X = {}));
         var re = function(e) {
             function t() {
                 return null !== e && e.apply(this, arguments) || this
@@ -2320,19 +2114,19 @@ webpackJsonp([62], {
                 }) : void 0
             }, t.prototype.renderEmptyMessage = function() {
                 var e = "";
-                return e = this.props.subscriptionType === K.Paid ? Object(d.d)("Any active subscriptions you purchase will show up here.", "SubscriptionsManagementTab") : this.props.subscriptionType === K.Gifts ? Object(d.d)("Any active gift subscriptions you have will show up here.", "SubscriptionsManagementTab") : Object(d.d)("Any other subscriptions you have will show up here.", "SubscriptionsManagementTab"), c.createElement(S._35, {
+                return e = this.props.subscriptionType === X.Paid ? Object(d.d)("Any active subscriptions you purchase will show up here.", "SubscriptionsManagementTab") : this.props.subscriptionType === X.Gifts ? Object(d.d)("Any active gift subscriptions you have will show up here.", "SubscriptionsManagementTab") : Object(d.d)("Any other subscriptions you have will show up here.", "SubscriptionsManagementTab"), c.createElement(S._35, {
                     display: S.R.Flex,
                     justifyContent: S._7.Center,
                     background: S.n.Base,
                     padding: 3,
                     border: !0,
-                    "data-a-target": X.EmptyMessage + "-" + this.props.subscriptionType,
-                    "data-test-selector": X.EmptyMessage
+                    "data-a-target": K.EmptyMessage + "-" + this.props.subscriptionType,
+                    "data-test-selector": K.EmptyMessage
                 }, c.createElement(S.Q, null, e))
             }, t.prototype.getSubCount = function() {
                 var e = this;
                 return this.props.data.currentUser && this.props.data.currentUser.subscriptionBenefits && this.props.data.currentUser.subscriptionBenefits.edges ? this.props.data.currentUser.subscriptionBenefits.edges.reduce(function(t, n) {
-                    return e.props.subscriptionType !== K.Other && n.node && n.node.user ? ++t : e.props.subscriptionType === K.Other && n.node && !n.node.user && n.node.product && "324" === n.node.product.id ? ++t : t
+                    return e.props.subscriptionType !== X.Other && n.node && n.node.user ? ++t : e.props.subscriptionType === X.Other && n.node && !n.node.user && n.node.product && "324" === n.node.product.id ? ++t : t
                 }, 0) : 0
             }, t.prototype.getTurboBadge = function() {
                 var e = void 0;
@@ -2346,24 +2140,24 @@ webpackJsonp([62], {
             }, t
         }(c.Component);
 
-        function se(e) {
+        function ae(e) {
             switch (e) {
-                case K.Gifts:
+                case X.Gifts:
                     return {
                         filter: "GIFT",
                         platform: "WEB"
                     };
-                case K.Mobile:
+                case X.Mobile:
                     return {
                         filter: "PLATFORM",
                         platform: "ANDROID"
                     };
-                case K.Other:
+                case X.Other:
                     return {
                         filter: "ALL",
                         platform: "WEB"
                     };
-                case K.Paid:
+                case X.Paid:
                 default:
                     return {
                         filter: "PLATFORM",
@@ -2371,14 +2165,14 @@ webpackJsonp([62], {
                     }
             }
         }
-        var ae, oe, ue = Object(g.compose)(Object(v.a)(ie, {
+        var se, oe, ue = Object(g.compose)(Object(v.a)(ie, {
                 options: function(e) {
                     return {
                         variables: {
                             limit: 100,
                             cursor: "",
-                            filter: se(e.subscriptionType).filter,
-                            platform: se(e.subscriptionType).platform
+                            filter: ae(e.subscriptionType).filter,
+                            platform: ae(e.subscriptionType).platform
                         }
                     }
                 },
@@ -2410,7 +2204,7 @@ webpackJsonp([62], {
         n("tCaF");
         ! function(e) {
             e.PaidTab = "SubscriptionsPaidTab", e.GiftsTab = "SubscriptionsGiftsTab", e.MobileTab = "SubscriptionsMobileTab", e.OtherTab = "SubscriptionsOtherTab"
-        }(ae || (ae = {})),
+        }(se || (se = {})),
         function(e) {
             e.Gifts = "GIFTS", e.Paid = "PAID", e.Mobile = "MOBILE", e.Other = "OTHER"
         }(oe || (oe = {}));
@@ -2498,14 +2292,14 @@ webpackJsonp([62], {
                     var e, t, n;
                     switch (this.state.currentTab) {
                         case oe.Gifts:
-                            e = K.Gifts, t = ae.GiftsTab, n = this.updateGiftSubCount;
+                            e = X.Gifts, t = se.GiftsTab, n = this.updateGiftSubCount;
                             break;
                         case oe.Other:
-                            e = K.Other, t = ae.OtherTab, n = this.updateOtherSubCount;
+                            e = X.Other, t = se.OtherTab, n = this.updateOtherSubCount;
                             break;
                         case oe.Paid:
                         default:
-                            t = ae.PaidTab, e = K.Paid, n = this.updateWebSubCount
+                            t = se.PaidTab, e = X.Paid, n = this.updateWebSubCount
                     }
                     return c.createElement(S._8, {
                         margin: {
@@ -2532,7 +2326,7 @@ webpackJsonp([62], {
         }, function(e) {
             return Object(r.b)({
                 login: function() {
-                    return a.f(s.a.SubsManagementPage)
+                    return s.f(a.a.SubsManagementPage)
                 }
             }, e)
         })(le);
@@ -2545,8 +2339,8 @@ webpackJsonp([62], {
         "use strict";
         var i = n("TToO"),
             r = n("GiK3"),
-            s = n("+V/3"),
-            a = n("Odds"),
+            a = n("+V/3"),
+            s = n("Odds"),
             o = (n("2IkU"), n("6sO2")),
             u = n("vH/s"),
             c = function(e) {
@@ -2583,7 +2377,7 @@ webpackJsonp([62], {
                     t = e.title,
                     n = e.image1x,
                     i = e.image2x,
-                    s = e.image4x,
+                    a = e.image4x,
                     u = r.createElement("img", {
                         alt: t,
                         "aria-label": Object(o.d)("{badgeTitle} badge", {
@@ -2591,7 +2385,7 @@ webpackJsonp([62], {
                         }, "Badge"),
                         className: "chat-badge",
                         src: n,
-                        srcSet: n + " 1x, " + i + " 2x, " + s + " 4x",
+                        srcSet: n + " 1x, " + i + " 2x, " + a + " 4x",
                         onMouseOver: this.onMouseOver,
                         onMouseOut: this.onMouseOut
                     });
@@ -2600,10 +2394,10 @@ webpackJsonp([62], {
                     onClick: this.onBadgeClickHandler,
                     target: "_blank",
                     "data-a-target": "chat-badge"
-                }, u)), this.state.isHovering ? r.createElement(a._52, {
-                    align: a._53.Left,
+                }, u)), this.state.isHovering ? r.createElement(s._52, {
+                    align: s._53.Left,
                     "data-a-target": "chat-badge",
-                    display: a.R.Inline,
+                    display: s.R.Inline,
                     key: n,
                     label: t,
                     offsetY: "0.9rem"
@@ -2611,11 +2405,11 @@ webpackJsonp([62], {
             }, t.prototype.getTargetURL = function() {
                 var e = this.props.badge;
                 switch (e.clickAction) {
-                    case s.e:
+                    case a.e:
                         return e.clickURL;
-                    case s.c:
+                    case a.c:
                         return e.channelName ? this.getSubscriberLink() : "";
-                    case s.d:
+                    case a.d:
                         return "https://www.twitch.tv/products/turbo?ref=chat_badge";
                     default:
                         return ""
@@ -2634,4 +2428,4 @@ webpackJsonp([62], {
         })
     }
 });
-//# sourceMappingURL=pages.subscriptions-management-1dba48da856ac0f070c7518882d1de11.js.map
+//# sourceMappingURL=pages.subscriptions-management-e8c927749239f1ea2202a3807c941bc3.js.map
