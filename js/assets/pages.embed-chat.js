@@ -5258,9 +5258,9 @@ webpackJsonp([35], {
                         routedRoomName: void 0,
                         isEmbedded: !0
                     }))
-                }, t = i.__decorate([Object(u.d)("EmbedChatPage", {
+                }, t = i.__decorate([Object(u.d)("PopoutChatPage", {
                     autoReportInteractive: !0,
-                    destination: d.a.ChatEmbed
+                    destination: d.a.ChatPopout
                 }), Object(o.a)({
                     location: c.PageviewLocation.Chat
                 })], t)
@@ -10220,7 +10220,7 @@ webpackJsonp([35], {
                                     case 0:
                                         return mn.test(this.state.currentMessageInput) ? this.state.isSendingBits ? [2] : 0 === (e = Object(Wt.a)(this.state.messageCheers)).total ? (this.props.sendMessage(this.state.currentMessageInput), this.setState({
                                             currentMessageInput: ""
-                                        }), this.chatInputRef.focus(), this.autocompleteInputRef.setValue(""), [2]) : this.props.bitsConfig.orderedActions.length && Object(xe.b)(this.props.channelID, this.props.user) && Object(xe.c)(this.props.channelID, this.props.user) && "on" === c.o.experiments.getAssignment("TWILIGHT_OWL_ROOM_CHEERING") && this.props.data.currentUser && null !== this.props.data.currentUser.bitsBalance && this.props.data.user && null !== this.props.data.user.cheer && Object(Wt.f)({
+                                        }), this.chatInputRef.focus(), this.autocompleteInputRef.setValue(""), [2]) : this.props.bitsConfig.orderedActions.length && Object(xe.c)(this.props.channelID, this.props.user) && Object(xe.d)(this.props.channelID, this.props.user) && "on" === c.o.experiments.getAssignment("TWILIGHT_OWL_ROOM_CHEERING") && this.props.data.currentUser && null !== this.props.data.currentUser.bitsBalance && this.props.data.user && null !== this.props.data.user.cheer && Object(Wt.f)({
                                             messageBits: e,
                                             balance: this.props.data.currentUser.bitsBalance,
                                             cheerMinimumBits: this.props.data.user.cheer.settings.cheerMinimumBits,
@@ -10348,7 +10348,7 @@ webpackJsonp([35], {
                             onClick: this.onEmotePickerToggle
                         })],
                         n = null,
-                        i = this.props.bitsConfig.orderedActions.length && Object(xe.b)(this.props.channelID, this.props.user) && Object(xe.c)(this.props.channelID, this.props.user);
+                        i = this.props.bitsConfig.orderedActions.length && Object(xe.c)(this.props.channelID, this.props.user) && Object(xe.d)(this.props.channelID, this.props.user);
                     return i && (t.unshift(l.createElement(Ie.a, {
                         key: "cheer",
                         assignments: {
@@ -11186,7 +11186,7 @@ webpackJsonp([35], {
                         n = this.props.emoteSetsData && this.props.emoteSetsData.emoteSets || [],
                         i = this.props.emoteSetsData && this.props.emoteSetsData.emoteMap || {},
                         r = null;
-                    return this.props.bitsConfig.orderedActions.length && Object(xe.b)(this.props.channelID, this.props.sessionUser) && Object(xe.c)(this.props.channelID, this.props.sessionUser) && (r = l.createElement(Ie.a, {
+                    return this.props.bitsConfig.orderedActions.length && Object(xe.c)(this.props.channelID, this.props.sessionUser) && Object(xe.d)(this.props.channelID, this.props.sessionUser) && (r = l.createElement(Ie.a, {
                         assignments: {
                             fallback: function() {
                                 return null
@@ -28665,7 +28665,7 @@ webpackJsonp([35], {
                     }
                 }, t.prototype.render = function() {
                     var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.id || "",
-                        t = Object(c.b)(e, this.props.sessionUser);
+                        t = Object(c.c)(e, this.props.sessionUser);
                     return this.props.visible ? r.createElement(O, {
                         allEmoteSets: this.state.allEmoteSets,
                         availableUpsells: this.state.availableUpsells,
@@ -31355,21 +31355,29 @@ webpackJsonp([35], {
     },
     TeXj: function(e, t, n) {
         "use strict";
-        t.b = function(e, t, n) {
+        t.c = function(e, t, n) {
             void 0 === n && (n = !1);
-            return s(r, e, t, n)
-        }, t.a = function(e, t, n) {
+            return c(a, e, t, n)
+        }, t.a = d, t.b = function(e, t, n) {
             void 0 === n && (n = !1);
-            return s(a, e, t, n)
-        }, t.c = function(e, t) {
-            return s(o, e, t)
+            var a = i.b.get(s, r.a.Off),
+                o = t && t.roles && t.roles.isStaff || !1;
+            return d(e, t, n) && (a === r.a.On || a === r.a.StaffOnly && o)
+        }, t.d = function(e, t) {
+            return c(l, e, t)
         };
         var i = n("6sO2"),
-            r = "esport_channel_page_whitelist",
-            a = "esport_insider_pass_whitelist",
-            o = "esports_room_cheering_whitelist";
+            r = n("QRuM"),
+            a = "esport_channel_page_whitelist",
+            o = "esport_insider_pass_whitelist",
+            s = "esport_insider_pass_gifting_launch",
+            l = "esports_room_cheering_whitelist";
 
-        function s(e, t, n, r) {
+        function d(e, t, n) {
+            return void 0 === n && (n = !1), c(o, e, t, n)
+        }
+
+        function c(e, t, n, r) {
             void 0 === r && (r = !1);
             var a = i.b.get(e, []),
                 o = n && n.roles && n.roles.isStaff || r;
@@ -37428,7 +37436,7 @@ webpackJsonp([35], {
                     }, t
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
-                    return this.props.isEsportChannel ? l.createElement(V, {
+                    return this.props.isEsportGiftingApproved ? l.createElement(V, {
                         onBack: this.props.onBack,
                         subscriptionProducts: this.props.subscriptionProducts,
                         giftRecipient: this.props.giftRecipient,
@@ -37689,6 +37697,7 @@ webpackJsonp([35], {
                     isEsportChannel: Object(y.a)(this.props.data.channelUser.id, this.props.sessionUser)
                 })
             }, t.prototype.renderSubGiftSelect = function() {
+                var e = Object(y.b)(this.props.data.channelUser.id, this.props.sessionUser);
                 return l.createElement(_._8, null, l.createElement(G.a, {
                     subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
                     isGift: !0
@@ -37707,7 +37716,7 @@ webpackJsonp([35], {
                     subscriptionProducts: this.props.data.channelUser.subscriptionProducts,
                     giftRecipient: this.props.data.targetUser.login,
                     reportSubMenuAction: this.trackBuyGiftSubEvent,
-                    isEsportChannel: Object(y.a)(this.props.data.channelUser.id, this.props.sessionUser)
+                    isEsportGiftingApproved: e
                 })))
             }, t.prototype.renderChatActions = function() {
                 var e = [];
@@ -49986,4 +49995,4 @@ webpackJsonp([35], {
         e.exports = n
     }
 });
-//# sourceMappingURL=pages.embed-chat-d5864c82dfdcf0946afbc5f8a9836395.js.map
+//# sourceMappingURL=pages.embed-chat-f44e54dd8feaa4980f6b08ea43dd801b.js.map

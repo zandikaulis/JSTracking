@@ -1,4 +1,4 @@
-webpackJsonp([114], {
+webpackJsonp([115], {
     "027l": function(e, t) {
         var n = {
             kind: "Document",
@@ -1362,7 +1362,7 @@ webpackJsonp([114], {
                         justifyContent: _._7.Center,
                         alignItems: _.c.Center
                     }, a.createElement(_._10, null));
-                    var e = Object(d.b)(this.props.data.user.id),
+                    var e = Object(d.c)(this.props.data.user.id),
                         t = a.createElement(j, {
                             subbedPlatform: this.state.subPlatform,
                             channelDisplayName: this.props.data.user.displayName,
@@ -1399,4 +1399,4 @@ webpackJsonp([114], {
         })
     }
 });
-//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-fcc34098d20da285df7606a5882d1b80.js.map
+//# sourceMappingURL=pages.subs.components.subs-broadcaster-page-054f7ff02dcd7557dfeb71eed1fd0495.js.map

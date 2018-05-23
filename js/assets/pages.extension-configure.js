@@ -1,4 +1,4 @@
-webpackJsonp([87], {
+webpackJsonp([89], {
     "0mrB": function(e, n) {},
     "1ZLG": function(e, n, t) {
         "use strict";
@@ -71,14 +71,14 @@ webpackJsonp([87], {
             E = t("2KeS"),
             g = t("V5M+"),
             h = t("9Gfr"),
-            f = t("SfDx"),
-            x = t("3zLD"),
-            y = t("7vx8"),
-            k = t("j7/Y"),
+            x = t("SfDx"),
+            f = t("3zLD"),
+            k = t("7vx8"),
+            y = t("j7/Y"),
             b = t("oIkB"),
-            C = t("w9tK"),
-            _ = t("gAaz"),
-            N = t("G8hb"),
+            _ = t("w9tK"),
+            N = t("gAaz"),
+            C = t("G8hb"),
             S = t("CSlQ"),
             O = t("l0vj"),
             I = function(e) {
@@ -234,8 +234,8 @@ webpackJsonp([87], {
                                 extensionVersion: t.version,
                                 isInstalled: n.isExtensionInstalled(t.id),
                                 summary: t.summary,
-                                supportedAnchors: Object(N.i)(t.views),
-                                supportedPlatforms: Object(N.j)(t.views)
+                                supportedAnchors: Object(C.i)(t.views),
+                                supportedPlatforms: Object(C.j)(t.views)
                             })
                         }), e = [1, 2, 3].map(function(e, t) {
                             return o.createElement(R, {
@@ -246,7 +246,7 @@ webpackJsonp([87], {
                             })
                         })
                     }
-                    return o.createElement(c._8, null, o.createElement(_.a, {
+                    return o.createElement(c._8, null, o.createElement(N.a, {
                         trackingContext: {
                             medium: u.PageviewMedium.ExtensionDiscovery
                         }
@@ -267,27 +267,27 @@ webpackJsonp([87], {
                     })
                 }, n
             }(o.Component),
-            F = Object(x.compose)(Object(S.d)("ExtensionDiscoveryPage", {
-                destination: C.a.ExtensionsDiscovery
-            }), Object(k.a)({
+            F = Object(f.compose)(Object(S.d)("ExtensionDiscoveryPage", {
+                destination: _.a.ExtensionsDiscovery
+            }), Object(y.a)({
                 location: u.PageviewLocation.ExtensionsDiscovery
-            }), Object(y.a)(T, {
+            }), Object(k.a)(T, {
                 name: "extensionDiscoveryData"
-            }), Object(y.a)(P, {
+            }), Object(k.a)(P, {
                 name: "installExtension"
             }))(w);
-        var M = Object(v.b)(null, function(e) {
+        var j = Object(v.b)(null, function(e) {
                 return Object(E.b)({
                     showExtensionErrorModal: function() {
                         return Object(g.d)(h.a, {})
                     },
                     showExtensionInstalledModal: function(e) {
                         var n = a.__rest(e, []);
-                        return Object(g.d)(f.a, n)
+                        return Object(g.d)(x.a, n)
                     }
                 }, e)
             })(F),
-            j = t("YJkA"),
+            M = t("YJkA"),
             L = t("bpr6"),
             U = t("twC3");
         var V = t("BwgW"),
@@ -315,7 +315,7 @@ webpackJsonp([87], {
                             var l = n.renderPanelAnchorOptions(i.panels);
                             l.length && a.push(l)
                         }
-                        return t.state === N.a.ACTIVE && a.push(n.renderDeactivate()), a.reduce(function(e, n, t) {
+                        return t.state === C.a.ACTIVE && a.push(n.renderDeactivate()), a.reduce(function(e, n, t) {
                             var i = o.createElement(c._35, {
                                 key: t,
                                 borderTop: !0,
@@ -355,17 +355,17 @@ webpackJsonp([87], {
                         }, Object(d.d)("Deactivate", "ActivateExtensionDropdownV2")))
                     }, n.renderComponentAnchorOptions = function(e) {
                         return e.reduce(function(e, t) {
-                            var i = n.renderSetAnchorLocationInteractable(t, N.b.Component);
+                            var i = n.renderSetAnchorLocationInteractable(t, C.b.Component);
                             return i && e.push(i), e
                         }, [])
                     }, n.renderOverlayAnchorOptions = function(e) {
                         return e.reduce(function(e, t) {
-                            var i = n.renderSetAnchorLocationInteractable(t, N.b.VideoOverlay);
+                            var i = n.renderSetAnchorLocationInteractable(t, C.b.VideoOverlay);
                             return i && e.push(i), e
                         }, [])
                     }, n.renderPanelAnchorOptions = function(e) {
                         var t = e.reduce(function(e, t) {
-                            var i = n.renderSetAnchorLocationInteractable(t, N.b.Panel);
+                            var i = n.renderSetAnchorLocationInteractable(t, C.b.Panel);
                             return i && e.push(i), e
                         }, []);
                         return e.length < G.b && t.push(o.createElement(c._6, {
@@ -380,7 +380,7 @@ webpackJsonp([87], {
                         }, Object(d.d)("Add as a new panel", "ActivateExtensionDropdownV2")))), t
                     }, n.renderSetAnchorLocationInteractable = function(e, t) {
                         var i = n.props.activationConfig;
-                        return i.state === N.a.ACTIVE && i.slot === e ? null : o.createElement(c._6, {
+                        return i.state === C.a.ACTIVE && i.slot === e ? null : o.createElement(c._6, {
                             key: e,
                             blurAfterClick: !0,
                             onClick: n.activateExtension,
@@ -395,7 +395,7 @@ webpackJsonp([87], {
                             slot: e.toUpperCase()
                         }, "ActivateExtensionDropdownV2")))
                     }, n.createPanelAndActivate = function() {
-                        n.props.activateExtension("", N.b.PANEL, !0)
+                        n.props.activateExtension("", C.b.PANEL, !0)
                     }, n.activateExtension = function(e) {
                         var t = e.currentTarget.dataset,
                             i = t.slot,
@@ -411,7 +411,7 @@ webpackJsonp([87], {
                         t = e.canActivate,
                         i = e.requiredActions;
                     return i && i.some(function(e) {
-                        return e.type === N.e.REQUIRES_CONFIGURATION
+                        return e.type === C.e.REQUIRES_CONFIGURATION
                     }) ? o.createElement(c._8, {
                         display: c.R.Flex,
                         alignItems: c.c.Center
@@ -422,7 +422,7 @@ webpackJsonp([87], {
                     }, o.createElement(c.v, {
                         dropdown: !0,
                         type: c.B.Text
-                    }, n.state === N.a.ACTIVE ? this.renderActivePresence(n.slot) : Object(d.d)("Activate", "ActivateExtensionDropdownV2")), o.createElement(c.q, {
+                    }, n.state === C.a.ACTIVE ? this.renderActivePresence(n.slot) : Object(d.d)("Activate", "ActivateExtensionDropdownV2")), o.createElement(c.q, {
                         size: c.s.Medium,
                         offsetY: "-0.1rem",
                         noTail: !0
@@ -517,7 +517,7 @@ webpackJsonp([87], {
                         }
                     }, o.createElement(c.Q, {
                         type: c._49.H5
-                    }, i)), this.renderExtensionTagPills(), a !== N.f.Released && o.createElement(W.a, {
+                    }, i)), this.renderExtensionTagPills(), a !== C.f.Released && o.createElement(W.a, {
                         state: a
                     }))))), o.createElement(c._8, {
                         display: c.R.Flex,
@@ -621,21 +621,21 @@ webpackJsonp([87], {
                 })))))
             };
         q.displayName = "InstalledExtensionPlaceHolder";
-        var Y, K, X, J, $, Z = t("7fT8"),
+        var K, Y, J, X, $, Z = t("7fT8"),
             ee = t("POf9"),
             ne = t("SHGE");
         ! function(e) {
             e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
-        }(Y || (Y = {})),
-        function(e) {
-            e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
         }(K || (K = {})),
         function(e) {
+            e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
+        }(Y || (Y = {})),
+        function(e) {
             e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
-        }(X || (X = {})),
+        }(J || (J = {})),
         function(e) {
             e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
-        }(J || (J = {})),
+        }(X || (X = {})),
         function(e) {
             e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
         }($ || ($ = {}));
@@ -664,7 +664,7 @@ webpackJsonp([87], {
                                     case 3:
                                         return (d = a.sent()) ? (c.slot = d && d.slotID, [3, 5]) : [2, s()];
                                     case 4:
-                                        if (i === N.b.COMPONENT) return [2, this.activateComponentExtensions(e, t)];
+                                        if (i === C.b.COMPONENT) return [2, this.activateComponentExtensions(e, t)];
                                         a.label = 5;
                                     case 5:
                                         return this.applyActivation((u = [], [c].forEach(function(e) {
@@ -676,7 +676,7 @@ webpackJsonp([87], {
                                                     installationID: t
                                                 };
                                             switch (n) {
-                                                case N.b.COMPONENT:
+                                                case C.b.COMPONENT:
                                                     if (!i) return;
                                                     o.component = {
                                                         slot: a,
@@ -684,12 +684,12 @@ webpackJsonp([87], {
                                                         y: i.y
                                                     };
                                                     break;
-                                                case N.b.PANEL:
+                                                case C.b.PANEL:
                                                     o.panel = {
                                                         slot: a
                                                     };
                                                     break;
-                                                case N.b.VIDEO_OVERLAY:
+                                                case C.b.VIDEO_OVERLAY:
                                                     o.videoOverlay = {
                                                         slot: a
                                                     }
@@ -713,13 +713,13 @@ webpackJsonp([87], {
                             if (!o || !o.id || !o.installedExtensions) return t();
                             var i = o.installedExtensions.find(function(n) {
                                 var t = n.activationConfig;
-                                return t.state === N.a.ACTIVE && t.anchor === e.anchor && t.slot === e.slot
+                                return t.state === C.a.ACTIVE && t.anchor === e.anchor && t.slot === e.slot
                             });
                             i ? a({
                                 activationSlot: e.slot,
-                                destructionType: N.c.Replace,
+                                destructionType: C.c.Replace,
                                 existingExtensionName: i.extension.name,
-                                existingMonetizationType: Object(N.h)(i.extension),
+                                existingMonetizationType: Object(C.h)(i.extension),
                                 onConfirm: n
                             }) : n()
                         })
@@ -770,7 +770,7 @@ webpackJsonp([87], {
                                         if (n = this.props, t = n.applyExtensionActivations, i = n.extensionManagementPageData, o = n.showExtensionErrorModal, !(r = i.currentUser) || !r.id) return [2];
                                         a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, N.c.Deactivate)];
+                                        return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, C.c.Deactivate)];
                                     case 2:
                                         return a.sent(), [4, t(Object(b.a)({
                                             channelID: r.id,
@@ -796,7 +796,7 @@ webpackJsonp([87], {
                                         if (n = this.props, t = n.extensionManagementPageData, i = n.showExtensionErrorModal, o = n.uninstallExtension, !(r = t.currentUser) || !r.id) return [2];
                                         a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, N.c.Uninstall)];
+                                        return a.trys.push([1, 4, , 5]), [4, this.confirmExtensionDestruction(e, C.c.Uninstall)];
                                     case 2:
                                         return a.sent(), [4, o(Object(b.a)({
                                             extensionInstallationID: e
@@ -841,7 +841,7 @@ webpackJsonp([87], {
                                 r = e.id,
                                 s = e.requiredActions,
                                 l = e.self,
-                                d = Object(N.i)(a.views);
+                                d = Object(C.i)(a.views);
                             return o.createElement(c._8, {
                                 key: r,
                                 margin: {
@@ -858,12 +858,12 @@ webpackJsonp([87], {
                                 trackingContext: {
                                     medium: u.PageviewMedium.ExtensionManagement
                                 },
-                                supportedAnchors: Object(N.i)(a.views),
-                                supportPlatforms: Object(N.j)(a.views),
+                                supportedAnchors: Object(C.i)(a.views),
+                                supportPlatforms: Object(C.j)(a.views),
                                 activationConfig: i,
                                 availableSlots: function(e, n) {
                                     var t = {};
-                                    if (n.includes(N.b.COMPONENT) && (t.components = ["extension-component-1", "extension-component-2"]), n.includes(N.b.VIDEO_OVERLAY) && (t.overlays = ["extension-overlay-1"]), n.includes(N.b.PANEL) && e.currentUser) {
+                                    if (n.includes(C.b.COMPONENT) && (t.components = ["extension-component-1", "extension-component-2"]), n.includes(C.b.VIDEO_OVERLAY) && (t.overlays = ["extension-overlay-1"]), n.includes(C.b.PANEL) && e.currentUser) {
                                         var i = e.currentUser.panels.reduce(function(e, n) {
                                             return n && n.__typename === ie && e.push(n.slotID), e
                                         }, []);
@@ -919,7 +919,7 @@ webpackJsonp([87], {
                         if (i) {
                             var a = t.installedExtensions.filter(function(e) {
                                     var n = e.activationConfig;
-                                    return n.state === N.a.ACTIVE && n.anchor === N.b.COMPONENT
+                                    return n.state === C.a.ACTIVE && n.anchor === C.b.COMPONENT
                                 }).map(function(e) {
                                     var n = e.id,
                                         t = e.activationConfig,
@@ -957,14 +957,14 @@ webpackJsonp([87], {
                             return n.id === e
                         });
                         if (!r) return i();
-                        var s = Object(N.h)(r.extension);
-                        n === N.c.Uninstall ? a({
-                            destructionType: N.c.Uninstall,
+                        var s = Object(C.h)(r.extension);
+                        n === C.c.Uninstall ? a({
+                            destructionType: C.c.Uninstall,
                             extensionName: r.extension.name,
                             monetizationType: s,
                             onConfirm: t
-                        }) : null !== s && n === N.c.Deactivate ? a({
-                            destructionType: N.c.Deactivate,
+                        }) : null !== s && n === C.c.Deactivate ? a({
+                            destructionType: C.c.Deactivate,
                             extensionName: r.extension.name,
                             monetizationType: s,
                             onConfirm: t
@@ -972,17 +972,17 @@ webpackJsonp([87], {
                     })
                 }, n
             }(o.Component),
-            oe = Object(x.compose)(Object(S.d)("ExtensionManagementPage", {
-                destination: C.a.ChannelDashboardExtensionsManagement
-            }), Object(k.a)({
+            oe = Object(f.compose)(Object(S.d)("ExtensionManagementPage", {
+                destination: _.a.ChannelDashboardExtensionsManagement
+            }), Object(y.a)({
                 location: u.PageviewLocation.DashboardExtensionsManagement
-            }), Object(y.a)(te, {
+            }), Object(k.a)(te, {
                 name: "extensionManagementPageData"
-            }), Object(y.a)(ee, {
+            }), Object(k.a)(ee, {
                 name: "createPanel"
-            }), Object(y.a)(Z, {
+            }), Object(k.a)(Z, {
                 name: "applyExtensionActivations"
-            }), Object(y.a)(ne, {
+            }), Object(k.a)(ne, {
                 name: "uninstallExtension"
             }))(ae);
         var re = Object(v.b)(null, function(e) {
@@ -993,7 +993,7 @@ webpackJsonp([87], {
                     },
                     showExtensionActivatedModal: function(e) {
                         var n = a.__rest(e, []);
-                        return Object(g.d)(j.a, n)
+                        return Object(g.d)(M.a, n)
                     },
                     showExtensionDestructionWarningModal: function(e) {
                         var n = a.__rest(e, []);
@@ -1020,7 +1020,7 @@ webpackJsonp([87], {
                         return o.createElement(o.Fragment, null, o.createElement(p, {
                             channelName: n.params.channelName,
                             selectedTab: i.Store
-                        }), o.createElement(M, null))
+                        }), o.createElement(j, null))
                     }, n
                 }
                 return a.__extends(n, e), n.prototype.render = function() {
@@ -3135,10 +3135,10 @@ webpackJsonp([87], {
             E = t("zezF"),
             g = t("HrG2"),
             h = t("q7Ag"),
-            f = t("CSlQ"),
-            x = t("Odds"),
-            y = t("yjkL"),
-            k = function(e) {
+            x = t("CSlQ"),
+            f = t("Odds"),
+            k = t("yjkL"),
+            y = function(e) {
                 function n() {
                     var n = null !== e && e.apply(this, arguments) || this;
                     return n.state = {
@@ -3176,31 +3176,31 @@ webpackJsonp([87], {
                         var l = this.state.installation,
                             u = l.extension,
                             m = l.activationConfig;
-                        s = r.createElement(x._8, {
+                        s = r.createElement(f._8, {
                             fullWidth: !0
-                        }, r.createElement(x._8, {
+                        }, r.createElement(f._8, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(x.C, {
+                        }, r.createElement(f.C, {
                             row: !0,
                             border: !1
-                        }, r.createElement(x.E, {
+                        }, r.createElement(f.E, {
                             alt: u.name,
                             src: this.state.hasCardImageError ? c.a.defaultAvatarURL : u.iconUrl,
-                            aspect: x.l.Aspect1x1,
-                            size: x.F.Size6,
+                            aspect: f.l.Aspect1x1,
+                            size: f.F.Size6,
                             onError: this.onCardImageError
-                        }), r.createElement(x.D, null, r.createElement(x._8, {
+                        }), r.createElement(f.D, null, r.createElement(f._8, {
                             padding: 1
-                        }, r.createElement(x.Q, {
-                            type: x._49.H4
-                        }, u.name), r.createElement(x.Q, {
-                            type: x._49.Span,
-                            color: x.K.Alt2
+                        }, r.createElement(f.Q, {
+                            type: f._49.H4
+                        }, u.name), r.createElement(f.Q, {
+                            type: f._49.Span,
+                            color: f.K.Alt2
                         }, Object(c.d)("Created by {extensionAuthor}", {
                             extensionAuthor: u.authorName
-                        }, "ExtensionConfigureComponent")))))), r.createElement(x._8, null, r.createElement(E.a, {
+                        }, "ExtensionConfigureComponent")))))), r.createElement(f._8, null, r.createElement(E.a, {
                             anchor: m.anchor,
                             className: "extension-configure-extension-frame",
                             extension: u,
@@ -3218,15 +3218,15 @@ webpackJsonp([87], {
                         dashboardURL: Object(h.c)(this.props.match.params.channelName),
                         title: Object(c.d)("Configure", "ExtensionConfigureComponent")
                     });
-                    return r.createElement(d.b, null, r.createElement(x._8, {
+                    return r.createElement(d.b, null, r.createElement(f._8, {
                         padding: 2
-                    }, r.createElement(x.Q, {
-                        type: x._49.H3
-                    }, this.getFormattedPageTitle()), r.createElement(x._8, {
+                    }, r.createElement(f.Q, {
+                        type: f._49.H3
+                    }, this.getFormattedPageTitle()), r.createElement(f._8, {
                         padding: {
                             top: 2
                         }
-                    }, p, r.createElement(x._35, {
+                    }, p, r.createElement(f._35, {
                         borderRight: !0,
                         borderLeft: !0,
                         borderBottom: !0,
@@ -3245,22 +3245,22 @@ webpackJsonp([87], {
                         to: Object(h.c)(e)
                     })
                 }, n.prototype.renderPlaceholders = function() {
-                    return r.createElement(x._8, {
+                    return r.createElement(f._8, {
                         fullWidth: !0
-                    }, r.createElement(x._8, {
-                        display: x.R.Flex,
-                        alignItems: x.c.Center,
+                    }, r.createElement(f._8, {
+                        display: f.R.Flex,
+                        alignItems: f.c.Center,
                         padding: {
                             y: 1
                         }
-                    }, r.createElement(x._8, null, r.createElement(x._14, {
+                    }, r.createElement(f._8, null, r.createElement(f._14, {
                         width: 60,
                         height: 60
-                    })), r.createElement(x._8, {
+                    })), r.createElement(f._8, {
                         padding: {
                             left: 1
                         }
-                    }, r.createElement(x._14, {
+                    }, r.createElement(f._14, {
                         lineCount: 2,
                         width: 200
                     }))))
@@ -3270,11 +3270,11 @@ webpackJsonp([87], {
                     return e || n
                 }, n
             }(r.Component),
-            b = Object(s.compose)(Object(f.d)("ExtensionConfigurePage", {
+            b = Object(s.compose)(Object(x.d)("ExtensionConfigurePage", {
                 destination: p.a.ChannelDashboardExtensionsConfigure
             }), Object(m.a)({
                 location: v.PageviewLocation.DashboardExtensionsConfigure
-            }), Object(u.a)(y, {
+            }), Object(u.a)(k, {
                 options: function(e) {
                     return {
                         variables: {
@@ -3294,19 +3294,19 @@ webpackJsonp([87], {
                 skip: function(e) {
                     return !e.data.user || !e.data.user.id
                 }
-            }))(k);
+            }))(y);
 
-        function C(e) {
+        function _(e) {
             return {
                 languageCode: e.session.languageCode,
                 locale: e.session.locale
             }
         }
-        var _ = Object(i.b)(C)(b);
+        var N = Object(i.b)(_)(b);
         t.d(n, "mapStateToProps", function() {
-            return C
-        }), t.d(n, "ExtensionConfigurePage", function() {
             return _
+        }), t.d(n, "ExtensionConfigurePage", function() {
+            return N
         })
     },
     bpr6: function(e, n, t) {
@@ -3319,405 +3319,213 @@ webpackJsonp([87], {
             l = t("V5M+"),
             c = t("sfWM"),
             d = t("BwgW"),
-            u = t("6sO2");
-
-        function m(e, n) {
-            return !(e.minX > n.maxX || e.maxX < n.minX) && !(e.minY > n.maxY || e.maxY < n.minY)
-        }
-
-        function p(e, n, t, i) {
-            return {
-                minX: e,
-                minY: n,
-                maxX: e + t,
-                maxY: n + i
-            }
-        }
-        var v = t("Odds"),
-            E = t("HW6M"),
-            g = function(e) {
-                var n, t = e.x,
-                    i = e.y,
-                    o = e.width,
-                    r = e.height,
-                    s = e.isGrabbed,
-                    l = e.isOverlapped,
-                    c = e.name,
-                    d = e.slot,
-                    u = e.tabIndex,
-                    m = {
-                        left: t + "px",
-                        top: i + "px",
-                        width: o + "px",
-                        height: r + "px"
-                    },
-                    p = E("extension-component-preview", ((n = {})["extension-component-preview--active"] = s, n["extension-component-preview--overlapped"] = l, n));
-                return a.createElement(v._3, {
-                    position: v._15.Absolute,
-                    textAlign: v._45.Center
-                }, a.createElement("div", {
-                    key: d,
-                    tabIndex: u,
-                    "data-slot": d,
-                    className: p,
-                    style: m
-                }, a.createElement(v._35, {
-                    fullHeight: !0,
-                    display: v.R.Flex,
-                    flexDirection: v.T.Column,
-                    justifyContent: v._7.Center
-                }, a.createElement(v.Q, {
-                    color: v.K.Overlay,
-                    type: v._49.Span,
-                    fontSize: v.V.Size5
-                }, c))))
-            },
-            h = 768,
-            f = 432,
-            x = 10,
-            y = {
-                w: {
-                    x: 0,
-                    y: -1
-                },
-                a: {
-                    x: -1,
-                    y: 0
-                },
-                s: {
-                    x: 0,
-                    y: 1
-                },
-                d: {
-                    x: 1,
-                    y: 0
-                },
-                k: {
-                    x: 0,
-                    y: -1
-                },
-                j: {
-                    x: 0,
-                    y: 1
-                },
-                h: {
-                    x: -1,
-                    y: 0
-                },
-                l: {
-                    x: 1,
-                    y: 0
-                },
-                arrowup: {
-                    x: 0,
-                    y: -1
-                },
-                arrowdown: {
-                    x: 0,
-                    y: 1
-                },
-                arrowleft: {
-                    x: -1,
-                    y: 0
-                },
-                arrowright: {
-                    x: 1,
-                    y: 0
-                }
-            },
-            k = (t("p8So"), function(e) {
+            u = t("6sO2"),
+            m = t("Odds"),
+            p = 768,
+            v = 432,
+            E = function(e) {
                 function n(n) {
                     var t = e.call(this, n) || this;
-                    t.renderOverlapError = function() {
-                        var e = t.state.hasOverlappingComponents ? v.j.SlideInTop : v.j.SlideOutTop;
-                        return t.state.hasOverlappingComponents || t.state.isAnimating ? a.createElement(v.e, {
-                            enabled: !0,
-                            onAnimationEnd: t.handleAnimationEnd,
-                            type: e
-                        }, a.createElement(v._35, {
-                            position: v._15.Absolute,
-                            attachTop: !0,
-                            fullWidth: !0,
-                            display: v.R.Flex,
-                            justifyContent: v._7.Center
-                        }, a.createElement(v._3, {
-                            display: v.R.Flex,
-                            padding: 1,
-                            elevation: 5
+                    t.renderPositionPreview = function() {
+                        var e = t.state.currentActivationSettings,
+                            n = t.getSlotListSorted().map(function(n) {
+                                var t = e[n],
+                                    i = t.componentConfig,
+                                    o = t.installationID,
+                                    r = t.x,
+                                    s = t.y,
+                                    l = Object(d.getComponentSizeFromView)(p, v, {
+                                        aspectHeight: i.aspectHeight,
+                                        aspectWidth: i.aspectWidth,
+                                        zoom: i.hasZoom,
+                                        zoomPixels: i.zoomPixels || d.DefaultZoomPixelWidth
+                                    }),
+                                    c = Object(d.getComponentPositionFromView)(p, v, {
+                                        x: 100 * r,
+                                        y: 100 * s
+                                    }),
+                                    u = {
+                                        top: c.y + "px",
+                                        left: c.x + "px",
+                                        height: l.height + "px",
+                                        width: l.width + "px"
+                                    };
+                                return a.createElement("div", {
+                                    key: o,
+                                    className: "extension-component-preview",
+                                    style: u
+                                })
+                            });
+                        return a.createElement(m._2, {
+                            position: m._15.Relative
                         }, a.createElement("div", {
-                            className: "extension-component-error"
-                        }, a.createElement(v._24, {
-                            asset: v._25.NotificationError
-                        }), a.createElement(v._3, {
-                            margin: {
-                                left: 1
+                            className: "extension-component-player-preview",
+                            style: {
+                                width: p,
+                                height: v
                             }
-                        }, a.createElement(v.Q, {
-                            fontSize: v.V.Size4
-                        }, Object(u.d)("Component Extensions cannot overlap", "ExtensionComponentActivateModal"))))))) : null
-                    }, t.renderPositionPreview = function() {
-                        var e = t.state.slotList.map(function(e, n) {
-                            var i = t.state.currentActivationSettings[e],
+                        }, n))
+                    }, t.renderCoordinateInputs = function() {
+                        var e = t.state.currentActivationSettings;
+                        return t.getSlotListSorted().map(function(n) {
+                            var i = e[n],
                                 o = i.componentConfig,
                                 r = i.extensionName,
-                                s = i.installationID,
-                                l = i.x,
-                                c = i.y,
-                                u = Object(d.getComponentSizeFromView)(h, f, {
-                                    aspectHeight: o.aspectHeight,
-                                    aspectWidth: o.aspectWidth,
-                                    zoom: o.hasZoom,
-                                    zoomPixels: o.zoomPixels || d.DefaultZoomPixelWidth
-                                }),
-                                m = Object(d.getComponentPositionFromView)(h, f, {
-                                    x: 100 * l,
-                                    y: 100 * c
-                                });
-                            return a.createElement(g, {
-                                slot: e,
-                                name: r,
-                                tabIndex: n + 1,
-                                isGrabbed: t.state.grabbedSlot === e,
-                                isOverlapped: t.state.collisionMap[e],
-                                key: s,
-                                x: m.x,
-                                y: m.y,
-                                width: u.width,
-                                height: u.height
-                            })
-                        });
-                        return a.createElement(v._3, {
-                            position: v._15.Relative
-                        }, a.createElement("div", {
-                            ref: t.updatePositionContainerRef,
-                            className: "extension-component-player",
-                            style: {
-                                width: h,
-                                height: f
-                            }
-                        }, e, t.renderOverlapError()))
-                    }, t.bringSlotToFront = function(e, n) {
-                        var t = e.filter(function(e) {
-                            return e !== n
-                        });
-                        return t.push(n), t
+                                s = i.x,
+                                l = i.y,
+                                c = t.getComponentMaxCoordinates(o),
+                                d = c.maxX,
+                                u = c.maxY;
+                            return a.createElement(m._8, {
+                                key: n
+                            }, a.createElement(m._8, {
+                                padding: 1
+                            }, a.createElement(m.Q, {
+                                bold: !0
+                            }, n, " : ", r)), a.createElement(m._8, {
+                                padding: 1
+                            }, a.createElement(m.W, {
+                                label: "X",
+                                orientation: m.X.Horizontal
+                            }, a.createElement(m._4, {
+                                type: m._5.Number,
+                                value: s.toString(),
+                                min: 0,
+                                max: d,
+                                step: .01,
+                                onChange: t.onCoordinateChange,
+                                "data-coordinate": "x",
+                                "data-slot": n,
+                                name: n + ":x"
+                            }))), a.createElement(m._8, {
+                                padding: 1
+                            }, a.createElement(m.W, {
+                                label: "Y",
+                                orientation: m.X.Horizontal
+                            }, a.createElement(m._4, {
+                                type: m._5.Number,
+                                value: l.toString(),
+                                min: 0,
+                                max: u,
+                                step: .01,
+                                onChange: t.onCoordinateChange,
+                                "data-coordinate": "y",
+                                "data-slot": n,
+                                name: n + ":y"
+                            }))))
+                        })
                     }, t.activateComponentsWithCurrentSettings = function() {
-                        var e = t.state.sortedSlotList.map(function(e) {
-                            var n = t.state.currentActivationSettings[e],
-                                i = n.installationID,
-                                a = n.x,
-                                o = n.y;
-                            return {
-                                installationID: i,
-                                component: {
-                                    slot: e,
-                                    x: Math.floor(100 * a),
-                                    y: Math.floor(100 * o)
+                        var e = t.state.currentActivationSettings,
+                            n = t.getSlotListSorted().map(function(n) {
+                                var t = e[n];
+                                return {
+                                    installationID: t.installationID,
+                                    component: {
+                                        slot: n,
+                                        x: 100 * t.x,
+                                        y: 100 * t.y
+                                    }
                                 }
+                            });
+                        t.props.onConfirm(n), t.props.closeModal()
+                    }, t.onCoordinateChange = function(e) {
+                        var n = e.target.value,
+                            a = e.currentTarget.name.split(":"),
+                            o = a[0],
+                            r = a[1];
+                        if (o && r) {
+                            var s = parseFloat(n) || 0,
+                                l = i.__assign({}, t.state.currentActivationSettings[o]),
+                                c = l.componentConfig;
+                            if ("x" === r) {
+                                var d = t.getComponentMaxCoordinates(c).maxX,
+                                    u = Math.max(0, Math.min(s, d));
+                                l.x = u
+                            } else if ("y" === r) {
+                                var m = t.getComponentMaxCoordinates(c).maxY;
+                                u = Math.max(0, Math.min(s, m));
+                                l.y = u
                             }
-                        });
-                        t.props.onConfirm(e), t.props.closeModal()
-                    }, t.updateCollisionMap = function(e, n, t) {
-                        e[n] = !1;
-                        for (var i = t[n], a = i.x, o = i.y, r = i.componentConfig, s = p(a, o, r.aspectWidth / 100, r.aspectHeight / 100), l = 0, c = Object.keys(t).sort(); l < c.length; l++) {
-                            var d = c[l];
-                            if (n !== d) {
-                                var u = t[d],
-                                    v = u.x,
-                                    E = u.y,
-                                    g = u.componentConfig;
-                                e[d] = !1, m(s, p(v, E, g.aspectWidth / 100, g.aspectHeight / 100)) && (e[n] = !0, e[d] = !0)
-                            }
-                        }
-                        return e
-                    }, t.updateCoordinates = function(e, n, a) {
-                        if (t.state.currentActivationSettings[e]) {
-                            var o = i.__assign({}, t.state.currentActivationSettings[e]),
-                                r = o.componentConfig,
-                                s = 100 - r.aspectWidth / 100,
-                                l = 100 - r.aspectHeight / 100;
-                            o.x = Math.max(0, Math.min(n, s)), o.y = Math.max(0, Math.min(a, l));
-                            var c, d = i.__assign({}, t.state.currentActivationSettings, ((c = {})[e] = o, c)),
-                                u = t.updateCollisionMap(t.state.collisionMap, e, d);
+                            var p, v = i.__assign({}, t.state.currentActivationSettings, ((p = {})[o] = l, p));
                             t.setState({
-                                collisionMap: u,
-                                currentActivationSettings: d
-                            })
-                        }
-                    }, t.updatePositionContainerRef = function(e) {
-                        t.setState({
-                            positioningContainer: e
-                        })
-                    }, t.handleMouseDown = function(e) {
-                        if (t.state.positioningContainer) {
-                            var n = e.target,
-                                i = t.findComponentPreview(n);
-                            if (i) {
-                                var a = t.state.positioningContainer.getBoundingClientRect(),
-                                    o = i.getAttribute("data-slot");
-                                if (o) {
-                                    var r = i.getBoundingClientRect(),
-                                        s = e.clientX - a.left,
-                                        l = e.clientY - a.top,
-                                        c = s - (r.left - a.left),
-                                        d = l - (r.top - a.top),
-                                        u = t.bringSlotToFront(t.state.slotList, o);
-                                    t.setState({
-                                        grabbedSlot: o,
-                                        mouseOffsetX: c,
-                                        mouseOffsetY: d,
-                                        slotList: u
-                                    })
-                                }
-                            } else t.setState({
-                                grabbedSlot: null
-                            })
-                        }
-                    }, t.handleMouseMove = function(e) {
-                        if (t.state.grabbedSlot && t.state.positioningContainer) {
-                            var n = t.state.positioningContainer.getBoundingClientRect(),
-                                i = e.clientX - n.left,
-                                a = e.clientY - n.top,
-                                o = i - t.state.mouseOffsetX + window.scrollX,
-                                r = a - t.state.mouseOffsetY + window.scrollY,
-                                s = o / h,
-                                l = r / f;
-                            t.updateCoordinates(t.state.grabbedSlot, Math.floor(1e4 * s) / 100, Math.floor(1e4 * l) / 100)
-                        }
-                    }, t.handleAnimationEnd = function() {
-                        t.setState({
-                            isAnimating: !1
-                        })
-                    }, t.handleFinishMove = function() {
-                        var e = t.state.sortedSlotList.some(function(e) {
-                                return t.state.collisionMap[e]
-                            }),
-                            n = e !== t.state.hasOverlappingComponents;
-                        t.setState({
-                            hasOverlappingComponents: e,
-                            isAnimating: n,
-                            grabbedSlot: null
-                        })
-                    }, t.handleKeyDown = function(e) {
-                        var n = document.activeElement ? document.activeElement.getAttribute("data-slot") : void 0;
-                        if (n && t.state.positioningContainer && t.state.positioningContainer.contains(document.activeElement)) {
-                            var i = t.state.positioningContainer.getBoundingClientRect(),
-                                a = 1 / h,
-                                o = 1 / f,
-                                r = 0,
-                                s = 0,
-                                l = document.activeElement;
-                            if (l) {
-                                var c = l.getBoundingClientRect();
-                                r = c.left, s = c.top
-                            }
-                            var d = 0,
-                                u = 0,
-                                m = e.key.toLowerCase(),
-                                p = y[m];
-                            p && (d = p.x * a, u = p.y * o);
-                            var v = e.shiftKey ? x : 1,
-                                E = r - i.left + (window.scrollX || 0),
-                                g = s - i.top + (window.scrollY || 0),
-                                k = d * v + E / h,
-                                b = u * v + g / f;
-                            t.updateCoordinates(n, Math.floor(1e4 * k) / 100, Math.floor(1e4 * b) / 100), t.handleFinishMove()
-                        }
-                    }, t.handleFocus = function() {
-                        var e = document.activeElement ? document.activeElement.getAttribute("data-slot") : void 0;
-                        if (e && t.state.positioningContainer && t.state.positioningContainer.contains(document.activeElement)) {
-                            var n = t.bringSlotToFront(t.state.slotList, e);
-                            t.setState({
-                                slotList: n
+                                currentActivationSettings: v
                             })
                         }
                     };
-                    var o = n.activatedComponentData.reduce(function(e, t) {
-                        return t.installationID === n.idToActivate ? e : (e[t.slot] = i.__assign({}, t, {
-                            x: t.x / 100,
-                            y: t.y / 100
-                        }), e)
-                    }, {});
-                    o[n.slotToActivate] = {
-                        installationID: n.idToActivate,
-                        extensionName: n.extensionNameToActivate,
-                        componentConfig: n.componentConfigToActivate,
-                        slot: n.slotToActivate,
+                    var o = n.activatedComponentData,
+                        r = n.idToActivate,
+                        s = n.extensionNameToActivate,
+                        l = n.slotToActivate,
+                        c = n.componentConfigToActivate,
+                        u = o.reduce(function(e, n) {
+                            return n.installationID === r ? e : (e[n.slot] = i.__assign({}, n, {
+                                x: n.x / 100,
+                                y: n.y / 100
+                            }), e)
+                        }, {});
+                    return u[l] = {
+                        installationID: r,
+                        extensionName: s,
+                        componentConfig: c,
+                        slot: l,
                         x: 0,
                         y: 0
-                    };
-                    var r = Object.keys(o).sort(),
-                        s = t.bringSlotToFront(r, n.slotToActivate),
-                        l = t.updateCollisionMap({}, n.slotToActivate, o),
-                        c = r.some(function(e) {
-                            return l[e]
-                        });
-                    return t.state = {
-                        slotList: s,
-                        collisionMap: l,
-                        sortedSlotList: r,
-                        hasOverlappingComponents: c,
-                        currentActivationSettings: o,
-                        grabbedSlot: null,
-                        mouseOffsetX: 0,
-                        mouseOffsetY: 0,
-                        positioningContainer: null,
-                        isAnimating: !1
+                    }, t.state = {
+                        currentActivationSettings: u
                     }, t
                 }
                 return i.__extends(n, e), n.prototype.render = function() {
-                    return a.createElement("div", {
-                        onMouseDown: this.handleMouseDown,
-                        onMouseMove: this.handleMouseMove,
-                        onMouseUp: this.handleFinishMove,
-                        onKeyDown: this.handleKeyDown,
-                        onFocus: this.handleFocus
-                    }, a.createElement(v._8, null, a.createElement(v.Q, {
-                        type: v._49.H5
-                    }, Object(u.d)("Set Component Location", "ExtensionComponentActivateModal")), a.createElement(v._35, {
+                    return a.createElement(m._8, null, a.createElement(m.Q, {
+                        type: m._49.H5
+                    }, Object(u.d)("Activate a Component Extension", "ExtensionComponentActivateModal")), a.createElement(m._35, {
                         borderTop: !0,
                         padding: {
                             y: 1
+                        },
+                        margin: {
+                            y: 1
                         }
-                    }, a.createElement(v.Q, null, Object(u.d)("Drag and drop the selected component to set a default anchor point within the video player", "ExtensionComponentActivateModal"))), a.createElement(v._35, {
-                        background: v.n.Alt,
-                        padding: {
-                            bottom: 1
-                        }
-                    }, this.renderPositionPreview()), a.createElement(v._35, {
-                        display: v.R.Flex,
-                        justifyContent: v._7.Center,
+                    }, this.renderPositionPreview()), a.createElement(m._35, {
                         borderTop: !0,
+                        borderBottom: !0,
                         padding: {
-                            top: 1
-                        }
-                    }, a.createElement(v._8, {
+                            y: 1
+                        },
+                        margin: {
+                            y: 1
+                        },
+                        display: m.R.Flex,
+                        flexDirection: m.T.Row
+                    }, this.renderCoordinateInputs()), a.createElement(m._8, {
+                        display: m.R.Flex,
+                        justifyContent: m._7.Center
+                    }, a.createElement(m._8, {
                         padding: {
                             right: 1
                         }
-                    }, a.createElement(v.v, {
-                        type: v.B.Hollow,
+                    }, a.createElement(m.v, {
+                        type: m.B.Hollow,
                         onClick: this.props.closeModal
-                    }, Object(u.d)("Cancel", "ExtensionComponentActivateModal"))), a.createElement(v.v, {
-                        disabled: this.state.hasOverlappingComponents,
+                    }, Object(u.d)("Cancel", "ExtensionComponentActivateModal"))), a.createElement(m.v, {
                         onClick: this.activateComponentsWithCurrentSettings
-                    }, Object(u.d)("Save", "ExtensionComponentActivateModal")))))
-                }, n.prototype.findComponentPreview = function(e) {
-                    if (e) {
-                        if (e.getAttribute("data-slot")) return e;
-                        if (e.parentElement) return this.findComponentPreview(e.parentElement)
+                    }, Object(u.d)("Activate", "ExtensionComponentActivateModal"))))
+                }, n.prototype.getComponentMaxCoordinates = function(e) {
+                    return {
+                        maxX: 100 - e.aspectWidth / 100,
+                        maxY: 100 - e.aspectHeight / 100
                     }
-                    return null
+                }, n.prototype.getSlotListSorted = function() {
+                    return Object.keys(this.state.currentActivationSettings).sort()
                 }, n
-            }(a.Component)),
-            b = function(e) {
+            }(a.Component),
+            g = function(e) {
                 function n() {
                     return null !== e && e.apply(this, arguments) || this
                 }
                 return i.__extends(n, e), n.prototype.render = function() {
                     return a.createElement(c.a, {
                         className: "extension-manager-modal-container--expand"
-                    }, a.createElement(k, {
+                    }, a.createElement(E, {
                         activatedComponentData: this.props.activatedComponentData,
                         componentConfigToActivate: this.props.componentConfigToActivate,
                         extensionNameToActivate: this.props.extensionNameToActivate,
@@ -3730,15 +3538,15 @@ webpackJsonp([87], {
                     }))
                 }, n
             }(a.Component);
-        var C = Object(o.b)(null, function(e) {
+        var h = Object(o.b)(null, function(e) {
             return Object(r.b)({
                 closeModal: l.c
             }, e)
-        })(b);
+        })(g);
         t.d(n, !1, function() {
-            return b
+            return g
         }), t.d(n, "a", function() {
-            return C
+            return h
         })
     },
     gAaz: function(e, n, t) {
@@ -3854,7 +3662,6 @@ webpackJsonp([87], {
                 return t
             }
     },
-    p8So: function(e, n) {},
     "ry+I": function(e, n, t) {
         "use strict";
         var i = t("GiK3"),
@@ -4143,7 +3950,7 @@ webpackJsonp([87], {
                 }))
             }, n
         }(a.Component);
-        var f = Object(o.b)(null, function(e) {
+        var x = Object(o.b)(null, function(e) {
             return Object(r.b)({
                 closeModal: l.c
             }, e)
@@ -4151,7 +3958,7 @@ webpackJsonp([87], {
         t.d(n, !1, function() {
             return h
         }), t.d(n, "a", function() {
-            return f
+            return x
         })
     },
     yjkL: function(e, n) {
@@ -4270,4 +4077,4 @@ webpackJsonp([87], {
         e.exports = t.p + "assets/discovery-splash-fallback-d5c69de700c33441b513b34421ad3d16.png"
     }
 });
-//# sourceMappingURL=pages.extension-configure-4563a1f8734e436c31671d78958160df.js.map
+//# sourceMappingURL=pages.extension-configure-72d3382001e29f9a85da5b21f7ce4f6b.js.map

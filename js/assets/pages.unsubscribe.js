@@ -1057,7 +1057,7 @@ webpackJsonp([49], {
                     margin: {
                         bottom: 1
                     }
-                }, s.createElement(g.Q, null, Object(u.d)("Access to VODs", "ChannelSubscriptionBenefits"))), e.badges.length > 0 && s.createElement(s.Fragment, null, s.createElement(g._2, {
+                }, s.createElement(g.Q, null, Object(u.d)("Access to VODs", "ChannelSubscriptionBenefits"))), e.badges.length && s.createElement(s.Fragment, null, s.createElement(g._2, {
                     margin: {
                         bottom: 1
                     }
@@ -1075,7 +1075,7 @@ webpackJsonp([49], {
                     }, s.createElement(m.a, {
                         badge: e
                     }))
-                }))), e.emotes.length > 0 && s.createElement(s.Fragment, null, s.createElement(g._2, {
+                }))), e.emotes.length && s.createElement(s.Fragment, null, s.createElement(g._2, {
                     margin: {
                         bottom: 1
                     }
@@ -1089,7 +1089,7 @@ webpackJsonp([49], {
                     locked: !1
                 })))
             };
-        var b = function(e) {
+        var h = function(e) {
                 return s.createElement(g.Q, {
                     type: g._49.H4
                 }, Object(u.d)("{price} / {interval}", {
@@ -1113,7 +1113,7 @@ webpackJsonp([49], {
                     }(e.interval)
                 }, "TicketDescription"))
             },
-            h = (n("R8MC"), {
+            b = (n("R8MC"), {
                 display: g.R.Hide,
                 breakpointLarge: {
                     display: g.R.Block
@@ -1125,7 +1125,7 @@ webpackJsonp([49], {
                     display: g.R.Hide
                 }
             },
-            x = function(e) {
+            w = function(e) {
                 return s.createElement(s.Fragment, null, s.createElement("div", {
                     className: "channel-subscription-header__banner-image",
                     style: {
@@ -1155,7 +1155,7 @@ webpackJsonp([49], {
                     alt: e.ownerDisplayName || "",
                     size: 96,
                     src: e.profileImageURL
-                })), s.createElement(g._8, i.__assign({}, h), s.createElement(g._2, {
+                })), s.createElement(g._8, i.__assign({}, b), s.createElement(g._2, {
                     margin: 2
                 }, s.createElement(g.Q, {
                     type: g._49.H4,
@@ -1164,11 +1164,11 @@ webpackJsonp([49], {
                 }, e.ownerDisplayName)), s.createElement(g.Q, {
                     type: g._49.H5,
                     color: g.K.Overlay
-                }, e.productDisplayName)))), s.createElement(g._35, i.__assign({}, h, {
+                }, e.productDisplayName)))), s.createElement(g._35, i.__assign({}, b, {
                     borderBottom: !0,
                     textAlign: g._45.Center,
                     padding: 2
-                }), s.createElement(b, {
+                }), s.createElement(h, {
                     price: e.productPrice,
                     interval: e.productPriceInterval
                 })), s.createElement(g._8, i.__assign({}, k, {
@@ -1187,12 +1187,12 @@ webpackJsonp([49], {
                     margin: 1
                 }, s.createElement(g.Q, {
                     type: g._49.H5
-                }, e.productDisplayName)), s.createElement(b, {
+                }, e.productDisplayName)), s.createElement(h, {
                     price: e.productPrice,
                     interval: e.productPriceInterval
                 })))
             },
-            w = n("yWCw"),
+            x = n("yWCw"),
             y = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -1247,14 +1247,14 @@ webpackJsonp([49], {
                     elevation: 1
                 }, e.children))
             }),
-            S = (n("ib22"), function() {
+            _ = (n("ib22"), function() {
                 return s.createElement(E, null, s.createElement(g._8, {
                     className: "error-ticket-description__header",
                     padding: 2
                 }, s.createElement(g._35, {
                     fullHeight: !0,
                     background: g.n.Alt2
-                }, s.createElement(w.a, null))), s.createElement(y, {
+                }, s.createElement(x.a, null))), s.createElement(y, {
                     collapsable: !0
                 }, s.createElement(g._35, {
                     className: "error-ticket-description__body",
@@ -1263,9 +1263,9 @@ webpackJsonp([49], {
                 }, s.createElement(g._35, {
                     fullHeight: !0,
                     background: g.n.Alt2
-                }, s.createElement(w.a, null)))))
+                }, s.createElement(x.a, null)))))
             }),
-            D = (n("1juF"), function() {
+            S = (n("1juF"), function() {
                 return s.createElement(E, null, s.createElement(g._8, {
                     className: "placeholder-ticket-description__header",
                     padding: 2
@@ -1322,7 +1322,7 @@ webpackJsonp([49], {
                     return Object(u.d)("Save your past broadcasts on Twitch for 60 days.", "TurboTicketDescription")
                 }
             }],
-            N = function(e) {
+            D = function(e) {
                 return s.createElement(E, null, s.createElement(g._35, {
                     background: g.n.Alt2
                 }, s.createElement(g._8, {
@@ -1372,18 +1372,18 @@ webpackJsonp([49], {
                     textAlign: g._45.Center,
                     background: g.n.Alt,
                     padding: 2
-                }, s.createElement(b, {
+                }, s.createElement(h, {
                     price: e.productPrice,
                     interval: e.productPriceInterval
                 })))))
             },
-            _ = n("3iBR"),
-            O = n("D0Fd"),
+            O = n("3iBR"),
+            N = n("D0Fd"),
             A = n("+6x9"),
             F = n("CWW0"),
             M = n("PGoF"),
-            I = (n("iLMR"), "skin-selector"),
-            C = "igc-selector",
+            C = (n("iLMR"), "skin-selector"),
+            I = "igc-selector",
             R = "badge-selector",
             j = function(e) {
                 function t() {
@@ -1400,7 +1400,7 @@ webpackJsonp([49], {
                                     display: g.R.Flex,
                                     flexDirection: g.T.Row,
                                     alignItems: g.c.Center,
-                                    "data-test-selector": I
+                                    "data-test-selector": C
                                 }, s.createElement("li", null, s.createElement(A.a, {
                                     imageURL: e.imageURL
                                 }))) : s.createElement(g._2, {
@@ -1411,10 +1411,10 @@ webpackJsonp([49], {
                                     display: g.R.Flex,
                                     flexDirection: g.T.Row,
                                     alignItems: g.c.Center,
-                                    "data-test-selector": I
-                                }, s.createElement("li", null, s.createElement(O.a, {
+                                    "data-test-selector": C
+                                }, s.createElement("li", null, s.createElement(N.a, {
                                     imageURL: e.imageURL,
-                                    size: O.b.Small
+                                    size: N.b.Small
                                 })))
                             }) : null;
                             return s.createElement(g._2, {
@@ -1433,7 +1433,7 @@ webpackJsonp([49], {
                                     src: e.imageURL,
                                     alt: e.name,
                                     size: 64,
-                                    "data-test-selector": C
+                                    "data-test-selector": I
                                 })
                             }) : null;
                             return s.createElement(g._8, {
@@ -1517,14 +1517,14 @@ webpackJsonp([49], {
                         className: "ticket-description__banner-image",
                         padding: 3
                     }, s.createElement("img", {
-                        src: _.c + "/owl-2017/all-access-logo.svg",
+                        src: O.c + "/owl-2017/all-access-logo.svg",
                         alt: Object(u.d)("Overwatch League All-Access Pass on Twitch", "EsportsTicketDescription"),
                         height: "80px"
                     })), s.createElement(g._35, {
                         borderBottom: !0,
                         textAlign: g._45.Center,
                         padding: 2
-                    }, s.createElement(b, {
+                    }, s.createElement(h, {
                         price: e,
                         interval: this.props.productPriceInterval
                     })), s.createElement(y, {
@@ -1592,7 +1592,7 @@ webpackJsonp([49], {
             }))(j),
             L = n("CSlQ"),
             P = n("5Kxe"),
-            Y = function(e) {
+            z = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.isTurboProduct = "turbo" === t.props.productName, t
@@ -1606,7 +1606,7 @@ webpackJsonp([49], {
                         t = e.product,
                         n = e.loading,
                         r = e.error;
-                    return n ? s.createElement(D, null) : !t || r ? s.createElement(S, null) : this.isTurboProduct ? s.createElement(N, {
+                    return n ? s.createElement(S, null) : !t || r ? s.createElement(_, null) : this.isTurboProduct ? s.createElement(D, {
                         productPrice: t.price,
                         productPriceInterval: t.interval && t.interval.unit
                     }) : this.isEsportsProduct ? s.createElement(U, {
@@ -1618,7 +1618,7 @@ webpackJsonp([49], {
                         productPriceInterval: t.interval && t.interval.unit
                     }) : s.createElement(E, null, s.createElement(g._35, {
                         background: g.n.Base
-                    }, s.createElement(x, {
+                    }, s.createElement(w, {
                         bannerImageURL: t.owner && t.owner.bannerImageURL,
                         profileImageURL: t.owner && t.owner.profileImageURL,
                         ownerDisplayName: t.owner && t.owner.displayName,
@@ -1696,7 +1696,7 @@ webpackJsonp([49], {
                     configurable: !0
                 }), t
             }(s.Component),
-            z = Object(o.compose)(Object(L.d)("TicketDescription"), Object(c.a)(P, {
+            H = Object(o.compose)(Object(L.d)("TicketDescription"), Object(c.a)(P, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1704,14 +1704,14 @@ webpackJsonp([49], {
                         }
                     }
                 }
-            }))(Y);
-        var B = Object(r.b)(function(e) {
+            }))(z);
+        var Y = Object(r.b)(function(e) {
             return {
                 sessionUser: Object(a.c)(e)
             }
-        })(z);
+        })(H);
         n.d(t, "a", function() {
-            return B
+            return Y
         })
     },
     "9Jn5": function(e, t, n) {
@@ -1726,6 +1726,212 @@ webpackJsonp([49], {
             var n = Number(t);
             return r(e, -n)
         }
+    },
+    "9u8h": function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return s
+        });
+        var r = n("TToO"),
+            a = n("6sO2"),
+            i = n("Aj/L"),
+            s = function() {
+                function e() {}
+                return e.get = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return [4, this.request(e, r.__assign({}, t, {
+                                        method: "GET"
+                                    }), n)];
+                                case 1:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.getOrThrow = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        method: "GET"
+                                    }), n)];
+                                case 1:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.put = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return [4, this.request(e, r.__assign({}, t, {
+                                        method: "PUT"
+                                    }), n)];
+                                case 1:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.putOrThrow = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        method: "PUT"
+                                    }), n)];
+                                case 1:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.post = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return [4, this.request(e, r.__assign({}, t, {
+                                        method: "POST"
+                                    }), n)];
+                                case 1:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.postOrThrow = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        method: "POST"
+                                    }), n)];
+                                case 1:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.delete = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return [4, this.request(e, r.__assign({}, t, {
+                                        method: "DELETE"
+                                    }), n)];
+                                case 1:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.deleteOrThrow = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(a) {
+                            switch (a.label) {
+                                case 0:
+                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        method: "DELETE"
+                                    }), n)];
+                                case 1:
+                                    return [2, a.sent()]
+                            }
+                        })
+                    })
+                }, e.request = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        var a, i, s, o;
+                        return r.__generator(this, function(u) {
+                            switch (u.label) {
+                                case 0:
+                                    return t = this.constructOptions(t, n), a = t.headers ? t.headers["Content-Type"] : void 0, i = this.serialize(t.body, a), s = r.__assign({}, t, {
+                                        body: i
+                                    }), [4, this._fetch(e, s)];
+                                case 1:
+                                    return o = u.sent(), [4, this.constructLegacyAPIResponse(o)];
+                                case 2:
+                                    return [2, u.sent()]
+                            }
+                        })
+                    })
+                }, e.requestOrThrow = function(e, t, n) {
+                    return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, void 0, function() {
+                        var a, i;
+                        return r.__generator(this, function(s) {
+                            switch (s.label) {
+                                case 0:
+                                    return s.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
+                                case 1:
+                                    if ((a = s.sent()).error || a.requestError) throw new Error("Error while making request");
+                                    return i = r.__assign({}, a, {
+                                        body: a.body
+                                    }), [2, Promise.resolve(i)];
+                                case 2:
+                                    throw s.sent();
+                                case 3:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, e.getAPIURL = function(e) {
+                    return new URL(e, a.o.config.apiBaseURL)
+                }, e.constructLegacyAPIResponse = function(e) {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var t, n, a, i;
+                        return r.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    t = {
+                                        status: e.status
+                                    }, r.label = 1;
+                                case 1:
+                                    return r.trys.push([1, 3, , 4]), [4, e.json()];
+                                case 2:
+                                    return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
+                                case 3:
+                                    return a = r.sent(), e.headers && e.headers.get && (i = e.headers.get("Content-Type")) && -1 !== i.indexOf("application/json") && (t.requestError = a), [3, 4];
+                                case 4:
+                                    return [2, t]
+                            }
+                        })
+                    })
+                }, e._fetch = function(e, t) {
+                    return void 0 === t && (t = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, fetch(this.getAPIURL(e).toString(), t)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.constructOptions = function(e, t) {
+                    return e = Object.assign({}, e, {
+                        headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                    })
+                }, e.serialize = function(e, t) {
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                        contentType: t
+                    }), null) : null
+                }, e.getDefaultHeaders = function(e, t) {
+                    var n = a.o.store.getState(),
+                        r = {
+                            Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
+                            "Accept-Language": "en-us",
+                            "Client-ID": a.o.config.legacyClientID,
+                            "X-Requested-With": "XMLHttpRequest"
+                        };
+                    e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
+                    var s = Object(i.c)(n);
+                    return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        r[e] && delete r[e]
+                    }), r
+                }, e.logger = a.o.logger.withCategory("legacy-api"), e
+            }()
     },
     A2zO: function(e, t, n) {
         var r = n("Be26");
@@ -1819,7 +2025,7 @@ webpackJsonp([49], {
                 Moira: o.c + "/owl-2017/global-rewards/full-skin/moira.png",
                 "Soldier: 76": o.c + "/owl-2017/global-rewards/full-skin/soldier-76.png"
             },
-            b = function(e) {
+            h = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -1901,7 +2107,7 @@ webpackJsonp([49], {
                         }),
                         s = this.props.insiderPurchaseState === m.a.PostPurchase && this.props.blizzardRewardsAvailable,
                         f = this.props.data.user.tournament.rewards.insider,
-                        b = f.heroSkins.concat(f.inGameContent).some(function(e) {
+                        h = f.heroSkins.concat(f.inGameContent).some(function(e) {
                             return e.canBeFulfilled
                         });
                     return a.createElement(l._8, {
@@ -1915,9 +2121,9 @@ webpackJsonp([49], {
                     }, a.createElement(l.Q, {
                         fontSize: l.V.Size3,
                         bold: !0
-                    }, Object(i.d)("Overwatch Content with the All-Access Pass", "EsportsInsiderRewards")), s && !b && a.createElement(l.Q, {
+                    }, Object(i.d)("Overwatch Content with the All-Access Pass", "EsportsInsiderRewards")), s && !h && a.createElement(l.Q, {
                         fontSize: l.V.Size4
-                    }, Object(i.d)("All in-game rewards have been claimed to your Blizzard account", "EsportsInsiderRewards")), s && b && a.createElement(l._8, {
+                    }, Object(i.d)("All in-game rewards have been claimed to your Blizzard account", "EsportsInsiderRewards")), s && h && a.createElement(l._8, {
                         display: l.R.Flex,
                         flexDirection: l.T.Row,
                         flexWrap: l.U.Wrap,
@@ -1991,7 +2197,7 @@ webpackJsonp([49], {
         }), n.d(t, "b", function() {
             return g
         }), n.d(t, "a", function() {
-            return b
+            return h
         })
     },
     D0Fd: function(e, t, n) {
@@ -2023,7 +2229,7 @@ webpackJsonp([49], {
                     f = /Edge/.test(window.navigator.userAgent) ? 90 : Object(u.b)(window.navigator.userAgent) ? 150 : 100,
                     g = Object(u.b)(window.navigator.userAgent) ? 150 : 131,
                     v = Object(u.b)(window.navigator.userAgent) ? 0 : 10,
-                    b = i("esports-hexagon__svg", {
+                    h = i("esports-hexagon__svg", {
                         "esports-hexagon__svg--large": this.props.size === r.Large
                     }, {
                         "esports-hexagon__svg--small": this.props.size === r.Small
@@ -2032,7 +2238,7 @@ webpackJsonp([49], {
                     }, {
                         "esports-hexagon__svg--small-blizzard": !this.props.comingSoon && this.props.size === r.Small
                     }),
-                    h = i("esports-hexagon__svg--background", {
+                    b = i("esports-hexagon__svg--background", {
                         "esports-hexagon__svg--background-coming-soon": this.props.comingSoon
                     }),
                     k = i("esports-hexagon__svg--fill", {
@@ -2043,7 +2249,7 @@ webpackJsonp([49], {
                     display: c.R.Flex,
                     flexDirection: c.T.Column
                 }, s.createElement("svg", {
-                    className: b,
+                    className: h,
                     viewBox: "5 0 90 131"
                 }, s.createElement("defs", null, s.createElement("pattern", {
                     id: l,
@@ -2068,7 +2274,7 @@ webpackJsonp([49], {
                     type: "matrix",
                     values: "0.12 0 0 0 0 0 0.04 0 0 0 0 0 0.68 0 0 0 0 0 1 0"
                 }))), s.createElement("polygon", {
-                    className: h,
+                    className: b,
                     points: "50,2 8.042394,26.558603 8,75 50,98 92,75 92,25",
                     stroke: "none",
                     strokeWidth: "1px",
@@ -2454,14 +2660,14 @@ webpackJsonp([49], {
             f = n("TToO"),
             g = n("OAwv"),
             v = n("GiK3"),
-            b = n("6sO2"),
-            h = n("yWCw"),
+            h = n("6sO2"),
+            b = n("yWCw"),
             k = n("8m9s"),
-            x = n("wuJz"),
-            w = n("3zLD"),
+            w = n("wuJz"),
+            x = n("3zLD"),
             y = n("9u8h"),
             E = n("Odds"),
-            S = function(e) {
+            _ = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -2513,7 +2719,7 @@ webpackJsonp([49], {
                         }
                     }, v.createElement(E._21, {
                         name: this.radioName,
-                        label: Object(b.d)("Other", "ReasonInput"),
+                        label: Object(h.d)("Other", "ReasonInput"),
                         onChange: this.handleOtherReasonRadioChange,
                         disabled: this.props.disabled
                     })), this.state.otherTextAreaEnabled && v.createElement(E._8, {
@@ -2522,115 +2728,115 @@ webpackJsonp([49], {
                         }
                     }, v.createElement(E._46, {
                         onChange: this.handleOtherReasonTextAreaChange,
-                        placeholder: Object(b.d)("Additional reasons or thoughts", "ReasonInput")
+                        placeholder: Object(h.d)("Additional reasons or thoughts", "ReasonInput")
                     }))))
                 }, t
             }(v.Component),
-            D = Object(w.compose)(Object(p.d)("ReasonInput", {
+            S = Object(x.compose)(Object(p.d)("ReasonInput", {
                 autoReportInteractive: !0
-            }))(S),
+            }))(_),
             T = function(e) {
                 var t = v.createElement(v.Fragment, null, v.createElement(E.Q, {
                         type: E._49.H2,
                         bold: !0
-                    }, Object(b.d)("Subscription Canceled", "UnsubscribeConfirmation")), v.createElement(E._8, {
+                    }, Object(h.d)("Subscription Canceled", "UnsubscribeConfirmation")), v.createElement(E._8, {
                         margin: {
                             top: 2
                         }
-                    }, v.createElement(E.Q, null, Object(b.d)("Your subscription has been immediately canceled. You will be receiving an email detailing your refund.", "UnsubscribeConfirmation")))),
+                    }, v.createElement(E.Q, null, Object(h.d)("Your subscription has been immediately canceled. You will be receiving an email detailing your refund.", "UnsubscribeConfirmation")))),
                     n = v.createElement(v.Fragment, null, v.createElement(E.Q, {
                         type: E._49.H2,
                         bold: !0
-                    }, Object(b.d)("Subscription No Longer Renewing", "UnsubscribeConfirmation")), v.createElement(E._8, {
+                    }, Object(h.d)("Subscription No Longer Renewing", "UnsubscribeConfirmation")), v.createElement(E._8, {
                         margin: {
                             top: 2
                         }
-                    }, v.createElement(E.Q, null, e.endsAt && Object(b.d)("Your subscription will no longer renew. You will have access to your benefits until {date}.", {
+                    }, v.createElement(E.Q, null, e.endsAt && Object(h.d)("Your subscription will no longer renew. You will have access to your benefits until {date}.", {
                         date: v.createElement(E.Q, {
                             key: "benefit-end-date",
                             type: E._49.Span,
                             bold: !0
-                        }, Object(b.c)(new Date(e.endsAt), "medium"))
+                        }, Object(h.c)(new Date(e.endsAt), "medium"))
                     }, "UnsubscribeConfirmation"))), v.createElement(E._8, {
                         margin: {
                             top: 2
                         }
-                    }, v.createElement(E.Q, null, e.endsAt && Object(b.d)("If you change your mind and would like to resubscribe, you can do so as of {date}.", {
+                    }, v.createElement(E.Q, null, e.endsAt && Object(h.d)("If you change your mind and would like to resubscribe, you can do so as of {date}.", {
                         date: v.createElement(E.Q, {
                             key: "resubscribe-date",
                             type: E._49.Span,
                             bold: !0
-                        }, Object(b.c)(Object(x.addDays)(new Date(e.endsAt), 1), "medium"))
+                        }, Object(h.c)(Object(w.addDays)(new Date(e.endsAt), 1), "medium"))
                     }, "UnsubscribeConfirmation"))));
                 return v.createElement(v.Fragment, null, e.unsubscribeType === r.Cancel ? t : n, v.createElement(E._8, {
                     margin: {
                         top: 2
                     }
-                }, v.createElement(E.Q, null, Object(b.d)("We hope you enjoyed the service and will consider resubscribing some day.", "UnsubscribeConfirmation"))), v.createElement(E._8, {
+                }, v.createElement(E.Q, null, Object(h.d)("We hope you enjoyed the service and will consider resubscribing some day.", "UnsubscribeConfirmation"))), v.createElement(E._8, {
                     margin: {
                         top: 2
                     }
-                }, v.createElement(E.Q, null, Object(b.d)("- Your friends at Twitch", "UnsubscribeConfirmation"))), v.createElement(E._8, {
+                }, v.createElement(E.Q, null, Object(h.d)("- Your friends at Twitch", "UnsubscribeConfirmation"))), v.createElement(E._8, {
                     margin: {
                         top: 2
                     }
                 }, v.createElement(E.v, {
                     linkTo: "/subscriptions"
-                }, Object(b.d)("Return to Subscriptions", "UnsubscribeForm"))))
+                }, Object(h.d)("Return to Subscriptions", "UnsubscribeForm"))))
             },
-            N = [{
+            D = [{
                 value: "I only wanted to subscribe for one month",
                 translation: function() {
-                    return Object(b.d)("I only wanted to subscribe for one month", "unsubscribe-reasons")
+                    return Object(h.d)("I only wanted to subscribe for one month", "unsubscribe-reasons")
                 }
             }, {
                 value: "Financial reasons",
                 translation: function() {
-                    return Object(b.d)("Financial reasons", "unsubscribe-reasons")
+                    return Object(h.d)("Financial reasons", "unsubscribe-reasons")
                 }
             }],
-            _ = [{
+            O = [{
                 value: "I prefer to manually renew my subscriptions",
                 translation: function() {
-                    return Object(b.d)("I prefer to manually renew my subscriptions", "unsubscribe-reasons")
+                    return Object(h.d)("I prefer to manually renew my subscriptions", "unsubscribe-reasons")
                 }
             }, {
                 value: "I need to change my payment method",
                 translation: function() {
-                    return Object(b.d)("I need to change my payment method", "unsubscribe-reasons")
+                    return Object(h.d)("I need to change my payment method", "unsubscribe-reasons")
                 }
             }, {
                 value: "I had a bad interaction with the broadcaster",
                 translation: function() {
-                    return Object(b.d)("I had a bad interaction with the broadcaster", "unsubscribe-reasons")
+                    return Object(h.d)("I had a bad interaction with the broadcaster", "unsubscribe-reasons")
                 }
             }, {
                 value: "The broadcaster's schedule changed or they're not streaming as much anymore",
                 translation: function() {
-                    return Object(b.d)("The broadcaster's schedule changed or they're not streaming as much anymore", "unsubscribe-reasons")
+                    return Object(h.d)("The broadcaster's schedule changed or they're not streaming as much anymore", "unsubscribe-reasons")
                 }
             }, {
                 value: "My schedule changed and I can't keep up with the stream anymore",
                 translation: function() {
-                    return Object(b.d)("My schedule changed and I can't keep up with the stream anymore", "unsubscribe-reasons")
+                    return Object(h.d)("My schedule changed and I can't keep up with the stream anymore", "unsubscribe-reasons")
                 }
-            }].concat(N),
-            O = [{
+            }].concat(D),
+            N = [{
                 value: "I accidentally subscribed to the wrong channel",
                 translation: function() {
-                    return Object(b.d)("I accidentally subscribed to the wrong channel", "unsubscribe-reasons")
+                    return Object(h.d)("I accidentally subscribed to the wrong channel", "unsubscribe-reasons")
                 }
             }, {
                 value: "I just wanted to get a shoutout",
                 translation: function() {
-                    return Object(b.d)("I just wanted to get a shoutout", "unsubscribe-reasons")
+                    return Object(h.d)("I just wanted to get a shoutout", "unsubscribe-reasons")
                 }
             }, {
                 value: "The channel benefits are not what I expected",
                 translation: function() {
-                    return Object(b.d)("The channel benefits are not what I expected", "unsubscribe-reasons")
+                    return Object(h.d)("The channel benefits are not what I expected", "unsubscribe-reasons")
                 }
-            }].concat(N);
+            }].concat(D);
         ! function(e) {
             e[e.Cancel = 0] = "Cancel", e[e.DoNotRenew = 1] = "DoNotRenew"
         }(r || (r = {}));
@@ -2690,7 +2896,7 @@ webpackJsonp([49], {
                         }
                     }, v.createElement(E.Q, {
                         color: E.K.Alt2
-                    }, Object(b.d)("Having issues with your subscription? Visit our <x:link1>Help Center</x:link1> or <x:link2>Contact Us</x:link2>.", {
+                    }, Object(h.d)("Having issues with your subscription? Visit our <x:link1>Help Center</x:link1> or <x:link2>Contact Us</x:link2>.", {
                         "x:link1": function(e) {
                             return v.createElement(E.O, {
                                 key: "help-center-link",
@@ -2717,8 +2923,8 @@ webpackJsonp([49], {
                     }, v.createElement(E.Q, {
                         type: E._49.H4,
                         bold: !0
-                    }, Object(b.d)("Please select your reason for canceling", "UnsubscribeForm"))), v.createElement(D, {
-                        reasons: this.props.unsubscribeType === r.Cancel ? O : _,
+                    }, Object(h.d)("Please select your reason for canceling", "UnsubscribeForm"))), v.createElement(S, {
+                        reasons: this.props.unsubscribeType === r.Cancel ? N : O,
                         updateReason: this.updateReason,
                         disabled: this.state.unsubscribing
                     }), v.createElement(E._35, {
@@ -2741,7 +2947,7 @@ webpackJsonp([49], {
                     }, v.createElement(E.v, {
                         linkTo: "/subscriptions",
                         disabled: this.state.unsubscribing
-                    }, Object(b.d)("Stay Subscribed", "UnsubscribeForm")))), this.props.unsubscribeType === r.DoNotRenew && v.createElement(E._8, {
+                    }, Object(h.d)("Stay Subscribed", "UnsubscribeForm")))), this.props.unsubscribeType === r.DoNotRenew && v.createElement(E._8, {
                         margin: {
                             top: 1
                         }
@@ -2750,21 +2956,21 @@ webpackJsonp([49], {
                     }, this.canPurchaseAgainText))))
                 }, Object.defineProperty(t.prototype, "unsubscribeActionText", {
                     get: function() {
-                        return this.props.unsubscribeType === r.Cancel ? Object(b.d)("Cancel Subscription", "UnsubscribeForm") : this.props.unsubscribeType === r.DoNotRenew ? Object(b.d)("Don't Renew Subscription", "UnsubscribeForm") : void 0
+                        return this.props.unsubscribeType === r.Cancel ? Object(h.d)("Cancel Subscription", "UnsubscribeForm") : this.props.unsubscribeType === r.DoNotRenew ? Object(h.d)("Don't Renew Subscription", "UnsubscribeForm") : void 0
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "warningText", {
                     get: function() {
-                        if (this.props.unsubscribeType === r.Cancel) return Object(b.d)("You may cancel your subscription within 24 hours of purchase and receive a refund. The broadcaster will not receive any revenue from your subscription if you do so.", "UnsubscribeForm");
+                        if (this.props.unsubscribeType === r.Cancel) return Object(h.d)("You may cancel your subscription within 24 hours of purchase and receive a refund. The broadcaster will not receive any revenue from your subscription if you do so.", "UnsubscribeForm");
                         if (this.props.unsubscribeType === r.DoNotRenew) {
                             var e = this.props.endsAt;
-                            return e ? Object(b.d)("If your renewal is stopped, your subscription will end on {endsAtDate}, at which time you will no longer have access to subscriber benefits and emotes.", {
+                            return e ? Object(h.d)("If your renewal is stopped, your subscription will end on {endsAtDate}, at which time you will no longer have access to subscriber benefits and emotes.", {
                                 endsAtDate: v.createElement(E.Q, {
                                     key: "ends-at-date",
                                     bold: !0,
                                     type: E._49.Span
-                                }, Object(b.c)(new Date(e), "medium"))
+                                }, Object(h.c)(new Date(e), "medium"))
                             }, "UnsubscribeForm") : null
                         }
                     },
@@ -2774,16 +2980,16 @@ webpackJsonp([49], {
                     get: function() {
                         var e = this.props.endsAt;
                         if (!e) return null;
-                        var t = Object(x.addDays)(new Date(e), 1);
-                        return Object(b.d)("If canceled, you can purchase the subscription again as of {canPurchaseAgainDate}.", {
-                            canPurchaseAgainDate: Object(b.c)(t, "medium")
+                        var t = Object(w.addDays)(new Date(e), 1);
+                        return Object(h.d)("If canceled, you can purchase the subscription again as of {canPurchaseAgainDate}.", {
+                            canPurchaseAgainDate: Object(h.c)(t, "medium")
                         }, "UnsubscribeForm")
                     },
                     enumerable: !0,
                     configurable: !0
                 }), t
             }(v.Component),
-            I = Object(w.compose)(Object(p.d)("UnsubscrbeForm", {
+            C = Object(x.compose)(Object(p.d)("UnsubscrbeForm", {
                 autoReportInteractive: !0
             }))(M);
         ! function(e) {
@@ -2793,12 +2999,12 @@ webpackJsonp([49], {
             e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
         }(F || (F = {}));
         n("702D");
-        var C = function(e) {
+        var I = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    return t.logger = b.o.logger.withCategory("unsubscribe-page"), t.unsubscribeType = "true" === g.parse(t.props.location.search).cancel ? r.Cancel : r.DoNotRenew, t.redirectToLegacyCheckout = function() {
+                    return t.logger = h.o.logger.withCategory("unsubscribe-page"), t.unsubscribeType = "true" === g.parse(t.props.location.search).cancel ? r.Cancel : r.DoNotRenew, t.redirectToLegacyCheckout = function() {
                         var e = t.props.match.params.productName;
-                        b.o.history.push("/products/" + e)
+                        h.o.history.push("/products/" + e)
                     }, t
                 }
                 return f.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -2808,8 +3014,8 @@ webpackJsonp([49], {
                 }, t.prototype.render = function() {
                     if (!this.props.currentUser) return this.props.promptLogin(), v.createElement(E._8, {
                         fullHeight: !0
-                    }, v.createElement(h.a, {
-                        message: Object(b.d)("You must be logged in to view this page", "UnsubscribePage")
+                    }, v.createElement(b.a, {
+                        message: Object(h.d)("You must be logged in to view this page", "UnsubscribePage")
                     }));
                     var e = this.props.data,
                         t = e.subscriptionProduct,
@@ -2818,7 +3024,7 @@ webpackJsonp([49], {
                         a = !n && !r;
                     if (a && !t) return v.createElement(E._8, {
                         fullHeight: !0
-                    }, v.createElement(h.a, null));
+                    }, v.createElement(b.a, null));
                     if (a && !this.hasSubscriptionBenefit) return this.redirectToLegacyCheckout(), v.createElement(E._8, {
                         fullHeight: !0
                     }, v.createElement(E._10, {
@@ -2826,7 +3032,7 @@ webpackJsonp([49], {
                     }));
                     if (a && !this.canUnsubscribe || r) return v.createElement(E._8, {
                         fullHeight: !0
-                    }, v.createElement(h.a, null));
+                    }, v.createElement(b.a, null));
                     var i = t && t.self && t.self.benefit && t.self.benefit.endsAt;
                     return v.createElement(E._8, {
                         display: E.R.Flex,
@@ -2854,7 +3060,7 @@ webpackJsonp([49], {
                         }
                     }, n ? v.createElement(E._14, {
                         lineCount: 20
-                    }) : v.createElement(I, {
+                    }) : v.createElement(C, {
                         currentUserID: this.props.currentUser.id,
                         productName: this.props.match.params.productName,
                         unsubscribeType: this.unsubscribeType,
@@ -2917,7 +3123,7 @@ webpackJsonp([49], {
                     return Object(c.f)(u.a.DashboardPage)
                 }
             }, e)
-        }))(C);
+        }))(I);
         n.d(t, "UnsubscribePage", function() {
             return j
         })
@@ -4432,25 +4638,25 @@ webpackJsonp([49], {
                 f = m.locale,
                 g = o.distanceInWords.localize;
             f && f.distanceInWords && f.distanceInWords.localize && (g = f.distanceInWords.localize);
-            var v, b, h = {
+            var v, h, b = {
                 addSuffix: Boolean(m.addSuffix),
                 comparison: p
             };
-            p > 0 ? (v = a(e), b = a(t)) : (v = a(t), b = a(e));
-            var k, x = i(b, v),
-                w = b.getTimezoneOffset() - v.getTimezoneOffset(),
-                y = Math.round(x / 60) - w;
-            if (y < 2) return m.includeSeconds ? x < 5 ? g("lessThanXSeconds", 5, h) : x < 10 ? g("lessThanXSeconds", 10, h) : x < 20 ? g("lessThanXSeconds", 20, h) : x < 40 ? g("halfAMinute", null, h) : g(x < 60 ? "lessThanXMinutes" : "xMinutes", 1, h) : 0 === y ? g("lessThanXMinutes", 1, h) : g("xMinutes", y, h);
-            if (y < 45) return g("xMinutes", y, h);
-            if (y < 90) return g("aboutXHours", 1, h);
-            if (y < u) return g("aboutXHours", Math.round(y / 60), h);
-            if (y < c) return g("xDays", 1, h);
-            if (y < l) return g("xDays", Math.round(y / u), h);
-            if (y < d) return g("aboutXMonths", k = Math.round(y / l), h);
-            if ((k = s(b, v)) < 12) return g("xMonths", Math.round(y / l), h);
+            p > 0 ? (v = a(e), h = a(t)) : (v = a(t), h = a(e));
+            var k, w = i(h, v),
+                x = h.getTimezoneOffset() - v.getTimezoneOffset(),
+                y = Math.round(w / 60) - x;
+            if (y < 2) return m.includeSeconds ? w < 5 ? g("lessThanXSeconds", 5, b) : w < 10 ? g("lessThanXSeconds", 10, b) : w < 20 ? g("lessThanXSeconds", 20, b) : w < 40 ? g("halfAMinute", null, b) : g(w < 60 ? "lessThanXMinutes" : "xMinutes", 1, b) : 0 === y ? g("lessThanXMinutes", 1, b) : g("xMinutes", y, b);
+            if (y < 45) return g("xMinutes", y, b);
+            if (y < 90) return g("aboutXHours", 1, b);
+            if (y < u) return g("aboutXHours", Math.round(y / 60), b);
+            if (y < c) return g("xDays", 1, b);
+            if (y < l) return g("xDays", Math.round(y / u), b);
+            if (y < d) return g("aboutXMonths", k = Math.round(y / l), b);
+            if ((k = s(h, v)) < 12) return g("xMonths", Math.round(y / l), b);
             var E = k % 12,
-                S = Math.floor(k / 12);
-            return E < 3 ? g("aboutXYears", S, h) : E < 9 ? g("overXYears", S, h) : g("almostXYears", S + 1, h)
+                _ = Math.floor(k / 12);
+            return E < 3 ? g("aboutXYears", _, b) : E < 9 ? g("overXYears", _, b) : g("almostXYears", _ + 1, b)
         }
     },
     mbxv: function(e, t, n) {
@@ -4741,21 +4947,21 @@ webpackJsonp([49], {
                 m = l.locale,
                 p = s.distanceInWords.localize;
             m && m.distanceInWords && m.distanceInWords.localize && (p = m.distanceInWords.localize);
-            var f, g, v, b = {
+            var f, g, v, h = {
                 addSuffix: Boolean(l.addSuffix),
                 comparison: d
             };
             d > 0 ? (f = a(e), g = a(t)) : (f = a(t), g = a(e));
-            var h = Math[l.partialMethod ? String(l.partialMethod) : "floor"],
+            var b = Math[l.partialMethod ? String(l.partialMethod) : "floor"],
                 k = i(g, f),
-                x = g.getTimezoneOffset() - f.getTimezoneOffset(),
-                w = h(k / 60) - x;
-            if ("s" === (v = l.unit ? String(l.unit) : w < 1 ? "s" : w < 60 ? "m" : w < o ? "h" : w < u ? "d" : w < c ? "M" : "Y")) return p("xSeconds", k, b);
-            if ("m" === v) return p("xMinutes", w, b);
-            if ("h" === v) return p("xHours", h(w / 60), b);
-            if ("d" === v) return p("xDays", h(w / o), b);
-            if ("M" === v) return p("xMonths", h(w / u), b);
-            if ("Y" === v) return p("xYears", h(w / c), b);
+                w = g.getTimezoneOffset() - f.getTimezoneOffset(),
+                x = b(k / 60) - w;
+            if ("s" === (v = l.unit ? String(l.unit) : x < 1 ? "s" : x < 60 ? "m" : x < o ? "h" : x < u ? "d" : x < c ? "M" : "Y")) return p("xSeconds", k, h);
+            if ("m" === v) return p("xMinutes", x, h);
+            if ("h" === v) return p("xHours", b(x / 60), h);
+            if ("d" === v) return p("xDays", b(x / o), h);
+            if ("M" === v) return p("xMonths", b(x / u), h);
+            if ("Y" === v) return p("xYears", b(x / c), h);
             throw new Error("Unknown unit: " + v)
         }
     },
@@ -5030,16 +5236,16 @@ webpackJsonp([49], {
             f = /^-?(\d{3})$/,
             g = /^-?(\d{2})-?(\d{2})$/,
             v = /^-?W(\d{2})$/,
-            b = /^-?W(\d{2})-?(\d{1})$/,
-            h = /^(\d{2}([.,]\d*)?)$/,
+            h = /^-?W(\d{2})-?(\d{1})$/,
+            b = /^(\d{2}([.,]\d*)?)$/,
             k = /^(\d{2}):?(\d{2}([.,]\d*)?)$/,
-            x = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/,
-            w = /([Z+-].*)$/,
+            w = /^(\d{2}):?(\d{2}):?(\d{2}([.,]\d*)?)$/,
+            x = /([Z+-].*)$/,
             y = /^(Z)$/,
             E = /^([+-])(\d{2})$/,
-            S = /^([+-])(\d{2}):?(\d{2})$/;
+            _ = /^([+-])(\d{2}):?(\d{2})$/;
 
-        function D(e, t, n) {
+        function S(e, t, n) {
             t = t || 0, n = n || 0;
             var r = new Date(0);
             r.setUTCFullYear(e, 0, 4);
@@ -5055,12 +5261,12 @@ webpackJsonp([49], {
                     var t, n = {},
                         r = e.split(o);
                     if (u.test(r[0]) ? (n.date = null, t = r[0]) : (n.date = r[0], t = r[1]), t) {
-                        var a = w.exec(t);
+                        var a = x.exec(t);
                         a ? (n.time = t.replace(a[1], ""), n.timezone = a[1]) : n.time = t
                     }
                     return n
                 }(e),
-                N = function(e, t) {
+                D = function(e, t) {
                     var n, r = l[t],
                         a = m[t];
                     if (n = d.exec(e) || a.exec(e)) {
@@ -5081,8 +5287,8 @@ webpackJsonp([49], {
                         year: null
                     }
                 }(T.date, n),
-                _ = N.year,
-                O = function(e, t) {
+                O = D.year,
+                N = function(e, t) {
                     if (null === t) return null;
                     var n, r, a, i;
                     if (0 === e.length) return (r = new Date(0)).setUTCFullYear(t), r;
@@ -5097,30 +5303,30 @@ webpackJsonp([49], {
                         var o = parseInt(n[2], 10);
                         return r.setUTCFullYear(t, a, o), r
                     }
-                    if (n = v.exec(e)) return i = parseInt(n[1], 10) - 1, D(t, i);
-                    if (n = b.exec(e)) {
+                    if (n = v.exec(e)) return i = parseInt(n[1], 10) - 1, S(t, i);
+                    if (n = h.exec(e)) {
                         i = parseInt(n[1], 10) - 1;
                         var u = parseInt(n[2], 10) - 1;
-                        return D(t, i, u)
+                        return S(t, i, u)
                     }
                     return null
-                }(N.restDateString, _);
-            if (O) {
-                var A, F = O.getTime(),
+                }(D.restDateString, O);
+            if (N) {
+                var A, F = N.getTime(),
                     M = 0;
                 return T.time && (M = function(e) {
                     var t, n, r;
-                    if (t = h.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * a;
+                    if (t = b.exec(e)) return (n = parseFloat(t[1].replace(",", "."))) % 24 * a;
                     if (t = k.exec(e)) return n = parseInt(t[1], 10), r = parseFloat(t[2].replace(",", ".")), n % 24 * a + r * i;
-                    if (t = x.exec(e)) {
+                    if (t = w.exec(e)) {
                         n = parseInt(t[1], 10), r = parseInt(t[2], 10);
                         var s = parseFloat(t[3].replace(",", "."));
                         return n % 24 * a + r * i + 1e3 * s
                     }
                     return null
-                }(T.time)), T.timezone ? (I = T.timezone, A = (C = y.exec(I)) ? 0 : (C = E.exec(I)) ? (R = 60 * parseInt(C[2], 10), "+" === C[1] ? -R : R) : (C = S.exec(I)) ? (R = 60 * parseInt(C[2], 10) + parseInt(C[3], 10), "+" === C[1] ? -R : R) : 0) : (A = new Date(F + M).getTimezoneOffset(), A = new Date(F + M + A * i).getTimezoneOffset()), new Date(F + M + A * i)
+                }(T.time)), T.timezone ? (C = T.timezone, A = (I = y.exec(C)) ? 0 : (I = E.exec(C)) ? (R = 60 * parseInt(I[2], 10), "+" === I[1] ? -R : R) : (I = _.exec(C)) ? (R = 60 * parseInt(I[2], 10) + parseInt(I[3], 10), "+" === I[1] ? -R : R) : 0) : (A = new Date(F + M).getTimezoneOffset(), A = new Date(F + M + A * i).getTimezoneOffset()), new Date(F + M + A * i)
             }
-            var I, C, R;
+            var C, I, R;
             return new Date(e)
         }
     },
@@ -5186,4 +5392,4 @@ webpackJsonp([49], {
         }
     }
 });
-//# sourceMappingURL=pages.unsubscribe-2cf0aba9483984c60c2cd83e760a0e2c.js.map
+//# sourceMappingURL=pages.unsubscribe-aab0d6233a34b1c1c83de5dbf6a33cef.js.map

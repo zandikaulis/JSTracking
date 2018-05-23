@@ -1,4 +1,4 @@
-webpackJsonp([105], {
+webpackJsonp([107], {
     "1myv": function(e, t) {
         var n = {
             kind: "Document",
@@ -2055,4 +2055,4 @@ webpackJsonp([105], {
         e.exports = n.p + "assets/missing-video-thumb-320x180-101fcbc1ff84459331417137edd6cfdb.png"
     }
 });
-//# sourceMappingURL=pages.video-tools.pages.collection-manager-22d103de7f3730f442a97479713933a3.js.map
+//# sourceMappingURL=pages.video-tools.pages.collection-manager-08f2b9d6f7ce58d811752a0532596621.js.map

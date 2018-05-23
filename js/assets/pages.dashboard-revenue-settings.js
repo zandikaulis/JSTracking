@@ -1,4 +1,4 @@
-webpackJsonp([98], {
+webpackJsonp([100], {
     "+0KR": function(e, t, n) {
         "use strict";
         var a = n("oR9V");
@@ -2409,6 +2409,64 @@ webpackJsonp([98], {
             }
     },
     IjoR: function(e, t) {},
+    J8WN: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return s
+        });
+        var a = n("TToO"),
+            r = n("GiK3"),
+            i = (n.n(r), n("Odds")),
+            o = n("yU6t"),
+            s = (n.n(o), function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        isDraggingOver: !1
+                    }, t.onDragEnter = function(e) {
+                        e.preventDefault(), t.setState({
+                            isDraggingOver: !0
+                        })
+                    }, t.onDragLeave = function(e) {
+                        e.preventDefault(), t.setState({
+                            isDraggingOver: !1
+                        })
+                    }, t.onFileInputChange = function(e) {
+                        e.preventDefault(), t.finalizeSelections(e.target.files), e.target.value = ""
+                    }, t.onFileDrop = function(e) {
+                        e.preventDefault(), t.setState({
+                            isDraggingOver: !1
+                        }), t.finalizeSelections(e.dataTransfer.files)
+                    }, t
+                }
+                return a.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(i.S, {
+                        dragOver: this.state.isDraggingOver,
+                        error: this.props.error
+                    }, r.createElement(i._2, {
+                        position: i._15.Absolute,
+                        attachTop: !0,
+                        attachLeft: !0,
+                        fullWidth: !0,
+                        fullHeight: !0,
+                        zIndex: i._62.Above
+                    }, r.createElement("input", {
+                        "data-a-target": "file-picker-input",
+                        "data-test-selector": "file-picker-input",
+                        className: "drag-and-drop-file-picker__input",
+                        accept: this.props.allowedFileTypes.join(","),
+                        multiple: this.props.multiFile || !1,
+                        onChange: this.onFileInputChange,
+                        type: "file",
+                        onDragLeave: this.onDragLeave,
+                        onDragEnter: this.onDragEnter,
+                        onDrop: this.onFileDrop
+                    })), this.props.children)
+                }, t.prototype.finalizeSelections = function(e) {
+                    e && this.props.onFilesSubmitted(Array.from(e))
+                }, t
+            }(r.Component))
+    },
     Jo6h: function(e, t, n) {
         "use strict";
         var a = n("GiK3"),
@@ -3053,32 +3111,6 @@ webpackJsonp([98], {
             };
         n.d(t, "a", function() {
             return i
-        })
-    },
-    QRuM: function(e, t, n) {
-        "use strict";
-        var a, r = n("TToO"),
-            i = n("GiK3"),
-            o = n("6sO2");
-        ! function(e) {
-            e.On = "on", e.Off = "off", e.StaffOnly = "staff"
-        }(a || (a = {}));
-        var s = function(e) {
-                function t() {
-                    return null !== e && e.apply(this, arguments) || this
-                }
-                return r.__extends(t, e), t.prototype.render = function() {
-                    var e = o.b.get(this.props.name, a.Off);
-                    return e === a.On || e === a.StaffOnly && this.props.isStaff ? this.props.children : null
-                }, t
-            }(i.Component),
-            l = s;
-        n.d(t, "a", function() {
-            return a
-        }), n.d(t, "c", function() {
-            return s
-        }), n.d(t, "b", function() {
-            return l
         })
     },
     QnA7: function(e, t) {},
@@ -7636,6 +7668,7 @@ webpackJsonp([98], {
         };
         e.exports = n
     },
+    yU6t: function(e, t) {},
     yuX3: function(e, t, n) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
@@ -11056,9 +11089,9 @@ webpackJsonp([98], {
                     }), i.createElement(wt, {
                         channelName: this.channelName,
                         isPartner: this.isPaidPartner
-                    })), this.isPaidPartner && i.createElement(Vt, {
+                    }), i.createElement(Vt, {
                         channelName: this.channelName
-                    })))
+                    }))))
                 }, Object.defineProperty(t.prototype, "channelName", {
                     get: function() {
                         return this.props.match.params.channelName
@@ -15975,6 +16008,15 @@ webpackJsonp([98], {
                         path: "/:channelName/dashboard/settings/revenue/cheerbadges",
                         component: pe
                     }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
+                        path: "/:channelName/dashboard/settings/revenue/game-commerce",
+                        component: ht
+                    }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
+                        path: "/:channelName/dashboard/settings/revenue/game-commerce-v2",
+                        component: vt
+                    }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
+                        path: "/:channelName/dashboard/settings/revenue/merch-by-amazon",
+                        component: xn
+                    }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/chatperks",
                         component: H
                     }), (this.isPaidAffiliate || this.isPaidPartner) && i.createElement(s.c, {
@@ -15986,15 +16028,6 @@ webpackJsonp([98], {
                     }), this.isPaidPartner && i.createElement(s.c, {
                         path: "/:channelName/dashboard/settings/revenue/subscription/badges",
                         component: wn
-                    }), this.isPaidPartner && i.createElement(s.c, {
-                        path: "/:channelName/dashboard/settings/revenue/game-commerce",
-                        component: ht
-                    }), this.isPaidPartner && i.createElement(s.c, {
-                        path: "/:channelName/dashboard/settings/revenue/game-commerce-v2",
-                        component: vt
-                    }), this.isPaidPartner && i.createElement(s.c, {
-                        path: "/:channelName/dashboard/settings/revenue/merch-by-amazon",
-                        component: xn
                     }), i.createElement(s.c, {
                         component: d.a
                     }))))) : i.createElement(N._8, {
@@ -16051,4 +16084,4 @@ webpackJsonp([98], {
     },
     z1LJ: function(e, t) {}
 });
-//# sourceMappingURL=pages.dashboard-revenue-settings-2ec21d3479001b36cc38b32d5bcb36bc.js.map
+//# sourceMappingURL=pages.dashboard-revenue-settings-2295f08fab8cc684a7f360f6e10073ff.js.map

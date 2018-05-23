@@ -1,124 +1,330 @@
-webpackJsonp([73], {
+webpackJsonp([74], {
+    "9u8h": function(e, t, i) {
+        "use strict";
+        i.d(t, "a", function() {
+            return s
+        });
+        var r = i("TToO"),
+            n = i("6sO2"),
+            a = i("Aj/L"),
+            s = function() {
+                function e() {}
+                return e.get = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, this.request(e, r.__assign({}, t, {
+                                        method: "GET"
+                                    }), i)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.getOrThrow = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        method: "GET"
+                                    }), i)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.put = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, this.request(e, r.__assign({}, t, {
+                                        method: "PUT"
+                                    }), i)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.putOrThrow = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        method: "PUT"
+                                    }), i)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.post = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, this.request(e, r.__assign({}, t, {
+                                        method: "POST"
+                                    }), i)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.postOrThrow = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        method: "POST"
+                                    }), i)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.delete = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, this.request(e, r.__assign({}, t, {
+                                        method: "DELETE"
+                                    }), i)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.deleteOrThrow = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(n) {
+                            switch (n.label) {
+                                case 0:
+                                    return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                        method: "DELETE"
+                                    }), i)];
+                                case 1:
+                                    return [2, n.sent()]
+                            }
+                        })
+                    })
+                }, e.request = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        var n, a, s, o;
+                        return r.__generator(this, function(c) {
+                            switch (c.label) {
+                                case 0:
+                                    return t = this.constructOptions(t, i), n = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, n), s = r.__assign({}, t, {
+                                        body: a
+                                    }), [4, this._fetch(e, s)];
+                                case 1:
+                                    return o = c.sent(), [4, this.constructLegacyAPIResponse(o)];
+                                case 2:
+                                    return [2, c.sent()]
+                            }
+                        })
+                    })
+                }, e.requestOrThrow = function(e, t, i) {
+                    return void 0 === t && (t = {}), void 0 === i && (i = {}), r.__awaiter(this, void 0, void 0, function() {
+                        var n, a;
+                        return r.__generator(this, function(s) {
+                            switch (s.label) {
+                                case 0:
+                                    return s.trys.push([0, 2, , 3]), [4, this.request(e, t, i)];
+                                case 1:
+                                    if ((n = s.sent()).error || n.requestError) throw new Error("Error while making request");
+                                    return a = r.__assign({}, n, {
+                                        body: n.body
+                                    }), [2, Promise.resolve(a)];
+                                case 2:
+                                    throw s.sent();
+                                case 3:
+                                    return [2]
+                            }
+                        })
+                    })
+                }, e.getAPIURL = function(e) {
+                    return new URL(e, n.o.config.apiBaseURL)
+                }, e.constructLegacyAPIResponse = function(e) {
+                    return r.__awaiter(this, void 0, void 0, function() {
+                        var t, i, n, a;
+                        return r.__generator(this, function(r) {
+                            switch (r.label) {
+                                case 0:
+                                    t = {
+                                        status: e.status
+                                    }, r.label = 1;
+                                case 1:
+                                    return r.trys.push([1, 3, , 4]), [4, e.json()];
+                                case 2:
+                                    return i = r.sent(), e.ok ? t.body = i : t.error = i, [3, 4];
+                                case 3:
+                                    return n = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = n), [3, 4];
+                                case 4:
+                                    return [2, t]
+                            }
+                        })
+                    })
+                }, e._fetch = function(e, t) {
+                    return void 0 === t && (t = {}), r.__awaiter(this, void 0, void 0, function() {
+                        return r.__generator(this, function(i) {
+                            switch (i.label) {
+                                case 0:
+                                    return [4, fetch(this.getAPIURL(e).toString(), t)];
+                                case 1:
+                                    return [2, i.sent()]
+                            }
+                        })
+                    })
+                }, e.constructOptions = function(e, t) {
+                    return e = Object.assign({}, e, {
+                        headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                    })
+                }, e.serialize = function(e, t) {
+                    return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                        contentType: t
+                    }), null) : null
+                }, e.getDefaultHeaders = function(e, t) {
+                    var i = n.o.store.getState(),
+                        r = {
+                            Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
+                            "Accept-Language": "en-us",
+                            "Client-ID": n.o.config.legacyClientID,
+                            "X-Requested-With": "XMLHttpRequest"
+                        };
+                    e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
+                    var s = Object(a.c)(i);
+                    return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        r[e] && delete r[e]
+                    }), r
+                }, e.logger = n.o.logger.withCategory("legacy-api"), e
+            }()
+    },
     CNsG: function(e, t, i) {
         "use strict";
         Object.defineProperty(t, "__esModule", {
             value: !0
         });
-        var r, a = i("TToO"),
-            n = i("GiK3"),
+        var r, n = i("TToO"),
+            a = i("GiK3"),
             s = i("CIox"),
             o = i("2KeS"),
-            l = i("6sO2"),
-            c = i("7vx8"),
-            m = i("CSlQ"),
-            u = i("Kckk"),
-            d = i("9u8h"),
-            f = this,
-            p = l.o.logger.withCategory("verify-email"),
-            h = function(e, t) {
-                return a.__awaiter(f, void 0, void 0, function() {
+            c = i("6sO2"),
+            l = i("7vx8"),
+            u = i("CSlQ"),
+            d = i("Kckk"),
+            h = i("9u8h"),
+            m = this,
+            f = c.o.logger.withCategory("verify-email"),
+            p = function(e, t) {
+                return n.__awaiter(m, void 0, void 0, function() {
                     var i, r;
-                    return a.__generator(this, function(a) {
-                        switch (a.label) {
+                    return n.__generator(this, function(n) {
+                        switch (n.label) {
                             case 0:
-                                i = "/kraken/users/" + e, a.label = 1;
+                                i = "/kraken/users/" + e, n.label = 1;
                             case 1:
-                                return a.trys.push([1, 3, , 4]), [4, d.a.putOrThrow(i, {
+                                return n.trys.push([1, 3, , 4]), [4, h.a.putOrThrow(i, {
                                     body: {
                                         email: t
                                     }
                                 })];
                             case 2:
-                                return a.sent(), [2, !0];
+                                return n.sent(), [2, !0];
                             case 3:
-                                return r = a.sent(), p.error(r, "Verify Email Service"), [2, !1];
+                                return r = n.sent(), f.error(r, "Verify Email Service"), [2, !1];
                             case 4:
                                 return [2]
                         }
                     })
                 })
             },
-            y = i("vH/s");
+            _ = i("vH/s");
         ! function(e) {
             e.Click = "click", e.Dismiss = "dismiss"
         }(r || (r = {}));
-        var E = i("Odds"),
-            S = (i("yY1M"), i("RDCx"));
+        var y = i("Odds"),
+            v = (i("yY1M"), i("RDCx"));
         i.d(t, "DISMISSAL_DATA_STORAGE_KEY", function() {
-            return I
+            return E
         }), i.d(t, "DISMISS_BTN_SELECTOR", function() {
-            return C
+            return D
         }), i.d(t, "VERIFY_BTN_SELECTOR", function() {
-            return T
+            return C
         }), i.d(t, "VerifyEmailBarPresentation", function() {
-            return N
+            return b
         }), i.d(t, "VerifyEmailBar", function() {
-            return k
+            return w
         });
-        var v, I = "verifyemailbar_dismissal",
-            _ = 18e5,
-            g = 5e3,
-            D = new Set(["/"]),
-            C = "dimiss-btn",
-            T = "verify-email-btn";
+        var g, E = "verifyemailbar_dismissal",
+            S = 18e5,
+            I = 5e3,
+            T = new Set(["/"]),
+            D = "dimiss-btn",
+            C = "verify-email-btn";
         ! function(e) {
             e[e.INITIAL = 0] = "INITIAL", e[e.CLICK_TO_VERIFY = 1] = "CLICK_TO_VERIFY", e[e.EMAIL_SENT = 2] = "EMAIL_SENT", e[e.ERROR_SENDING = 3] = "ERROR_SENDING", e[e.DISMISSED = 4] = "DISMISSED"
-        }(v || (v = {}));
-        var N = function(e) {
+        }(g || (g = {}));
+        var b = function(e) {
                 function t(t) {
                     var i = e.call(this, t) || this;
                     return i.state = {
                         isError: !1,
-                        verifyEmailBarState: v.INITIAL
-                    }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.logger = l.o.logger.withCategory("verify-email-bar"), i.dismissBarClickHandler = function(e) {
+                        verifyEmailBarState: g.INITIAL
+                    }, i.resetAfterDismissalTimeoutID = null, i.afterVerifyDismissTimeoutID = null, i.dismissalData = null, i.logger = c.o.logger.withCategory("verify-email-bar"), i.dismissBarClickHandler = function(e) {
                         e && e.stopPropagation();
                         var t = i.dismissalData ? i.dismissalData.dismissalCount : 0;
                         i.dismissalData = {
                             dismissalCount: t + 1,
                             dismissalDateTimeMs: Date.now()
-                        }, l.l.set(I, i.dismissalData), i.setState({
-                            verifyEmailBarState: v.DISMISSED
+                        }, c.l.set(E, i.dismissalData), i.setState({
+                            verifyEmailBarState: g.DISMISSED
                         }), i.resetAfterDismissalTimeoutID = setTimeout(function() {
-                            return a.__awaiter(i, void 0, void 0, function() {
-                                return a.__generator(this, function(e) {
+                            return n.__awaiter(i, void 0, void 0, function() {
+                                return n.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
                                             return [4, this.props.data.refetch()];
                                         case 1:
                                             return e.sent(), this.setState({
-                                                verifyEmailBarState: v.INITIAL
+                                                verifyEmailBarState: g.INITIAL
                                             }), this.resetAfterDismissalTimeoutID = null, [2]
                                     }
                                 })
                             })
-                        }, 1.01 * _), l.o.tracking.track(y.SpadeEventType.VerifyEmailBar, {
+                        }, 1.01 * S), c.o.tracking.track(_.SpadeEventType.VerifyEmailBar, {
                             action: r.Dismiss
                         })
                     }, i.onClickToVerify = function(e) {
-                        return a.__awaiter(i, void 0, void 0, function() {
+                        return n.__awaiter(i, void 0, void 0, function() {
                             var t, i = this;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                            return n.__generator(this, function(n) {
+                                switch (n.label) {
                                     case 0:
-                                        return e && e.currentTarget && (t = e.currentTarget) && t.blur(), [4, h(this.props.data.currentUser.id, this.props.data.currentUser.email)];
+                                        return e && e.currentTarget && (t = e.currentTarget) && t.blur(), [4, p(this.props.data.currentUser.id, this.props.data.currentUser.email)];
                                     case 1:
-                                        return a.sent() ? this.setState({
-                                            verifyEmailBarState: v.EMAIL_SENT
+                                        return n.sent() ? this.setState({
+                                            verifyEmailBarState: g.EMAIL_SENT
                                         }) : this.setState({
-                                            verifyEmailBarState: v.ERROR_SENDING
+                                            verifyEmailBarState: g.ERROR_SENDING
                                         }), this.afterVerifyDismissTimeoutID = setTimeout(function() {
                                             i.setState({
-                                                verifyEmailBarState: v.DISMISSED
+                                                verifyEmailBarState: g.DISMISSED
                                             }), i.afterVerifyDismissTimeoutID = null
-                                        }, g), l.o.tracking.track(y.SpadeEventType.VerifyEmailBar, {
+                                        }, I), c.o.tracking.track(_.SpadeEventType.VerifyEmailBar, {
                                             action: r.Click
                                         }), [2]
                                 }
                             })
                         })
-                    }, i.dismissalData = l.l.getOptional(I), i
+                    }, i.dismissalData = c.l.getOptional(E), i
                 }
-                return a.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
+                return n.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                     var i = this;
                     this.setState({
                         isError: !0
@@ -134,72 +340,72 @@ webpackJsonp([73], {
                 }, t.prototype.componentDidUpdate = function() {
                     this.maybeChangeBarState(), this.props.data.loading || this.props.latencyTracking.reportInteractive()
                 }, t.prototype.maybeChangeBarState = function() {
-                    this.state.verifyEmailBarState !== v.EMAIL_SENT && this.state.verifyEmailBarState !== v.ERROR_SENDING && (this.isVisible() && this.shouldHide() ? this.setState({
-                        verifyEmailBarState: v.INITIAL
-                    }) : this.state.verifyEmailBarState !== v.INITIAL || this.shouldHide() || this.setState({
-                        verifyEmailBarState: v.CLICK_TO_VERIFY
+                    this.state.verifyEmailBarState !== g.EMAIL_SENT && this.state.verifyEmailBarState !== g.ERROR_SENDING && (this.isVisible() && this.shouldHide() ? this.setState({
+                        verifyEmailBarState: g.INITIAL
+                    }) : this.state.verifyEmailBarState !== g.INITIAL || this.shouldHide() || this.setState({
+                        verifyEmailBarState: g.CLICK_TO_VERIFY
                     }))
                 }, t.prototype.render = function() {
                     if (this.state.isError) return null;
                     switch (this.state.verifyEmailBarState) {
-                        case v.CLICK_TO_VERIFY:
+                        case g.CLICK_TO_VERIFY:
                             return this.renderClickToVerify();
-                        case v.EMAIL_SENT:
+                        case g.EMAIL_SENT:
                             return this.renderEmailSent();
-                        case v.ERROR_SENDING:
+                        case g.ERROR_SENDING:
                             return this.renderErrorSending();
                         default:
                             return null
                     }
                 }, t.prototype.isVisible = function() {
-                    return this.state.verifyEmailBarState !== v.INITIAL && this.state.verifyEmailBarState !== v.DISMISSED
+                    return this.state.verifyEmailBarState !== g.INITIAL && this.state.verifyEmailBarState !== g.DISMISSED
                 }, t.prototype.renderClickToVerify = function() {
-                    return n.createElement(E.e, {
-                        type: E.j.SlideInTop,
-                        duration: E.g.ExtraLong
-                    }, n.createElement(E._8, {
+                    return a.createElement(y.e, {
+                        type: y.j.SlideInTop,
+                        duration: y.g.ExtraLong
+                    }, a.createElement(y._8, {
                         fullWidth: !0,
-                        position: E._15.Relative
-                    }, n.createElement(E._35, {
+                        position: y._15.Relative
+                    }, a.createElement(y._35, {
                         className: "verify-email-bar",
-                        display: E.R.Flex,
-                        alignItems: E.c.Center,
-                        justifyContent: E._7.Center,
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
+                        justifyContent: y._7.Center,
                         elevation: 1
-                    }, n.createElement(E._2, {
+                    }, a.createElement(y._2, {
                         fullHeight: !0,
                         fullWidth: !0,
                         padding: 1
-                    }, n.createElement("button", {
+                    }, a.createElement("button", {
                         onClick: this.onClickToVerify,
-                        "data-test-selector": T
-                    }, n.createElement(E._8, {
-                        display: E.R.Flex,
-                        alignItems: E.c.Center,
-                        justifyContent: E._7.Center
-                    }, n.createElement(E._8, {
+                        "data-test-selector": C
+                    }, a.createElement(y._8, {
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
+                        justifyContent: y._7.Center
+                    }, a.createElement(y._8, {
                         className: "verify-email-bar__copy",
-                        display: E.R.Flex,
-                        alignItems: E.c.Center,
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
                         margin: {
                             right: 1
                         },
                         padding: {
                             right: .5
                         }
-                    }, n.createElement(E._24, {
-                        asset: E._25.NotificationWarning,
-                        type: E._26.Inherit
-                    })), n.createElement(E._8, {
+                    }, a.createElement(y._24, {
+                        asset: y._25.NotificationWarning,
+                        type: y._26.Inherit
+                    })), a.createElement(y._8, {
                         className: "verify-email-bar__copy"
-                    }, n.createElement(E.Q, {
-                        fontSize: E.V.Size5,
-                        color: E.K.Inherit
-                    }, Object(l.d)("Keep your account secure and verify {email}.", {
+                    }, a.createElement(y.Q, {
+                        fontSize: y.V.Size5,
+                        color: y.K.Inherit
+                    }, Object(c.d)("Keep your account secure and verify {email}.", {
                         email: this.props.data.currentUser.email
-                    }, "VerifyEmail")))))), n.createElement(E._35, {
+                    }, "VerifyEmail")))))), a.createElement(y._35, {
                         className: "verify-email-bar__dismiss",
-                        position: E._15.Absolute,
+                        position: y._15.Absolute,
                         attachRight: !0,
                         margin: {
                             right: 2
@@ -208,94 +414,94 @@ webpackJsonp([73], {
                             x: 1,
                             y: .5
                         }
-                    }, n.createElement(E.O, {
-                        type: E.P.Inherit,
+                    }, a.createElement(y.O, {
+                        type: y.P.Inherit,
                         onClick: this.dismissBarClickHandler,
-                        "data-test-selector": C,
+                        "data-test-selector": D,
                         hoverColorInherit: !0,
                         hoverUnderlineNone: !0
-                    }, Object(l.d)("Not Now", "VerifyEmail"))))))
+                    }, Object(c.d)("Not Now", "VerifyEmail"))))))
                 }, t.prototype.renderEmailSent = function() {
-                    return n.createElement(E._35, {
+                    return a.createElement(y._35, {
                         className: "verify-email-bar verify-email-bar--success",
-                        display: E.R.Flex,
-                        justifyContent: E._7.Center,
-                        alignItems: E.c.Center,
+                        display: y.R.Flex,
+                        justifyContent: y._7.Center,
+                        alignItems: y.c.Center,
                         elevation: 1,
                         padding: 1
-                    }, n.createElement(E._35, {
-                        display: E.R.Flex,
-                        alignItems: E.c.Center,
+                    }, a.createElement(y._35, {
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
                         margin: {
                             right: 1
                         },
                         padding: {
                             right: .5
                         },
-                        color: E.K.Overlay
-                    }, n.createElement(E._24, {
-                        asset: E._25.NavMessages,
-                        type: E._26.Inherit
-                    })), n.createElement(E.Q, {
-                        fontSize: E.V.Size5,
-                        color: E.K.Overlay
-                    }, Object(l.d)("Check your inbox at {email} for your verification email.", {
+                        color: y.K.Overlay
+                    }, a.createElement(y._24, {
+                        asset: y._25.NavMessages,
+                        type: y._26.Inherit
+                    })), a.createElement(y.Q, {
+                        fontSize: y.V.Size5,
+                        color: y.K.Overlay
+                    }, Object(c.d)("Check your inbox at {email} for your verification email.", {
                         email: this.props.data.currentUser.email
                     }, "VerifyEmail")))
                 }, t.prototype.renderErrorSending = function() {
-                    return n.createElement(E._35, {
+                    return a.createElement(y._35, {
                         className: "verify-email-bar verify-email-bar--error",
-                        display: E.R.Flex,
-                        justifyContent: E._7.Center,
-                        alignItems: E.c.Center,
+                        display: y.R.Flex,
+                        justifyContent: y._7.Center,
+                        alignItems: y.c.Center,
                         elevation: 1,
                         padding: 1
-                    }, n.createElement(E._35, {
-                        display: E.R.Flex,
-                        alignItems: E.c.Center,
+                    }, a.createElement(y._35, {
+                        display: y.R.Flex,
+                        alignItems: y.c.Center,
                         margin: {
                             right: 1
                         },
                         padding: {
                             right: .5
                         },
-                        color: E.K.Overlay
-                    }, n.createElement(E._24, {
-                        asset: E._25.DeadGlitch,
-                        type: E._26.Inherit
-                    })), n.createElement(E.Q, {
-                        fontSize: E.V.Size5,
-                        color: E.K.Overlay
-                    }, Object(l.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
+                        color: y.K.Overlay
+                    }, a.createElement(y._24, {
+                        asset: y._25.DeadGlitch,
+                        type: y._26.Inherit
+                    })), a.createElement(y.Q, {
+                        fontSize: y.V.Size5,
+                        color: y.K.Overlay
+                    }, Object(c.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
                         email: this.props.data.currentUser.email
-                    }, "VerifyEmail")), n.createElement(E._35, {
-                        position: E._15.Absolute,
+                    }, "VerifyEmail")), a.createElement(y._35, {
+                        position: y._15.Absolute,
                         attachRight: !0,
                         margin: {
                             right: 2
                         }
-                    }, n.createElement(E.v, {
-                        type: E.B.Hollow,
+                    }, a.createElement(y.v, {
+                        type: y.B.Hollow,
                         overlay: !0,
                         linkTo: "/settings/profile"
-                    }, Object(l.d)("Update Email", "VerifyEmail"))))
+                    }, Object(c.d)("Update Email", "VerifyEmail"))))
                 }, t.prototype.shouldHide = function() {
                     return !(this.isDataLoaded() && !this.props.data.currentUser.isEmailVerified) || (this.shouldRespectDismissal() || this.isShowingPrimeUpsell())
                 }, t.prototype.isShowingPrimeUpsell = function() {
-                    if (D.has(this.props.location.pathname)) {
+                    if (T.has(this.props.location.pathname)) {
                         var e = this.props.data.currentUser && this.props.data.currentUser.hasPrime,
                             t = this.props.data.requestInfo && this.props.data.requestInfo.countryCode;
-                        return Object(u.n)(e, t)
+                        return Object(d.n)(e, t)
                     }
                     return !1
                 }, t.prototype.shouldRespectDismissal = function() {
                     var e = this.dismissalData;
-                    return null !== e && (e.dismissalCount > 0 && Date.now() < e.dismissalDateTimeMs + _)
+                    return null !== e && (e.dismissalCount > 0 && Date.now() < e.dismissalDateTimeMs + S)
                 }, t.prototype.isDataLoaded = function() {
                     return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                 }, t
-            }(n.Component),
-            k = Object(o.d)(Object(m.d)("VerifyEmail"), Object(c.a)(S), s.f)(N)
+            }(a.Component),
+            w = Object(o.d)(Object(u.d)("VerifyEmail"), Object(l.a)(v), s.f)(b)
     },
     RDCx: function(e, t) {
         var i = {
@@ -403,4 +609,4 @@ webpackJsonp([73], {
     },
     yY1M: function(e, t) {}
 });
-//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-86201bba1f4cc3b7a49af68952469ec3.js.map
+//# sourceMappingURL=features.verify-email.components.verify-email-bar.component-35ac01d52e2073e285b2e7ffd402fd47.js.map

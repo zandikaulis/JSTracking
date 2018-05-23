@@ -69,7 +69,7 @@ webpackJsonp([102], {
             g = n("zCIC"),
             v = n("6BvN"),
             S = n("7Nlu"),
-            k = (n("12gq"), function(e) {
+            b = (n("12gq"), function(e) {
                 return a.createElement(l._8, {
                     attachTop: !0,
                     attachRight: !0,
@@ -108,9 +108,9 @@ webpackJsonp([102], {
         ! function(e) {
             e[e.Confirm = 1] = "Confirm", e[e.Dismiss = 2] = "Dismiss", e[e.Up = 3] = "Up", e[e.Down = 4] = "Down"
         }(u || (u = {}));
-        var y = {};
-        y[v.a.Esc] = u.Dismiss, y[v.a.Enter] = u.Confirm, y[v.a.Tab] = u.Confirm, y[v.a.Up] = u.Up, y[v.a.Down] = u.Down;
-        var b, O = function(e) {
+        var k = {};
+        k[v.a.Esc] = u.Dismiss, k[v.a.Enter] = u.Confirm, k[v.a.Tab] = u.Confirm, k[v.a.Up] = u.Up, k[v.a.Down] = u.Down;
+        var y, O = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onFocus = function() {
@@ -120,7 +120,7 @@ webpackJsonp([102], {
                     }, n.onClickOut = function() {
                         n.state.isOpen && n.handleInteraction(u.Dismiss)
                     }, n.onKeyDown = function(e) {
-                        var t = y[e.keyCode];
+                        var t = k[e.keyCode];
                         t && n.handleInteraction(t)
                     }, n.handleInteraction = function(e) {
                         switch (e) {
@@ -195,11 +195,11 @@ webpackJsonp([102], {
                         t = null;
                     return 0 === this.props.searchTerm.length || (t = this.props.gameResults ? this.props.gameResults.length > 0 ? this.renderGameResults(this.props.gameResults, this.state.highlightedGameIndex) : this.props.isSearchPending ? a.createElement(l._10, {
                         fillContent: !0
-                    }) : a.createElement(k, {
+                    }) : a.createElement(b, {
                         icon: l._25.SearchNoResults,
                         titleText: Object(o.d)("No results found", "GameSelector"),
                         subText: Object(o.d)("They're probably in another castle", "GameSelector")
-                    }) : a.createElement(k, {
+                    }) : a.createElement(b, {
                         icon: l._25.DeadGlitch,
                         titleText: Object(o.d)("Search is not available at this time", "GameSelector"),
                         subText: Object(o.d)("Please try again later", "GameSelector")
@@ -412,7 +412,7 @@ webpackJsonp([102], {
             }),
             function(e) {
                 e[e.EditDescription = 0] = "EditDescription"
-            }(b || (b = {}));
+            }(y || (y = {}));
         var H = function(e) {
             function t() {
                 var t = null !== e && e.apply(this, arguments) || this;
@@ -464,7 +464,7 @@ webpackJsonp([102], {
                 }, a.createElement(l.W, {
                     label: Object(o.d)("Description", "VideoManagerEdit")
                 }, a.createElement(l._46, {
-                    "data-test-selector": b.EditDescription,
+                    "data-test-selector": y.EditDescription,
                     disabled: n,
                     onChange: this.onDescriptionChangeHandler,
                     placeholder: Object(o.d)("Describe your video", "VideoManagerEdit"),
@@ -1527,6 +1527,118 @@ webpackJsonp([102], {
         }
     },
     CBaN: function(e, t) {},
+    D9fv: function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return o
+        }), t.b = function() {
+            var e = i.o.intl.getLanguageCode(),
+                t = function(t) {
+                    return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
+                };
+            return r.slice().sort(function(e, n) {
+                var i = t(e),
+                    r = t(n);
+                return i !== r ? i - r : i + ":" + e.label < r + ":" + n.label ? -1 : 1
+            }).concat(a(!0))
+        };
+        var i = n("6sO2"),
+            r = [{
+                code: "ar",
+                label: "العربية"
+            }, {
+                code: "bg",
+                label: "Български"
+            }, {
+                code: "cs",
+                label: "Čeština"
+            }, {
+                code: "da",
+                label: "Dansk"
+            }, {
+                code: "de",
+                label: "Deutsch"
+            }, {
+                code: "el",
+                label: "Ελληνικά"
+            }, {
+                code: "en",
+                label: "English"
+            }, {
+                code: "es",
+                label: "Español"
+            }, {
+                code: "fi",
+                label: "Suomi"
+            }, {
+                code: "fr",
+                label: "Français"
+            }, {
+                code: "hu",
+                label: "Magyar"
+            }, {
+                code: "it",
+                label: "Italiano"
+            }, {
+                code: "ja",
+                label: "日本語"
+            }, {
+                code: "ko",
+                label: "한국어"
+            }, {
+                code: "nl",
+                label: "Nederlands"
+            }, {
+                code: "no",
+                label: "Norsk"
+            }, {
+                code: "pl",
+                label: "Polski"
+            }, {
+                code: "pt",
+                label: "Português"
+            }, {
+                code: "ro",
+                label: "Română"
+            }, {
+                code: "ru",
+                label: "Русский"
+            }, {
+                code: "sk",
+                label: "Slovenčina"
+            }, {
+                code: "sv",
+                label: "Svenska"
+            }, {
+                code: "th",
+                label: "ภาษาไทย"
+            }, {
+                code: "tr",
+                label: "Türkçe"
+            }, {
+                code: "vi",
+                label: "Tiếng Việt"
+            }, {
+                code: "zh-hk",
+                label: "中文(粵語)"
+            }, {
+                code: "zh",
+                label: "中文"
+            }];
+
+        function a(e) {
+            return void 0 === e && (e = !1), [{
+                code: "asl",
+                label: "American Sign Language"
+            }, {
+                code: "other",
+                label: e ? Object(i.d)("Other", "broadcaster-languages") : "Other"
+            }]
+        }
+        var o = new Set(r.concat(a()).map(function(e) {
+            return e.code
+        }))
+    },
     H6Wp: function(e, t) {
         var n = {
             kind: "Document",
@@ -1659,13 +1771,13 @@ webpackJsonp([102], {
             g = n("NY9D"),
             v = n("w9tK"),
             S = n("vH/s"),
-            k = n("CSlQ"),
-            y = n("fc0G"),
-            b = function(e) {
-                return a.createElement(y.c, {
+            b = n("CSlQ"),
+            k = n("fc0G"),
+            y = function(e) {
+                return a.createElement(k.c, {
                     vodID: e.videoID,
                     disableTheatreButton: !0,
-                    playerTypeOverride: y.b.Highlighter,
+                    playerTypeOverride: k.b.Highlighter,
                     paused: e.paused,
                     nextVideoOffset: e.nextVideoOffset,
                     onVideoTimeChange: e.onVideoTimeChange,
@@ -1908,8 +2020,8 @@ webpackJsonp([102], {
                     return this.props.segments[this.state.selectedSegmentIndex]
                 }, t
             }(a.Component),
-            j = n("zAjo"),
-            L = n("sJBK");
+            L = n("zAjo"),
+            j = n("sJBK");
         n("zECu");
         ! function(e) {
             e[e.Highlight = 0] = "Highlight", e[e.VideoManagerLink = 1] = "VideoManagerLink"
@@ -1954,11 +2066,11 @@ webpackJsonp([102], {
                                 padding: {
                                     left: 2
                                 }
-                            }, a.createElement(j.a, {
+                            }, a.createElement(L.a, {
                                 balloonDirection: x.r.RightCenter,
                                 buttonType: x.B.Hollow,
                                 content: {
-                                    type: L.a.Video,
+                                    type: j.a.Video,
                                     id: t.id,
                                     owner: {
                                         id: e.props.owner.id,
@@ -2302,11 +2414,11 @@ webpackJsonp([102], {
                 }
             })(A),
             Q = n("+Znq"),
-            K = n("6BvN");
+            z = n("6BvN");
         ! function(e) {
             e[e.EndFormGroup = 0] = "EndFormGroup", e[e.Offsets = 1] = "Offsets", e[e.StartFormGroup = 2] = "StartFormGroup", e[e.UpdateButton = 3] = "UpdateButton"
         }(U || (U = {}));
-        var z = function(e) {
+        var K = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
                     return n.onStartChange = function(e) {
@@ -2318,7 +2430,7 @@ webpackJsonp([102], {
                             endOffset: e.currentTarget.value
                         })
                     }, n.onKeyDown = function(e) {
-                        e.keyCode === K.a.Enter && n.update()
+                        e.keyCode === z.a.Enter && n.update()
                     }, n.onInputBlur = function() {
                         n.update()
                     }, n.onUpdateClick = function() {
@@ -2457,7 +2569,7 @@ webpackJsonp([102], {
                     }))
                 }, t
             }(a.Component),
-            J = Object(d.compose)(Object(k.d)("VideoSegmentEditor", {
+            J = Object(d.compose)(Object(b.d)("VideoSegmentEditor", {
                 autoReportInteractive: !0
             }))(X),
             Y = function(e) {
@@ -2533,7 +2645,7 @@ webpackJsonp([102], {
                         padding: {
                             y: 1
                         }
-                    }, a.createElement(z, {
+                    }, a.createElement(K, {
                         onUpdate: this.onActiveSegmentOffsetChange,
                         segment: this.state.timelineSegments[this.state.activeIndex]
                     })))
@@ -2562,7 +2674,7 @@ webpackJsonp([102], {
                     }
                 }, t
             }(a.Component),
-            $ = Object(d.compose)(Object(k.d)("VideoTimeline", {
+            $ = Object(d.compose)(Object(b.d)("VideoTimeline", {
                 autoReportInteractive: !0
             }))(Y);
 
@@ -2802,7 +2914,7 @@ webpackJsonp([102], {
                         }
                     }, a.createElement(x.k, {
                         ratio: x.l.Aspect16x9
-                    }, a.createElement(b, {
+                    }, a.createElement(y, {
                         videoID: this.props.data.video.id,
                         paused: this.state.shouldPlayerPause,
                         onVideoTimeChange: this.onPlayerTimeChange,
@@ -2896,7 +3008,7 @@ webpackJsonp([102], {
                         }
                     }
                 }
-            }), Object(k.d)("HighlighterPage", {
+            }), Object(b.d)("HighlighterPage", {
                 destination: v.a.VideoManagerHighlighter
             }), Object(f.a)({
                 location: S.PageviewLocation.VideoManagerHighlighter
@@ -3459,6 +3571,39 @@ webpackJsonp([102], {
         };
         e.exports = n
     },
+    qLt5: function(e, t, n) {
+        "use strict";
+        var i = n("TToO"),
+            r = n("GiK3"),
+            a = n("D9fv"),
+            o = n("Odds"),
+            s = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.onChange = function(e) {
+                        t.props.onChange(e.currentTarget.value)
+                    }, t.renderLanguageOption = function(e) {
+                        return r.createElement("option", {
+                            key: e.code,
+                            value: e.code
+                        }, e.label)
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = r.createElement(o._30, {
+                        onChange: this.onChange,
+                        disabled: this.props.disabled,
+                        defaultValue: this.props.defaultLanguage
+                    }, Object(a.b)().map(this.renderLanguageOption));
+                    return this.props.label && (e = r.createElement(o.W, {
+                        label: this.props.label
+                    }, e)), e
+                }, t
+            }(r.Component);
+        n.d(t, "a", function() {
+            return s
+        })
+    },
     sJBK: function(e, t, n) {
         "use strict";
         var i;
@@ -3642,24 +3787,24 @@ webpackJsonp([102], {
                     Object(u.c)(t, n, a.o.apollo.client)
                 }, t
             }(r.Component),
-            k = n("bhVC"),
-            y = [{
-                type: k.b.Twitter,
+            b = n("bhVC"),
+            k = [{
+                type: b.b.Twitter,
                 selector: "twitter-button"
             }, {
-                type: k.b.Facebook,
+                type: b.b.Facebook,
                 selector: "fb-button"
             }, {
-                type: k.b.VKontakte,
+                type: b.b.VKontakte,
                 selector: "vk-button"
             }, {
-                type: k.b.Reddit,
+                type: b.b.Reddit,
                 selector: "reddit-button"
             }, {
-                type: k.b.Copy,
+                type: b.b.Copy,
                 selector: "copy-link-button"
             }],
-            b = function(e) {
+            y = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -3668,8 +3813,8 @@ webpackJsonp([102], {
                         t = this.props.content,
                         n = this.getContentURL(t),
                         i = this.getSocialShareContextTitle(t),
-                        a = y.map(function(t) {
-                            return r.createElement(k.a, {
+                        a = k.map(function(t) {
+                            return r.createElement(b.a, {
                                 "data-test-selector": t.selector,
                                 key: t.type,
                                 onShareClick: function(t) {
@@ -3707,19 +3852,19 @@ webpackJsonp([102], {
             }(r.Component),
             O = function(e) {
                 switch (e) {
-                    case k.b.Twitter:
+                    case b.b.Twitter:
                         return u.a.Twitter;
-                    case k.b.Reddit:
+                    case b.b.Reddit:
                         return u.a.Reddit;
-                    case k.b.VKontakte:
+                    case b.b.VKontakte:
                         return u.a.VKontakte;
-                    case k.b.Facebook:
+                    case b.b.Facebook:
                         return u.a.Facebook;
-                    case k.b.Copy:
+                    case b.b.Copy:
                         return u.a.Copy;
-                    case k.b.CopyInput:
+                    case b.b.CopyInput:
                         return u.a.Link;
-                    case k.b.Download:
+                    case b.b.Download:
                         return u.a.Download;
                     default:
                         return e
@@ -3743,7 +3888,7 @@ webpackJsonp([102], {
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(b, i.__assign({}, this.props, {
+                    return r.createElement(y, i.__assign({}, this.props, {
                         onClick: this.onClickHandler
                     }))
                 }, t.prototype.trackCollectionShare = function(e, t, n) {
@@ -3893,4 +4038,4 @@ webpackJsonp([102], {
     },
     zECu: function(e, t) {}
 });
-//# sourceMappingURL=pages.video-tools.pages.highlighter-b8d46498df839eb4aa98bb8b89f7734a.js.map
+//# sourceMappingURL=pages.video-tools.pages.highlighter-b7bc2304527e80463fd6ce70390191e9.js.map
