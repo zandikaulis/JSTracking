@@ -2073,8 +2073,9 @@ window.SiteOptions = {
         },
         "50e947d4-24b7-4000-a046-f48f4072b7cf": {
             "name": "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV",
-            "v": 3504,
+            "v": 3851,
             "t": 2,
+            "s": 1,
             "groups": [{
                 "weight": 90,
                 "value": "control"
