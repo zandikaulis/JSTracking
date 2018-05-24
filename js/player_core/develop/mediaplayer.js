@@ -2569,7 +2569,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-ec1d1fb6";
+    return "2.3.0-c3580cde";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2672,7 +2672,7 @@ MediaPlayer.prototype.getDisplayHeight = function () {
 }
 
 MediaPlayer.prototype.getManifestInfo = function () {
-    return this._state.extraInfo;
+    return this._state.twitchInfo;
 }
 
 // TODO: Switch latency functions to return seconds
@@ -2714,7 +2714,7 @@ MediaPlayer.prototype._resetState = function () {
         qualities: [],
         duration: 0,
         startOffset: 0,
-        extraInfo: {},
+        twitchInfo: {},
     });
 
     // Statistics calculated in the client
@@ -2753,6 +2753,9 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(PlayerEvent.SEEK_COMPLETED, this._onSeekCompleted.bind(this));
     em.on(ClientMessage.STATS, function (stats) {
         objectAssign(this._stats, stats);
+    }.bind(this));
+    em.on(ClientMessage.TWITCH_INFO, function (properties) {
+        objectAssign(this._state, properties);
     }.bind(this));
     em.on(ClientMessage.STATE_CHANGED, this._onStateChanged.bind(this));
     em.on(ClientMessage.SAVE_ITEM, this._saveItem.bind(this));
@@ -3691,6 +3694,11 @@ module.exports = {
      * @param {string} cue.metadata - opaque metadata payload
      */
     ADD_CUE: 'ClientAddCue',
+    /**
+     * Updates the twitch playlist tracking properties
+     * @param {Object} playlist properties that have changed
+     */
+    TWITCH_INFO: 'ClientTwitchInfo',
 };
 
 
