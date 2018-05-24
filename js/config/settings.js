@@ -45,7 +45,7 @@ window.__twilightSettings = {
     "extensions_mobile_banner_enabled": false,
     "first_page_loaded_timeout": 30000,
     "gdpr_consent_enabled": false,
-    "gdpr_disabled_eea_consent": true,
+    "gdpr_disabled_eea_consent": false,
     "gdpr_evidon_timeout_ms": 30000,
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
     "impact_experiment_key": false,
@@ -583,13 +583,13 @@ window.__twilightSettings = {
         },
         "60936fd6-ef0a-49f1-9421-712f2ba02513": {
             "name": "TWILIGHT_DASHBOARD_SETTINGS_LAUNCH",
-            "v": 3836,
+            "v": 3852,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "no"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "yes"
             }]
         },
