@@ -791,6 +791,18 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
+        "bf00cae3-c729-4ff9-816c-f9ede2f69f02": {
+            "name": "twilight_vod_used_to_this",
+            "v": 3854,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": {
             "name": "twilight_vod_shoryuken",
             "v": 3788,
