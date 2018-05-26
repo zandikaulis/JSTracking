@@ -4708,8 +4708,8 @@
                 }(),
                 O = n("o4DC"),
                 D = n("lmy8"),
-                x = n("h9Rz"),
-                L = n("+0NX"),
+                x = n("qIYN"),
+                L = n("h9Rz"),
                 P = n("uhBA"),
                 F = new O.b({
                     introspectionQueryResultData: {
@@ -4788,90 +4788,83 @@
                     }, e.prototype.removeQueryMetricsListener = function(e) {
                         this.eventEmitter.removeListener("query-metrics", e)
                     }, e.prototype.createApolloClient = function() {
-                        var e = this;
                         return new D.a({
                             cache: new O.a({
                                 fragmentMatcher: F
                             }),
                             queryDeduplication: !0,
-                            link: Object(L.a)().concat(new x.a({
+                            link: new L.a({
                                 batchMax: 20,
-                                uri: this.config.graphqlEndpoint,
-                                includeExtensions: !0,
-                                fetch: function(t, n) {
-                                    var i = {
-                                            "Client-Id": e.config.authSettings.clientID,
-                                            "X-Device-Id": e.session.deviceID
-                                        },
-                                        r = e.store.getState();
-                                    r.session && (i["Accept-Language"] = r.session.locale), e.authToken && (i.Authorization = "OAuth " + e.authToken), n.headers = i;
-                                    var a = {
-                                        id: ++e.batchID,
-                                        timestamp: performance.timing.navigationStart + performance.now(),
-                                        requests: JSON.parse(n.body)
-                                    };
-                                    return fetch(t, n).then(function(t) {
-                                        return p.__awaiter(e, void 0, void 0, function() {
-                                            var e, n, i, r;
-                                            return p.__generator(this, function(o) {
-                                                switch (o.label) {
-                                                    case 0:
-                                                        return t.status && t.status >= 400 || t.status < 200 ? 401 !== t.status ? [3, 4] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : [3, 1] : [3, 7];
-                                                    case 1:
-                                                        return this.logger.warn("Received 401 response from GraphQL, logging user out."), [4, Object(A.h)(this.authToken, {
-                                                            config: this.config,
-                                                            logger: this.logger
-                                                        })];
-                                                    case 2:
-                                                        return o.sent(), window.location.reload(!0), [2, t];
-                                                    case 3:
-                                                        return [3, 6];
-                                                    case 4:
-                                                        return n = (e = this.logger).error, i = [new Error("Received non-200 response from GraphQL."), "Received non-200 response from GraphQL."], r = {
-                                                            status: t.status
-                                                        }, [4, t.clone().text()];
-                                                    case 5:
-                                                        n.apply(e, i.concat([(r.body = o.sent(), r)])), o.label = 6;
-                                                    case 6:
-                                                        return [2, t];
-                                                    case 7:
-                                                        return this.collectQueryStats(t, a), [2, t]
-                                                }
-                                            })
-                                        })
-                                    })
-                                }
-                            }))
-                        })
-                    }, e.prototype.collectQueryStats = function(e, t) {
-                        return p.__awaiter(this, void 0, void 0, function() {
-                            var n, i = this;
-                            return p.__generator(this, function(r) {
-                                switch (r.label) {
-                                    case 0:
-                                        return [4, e.clone().json()];
-                                    case 1:
-                                        return n = r.sent().map(function(e, n) {
-                                            var r = e,
-                                                a = t.requests[n];
-                                            return r.extensions && !r.status ? {
-                                                queryID: ++i.queryID,
-                                                durationMs: r.extensions.durationMilliseconds,
-                                                operationName: r.extensions.operationName,
-                                                variables: a.variables
-                                            } : {
-                                                queryID: ++i.queryID,
-                                                operationName: "<extensions field missing>",
-                                                durationMs: 0
-                                            }
-                                        }), this.eventEmitter.listeners("query-metrics", !0) && this.eventEmitter.emit("query-metrics", {
-                                            batchID: t.id,
-                                            batchTimestamp: t.timestamp,
-                                            queries: n
-                                        }), [2]
-                                }
+                                fetch: this.createApolloFetcher()
                             })
                         })
+                    }, e.prototype.createApolloFetcher = function() {
+                        var e = this,
+                            t = Object(x.a)({
+                                uri: this.config.graphqlEndpoint
+                            });
+                        return t.batchUse(function(t, n) {
+                            var i = t.requests,
+                                r = t.options,
+                                a = {
+                                    "Client-Id": e.config.authSettings.clientID,
+                                    "X-Device-Id": e.session.deviceID
+                                },
+                                o = e.store.getState();
+                            o.session && (a["Accept-Language"] = o.session.locale), e.authToken && (a.Authorization = "OAuth " + e.authToken), r.headers = a, r.twilight = {
+                                batchID: ++e.batchID,
+                                batchTimestamp: performance.timing.navigationStart + performance.now(),
+                                requests: i
+                            }, n()
+                        }), t.batchUseAfter(function(t, n) {
+                            var i = t.response,
+                                r = t.options;
+                            return p.__awaiter(e, void 0, void 0, function() {
+                                var e, t, a, o, s, l, c = this;
+                                return p.__generator(this, function(d) {
+                                    switch (d.label) {
+                                        case 0:
+                                            return i.status && i.status >= 400 || i.status < 200 ? 401 !== i.status ? [3, 4] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : [3, 1] : [3, 7];
+                                        case 1:
+                                            return this.logger.warn("Received 401 response from GraphQL, logging user out."), [4, Object(A.h)(this.authToken, {
+                                                config: this.config,
+                                                logger: this.logger
+                                            })];
+                                        case 2:
+                                            return d.sent(), window.location.reload(!0), [2];
+                                        case 3:
+                                            return [3, 6];
+                                        case 4:
+                                            return t = (e = this.logger).error, a = [new Error("Received non-200 response from GraphQL."), "Received non-200 response from GraphQL."], o = {
+                                                status: i.status
+                                            }, [4, i.text()];
+                                        case 5:
+                                            t.apply(e, a.concat([(o.body = d.sent(), o)])), d.label = 6;
+                                        case 6:
+                                            return n(), [2];
+                                        case 7:
+                                            return s = r, l = i.parsed.map(function(e, t) {
+                                                var n = e,
+                                                    i = s.twilight.requests[t];
+                                                return n.extensions && !n.status ? {
+                                                    queryID: ++c.queryID,
+                                                    durationMs: n.extensions.durationMilliseconds,
+                                                    operationName: n.extensions.operationName,
+                                                    variables: i.variables
+                                                } : {
+                                                    queryID: ++c.queryID,
+                                                    operationName: "<extensions field missing>",
+                                                    durationMs: 0
+                                                }
+                                            }), this.eventEmitter.listeners("query-metrics", !0) && this.eventEmitter.emit("query-metrics", {
+                                                batchID: s.twilight.batchID,
+                                                batchTimestamp: s.twilight.batchTimestamp,
+                                                queries: l
+                                            }), n(), [2]
+                                    }
+                                })
+                            })
+                        }), t
                     }, e
                 }(),
                 j = function() {
