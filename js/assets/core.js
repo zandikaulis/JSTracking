@@ -3571,8 +3571,8 @@
                             }, e))
                         }, t.renderSectionTitle = function() {
                             return t.props.sectionTitle && a.createElement(u.Ia, {
-                                padding: {
-                                    top: 1
+                                margin: {
+                                    y: 1
                                 },
                                 className: "prime-offers__title"
                             }, a.createElement(u.Q, {
@@ -4193,7 +4193,6 @@
                     "3763f4e7-c786-4000-a6c3-b91b9c774302": "control",
                     "d6bb4aa4-efae-4031-96be-f08950d6c8f4": "shown",
                     "db2180db-bc89-4f97-8bef-208b1782e18f": "off",
-                    "f866f89d-85de-4a5b-9b00-d97c791bc16d": "no",
                     "47597570-dd4e-4996-85eb-86db164cae9c": "control",
                     "7aa589f3-34d8-425f-8227-29007d50757e": "control",
                     "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": "control",
@@ -4238,7 +4237,6 @@
                     TWILIGHT_FENIX_DOWN: "3763f4e7-c786-4000-a6c3-b91b9c774302",
                     TWILIGHT_EVENT_GAME_DIRECTORY: "d6bb4aa4-efae-4031-96be-f08950d6c8f4",
                     TWILIGHT_LEADERBOARDS: "db2180db-bc89-4f97-8bef-208b1782e18f",
-                    TWILIGHT_RAID_AUTO_JOIN: "f866f89d-85de-4a5b-9b00-d97c791bc16d",
                     TWILIGHT_AML_RANKING_FOLLOWS: "47597570-dd4e-4996-85eb-86db164cae9c",
                     TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e",
                     TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2: "0dc9a9c9-fee5-4b5f-a462-f07675713e5e",
@@ -22511,7 +22509,7 @@
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
                 }(r || (r = {})),
                 function(e) {
-                    e.ChannelMetadata = "channel_metadata", e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionCard = "extension_card", e.ExtensionCategoryPreview = "extension_category_preview", e.ExtensionDetails = "extension_details", e.ExtensionNavTabLink = "extension_nav_tab_link", e.ExtensionSearchBar = "extension_search_bar", e.ExtensionConfigureButton = "extension_configure_button", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.GameBoxart = "game_boxart", e.GameMetadata = "game_metadata", e.GameName = "game_name", e.Games = "directory_games", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.InstalledExtensionCard = "installed_extension_card", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.UserThumbnail = "user_thumbnail", e.Video = "video", e.VideoThumbnail = "video_thumbnail", e.VideoTitle = "video_title", e.VideoShelf = "video_shelf"
+                    e.ChannelMetadata = "channel_metadata", e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionCard = "extension_card", e.ExtensionCategoryPreview = "extension_category_preview", e.ExtensionDetails = "extension_details", e.ExtensionNavTabLink = "extension_nav_tab_link", e.ExtensionSearchBar = "extension_search_bar", e.ExtensionConfigureButton = "extension_configure_button", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.GameBoxart = "game_boxart", e.GameMetadata = "game_metadata", e.GameName = "game_name", e.Games = "directory_games", e.HeaderGameName = "header_game_name", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.InstalledExtensionCard = "installed_extension_card", e.Live = "live_channel", e.LiveHost = "live_host", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.LatestCollection = "latest_collection", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.UserThumbnail = "user_thumbnail", e.Video = "video", e.VideoThumbnail = "video_thumbnail", e.VideoTitle = "video_title", e.VideoShelf = "video_shelf"
                 }(a || (a = {})),
                 function(e) {
                     e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.EventDetails = "event_details", e.ExtensionCategory = "extension_category", e.ExtensionConfiguration = "extension_configuration", e.ExtensionPage = "extension_page", e.ExtensionSearch = "extension_search", e.ExtensionDiscovery = "extension_discovery", e.ExtensionManagement = "extension_management", e.ExtensionDashboardTopNav = "extension_dashboard_top_nav", e.ExtensionInstalledModal = "extension_modal_installed", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopNav = "twitch_topnav", e.TwitchHome = "twitch_home", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
@@ -38556,13 +38554,14 @@
                 A = n("f00E"),
                 U = n("vRsq"),
                 j = n("kz7j"),
-                M = n("GnwI"),
-                B = n("YFoo"),
-                z = n("kxrW"),
-                H = n("oKCn"),
-                V = n("lTz2"),
-                W = (n("JRTt"), n("Addw")),
-                G = {
+                M = n("ndwU"),
+                B = n("GnwI"),
+                z = n("YFoo"),
+                H = n("kxrW"),
+                V = n("oKCn"),
+                W = n("lTz2"),
+                G = (n("JRTt"), n("Addw")),
+                q = {
                     allowfullscreen: !0,
                     externalfullscreen: !1,
                     autoplay: !0,
@@ -38571,7 +38570,7 @@
                     controls: !0,
                     height: "100%",
                     playsinline: !0,
-                    player: H.c.Site,
+                    player: V.c.Site,
                     showInfo: !1,
                     showtheatre: !1,
                     trackingProperties: {
@@ -38582,14 +38581,14 @@
                     gdprConsent: !1
                 };
 
-            function q() {
+            function Q() {
                 return !!window.Twitch && !!window.Twitch.Player
             }
-            var Q = function(e) {
+            var K = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.lastGDPRBlockContent = !1, n.logger = o.j.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
-                            q() ? (n.setState({
+                            Q() ? (n.setState({
                                 canInitializePlayer: !0
                             }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
                         }, n.attachRef = function(e) {
@@ -38601,11 +38600,11 @@
                                 playSessionID: e.playSessionId
                             }))
                         }, n.onOpenStream = function() {
-                            if (n.props.playerTypeOverride === H.c.Frontpage && n.player)
+                            if (n.props.playerTypeOverride === V.c.Frontpage && n.player)
                                 if (n.props.channelLogin) o.o.history.push("/" + n.props.channelLogin);
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
-                                o.o.history.push("/videos/" + n.props.vodID + "?t=" + Object(W.a)(e))
+                                o.o.history.push("/videos/" + n.props.vodID + "?t=" + Object(G.a)(e))
                             } else n.props.collectionID && o.o.history.push("/collections/" + n.props.collectionID)
                         }, n.onPlayerReady = function() {
                             n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
@@ -38622,9 +38621,9 @@
                                 playerPaused: e
                             }), n.props.onPauseToggled && n.props.onPauseToggled(e)
                         }, n.onStreamStatusOnline = function() {
-                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(z.a.Online)
+                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(H.a.Online)
                         }, n.onStreamStatusOffline = function() {
-                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(z.a.Offline)
+                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(H.a.Offline)
                         }, n.onTheatreChange = function(e) {
                             e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
                         }, n.onFullScreenChange = function() {
@@ -38676,17 +38675,17 @@
                         }, n.updatePlayerTrackingDataFromProps = function() {
                             n.updatePlayerTrackingData(n.props)
                         }, n.updatePlayerType = function(e) {
-                            var t = e || G.player;
+                            var t = e || q.player;
                             n.player && n.playerType !== t && (n.player.setPlayerType(t), n.playerType = t)
                         }, n.maybeRecordClip = function() {
-                            n.player && n.state.playerInitialized && n.player.recordClip()
+                            n.player && n.state.playerInitialized && !Object(M.a)() && n.player.recordClip()
                         }, n.playerBuffering = n.registerBufferingEvent(), n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
-                            canInitializePlayer: q(),
+                            canInitializePlayer: Q(),
                             playerInitialized: !1,
                             isFullScreen: !1,
                             playerPaused: !1,
                             playerRefID: Object(A.a)()
-                        }, n.playerType = t.playerTypeOverride || G.player, n.lastSetChannel = t.channelLogin, n.lastGDPRBlockContent = t.gdpr.blockConsentRequiredContent, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
+                        }, n.playerType = t.playerTypeOverride || q.player, n.lastSetChannel = t.channelLogin, n.lastGDPRBlockContent = t.gdpr.blockConsentRequiredContent, t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), o.n.eventEmitter.addListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), window.__playerScriptChunk && !t.tagInjected) {
@@ -38718,7 +38717,7 @@
                                 }
                                 this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && e.gdpr.blockConsentRequiredContent !== this.lastGDPRBlockContent && (this.player.setGDPRConsent(!e.gdpr.blockConsentRequiredContent), this.lastGDPRBlockContent = e.gdpr.blockConsentRequiredContent);
                                 var c = e.channelLogin !== this.lastSetChannel;
-                                if (this.player && e.channelLogin && (c || Object(V.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void o.n.setVideoPlayerTrackingData({
+                                if (this.player && e.channelLogin && (c || Object(W.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void o.n.setVideoPlayerTrackingData({
                                     vodID: void 0
                                 });
                                 var d = e.collectionID && this.props.collectionID !== e.collectionID,
@@ -38747,7 +38746,7 @@
                                 "video-player--fullscreen": this.state.isFullScreen
                             }),
                             t = D("video-player__container", {
-                                "video-player__container--clips": H.a.includes(this.playerType)
+                                "video-player__container--clips": V.a.includes(this.playerType)
                             });
                         return r.createElement("div", {
                             className: D(e),
@@ -38757,24 +38756,24 @@
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(z.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(z.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(z.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(B.a.Play, this.onPlayerPlay), this.player.removeEventListener(B.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(z.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(z.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(z.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(z.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(B.a.Seeked, this.onSeek), this.player.removeEventListener(B.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(z.a.OpenStream, this.onOpenStream), this.player.removeEventListener(B.a.Pause, this.onPause), this.player.removeEventListener(z.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
+                        this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(H.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(H.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(H.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Play, this.onPlayerPlay), this.player.removeEventListener(z.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(H.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(H.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(H.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(H.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(z.a.Seeked, this.onSeek), this.player.removeEventListener(z.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(H.a.OpenStream, this.onOpenStream), this.player.removeEventListener(z.a.Pause, this.onPause), this.player.removeEventListener(H.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(z.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
                         this.player && this.state.playerInitialized && this.player.trackMiniPlayerAction(e, t)
                     }, t.prototype.initializePlayer = function() {
-                        var e = i.__assign({}, G, {
+                        var e = i.__assign({}, q, {
                             showtheatre: !this.props.disableTheatreButton,
                             allowfullscreen: !this.props.disableFullscreen,
                             externalfullscreen: this.props.fullscreen.supported(),
                             autoplay: !this.props.paused,
                             gdprConsent: !this.props.gdpr.blockConsentRequiredContent
                         });
-                        this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride, this.props.playerTypeOverride === H.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(U.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
+                        this.props.playerTypeOverride && (e.player = this.props.playerTypeOverride, this.playerType = this.props.playerTypeOverride, this.props.playerTypeOverride === V.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(U.b)(this.props.vodID), o.n.setVideoPlayerTrackingData({
                             vodID: this.props.vodID
-                        })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(W.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
+                        })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(G.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
                         var t = new window.Twitch.Player(this.playerRef, e);
-                        this.player = t, t.addEventListener(z.a.PlayerReady, this.onPlayerReady), t.addEventListener(z.a.Online, this.onStreamStatusOnline), t.addEventListener(z.a.Offline, this.onStreamStatusOffline), t.addEventListener(B.a.Ended, this.onStreamStatusOffline), t.addEventListener(B.a.Play, this.onPlayerPlay), t.addEventListener(B.a.Playing, this.onPlayerPlaying), t.addEventListener(B.a.Seeked, this.onSeek), t.addEventListener(B.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(z.a.TheatreChange, this.onTheatreChange), t.addEventListener(z.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(z.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(z.a.ClipsModerationOpen, this.onClipsModerationOpen), t.addEventListener(z.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(z.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(z.a.OpenStream, this.onOpenStream), t.addEventListener(B.a.Pause, this.onPause), t.addEventListener(z.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(B.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.registerPlayer(this.player), x.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
+                        this.player = t, t.addEventListener(H.a.PlayerReady, this.onPlayerReady), t.addEventListener(H.a.Online, this.onStreamStatusOnline), t.addEventListener(H.a.Offline, this.onStreamStatusOffline), t.addEventListener(z.a.Ended, this.onStreamStatusOffline), t.addEventListener(z.a.Play, this.onPlayerPlay), t.addEventListener(z.a.Playing, this.onPlayerPlaying), t.addEventListener(z.a.Seeked, this.onSeek), t.addEventListener(z.a.TimeUpdate, this.onTimeUpdate), t.addEventListener(H.a.TheatreChange, this.onTheatreChange), t.addEventListener(H.a.FullscreenChange, this.onFullScreenChange), t.addEventListener(H.a.ExternalFullscreenChange, this.onExternalFullScreenChange), t.addEventListener(H.a.ClipsModerationOpen, this.onClipsModerationOpen), t.addEventListener(H.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), t.addEventListener(H.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), t.addEventListener(H.a.OpenStream, this.onOpenStream), t.addEventListener(z.a.Pause, this.onPause), t.addEventListener(H.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), t.addEventListener(z.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.registerPlayer(this.player), x.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(t), this.maybeAttachToWindow(this.props)
                     }, t.prototype.registerBufferingEvent = function() {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 1e3,
@@ -38825,8 +38824,8 @@
                         L.unbind("alt+x")
                     }, t.tagInjected = !1, t
                 }(r.Component),
-                K = Object(M.d)("VideoPlayer")(Q);
-            var Y = Object(f.d)(Object(g.b)(function(e) {
+                Y = Object(B.d)("VideoPlayer")(K);
+            var Z = Object(f.d)(Object(g.b)(function(e) {
                 return {
                     isWhispersBottomBarVisible: Object(T.b)(e),
                     theatreModeEnabled: e.ui.theatreModeEnabled,
@@ -38877,9 +38876,9 @@
                         E.exit()
                     }, n
                 }(r.Component)
-            }, Object(I.b)(), _.f)(K);
+            }, Object(I.b)(), _.f)(Y);
 
-            function Z(e, t, n) {
+            function $(e, t, n) {
                 if (e.collectionID || !e.videoID)
                     if (e.collectionID && e.videoID) {
                         if (n && n.currentVideoID && n.currentCollectionID && n.currentVideoID === e.videoID && n.currentCollectionID === e.collectionID) return;
@@ -38904,11 +38903,11 @@
             }), n.d(t, "a", function() {
                 return w
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "c", function() {
-                return Y
-            }), n.d(t, "d", function() {
                 return Z
+            }), n.d(t, "d", function() {
+                return $
             }), n.d(t, "b", function() {
-                return H.c
+                return V.c
             })
         },
         eJ65: function(e, t, n) {
@@ -44380,6 +44379,17 @@
                 return c
             })
         },
+        ndwU: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return r
+            });
+            var i = n("/7QA");
+
+            function r() {
+                return "variant1" === i.o.experiments.getAssignment("TWILIGHT_CLIPS_ON_THE_BRAIN")
+            }
+        },
         nxnD: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -47458,6 +47468,14 @@
                             e.stopPropagation()
                         }, n.onHeaderActivate = function(e) {
                             e.target === e.currentTarget && (e.charCode !== y.a.Enter && e.charCode !== y.a.Space || (n.props.onHeaderInteract(), e.stopPropagation()))
+                        }, n.onFocus = function() {
+                            n.setState({
+                                isElementFocused: !0
+                            })
+                        }, n.onBlur = function() {
+                            n.setState({
+                                isElementFocused: !1
+                            })
                         }, n.onPresenceClick = function(e, t) {
                             t.stopPropagation();
                             var i = n.props.participants.currentUser && n.props.participants.currentUser.friends.edges.find(function(e) {
@@ -47472,24 +47490,29 @@
                         var i = h.o.experiments.getAssignment("TWILIGHT_EXTENDED_PRESENCE");
                         return n.state = {
                             potentialSpamResolution: "pending",
-                            hasExtendedRichPresence: "variant_a" === i
+                            hasExtendedRichPresence: "variant_a" === i,
+                            isElementFocused: !1
                         }, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this,
-                            t = p({
+                            t = this.props.isHighlighted && !this.state.isElementFocused,
+                            n = p({
                                 "thread-header__title-bar-container": !0,
                                 "thread-header__title-bar-container--highlighted": this.props.isHighlighted,
                                 "thread-header__title-bar-container--focused": this.props.isFocused
                             }),
-                            n = p({
+                            i = p({
                                 "thread-header": !0,
                                 "thread-header--collapsed": this.props.isCollapsed
                             }),
-                            i = Object(h.d)("Close", "WhisperThreadHeader"),
-                            a = Object(h.d)("Settings", "WhisperThreadHeader");
+                            a = p({
+                                "thread-header__display-name--highlighted": this.props.isHighlighted
+                            }),
+                            o = Object(h.d)("Close", "WhisperThreadHeader"),
+                            s = Object(h.d)("Settings", "WhisperThreadHeader");
                         if (this.props.isLoading || !this.props.participants.currentUser || !this.props.participants.user) return r.createElement(z.Ia, {
-                            className: t,
+                            className: n,
                             display: z.R.Flex,
                             justifyContent: z.Ha.Between,
                             fullWidth: !0,
@@ -47507,20 +47530,20 @@
                         }), r.createElement(z.Ia, {
                             display: z.R.Flex
                         }, r.createElement(z.w, {
-                            ariaLabel: i,
+                            ariaLabel: o,
                             icon: z.Za.RemoveTag,
                             "data-a-target": "whispers-thread__close-button-" + this.props.threadID,
                             onClick: this.props.onClose
                         })));
-                        var o = null,
-                            s = null,
-                            l = null,
+                        var l = null,
                             c = null,
-                            d = this.props.participants.currentUser && this.props.participants.currentUser.friends.edges.find(function(t) {
+                            d = null,
+                            u = null,
+                            m = this.props.participants.currentUser && this.props.participants.currentUser.friends.edges.find(function(t) {
                                 return !(!t.node || t.node.id !== e.interlocutor.id)
                             });
-                        if (d) {
-                            s = r.createElement(z.Ia, {
+                        if (m) {
+                            c = r.createElement(z.Ia, {
                                 margin: {
                                     left: 1
                                 },
@@ -47541,52 +47564,52 @@
                                         default:
                                             return z.Ra.Offline
                                     }
-                                }(d.availability)
+                                }(m.availability)
                             }));
-                            var u = d.activity,
-                                m = d.availability;
-                            if (u) {
-                                var g = {
-                                        activity: u,
-                                        availability: this.state.hasExtendedRichPresence ? m : void 0
+                            var g = m.activity,
+                                f = m.availability;
+                            if (g) {
+                                var v = {
+                                        activity: g,
+                                        availability: this.state.hasExtendedRichPresence ? f : void 0
                                     },
-                                    f = Object(F.c)(g, !0),
-                                    v = null,
-                                    b = Object(F.d)(this.props.participants.user.login, u);
-                                if (b && (v = {
-                                        pathname: b,
+                                    b = Object(F.c)(v, !0),
+                                    y = null,
+                                    k = Object(F.d)(this.props.participants.user.login, g);
+                                if (k && (y = {
+                                        pathname: k,
                                         state: {
                                             content: P.PageviewContent.Presence,
                                             medium: P.PageviewMedium.Whispers
                                         }
-                                    }), v) {
-                                    var y = p({
+                                    }), y) {
+                                    var S = p({
                                         "thread-header__activity-link--highlighted": this.props.isHighlighted
                                     });
-                                    l = r.createElement(R.a, {
-                                        className: y,
-                                        title: Object(F.c)(g) || "",
+                                    d = r.createElement(R.a, {
+                                        className: S,
+                                        title: Object(F.c)(v) || "",
                                         onClick: this.onPresenceClick.bind(this, x.a.WhisperHeaderLink),
-                                        to: v,
+                                        to: y,
                                         "data-test-selector": "whispers-thread__presence-link"
-                                    }, f)
-                                } else l = f;
-                                this.props.isCollapsed || (c = r.createElement(z.Ia, {
+                                    }, b)
+                                } else d = b;
+                                this.props.isCollapsed || (u = r.createElement(z.Ia, {
                                     padding: {
                                         right: .5
                                     }
                                 }, r.createElement(A.a, {
-                                    availability: m,
-                                    link: v,
+                                    availability: f,
+                                    link: y,
                                     onClick: this.onPresenceClick.bind(this, x.a.WhisperHeaderButton),
                                     shouldHollowOverlay: this.props.isHighlighted
                                 })))
                             }
                         }
-                        this.props.isCollapsed || !this.props.participants.currentUser || this.props.interactionsDisabled || (o = r.createElement(O.a, null, r.createElement(z.w, {
-                            ariaLabel: a,
+                        this.props.isCollapsed || !this.props.participants.currentUser || this.props.interactionsDisabled || (l = r.createElement(O.a, null, r.createElement(z.w, {
+                            ariaLabel: s,
                             icon: z.Za.Gear,
-                            overlay: this.props.isHighlighted
+                            overlay: t
                         }), r.createElement(z.q, {
                             direction: z.r.BottomRight,
                             offsetX: "0.5rem"
@@ -47602,7 +47625,7 @@
                             onUnblock: this.props.onUnblock,
                             showReportUserModal: this.props.showReportUserModal
                         }))));
-                        var k = this.interlocutor.displayBadges.map(function(e) {
+                        var w = this.interlocutor.displayBadges.map(function(e) {
                             return r.createElement(z.Ca, {
                                 key: e.id,
                                 flexShrink: 0,
@@ -47617,17 +47640,19 @@
                             }))
                         });
                         return r.createElement(z.Ia, {
-                            className: n,
+                            className: i,
                             position: z.Pa.Relative,
                             fullWidth: !0
                         }, r.createElement("div", {
                             className: "thread-header__click-area",
                             onClick: this.props.onHeaderInteract,
                             onKeyPress: this.onHeaderActivate,
+                            onFocus: this.onFocus,
+                            onBlur: this.onBlur,
                             "data-a-target": "thread-header__click-area",
                             tabIndex: 0
                         }, r.createElement(z.Ia, {
-                            className: t,
+                            className: n,
                             fullWidth: !0,
                             padding: {
                                 x: 1,
@@ -47654,32 +47679,32 @@
                                 right: 1
                             },
                             ellipsis: !0
-                        }, k, r.createElement(z.Q, {
-                            color: this.props.isHighlighted ? z.K.Overlay : z.K.Base,
+                        }, w, r.createElement(z.Q, {
+                            className: a,
                             type: z.xb.Span,
                             bold: !0,
                             ellipsis: !0
-                        }, this.interlocutor.displayName ? this.interlocutor.displayName : ne.displayName), s), r.createElement(z.jb, {
+                        }, this.interlocutor.displayName ? this.interlocutor.displayName : ne.displayName), c), r.createElement(z.jb, {
                             className: "thread-header__activity",
                             color: this.props.isHighlighted ? z.K.Overlay : z.K.Base,
                             padding: {
                                 right: 1
                             },
                             ellipsis: !0
-                        }, l)), r.createElement(z.Ia, {
+                        }, d)), r.createElement(z.Ia, {
                             display: z.R.Flex,
                             flexShrink: 0,
                             flexDirection: z.T.Row,
                             alignItems: z.c.Center
-                        }, c, r.createElement("div", {
+                        }, u, r.createElement("div", {
                             onClick: this.onSettingsClick
-                        }, o), r.createElement(z.w, {
-                            ariaLabel: i,
+                        }, l), r.createElement(z.w, {
+                            ariaLabel: o,
                             icon: z.Za.RemoveTag,
                             "data-a-target": "thread-close-button-" + (this.props.participants.user && this.props.participants.user.login),
                             "data-test-selector": "thread-header__close-button-" + this.props.threadID,
                             onClick: this.props.onClose,
-                            overlay: this.props.isHighlighted
+                            overlay: t
                         })))), this.renderPotentialSpamPrompt())
                     }, Object.defineProperty(t.prototype, "interlocutor", {
                         get: function() {
@@ -50323,12 +50348,13 @@
         tuvy: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return a
             });
-            var i = n("/7QA");
+            var i = n("/7QA"),
+                r = null;
 
-            function r() {
-                return "on" === i.o.experiments.getAssignment("TWILIGHT_WATCH_SYMMETRA")
+            function a() {
+                return null !== r ? r : r = "on" === i.o.experiments.getAssignment("TWILIGHT_WATCH_SYMMETRA")
             }
         },
         "u3+/": function(e, t, n) {},
