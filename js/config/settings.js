@@ -29,7 +29,7 @@ window.__twilightSettings = {
     "dashboard_moderation_settings_enabled": true,
     "dashboard_settings_launch": "on",
     "dashboard_vp_widget_enabled": true,
-    "deprecated_messages_download_enabled": true,
+    "deprecated_messages_download_enabled": false,
     "detector_urls": ["https://s0.2mdn.net/", "https://adservice.google.com", "https://pagead2.googlesyndication.com/", "https://r.nexac.com/e/getdata.xgi?foo=bar"],
     "env_test": "This is a test in Production.",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171"],
