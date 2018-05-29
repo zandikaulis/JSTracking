@@ -1926,14 +1926,13 @@ DRMManager.prototype._generateLicense = function(message) {
     if (this.selectedCDM === KEY_SYSTEMS.CLEAR_KEY) {
         // clearkey implementation where KID is key
         var request = JSON.parse(new TextDecoder().decode(message));
-        var keyObj = {
-            kty: 'oct',
-            alg: 'A128KW',
-            kid: request.kids[0],
-            k: request.kids[0]
-        };
+
+        var _keys = request.kids.map(function(keyid) {
+            return {kty: 'oct', alg: 'A128KW', kid: keyid, k: keyid};
+        });
+
         var result = new TextEncoder().encode(JSON.stringify({
-            keys: [keyObj]
+            keys: _keys
         }));
         return Promise.resolve(result);
     } else {
@@ -2569,7 +2568,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-9d745357";
+    return "2.3.0-fe2d6a5a";
 }
 
 MediaPlayer.prototype.isLooping = function () {
