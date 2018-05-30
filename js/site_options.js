@@ -2523,13 +2523,13 @@ window.SiteOptions = {
         },
         "633fce9b-1bb8-49ea-886a-52e91a1b4575": {
             "name": "ios_clips_sleepy_time",
-            "v": 3873,
+            "v": 3880,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 0,
                 "value": "sleepy"
             }]
         },
@@ -4216,13 +4216,13 @@ window.SiteOptions = {
         },
         "add0c209-b45c-4ea5-b6f8-96a3d9e85699": {
             "name": "android_clips_sleepy_time",
-            "v": 3872,
+            "v": 3879,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 1,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 0,
                 "value": "sleepy"
             }]
         },
@@ -5837,13 +5837,13 @@ window.SiteOptions = {
         },
         "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7": {
             "name": "twilight_clips_on_the_brain",
-            "v": 3877,
+            "v": 3878,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "variant1"
             }]
         },
