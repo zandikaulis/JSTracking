@@ -3160,13 +3160,13 @@ window.SiteOptions = {
         },
         "7e81d1d7-80a5-4eef-8828-185256ed2c0b": {
             "name": "ios_airplay_playback_interruption_avqueueplayer_workaround",
-            "v": 3826,
+            "v": 3883,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "enabled"
             }]
         },
