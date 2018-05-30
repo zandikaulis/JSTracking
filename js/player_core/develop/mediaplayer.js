@@ -2292,7 +2292,12 @@ module.exports = {
      * Profiler event with profiler data
      * @param {string} event The profiler event name
      */
-    PROFILE: 'PlayerProfile'
+    PROFILE: 'PlayerProfile',
+    /**
+     * Updates the twitch playlist tracking properties
+     * @param {Object} playlist properties that have changed
+     */
+    TWITCH_INFO: 'PlayerTwitchInfo',
 };
 
 
@@ -2568,7 +2573,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-e2d915fd";
+    return "2.3.0-1428c1ae";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2750,11 +2755,9 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(PlayerEvent.VOLUME_CHANGED, this._onVolumeChanged.bind(this));
     em.on(PlayerEvent.MUTED_CHANGED, this._onMutedChanged.bind(this));
     em.on(PlayerEvent.SEEK_COMPLETED, this._onSeekCompleted.bind(this));
+    em.on(PlayerEvent.TWITCH_INFO, this._onTwitchInfo.bind(this));
     em.on(ClientMessage.STATS, function (stats) {
         objectAssign(this._stats, stats);
-    }.bind(this));
-    em.on(ClientMessage.TWITCH_INFO, function (properties) {
-        objectAssign(this._state, properties);
     }.bind(this));
     em.on(ClientMessage.STATE_CHANGED, this._onStateChanged.bind(this));
     em.on(ClientMessage.SAVE_ITEM, this._saveItem.bind(this));
@@ -2938,6 +2941,10 @@ MediaPlayer.prototype._onSinkStop = function () {
 
 MediaPlayer.prototype._onSinkError = function (mediaError) {
     this._postMessage(WorkerMessage.SINK_ERROR, mediaError);
+};
+
+MediaPlayer.prototype._onTwitchInfo = function (properties) {
+    objectAssign(this._state, properties);
 };
 
 // Handle state updates and RPCs from worker
@@ -3693,11 +3700,6 @@ module.exports = {
      * @param {string} cue.metadata - opaque metadata payload
      */
     ADD_CUE: 'ClientAddCue',
-    /**
-     * Updates the twitch playlist tracking properties
-     * @param {Object} playlist properties that have changed
-     */
-    TWITCH_INFO: 'ClientTwitchInfo',
 };
 
 
