@@ -596,13 +596,13 @@ window.__twilightSettings = {
         },
         "6699df7d-9f23-494c-87a1-06fdf80f1e68": {
             "name": "twilight_video_card_updates",
-            "v": 3538,
+            "v": 3893,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 100,
                 "value": "variation"
             }]
         },
@@ -983,13 +983,13 @@ window.__twilightSettings = {
         },
         "f3920cff-ef57-46c9-8dd9-b4f145acf6e5": {
             "name": "twilight_discovery_frontpage_mvp",
-            "v": 3887,
+            "v": 3895,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 95,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 5,
                 "value": "variant"
             }]
         },
