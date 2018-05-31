@@ -87,6 +87,7 @@ window.__twilightSettings = {
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
     "spade_url": "https://video-edge-4d2822.sjc02.hls.ttvnw.net/v1/segment/Cst2lGfosQBqcYgFaWRoos4GWTq8dn8ea7tu74Yy7tzFspFmTYgh6y5IAezWTh2leDUURHjeEz6a-b7tHw4TXMDmBKBnCAxOeJQBJLOVo6VHNOxYKwi3qDyLaQAEdvXO7qsQGNJO9YvguUUDvqAFEDCcO9jXzYqWusmdJkO14NKvRobSHmEWvKG9YNwtKfec2p_xUm-u2caqTJBQ91pSnQGB9vJs5eU9VHZmJAKFpd2vaiTMsB4yPDh26xcry1X7fDRi63s3juCd4aDvXxN_oJOzx0s61ZxkOT7_yAKlFM3y0pCcLyN49sS3weSUr_MD-PEueqwl7_ojrZPXyR1nLXCXdW-jLxH0bIRKfMYzzbKY-j6O2z2wKFFDcdb8HvV9sGeY4jlhZrYCDWqqYajo0wHfBJLb-p2_6P8diGwkf1hiwaqSXcF3esKtS5eN0gJLIA9y9XUZH_duqJ4Ukzhzqm5BcMOCnCnXEfGKSFxQzMoqBUpbuKJY-19qngn2tOuvMuavU9yRn_W3VXzM1wdeaGfQ9dhlgKTV.ts",
+    "stats_sample_rate": 0,
     "stream_summary_new_referrals": true,
     "stream_summary_timeseries_panel": true,
     "stream_summary_vod_panel": true,
