@@ -2573,7 +2573,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-ce911ae8";
+    return "2.3.0-c60b51ec";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3241,21 +3241,7 @@ MediaSink.prototype.remove = function (range) {
  * @param {number} playhead - position of new playhead
  */
 MediaSink.prototype.seekTo = function (playhead) {
-    // Make sure happens after any prior calls to
-    // 'remove' have completed.
-    var scheduled = [];
-    function scheduleUpdate(srcBuf) {
-        return srcBuf.schedule();
-    }
-
-    for (var key in this._tracks) {
-        scheduled.push(this._tracks[key].then(scheduleUpdate));
-    }
-
-    Promise.all(scheduled).then(function () {
-        this._video.currentTime = playhead;
-        this._onbufferupdate()
-    }.bind(this)).catch(noop);
+    this._video.currentTime = playhead;
 };
 
 /**
@@ -3581,17 +3567,6 @@ SafeSourceBuffer.prototype.remove = function (start, end) {
             srcBuf.remove(start, end);
         });
     }
-};
-
-/**
- * Returns a promise that's resolved when all previous tasks have finished
- * @return {Promise}
- */
-SafeSourceBuffer.prototype.schedule = function () {
-    return new Promise(function (resolve) {
-        this._pending.push(resolve);
-        this._process();
-    }.bind(this));
 };
 
 /**
