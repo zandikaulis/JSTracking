@@ -57,7 +57,7 @@ window.__twilightSettings = {
     "legacy_routes": ["^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/dashboard/action_log$", "^/[a-zA-Z0-9_\\-%]+/dashboard/commercial$", "^/[a-zA-Z0-9_\\-%]+/dashboard/delay$", "^/[a-zA-Z0-9_\\-%]+/dashboard/stats$", "^/[a-zA-Z0-9_\\-%]+/dashboard/video-stats(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/settings(/.+)?$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/directory/random$", "^/health_check$", "^/partner/.+$", "^/profile$", "^/search$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/upload$", "^/user/.+$", "^/yt/.+$"],
     "legacy_routes_enabled": true,
     "longtask_tracking_sample_rate": 0.1,
-    "mobile_subs_enabled": false,
+    "mobile_subs_feature_flag": "staff",
     "native_broadcast_blacklist": ["germenchrestream"],
     "net_neutrality_visible": false,
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
