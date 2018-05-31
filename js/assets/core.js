@@ -1301,7 +1301,7 @@
         },
         118: function(e, t) {},
         "14MF": function(e, t, n) {},
-        173: function(e, t, n) {
+        174: function(e, t, n) {
             n("/cy1"), n("gg62"), n("LVaA"), e.exports = n("sNlA")
         },
         "19zd": function(e, t) {
@@ -2789,22 +2789,23 @@
                 })(p),
                 h = n("6x+I"),
                 g = n("geRD"),
-                f = n("cinR"),
-                v = n("Rjl4"),
-                b = n("O4UZ"),
-                y = (n("8EWP"), n("WcZC")),
-                k = function(e) {
+                f = n("JVUd"),
+                v = n("cinR"),
+                b = n("Rjl4"),
+                y = n("O4UZ"),
+                k = (n("8EWP"), n("WcZC")),
+                S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function(e) {
-                            Object(v.e)({
+                            Object(b.f)({
                                 offerID: t.props.offerID,
                                 externalURL: t.props.externalURL,
                                 hasPrime: !0,
                                 index: t.props.index
-                            }, t.props.offerType), t.props.claimCallback && t.props.offerType !== b.e.EXTERNAL_OFFER && !t.props.externalURL && t.props.claimCallback(e)
+                            }, t.props.offerType), t.props.claimCallback && t.props.offerType !== y.e.EXTERNAL_OFFER && !t.props.externalURL && t.props.claimCallback(e)
                         }, t.onHover = function() {
-                            Object(v.f)({
+                            Object(b.g)({
                                 offerID: t.props.offerID,
                                 externalURL: t.props.externalURL,
                                 hasPrime: !0,
@@ -2817,9 +2818,9 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = this.props.orientation || b.c.Default,
-                            t = b.j(e),
-                            n = b.h("prime-claim-button", e);
+                        var e = this.props.orientation || y.c.Default,
+                            t = y.j(e),
+                            n = y.h("prime-claim-button", e);
                         return a.createElement(u.Ia, {
                             fullWidth: !0,
                             className: n,
@@ -2831,15 +2832,16 @@
                             n = e.claiming,
                             i = e.offerType,
                             r = this.getButtonText();
-                        if (t || i === b.e.EXTERNAL_OFFER) return a.createElement(f.a, {
+                        if (t || i === y.e.EXTERNAL_OFFER) return a.createElement(v.a, {
                             onHover: this.onHover
                         }, a.createElement(u.v, {
                             fullWidth: !0,
                             linkTo: t,
                             targetBlank: !0,
-                            onClick: this.onClick
+                            onClick: this.onClick,
+                            "data-a-target": "prime-claim-button"
                         }, r));
-                        var o = a.createElement(f.a, {
+                        var o = a.createElement(v.a, {
                             onHover: this.onHover
                         }, a.createElement(u.v, {
                             fullWidth: !0,
@@ -2856,23 +2858,23 @@
                         var e = Object(s.d)("Learn More", "PrimeClaimButton");
                         if (this.props.externalURL) return e;
                         switch (this.props.offerType) {
-                            case b.e.CLAIM_CODE:
+                            case y.e.CLAIM_CODE:
                                 return Object(s.d)("Get Code", "PrimeClaimButton");
-                            case b.e.EXTERNAL_OFFER:
+                            case y.e.EXTERNAL_OFFER:
                                 return e;
-                            case b.e.DIRECT_ENTITLEMENT:
+                            case y.e.DIRECT_ENTITLEMENT:
                             default:
                                 return Object(s.d)("Claim Offer", "PrimeClaimButton")
                         }
                     }, t
                 }(a.Component),
-                S = Object(o.compose)(Object(c.a)(y), Object(d.d)("PrimeClaimButton"))(k),
-                w = (n("uhg1"), function(e) {
+                w = Object(o.compose)(Object(c.a)(k), Object(d.d)("PrimeClaimButton"))(S),
+                _ = (n("uhg1"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.toggleShowDescription = function() {
                             var e = !n.state.showDescription;
-                            Object(v.h)(e, {
+                            Object(b.i)(e, {
                                 offerID: n.props.offerID,
                                 externalURL: n.props.externalURL,
                                 hasPrime: n.props.hasPrime,
@@ -2881,12 +2883,12 @@
                                 showDescription: e
                             })
                         }, n.onHover = function() {
-                            n.state.showDescription ? Object(v.g)({
+                            n.state.showDescription ? Object(b.h)({
                                 offerID: n.props.offerID,
                                 externalURL: n.props.externalURL,
                                 hasPrime: n.props.hasPrime,
                                 index: n.props.index
-                            }) : Object(v.i)({
+                            }) : Object(b.j)({
                                 offerID: n.props.offerID,
                                 externalURL: n.props.externalURL,
                                 hasPrime: n.props.hasPrime,
@@ -2899,15 +2901,15 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = this.props.orientation || b.c.Default,
-                            t = Object(b.h)("prime-claim-description", e);
+                        var e = this.props.orientation || y.c.Default,
+                            t = Object(y.h)("prime-claim-description", e);
                         return a.createElement(u.Ia, {
                             fullWidth: !0,
                             className: t,
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(f.a, {
+                        }, a.createElement(v.a, {
                             onHover: this.onHover
                         }, a.createElement(u.v, {
                             "data-a-target": "prime-claim-description-button",
@@ -2919,7 +2921,7 @@
                         return this.state.showDescription ? Object(s.d)("Close Info", "PrimeClaimDescription") : Object(s.d)("More Info", "PrimeClaimDescription")
                     }, t.prototype.getDescriptionBlock = function(e) {
                         var t = null,
-                            n = Object(b.j)(e);
+                            n = Object(y.j)(e);
                         return this.state.showDescription && (t = a.createElement(u.jb, {
                             className: "prime-claim-description__body",
                             background: n ? u.n.Alt2 : u.n.Base,
@@ -2936,22 +2938,22 @@
                         })))), t
                     }, t
                 }(a.Component)),
-                _ = Object(d.d)("PrimeClaimDescription", {
+                E = Object(d.d)("PrimeClaimDescription", {
                     autoReportInteractive: !0
-                })(w),
-                E = n("YSRz"),
-                C = function(e) {
+                })(_),
+                C = n("YSRz"),
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function() {
-                            Object(v.l)({
+                            Object(b.n)({
                                 offerID: t.props.offerID,
                                 externalURL: t.getLink(),
                                 hasPrime: !1,
                                 index: t.props.index
                             })
                         }, t.onHover = function() {
-                            Object(v.m)({
+                            Object(b.o)({
                                 offerID: t.props.offerID,
                                 externalURL: t.getLink(),
                                 hasPrime: !1,
@@ -2966,7 +2968,7 @@
                                 top: 2,
                                 bottom: 1
                             }
-                        }, a.createElement(f.a, {
+                        }, a.createElement(v.a, {
                             onHover: this.onHover
                         }, a.createElement(u.v, {
                             fullWidth: !0,
@@ -2976,15 +2978,15 @@
                         }, Object(s.d)("Start Your Free Trial", "PrimeUpsellButton"))))
                     }, t.prototype.getLink = function() {
                         if (this.props.externalURL) return this.props.externalURL;
-                        var e = this.props.externalReftag || E.c;
-                        return Object(E.d)(e, window.location.pathname.substring(1))
+                        var e = this.props.externalReftag || C.c;
+                        return Object(C.d)(e, window.location.pathname.substring(1))
                     }, t
                 }(a.Component),
-                N = Object(d.d)("PrimeUpsellButton", {
+                T = Object(d.d)("PrimeUpsellButton", {
                     autoReportInteractive: !0
-                })(C),
-                T = n("zUQL"),
-                I = function(e) {
+                })(N),
+                I = n("zUQL"),
+                R = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2993,8 +2995,8 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = this.props.orientation || b.c.Default,
-                            t = Object(b.h)("prime-claim", e);
+                        var e = this.props.orientation || y.c.Default,
+                            t = Object(y.h)("prime-claim", e);
                         return a.createElement(u.Ia, {
                             className: t,
                             margin: {
@@ -3003,7 +3005,7 @@
                         }, this.getCallToAction(), this.getClaimDescriptionSection())
                     }, t.prototype.getCallToAction = function() {
                         var e = this.props.data;
-                        return Object(b.l)(e) ? a.createElement(S, {
+                        return Object(y.l)(e) ? a.createElement(w, {
                             offerType: this.props.offerType,
                             offerID: this.props.offerID,
                             claimCallback: this.props.claimCallback,
@@ -3011,29 +3013,29 @@
                             orientation: this.props.orientation,
                             externalURL: this.props.externalURL,
                             index: this.props.index
-                        }) : a.createElement(N, {
+                        }) : a.createElement(T, {
                             externalReftag: this.props.externalReftag,
                             externalURL: this.props.externalURL,
                             offerID: this.props.offerID,
                             index: this.props.index
                         })
                     }, t.prototype.getClaimDescriptionSection = function() {
-                        if (this.props.offerType === b.e.EXTERNAL_OFFER || this.props.externalURL) return null;
+                        if (this.props.offerType === y.e.EXTERNAL_OFFER || this.props.externalURL) return null;
                         var e = this.props.data;
-                        return a.createElement(_, {
+                        return a.createElement(E, {
                             description: this.props.offerDescription,
                             offerID: this.props.offerID,
                             externalURL: this.props.externalURL,
                             index: this.props.index,
                             orientation: this.props.orientation,
-                            hasPrime: Object(b.l)(e)
+                            hasPrime: Object(y.l)(e)
                         })
                     }, t
                 }(a.Component),
-                R = Object(o.compose)(Object(c.a)(T), Object(d.d)("PrimeInstructions"))(I),
-                O = n("z8lI"),
-                D = n("fvjX"),
-                x = (n("DvQC"), function(e) {
+                O = Object(o.compose)(Object(c.a)(I), Object(d.d)("PrimeInstructions"))(R),
+                D = n("z8lI"),
+                x = n("fvjX"),
+                L = (n("DvQC"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.setRef = function(e) {
@@ -3076,8 +3078,8 @@
                         }))
                     }, t
                 }(a.Component)),
-                L = Object(D.d)(Object(d.d)("CopyButton"))(x),
-                P = function(e) {
+                P = Object(x.d)(Object(d.d)("CopyButton"))(L),
+                F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -3107,13 +3109,13 @@
                             value: this.state.value,
                             disabled: this.props.disabled,
                             readOnly: this.props.readOnly
-                        })), a.createElement(u.Ia, null, a.createElement(L, {
+                        })), a.createElement(u.Ia, null, a.createElement(P, {
                             clipboardText: this.state.value
                         }))) : null
                     }, t
                 }(a.Component),
-                F = Object(D.d)(Object(d.d)("CopyableItem"))(P),
-                A = (n("2b5K"), function(e) {
+                A = Object(x.d)(Object(d.d)("CopyableItem"))(F),
+                U = (n("2b5K"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.getClaimInstructions = function() {
@@ -3133,6 +3135,7 @@
                         }, n.renderVerticalLayout = function() {
                             return a.createElement(u.jb, {
                                 className: "prime-claim-instructions prime-claim-instructions--vertical",
+                                "data-a-target": "prime-claim-instructions--vertical",
                                 background: u.n.Alt2,
                                 border: !0,
                                 padding: 1,
@@ -3151,6 +3154,7 @@
                                 onClick: n.toggleShowDescription
                             }, n.getDescriptionButtonText()), n.state.showDescription && a.createElement(u.jb, {
                                 className: "prime-claim-instructions__body",
+                                "data-a-target": "prime-claim-instructions--horizontal",
                                 border: !0,
                                 position: u.Pa.Absolute,
                                 padding: 1,
@@ -3168,32 +3172,34 @@
                         }, n
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.orientation || b.c.Default;
-                        return Object(b.j)(e) ? this.renderVerticalLayout() : this.renderHorizontalLayout()
+                        var e = this.props.orientation || y.c.Default;
+                        return Object(y.j)(e) ? this.renderVerticalLayout() : this.renderHorizontalLayout()
                     }, t
                 }(a.Component)),
-                U = Object(d.d)("PrimeClaimInstructions", {
+                j = Object(d.d)("PrimeClaimInstructions", {
                     autoReportInteractive: !0
-                })(A),
-                j = (n("QZ2B"), function(e) {
+                })(U),
+                M = (n("QZ2B"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getPrimeClaimInstructions = function() {
-                            if (t.props.claimInstructions) return a.createElement(U, {
+                            if (t.props.claimInstructions) return a.createElement(j, {
                                 claimInstructions: t.props.claimInstructions || "",
                                 orientation: t.props.orientation
                             })
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.orientation || b.c.Default,
-                            t = Object(b.h)("prime-redeem", e);
+                        var e = this.props.orientation || y.c.Default,
+                            t = Object(y.h)("prime-redeem", e);
                         return a.createElement(u.Ia, {
                             className: t
                         }, this.getCodeOrConfirmation(e), this.getPrimeClaimInstructions())
                     }, t.prototype.getCodeOrConfirmation = function(e) {
-                        var t = Object(b.j)(e);
-                        if (this.props.code && this.props.deliveryMethod === b.e.CLAIM_CODE) return a.createElement(u.Ia, null, a.createElement(F, {
+                        var t = Object(y.j)(e);
+                        if (this.props.code && this.props.deliveryMethod === y.e.CLAIM_CODE) return a.createElement(u.Ia, {
+                            "data-a-target": "prime-redeem-code-container"
+                        }, a.createElement(A, {
                             initialText: this.props.code,
                             readOnly: !0,
                             textCenter: !0
@@ -3241,12 +3247,12 @@
                         })), Object(s.d)("Added To Your Twitch Account", "PrimeRedeem"))))
                     }, t
                 }(a.Component)),
-                M = Object(d.d)("PrimeRedeem", {
+                B = Object(d.d)("PrimeRedeem", {
                     autoReportInteractive: !0
-                })(j),
-                B = n("SStD"),
-                z = (n("+H9m"), "prime-offer__video"),
-                V = function(e) {
+                })(M),
+                z = n("SStD"),
+                V = (n("+H9m"), "prime-offer__video"),
+                H = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3315,7 +3321,8 @@
                                 padding: {
                                     right: 1,
                                     y: .5
-                                }
+                                },
+                                fullWidth: !0
                             }, a.createElement(u.jb, {
                                 className: "prime-offer__content",
                                 margin: {
@@ -3357,7 +3364,7 @@
                                 playsInline: !0,
                                 muted: !0,
                                 controls: i,
-                                "data-test-selector": z
+                                "data-test-selector": V
                             }, a.createElement("source", {
                                 src: e,
                                 type: "video/mp4"
@@ -3376,22 +3383,22 @@
                                 r = t.props.data || {};
                             if (t.state.error) {
                                 var o = t.getErrorType();
-                                return a.createElement(O.a, {
+                                return a.createElement(D.a, {
                                     fontSize: u.V.Size6,
                                     testTarget: "prime-offer-error",
                                     errorType: o
                                 })
                             }
-                            if (!n.externalURL && (t.isCurrentOfferClaimed(e) || t.state.claimed) && Object(b.l)(r)) {
+                            if (!n.externalURL && (t.isCurrentOfferClaimed(e) || t.state.claimed) && Object(y.l)(r)) {
                                 var s = t.state.claimData || i.claimData;
-                                return a.createElement(M, {
+                                return a.createElement(B, {
                                     claimInstructions: e.claimInstructions,
                                     code: s,
                                     deliveryMethod: e.deliveryMethod,
                                     orientation: t.props.orientation
                                 })
                             }
-                            return a.createElement(R, {
+                            return a.createElement(O, {
                                 offerID: e.id,
                                 offerDescription: e.description,
                                 offerType: e.deliveryMethod,
@@ -3403,7 +3410,7 @@
                                 orientation: t.props.orientation
                             })
                         }, t.getErrorType = function() {
-                            return t.state.error || b.b.UNKNOWN_ERROR
+                            return t.state.error || y.b.UNKNOWN_ERROR
                         }, t.claimOffer = function(e) {
                             e.nativeEvent.stopImmediatePropagation(), t.setState({
                                 claiming: !0
@@ -3424,32 +3431,41 @@
                                             claimed: !0,
                                             error: void 0
                                         }), a && a.code) {
-                                        var o = b.b[a.code];
+                                        var o = y.b[a.code];
                                         t.setState({
                                             claiming: !1,
                                             claimed: !1,
-                                            error: o || b.b.UNKNOWN_ERROR
+                                            error: o || y.b.UNKNOWN_ERROR
                                         })
                                     }
                                 }).catch(function() {
                                     t.setState({
                                         claiming: !1,
                                         claimed: !1,
-                                        error: b.b.UNKNOWN_ERROR
+                                        error: y.b.UNKNOWN_ERROR
                                     })
                                 })
                             }
+                        }, t.trackImpression = function() {
+                            var e;
+                            t.props.offer.content && (e = t.props.offer.content.externalURL), Object(b.m)({
+                                offerID: t.props.offer.id,
+                                externalURL: e || "",
+                                index: t.props.index,
+                                hasPrime: Object(y.l)(t.props.data),
+                                displayWidthType: t.props.displayWidthType
+                            })
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                        this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive(), this.props.impressionListener.registerImpressionCallback(this.trackImpression)
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive(), this.offerVideo && this.offerVideo.play()
                     }, t.prototype.render = function() {
                         var e = this.props.offer;
                         if (e) {
-                            var t = this.props.orientation || b.c.Default;
-                            return b.j(t) ? this.renderVerticalLayout(e) : this.renderHorizontalLayout(e)
+                            var t = this.props.orientation || y.c.Default;
+                            return y.j(t) ? this.renderVerticalLayout(e) : this.renderHorizontalLayout(e)
                         }
                         return null
                     }, t.prototype.isCurrentOfferClaimed = function(e) {
@@ -3458,20 +3474,22 @@
                         }).hasEntitlement
                     }, t
                 }(a.Component),
-                H = Object(o.compose)(Object(c.a)(T, {
+                W = Object(o.compose)(Object(c.a)(I, {
                     name: "data"
-                }), Object(c.a)(B, {
+                }), Object(c.a)(z, {
                     name: "claimPrimeOffer"
-                }), Object(d.d)("PrimeOffer"))(V),
-                W = (n("YO7o"), function(e) {
+                }), Object(d.d)("PrimeOffer"), Object(f.a)("PrimeOffer", {
+                    pixels: 100
+                }))(H),
+                G = (n("YO7o"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = this.props.orientation || b.c.Default,
-                            t = Object(b.j)(e);
+                        var e = this.props.orientation || y.c.Default,
+                            t = Object(y.j)(e);
                         return a.createElement(u.jb, {
                             className: "prime-offer-placeholder",
                             alignItems: u.c.Center,
@@ -3515,10 +3533,10 @@
                         })))
                     }, t
                 }(a.Component)),
-                G = Object(d.d)("PrimeOfferPlaceholder", {
+                q = Object(d.d)("PrimeOfferPlaceholder", {
                     autoReportInteractive: !0
-                })(W),
-                q = (n("B1YN"), function(e) {
+                })(G),
+                Q = (n("B1YN"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3549,18 +3567,18 @@
                             type: u.ab.Brand
                         })), a.createElement(u.Q, {
                             type: u.xb.P
-                        }, Object(s.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), a.createElement(N, null))
+                        }, Object(s.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), a.createElement(T, null))
                     }, t
                 }(a.Component)),
-                Q = Object(d.d)("PrimeUpsell", {
+                K = Object(d.d)("PrimeUpsell", {
                     autoReportInteractive: !0
-                })(q),
-                K = n("RfIv"),
-                Y = n("OeOm"),
-                Z = (n("vSEG"), function(e) {
+                })(Q),
+                Y = n("RfIv"),
+                Z = n("OeOm"),
+                $ = (n("vSEG"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.renderDesktopOffers = function(e) {
+                        return t.renderDesktopOffers = function() {
                             return a.createElement(u.Ia, {
                                 className: "prime-offer-list__content--desktop"
                             }, t.renderSectionTitle(), a.createElement(u.Db, {
@@ -3568,7 +3586,7 @@
                                 gutterSize: u.Fb.Small,
                                 center: !0,
                                 placeholderItems: 20
-                            }, e))
+                            }, t.renderOfferExperience(b.a.Wide)))
                         }, t.renderSectionTitle = function() {
                             return t.props.sectionTitle && a.createElement(u.Ia, {
                                 margin: {
@@ -3580,17 +3598,17 @@
                                 color: u.K.Base,
                                 bold: !0
                             }, t.props.sectionTitle))
-                        }, t.renderMobileOffers = function(e) {
+                        }, t.renderMobileOffers = function() {
                             return a.createElement(u.Ia, {
                                 className: "prime-offer-list__content--mobile"
-                            }, t.renderSectionTitle(), e)
+                            }, t.renderSectionTitle(), t.renderOfferExperience(b.a.Narrow))
                         }, t.getOfferListOrientation = function() {
-                            return t.props.listDirection || b.c.Default
+                            return t.props.listDirection || y.c.Default
                         }, t.getHiddenOfferIdsByPlacement = function(e) {
                             switch (e) {
-                                case b.d.Crown:
+                                case y.d.Crown:
                                     return s.b.get("prime-crown-hidden-ids", []);
-                                case b.d.LootPage:
+                                case y.d.LootPage:
                                     return s.b.get("prime-loot-page-hidden-ids", []);
                                 default:
                                     return []
@@ -3600,7 +3618,7 @@
                             return !e || e.loading
                         }, t.renderOfferPlaceholders = function() {
                             for (var e = [], n = 0; n < 3; ++n) {
-                                var i = a.createElement(G, {
+                                var i = a.createElement(q, {
                                     key: n,
                                     orientation: t.getOfferListOrientation()
                                 });
@@ -3618,11 +3636,10 @@
                     }, t.prototype.render = function() {
                         var e = this.getOfferListOrientation(),
                             t = e.toLowerCase(),
-                            n = Object(b.h)("prime-offer-list", e),
+                            n = Object(y.h)("prime-offer-list", e),
                             i = "prime-offer-list__content prime-offer-list__content--" + t,
-                            r = this.props.listDirection === b.c.Horizontal,
-                            o = this.props.listDirection === b.c.Vertical,
-                            s = this.renderOfferExperience();
+                            r = this.props.listDirection === y.c.Horizontal,
+                            o = this.props.listDirection === y.c.Vertical;
                         return a.createElement(l.b, {
                             className: n,
                             suppressScrollX: o,
@@ -3635,26 +3652,29 @@
                                 bottom: 2,
                                 x: 1
                             }
-                        }, this.renderUpsell(), this.props.listDirection === b.c.Horizontal && this.renderDesktopOffers(s), this.renderMobileOffers(s)))
+                        }, this.renderUpsell(), this.props.listDirection === y.c.Horizontal && this.renderDesktopOffers(), this.renderMobileOffers()))
                     }, t.prototype.renderUpsell = function() {
                         var e = this.props.userData;
-                        if (!Object(b.k)(e) && !Object(b.l)(e) && !this.props.hideUpsell) return a.createElement(Q, null)
-                    }, t.prototype.renderOfferExperience = function() {
-                        var e = this,
-                            t = this.props.offersData;
+                        if (!Object(y.k)(e) && !Object(y.l)(e) && !this.props.hideUpsell) return a.createElement(K, null)
+                    }, t.prototype.renderOfferExperience = function(e) {
+                        var t = this,
+                            n = this.props.offersData;
                         if (this.shouldShowPlaceholders()) return this.renderOfferPlaceholders();
-                        if (t.primeOffers && t.primeOffers.length) {
-                            var n = this.getSortedOffers(),
-                                i = n[n.length - 1];
-                            return n.map(function(t, n) {
-                                return a.createElement(H, {
-                                    externalReftag: e.props.externalReftag,
-                                    key: t.id,
-                                    offer: t,
-                                    isLast: i.id === t.id,
-                                    index: n,
-                                    orientation: e.getOfferListOrientation()
-                                })
+                        if (n.primeOffers && n.primeOffers.length) {
+                            var i = this.getSortedOffers(),
+                                r = i[i.length - 1];
+                            return i.map(function(n, i) {
+                                return a.createElement(u.Ia, {
+                                    display: u.R.InlineBlock
+                                }, a.createElement(W, {
+                                    externalReftag: t.props.externalReftag,
+                                    key: n.id,
+                                    offer: n,
+                                    isLast: r.id === n.id,
+                                    index: i,
+                                    orientation: t.getOfferListOrientation(),
+                                    displayWidthType: e
+                                }))
                             })
                         }
                         return a.createElement(m, null)
@@ -3672,24 +3692,24 @@
                         if (t) {
                             var a = r.filter(function(t) {
                                     return !e.offerHasExternalURL(t) && t.self && t.self.hasEntitlement
-                                }).sort(b.o),
+                                }).sort(y.o),
                                 o = this.filterOffersByOfferType(a),
                                 s = r.filter(function(t) {
                                     return e.offerHasExternalURL(t) || !t.self || !t.self.hasEntitlement
-                                }).sort(b.o);
+                                }).sort(y.o);
                             return this.filterOffersByOfferType(s).concat(o)
                         }
-                        return this.filterOffersByOfferType(r).slice().sort(b.o)
+                        return this.filterOffersByOfferType(r).slice().sort(y.o)
                     }, t.prototype.offerHasExternalURL = function(e) {
                         var t = e && e.content;
                         return t && t.externalURL
                     }, t.prototype.filterOffersByOfferType = function(e) {
                         var t = this.getFreeGamesWithPrimeOfferIds();
-                        return this.props.offerFilterType === K.a.Game ? e.filter(function(e) {
+                        return this.props.offerFilterType === Y.a.Game ? e.filter(function(e) {
                             return t.includes(e.id)
-                        }).sort(b.o) : this.props.offerFilterType === K.a.InGameLoot ? e.filter(function(e) {
+                        }).sort(y.o) : this.props.offerFilterType === Y.a.InGameLoot ? e.filter(function(e) {
                             return !t.includes(e.id)
-                        }).sort(b.o) : e
+                        }).sort(y.o) : e
                     }, t.prototype.getUserId = function() {
                         var e = this.props.userData;
                         return e && !e.loading && !e.error && e.currentUser && e.currentUser.id ? e.currentUser.id : ""
@@ -3723,31 +3743,31 @@
                         configurable: !0
                     }), t
                 }(a.Component)),
-                $ = Object(o.compose)(Object(c.a)(Y, {
+                X = Object(o.compose)(Object(c.a)(Z, {
                     name: "offersData",
                     options: function() {
                         return {
                             variables: {
-                                dateOverride: Object(b.f)()
+                                dateOverride: Object(y.f)()
                             }
                         }
                     },
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
                     }
-                }), Object(c.a)(T, {
+                }), Object(c.a)(I, {
                     name: "userData",
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
                     }
-                }), Object(d.d)("PrimeOfferList"))(Z);
-            var X = Object(i.b)(function(e) {
+                }), Object(d.d)("PrimeOfferList"))($);
+            var J = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })($);
+            })(X);
             n.d(t, "a", function() {
-                return X
+                return J
             })
         },
         "4VQm": function(e, t, n) {
@@ -3765,7 +3785,7 @@
             var u = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.root = null, n.scrollContent = null, n.resizeTimeout = 0, n.receivers = [], n.scrollTimeout = 0, n.wheelTimeout = 0, n.getChildContext = function() {
+                    return n.root = null, n.scrollContent = null, n.xScrollContent = null, n.resizeTimeout = 0, n.receivers = [], n.scrollTimeout = 0, n.wheelTimeout = 0, n.getChildContext = function() {
                         return {
                             registerReceiver: n.registerReceiver,
                             requestVisibilityCheck: n.requestVisibilityCheck,
@@ -3845,14 +3865,14 @@
                 }
                 return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     if (this.root) {
-                        if (this.simplebarRef = new l(this.root, this.createSimpleBarOptions()), this.scrollContent = this.simplebarRef.getScrollElement(), this.props.contentRef && this.props.contentRef(this.scrollContent), this.props.contentClassName) {
+                        if (this.simplebarRef = new l(this.root, this.createSimpleBarOptions()), this.scrollContent = this.simplebarRef.getScrollElement(), this.xScrollContent = this.simplebarRef.getContentElement(), this.props.contentRef && this.props.contentRef(this.scrollContent), this.props.contentClassName) {
                             var e = this.scrollContent.querySelector(".simplebar-content");
                             e && e.classList.add(this.props.contentClassName)
                         }
-                        this.props.scrollContentClassName && this.scrollContent.classList.add(this.props.scrollContentClassName), window.addEventListener("resize", this.onResize), this.scrollContent.addEventListener("scroll", this.onScroll), this.scrollContent.addEventListener("wheel", this.onWheel), this.notifyReceivers()
+                        this.props.scrollContentClassName && this.scrollContent.classList.add(this.props.scrollContentClassName), window.addEventListener("resize", this.onResize), this.scrollContent.addEventListener("scroll", this.onScroll), this.xScrollContent.addEventListener("scroll", this.onScroll), this.scrollContent.addEventListener("wheel", this.onWheel), this.notifyReceivers()
                     }
                 }, t.prototype.componentWillUnmount = function() {
-                    this.root && (delete this.simplebarRef, window.removeEventListener("resize", this.onResize), this.scrollContent && this.scrollContent.removeEventListener("scroll", this.onScroll))
+                    this.root && (delete this.simplebarRef, window.removeEventListener("resize", this.onResize), this.scrollContent && this.scrollContent.removeEventListener("scroll", this.onScroll), this.xScrollContent && this.xScrollContent.removeEventListener("scroll", this.onScroll))
                 }, t.prototype.render = function() {
                     var e = this.props,
                         t = (e.disableDebounce, e.suppressScrollX, e.suppressScrollY, e.scrollRef, e.scrollContentClassName, e.contentClassName, r.__rest(e, ["disableDebounce", "suppressScrollX", "suppressScrollY", "scrollRef", "scrollContentClassName", "contentClassName"])),
@@ -5368,6 +5388,10 @@
                                 n.page = e, n.destination = t, n.sentinel.setPageComponentName(e.componentName)
                             }, n.sendCustomEventToSpade = function(e) {
                                 n.componentEventsEnabled && n.tracker.trackCustomEvent(e, n.isFirstLoad, n.hasLostVisibility, n.destination, n.getPageComponentName())
+                            }, n.addPageLoadFailedListener = function(e) {
+                                n.emitter.addListener("firstPageLoadFailed", e)
+                            }, n.removePageLoadFailedListener = function(e) {
+                                n.emitter.removeListener("firstPageLoadFailed", e)
                             }, n.sendAllEvents = function() {
                                 n.networkMonitor && (n.networkMonitor.flush(), n.doReconcileQueries(!0)), n.sendBenchmarkEventsToSpade(), n.sendNetworkRequestsToSpade()
                             }, n.sendFetchStartEvent = function(e, t, i) {
@@ -5525,7 +5549,7 @@
                                             void 0 === a.componentDuration.value && t.push(a.componentName), a.children && a.children.length && n(a.children)
                                         }
                                     };
-                                n(e.children || []), e.logger.error(new Error("First Page Loaded Failsafe Triggered"), "The first page loaded failsafe was triggered for page " + (e.page ? e.page.componentName : "Unknown") + (t.length ? " and components " + t.join(", ") : "")), e.store.dispatch(Object(Y.f)())
+                                n(e.children || []), e.logger.error(new Error("First Page Loaded Failsafe Triggered"), "The first page loaded failsafe was triggered for page " + (e.page ? e.page.componentName : "Unknown") + (t.length ? " and components " + t.join(", ") : "")), e.emitter.emit("firstPageLoadFailed"), e.store.dispatch(Object(Y.f)())
                             }
                         }, this.firstPageLoadedTimeout))
                     }, t.prototype.subscribeToUpdates = function(e) {
@@ -8179,7 +8203,7 @@
                         }, t.onToggleMenu = function(e) {
                             t.seeOffers(), e && t.setState({
                                 numOfUnseenOffers: 0
-                            }), Object(S.c)(!e, {
+                            }), Object(S.d)(!e, {
                                 hasPrime: t.hasPrime(),
                                 numberOfOffers: t.getNumberOfOffers()
                             })
@@ -8190,7 +8214,7 @@
                                 n = e && e.primeOffers;
                             return n && n.length || 0
                         }, t.onHover = function() {
-                            Object(S.b)({
+                            Object(S.c)({
                                 hasPrime: t.hasPrime()
                             })
                         }, t.hasPrime = function() {
@@ -8286,7 +8310,7 @@
                             this.props.latencyTracking.reportCustomEvent(this.offersLoadedEvent);
                             var i = n.primeOffers,
                                 r = i && i.length;
-                            Object(S.d)({
+                            Object(S.e)({
                                 hasPrime: this.hasPrime(),
                                 numberOfOffers: r || 0
                             })
@@ -18746,6 +18770,86 @@
             };
             e.exports = n
         },
+        JVUd: function(e, t, n) {
+            "use strict";
+            var i = n("mrSG"),
+                r = n("17x9"),
+                a = n("q1tI"),
+                o = n("/7QA");
+
+            function s(e, t) {
+                return function(n) {
+                    return function(s) {
+                        function l() {
+                            var e = null !== s && s.apply(this, arguments) || this;
+                            return e.state = {
+                                hadImpression: !1,
+                                didScroll: !1
+                            }, e.logger = o.j.withCategory("with-impression-listener"), e.setRef = function(t) {
+                                return e.element = t
+                            }, e.registerImpressionCallback = function(t) {
+                                e.reportImpression = t
+                            }, e
+                        }
+                        return i.__extends(l, s), l.prototype.componentDidMount = function() {
+                            this.scrollContext = this.context;
+                            var n = this.scrollContext.registerReceiver;
+                            n ? t && void 0 !== t.percentage && void 0 !== t.pixels ? this.logger.warn("<" + e + " /> should only be initialized with percentage or pixel thresholds, not both") : this.unregister = n(this) : this.logger.warn("<" + e + " /> initialized missing a <ScrollableArea /> provider")
+                        }, l.prototype.componentWillUnmount = function() {
+                            this.unregister && this.unregister()
+                        }, l.prototype.render = function() {
+                            var e = {
+                                impressionListener: {
+                                    hadImpression: this.state.hadImpression,
+                                    didScroll: this.state.didScroll,
+                                    registerImpressionCallback: this.registerImpressionCallback
+                                }
+                            };
+                            return a.createElement("div", {
+                                ref: this.setRef
+                            }, a.createElement(n, i.__assign({}, this.props, e)))
+                        }, l.prototype.checkVisible = function(e) {
+                            return i.__awaiter(this, void 0, void 0, function() {
+                                var t, n;
+                                return i.__generator(this, function(i) {
+                                    return this.state.hadImpression || (t = this.isVisible(e)) && (n = this.isScrolled(), this.setState({
+                                        hadImpression: t,
+                                        didScroll: n
+                                    }), this.reportImpression && this.reportImpression(n)), [2]
+                                })
+                            })
+                        }, l.prototype.isVisible = function(e) {
+                            if (!this.element) return !1;
+                            var n = this.element.getBoundingClientRect();
+                            if (n.left < e.right && n.right > e.left && n.top < e.bottom && n.bottom > e.top) {
+                                if (!t || 0 === t.percentage || 0 === t.pixels) return !0;
+                                var i = t.percentage,
+                                    r = t.pixels,
+                                    a = n.bottom - n.top,
+                                    o = e.bottom - e.top,
+                                    s = Math.min(e.bottom - n.top, a, o);
+                                if (r) {
+                                    if (a >= r) return s >= r;
+                                    i = 100
+                                }
+                                return !i || 100 * (s / a) >= i
+                            }
+                            return !1
+                        }, l.prototype.isScrolled = function() {
+                            if (!this.scrollContext) return !1;
+                            var e = this.scrollContext.getScrollContent();
+                            return !(!e || 0 === e.scrollTop)
+                        }, l.contextTypes = {
+                            registerReceiver: r.func,
+                            getScrollContent: r.func
+                        }, l
+                    }(a.Component)
+                }
+            }
+            n.d(t, "a", function() {
+                return s
+            })
+        },
         JbHs: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -20344,22 +20448,24 @@
                 r = n("/7QA"),
                 a = n("ZDlU"),
                 o = n("Ue10"),
-                s = function() {
+                s = function(e) {
+                    var t = i.createElement(o.v, {
+                        linkTo: "/directory",
+                        "data-a-target": "browse-channels-button"
+                    }, Object(r.d)("Browse channels", "PageNotFound"));
                     return i.createElement(a.a, {
                         message: Object(r.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "PageNotFound")
                     }, i.createElement(o.Ia, {
                         margin: {
                             top: 2
                         }
-                    }, i.createElement(o.v, {
-                        linkTo: "/directory",
-                        "data-a-target": "browse-channels-button"
-                    }, Object(r.d)("Browse channels", "PageNotFound"))))
+                    }, e.children || t))
                 };
-            n.d(t, "a", function() {
+            s.displayName = "PageNotFound", n.d(t, "a", function() {
                 return s
             })
         },
+        LGxt: function(e, t, n) {},
         LKlA: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -24747,39 +24853,43 @@
         },
         Rjl4: function(e, t, n) {
             "use strict";
-            n.d(t, "a", function() {
+            n.d(t, "b", function() {
                 return o
-            }), n.d(t, "b", function() {
-                return d
+            }), n.d(t, "a", function() {
+                return s
             }), n.d(t, "c", function() {
                 return u
             }), n.d(t, "d", function() {
                 return p
-            }), n.d(t, "l", function() {
-                return m
-            }), n.d(t, "m", function() {
-                return h
-            }), n.d(t, "h", function() {
-                return g
             }), n.d(t, "e", function() {
-                return f
+                return m
+            }), n.d(t, "n", function() {
+                return h
+            }), n.d(t, "o", function() {
+                return g
             }), n.d(t, "i", function() {
-                return v
-            }), n.d(t, "g", function() {
-                return b
+                return f
             }), n.d(t, "f", function() {
-                return y
+                return v
             }), n.d(t, "j", function() {
-                return w
+                return b
+            }), n.d(t, "h", function() {
+                return y
+            }), n.d(t, "g", function() {
+                return k
+            }), n.d(t, "m", function() {
+                return S
             }), n.d(t, "k", function() {
-                return _
+                return E
+            }), n.d(t, "l", function() {
+                return C
             });
-            var i, r, a, o, s = n("/7QA"),
-                l = n("2xye"),
-                c = n("O4UZ");
+            var i, r, a, o, s, l = n("/7QA"),
+                c = n("2xye"),
+                d = n("O4UZ");
 
-            function d(e) {
-                s.n.track(l.SpadeEventType.CrownInteraction, {
+            function u(e) {
+                l.n.track(c.SpadeEventType.CrownInteraction, {
                     has_prime: e.hasPrime,
                     client_time: Date.now(),
                     action: i.Hover,
@@ -24787,8 +24897,8 @@
                 })
             }
 
-            function u(e, t) {
-                s.n.track(l.SpadeEventType.CrownInteraction, {
+            function p(e, t) {
+                l.n.track(c.SpadeEventType.CrownInteraction, {
                     has_prime: t.hasPrime,
                     client_time: Date.now(),
                     number_of_offers: t.numberOfOffers,
@@ -24797,8 +24907,8 @@
                 })
             }
 
-            function p(e) {
-                s.n.track(l.SpadeEventType.CrownInteraction, {
+            function m(e) {
+                l.n.track(c.SpadeEventType.CrownInteraction, {
                     has_prime: e.hasPrime,
                     client_time: Date.now(),
                     number_of_offers: e.numberOfOffers,
@@ -24807,51 +24917,55 @@
                 })
             }
 
-            function m(e) {
-                S(e, r.Click, a.StartYourFreeTrial)
-            }
-
             function h(e) {
-                S(e, r.Hover, a.StartYourFreeTrial)
+                _(e, r.Click, a.StartYourFreeTrial)
             }
 
-            function g(e, t) {
-                S(t, r.Click, e ? a.MoreInfo : a.CloseInfo)
+            function g(e) {
+                _(e, r.Hover, a.StartYourFreeTrial)
             }
 
             function f(e, t) {
-                k(e, r.Click, t)
+                _(t, r.Click, e ? a.MoreInfo : a.CloseInfo)
             }
 
-            function v(e) {
-                S(e, r.Hover, a.MoreInfo)
+            function v(e, t) {
+                w(e, r.Click, t)
             }
 
             function b(e) {
-                S(e, r.Hover, a.CloseInfo)
+                _(e, r.Hover, a.MoreInfo)
             }
 
-            function y(e, t) {
-                k(e, r.Hover, t)
+            function y(e) {
+                _(e, r.Hover, a.CloseInfo)
             }
 
-            function k(e, t, n) {
+            function k(e, t) {
+                w(e, r.Hover, t)
+            }
+
+            function S(e) {
+                _(e, r.Impression, a.Offer)
+            }
+
+            function w(e, t, n) {
                 var i;
                 switch (n) {
-                    case c.e.CLAIM_CODE:
+                    case d.e.CLAIM_CODE:
                         i = a.GetCode;
                         break;
-                    case c.e.EXTERNAL_OFFER:
+                    case d.e.EXTERNAL_OFFER:
                         i = a.LearnMore;
                         break;
-                    case c.e.DIRECT_ENTITLEMENT:
+                    case d.e.DIRECT_ENTITLEMENT:
                         i = a.ClaimOffer
                 }
-                i && S(e, t, i)
+                i && _(e, t, i)
             }
 
-            function S(e, t, n) {
-                s.n.track(l.SpadeEventType.PrimeOfferInteraction, {
+            function _(e, t, n) {
+                l.n.track(c.SpadeEventType.PrimeOfferInteraction, {
                     client_time: Date.now(),
                     offer_id: e.offerID,
                     external_url: e.externalURL,
@@ -24859,20 +24973,21 @@
                     element: n,
                     action: t,
                     user_agent: navigator.userAgent,
-                    has_prime: e.hasPrime
+                    has_prime: e.hasPrime,
+                    display_width_type: e.displayWidthType
                 })
             }
 
-            function w(e) {
-                s.n.track(l.SpadeEventType.PrimeLootPagePageview, {
+            function E(e) {
+                l.n.track(c.SpadeEventType.PrimeLootPagePageview, {
                     client_time: Date.now(),
                     reftag: e.reftag,
                     user_agent: navigator.userAgent
                 })
             }
 
-            function _(e) {
-                s.n.track(l.SpadeEventType.PrimeLootPageTryPrimeClick, {
+            function C(e) {
+                l.n.track(c.SpadeEventType.PrimeLootPageTryPrimeClick, {
                     client_time: Date.now(),
                     button_position: e.buttonPosition,
                     user_agent: navigator.userAgent
@@ -24881,14 +24996,17 @@
                 e.Open = "click_open", e.Close = "click_close", e.Hover = "hover", e.OffersLoaded = "offers_loaded"
             }(i || (i = {})),
             function(e) {
-                e.Hover = "hover", e.Click = "click"
+                e.Hover = "hover", e.Click = "click", e.Impression = "impression"
             }(r || (r = {})),
             function(e) {
-                e.StartYourFreeTrial = "start_your_free_trial", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code"
+                e.StartYourFreeTrial = "start_your_free_trial", e.MoreInfo = "more_info", e.CloseInfo = "close_info", e.ClaimOffer = "claim_offer", e.LearnMore = "learn_more", e.GetCode = "get_code", e.Offer = "offer"
             }(a || (a = {})),
             function(e) {
                 e.TopNav = "top-nav", e.CenterBanner = "center-banner", e.CenterFooter = "center-footer"
-            }(o || (o = {}))
+            }(o || (o = {})),
+            function(e) {
+                e.Wide = "wide", e.Narrow = "narrow"
+            }(s || (s = {}))
         },
         RmgP: function(e, t) {
             var n = {
@@ -38547,8 +38665,8 @@
                 U = n("vRsq"),
                 j = n("kz7j"),
                 M = n("ndwU"),
-                B = n("GnwI"),
-                z = n("YFoo"),
+                B = n("GnwI");
+            var z = n("YFoo"),
                 V = n("kxrW"),
                 H = n("oKCn"),
                 W = n("lTz2"),
@@ -38649,21 +38767,23 @@
                         }, n.onPersistentPlayerToggled = function() {
                             n.props.togglePersistentPlayer && n.props.togglePersistentPlayer()
                         }, n.updatePlayerTrackingData = function(e) {
-                            if (n.state.playerInitialized && n.player) {
-                                var t = o.n.getLastPageview(),
+                            n.state.playerInitialized && n.player && n.player.setTrackingProperties(function(e, t) {
+                                var n = o.n.getLastPageview(),
                                     r = {
                                         host_channel: e.hostChannel,
                                         collapse_right: !e.rightColumnExpanded,
                                         collapse_left: !e.sideNavExpanded
                                     };
-                                t ? n.logger.debug("Tracking data updated.", {
-                                    pageviewProperties: t,
+                                t && (n ? t.debug("Tracking data updated.", {
+                                    pageviewProperties: n,
                                     updates: r
-                                }) : n.logger.debug("pageviewProperties not found; only hosting status updated", {
-                                    pageviewProperties: t,
+                                }) : t.debug("pageviewProperties not found; only hosting status updated", {
+                                    pageviewProperties: n,
                                     updates: r
-                                }), n.player.setTrackingProperties(i.__assign({}, t, r))
-                            }
+                                }));
+                                var a = e.history.location && e.history.location.state || {};
+                                return i.__assign({}, n, r, a)
+                            }(e, o.j))
                         }, n.updatePlayerTrackingDataFromProps = function() {
                             n.updatePlayerTrackingData(n.props)
                         }, n.updatePlayerType = function(e) {
@@ -48973,7 +49093,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsent = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardStreamDelay = "live_dashboard_stream_delay", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsent = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardStreamDelay = "live_dashboard_stream_delay", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -49199,30 +49319,109 @@
                 A = n("eW5E"),
                 U = n("5zC2"),
                 j = n("GnwI"),
-                M = n("FnPL"),
-                B = n("HuHG"),
-                z = n("Ar2k"),
-                V = n("Grq2"),
-                H = "update_chunks",
-                W = "twilight.update_manager.known_builds",
-                G = /^assets\/(.+)-.+\.(.+?)$/i;
+                M = n("Ue10"),
+                B = (n("LGxt"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            error: !1,
+                            isDismissed: !1
+                        }, t.dismissBarClickHandler = function(e) {
+                            e && e.stopPropagation(), t.setState({
+                                isDismissed: !0
+                            })
+                        }, t.messageListener = function() {
+                            t.setState({
+                                isDismissed: !1,
+                                error: !0
+                            })
+                        }, t
+                    }
+                    return u.__extends(t, e), t.prototype.componentDidMount = function() {
+                        a.o.benchmarking.getRootLatencyTracker().addPageLoadFailedListener(this.messageListener)
+                    }, t.prototype.componentWillUnmount = function() {
+                        a.o.benchmarking.getRootLatencyTracker().removePageLoadFailedListener(this.messageListener)
+                    }, t.prototype.render = function() {
+                        if (!this.state.error || this.state.isDismissed) return null;
+                        var e = Object(a.d)("Warning: This page does not report interactive! See the <x:link>Latency Tracking documentation</x:link> to resolve this", {
+                            "x:link": function(e) {
+                                return i.createElement("a", {
+                                    className: "red-banner__link",
+                                    href: "https://git-aws.internal.justin.tv/pages/twilight/twilight-docs/docs/guides/latency-tracking.html",
+                                    target: "_blank"
+                                }, e)
+                            }
+                        }, "Namespace");
+                        return i.createElement(M.jb, {
+                            className: "red-banner",
+                            display: M.R.Flex,
+                            justifyContent: M.Ha.Center,
+                            alignItems: M.c.Center,
+                            elevation: 1,
+                            padding: 1
+                        }, i.createElement(M.jb, {
+                            display: M.R.Flex,
+                            alignItems: M.c.Center,
+                            margin: {
+                                right: 1
+                            },
+                            padding: {
+                                right: .5
+                            },
+                            color: M.K.Overlay
+                        }, i.createElement(M.Ya, {
+                            asset: M.Za.NotificationWarning,
+                            type: M.ab.Inherit
+                        })), i.createElement(M.Q, {
+                            fontSize: M.V.Size5,
+                            color: M.K.Overlay
+                        }, e), i.createElement(M.jb, {
+                            className: "red-banner__dismiss",
+                            position: M.Pa.Absolute,
+                            attachRight: !0,
+                            margin: {
+                                right: 2
+                            },
+                            padding: {
+                                x: 1,
+                                y: .5
+                            },
+                            color: M.K.Overlay
+                        }, i.createElement(M.O, {
+                            type: M.P.Inherit,
+                            onClick: this.dismissBarClickHandler,
+                            hoverColorInherit: !0,
+                            hoverUnderlineNone: !0
+                        }, i.createElement(M.Ya, {
+                            asset: M.Za.Close,
+                            type: M.ab.Inherit
+                        }))))
+                    }, t
+                }(i.Component)),
+                z = n("FnPL"),
+                V = n("HuHG"),
+                H = n("Ar2k"),
+                W = n("Grq2"),
+                G = "update_chunks",
+                q = "twilight.update_manager.known_builds",
+                Q = /^assets\/(.+)-.+\.(.+?)$/i;
 
-            function q(e) {
-                var t = G.exec(e);
+            function K(e) {
+                var t = Q.exec(e);
                 if (t) return t[1] + "." + t[2]
             }
 
-            function Q(e, t) {
+            function Y(e, t) {
                 return u.__awaiter(this, void 0, void 0, function() {
                     var n, i, r, o, s, l, c, d, p, m, h, g;
                     return u.__generator(this, function(u) {
                         switch (u.label) {
                             case 0:
-                                for (n = a.o.dynamicSettings.get(H, []), i = {
+                                for (n = a.o.dynamicSettings.get(G, []), i = {
                                         headers: new Headers({
                                             "Content-Type": "application/octet-stream"
                                         })
-                                    }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (c = q(l)) && n.includes(c) && r.push(fetch("" + a.o.config.cdnURL + l, i));
+                                    }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (c = K(l)) && n.includes(c) && r.push(fetch("" + a.o.config.cdnURL + l, i));
                                 return 0 === r.length ? [2, !1] : [4, Promise.all(r)];
                             case 1:
                                 for (d = u.sent(), p = !1, m = 0, h = d; m < h.length; m++)(g = h[m]).ok || (p = !0, t.warn("Failed to preload chunk.", {
@@ -49235,21 +49434,21 @@
                 })
             }
 
-            function K() {
-                return new Set(a.m.get(W, [])).add(a.o.config.buildID)
+            function Z() {
+                return new Set(a.m.get(q, [])).add(a.o.config.buildID)
             }
 
-            function Y(e) {
-                a.m.set(W, Array.from(K().add(e)))
+            function $(e) {
+                a.m.set(q, Array.from(Z().add(e)))
             }
-            var Z = function(e) {
+            var X = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             newBuilds: new Set,
                             rejectedBuilds: new Set,
                             shouldReloadOnTransition: !1
-                        }, t.knownBuilds = K(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
+                        }, t.knownBuilds = Z(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
                             t.state.shouldReloadOnTransition && window.location.reload(!0)
                         }, t.processManifest = function() {
                             return u.__awaiter(t, void 0, void 0, function() {
@@ -49282,7 +49481,7 @@
                                                 })
                                             }(this.logger)];
                                         case 1:
-                                            return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, Q(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
+                                            return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, Y(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
                                                 currentBuildID: a.o.config.buildID
                                             }), [2]);
                                         case 2:
@@ -49290,7 +49489,7 @@
                                                 currentBuildID: a.o.config.buildID,
                                                 releaseBuildID: e.release.buildId
                                             }), this.setState(function(t) {
-                                                return Y(e.release.buildId), {
+                                                return $(e.release.buildId), {
                                                     newBuilds: new Set(t.newBuilds).add(e.release.buildId),
                                                     shouldReloadOnTransition: !e.canary || a.o.config.buildID !== e.canary.buildId
                                                 }
@@ -49308,13 +49507,13 @@
                                                 }
                                             }), i.label = 6;
                                         case 6:
-                                            return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, Q(e.canary.files, this.logger)]) : [3, 10];
+                                            return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, Y(e.canary.files, this.logger)]) : [3, 10];
                                         case 7:
                                             i.sent() && (this.logger.debug("Preloading canary chunks succeeded", {
                                                 currentBuildID: a.o.config.buildID,
                                                 canaryBuildID: t
                                             }), this.setState(function(e) {
-                                                return Y(t), {
+                                                return $(t), {
                                                     newBuilds: new Set(e.newBuilds).add(t)
                                                 }
                                             })), i.label = 8;
@@ -49347,40 +49546,39 @@
                         return null
                     }, t
                 }(i.Component),
-                $ = n("xlgz"),
-                X = n("jytb"),
-                J = n("ZPFX");
-            var ee = Object(c.b)(function(e) {
+                J = n("xlgz"),
+                ee = n("jytb"),
+                te = n("ZPFX");
+            var ne = Object(c.b)(function(e) {
                     return {
                         isLoggedIn: Object(s.d)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         theatreModeEnabled: e.ui.theatreModeEnabled
                     }
-                })(J.a),
-                te = n("Ue10"),
-                ne = (n("cGJr"), h.a.wrap(function() {
+                })(te.a),
+                ie = (n("cGJr"), h.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(37)]).then(n.bind(null, "mdlQ"))
                 }, "DashboardRoot")),
-                ie = h.a.wrap(function() {
+                re = h.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(33), n.e(0), n.e(36)]).then(n.bind(null, "Pnqn"))
                 }, "TeamsDashboardRoot"),
-                re = h.a.wrap(function() {
+                ae = h.a.wrap(function() {
                     return n.e(35).then(n.bind(null, "hy6r"))
                 }, "TeamsLandingPage"),
-                ae = h.a.wrap(function() {
+                oe = h.a.wrap(function() {
                     return n.e(34).then(n.bind(null, "8n14"))
                 }, "OnboardingRoot"),
-                oe = function(e) {
+                se = function(e) {
                     return i.createElement(p.c, {
                         to: "/teams/" + e.match.params.teamName + "/dashboard"
                     })
                 },
-                se = function(e) {
+                le = function(e) {
                     return i.createElement(p.c, {
                         to: "/team/" + e.match.params.teamName
                     })
                 },
-                le = function(e) {
+                ce = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onHistoryChange = function(e, n) {
@@ -49400,75 +49598,75 @@
                             t && document.body.classList.remove(t), n && document.body.classList.add(n)
                         }
                     }, t.prototype.render = function() {
-                        return i.createElement("div", null, i.createElement(te.Ia, {
+                        return i.createElement("div", null, i.createElement(M.Ia, {
                             className: "twilight-root",
-                            overflow: te.La.Hidden,
-                            display: te.R.Flex,
-                            flexDirection: te.T.Column,
-                            flexWrap: te.U.NoWrap,
-                            position: te.Pa.Absolute,
+                            overflow: M.La.Hidden,
+                            display: M.R.Flex,
+                            flexDirection: M.T.Column,
+                            flexWrap: M.U.NoWrap,
+                            position: M.Pa.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             attachBottom: !0,
                             attachLeft: !0
-                        }, i.createElement(x, null), i.createElement(A.a, null), i.createElement(U.b, null), i.createElement(p.e, null, i.createElement(p.d, {
+                        }, a.o.benchmarking.toolsEnabled && i.createElement(B, null), i.createElement(x, null), i.createElement(A.a, null), i.createElement(U.b, null), i.createElement(p.e, null, i.createElement(p.d, {
                             path: "/:channelName/dashboard/:pageName?",
-                            component: ne
+                            component: ie
                         }), i.createElement(p.d, {
                             path: "/hi",
-                            component: ae
+                            component: oe
                         }), i.createElement(p.d, {
                             path: "/:channelName/manager",
-                            component: ne
+                            component: ie
                         }), i.createElement(p.d, {
                             path: "/(manager|dashboard)/:pageName?",
                             component: m.a
                         }), i.createElement(p.d, {
                             path: "/event/:teamName",
-                            component: se
+                            component: le
                         }), i.createElement(p.d, {
                             exact: !0,
                             path: "/team/:teamName/edit",
-                            render: oe
+                            render: se
                         }), i.createElement(p.d, {
                             path: "/team/:teamName",
-                            component: re
+                            component: ae
                         }), i.createElement(p.d, {
                             path: "/teams/:teamName/dashboard/:pageName?",
-                            component: ie
+                            component: re
                         }), i.createElement(p.d, {
                             path: "/",
-                            component: ee
-                        })), i.createElement(X.b, null), i.createElement(z.b, null), i.createElement(g.a, null), this.props.firstPageLoaded && i.createElement(B.a, null), this.props.firstPageLoaded && i.createElement(V.a, {
+                            component: ne
+                        })), i.createElement(ee.b, null), i.createElement(H.b, null), i.createElement(g.a, null), this.props.firstPageLoaded && i.createElement(V.a, null), this.props.firstPageLoaded && i.createElement(W.a, {
                             history: this.props.history
-                        }), this.props.isLoggedIn && i.createElement($.a, null), a.o.benchmarking.toolsEnabled && i.createElement(j.c, {
+                        }), this.props.isLoggedIn && i.createElement(J.a, null), a.o.benchmarking.toolsEnabled && i.createElement(j.c, {
                             benchmarking: a.o.benchmarking
-                        }), this.props.firstPageLoaded && i.createElement(M.b, {
+                        }), this.props.firstPageLoaded && i.createElement(z.b, {
                             history: this.props.history
-                        }), this.props.firstPageLoaded && i.createElement(Z, null), this.props.firstPageLoaded && i.createElement(F, null)))
+                        }), this.props.firstPageLoaded && i.createElement(X, null), this.props.firstPageLoaded && i.createElement(F, null)))
                     }, t
                 }(i.Component),
-                ce = Object(j.d)("Root", {
+                de = Object(j.d)("Root", {
                     isRoot: !0
-                })(le);
-            var de, ue = Object(c.b)(function(e) {
+                })(ce);
+            var ue, pe = Object(c.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isLoggedIn: Object(s.d)(e),
                         theme: Object(d.a)(e)
                     }
-                })(ce),
-                pe = Object(r.f)(ue);
+                })(de),
+                me = Object(r.f)(pe);
 
-            function me() {
+            function he() {
                 a.o.mount(i.createElement(r.d, {
                     history: a.o.history
-                }, i.createElement(pe, null)), document.getElementById("root"))
+                }, i.createElement(me, null)), document.getElementById("root"))
             }
-            var he = !1;
-            de = a.o.store.getReduxStore().subscribe(function() {
+            var ge = !1;
+            ue = a.o.store.getReduxStore().subscribe(function() {
                 var e = a.o.store.getState();
-                !he && Object(s.e)(e) && (he = !0, de(), a.a.optimizedBuild ? me() : setTimeout(me, 500))
+                !ge && Object(s.e)(e) && (ge = !0, ue(), a.a.optimizedBuild ? he() : setTimeout(he, 500))
             }), Object(l.a)(), a.o.store.dispatch(Object(o.e)())
         },
         sSlw: function(e, t, n) {
@@ -54152,6 +54350,6 @@
         }
     },
     [
-        [173, 83, 0]
+        [174, 83, 0]
     ]
 ]);
