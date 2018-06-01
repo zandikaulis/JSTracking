@@ -4363,13 +4363,13 @@ window.SiteOptions = {
         },
         "b156afda-e215-413a-b9f9-efebda54ce96": {
             "name": "ios_aa_2018",
-            "v": 3681,
+            "v": 3897,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "enabled"
             }]
         },
