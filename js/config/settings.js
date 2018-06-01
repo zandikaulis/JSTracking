@@ -27,7 +27,6 @@ window.__twilightSettings = {
     "crate_trickster_launch": "off",
     "dashboard_live_twilight": "off",
     "dashboard_moderation_settings_enabled": true,
-    "dashboard_settings_launch": "on",
     "dashboard_vp_widget_enabled": true,
     "deprecated_messages_download_enabled": false,
     "detector_urls": ["https://s0.2mdn.net/", "https://adservice.google.com", "https://pagead2.googlesyndication.com/", "https://r.nexac.com/e/getdata.xgi?foo=bar"],
@@ -581,18 +580,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 5,
                 "value": "no"
-            }]
-        },
-        "60936fd6-ef0a-49f1-9421-712f2ba02513": {
-            "name": "TWILIGHT_DASHBOARD_SETTINGS_LAUNCH",
-            "v": 3852,
-            "t": 2,
-            "groups": [{
-                "weight": 0,
-                "value": "no"
-            }, {
-                "weight": 100,
-                "value": "yes"
             }]
         },
         "6699df7d-9f23-494c-87a1-06fdf80f1e68": {
