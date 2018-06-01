@@ -481,14 +481,14 @@ window.__twilightSettings = {
         },
         "50e947d4-24b7-4000-a046-f48f4072b7cf": {
             "name": "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV",
-            "v": 3851,
+            "v": 3901,
             "t": 2,
             "s": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 80,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "variant_a"
             }, {
                 "weight": 10,
