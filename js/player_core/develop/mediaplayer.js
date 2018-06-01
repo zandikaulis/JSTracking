@@ -2573,7 +2573,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-4c64b659";
+    return "2.3.0-bc70b92a";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2679,11 +2679,25 @@ MediaPlayer.prototype.getManifestInfo = function () {
     return this._state.twitchInfo;
 }
 
-// TODO: Switch latency functions to return seconds
+/**
+ * @returns {number} broadcast latency in seconds
+ */
+MediaPlayer.prototype.getLiveLatency = function () {
+    return this._stats.broadcasterLatency;
+}
+
+/**
+ * @deprecated use getLiveLatency
+ * @returns {number} broadcast latency in milliseconds
+ */
 MediaPlayer.prototype.getBroadcasterLatency = function () {
     return this._stats.broadcasterLatency * 1000;
 }
 
+/**
+ * @deprecated use getLiveLatency
+ * @returns {number} transcoder latency in milliseconds
+ */
 MediaPlayer.prototype.getTranscoderLatency = function () {
     return this._stats.transcoderLatency * 1000;
 }

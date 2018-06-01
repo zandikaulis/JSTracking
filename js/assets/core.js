@@ -1610,7 +1610,7 @@
                             },
                             startTime: 0
                         })
-                    }, e.prototype.reportCustomEvent = function(e) {}, e.prototype.resetCustomEvents = function(e) {}, e
+                    }, e.prototype.reportCustomEvent = function(e) {}, e.prototype.resetCustomEvents = function(e) {}, e.prototype.unregister = function() {}, e
                 }()
         },
         "1utW": function(e, t, n) {
@@ -5156,6 +5156,12 @@
                             expectedChildCount: e,
                             children: this.getChildNames()
                         }), e && (this.expectedChildCount = e), this.checkChildCompleted())
+                    }, e.prototype.unregister = function() {
+                        this.hasReportedInteractive || (this.parent ? (this.parent.unregisterChild(this), this.logger.debug("Unregistering component which has not reported interactive yet", {
+                            component: this.componentName
+                        })) : this.logger.debug("Attempted to unregister a parent-less component. This is a no-op.", {
+                            component: this.componentName
+                        }))
                     }, e.prototype.resetCustomEvents = function(e) {
                         this.root.customEvents[e] = []
                     }, e.prototype.registerCustomEvent = function(e) {
@@ -5234,6 +5240,12 @@
                             this.reset(!1)
                         }
                         this.root.resetFirstPageLoadedFailsafe(), this.children.push(e)
+                    }, e.prototype.unregisterChild = function(e) {
+                        var t = this.children.indexOf(e);
+                        t > -1 ? (this.children.splice(t, 1), this.expectedChildCount && this.expectedChildCount--) : this.logger.warn("Child attempted to unregister itself, but was not registered", {
+                            child: e.componentName,
+                            parent: this.componentName
+                        }), this.hasReportedInteractive && this.checkChildCompleted()
                     }, e.prototype.getChildNames = function() {
                         return this.children.map(function(e) {
                             return e.componentName
@@ -24263,9 +24275,7 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.props.reportInteractive()
-                    }, t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive()
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.props.data && !this.props.data.loading && this.props.reportInteractive()
@@ -38868,7 +38878,7 @@
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(V.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(V.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(V.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Play, this.onPlayerPlay), this.player.removeEventListener(z.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(V.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(V.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(z.a.Seeked, this.onSeek), this.player.removeEventListener(z.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(V.a.OpenStream, this.onOpenStream), this.player.removeEventListener(z.a.Pause, this.onPause), this.player.removeEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(z.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
+                        this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(V.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(V.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(V.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Play, this.onPlayerPlay), this.player.removeEventListener(z.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(V.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(V.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(z.a.Seeked, this.onSeek), this.player.removeEventListener(z.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(V.a.OpenStream, this.onOpenStream), this.player.removeEventListener(z.a.Pause, this.onPause), this.player.removeEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(z.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
@@ -39488,6 +39498,8 @@
                             t && t.autoReportInteractive && (this.logger.debug("Using default implementation of reportInteractive", {
                                 componentID: e
                             }), this.tracker.reportInteractive())
+                        }, d.prototype.componentWillUnmount = function() {
+                            this.tracker.unregister()
                         }, d.prototype.render = function() {
                             var e = {
                                     latencyTracking: this.tracker,
