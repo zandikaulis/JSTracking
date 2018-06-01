@@ -1296,7 +1296,7 @@
                 }
                 return e
             }! function(e) {
-                e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.BitsCheckoutPage = "bits_checkout_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.LoginRequiredInterstitial = "login_required_interstitial", e.MessagesPage = "messages_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
+                e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.BitsCheckoutPage = "bits_checkout_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.ExtensionInstallButton = "extension_install_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.LoginRequiredInterstitial = "login_required_interstitial", e.MessagesPage = "messages_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
             }(i || (i = {}))
         },
         118: function(e, t) {},
@@ -11514,90 +11514,6 @@
             };
             e.exports = n
         },
-        FnPL: function(e, t, n) {
-            "use strict";
-            var i = n("mrSG"),
-                r = n("cr+I"),
-                a = n("q1tI"),
-                o = n("/7QA"),
-                s = n("zB42"),
-                l = "legacy_routes_enabled",
-                c = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
-                            n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
-                                path: e.pathname
-                            }), n.legacyRoutes.forEach(function(t) {
-                                try {
-                                    if (e.pathname.match(t)) {
-                                        n.logger.debug("Found legacy route. Reloading...");
-                                        var i = "" !== e.search ? r.parse(e.search) : {};
-                                        i["from-redirect"] = "true";
-                                        var a = r.stringify(i),
-                                            l = o.a.buildType === s.a.Dev ? window.location.host : window.location.hostname,
-                                            c = window.location.protocol + "//" + l + e.pathname + "?" + a;
-                                        return n.logger.debug("Redirecting to legacy route", {
-                                            newUrl: c
-                                        }), void window.location.replace(c)
-                                    }
-                                } catch (e) {
-                                    o.j.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
-                                        regex: t
-                                    })
-                                }
-                            })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
-                        }, n.processRedirectParam = function(e) {
-                            if (e && e.pathname && e.search) {
-                                var t = "" !== e.search ? r.parse(e.search) : {};
-                                if (t["from-redirect"]) {
-                                    delete t["from-redirect"];
-                                    var i = r.stringify(t),
-                                        a = "";
-                                    i.length > 0 && (a = "?" + i), n.props.history.replace({
-                                        pathname: e.pathname,
-                                        hash: e.hash,
-                                        search: a
-                                    })
-                                }
-                            }
-                        }, n.isEnabled = o.b.get(l, !1), n.logger = o.j.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
-                    }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return null
-                    }, t.prototype.componentDidMount = function() {
-                        this.processRedirectParam(this.props.history.location)
-                    }, t.prototype.buildRoutes = function() {
-                        if (!this.isEnabled) return [];
-                        this.logger.debug("Building legacy routes...");
-                        var e = o.b.get("legacy_routes", []),
-                            t = [];
-                        if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
-                        for (var n = 0, i = e; n < i.length; n++) {
-                            var r = i[n];
-                            try {
-                                var a = new RegExp(r, "i");
-                                t.push(a)
-                            } catch (e) {
-                                this.logger.debug("Failed to parse route!", {
-                                    val: r,
-                                    err: e
-                                })
-                            }
-                        }
-                        return this.logger.debug("Done building legacy routes!", {
-                            count: t.length
-                        }), t
-                    }, t
-                }(a.Component);
-            n.d(t, "a", function() {
-                return l
-            }), n.d(t, !1, function() {
-                return "legacy_routes"
-            }), n.d(t, "b", function() {
-                return c
-            })
-        },
         Fxe2: function(e, t, n) {
             "use strict";
 
@@ -13865,13 +13781,12 @@
             var U = n("u5aL"),
                 j = n("TSYQ"),
                 M = n("8/mp"),
-                B = n("kcPv"),
-                z = n("QVaV"),
-                V = n("hyVY"),
-                H = n("fk61"),
-                W = n("N0BP"),
-                G = (n("+nzp"), n("KRR4")),
-                q = function(e) {
+                B = n("QVaV"),
+                z = n("hyVY"),
+                V = n("fk61"),
+                H = n("N0BP"),
+                W = (n("+nzp"), n("KRR4")),
+                G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -13890,7 +13805,7 @@
                             tabIndex: -1,
                             "data-a-target": "search-live-result-card-link",
                             onClick: this.props.onClick
-                        }, Object(W.a)(this.props)), d.createElement(y.C, null, d.createElement(y.Ia, {
+                        }, Object(H.a)(this.props)), d.createElement(y.C, null, d.createElement(y.Ia, {
                             className: "search-live-result-card__wrapper",
                             position: y.Pa.Relative,
                             overflow: y.La.Hidden,
@@ -13941,7 +13856,7 @@
                             className: "search-live-result-card__info",
                             ellipsis: !0
                         }, this.props.title))))))))
-                    }, t = c.__decorate([Object(h.a)(G, {
+                    }, t = c.__decorate([Object(h.a)(W, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -13951,7 +13866,7 @@
                         }
                     })], t)
                 }(d.Component),
-                Q = (n("aKpu"), function(e) {
+                q = (n("aKpu"), function(e) {
                     var t, n, i, r;
                     return e.title && (e.hitsCount && e.hitsCount > 0 ? t = Object(u.d)("more", "SearchResultSection") : e.totalHitsCount && e.totalHitsCount > 0 && (t = Object(u.d)("Show", "SearchResultSection")), void 0 !== e.totalHitsCount && (i = d.createElement(y.Ma, {
                         type: y.Na.Brand,
@@ -13997,7 +13912,7 @@
                         className: "search-result-section__block"
                     }, n, r)
                 }),
-                K = (n("Ru8C"), function(e) {
+                Q = (n("Ru8C"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -14034,8 +13949,8 @@
                         }, this.props.title)))
                     }, t
                 }(d.Component)),
-                Y = n("vR4/"),
-                Z = function(e) {
+                K = n("vR4/"),
+                Y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleOptionChange = function(e) {
@@ -14073,13 +13988,13 @@
                         }, d.createElement(y.eb, {
                             name: "type"
                         }, d.createElement("option", {
-                            value: Y.c.AllVideos
+                            value: K.c.AllVideos
                         }, Object(u.d)("All Videos", "search__video-filters")), d.createElement("option", {
-                            value: Y.c.PastBroadcasts
+                            value: K.c.PastBroadcasts
                         }, Object(u.d)("Past Broadcasts", "search__video-filters")), d.createElement("option", {
-                            value: Y.c.Uploads
+                            value: K.c.Uploads
                         }, Object(u.d)("Uploads", "search__video-filters")), d.createElement("option", {
-                            value: Y.c.Highlights
+                            value: K.c.Highlights
                         }, Object(u.d)("Highlights", "search__video-filters")))), d.createElement(y.Ia, {
                             display: y.R.InlineFlex,
                             margin: {
@@ -14089,11 +14004,11 @@
                         }, d.createElement(y.eb, {
                             name: "video_length"
                         }, d.createElement("option", {
-                            value: Y.a.AnyLength
+                            value: K.a.AnyLength
                         }, Object(u.d)("Any Length", "search__video-filters")), d.createElement("option", {
-                            value: Y.a.Short
+                            value: K.a.Short
                         }, Object(u.d)("Short", "search__video-filters")), d.createElement("option", {
-                            value: Y.a.Long
+                            value: K.a.Long
                         }, Object(u.d)("Long", "search__video-filters"))))), d.createElement(y.Ia, {
                             margin: {
                                 bottom: .5
@@ -14103,13 +14018,13 @@
                         }, d.createElement(y.eb, {
                             name: "sort"
                         }, d.createElement("option", {
-                            value: Y.b.Popular
+                            value: K.b.Popular
                         }, Object(u.d)("Popular", "search__video-filters")), d.createElement("option", {
-                            value: Y.b.Newest
+                            value: K.b.Newest
                         }, Object(u.d)("Newest", "search__video-filters")))))))
                     }, t
                 }(d.Component),
-                $ = (n("OjLy"), function(e) {
+                Z = (n("OjLy"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBackClick = function() {
@@ -14146,16 +14061,16 @@
                             "search-results-panel--closed": !this.props.isOpen,
                             "search-results-panel--filtered": this.props.currentCategory === x.a.Videos
                         };
-                        return e = this.props.currentCategory && null !== this.props.currentCategory ? d.createElement(K, {
+                        return e = this.props.currentCategory && null !== this.props.currentCategory ? d.createElement(Q, {
                             title: this.getCategoryTitle(this.props.currentCategory),
                             showBack: !0,
                             onBackClick: this.onBackClick
-                        }) : d.createElement(K, {
+                        }) : d.createElement(Q, {
                             title: Object(u.d)("Top Results", "SearchResultPanel__titlebar"),
                             showBack: !1
                         }), t = this.props.isWaiting ? d.createElement(y.Ka, {
                             fillContent: !0
-                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.currentCategory && null !== this.props.currentCategory ? this.getCategoryDrillDown(this.props.currentCategory) : this.props.gameResults && this.props.gameResults.totalHits > 0 || this.props.userResults && this.props.userResults.totalHits > 0 || this.props.communityResults && this.props.communityResults.totalHits > 0 || this.props.videoResults && this.props.videoResults.totalHits > 0 || this.props.liveResults && this.props.liveResults.totalHits > 0 ? this.getResultSections() : this.getNoResultsMessage(), this.props.currentCategory === x.a.Videos && (n = d.createElement(Z, {
+                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.currentCategory && null !== this.props.currentCategory ? this.getCategoryDrillDown(this.props.currentCategory) : this.props.gameResults && this.props.gameResults.totalHits > 0 || this.props.userResults && this.props.userResults.totalHits > 0 || this.props.communityResults && this.props.communityResults.totalHits > 0 || this.props.videoResults && this.props.videoResults.totalHits > 0 || this.props.liveResults && this.props.liveResults.totalHits > 0 ? this.getResultSections() : this.getNoResultsMessage(), this.props.currentCategory === x.a.Videos && (n = d.createElement(Y, {
                             key: "video-filters",
                             onOptionsChange: this.props.onVideoOptionsChange
                         })), d.createElement("div", {
@@ -14199,7 +14114,7 @@
                             }
                         }, d.createElement(y.Y, null, s))), this.getResultSection("games-section", x.a.Games, this.gameHeaderSelect, this.props.gameResults, i.length, i, n, t), this.getResultSection("live-section", x.a.Channels, this.liveHeaderSelect, this.props.liveResults, s.length, e, n, t), this.getResultSection("channels-section", x.a.Users, this.userHeaderSelect, this.props.userResults, r.length, r, n, t), this.getResultSection("videos-section", x.a.Videos, this.videoHeaderSelect, this.props.videoResults, o.length, o, n, t), this.getResultSection("communities-section", x.a.Communities, this.communityHeaderSelect, this.props.communityResults, a.length, a, n, t), t.concat(n)
                     }, t.prototype.getResultSection = function(e, t, n, i, r, a, o, s) {
-                        var l = d.createElement(Q, {
+                        var l = d.createElement(q, {
                             key: e,
                             totalHitsCount: i ? i.totalHits : 0,
                             hitsCount: r,
@@ -14211,7 +14126,7 @@
                     }, t.prototype.getGameCards = function() {
                         var e = this;
                         return this.props.gameResults ? this.props.gameResults.results.map(function(t) {
-                            return d.createElement(H.a, {
+                            return d.createElement(V.a, {
                                 onClick: e.onClick,
                                 id: "game_" + t.id,
                                 key: "game_" + t.id,
@@ -14225,7 +14140,7 @@
                     }, t.prototype.getLiveCards = function() {
                         var e = this;
                         return this.props.liveResults ? this.props.liveResults.results.map(function(t) {
-                            var n = Object(z.a)(t.login || "", t.name || "");
+                            var n = Object(B.a)(t.login || "", t.name || "");
                             return d.createElement(y.L, {
                                 key: "live_" + t.id,
                                 cols: 6
@@ -14233,7 +14148,7 @@
                                 margin: {
                                     bottom: 1
                                 }
-                            }, d.createElement(q, {
+                            }, d.createElement(G, {
                                 onClick: e.onClick,
                                 id: "live_" + t.id,
                                 imageAlt: t.thumbnailAltText,
@@ -14249,7 +14164,7 @@
                     }, t.prototype.getUserCards = function() {
                         var e = this;
                         return this.props.userResults ? this.props.userResults.results.map(function(t) {
-                            var n = Object(z.a)(t.login || "", t.name || "");
+                            var n = Object(B.a)(t.login || "", t.name || "");
                             return d.createElement(y.Ga, {
                                 linkTo: t.linkTo,
                                 onClick: e.onClick,
@@ -14283,8 +14198,8 @@
                     }, t.prototype.getVideoCards = function() {
                         var e = this;
                         return this.props.videoResults ? this.props.videoResults.results.map(function(t) {
-                            var n = Object(z.a)(t.login || "", t.name || ""),
-                                i = Object(V.b)(t.length || 0);
+                            var n = Object(B.a)(t.login || "", t.name || ""),
+                                i = Object(z.b)(t.length || 0);
                             return d.createElement(y.Ga, {
                                 key: "video_" + t.id,
                                 linkTo: t.linkTo,
@@ -14332,8 +14247,7 @@
                         return this.props.communityResults ? this.props.communityResults.results.map(function(t) {
                             return d.createElement(y.Ga, {
                                 key: "community_" + t.id,
-                                targetBlank: Object(B.b)(),
-                                linkTo: Object(B.a)(t.linkTo),
+                                linkTo: t.linkTo,
                                 onClick: e.onClick,
                                 tabIndex: -1,
                                 "data-ts_selectable": !0,
@@ -14404,7 +14318,7 @@
                             default:
                                 return this.getNoResultsMessage()
                         }
-                        return d.createElement(Q, null, t)
+                        return d.createElement(q, null, t)
                     }, t.prototype.getCategoryTitle = function(e) {
                         switch (e) {
                             case x.a.Games:
@@ -14480,7 +14394,7 @@
                         }, Object(u.d)("Please try again later", "SearchResultPanel")))
                     }, t
                 }(d.Component)),
-                X = (n("yH8i"), function(e) {
+                $ = (n("yH8i"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -14537,7 +14451,7 @@
                         }
                     }, t
                 }(d.Component)),
-                J = (n("b52s"), function(e) {
+                X = (n("b52s"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleKeydown = function(e) {
@@ -14576,7 +14490,7 @@
                             show: this.props.isOpen,
                             offsetY: "5px",
                             "data-a-target": "nav-search-balloon"
-                        }, d.createElement($, {
+                        }, d.createElement(Z, {
                             isOpen: this.props.isOpen,
                             gameResults: this.props.gameResults,
                             userResults: this.props.userResults,
@@ -14591,17 +14505,17 @@
                             onVideoOptionsChange: this.props.onVideoOptionsChange,
                             loadMore: this.props.loadMore,
                             onKeyDown: this.props.onKeyDown
-                        })), d.createElement(X, {
+                        })), d.createElement($, {
                             isVisible: this.props.isOpen && !!this.props.currentCategory,
                             currentCategory: this.props.currentCategory,
                             onClick: this.categoryTagClicked
                         }))))
                     }, t
                 }(d.Component)),
-                ee = 175,
+                J = 175,
+                ee = 1e3,
                 te = 1e3,
-                ne = 1e3,
-                ie = function(e) {
+                ne = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.didSelectCategory = !1, n.didSelectResult = !1, n.searchResultsFirstPage = null, n.onCategorySelected = function(e) {
@@ -14617,7 +14531,7 @@
                             })
                         }, n.onChange = function(e) {
                             n.inputTimer && (clearTimeout(n.inputTimer), n.inputTimer = 0), n.props.latencyTracking.resetCustomEvents(R.a.Search), e ? (n.searchResultsFirstPage = n.props.latencyTracking.registerCustomEvent({
-                                benchmark: te,
+                                benchmark: ee,
                                 group: R.a.Search,
                                 key: R.b.SearchResultsFirstPage,
                                 label: R.c.FirstPageLoaded,
@@ -14634,7 +14548,7 @@
                                 }, function() {
                                     n.state.videoOptions ? n.doVideosSearch(e, n.state.videoOptions) : n.doSearch(e)
                                 })
-                            }, ee)) : n.setState(n.getEmptyState())
+                            }, J)) : n.setState(n.getEmptyState())
                         }, n.onHistoryChange = function() {
                             n.state.isOpen && n.setState({
                                 isOpen: !1
@@ -14668,7 +14582,7 @@
                                         case 0:
                                             if (this.state.queryID || null === this.state.currentCategory || !0 === this.state.exhaustedHits || this.state.videoOptions) return [2];
                                             e = this.state.currentPage + 1, this.props.latencyTracking.resetCustomEvents(R.a.Search), n = this.props.latencyTracking.registerCustomEvent({
-                                                benchmark: ne,
+                                                benchmark: te,
                                                 group: R.a.Search,
                                                 key: R.b.SearchResultsLaterPage,
                                                 label: R.c.LaterPageLoaded,
@@ -14792,7 +14706,7 @@
                             }))
                         }(this.state.term)
                     }, t.prototype.render = function() {
-                        return d.createElement(J, {
+                        return d.createElement(X, {
                             onChange: this.onChange,
                             onClickOut: this.onClickOut,
                             onFocus: this.onFocus,
@@ -14925,10 +14839,10 @@
                         }
                     }, t = c.__decorate([Object(w.d)("NavSearch")], t)
                 }(d.Component),
-                re = Object(N.f)(ie),
-                ae = n("RVih"),
-                oe = n("YSKX"),
-                se = function(e) {
+                ie = Object(N.f)(ne),
+                re = n("RVih"),
+                ae = n("YSKX"),
+                oe = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -14944,7 +14858,7 @@
                             className: "top-nav__nav-link",
                             "data-a-target": "store-link"
                         }, Object(u.d)("Store", "TopNavStore")) : null
-                    }, t = c.__decorate([Object(h.a)(oe, {
+                    }, t = c.__decorate([Object(h.a)(ae, {
                         skip: function(e) {
                             return !e.isLoggedIn
                         }
@@ -14952,16 +14866,15 @@
                         autoReportInteractive: !0
                     })], t)
                 }(d.Component);
-            var le, ce = Object(i.b)(function(e) {
+            var se, le = Object(i.b)(function(e) {
                     return {
                         isLoggedIn: Object(l.d)(e)
                     }
-                })(se),
-                de = n("ht6z"),
-                ue = n("YSRz"),
-                pe = n("myUo"),
-                me = Object(B.a)("/products/turbo?ref=top_nav"),
-                he = function(e) {
+                })(oe),
+                ce = n("ht6z"),
+                de = n("YSRz"),
+                ue = n("myUo"),
+                pe = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -14969,16 +14882,16 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         if (this.props.data.loading || this.props.data.error) return null;
-                        var e = this.props.data.requestInfo && !Object(de.a)(this.props.data.requestInfo.countryCode),
+                        var e = this.props.data.requestInfo && !Object(ce.a)(this.props.data.requestInfo.countryCode),
                             t = !this.props.data.currentUser || !this.props.data.currentUser.hasTurbo;
-                        if (e && t) return d.createElement("a", {
-                            href: me,
-                            target: "_blank",
+                        if (e && t) return d.createElement(y.O, {
+                            to: "/products/turbo?ref=top_nav",
+                            targetBlank: !0,
                             className: "top-nav__nav-link",
                             "data-a-target": "try-prime-link"
                         }, Object(u.d)("Go Turbo", "TopNavUpsell"));
                         if (!this.props.data.currentUser || !this.props.data.currentUser.hasPrime) {
-                            var n = Object(ue.d)(ue.b, window.location.pathname.substring(1));
+                            var n = Object(de.d)(de.b, window.location.pathname.substring(1));
                             return d.createElement("a", {
                                 href: n,
                                 target: "_blank",
@@ -14987,25 +14900,25 @@
                             }, Object(u.d)("Try Prime", "TopNavUpsell"))
                         }
                         return null
-                    }, t = c.__decorate([Object(h.a)(pe), Object(w.d)("TopNavUpsellComponent")], t)
+                    }, t = c.__decorate([Object(h.a)(ue), Object(w.d)("TopNavUpsellComponent")], t)
                 }(d.Component),
-                ge = n("x7UT"),
-                fe = n("eDVu"),
-                ve = n("NSwr"),
-                be = n("0Log"),
-                ye = n("/0dD"),
-                ke = n("/aPz"),
-                Se = n("daa2"),
-                we = n("76Lv"),
-                _e = n("JOxF"),
-                Ee = n("jZLd"),
-                Ce = n("XDQu"),
-                Ne = n("geRD");
+                me = n("x7UT"),
+                he = n("eDVu"),
+                ge = n("NSwr"),
+                fe = n("0Log"),
+                ve = n("/0dD"),
+                be = n("/aPz"),
+                ye = n("daa2"),
+                ke = n("76Lv"),
+                Se = n("JOxF"),
+                we = n("jZLd"),
+                _e = n("XDQu"),
+                Ee = n("geRD");
             ! function(e) {
                 e.Disable = "disable", e.Enable = "enable"
-            }(le || (le = {}));
+            }(se || (se = {}));
             n("g6pS");
-            var Te = function(e) {
+            var Ce = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onLogoutClick = function(e) {
@@ -15013,12 +14926,12 @@
                         }, t.onShareCheckboxClick = function() {
                             t.props.data && !t.props.data.error && t.props.data.currentUser && t.props.toggleShareActivity()
                         }, t.onDarkModeCheckboxClick = function() {
-                            var e = t.props.theme === ye.a.Dark ? ye.a.Light : ye.a.Dark;
-                            t.props.changeTheme(e, Ee.a.UserMenu)
+                            var e = t.props.theme === ve.a.Dark ? ve.a.Light : ve.a.Dark;
+                            t.props.changeTheme(e, we.a.UserMenu)
                         }, t.onOnlineClick = function(e) {
-                            t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(ve.a.Online))
+                            t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(ge.a.Online))
                         }, t.onInvisibleClick = function(e) {
-                            t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(ve.a.Offline))
+                            t.props.data && !t.props.data.error && t.props.data.currentUser && (e && e.stopPropagation(), t.props.toggleVisibility(ge.a.Offline))
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -15039,13 +14952,13 @@
                             p = void 0,
                             m = void 0,
                             h = void 0;
-                        return this.props.data && !this.props.data.error && this.props.data.currentUser && (i = !0, r = this.props.data.currentUser.availability === ve.a.Offline ? y.K.Base : y.K.Alt2, a = this.props.data.currentUser.availability === ve.a.Online ? y.K.Base : y.K.Alt2, o = !!this.props.data.currentUser.settings && this.props.data.currentUser.settings.isSharingActivity, s = this.props.data.currentUser.availability === ve.a.Offline, l = this.props.data.currentUser.availability === ve.a.Online, c = this.props.data.currentUser.availability === ve.a.Offline, p = {
+                        return this.props.data && !this.props.data.error && this.props.data.currentUser && (i = !0, r = this.props.data.currentUser.availability === ge.a.Offline ? y.K.Base : y.K.Alt2, a = this.props.data.currentUser.availability === ge.a.Online ? y.K.Base : y.K.Alt2, o = !!this.props.data.currentUser.settings && this.props.data.currentUser.settings.isSharingActivity, s = this.props.data.currentUser.availability === ge.a.Offline, l = this.props.data.currentUser.availability === ge.a.Online, c = this.props.data.currentUser.availability === ge.a.Offline, p = {
                             pathname: "/" + this.props.data.currentUser.login,
                             state: {
                                 content: g.PageviewContent.SelfChannel,
                                 medium: g.PageviewMedium.TopNav
                             }
-                        }, m = Object(B.a)("/" + this.props.data.currentUser.login + "/manager"), h = "/" + this.props.data.currentUser.login + "/dashboard/live"), d.createElement(y.jb, {
+                        }, m = "/" + this.props.data.currentUser.login + "/manager", h = "/" + this.props.data.currentUser.login + "/dashboard/live"), d.createElement(y.jb, {
                             overflow: y.La.Hidden,
                             position: y.Pa.Absolute,
                             className: e,
@@ -15144,7 +15057,7 @@
                             "data-a-target": "dark-mode-toggle",
                             "data-test-selector": "dark-mode-toggle",
                             "data-a-value": this.props.theme,
-                            checked: this.props.theme === ye.a.Dark,
+                            checked: this.props.theme === ve.a.Dark,
                             onChange: this.onDarkModeCheckboxClick
                         }))), d.createElement(y.Ia, {
                             margin: {
@@ -15265,8 +15178,7 @@
                             height: 18,
                             width: 18
                         })), d.createElement(y.Q, null, Object(u.d)("Messages", "UserMenuDropdown")))), d.createElement(y.Ga, {
-                            targetBlank: Object(B.b)(),
-                            linkTo: Object(B.a)("/subscriptions"),
+                            linkTo: "/subscriptions",
                             "data-a-target": "subscriptions-dropdown-link"
                         }, d.createElement(y.jb, {
                             color: y.K.Alt,
@@ -15335,8 +15247,7 @@
                                 y: 1
                             }
                         }), d.createElement(y.Ga, {
-                            targetBlank: Object(B.b)(),
-                            linkTo: Object(B.a)("/settings/profile"),
+                            linkTo: "/settings/profile",
                             "data-a-target": "settings-dropdown-link"
                         }, d.createElement(y.jb, {
                             color: y.K.Alt,
@@ -15380,15 +15291,15 @@
                         })), d.createElement(y.Q, null, Object(u.d)("Log Out", "UserMenuDropdown"))))))))
                     }, t = c.__decorate([Object(w.d)("UserMenuDropdown")], t)
                 }(d.Component),
-                Ie = n("6qmu"),
-                Re = n("3KNA"),
-                Oe = function(e) {
+                Ne = n("6qmu"),
+                Te = n("3KNA"),
+                Ie = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.toggleShareActivity = function() {
                             if (t.props.data && !t.props.data.error && t.props.data.currentUser) {
                                 var e, n, i = !!t.props.data.currentUser.settings && !t.props.data.currentUser.settings.isSharingActivity,
-                                    r = c.__assign({}, Object(Ne.a)({
+                                    r = c.__assign({}, Object(Ee.a)({
                                         isSharingActivity: i
                                     }), {
                                         optimisticResponse: {
@@ -15410,15 +15321,15 @@
                                     isSharingEnabled: i
                                 }, n = {
                                     login: e.login,
-                                    action: e.isSharingEnabled ? le.Enable : le.Disable
+                                    action: e.isSharingEnabled ? se.Enable : se.Disable
                                 }, u.n.track(g.SpadeEventType.PresenceToggle, n)
                             }
                         }, t.toggleVisibility = function(e) {
-                            t.props.data && !t.props.data.error && t.props.data.currentUser && Object(Se.e)(e)
+                            t.props.data && !t.props.data.error && t.props.data.currentUser && Object(ye.e)(e)
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(Te, {
+                        return d.createElement(Ce, {
                             data: this.props.data,
                             dropdownOpen: this.props.dropdownOpen,
                             toggleShareActivity: this.toggleShareActivity,
@@ -15427,43 +15338,43 @@
                             logout: this.props.logout,
                             theme: this.props.theme
                         })
-                    }, t = c.__decorate([Object(h.a)(Ie, {
+                    }, t = c.__decorate([Object(h.a)(Ne, {
                         skip: function(e) {
                             return !e.firstPageLoaded
                         }
-                    }), Object(h.a)(Re, {
+                    }), Object(h.a)(Te, {
                         name: "updateIsSharingActivity"
-                    }), Object(fe.a)(function(e) {
+                    }), Object(he.a)(function(e) {
                         return {
-                            query: Ie,
-                            topic: e.data && e.data.currentUser ? Object(ke.m)(e.data.currentUser.id) : "",
+                            query: Ne,
+                            topic: e.data && e.data.currentUser ? Object(be.m)(e.data.currentUser.id) : "",
                             skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
-                            type: be.PubsubMessageType.PresenceSettings,
+                            type: fe.PubsubMessageType.PresenceSettings,
                             mutator: function(e, t) {
                                 return t.currentUser && t.currentUser.settings && (t.currentUser.settings.visibility = e.data.availability_override.toUpperCase(), t.currentUser.settings.isSharingActivity = e.data.share_activity), t
                             }
                         }
                     })], t)
                 }(d.Component);
-            var De = Object(i.b)(function(e) {
+            var Re = Object(i.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
-                        theme: Object(Ce.a)(e)
+                        theme: Object(_e.a)(e)
                     }
                 }, function(e) {
                     return Object(a.b)({
-                        changeTheme: Ee.b,
+                        changeTheme: we.b,
                         logout: s.g
                     }, e)
-                })(Oe),
-                xe = (n("ENuL"), function(e) {
+                })(Ie),
+                Oe = (n("ENuL"), function(e) {
                     return d.createElement(y.Ia, {
                         position: y.Pa.Relative,
                         display: y.R.Flex,
                         flexGrow: 1,
                         alignItems: y.c.Stretch,
                         fullHeight: !0,
-                        className: Object(we.c)(ye.a.Dark)
+                        className: Object(ke.c)(ve.a.Dark)
                     }, d.createElement(y.Ia, {
                         display: y.R.Flex,
                         flexGrow: 1,
@@ -15542,8 +15453,8 @@
                         asset: y.Za.GlyphArrDown
                     })))))))
                 }),
-                Le = n("m98o"),
-                Pe = (n("rF0/"), function(e) {
+                De = n("m98o"),
+                xe = (n("rF0/"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onCardClick = function() {
@@ -15554,7 +15465,7 @@
                         var e = this.props.data.currentUser,
                             t = e && e.profileImageURL || u.a.defaultAvatarURL,
                             n = e && e.displayName || "",
-                            i = ve.a.Offline;
+                            i = ge.a.Offline;
                         return e && (e.availability ? i = e.availability : e.settings && e.settings.visibility && (i = e.settings.visibility)), d.createElement(y.Ia, {
                             position: y.Pa.Relative,
                             display: y.R.Flex,
@@ -15618,7 +15529,7 @@
                             margin: {
                                 right: .5
                             }
-                        }, d.createElement(Le.a, {
+                        }, d.createElement(De.a, {
                             availability: i
                         })), d.createElement(y.jb, {
                             ellipsis: !0,
@@ -15628,9 +15539,9 @@
                             noWrap: !0,
                             "data-a-target": "online-status",
                             lineHeight: y.Ja.Heading
-                        }, this.props.data.currentUser && d.createElement(Le.b, {
+                        }, this.props.data.currentUser && d.createElement(De.b, {
                             activity: this.props.data.currentUser.activity,
-                            availability: i === ve.a.Offline ? ve.a.Invisible : i
+                            availability: i === ge.a.Offline ? ge.a.Invisible : i
                         }))))), d.createElement(y.jb, {
                             display: y.R.Flex,
                             flexShrink: 0,
@@ -15642,8 +15553,8 @@
                         }))))))
                     }, t
                 }(d.Component)),
-                Fe = n("jeWT"),
-                Ae = function(e) {
+                Le = n("jeWT"),
+                Pe = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
@@ -15657,7 +15568,7 @@
                         }, n.dataIsReady = function(e) {
                             return e.data && !e.data.loading && !e.data.error && e.data.currentUser
                         }, n.setUserToOffline = function() {
-                            Object(Se.c)(ve.a.Offline), Object(Se.a)()
+                            Object(ye.c)(ge.a.Offline), Object(ye.a)()
                         }, n.setNewSession = function() {
                             return c.__awaiter(n, void 0, void 0, function() {
                                 var e;
@@ -15667,7 +15578,7 @@
                                             if (this.isSettingNewSession) return [2];
                                             this.isSettingNewSession = !0, t.label = 1;
                                         case 1:
-                                            return t.trys.push([1, 3, 4, 5]), [4, Object(Se.g)()];
+                                            return t.trys.push([1, 3, 4, 5]), [4, Object(ye.g)()];
                                         case 2:
                                             return t.sent(), this.props.initialUserAvailabilitySet(), [3, 5];
                                         case 3:
@@ -15699,13 +15610,13 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.unsubscribeFromHistory(), this.setUserToOffline()
                     }, t.prototype.render = function() {
-                        var e = j(Object(we.c)(ye.a.Dark), {
+                        var e = j(Object(ke.c)(ve.a.Dark), {
                                 "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                             }),
                             t = null;
-                        return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(xe, {
+                        return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(Oe, {
                             onMenuCardClick: this.onMenuCardClick
-                        }) : d.createElement(Pe, {
+                        }) : d.createElement(xe, {
                             data: this.props.data,
                             onMenuCardClick: this.onMenuCardClick,
                             theme: this.props.theme
@@ -15718,46 +15629,46 @@
                         }, d.createElement(U.a, {
                             onClickOut: this.onClickOut,
                             className: e
-                        }, t, d.createElement(De, {
+                        }, t, d.createElement(Re, {
                             dropdownOpen: this.state.dropdownOpen
                         })))
                     }, t.prototype.reportInteractive = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                    }, t = c.__decorate([Object(h.a)(Fe), Object(fe.a)(function(e) {
+                    }, t = c.__decorate([Object(h.a)(Le), Object(he.a)(function(e) {
                         return {
-                            query: Fe,
-                            topic: e.data.currentUser ? Object(ke.m)(e.data.currentUser.id) : "",
+                            query: Le,
+                            topic: e.data.currentUser ? Object(be.m)(e.data.currentUser.id) : "",
                             skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
-                            type: be.PubsubMessageType.PresenceSettings,
+                            type: fe.PubsubMessageType.PresenceSettings,
                             mutator: function(e, t) {
                                 return t.currentUser && t.currentUser.settings && (t.currentUser.settings.visibility = e.data.availability_override.toUpperCase(), t.currentUser.settings.isSharingActivity = e.data.share_activity), t
                             }
                         }
-                    }), Object(ge.a)([{
+                    }), Object(me.a)([{
                         topic: function(e) {
-                            return e.data.currentUser ? Object(ke.m)(e.data.currentUser.id) : ""
+                            return e.data.currentUser ? Object(be.m)(e.data.currentUser.id) : ""
                         },
-                        mapMessageTypesToProps: (Ue = {}, Ue[be.PubsubMessageType.Presence] = "presence", Ue),
+                        mapMessageTypesToProps: (Fe = {}, Fe[fe.PubsubMessageType.Presence] = "presence", Fe),
                         skip: function(e) {
                             return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                         }
                     }]), Object(w.d)("User")], t)
                 }(d.Component);
-            var Ue, je = Object(i.b)(function(e) {
+            var Fe, Ae = Object(i.b)(function(e) {
                     return {
-                        theme: Object(Ce.a)(e),
+                        theme: Object(_e.a)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         initialUserAvailabilityIsSet: e.session.initialUserAvailabilityIsSet
                     }
                 }, function(e) {
                     return Object(a.b)({
-                        changeTheme: Ee.b,
-                        initialUserAvailabilitySet: _e.g
+                        changeTheme: we.b,
+                        initialUserAvailabilitySet: Se.g
                     }, e)
-                })(Object(r.f)(Ae)),
-                Me = n("9pSj"),
-                Be = n("DS6v"),
-                ze = (n("Rh8e"), function(e) {
+                })(Object(r.f)(Pe)),
+                Ue = n("9pSj"),
+                je = n("DS6v"),
+                Me = (n("Rh8e"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.state = {
@@ -15797,7 +15708,7 @@
                                 },
                                 alignSelf: y.d.Center,
                                 flexWrap: y.U.NoWrap
-                            }, !e && d.createElement(Me.c, null))
+                            }, !e && d.createElement(Ue.c, null))
                         }, n.renderStoreLink = function() {
                             var e = !1;
                             if (n.props.data) {
@@ -15916,7 +15827,7 @@
                             href: "https://app.twitch.tv/download",
                             "data-a-target": "get-desktop-link",
                             className: "top-nav__nav-link"
-                        }, Object(u.d)("Get Desktop", "TopNav")), d.createElement(he, null), d.createElement(ce, null), d.createElement(y.Ia, {
+                        }, Object(u.d)("Get Desktop", "TopNav")), d.createElement(pe, null), d.createElement(le, null), d.createElement(y.Ia, {
                             className: "top-nav__ellipsis-button",
                             display: y.R.Flex,
                             alignItems: y.c.Center
@@ -16032,18 +15943,18 @@
                             className: "top-nav__search",
                             flexGrow: 1,
                             alignSelf: y.d.Center
-                        }, !this.state.isError && d.createElement(re, null))), !this.state.isError && this.renderTwitchPrimeCrown(), !this.state.isError && this.renderOnsiteNotifications(), this.state.isGetBitsButtonExperimentEnabled && this.renderBitsButton(), !this.state.isError && d.createElement(y.Ia, {
+                        }, !this.state.isError && d.createElement(ie, null))), !this.state.isError && this.renderTwitchPrimeCrown(), !this.state.isError && this.renderOnsiteNotifications(), this.state.isGetBitsButtonExperimentEnabled && this.renderBitsButton(), !this.state.isError && d.createElement(y.Ia, {
                             className: "top-nav__nav-items-container",
                             display: y.R.Flex,
                             alignItems: y.c.Center,
                             flexWrap: y.U.NoWrap,
                             flexGrow: 0,
                             flexShrink: 0
-                        }, this.props.isLoggedIn ? d.createElement(je, null) : d.createElement(ae.a, {
+                        }, this.props.isLoggedIn ? d.createElement(Ae, null) : d.createElement(re.a, {
                             login: this.props.login,
                             signup: this.props.signup
                         })))))
-                    }, t = c.__decorate([Object(h.a)(Be, {
+                    }, t = c.__decorate([Object(h.a)(je, {
                         skip: function(e) {
                             return !e.isLoggedIn
                         }
@@ -16051,7 +15962,7 @@
                         autoReportInteractive: !0
                     })], t)
                 }(d.Component));
-            var Ve = Object(r.f)(Object(i.b)(function(e) {
+            var Be = Object(r.f)(Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(l.d)(e)
                 }
@@ -16065,13 +15976,13 @@
                         return Object(s.h)(o.a.TopNavSignupButton)
                     }
                 }, e)
-            })(ze));
+            })(Me));
             n.d(t, !1, function() {
                 return "5rem"
             }), n.d(t, !1, function() {
                 return "9.5rem"
             }), n.d(t, "a", function() {
-                return Ve
+                return Be
             })
         },
         Gw6o: function(e, t, n) {
@@ -16801,7 +16712,7 @@
                 p = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.content = Object(a.d)("We use cookies to provide features, advertising, analytics and personalize content. By using our site, you consent to cookies. <x:link>Learn more</x:link>.", {
+                        return t.content = Object(a.d)("We use cookies to personalize content and provide features, advertising, and analytics. By using our site, you consent to cookies. <x:link>Learn more</x:link>.", {
                             "x:link": function(e) {
                                 return r.createElement(l.O, {
                                     key: "eea-cookie-alert",
@@ -22605,7 +22516,7 @@
                     return s
                 }),
                 function(e) {
-                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live-page", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.ContentUnavailable = "404", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
+                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.ContentUnavailable = "404", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
                 }(i || (i = {})),
                 function(e) {
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -23785,7 +23696,7 @@
                             i = Object(c.d)("Subscribed via {platform} Subscriptions", {
                                 platform: "IOS" === this.props.subbedPlatform ? "Apple" : "Google"
                             }, "SubbedTopPage"),
-                            r = "IOS" === this.props.subbedPlatform ? "https://help.twitch.tv/customer/portal/articles/2921095#ManageiOS" : "https://help.twitch.tv/customer/portal/articles/2921095#ManageGoogle";
+                            r = "IOS" === this.props.subbedPlatform ? "https://help.twitch.tv/customer/portal/articles/2921095#ManageiOS" : "https://help.twitch.tv/customer/portal/articles/2935963-how-to-purchase-and-manage-subscriptions-on-android#Manage";
                         return a.createElement(y.Ia, {
                             "data-test-selector": "subscribed-view-mobile"
                         }, a.createElement(y.Ia, {
@@ -34238,6 +34149,12 @@
                             component: H,
                             exact: !0
                         }), e ? r.createElement(_.d, {
+                            path: "/:channelLogin/about",
+                            component: W
+                        }) : r.createElement(_.d, {
+                            path: "/:channelName/about",
+                            component: H
+                        }), e ? r.createElement(_.d, {
                             path: "/:channelLogin/clips",
                             component: W
                         }) : r.createElement(_.d, {
@@ -43355,26 +43272,6 @@
                     e.Height = "height", e.Loaded = "loaded", e.KrakenCallback = "krakenCallback", e.PassportCallback = "passportCallback", e.Heartbeat = "heartbeat"
                 }(r || (r = {}))
         },
-        kcPv: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return s
-            }), n.d(t, "b", function() {
-                return l
-            });
-            var i = n("/7QA"),
-                r = n("zB42"),
-                a = n("FnPL"),
-                o = "https://www.twitch.tv";
-
-            function s(e) {
-                return i.b.get(a.a, !1) || i.a.buildType !== r.a.Production ? "string" == typeof e ? e : e.pathname || "" : "string" == typeof e ? o + e : o + e.pathname
-            }
-
-            function l() {
-                return !i.b.get(a.a, !1) && i.a.buildType === r.a.Production
-            }
-        },
         kdOL: function(e, t) {
             var n = {
                 kind: "Document",
@@ -49398,30 +49295,98 @@
                         }))))
                     }, t
                 }(i.Component)),
-                z = n("FnPL"),
-                V = n("HuHG"),
-                H = n("Ar2k"),
-                W = n("Grq2"),
-                G = "update_chunks",
-                q = "twilight.update_manager.known_builds",
-                Q = /^assets\/(.+)-.+\.(.+?)$/i;
+                z = "legacy_routes_enabled",
+                V = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
+                            n.isEnabled ? "REPLACE" !== t ? e && e.pathname ? (n.logger.debug("Location changed", {
+                                path: e.pathname
+                            }), n.legacyRoutes.forEach(function(t) {
+                                try {
+                                    if (e.pathname.match(t)) {
+                                        n.logger.debug("Found legacy route. Reloading...");
+                                        var i = "" !== e.search ? k.parse(e.search) : {};
+                                        i["from-redirect"] = "true";
+                                        var r = k.stringify(i),
+                                            o = a.a.buildType === w.a.Dev ? window.location.host : window.location.hostname,
+                                            s = window.location.protocol + "//" + o + e.pathname + "?" + r;
+                                        return n.logger.debug("Redirecting to legacy route", {
+                                            newUrl: s
+                                        }), void window.location.replace(s)
+                                    }
+                                } catch (e) {
+                                    a.j.withCategory("legacy").error(e, "Unable to determine legacy reload match", {
+                                        regex: t
+                                    })
+                                }
+                            })) : n.logger.debug("Unable to process history change. Path is null or empty.") : n.logger.debug("Skipping legacy route processing, due to history replace.") : n.logger.debug("Legacy routing not enabled.")
+                        }, n.processRedirectParam = function(e) {
+                            if (e && e.pathname && e.search) {
+                                var t = "" !== e.search ? k.parse(e.search) : {};
+                                if (t["from-redirect"]) {
+                                    delete t["from-redirect"];
+                                    var i = k.stringify(t),
+                                        r = "";
+                                    i.length > 0 && (r = "?" + i), n.props.history.replace({
+                                        pathname: e.pathname,
+                                        hash: e.hash,
+                                        search: r
+                                    })
+                                }
+                            }
+                        }, n.isEnabled = a.b.get(z, !1), n.logger = a.j.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                    }
+                    return u.__extends(t, e), t.prototype.render = function() {
+                        return null
+                    }, t.prototype.componentDidMount = function() {
+                        this.processRedirectParam(this.props.history.location)
+                    }, t.prototype.buildRoutes = function() {
+                        if (!this.isEnabled) return [];
+                        this.logger.debug("Building legacy routes...");
+                        var e = a.b.get("legacy_routes", []),
+                            t = [];
+                        if (!e || 0 === e.length) return this.logger.debug("No legacy routes found in settings."), t;
+                        for (var n = 0, i = e; n < i.length; n++) {
+                            var r = i[n];
+                            try {
+                                var o = new RegExp(r, "i");
+                                t.push(o)
+                            } catch (e) {
+                                this.logger.debug("Failed to parse route!", {
+                                    val: r,
+                                    err: e
+                                })
+                            }
+                        }
+                        return this.logger.debug("Done building legacy routes!", {
+                            count: t.length
+                        }), t
+                    }, t
+                }(i.Component),
+                H = n("HuHG"),
+                W = n("Ar2k"),
+                G = n("Grq2"),
+                q = "update_chunks",
+                Q = "twilight.update_manager.known_builds",
+                K = /^assets\/(.+)-.+\.(.+?)$/i;
 
-            function K(e) {
-                var t = Q.exec(e);
+            function Y(e) {
+                var t = K.exec(e);
                 if (t) return t[1] + "." + t[2]
             }
 
-            function Y(e, t) {
+            function Z(e, t) {
                 return u.__awaiter(this, void 0, void 0, function() {
                     var n, i, r, o, s, l, c, d, p, m, h, g;
                     return u.__generator(this, function(u) {
                         switch (u.label) {
                             case 0:
-                                for (n = a.o.dynamicSettings.get(G, []), i = {
+                                for (n = a.o.dynamicSettings.get(q, []), i = {
                                         headers: new Headers({
                                             "Content-Type": "application/octet-stream"
                                         })
-                                    }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (c = K(l)) && n.includes(c) && r.push(fetch("" + a.o.config.cdnURL + l, i));
+                                    }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (c = Y(l)) && n.includes(c) && r.push(fetch("" + a.o.config.cdnURL + l, i));
                                 return 0 === r.length ? [2, !1] : [4, Promise.all(r)];
                             case 1:
                                 for (d = u.sent(), p = !1, m = 0, h = d; m < h.length; m++)(g = h[m]).ok || (p = !0, t.warn("Failed to preload chunk.", {
@@ -49434,21 +49399,21 @@
                 })
             }
 
-            function Z() {
-                return new Set(a.m.get(q, [])).add(a.o.config.buildID)
+            function $() {
+                return new Set(a.m.get(Q, [])).add(a.o.config.buildID)
             }
 
-            function $(e) {
-                a.m.set(q, Array.from(Z().add(e)))
+            function X(e) {
+                a.m.set(Q, Array.from($().add(e)))
             }
-            var X = function(e) {
+            var J = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             newBuilds: new Set,
                             rejectedBuilds: new Set,
                             shouldReloadOnTransition: !1
-                        }, t.knownBuilds = Z(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
+                        }, t.knownBuilds = $(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
                             t.state.shouldReloadOnTransition && window.location.reload(!0)
                         }, t.processManifest = function() {
                             return u.__awaiter(t, void 0, void 0, function() {
@@ -49481,7 +49446,7 @@
                                                 })
                                             }(this.logger)];
                                         case 1:
-                                            return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, Y(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
+                                            return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, Z(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
                                                 currentBuildID: a.o.config.buildID
                                             }), [2]);
                                         case 2:
@@ -49489,7 +49454,7 @@
                                                 currentBuildID: a.o.config.buildID,
                                                 releaseBuildID: e.release.buildId
                                             }), this.setState(function(t) {
-                                                return $(e.release.buildId), {
+                                                return X(e.release.buildId), {
                                                     newBuilds: new Set(t.newBuilds).add(e.release.buildId),
                                                     shouldReloadOnTransition: !e.canary || a.o.config.buildID !== e.canary.buildId
                                                 }
@@ -49507,13 +49472,13 @@
                                                 }
                                             }), i.label = 6;
                                         case 6:
-                                            return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, Y(e.canary.files, this.logger)]) : [3, 10];
+                                            return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, Z(e.canary.files, this.logger)]) : [3, 10];
                                         case 7:
                                             i.sent() && (this.logger.debug("Preloading canary chunks succeeded", {
                                                 currentBuildID: a.o.config.buildID,
                                                 canaryBuildID: t
                                             }), this.setState(function(e) {
-                                                return $(t), {
+                                                return X(t), {
                                                     newBuilds: new Set(e.newBuilds).add(t)
                                                 }
                                             })), i.label = 8;
@@ -49546,39 +49511,39 @@
                         return null
                     }, t
                 }(i.Component),
-                J = n("xlgz"),
-                ee = n("jytb"),
-                te = n("ZPFX");
-            var ne = Object(c.b)(function(e) {
+                ee = n("xlgz"),
+                te = n("jytb"),
+                ne = n("ZPFX");
+            var ie = Object(c.b)(function(e) {
                     return {
                         isLoggedIn: Object(s.d)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         theatreModeEnabled: e.ui.theatreModeEnabled
                     }
-                })(te.a),
-                ie = (n("cGJr"), h.a.wrap(function() {
+                })(ne.a),
+                re = (n("cGJr"), h.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(37)]).then(n.bind(null, "mdlQ"))
                 }, "DashboardRoot")),
-                re = h.a.wrap(function() {
+                ae = h.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(33), n.e(0), n.e(36)]).then(n.bind(null, "Pnqn"))
                 }, "TeamsDashboardRoot"),
-                ae = h.a.wrap(function() {
+                oe = h.a.wrap(function() {
                     return n.e(35).then(n.bind(null, "hy6r"))
                 }, "TeamsLandingPage"),
-                oe = h.a.wrap(function() {
+                se = h.a.wrap(function() {
                     return n.e(34).then(n.bind(null, "8n14"))
                 }, "OnboardingRoot"),
-                se = function(e) {
+                le = function(e) {
                     return i.createElement(p.c, {
                         to: "/teams/" + e.match.params.teamName + "/dashboard"
                     })
                 },
-                le = function(e) {
+                ce = function(e) {
                     return i.createElement(p.c, {
                         to: "/team/" + e.match.params.teamName
                     })
                 },
-                ce = function(e) {
+                de = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onHistoryChange = function(e, n) {
@@ -49611,62 +49576,62 @@
                             attachLeft: !0
                         }, a.o.benchmarking.toolsEnabled && i.createElement(B, null), i.createElement(x, null), i.createElement(A.a, null), i.createElement(U.b, null), i.createElement(p.e, null, i.createElement(p.d, {
                             path: "/:channelName/dashboard/:pageName?",
-                            component: ie
+                            component: re
                         }), i.createElement(p.d, {
                             path: "/hi",
-                            component: oe
+                            component: se
                         }), i.createElement(p.d, {
                             path: "/:channelName/manager",
-                            component: ie
+                            component: re
                         }), i.createElement(p.d, {
                             path: "/(manager|dashboard)/:pageName?",
                             component: m.a
                         }), i.createElement(p.d, {
                             path: "/event/:teamName",
-                            component: le
+                            component: ce
                         }), i.createElement(p.d, {
                             exact: !0,
                             path: "/team/:teamName/edit",
-                            render: se
+                            render: le
                         }), i.createElement(p.d, {
                             path: "/team/:teamName",
-                            component: ae
+                            component: oe
                         }), i.createElement(p.d, {
                             path: "/teams/:teamName/dashboard/:pageName?",
-                            component: re
+                            component: ae
                         }), i.createElement(p.d, {
                             path: "/",
-                            component: ne
-                        })), i.createElement(ee.b, null), i.createElement(H.b, null), i.createElement(g.a, null), this.props.firstPageLoaded && i.createElement(V.a, null), this.props.firstPageLoaded && i.createElement(W.a, {
+                            component: ie
+                        })), i.createElement(te.b, null), i.createElement(W.b, null), i.createElement(g.a, null), this.props.firstPageLoaded && i.createElement(H.a, null), this.props.firstPageLoaded && i.createElement(G.a, {
                             history: this.props.history
-                        }), this.props.isLoggedIn && i.createElement(J.a, null), a.o.benchmarking.toolsEnabled && i.createElement(j.c, {
+                        }), this.props.isLoggedIn && i.createElement(ee.a, null), a.o.benchmarking.toolsEnabled && i.createElement(j.c, {
                             benchmarking: a.o.benchmarking
-                        }), this.props.firstPageLoaded && i.createElement(z.b, {
+                        }), this.props.firstPageLoaded && i.createElement(V, {
                             history: this.props.history
-                        }), this.props.firstPageLoaded && i.createElement(X, null), this.props.firstPageLoaded && i.createElement(F, null)))
+                        }), this.props.firstPageLoaded && i.createElement(J, null), this.props.firstPageLoaded && i.createElement(F, null)))
                     }, t
                 }(i.Component),
-                de = Object(j.d)("Root", {
+                ue = Object(j.d)("Root", {
                     isRoot: !0
-                })(ce);
-            var ue, pe = Object(c.b)(function(e) {
+                })(de);
+            var pe, me = Object(c.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isLoggedIn: Object(s.d)(e),
                         theme: Object(d.a)(e)
                     }
-                })(de),
-                me = Object(r.f)(pe);
+                })(ue),
+                he = Object(r.f)(me);
 
-            function he() {
+            function ge() {
                 a.o.mount(i.createElement(r.d, {
                     history: a.o.history
-                }, i.createElement(me, null)), document.getElementById("root"))
+                }, i.createElement(he, null)), document.getElementById("root"))
             }
-            var ge = !1;
-            ue = a.o.store.getReduxStore().subscribe(function() {
+            var fe = !1;
+            pe = a.o.store.getReduxStore().subscribe(function() {
                 var e = a.o.store.getState();
-                !ge && Object(s.e)(e) && (ge = !0, ue(), a.a.optimizedBuild ? he() : setTimeout(he, 500))
+                !fe && Object(s.e)(e) && (fe = !0, pe(), a.a.optimizedBuild ? ge() : setTimeout(ge, 500))
             }), Object(l.a)(), a.o.store.dispatch(Object(o.e)())
         },
         sSlw: function(e, t, n) {
