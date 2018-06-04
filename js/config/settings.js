@@ -85,6 +85,7 @@ window.__twilightSettings = {
     "stream_summary_timeseries_panel": true,
     "stream_summary_vod_panel": true,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
+    "throttled_experiment_event_enabled": true,
     "tvapp_ps4_ads_enabled": true,
     "tvapp_ps4_channel_blacklist": [133497623, 157092761],
     "tvapp_ps4_preroll_duration": 30,
