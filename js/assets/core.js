@@ -4236,7 +4236,8 @@
                     "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": "control",
                     "51efc82d-cfe8-42bd-ae4b-9304112ed9df": "control",
                     "d4752777-a16a-4128-bcfb-42cbd4a53613": "off",
-                    "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7": "control"
+                    "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7": "control",
+                    "7a149a1e-2edd-403a-8e1a-bc466fa8ae46": "control"
                 },
                 b = {
                     TWILIGHT_AAX_DISPLAY: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -4276,7 +4277,8 @@
                     TWILIGHT_VOD_SHORYUKEN: "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9",
                     TWILIGHT_VOD_PROVOCATEUR: "51efc82d-cfe8-42bd-ae4b-9304112ed9df",
                     TWILIGHT_OWL_ROOM_CHEERING: "d4752777-a16a-4128-bcfb-42cbd4a53613",
-                    TWILIGHT_CLIPS_ON_THE_BRAIN: "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7"
+                    TWILIGHT_CLIPS_ON_THE_BRAIN: "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7",
+                    TWILIGHT_WORLD_CUP_EVENT: "7a149a1e-2edd-403a-8e1a-bc466fa8ae46"
                 },
                 y = {
                     TWILIGHT_AAX_DISPLAY: "yes",
@@ -5653,7 +5655,7 @@
                         })
                     }
                     return e.prototype.shouldEnableTools = function(e) {
-                        return e.forceComponentBenchmarking ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(ae, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
+                        return e.forceBenchmarkingTools ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(ae, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
                     }, e.prototype.shouldEnableComponentBenchmarking = function(e, t, n) {
                         return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(re, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
                     }, e.prototype.shouldEnableNetworkBenchmarking = function(e, t, n, i) {
@@ -27655,7 +27657,7 @@
                         }, Object(w.Lb)(this.props))))
                     }, t = i.__decorate([Object(f.d)("OnlineFriend")], t)
                 }(a.Component);
-            var Je = Object(v.b)(function(e) {
+            var Je, et = Object(v.b)(function(e) {
                     return {
                         currentUserID: e.session.user && "" + e.session.user.id || ""
                     }
@@ -27670,8 +27672,8 @@
                         }
                     }, e)
                 })(Xe),
-                et = n("GRNm"),
-                tt = function(e) {
+                tt = n("GRNm"),
+                nt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.defaultInitialRenderCount = 15, n.sortTimeout = 0, n.onMouseEnter = function() {
@@ -27680,7 +27682,7 @@
                             })
                         }, n.renderOnlineFriends = function() {
                             return n.state.sortedFriends.length ? (n.state.hasInteracted ? n.state.sortedFriends : n.state.sortedFriends.slice(0, n.getDisplayCount())).map(function(e, t) {
-                                return e.node && e.node.id ? a.createElement(Je, {
+                                return e.node && e.node.id ? a.createElement(et, {
                                     activity: e.activity,
                                     availability: e.availability,
                                     key: "online-friends-" + e.node.id,
@@ -27728,7 +27730,7 @@
                         }), this.renderOnlineFriends()) : a.createElement(O, null)
                     }, t = i.__decorate([Object(le.a)(function(e) {
                         return {
-                            query: et,
+                            query: tt,
                             skip: !e.friends || 0 === e.friends.length,
                             topic: Object(pe.m)(e.selfID || ""),
                             type: ce.PubsubMessageType.Presence,
@@ -27752,7 +27754,7 @@
                         }
                     }), Object(le.a)(function(e) {
                         return {
-                            query: et,
+                            query: tt,
                             skip: !e.friends || 0 === e.friends.length,
                             topic: Object(pe.h)(e.selfID || ""),
                             mutator: function(t, n) {
@@ -27773,8 +27775,55 @@
                         }
                     }), Object(f.d)("OnlineFriends")], t)
                 }(a.Component),
-                nt = n("f00E"),
                 it = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.logger = l.j.withCategory("SideNavPageInfoSection"), n.setContainerRef = function(e) {
+                            return n.containerRef = e
+                        }, n.state = {
+                            content: null,
+                            contentID: null,
+                            isError: !1
+                        }, Je && n.logger.warn("SideNavPageInfoSection should only ever be used in the SideNav component. Use <SideNavPageInfoSectionContent> instead to wrap components."), Je = n, n
+                    }
+                    return i.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
+                        var n = this;
+                        this.setState({
+                            isError: !0
+                        }, function() {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                                info: t
+                            })
+                        })
+                    }, t.prototype.componentDidMount = function() {
+                        this.reportInteractive()
+                    }, t.prototype.componentDidUpdate = function() {
+                        this.state.content && this.reportInteractive()
+                    }, t.prototype.render = function() {
+                        return !this.state.content || this.state.isError ? null : a.createElement(w.jb, {
+                            padding: {
+                                bottom: .5
+                            },
+                            className: "side-nav-page-info",
+                            refDelegate: this.setContainerRef
+                        }, this.state.content)
+                    }, t.prototype.provideContent = function(e, t) {
+                        this.state.content && this.state.contentID !== t && this.logger.warn("Displaying another component already. Only one component can be displayed at a time using <SideNavPageInfoSectionContent>. Check the page or other subcomponents to find the other instance and determine which one should be showing."), this.setState({
+                            content: e,
+                            contentID: t
+                        })
+                    }, t.prototype.removeContent = function() {
+                        this.setState({
+                            content: null,
+                            contentID: null
+                        })
+                    }, t.prototype.reportInteractive = function() {
+                        this.props.latencyTracking.reportInteractive()
+                    }, t
+                }(a.Component),
+                rt = Object(o.compose)(Object(f.d)("SideNavPageInfoSection"))(it),
+                at = n("f00E"),
+                ot = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getSlideInContent = function() {
@@ -27814,13 +27863,13 @@
                         }, Object(w.Lb)(this.props)))
                     }, t = i.__decorate([Object(f.d)("RecommendedChannel")], t)
                 }(a.Component);
-            var rt = Object(v.b)(function(e) {
+            var st = Object(v.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                })(it),
-                at = n("PkHO"),
-                ot = function(e) {
+                })(ot),
+                lt = n("PkHO"),
+                ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -27828,7 +27877,7 @@
                         }, t.getRecommendedChannels = function() {
                             var e = t.dataToDisplay();
                             return e ? e.slice(0, t.getNodesToDisplayCount()).map(function(e, n) {
-                                return e.broadcaster && e.broadcaster.id && e.broadcaster.login ? a.createElement(rt, {
+                                return e.broadcaster && e.broadcaster.id && e.broadcaster.login ? a.createElement(st, {
                                     id: e.broadcaster.id,
                                     key: "recommended-channels-" + e.id,
                                     collapsed: t.props.collapsed,
@@ -27874,22 +27923,22 @@
                     }, t.prototype.getNodesToDisplayCount = function() {
                         var e = this.dataToDisplay();
                         return e ? this.state.hasLoadedMore ? e.length : Math.min(e.length, 3) : 0
-                    }, t = i.__decorate([Object(d.a)(at, {
+                    }, t = i.__decorate([Object(d.a)(lt, {
                         options: function() {
                             return {
                                 variables: {
                                     first: 10,
-                                    recID: Object(nt.a)(),
+                                    recID: Object(at.a)(),
                                     language: ""
                                 }
                             }
                         }
                     }), Object(f.d)("RecommendedChannels")], t)
                 }(a.Component),
-                st = n("geRD"),
-                lt = n("FAZm"),
-                ct = n("kXha"),
-                dt = function(e) {
+                dt = n("geRD"),
+                ut = n("FAZm"),
+                pt = n("kXha"),
+                mt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.getSlideInContent = function() {
@@ -27916,7 +27965,7 @@
                             n.setState({
                                 working: !0
                             }, function() {
-                                var e = Object(st.a)({
+                                var e = Object(dt.a)({
                                     targetID: n.props.user.id
                                 });
                                 n.props.createFriendRequest(e).then(n.props.onRecommendationChanged).catch(function() {
@@ -27957,13 +28006,13 @@
                             collapsed: this.props.collapsed,
                             slideInContent: this.getSlideInContent()
                         }, Object(w.Lb)(this.props))))
-                    }, t = i.__decorate([Object(d.a)(lt, {
+                    }, t = i.__decorate([Object(d.a)(ut, {
                         name: "createFriendRequest"
-                    }), Object(d.a)(ct, {
+                    }), Object(d.a)(pt, {
                         name: "dismissFriendRecommendation"
                     }), Object(f.d)("RecommendedFriend")], t)
                 }(a.Component);
-            var ut = Object(v.b)(function(e) {
+            var ht = Object(v.b)(function(e) {
                     return {
                         currentUserID: e.session.user && "" + e.session.user.id || ""
                     }
@@ -27977,9 +28026,9 @@
                             }, Object(qe.a)())
                         }
                     }, e)
-                })(dt),
-                pt = n("IW1U"),
-                mt = function(e) {
+                })(mt),
+                gt = n("IW1U"),
+                ft = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onRecommendationDataChanged = function() {
@@ -27996,7 +28045,7 @@
                         }, a.createElement(T, {
                             title: Object(l.d)("Recommended Friends", "RecommendedFriends")
                         }), t.map(function(t, n) {
-                            return a.createElement(ut, {
+                            return a.createElement(ht, {
                                 key: "recommended-friends-" + t.id,
                                 user: t,
                                 collapsed: e.props.collapsed,
@@ -28012,14 +28061,14 @@
                         return this.props.data.currentUser.recommendations.friends.forEach(function(e) {
                             e.user && e.user.id && t.push(e.user)
                         }), 0 === t.length ? null : t.slice(0, e)
-                    }, t = i.__decorate([Object(d.a)(pt), Object(f.d)("RecommendedFriends")], t)
+                    }, t = i.__decorate([Object(d.a)(gt), Object(f.d)("RecommendedFriends")], t)
                 }(a.Component),
-                ht = n("yLwq"),
-                gt = n("H/lO"),
-                ft = n("NZDK"),
-                vt = n("8/nF"),
-                bt = n("eeaQ"),
-                yt = function(e) {
+                vt = n("yLwq"),
+                bt = n("H/lO"),
+                yt = n("NZDK"),
+                kt = n("8/nF"),
+                St = n("eeaQ"),
+                wt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleClick = function(e) {
@@ -28054,7 +28103,7 @@
                             n.setState({
                                 working: !0
                             }, function() {
-                                n.props.createFriendRequest(Object(st.a)({
+                                n.props.createFriendRequest(Object(dt.a)({
                                     targetID: n.props.id
                                 })).then(function() {
                                     n.setState({
@@ -28071,7 +28120,7 @@
                             n.setState({
                                 working: !0
                             }, function() {
-                                n.props.cancelFriendRequest(Object(st.a)({
+                                n.props.cancelFriendRequest(Object(dt.a)({
                                     targetID: n.props.id
                                 })).then(function() {
                                     n.setState({
@@ -28100,13 +28149,13 @@
                             slideInContent: this.getSlideInContent(),
                             collapsed: this.props.collapsed
                         }, Object(y.a)(this.props)))
-                    }, t = i.__decorate([Object(d.a)(bt, {
+                    }, t = i.__decorate([Object(d.a)(St, {
                         name: "createFriendRequest"
-                    }), Object(d.a)(vt, {
+                    }), Object(d.a)(kt, {
                         name: "cancelFriendRequest"
                     }), Object(f.d)("Search Friend Result")], t)
                 }(a.Component);
-            var kt = Object(v.b)(function(e) {
+            var _t = Object(v.b)(function(e) {
                     return {
                         currentUserID: e.session.user && "" + e.session.user.id || ""
                     }
@@ -28120,15 +28169,15 @@
                             }, Object(qe.a)())
                         }
                     }, e)
-                })(yt),
-                St = function(e) {
+                })(wt),
+                Et = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.inputTimeout = 0, n.renderFilteredFriends = function() {
                             return n.state.filteredFriends && 0 !== n.state.filteredFriends.length ? n.state.filteredFriends.filter(function(e) {
                                 return e.node && null !== e.node.id
                             }).map(function(e, t) {
-                                return a.createElement(Je, {
+                                return a.createElement(et, {
                                     activity: e.activity,
                                     availability: e.availability,
                                     key: "friend-search-results-" + e.node.id,
@@ -28141,8 +28190,8 @@
                         }, n.renderSearchResults = function() {
                             var e = n.state.searchResults;
                             return e && e.users && 0 !== e.users.totalHits ? e.users.hits.map(function(e, t) {
-                                var i = e.profile_image || Object(ht.c)(e.objectID, 30);
-                                return a.createElement(kt, {
+                                var i = e.profile_image || Object(vt.c)(e.objectID, 30);
+                                return a.createElement(_t, {
                                     id: e.objectID,
                                     displayName: e.name,
                                     login: e.login,
@@ -28184,7 +28233,7 @@
                             }, 200)
                         }, n.state = {
                             searching: !0
-                        }, n.searchClient = new ft.a({
+                        }, n.searchClient = new yt.a({
                             appId: l.a.algoliaApplicationID,
                             apiKey: l.a.algoliaAPIKey,
                             apolloClient: l.o.apollo.client,
@@ -28215,7 +28264,7 @@
                                     case 0:
                                         return e ? (this.setState({
                                             searching: !0
-                                        }), [4, this.searchClient.queryForType(gt.a.Users, e, Object(nt.a)(), {
+                                        }), [4, this.searchClient.queryForType(bt.a.Users, e, Object(at.a)(), {
                                             hitsPerPage: 10
                                         })]) : [2];
                                     case 1:
@@ -28230,7 +28279,7 @@
                         })
                     }, t = i.__decorate([Object(f.d)("Search Friend Results")], t)
                 }(a.Component),
-                wt = function(e) {
+                Ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleInputChange = function(e) {
@@ -28249,20 +28298,20 @@
                         }))
                     }, t
                 }(a.Component),
-                _t = n("p5Wp");
+                Nt = n("p5Wp");
             n("Ue8y");
             n.d(t, "b", function() {
-                return Et
+                return Tt
             }), n.d(t, "a", function() {
-                return xt
+                return Ft
             });
-            var Et = 1200,
-                Ct = "treatment",
-                Nt = "control",
-                Tt = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV",
-                It = "left_nav_order_exp",
-                Rt = "variant_a",
-                Ot = function(e) {
+            var Tt = 1200,
+                It = "treatment",
+                Rt = "control",
+                Ot = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV",
+                Dt = "left_nav_order_exp",
+                xt = "variant_a",
+                Lt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.logger = l.o.logger.withCategory("side-nav"), n.handleToggleVisibility = function() {
@@ -28273,9 +28322,9 @@
                             })
                         }, n.collapseOnBreakpoint = function() {
                             var e = window.innerWidth;
-                            e < Et && !n.state.forceCollapsed ? n.setState({
+                            e < Tt && !n.state.forceCollapsed ? n.setState({
                                 forceCollapsed: !0
-                            }) : e >= Et && n.state.forceCollapsed && n.setState({
+                            }) : e >= Tt && n.state.forceCollapsed && n.setState({
                                 forceCollapsed: !1
                             }), n.resetAnimationState()
                         }, n.handleWindowResize = function() {
@@ -28284,7 +28333,7 @@
                             n.resizeAnimationFrame = null
                         }, n.onHistoryChange = function(e) {
                             var t = n.props.isLoggedIn,
-                                i = Object(_t.a)({
+                                i = Object(Nt.a)({
                                     isLoggedIn: t,
                                     location: e
                                 });
@@ -28299,9 +28348,9 @@
                             n.props.isLoggedIn && (n.props.data.loading || n.props.data.error) || n.props.latencyTracking.reportInteractive()
                         }, n.getRelevanceSortingAssignment = function(e) {
                             switch (e) {
-                                case Ct:
+                                case It:
                                     return !0;
-                                case Nt:
+                                case Rt:
                                 default:
                                     return !1
                             }
@@ -28309,17 +28358,17 @@
                         var i = t.isLoggedIn,
                             r = t.location,
                             a = l.o.experiments.getAssignment("TWILIGHT_AML_RANKING_FOLLOWS"),
-                            o = l.o.experiments.getAssignment(Tt);
+                            o = l.o.experiments.getAssignment(Ot);
                         return n.state = {
                             isError: !1,
-                            isLeftNavOrderExperiment: o === It,
-                            isSubscribedExperiment: o === Rt,
-                            hideSideNav: Object(_t.a)({
+                            isLeftNavOrderExperiment: o === Dt,
+                            isSubscribedExperiment: o === xt,
+                            hideSideNav: Object(Nt.a)({
                                 isLoggedIn: i,
                                 location: r
                             }),
                             forceCollapsed: !1,
-                            showSubscribedChannels: o === Rt,
+                            showSubscribedChannels: o === xt,
                             sortByRelevance: n.getRelevanceSortingAssignment(a)
                         }, n
                     }
@@ -28398,7 +28447,7 @@
                             fullHeight: !0,
                             display: w.R.Flex,
                             position: w.Pa.Relative
-                        }, i && a.createElement(se, null), a.createElement(w.Ia, {
+                        }, a.createElement(rt, null), i && a.createElement(se, null), a.createElement(w.Ia, {
                             flexWrap: w.U.NoWrap,
                             fullHeight: !0,
                             display: w.R.Flex,
@@ -28424,7 +28473,7 @@
                         }, a.createElement(c.b, {
                             className: "side-nav__overlay-wrapper",
                             suppressScrollX: !0
-                        }, a.createElement(St, {
+                        }, a.createElement(Et, {
                             searchInput: this.state.searchInput,
                             friends: f,
                             key: "search-friend-results",
@@ -28440,16 +28489,16 @@
                                 sortByRelevance: this.state.sortByRelevance,
                                 showExtraChannels: this.state.isLeftNavOrderExperiment,
                                 showSubscribedChannels: this.state.isSubscribedExperiment
-                            }), a.createElement(ot, {
+                            }), a.createElement(ct, {
                                 collapsed: e
-                            }), this.props.firstPageLoaded && a.createElement(tt, {
+                            }), this.props.firstPageLoaded && a.createElement(nt, {
                                 collapsed: e,
                                 friends: f,
                                 selfID: v,
                                 loading: this.props.data.loading,
                                 errored: !!this.props.data.error,
                                 refetch: this.props.data.refetch
-                            }), this.props.firstPageLoaded && a.createElement(mt, {
+                            }), this.props.firstPageLoaded && a.createElement(ft, {
                                 collapsed: e
                             })) : a.createElement(w.Ia, {
                                 flexGrow: 1,
@@ -28460,16 +28509,16 @@
                                 sortByRelevance: this.state.sortByRelevance,
                                 showExtraChannels: this.state.isLeftNavOrderExperiment,
                                 showSubscribedChannels: this.state.isSubscribedExperiment
-                            }), a.createElement(tt, {
+                            }), a.createElement(nt, {
                                 collapsed: e,
                                 friends: f,
                                 selfID: v,
                                 loading: this.props.data.loading,
                                 errored: !!this.props.data.error,
                                 refetch: this.props.data.refetch
-                            }), this.props.firstPageLoaded && a.createElement(ot, {
+                            }), this.props.firstPageLoaded && a.createElement(ct, {
                                 collapsed: e
-                            }), this.props.firstPageLoaded && a.createElement(mt, {
+                            }), this.props.firstPageLoaded && a.createElement(ft, {
                                 collapsed: e
                             }));
                         return a.createElement(w.Ia, {
@@ -28493,7 +28542,7 @@
                             fullHeight: !0,
                             display: w.R.Flex,
                             position: w.Pa.Relative
-                        }, i && a.createElement(se, null), a.createElement(w.Ia, {
+                        }, a.createElement(rt, null), i && a.createElement(se, null), a.createElement(w.Ia, {
                             className: "side-nav__overlay-wrapper",
                             flexWrap: w.U.NoWrap,
                             fullHeight: !0,
@@ -28507,7 +28556,7 @@
                             overflow: w.La.Hidden
                         }, a.createElement(c.b, {
                             suppressScrollX: !0
-                        }, b)), m), a.createElement(wt, {
+                        }, b)), m), a.createElement(Ct, {
                             collapsed: e,
                             onInputChange: this.onSearchInputChange
                         }))), !i && l)
@@ -28515,12 +28564,12 @@
                         return l.l.get(l.o.config.layoutCacheKey, h.a)
                     }, t
                 }(a.Component),
-                Dt = Object(o.compose)(Object(f.d)("SideNav"), Object(d.a)(et, {
+                Pt = Object(o.compose)(Object(f.d)("SideNav"), Object(d.a)(tt, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
-                }))(Ot),
-                xt = Object(s.f)(Dt)
+                }))(Lt),
+                Ft = Object(s.f)(Pt)
         },
         UWwt: function(e, t, n) {},
         "UY/B": function(e, t) {
@@ -33705,7 +33754,7 @@
                 location: h.PageviewLocation.LoginRequired
             }))(function() {
                 return l.createElement(u.a, {
-                    message: Object(d.d)("You must be logged in to view this page", "ManagerRedirectPage")
+                    message: Object(d.d)("You must be logged in to view this page", "LoginRequiredPage")
                 })
             });
             var v = Object(i.b)(function(e) {
@@ -34692,34 +34741,35 @@
                 r = n("/7QA"),
                 a = n("kRBY"),
                 o = n("XmgI"),
-                s = n("RcPG"),
-                l = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?");
-            var c = n("uwZC"),
-                d = n("8wO+"),
-                u = n("60o1");
+                s = n("gTu3"),
+                l = n("RcPG"),
+                c = new RegExp("(?:^|\\s)(?:https?://)?clips.twitch.tv/(\\w+)(?:/)?(\\w+)?(?:/edit)?(?:$|\\s)?");
+            var d = n("uwZC"),
+                u = n("8wO+"),
+                p = n("60o1");
             n.d(t, "a", function() {
-                return f
-            }), n.d(t, "b", function() {
                 return v
-            }), n.d(t, "g", function() {
+            }), n.d(t, "b", function() {
                 return b
-            }), n.d(t, "d", function() {
+            }), n.d(t, "g", function() {
                 return y
+            }), n.d(t, "d", function() {
+                return k
             }), n.d(t, "c", function() {
-                return S
-            }), n.d(t, "f", function() {
                 return w
-            }), n.d(t, "e", function() {
+            }), n.d(t, "f", function() {
                 return _
+            }), n.d(t, "e", function() {
+                return E
             });
-            var p = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
-                m = {},
-                h = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,8}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
-                g = /^(['"*([{</]*)@((?:[^\u0000-\u007F]|[\w-])+)/;
+            var m = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
+                h = {},
+                g = /^(?:(https?:\/\/)?(?:[\w@#%\-+=:~]+\.)+[a-z]{2,8}(?:\/[\w./@#%&()\-+=:?~]*)?)$/g,
+                f = /^(['"*([{</]*)@((?:[^\u0000-\u007F]|[\w-])+)/;
 
-            function f(e, t, n, r, a, o) {
+            function v(e, t, n, r, a, o) {
                 var s;
-                void 0 === o && (o = !1), s = a ? Object(c.b)(e, a) : function(e) {
+                void 0 === o && (o = !1), s = a ? Object(d.b)(e, a) : function(e) {
                     var t = [];
                     e && Object.keys(e).forEach(function(n) {
                         var i = e[n];
@@ -34731,9 +34781,9 @@
                                     images: {
                                         themed: !1,
                                         sources: {
-                                            "1x": w(n, 1),
-                                            "2x": w(n, 2),
-                                            "4x": w(n, 4)
+                                            "1x": _(n, 1),
+                                            "2x": _(n, 2),
+                                            "4x": _(n, 4)
                                         }
                                     }
                                 }
@@ -34742,7 +34792,7 @@
                     });
                     return t
                 }(t.emotes);
-                var l = Object(u.a)(t.displayName, t.username);
+                var l = Object(p.a)(t.displayName, t.username);
                 return {
                     badges: t.badges || {},
                     bits: t.bits,
@@ -34750,166 +34800,167 @@
                         userLogin: t.username,
                         userID: t.userID,
                         userType: t.userType,
-                        color: t.color || v(t.userID)
+                        color: t.color || b(t.userID)
                     }),
-                    messageParts: e ? b(e, s, t.bits, n, r, t.username) : [],
+                    messageParts: e ? y(e, s, t.bits, n, r, t.username) : [],
                     deleted: o,
                     timestamp: Date.now()
                 }
             }
 
-            function v(e, t) {
-                return void 0 === t && (t = 15), "number" != typeof m[e] && (m[e] = Math.floor(Math.random() * t)), p[m[e]]
+            function b(e, t) {
+                return void 0 === t && (t = 15), "number" != typeof h[e] && (h[e] = Math.floor(Math.random() * t)), m[h[e]]
             }
 
-            function b(e, t, n, r, a, o) {
+            function y(e, t, n, r, a, o) {
                 void 0 === t && (t = []);
-                var l = [],
+                var s = [],
                     c = 0,
-                    d = y(e);
+                    d = k(e);
                 t.forEach(function(t) {
                     var u = d ? d.slice(c, t.startIndex).join("") : e.slice(c, t.startIndex);
-                    u && (l = n ? l.concat(k(u, o, a, r)) : l.concat(S(u, o, a))), l.push({
-                        type: s.a.Emote,
+                    u && (s = n ? s.concat(S(u, o, a, r)) : s.concat(w(u, o, a))), s.push({
+                        type: l.a.Emote,
                         content: i.__assign({
                             alt: d ? d.slice(t.startIndex, t.endIndex).join("") : e.slice(t.startIndex, t.endIndex)
                         }, t.data)
                     }), c = t.endIndex
                 });
                 var u = d ? d.slice(c).join("") : e.slice(c);
-                return u && (l = n ? l.concat(k(u, o, a, r)) : l.concat(S(u, o, a))), l
+                return u && (s = n ? s.concat(S(u, o, a, r)) : s.concat(w(u, o, a))), s
             }
 
-            function y(e) {
+            function k(e) {
                 return e.match(/[^\uD800-\uDFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g)
             }
 
-            function k(e, t, n, i) {
-                if (!i) return S(e, t, n);
+            function S(e, t, n, i) {
+                if (!i) return w(e, t, n);
                 var r = Object(o.c)(e, i).map(function(e) {
-                    return e.type === s.a.Text ? S(e.content, t, n) : e
+                    return e.type === l.a.Text ? w(e.content, t, n) : e
                 });
                 return [].concat.apply([], r)
             }
 
-            function S(e, t, n) {
+            function w(e, t, n) {
                 var i = [],
                     o = e.split(/\s+/),
-                    c = Object(a.c)(r.o.store.getState());
+                    d = Object(a.c)(r.o.store.getState());
                 return o.forEach(function(e, a) {
-                    h.lastIndex = 0, g.lastIndex = 0;
-                    var u = h.exec(e),
-                        p = 0 === a,
-                        m = a === o.length - 1,
-                        f = function(e, t, n, i, r) {
+                    g.lastIndex = 0, f.lastIndex = 0;
+                    var p = g.exec(e),
+                        m = 0 === a,
+                        h = a === o.length - 1,
+                        v = function(e, t, n, i, r) {
                             var a = [],
-                                o = e.match(g);
+                                o = e.match(f);
                             if (!o) return a;
-                            var l = o[1],
-                                c = o[2],
-                                d = e.slice(o[0].length);
-                            l.length && a.push({
-                                type: s.a.Text,
-                                content: (n ? "" : " ") + l
+                            var c = o[1],
+                                d = o[2],
+                                u = e.slice(o[0].length);
+                            c.length && a.push({
+                                type: l.a.Text,
+                                content: (n ? "" : " ") + c
                             });
+                            var p = s.a.Default;
+                            C(d, r) ? p = s.a.Recipient : r && r.login === t && (p = s.a.Sender);
                             a.push({
-                                type: s.a.Mention,
+                                type: l.a.Mention,
                                 content: {
-                                    sender: t,
-                                    recipient: c,
-                                    isCurrentUserRecipient: E(c, r)
+                                    recipient: d,
+                                    currentUserMentionRelation: p
                                 }
-                            }), d.length && a.push({
-                                type: s.a.Text,
-                                content: d + (i ? "" : " ")
+                            }), u.length && a.push({
+                                type: l.a.Text,
+                                content: u + (i ? "" : " ")
                             });
                             return a
-                        }(e, t, p, m, c);
-                    if (u) {
-                        var v = u.index;
-                        0 !== v && i.push({
-                            type: s.a.Text,
-                            content: "" + e.slice(0, v)
+                        }(e, t, m, h, d);
+                    if (p) {
+                        var b = p.index;
+                        0 !== b && i.push({
+                            type: l.a.Text,
+                            content: "" + e.slice(0, b)
                         });
-                        var b = h.lastIndex;
+                        var y = g.lastIndex;
                         if (n) i.push({
-                            type: s.a.Text,
+                            type: l.a.Text,
                             content: " <" + Object(r.d)("deleted link", "CreateMessageData") + "> "
                         });
                         else {
-                            var y = (u[1] ? "" : "https://") + e.slice(v, b);
+                            var k = (p[1] ? "" : "https://") + e.slice(b, y);
                             if (function(e) {
-                                    return void 0 === e && (e = ""), l.test(e) && !e.includes("clips.twitch.tv/2017/")
-                                }(y)) {
-                                var k = function(e) {
+                                    return void 0 === e && (e = ""), c.test(e) && !e.includes("clips.twitch.tv/2017/")
+                                }(k)) {
+                                var S = function(e) {
                                     void 0 === e && (e = "");
-                                    var t = e.match(l);
+                                    var t = e.match(c);
                                     return null === t ? "" : t && t.length > 0 && void 0 !== t.index ? t[1] : ""
-                                }(y);
+                                }(k);
                                 i.push({
-                                    type: s.a.ClipLink,
+                                    type: l.a.ClipLink,
                                     content: {
-                                        slug: k,
-                                        url: y,
-                                        displayText: e.slice(v, b)
+                                        slug: S,
+                                        url: k,
+                                        displayText: e.slice(b, y)
                                     }
                                 })
-                            } else if (Object(d.a)(y)) {
-                                var S = Object(d.b)(y);
+                            } else if (Object(u.a)(k)) {
+                                var w = Object(u.b)(k);
                                 i.push({
-                                    type: s.a.VideoLink,
+                                    type: l.a.VideoLink,
                                     content: {
-                                        id: S,
-                                        url: y,
-                                        displayText: e.slice(v, b)
+                                        id: w,
+                                        url: k,
+                                        displayText: e.slice(b, y)
                                     }
                                 })
                             } else i.push({
-                                type: s.a.Link,
+                                type: l.a.Link,
                                 content: {
-                                    displayText: e.slice(v, b),
-                                    url: y
+                                    displayText: e.slice(b, y),
+                                    url: k
                                 }
                             })
                         }
-                        var w = e.slice(b),
-                            _ = "";
-                        a < o.length - 1 && (_ = " "), w && i.push({
-                            type: s.a.Text,
-                            content: "" + w + _
+                        var _ = e.slice(y),
+                            E = "";
+                        a < o.length - 1 && (E = " "), _ && i.push({
+                            type: l.a.Text,
+                            content: "" + _ + E
                         })
-                    } else if (f.length > 0) i.push.apply(i, f);
-                    else if (E(e, c)) i.push({
-                        type: s.a.CurrentUserHighlight,
+                    } else if (v.length > 0) i.push.apply(i, v);
+                    else if (C(e, d)) i.push({
+                        type: l.a.CurrentUserHighlight,
                         content: e
                     });
                     else {
-                        var C = i.length && i[i.length - 1];
-                        _ = m ? "" : " ";
-                        if (C && C.type === s.a.Text) C.content += e + _;
+                        var N = i.length && i[i.length - 1];
+                        E = h ? "" : " ";
+                        if (N && N.type === l.a.Text) N.content += e + E;
                         else {
-                            var N = p ? "" : " ";
+                            var T = m ? "" : " ";
                             i.push({
-                                type: s.a.Text,
-                                content: N + e + _
+                                type: l.a.Text,
+                                content: T + e + E
                             })
                         }
                     }
                 }), i
             }
 
-            function w(e, t) {
+            function _(e, t) {
                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
             }
 
-            function _(e) {
+            function E(e) {
                 return {
-                    src: w(e, 1),
-                    srcSet: w(e, 1) + " 1x, " + w(e, 2) + " 2x, " + w(e, 3) + " 4x"
+                    src: _(e, 1),
+                    srcSet: _(e, 1) + " 1x, " + _(e, 2) + " 2x, " + _(e, 3) + " 4x"
                 }
             }
 
-            function E(e, t) {
+            function C(e, t) {
                 if (!t) return !1;
                 var n = t.displayName,
                     i = t.login;
@@ -39729,6 +39780,16 @@
                         })
                     }, e
                 }()
+        },
+        gTu3: function(e, t, n) {
+            "use strict";
+            var i;
+            n.d(t, "a", function() {
+                    return i
+                }),
+                function(e) {
+                    e[e.Default = 0] = "Default", e[e.Recipient = 1] = "Recipient", e[e.Sender = 2] = "Sender"
+                }(i || (i = {}))
         },
         gXgt: function(e, t, n) {},
         gXoJ: function(e, t, n) {
@@ -49575,14 +49636,8 @@
                             attachBottom: !0,
                             attachLeft: !0
                         }, a.o.benchmarking.toolsEnabled && i.createElement(B, null), i.createElement(x, null), i.createElement(A.a, null), i.createElement(U.b, null), i.createElement(p.e, null, i.createElement(p.d, {
-                            path: "/:channelName/dashboard/:pageName?",
-                            component: re
-                        }), i.createElement(p.d, {
                             path: "/hi",
                             component: se
-                        }), i.createElement(p.d, {
-                            path: "/:channelName/manager",
-                            component: re
                         }), i.createElement(p.d, {
                             path: "/(manager|dashboard)/:pageName?",
                             component: m.a
@@ -49599,6 +49654,12 @@
                         }), i.createElement(p.d, {
                             path: "/teams/:teamName/dashboard/:pageName?",
                             component: ae
+                        }), i.createElement(p.d, {
+                            path: "/:channelName/manager",
+                            component: re
+                        }), i.createElement(p.d, {
+                            path: "/:channelName/dashboard/:pageName?",
+                            component: re
                         }), i.createElement(p.d, {
                             path: "/",
                             component: ie

@@ -694,13 +694,13 @@ window.__twilightSettings = {
         },
         "9a93c54d-a771-4dd6-ab25-02216c2d6c2a": {
             "name": "twilight_pubg_filters",
-            "v": 3780,
+            "v": 3918,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 95,
+                "weight": 100,
                 "value": "variant"
             }]
         },
