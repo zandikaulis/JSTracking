@@ -883,7 +883,8 @@ function supportsSingleFrameFragments(browser) {
         major = browser.major;
     return (
         (name == 'chrome' && major >= 50) ||
-        (name == 'firefox' && major >= 45)
+        (name == 'firefox' && major >= 45) ||
+        (name == 'safari' && major >= 11)
     );
 }
 
@@ -2458,11 +2459,16 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
 
 // Public interface
 
-MediaPlayer.createWorker = function (url) {
+MediaPlayer.createWorker = function (workerUrl, wasmUrl, wasmCache) {
     // Resolve relative urls in worker based on worker url
-    var base = url.substring(0, url.lastIndexOf('/') + 1);
-    var str = "var Module={locateFile:function(url){return'" + base + "'+url}};importScripts('" + url +"')";
-    return new Worker(URL.createObjectURL(new Blob([str])));
+    var importFunction = `
+        var Module = {
+            WASM_BINARY_URL: '${wasmUrl}',
+            WASM_CACHE_MODE: ${wasmCache}
+        }
+        importScripts('${workerUrl}');
+    `;
+    return new Worker(URL.createObjectURL(new Blob([importFunction])));
 }
 
 MediaPlayer.prototype.delete = function () {
@@ -2573,7 +2579,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-a530ff34";
+    return "2.3.0-cf939dbd";
 }
 
 MediaPlayer.prototype.isLooping = function () {
