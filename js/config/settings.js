@@ -650,6 +650,18 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
+        "7a149a1e-2edd-403a-8e1a-bc466fa8ae46": {
+            "name": "TWILIGHT_WORLD_CUP_EVENT",
+            "v": 3936,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "7aa589f3-34d8-425f-8227-29007d50757e": {
             "name": "twilight_growth_email_verify_bar",
             "v": 2955,
