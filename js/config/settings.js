@@ -710,6 +710,18 @@ window.__twilightSettings = {
                 "value": "variant"
             }]
         },
+        "9ba74270-ecf4-466d-b04e-f66b9883d632": {
+            "name": "TWILIGHT_WORLD_CUP_EVENT_SETTINGS",
+            "v": 3937,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
         "a9667563-723a-4cf7-b253-674d9eef0a53": {
             "name": "twilight_web_onboarding_user",
             "v": 2506,
