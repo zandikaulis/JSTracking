@@ -44,7 +44,6 @@ window.__twilightSettings = {
     "gdpr_disabled_eea_consent": false,
     "gdpr_evidon_timeout_ms": 30000,
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
-    "impact_experiment_key": false,
     "ivw_countries": ["DE"],
     "ivw_languages": ["de"],
     "ivw_url": "https://script.ioam.de/iam.js",
