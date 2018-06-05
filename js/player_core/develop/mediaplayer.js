@@ -2579,7 +2579,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-ee491376";
+    return "2.3.0-a32ae7f8";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2995,8 +2995,18 @@ function safeParseJSON(jsonStr) {
     }
 }
 
+/**
+ * @returns {boolean} true if MSE (MediaSource Extensions) is supported by the browser, false otherwise.
+ */
 function isMSESupported() {
     return (typeof MediaSource !== 'undefined')
+}
+
+/**
+ * @returns {boolean} true if VP9 video is supported by the browser, false otherwise
+ */
+MediaPlayer.isVP9Supported = function () {
+    return isMSESupported() && MediaSource.isTypeSupported("video/mp4;codecs=\"vp09.00.10.08\"");
 }
 
 // IE doesn't support 'objectAssign'. We only use it
