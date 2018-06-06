@@ -4566,47 +4566,12 @@
                     }, e
                 }(),
                 T = n("2xye"),
-                I = n("56gP"),
-                R = "stats_sample_rate",
-                O = "twilight",
-                D = function() {
-                    function e(e) {
-                        this.logger = e.logger.withCategory("twilight-stats"), this.recordingEnabled = e.config.buildType === s.a.Production && e.dynamicSettings.get(R, 0) > 100 * Math.random(), this.statsClient = I.Stats.getInstance(e.config.buildType === s.a.Production ? "production" : "development", O)
-                    }
-                    return e.prototype.recordComponentError = function(e) {
-                        if (this.recordingEnabled) try {
-                            this.statsClient.logCounter("web.errors.component." + e, 1)
-                        } catch (t) {
-                            this.logger.error(t, "Unable to record component error", {
-                                name: e
-                            })
-                        }
-                    }, e.prototype.recordFailsafeError = function(e) {
-                        if (this.recordingEnabled) try {
-                            this.statsClient.logCounter("web.errors.failsafe." + e, 1)
-                        } catch (e) {
-                            this.logger.error(e, "Unable to record failsafe error")
-                        }
-                    }, e.prototype.recordSearchError = function(e, t) {
-                        if (this.recordingEnabled) try {
-                            this.statsClient.logCounter("features.algolia.error." + e, 1), this.statsClient.logTimer("features.algolia.error_duration." + e, t)
-                        } catch (e) {
-                            this.logger.error(e, "Unable to record search error")
-                        }
-                    }, e.prototype.recordSearchSuccess = function(e, t) {
-                        if (this.recordingEnabled) try {
-                            this.statsClient.logCounter("features.algolia.success." + e, 1), this.statsClient.logTimer("features.algolia.success_duration." + e, t)
-                        } catch (e) {
-                            this.logger.error(e, "Unable to record search success")
-                        }
-                    }, e
-                }(),
-                x = n("Two0"),
-                L = function() {
+                I = n("Two0"),
+                R = function() {
                     function e(e, t) {
                         this.activeOperations = [], this.logger = e.withCategory("tmi");
                         var n = this.getConnectionOptions(t);
-                        this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new x.a({
+                        this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new I.a({
                             connection: n,
                             logger: this.logger
                         })
@@ -4789,12 +4754,12 @@
                         return null
                     }, e
                 }(),
-                P = n("o4DC"),
-                F = n("lmy8"),
-                A = n("qIYN"),
-                U = n("h9Rz"),
-                j = n("uhBA"),
-                M = new P.b({
+                O = n("o4DC"),
+                D = n("lmy8"),
+                x = n("qIYN"),
+                L = n("h9Rz"),
+                P = n("uhBA"),
+                F = new O.b({
                     introspectionQueryResultData: {
                         __schema: {
                             types: [{
@@ -4861,29 +4826,29 @@
                         }
                     }
                 }),
-                B = n("GTg4"),
-                z = function() {
+                A = n("GTg4"),
+                U = function() {
                     function e(e) {
-                        this.authToken = null, this.batchID = 0, this.eventEmitter = new j.EventEmitter, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.client = this.createApolloClient()
+                        this.authToken = null, this.batchID = 0, this.eventEmitter = new P.EventEmitter, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.client = this.createApolloClient()
                     }
                     return e.prototype.addQueryMetricsListener = function(e) {
                         this.eventEmitter.addListener("query-metrics", e)
                     }, e.prototype.removeQueryMetricsListener = function(e) {
                         this.eventEmitter.removeListener("query-metrics", e)
                     }, e.prototype.createApolloClient = function() {
-                        return new F.a({
-                            cache: new P.a({
-                                fragmentMatcher: M
+                        return new D.a({
+                            cache: new O.a({
+                                fragmentMatcher: F
                             }),
                             queryDeduplication: !0,
-                            link: new U.a({
+                            link: new L.a({
                                 batchMax: 20,
                                 fetch: this.createApolloFetcher()
                             })
                         })
                     }, e.prototype.createApolloFetcher = function() {
                         var e = this,
-                            t = Object(A.a)({
+                            t = Object(x.a)({
                                 uri: this.config.graphqlEndpoint
                             });
                         return t.batchUse(function(t, n) {
@@ -4909,7 +4874,7 @@
                                         case 0:
                                             return i.status && i.status >= 400 || i.status < 200 ? 401 !== i.status ? [3, 4] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : [3, 1] : [3, 7];
                                         case 1:
-                                            return this.logger.warn("Received 401 response from GraphQL, logging user out."), [4, Object(B.h)(this.authToken, {
+                                            return this.logger.warn("Received 401 response from GraphQL, logging user out."), [4, Object(A.h)(this.authToken, {
                                                 config: this.config,
                                                 logger: this.logger
                                             })];
@@ -4950,7 +4915,7 @@
                         }), t
                     }, e
                 }(),
-                V = function() {
+                j = function() {
                     function e(e) {
                         this.logger = e.withCategory("integrations"), window.__twilightIntegrations ? (this.desklight = this.loadIntegration("desklight"), this.spotlight = this.loadIntegration("spotlight")) : this.logger.debug("No integrations found.")
                     }
@@ -4980,10 +4945,10 @@
                         })
                     }, e
                 }(),
-                H = n("fvjX"),
-                W = n("TdMD"),
-                G = n.n(W),
-                q = function() {
+                M = n("fvjX"),
+                B = n("TdMD"),
+                z = n.n(B),
+                V = function() {
                     function e(e) {
                         var t = this;
                         this.reducers = {}, this.rootReducer = function(e, n) {
@@ -5006,7 +4971,7 @@
                                         }
                             }
                             return a ? r : e
-                        }, this.reduxStore = Object(H.e)(this.rootReducer, (e.buildType !== s.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || H.d)(Object(H.a)(G.a)))
+                        }, this.reduxStore = Object(M.e)(this.rootReducer, (e.buildType !== s.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || M.d)(Object(M.a)(z.a)))
                     }
                     return e.prototype.getReduxStore = function() {
                         return this.reduxStore
@@ -5022,7 +4987,7 @@
                         })
                     }, e
                 }(),
-                Q = function() {
+                H = function() {
                     function e(e, t, n) {
                         this.sniffers = e, this.trackFunc = t, this.filterFunc = n, this.startCalled = !1
                     }
@@ -5079,16 +5044,16 @@
                         return e > 0 && t > 0 ? t - e : void 0
                     }, e
                 }(),
-                K = "resource";
+                W = "resource";
 
-            function Y(e) {
+            function G(e) {
                 return !!(e && e.timing && e.getEntriesByType && e.setResourceTimingBufferSize && e.clearResourceTimings)
             }
-            var Z, $ = function() {
+            var q, Q = function() {
                     function e(e, t, n) {
                         var i = this;
-                        this.performance = t, this.frameURL = n, this.startCalled = !1, this.eventEmitter = new j.EventEmitter, this.emitterName = "network-sniffer", this.processNewResourceTimings = function() {
-                            var e = i.performance.getEntriesByType(K);
+                        this.performance = t, this.frameURL = n, this.startCalled = !1, this.eventEmitter = new P.EventEmitter, this.emitterName = "network-sniffer", this.processNewResourceTimings = function() {
+                            var e = i.performance.getEntriesByType(W);
                             if (0 !== e.length) {
                                 for (var t = 0, n = e; t < n.length; t++) {
                                     var r = n[t];
@@ -5096,14 +5061,14 @@
                                 }
                                 i.clearResourceBuffer()
                             }
-                        }, this.logger = e.withCategory("network-sniffer"), Y(t) ? this.logger.debug("Created") : this.logger.warn("No sniffing allowed!")
+                        }, this.logger = e.withCategory("network-sniffer"), G(t) ? this.logger.debug("Created") : this.logger.warn("No sniffing allowed!")
                     }
                     return e.prototype.start = function() {
                         return !this.startCalled && (this.startCalled = !0, this.setResourceBufferSize(), setInterval(this.processNewResourceTimings, 500), !0)
                     }, e.prototype.getFrameTiming = function() {
                         return this.performance.timing
                     }, e.prototype.getAvailableResourceTimings = function() {
-                        return this.processNewResourceTimings(), this.performance.getEntriesByType(K)
+                        return this.processNewResourceTimings(), this.performance.getEntriesByType(W)
                     }, e.prototype.addResourceListener = function(e) {
                         this.eventEmitter.addListener(this.emitterName, e)
                     }, e.prototype.removeResourceListener = function(e) {
@@ -5116,10 +5081,10 @@
                         this.eventEmitter.emit(this.emitterName, e)
                     }, e
                 }(),
-                X = function() {
+                K = function() {
                     function e(e) {
                         var t = this;
-                        this.buffer = [], this.eventEmitter = new j.EventEmitter, this.emitterName = "network-metrics", this.loggedHostWarnings = {}, this.shouldLogHosts = function(e) {
+                        this.buffer = [], this.eventEmitter = new P.EventEmitter, this.emitterName = "network-metrics", this.loggedHostWarnings = {}, this.shouldLogHosts = function(e) {
                             return function(n) {
                                 var i = new URL(n),
                                     r = i.hostname,
@@ -5148,7 +5113,7 @@
                         var n = this.createSniffers();
                         n.map(function(e) {
                             t.logger.debug("Starting network sniffer"), e.start()
-                        }), this.networkLogger = new Q(n, this.onRequestCompleted, this.shouldLogHosts(e.config.networkLoggingHostNames)), this.logger.debug("Starting network logger"), this.networkLogger.start()
+                        }), this.networkLogger = new H(n, this.onRequestCompleted, this.shouldLogHosts(e.config.networkLoggingHostNames)), this.logger.debug("Starting network logger"), this.networkLogger.start()
                     }
                     return e.prototype.flush = function() {
                         this.networkLogger.flush()
@@ -5175,27 +5140,27 @@
                         }
                     }, e.prototype.canAccessPerformance = function(e) {
                         try {
-                            return Y(e.performance)
+                            return G(e.performance)
                         } catch (e) {
                             return this.logger.warn("Unable to determine if network sniffing is allowed", e), !1
                         }
                     }, e.prototype.createSniffer = function(e) {
                         try {
-                            return new $(this.logger, e.performance, e.location.href)
+                            return new Q(this.logger, e.performance, e.location.href)
                         } catch (e) {
                             this.logger.warn("Unable to create network sniffer", e)
                         }
                     }, e
                 }(),
-                J = n("JOxF"),
-                ee = n("kz7j"),
-                te = n("DiGQ"),
-                ne = n("NvVO"),
-                ie = function() {
+                Y = n("JOxF"),
+                Z = n("kz7j"),
+                $ = n("DiGQ"),
+                X = n("NvVO"),
+                J = function() {
                     function e(t, n) {
                         var i = this;
                         if (this.componentDuration = {
-                                latencyStatus: te.a.Unknown
+                                latencyStatus: $.a.Unknown
                             }, this.isRoot = !1, this.hasReportedInteractive = !1, this.customEvents = {}, this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.setLocation = function(e) {
                                 i.root.setLocation(e)
                             }, this.sendInitializingEvent = function(e, t, n) {
@@ -5206,7 +5171,7 @@
                                 return i.getCurrentTimestamp() - i.completedTimestamp < 500
                             }, this.id = e.counter++, this.componentName = t, this.parent = n && n.parent, this.children = [], this.parent ? (this.tracker = this.parent.tracker, this.root = this.parent.root || this.parent, this.depth = this.parent.depth + 1, this.parent.registerChild(this)) : this.depth = 0, this.logger = n.logger, this.isPageComponent = this.componentName.endsWith("Page"), this.isPrePageLoad = this.isRoot || this.root && !this.root.completedTimestamp, this.isPageComponent) {
                             var r = n && n.destination;
-                            r || (this.logger.error(new Error("The " + this.componentName + " component must supply a canonical destination, ex: directory.index"), "Invalid withLatencyTracking options"), r = ne.a.Unknown), this.logger.debug("Set root page to: " + r), this.root && this.root.setPage(this, r)
+                            r || (this.logger.error(new Error("The " + this.componentName + " component must supply a canonical destination, ex: directory.index"), "Invalid withLatencyTracking options"), r = X.a.Unknown), this.logger.debug("Set root page to: " + r), this.root && this.root.setPage(this, r)
                         }
                         n && n.destination && !this.isPageComponent && this.logger.error(new Error("The " + this.componentName + ' component supplied a destination but the component name does not end in "Page".'), "Invalid withLatencyTracking options"), this.resetStartTime(), this.raiseUpdate(), this.logger.debug("Latency tracker created")
                     }
@@ -5230,7 +5195,7 @@
                     }, e.prototype.registerCustomEvent = function(e) {
                         var t, n = !1;
                         switch (e.start) {
-                            case ee.d.Registration:
+                            case Z.d.Registration:
                                 t = this.getCurrentTimestamp();
                                 break;
                             default:
@@ -5243,7 +5208,7 @@
                         var i = p.__assign({}, e, {
                             doNotTrack: n,
                             duration: {
-                                latencyStatus: te.a.Unknown
+                                latencyStatus: $.a.Unknown
                             },
                             startTime: t
                         });
@@ -5253,7 +5218,7 @@
                     }, e.prototype.reportCustomEvent = function(e) {
                         if (!(e.duration && e.duration.value || e.doNotTrack)) {
                             var t = Math.round(this.getCurrentTimestamp() - e.startTime),
-                                n = t <= e.benchmark ? te.a.Pass : te.a.Fail;
+                                n = t <= e.benchmark ? $.a.Pass : $.a.Fail;
                             e.duration.value = t, e.duration.latencyStatus = n, this.logger.debug("[" + e.group + "][" + e.label + "] Event reported", {
                                 customEvent: e
                             }), this.raiseUpdate(), this.root.sendCustomEventToSpade(e)
@@ -5284,7 +5249,7 @@
                             var e = Math.round(this.completedTimestamp - this.startTimestamp);
                             this.componentDuration = {
                                 value: e,
-                                latencyStatus: te.a.Unknown
+                                latencyStatus: $.a.Unknown
                             }, this.logger.debug("Done", {
                                 componantName: this.componentName,
                                 durationMs: this.componentDuration.value
@@ -5324,7 +5289,7 @@
                         var e = this.getCurrentTimestamp();
                         this.startTimestamp = e, this.relativeStartTime = this.getRelativeStartTimestamp(), this.completedTimestamp = 0, this.componentDuration = {
                             value: void 0,
-                            latencyStatus: te.a.Unknown
+                            latencyStatus: $.a.Unknown
                         }
                     }, e.prototype.childReset = function(e) {
                         this.children.includes(e) || this.children.push(e), this.completedTimestamp ? this.logger.warn("Child component reset after this one completed", {
@@ -5341,7 +5306,7 @@
                         }), this.hasReportedInteractive && this.checkChildCompleted())
                     }, e.counter = 1, e
                 }(),
-                re = function() {
+                ee = function() {
                     function e(e, t) {
                         this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
                     }
@@ -5436,19 +5401,19 @@
                         })
                     }, e
                 }(),
-                ae = "first_page_loaded_timeout",
-                oe = function(e) {
+                te = "first_page_loaded_timeout",
+                ne = function(e) {
                     function t(t) {
                         var n = e.call(this, "Root", {
                             logger: t.logger.withCategory("latency-tracker")
                         }) || this;
                         if (n.rootInitDuration = {
-                                latencyStatus: te.a.Unknown
+                                latencyStatus: $.a.Unknown
                             }, n.firstPaint = {
-                                latencyStatus: te.a.Unknown
+                                latencyStatus: $.a.Unknown
                             }, n.pageLoadDuration = {
-                                latencyStatus: te.a.Unknown
-                            }, n.networkEvents = [], n.queryBatchMetrics = [], n.queryEvents = [], n.isFirstLoad = !0, n.isRoot = !0, n.hasLostVisibility = !1, n.emitter = new j.EventEmitter, n.firstPageLoadedFailsafe = 0, n.firstPageLoadedTimeout = 1e4, n.getLocation = function() {
+                                latencyStatus: $.a.Unknown
+                            }, n.networkEvents = [], n.queryBatchMetrics = [], n.queryEvents = [], n.isFirstLoad = !0, n.isRoot = !0, n.hasLostVisibility = !1, n.emitter = new P.EventEmitter, n.firstPageLoadedFailsafe = 0, n.firstPageLoadedTimeout = 1e4, n.getLocation = function() {
                                 return n.location
                             }, n.setLocation = function(e) {
                                 n.logger.debug("Updating location", {
@@ -5479,12 +5444,12 @@
                                         var r = performance.getEntriesByType("paint").find(function(e) {
                                             return "first-contentful-paint" === e.name
                                         });
-                                        r && (n.firstPaint.value = r.startTime, r.startTime > 250 ? n.firstPaint.latencyStatus = te.a.Fail : n.firstPaint.latencyStatus = te.a.Pass, n.tracker.trackCustomEvent({
+                                        r && (n.firstPaint.value = r.startTime, r.startTime > 250 ? n.firstPaint.latencyStatus = $.a.Fail : n.firstPaint.latencyStatus = $.a.Pass, n.tracker.trackCustomEvent({
                                             benchmark: 250,
                                             duration: n.firstPaint,
-                                            group: ee.a.Page,
-                                            key: ee.b.FirstPaint,
-                                            label: ee.c.FirstPaint,
+                                            group: Z.a.Page,
+                                            key: Z.b.FirstPaint,
+                                            label: Z.c.FirstPaint,
                                             startTime: n.navigationStart
                                         }, n.isFirstLoad, n.hasLostVisibility, n.destination, n.getPageComponentName()))
                                     } catch (e) {
@@ -5498,14 +5463,14 @@
                                     r = Math.round(e.start_time - n.getNavigationStartTimestamp());
                                 n.networkEvents.push({
                                     networkEvent: e,
-                                    latencyStatus: te.a.Unknown,
+                                    latencyStatus: $.a.Unknown,
                                     relativeStartTime: r,
                                     isPendingSpade: !0,
                                     isApiRequest: t,
                                     isPrePageload: i,
                                     duration: {
                                         value: e.duration,
-                                        latencyStatus: te.a.Unknown
+                                        latencyStatus: $.a.Unknown
                                     }
                                 }), n.reconcileQueries()
                             }, n.reconcileQueries = function() {
@@ -5523,7 +5488,7 @@
                                             return e.networkEvent.duration >= i.slowestQueryInBatch && e.networkEvent.start_time >= i.batchTimestamp
                                         })), r ? (i.relatedNetworkEvent = r.networkEvent, i.isPrePageload = r.isPrePageload, i.requestDuration = {
                                             value: Math.round(r.networkEvent.duration),
-                                            latencyStatus: te.a.Unknown
+                                            latencyStatus: $.a.Unknown
                                         }) : e && n.logger.warn("Unable to find a related network event for query", {
                                             queryEvent: i,
                                             filteredApiRequests: t,
@@ -5544,7 +5509,7 @@
                                     n.queryBatchMetrics.push({
                                         batchID: e.batchID,
                                         batchTimestamp: e.batchTimestamp,
-                                        latencyStatus: te.a.Unknown,
+                                        latencyStatus: $.a.Unknown,
                                         slowestQueryInBatch: t
                                     });
                                     for (var i = 0, r = e.queries; i < r.length; i++) {
@@ -5555,16 +5520,16 @@
                                             relativeStartTime: Math.round(e.batchTimestamp - n.getNavigationStartTimestamp()),
                                             queryDuration: {
                                                 value: a.durationMs,
-                                                latencyStatus: te.a.Unknown
+                                                latencyStatus: $.a.Unknown
                                             },
                                             requestDuration: {
-                                                latencyStatus: te.a.Unknown
+                                                latencyStatus: $.a.Unknown
                                             },
                                             operationName: a.operationName,
                                             queryID: a.queryID,
                                             slowestQueryInBatch: t,
                                             variables: a.variables,
-                                            latencyStatus: te.a.Unknown,
+                                            latencyStatus: $.a.Unknown,
                                             isPendingSpade: !0,
                                             isPrePageload: !1
                                         })
@@ -5602,10 +5567,10 @@
                                 }
                             }, n.checkLostVisibility = function() {
                                 n.hasLostVisibility || (n.hasLostVisibility = document.hidden)
-                            }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new re(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
+                            }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new ee(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
                                 value: Math.round(n.startTimestamp - n.navigationStart),
-                                latencyStatus: te.a.Unknown
-                            }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.stats = t.stats, n.firstPageLoadedTimeout = t.dyanmicSettings.get(ae, 1e4), n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
+                                latencyStatus: $.a.Unknown
+                            }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.firstPageLoadedTimeout = t.dyanmicSettings.get(te, 1e4), n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
                             n.checkLostVisibility(), document.addEventListener("visibilitychange", n.checkLostVisibility)
                         } catch (e) {
                             n.logger.warn("Failed to attach event listener for document visibility change, assuming visibility has been lost.", e), n.hasLostVisibility = !0
@@ -5616,15 +5581,14 @@
                         var e = this;
                         this.clearFirstPageLoadedFailsafeTimer(), void 0 === this.componentDuration.value && this.isFirstLoad && this.page && (this.firstPageLoadedFailsafe = setTimeout(function() {
                             if (void 0 === e.componentDuration.value && e.isFirstLoad && e.page) {
-                                var t = e.page ? e.page.componentName : "Unknown",
-                                    n = [],
-                                    i = function(r) {
-                                        for (var a = 0, o = r; a < o.length; a++) {
-                                            var s = o[a];
-                                            void 0 === s.componentDuration.value && (n.push(s.componentName), s.children && s.children.length || e.stats.recordFailsafeError([t, s.componentName].join("_"))), s.children && s.children.length && i(s.children)
+                                var t = [],
+                                    n = function(e) {
+                                        for (var i = 0, r = e; i < r.length; i++) {
+                                            var a = r[i];
+                                            void 0 === a.componentDuration.value && t.push(a.componentName), a.children && a.children.length && n(a.children)
                                         }
                                     };
-                                i(e.children || []), n.length || e.stats.recordFailsafeError(e.page.componentName), e.logger.error(new Error("First Page Loaded Failsafe Triggered"), "The first page loaded failsafe was triggered for page " + t + (n.length ? " and components " + n.join(", ") : "")), e.emitter.emit("firstPageLoadFailed"), e.store.dispatch(Object(J.f)())
+                                n(e.children || []), e.logger.error(new Error("First Page Loaded Failsafe Triggered"), "The first page loaded failsafe was triggered for page " + (e.page ? e.page.componentName : "Unknown") + (t.length ? " and components " + t.join(", ") : "")), e.emitter.emit("firstPageLoadFailed"), e.store.dispatch(Object(Y.f)())
                             }
                         }, this.firstPageLoadedTimeout))
                     }, t.prototype.subscribeToUpdates = function(e) {
@@ -5632,16 +5596,16 @@
                     }, t.prototype.getCustomEvents = function() {
                         return this.customEvents
                     }, t.prototype.reset = function() {
-                        this.isFirstLoad && this.store.dispatch(Object(J.f)()), this.clearFirstPageLoadedFailsafeTimer();
+                        this.isFirstLoad && this.store.dispatch(Object(Y.f)()), this.clearFirstPageLoadedFailsafeTimer();
                         var e = this.getCurrentTimestamp();
                         this.customEvents = {}, this.resetChildren(), this.children = [], this.startTimestamp = e, this.navigationStart = e, this.relativeStartTime = 0, this.rootInitDuration = {
-                            latencyStatus: te.a.Unknown
+                            latencyStatus: $.a.Unknown
                         }, this.firstPaint = {
-                            latencyStatus: te.a.Unknown
+                            latencyStatus: $.a.Unknown
                         }, this.completedTimestamp = 0, this.componentDuration = {
-                            latencyStatus: te.a.Unknown
+                            latencyStatus: $.a.Unknown
                         }, this.hasReportedInteractive = !1, this.page = void 0, this.isFirstLoad = !1, this.pageLoadDuration = {
-                            latencyStatus: te.a.Unknown
+                            latencyStatus: $.a.Unknown
                         }, this.networkEvents = [], this.queryEvents = [], this.queryBatchMetrics = [], this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.hasSentAppBooted = !1, this.hasSentCompleteTransition = !1, this.hasReportedInteractive = !1, this.hasLostVisibility = !1, this.raiseUpdate(), this.logger.debug("Reset Root")
                     }, t.prototype.raiseUpdate = function() {
                         var e = this;
@@ -5667,19 +5631,19 @@
                             if (this.page) {
                                 if (this.completedTimestamp = this.getCurrentTimestamp(), this.componentDuration = {
                                         value: Math.round(this.completedTimestamp - this.startTimestamp),
-                                        latencyStatus: te.a.Unknown
+                                        latencyStatus: $.a.Unknown
                                     }, this.logger.debug("Root tracker done", {
                                         durationMs: this.componentDuration
                                     }), this.pageLoadDuration = {
                                         value: (this.componentDuration.value || 0) + (this.rootInitDuration.value || 0),
-                                        latencyStatus: te.a.Unknown
+                                        latencyStatus: $.a.Unknown
                                     }, this.logger.debug("Root page completed", {
                                         pageLoadDuration: this.pageLoadDuration,
                                         rootInitDuration: this.rootInitDuration,
                                         componentDuration: this.componentDuration,
                                         children: this.getChildNames()
                                     }), this.raiseUpdate(), this.sendAllEvents(), this.isFirstLoad) {
-                                    this.clearFirstPageLoadedFailsafeTimer(), this.store.dispatch(Object(J.f)());
+                                    this.clearFirstPageLoadedFailsafeTimer(), this.store.dispatch(Object(Y.f)());
                                     var e = document.getElementById("root");
                                     e && e.setAttribute("data-a-page-loaded", Date.now().toString())
                                 }
@@ -5689,23 +5653,23 @@
                     }, t.prototype.clearFirstPageLoadedFailsafeTimer = function() {
                         this.firstPageLoadedFailsafe && (clearTimeout(this.firstPageLoadedFailsafe), this.firstPageLoadedFailsafe = 0)
                     }, t
-                }(ie),
-                se = "twilight.force-component-benchmarking",
-                le = "twilight.force-network-monitoring",
-                ce = "twilight.force-benchmarking-tools",
-                de = {
+                }(J),
+                ie = "twilight.force-component-benchmarking",
+                re = "twilight.force-network-monitoring",
+                ae = "twilight.force-benchmarking-tools",
+                oe = {
                     networkingThreshold: "benchmark_networking_threshold",
                     componentThreshold: "benchmark_component_threshold"
                 },
-                ue = function() {
+                se = function() {
                     function e(e) {
                         var t = this;
                         this.getRootLatencyTracker = function() {
                             return t.latencyTracker
                         }, this.logger = e.logger.withCategory("Benchmarking"), this.seed = Math.round(100 * Math.random()) / 100, this.storage = e.storage;
-                        var n = e.dynamicSettings.get(de.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
-                            i = e.dynamicSettings.get(de.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
-                        this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new X(e)), this.latencyTracker = new oe({
+                        var n = e.dynamicSettings.get(oe.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
+                            i = e.dynamicSettings.get(oe.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
+                        this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new K(e)), this.latencyTracker = new ne({
                             componentEventsEnabled: this.componentsEnabled,
                             dyanmicSettings: e.dynamicSettings,
                             networkEventsEnabled: this.networkingEnabled,
@@ -5716,7 +5680,6 @@
                             networkMonitor: this.networkMonitoring,
                             sentinel: e.sentinel,
                             tracking: e.tracking,
-                            stats: e.stats,
                             store: e.store,
                             trackVisibility: !0
                         }), this.logger.debug("Initialized", {
@@ -5729,30 +5692,30 @@
                         })
                     }
                     return e.prototype.shouldEnableTools = function(e) {
-                        return e.forceBenchmarkingTools ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(ce, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
+                        return e.forceBenchmarkingTools ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(ae, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
                     }, e.prototype.shouldEnableComponentBenchmarking = function(e, t, n) {
-                        return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(le, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
+                        return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(re, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
                     }, e.prototype.shouldEnableNetworkBenchmarking = function(e, t, n, i) {
-                        return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(se, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
+                        return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(ie, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
                     }, e
                 }(),
-                pe = n("oUNp"),
-                me = n("6LFT"),
-                he = n.n(me),
-                ge = n("h0rt"),
-                fe = n.n(ge);
+                le = n("oUNp"),
+                ce = n("6LFT"),
+                de = n.n(ce),
+                ue = n("h0rt"),
+                pe = n.n(ue);
             ! function(e) {
                 e[e.Debug = 1] = "Debug", e[e.Info = 2] = "Info", e[e.Warn = 3] = "Warn", e[e.Error = 4] = "Error", e[e.Fatal = 5] = "Fatal"
-            }(Z || (Z = {}));
-            var ve, be, ye, ke, Se, we, _e, Ee, Ce, Ne, Te, Ie, Re, Oe, De, xe = function() {
+            }(q || (q = {}));
+            var me, he, ge, fe, ve, be, ye, ke, Se, we, _e, Ee, Ce, Ne, Te, Ie = function() {
                     function e(e, t) {
                         var n = this;
-                        if (this.eventEmitter = new j.EventEmitter, this.addMessageListener = function(e) {
+                        if (this.eventEmitter = new P.EventEmitter, this.addMessageListener = function(e) {
                                 n.eventEmitter.addListener("message", e)
                             }, this.removeMessageListener = function(e) {
                                 n.eventEmitter.removeListener("message", e)
                             }, this.onWindowError = function(e) {
-                                e.error ? (e.preventDefault(), n.write(Z.Error, "Uncaught error.", void 0, e.error, "uncaught")) : n.write(Z.Warn, "Uncaught error, but the error object is null. This is usually caused by a browser permission issue. Please check the browser console.", [{
+                                e.error ? (e.preventDefault(), n.write(q.Error, "Uncaught error.", void 0, e.error, "uncaught")) : n.write(q.Warn, "Uncaught error, but the error object is null. This is usually caused by a browser permission issue. Please check the browser console.", [{
                                     event: e
                                 }], new Error("Uncaught error, but the error object is null."), "uncaught")
                             }, e && t) throw new Error("Cannot pass both `options` and `childOptions` arguments.");
@@ -5768,25 +5731,25 @@
                         })
                     }, e.prototype.debug = function(e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                        this.write(Z.Debug, e, t)
+                        this.write(q.Debug, e, t)
                     }, e.prototype.info = function(e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                        this.write(Z.Info, e, t)
+                        this.write(q.Info, e, t)
                     }, e.prototype.warn = function(e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                        this.write(Z.Warn, e, t)
+                        this.write(q.Warn, e, t)
                     }, e.prototype.error = function(e, t) {
                         for (var n = [], i = 2; i < arguments.length; i++) n[i - 2] = arguments[i];
-                        this.write(Z.Error, t, n, e, "caught")
+                        this.write(q.Error, t, n, e, "caught")
                     }, e.prototype.fatal = function(e, t) {
                         for (var n = [], i = 2; i < arguments.length; i++) n[i - 2] = arguments[i];
-                        this.write(Z.Fatal, t, n, e, "fatal")
+                        this.write(q.Fatal, t, n, e, "fatal")
                     }, e.prototype.flush = function() {
                         if (this.rootLogger) throw new Error("Cannot flush a child logger.");
                         var e = this.buffer;
                         return this.buffer = [], this.messagesTruncated && e.unshift({
                             time: e[0].time - 1,
-                            level: Z[Z.Info].toLowerCase(),
+                            level: q[q.Info].toLowerCase(),
                             message: "Log truncated.",
                             args: [{
                                 firstMessageTime: this.firstMessageTime,
@@ -5795,13 +5758,13 @@
                             }]
                         }), e
                     }, e.prototype.write = function(e, t, n, i, r, a, o) {
-                        void 0 === n && (n = []), void 0 === o && (o = !1), this.rootLogger ? this.rootLogger.write(e, t, n, i, r, this.category, o) : (this.buffer.length === this.maxBufferSize && (this.firstMessageTime || (this.firstMessageTime = this.buffer[0].time), this.truncationEvents = (this.truncationEvents || 0) + 1, this.messagesTruncated = (this.messagesTruncated || 0) + this.buffer.splice(0, Math.ceil(this.maxBufferSize / 10)).length), a = a || this.category, e >= this.minConsoleLogLevel && this.writeToConsole(e, a, t, n, i), e !== Z.Debug && this.writeToBuffer(e, a, t, n, i, r, o), !this.onError || e !== Z.Error && e !== Z.Fatal || this.onError(this))
+                        void 0 === n && (n = []), void 0 === o && (o = !1), this.rootLogger ? this.rootLogger.write(e, t, n, i, r, this.category, o) : (this.buffer.length === this.maxBufferSize && (this.firstMessageTime || (this.firstMessageTime = this.buffer[0].time), this.truncationEvents = (this.truncationEvents || 0) + 1, this.messagesTruncated = (this.messagesTruncated || 0) + this.buffer.splice(0, Math.ceil(this.maxBufferSize / 10)).length), a = a || this.category, e >= this.minConsoleLogLevel && this.writeToConsole(e, a, t, n, i), e !== q.Debug && this.writeToBuffer(e, a, t, n, i, r, o), !this.onError || e !== q.Error && e !== q.Fatal || this.onError(this))
                     }, e.prototype.writeToBuffer = function(e, t, n, i, r, a, o) {
                         void 0 === o && (o = !1);
                         var l = [],
                             c = {
                                 time: Date.now(),
-                                level: Z[e].toLowerCase(),
+                                level: q[e].toLowerCase(),
                                 message: n
                             };
                         if (i && i.length > 0 && (c.args = i.map(function(e, t) {
@@ -5828,11 +5791,11 @@
                             }]), this.buffer.push(c), !o)
                             for (var d = 0, u = l; d < u.length; d++) {
                                 var p = u[d];
-                                this.buildType === s.a.Production ? this.write(Z.Warn, "Failed to serialize argument for log message.", [{
+                                this.buildType === s.a.Production ? this.write(q.Warn, "Failed to serialize argument for log message.", [{
                                     message: p.message,
                                     argIndex: p.argIndex,
                                     err: p.err
-                                }], void 0, void 0, void 0, !0) : this.write(Z.Error, "Failed to serialize argument for log message.", [{
+                                }], void 0, void 0, void 0, !0) : this.write(q.Error, "Failed to serialize argument for log message.", [{
                                     message: p.message,
                                     argIndex: p.argIndex
                                 }], p.err, "caught", t, !0)
@@ -5840,15 +5803,15 @@
                         this.eventEmitter.emit("message", c)
                     }, e.prototype.writeToConsole = function(e, t, n, i, r) {
                         var a = (new Date).toLocaleTimeString();
-                        t = t ? "[" + t + "] " : "", n = a + " [" + Z[e].toUpperCase() + "] " + t + n, e === Z.Fatal && (e = Z.Error);
-                        var o = (console[Z[e].toLowerCase()] || console.log).bind(console);
+                        t = t ? "[" + t + "] " : "", n = a + " [" + q[e].toUpperCase() + "] " + t + n, e === q.Fatal && (e = q.Error);
+                        var o = (console[q[e].toLowerCase()] || console.log).bind(console);
                         r ? o.apply(void 0, [n, r].concat(i)) : o.apply(void 0, [n].concat(i))
                     }, e
                 }(),
-                Le = n("f00E"),
-                Pe = n("3yfl"),
-                Fe = ["0000000000000000", "00000000000000000000000000000000"],
-                Ae = function() {
+                Re = n("f00E"),
+                Oe = n("3yfl"),
+                De = ["0000000000000000", "00000000000000000000000000000000"],
+                xe = function() {
                     function e(e) {
                         var t = this;
                         this.onHistoryChange = function() {
@@ -5856,27 +5819,27 @@
                         }, this.storage = e.storage, this.tempStorage = e.tempStorage, this.benchmarkID = this.getOrCreateBenchmarkSessionID(), this.deviceID = this.getOrCreateDeviceID(), this.localStorageDeviceID = this.getOrCreateLocalStorageDeviceID(), this.pageviewID = this.getUniqueID(), this.tabID = this.getOrCreateSessionStorageUniqueID(), e.history.listen(this.onHistoryChange)
                     }
                     return e.prototype.getUniqueID = function() {
-                        return Object(Le.b)().substring(0, 16)
+                        return Object(Re.b)().substring(0, 16)
                     }, e.prototype.getOrCreateDeviceID = function() {
                         var e = m.get("unique_id");
-                        return e && this.isValidDeviceID(e) ? e : (e = Object(Le.b)().substring(0, 16), m.set("unique_id", e, {
+                        return e && this.isValidDeviceID(e) ? e : (e = Object(Re.b)().substring(0, 16), m.set("unique_id", e, {
                             expires: 3650,
-                            domain: Object(Pe.a)(),
+                            domain: Object(Oe.a)(),
                             secure: "https:" === window.location.protocol
                         }), e)
                     }, e.prototype.getOrCreateBenchmarkSessionID = function() {
-                        return m.get("twilight.automation_session_id") || Object(Le.b)().substring(0, 16)
+                        return m.get("twilight.automation_session_id") || Object(Re.b)().substring(0, 16)
                     }, e.prototype.getOrCreateSessionStorageUniqueID = function() {
                         var e = this.tempStorage.get("session_storage_unique_id", "");
-                        return e || (e = Object(Le.b)().substring(0, 16), this.tempStorage.set("session_storage_unique_id", e), e)
+                        return e || (e = Object(Re.b)().substring(0, 16), this.tempStorage.set("session_storage_unique_id", e), e)
                     }, e.prototype.getOrCreateLocalStorageDeviceID = function() {
                         var e = this.storage.get("local_storage_device_id", "");
-                        return e || (e = Object(Le.b)().substring(0, 16), this.storage.set("local_storage_device_id", e), e)
+                        return e || (e = Object(Re.b)().substring(0, 16), this.storage.set("local_storage_device_id", e), e)
                     }, e.prototype.isValidDeviceID = function(e) {
-                        return e.length >= 16 && !Fe.includes(e)
+                        return e.length >= 16 && !De.includes(e)
                     }, e
                 }(),
-                Ue = function() {
+                Le = function() {
                     function e(e, t) {
                         this.cache = {}, this.storage = e, this.logger = t
                     }
@@ -5938,48 +5901,48 @@
                         }
                     }, e
                 }(),
-                je = n("VSCq");
+                Pe = n("VSCq");
 
-            function Me(e) {
-                ve = new Be(e), be = ve.config, ye = ve.dynamicSettings, ke = ve.intl.formatDate, Se = ve.intl.formatMessage, we = ve.intl.formatNumber, _e = ve.intl.formatNumberShort, Ee = ve.intl.formatPastRelativeDate, Ce = ve.intl.formatRelativeDate, Ne = ve.intl.formatTime, Te = ve.logger, Ie = ve.pubsub, ve.stats, Re = ve.storage, Oe = ve.tempStorage, De = ve.tracking
+            function Fe(e) {
+                me = new Ae(e), he = me.config, ge = me.dynamicSettings, fe = me.intl.formatDate, ve = me.intl.formatMessage, be = me.intl.formatNumber, ye = me.intl.formatNumberShort, ke = me.intl.formatPastRelativeDate, Se = me.intl.formatRelativeDate, we = me.intl.formatTime, _e = me.logger, Ee = me.pubsub, Ce = me.storage, Ne = me.tempStorage, Te = me.tracking
             }
             n.d(t, "p", function() {
-                return ve
+                return me
             }), n.d(t, "a", function() {
-                return be
+                return he
             }), n.d(t, "b", function() {
-                return ye
+                return ge
             }), n.d(t, "c", function() {
-                return ke
+                return fe
             }), n.d(t, "d", function() {
-                return Se
+                return ve
             }), n.d(t, "e", function() {
-                return we
+                return be
             }), n.d(t, "f", function() {
-                return _e
+                return ye
             }), n.d(t, "g", function() {
-                return Ee
+                return ke
             }), n.d(t, "h", function() {
-                return Ce
+                return Se
             }), n.d(t, "i", function() {
-                return Ne
+                return we
             }), n.d(t, "k", function() {
-                return Te
+                return _e
             }), n.d(t, "l", function() {
-                return Ie
+                return Ee
             }), n.d(t, "m", function() {
-                return Re
+                return Ce
             }), n.d(t, "n", function() {
-                return Oe
+                return Ne
             }), n.d(t, "o", function() {
-                return De
+                return Te
             }), n.d(t, "j", function() {
-                return Me
+                return Fe
             });
-            var Be = function() {
+            var Ae = function() {
                 function e(e) {
                     var t, n, i, r, a = this;
-                    this.history = (n = t ? fe()() : he()(), i = n.push.bind(n), r = /^([^#?]+)?(\?[^#]+)?(\#.+)?$/i, n.push = function(e, t) {
+                    this.history = (n = t ? pe()() : de()(), i = n.push.bind(n), r = /^([^#?]+)?(\?[^#]+)?(\#.+)?$/i, n.push = function(e, t) {
                         var a = n.location.pathname,
                             o = "",
                             s = "";
@@ -5989,8 +5952,8 @@
                             l[1] && (a = l[1]), l[2] && (o = l[2]), l[3] && (s = l[3])
                         } else e.pathname && (a = e.pathname), e.search && ((o = e.search).startsWith("?") || (o = "?" + o)), e.hash && ((s = e.hash).startsWith("#") || (s = "#" + s));
                         (a === n.location.pathname || !a.startsWith("/") && n.location.pathname.endsWith("/" + a)) && o === n.location.search && s === n.location.hash ? n.replace(e, t) : i(e, t)
-                    }, n), this.pageTitle = "Twitch", this.config = e, this.store = new q(this.config);
-                    var o = this.config.buildType === s.a.Production ? Z.Error : Z.Debug;
+                    }, n), this.pageTitle = "Twitch", this.config = e, this.store = new V(this.config);
+                    var o = this.config.buildType === s.a.Production ? q.Error : q.Debug;
                     try {
                         var l = localStorage.getItem(this.config.forceMinConsoleLogLevelKey);
                         null !== l && (o = Number(l))
@@ -6000,18 +5963,14 @@
                             key: this.config.forceMinConsoleLogLevelKey
                         })
                     }
-                    this.logger = new xe({
+                    this.logger = new Ie({
                         minConsoleLogLevel: o,
                         maxBufferSize: 1e3,
                         buildType: this.config.buildType
-                    }), this.logger.addWindowErrorListener(), this.storage = new Ue(localStorage, this.logger.withCategory("storage")), this.tempStorage = new Ue(sessionStorage, this.logger.withCategory("tempStorage")), this.dynamicSettings = new pe.a({
+                    }), this.logger.addWindowErrorListener(), this.storage = new Le(localStorage, this.logger.withCategory("storage")), this.tempStorage = new Le(sessionStorage, this.logger.withCategory("tempStorage")), this.dynamicSettings = new le.a({
                         logger: this.logger,
                         storage: this.storage
-                    }), this.stats = new D({
-                        config: this.config,
-                        dynamicSettings: this.dynamicSettings,
-                        logger: this.logger
-                    }), this.session = new Ae({
+                    }), this.session = new xe({
                         history: this.history,
                         storage: this.storage,
                         tempStorage: this.tempStorage
@@ -6027,7 +5986,7 @@
                         dynamicSettings: this.dynamicSettings,
                         storage: this.storage,
                         logger: this.logger
-                    }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new z({
+                    }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new U({
                         config: this.config,
                         dynamicSettings: this.dynamicSettings,
                         logger: this.logger,
@@ -6041,14 +6000,13 @@
                         session: this.session,
                         store: this.store,
                         adBlockDetector: this.adBlockDetector
-                    }), this.pubsub = new C(this.store, this.logger), this.intl = new je.TwitchIntl(e.locales), this.config.embedded || (this.benchmarking = new ue({
+                    }), this.pubsub = new C(this.store, this.logger), this.intl = new Pe.TwitchIntl(e.locales), this.config.embedded || (this.benchmarking = new se({
                         apollo: this.apollo,
                         config: this.config,
                         dynamicSettings: this.dynamicSettings,
                         logger: this.logger,
                         sentinel: this.sentinel,
                         session: this.session,
-                        stats: this.stats,
                         storage: this.storage,
                         store: this.store,
                         tracking: this.tracking,
@@ -6060,7 +6018,7 @@
                         store: this.store,
                         storage: this.storage,
                         tracking: this.tracking
-                    }), this.tmi = new L(this.logger, this.config), this.integrations = new V(this.logger)
+                    }), this.tmi = new R(this.logger, this.config), this.integrations = new j(this.logger)
                 }
                 return e.prototype.mount = function(e, t) {
                     a.render(this.wrap(e), t)
@@ -7764,7 +7722,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            d.o.stats.recordComponentError("PersistentPlayerRoot"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -9193,7 +9151,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            u.o.stats.recordComponentError("TooltipLayer"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -11665,7 +11623,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            l.o.stats.recordComponentError("RightColumn"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -13657,7 +13615,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            l.o.stats.recordComponentError("TrackingManager"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -14760,8 +14718,7 @@
                             apiKey: u.a.algoliaAPIKey,
                             apolloClient: u.o.apollo.client,
                             logger: u.j,
-                            config: u.a,
-                            stats: u.o.stats
+                            config: u.a
                         }), n.state = n.getEmptyState(), n
                     }
                     return c.__extends(t, e), t.prototype.componentDidMount = function() {
@@ -15865,7 +15822,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            u.o.stats.recordComponentError("TopNav"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -16889,7 +16846,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            a.o.stats.recordComponentError("ToastManager"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -21502,23 +21459,25 @@
         NZDK: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return c
+                return u
             });
             var i = n("mrSG"),
                 r = n("hnrd"),
-                a = n("H/lO"),
-                o = n("vR4/"),
-                s = n("BSTw"),
-                l = {
+                a = n("56gP"),
+                o = n("zB42"),
+                s = n("H/lO"),
+                l = n("vR4/"),
+                c = n("BSTw"),
+                d = {
                     games: {
-                        indexName: a.a.Games,
+                        indexName: s.a.Games,
                         hitsPerPage: 2,
                         topNumericFilters: ["popularity>1"],
                         singleTypeNumericFilters: [],
                         optionalFacetFilters: ""
                     },
                     videos: {
-                        indexName: a.a.Videos,
+                        indexName: s.a.Videos,
                         hitsPerPage: 6,
                         get topNumericFilters() {
                             return ["created_at>" + function(e) {
@@ -21531,34 +21490,34 @@
                         optionalFacetFilters: ""
                     },
                     users: {
-                        indexName: a.a.Users,
+                        indexName: s.a.Users,
                         hitsPerPage: 2,
                         topNumericFilters: ["followers>50"],
                         singleTypeNumericFilters: [],
                         optionalFacetFilters: ""
                     },
                     channels: {
-                        indexName: a.a.Channels,
+                        indexName: s.a.Channels,
                         hitsPerPage: 6,
                         get topNumericFilters() {
-                            return ["channel_count>10", "updated_on>" + d()]
+                            return ["channel_count>10", "updated_on>" + p()]
                         },
                         get singleTypeNumericFilters() {
-                            return ["updated_on>" + d()]
+                            return ["updated_on>" + p()]
                         },
                         optionalFacetFilters: ""
                     },
                     communities: {
-                        indexName: a.a.Communities,
+                        indexName: s.a.Communities,
                         hitsPerPage: 2,
                         topNumericFilters: [],
                         singleTypeNumericFilters: [],
                         optionalFacetFilters: ""
                     }
                 },
-                c = function() {
+                u = function() {
                     function e(e) {
-                        this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.getCountryCode(e.apolloClient)
+                        this.client = r(e.appId, e.apiKey), this.stats = a.Stats.getInstance(e.config.buildType === o.a.Production ? "production" : "development", "twilight.features.algolia"), this.logger = e.logger.withCategory("search-client"), this.getCountryCode(e.apolloClient)
                     }
                     return e.prototype.queryTopResults = function(e, t) {
                         return i.__awaiter(this, void 0, void 0, function() {
@@ -21566,7 +21525,7 @@
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
-                                        return r = [], (n = []).push(this.getTopResult(l.games, e)), n.push(this.getTopResult(l.videos, e)), n.push(this.getTopResult(l.users, e)), n.push(this.getTopResult(l.channels, e)), n.push(this.getTopResult(l.communities, e)), r.push(this.getTotalResult(l.games, e)), r.push(this.getTotalResult(l.videos, e)), r.push(this.getTotalResult(l.users, e)), r.push(this.getTotalResult(l.channels, e)), [4, this.query(n.concat(r))];
+                                        return r = [], (n = []).push(this.getTopResult(d.games, e)), n.push(this.getTopResult(d.videos, e)), n.push(this.getTopResult(d.users, e)), n.push(this.getTopResult(d.channels, e)), n.push(this.getTopResult(d.communities, e)), r.push(this.getTotalResult(d.games, e)), r.push(this.getTotalResult(d.videos, e)), r.push(this.getTotalResult(d.users, e)), r.push(this.getTotalResult(d.channels, e)), [4, this.query(n.concat(r))];
                                     case 1:
                                         return (a = i.sent()) ? (o = a.results, [2, {
                                             id: t,
@@ -21619,23 +21578,23 @@
                             })
                         })
                     }, e.prototype.queryForType = function(e, t, n, r) {
-                        var o = void 0 === r ? {} : r,
-                            s = o.page,
-                            c = void 0 === s ? 0 : s,
-                            d = o.hitsPerPage,
-                            u = void 0 === d ? 50 : d,
-                            p = o.facetFilters,
+                        var a = void 0 === r ? {} : r,
+                            o = a.page,
+                            l = void 0 === o ? 0 : o,
+                            c = a.hitsPerPage,
+                            u = void 0 === c ? 50 : c,
+                            p = a.facetFilters,
                             m = void 0 === p ? "" : p,
-                            h = o.numericFilters;
+                            h = a.numericFilters;
                         return i.__awaiter(this, void 0, void 0, function() {
-                            var r, o, s, d, p, g, f, v = this;
+                            var r, a, o, c, p, g, f, v = this;
                             return i.__generator(this, function(b) {
                                 switch (b.label) {
                                     case 0:
                                         switch (r = {
                                             id: n,
-                                            currentPage: c
-                                        }, o = function(e) {
+                                            currentPage: l
+                                        }, a = function(e) {
                                             return i.__awaiter(v, void 0, void 0, function() {
                                                 var n, a;
                                                 return i.__generator(this, function(i) {
@@ -21645,7 +21604,7 @@
                                                                 indexName: e.indexName,
                                                                 query: t,
                                                                 params: {
-                                                                    page: c,
+                                                                    page: l,
                                                                     hitsPerPage: u,
                                                                     numericFilters: h || e.singleTypeNumericFilters,
                                                                     facets: "*",
@@ -21664,36 +21623,36 @@
                                                 })
                                             })
                                         }, e) {
-                                            case a.a.Games:
+                                            case s.a.Games:
                                                 return [3, 1];
-                                            case a.a.Users:
+                                            case s.a.Users:
                                                 return [3, 3];
-                                            case a.a.Channels:
+                                            case s.a.Channels:
                                                 return [3, 5];
-                                            case a.a.Videos:
+                                            case s.a.Videos:
                                                 return [3, 7];
-                                            case a.a.Communities:
+                                            case s.a.Communities:
                                                 return [3, 9]
                                         }
                                         return [3, 11];
                                     case 1:
-                                        return s = r, [4, o(l.games)];
+                                        return o = r, [4, a(d.games)];
                                     case 2:
-                                        return s.games = b.sent(), [3, 12];
+                                        return o.games = b.sent(), [3, 12];
                                     case 3:
-                                        return d = r, [4, o(l.users)];
+                                        return c = r, [4, a(d.users)];
                                     case 4:
-                                        return d.users = b.sent(), [3, 12];
+                                        return c.users = b.sent(), [3, 12];
                                     case 5:
-                                        return p = r, [4, o(l.channels)];
+                                        return p = r, [4, a(d.channels)];
                                     case 6:
                                         return p.channels = b.sent(), [3, 12];
                                     case 7:
-                                        return g = r, [4, o(l.videos)];
+                                        return g = r, [4, a(d.videos)];
                                     case 8:
                                         return g.videos = b.sent(), [3, 12];
                                     case 9:
-                                        return f = r, [4, o(l.communities)];
+                                        return f = r, [4, a(d.communities)];
                                     case 10:
                                         return f.communities = b.sent(), [3, 12];
                                     case 11:
@@ -21705,46 +21664,46 @@
                         })
                     }, e.prototype.queryVideos = function(e, t, n) {
                         return i.__awaiter(this, void 0, void 0, function() {
-                            var r, s, l, c;
+                            var r, a, o, c;
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
                                         switch (n.sort) {
-                                            case o.b.Newest:
-                                                r = a.a.VideosNewest;
+                                            case l.b.Newest:
+                                                r = s.a.VideosNewest;
                                                 break;
-                                            case o.b.Popular:
+                                            case l.b.Popular:
                                             default:
-                                                r = a.a.Videos
+                                                r = s.a.Videos
                                         }
-                                        switch (s = [], n.length) {
-                                            case o.a.Short:
-                                                s.push("length<=900");
+                                        switch (a = [], n.length) {
+                                            case l.a.Short:
+                                                a.push("length<=900");
                                                 break;
-                                            case o.a.Long:
-                                                s.push("length>900")
+                                            case l.a.Long:
+                                                a.push("length>900")
                                         }
-                                        switch (l = {
+                                        switch (o = {
                                             indexName: r,
                                             query: e,
                                             params: {
                                                 page: 0,
                                                 hitsPerPage: 50,
-                                                numericFilters: s,
+                                                numericFilters: a,
                                                 facets: "*",
                                                 facetFilters: ""
                                             }
                                         }, n.type) {
-                                            case o.c.PastBroadcasts:
-                                                l.params.facetFilters = "broadcast_type:archive";
+                                            case l.c.PastBroadcasts:
+                                                o.params.facetFilters = "broadcast_type:archive";
                                                 break;
-                                            case o.c.Uploads:
-                                                l.params.facetFilters = "broadcast_type:upload";
+                                            case l.c.Uploads:
+                                                o.params.facetFilters = "broadcast_type:upload";
                                                 break;
-                                            case o.c.Highlights:
-                                                l.params.facetFilters = "broadcast_type:highlight"
+                                            case l.c.Highlights:
+                                                o.params.facetFilters = "broadcast_type:highlight"
                                         }
-                                        return [4, this.query([l])];
+                                        return [4, this.query([o])];
                                     case 1:
                                         return (c = i.sent()) ? [2, {
                                             id: t,
@@ -21761,7 +21720,7 @@
                     }, e.prototype.getCountryCode = function(e) {
                         var t = this;
                         e.query({
-                            query: s
+                            query: c
                         }).then(function(e) {
                             t.countryCode = e.data.requestInfo.countryCode
                         }).catch(function(e) {
@@ -21800,14 +21759,20 @@
                                     case 3:
                                         return i.sent(), a = !0, t = null, [3, 4];
                                     case 4:
-                                        return r = Date.now(), this.countryCode && (a ? this.stats.recordSearchError(this.countryCode, r - n) : this.stats.recordSearchSuccess(this.countryCode, r - n)), [2, t]
+                                        r = Date.now();
+                                        try {
+                                            this.countryCode && (a ? (this.stats.logCounter("error." + this.countryCode, 1), this.stats.logTimer("error_duration." + this.countryCode, r - n)) : (this.stats.logCounter("success." + this.countryCode, 1), this.stats.logTimer("success_duration." + this.countryCode, r - n)))
+                                        } catch (t) {
+                                            this.logger.error(t, "Failed to send search stats", e)
+                                        }
+                                        return [2, t]
                                 }
                             })
                         })
                     }, e
                 }();
 
-            function d() {
+            function p() {
                 return Math.floor(((new Date).getTime() - 6e5) / 1e3)
             }
         },
@@ -23533,8 +23498,7 @@
                             apiKey: c.a.algoliaAPIKey,
                             apolloClient: c.o.apollo.client,
                             logger: c.j,
-                            config: c.a,
-                            stats: c.o.stats
+                            config: c.a
                         }), n
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
@@ -28364,8 +28328,7 @@
                             apiKey: l.a.algoliaAPIKey,
                             apolloClient: l.o.apollo.client,
                             logger: l.j,
-                            config: l.a,
-                            stats: l.o.stats
+                            config: l.a
                         }), n
                     }
                     return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
@@ -28504,7 +28467,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            l.o.stats.recordComponentError("SideNav"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -34153,7 +34116,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            f.o.stats.recordComponentError("StickyFooterRoot"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -34309,7 +34272,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            f.o.stats.recordComponentError("ChannelPageRedesignRouter"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -34559,7 +34522,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            f.o.stats.recordComponentError("DefaultRootRouter"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -35414,7 +35377,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            c.o.stats.recordComponentError("ModalRoot"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -39594,7 +39557,7 @@
                                     latencyTracking: r.tracker
                                 }
                             }, r.onError = function() {
-                                o.o.stats.recordComponentError(e), r.tracker.reportInteractive()
+                                return r.tracker.reportInteractive()
                             }, t && t.isRoot ? r.tracker = o.o.benchmarking.getRootLatencyTracker() : i.latencyTracking ? r.tracker = i.latencyTracking.createChild(e, t && t.destination) : (r.tracker = new l.a(e, t && t.destination), r.tracker.root = new l.a("Root", t && t.destination)), r
                         }
                         return i.__extends(d, c), d.prototype.componentDidMount = function() {
@@ -41538,7 +41501,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            o.o.stats.recordComponentError("UserCardLayer"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -42561,8 +42524,7 @@
                             apiKey: l.a.algoliaAPIKey,
                             apolloClient: l.o.apollo.client,
                             logger: l.j,
-                            config: l.a,
-                            stats: l.o.stats
+                            config: l.a
                         }), n
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
@@ -42706,8 +42668,7 @@
                             apiKey: l.a.algoliaAPIKey,
                             apolloClient: l.o.apollo.client,
                             logger: l.j,
-                            config: l.a,
-                            stats: l.o.stats
+                            config: l.a
                         }), n
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
@@ -49275,7 +49236,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            a.o.stats.recordComponentError("AdManager"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -49833,7 +49794,7 @@
                         this.setState({
                             isError: !0
                         }, function() {
-                            o.o.stats.recordComponentError("StickyHeaderRoot"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
