@@ -237,13 +237,13 @@
         },
         "/aPz": function(e, t, n) {
             "use strict";
-            n.d(t, "c", function() {
+            n.d(t, "b", function() {
                 return o
-            }), n.d(t, "e", function() {
+            }), n.d(t, "d", function() {
                 return s
-            }), n.d(t, "f", function() {
+            }), n.d(t, "e", function() {
                 return l
-            }), n.d(t, "g", function() {
+            }), n.d(t, "f", function() {
                 return c
             }), n.d(t, "z", function() {
                 return d
@@ -263,17 +263,17 @@
                 return v
             }), n.d(t, "o", function() {
                 return b
-            }), n.d(t, "h", function() {
+            }), n.d(t, "g", function() {
                 return y
-            }), n.d(t, "b", function() {
-                return k
             }), n.d(t, "a", function() {
-                return S
+                return k
             }), n.d(t, "t", function() {
-                return w
+                return S
             }), n.d(t, "x", function() {
-                return _
+                return w
             }), n.d(t, "w", function() {
+                return _
+            }), n.d(t, "h", function() {
                 return E
             }), n.d(t, "u", function() {
                 return C
@@ -285,7 +285,7 @@
                 return I
             }), n.d(t, "p", function() {
                 return R
-            }), n.d(t, "d", function() {
+            }), n.d(t, "c", function() {
                 return O
             }), n.d(t, "r", function() {
                 return D
@@ -353,23 +353,23 @@
             }
 
             function k(e) {
-                return r.PubsubTopic.ChannelBitsPinEvents + "." + e
-            }
-
-            function S(e) {
                 return r.PubsubTopic.BitsLeaderboardEvents + "." + e.id
             }
 
-            function w(e) {
+            function S(e) {
                 return r.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function _(e) {
+            function w(e) {
                 return r.PubsubTopic.UserSubscribeEvents + "." + e
             }
 
-            function E(e) {
+            function _(e) {
                 return r.PubsubTopic.UserCrateEvents + "." + e
+            }
+
+            function E(e) {
+                return r.PubsubTopic.CampaignGlobalEvents + "." + e
             }
 
             function C(e) {
@@ -1610,7 +1610,7 @@
                             },
                             startTime: 0
                         })
-                    }, e.prototype.reportCustomEvent = function(e) {}, e.prototype.resetCustomEvents = function(e) {}, e
+                    }, e.prototype.reportCustomEvent = function(e) {}, e.prototype.resetCustomEvents = function(e) {}, e.prototype.unregister = function() {}, e
                 }()
         },
         "1utW": function(e, t, n) {
@@ -4265,7 +4265,8 @@
                     "51efc82d-cfe8-42bd-ae4b-9304112ed9df": "control",
                     "d4752777-a16a-4128-bcfb-42cbd4a53613": "off",
                     "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7": "control",
-                    "7a149a1e-2edd-403a-8e1a-bc466fa8ae46": "control"
+                    "7a149a1e-2edd-403a-8e1a-bc466fa8ae46": "control",
+                    "ba44e8c9-0beb-4982-b48f-87457bfa962c": "off"
                 },
                 b = {
                     TWILIGHT_AAX_DISPLAY: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -4307,7 +4308,8 @@
                     TWILIGHT_VOD_PROVOCATEUR: "51efc82d-cfe8-42bd-ae4b-9304112ed9df",
                     TWILIGHT_OWL_ROOM_CHEERING: "d4752777-a16a-4128-bcfb-42cbd4a53613",
                     TWILIGHT_CLIPS_ON_THE_BRAIN: "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7",
-                    TWILIGHT_WORLD_CUP_EVENT: "7a149a1e-2edd-403a-8e1a-bc466fa8ae46"
+                    TWILIGHT_WORLD_CUP_EVENT: "7a149a1e-2edd-403a-8e1a-bc466fa8ae46",
+                    TWILIGHT_EXTENSIONS_DISCOVERY_RELEASE: "ba44e8c9-0beb-4982-b48f-87457bfa962c"
                 },
                 y = {
                     TWILIGHT_AAX_DISPLAY: "yes",
@@ -4317,7 +4319,8 @@
                     TWILIGHT_NEW_REPORTING_WIZARD: "yes",
                     TWILIGHT_DISCOVERY_FRONTPAGE_MVP: "variant",
                     TWILIGHT_PAY__SAVED_PAYMENT_METHODS: "yes",
-                    TWILIGHT_PUBG_FILTERS: "variant"
+                    TWILIGHT_PUBG_FILTERS: "variant",
+                    TWILIGHT_EXTENSIONS_DISCOVERY_RELEASE: "on"
                 },
                 k = n("pXgH"),
                 S = "twilight.ignore_experiments",
@@ -5190,6 +5193,12 @@
                             expectedChildCount: e,
                             children: this.getChildNames()
                         }), e && (this.expectedChildCount = e), this.checkChildCompleted())
+                    }, e.prototype.unregister = function() {
+                        this.hasReportedInteractive || (this.parent ? (this.parent.unregisterChild(this), this.logger.debug("Unregistering component which has not reported interactive yet", {
+                            component: this.componentName
+                        })) : this.logger.debug("Attempted to unregister a parent-less component. This is a no-op.", {
+                            component: this.componentName
+                        }))
                     }, e.prototype.resetCustomEvents = function(e) {
                         this.root.customEvents[e] = []
                     }, e.prototype.registerCustomEvent = function(e) {
@@ -5273,6 +5282,12 @@
                             this.reset(!1)
                         }
                         this.root.resetFirstPageLoadedFailsafe(), this.children.push(e)
+                    }, e.prototype.unregisterChild = function(e) {
+                        var t = this.children.indexOf(e);
+                        t > -1 ? (this.children.splice(t, 1), this.expectedChildCount && this.expectedChildCount--) : this.logger.warn("Child attempted to unregister itself, but was not registered", {
+                            child: e.componentName,
+                            parent: this.componentName
+                        }), this.hasReportedInteractive && this.checkChildCompleted()
                     }, e.prototype.getChildNames = function() {
                         return this.children.map(function(e) {
                             return e.componentName
@@ -20692,9 +20707,8 @@
                         }
                     }, t.prototype.renderFollowButton = function(e) {
                         var t = this.props.isHostedFollow && this.props.channelName ? Object(o.d)("Follow {username}", {
-                                username: this.props.channelName
-                            }, "FollowButton") : Object(o.d)("Follow", "FollowButton"),
-                            n = this.props.isFullWidthButton ? 2 : void 0;
+                            username: this.props.channelName
+                        }, "FollowButton") : Object(o.d)("Follow", "FollowButton");
                         return r.createElement(v.v, i.__assign({
                             ariaLabel: t,
                             blurAfterClick: this.props.blurAfterClick,
@@ -20704,14 +20718,9 @@
                             onClick: e,
                             size: this.props.size,
                             tabIndex: this.props.tabIndex
-                        }, Object(v.Lb)(this.props)), this.props.followUIType === S.IconOnly ? null : r.createElement(v.Ia, {
-                            margin: {
-                                right: n
-                            }
-                        }, t))
+                        }, Object(v.Lb)(this.props)), this.props.followUIType === S.IconOnly ? null : t)
                     }, t.prototype.renderUnfollowButton = function() {
-                        var e = Object(o.d)("Unfollow", "FollowButton"),
-                            t = this.props.isFullWidthButton ? 2 : void 0;
+                        var e = Object(o.d)("Unfollow", "FollowButton");
                         return r.createElement(v.v, i.__assign({
                             ariaLabel: e,
                             blurAfterClick: this.props.blurAfterClick,
@@ -20723,11 +20732,7 @@
                             tabIndex: this.props.tabIndex,
                             size: this.props.size,
                             onClick: this.toggleFollowing
-                        }, Object(v.Lb)(this.props)), this.props.unfollowUIType === S.IconOnly ? null : r.createElement(v.Ia, {
-                            margin: {
-                                right: t
-                            }
-                        }, Object(o.d)("Followed", "FollowButton")))
+                        }, Object(v.Lb)(this.props)), this.props.unfollowUIType === S.IconOnly ? null : Object(o.d)("Followed", "FollowButton"))
                     }, t.prototype.renderUnfollowButtonWithDropdown = function() {
                         var e = this.props.balloonDirection ? this.props.balloonDirection : v.r.BottomRight;
                         return r.createElement(v.Ia, {
@@ -21256,7 +21261,8 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.isErrored ? r.createElement(l, null) : r.Children.only(this.props.children);
+                        var e = void 0 === this.props.showDropdown || this.props.showDropdown,
+                            t = this.props.isErrored ? r.createElement(l, null) : r.Children.only(this.props.children);
                         return r.createElement(a.a, {
                             onClickOut: this.onClickOut
                         }, r.createElement(s.bb, {
@@ -21268,7 +21274,7 @@
                             "data-a-target": "nav-search-input",
                             spellCheck: !1,
                             refDelegate: this.getInputRef
-                        }), r.createElement(s.q, i.__assign({
+                        }), e && r.createElement(s.q, i.__assign({
                             noTail: !0
                         }, this.props.balloonProps, {
                             show: this.state.isOpen
@@ -21276,7 +21282,7 @@
                             tabIndex: 0,
                             onKeyDown: this.onKeyDown,
                             onMouseOver: this.props.enableMouseEvents ? this.onMouseOver : void 0
-                        }, e)))
+                        }, t)))
                     }, t.prototype.toggle = function(e) {
                         e !== this.state.isOpen && this.setState({
                             isOpen: e
@@ -24264,9 +24270,7 @@
                             })
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.props.reportInteractive()
-                    }, t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.reportInteractive && this.isUserDataReady(this.props) && this.props.reportInteractive()
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.channelLogin && !this.isUserDataReady(this.props) || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.props.reportInteractive && this.props.data && !this.props.data.loading && this.props.reportInteractive()
@@ -24283,45 +24287,35 @@
                         this.props.data.user.self && this.props.data.user.self.subscriptionBenefit && (r = this.props.data.user.self.subscriptionBenefit.purchasedWithPrime ? m.a.Prime : this.props.data.user.self.subscriptionBenefit.tier, this.modalLevel = ""), this.props.data.user.subscriptionProducts.some(this.isSubscriptionProductInvalid) && (i = !0);
                         var o, s = t ? Object(c.d)("All-Access Pass", "SubscribeButton") : Object(c.d)("Get the All-Access Pass", "SubscribeButton");
                         if (t) {
-                            var l = i ? Object(c.d)("Subscribed", "SubscribeButton") : Object(c.d)("Gift A Sub", "SubscribeButton"),
-                                u = this.props.isFullWidthButton ? 2 : void 0;
+                            var l = i ? Object(c.d)("Subscribed", "SubscribeButton") : Object(c.d)("Gift A Sub", "SubscribeButton");
                             if (o = this.props.hostChannelID ? Object(c.d)("Subscribed to {username}", {
                                     username: this.props.data.user.displayName
                                 }, "SubscribeButton") : l, i && !n) return a.createElement(y.v, {
                                 disabled: !0,
                                 ariaLabel: o,
                                 icon: y.Za.Star
-                            }, a.createElement(y.Ia, {
-                                margin: {
-                                    right: u
-                                }
-                            }, o));
+                            }, o);
                             n && (o = s)
                         } else o = n ? s : this.props.hostChannelID ? Object(c.d)("Subscribe to {username}", {
                             username: this.props.data.user.displayName
                         }, "SubscribeButton") : Object(c.d)("Subscribe", "SubscribeButton");
-                        var p = r === m.a.Prime ? y.Za.Crown : y.Za.Star,
-                            f = t ? "subscribed-button" : "subscribe-button",
-                            v = this.props.isFullWidthButton && t ? 2 : void 0,
-                            b = a.createElement(y.v, {
-                                "data-a-target": f,
+                        var u = r === m.a.Prime ? y.Za.Crown : y.Za.Star,
+                            p = t ? "subscribed-button" : "subscribe-button",
+                            f = a.createElement(y.v, {
+                                "data-a-target": p,
                                 "data-test-selector": "subscribe-button__dropdown",
                                 ariaLabel: o,
                                 type: t ? y.B.Success : y.B.Default,
                                 dropdown: !this.props.isInSideNav,
                                 fullWidth: !0,
-                                icon: t ? p : void 0
-                            }, a.createElement(y.Ia, {
-                                margin: {
-                                    right: v
-                                }
-                            }, o)),
-                            k = y.r.BottomRight;
-                        return this.props.isInSideNav ? k = y.r.RightCenter : this.props.hostChannelID && (k = y.r.TopLeft), a.createElement(d.a, {
+                                icon: t ? u : void 0
+                            }, o),
+                            v = y.r.BottomRight;
+                        return this.props.isInSideNav ? v = y.r.RightCenter : this.props.hostChannelID && (v = y.r.TopLeft), a.createElement(d.a, {
                             onToggle: this.handleMenuToggle
-                        }, b, a.createElement(y.q, {
+                        }, f, a.createElement(y.q, {
                             size: y.s.Large,
-                            direction: k,
+                            direction: v,
                             "data-a-target": "sub-balloon"
                         }, a.createElement($, {
                             authToken: this.props.authToken,
@@ -24381,8 +24375,7 @@
                             updateContainerWidth: this.props.updateContainerWidth,
                             hideEsportsSubscription: this.props.hideEsportsSubscription,
                             reportInteractive: this.reportInteractive,
-                            isInSideNav: this.props.isInSideNav,
-                            isFullWidthButton: this.props.isFullWidthButton
+                            isInSideNav: this.props.isInSideNav
                         })
                     }, t = r.__decorate([Object(l.d)("SubscribeButton")], t)
                 }(a.Component);
@@ -26921,11 +26914,7 @@
                                 onClick: this.handleEditButtonClicked,
                                 type: w.B.Hollow,
                                 "data-test-selector": "side-nav-channel-info__edit_button"
-                            }, a.createElement(w.Ia, {
-                                margin: {
-                                    right: 2
-                                }
-                            }, Object(l.d)("Edit Stream Info", "SideNavChannelInfo")))))
+                            }, Object(l.d)("Edit Stream Info", "SideNavChannelInfo"))))
                         }
                         var c = i ? 1 : 0;
                         return a.createElement(w.jb, {
@@ -26974,8 +26963,7 @@
                             hideDropdownWhenFollowing: !0,
                             channelLogin: this.props.lastActiveChannelLogin,
                             followUIType: b.b.IconAndText,
-                            unfollowUIType: b.b.IconAndText,
-                            isFullWidthButton: !0
+                            unfollowUIType: b.b.IconAndText
                         })), a.createElement(w.Ia, {
                             display: w.R.Flex,
                             flexDirection: w.T.Column,
@@ -26986,8 +26974,7 @@
                         }, a.createElement($.a, {
                             isInSideNav: !0,
                             channelLogin: this.props.lastActiveChannelLogin,
-                            hideEsportsSubscription: this.props.hideEsportsSubscription,
-                            isFullWidthButton: !0
+                            hideEsportsSubscription: this.props.hideEsportsSubscription
                         })), n)))
                     }, t.prototype.updateLiveState = function(e) {
                         e.data && e.data.user && !e.data.loading && !e.data.error && this.setState({
@@ -27846,7 +27833,7 @@
                         return {
                             query: tt,
                             skip: !e.friends || 0 === e.friends.length,
-                            topic: Object(pe.h)(e.selfID || ""),
+                            topic: Object(pe.g)(e.selfID || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.friends) return n;
                                 var i = t.change === ce.FrienshipChangeType.Removed || t.change === ce.FrienshipChangeType.SelfRemoved;
@@ -34237,7 +34224,7 @@
                     return Promise.all([n.e(0), n.e(42)]).then(n.bind(null, "AaPt"))
                 }, "ChannelVideosPage"),
                 q = a.a.wrap(function() {
-                    return n.e(55).then(n.bind(null, "rVsl"))
+                    return n.e(54).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
                 Q = a.a.wrap(function() {
                     return n.e(41).then(n.bind(null, "juOe"))
@@ -34395,122 +34382,119 @@
                     autoReportInteractive: !0
                 })(X),
                 ee = a.a.wrap(function() {
-                    return n.e(71).then(n.bind(null, "wh8/"))
+                    return n.e(70).then(n.bind(null, "wh8/"))
                 }, "AnonFrontPage"),
                 te = a.a.wrap(function() {
-                    return n.e(70).then(n.bind(null, "moen"))
+                    return n.e(69).then(n.bind(null, "moen"))
                 }, "BroadcastPage"),
                 ne = a.a.wrap(function() {
-                    return n.e(69).then(n.bind(null, "99ae"))
+                    return n.e(68).then(n.bind(null, "99ae"))
                 }, "BrowseRootPage"),
                 ie = a.a.wrap(function() {
-                    return n.e(68).then(n.bind(null, "otOH"))
+                    return n.e(67).then(n.bind(null, "otOH"))
                 }, "CommunityModerationRoot"),
                 re = a.a.wrap(function() {
-                    return n.e(67).then(n.bind(null, "FvFK"))
+                    return n.e(66).then(n.bind(null, "FvFK"))
                 }, "CreateCommunityPage"),
                 ae = a.a.wrap(function() {
-                    return n.e(66).then(n.bind(null, "dQAD"))
+                    return n.e(65).then(n.bind(null, "dQAD"))
                 }, "DevOnlyRoot"),
                 oe = a.a.wrap(function() {
-                    return n.e(65).then(n.bind(null, "mpcK"))
+                    return n.e(64).then(n.bind(null, "mpcK"))
                 }, "DirectoryRootPage"),
                 se = a.a.wrap(function() {
-                    return n.e(64).then(n.bind(null, "AtgE"))
+                    return n.e(63).then(n.bind(null, "AtgE"))
                 }, "EmailUnsubscribePage"),
                 le = a.a.wrap(function() {
-                    return n.e(63).then(n.bind(null, "VkGE"))
+                    return n.e(62).then(n.bind(null, "VkGE"))
                 }, "EmailVerificationPage"),
                 ce = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(62)]).then(n.bind(null, "4c/Z"))
+                    return Promise.all([n.e(0), n.e(61)]).then(n.bind(null, "4c/Z"))
                 }, "EventLandingPage"),
                 de = a.a.wrap(function() {
-                    return n.e(61).then(n.bind(null, "lQdQ"))
+                    return n.e(60).then(n.bind(null, "lQdQ"))
                 }, "ExtensionsRoot"),
                 ue = a.a.wrap(function() {
-                    return n.e(60).then(n.bind(null, "Uyt6"))
+                    return n.e(59).then(n.bind(null, "Uyt6"))
                 }, "FollowingRootPage"),
                 pe = a.a.wrap(function() {
-                    return n.e(59).then(n.bind(null, "0fnA"))
+                    return n.e(58).then(n.bind(null, "0fnA"))
                 }, "FrontPage"),
                 me = a.a.wrap(function() {
-                    return n.e(58).then(n.bind(null, "O0y+"))
+                    return n.e(57).then(n.bind(null, "O0y+"))
                 }, "FriendRequestsPage"),
                 he = a.a.wrap(function() {
-                    return n.e(57).then(n.bind(null, "2W9R"))
+                    return n.e(56).then(n.bind(null, "2W9R"))
                 }, "FriendsPage"),
                 ge = a.a.wrap(function() {
-                    return n.e(56).then(n.bind(null, "UqZg"))
+                    return n.e(55).then(n.bind(null, "UqZg"))
                 }, "InventoryPage"),
                 fe = a.a.wrap(function() {
-                    return n.e(55).then(n.bind(null, "rVsl"))
+                    return n.e(54).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
                 ve = a.a.wrap(function() {
-                    return n.e(54).then(n.bind(null, "4Agi"))
+                    return n.e(53).then(n.bind(null, "4Agi"))
                 }, "DesklightModsRootPage"),
                 be = a.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(53)]).then(n.bind(null, "cz4h"))
+                    return Promise.all([n.e(31), n.e(0), n.e(52)]).then(n.bind(null, "cz4h"))
                 }, "PaymentsLandingPage"),
                 ye = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(52)]).then(n.bind(null, "EOaz"))
+                    return Promise.all([n.e(0), n.e(51)]).then(n.bind(null, "EOaz"))
                 }, "SettingsRoot"),
                 ke = a.a.wrap(function() {
-                    return n.e(51).then(n.bind(null, "QE/F"))
-                }, "SquadStreamRoot"),
-                Se = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(50)]).then(n.bind(null, "4JFD"))
                 }, "VideoWatchPage"),
-                we = a.a.wrap(function() {
+                Se = a.a.wrap(function() {
                     return n.e(49).then(n.bind(null, "UGMo"))
                 }, "SubscriptionsManagementPage"),
-                _e = a.a.wrap(function() {
+                we = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(48)]).then(n.bind(null, "c0BZ"))
                 }, "UnsubscribePage");
 
-            function Ee() {
+            function _e() {
                 return window.location.assign(window.location.href), null
             }
 
-            function Ce(e) {
+            function Ee(e) {
                 var t = Object(T.a)(e.match.params.videoID);
                 return r.createElement(_.c, {
                     to: "/videos/" + t
                 })
             }
 
-            function Ne(e) {
+            function Ce(e) {
                 return r.createElement(_.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             }
 
-            function Te() {
+            function Ne() {
                 return r.createElement(_.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             }
 
-            function Ie() {
+            function Te() {
                 return r.createElement(_.c, {
                     to: "/directory/all/xbox"
                 })
             }
 
-            function Re() {
+            function Ie() {
                 return r.createElement(_.c, {
                     to: "/manager/upload"
                 })
             }
 
-            function Oe() {
+            function Re() {
                 return window.location.replace("/p/terms-of-service"), null
             }
 
-            function De() {
+            function Oe() {
                 return window.location.replace(I.a), null
             }
-            var xe = function(e) {
+            var De = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -34538,37 +34522,40 @@
                             component: this.props.isLoggedIn ? pe : ee
                         }), r.createElement(_.d, {
                             path: "/activate",
-                            render: Ee
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/bits",
-                            render: Ee
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/bits-checkout",
-                            render: Ee
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/checkout",
-                            render: Ee
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/products",
-                            render: Ee
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/embed",
-                            render: Ee
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/popout",
-                            render: Ee
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/prime",
-                            render: Ee
+                            render: _e
+                        }), f.a.buildType !== N.a.Production && r.createElement(_.d, {
+                            path: "/sq",
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/subs",
-                            render: Ee
+                            render: _e
                         }), r.createElement(_.d, {
                             path: "/broadcast",
                             component: te
                         }), r.createElement(_.d, {
                             path: "/collections/:collectionID",
-                            component: Se
+                            component: ke
                         }), r.createElement(_.d, {
                             path: "/communities/create",
                             component: re
@@ -34604,7 +34591,7 @@
                             component: oe
                         }), r.createElement(_.d, {
                             path: "/directory/game/:encodedCommunityName/videos",
-                            render: Ne
+                            render: Ce
                         }), r.createElement(_.d, {
                             path: "/directory/game/:encodedCommunityName/:encodedLanguage",
                             component: oe
@@ -34616,7 +34603,7 @@
                             component: ne
                         }), r.createElement(_.d, {
                             path: "/directory/all/xb1",
-                            render: Ie
+                            render: Te
                         }), r.createElement(_.d, {
                             path: "/directory/all/xbox",
                             component: ne
@@ -34649,7 +34636,7 @@
                             component: he
                         }), r.createElement(_.d, {
                             path: "/following",
-                            render: Te
+                            render: Ne
                         }), r.createElement(_.d, {
                             path: "/inbox",
                             component: fe
@@ -34671,61 +34658,58 @@
                             exact: !0
                         }), r.createElement(_.d, {
                             path: "/store",
-                            render: De
+                            render: Oe
                         }), r.createElement(_.d, {
                             path: "/store/merch",
-                            render: De
+                            render: Oe
                         }), r.createElement(_.d, {
                             path: "/subscriptions",
-                            component: we
+                            component: Se
                         }), r.createElement(_.d, {
                             path: "/settings/:tab?",
                             component: ye
                         }), r.createElement(_.d, {
                             path: "/unsubscribe/:productName",
-                            component: _e
+                            component: we
                         }), r.createElement(_.d, {
                             path: "/upload",
-                            render: Re,
+                            render: Ie,
                             exact: !0
                         }), r.createElement(_.d, {
                             path: "/user/legal",
-                            render: Oe,
+                            render: Re,
                             exact: !0
                         }), r.createElement(_.d, {
                             path: "/videos/v:videoID",
-                            render: Ce
+                            render: Ee
                         }), r.createElement(_.d, {
                             path: "/videos/:videoID",
-                            component: Se
+                            component: ke
                         }), f.a.buildType !== N.a.Production && f.o.integrations.desklight && r.createElement(_.d, {
                             path: "/mods",
                             component: ve
-                        }), f.a.buildType !== N.a.Production && r.createElement(_.d, {
-                            path: "/sq",
-                            component: ke
                         }), r.createElement(_.d, {
                             path: "*",
                             component: J
                         }))
                     }, t
                 }(r.Component),
-                Le = Object(R.d)("DefaultRootRouter", {
+                xe = Object(R.d)("DefaultRootRouter", {
                     autoReportInteractive: !0
-                })(xe);
+                })(De);
             n.d(t, "b", function() {
-                return Fe
+                return Pe
             }), n.d(t, "a", function() {
-                return Ae
+                return Fe
             });
-            var Pe = a.a.wrap(function() {
-                    return n.e(72).then(n.bind(null, "3iFw"))
+            var Le = a.a.wrap(function() {
+                    return n.e(71).then(n.bind(null, "3iFw"))
                 }, "Whispers", {
                     failSilently: !0,
                     placeholder: null
                 }),
-                Fe = "twilight-main",
-                Ae = function(e) {
+                Pe = "twilight-main",
+                Fe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -34756,14 +34740,14 @@
                             flexDirection: v.T.Column,
                             zIndex: this.props.theatreModeEnabled ? void 0 : v.Kb.Default
                         }, r.createElement("main", {
-                            className: Fe
+                            className: Pe
                         }, r.createElement(k.b, null), r.createElement(l.a, {
                             contentRefDelegate: this.setRootScrollableContentRef
-                        }, r.createElement(Le, {
+                        }, r.createElement(xe, {
                             isLoggedIn: this.props.isLoggedIn
                         }), r.createElement(o.b, {
                             mainRef: this.state.rootScrollableContentRef
-                        })), r.createElement(b, null), this.props.firstPageLoaded && r.createElement(Pe, null))), r.createElement(s.a, null)))
+                        })), r.createElement(b, null), this.props.firstPageLoaded && r.createElement(Le, null))), r.createElement(s.a, null)))
                     }, t
                 }(r.Component)
         },
@@ -38944,7 +38928,7 @@
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.props.latencyTracking.reportInteractive(), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(V.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(V.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(V.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Play, this.onPlayerPlay), this.player.removeEventListener(z.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(V.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(V.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(z.a.Seeked, this.onSeek), this.player.removeEventListener(z.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(V.a.OpenStream, this.onOpenStream), this.player.removeEventListener(z.a.Pause, this.onPause), this.player.removeEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(z.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
+                        this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), o.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(V.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(V.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(V.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(z.a.Play, this.onPlayerPlay), this.player.removeEventListener(z.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(V.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(V.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(z.a.Seeked, this.onSeek), this.player.removeEventListener(z.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(V.a.OpenStream, this.onOpenStream), this.player.removeEventListener(z.a.Pause, this.onPause), this.player.removeEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(z.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.unregisterPlayer(), this.player.destroy()), o.n.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
@@ -39564,6 +39548,8 @@
                             t && t.autoReportInteractive && (this.logger.debug("Using default implementation of reportInteractive", {
                                 componentID: e
                             }), this.tracker.reportInteractive())
+                        }, d.prototype.componentWillUnmount = function() {
+                            this.tracker.unregister()
                         }, d.prototype.render = function() {
                             var e = {
                                     latencyTracking: this.tracker,
@@ -42435,7 +42421,8 @@
                     return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         this.communitySearch && e.isCommunitySearchOpen !== this.props.isCommunitySearchOpen && this.communitySearch.toggle(e.isCommunitySearchOpen)
                     }, t.prototype.render = function() {
-                        var e = this;
+                        var e = this,
+                            t = this.props.communityResults ? this.props.communityResults.hits : [];
                         return o.createElement("div", null, o.createElement(b.W, {
                             error: this.props.error,
                             errorMessage: this.props.errorMessage,
@@ -42449,14 +42436,15 @@
                             balloonProps: {
                                 size: b.s.Medium,
                                 direction: b.r.Bottom
-                            }
+                            },
+                            showDropdown: t.length > 0
                         }, o.createElement(b.Ia, {
                             display: b.R.Flex
                         }, o.createElement(f.b, {
                             height: 300,
                             suppressScrollX: !0,
                             className: "edit-broadcast__community-search__section"
-                        }, o.createElement(b.Ia, null, this.props.communityResults && this.props.communityResults.hits.map(function(t, n) {
+                        }, o.createElement(b.Ia, null, t.map(function(t, n) {
                             return o.createElement(w, {
                                 key: t.objectID,
                                 "data-idx": n,
@@ -42466,7 +42454,7 @@
                         }))), o.createElement(b.Ia, {
                             className: "edit-broadcast__community-search__section"
                         }, o.createElement(y, {
-                            community: this.props.communityResults && null !== this.state.focusedCommunityIdx ? this.props.communityResults.hits[this.state.focusedCommunityIdx] : null
+                            community: this.props.communityResults && null !== this.state.focusedCommunityIdx ? t[this.state.focusedCommunityIdx] : null
                         }))))), o.createElement(b.Ia, {
                             margin: {
                                 top: .5
@@ -42861,16 +42849,16 @@
                             })
                         }, t.fetchGoLiveNotification = function(e) {
                             return r.__awaiter(t, void 0, void 0, function() {
-                                var t, n, i, a;
-                                return r.__generator(this, function(o) {
-                                    switch (o.label) {
+                                var t, n, i, a, o, s;
+                                return r.__generator(this, function(c) {
+                                    switch (c.label) {
                                         case 0:
                                             return t = "/kraken/users/" + e + "/notifications/custom?notification_type=streamup", [4, m.a.get(t)];
                                         case 1:
-                                            return (n = o.sent()).body && !n.error ? (i = n.body.message, this.setState(function(e) {
+                                            return (n = c.sent()).body && !n.error ? (i = n.body, a = i.message, o = i.is_default, this.setState(function(e) {
                                                 var t = r.__assign({}, e);
-                                                return t.fields.goLiveNotification.value = i || "", t.isLoaded = !0, t
-                                            })) : (a = Object(l.d)("Unable to fetch go live notification", "StreamInformation"), l.j.error(new Error(a), a), this.setState({
+                                                return t.fields.goLiveNotification.value = o ? "" : a, t.isLoaded = !0, t
+                                            })) : (s = Object(l.d)("Unable to fetch go live notification", "StreamInformation"), l.j.error(new Error(s), s), this.setState({
                                                 isLoaded: !0
                                             })), [2]
                                     }
@@ -43605,16 +43593,16 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.convertViews = r, t.extensionInstallationsFromRest = function(e) {
+            }), t.convertViews = a, t.extensionInstallationsFromRest = function(e) {
                 return e.installed_extensions.map(function(t) {
                     var n = t.extension,
-                        a = t.installation_status,
-                        o = e.tokens.reduce(function(e, t) {
+                        o = t.installation_status,
+                        s = e.tokens.reduce(function(e, t) {
                             var i = t.extension_id,
                                 r = t.token;
                             return n.id === i ? r : e
                         }, ""),
-                        s = a.activation_config.anchor === i.ExtensionAnchor.Component;
+                        l = o.activation_config.anchor === r.ExtensionAnchor.Component;
                     return {
                         id: n.id,
                         extension: {
@@ -43623,32 +43611,38 @@
                             bitsEnabled: n.bits_enabled,
                             description: n.description,
                             name: n.name,
-                            iconUrl: n.icon_url,
+                            iconUrl: n.icon_urls[i.ExtensionIconSizes.Square100],
+                            iconUrls: {
+                                square24: n.icon_urls[i.ExtensionIconSizes.Square24],
+                                square100: n.icon_urls[i.ExtensionIconSizes.Square100],
+                                discoverySplash: n.icon_urls[i.ExtensionIconSizes.DiscoverySplash]
+                            },
                             id: n.id,
                             requestIdentityLink: n.request_identity_link,
                             sku: n.sku,
                             summary: n.summary,
-                            token: o,
+                            token: s,
                             vendorCode: n.vendor_code,
                             state: n.state,
                             version: n.version,
-                            views: r(n.views),
+                            views: a(n.views),
                             whitelistedConfigUrls: n.whitelisted_config_urls,
                             whitelistedPanelUrls: n.whitelisted_panel_urls
                         },
                         activationConfig: {
-                            anchor: a.activation_config.anchor,
-                            slot: a.activation_config.slot,
-                            x: s ? a.activation_config.x : void 0,
-                            y: s ? a.activation_config.y : void 0,
-                            state: a.activation_state
+                            anchor: o.activation_config.anchor,
+                            slot: o.activation_config.slot,
+                            x: l ? o.activation_config.x : void 0,
+                            y: l ? o.activation_config.y : void 0,
+                            state: o.activation_state
                         }
                     }
                 })
             };
-            var i = n("UD7r");
+            var i = n("2R+N"),
+                r = n("UD7r");
 
-            function r(e) {
+            function a(e) {
                 var t = {};
                 return e.component && (t.component = {
                     aspectHeight: e.component.aspect_height,
@@ -49099,7 +49093,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsent = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardStreamDelay = "live_dashboard_stream_delay", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AbandonedSearch = "abandoned_search", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BeganSearch = "began_search", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.CompletedSearch = "completed_search", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsent = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardStreamDelay = "live_dashboard_stream_delay", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportHide = "auth_exit", e.PassportShow = "auth_show", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptImpression = "raid_prompt_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQuery = "search_query", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.Unfollow = "unfollow", e.UpdateLiveDashboardStreamInformation = "live_dashboard_stream_information", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
