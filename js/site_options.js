@@ -485,10 +485,10 @@ window.SiteOptions = {
         },
         "16e62af8-77e7-4d62-92c2-c66c5713a78f": {
             "name": "enable_live_sorting",
-            "v": 3943,
+            "v": 3944,
             "t": 1,
             "groups": [{
-                "weight": 88,
+                "weight": 89,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -496,9 +496,6 @@ window.SiteOptions = {
             }, {
                 "weight": 1,
                 "value": "control1"
-            }, {
-                "weight": 1,
-                "value": "enable"
             }]
         },
         "1710cf57-352c-4d09-b2c1-3d40bdf79b30": {
