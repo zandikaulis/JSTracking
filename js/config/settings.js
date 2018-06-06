@@ -1024,6 +1024,18 @@ window.__twilightSettings = {
                 "weight": 0,
                 "value": "no"
             }]
+        },
+        "fa443b30-d363-4978-a831-14c653eb6f41": {
+            "name": "TWILIGHT_AD_DENSITY_WIDGET",
+            "v": 3940,
+            "t": 3,
+            "groups": [{
+                "weight": 5,
+                "value": "yes"
+            }, {
+                "weight": 5,
+                "value": "no"
+            }]
         }
     }
 }
