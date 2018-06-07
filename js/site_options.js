@@ -1449,11 +1449,11 @@ window.SiteOptions = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 3800,
+            "v": 3950,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.5.6"
+                "value": "2.5.14"
             }]
         },
         "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
@@ -1755,7 +1755,7 @@ window.SiteOptions = {
         },
         "49083595-80d4-4c13-93a2-20a605b3318e": {
             "name": "Player Core WASM experiment",
-            "v": 3929,
+            "v": 3953,
             "t": 1,
             "groups": [{
                 "weight": 15,
@@ -5702,14 +5702,17 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3926,
+            "v": 3951,
             "t": 1,
             "groups": [{
-                "weight": 2,
-                "value": "2.5.13"
-            }, {
-                "weight": 98,
+                "weight": 90,
                 "value": "2.5.6"
+            }, {
+                "weight": 5,
+                "value": "2.5.14"
+            }, {
+                "weight": 5,
+                "value": "2.5.15"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
