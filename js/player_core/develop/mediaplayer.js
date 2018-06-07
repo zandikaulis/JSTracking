@@ -2299,6 +2299,11 @@ module.exports = {
      * @param {Object} playlist properties that have changed
      */
     TWITCH_INFO: 'PlayerTwitchInfo',
+    /**
+     * Notifies a failed API call inside the worker message handler
+     * @param {string} message The message of exception
+     */
+    WORKER_ERROR: 'PlayerWorkerError'
 };
 
 
@@ -2579,7 +2584,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-41c3e26e";
+    return "2.3.0-a0826094";
 }
 
 MediaPlayer.prototype.isLooping = function () {
