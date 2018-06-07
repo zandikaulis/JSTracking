@@ -2034,10 +2034,10 @@ window.SiteOptions = {
         },
         "4f2ebce8-68ed-40a4-afb2-9db8fb09711d": {
             "name": "vod_qos_model",
-            "v": 3947,
+            "v": 3948,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 40,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -2051,6 +2051,9 @@ window.SiteOptions = {
             }, {
                 "weight": 20,
                 "value": "control20"
+            }, {
+                "weight": 10,
+                "value": "asia_reverse"
             }]
         },
         "4f5c0aa5-292d-4ed3-9b2a-f9da6ea195f2": {
