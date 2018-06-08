@@ -3557,6 +3557,18 @@ window.SiteOptions = {
                 "value": "no_autoplay"
             }]
         },
+        "8f29eb23-cdb8-43a2-bb0f-7d0e0232f918": {
+            "name": "ios_graphql_browse",
+            "v": 3959,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "disabled"
+            }, {
+                "weight": 0,
+                "value": "enabled"
+            }]
+        },
         "8f5277f3-7583-4fd9-ab09-e5a5c432b12b": {
             "name": "android_autoplay_profile",
             "v": 1263,
