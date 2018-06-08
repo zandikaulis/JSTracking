@@ -1758,13 +1758,13 @@ window.SiteOptions = {
         },
         "49083595-80d4-4c13-93a2-20a605b3318e": {
             "name": "Player Core WASM experiment",
-            "v": 3953,
+            "v": 3968,
             "t": 1,
             "groups": [{
-                "weight": 15,
+                "weight": 0,
                 "value": "wasm"
             }, {
-                "weight": 85,
+                "weight": 100,
                 "value": "asmjs"
             }]
         },
@@ -5729,13 +5729,10 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3963,
+            "v": 3967,
             "t": 1,
             "groups": [{
-                "weight": 50,
-                "value": "2.5.6"
-            }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "2.5.15"
             }]
         },
