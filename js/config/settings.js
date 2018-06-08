@@ -133,13 +133,13 @@ window.__twilightSettings = {
         },
         "080c0331-3073-4539-992f-93274236a97d": {
             "name": "TWILIGHT_PAY__SAVED_PAYMENT_METHODS",
-            "v": 3733,
+            "v": 3957,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 75,
                 "value": "yes"
             }, {
-                "weight": 50,
+                "weight": 25,
                 "value": "no"
             }]
         },
