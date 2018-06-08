@@ -830,14 +830,14 @@ window.SiteOptions = {
         },
         "21084181-ee54-486d-8eb2-09a317143a8e": {
             "name": "pushy_notifications_fatigue_v2",
-            "v": 3930,
+            "v": 3955,
             "t": 2,
             "groups": [{
                 "weight": 50,
                 "value": "control"
             }, {
                 "weight": 50,
-                "value": "treatment"
+                "value": "active"
             }]
         },
         "2153e9fc-7f48-4402-aa54-7883d0c55c98": {
