@@ -688,13 +688,13 @@ window.__twilightSettings = {
         },
         "9619b63b-2e9a-4e20-af4b-cce72346691d": {
             "name": "twilight_web_onboarding_follow_categories",
-            "v": 2890,
+            "v": 3965,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "enabled"
             }]
         },
@@ -964,13 +964,13 @@ window.__twilightSettings = {
         },
         "e9fe3136-84bc-4a61-9079-0c7df78abeb3": {
             "name": "twilight_web_onboarding_categories",
-            "v": 2892,
+            "v": 3964,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "yes"
             }]
         },
