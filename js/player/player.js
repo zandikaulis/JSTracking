@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".84ad9240bd6e1beadf6b.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".880ab2faaff59c7a7d4c.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -4203,7 +4203,8 @@
             I = {
                 "twitch-ext-follow-action": O,
                 "twitch-ext-login-request": C,
-                "twitch-ext-use-bits-prompt-required": T
+                "twitch-ext-use-bits-prompt-required": T,
+                "twitch-ext-use-bits": T
             }
     }, function(e, t, n) {
         "use strict";
@@ -28540,7 +28541,7 @@
                 function t() {
                     r(this, t);
                     var e = i(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e._boundCreateExtensionHoverHandler = e._createHoverHandler.bind(e), e._boundOnClick = e._onClick.bind(e), e._boundHandleMenuTransition = e._handleMenuTransition.bind(e), e._boundHandleWindowBlur = e.handleWindowBlur.bind(e), e._boundHandleMenuDismiss = e._handleMenuDismiss.bind(e), e._boundOnImageLoadFail = e._onImageLoadFail.bind(e), e.state = {
+                    return e._boundCreateExtensionHoverHandler = e._createHoverHandler.bind(e), e._boundOnClick = e._onClick.bind(e), e._boundHandleMenuTransition = e._handleMenuTransition.bind(e), e._boundHandleWindowBlur = e.handleWindowBlur.bind(e), e._boundHandleMenuDismiss = e._handleMenuDismiss.bind(e), e._boundOnImageLoadFail = e._onImageLoadFail.bind(e), e._boundTrackEvent = e.trackEvent.bind(e), e.state = {
                         iconUrls: e._getIconUrls(e.props.installation)
                     }, e
                 }
@@ -28615,7 +28616,7 @@
                                 onIdentityToggle: a,
                                 onVisibilityToggle: s,
                                 playerHeight: i,
-                                trackEvent: this.trackEvent,
+                                trackEvent: this._boundTrackEvent,
                                 windowObj: o,
                                 handleMenuTransition: this._boundHandleMenuTransition,
                                 closeExtensionMenu: this._boundHandleMenuDismiss
@@ -37688,7 +37689,7 @@
             }(),
             os = n(106),
             as = n(10),
-            ss = "//video-edge-b7f7f8.sjc02.hls.ttvnw.net/v1/segment/Ck74Ss8gQ98XQvmmXP15T5OfZhxHLbniiksJfE-pT2FCT0BIHOfklXWfNANhI-vpcaZB1RsbYA5xw_AI2-8-K3qEkcft4wwLS92Cw70h3WA_rxAu0KXTJZTOvYQ_B35d8_ZIJVkv4dxvk2IwDVR01lAB89wH-nP2ZXyT3knmpqK2v_6f67ipRcZl-o0aUONXp5IH3v1LcO0J2RR5rVqDNQDU1ehyOCV779xgXICUTnQSPBqcbSUXqmvueF4sLo8OcWELyCg58f8knV1IctCg4TTG3_ORoOExyJ5NocLS-b09x2IcWXqZlLWmjAB-dMxc6B4S4HbLOUO8u5tUnJcYOq7XzMRdQIOSkmHMPGTegdQXokXKCytyjeS_HkaOVM2n_du6WwUMkNV4hYB1I31tXYQzt0dIvywQlhAYb0fvfDR7sRykYxKlgxfz-KU6RJnMOdXnxiihAITpRzgbgcFP3tocyHLudQRZTW_7hkLLEJz5OK2NTlKmYT9XJhrsAo1HfYeWFkCVi22NLQUGVQUH0L9158W9HMRvK4BJEu.ts",
+            ss = "//video-edge-0cf7ec.sjc02.hls.ttvnw.net/v1/segment/Crp1p4D7Pzwl6VXYuS5yE3SZmIg-IR54a3VoYPY3xY3q9MjCIc32DUI4nYa9KvqE2RuW9vMoXfOQR2WAk6guM4Hsm_ginn0h7FFEBGn1zahD1R7XdH9wv5Y5tgYLgBrMGa7O_dY3Zk5GSxpO416NneUMqmZoJHL8QJFb71r8O88XKg3KAh4EILHn6Oqqn4G8SjNvR6nAA8A91LMQymMpWpVR_5LHUeAeQItBsZXigTM9Do5mEH3csrznh7O6BozV_khIv-Z97qvIR4o2SzqnxvZKdOTamO3yL8G4IJ3PgZn_4JBeh24gEukkQIImm--5XknqlQBDqwj4vc2ZvU4W1bpxtOnjCsTMUoeMQea-tPIb2KZpxVA-jCIfD4y8TfsBeNYu4doX_7fS_3eE6fisHhN8apW8nzExgAlmUy_oLp7lCDp93uuOpo56f5rZPlOqYXy26C1LLm_ueG2BgnZblPArVSSmghCdfAWgrEM7nF9iih-CPJBxOAPOud8vNzX5QuzR9ozBbUw3nsT6zfHCeGAjNMU.ts",
             us = n(49),
             cs = n(271),
             ls = n(140),
@@ -37725,7 +37726,7 @@
             vs = /^(\d+)\.(\d+)\.(\d+)[+|-]?(.*)?$/,
             gs = /^(\d+)\.(\d+)[+|-]?(.*)?$/,
             bs = /^(\d+)$/,
-            _s = "3.6.2",
+            _s = "3.7.0",
             ws = "desktop",
             ks = "ember",
             Es = [es.e, es.d, es.v, es.p],
