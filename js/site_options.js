@@ -1452,11 +1452,11 @@ window.SiteOptions = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 3950,
+            "v": 3962,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.5.14"
+                "value": "2.5.15"
             }]
         },
         "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
@@ -5729,16 +5729,13 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3951,
+            "v": 3963,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 50,
                 "value": "2.5.6"
             }, {
-                "weight": 5,
-                "value": "2.5.14"
-            }, {
-                "weight": 5,
+                "weight": 50,
                 "value": "2.5.15"
             }]
         },
