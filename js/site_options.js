@@ -2037,10 +2037,10 @@ window.SiteOptions = {
         },
         "4f2ebce8-68ed-40a4-afb2-9db8fb09711d": {
             "name": "vod_qos_model",
-            "v": 3948,
+            "v": 3976,
             "t": 1,
             "groups": [{
-                "weight": 40,
+                "weight": 50,
                 "value": "control"
             }, {
                 "weight": 10,
@@ -2048,9 +2048,6 @@ window.SiteOptions = {
             }, {
                 "weight": 10,
                 "value": "business_logic_reverse"
-            }, {
-                "weight": 10,
-                "value": "poisson_v1"
             }, {
                 "weight": 20,
                 "value": "control20"
