@@ -2584,7 +2584,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-3e3e7af1";
+    return "2.3.0-a51c4906";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3276,7 +3276,24 @@ MediaSink.prototype.remove = function (range) {
  * @param {number} playhead - position of new playhead
  */
 MediaSink.prototype.seekTo = function (playhead) {
-    this._video.currentTime = playhead;
+    var buffered = this.buffered();
+    if (playhead >= buffered.start && playhead < buffered.end) {
+        // If we're seeking within the buffer, wait for pending operations
+        function schedulePromise(track) {
+            return new Promise(function (resolve) {
+                track.schedule(resolve);
+            });
+        }
+        var promises = [];
+        for (var key in this._tracks) {
+            promises.push(this._tracks[key].then(schedulePromise));
+        }
+        Promise.all(promises).then(function () {
+            this._video.currentTime = playhead
+        }.bind(this));
+    } else {
+        this._video.currentTime = playhead;
+    }
 };
 
 /**
@@ -3566,13 +3583,9 @@ function SafeSourceBuffer(video, srcBuf) {
  * @param {TypedArray} buf - fmp4 media buffer
  */
 SafeSourceBuffer.prototype.appendBuffer = function (buf) {
-    if (this._pending.empty() && !this._updating()) {
-        this._srcBuf.appendBuffer(buf);
-    } else {
-        this._pending.push(function (srcBuf) {
-            srcBuf.appendBuffer(buf);
-        });
-    }
+    this.schedule(function (srcBuf) {
+        srcBuf.appendBuffer(buf);
+    });
 };
 
 /**
@@ -3580,13 +3593,9 @@ SafeSourceBuffer.prototype.appendBuffer = function (buf) {
  * @param {TypedArray} buf - fmp4 media buffer
  */
 SafeSourceBuffer.prototype.setTimestampOffset = function (offset) {
-    if (this._pending.empty() && !this._updating()) {
-        this._srcBuf.timestampOffset = offset;
-    } else {
-        this._pending.push(function (srcBuf) {
-            srcBuf.timestampOffset = offset;
-        });
-    }
+    this.schedule(function (srcBuf) {
+        srcBuf.timestampOffset = offset;
+    });
 };
 
 /**
@@ -3595,12 +3604,20 @@ SafeSourceBuffer.prototype.setTimestampOffset = function (offset) {
  * @param {number} end - end of range to remove
  */
 SafeSourceBuffer.prototype.remove = function (start, end) {
+    this.schedule(function (srcBuf) {
+        srcBuf.remove(start, end);
+    });
+};
+
+/**
+ * Schedule a callback for when updating is over
+ * @param {fn} callback - call after update ends
+ */
+SafeSourceBuffer.prototype.schedule = function (fn) {
     if (this._pending.empty() && !this._updating()) {
-        this._srcBuf.remove(start, end);
+        fn(this._srcBuf);
     } else {
-        this._pending.push(function (srcBuf) {
-            srcBuf.remove(start, end);
-        });
+        this._pending.push(fn);
     }
 };
 
