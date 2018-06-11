@@ -461,14 +461,14 @@ window.SiteOptions = {
         },
         "158b4a89-454f-496c-aa2d-646886c43ec4": {
             "name": "ios_discover",
-            "v": 3974,
+            "v": 3975,
             "t": 1,
             "groups": [{
                 "weight": 80,
                 "value": "control"
             }, {
                 "weight": 20,
-                "value": "enabled_6.4"
+                "value": "enabled_6.4_and_later"
             }]
         },
         "15a67dfe-256c-428c-928f-d3c4c13d0abf": {
