@@ -913,7 +913,7 @@ window.__twilightSettings = {
         },
         "db6dc127-b372-48fe-9d8b-493ea6c51c57": {
             "name": "twilight_preview_card_iconic_images",
-            "v": 3778,
+            "v": 3980,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -921,9 +921,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "boxart"
-            }, {
-                "weight": 0,
-                "value": "nothing"
             }]
         },
         "e0fdfc17-389d-4ba5-8596-065352ddc01e": {
