@@ -485,7 +485,7 @@ window.SiteOptions = {
         },
         "16e62af8-77e7-4d62-92c2-c66c5713a78f": {
             "name": "enable_live_sorting",
-            "v": 3954,
+            "v": 3982,
             "t": 1,
             "groups": [{
                 "weight": 88,
@@ -498,7 +498,7 @@ window.SiteOptions = {
                 "value": "control1"
             }, {
                 "weight": 1,
-                "value": "enable_dl_only"
+                "value": "enable"
             }]
         },
         "1710cf57-352c-4d09-b2c1-3d40bdf79b30": {
