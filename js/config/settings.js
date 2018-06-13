@@ -39,6 +39,7 @@ window.__twilightSettings = {
     "extensions_bits_banner_enabled": true,
     "extensions_discovery_enabled": true,
     "extensions_mobile_banner_enabled": false,
+    "extensions_mve_banner_enabled": false,
     "first_page_loaded_timeout": 30000,
     "gdpr_consent_enabled": false,
     "gdpr_disabled_eea_consent": false,
