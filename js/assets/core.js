@@ -7604,7 +7604,7 @@
                                 "persistent-player__border--mini": this.props.mini
                             }),
                             borderRadius: this.props.mini ? g.t.Medium : g.t.None,
-                            overflow: this.props.mini ? g.La.Hidden : g.La.Auto
+                            overflow: this.props.mini ? g.La.Hidden : void 0
                         }, l.createElement("div", {
                             className: u("persistent-player", n),
                             style: e
