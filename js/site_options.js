@@ -1758,13 +1758,13 @@ window.SiteOptions = {
         },
         "49083595-80d4-4c13-93a2-20a605b3318e": {
             "name": "Player Core WASM experiment",
-            "v": 3968,
+            "v": 3985,
             "t": 1,
             "groups": [{
-                "weight": 0,
+                "weight": 5,
                 "value": "wasm"
             }, {
-                "weight": 100,
+                "weight": 95,
                 "value": "asmjs"
             }]
         },
