@@ -60,7 +60,7 @@ window.__twilightSettings = {
     "onsite_notifications_launch": true,
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
     "persisted_queries_enabled": true,
-    "player_routes_exact": ["activate", "bits", "bits-checkout", "directory", "following", "popout", "prime", "store", "subs"],
+    "player_routes_exact": ["", "activate", "bits", "bits-checkout", "directory", "following", "popout", "prime", "store", "subs"],
     "player_routes_startswith": ["bits-checkout/", "checkout/", "collections/", "communities/", "directory/", "event/", "prime/", "products/", "settings/", "store/", "subs/"],
     "premiere_video_manager_public": true,
     "premiere_video_manager_staff": true,
@@ -122,7 +122,7 @@ window.__twilightSettings = {
         },
         "03f25f55-ded6-417a-b241-d656571c4a1f": {
             "name": "twilight_watch_symmetra",
-            "v": 3510,
+            "v": 3999,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -321,7 +321,7 @@ window.__twilightSettings = {
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
             "name": "twilight_watch_winston",
-            "v": 3511,
+            "v": 3998,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -581,7 +581,7 @@ window.__twilightSettings = {
         },
         "647bfc96-3fc6-4f5e-ab95-38c4eab60830": {
             "name": "twilight_watch_sombra",
-            "v": 3996,
+            "v": 3997,
             "t": 1,
             "groups": [{
                 "weight": 100,

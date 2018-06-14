@@ -166,7 +166,7 @@ window.SiteOptions = {
         },
         "03f25f55-ded6-417a-b241-d656571c4a1f": {
             "name": "twilight_watch_symmetra",
-            "v": 3510,
+            "v": 3999,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -1452,11 +1452,11 @@ window.SiteOptions = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 3962,
+            "v": 4000,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.5.15"
+                "value": "2.5.16"
             }]
         },
         "3e011e23-ef29-46a5-af4b-a86e15d8c9e6": {
@@ -1473,7 +1473,7 @@ window.SiteOptions = {
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
             "name": "twilight_watch_winston",
-            "v": 3511,
+            "v": 3998,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -2601,7 +2601,7 @@ window.SiteOptions = {
         },
         "647bfc96-3fc6-4f5e-ab95-38c4eab60830": {
             "name": "twilight_watch_sombra",
-            "v": 3996,
+            "v": 3997,
             "t": 1,
             "groups": [{
                 "weight": 100,
