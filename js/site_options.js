@@ -2367,6 +2367,18 @@ window.SiteOptions = {
                 "value": "control"
             }]
         },
+        "5bba49ad-0e6d-462c-96e0-f79ff45299be": {
+            "name": "pushy_device_token_pruning",
+            "v": 4001,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "5bdcd7ae-c35c-4c5a-80b4-72716c3f5612": {
             "name": "android_disable_core_player_mp4_playback",
             "v": 3738,
@@ -5762,11 +5774,14 @@ window.SiteOptions = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 3967,
+            "v": 4002,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "2.5.15"
+            }, {
+                "weight": 10,
+                "value": "2.5.16"
             }]
         },
         "ed516213-9b6f-49a0-96f7-1706aafc8e2d": {
