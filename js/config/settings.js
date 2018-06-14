@@ -579,6 +579,18 @@ window.__twilightSettings = {
                 "value": "clip_page"
             }]
         },
+        "647bfc96-3fc6-4f5e-ab95-38c4eab60830": {
+            "name": "twilight_watch_sombra",
+            "v": 3996,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
+            }]
+        },
         "6699df7d-9f23-494c-87a1-06fdf80f1e68": {
             "name": "twilight_video_card_updates",
             "v": 3893,

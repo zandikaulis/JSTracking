@@ -1758,7 +1758,7 @@ window.SiteOptions = {
         },
         "49083595-80d4-4c13-93a2-20a605b3318e": {
             "name": "Player Core WASM experiment",
-            "v": 3994,
+            "v": 3995,
             "t": 1,
             "groups": [{
                 "weight": 15,
@@ -2597,6 +2597,18 @@ window.SiteOptions = {
             }, {
                 "weight": 100,
                 "value": "active"
+            }]
+        },
+        "647bfc96-3fc6-4f5e-ab95-38c4eab60830": {
+            "name": "twilight_watch_sombra",
+            "v": 3996,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
             }]
         },
         "64c787d2-7a36-447b-bba3-8bbab6846da6": {
