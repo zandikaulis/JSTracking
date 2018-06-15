@@ -19158,6 +19158,7 @@
                                             M = l.getInteger(e.tags["msg-param-selected-count"]);
                                             this.events.rewardgift({
                                                 bitsAmount: I,
+                                                channel: o,
                                                 minCheerAmount: N,
                                                 selectedCount: M,
                                                 message: D,

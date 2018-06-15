@@ -41,7 +41,7 @@ window.__twilightSettings = {
     "extensions_mobile_banner_enabled": false,
     "extensions_mve_banner_enabled": false,
     "first_page_loaded_timeout": 30000,
-    "gdpr_consent_enabled": false,
+    "gdpr_consent_enabled": true,
     "gdpr_disabled_eea_consent": false,
     "gdpr_evidon_timeout_ms": 30000,
     "google_analytics_url": "https://ssl.google-analytics.com/ga.js",
