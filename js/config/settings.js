@@ -816,7 +816,7 @@ window.__twilightSettings = {
         },
         "ba44e8c9-0beb-4982-b48f-87457bfa962c": {
             "name": "twilight_extensions_discovery_release",
-            "v": 3928,
+            "v": 4020,
             "t": 1,
             "groups": [{
                 "weight": 100,
