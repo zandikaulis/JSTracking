@@ -4328,6 +4328,7 @@
                     "fa443b30-d363-4978-a831-14c653eb6f41": "no",
                     "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": "off",
                     "03f25f55-ded6-417a-b241-d656571c4a1f": "off",
+                    "647bfc96-3fc6-4f5e-ab95-38c4eab60830": "off",
                     "f3920cff-ef57-46c9-8dd9-b4f145acf6e5": "control",
                     "080c0331-3073-4539-992f-93274236a97d": "off",
                     "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": "control",
@@ -4372,6 +4373,7 @@
                     TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT: "ba473bec-1ad3-4b55-9b3e-fdc002ba695c",
                     TWILIGHT_WATCH_WINSTON: "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773",
                     TWILIGHT_WATCH_SYMMETRA: "03f25f55-ded6-417a-b241-d656571c4a1f",
+                    TWILIGHT_WATCH_SOMBRA: "647bfc96-3fc6-4f5e-ab95-38c4eab60830",
                     TWILIGHT_DISCOVERY_FRONTPAGE_MVP: "f3920cff-ef57-46c9-8dd9-b4f145acf6e5",
                     TWILIGHT_VOD_SHORYUKEN: "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9",
                     TWILIGHT_VOD_PROVOCATEUR: "51efc82d-cfe8-42bd-ae4b-9304112ed9df",
@@ -33022,26 +33024,27 @@
                 j = n("zB42"),
                 B = n("VwD5"),
                 z = n("GnwI"),
-                H = n("Fxe2"),
-                V = n("tuvy"),
-                W = n("dtw8");
-            var G = Object(o.b)(function(e) {
+                H = n("oJmH"),
+                V = n("Fxe2"),
+                W = n("tuvy"),
+                G = n("dtw8");
+            var q = Object(o.b)(function(e) {
                     var t = Object(_.c)(e);
                     return {
                         isLoggedIn: Object(_.d)(e),
                         userLogin: t && t.login
                     }
                 })(function(e) {
-                    return e.isLoggedIn && e.userLogin === e.match.params.channelLogin.toLowerCase() ? r.createElement(W.b, {
+                    return e.isLoggedIn && e.userLogin === e.match.params.channelLogin.toLowerCase() ? r.createElement(G.b, {
                         to: "/settings/profile"
-                    }) : r.createElement(W.b, {
+                    }) : r.createElement(G.b, {
                         to: "/"
                     })
                 }),
-                q = n("yR8l"),
-                Q = n("EOHf"),
-                K = n("Eo7B"),
-                Y = function(e) {
+                Q = n("yR8l"),
+                K = n("EOHf"),
+                Y = n("Eo7B"),
+                $ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.redirectToSubCheckout = function() {
@@ -33058,7 +33061,7 @@
                             fillContent: !0
                         }) : this.props.data.loading ? r.createElement(k.Ka, {
                             fillContent: !0
-                        }) : r.createElement(Q.a, null)
+                        }) : r.createElement(K.a, null)
                     }, Object.defineProperty(t.prototype, "productName", {
                         get: function() {
                             if (this.props.data.user && this.props.data.user.subscriptionProducts) {
@@ -33071,7 +33074,7 @@
                         configurable: !0
                     }), t
                 }(r.Component),
-                $ = Object(q.a)(K, {
+                X = Object(Q.a)(Y, {
                     options: function(e) {
                         return {
                             variables: {
@@ -33079,66 +33082,66 @@
                             }
                         }
                     }
-                })(Y),
-                X = a.a.wrap(function() {
+                })($),
+                J = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(49)]).then(n.bind(null, "XH7V"))
                 }, "ChannelClipsPage"),
-                J = a.a.wrap(function() {
+                Z = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(48)]).then(n.bind(null, "5qQ0"))
                 }, "ChannelCollectionsPage"),
-                Z = a.a.wrap(function() {
+                ee = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(47)]).then(n.bind(null, "0PcG"))
                 }, "ChannelEventsPage"),
-                ee = a.a.wrap(function() {
+                te = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(46)]).then(n.bind(null, "ibCL"))
                 }, "ChannelFollowersPage"),
-                te = a.a.wrap(function() {
+                ne = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(45)]).then(n.bind(null, "Zcpz"))
                 }, "ChannelFollowingPage"),
-                ne = a.a.wrap(function() {
+                ie = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(44)]).then(n.bind(null, "JNF5"))
                 }, "ChannelPage"),
-                ie = a.a.wrap(function() {
+                re = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(43)]).then(n.bind(null, "DOLr"))
                 }, "ChannelRoot"),
-                re = a.a.wrap(function() {
+                ae = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(42)]).then(n.bind(null, "AaPt"))
                 }, "ChannelVideosPage"),
-                ae = a.a.wrap(function() {
+                oe = a.a.wrap(function() {
                     return n.e(56).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                oe = a.a.wrap(function() {
+                se = a.a.wrap(function() {
                     return n.e(41).then(n.bind(null, "juOe"))
                 }, "ReportUserPage"),
-                se = a.a.wrap(function() {
+                le = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(40)]).then(n.bind(null, "4JFD"))
                 }, "VideoWatchPage"),
-                le = function(e) {
+                ce = function(e) {
                     return r.createElement(A.c, {
                         to: "/popout/" + e.match.params.channelLogin + "/chat"
                     })
                 },
-                ce = function(e) {
+                de = function(e) {
                     return r.createElement(A.c, {
                         to: "/" + e.match.params.channelLogin + "/videos/all"
                     })
                 },
-                de = function(e) {
+                ue = function(e) {
                     return r.createElement(A.c, {
                         to: "/" + e.match.params.channelLogin + "/videos/archive"
                     })
                 },
-                ue = function(e) {
+                pe = function(e) {
                     return window.location.replace(l.a.playerBaseURL + "/?channel=" + e.match.params.channelLogin), null
                 };
 
-            function pe(e) {
-                var t = Object(H.a)(e.match.params.videoID);
+            function me(e) {
+                var t = Object(V.a)(e.match.params.videoID);
                 return r.createElement(A.c, {
                     to: "/videos/" + t
                 })
             }
-            var me = function(e) {
+            var he = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -33158,242 +33161,251 @@
                         if (this.state.isError) return r.createElement(M.a, {
                             message: Object(l.d)("An error occurred on this page", "ChannelPageRouter")
                         });
-                        var e = Object(V.a)();
-                        return r.createElement(A.e, null, e ? r.createElement(A.d, {
+                        var e = Object(W.a)();
+                        return !Object(W.c)() && Object(W.b)(this.props.location.pathname) && (e = !1), r.createElement(A.e, null, e ? r.createElement(A.d, {
                             path: "/collections/:collectionID",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/collections/:collectionID",
-                            component: se
+                            component: le
                         }), r.createElement(A.d, {
                             path: "/videos/v:videoID",
-                            render: pe
+                            render: me
                         }), e ? r.createElement(A.d, {
                             path: "/videos/:videoID",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/videos/:videoID",
-                            component: se
+                            component: le
                         }), e ? r.createElement(A.d, {
                             path: "/:channelLogin",
-                            component: ie,
+                            component: re,
                             exact: !0
                         }) : r.createElement(A.d, {
                             path: "/:channelName",
-                            component: ne,
+                            component: ie,
                             exact: !0
                         }), e ? r.createElement(A.d, {
                             path: "/:channelLogin/about",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/:channelName/about",
-                            component: ne
+                            component: ie
                         }), e ? r.createElement(A.d, {
                             path: "/:channelLogin/clips",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/:channelName/clips",
-                            component: X
-                        }), r.createElement(A.d, {
-                            path: "/:channelLogin/chat",
-                            render: le
-                        }), e ? r.createElement(A.d, {
-                            path: "/:channelLogin/collections",
-                            component: ie
-                        }) : r.createElement(A.d, {
-                            path: "/:channelLogin/collections",
                             component: J
                         }), r.createElement(A.d, {
+                            path: "/:channelLogin/chat",
+                            render: ce
+                        }), e ? r.createElement(A.d, {
+                            path: "/:channelLogin/collections",
+                            component: re
+                        }) : r.createElement(A.d, {
+                            path: "/:channelLogin/collections",
+                            component: Z
+                        }), r.createElement(A.d, {
                             path: "/:channelLogin/embed",
-                            render: ue
-                        }), e && r.createElement(A.d, {
+                            render: pe
+                        }), e ? r.createElement(A.d, {
+                            path: "/:channelLogin/esports-loot",
+                            component: re
+                        }) : r.createElement(A.d, {
                             path: "/:channelLogin/esports-loot",
                             component: ie
-                        }), e && r.createElement(A.d, {
+                        }), e ? r.createElement(A.d, {
+                            path: "/:channelLogin/esports-pass",
+                            component: re
+                        }) : r.createElement(A.d, {
                             path: "/:channelLogin/esports-pass",
                             component: ie
-                        }), e && r.createElement(A.d, {
+                        }), e ? r.createElement(A.d, {
+                            path: "/:channelLogin/esports-progress",
+                            component: re
+                        }) : r.createElement(A.d, {
                             path: "/:channelLogin/esports-progress",
                             component: ie
                         }), e ? r.createElement(A.d, {
                             path: "/:channelLogin/events",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/:channelLogin/events",
-                            component: Z
-                        }), e ? r.createElement(A.d, {
-                            path: "/:channelLogin/followers",
-                            component: ie
-                        }) : r.createElement(A.d, {
-                            path: "/:channelLogin/followers",
                             component: ee
                         }), e ? r.createElement(A.d, {
+                            path: "/:channelLogin/followers",
+                            component: re
+                        }) : r.createElement(A.d, {
+                            path: "/:channelLogin/followers",
+                            component: te
+                        }), e ? r.createElement(A.d, {
                             path: "/:channelLogin/following",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/:channelLogin/following",
-                            component: te
+                            component: ne
                         }), r.createElement(A.d, {
                             path: "/:channelLogin/inbox",
-                            component: ae
+                            component: oe
                         }), r.createElement(A.d, {
                             path: "/:channelLogin/outbox",
-                            component: ae
+                            component: oe
                         }), r.createElement(A.d, {
                             path: "/:channelLogin/profile",
-                            render: ce
+                            render: de
                         }), r.createElement(A.d, {
                             path: "/:channelName/report",
-                            component: oe
+                            component: se
                         }), e ? r.createElement(A.d, {
                             path: "/:channelLogin/p/:entityID",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/:channelName/p/:entityID",
-                            component: ne
+                            component: ie
                         }), r.createElement(A.d, {
                             path: "/:channelLogin/popout",
-                            render: ue
+                            render: pe
                         }), e ? r.createElement(A.d, {
                             path: "/:channelLogin/rooms/:roomName",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/:channelName/rooms/:roomName",
-                            component: ne
+                            component: ie
                         }), r.createElement(A.d, {
                             path: "/:channelLogin/videos/(past_broadcasts?)",
-                            render: de
+                            render: ue
                         }), e ? r.createElement(A.d, {
                             path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                            component: ie
+                            component: re
                         }) : r.createElement(A.d, {
                             path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                            component: re
+                            component: ae
                         }), r.createElement(A.d, {
                             path: "/:channelLogin/videos/:unknownFilter?",
-                            render: ce
+                            render: de
                         }), r.createElement(A.d, {
                             path: "/:channelLogin/settings",
-                            component: G
+                            component: q
                         }), r.createElement(A.d, {
                             path: "/:channelLogin/subscribe",
-                            component: $
+                            component: X
                         }), r.createElement(A.d, {
                             path: "*",
-                            component: Q.a
+                            component: K.a
                         }))
                     }, t
                 }(r.Component),
-                he = Object(z.d)("ChannelPageRedesignRouter", {
+                fe = Object(H.compose)(Object(z.d)("ChannelPageRedesignRouter", {
                     autoReportInteractive: !0
-                })(me),
-                fe = a.a.wrap(function() {
+                }), A.f)(he),
+                ge = a.a.wrap(function() {
                     return n.e(72).then(n.bind(null, "wh8/"))
                 }, "AnonFrontPage"),
-                ge = a.a.wrap(function() {
+                ve = a.a.wrap(function() {
                     return n.e(71).then(n.bind(null, "moen"))
                 }, "BroadcastPage"),
-                ve = a.a.wrap(function() {
+                be = a.a.wrap(function() {
                     return n.e(70).then(n.bind(null, "99ae"))
                 }, "BrowseRootPage"),
-                be = a.a.wrap(function() {
+                ye = a.a.wrap(function() {
                     return n.e(69).then(n.bind(null, "otOH"))
                 }, "CommunityModerationRoot"),
-                ye = a.a.wrap(function() {
+                ke = a.a.wrap(function() {
                     return n.e(68).then(n.bind(null, "FvFK"))
                 }, "CreateCommunityPage"),
-                ke = a.a.wrap(function() {
+                Se = a.a.wrap(function() {
                     return n.e(67).then(n.bind(null, "dQAD"))
                 }, "DevOnlyRoot"),
-                Se = a.a.wrap(function() {
+                we = a.a.wrap(function() {
                     return n.e(66).then(n.bind(null, "mpcK"))
                 }, "DirectoryRootPage"),
-                we = a.a.wrap(function() {
+                Ee = a.a.wrap(function() {
                     return n.e(65).then(n.bind(null, "AtgE"))
                 }, "EmailUnsubscribePage"),
-                Ee = a.a.wrap(function() {
+                Ce = a.a.wrap(function() {
                     return n.e(64).then(n.bind(null, "VkGE"))
                 }, "EmailVerificationPage"),
-                Ce = a.a.wrap(function() {
+                Ne = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(63)]).then(n.bind(null, "4c/Z"))
                 }, "EventLandingPage"),
-                Ne = a.a.wrap(function() {
+                Te = a.a.wrap(function() {
                     return n.e(62).then(n.bind(null, "lQdQ"))
                 }, "ExtensionsRoot"),
-                Te = a.a.wrap(function() {
+                Ie = a.a.wrap(function() {
                     return n.e(61).then(n.bind(null, "Uyt6"))
                 }, "FollowingRootPage"),
-                Ie = a.a.wrap(function() {
+                _e = a.a.wrap(function() {
                     return n.e(60).then(n.bind(null, "0fnA"))
                 }, "FrontPage"),
-                _e = a.a.wrap(function() {
+                Re = a.a.wrap(function() {
                     return n.e(59).then(n.bind(null, "O0y+"))
                 }, "FriendRequestsPage"),
-                Re = a.a.wrap(function() {
+                Oe = a.a.wrap(function() {
                     return n.e(58).then(n.bind(null, "2W9R"))
                 }, "FriendsPage"),
-                Oe = a.a.wrap(function() {
+                De = a.a.wrap(function() {
                     return n.e(57).then(n.bind(null, "UqZg"))
                 }, "InventoryPage"),
-                De = a.a.wrap(function() {
+                Pe = a.a.wrap(function() {
                     return n.e(56).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                Pe = a.a.wrap(function() {
+                xe = a.a.wrap(function() {
                     return n.e(55).then(n.bind(null, "uHYy"))
                 }, "PartnershipSignup"),
-                xe = a.a.wrap(function() {
+                Le = a.a.wrap(function() {
                     return n.e(54).then(n.bind(null, "4Agi"))
                 }, "DesklightModsRootPage"),
-                Le = a.a.wrap(function() {
+                Fe = a.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(0), n.e(53)]).then(n.bind(null, "cz4h"))
                 }, "PaymentsLandingPage"),
-                Fe = a.a.wrap(function() {
+                Ae = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(52)]).then(n.bind(null, "EOaz"))
                 }, "SettingsRoot"),
-                Ae = a.a.wrap(function() {
+                Ue = a.a.wrap(function() {
                     return n.e(51).then(n.bind(null, "UGMo"))
                 }, "SubscriptionsManagementPage"),
-                Ue = a.a.wrap(function() {
+                Me = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(50)]).then(n.bind(null, "c0BZ"))
                 }, "UnsubscribePage");
 
-            function Me() {
+            function je() {
                 return window.location.assign(window.location.href), null
             }
 
-            function je(e) {
+            function Be(e) {
                 return r.createElement(A.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             }
 
-            function Be() {
+            function ze() {
                 return r.createElement(A.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             }
 
-            function ze() {
+            function He() {
                 return r.createElement(A.c, {
                     to: "/directory/all/xbox"
                 })
             }
 
-            function He() {
+            function Ve() {
                 return r.createElement(A.c, {
                     to: "/manager/upload"
                 })
             }
 
-            function Ve() {
+            function We() {
                 return window.location.replace("/p/terms-of-service"), null
             }
 
-            function We() {
+            function Ge() {
                 return window.location.replace(B.a), null
             }
-            var Ge = function(e) {
+            var qe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -33414,205 +33426,205 @@
                             message: Object(l.d)("An error occurred on this page", "DefaultRootRouter")
                         }) : r.createElement(A.e, null, l.a.buildType !== j.a.Production && r.createElement(A.d, {
                             path: "/_dev",
-                            component: ke
+                            component: Se
                         }), r.createElement(A.d, {
                             exact: !0,
                             path: "/",
-                            component: this.props.isLoggedIn ? Ie : fe
+                            component: this.props.isLoggedIn ? _e : ge
                         }), r.createElement(A.d, {
                             path: "/activate",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/bits",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/bits-checkout",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/checkout",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/products",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/embed",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/popout",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/prime",
-                            render: Me
-                        }), l.a.buildType !== j.a.Production && r.createElement(A.d, {
-                            path: "/sq",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/subs",
-                            render: Me
-                        }), r.createElement(A.d, {
-                            path: "/broadcast",
-                            component: ge
-                        }), r.createElement(A.d, {
-                            path: "/collections/:collectionID",
-                            component: he
-                        }), r.createElement(A.d, {
-                            path: "/communities/create",
-                            component: ye
-                        }), r.createElement(A.d, {
-                            path: "/communities/:encodedCommunityName/details",
-                            component: Se
-                        }), r.createElement(A.d, {
-                            path: "/communities/:encodedCommunityName/moderation/:page?",
-                            component: be
-                        }), r.createElement(A.d, {
-                            path: "/communities/:encodedCommunityName/:encodedLanguage",
-                            component: Se
-                        }), r.createElement(A.d, {
-                            path: "/communities/:encodedCommunityName",
-                            component: Se
-                        }), r.createElement(A.d, {
-                            path: "/directory/communities",
-                            component: ve
-                        }), r.createElement(A.d, {
-                            path: "/directory/creative",
-                            component: ve
-                        }), r.createElement(A.d, {
-                            path: "/directory/following/:category?",
-                            component: Te
-                        }), r.createElement(A.d, {
-                            path: "/directory/game/:encodedCommunityName/clips",
-                            component: Se
-                        }), r.createElement(A.d, {
-                            path: "/directory/game/:encodedCommunityName/details",
-                            component: Se
-                        }), r.createElement(A.d, {
-                            path: "/directory/game/:encodedCommunityName/videos/:filter",
-                            component: Se
-                        }), r.createElement(A.d, {
-                            path: "/directory/game/:encodedCommunityName/videos",
                             render: je
                         }), r.createElement(A.d, {
-                            path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                            component: Se
+                            path: "/bits",
+                            render: je
                         }), r.createElement(A.d, {
-                            path: "/directory/game/:encodedCommunityName",
-                            component: Se
+                            path: "/bits-checkout",
+                            render: je
                         }), r.createElement(A.d, {
-                            path: "/directory/all/ps4",
+                            path: "/checkout",
+                            render: je
+                        }), r.createElement(A.d, {
+                            path: "/products",
+                            render: je
+                        }), r.createElement(A.d, {
+                            path: "/embed",
+                            render: je
+                        }), r.createElement(A.d, {
+                            path: "/popout",
+                            render: je
+                        }), r.createElement(A.d, {
+                            path: "/prime",
+                            render: je
+                        }), l.a.buildType !== j.a.Production && r.createElement(A.d, {
+                            path: "/sq",
+                            render: je
+                        }), r.createElement(A.d, {
+                            path: "/subs",
+                            render: je
+                        }), r.createElement(A.d, {
+                            path: "/broadcast",
                             component: ve
                         }), r.createElement(A.d, {
-                            path: "/directory/all/xb1",
-                            render: ze
+                            path: "/collections/:collectionID",
+                            component: fe
                         }), r.createElement(A.d, {
-                            path: "/directory/all/xbox",
-                            component: ve
+                            path: "/communities/create",
+                            component: ke
                         }), r.createElement(A.d, {
-                            path: "/directory/all/:encodedLanguage",
-                            component: ve
-                        }), r.createElement(A.d, {
-                            path: "/directory/all",
-                            component: ve
-                        }), r.createElement(A.d, {
-                            path: "/directory/:category?",
-                            component: ve
-                        }), r.createElement(A.d, {
-                            path: "/events/:eventName",
-                            component: Ce
-                        }), r.createElement(A.d, {
-                            path: "/email-unsubscribe",
+                            path: "/communities/:encodedCommunityName/details",
                             component: we
                         }), r.createElement(A.d, {
-                            path: "/email-verification/:emailOpaqueId",
-                            component: Ee
+                            path: "/communities/:encodedCommunityName/moderation/:page?",
+                            component: ye
                         }), r.createElement(A.d, {
-                            path: "/ext",
-                            component: Ne
+                            path: "/communities/:encodedCommunityName/:encodedLanguage",
+                            component: we
                         }), r.createElement(A.d, {
-                            path: "/friends/requests",
-                            component: _e
+                            path: "/communities/:encodedCommunityName",
+                            component: we
                         }), r.createElement(A.d, {
-                            path: "/friends",
-                            component: Re
+                            path: "/directory/communities",
+                            component: be
                         }), r.createElement(A.d, {
-                            path: "/following",
+                            path: "/directory/creative",
+                            component: be
+                        }), r.createElement(A.d, {
+                            path: "/directory/following/:category?",
+                            component: Ie
+                        }), r.createElement(A.d, {
+                            path: "/directory/game/:encodedCommunityName/clips",
+                            component: we
+                        }), r.createElement(A.d, {
+                            path: "/directory/game/:encodedCommunityName/details",
+                            component: we
+                        }), r.createElement(A.d, {
+                            path: "/directory/game/:encodedCommunityName/videos/:filter",
+                            component: we
+                        }), r.createElement(A.d, {
+                            path: "/directory/game/:encodedCommunityName/videos",
                             render: Be
                         }), r.createElement(A.d, {
-                            path: "/inbox",
-                            component: De
+                            path: "/directory/game/:encodedCommunityName/:encodedLanguage",
+                            component: we
                         }), r.createElement(A.d, {
-                            path: "/inventory",
+                            path: "/directory/game/:encodedCommunityName",
+                            component: we
+                        }), r.createElement(A.d, {
+                            path: "/directory/all/ps4",
+                            component: be
+                        }), r.createElement(A.d, {
+                            path: "/directory/all/xb1",
+                            render: He
+                        }), r.createElement(A.d, {
+                            path: "/directory/all/xbox",
+                            component: be
+                        }), r.createElement(A.d, {
+                            path: "/directory/all/:encodedLanguage",
+                            component: be
+                        }), r.createElement(A.d, {
+                            path: "/directory/all",
+                            component: be
+                        }), r.createElement(A.d, {
+                            path: "/directory/:category?",
+                            component: be
+                        }), r.createElement(A.d, {
+                            path: "/events/:eventName",
+                            component: Ne
+                        }), r.createElement(A.d, {
+                            path: "/email-unsubscribe",
+                            component: Ee
+                        }), r.createElement(A.d, {
+                            path: "/email-verification/:emailOpaqueId",
+                            component: Ce
+                        }), r.createElement(A.d, {
+                            path: "/ext",
+                            component: Te
+                        }), r.createElement(A.d, {
+                            path: "/friends/requests",
+                            component: Re
+                        }), r.createElement(A.d, {
+                            path: "/friends",
                             component: Oe
                         }), r.createElement(A.d, {
-                            path: "/messages/:pageName?",
+                            path: "/following",
+                            render: ze
+                        }), r.createElement(A.d, {
+                            path: "/inbox",
+                            component: Pe
+                        }), r.createElement(A.d, {
+                            path: "/inventory",
                             component: De
                         }), r.createElement(A.d, {
+                            path: "/messages/:pageName?",
+                            component: Pe
+                        }), r.createElement(A.d, {
                             path: "/outbox",
-                            component: De
+                            component: Pe
                         }), r.createElement(A.d, {
                             exact: !0,
                             path: "/partner/signup",
-                            component: Pe
+                            component: xe
                         }), r.createElement(A.d, {
                             path: "/payments",
-                            component: Le
+                            component: Fe
                         }), r.createElement(A.d, {
                             path: "/profile",
                             component: U.a,
                             exact: !0
                         }), r.createElement(A.d, {
                             path: "/store",
-                            render: We
+                            render: Ge
                         }), r.createElement(A.d, {
                             path: "/store/merch",
-                            render: We
+                            render: Ge
                         }), r.createElement(A.d, {
                             path: "/subscriptions",
-                            component: Ae
-                        }), r.createElement(A.d, {
-                            path: "/settings/:tab?",
-                            component: Fe
-                        }), r.createElement(A.d, {
-                            path: "/unsubscribe/:productName",
                             component: Ue
                         }), r.createElement(A.d, {
-                            path: "/upload",
-                            render: He,
-                            exact: !0
+                            path: "/settings/:tab?",
+                            component: Ae
                         }), r.createElement(A.d, {
-                            path: "/user/legal",
+                            path: "/unsubscribe/:productName",
+                            component: Me
+                        }), r.createElement(A.d, {
+                            path: "/upload",
                             render: Ve,
                             exact: !0
                         }), r.createElement(A.d, {
+                            path: "/user/legal",
+                            render: We,
+                            exact: !0
+                        }), r.createElement(A.d, {
                             path: "/videos/v:videoID",
-                            component: he
+                            component: fe
                         }), r.createElement(A.d, {
                             path: "/videos/:videoID",
-                            component: he
+                            component: fe
                         }), l.a.buildType !== j.a.Production && l.o.integrations.desklight && r.createElement(A.d, {
                             path: "/mods",
-                            component: xe
+                            component: Le
                         }), r.createElement(A.d, {
                             path: "*",
-                            component: he
+                            component: fe
                         }))
                     }, t
                 }(r.Component),
-                qe = Object(z.d)("DefaultRootRouter", {
+                Qe = Object(z.d)("DefaultRootRouter", {
                     autoReportInteractive: !0
-                })(Ge);
+                })(qe);
             n.d(t, "b", function() {
-                return Ke
-            }), n.d(t, "a", function() {
                 return Ye
+            }), n.d(t, "a", function() {
+                return $e
             });
-            var Qe = a.a.wrap(function() {
+            var Ke = a.a.wrap(function() {
                     return n.e(73).then(n.bind(null, "3iFw"))
                 }, "Whispers", {
                     failSilently: !0,
                     placeholder: null
                 }),
-                Ke = "twilight-main",
-                Ye = function(e) {
+                Ye = "twilight-main",
+                $e = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -33643,14 +33655,14 @@
                             flexDirection: k.T.Column,
                             zIndex: this.props.theatreModeEnabled ? void 0 : k.Nb.Default
                         }, r.createElement("main", {
-                            className: Ke
+                            className: Ye
                         }, r.createElement(x.b, null), r.createElement(N.a, {
                             contentRefDelegate: this.setRootScrollableContentRef
-                        }, r.createElement(qe, {
+                        }, r.createElement(Qe, {
                             isLoggedIn: this.props.isLoggedIn
                         }), r.createElement(E.b, {
                             mainRef: this.state.rootScrollableContentRef
-                        })), r.createElement(D, null), this.props.firstPageLoaded && r.createElement(Qe, null))), r.createElement(C.a, null)))
+                        })), r.createElement(D, null), this.props.firstPageLoaded && r.createElement(Ke, null))), r.createElement(C.a, null)))
                     }, t
                 }(r.Component)
         },
@@ -37563,8 +37575,14 @@
                                     pageviewProperties: n,
                                     updates: r
                                 }));
-                                var a = e.history.location && e.history.location.state || {};
-                                return i.a({}, n, r, a)
+                                var a = e.history.location && e.history.location.state || {},
+                                    s = {
+                                        item_tracking_id: a.item_tracking_id,
+                                        item_position: a.item_position,
+                                        row_position: a.row_position,
+                                        row_name: a.row_name
+                                    };
+                                return i.a({}, s, n, r)
                             }(e, o.j))
                         }, n.updatePlayerTrackingDataFromProps = function() {
                             n.updatePlayerTrackingData(n.props)
@@ -48189,13 +48207,27 @@
         tuvy: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return a
+                return s
+            }), n.d(t, "c", function() {
+                return l
+            }), n.d(t, "b", function() {
+                return c
             });
             var i = n("/7QA"),
-                r = null;
+                r = null,
+                a = null,
+                o = new RegExp("^/(" + ["overwatchleague", "overwatchleague_allaccess", "overwatchleague_kr", "overwatchleague_fr", "overwatchleague_zh", "overwatchleague_zhtw", "blizzheroes", "BlizzHeroesKR", "BlizzHeroesDE", "BlizzHeroesRU", "BlizzHeroesFR"].join("|") + ")", "i");
 
-            function a() {
+            function s() {
                 return null !== r ? r : r = "on" === i.o.experiments.getAssignment("TWILIGHT_WATCH_SYMMETRA")
+            }
+
+            function l() {
+                return null !== a ? a : a = "on" === i.o.experiments.getAssignment("TWILIGHT_WATCH_SOMBRA")
+            }
+
+            function c(e) {
+                return !!e.match(o)
             }
         },
         u0aY: function(e, t, n) {
