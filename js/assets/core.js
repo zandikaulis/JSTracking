@@ -222,15 +222,15 @@
                 return l
             }), n.d(t, "g", function() {
                 return c
-            }), n.d(t, "A", function() {
+            }), n.d(t, "z", function() {
                 return d
-            }), n.d(t, "B", function() {
+            }), n.d(t, "A", function() {
                 return u
             }), n.d(t, "j", function() {
                 return p
             }), n.d(t, "t", function() {
                 return m
-            }), n.d(t, "z", function() {
+            }), n.d(t, "y", function() {
                 return h
             }), n.d(t, "m", function() {
                 return f
@@ -250,28 +250,26 @@
                 return w
             }), n.d(t, "u", function() {
                 return E
-            }), n.d(t, "y", function() {
-                return C
             }), n.d(t, "x", function() {
-                return N
+                return C
             }), n.d(t, "i", function() {
-                return T
+                return N
             }), n.d(t, "v", function() {
-                return I
+                return T
             }), n.d(t, "w", function() {
+                return I
+            }), n.d(t, "B", function() {
                 return _
-            }), n.d(t, "C", function() {
-                return R
             }), n.d(t, "l", function() {
-                return O
+                return R
             }), n.d(t, "q", function() {
-                return D
+                return O
             }), n.d(t, "d", function() {
-                return P
+                return D
             }), n.d(t, "s", function() {
-                return x
+                return P
             }), n.d(t, "r", function() {
-                return L
+                return x
             });
             var i = n("/7QA"),
                 r = n("0Log"),
@@ -354,38 +352,34 @@
             }
 
             function N(e) {
-                return r.PubsubTopic.UserCrateEvents + "." + e
-            }
-
-            function T(e) {
                 return r.PubsubTopic.CampaignGlobalEvents + "." + e
             }
 
-            function I(e) {
+            function T(e) {
                 return r.PubsubTopic.CampaignUserEvents + "." + e
             }
 
-            function _(e) {
+            function I(e) {
                 return r.PubsubTopic.UserCommerceEvents + "." + e
             }
 
-            function R(e) {
+            function _(e) {
                 return r.PubsubTopic.Whispers + "." + e
             }
 
-            function O(e) {
+            function R(e) {
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function D(e) {
+            function O(e) {
                 return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function P(e) {
+            function D(e) {
                 return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
-            function x(e) {
+            function P(e) {
                 return i.k.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -398,7 +392,7 @@
                 })
             }
 
-            function L(e) {
+            function x(e) {
                 return i.k.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
@@ -14429,6 +14423,8 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleKeydown = function(e) {
                             e.keyCode === P.a.F && e.altKey && (e.preventDefault(), t.NavSearchInputRef.focus())
+                        }, t.focusInput = function(e) {
+                            e || t.NavSearchInputRef.focus()
                         }, t.renderSearchInput = function() {
                             return d.createElement(E.eb, {
                                 onChange: t.handleChange,
@@ -14471,6 +14467,7 @@
                         window.removeEventListener("keydown", this.handleKeydown)
                     }, t.prototype.render = function() {
                         return re.label = Object(u.d)("Search", "NavSearch"), this.props.truncated ? d.createElement(f.a, {
+                            onToggle: this.focusInput,
                             tooltipProps: re
                         }, d.createElement(E.w, {
                             ariaLabel: re.label,
@@ -16810,8 +16807,6 @@
                         return s.SpadeVideoBroadcastType.Highlight;
                     case a.a.Upload:
                         return s.SpadeVideoBroadcastType.Upload;
-                    case a.a.WatchParty:
-                        return s.SpadeVideoBroadcastType.WatchParty;
                     case a.a.PastPremiere:
                         return s.SpadeVideoBroadcastType.PastPremiere;
                     case a.a.PremiereUpload:
@@ -23539,7 +23534,7 @@
                         }
                     }), Object(p.a)([{
                         topic: function(e) {
-                            return Object(g.y)(e.data.currentUser && e.data.currentUser.id || "")
+                            return Object(g.x)(e.data.currentUser && e.data.currentUser.id || "")
                         },
                         mapMessageTypesToProps: {
                             "*": "subscriptionInfo"
@@ -23593,7 +23588,7 @@
                     return i
                 }),
                 function(e) {
-                    e.Archive = "ARCHIVE", e.Highlight = "HIGHLIGHT", e.Upload = "UPLOAD", e.WatchParty = "WATCH_PARTY", e.PastPremiere = "PAST_PREMIERE", e.PremiereUpload = "PREMIERE_UPLOAD"
+                    e.Archive = "ARCHIVE", e.Highlight = "HIGHLIGHT", e.Upload = "UPLOAD", e.PastPremiere = "PAST_PREMIERE", e.PremiereUpload = "PREMIERE_UPLOAD"
                 }(i || (i = {}))
         },
         R6PH: function(e, t, n) {},
@@ -37598,9 +37593,18 @@
                                 google: !e.gdprBlockGoogleContent
                             }
                         }, n.updatePlayerGDPRConsent = function(e) {
-                            if (n.player) {
+                            if (n.player) try {
                                 var t = n.createPlayerGDPROptions(e);
                                 t.amazon !== n.lastGDPR.amazon && n.player.setAmazonGDPRConsent(t.amazon), t.comscore !== n.lastGDPR.comscore && n.player.setComscoreGDPRConsent(t.comscore), t.google !== n.lastGDPR.google && n.player.setGoogleGDPRConsent(t.google), n.lastGDPR = t
+                            } catch (e) {
+                                var i = {
+                                        playerHasGDPR: "function" == typeof n.player.setAmazonGDPRConsent,
+                                        userAgent: navigator.userAgent
+                                    },
+                                    r = "Failed to set player GDPR consent. Data: " + JSON.stringify(i);
+                                n.logger.error(new Error("Failed to set player GDPR consent"), r, {
+                                    data: i
+                                })
                             }
                         }, n.playerBuffering = n.registerBufferingEvent(), n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
                             canInitializePlayer: K(),
@@ -39317,7 +39321,7 @@
                     e.Live = "live", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.ForYou = "foryou"
                 }(r || (r = {})),
                 function(e) {
-                    e.Archive = "archive", e.Highlight = "highlight", e.Upload = "upload", e.WatchParty = "watch_party", e.PastPremiere = "past_premiere", e.PremiereUpload = "premiere_upload"
+                    e.Archive = "archive", e.Highlight = "highlight", e.Upload = "upload", e.PastPremiere = "past_premiere", e.PremiereUpload = "premiere_upload"
                 }(a || (a = {})),
                 function(e) {
                     e.Clip = "clip", e.Channel = " channel", e.Chomment = "chomment", e.Collection = "collection", e.Event = "event", e.Game = "game", e.Stream = "stream", e.Video = "vod", e.User = "user"
@@ -46163,7 +46167,7 @@
                     }
                 }), Object(b.a)([{
                     topic: function(e) {
-                        return Object(E.C)(e.currentUserID)
+                        return Object(E.B)(e.currentUserID)
                     },
                     mapMessageTypesToProps: (de = {}, de[k.PubsubMessageType.WhisperReceived] = "whisperReceived", de[k.PubsubMessageType.WhisperSent] = "whisperSent", de),
                     skipMessage: function(e, t) {
