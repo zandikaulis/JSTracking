@@ -1699,18 +1699,6 @@ window.SiteOptions = {
                 "value": "treatment"
             }]
         },
-        "47614563-01e2-4e3b-9aa4-4c49d9e67fc3": {
-            "name": "prime_extension_prime_gardens_broadcaster",
-            "v": 4010,
-            "t": 3,
-            "groups": [{
-                "weight": 1,
-                "value": "141175853"
-            }, {
-                "weight": 0,
-                "value": ""
-            }]
-        },
         "479d9473-bf6e-4d74-8f9b-dd85d6f98921": {
             "name": "LOL_METADATA_EXPERIMENT",
             "v": 1419,
@@ -4317,6 +4305,18 @@ window.SiteOptions = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "ad40cfba-03eb-4d7d-bbbd-16ad1074ef9e": {
+            "name": "prime_extension_prime_gardens",
+            "v": 4037,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 1,
+                "value": "off"
             }]
         },
         "ad5f316b-0a87-44a6-9348-f6b6ee36b0bb": {
