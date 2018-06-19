@@ -4753,14 +4753,17 @@ window.SiteOptions = {
         },
         "bb2d1459-65c5-49df-a5a0-b1c76ff23a85": {
             "name": "ios_chromecast_control_center",
-            "v": 3533,
+            "v": 4034,
             "t": 1,
             "groups": [{
                 "weight": 0,
                 "value": "disabled"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "enabled"
+            }, {
+                "weight": 100,
+                "value": "enabled_6_5_and_later"
             }]
         },
         "bb614c04-fce4-4abb-9686-a38022f4284e": {
