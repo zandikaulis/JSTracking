@@ -580,6 +580,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "6147aed8-6beb-4c24-a00b-a9ec189a4c1d": {
+            "name": "twilight_channel_analytics_content_overlap_panels",
+            "v": 4043,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "no"
+            }, {
+                "weight": 100,
+                "value": "yes"
+            }]
+        },
         "62a4a88c-8a9a-4316-8f2b-2e0022c2c869": {
             "name": "TWILIGHT_VOD_ONE_FAMILY",
             "v": 3983,
