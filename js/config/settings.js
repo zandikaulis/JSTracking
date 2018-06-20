@@ -193,6 +193,18 @@ window.__twilightSettings = {
                 "value": "variant"
             }]
         },
+        "10c75b60-f4c7-460b-99c8-e5caa22fd61f": {
+            "name": "twilight_web_side_nav_upsell_center",
+            "v": 4039,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
             "name": "twilight_videos_in_sidenav",
             "v": 2842,

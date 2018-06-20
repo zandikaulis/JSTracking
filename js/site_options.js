@@ -417,6 +417,18 @@ window.SiteOptions = {
                 "value": "variant"
             }]
         },
+        "10c75b60-f4c7-460b-99c8-e5caa22fd61f": {
+            "name": "twilight_web_side_nav_upsell_center",
+            "v": 4039,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "yes"
+            }]
+        },
         "1233e3a4-d72f-48e5-b4b4-67856afdd7d5": {
             "name": "ios_end_of_clips",
             "v": 3467,
