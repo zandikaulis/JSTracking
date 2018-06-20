@@ -368,6 +368,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "40f4fd80-86ca-44f4-9abc-0324d24908bc": {
+            "name": "TWILIGHT_RAID_UPSELL",
+            "v": 4051,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "test"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "416c1ee6-9adc-43e1-8e98-cd761068bc0b": {
             "name": "twilight_player_version",
             "v": 2325,
