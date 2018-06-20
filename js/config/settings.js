@@ -652,18 +652,6 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
-        "70a03c8f-25cf-4bd0-bdcf-ba1459727023": {
-            "name": "TWILIGHT_RAID_UPSELL",
-            "v": 3977,
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "test"
-            }, {
-                "weight": 100,
-                "value": "control"
-            }]
-        },
         "72c14aa9-d78d-4095-8f27-d97b9aac4233": {
             "name": "TWILIGHT_SUB_CHECKOUT_POPUP",
             "v": 3022,
