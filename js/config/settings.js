@@ -107,7 +107,7 @@ window.__twilightSettings = {
     "update_manager_enabled": false,
     "update_manager_reload_jitter": 5000,
     "viewer_milestones_enabled": true,
-    "vod_archives_vira_grand": "staff",
+    "vod_archives_vira_grand": "on",
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
             "name": "twilight_sub_gifting",
