@@ -134,7 +134,7 @@
                         }), a.createElement(l.a, null))
                     }, t
                 }(a.Component));
-            var m = Object(s.d)(Object(d.d)("ReportUserModal"), Object(o.b)(null, function(e) {
+            var m = Object(s.d)(Object(d.c)("ReportUserModal"), Object(o.b)(null, function(e) {
                 return Object(s.b)({
                     closeModal: c.c
                 }, e)
@@ -210,7 +210,7 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t
                 }(a.Component),
-                u = Object(o.compose)(Object(l.d)("SideNavPageInfoSection"))(d)
+                u = Object(o.compose)(Object(l.c)("SideNavPageInfoSection"))(d)
         },
         "/aPz": function(e, t, n) {
             "use strict";
@@ -263,9 +263,9 @@
             }), n.d(t, "l", function() {
                 return R
             }), n.d(t, "q", function() {
-                return D
-            }), n.d(t, "d", function() {
                 return O
+            }), n.d(t, "d", function() {
+                return D
             }), n.d(t, "s", function() {
                 return P
             }), n.d(t, "r", function() {
@@ -371,11 +371,11 @@
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function D(e) {
+            function O(e) {
                 return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function O(e) {
+            function D(e) {
                 return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
@@ -414,6 +414,16 @@
             Object(i.b)() && (document.domain = "twitch.tv")
         },
         "/mBu": function(e, t, n) {},
+        "/rr3": function(e, t, n) {
+            "use strict";
+            var i;
+            n.d(t, "a", function() {
+                    return i
+                }),
+                function(e) {
+                    e[e.Default = 0] = "Default", e[e.WhisperSettings = 1] = "WhisperSettings"
+                }(i || (i = {}))
+        },
         "06uF": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -754,12 +764,12 @@
                             }
                         }
                         return n
-                    }, t = i.c([Object(g.d)("EmotePickerMenu", {
+                    }, t = i.c([Object(g.c)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(r.Component)),
                 R = n("DB+C"),
-                D = function(e) {
+                O = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.trackSubEvent = function(e) {
@@ -867,7 +877,7 @@
                         return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
                     }, t
                 }(r.Component);
-            var O = Object(a.compose)(Object(o.b)(function(e) {
+            var D = Object(a.compose)(Object(o.b)(function(e) {
                 return {
                     currentUserID: e.session.user && e.session.user.id,
                     sessionUser: e.session.user,
@@ -895,10 +905,83 @@
                 skip: function(e) {
                     return !e.currentUserID
                 }
-            }]), Object(g.d)("EmotePicker"), Object(c.a)())(D);
+            }]), Object(g.c)("EmotePicker"), Object(c.a)())(O);
             n.d(t, "a", function() {
-                return O
+                return D
             })
+        },
+        "0FG4": function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return i
+            }), n.d(t, "c", function() {
+                return s
+            }), n.d(t, "b", function() {
+                return c
+            });
+            var i, r = n("RcPG"),
+                a = n("a1OF");
+            ! function(e) {
+                e[e.Position = 0] = "Position", e[e.Token = 1] = "Token"
+            }(i || (i = {}));
+            var o = "0";
+
+            function s(e, t, n) {
+                var o, s, l = n.type === i.Position ? t : e,
+                    c = n.map[l];
+                if (c) {
+                    var d = (o = e, s = c.id, {
+                        images: {
+                            sources: {
+                                "1x": Object(a.e)(s, 1),
+                                "2x": Object(a.e)(s, 2),
+                                "4x": Object(a.e)(s, 4)
+                            },
+                            themed: !1
+                        },
+                        alt: o
+                    });
+                    return {
+                        type: r.a.Emote,
+                        content: d
+                    }
+                }
+                return null
+            }
+            var l = {
+                "\\:\\&gt\\;": [":>"],
+                "\\&gt\\;\\(": [">("],
+                "\\&lt\\;\\]": ["<]"],
+                "\\&lt\\;3": ["<3"],
+                ":-?(?:7|L)": [":-7", ":-L", ":7", ":L"],
+                "[oO](_|\\.)[oO]": ["o_o", "O_O", "o_O", "O_o", "o.o", "O.O", "o.O", "O.o"],
+                "\\;-?(p|P)": [";-p", ";-P", ";p", ";P"],
+                "\\;-?\\)": [";-)", ";)"],
+                "\\:-?(o|O)": [":-o", ":-O", ":o", ":O"],
+                "\\:-?(p|P)": [":-p", ":-P", ":p", ":P"],
+                "\\:-?(S|s)": [":-S", ":-s", ":s", ":S"],
+                "\\:-?[\\\\/]": [":-/", ":-\\", ":/", ":\\"],
+                "\\:-?[z|Z|\\|]": [":-|", ":-Z", ":-z", ":|", ":Z", ":z"],
+                "\\:-?\\(": [":-(", ":("],
+                "\\:-?\\)": [":-)", ":)"],
+                "\\:-?D": [":-D", ":D"],
+                "#-?[\\\\/]": ["#-/", "#-\\", "#/", "#\\"],
+                "B-?\\)": ["B-)", "B)"],
+                "R-?\\)": ["R-)", "R)"]
+            };
+
+            function c(e) {
+                for (var t = {}, n = 0, i = e; n < i.length; n++)
+                    for (var r = i[n], a = 0, s = r.emotes; a < s.length; a++)
+                        for (var c = s[a], d = 0, u = l[c.token] || [c.token]; d < u.length; d++) {
+                            var p = u[d];
+                            t[p] && r.id === o || (t[p] = {
+                                id: c.id,
+                                token: p
+                            })
+                        }
+                return t
+            }
         },
         "0GkP": function(e, t, n) {
             "use strict";
@@ -1111,15 +1194,16 @@
                 var r
             }
             var y = n("/7QA"),
-                k = n("Ue10"),
-                S = n("heM0");
-            var w = Object(i.compose)(Object(r.b)(null, function(e) {
+                k = n("/rr3"),
+                S = n("Ue10"),
+                w = n("heM0");
+            var E = Object(i.compose)(Object(r.b)(null, function(e) {
                     return Object(d.b)({
                         onLoginClick: function() {
                             return m.f(p.a.FriendAdd)
                         }
                     }, e)
-                }), Object(a.a)(S, {
+                }), Object(a.a)(w, {
                     name: "onCreateFriendRequest",
                     options: function(e) {
                         return l.a({}, Object(u.a)({
@@ -1128,22 +1212,35 @@
                     }
                 }))(function(e) {
                     var t = Object(y.d)("Add Friend", "AddFriendButton");
-                    return c.createElement(k.v, {
-                        ariaLabel: t,
-                        onClick: e.isLoggedIn ? e.onCreateFriendRequest : e.onLoginClick,
-                        "data-test-selector": "add-button"
-                    }, t)
+                    switch (e.friendButtonUIType) {
+                        case k.a.WhisperSettings:
+                            return c.createElement(S.Ga, {
+                                ariaLabel: t,
+                                onClick: e.isLoggedIn ? e.onCreateFriendRequest : e.onLoginClick
+                            }, c.createElement(S.Ia, {
+                                padding: {
+                                    y: .5,
+                                    x: 1
+                                }
+                            }, t));
+                        default:
+                            return c.createElement(S.v, {
+                                ariaLabel: t,
+                                onClick: e.isLoggedIn ? e.onCreateFriendRequest : e.onLoginClick,
+                                "data-test-selector": "add-button"
+                            }, t)
+                    }
                 }),
-                E = n("aECu"),
-                C = n("csdq"),
-                N = Object(i.compose)(Object(a.a)(E, {
+                C = n("aECu"),
+                N = n("csdq"),
+                T = Object(i.compose)(Object(a.a)(C, {
                     name: "onAcceptFriendRequest",
                     options: function(e) {
                         return l.a({}, Object(u.a)({
                             targetID: e.targetID
                         }), b("acceptFriendRequest", "AcceptFriendRequestPayload", e.targetID, h))
                     }
-                }), Object(a.a)(C, {
+                }), Object(a.a)(N, {
                     name: "onRejectFriendRequest",
                     options: function(e) {
                         return l.a({}, Object(u.a)({
@@ -1151,32 +1248,38 @@
                         }), b("rejectFriendRequest", "RejectFriendRequestPayload", e.targetID, g))
                     }
                 }))(function(e) {
+                    if (e.friendButtonUIType === k.a.WhisperSettings) return c.createElement(S.Ia, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Friend Request Pending", "IncomingFriendRequestButton"));
                     var t = Object(y.d)("Accept", "IncomingFriendRequestButton"),
                         n = Object(y.d)("Reject", "IncomingFriendRequestButton");
-                    return c.createElement(k.Ia, null, c.createElement(k.Ia, {
-                        display: k.R.InlineBlock,
+                    return c.createElement(S.Ia, null, c.createElement(S.Ia, {
+                        display: S.R.InlineBlock,
                         margin: {
                             right: .5
                         }
-                    }, c.createElement(k.Db, {
-                        align: k.Eb.Left,
+                    }, c.createElement(S.Db, {
+                        align: S.Eb.Left,
                         label: Object(y.d)("Accept Friend Request", "IncomingFriendRequestButton")
-                    }, c.createElement(k.v, {
+                    }, c.createElement(S.v, {
                         ariaLabel: t,
                         onClick: e.onAcceptFriendRequest,
                         "data-test-selector": "accept-button"
-                    }, t))), c.createElement(k.Db, {
-                        align: k.Eb.Left,
+                    }, t))), c.createElement(S.Db, {
+                        align: S.Eb.Left,
                         label: Object(y.d)("Reject Friend Request", "IncomingFriendRequestButton")
-                    }, c.createElement(k.v, {
+                    }, c.createElement(S.v, {
                         ariaLabel: n,
                         onClick: e.onRejectFriendRequest,
-                        type: k.B.Alert,
+                        type: S.B.Alert,
                         "data-test-selector": "reject-button"
                     }, n)))
                 }),
-                T = n("Xcb2"),
-                I = Object(i.compose)(Object(a.a)(T, {
+                I = n("Xcb2"),
+                _ = Object(i.compose)(Object(a.a)(I, {
                     name: "onCancelFriendRequest",
                     options: function(e) {
                         return l.a({}, Object(u.a)({
@@ -1184,15 +1287,21 @@
                         }), b("cancelFriendRequest", "CancelFriendRequestPayload", e.targetID, g))
                     }
                 }))(function(e) {
+                    if (e.friendButtonUIType === k.a.WhisperSettings) return c.createElement(S.Ia, {
+                        padding: {
+                            y: .5,
+                            x: 1
+                        }
+                    }, Object(y.d)("Friend Request Pending", "OutgoingFriendRequestButton"));
                     var t = Object(y.d)("Cancel Request", "OutgoingFriendRequestButton");
-                    return c.createElement(k.v, {
+                    return c.createElement(S.v, {
                         ariaLabel: t,
                         onClick: e.onCancelFriendRequest,
                         "data-test-selector": "cancel-button"
                     }, t)
                 }),
-                _ = n("IRYN"),
-                R = Object(i.compose)(Object(a.a)(_, {
+                R = n("IRYN"),
+                O = Object(i.compose)(Object(a.a)(R, {
                     name: "onUnfriendUser",
                     options: function(e) {
                         return l.a({}, Object(u.a)({
@@ -1200,9 +1309,10 @@
                         }), b("unfriendUser", "UnfriendUserPayload", e.targetID, g))
                     }
                 }))(function(e) {
+                    if (e.friendButtonUIType === k.a.WhisperSettings) return null;
                     var t = Object(y.d)("Friends", "UnfriendButton"),
                         n = Object(y.d)("Unfriend", "UnfriendButton");
-                    return c.createElement(k.v, {
+                    return c.createElement(S.v, {
                         ariaLabel: n,
                         onClick: e.onUnfriendUser,
                         statusAlertText: n,
@@ -1216,46 +1326,52 @@
                     return l.d(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (!this.props.friendData && this.props.data && (this.props.data.loading || this.props.data.error)) return c.createElement(k.Ra, {
+                        var e = this.props.friendButtonUIType || k.a.Default;
+                        if (!this.props.friendData && this.props.data && (this.props.data.loading || this.props.data.error)) return e === k.a.WhisperSettings ? null : c.createElement(S.Ra, {
                             height: 30,
                             width: 60
                         });
-                        var e = this.props.friendData || this.props.data;
-                        if (!e || !e.user || !e.user.self || this.props.targetID === this.props.currentUserID) return null;
-                        if (!this.props.isLoggedIn) return c.createElement(w, {
+                        var t = this.props.friendData || this.props.data;
+                        if (!t || !t.user || !t.user.self || this.props.targetID === this.props.currentUserID) return null;
+                        if (!this.props.isLoggedIn) return c.createElement(E, {
+                            friendButtonUIType: e,
                             isLoggedIn: this.props.isLoggedIn,
                             targetID: this.props.targetID
                         });
-                        switch (e.user.self.friendship ? e.user.self.friendship.__typename : g) {
+                        switch (t.user.self.friendship ? t.user.self.friendship.__typename : g) {
                             case h:
-                                return c.createElement(R, {
+                                return c.createElement(O, {
+                                    friendButtonUIType: e,
                                     targetID: this.props.targetID
                                 });
                             case f:
-                                return c.createElement(N, {
+                                return c.createElement(T, {
+                                    friendButtonUIType: e,
                                     targetID: this.props.targetID
                                 });
                             case v:
-                                return c.createElement(I, {
+                                return c.createElement(_, {
+                                    friendButtonUIType: e,
                                     targetID: this.props.targetID
                                 });
                             case g:
                             default:
-                                return c.createElement(w, {
+                                return c.createElement(E, {
+                                    friendButtonUIType: e,
                                     isLoggedIn: this.props.isLoggedIn,
                                     targetID: this.props.targetID
                                 })
                         }
                     }, t
                 }(c.Component),
-                O = n("GGok");
-            var P = Object(i.compose)(Object(s.d)("FriendButton"), Object(r.b)(function(e) {
+                P = n("GGok");
+            var x = Object(i.compose)(Object(s.c)("FriendButton"), Object(r.b)(function(e) {
                 var t = Object(o.c)(e);
                 return {
                     currentUserID: t && t.id,
                     isLoggedIn: Object(o.d)(e)
                 }
-            }), Object(a.a)(O, {
+            }), Object(a.a)(P, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1268,7 +1384,7 @@
                 }
             }))(D);
             n.d(t, "a", function() {
-                return P
+                return x
             })
         },
         "1/iK": function(e, t, n) {
@@ -1304,9 +1420,9 @@
                 e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.BitsCheckoutPage = "bits_checkout_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.ExtensionInstallButton = "extension_install_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.LoginRequiredInterstitial = "login_required_interstitial", e.MessagesPage = "messages_page", e.PartnershipSignupPage = "partnership_signup_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
             }(i || (i = {}))
         },
-        117: function(e, t) {},
+        119: function(e, t) {},
         "14MF": function(e, t, n) {},
-        165: function(e, t, n) {
+        167: function(e, t, n) {
             n("/cy1"), n("gg62"), n("LVaA"), e.exports = n("sNlA")
         },
         "19zd": function(e, t) {
@@ -2789,7 +2905,7 @@
                         }, Object(s.d)("Free in-game loot every month, plus surprises", "PrimeEmpty")), a.createElement("div", null, e))
                     }, t
                 }(a.Component),
-                m = Object(d.d)("PrimeEmpty", {
+                m = Object(d.c)("PrimeEmpty", {
                     autoReportInteractive: !0
                 })(p),
                 h = n("6x+I"),
@@ -2873,7 +2989,7 @@
                         }
                     }, t
                 }(a.Component),
-                w = Object(o.compose)(Object(c.a)(k), Object(d.d)("PrimeClaimButton"))(S),
+                w = Object(o.compose)(Object(c.a)(k), Object(d.c)("PrimeClaimButton"))(S),
                 E = (n("uhg1"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -2961,7 +3077,7 @@
                         return this.state.showDescription && (t = n ? this.renderVerticalDescriptionBlock() : this.renderHorizontalDescriptionBlock()), t
                     }, t
                 }(a.Component)),
-                C = Object(d.d)("PrimeClaimDescription", {
+                C = Object(d.c)("PrimeClaimDescription", {
                     autoReportInteractive: !0
                 })(E),
                 N = n("9pSj"),
@@ -3009,11 +3125,11 @@
                         return e ? Object(T.f)(n, i) : Object(T.e)(n, i)
                     }, t
                 }(a.Component),
-                _ = Object(d.d)("PrimeUpsellButton", {
+                _ = Object(d.c)("PrimeUpsellButton", {
                     autoReportInteractive: !0
                 })(I),
                 R = n("zUQL"),
-                D = function(e) {
+                O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3060,7 +3176,7 @@
                         })
                     }, t
                 }(a.Component),
-                O = Object(o.compose)(Object(c.a)(R), Object(d.d)("PrimeInstructions"))(D),
+                D = Object(o.compose)(Object(c.a)(R), Object(d.c)("PrimeInstructions"))(O),
                 P = n("z8lI"),
                 x = n("fvjX"),
                 L = (n("DvQC"), function(e) {
@@ -3106,7 +3222,7 @@
                         }))
                     }, t
                 }(a.Component)),
-                F = Object(x.d)(Object(d.d)("CopyButton"))(L),
+                F = Object(x.d)(Object(d.c)("CopyButton"))(L),
                 A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3142,7 +3258,7 @@
                         }))) : null
                     }, t
                 }(a.Component),
-                U = Object(x.d)(Object(d.d)("CopyableItem"))(A),
+                U = Object(x.d)(Object(d.c)("CopyableItem"))(A),
                 M = (n("2b5K"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -3211,7 +3327,7 @@
                         return Object(y.j)(e) ? this.renderVerticalLayout() : this.renderHorizontalLayout()
                     }, t
                 }(a.Component)),
-                j = Object(d.d)("PrimeClaimInstructions", {
+                j = Object(d.c)("PrimeClaimInstructions", {
                     autoReportInteractive: !0
                 })(M),
                 B = (n("QZ2B"), function(e) {
@@ -3282,7 +3398,7 @@
                         })), Object(s.d)("Added To Your Twitch Account", "PrimeRedeem"))))
                     }, t
                 }(a.Component)),
-                z = Object(d.d)("PrimeRedeem", {
+                z = Object(d.c)("PrimeRedeem", {
                     autoReportInteractive: !0
                 })(B),
                 H = n("SStD"),
@@ -3433,7 +3549,7 @@
                                     orientation: t.props.orientation
                                 })
                             }
-                            return a.createElement(O, {
+                            return a.createElement(D, {
                                 offerID: e.id,
                                 offerDescription: e.description,
                                 offerType: e.deliveryMethod,
@@ -3513,7 +3629,7 @@
                     name: "data"
                 }), Object(c.a)(H, {
                     name: "claimPrimeOffer"
-                }), Object(d.d)("PrimeOffer"), Object(g.a)("PrimeOffer", {
+                }), Object(d.c)("PrimeOffer"), Object(g.a)("PrimeOffer", {
                     pixels: 100
                 }))(W),
                 q = (n("YO7o"), function(e) {
@@ -3568,7 +3684,7 @@
                         })))
                     }, t
                 }(a.Component)),
-                Q = Object(d.d)("PrimeOfferPlaceholder", {
+                Q = Object(d.c)("PrimeOfferPlaceholder", {
                     autoReportInteractive: !0
                 })(q),
                 K = (n("B1YN"), function(e) {
@@ -3605,7 +3721,7 @@
                         }, Object(s.d)("Get free game loot like this every month plus surprises, ad-free viewing, and loads more with Twitch Prime.", "PrimeUpsell")), a.createElement(_, null))
                     }, t
                 }(a.Component)),
-                Y = Object(d.d)("PrimeUpsell", {
+                Y = Object(d.c)("PrimeUpsell", {
                     autoReportInteractive: !0
                 })(K),
                 $ = n("RfIv"),
@@ -3796,7 +3912,7 @@
                     skip: function(e) {
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
                     }
-                }), Object(d.d)("PrimeOfferList"))(J);
+                }), Object(d.c)("PrimeOfferList"))(J);
             var ee = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
@@ -4224,23 +4340,23 @@
         },
         "4rCz": function(e, t, n) {
             "use strict";
-            var i = n("q1tI"),
-                r = n("oJmH"),
-                a = n("i8i4"),
-                o = n("/MKj"),
-                s = n("zB42"),
-                l = n("I4Vk"),
-                c = n("GlMZ"),
-                d = "detector_urls",
-                u = function() {
+            var i, r = n("q1tI"),
+                a = n("oJmH"),
+                o = n("i8i4"),
+                s = n("/MKj"),
+                l = n("zB42"),
+                c = n("I4Vk"),
+                d = n("GlMZ"),
+                u = "detector_urls",
+                p = function() {
                     function e(e) {
-                        this.detected = !1, this.blockDetectorURLS = [], this.storage = e.storage, this.detected = this.detected || this.storage.get("blockDetector.detected", !1), this.logger = e.logger.withCategory("ad-block-detector"), this.blockDetectorURLS = e.dynamicSettings.get(d, ["https://pubads.g.doubleclick.net/|"]), this.logger.debug("Created.")
+                        this.detected = !1, this.blockDetectorURLS = [], this.storage = e.storage, this.detected = this.detected || this.storage.get("blockDetector.detected", !1), this.logger = e.logger.withCategory("ad-block-detector"), this.blockDetectorURLS = e.dynamicSettings.get(u, ["https://pubads.g.doubleclick.net/|"]), this.logger.debug("Created.")
                     }
                     return e.prototype.detectAdBlock = function() {
                         this.logger.debug("Start ad block tests."), this.blockDetectorURLS.forEach(this.testAccessToURL.bind(this)), this.detectEasyListPrivacy()
                     }, e.prototype.testAccessToURL = function(e) {
                         var t = this;
-                        e = e.replace(/\|/g, Object(l.a)(10)), fetch(e, {
+                        e = e.replace(/\|/g, Object(c.a)(10)), fetch(e, {
                             method: "GET",
                             mode: "no-cors"
                         }).then(function(n) {
@@ -4256,15 +4372,15 @@
                                 event: "dummy-event",
                                 properties: {
                                     time: Date.now(),
-                                    random1: Object(l.a)(256),
-                                    random2: Object(l.a)(256),
-                                    random3: Object(l.a)(256),
-                                    random4: Object(l.a)(256)
+                                    random1: Object(c.a)(256),
+                                    random2: Object(c.a)(256),
+                                    random3: Object(c.a)(256),
+                                    random4: Object(c.a)(256)
                                 }
                             },
                             n = {
                                 method: "POST",
-                                body: new Blob([Object(c.a)([t])], {
+                                body: new Blob([Object(d.a)([t])], {
                                     type: "application/x-www-form-urlencoded; charset=UTF-8"
                                 })
                             };
@@ -4285,115 +4401,17 @@
                         this.storage.set("blockDetector.detected", !0), this.detected = !0
                     }, e
                 }(),
-                p = n("mrSG"),
-                m = n("p46w"),
-                h = n("wMnI"),
-                f = n("cr+I"),
-                g = n("/7QA"),
-                v = {
-                    "ef25ca44-13bd-4e89-99d2-f9939c013fec": "off",
-                    "a9667563-723a-4cf7-b253-674d9eef0a53": "control",
-                    "74156eb2-ed95-482c-b006-60c1428e8846": "control",
-                    "e9fe3136-84bc-4a61-9079-0c7df78abeb3": "control",
-                    "47c76558-9d79-4181-9e43-d7c440a1a148": "control",
-                    "9619b63b-2e9a-4e20-af4b-cce72346691d": "control",
-                    "5c8e4a59-8c63-4000-9c4e-6224f34b7c21": "control",
-                    "72c14aa9-d78d-4095-8f27-d97b9aac4233": "no",
-                    "3fa31c3d-1477-40a5-9433-0b64b398c86a": "recurly",
-                    "afc307f3-4011-40ba-9406-56c474b5922b": "control",
-                    "4cfb5972-e20e-4ae1-92dd-7287ec58b4a4": "control",
-                    "3763f4e7-c786-4000-a6c3-b91b9c774302": "control",
-                    "d6bb4aa4-efae-4031-96be-f08950d6c8f4": "shown",
-                    "db2180db-bc89-4f97-8bef-208b1782e18f": "off",
-                    "47597570-dd4e-4996-85eb-86db164cae9c": "control",
-                    "7aa589f3-34d8-425f-8227-29007d50757e": "control",
-                    "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": "control",
-                    "e0fdfc17-389d-4ba5-8596-065352ddc01e": "control",
-                    "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": "control",
-                    "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": "price",
-                    "50e947d4-24b7-4000-a046-f48f4072b7cf": "control",
-                    "c9fb1ee5-b3ff-4bfb-9584-4412a8878f16": "control",
-                    "b24e5cd6-c649-4cab-b768-03ad6cf488be": "control",
-                    "3fc50829-31d6-449a-a757-7a3f44d77ab3": "no",
-                    "d1fe9a0a-e9f2-4450-ac57-4ff2eefa0dcf": "control",
-                    "6699df7d-9f23-494c-87a1-06fdf80f1e68": "control",
-                    "ba473bec-1ad3-4b55-9b3e-fdc002ba695c": "control",
-                    "5fd568be-2073-4f99-84d5-565e8b2a3343": "no",
-                    "fa443b30-d363-4978-a831-14c653eb6f41": "no",
-                    "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": "off",
-                    "03f25f55-ded6-417a-b241-d656571c4a1f": "off",
-                    "647bfc96-3fc6-4f5e-ab95-38c4eab60830": "off",
-                    "f3920cff-ef57-46c9-8dd9-b4f145acf6e5": "control",
-                    "080c0331-3073-4539-992f-93274236a97d": "off",
-                    "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": "control",
-                    "51efc82d-cfe8-42bd-ae4b-9304112ed9df": "control",
-                    "d4752777-a16a-4128-bcfb-42cbd4a53613": "off",
-                    "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7": "control",
-                    "7a149a1e-2edd-403a-8e1a-bc466fa8ae46": "control",
-                    "9ba74270-ecf4-466d-b04e-f66b9883d632": "control",
-                    "ba44e8c9-0beb-4982-b48f-87457bfa962c": "off",
-                    "db6dc127-b372-48fe-9d8b-493ea6c51c57": "control"
-                },
-                b = {
-                    TWILIGHT_AAX_DISPLAY: "5fd568be-2073-4f99-84d5-565e8b2a3343",
-                    TWILIGHT_AD_DENSITY_WIDGET: "fa443b30-d363-4978-a831-14c653eb6f41",
-                    STREAMER_TRAILERS: "ef25ca44-13bd-4e89-99d2-f9939c013fec",
-                    TWILIGHT_WEB_ONBOARDING: "a9667563-723a-4cf7-b253-674d9eef0a53",
-                    TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING: "74156eb2-ed95-482c-b006-60c1428e8846",
-                    TWILIGHT_WEB_ONBOARDING_CATEGORIES: "e9fe3136-84bc-4a61-9079-0c7df78abeb3",
-                    TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE: "47c76558-9d79-4181-9e43-d7c440a1a148",
-                    TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES: "9619b63b-2e9a-4e20-af4b-cce72346691d",
-                    TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING: "5c8e4a59-8c63-4000-9c4e-6224f34b7c21",
-                    TWILIGHT_SUB_CHECKOUT_POPUP: "72c14aa9-d78d-4095-8f27-d97b9aac4233",
-                    TWILIGHT_SUB_CHECKOUT_VARIANT: "3fa31c3d-1477-40a5-9433-0b64b398c86a",
-                    TWILIGHT_PAY__SAVED_PAYMENT_METHODS: "080c0331-3073-4539-992f-93274236a97d",
-                    TWILIGHT_VIDEO_FEATURO_EN: "afc307f3-4011-40ba-9406-56c474b5922b",
-                    TWILIGHT_THEATRE_FULLSCREEN: "4cfb5972-e20e-4ae1-92dd-7287ec58b4a4",
-                    TWILIGHT_FENIX_DOWN: "3763f4e7-c786-4000-a6c3-b91b9c774302",
-                    TWILIGHT_EVENT_GAME_DIRECTORY: "d6bb4aa4-efae-4031-96be-f08950d6c8f4",
-                    TWILIGHT_LEADERBOARDS: "db2180db-bc89-4f97-8bef-208b1782e18f",
-                    TWILIGHT_AML_RANKING_FOLLOWS: "47597570-dd4e-4996-85eb-86db164cae9c",
-                    TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e",
-                    TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2: "0dc9a9c9-fee5-4b5f-a462-f07675713e5e",
-                    TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL: "e0fdfc17-389d-4ba5-8596-065352ddc01e",
-                    TWILIGHT_ANIMATED_DIRECTORY_THUMBNAILS: "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9",
-                    TWILIGHT_MOBILE_SUBS_TIER_NAMES: "ee491c3c-d6f7-4f00-8c53-c630dfa10f41",
-                    TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV: "50e947d4-24b7-4000-a046-f48f4072b7cf",
-                    TWILIGHT_SUBS_AFFILIATE_BADGES: "c9fb1ee5-b3ff-4bfb-9584-4412a8878f16",
-                    TWILIGHT_EXTENDED_PRESENCE: "b24e5cd6-c649-4cab-b768-03ad6cf488be",
-                    TWILIGHT_NEW_REPORTING_WIZARD: "3fc50829-31d6-449a-a757-7a3f44d77ab3",
-                    TWILIGHT_GET_BITS_TOP_NAV: "d1fe9a0a-e9f2-4450-ac57-4ff2eefa0dcf",
-                    TWILIGHT_VIDEO_CARD_UPDATES: "6699df7d-9f23-494c-87a1-06fdf80f1e68",
-                    TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT: "ba473bec-1ad3-4b55-9b3e-fdc002ba695c",
-                    TWILIGHT_WATCH_WINSTON: "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773",
-                    TWILIGHT_WATCH_SYMMETRA: "03f25f55-ded6-417a-b241-d656571c4a1f",
-                    TWILIGHT_WATCH_SOMBRA: "647bfc96-3fc6-4f5e-ab95-38c4eab60830",
-                    TWILIGHT_DISCOVERY_FRONTPAGE_MVP: "f3920cff-ef57-46c9-8dd9-b4f145acf6e5",
-                    TWILIGHT_VOD_SHORYUKEN: "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9",
-                    TWILIGHT_VOD_PROVOCATEUR: "51efc82d-cfe8-42bd-ae4b-9304112ed9df",
-                    TWILIGHT_OWL_ROOM_CHEERING: "d4752777-a16a-4128-bcfb-42cbd4a53613",
-                    TWILIGHT_CLIPS_ON_THE_BRAIN: "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7",
-                    TWILIGHT_WORLD_CUP_EVENT: "7a149a1e-2edd-403a-8e1a-bc466fa8ae46",
-                    TWILIGHT_WORLD_CUP_EVENT_SETTINGS: "9ba74270-ecf4-466d-b04e-f66b9883d632",
-                    TWILIGHT_EXTENSIONS_DISCOVERY_RELEASE: "ba44e8c9-0beb-4982-b48f-87457bfa962c",
-                    TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES: "db6dc127-b372-48fe-9d8b-493ea6c51c57"
-                },
-                y = {
-                    TWILIGHT_AAX_DISPLAY: "yes",
-                    TWILIGHT_ANIMATED_DIRECTORY_THUMBNAILS: "experiment",
-                    TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV: "variant_a",
-                    TWILIGHT_VIDEO_CARD_UPDATES: "variation",
-                    TWILIGHT_NEW_REPORTING_WIZARD: "yes",
-                    TWILIGHT_DISCOVERY_FRONTPAGE_MVP: "variant",
-                    TWILIGHT_PAY__SAVED_PAYMENT_METHODS: "yes",
-                    TWILIGHT_EXTENSIONS_DISCOVERY_RELEASE: "on",
-                    TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES: "control"
-                },
-                k = n("pXgH"),
-                S = "twilight.ignore_experiments",
-                w = function() {
+                m = n("mrSG"),
+                h = n("p46w"),
+                f = n("wMnI"),
+                g = n("cr+I"),
+                v = n("/7QA"),
+                b = n("D7An"),
+                y = n("pXgH"),
+                k = "twilight.ignore_experiments",
+                S = function() {
                     function e(e) {
-                        this.eventThrottleStatus = {}, this.hasInitialized = !1, this.ignoreExperiments = !1, this.dynamicSettings = e.dynamicSettings, this.logger = e.logger.withCategory("Experiment"), this.session = e.session, this.store = e.store, this.tracking = e.tracking, this.ignoreExperiments = e.storage.get(S, !1)
+                        this.eventThrottleStatus = {}, this.hasInitialized = !1, this.ignoreExperiments = !1, this.dynamicSettings = e.dynamicSettings, this.logger = e.logger.withCategory("Experiment"), this.session = e.session, this.store = e.store, this.tracking = e.tracking, this.ignoreExperiments = e.storage.get(k, !1)
                     }
                     return e.prototype.getAssignment = function(e, t) {
                         if (void 0 === t && (t = {}), this.ignoreExperiments) return this.logger.debug("Ingoring experiments because local storage key is present"), null;
@@ -4402,12 +4420,12 @@
                         } catch (e) {
                             return this.logger.warn("Cannot initialize", e), null
                         }
-                        if (!b[e]) return this.logger.warn("Experiment name not in mapping", e), null;
-                        var n = b[e];
+                        if (!b.b[e]) return this.logger.warn("Experiment name not in mapping", e), null;
+                        var n = b.b[e];
                         if (!this.experiments[n]) return this.logger.warn("Unable to find experiment configuration", {
                             name: e,
                             id: n
-                        }), v[n] && this.overrides[n] ? (this.logger.warn("Using experiment override despite missing experiment configuration", {
+                        }), b.a[n] && this.overrides[n] ? (this.logger.warn("Using experiment override despite missing experiment configuration", {
                             name: e,
                             id: n,
                             assignment: this.overrides[n]
@@ -4419,15 +4437,15 @@
                             experiment: i
                         }), null;
                         var r, a, o = this.assignments[n];
-                        switch (this.overrides[n] ? r = this.overrides[n] : 3 === i.t ? t.channel ? r = Object(h.selectTreatment)(n, i, t.channel) : (this.logger.warn("Called getAssignment() for channel experiment with no channel", i), r = o) : r = o, i.t) {
+                        switch (this.overrides[n] ? r = this.overrides[n] : 3 === i.t ? t.channel ? r = Object(f.selectTreatment)(n, i, t.channel) : (this.logger.warn("Called getAssignment() for channel experiment with no channel", i), r = o) : r = o, i.t) {
                             case 1:
-                                a = k.a.Device;
+                                a = y.a.Device;
                                 break;
                             case 2:
-                                a = k.a.User;
+                                a = y.a.User;
                                 break;
                             case 3:
-                                a = k.a.Channel;
+                                a = y.a.Channel;
                                 break;
                             default:
                                 a = void 0
@@ -4454,10 +4472,12 @@
                             n = JSON.stringify(e),
                             i = this.eventThrottleStatus[n];
                         this.dynamicSettings.get("throttled_experiment_event_enabled", !1) && (!this.eventThrottleStatus[n] || Date.now() - i > 6e4) && (this.tracking.trackExperimentThrottled(t), this.eventThrottleStatus[n] = Date.now()), this.tracking.trackExperiment(t)
+                    }, e.prototype.getAssignments = function() {
+                        return this.assignments
                     }, e.prototype.initialize = function() {
                         if (window.__twilightSettings && window.__twilightSettings.experiments) {
                             this.experiments = window.__twilightSettings && window.__twilightSettings.experiments;
-                            var e = Object(h.validate)(this.experiments);
+                            var e = Object(f.validate)(this.experiments);
                             e && (this.logger.error(e, "Invalid experiment configuration. Experiments will be default"), this.experiments = {})
                         } else this.logger.warn("Unable to get experiment data from dynamic settings. Experiments will be default."), this.experiments = {};
                         var t = this.store.getState().session;
@@ -4471,52 +4491,52 @@
                     }, e.prototype.determineOverrides = function(e) {
                         var t = this,
                             n = {};
-                        e && Object.keys(y).forEach(function(e) {
-                            b[e] ? y[e] && (n[b[e]] = y[e]) : t.logger.warn("Staff experiment name is not in mapping", e)
+                        e && Object.keys(b.c).forEach(function(e) {
+                            b.b[e] ? b.c[e] && (n[b.b[e]] = b.c[e]) : t.logger.warn("Staff experiment name is not in mapping", e)
                         });
                         var i = {};
                         try {
-                            var r = m.get(g.a.experimentsOverrideCookie);
+                            var r = h.get(v.a.experimentsOverrideCookie);
                             if (r) {
                                 var a = JSON.parse(r);
                                 Object.keys(a).forEach(function(e) {
-                                    v[e] ? i[e] = a[e] : t.logger.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", e)
+                                    b.a[e] ? i[e] = a[e] : t.logger.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", e)
                                 })
                             }
                         } catch (e) {
                             this.logger.warn("Unable to parse cookie overrides", e)
                         }
                         var o = {},
-                            s = f.parse(window.location.search);
+                            s = g.parse(window.location.search);
                         if (s.experiments) try {
                             var l = JSON.parse(s.experiments);
                             Object.keys(l).forEach(function(e) {
-                                b[e] ? o[b[e]] = l[e] : t.logger.warn("URL override experiment name is not in mapping", e)
+                                b.b[e] ? o[b.b[e]] = l[e] : t.logger.warn("URL override experiment name is not in mapping", e)
                             })
                         } catch (e) {
                             this.logger.warn("Unable to parse URL overrides", e)
                         }
-                        return p.a({}, n, i, o)
+                        return m.a({}, n, i, o)
                     }, e.prototype.determineAssignments = function(e, t, n) {
                         var i = this,
                             r = {};
-                        return Object.keys(v).forEach(function(a) {
+                        return Object.keys(b.a).forEach(function(a) {
                             if (e[a]) {
                                 var o = e[a];
-                                1 === o.t ? r[a] = Object(h.selectTreatment)(a, o, t) : 2 === o.t && n ? r[a] = Object(h.selectTreatment)(a, o, n) : r[a] = v[a]
+                                1 === o.t ? r[a] = Object(f.selectTreatment)(a, o, t) : 2 === o.t && n ? r[a] = Object(f.selectTreatment)(a, o, n) : r[a] = b.a[a]
                             } else i.logger.warn("Experiment is deprecated", a)
                         }), r
                     }, e
                 }(),
-                E = n("B9ku"),
-                C = n.n(E),
-                N = function() {
+                w = n("B9ku"),
+                E = n.n(w),
+                C = function() {
                     function e(e, t) {
                         this.store = e, this.logger = t.withCategory("pubsub")
                     }
                     return e.prototype.subscribe = function(e) {
                         var t = this;
-                        this.driver || (this.driver = C.a.getInstance("production"));
+                        this.driver || (this.driver = E.a.getInstance("production"));
                         var n = this.wrapMessageCallback(e.onMessage),
                             i = this.store.getState();
                         return this.driver.Listen({
@@ -4528,7 +4548,7 @@
                                     }), e.success && e.success()
                                 },
                                 failure: function(n) {
-                                    g.a.buildType === s.a.Production ? t.logger.warn("Failed to subscribe to topic.", {
+                                    v.a.buildType === l.a.Production ? t.logger.warn("Failed to subscribe to topic.", {
                                         opts: e,
                                         err: n
                                     }) : t.logger.error(new Error("Failed to subscribe to topic."), "Failed to subscribe to topic.", {
@@ -4573,7 +4593,7 @@
                         }
                     }, e
                 }(),
-                T = function() {
+                N = function() {
                     function e(e) {
                         this.currentPageComponentName = "", this.buildID = e.buildID, this.endpoint = e.endpoint, this.logger = e.logger.withCategory("sentinel"), this.session = e.session, this.store = e.store, this.logger.debug("Creating instance.", {
                             buildID: e.buildID,
@@ -4581,9 +4601,9 @@
                         })
                     }
                     return e.prototype.report = function(e) {
-                        return p.b(this, void 0, void 0, function() {
+                        return m.b(this, void 0, void 0, function() {
                             var t, n, i, r;
-                            return p.e(this, function(a) {
+                            return m.e(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         t = {
@@ -4635,13 +4655,13 @@
                         this.currentPageComponentName = e
                     }, e
                 }(),
-                I = n("2xye"),
-                _ = n("56gP"),
-                R = "stats_sample_rate",
-                D = "twilight",
+                T = n("2xye"),
+                I = n("56gP"),
+                _ = "stats_sample_rate",
+                R = "twilight",
                 O = function() {
                     function e(e) {
-                        this.logger = e.logger.withCategory("twilight-stats"), this.recordingEnabled = e.config.buildType === s.a.Production && e.dynamicSettings.get(R, 0) > 100 * Math.random(), this.statsClient = _.Stats.getInstance(e.config.buildType === s.a.Production ? "production" : "development", D)
+                        this.logger = e.logger.withCategory("twilight-stats"), this.recordingEnabled = e.config.buildType === l.a.Production && e.dynamicSettings.get(_, 0) > 100 * Math.random(), this.statsClient = I.Stats.getInstance(e.config.buildType === l.a.Production ? "production" : "development", R)
                     }
                     return e.prototype.recordComponentError = function(e) {
                         if (this.recordingEnabled) try {
@@ -4671,12 +4691,12 @@
                         }
                     }, e
                 }(),
-                P = n("Two0"),
-                x = function() {
+                D = n("Two0"),
+                P = function() {
                     function e(e, t) {
                         this.activeOperations = [], this.logger = e.withCategory("tmi");
                         var n = this.getConnectionOptions(t);
-                        this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new P.a({
+                        this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new D.a({
                             connection: n,
                             logger: this.logger
                         })
@@ -4690,9 +4710,9 @@
                             authToken: t
                         })
                     }, e.prototype.connect = function() {
-                        return p.b(this, void 0, void 0, function() {
+                        return m.b(this, void 0, void 0, function() {
                             var e, t;
-                            return p.e(this, function(n) {
+                            return m.e(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         if (this.disabled) return [2];
@@ -4719,8 +4739,8 @@
                     }, e.prototype.getCurrentChannel = function() {
                         return this.currentChannel
                     }, e.prototype.join = function(e) {
-                        return p.b(this, void 0, void 0, function() {
-                            return p.e(this, function(t) {
+                        return m.b(this, void 0, void 0, function() {
+                            return m.e(this, function(t) {
                                 switch (t.label) {
                                     case 0:
                                         return this.disabled ? [2] : [4, this.setChannel(e)];
@@ -4730,8 +4750,8 @@
                             })
                         })
                     }, e.prototype.part = function() {
-                        return p.b(this, void 0, void 0, function() {
-                            return p.e(this, function(e) {
+                        return m.b(this, void 0, void 0, function() {
+                            return m.e(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         return [4, this.setChannel(null)];
@@ -4741,9 +4761,9 @@
                             })
                         })
                     }, e.prototype.setChannel = function(e) {
-                        return p.b(this, void 0, void 0, function() {
+                        return m.b(this, void 0, void 0, function() {
                             var t, n, i, r, a = this;
-                            return p.e(this, function(o) {
+                            return m.e(this, function(o) {
                                 switch (o.label) {
                                     case 0:
                                         (t = this.logger.withCategory("setChannel").withCategory(e ? "join" : "part")).info("begin", {
@@ -4754,9 +4774,9 @@
                                         o.trys.push([1, 6, , 7]), n = null, o.label = 2;
                                     case 2:
                                         return o.trys.push([2, , 4, 5]), n = new Promise(function(n) {
-                                            return p.b(a, void 0, void 0, function() {
+                                            return m.b(a, void 0, void 0, function() {
                                                 var i, r;
-                                                return p.e(this, function(a) {
+                                                return m.e(this, function(a) {
                                                     switch (a.label) {
                                                         case 0:
                                                             return a.trys.push([0, 8, 9, 10]), this.activeOperations.length > 0 ? (t.info("awaiting active operations", {
@@ -4815,8 +4835,8 @@
                             })
                         })
                     }, e.prototype.ensureConnected = function() {
-                        return p.b(this, void 0, void 0, function() {
-                            return p.e(this, function(e) {
+                        return m.b(this, void 0, void 0, function() {
+                            return m.e(this, function(e) {
                                 switch (e.label) {
                                     case 0:
                                         return this.client.isConnected() ? [3, 2] : (this.logger.debug("Connection not yet established. Waiting on connect to complete..."), [4, this.connect()]);
@@ -4836,9 +4856,9 @@
                                 server: e.tmiHost
                             },
                             n = this.getQueryStringOptions();
-                        return null === n ? (this.logger.debug("Using options from configuration"), t) : "false" === n.server ? p.a({}, t, {
+                        return null === n ? (this.logger.debug("Using options from configuration"), t) : "false" === n.server ? m.a({}, t, {
                             disabled: !0
-                        }) : e.buildType !== s.a.Dev ? t : {
+                        }) : e.buildType !== l.a.Dev ? t : {
                             disabled: !1,
                             secure: null !== n.secure ? n.secure : t.secure,
                             port: null !== n.port ? n.port : t.port,
@@ -4846,7 +4866,7 @@
                         }
                     }, e.prototype.getQueryStringOptions = function() {
                         try {
-                            var e = f.parse(window.location.search),
+                            var e = g.parse(window.location.search),
                                 t = {
                                     server: void 0 !== e.tmi_host ? e.tmi_host : null,
                                     port: void 0 !== e.tmi_port ? +e.tmi_port : null,
@@ -4859,12 +4879,12 @@
                         return null
                     }, e
                 }(),
-                L = n("o4DC"),
-                F = n("lmy8"),
-                A = n("qIYN"),
-                U = n("h9Rz"),
-                M = n("uhBA"),
-                j = new L.b({
+                x = n("o4DC"),
+                L = n("lmy8"),
+                F = n("h9Rz"),
+                A = n("+0NX"),
+                U = n("uhBA"),
+                M = new x.b({
                     introspectionQueryResultData: {
                         __schema: {
                             types: [{
@@ -4931,97 +4951,115 @@
                         }
                     }
                 }),
-                B = n("GTg4"),
-                z = n("t5Gm"),
-                H = function() {
+                j = n("GTg4"),
+                B = n("t5Gm"),
+                z = function() {
                     function e(e) {
-                        this.authToken = null, this.batchID = 0, this.eventEmitter = new M.EventEmitter, this.queryID = 0, this.config = e.config, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.client = this.createApolloClient()
+                        this.authToken = null, this.batchID = 0, this.eventEmitter = new U.EventEmitter, this.queryID = 0, this.config = e.config, this.dynamicSettings = e.dynamicSettings, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.client = this.createApolloClient()
                     }
                     return e.prototype.addQueryMetricsListener = function(e) {
                         this.eventEmitter.addListener("query-metrics", e)
                     }, e.prototype.removeQueryMetricsListener = function(e) {
                         this.eventEmitter.removeListener("query-metrics", e)
                     }, e.prototype.createApolloClient = function() {
-                        return new F.a({
-                            cache: new L.a({
-                                fragmentMatcher: j
+                        var e = this.createBatchHTTPLink();
+                        return this.dynamicSettings.get("persisted_queries_enabled", !1) && (e = Object(A.a)().concat(e)), new L.a({
+                            cache: new x.a({
+                                fragmentMatcher: M
                             }),
-                            queryDeduplication: !0,
-                            link: new U.a({
-                                batchMax: 20,
-                                fetch: this.createApolloFetcher()
-                            })
+                            link: e,
+                            queryDeduplication: !0
                         })
-                    }, e.prototype.createApolloFetcher = function() {
-                        var e = this,
-                            t = Object(A.a)({
-                                uri: this.config.graphqlEndpoint
-                            });
-                        return t.batchUse(function(t, n) {
-                            var i = t.requests,
-                                r = t.options,
-                                a = {
-                                    "Client-Id": e.config.authSettings.clientID,
-                                    "X-Device-Id": e.session.deviceID
-                                },
-                                o = e.store.getState();
-                            o.session && (a["Accept-Language"] = o.session.locale), e.authToken && (a.Authorization = "OAuth " + e.authToken), r.headers = a, r.twilight = {
-                                batchID: ++e.batchID,
-                                batchTimestamp: performance.timing.navigationStart + performance.now(),
-                                requests: i
-                            }, n()
-                        }), t.batchUseAfter(function(t, n) {
-                            var i = t.response,
-                                r = t.options;
-                            return p.b(e, void 0, void 0, function() {
-                                var e, t, a, o, s, l, c = this;
-                                return p.e(this, function(d) {
-                                    switch (d.label) {
-                                        case 0:
-                                            return i.status && i.status >= 400 || i.status < 200 ? 401 !== i.status ? [3, 4] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : [3, 1] : [3, 7];
-                                        case 1:
-                                            return this.logger.warn("Received 401 response from GraphQL, logging user out."), Object(z.a)(), [4, Object(B.h)(this.authToken, {
-                                                config: this.config,
-                                                logger: this.logger
-                                            })];
-                                        case 2:
-                                            return d.sent(), window.location.reload(!0), [2];
-                                        case 3:
-                                            return [3, 6];
-                                        case 4:
-                                            return t = (e = this.logger).error, a = [new Error("Received non-200 response from GraphQL."), "Received non-200 response from GraphQL."], o = {
-                                                status: i.status
-                                            }, [4, i.text()];
-                                        case 5:
-                                            t.apply(e, a.concat([(o.body = d.sent(), o)])), d.label = 6;
-                                        case 6:
-                                            return n(), [2];
-                                        case 7:
-                                            return s = r, l = i.parsed.map(function(e, t) {
-                                                var n = e,
-                                                    i = s.twilight.requests[t];
-                                                return n.extensions && !n.status ? {
-                                                    queryID: ++c.queryID,
-                                                    durationMs: n.extensions.durationMilliseconds,
-                                                    operationName: n.extensions.operationName,
+                    }, e.prototype.collectQueryStats = function(e, t) {
+                        return m.b(this, void 0, void 0, function() {
+                            var n, i, r = this;
+                            return m.e(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        return a.trys.push([0, 2, , 3]), [4, e.json()];
+                                    case 1:
+                                        return n = a.sent(), [3, 3];
+                                    case 2:
+                                        return i = a.sent(), this.logger.error(i, "Unable to parse response json"), [2];
+                                    case 3:
+                                        return setTimeout(function() {
+                                            var e = n.map(function(e, n) {
+                                                var i = t.requests[n];
+                                                return e.extensions && e.extensions.durationMilliseconds && !e.status ? {
+                                                    queryID: ++r.queryID,
+                                                    durationMs: e.extensions.durationMilliseconds,
+                                                    operationName: e.extensions.operationName,
                                                     variables: i.variables
                                                 } : {
-                                                    queryID: ++c.queryID,
+                                                    queryID: ++r.queryID,
                                                     operationName: "<extensions field missing>",
                                                     durationMs: 0
                                                 }
-                                            }), this.eventEmitter.listeners("query-metrics", !0) && this.eventEmitter.emit("query-metrics", {
-                                                batchID: s.twilight.batchID,
-                                                batchTimestamp: s.twilight.batchTimestamp,
-                                                queries: l
-                                            }), n(), [2]
-                                    }
-                                })
+                                            });
+                                            r.eventEmitter.listeners("query-metrics", !0) && r.eventEmitter.emit("query-metrics", {
+                                                batchID: t.id,
+                                                batchTimestamp: t.timestamp,
+                                                queries: e
+                                            })
+                                        }), [2]
+                                }
                             })
-                        }), t
+                        })
+                    }, e.prototype.createBatchHTTPLink = function() {
+                        var e = this;
+                        return new F.a({
+                            batchMax: 20,
+                            uri: this.config.graphqlEndpoint,
+                            includeExtensions: !0,
+                            fetch: function(t, n) {
+                                var i = {
+                                        "Client-Id": e.config.authSettings.clientID,
+                                        "X-Device-Id": e.session.deviceID
+                                    },
+                                    r = e.store.getState();
+                                r.session && (i["Accept-Language"] = r.session.locale), e.authToken && (i.Authorization = "OAuth " + e.authToken), n.headers = i;
+                                var a = {
+                                    id: ++e.batchID,
+                                    timestamp: performance.timing.navigationStart + performance.now(),
+                                    requests: JSON.parse(n.body)
+                                };
+                                return fetch(t, n).then(function(t) {
+                                    return m.b(e, void 0, void 0, function() {
+                                        var e, n, i, r;
+                                        return m.e(this, function(o) {
+                                            switch (o.label) {
+                                                case 0:
+                                                    return t.status && (t.status >= 400 || t.status < 200) ? 401 !== t.status ? [3, 4] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : [3, 1] : [3, 7];
+                                                case 1:
+                                                    return this.logger.warn("Received 401 response from GraphQL, logging user out."), Object(B.a)(), [4, Object(j.h)(this.authToken, {
+                                                        config: this.config,
+                                                        logger: this.logger
+                                                    })];
+                                                case 2:
+                                                    return o.sent(), window.location.reload(!0), [2, t];
+                                                case 3:
+                                                    return [3, 6];
+                                                case 4:
+                                                    return n = (e = this.logger).error, i = [new Error("Received non-200 response from GraphQL."), "Received non-200 response from GraphQL."], r = {
+                                                        status: t.status
+                                                    }, [4, t.clone().text()];
+                                                case 5:
+                                                    n.apply(e, i.concat([(r.body = o.sent(), r)])), o.label = 6;
+                                                case 6:
+                                                    return [2, t];
+                                                case 7:
+                                                    return [4, this.collectQueryStats(t.clone(), a)];
+                                                case 8:
+                                                    return o.sent(), [2, t]
+                                            }
+                                        })
+                                    })
+                                })
+                            }
+                        })
                     }, e
                 }(),
-                V = function() {
+                H = function() {
                     function e(e) {
                         this.logger = e.withCategory("integrations"), window.__twilightIntegrations ? (this.desklight = this.loadIntegration("desklight"), this.spotlight = this.loadIntegration("spotlight")) : this.logger.debug("No integrations found.")
                     }
@@ -5051,10 +5089,10 @@
                         })
                     }, e
                 }(),
-                W = n("fvjX"),
-                G = n("TdMD"),
-                q = n.n(G),
-                Q = function() {
+                V = n("fvjX"),
+                W = n("TdMD"),
+                G = n.n(W),
+                q = function() {
                     function e(e) {
                         var t = this;
                         this.reducers = {}, this.rootReducer = function(e, n) {
@@ -5066,7 +5104,7 @@
                                     if (void 0 === (s = t.reducers[n.name](e[n.name], {
                                             type: "@@INIT"
                                         }))) throw new Error("Reducer for key " + n.name + " returned undefined!");
-                                    r = p.a({}, e, ((i = {})[n.name] = s, i)), a = !0;
+                                    r = m.a({}, e, ((i = {})[n.name] = s, i)), a = !0;
                                     break;
                                 default:
                                     for (var o in t.reducers)
@@ -5077,7 +5115,7 @@
                                         }
                             }
                             return a ? r : e
-                        }, this.reduxStore = Object(W.e)(this.rootReducer, (e.buildType !== s.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || W.d)(Object(W.a)(q.a)))
+                        }, this.reduxStore = Object(V.e)(this.rootReducer, (e.buildType !== l.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || V.d)(Object(V.a)(G.a)))
                     }
                     return e.prototype.getReduxStore = function() {
                         return this.reduxStore
@@ -5093,757 +5131,24 @@
                         })
                     }, e
                 }(),
-                K = function() {
-                    function e(e, t, n) {
-                        this.sniffers = e, this.trackFunc = t, this.filterFunc = n, this.startCalled = !1
-                    }
-                    return e.prototype.start = function() {
-                        return !this.startCalled && (this.startCalled = !0, this.sniffers.forEach(this.processSniffer.bind(this)), !0)
-                    }, e.prototype.flush = function() {
-                        this.sniffers.forEach(function(e) {
-                            return e.getAvailableResourceTimings()
-                        })
-                    }, e.prototype.processSniffer = function(e) {
-                        var t = e.frameURL,
-                            n = e.getFrameTiming(),
-                            i = n.navigationStart;
-                        this.processFrameTiming(t, n), e.addResourceListener(this.processResourceTiming.bind(this, i)), e.getAvailableResourceTimings().forEach(this.processResourceTiming.bind(this, i))
-                    }, e.prototype.processFrameTiming = function(e, t) {
-                        if (this.shouldSend(e)) {
-                            var n = this.createFrameNetworkEventData(e, t);
-                            this.trackFunc(n)
-                        }
-                    }, e.prototype.processResourceTiming = function(e, t) {
-                        if (this.shouldSend(t.name)) {
-                            var n = this.createResourceNetworkEventData(e, t);
-                            this.trackFunc(n)
-                        }
-                    }, e.prototype.shouldSend = function(e) {
-                        return !this.filterFunc || this.filterFunc(e)
-                    }, e.prototype.createFrameNetworkEventData = function(e, t) {
-                        return {
-                            type: "frame",
-                            request_url: e,
-                            start_time: t.navigationStart,
-                            duration: Math.round(t.responseEnd - t.fetchStart),
-                            dns_duration: this.computeDuration(t.domainLookupStart, t.domainLookupEnd),
-                            connect_duration: this.computeDuration(t.connectStart, t.connectEnd),
-                            request_duration: this.computeDuration(t.requestStart, t.responseStart),
-                            response_duration: this.computeDuration(t.responseStart, t.responseEnd),
-                            redirect_duration: this.computeDuration(t.redirectStart, t.redirectEnd)
-                        }
-                    }, e.prototype.createResourceNetworkEventData = function(e, t) {
-                        return {
-                            type: "resource",
-                            request_url: t.name,
-                            start_time: e + t.startTime,
-                            duration: Math.round(t.duration),
-                            dns_duration: this.computeDuration(t.domainLookupStart, t.domainLookupEnd),
-                            connect_duration: this.computeDuration(t.connectStart, t.connectEnd),
-                            request_duration: this.computeDuration(t.requestStart, t.responseStart),
-                            response_duration: this.computeDuration(t.responseStart, t.responseEnd),
-                            redirect_duration: this.computeDuration(t.redirectStart, t.redirectEnd),
-                            transfer_size: t.transferSize,
-                            decoded_size: t.decodedBodySize
-                        }
-                    }, e.prototype.computeDuration = function(e, t) {
-                        return e > 0 && t > 0 ? t - e : void 0
-                    }, e
-                }(),
-                Y = "resource";
-
-            function $(e) {
-                return !!(e && e.timing && e.getEntriesByType && e.setResourceTimingBufferSize && e.clearResourceTimings)
-            }
-            var X, J = function() {
-                    function e(e, t, n) {
-                        var i = this;
-                        this.performance = t, this.frameURL = n, this.startCalled = !1, this.eventEmitter = new M.EventEmitter, this.emitterName = "network-sniffer", this.processNewResourceTimings = function() {
-                            var e = i.performance.getEntriesByType(Y);
-                            if (0 !== e.length) {
-                                for (var t = 0, n = e; t < n.length; t++) {
-                                    var r = n[t];
-                                    i.fireResourceListeners(r)
-                                }
-                                i.clearResourceBuffer()
-                            }
-                        }, this.logger = e.withCategory("network-sniffer"), $(t) ? this.logger.debug("Created") : this.logger.warn("No sniffing allowed!")
-                    }
-                    return e.prototype.start = function() {
-                        return !this.startCalled && (this.startCalled = !0, this.setResourceBufferSize(), setInterval(this.processNewResourceTimings, 500), !0)
-                    }, e.prototype.getFrameTiming = function() {
-                        return this.performance.timing
-                    }, e.prototype.getAvailableResourceTimings = function() {
-                        return this.processNewResourceTimings(), this.performance.getEntriesByType(Y)
-                    }, e.prototype.addResourceListener = function(e) {
-                        this.eventEmitter.addListener(this.emitterName, e)
-                    }, e.prototype.removeResourceListener = function(e) {
-                        this.eventEmitter.removeListener(this.emitterName, e)
-                    }, e.prototype.setResourceBufferSize = function() {
-                        this.performance.setResourceTimingBufferSize(1e3)
-                    }, e.prototype.clearResourceBuffer = function() {
-                        this.performance.clearResourceTimings(), this.setResourceBufferSize()
-                    }, e.prototype.fireResourceListeners = function(e) {
-                        this.eventEmitter.emit(this.emitterName, e)
-                    }, e
-                }(),
-                Z = function() {
-                    function e(e) {
-                        var t = this;
-                        this.buffer = [], this.eventEmitter = new M.EventEmitter, this.emitterName = "network-metrics", this.loggedHostWarnings = {}, this.shouldLogHosts = function(e) {
-                            return function(n) {
-                                var i = new URL(n),
-                                    r = i.hostname,
-                                    a = r.split(".");
-                                a.length > 2 && (r = a[a.length - 2] + "." + a[a.length - 1]);
-                                var o = e.some(function(e) {
-                                    return 0 === r.indexOf(e)
-                                });
-                                return o || t.loggedHostWarnings[r] || (t.loggedHostWarnings[r] = !0, t.logger.debug("Request not in whitelist", {
-                                    urlHost: r,
-                                    url: i
-                                })), o
-                            }
-                        }, this.onRequestCompleted = function(e) {
-                            if (t.eventEmitter.listeners(t.emitterName, !0)) {
-                                if (t.buffer.length > 0) {
-                                    for (var n = 0, i = t.buffer; n < i.length; n++) {
-                                        var r = i[n];
-                                        t.eventEmitter.emit(t.emitterName, r)
-                                    }
-                                    t.buffer = []
-                                }
-                                t.eventEmitter.emit(t.emitterName, e)
-                            } else t.buffer.push(e)
-                        }, this.logger = e.logger.withCategory("network monitoring"), this.window = e.window;
-                        var n = this.createSniffers();
-                        n.map(function(e) {
-                            t.logger.debug("Starting network sniffer"), e.start()
-                        }), this.networkLogger = new K(n, this.onRequestCompleted, this.shouldLogHosts(e.config.networkLoggingHostNames)), this.logger.debug("Starting network logger"), this.networkLogger.start()
-                    }
-                    return e.prototype.flush = function() {
-                        this.networkLogger.flush()
-                    }, e.prototype.subscribeToUpdates = function(e) {
-                        this.eventEmitter.addListener(this.emitterName, e)
-                    }, e.prototype.removeQueryMetricsListener = function(e) {
-                        this.eventEmitter.removeListener(this.emitterName, e)
-                    }, e.prototype.createSniffers = function() {
-                        var e = [];
-                        this.canAccessPerformance(this.window) && ((n = this.createSniffer(this.window)) && (this.logger.debug("Creating network sniffer for main window"), e.push(n)));
-                        for (var t = 0; t < this.window.frames.length; t++) {
-                            var n;
-                            if (this.canAccessFrame(t) && this.canAccessPerformance(this.window.frames[t].window))(n = this.createSniffer(this.window.frames[t].window)) && (this.logger.debug("Creating network sniffer for frame", t), e.push(n))
-                        }
-                        return e
-                    }, e.prototype.canAccessFrame = function(e) {
-                        try {
-                            return !!this.window.frames[e].window
-                        } catch (t) {
-                            return this.logger.warn("Can't access frame", {
-                                index: e,
-                                err: t
-                            }), !1
-                        }
-                    }, e.prototype.canAccessPerformance = function(e) {
-                        try {
-                            return $(e.performance)
-                        } catch (e) {
-                            return this.logger.warn("Unable to determine if network sniffing is allowed", e), !1
-                        }
-                    }, e.prototype.createSniffer = function(e) {
-                        try {
-                            return new J(this.logger, e.performance, e.location.href)
-                        } catch (e) {
-                            this.logger.warn("Unable to create network sniffer", e)
-                        }
-                    }, e
-                }(),
-                ee = n("JOxF"),
-                te = n("kz7j"),
-                ne = n("DiGQ"),
-                ie = n("NvVO"),
-                re = function() {
-                    function e(t, n) {
-                        var i = this;
-                        if (this.componentDuration = {
-                                latencyStatus: ne.a.Unknown
-                            }, this.isRoot = !1, this.hasReportedInteractive = !1, this.customEvents = {}, this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.getHasReportedInteractive = function() {
-                                return i.hasReportedInteractive
-                            }, this.setLocation = function(e) {
-                                i.root.setLocation(e)
-                            }, this.sendInitializingEvent = function(e, t, n) {
-                                i.hasSentInitializing || (i.tracker.trackInitialize(e, t, n, i.componentName, i.relativeStartTime, i.id.toString(), i.startTimestamp, i.isPrePageLoad, i.root && i.root.hasLostVisibility, i.parent && i.parent.id.toString()), i.hasSentInitializing = !0)
-                            }, this.sendInteractiveEvent = function(e, t, n) {
-                                !i.hasSentInteractive && i.componentDuration.value && (i.tracker.trackInteractive(e, t, n, i.componentName, i.relativeStartTime, i.id.toString(), i.completedTimestamp, i.componentDuration.value, i.isPrePageLoad, i.root && i.root.hasLostVisibility, i.parent && i.parent.id.toString(), i.parent && i.parent.componentName), i.hasSentInteractive = !0)
-                            }, this.shouldWarnChild = function() {
-                                return i.getCurrentTimestamp() - i.completedTimestamp < 500
-                            }, this.id = e.counter++, this.componentName = t, this.parent = n && n.parent, this.children = [], this.parent ? (this.tracker = this.parent.tracker, this.root = this.parent.root || this.parent, this.depth = this.parent.depth + 1, this.parent.registerChild(this)) : this.depth = 0, this.logger = n.logger, this.isPageComponent = this.componentName.endsWith("Page"), this.isPrePageLoad = this.isRoot || this.root && !this.root.completedTimestamp, this.isPageComponent) {
-                            var r = n && n.destination;
-                            r || (this.logger.error(new Error("The " + this.componentName + " component must supply a canonical destination, ex: directory.index"), "Invalid withLatencyTracking options"), r = ie.a.Unknown), this.logger.debug("Set root page to: " + r), this.root && this.root.setPage(this, r)
-                        }
-                        n && n.destination && !this.isPageComponent && this.logger.error(new Error("The " + this.componentName + ' component supplied a destination but the component name does not end in "Page".'), "Invalid withLatencyTracking options"), this.resetStartTime(), this.raiseUpdate(), this.logger.debug("Latency tracker created")
-                    }
-                    return e.prototype.reset = function(e) {
-                        void 0 === e && (e = !0), this.completedTimestamp && (e && (this.children = [], this.hasReportedInteractive = !1), this.resetStartTime(), this.parent && this.parent.childReset(this), this.logger.debug(this.componentName + " reset", {
-                            children: this.children
-                        }), this.raiseUpdate())
-                    }, e.prototype.resetChildren = function() {
-                        if (this.children && this.children.length)
-                            for (var e = 0, t = this.children; e < t.length; e++) {
-                                t[e].resetChildren()
-                            }
-                        this.children = []
-                    }, e.prototype.reportInteractive = function(e) {
-                        this.hasReportedInteractive ? this.logger.debug("Already reported interactive") : (this.hasReportedInteractive = !0, this.logger.debug(this.componentName + " reported interactive", {
-                            expectedChildCount: e,
-                            children: this.getChildNames()
-                        }), e && (this.expectedChildCount = e), this.checkChildCompleted())
-                    }, e.prototype.unregister = function() {
-                        this.hasReportedInteractive || (this.parent ? (this.parent.unregisterChild(this), this.logger.debug("Unregistering component which has not reported interactive yet", {
-                            component: this.componentName
-                        })) : this.logger.debug("Attempted to unregister a parent-less component. This is a no-op.", {
-                            component: this.componentName
-                        }))
-                    }, e.prototype.resetCustomEvents = function(e) {
-                        this.root.customEvents[e] = []
-                    }, e.prototype.registerCustomEvent = function(e) {
-                        var t, n = !1;
-                        switch (e.start) {
-                            case te.d.Registration:
-                                t = this.getCurrentTimestamp();
-                                break;
-                            default:
-                                this.root.customEvents[e.group] && this.root.customEvents[e.group].find(function(t) {
-                                    return t.key === e.key
-                                }) && (n = !0, this.logger.warn("Registered a custom event timed from navigation start, that was previously registered. Reporting this event will be a no-op.", {
-                                    customEventOptions: e
-                                })), t = this.getRootInitTimestamp()
-                        }
-                        var i = p.a({}, e, {
-                            doNotTrack: n,
-                            duration: {
-                                latencyStatus: ne.a.Unknown
-                            },
-                            startTime: t
-                        });
-                        return this.logger.debug("[" + e.group + "][" + e.label + "] Event registered", {
-                            customEvent: i
-                        }), n || (this.root.customEvents[e.group] || (this.root.customEvents[e.group] = []), this.root.customEvents[e.group].push(i)), this.raiseUpdate(), i
-                    }, e.prototype.reportCustomEvent = function(e) {
-                        if (!(e.duration && e.duration.value || e.doNotTrack)) {
-                            var t = Math.round(this.getCurrentTimestamp() - e.startTime),
-                                n = t <= e.benchmark ? ne.a.Pass : ne.a.Fail;
-                            e.duration.value = t, e.duration.latencyStatus = n, this.logger.debug("[" + e.group + "][" + e.label + "] Event reported", {
-                                customEvent: e
-                            }), this.raiseUpdate(), this.root.sendCustomEventToSpade(e)
-                        }
-                    }, e.prototype.createChild = function(t, n) {
-                        return new e(t, {
-                            destination: n,
-                            parent: this,
-                            logger: this.logger.withCategory(t)
-                        })
-                    }, e.prototype.sendBenchmarkEventsToSpade = function() {
-                        if (this.root) {
-                            var e = this.root.getLocation(),
-                                t = this.root.getDestination(),
-                                n = this.root.getPageComponentName();
-                            if (t && e && n) {
-                                this.sendInitializingEvent(t, e, n), this.sendInteractiveEvent(t, e, n);
-                                for (var i = 0, r = this.children; i < r.length; i++) {
-                                    r[i].sendBenchmarkEventsToSpade()
-                                }
-                            }
-                        }
-                    }, e.prototype.raiseUpdate = function() {
-                        this.root && this.root.raiseUpdate()
-                    }, e.prototype.markCompleted = function() {
-                        if (!this.completedTimestamp) {
-                            this.completedTimestamp = this.getCurrentTimestamp();
-                            var e = Math.round(this.completedTimestamp - this.startTimestamp);
-                            this.componentDuration = {
-                                value: e,
-                                latencyStatus: ne.a.Unknown
-                            }, this.logger.debug("Done", {
-                                componantName: this.componentName,
-                                durationMs: this.componentDuration.value
-                            }), this.parent && this.parent.childCompleted(this), this.raiseUpdate()
-                        }
-                    }, e.prototype.checkChildCompleted = function() {
-                        var e = this.expectedChildCount ? this.expectedChildCount : this.children.length;
-                        this.children.filter(function(e) {
-                            return e.completedTimestamp
-                        }).length >= e && (this.logger.debug("All children completed", {
-                            componentName: this.componentName,
-                            expectedChildCount: e,
-                            children: this.getChildNames()
-                        }), this.markCompleted())
-                    }, e.prototype.registerChild = function(e) {
-                        if (this.completedTimestamp) {
-                            if (this.root && this.root.completedTimestamp) return void(this.shouldWarnChild() && this.logger.warn("Child attempted to register itself, but parent is already completed", {
-                                child: e.componentName,
-                                parent: this.componentName
-                            }));
-                            this.reset(!1)
-                        }
-                        this.root.resetFirstPageLoadedFailsafe(), this.children.push(e)
-                    }, e.prototype.unregisterChild = function(e) {
-                        var t = this.children.indexOf(e);
-                        t > -1 ? (this.children.splice(t, 1), this.expectedChildCount && this.expectedChildCount--) : this.logger.warn("Child attempted to unregister itself, but was not registered", {
-                            child: e.componentName,
-                            parent: this.componentName
-                        }), this.hasReportedInteractive && this.checkChildCompleted()
-                    }, e.prototype.getChildNames = function() {
-                        return this.children.map(function(e) {
-                            return e.componentName
-                        })
-                    }, e.prototype.getRootInitTimestamp = function() {
-                        return this.root.startTimestamp
-                    }, e.prototype.getNavigationStartTimestamp = function() {
-                        return this.root ? this.root.navigationStart : Date.now()
-                    }, e.prototype.getCurrentTimestamp = function() {
-                        return performance.timing.navigationStart + performance.now()
-                    }, e.prototype.getRelativeStartTimestamp = function() {
-                        return Math.round(this.startTimestamp - this.getNavigationStartTimestamp())
-                    }, e.prototype.resetStartTime = function() {
-                        var e = this.getCurrentTimestamp();
-                        this.startTimestamp = e, this.relativeStartTime = this.getRelativeStartTimestamp(), this.completedTimestamp = 0, this.componentDuration = {
-                            value: void 0,
-                            latencyStatus: ne.a.Unknown
-                        }
-                    }, e.prototype.childReset = function(e) {
-                        this.children.includes(e) || this.children.push(e), this.completedTimestamp ? this.logger.warn("Child component reset after this one completed", {
-                            child: e.componentName
-                        }) : this.logger.debug("Child component reset", {
-                            child: e.componentName
-                        })
-                    }, e.prototype.childCompleted = function(e) {
-                        this.completedTimestamp ? this.shouldWarnChild() && this.logger.warn("Child attempted to report completed, but parent is already completed", {
-                            child: e.componentName,
-                            parent: this.componentName
-                        }) : (this.logger.debug(this.componentName + " child " + e.componentName + " completed", {
-                            children: this.getChildNames()
-                        }), this.hasReportedInteractive && this.checkChildCompleted())
-                    }, e.counter = 1, e
-                }(),
-                ae = function() {
-                    function e(e, t) {
-                        this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
-                    }
-                    return e.prototype.trackNetworkRequestEvent = function(e, t, n, i, r, a) {
-                        a.request_url !== this.tracking.getEndpoint() ? this.tracking.trackBenchmark(I.SpadeEventType.NetworkRequest, p.a({
-                            is_pre_pageload: i,
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            client_time: a.start_time / 1e3,
-                            relative_start_time: r
-                        }, a)) : this.logger.debug("Skipping Spade network request.")
-                    }, e.prototype.trackCompleteTransition = function(e, t, n, i, r, a, o) {
-                        this.tracking.trackBenchmark(I.SpadeEventType.CompleteTransition, {
-                            client_time: i / 1e3,
-                            lost_visibility: o,
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            is_app_launch: a,
-                            time_from_fetch: r
-                        })
-                    }, e.prototype.trackCustomEvent = function(e, t, n, i, r) {
-                        this.tracking.trackCustomEventBenchmark({
-                            benchmark: e.benchmark,
-                            destination: i,
-                            duration: Math.round(e.duration && e.duration.value || 0),
-                            group: e.group,
-                            is_app_launch: t,
-                            key: e.key,
-                            label: e.label,
-                            lost_visibility: n,
-                            page_component_name: r
-                        })
-                    }, e.prototype.trackAppBooted = function(e, t, n, i, r, a) {
-                        this.tracking.trackBenchmark(I.SpadeEventType.AppBooted, {
-                            client_time: i / 1e3,
-                            lost_visibility: a,
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            time_from_fetch: r
-                        })
-                    }, e.prototype.trackInitialize = function(e, t, n, i, r, a, o, s, l, c) {
-                        this.tracking.trackBenchmark(I.SpadeEventType.ComponentInitializing, {
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            component: i,
-                            component_id: a,
-                            parent_component_id: c,
-                            client_time: o / 1e3,
-                            lost_visibility: l,
-                            is_pre_pageload: s,
-                            relative_start_time: r
-                        })
-                    }, e.prototype.trackInteractive = function(e, t, n, i, r, a, o, s, l, c, d, u) {
-                        this.tracking.trackBenchmark(I.SpadeEventType.ComponentInteractive, {
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            component: i,
-                            component_id: a,
-                            parent_component_id: d,
-                            parent_component: u,
-                            client_time: o / 1e3,
-                            time_from_initializing: s / 1e3,
-                            duration: s,
-                            lost_visibility: c,
-                            relative_start_time: r,
-                            is_pre_pageload: l
-                        })
-                    }, e.prototype.trackFetchStart = function(e, t, n, i, r) {
-                        this.tracking.trackBenchmark(I.SpadeEventType.FetchStart, {
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            client_time: i / 1e3,
-                            lost_visibility: r
-                        })
-                    }, e.prototype.trackApiQuery = function(e, t, n, i, r, a, o, s, l) {
-                        this.tracking.trackApiQueryBenchmark({
-                            destination: e,
-                            location: t,
-                            client_time: i / 1e3,
-                            page_component_name: r,
-                            query_name: a,
-                            is_pre_pageload: l,
-                            execution_time: o,
-                            request_time: s,
-                            relative_start_time: n
-                        })
-                    }, e
-                }(),
-                oe = "first_page_loaded_timeout",
-                se = function(e) {
-                    function t(t) {
-                        var n = e.call(this, "Root", {
-                            logger: t.logger.withCategory("latency-tracker")
-                        }) || this;
-                        if (n.rootInitDuration = {
-                                latencyStatus: ne.a.Unknown
-                            }, n.firstPaint = {
-                                latencyStatus: ne.a.Unknown
-                            }, n.pageLoadDuration = {
-                                latencyStatus: ne.a.Unknown
-                            }, n.networkEvents = [], n.queryBatchMetrics = [], n.queryEvents = [], n.isFirstLoad = !0, n.isRoot = !0, n.hasLostVisibility = !1, n.emitter = new M.EventEmitter, n.hasDispatchedFirstPageLoaded = !1, n.firstPageLoadedFailsafe = 0, n.firstPageLoadedTimeout = 1e4, n.getLocation = function() {
-                                return n.location
-                            }, n.setLocation = function(e) {
-                                n.logger.debug("Updating location", {
-                                    location: e
-                                }), n.location = e, n.sendBenchmarkEventsToSpade()
-                            }, n.getDestination = function() {
-                                return n.destination
-                            }, n.getPageComponentName = function() {
-                                return n.page && n.page.componentName
-                            }, n.setPage = function(e, t) {
-                                n.page = e, n.destination = t, n.sentinel.setPageComponentName(e.componentName)
-                            }, n.sendCustomEventToSpade = function(e) {
-                                n.componentEventsEnabled && n.tracker.trackCustomEvent(e, n.isFirstLoad, n.hasLostVisibility, n.destination, n.getPageComponentName())
-                            }, n.addPageLoadFailedListener = function(e) {
-                                n.emitter.addListener("firstPageLoadFailed", e)
-                            }, n.removePageLoadFailedListener = function(e) {
-                                n.emitter.removeListener("firstPageLoadFailed", e)
-                            }, n.sendAllEvents = function() {
-                                n.networkMonitor && (n.networkMonitor.flush(), n.doReconcileQueries(!0)), n.sendBenchmarkEventsToSpade(), n.sendNetworkRequestsToSpade()
-                            }, n.sendFetchStartEvent = function(e, t, i) {
-                                n.isFirstLoad && !n.hasSentFetchStart && (n.tracker.trackFetchStart(e, t, i, performance.timing.fetchStart, n.hasLostVisibility), n.hasSentFetchStart = !0)
-                            }, n.sendCompleteTransitionEvent = function(e, t, i) {
-                                !n.hasSentCompleteTransition && n.pageLoadDuration.value && (n.tracker.trackCompleteTransition(e, t, i, n.completedTimestamp, n.pageLoadDuration.value, n.isFirstLoad, n.hasLostVisibility), n.hasSentCompleteTransition = !0)
-                            }, n.sendAppBootedEvent = function(e, t, i) {
-                                if (n.isFirstLoad && !n.hasSentAppBooted && n.rootInitDuration.value) {
-                                    n.tracker.trackAppBooted(e, t, i, n.startTimestamp, n.rootInitDuration.value, n.hasLostVisibility);
-                                    try {
-                                        var r = performance.getEntriesByType("paint").find(function(e) {
-                                            return "first-contentful-paint" === e.name
-                                        });
-                                        r && (n.firstPaint.value = r.startTime, r.startTime > 250 ? n.firstPaint.latencyStatus = ne.a.Fail : n.firstPaint.latencyStatus = ne.a.Pass, n.tracker.trackCustomEvent({
-                                            benchmark: 250,
-                                            duration: n.firstPaint,
-                                            group: te.a.Page,
-                                            key: te.b.FirstPaint,
-                                            label: te.c.FirstPaint,
-                                            startTime: n.navigationStart
-                                        }, n.isFirstLoad, n.hasLostVisibility, n.destination, n.getPageComponentName()))
-                                    } catch (e) {
-                                        n.logger.debug("First paint metrics not available on this platform", e)
-                                    }
-                                    n.hasSentAppBooted = !0
-                                }
-                            }, n.onNetworkRequest = function(e) {
-                                var t = e.request_url.startsWith(n.graphqlEndpoint),
-                                    i = !n.completedTimestamp || e.start_time <= n.completedTimestamp,
-                                    r = Math.round(e.start_time - n.getNavigationStartTimestamp());
-                                n.networkEvents.push({
-                                    networkEvent: e,
-                                    latencyStatus: ne.a.Unknown,
-                                    relativeStartTime: r,
-                                    isPendingSpade: !0,
-                                    isApiRequest: t,
-                                    isPrePageload: i,
-                                    duration: {
-                                        value: e.duration,
-                                        latencyStatus: ne.a.Unknown
-                                    }
-                                }), n.reconcileQueries()
-                            }, n.reconcileQueries = function() {
-                                n.queryReconciliationTimer || (n.queryReconciliationTimer = setTimeout(function() {
-                                    n.queryReconciliationTimer = null, n.doReconcileQueries(!1), n.sendNetworkRequestsToSpade()
-                                }, 250))
-                            }, n.doReconcileQueries = function(e) {
-                                for (var t = n.networkEvents.filter(function(e) {
-                                        return e.isApiRequest
-                                    }), i = function(i) {
-                                        var r = t.find(function(e) {
-                                            return e.networkEvent.duration >= i.slowestQueryInBatch && e.networkEvent.start_time >= i.batchTimestamp && e.networkEvent.start_time - i.batchTimestamp < 10
-                                        });
-                                        !r && e && (r = t.find(function(e) {
-                                            return e.networkEvent.duration >= i.slowestQueryInBatch && e.networkEvent.start_time >= i.batchTimestamp
-                                        })), r ? (i.relatedNetworkEvent = r.networkEvent, i.isPrePageload = r.isPrePageload, i.requestDuration = {
-                                            value: Math.round(r.networkEvent.duration),
-                                            latencyStatus: ne.a.Unknown
-                                        }) : e && n.logger.warn("Unable to find a related network event for query", {
-                                            queryEvent: i,
-                                            filteredApiRequests: t,
-                                            allNetworkRequests: n.networkEvents.slice()
-                                        })
-                                    }, r = 0, a = n.queryEvents.filter(function(e) {
-                                        return !e.relatedNetworkEvent
-                                    }); r < a.length; r++) {
-                                    i(a[r])
-                                }
-                                n.raiseUpdate()
-                            }, n.onQuery = function(e) {
-                                if (n.completedTimestamp && e.batchTimestamp > n.completedTimestamp) n.logger.debug("Query event data skipped, it is post page load.", e);
-                                else {
-                                    var t = Math.max.apply(Math, e.queries.map(function(e) {
-                                        return e.durationMs
-                                    }));
-                                    n.queryBatchMetrics.push({
-                                        batchID: e.batchID,
-                                        batchTimestamp: e.batchTimestamp,
-                                        latencyStatus: ne.a.Unknown,
-                                        slowestQueryInBatch: t
-                                    });
-                                    for (var i = 0, r = e.queries; i < r.length; i++) {
-                                        var a = r[i];
-                                        n.queryEvents.push({
-                                            batchID: e.batchID,
-                                            batchTimestamp: e.batchTimestamp,
-                                            relativeStartTime: Math.round(e.batchTimestamp - n.getNavigationStartTimestamp()),
-                                            queryDuration: {
-                                                value: a.durationMs,
-                                                latencyStatus: ne.a.Unknown
-                                            },
-                                            requestDuration: {
-                                                latencyStatus: ne.a.Unknown
-                                            },
-                                            operationName: a.operationName,
-                                            queryID: a.queryID,
-                                            slowestQueryInBatch: t,
-                                            variables: a.variables,
-                                            latencyStatus: ne.a.Unknown,
-                                            isPendingSpade: !0,
-                                            isPrePageload: !1
-                                        })
-                                    }
-                                    n.logger.debug("GraphQL query completed: ", {
-                                        latestQueryData: e,
-                                        allBatches: n.queryBatchMetrics
-                                    }), n.reconcileQueries()
-                                }
-                            }, n.sendNetworkRequestsToSpade = function() {
-                                if (n.networkEventsEnabled && n.destination && n.location && n.page) {
-                                    n.logger.debug("Sending ready network and query events to Spade");
-                                    var e = n.networkEvents.filter(function(e) {
-                                        return e.isPendingSpade
-                                    });
-                                    if (e.length) {
-                                        for (var t = 0, i = e; t < i.length; t++) {
-                                            var r = i[t];
-                                            r.isPendingSpade = !1, n.tracker.trackNetworkRequestEvent(n.destination, n.location, n.page.componentName, r.isPrePageload, r.relativeStartTime, r.networkEvent)
-                                        }
-                                        n.logger.debug("Sent network events to spade:", {
-                                            count: e.length
-                                        })
-                                    }
-                                    var a = n.queryEvents.filter(function(e) {
-                                        return e.isPendingSpade && e.isPrePageload
-                                    });
-                                    if (a.length > 0) {
-                                        for (var o = 0, s = 0, l = a; s < l.length; s++) {
-                                            var c = l[s];
-                                            void 0 !== c.requestDuration.value && void 0 !== c.queryDuration.value && (c.isPendingSpade = !1, n.tracker.trackApiQuery(n.destination, n.location, c.relativeStartTime, c.batchTimestamp, n.page.componentName, c.operationName, c.queryDuration.value, c.requestDuration.value, c.isPrePageload), o += 1)
-                                        }
-                                        n.logger.debug("Sent " + o + " query events to Spade, " + (a.length - o) + " events skipped because they are not yet ready.")
-                                    }
-                                }
-                            }, n.checkLostVisibility = function() {
-                                n.hasLostVisibility || (n.hasLostVisibility = document.hidden)
-                            }, n.dispatchFirstPageLoaded = function() {
-                                n.store.dispatch(Object(ee.f)()), n.hasDispatchedFirstPageLoaded = !0
-                            }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new ae(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
-                                value: Math.round(n.startTimestamp - n.navigationStart),
-                                latencyStatus: ne.a.Unknown
-                            }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.stats = t.stats, n.firstPageLoadedTimeout = t.dyanmicSettings.get(oe, 1e4), n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
-                            n.checkLostVisibility(), document.addEventListener("visibilitychange", n.checkLostVisibility)
-                        } catch (e) {
-                            n.logger.warn("Failed to attach event listener for document visibility change, assuming visibility has been lost.", e), n.hasLostVisibility = !0
-                        }
-                        return n.raiseUpdate(), n
-                    }
-                    return p.d(t, e), t.prototype.resetFirstPageLoadedFailsafe = function() {
-                        var e = this;
-                        this.clearFirstPageLoadedFailsafeTimer();
-                        var t = function() {
-                            return void 0 !== e.componentDuration.value || !e.isFirstLoad || !e.page || e.hasDispatchedFirstPageLoaded
-                        };
-                        t() || (this.firstPageLoadedFailsafe = setTimeout(function() {
-                            if (!t()) {
-                                var n = e.page ? e.page.componentName : "Unknown",
-                                    i = [],
-                                    r = function(t) {
-                                        for (var a = 0, o = t; a < o.length; a++) {
-                                            var s = o[a];
-                                            s.getHasReportedInteractive() || (i.push(s.componentName), e.stats.recordFailsafeError([n, s.componentName].join("_"))), s.children && s.children.length && r(s.children)
-                                        }
-                                    };
-                                r(e.children || []), i.length || e.stats.recordFailsafeError(n), e.logger.error(new Error("First Page Loaded Failsafe Triggered"), "The first page loaded failsafe was triggered for page " + n + (i.length ? " and components " + i.join(", ") : "")), e.emitter.emit("firstPageLoadFailed"), e.dispatchFirstPageLoaded()
-                            }
-                        }, this.firstPageLoadedTimeout))
-                    }, t.prototype.subscribeToUpdates = function(e) {
-                        this.emitter.addListener("root-latency-tracker", e)
-                    }, t.prototype.getCustomEvents = function() {
-                        return this.customEvents
-                    }, t.prototype.reset = function() {
-                        this.isFirstLoad && this.dispatchFirstPageLoaded(), this.clearFirstPageLoadedFailsafeTimer();
-                        var e = this.getCurrentTimestamp();
-                        this.customEvents = {}, this.resetChildren(), this.children = [], this.startTimestamp = e, this.navigationStart = e, this.relativeStartTime = 0, this.rootInitDuration = {
-                            latencyStatus: ne.a.Unknown
-                        }, this.firstPaint = {
-                            latencyStatus: ne.a.Unknown
-                        }, this.completedTimestamp = 0, this.componentDuration = {
-                            latencyStatus: ne.a.Unknown
-                        }, this.hasReportedInteractive = !1, this.page = void 0, this.isFirstLoad = !1, this.pageLoadDuration = {
-                            latencyStatus: ne.a.Unknown
-                        }, this.networkEvents = [], this.queryEvents = [], this.queryBatchMetrics = [], this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.hasSentAppBooted = !1, this.hasSentCompleteTransition = !1, this.hasReportedInteractive = !1, this.hasLostVisibility = !1, this.raiseUpdate(), this.logger.debug("Reset Root")
-                    }, t.prototype.raiseUpdate = function() {
-                        var e = this;
-                        this.toolsEnabled && !this.dispatchTimer && (this.dispatchTimer = setTimeout(function() {
-                            e.dispatchTimer = null, e.emitter.emit("root-latency-tracker")
-                        }, 100))
-                    }, t.prototype.sendBenchmarkEventsToSpade = function() {
-                        if (this.destination && this.location && this.page) {
-                            if (this.sendFetchStartEvent(this.destination, this.location, this.page.componentName), this.sendAppBootedEvent(this.destination, this.location, this.page.componentName), this.componentEventsEnabled && (this.sendInitializingEvent(this.destination, this.location, this.page.componentName), this.sendInteractiveEvent(this.destination, this.location, this.page.componentName)), this.sendCompleteTransitionEvent(this.destination, this.location, this.page.componentName), this.componentEventsEnabled)
-                                for (var e = 0, t = this.children; e < t.length; e++) {
-                                    t[e].sendBenchmarkEventsToSpade()
-                                }
-                        } else this.logger.debug("Unable to send events to spade. destination or location is not set")
-                    }, t.prototype.registerChild = function(t) {
-                        e.prototype.registerChild.call(this, t), this.logger.debug("Root page got a new child", {
-                            newChild: t.componentName,
-                            allChildren: this.getChildNames()
-                        })
-                    }, t.prototype.checkChildCompleted = function() {
-                        this.page ? e.prototype.checkChildCompleted.call(this) : this.logger.debug("Root page incomplete, pending a page to register.")
-                    }, t.prototype.markCompleted = function() {
-                        if (!this.completedTimestamp)
-                            if (this.page) {
-                                if (this.completedTimestamp = this.getCurrentTimestamp(), this.componentDuration = {
-                                        value: Math.round(this.completedTimestamp - this.startTimestamp),
-                                        latencyStatus: ne.a.Unknown
-                                    }, this.logger.debug("Root tracker done", {
-                                        durationMs: this.componentDuration
-                                    }), this.pageLoadDuration = {
-                                        value: (this.componentDuration.value || 0) + (this.rootInitDuration.value || 0),
-                                        latencyStatus: ne.a.Unknown
-                                    }, this.logger.debug("Root page completed", {
-                                        pageLoadDuration: this.pageLoadDuration,
-                                        rootInitDuration: this.rootInitDuration,
-                                        componentDuration: this.componentDuration,
-                                        children: this.getChildNames()
-                                    }), this.raiseUpdate(), this.sendAllEvents(), this.isFirstLoad) {
-                                    this.clearFirstPageLoadedFailsafeTimer(), this.dispatchFirstPageLoaded();
-                                    var e = document.getElementById("root");
-                                    e && e.setAttribute("data-a-page-loaded", Date.now().toString())
-                                }
-                            } else this.logger.warn("Root page attemped to complete without a registered page component.")
-                    }, t.prototype.getNavigationStartTimestamp = function() {
-                        return this.navigationStart > 0 ? this.navigationStart : performance.timing.navigationStart
-                    }, t.prototype.clearFirstPageLoadedFailsafeTimer = function() {
-                        this.firstPageLoadedFailsafe && (clearTimeout(this.firstPageLoadedFailsafe), this.firstPageLoadedFailsafe = 0)
-                    }, t
-                }(re),
-                le = "twilight.force-component-benchmarking",
-                ce = "twilight.force-network-monitoring",
-                de = "twilight.force-benchmarking-tools",
-                ue = {
-                    networkingThreshold: "benchmark_networking_threshold",
-                    componentThreshold: "benchmark_component_threshold"
-                },
-                pe = function() {
-                    function e(e) {
-                        var t = this;
-                        this.getRootLatencyTracker = function() {
-                            return t.latencyTracker
-                        }, this.logger = e.logger.withCategory("Benchmarking"), this.seed = Math.round(100 * Math.random()) / 100, this.storage = e.storage;
-                        var n = e.dynamicSettings.get(ue.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
-                            i = e.dynamicSettings.get(ue.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
-                        this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new Z(e)), this.latencyTracker = new se({
-                            componentEventsEnabled: this.componentsEnabled,
-                            dyanmicSettings: e.dynamicSettings,
-                            networkEventsEnabled: this.networkingEnabled,
-                            toolsEnabled: this.toolsEnabled,
-                            config: e.config,
-                            logger: e.logger,
-                            apollo: e.apollo,
-                            networkMonitor: this.networkMonitoring,
-                            sentinel: e.sentinel,
-                            tracking: e.tracking,
-                            stats: e.stats,
-                            store: e.store,
-                            trackVisibility: !0
-                        }), this.logger.debug("Initialized", {
-                            seed: this.seed,
-                            toolsEnabled: this.toolsEnabled,
-                            componentsEnabled: this.componentsEnabled,
-                            componentThreshold: i,
-                            networkingEnabled: this.networkingEnabled,
-                            networkingThreshold: n
-                        })
-                    }
-                    return e.prototype.shouldEnableTools = function(e) {
-                        return e.forceBenchmarkingTools ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(de, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
-                    }, e.prototype.shouldEnableComponentBenchmarking = function(e, t, n) {
-                        return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(ce, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
-                    }, e.prototype.shouldEnableNetworkBenchmarking = function(e, t, n, i) {
-                        return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(le, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
-                    }, e
-                }(),
-                me = n("oUNp"),
-                he = n("6LFT"),
-                fe = n.n(he),
-                ge = n("h0rt"),
-                ve = n.n(ge);
+                Q = n("NdhY"),
+                K = n("oUNp"),
+                Y = n("6LFT"),
+                $ = n.n(Y),
+                X = n("h0rt"),
+                J = n.n(X);
             ! function(e) {
                 e[e.Debug = 1] = "Debug", e[e.Info = 2] = "Info", e[e.Warn = 3] = "Warn", e[e.Error = 4] = "Error", e[e.Fatal = 5] = "Fatal"
-            }(X || (X = {}));
-            var be, ye, ke, Se, we, Ee, Ce, Ne, Te, Ie, _e, Re, De, Oe, Pe, xe = function() {
+            }(i || (i = {}));
+            var Z, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he = function() {
                     function e(e, t) {
                         var n = this;
-                        if (this.eventEmitter = new M.EventEmitter, this.addMessageListener = function(e) {
+                        if (this.eventEmitter = new U.EventEmitter, this.addMessageListener = function(e) {
                                 n.eventEmitter.addListener("message", e)
                             }, this.removeMessageListener = function(e) {
                                 n.eventEmitter.removeListener("message", e)
                             }, this.onWindowError = function(e) {
-                                e.error ? (e.preventDefault(), n.write(X.Error, "Uncaught error.", void 0, e.error, "uncaught")) : n.write(X.Warn, "Uncaught error, but the error object is null. This is usually caused by a browser permission issue. Please check the browser console.", [{
+                                e.error ? (e.preventDefault(), n.write(i.Error, "Uncaught error.", void 0, e.error, "uncaught")) : n.write(i.Warn, "Uncaught error, but the error object is null. This is usually caused by a browser permission issue. Please check the browser console.", [{
                                     event: e
                                 }], new Error("Uncaught error, but the error object is null."), "uncaught")
                             }, e && t) throw new Error("Cannot pass both `options` and `childOptions` arguments.");
@@ -5859,25 +5164,25 @@
                         })
                     }, e.prototype.debug = function(e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                        this.write(X.Debug, e, t)
+                        this.write(i.Debug, e, t)
                     }, e.prototype.info = function(e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                        this.write(X.Info, e, t)
+                        this.write(i.Info, e, t)
                     }, e.prototype.warn = function(e) {
                         for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                        this.write(X.Warn, e, t)
+                        this.write(i.Warn, e, t)
                     }, e.prototype.error = function(e, t) {
-                        for (var n = [], i = 2; i < arguments.length; i++) n[i - 2] = arguments[i];
-                        this.write(X.Error, t, n, e, "caught")
+                        for (var n = [], r = 2; r < arguments.length; r++) n[r - 2] = arguments[r];
+                        this.write(i.Error, t, n, e, "caught")
                     }, e.prototype.fatal = function(e, t) {
-                        for (var n = [], i = 2; i < arguments.length; i++) n[i - 2] = arguments[i];
-                        this.write(X.Fatal, t, n, e, "fatal")
+                        for (var n = [], r = 2; r < arguments.length; r++) n[r - 2] = arguments[r];
+                        this.write(i.Fatal, t, n, e, "fatal")
                     }, e.prototype.flush = function() {
                         if (this.rootLogger) throw new Error("Cannot flush a child logger.");
                         var e = this.buffer;
                         return this.buffer = [], this.messagesTruncated && e.unshift({
                             time: e[0].time - 1,
-                            level: X[X.Info].toLowerCase(),
+                            level: i[i.Info].toLowerCase(),
                             message: "Log truncated.",
                             args: [{
                                 firstMessageTime: this.firstMessageTime,
@@ -5885,17 +5190,17 @@
                                 truncationEvents: this.truncationEvents
                             }]
                         }), e
-                    }, e.prototype.write = function(e, t, n, i, r, a, o) {
-                        void 0 === n && (n = []), void 0 === o && (o = !1), this.rootLogger ? this.rootLogger.write(e, t, n, i, r, this.category, o) : (this.buffer.length === this.maxBufferSize && (this.firstMessageTime || (this.firstMessageTime = this.buffer[0].time), this.truncationEvents = (this.truncationEvents || 0) + 1, this.messagesTruncated = (this.messagesTruncated || 0) + this.buffer.splice(0, Math.ceil(this.maxBufferSize / 10)).length), a = a || this.category, e >= this.minConsoleLogLevel && this.writeToConsole(e, a, t, n, i), e !== X.Debug && this.writeToBuffer(e, a, t, n, i, r, o), !this.onError || e !== X.Error && e !== X.Fatal || this.onError(this))
-                    }, e.prototype.writeToBuffer = function(e, t, n, i, r, a, o) {
-                        void 0 === o && (o = !1);
-                        var l = [],
-                            c = {
+                    }, e.prototype.write = function(e, t, n, r, a, o, s) {
+                        void 0 === n && (n = []), void 0 === s && (s = !1), this.rootLogger ? this.rootLogger.write(e, t, n, r, a, this.category, s) : (this.buffer.length === this.maxBufferSize && (this.firstMessageTime || (this.firstMessageTime = this.buffer[0].time), this.truncationEvents = (this.truncationEvents || 0) + 1, this.messagesTruncated = (this.messagesTruncated || 0) + this.buffer.splice(0, Math.ceil(this.maxBufferSize / 10)).length), o = o || this.category, e >= this.minConsoleLogLevel && this.writeToConsole(e, o, t, n, r), e !== i.Debug && this.writeToBuffer(e, o, t, n, r, a, s), !this.onError || e !== i.Error && e !== i.Fatal || this.onError(this))
+                    }, e.prototype.writeToBuffer = function(e, t, n, r, a, o, s) {
+                        void 0 === s && (s = !1);
+                        var c = [],
+                            d = {
                                 time: Date.now(),
-                                level: X[e].toLowerCase(),
+                                level: i[e].toLowerCase(),
                                 message: n
                             };
-                        if (i && i.length > 0 && (c.args = i.map(function(e, t) {
+                        if (r && r.length > 0 && (d.args = r.map(function(e, t) {
                                 if (e instanceof Error) return {
                                     name: e.name,
                                     message: e.message,
@@ -5904,42 +5209,42 @@
                                 if ("object" == typeof e) try {
                                     return JSON.parse(JSON.stringify(e))
                                 } catch (e) {
-                                    return l.push({
+                                    return c.push({
                                         message: n,
                                         argIndex: t,
                                         err: e
                                     }), "<unserializable>"
                                 } else if ("function" == typeof e) return e.name ? "<function " + e.name + ">" : "<anonymous function>";
                                 return e
-                            })), t && (c.category = t), r && (c.errors = [{
-                                name: r.name,
-                                message: r.message,
-                                stack: r.stack || null,
-                                type: a || "caught"
-                            }]), this.buffer.push(c), !o)
-                            for (var d = 0, u = l; d < u.length; d++) {
-                                var p = u[d];
-                                this.buildType === s.a.Production ? this.write(X.Warn, "Failed to serialize argument for log message.", [{
-                                    message: p.message,
-                                    argIndex: p.argIndex,
-                                    err: p.err
-                                }], void 0, void 0, void 0, !0) : this.write(X.Error, "Failed to serialize argument for log message.", [{
-                                    message: p.message,
-                                    argIndex: p.argIndex
-                                }], p.err, "caught", t, !0)
+                            })), t && (d.category = t), a && (d.errors = [{
+                                name: a.name,
+                                message: a.message,
+                                stack: a.stack || null,
+                                type: o || "caught"
+                            }]), this.buffer.push(d), !s)
+                            for (var u = 0, p = c; u < p.length; u++) {
+                                var m = p[u];
+                                this.buildType === l.a.Production ? this.write(i.Warn, "Failed to serialize argument for log message.", [{
+                                    message: m.message,
+                                    argIndex: m.argIndex,
+                                    err: m.err
+                                }], void 0, void 0, void 0, !0) : this.write(i.Error, "Failed to serialize argument for log message.", [{
+                                    message: m.message,
+                                    argIndex: m.argIndex
+                                }], m.err, "caught", t, !0)
                             }
-                        this.eventEmitter.emit("message", c)
-                    }, e.prototype.writeToConsole = function(e, t, n, i, r) {
-                        var a = (new Date).toLocaleTimeString();
-                        t = t ? "[" + t + "] " : "", n = a + " [" + X[e].toUpperCase() + "] " + t + n, e === X.Fatal && (e = X.Error);
-                        var o = (console[X[e].toLowerCase()] || console.log).bind(console);
-                        r ? o.apply(void 0, [n, r].concat(i)) : o.apply(void 0, [n].concat(i))
+                        this.eventEmitter.emit("message", d)
+                    }, e.prototype.writeToConsole = function(e, t, n, r, a) {
+                        var o = (new Date).toLocaleTimeString();
+                        t = t ? "[" + t + "] " : "", n = o + " [" + i[e].toUpperCase() + "] " + t + n, e === i.Fatal && (e = i.Error);
+                        var s = (console[i[e].toLowerCase()] || console.log).bind(console);
+                        a ? s.apply(void 0, [n, a].concat(r)) : s.apply(void 0, [n].concat(r))
                     }, e
                 }(),
-                Le = n("f00E"),
-                Fe = n("3yfl"),
-                Ae = ["0000000000000000", "00000000000000000000000000000000"],
-                Ue = function() {
+                fe = n("f00E"),
+                ge = n("3yfl"),
+                ve = ["0000000000000000", "00000000000000000000000000000000"],
+                be = function() {
                     function e(e) {
                         var t = this;
                         this.onHistoryChange = function() {
@@ -5947,27 +5252,27 @@
                         }, this.storage = e.storage, this.tempStorage = e.tempStorage, this.benchmarkID = this.getOrCreateBenchmarkSessionID(), this.deviceID = this.getOrCreateDeviceID(), this.localStorageDeviceID = this.getOrCreateLocalStorageDeviceID(), this.pageviewID = this.getUniqueID(), this.tabID = this.getOrCreateSessionStorageUniqueID(), e.history.listen(this.onHistoryChange)
                     }
                     return e.prototype.getUniqueID = function() {
-                        return Object(Le.b)().substring(0, 16)
+                        return Object(fe.b)().substring(0, 16)
                     }, e.prototype.getOrCreateDeviceID = function() {
-                        var e = m.get("unique_id");
-                        return e && this.isValidDeviceID(e) ? e : (e = Object(Le.b)().substring(0, 16), m.set("unique_id", e, {
+                        var e = h.get("unique_id");
+                        return e && this.isValidDeviceID(e) ? e : (e = Object(fe.b)().substring(0, 16), h.set("unique_id", e, {
                             expires: 3650,
-                            domain: Object(Fe.a)(),
+                            domain: Object(ge.a)(),
                             secure: "https:" === window.location.protocol
                         }), e)
                     }, e.prototype.getOrCreateBenchmarkSessionID = function() {
-                        return m.get("twilight.automation_session_id") || Object(Le.b)().substring(0, 16)
+                        return h.get("twilight.automation_session_id") || Object(fe.b)().substring(0, 16)
                     }, e.prototype.getOrCreateSessionStorageUniqueID = function() {
                         var e = this.tempStorage.get("session_storage_unique_id", "");
-                        return e || (e = Object(Le.b)().substring(0, 16), this.tempStorage.set("session_storage_unique_id", e), e)
+                        return e || (e = Object(fe.b)().substring(0, 16), this.tempStorage.set("session_storage_unique_id", e), e)
                     }, e.prototype.getOrCreateLocalStorageDeviceID = function() {
                         var e = this.storage.get("local_storage_device_id", "");
-                        return e || (e = Object(Le.b)().substring(0, 16), this.storage.set("local_storage_device_id", e), e)
+                        return e || (e = Object(fe.b)().substring(0, 16), this.storage.set("local_storage_device_id", e), e)
                     }, e.prototype.isValidDeviceID = function(e) {
-                        return e.length >= 16 && !Ae.includes(e)
+                        return e.length >= 16 && !ve.includes(e)
                     }, e
                 }(),
-                Me = function() {
+                ye = function() {
                     function e(e, t) {
                         this.cache = {}, this.storage = e, this.logger = t
                     }
@@ -6029,102 +5334,102 @@
                         }
                     }, e
                 }(),
-                je = n("VSCq");
+                ke = n("VSCq");
 
-            function Be(e) {
-                be = new ze(e), ye = be.config, ke = be.dynamicSettings, Se = be.intl.formatDate, we = be.intl.formatMessage, Ee = be.intl.formatNumber, Ce = be.intl.formatNumberShort, Ne = be.intl.formatPastRelativeDate, Te = be.intl.formatRelativeDate, Ie = be.intl.formatTime, _e = be.logger, Re = be.pubsub, be.stats, De = be.storage, Oe = be.tempStorage, Pe = be.tracking
+            function Se(e) {
+                Z = new we(e), ee = Z.config, te = Z.dynamicSettings, ne = Z.intl.formatDate, ie = Z.intl.formatMessage, re = Z.intl.formatNumber, ae = Z.intl.formatNumberShort, oe = Z.intl.formatPastRelativeDate, se = Z.intl.formatRelativeDate, le = Z.intl.formatTime, ce = Z.logger, de = Z.pubsub, Z.stats, ue = Z.storage, pe = Z.tempStorage, me = Z.tracking
             }
             n.d(t, "p", function() {
-                return be
+                return Z
             }), n.d(t, "a", function() {
-                return ye
+                return ee
             }), n.d(t, "b", function() {
-                return ke
+                return te
             }), n.d(t, "c", function() {
-                return Se
+                return ne
             }), n.d(t, "d", function() {
-                return we
+                return ie
             }), n.d(t, "e", function() {
-                return Ee
+                return re
             }), n.d(t, "f", function() {
-                return Ce
+                return ae
             }), n.d(t, "g", function() {
-                return Ne
+                return oe
             }), n.d(t, "h", function() {
-                return Te
+                return se
             }), n.d(t, "i", function() {
-                return Ie
+                return le
             }), n.d(t, "k", function() {
-                return _e
+                return ce
             }), n.d(t, "l", function() {
-                return Re
+                return de
             }), n.d(t, "m", function() {
-                return De
+                return ue
             }), n.d(t, "n", function() {
-                return Oe
+                return pe
             }), n.d(t, "o", function() {
-                return Pe
+                return me
             }), n.d(t, "j", function() {
-                return Be
+                return Se
             });
-            var ze = function() {
+            var we = function() {
                 function e(e) {
-                    var t, n, i, r, a = this;
-                    this.history = (n = t ? ve()() : fe()(), i = n.push.bind(n), r = /^([^#?]+)?(\?[^#]+)?(\#.+)?$/i, n.push = function(e, t) {
-                        var a = n.location.pathname,
+                    var t, n, r, a, o = this;
+                    this.history = (n = t ? J()() : $()(), r = n.push.bind(n), a = /^([^#?]+)?(\?[^#]+)?(\#.+)?$/i, n.push = function(e, t) {
+                        var i = n.location.pathname,
                             o = "",
                             s = "";
                         if ("string" == typeof e) {
-                            var l = r.exec(e);
-                            if (!l) return void i(e, t);
-                            l[1] && (a = l[1]), l[2] && (o = l[2]), l[3] && (s = l[3])
-                        } else e.pathname && (a = e.pathname), e.search && ((o = e.search).startsWith("?") || (o = "?" + o)), e.hash && ((s = e.hash).startsWith("#") || (s = "#" + s));
-                        (a === n.location.pathname || !a.startsWith("/") && n.location.pathname.endsWith("/" + a)) && o === n.location.search && s === n.location.hash ? n.replace(e, t) : i(e, t)
-                    }, n), this.pageTitle = "Twitch", this.config = e, this.store = new Q(this.config);
-                    var o = this.config.buildType === s.a.Production ? X.Error : X.Debug;
+                            var l = a.exec(e);
+                            if (!l) return void r(e, t);
+                            l[1] && (i = l[1]), l[2] && (o = l[2]), l[3] && (s = l[3])
+                        } else e.pathname && (i = e.pathname), e.search && ((o = e.search).startsWith("?") || (o = "?" + o)), e.hash && ((s = e.hash).startsWith("#") || (s = "#" + s));
+                        (i === n.location.pathname || !i.startsWith("/") && n.location.pathname.endsWith("/" + i)) && o === n.location.search && s === n.location.hash ? n.replace(e, t) : r(e, t)
+                    }, n), this.pageTitle = "Twitch", this.config = e, this.store = new q(this.config);
+                    var s = this.config.buildType === l.a.Production ? i.Error : i.Debug;
                     try {
-                        var l = localStorage.getItem(this.config.forceMinConsoleLogLevelKey);
-                        null !== l && (o = Number(l))
+                        var c = localStorage.getItem(this.config.forceMinConsoleLogLevelKey);
+                        null !== c && (s = Number(c))
                     } catch (e) {
                         console.error("Failed to get log level override from local storage.", {
                             err: e,
                             key: this.config.forceMinConsoleLogLevelKey
                         })
                     }
-                    this.logger = new xe({
-                        minConsoleLogLevel: o,
+                    this.logger = new he({
+                        minConsoleLogLevel: s,
                         maxBufferSize: 1e3,
                         buildType: this.config.buildType
-                    }), this.logger.addWindowErrorListener(), this.storage = new Me(localStorage, this.logger.withCategory("storage")), this.tempStorage = new Me(sessionStorage, this.logger.withCategory("tempStorage")), this.dynamicSettings = new me.a({
+                    }), this.logger.addWindowErrorListener(), this.storage = new ye(localStorage, this.logger.withCategory("storage")), this.tempStorage = new ye(sessionStorage, this.logger.withCategory("tempStorage")), this.dynamicSettings = new K.a({
                         logger: this.logger,
                         storage: this.storage
                     }), this.stats = new O({
                         config: this.config,
                         dynamicSettings: this.dynamicSettings,
                         logger: this.logger
-                    }), this.session = new Ue({
+                    }), this.session = new be({
                         history: this.history,
                         storage: this.storage,
                         tempStorage: this.tempStorage
-                    }), this.config.embedded || (this.sentinel = new T({
+                    }), this.config.embedded || (this.sentinel = new N({
                         buildID: e.buildID,
                         endpoint: e.sentinelEndpoint,
                         logger: this.logger,
                         session: this.session,
                         store: this.store
                     }), this.logger.onError = function(e) {
-                        a.sentinel.report(e.flush())
-                    }), this.adBlockDetector = new u({
+                        o.sentinel.report(e.flush())
+                    }), this.adBlockDetector = new p({
                         dynamicSettings: this.dynamicSettings,
                         storage: this.storage,
                         logger: this.logger
-                    }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new H({
+                    }), this.adBlockDetector.addTwitchGlobal(), this.adBlockDetector.detectAdBlock(), this.apollo = new z({
                         config: this.config,
                         dynamicSettings: this.dynamicSettings,
                         logger: this.logger,
                         session: this.session,
                         store: this.store
-                    }), this.tracking = new I.Spade({
+                    }), this.tracking = new T.Spade({
                         apollo: this.apollo,
                         config: this.config,
                         endpoint: this.dynamicSettings.get("spade_url", e.defaultSpadeEndpoint),
@@ -6132,7 +5437,7 @@
                         session: this.session,
                         store: this.store,
                         adBlockDetector: this.adBlockDetector
-                    }), this.pubsub = new N(this.store, this.logger), this.intl = new je.TwitchIntl(e.locales), this.config.embedded || (this.benchmarking = new pe({
+                    }), this.pubsub = new C(this.store, this.logger), this.intl = new ke.TwitchIntl(e.locales), this.config.embedded || (this.benchmarking = new Q.a({
                         apollo: this.apollo,
                         config: this.config,
                         dynamicSettings: this.dynamicSettings,
@@ -6144,21 +5449,21 @@
                         store: this.store,
                         tracking: this.tracking,
                         window: window
-                    })), this.experiments = new w({
+                    })), this.experiments = new S({
                         dynamicSettings: this.dynamicSettings,
                         logger: this.logger,
                         session: this.session,
                         store: this.store,
                         storage: this.storage,
                         tracking: this.tracking
-                    }), this.tmi = new x(this.logger, this.config), this.integrations = new V(this.logger)
+                    }), this.tmi = new P(this.logger, this.config), this.integrations = new H(this.logger)
                 }
                 return e.prototype.mount = function(e, t) {
-                    a.render(this.wrap(e), t)
+                    o.render(this.wrap(e), t)
                 }, e.prototype.wrap = function(e) {
-                    return i.createElement(r.ApolloProvider, {
+                    return r.createElement(a.ApolloProvider, {
                         client: this.apollo.client
-                    }, i.createElement(o.a, {
+                    }, r.createElement(s.a, {
                         store: this.store.getReduxStore()
                     }, e))
                 }, e.prototype.setPageTitle = function(e) {
@@ -6460,7 +5765,7 @@
                         registerReceiver: a.func
                     }, t
                 }(o.Component),
-                u = Object(l.d)("ExtensionFrame")(d),
+                u = Object(l.c)("ExtensionFrame")(d),
                 p = n("lBSt");
 
             function m(e) {
@@ -6633,8 +5938,6 @@
                 return i
             })
         },
-        68: function(e, t) {},
-        69: function(e, t) {},
         "6Add": function(e, t, n) {},
         "6qmu": function(e, t) {
             var n = {
@@ -6761,6 +6064,8 @@
             e.exports = n
         },
         70: function(e, t) {},
+        71: function(e, t) {},
+        72: function(e, t) {},
         "75DT": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -7389,10 +6694,11 @@
                     return i
                 }),
                 function(e) {
-                    e[e.Backspace = 8] = "Backspace", e[e.Tab = 9] = "Tab", e[e.Enter = 13] = "Enter", e[e.Esc = 27] = "Esc", e[e.Space = 32] = "Space", e[e.Left = 37] = "Left", e[e.Up = 38] = "Up", e[e.Right = 39] = "Right", e[e.Down = 40] = "Down", e[e.Colon = 58] = "Colon", e[e.At = 64] = "At", e[e.F = 70] = "F", e[e.P = 80] = "P"
+                    e[e.Backspace = 8] = "Backspace", e[e.Tab = 9] = "Tab", e[e.Enter = 13] = "Enter", e[e.Esc = 27] = "Esc", e[e.Space = 32] = "Space", e[e.Left = 37] = "Left", e[e.Up = 38] = "Up", e[e.Right = 39] = "Right", e[e.Down = 40] = "Down", e[e.Colon = 58] = "Colon", e[e.At = 64] = "At", e[e.F = 70] = "F", e[e.P = 80] = "P", e[e.S = 83] = "S"
                 }(i || (i = {}))
         },
         "8EWP": function(e, t, n) {},
+        "8NHS": function(e, t, n) {},
         "8jSG": function(e, t) {
             var n = {
                 kind: "Document",
@@ -7771,7 +7077,7 @@
                 I = n("17x9"),
                 _ = n("76Lv"),
                 R = null,
-                D = function(e) {
+                O = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -7871,16 +7177,16 @@
                         scrollToTop: I.func
                     }, t
                 }(l.Component);
-            var O = Object(i.b)(function(e) {
+            var D = Object(i.b)(function(e) {
                 return {
                     theme: e.ui.theme,
                     persistentPlayerEnabled: e.ui.persistentPlayerEnabled
                 }
-            })(D);
+            })(O);
             n.d(t, "b", function() {
                 return T
             }), n.d(t, "a", function() {
-                return O
+                return D
             }), n.d(t, !1, function() {
                 return k
             })
@@ -8172,7 +7478,7 @@
                         }, s.createElement(v.Q, null, e.toString())))))
                     }, t
                 }(s.Component)),
-                y = Object(f.d)("PrimeOfferHeader", {
+                y = Object(f.c)("PrimeOfferHeader", {
                     autoReportInteractive: !0
                 })(b),
                 k = n("4NwI"),
@@ -8404,15 +7710,15 @@
                     name: "userData"
                 }), Object(u.a)(E, {
                     name: "updatePrimeOfferStatus"
-                }), Object(f.d)("PrimeOffers"))(T);
+                }), Object(f.c)("PrimeOffers"))(T);
             var _ = Object(r.b)(function(e) {
                     return {
                         firstPageLoaded: !!e.session.firstPageLoaded
                     }
                 })(I),
                 R = n("6x+I"),
-                D = n("KxT4"),
-                O = n("j3KY"),
+                O = n("KxT4"),
+                D = n("j3KY"),
                 P = (n("sWJ6"), n("487o")),
                 x = function(e) {
                     function t() {
@@ -8435,10 +7741,10 @@
                             i = t.currentUser && t.currentUser.hasPrime,
                             r = t.requestInfo && t.requestInfo.countryCode;
                         if (!Object(w.n)(i, r) || t.loading || n) return null;
-                        var a = Object(O.f)(O.a, ""),
+                        var a = Object(D.f)(D.a, ""),
                             o = Object(c.d)("Twitch Prime", "BlueBar"),
                             l = s.createElement("span", null, Object(c.d)("Free loot every month, plus exclusives and surprises, ad-free viewing, and loads more.", "BlueBar")),
-                            d = Object(O.f)(O.a, ""),
+                            d = Object(D.f)(D.a, ""),
                             u = Object(c.d)("Start Your Free Trial", "BlueBar");
                         return t.loading || t.error || t.primePromotions && t.primePromotions.forEach(function(e) {
                             switch (e.id) {
@@ -8533,7 +7839,7 @@
                 }(s.Component),
                 L = Object(l.compose)(Object(r.b)(function(e) {
                     return {
-                        blockBannerForGDPR: Object(D.h)(e)
+                        blockBannerForGDPR: Object(O.h)(e)
                     }
                 }), Object(u.a)(P, {
                     options: function() {
@@ -8544,7 +7850,7 @@
                             }
                         }
                     }
-                }), Object(f.d)("BlueBarComponent"))(x),
+                }), Object(f.c)("BlueBarComponent"))(x),
                 F = n("z8lI");
             n.d(t, "d", function() {
                 return _
@@ -8991,7 +8297,7 @@
                         return i && i.subscriptionBenefit
                     }, t
                 }(a.Component),
-                k = Object(o.compose)(Object(u.d)("PrimeSubscribe"), Object(l.a)(v, {
+                k = Object(o.compose)(Object(u.c)("PrimeSubscribe"), Object(l.a)(v, {
                     options: function(e) {
                         return {
                             variables: {
@@ -9213,6 +8519,7 @@
             }), n.d(t, !1, function() {})
         },
         AsVq: function(e, t, n) {},
+        "B+KG": function(e, t, n) {},
         B1YN: function(e, t, n) {},
         BK8n: function(e, t, n) {
             "use strict";
@@ -9626,7 +8933,6 @@
         },
         BndF: function(e, t, n) {},
         By5U: function(e, t) {},
-        "CC+3": function(e, t, n) {},
         CZEr: function(e, t) {
             var n = {
                 kind: "Document",
@@ -10019,6 +9325,736 @@
             };
             e.exports = n
         },
+        "D2+s": function(e, t, n) {
+            "use strict";
+            var i, r = n("mrSG"),
+                a = n("q1tI"),
+                o = n("/7QA"),
+                s = n("8Ad5"),
+                l = n("/0dD"),
+                c = n("76Lv"),
+                d = n("8/mp"),
+                u = n("oUNp"),
+                p = n("Ue10"),
+                m = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.openEditing = function(e) {
+                            t.props.openEditing(e)
+                        }, t
+                    }
+                    return r.d(t, e), t.prototype.render = function() {
+                        var e, t, n = this,
+                            i = this.props.override,
+                            r = void 0 !== i;
+                        return "boolean" == typeof this.props.settingData ? t = a.createElement(p.Ia, null, this.renderToggle(this.props.settingKey, !!this.props.settingData, i)) : (t = a.createElement(p.Q, {
+                            wordBreak: p.Mb.BreakAll
+                        }, r ? JSON.stringify(i) : JSON.stringify(this.props.settingData)), e = a.createElement(p.Ia, {
+                            margin: {
+                                left: 1
+                            }
+                        }, a.createElement(p.w, {
+                            ariaLabel: "Edit",
+                            icon: p.cb.Edit,
+                            key: this.props.settingKey,
+                            onClick: function() {
+                                return n.openEditing(n.props.settingKey)
+                            },
+                            blurAfterClick: !0
+                        }))), a.createElement(p.mb, {
+                            margin: {
+                                bottom: 1,
+                                right: 1
+                            },
+                            padding: 1,
+                            color: p.K.Base,
+                            display: p.R.Flex,
+                            justifyContent: p.Ha.Between,
+                            border: !0,
+                            borderMarked: r,
+                            key: this.props.settingKey
+                        }, a.createElement(p.W, {
+                            label: this.props.settingKey
+                        }, t), e)
+                    }, t.prototype.renderToggle = function(e, t, n) {
+                        var i = this;
+                        return a.createElement(p.Cb, {
+                            onChange: function(n) {
+                                var r = n.currentTarget.checked;
+                                i.props.setOverride(e, r === t ? void 0 : r)
+                            },
+                            checked: void 0 === n ? t : !!n
+                        })
+                    }, t
+                }(a.Component),
+                h = (n("IhyH"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            value: t.props.value
+                        }, t.onValueChange = function(e) {
+                            t.setState({
+                                value: e.target.value
+                            })
+                        }, t.saveOverride = function() {
+                            t.props.saveOverride(t.props.overrideKey, t.state.value)
+                        }, t.removeOverride = function() {
+                            t.props.saveOverride(t.props.overrideKey, void 0), t.props.close()
+                        }, t
+                    }
+                    return r.d(t, e), t.prototype.render = function() {
+                        var e = "string" == typeof this.state.value ? this.state.value : JSON.stringify(this.props.value);
+                        return a.createElement(d.b, {
+                            contentClassName: "dynamic-setting-edit__content"
+                        }, a.createElement(p.mb, {
+                            background: p.n.Alt,
+                            padding: 1,
+                            fullWidth: !0,
+                            display: p.R.Flex,
+                            flexDirection: p.T.Column,
+                            overflow: p.La.Hidden
+                        }, a.createElement(p.Q, {
+                            fontSize: p.V.Size3,
+                            color: p.K.Alt
+                        }, this.props.overrideKey), a.createElement(p.Ia, {
+                            display: p.R.Flex,
+                            alignItems: p.c.Stretch,
+                            margin: {
+                                y: 1
+                            },
+                            fullHeight: !0
+                        }, a.createElement(p.xb, {
+                            placeholder: "(undefined)",
+                            onChange: this.onValueChange,
+                            value: e,
+                            noResize: !0
+                        })), a.createElement(p.Ia, {
+                            flexShrink: 0,
+                            display: p.R.Flex,
+                            flexDirection: p.T.Column,
+                            alignItems: p.c.End
+                        }, this.props.error && a.createElement(p.Ia, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, a.createElement(p.Q, {
+                            color: p.K.Error
+                        }, this.props.error)), a.createElement(p.Ia, {
+                            display: p.R.Flex,
+                            justifyContent: p.Ha.End
+                        }, a.createElement(p.Ia, {
+                            display: p.R.InlineBlock,
+                            margin: {
+                                right: 1
+                            }
+                        }, a.createElement(p.v, {
+                            onClick: this.props.close,
+                            type: p.B.Hollow
+                        }, "Cancel")), this.props.hasOverride && a.createElement(p.Ia, {
+                            display: p.R.InlineBlock,
+                            margin: {
+                                right: 1
+                            }
+                        }, a.createElement(p.v, {
+                            type: p.B.Alert,
+                            onClick: this.removeOverride
+                        }, "Remove Override")), a.createElement(p.v, {
+                            disabled: this.props.value === e,
+                            onClick: this.saveOverride
+                        }, "Save Override")))))
+                    }, t
+                }(a.Component));
+            ! function(e) {
+                e.OverridesOnLoad = "PAGE LOADED WITH OVERRIDES ACTIVE", e.OverridesRequireRefresh = "Refresh the page to see your changes.", e.None = ""
+            }(i || (i = {}));
+            var f = n("p46w"),
+                g = n("D7An");
+
+            function v() {
+                return o.l.get(u.b, {})
+            }
+
+            function b() {
+                var e = {};
+                try {
+                    var t = f.get(o.a.experimentsOverrideCookie);
+                    if (t) {
+                        var n = JSON.parse(t);
+                        Object.keys(n).forEach(function(t) {
+                            g.a[t] ? e[t] = n[t] : o.j.warn("Cookie experiment ID is not in DEFAULT_ASSIGNMENTS mapping", t)
+                        })
+                    }
+                } catch (e) {
+                    o.j.warn("Unable to parse cookie overrides", e), f.set(o.a.experimentsOverrideCookie, JSON.stringify({}))
+                }
+                return e
+            }
+
+            function y(e, t) {
+                var n = t.length,
+                    i = e.length;
+                if (i > n) return !1;
+                if (i === n) return e === t;
+                e: for (var r = 0, a = 0; r < i; r++) {
+                    for (var o = e.charCodeAt(r); a < n;)
+                        if (t.charCodeAt(a++) === o) continue e;
+                    return !1
+                }
+                return !0
+            }
+            var k = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            searchQuery: "",
+                            dynamicSettingError: "",
+                            overrides: v(),
+                            editingOverrideKey: ""
+                        }, t.dynamicSettings = window.__twilightSettings, t.filteredDynamicSettings = function() {
+                            return "" === t.state.searchQuery ? Object.keys(t.dynamicSettings) : Object.keys(t.dynamicSettings).filter(function(e) {
+                                return y(t.state.searchQuery, e.toLowerCase())
+                            })
+                        }, t.openEditing = function(e) {
+                            t.setState({
+                                editingOverrideKey: e
+                            })
+                        }, t.closeEditing = function() {
+                            t.setState({
+                                editingOverrideKey: "",
+                                dynamicSettingError: ""
+                            })
+                        }, t.setOverride = function(e, n) {
+                            var a = r.a({}, t.state.overrides);
+                            if (void 0 === n) delete a[e];
+                            else {
+                                var s = void 0;
+                                try {
+                                    s = JSON.parse(n)
+                                } catch (e) {
+                                    s = n
+                                }
+                                var l = typeof t.dynamicSettings[e],
+                                    c = typeof s;
+                                if (l !== c) return void t.setState({
+                                    dynamicSettingError: "Invalid entry: <" + c + "> is not of type <" + l + ">"
+                                });
+                                a[e] = s
+                            }
+                            t.closeEditing(), t.setState({
+                                overrides: a
+                            }), o.l.set(u.b, a), t.props.showUrgentMessage(i.OverridesRequireRefresh)
+                        }, t.onSearchTextChange = function(e) {
+                            t.setState({
+                                searchQuery: e.target.value.toLowerCase()
+                            })
+                        }, t.clearOverrides = function() {
+                            o.l.set(u.b, {}), t.setState({
+                                overrides: {}
+                            }), t.props.showUrgentMessage(i.OverridesRequireRefresh)
+                        }, t
+                    }
+                    return r.d(t, e), t.prototype.render = function() {
+                        var e = this,
+                            t = Object.keys(this.state.overrides).length,
+                            n = this.state.editingOverrideKey ? this.dynamicSettings[this.state.editingOverrideKey] : void 0,
+                            i = this.state.editingOverrideKey ? this.state.overrides[this.state.editingOverrideKey] : void 0,
+                            r = void 0 !== i,
+                            o = r ? i : n;
+                        return a.createElement(p.Ia, {
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            overflow: p.La.Hidden,
+                            padding: {
+                                bottom: 2
+                            }
+                        }, a.createElement(p.Ia, {
+                            padding: {
+                                right: 1
+                            },
+                            display: p.R.Flex,
+                            fullWidth: !0
+                        }, a.createElement(p.Ia, {
+                            flexGrow: 1
+                        }, a.createElement(p.Ea, {
+                            type: p.Fa.Search,
+                            onChange: this.onSearchTextChange,
+                            placeholder: "Search for Dynamic Settings",
+                            autoFocus: !0
+                        })), a.createElement(p.Ia, {
+                            flexShrink: 1,
+                            margin: {
+                                left: 1
+                            }
+                        }, a.createElement(p.v, {
+                            onClick: this.clearOverrides,
+                            disabled: 0 === t
+                        }, "clear overrides (", t, ")"))), a.createElement(p.Ca, {
+                            fullWidth: !0
+                        }, a.createElement(d.b, {
+                            suppressScrollX: !0
+                        }, a.createElement(p.Ia, {
+                            padding: {
+                                y: 1
+                            }
+                        }, this.filteredDynamicSettings().map(function(t) {
+                            return a.createElement(m, {
+                                key: t,
+                                settingKey: t,
+                                override: e.state.overrides[t],
+                                settingData: window.__twilightSettings[t],
+                                openEditing: e.openEditing,
+                                setOverride: e.setOverride
+                            })
+                        })))), this.state.editingOverrideKey && a.createElement(p.mb, {
+                            position: p.Sa.Absolute,
+                            attachTop: !0,
+                            attachLeft: !0,
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            padding: 1,
+                            background: p.n.Overlay
+                        }, a.createElement(h, {
+                            close: this.closeEditing,
+                            saveOverride: this.setOverride,
+                            overrideKey: this.state.editingOverrideKey,
+                            value: o,
+                            hasOverride: r,
+                            error: this.state.dynamicSettingError
+                        })))
+                    }, t
+                }(a.Component),
+                S = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.onOverrideSelect = function(e) {
+                            var n = t.props.override === e ? void 0 : e;
+                            t.props.setOverride(t.props.experimentData.id, n)
+                        }, t
+                    }
+                    return r.d(t, e), t.prototype.render = function() {
+                        var e = this,
+                            t = this.props.experimentData,
+                            n = void 0 !== this.props.override;
+                        return a.createElement(p.mb, {
+                            margin: {
+                                bottom: 1,
+                                right: 1
+                            },
+                            padding: 1,
+                            color: p.K.Base,
+                            display: p.R.Flex,
+                            alignItems: p.c.Center,
+                            justifyContent: p.Ha.Between,
+                            border: !0,
+                            borderMarked: n
+                        }, a.createElement(p.W, {
+                            label: t.name
+                        }, a.createElement(p.Ia, {
+                            display: p.R.Flex,
+                            flexDirection: p.T.Column,
+                            fullWidth: !0,
+                            ellipsis: !0
+                        }, t.groups.map(function(i) {
+                            var r = n ? e.props.override : o.o.experiments.getAssignments()[t.id];
+                            return a.createElement(p.Ia, {
+                                margin: {
+                                    bottom: .5
+                                },
+                                key: i.value
+                            }, a.createElement(p.Ya, {
+                                onChange: function() {
+                                    return e.onOverrideSelect(i.value)
+                                },
+                                label: i.value,
+                                name: t.name,
+                                checked: r === i.value
+                            }))
+                        }))))
+                    }, t
+                }(a.Component);
+            var w = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.experiments = Object.keys(window.__twilightSettings.experiments).filter(function(e) {
+                            return !!g.a[e]
+                        }).reduce(function(e, t) {
+                            return e[t] = r.a({
+                                id: t
+                            }, window.__twilightSettings.experiments[t]), e
+                        }, {}), n.filteredExperiments = function() {
+                            return "" === n.state.searchQuery ? Object.keys(n.experiments) : Object.keys(n.experiments).filter(function(e) {
+                                return y(n.state.searchQuery, n.experiments[e].name.toLowerCase())
+                            })
+                        }, n.onExperimentSearchTextChange = function(e) {
+                            n.setState({
+                                searchQuery: e.target.value.toLowerCase()
+                            })
+                        }, n.setOverride = function(e, t) {
+                            var a = r.a({}, n.state.overrides);
+                            t ? a[e] = t : delete a[e], n.setState({
+                                overrides: a
+                            }), f.set(o.a.experimentsOverrideCookie, JSON.stringify(a)), n.props.showUrgentMessage(i.OverridesRequireRefresh)
+                        }, n.clearOverrides = function() {
+                            f.set(o.a.experimentsOverrideCookie, JSON.stringify({})), n.setState({
+                                overrides: {}
+                            }), n.props.showUrgentMessage(i.OverridesRequireRefresh)
+                        }, n.state = {
+                            searchQuery: "",
+                            overrides: b()
+                        }, n
+                    }
+                    return r.d(t, e), t.prototype.render = function() {
+                        var e = this,
+                            t = Object.keys(this.state.overrides).length;
+                        return a.createElement(p.Ia, {
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            overflow: p.La.Hidden,
+                            padding: {
+                                bottom: 2
+                            }
+                        }, a.createElement(p.Ia, {
+                            padding: {
+                                right: 1
+                            },
+                            display: p.R.Flex,
+                            fullWidth: !0
+                        }, a.createElement(p.Ia, {
+                            flexGrow: 1
+                        }, a.createElement(p.Ea, {
+                            type: p.Fa.Search,
+                            onChange: this.onExperimentSearchTextChange,
+                            placeholder: "Search for Experiments",
+                            autoFocus: !0
+                        })), a.createElement(p.Ia, {
+                            flexShrink: 1,
+                            margin: {
+                                left: 1
+                            }
+                        }, a.createElement(p.v, {
+                            onClick: this.clearOverrides,
+                            disabled: 0 === t
+                        }, "Clear overrides (", t, ")"))), a.createElement(p.Ca, {
+                            fullWidth: !0
+                        }, a.createElement(d.b, null, a.createElement(p.Ia, {
+                            padding: {
+                                y: 1
+                            }
+                        }, this.filteredExperiments().map(function(t) {
+                            var n = e.state.overrides[t];
+                            return a.createElement(S, {
+                                key: t,
+                                experimentData: e.experiments[t],
+                                override: n,
+                                setOverride: e.setOverride
+                            })
+                        })))))
+                    }, t
+                }(a.Component),
+                E = n("EuNP");
+            n("NM47");
+            n.d(t, "a", function() {
+                return N
+            }), n.d(t, "b", function() {
+                return R
+            });
+            var C, N = "twilight.perf-hide",
+                T = "twilight.perf-size",
+                I = "twilight.staff-tab",
+                _ = 3;
+            ! function(e) {
+                e.Latency = "Latency", e.Experiments = "Experiments", e.DynamicSettings = "Dynamic Settings"
+            }(C || (C = {}));
+            var R = function(e) {
+                function t(t) {
+                    var n = e.call(this, t) || this;
+                    n.showUrgentMessage = function(e) {
+                        n.setState({
+                            urgentMessage: e
+                        })
+                    }, n.renderStaffTabButton = function(e, t, i) {
+                        void 0 === i && (i = !1);
+                        var r = n.state.selectedTab === e;
+                        return a.createElement(p.Db, {
+                            label: e,
+                            direction: p.Fb.Right
+                        }, a.createElement(p.w, {
+                            onClick: function() {
+                                n.setState({
+                                    selectedTab: e
+                                }), o.l.set(I, e)
+                            },
+                            icon: t,
+                            size: p.x.Large,
+                            overlay: !r,
+                            ariaLabel: "Go To " + e,
+                            type: r ? p.y.Primary : p.y.Default,
+                            blurAfterClick: !0
+                        }), i && a.createElement(p.Ia, {
+                            position: p.Sa.Relative
+                        }, a.createElement(p.Ia, {
+                            position: p.Sa.Absolute,
+                            attachTop: !0,
+                            attachRight: !0
+                        }, a.createElement(p.Pa, {
+                            label: "!",
+                            type: p.Qa.Notification
+                        }))))
+                    }, n.onReload = function() {
+                        location.reload()
+                    }, n.onClickWindowSize = function() {
+                        var e = n.state.size + 1;
+                        e > _ && (e = 0), o.l.set(T, e.toString()), n.setState({
+                            size: e
+                        })
+                    }, n.onClickClose = function() {
+                        n.setState({
+                            hidden: !0
+                        })
+                    }, n.onKeyDown = function(e) {
+                        var t = e.keyCode === s.a.S && e.shiftKey && (e.ctrlKey || e.metaKey);
+                        t && n.state.hidden ? (o.l.remove(N), n.setState({
+                            hidden: !1
+                        })) : t && !n.state.hidden && (o.l.set(N, !0), n.setState({
+                            hidden: !0
+                        }))
+                    };
+                    var r = Object.keys(b()).length > 0,
+                        l = Object.keys(v()).length > 0,
+                        c = r || l,
+                        d = c ? i.OverridesOnLoad : i.None;
+                    return n.state = {
+                        hidden: o.l.get(N, !1) && !c,
+                        size: o.l.get(T, 0),
+                        selectedTab: o.l.get(I, C.Latency),
+                        urgentMessage: d
+                    }, n
+                }
+                return r.d(t, e), t.prototype.componentWillMount = function() {
+                    window.addEventListener("keydown", this.onKeyDown), o.o.experiments.getAssignment("just using this to init")
+                }, t.prototype.componentWillUnmount = function() {
+                    window.removeEventListener("keydown", this.onKeyDown)
+                }, t.prototype.render = function() {
+                    if (this.state.hidden) return null;
+                    var e = Object.keys(b()).length > 0,
+                        t = Object.keys(v()).length > 0;
+                    return a.createElement(p.mb, {
+                        className: "staff-console staff-console--size-" + this.state.size + " " + Object(c.c)(l.a.Dark),
+                        position: p.Sa.Fixed,
+                        display: p.R.Flex
+                    }, a.createElement(p.mb, {
+                        display: p.R.Flex,
+                        border: !0,
+                        fullWidth: !0
+                    }, a.createElement(p.mb, {
+                        className: "staff-consol__select-bar",
+                        flexShrink: 1,
+                        flexGrow: 0,
+                        display: p.R.Flex,
+                        flexDirection: p.T.Column,
+                        borderRight: !0
+                    }, this.renderStaffTabButton(C.Latency, p.cb.OP), this.renderStaffTabButton(C.Experiments, p.cb.Experiment, e), this.renderStaffTabButton(C.DynamicSettings, p.cb.NavSettings, t)), a.createElement(p.Ia, {
+                        flexGrow: 1,
+                        display: p.R.Flex,
+                        flexDirection: p.T.Column,
+                        overflow: p.La.Hidden
+                    }, a.createElement(p.mb, {
+                        className: "staff-console__top-bar",
+                        flexGrow: 0,
+                        flexShrink: 0,
+                        display: p.R.Flex,
+                        justifyContent: p.Ha.Between,
+                        flexWrap: p.U.NoWrap,
+                        alignItems: p.c.Center,
+                        borderBottom: !0
+                    }, a.createElement(p.Ia, {
+                        padding: {
+                            left: 1
+                        }
+                    }, a.createElement(p.Q, {
+                        bold: !0,
+                        fontSize: p.V.Size4,
+                        type: p.Ab.Span
+                    }, this.state.selectedTab)), a.createElement(p.Ia, {
+                        display: p.R.Flex,
+                        padding: {
+                            right: .5
+                        }
+                    }, a.createElement(p.w, {
+                        onClick: this.onClickWindowSize,
+                        icon: p.cb.Maximize,
+                        overlay: !0,
+                        ariaLabel: "Change Size"
+                    }), a.createElement(p.w, {
+                        onClick: this.onClickClose,
+                        icon: p.cb.Close,
+                        overlay: !0,
+                        ariaLabel: "Close"
+                    }))), a.createElement(p.Ia, {
+                        display: p.R.Flex,
+                        position: p.Sa.Relative,
+                        flexGrow: 1,
+                        fullHeight: !0,
+                        padding: {
+                            left: 1,
+                            top: 1
+                        }
+                    }, this.renderTabContent(this.state.selectedTab)), a.createElement(p.mb, {
+                        flexShrink: 0,
+                        flexGrow: 0,
+                        borderTop: !0
+                    }, this.state.urgentMessage && a.createElement(p.mb, {
+                        background: p.n.Accent,
+                        padding: {
+                            x: 1,
+                            y: .5
+                        },
+                        display: p.R.Flex,
+                        alignItems: p.c.Center,
+                        justifyContent: p.Ha.Between
+                    }, a.createElement(p.Q, null, this.state.urgentMessage), this.state.urgentMessage === i.OverridesRequireRefresh && a.createElement(p.v, {
+                        onClick: this.onReload,
+                        size: p.z.Small,
+                        type: p.B.Hollow,
+                        overlay: !0
+                    }, "Reload Page")), a.createElement(p.Ia, {
+                        padding: {
+                            x: 1,
+                            y: .5
+                        },
+                        className: "staff-console__hint-text"
+                    }, 'Press "Ctr/Cmd + Shift + S" to toggle Staff Console')))))
+                }, t.prototype.renderTabContent = function(e) {
+                    switch (e) {
+                        case C.Latency:
+                            return a.createElement(E.a, {
+                                benchmarking: o.o.benchmarking
+                            });
+                        case C.Experiments:
+                            return a.createElement(w, {
+                                showUrgentMessage: this.showUrgentMessage
+                            });
+                        case C.DynamicSettings:
+                            return a.createElement(k, {
+                                showUrgentMessage: this.showUrgentMessage
+                            });
+                        default:
+                            return null
+                    }
+                }, t
+            }(a.Component)
+        },
+        D7An: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return i
+            }), n.d(t, "b", function() {
+                return r
+            }), n.d(t, "c", function() {
+                return a
+            });
+            var i = {
+                    "ef25ca44-13bd-4e89-99d2-f9939c013fec": "off",
+                    "a9667563-723a-4cf7-b253-674d9eef0a53": "control",
+                    "74156eb2-ed95-482c-b006-60c1428e8846": "control",
+                    "e9fe3136-84bc-4a61-9079-0c7df78abeb3": "control",
+                    "47c76558-9d79-4181-9e43-d7c440a1a148": "control",
+                    "9619b63b-2e9a-4e20-af4b-cce72346691d": "control",
+                    "5c8e4a59-8c63-4000-9c4e-6224f34b7c21": "control",
+                    "72c14aa9-d78d-4095-8f27-d97b9aac4233": "no",
+                    "3fa31c3d-1477-40a5-9433-0b64b398c86a": "recurly",
+                    "afc307f3-4011-40ba-9406-56c474b5922b": "control",
+                    "4cfb5972-e20e-4ae1-92dd-7287ec58b4a4": "control",
+                    "3763f4e7-c786-4000-a6c3-b91b9c774302": "control",
+                    "d6bb4aa4-efae-4031-96be-f08950d6c8f4": "shown",
+                    "db2180db-bc89-4f97-8bef-208b1782e18f": "off",
+                    "47597570-dd4e-4996-85eb-86db164cae9c": "control",
+                    "7aa589f3-34d8-425f-8227-29007d50757e": "control",
+                    "0dc9a9c9-fee5-4b5f-a462-f07675713e5e": "control",
+                    "e0fdfc17-389d-4ba5-8596-065352ddc01e": "control",
+                    "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9": "control",
+                    "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": "price",
+                    "50e947d4-24b7-4000-a046-f48f4072b7cf": "control",
+                    "c9fb1ee5-b3ff-4bfb-9584-4412a8878f16": "control",
+                    "b24e5cd6-c649-4cab-b768-03ad6cf488be": "control",
+                    "3fc50829-31d6-449a-a757-7a3f44d77ab3": "no",
+                    "d1fe9a0a-e9f2-4450-ac57-4ff2eefa0dcf": "control",
+                    "6699df7d-9f23-494c-87a1-06fdf80f1e68": "control",
+                    "ba473bec-1ad3-4b55-9b3e-fdc002ba695c": "control",
+                    "5fd568be-2073-4f99-84d5-565e8b2a3343": "no",
+                    "fa443b30-d363-4978-a831-14c653eb6f41": "no",
+                    "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": "off",
+                    "03f25f55-ded6-417a-b241-d656571c4a1f": "off",
+                    "647bfc96-3fc6-4f5e-ab95-38c4eab60830": "off",
+                    "f3920cff-ef57-46c9-8dd9-b4f145acf6e5": "control",
+                    "080c0331-3073-4539-992f-93274236a97d": "off",
+                    "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": "control",
+                    "51efc82d-cfe8-42bd-ae4b-9304112ed9df": "control",
+                    "d4752777-a16a-4128-bcfb-42cbd4a53613": "off",
+                    "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7": "control",
+                    "7a149a1e-2edd-403a-8e1a-bc466fa8ae46": "control",
+                    "9ba74270-ecf4-466d-b04e-f66b9883d632": "control",
+                    "ba44e8c9-0beb-4982-b48f-87457bfa962c": "off",
+                    "db6dc127-b372-48fe-9d8b-493ea6c51c57": "control",
+                    "6147aed8-6beb-4c24-a00b-a9ec189a4c1d": "no"
+                },
+                r = {
+                    TWILIGHT_AAX_DISPLAY: "5fd568be-2073-4f99-84d5-565e8b2a3343",
+                    TWILIGHT_AD_DENSITY_WIDGET: "fa443b30-d363-4978-a831-14c653eb6f41",
+                    STREAMER_TRAILERS: "ef25ca44-13bd-4e89-99d2-f9939c013fec",
+                    TWILIGHT_WEB_ONBOARDING: "a9667563-723a-4cf7-b253-674d9eef0a53",
+                    TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING: "74156eb2-ed95-482c-b006-60c1428e8846",
+                    TWILIGHT_WEB_ONBOARDING_CATEGORIES: "e9fe3136-84bc-4a61-9079-0c7df78abeb3",
+                    TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE: "47c76558-9d79-4181-9e43-d7c440a1a148",
+                    TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES: "9619b63b-2e9a-4e20-af4b-cce72346691d",
+                    TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING: "5c8e4a59-8c63-4000-9c4e-6224f34b7c21",
+                    TWILIGHT_SUB_CHECKOUT_POPUP: "72c14aa9-d78d-4095-8f27-d97b9aac4233",
+                    TWILIGHT_SUB_CHECKOUT_VARIANT: "3fa31c3d-1477-40a5-9433-0b64b398c86a",
+                    TWILIGHT_PAY__SAVED_PAYMENT_METHODS: "080c0331-3073-4539-992f-93274236a97d",
+                    TWILIGHT_VIDEO_FEATURO_EN: "afc307f3-4011-40ba-9406-56c474b5922b",
+                    TWILIGHT_THEATRE_FULLSCREEN: "4cfb5972-e20e-4ae1-92dd-7287ec58b4a4",
+                    TWILIGHT_FENIX_DOWN: "3763f4e7-c786-4000-a6c3-b91b9c774302",
+                    TWILIGHT_EVENT_GAME_DIRECTORY: "d6bb4aa4-efae-4031-96be-f08950d6c8f4",
+                    TWILIGHT_LEADERBOARDS: "db2180db-bc89-4f97-8bef-208b1782e18f",
+                    TWILIGHT_AML_RANKING_FOLLOWS: "47597570-dd4e-4996-85eb-86db164cae9c",
+                    TWILIGHT_GROWTH_EMAIL_VERIFY_BAR: "7aa589f3-34d8-425f-8227-29007d50757e",
+                    TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2: "0dc9a9c9-fee5-4b5f-a462-f07675713e5e",
+                    TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL: "e0fdfc17-389d-4ba5-8596-065352ddc01e",
+                    TWILIGHT_ANIMATED_DIRECTORY_THUMBNAILS: "0ca9c0f5-f9fc-40c6-be3f-52a9fa69a8b9",
+                    TWILIGHT_MOBILE_SUBS_TIER_NAMES: "ee491c3c-d6f7-4f00-8c53-c630dfa10f41",
+                    TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV: "50e947d4-24b7-4000-a046-f48f4072b7cf",
+                    TWILIGHT_SUBS_AFFILIATE_BADGES: "c9fb1ee5-b3ff-4bfb-9584-4412a8878f16",
+                    TWILIGHT_EXTENDED_PRESENCE: "b24e5cd6-c649-4cab-b768-03ad6cf488be",
+                    TWILIGHT_NEW_REPORTING_WIZARD: "3fc50829-31d6-449a-a757-7a3f44d77ab3",
+                    TWILIGHT_GET_BITS_TOP_NAV: "d1fe9a0a-e9f2-4450-ac57-4ff2eefa0dcf",
+                    TWILIGHT_VIDEO_CARD_UPDATES: "6699df7d-9f23-494c-87a1-06fdf80f1e68",
+                    TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT: "ba473bec-1ad3-4b55-9b3e-fdc002ba695c",
+                    TWILIGHT_WATCH_WINSTON: "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773",
+                    TWILIGHT_WATCH_SYMMETRA: "03f25f55-ded6-417a-b241-d656571c4a1f",
+                    TWILIGHT_WATCH_SOMBRA: "647bfc96-3fc6-4f5e-ab95-38c4eab60830",
+                    TWILIGHT_DISCOVERY_FRONTPAGE_MVP: "f3920cff-ef57-46c9-8dd9-b4f145acf6e5",
+                    TWILIGHT_VOD_SHORYUKEN: "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9",
+                    TWILIGHT_VOD_PROVOCATEUR: "51efc82d-cfe8-42bd-ae4b-9304112ed9df",
+                    TWILIGHT_OWL_ROOM_CHEERING: "d4752777-a16a-4128-bcfb-42cbd4a53613",
+                    TWILIGHT_CLIPS_ON_THE_BRAIN: "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7",
+                    TWILIGHT_WORLD_CUP_EVENT: "7a149a1e-2edd-403a-8e1a-bc466fa8ae46",
+                    TWILIGHT_WORLD_CUP_EVENT_SETTINGS: "9ba74270-ecf4-466d-b04e-f66b9883d632",
+                    TWILIGHT_EXTENSIONS_DISCOVERY_RELEASE: "ba44e8c9-0beb-4982-b48f-87457bfa962c",
+                    TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES: "db6dc127-b372-48fe-9d8b-493ea6c51c57",
+                    TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS: "6147aed8-6beb-4c24-a00b-a9ec189a4c1d"
+                },
+                a = {
+                    TWILIGHT_AAX_DISPLAY: "yes",
+                    TWILIGHT_ANIMATED_DIRECTORY_THUMBNAILS: "experiment",
+                    TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV: "variant_a",
+                    TWILIGHT_VIDEO_CARD_UPDATES: "variation",
+                    TWILIGHT_NEW_REPORTING_WIZARD: "yes",
+                    TWILIGHT_DISCOVERY_FRONTPAGE_MVP: "variant",
+                    TWILIGHT_PAY__SAVED_PAYMENT_METHODS: "yes",
+                    TWILIGHT_EXTENSIONS_DISCOVERY_RELEASE: "on",
+                    TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES: "control"
+                }
+        },
         "DB+C": function(e, t) {
             var n = {
                 kind: "Document",
@@ -10406,7 +10442,7 @@
                         }, Object(c.Ob)(this.props), {
                             targetBlank: void 0 === this.props.targetBlank || this.props.targetBlank
                         }), t)
-                    }, t = i.c([Object(s.d)("SubTierButton", {
+                    }, t = i.c([Object(s.c)("SubTierButton", {
                         autoReportInteractive: !0
                     })], t)
                 }(r.Component);
@@ -10682,7 +10718,7 @@
             function k(e) {
                 return "subscribe-button-modal-tab-" + e
             }
-            var S = Object(c.d)("SubTierTabs", {
+            var S = Object(c.c)("SubTierTabs", {
                 autoReportInteractive: !0
             })(y);
             n.d(t, !1, function() {
@@ -10903,7 +10939,7 @@
                 s = n("NvVO"),
                 l = n("2xye"),
                 c = n("GnwI");
-            var d = Object(r.d)(Object(c.d)("ContentUnavailablePage", {
+            var d = Object(r.d)(Object(c.c)("ContentUnavailablePage", {
                 autoReportInteractive: !0,
                 destination: s.a.ContentUnavailable
             }), Object(o.a)({
@@ -11142,6 +11178,578 @@
                 }
             };
             e.exports = n
+        },
+        EuNP: function(e, t, n) {
+            "use strict";
+            var i = n("mrSG"),
+                r = n("q1tI"),
+                a = n("/7QA"),
+                o = n("8/mp"),
+                s = n("kz7j"),
+                l = n("DiGQ"),
+                c = function() {
+                    function e() {}
+                    return e.getComponentStats = function(t) {
+                        var n = 0,
+                            i = 0,
+                            r = 0,
+                            a = 0;
+                        e.updateLatencyStatus(t.rootInitDuration, 800), e.updateLatencyStatus(t.pageLoadDuration, 2e3), e.updateLatencyStatus(t.componentDuration, 2e3);
+                        var o = e.flattenTrackers(t);
+                        o.forEach(function(t) {
+                            e.updateLatencyStatus(t.componentDuration, 400)
+                        });
+                        var s = o.map(function(e) {
+                            return e.componentDuration.value || 0
+                        });
+                        s.length > 0 && (n = s.reduce(function(e, t) {
+                            return e + t
+                        }), i = Math.max.apply(Math, s), a = Math.min.apply(Math, s), r = n / s.length);
+                        var l = {};
+                        return o.forEach(function(e) {
+                            l[e.componentDuration.latencyStatus] || (l[e.componentDuration.latencyStatus] = 0), l[e.componentDuration.latencyStatus]++
+                        }), {
+                            rootTracker: t,
+                            average: e.getLatencyStatus(r, 400),
+                            count: e.getLatencyStatus(o.length, 200),
+                            max: e.getLatencyStatus(i, 400),
+                            min: e.getLatencyStatus(a, 400),
+                            countByStatus: l
+                        }
+                    }, e.getNetworkStats = function(t) {
+                        var n = t.networkEvents.filter(function(e) {
+                            return e.isPrePageload
+                        });
+                        n.forEach(function(t) {
+                            e.updateLatencyStatus(t.duration, 150)
+                        });
+                        var i = n.map(function(e) {
+                                return e.networkEvent.duration
+                            }),
+                            r = n.map(function(e) {
+                                return e.networkEvent.transfer_size || 0
+                            }),
+                            a = 0,
+                            o = 0,
+                            s = 0,
+                            l = 0,
+                            c = 0;
+                        i.length && (a = i.reduce(function(e, t) {
+                            return e + t
+                        }), o = r.reduce(function(e, t) {
+                            return e + t
+                        }), s = Math.max.apply(Math, i), l = Math.min.apply(Math, i), c = a / i.length), n.sort(function(e, t) {
+                            return (t.duration.value || 0) - (e.duration.value || 0)
+                        });
+                        var d = {};
+                        return n.forEach(function(e) {
+                            d[e.duration.latencyStatus] || (d[e.duration.latencyStatus] = 0), d[e.duration.latencyStatus]++
+                        }), {
+                            metrics: n,
+                            average: e.getLatencyStatus(c, 150),
+                            count: e.getLatencyStatus(n.length, 200),
+                            max: e.getLatencyStatus(s, 150),
+                            min: e.getLatencyStatus(l, 150),
+                            totalSize: o,
+                            countByStatus: d
+                        }
+                    }, e.getQueryBatchStats = function(t) {
+                        var n = t.queryBatchMetrics,
+                            i = n.map(function(e) {
+                                return e.slowestQueryInBatch || 0
+                            }),
+                            r = Math.max.apply(Math, i),
+                            a = {
+                                batchCount: {
+                                    value: n.length,
+                                    latencyStatus: l.a.Unknown
+                                },
+                                slowestQuery: {
+                                    value: r,
+                                    latencyStatus: l.a.Unknown
+                                }
+                            };
+                        return e.updateLatencyStatus(a.batchCount, 3), e.updateLatencyStatus(a.slowestQuery, 150), a
+                    }, e.getQueryStats = function(t) {
+                        var n = 0,
+                            i = 0,
+                            r = 0,
+                            a = t.queryEvents;
+                        a.forEach(function(t) {
+                            e.updateLatencyStatus(t.requestDuration, 150), e.updateLatencyStatus(t.queryDuration, 150)
+                        });
+                        var o = a.map(function(e) {
+                            return e.queryDuration.value || 0
+                        });
+                        o.length > 0 && (n = o.reduce(function(e, t) {
+                            return e + t
+                        }), i = Math.max.apply(Math, o), r = n / o.length), a.sort(function(e, t) {
+                            return (t.queryDuration.value || 0) - (e.queryDuration.value || 0)
+                        });
+                        var s = {};
+                        return a.forEach(function(e) {
+                            s[e.queryDuration.latencyStatus] || (s[e.queryDuration.latencyStatus] = 0), s[e.queryDuration.latencyStatus]++
+                        }), {
+                            metrics: a,
+                            count: e.getLatencyStatus(a.length, 200),
+                            max: e.getLatencyStatus(i, 150),
+                            average: e.getLatencyStatus(r, 150),
+                            min: e.getLatencyStatus(0, 150),
+                            countByStatus: s
+                        }
+                    }, e.getLatencyStatus = function(e, t) {
+                        return void 0 === e ? {
+                            value: e,
+                            latencyStatus: l.a.Unknown
+                        } : {
+                            value: e,
+                            latencyStatus: e > t ? l.a.Fail : l.a.Pass
+                        }
+                    }, e.updateLatencyStatus = function(e, t) {
+                        e && void 0 !== e.value && (e.latencyStatus = e.value > t ? l.a.Fail : l.a.Pass)
+                    }, e.flattenTrackers = function(t, n) {
+                        return n || (n = []), t.isRoot || n.push(t), t.children.forEach(function(t) {
+                            e.flattenTrackers(t, n)
+                        }), n
+                    }, e
+                }(),
+                d = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.d(t, e), t.prototype.render = function() {
+                        return r.createElement("span", null, this.bytesToSize(this.props.totalSize))
+                    }, t.prototype.bytesToSize = function(e) {
+                        if (0 === e) return "0 Bytes";
+                        var t = Math.floor(Math.log(e) / Math.log(1024));
+                        return Math.round(e / Math.pow(1024, t)) + " " + ["Bytes", "KB", "MB", "GB", "TB"][t]
+                    }, t
+                }(r.Component),
+                u = n("TSYQ"),
+                p = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.d(t, e), t.prototype.render = function() {
+                        if (this.props.metric.latencyStatus === l.a.Unknown || void 0 === this.props.metric.value) return r.createElement("span", {
+                            className: "latency-metrics__dot-animation"
+                        }, " ");
+                        var e = this.props.metric.latencyStatus === l.a.Fail ? "red" : "green";
+                        return r.createElement("span", {
+                            className: "latency-metrics__item-number latency-metrics__item-" + e
+                        }, Math.round(this.props.metric.value), " ms")
+                    }, t
+                }(r.Component),
+                m = (n("ryLB"), function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        n.onClickExpand = function() {
+                            n.setState({
+                                isExpanded: !n.state.isExpanded
+                            })
+                        };
+                        var i = t.tracker.depth < 2;
+                        return n.state = {
+                            isExpanded: i
+                        }, n
+                    }
+                    return i.d(t, e), t.prototype.render = function() {
+                        return this.props.tracker.isRoot ? r.createElement("div", {
+                            className: "latency-metrics-component"
+                        }, r.createElement("div", {
+                            className: "request-latency-metrics__header"
+                        }, r.createElement("div", {
+                            className: "request-latency-metrics__header-url"
+                        }, "Component"), r.createElement("div", {
+                            className: "request-latency-metrics__header-time"
+                        }, "Started"), r.createElement("div", {
+                            className: "request-latency-metrics__header-size"
+                        }, "Duration")), r.createElement("ul", null, this.renderItem())) : this.renderItem()
+                    }, t.prototype.renderItem = function() {
+                        var e = this.props.tracker,
+                            t = e.children.length > 0,
+                            n = {
+                                "latency-metrics-component__metrics": !0,
+                                "latency-metrics-component__metrics-with-children": t
+                            };
+                        return r.createElement("li", null, r.createElement("div", {
+                            className: u(n),
+                            onClick: this.onClickExpand
+                        }, r.createElement("div", {
+                            className: "latency-metrics-component__left"
+                        }, r.createElement("span", {
+                            className: "latency-metrics-component__name"
+                        }, e.componentName), " ", t && r.createElement("span", null, "(", e.children.length, ")")), r.createElement("div", {
+                            className: "latency-metrics-component__time"
+                        }, Math.round(e.relativeStartTime), " ms"), r.createElement("div", {
+                            className: "latency-metrics-component__duration"
+                        }, r.createElement(p, {
+                            metric: e.componentDuration
+                        }))), r.createElement("ul", null, this.state.isExpanded && e.children.map(function(e) {
+                            return r.createElement(m, {
+                                tracker: e,
+                                key: e.id
+                            })
+                        })))
+                    }, t
+                }(r.Component)),
+                h = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.d(t, e), t.prototype.render = function() {
+                        if (this.props.metric.latencyStatus === l.a.Unknown || void 0 === this.props.metric.value) return r.createElement("span", {
+                            className: "latency-metrics__dot-animation"
+                        }, " ");
+                        var e = this.props.metric.latencyStatus === l.a.Fail ? "red" : "green";
+                        return r.createElement("span", {
+                            className: "latency-metrics__item-number latency-metrics__item-" + e
+                        }, this.props.metric.value)
+                    }, t
+                }(r.Component),
+                f = (n("Pxir"), function(e) {
+                    function t(t) {
+                        return e.call(this, t) || this
+                    }
+                    return i.d(t, e), t.prototype.render = function() {
+                        var e = this;
+                        return r.createElement("div", {
+                            className: "query-metrics"
+                        }, r.createElement("div", {
+                            className: "query-metrics__header"
+                        }, r.createElement("div", {
+                            className: "query-metrics__header-batch"
+                        }, "Batch"), r.createElement("div", {
+                            className: "query-metrics__header-name"
+                        }, "Name"), r.createElement("div", {
+                            className: "query-metrics__header-time"
+                        }, "Started"), r.createElement("div", {
+                            className: "query-metrics__header-time"
+                        }, "Request"), r.createElement("div", {
+                            className: "query-metrics__header-time"
+                        }, "Query")), this.props.queryMetrics.map(function(t) {
+                            return e.renderItem(t)
+                        }))
+                    }, t.prototype.renderItem = function(e) {
+                        var t = e.queryID;
+                        return r.createElement("div", {
+                            className: "query-metrics__item",
+                            key: t
+                        }, r.createElement("div", {
+                            className: "query-metrics__item-batch"
+                        }, e.batchID), r.createElement("div", {
+                            className: "query-metrics__item-name"
+                        }, this.renderQueryTitle(e)), r.createElement("div", {
+                            className: "query-metrics__item-time"
+                        }, Math.round(e.relativeStartTime), " ms"), r.createElement("div", {
+                            className: "query-metrics__item-time"
+                        }, e.requestDuration && e.requestDuration.latencyStatus && r.createElement(p, {
+                            metric: e.requestDuration
+                        })), r.createElement("div", {
+                            className: "query-metrics__item-time"
+                        }, r.createElement(p, {
+                            metric: e.queryDuration
+                        })))
+                    }, t.prototype.renderQueryTitle = function(e) {
+                        var t = e.variables && e.variables;
+                        return t && t.id ? r.createElement("span", null, e.operationName, " (id: ", t.id, ")") : r.createElement("span", null, e.operationName)
+                    }, t
+                }(r.Component)),
+                g = (n("B+KG"), function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.d(t, e), t.prototype.render = function() {
+                        var e = this;
+                        return r.createElement("div", {
+                            className: "request-latency-metrics"
+                        }, r.createElement("div", {
+                            className: "request-latency-metrics__header"
+                        }, r.createElement("div", {
+                            className: "request-latency-metrics__header-url"
+                        }, "Url"), r.createElement("div", {
+                            className: "request-latency-metrics__header-time"
+                        }, "Started"), r.createElement("div", {
+                            className: "request-latency-metrics__header-size"
+                        }, "Size"), r.createElement("div", {
+                            className: "request-latency-metrics__header-time"
+                        }, "Time")), this.props.metricsGroup.metrics.map(function(t) {
+                            return e.renderItem(t)
+                        }))
+                    }, t.prototype.getDisplayLink = function(e) {
+                        var t = new URL(e),
+                            n = t.hostname + t.pathname;
+                        if (n.length < 24) return n;
+                        var i = t.pathname.substring(t.pathname.lastIndexOf("/"));
+                        i || a.j.warn("Failed to parse url", {
+                            url: t,
+                            fileName: i
+                        });
+                        var r = i.split(".");
+                        return 3 === r.length && (i = r[0] + "." + r[2]), i.length > 24 && (i = i.substring(0, 16) + "..." + i.substring(i.lastIndexOf(".") - 4)), t.hostname + i
+                    }, t.prototype.renderItem = function(e) {
+                        var t = e.networkEvent,
+                            n = t.request_url + ":" + t.duration + ":" + t.start_time;
+                        return r.createElement("div", {
+                            className: "request-latency-metrics__item",
+                            key: n
+                        }, r.createElement("div", {
+                            className: "request-latency-metrics__item-url",
+                            title: t.request_url
+                        }, r.createElement("div", null, this.getDisplayLink(t.request_url))), r.createElement("div", {
+                            className: "request-latency-metrics__item-time"
+                        }, Math.round(e.relativeStartTime), " ms"), r.createElement("div", {
+                            className: "request-latency-metrics__item-size"
+                        }, t.transfer_size && t.transfer_size > 0 ? r.createElement(d, {
+                            totalSize: t.transfer_size
+                        }) : r.createElement("span", null)), r.createElement("div", {
+                            className: "request-latency-metrics__item-time"
+                        }, r.createElement(p, {
+                            metric: e.duration
+                        })))
+                    }, t
+                }(r.Component)),
+                v = n("Ue10"),
+                b = (n("8NHS"), "twilight.perf-tab"),
+                y = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.renderTab = function(e, t, i) {
+                            var a = n.state.selectedTab === e;
+                            return r.createElement(v.nb, {
+                                active: a,
+                                onClick: function() {
+                                    return n.onClickTab(e)
+                                }
+                            }, r.createElement(v.Ia, {
+                                display: v.R.Flex
+                            }, t, i && n.renderTabBubble(i)))
+                        }, n.renderTabBubble = function(e) {
+                            return r.createElement(v.Ia, {
+                                margin: {
+                                    left: .5
+                                }
+                            }, r.createElement(v.Pa, {
+                                label: e.toString(),
+                                type: v.Qa.Notification
+                            }))
+                        }, n.onClickTab = function(e) {
+                            a.l.set(b, e), n.setState({
+                                selectedTab: e
+                            })
+                        }, n.onLatencyUpdate = function() {
+                            var e = c.getComponentStats(n.tracker),
+                                t = c.getNetworkStats(n.tracker),
+                                i = c.getQueryStats(n.tracker),
+                                r = c.getQueryBatchStats(n.tracker),
+                                a = n.tracker.getCustomEvents();
+                            n.setState({
+                                componentStats: e,
+                                networkStats: t,
+                                queryStats: i,
+                                queryBatchStats: r,
+                                customEvents: a
+                            })
+                        }, n.tracker = t.benchmarking.getRootLatencyTracker(), n.state = {
+                            selectedTab: a.l.get(b, "overview"),
+                            componentStats: c.getComponentStats(n.tracker),
+                            networkStats: c.getNetworkStats(n.tracker),
+                            queryStats: c.getQueryStats(n.tracker),
+                            queryBatchStats: c.getQueryBatchStats(n.tracker),
+                            customEvents: n.tracker.getCustomEvents()
+                        }, n.tracker.subscribeToUpdates(n.onLatencyUpdate), n
+                    }
+                    return i.d(t, e), t.prototype.render = function() {
+                        return r.createElement(v.Ia, {
+                            display: v.R.Flex,
+                            flexDirection: v.T.Column,
+                            fullHeight: !0,
+                            fullWidth: !0
+                        }, r.createElement(v.Ia, {
+                            className: "latency-metrics__header-container",
+                            display: v.R.Flex,
+                            justifyContent: v.Ha.Between,
+                            flexWrap: v.U.NoWrap,
+                            alignItems: v.c.Start
+                        }, r.createElement(v.ob, null, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[l.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[l.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[l.a.Fail]))), r.createElement(v.Ia, {
+                            className: "latency-metrics__body",
+                            display: v.R.Flex,
+                            flexDirection: v.T.Column,
+                            flexGrow: 1,
+                            overflow: v.La.Hidden,
+                            fullHeight: !0
+                        }, r.createElement(o.b, {
+                            className: "latency-metrics__scroller"
+                        }, r.createElement(v.Ia, {
+                            margin: {
+                                y: 1,
+                                right: 1
+                            }
+                        }, "overview" === this.state.selectedTab && this.renderOverviewTab(), "components" === this.state.selectedTab && this.renderComponentsTab(), "queries" === this.state.selectedTab && this.renderQueriesTab(), "requests" === this.state.selectedTab && this.renderRequestsTab()))))
+                    }, t.prototype.renderOverviewTab = function() {
+                        var e = this,
+                            t = this.state.networkStats,
+                            n = this.state.queryStats,
+                            i = this.state.queryBatchStats,
+                            a = this.state.componentStats;
+                        return r.createElement(v.Ia, null, r.createElement(v.Ia, {
+                            className: "latency-metrics__item",
+                            display: v.R.Flex,
+                            justifyContent: v.Ha.Between,
+                            flexWrap: v.U.NoWrap
+                        }, r.createElement(v.Ia, {
+                            className: "latency-metrics__item-left latency-metrics__item-name",
+                            ellipsis: !0
+                        }, r.createElement("span", null, s.c.FirstPaint)), r.createElement(v.Ia, {
+                            className: "latency-metrics__item-right",
+                            display: v.R.Flex,
+                            flexWrap: v.U.NoWrap,
+                            flexShrink: 0
+                        }, r.createElement("div", {
+                            className: "latency-metrics__item-number"
+                        }, this.tracker.isFirstLoad ? r.createElement(p, {
+                            metric: this.tracker.firstPaint
+                        }) : r.createElement("span", null, "n/a")))), r.createElement(v.Ia, {
+                            className: "latency-metrics__item",
+                            display: v.R.Flex,
+                            justifyContent: v.Ha.Between,
+                            flexWrap: v.U.NoWrap
+                        }, r.createElement(v.Ia, {
+                            className: "latency-metrics__item-left latency-metrics__item-name",
+                            ellipsis: !0
+                        }, r.createElement("span", null, "Initialize")), r.createElement(v.Ia, {
+                            className: "latency-metrics__item-right",
+                            display: v.R.Flex,
+                            flexWrap: v.U.NoWrap,
+                            flexShrink: 0
+                        }, r.createElement("div", {
+                            className: "latency-metrics__item-number"
+                        }, this.tracker.isFirstLoad ? r.createElement(p, {
+                            metric: this.tracker.rootInitDuration
+                        }) : r.createElement("span", null, "n/a")))), r.createElement(v.Ia, {
+                            className: "latency-metrics__item",
+                            display: v.R.Flex,
+                            justifyContent: v.Ha.Between,
+                            flexWrap: v.U.NoWrap
+                        }, r.createElement(v.Ia, {
+                            className: "latency-metrics__item-left latency-metrics__item-name",
+                            ellipsis: !0
+                        }, r.createElement("span", null, this.tracker.isFirstLoad ? "Page Load" : "App Transition")), r.createElement("div", {
+                            className: "latency-metrics__item-number"
+                        }, r.createElement(p, {
+                            metric: this.tracker.pageLoadDuration
+                        }))), r.createElement(v.Ia, {
+                            className: "latency-metrics__item",
+                            display: v.R.Flex,
+                            justifyContent: v.Ha.Between,
+                            flexWrap: v.U.NoWrap
+                        }, r.createElement(v.Ia, {
+                            className: "latency-metrics__item-left latency-metrics__item-name",
+                            ellipsis: !0
+                        }, r.createElement("span", null, "Components (", a.count.value, ")")), r.createElement("div", {
+                            className: "latency-metrics__item-number"
+                        }, r.createElement("span", {
+                            className: "latency-metrics__item-stats"
+                        }, r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, "Slowest:"), r.createElement(p, {
+                            metric: a.max
+                        }), r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, "Average:"), r.createElement(p, {
+                            metric: a.average
+                        })))), r.createElement(v.Ia, {
+                            className: "latency-metrics__item",
+                            display: v.R.Flex,
+                            justifyContent: v.Ha.Between,
+                            flexWrap: v.U.NoWrap
+                        }, r.createElement(v.Ia, {
+                            className: "latency-metrics__item-left latency-metrics__item-name",
+                            ellipsis: !0
+                        }, r.createElement("span", null, "Queries (", n.count.value, ")")), r.createElement("div", {
+                            className: "latency-metrics__item-number"
+                        }, r.createElement("span", {
+                            className: "latency-metrics__item-stats"
+                        }, r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, "Batches:"), r.createElement(h, {
+                            metric: i.batchCount
+                        }), r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, "Slowest:"), r.createElement(p, {
+                            metric: n.max
+                        }), r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, "Average:"), r.createElement(p, {
+                            metric: n.average
+                        })))), r.createElement(v.Ia, {
+                            className: "latency-metrics__item",
+                            display: v.R.Flex,
+                            justifyContent: v.Ha.Between,
+                            flexWrap: v.U.NoWrap
+                        }, r.createElement(v.Ia, {
+                            className: "latency-metrics__item-left latency-metrics__item-name",
+                            ellipsis: !0
+                        }, r.createElement("span", null, "Requests (", t.count.value, ")")), r.createElement("div", {
+                            className: "latency-metrics__item-number"
+                        }, r.createElement("span", {
+                            className: "latency-metrics__item-stats"
+                        }, r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, "Slowest:"), r.createElement(p, {
+                            metric: t.max
+                        }), r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, "Average:"), r.createElement(p, {
+                            metric: t.average
+                        }), r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, "Size:"), " ", r.createElement(d, {
+                            totalSize: t.totalSize
+                        })))), Object.keys(this.state.customEvents).map(function(t) {
+                            return e.renderCustomEventGroup(t, e.state.customEvents[t])
+                        }))
+                    }, t.prototype.renderCustomEventGroup = function(e, t) {
+                        var n = this;
+                        return r.createElement(v.Ia, {
+                            key: e,
+                            className: "latency-metrics__item",
+                            display: v.R.Flex,
+                            justifyContent: v.Ha.Between,
+                            flexWrap: v.U.NoWrap
+                        }, r.createElement(v.Ia, {
+                            className: "latency-metrics__item-left latency-metrics__item-name",
+                            ellipsis: !0
+                        }, r.createElement("span", null, e)), r.createElement("div", {
+                            className: "latency-metrics__item-number"
+                        }, t.map(function(e) {
+                            return n.renderCustomEvent(e)
+                        })))
+                    }, t.prototype.renderCustomEvent = function(e) {
+                        return r.createElement("span", {
+                            key: e.key
+                        }, r.createElement("span", {
+                            className: "latency-metrics__item-stats-label"
+                        }, e.label, ":"), " ", r.createElement(p, {
+                            metric: e.duration
+                        }))
+                    }, t.prototype.renderComponentsTab = function() {
+                        return r.createElement(m, {
+                            tracker: this.tracker
+                        })
+                    }, t.prototype.renderRequestsTab = function() {
+                        return r.createElement(g, {
+                            metricsGroup: this.state.networkStats
+                        })
+                    }, t.prototype.renderQueriesTab = function() {
+                        return r.createElement(f, {
+                            queryMetrics: this.tracker.queryEvents
+                        })
+                    }, t
+                }(r.Component);
+            n.d(t, "a", function() {
+                return y
+            })
         },
         EvYO: function(e, t, n) {
             "use strict";
@@ -11630,7 +12238,7 @@
                                 hideCollapseButton: !0
                             })
                         }, 5e3)
-                    }, t = r.c([Object(u.d)("RightColumn")], t)
+                    }, t = r.c([Object(u.c)("RightColumn")], t)
                 }(s.Component)
         },
         GAhM: function(e, t, n) {},
@@ -12612,640 +13220,12 @@
                             onLoad: this.handleLoad
                         }, Object(a.Ob)(this.props)))
                     }, t = i.c([Object(o.a)("CriticalImage")], t)
-                }(r.Component),
-                c = n("/7QA"),
-                d = n("8/mp"),
-                u = n("8Ad5"),
-                p = n("/0dD"),
-                m = n("76Lv"),
-                h = n("kz7j"),
-                f = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.d(t, e), t.prototype.render = function() {
-                        return r.createElement("span", null, this.bytesToSize(this.props.totalSize))
-                    }, t.prototype.bytesToSize = function(e) {
-                        if (0 === e) return "0 Bytes";
-                        var t = Math.floor(Math.log(e) / Math.log(1024));
-                        return Math.round(e / Math.pow(1024, t)) + " " + ["Bytes", "KB", "MB", "GB", "TB"][t]
-                    }, t
-                }(r.Component),
-                g = n("TSYQ"),
-                v = n("DiGQ"),
-                b = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.d(t, e), t.prototype.render = function() {
-                        if (this.props.metric.latencyStatus === v.a.Unknown || void 0 === this.props.metric.value) return r.createElement("span", {
-                            className: "latency-metrics__dot-animation"
-                        }, " ");
-                        var e = this.props.metric.latencyStatus === v.a.Fail ? "red" : "green";
-                        return r.createElement("span", {
-                            className: "latency-metrics__item-number latency-metrics__item-" + e
-                        }, Math.round(this.props.metric.value), " ms")
-                    }, t
-                }(r.Component),
-                y = (n("eQXm"), function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        n.onClickExpand = function() {
-                            n.setState({
-                                isExpanded: !n.state.isExpanded
-                            })
-                        };
-                        var i = t.tracker.depth < 2;
-                        return n.state = {
-                            isExpanded: i
-                        }, n
-                    }
-                    return i.d(t, e), t.prototype.render = function() {
-                        return this.props.tracker.isRoot ? r.createElement("div", {
-                            className: "latency-metrics-component"
-                        }, r.createElement("div", {
-                            className: "request-latency-metrics__header"
-                        }, r.createElement("div", {
-                            className: "request-latency-metrics__header-url"
-                        }, "Component"), r.createElement("div", {
-                            className: "request-latency-metrics__header-time"
-                        }, "Started"), r.createElement("div", {
-                            className: "request-latency-metrics__header-size"
-                        }, "Duration")), r.createElement("ul", null, this.renderItem())) : this.renderItem()
-                    }, t.prototype.renderItem = function() {
-                        var e = this.props.tracker,
-                            t = e.children.length > 0,
-                            n = {
-                                "latency-metrics-component__metrics": !0,
-                                "latency-metrics-component__metrics-with-children": t
-                            };
-                        return r.createElement("li", null, r.createElement("div", {
-                            className: g(n),
-                            onClick: this.onClickExpand
-                        }, r.createElement("div", {
-                            className: "latency-metrics-component__left"
-                        }, r.createElement("span", {
-                            className: "latency-metrics-component__name"
-                        }, e.componentName), " ", t && r.createElement("span", null, "(", e.children.length, ")")), r.createElement("div", {
-                            className: "latency-metrics-component__time"
-                        }, Math.round(e.relativeStartTime), " ms"), r.createElement("div", {
-                            className: "latency-metrics-component__duration"
-                        }, r.createElement(b, {
-                            metric: e.componentDuration
-                        }))), r.createElement("ul", null, this.state.isExpanded && e.children.map(function(e) {
-                            return r.createElement(y, {
-                                tracker: e,
-                                key: e.id
-                            })
-                        })))
-                    }, t
-                }(r.Component)),
-                k = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.d(t, e), t.prototype.render = function() {
-                        if (this.props.metric.latencyStatus === v.a.Unknown || void 0 === this.props.metric.value) return r.createElement("span", {
-                            className: "latency-metrics__dot-animation"
-                        }, " ");
-                        var e = this.props.metric.latencyStatus === v.a.Fail ? "red" : "green";
-                        return r.createElement("span", {
-                            className: "latency-metrics__item-number latency-metrics__item-" + e
-                        }, this.props.metric.value)
-                    }, t
-                }(r.Component),
-                S = (n("vQMB"), function(e) {
-                    function t(t) {
-                        return e.call(this, t) || this
-                    }
-                    return i.d(t, e), t.prototype.render = function() {
-                        var e = this;
-                        return r.createElement("div", {
-                            className: "query-metrics"
-                        }, r.createElement("div", {
-                            className: "query-metrics__header"
-                        }, r.createElement("div", {
-                            className: "query-metrics__header-batch"
-                        }, "Batch"), r.createElement("div", {
-                            className: "query-metrics__header-name"
-                        }, "Name"), r.createElement("div", {
-                            className: "query-metrics__header-time"
-                        }, "Started"), r.createElement("div", {
-                            className: "query-metrics__header-time"
-                        }, "Request"), r.createElement("div", {
-                            className: "query-metrics__header-time"
-                        }, "Query")), this.props.queryMetrics.map(function(t) {
-                            return e.renderItem(t)
-                        }))
-                    }, t.prototype.renderItem = function(e) {
-                        var t = e.queryID;
-                        return r.createElement("div", {
-                            className: "query-metrics__item",
-                            key: t
-                        }, r.createElement("div", {
-                            className: "query-metrics__item-batch"
-                        }, e.batchID), r.createElement("div", {
-                            className: "query-metrics__item-name"
-                        }, this.renderQueryTitle(e)), r.createElement("div", {
-                            className: "query-metrics__item-time"
-                        }, Math.round(e.relativeStartTime), " ms"), r.createElement("div", {
-                            className: "query-metrics__item-time"
-                        }, e.requestDuration && e.requestDuration.latencyStatus && r.createElement(b, {
-                            metric: e.requestDuration
-                        })), r.createElement("div", {
-                            className: "query-metrics__item-time"
-                        }, r.createElement(b, {
-                            metric: e.queryDuration
-                        })))
-                    }, t.prototype.renderQueryTitle = function(e) {
-                        var t = e.variables && e.variables;
-                        return t && t.id ? r.createElement("span", null, e.operationName, " (id: ", t.id, ")") : r.createElement("span", null, e.operationName)
-                    }, t
-                }(r.Component)),
-                w = (n("CC+3"), function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.d(t, e), t.prototype.render = function() {
-                        var e = this;
-                        return r.createElement("div", {
-                            className: "request-latency-metrics"
-                        }, r.createElement("div", {
-                            className: "request-latency-metrics__header"
-                        }, r.createElement("div", {
-                            className: "request-latency-metrics__header-url"
-                        }, "Url"), r.createElement("div", {
-                            className: "request-latency-metrics__header-time"
-                        }, "Started"), r.createElement("div", {
-                            className: "request-latency-metrics__header-size"
-                        }, "Size"), r.createElement("div", {
-                            className: "request-latency-metrics__header-time"
-                        }, "Time")), this.props.metricsGroup.metrics.map(function(t) {
-                            return e.renderItem(t)
-                        }))
-                    }, t.prototype.getDisplayLink = function(e) {
-                        var t = new URL(e),
-                            n = t.hostname + t.pathname;
-                        if (n.length < 24) return n;
-                        var i = t.pathname.substring(t.pathname.lastIndexOf("/"));
-                        i || c.j.warn("Failed to parse url", {
-                            url: t,
-                            fileName: i
-                        });
-                        var r = i.split(".");
-                        return 3 === r.length && (i = r[0] + "." + r[2]), i.length > 24 && (i = i.substring(0, 16) + "..." + i.substring(i.lastIndexOf(".") - 4)), t.hostname + i
-                    }, t.prototype.renderItem = function(e) {
-                        var t = e.networkEvent,
-                            n = t.request_url + ":" + t.duration + ":" + t.start_time;
-                        return r.createElement("div", {
-                            className: "request-latency-metrics__item",
-                            key: n
-                        }, r.createElement("div", {
-                            className: "request-latency-metrics__item-url",
-                            title: t.request_url
-                        }, r.createElement("div", null, this.getDisplayLink(t.request_url))), r.createElement("div", {
-                            className: "request-latency-metrics__item-time"
-                        }, Math.round(e.relativeStartTime), " ms"), r.createElement("div", {
-                            className: "request-latency-metrics__item-size"
-                        }, t.transfer_size && t.transfer_size > 0 ? r.createElement(f, {
-                            totalSize: t.transfer_size
-                        }) : r.createElement("span", null)), r.createElement("div", {
-                            className: "request-latency-metrics__item-time"
-                        }, r.createElement(b, {
-                            metric: e.duration
-                        })))
-                    }, t
-                }(r.Component)),
-                E = function() {
-                    function e() {}
-                    return e.getComponentStats = function(t) {
-                        var n = 0,
-                            i = 0,
-                            r = 0,
-                            a = 0;
-                        e.updateLatencyStatus(t.rootInitDuration, 800), e.updateLatencyStatus(t.pageLoadDuration, 2e3), e.updateLatencyStatus(t.componentDuration, 2e3);
-                        var o = e.flattenTrackers(t);
-                        o.forEach(function(t) {
-                            e.updateLatencyStatus(t.componentDuration, 400)
-                        });
-                        var s = o.map(function(e) {
-                            return e.componentDuration.value || 0
-                        });
-                        s.length > 0 && (n = s.reduce(function(e, t) {
-                            return e + t
-                        }), i = Math.max.apply(Math, s), a = Math.min.apply(Math, s), r = n / s.length);
-                        var l = {};
-                        return o.forEach(function(e) {
-                            l[e.componentDuration.latencyStatus] || (l[e.componentDuration.latencyStatus] = 0), l[e.componentDuration.latencyStatus]++
-                        }), {
-                            rootTracker: t,
-                            average: e.getLatencyStatus(r, 400),
-                            count: e.getLatencyStatus(o.length, 200),
-                            max: e.getLatencyStatus(i, 400),
-                            min: e.getLatencyStatus(a, 400),
-                            countByStatus: l
-                        }
-                    }, e.getNetworkStats = function(t) {
-                        var n = t.networkEvents.filter(function(e) {
-                            return e.isPrePageload
-                        });
-                        n.forEach(function(t) {
-                            e.updateLatencyStatus(t.duration, 150)
-                        });
-                        var i = n.map(function(e) {
-                                return e.networkEvent.duration
-                            }),
-                            r = n.map(function(e) {
-                                return e.networkEvent.transfer_size || 0
-                            }),
-                            a = 0,
-                            o = 0,
-                            s = 0,
-                            l = 0,
-                            c = 0;
-                        i.length && (a = i.reduce(function(e, t) {
-                            return e + t
-                        }), o = r.reduce(function(e, t) {
-                            return e + t
-                        }), s = Math.max.apply(Math, i), l = Math.min.apply(Math, i), c = a / i.length), n.sort(function(e, t) {
-                            return (t.duration.value || 0) - (e.duration.value || 0)
-                        });
-                        var d = {};
-                        return n.forEach(function(e) {
-                            d[e.duration.latencyStatus] || (d[e.duration.latencyStatus] = 0), d[e.duration.latencyStatus]++
-                        }), {
-                            metrics: n,
-                            average: e.getLatencyStatus(c, 150),
-                            count: e.getLatencyStatus(n.length, 200),
-                            max: e.getLatencyStatus(s, 150),
-                            min: e.getLatencyStatus(l, 150),
-                            totalSize: o,
-                            countByStatus: d
-                        }
-                    }, e.getQueryBatchStats = function(t) {
-                        var n = t.queryBatchMetrics,
-                            i = n.map(function(e) {
-                                return e.slowestQueryInBatch || 0
-                            }),
-                            r = Math.max.apply(Math, i),
-                            a = {
-                                batchCount: {
-                                    value: n.length,
-                                    latencyStatus: v.a.Unknown
-                                },
-                                slowestQuery: {
-                                    value: r,
-                                    latencyStatus: v.a.Unknown
-                                }
-                            };
-                        return e.updateLatencyStatus(a.batchCount, 3), e.updateLatencyStatus(a.slowestQuery, 150), a
-                    }, e.getQueryStats = function(t) {
-                        var n = 0,
-                            i = 0,
-                            r = 0,
-                            a = t.queryEvents;
-                        a.forEach(function(t) {
-                            e.updateLatencyStatus(t.requestDuration, 150), e.updateLatencyStatus(t.queryDuration, 150)
-                        });
-                        var o = a.map(function(e) {
-                            return e.queryDuration.value || 0
-                        });
-                        o.length > 0 && (n = o.reduce(function(e, t) {
-                            return e + t
-                        }), i = Math.max.apply(Math, o), r = n / o.length), a.sort(function(e, t) {
-                            return (t.queryDuration.value || 0) - (e.queryDuration.value || 0)
-                        });
-                        var s = {};
-                        return a.forEach(function(e) {
-                            s[e.queryDuration.latencyStatus] || (s[e.queryDuration.latencyStatus] = 0), s[e.queryDuration.latencyStatus]++
-                        }), {
-                            metrics: a,
-                            count: e.getLatencyStatus(a.length, 200),
-                            max: e.getLatencyStatus(i, 150),
-                            average: e.getLatencyStatus(r, 150),
-                            min: e.getLatencyStatus(0, 150),
-                            countByStatus: s
-                        }
-                    }, e.getLatencyStatus = function(e, t) {
-                        return void 0 === e ? {
-                            value: e,
-                            latencyStatus: v.a.Unknown
-                        } : {
-                            value: e,
-                            latencyStatus: e > t ? v.a.Fail : v.a.Pass
-                        }
-                    }, e.updateLatencyStatus = function(e, t) {
-                        e && void 0 !== e.value && (e.latencyStatus = e.value > t ? v.a.Fail : v.a.Pass)
-                    }, e.flattenTrackers = function(t, n) {
-                        return n || (n = []), t.isRoot || n.push(t), t.children.forEach(function(t) {
-                            e.flattenTrackers(t, n)
-                        }), n
-                    }, e
-                }(),
-                C = (n("NsJI"), "twilight.perf-hide"),
-                N = "twilight.perf-size",
-                T = "twilight.perf-tab",
-                I = 3,
-                _ = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.renderTab = function(e, t, i) {
-                            var o = n.state.selectedTab === e;
-                            return r.createElement(a.Ca, {
-                                display: a.R.Flex,
-                                alignItems: a.c.Center,
-                                padding: .5,
-                                margin: {
-                                    right: 1
-                                }
-                            }, r.createElement("button", {
-                                onClick: function() {
-                                    return n.onClickTab(e)
-                                },
-                                className: "latency-metrics__button" + (o ? " latency-metrics__button--selected" : "")
-                            }, t, i && n.renderTabBubble(i)))
-                        }, n.renderTabBubble = function(e) {
-                            return r.createElement(a.Ia, {
-                                margin: {
-                                    left: .5
-                                }
-                            }, r.createElement(a.Pa, {
-                                label: e.toString(),
-                                type: a.Qa.Notification
-                            }))
-                        }, n.onClickTab = function(e) {
-                            c.l.set(T, e), n.setState({
-                                selectedTab: e
-                            })
-                        }, n.onLatencyUpdate = function() {
-                            var e = E.getComponentStats(n.tracker),
-                                t = E.getNetworkStats(n.tracker),
-                                i = E.getQueryStats(n.tracker),
-                                r = E.getQueryBatchStats(n.tracker),
-                                a = n.tracker.getCustomEvents();
-                            n.setState({
-                                componentStats: e,
-                                networkStats: t,
-                                queryStats: i,
-                                queryBatchStats: r,
-                                customEvents: a
-                            })
-                        }, n.onClickWindowSize = function() {
-                            var e = n.state.size + 1;
-                            e > I && (e = 0), c.l.set(N, e.toString()), n.setState({
-                                size: e
-                            })
-                        }, n.onClickClose = function() {
-                            n.setState({
-                                hidden: !0
-                            })
-                        }, n.onKeyDown = function(e) {
-                            e.keyCode === u.a.P && e.shiftKey && n.state.hidden ? (c.l.remove(C), n.setState({
-                                hidden: !1
-                            })) : e.keyCode === u.a.P && e.shiftKey && !n.state.hidden && (c.l.set(C, !0), n.setState({
-                                hidden: !0
-                            }))
-                        }, n.tracker = t.benchmarking.getRootLatencyTracker(), n.state = {
-                            hidden: c.l.get(C, !1),
-                            selectedTab: c.l.get(T, "overview"),
-                            size: c.l.get(N, 0),
-                            componentStats: E.getComponentStats(n.tracker),
-                            networkStats: E.getNetworkStats(n.tracker),
-                            queryStats: E.getQueryStats(n.tracker),
-                            queryBatchStats: E.getQueryBatchStats(n.tracker),
-                            customEvents: n.tracker.getCustomEvents()
-                        }, n.tracker.subscribeToUpdates(n.onLatencyUpdate), n
-                    }
-                    return i.d(t, e), t.prototype.componentWillMount = function() {
-                        window.addEventListener("keydown", this.onKeyDown)
-                    }, t.prototype.componentWillUnmount = function() {
-                        window.removeEventListener("keydown", this.onKeyDown)
-                    }, t.prototype.render = function() {
-                        return this.state.hidden ? null : r.createElement(a.Ia, {
-                            className: "latency-metrics latency-metrics__size-" + this.state.size + " " + Object(m.c)(p.a.Dark),
-                            position: a.Sa.Fixed,
-                            padding: {
-                                y: 1
-                            }
-                        }, r.createElement(a.Ia, {
-                            className: "latency-metrics__header-container",
-                            display: a.R.Flex,
-                            justifyContent: a.Ha.Between,
-                            flexWrap: a.U.NoWrap,
-                            alignItems: a.c.Start,
-                            padding: {
-                                bottom: 1
-                            },
-                            margin: {
-                                x: 1
-                            }
-                        }, r.createElement(a.Ia, {
-                            display: a.R.Flex,
-                            flexShrink: 0
-                        }, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[v.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[v.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[v.a.Fail])), r.createElement(a.Ia, {
-                            className: "latency-metrics__controls",
-                            display: a.R.Flex,
-                            flexShrink: 0
-                        }, r.createElement(a.w, {
-                            onClick: this.onClickWindowSize,
-                            icon: a.cb.Maximize,
-                            size: a.x.Small,
-                            overlay: !0,
-                            ariaLabel: "Change Size"
-                        }), r.createElement(a.w, {
-                            onClick: this.onClickClose,
-                            icon: a.cb.Close,
-                            size: a.x.Small,
-                            overlay: !0,
-                            ariaLabel: "Close"
-                        }))), r.createElement(a.Ia, {
-                            className: "latency-metrics__body",
-                            display: a.R.Flex,
-                            flexDirection: a.T.Column,
-                            flexGrow: 1,
-                            fullHeight: !0,
-                            overflow: a.La.Hidden
-                        }, "overview" === this.state.selectedTab && this.renderOverviewTab(), "components" === this.state.selectedTab && this.renderComponentsTab(), "queries" === this.state.selectedTab && this.renderQueriesTab(), "requests" === this.state.selectedTab && this.renderRequestsTab()), r.createElement("div", {
-                            className: "latency-metrics__footer"
-                        }, r.createElement("span", {
-                            className: "latency-metrics__hint-text"
-                        }, 'Press "Shift + P" to toggle latency metrics')))
-                    }, t.prototype.renderOverviewTab = function() {
-                        var e = this,
-                            t = this.state.networkStats,
-                            n = this.state.queryStats,
-                            i = this.state.queryBatchStats,
-                            o = this.state.componentStats;
-                        return r.createElement(d.b, {
-                            className: "latency-metrics__scroller"
-                        }, r.createElement(a.Ia, null, r.createElement(a.Ia, {
-                            className: "latency-metrics__item",
-                            display: a.R.Flex,
-                            justifyContent: a.Ha.Between,
-                            flexWrap: a.U.NoWrap
-                        }, r.createElement(a.Ia, {
-                            className: "latency-metrics__item-left latency-metrics__item-name",
-                            ellipsis: !0
-                        }, r.createElement("span", null, h.c.FirstPaint)), r.createElement(a.Ia, {
-                            className: "latency-metrics__item-right",
-                            display: a.R.Flex,
-                            flexWrap: a.U.NoWrap,
-                            flexShrink: 0
-                        }, r.createElement("div", {
-                            className: "latency-metrics__item-number"
-                        }, this.tracker.isFirstLoad ? r.createElement(b, {
-                            metric: this.tracker.firstPaint
-                        }) : r.createElement("span", null, "n/a")))), r.createElement(a.Ia, {
-                            className: "latency-metrics__item",
-                            display: a.R.Flex,
-                            justifyContent: a.Ha.Between,
-                            flexWrap: a.U.NoWrap
-                        }, r.createElement(a.Ia, {
-                            className: "latency-metrics__item-left latency-metrics__item-name",
-                            ellipsis: !0
-                        }, r.createElement("span", null, "Initialize")), r.createElement(a.Ia, {
-                            className: "latency-metrics__item-right",
-                            display: a.R.Flex,
-                            flexWrap: a.U.NoWrap,
-                            flexShrink: 0
-                        }, r.createElement("div", {
-                            className: "latency-metrics__item-number"
-                        }, this.tracker.isFirstLoad ? r.createElement(b, {
-                            metric: this.tracker.rootInitDuration
-                        }) : r.createElement("span", null, "n/a")))), r.createElement(a.Ia, {
-                            className: "latency-metrics__item",
-                            display: a.R.Flex,
-                            justifyContent: a.Ha.Between,
-                            flexWrap: a.U.NoWrap
-                        }, r.createElement(a.Ia, {
-                            className: "latency-metrics__item-left latency-metrics__item-name",
-                            ellipsis: !0
-                        }, r.createElement("span", null, this.tracker.isFirstLoad ? "Page Load" : "App Transition")), r.createElement("div", {
-                            className: "latency-metrics__item-number"
-                        }, r.createElement(b, {
-                            metric: this.tracker.pageLoadDuration
-                        }))), r.createElement(a.Ia, {
-                            className: "latency-metrics__item",
-                            display: a.R.Flex,
-                            justifyContent: a.Ha.Between,
-                            flexWrap: a.U.NoWrap
-                        }, r.createElement(a.Ia, {
-                            className: "latency-metrics__item-left latency-metrics__item-name",
-                            ellipsis: !0
-                        }, r.createElement("span", null, "Components (", o.count.value, ")")), r.createElement("div", {
-                            className: "latency-metrics__item-number"
-                        }, r.createElement("span", {
-                            className: "latency-metrics__item-stats"
-                        }, r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, "Slowest:"), r.createElement(b, {
-                            metric: o.max
-                        }), r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, "Average:"), r.createElement(b, {
-                            metric: o.average
-                        })))), r.createElement(a.Ia, {
-                            className: "latency-metrics__item",
-                            display: a.R.Flex,
-                            justifyContent: a.Ha.Between,
-                            flexWrap: a.U.NoWrap
-                        }, r.createElement(a.Ia, {
-                            className: "latency-metrics__item-left latency-metrics__item-name",
-                            ellipsis: !0
-                        }, r.createElement("span", null, "Queries (", n.count.value, ")")), r.createElement("div", {
-                            className: "latency-metrics__item-number"
-                        }, r.createElement("span", {
-                            className: "latency-metrics__item-stats"
-                        }, r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, "Batches:"), r.createElement(k, {
-                            metric: i.batchCount
-                        }), r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, "Slowest:"), r.createElement(b, {
-                            metric: n.max
-                        }), r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, "Average:"), r.createElement(b, {
-                            metric: n.average
-                        })))), r.createElement(a.Ia, {
-                            className: "latency-metrics__item",
-                            display: a.R.Flex,
-                            justifyContent: a.Ha.Between,
-                            flexWrap: a.U.NoWrap
-                        }, r.createElement(a.Ia, {
-                            className: "latency-metrics__item-left latency-metrics__item-name",
-                            ellipsis: !0
-                        }, r.createElement("span", null, "Requests (", t.count.value, ")")), r.createElement("div", {
-                            className: "latency-metrics__item-number"
-                        }, r.createElement("span", {
-                            className: "latency-metrics__item-stats"
-                        }, r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, "Slowest:"), r.createElement(b, {
-                            metric: t.max
-                        }), r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, "Average:"), r.createElement(b, {
-                            metric: t.average
-                        }), r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, "Size:"), " ", r.createElement(f, {
-                            totalSize: t.totalSize
-                        })))), Object.keys(this.state.customEvents).map(function(t) {
-                            return e.renderCustomEventGroup(t, e.state.customEvents[t])
-                        })))
-                    }, t.prototype.renderCustomEventGroup = function(e, t) {
-                        var n = this;
-                        return r.createElement(a.Ia, {
-                            key: e,
-                            className: "latency-metrics__item",
-                            display: a.R.Flex,
-                            justifyContent: a.Ha.Between,
-                            flexWrap: a.U.NoWrap
-                        }, r.createElement(a.Ia, {
-                            className: "latency-metrics__item-left latency-metrics__item-name",
-                            ellipsis: !0
-                        }, r.createElement("span", null, e)), r.createElement("div", {
-                            className: "latency-metrics__item-number"
-                        }, t.map(function(e) {
-                            return n.renderCustomEvent(e)
-                        })))
-                    }, t.prototype.renderCustomEvent = function(e) {
-                        return r.createElement("span", {
-                            key: e.key
-                        }, r.createElement("span", {
-                            className: "latency-metrics__item-stats-label"
-                        }, e.label, ":"), " ", r.createElement(b, {
-                            metric: e.duration
-                        }))
-                    }, t.prototype.renderComponentsTab = function() {
-                        return r.createElement(d.b, {
-                            className: "latency-metrics__scroller"
-                        }, r.createElement(y, {
-                            tracker: this.tracker
-                        }))
-                    }, t.prototype.renderRequestsTab = function() {
-                        return r.createElement(d.b, {
-                            className: "latency-metrics__scroller"
-                        }, r.createElement(w, {
-                            metricsGroup: this.state.networkStats
-                        }))
-                    }, t.prototype.renderQueriesTab = function() {
-                        return r.createElement(d.b, {
-                            className: "latency-metrics__scroller"
-                        }, r.createElement(S, {
-                            queryMetrics: this.tracker.queryEvents
-                        }))
-                    }, t
                 }(r.Component);
             n.d(t, "a", function() {
                 return s
             }), n.d(t, "b", function() {
                 return l
             }), n.d(t, "c", function() {
-                return _
-            }), n.d(t, "d", function() {
                 return o.a
             })
         },
@@ -13289,7 +13269,7 @@
                         }) : null
                     }, t
                 }(o.Component),
-                f = Object(s.d)(Object(p.d)("AmazonAds", {
+                f = Object(s.d)(Object(p.c)("AmazonAds", {
                     autoReportInteractive: !0
                 }), Object(m.i)(m.c.Amazon))(h),
                 g = n("eO8H"),
@@ -13334,7 +13314,7 @@
                         }) : null
                     }, t
                 }(o.Component),
-                b = Object(s.d)(g.f, Object(p.d)("Comscore"), Object(m.i)(m.c.ComScore))(v),
+                b = Object(s.d)(g.f, Object(p.c)("Comscore"), Object(m.i)(m.c.ComScore))(v),
                 y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -13355,7 +13335,7 @@
                         return this.scriptSrc ? o.createElement("div", {
                             ref: this.renderBinding
                         }) : null
-                    }, t = r.c([Object(p.d)("GoogleAnalytics")], t)
+                    }, t = r.c([Object(p.c)("GoogleAnalytics")], t)
                 }(o.Component),
                 k = n("NvVO"),
                 S = n("L9xt");
@@ -13452,7 +13432,7 @@
                         }) : null
                     }, t.prototype.componentWillUnmount = function() {
                         l.n.eventEmitter.removeListener(S.SpadeEventType.Pageview, this.trackPageView)
-                    }, t = r.c([Object(p.d)("IVW")], t)
+                    }, t = r.c([Object(p.c)("IVW")], t)
                 }(o.Component),
                 E = n("p46w"),
                 C = function(e) {
@@ -13525,7 +13505,7 @@
                         })
                     }, t
                 }(o.Component),
-                N = Object(s.d)(g.f, Object(p.d)("Krux", {
+                N = Object(s.d)(g.f, Object(p.c)("Krux", {
                     autoReportInteractive: !0
                 }), Object(m.i)(m.c.SalesforceDMP))(C),
                 T = n("AOPA");
@@ -13578,7 +13558,7 @@
                         !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(o.Component),
-                _ = Object(s.d)(Object(c.a)(T), Object(p.d)("TrackingManager"))(I)
+                _ = Object(s.d)(Object(c.a)(T), Object(p.c)("TrackingManager"))(I)
         },
         "Gu+9": function(e, t, n) {
             "use strict";
@@ -13717,14 +13697,14 @@
                 I = n("GnwI"),
                 _ = n("TDc0"),
                 R = n("oSPo");
-            var D = Object(i.b)(function(e) {
+            var O = Object(i.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         languageCode: e.session.languageCode,
                         currentUser: Object(l.c)(e)
                     }
                 })(R.b),
-                O = n("dtw8"),
+                D = n("dtw8"),
                 P = n("8Ad5"),
                 x = n("f00E"),
                 L = n("kz7j"),
@@ -14828,9 +14808,9 @@
                             exhaustedHits: !1,
                             videoOptions: void 0
                         }
-                    }, t = c.c([Object(I.d)("NavSearch")], t)
+                    }, t = c.c([Object(I.c)("NavSearch")], t)
                 }(d.Component),
-                de = Object(O.f)(ce),
+                de = Object(D.f)(ce),
                 ue = n("RVih"),
                 pe = n("YSKX"),
                 me = function(e) {
@@ -14853,7 +14833,7 @@
                         skip: function(e) {
                             return !e.isLoggedIn
                         }
-                    }), Object(I.d)("TopNavStoreComponent", {
+                    }), Object(I.c)("TopNavStoreComponent", {
                         autoReportInteractive: !0
                     })], t)
                 }(d.Component);
@@ -14891,7 +14871,7 @@
                             }, Object(u.d)("Try Prime", "TopNavUpsell"))
                         }
                         return null
-                    }, t = c.c([Object(g.a)(be), Object(I.d)("TopNavUpsellComponent")], t)
+                    }, t = c.c([Object(g.a)(be), Object(I.c)("TopNavUpsellComponent")], t)
                 }(d.Component),
                 ke = n("x7UT"),
                 Se = n("eDVu"),
@@ -14903,13 +14883,13 @@
                 Ie = n("76Lv"),
                 _e = n("JOxF"),
                 Re = n("jZLd"),
-                De = n("XDQu"),
-                Oe = n("geRD");
+                Oe = n("XDQu"),
+                De = n("geRD");
             ! function(e) {
                 e.Disable = "disable", e.Enable = "enable"
             }(he || (he = {}));
-            n("g6pS");
-            var Pe = function(e) {
+            var Pe = n("t/yO"),
+                xe = (n("g6pS"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onLogoutClick = function(e) {
@@ -15258,7 +15238,7 @@
                             asset: E.cb.NavSettings,
                             height: 20,
                             width: 20
-                        })), d.createElement(E.Q, null, Object(u.d)("Settings", "UserMenuDropdown")))), d.createElement(E.Ga, {
+                        })), d.createElement(E.Q, null, Object(u.d)("Settings", "UserMenuDropdown")))), d.createElement(Pe.a, null), d.createElement(E.Ga, {
                             "data-a-target": "dropdown-logout",
                             onClick: this.onLogoutClick
                         }, d.createElement(E.mb, {
@@ -15280,17 +15260,17 @@
                             height: 20,
                             width: 20
                         })), d.createElement(E.Q, null, Object(u.d)("Log Out", "UserMenuDropdown"))))))))
-                    }, t = c.c([Object(I.d)("UserMenuDropdown")], t)
-                }(d.Component),
-                xe = n("6qmu"),
-                Le = n("3KNA"),
-                Fe = function(e) {
+                    }, t = c.c([Object(I.c)("UserMenuDropdown")], t)
+                }(d.Component)),
+                Le = n("6qmu"),
+                Fe = n("3KNA"),
+                Ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.toggleShareActivity = function() {
                             if (t.props.data && !t.props.data.error && t.props.data.currentUser) {
                                 var e, n, i = !!t.props.data.currentUser.settings && !t.props.data.currentUser.settings.isSharingActivity,
-                                    r = c.a({}, Object(Oe.a)({
+                                    r = c.a({}, Object(De.a)({
                                         isSharingActivity: i
                                     }), {
                                         optimisticResponse: {
@@ -15320,7 +15300,7 @@
                         }, t
                     }
                     return c.d(t, e), t.prototype.render = function() {
-                        return d.createElement(Pe, {
+                        return d.createElement(xe, {
                             data: this.props.data,
                             dropdownOpen: this.props.dropdownOpen,
                             toggleShareActivity: this.toggleShareActivity,
@@ -15329,15 +15309,15 @@
                             logout: this.props.logout,
                             theme: this.props.theme
                         })
-                    }, t = c.c([Object(g.a)(xe, {
+                    }, t = c.c([Object(g.a)(Le, {
                         skip: function(e) {
                             return !e.firstPageLoaded
                         }
-                    }), Object(g.a)(Le, {
+                    }), Object(g.a)(Fe, {
                         name: "updateIsSharingActivity"
                     }), Object(Se.a)(function(e) {
                         return {
-                            query: xe,
+                            query: Le,
                             topic: e.data && e.data.currentUser ? Object(Ne.n)(e.data.currentUser.id) : "",
                             skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                             type: Ee.PubsubMessageType.PresenceSettings,
@@ -15347,18 +15327,18 @@
                         }
                     })], t)
                 }(d.Component);
-            var Ae = Object(i.b)(function(e) {
+            var Ue = Object(i.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
-                        theme: Object(De.a)(e)
+                        theme: Object(Oe.a)(e)
                     }
                 }, function(e) {
                     return Object(a.b)({
                         changeTheme: Re.b,
                         logout: s.g
                     }, e)
-                })(Fe),
-                Ue = (n("ENuL"), function(e) {
+                })(Ae),
+                Me = (n("ENuL"), function(e) {
                     return d.createElement(E.Ia, {
                         position: E.Sa.Relative,
                         display: E.R.Flex,
@@ -15438,8 +15418,8 @@
                         asset: E.cb.GlyphArrDown
                     })))))))
                 }),
-                Me = n("m98o"),
-                je = (n("rF0/"), function(e) {
+                je = n("m98o"),
+                Be = (n("rF0/"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onCardClick = function() {
@@ -15546,7 +15526,7 @@
                             noWrap: !0,
                             "data-a-target": "online-status",
                             lineHeight: E.Ja.Heading
-                        }, this.props.data.currentUser && d.createElement(Me.a, {
+                        }, this.props.data.currentUser && d.createElement(je.a, {
                             activity: this.props.data.currentUser.activity,
                             availability: i === we.a.Offline ? we.a.Invisible : i
                         }))))), d.createElement(E.mb, {
@@ -15560,8 +15540,8 @@
                         }))))))
                     }, t
                 }(d.Component)),
-                Be = n("jeWT"),
-                ze = function(e) {
+                ze = n("jeWT"),
+                He = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
@@ -15621,9 +15601,9 @@
                                 "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                             }),
                             t = null;
-                        return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(Ue, {
+                        return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(Me, {
                             onMenuCardClick: this.onMenuCardClick
-                        }) : d.createElement(je, {
+                        }) : d.createElement(Be, {
                             data: this.props.data,
                             onMenuCardClick: this.onMenuCardClick,
                             theme: this.props.theme
@@ -15636,14 +15616,14 @@
                         }, d.createElement(H.a, {
                             onClickOut: this.onClickOut,
                             className: e
-                        }, t, d.createElement(Ae, {
+                        }, t, d.createElement(Ue, {
                             dropdownOpen: this.state.dropdownOpen
                         })))
                     }, t.prototype.reportInteractive = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                    }, t = c.c([Object(g.a)(Be), Object(Se.a)(function(e) {
+                    }, t = c.c([Object(g.a)(ze), Object(Se.a)(function(e) {
                         return {
-                            query: Be,
+                            query: ze,
                             topic: e.data.currentUser ? Object(Ne.n)(e.data.currentUser.id) : "",
                             skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                             type: Ee.PubsubMessageType.PresenceSettings,
@@ -15655,15 +15635,15 @@
                         topic: function(e) {
                             return e.data.currentUser ? Object(Ne.n)(e.data.currentUser.id) : ""
                         },
-                        mapMessageTypesToProps: (He = {}, He[Ee.PubsubMessageType.Presence] = "presence", He),
+                        mapMessageTypesToProps: (Ve = {}, Ve[Ee.PubsubMessageType.Presence] = "presence", Ve),
                         skip: function(e) {
                             return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                         }
-                    }]), Object(I.d)("User")], t)
+                    }]), Object(I.c)("User")], t)
                 }(d.Component);
-            var He, Ve = Object(i.b)(function(e) {
+            var Ve, We = Object(i.b)(function(e) {
                     return {
-                        theme: Object(De.a)(e),
+                        theme: Object(Oe.a)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         initialUserAvailabilityIsSet: e.session.initialUserAvailabilityIsSet
                     }
@@ -15672,10 +15652,10 @@
                         changeTheme: Re.b,
                         initialUserAvailabilitySet: _e.g
                     }, e)
-                })(Object(r.f)(ze)),
-                We = n("9pSj"),
-                Ge = n("DS6v"),
-                qe = (n("Rh8e"), function(e) {
+                })(Object(r.f)(He)),
+                Ge = n("9pSj"),
+                qe = n("DS6v"),
+                Qe = (n("Rh8e"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.state = {
@@ -15704,7 +15684,7 @@
                                     right: 1
                                 },
                                 flexShrink: 0
-                            }, d.createElement(D, null)) : null
+                            }, d.createElement(O, null)) : null
                         }, n.renderTwitchPrimeCrown = function(e) {
                             return d.createElement(E.Ia, {
                                 className: "top-nav__prime",
@@ -15715,7 +15695,7 @@
                                 },
                                 alignSelf: E.d.Center,
                                 flexWrap: E.U.NoWrap
-                            }, !e && d.createElement(We.d, null))
+                            }, !e && d.createElement(Ge.d, null))
                         }, n.renderStoreLink = function() {
                             var e = !1;
                             if (n.props.data) {
@@ -16008,19 +15988,19 @@
                             flexWrap: E.U.NoWrap,
                             flexGrow: 0,
                             flexShrink: 0
-                        }, this.props.isLoggedIn ? d.createElement(Ve, null) : d.createElement(ue.a, {
+                        }, this.props.isLoggedIn ? d.createElement(We, null) : d.createElement(ue.a, {
                             login: this.props.login,
                             signup: this.props.signup
                         })))))
-                    }, t = c.c([Object(g.a)(Ge, {
+                    }, t = c.c([Object(g.a)(qe, {
                         skip: function(e) {
                             return !e.isLoggedIn
                         }
-                    }), Object(I.d)("TopNav", {
+                    }), Object(I.c)("TopNav", {
                         autoReportInteractive: !0
                     })], t)
                 }(d.Component));
-            var Qe = Object(r.f)(Object(i.b)(function(e) {
+            var Ke = Object(r.f)(Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(l.d)(e)
                 }
@@ -16034,13 +16014,13 @@
                         return Object(s.h)(o.a.TopNavSignupButton)
                     }
                 }, e)
-            })(qe));
+            })(Qe));
             n.d(t, !1, function() {
                 return "5rem"
             }), n.d(t, !1, function() {
                 return "9.5rem"
             }), n.d(t, "a", function() {
-                return Qe
+                return Ke
             })
         },
         Gw6o: function(e, t, n) {
@@ -17097,6 +17077,7 @@
                     }
             }
         },
+        IhyH: function(e, t, n) {},
         IrUU: function(e, t) {
             var n = {
                 kind: "Document",
@@ -17604,7 +17585,7 @@
                             "data-test-selector": t,
                             purchase: this.props.purchase
                         }, this.props.buttonMessage || e)
-                    }, t = i.c([Object(l.d)("GiftSubscribeButton", {
+                    }, t = i.c([Object(l.c)("GiftSubscribeButton", {
                         autoReportInteractive: !0
                     }), Object(o.a)(d, {
                         options: function(e) {
@@ -19578,7 +19559,7 @@
                         updateGDPRStatus: a.e,
                         updateGDPRVendorPreferences: a.f
                     }, e)
-                }), Object(h.a)(b), Object(v.d)("GDPRConsentManager"))(y);
+                }), Object(h.a)(b), Object(v.c)("GDPRConsentManager"))(y);
 
             function S() {
                 return f() || r.b.get("gdpr_consent_enabled", !1)
@@ -20327,7 +20308,7 @@
             });
             var i = n("mrSG"),
                 r = n("yR8l"),
-                a = n("uwZC"),
+                a = n("0FG4"),
                 o = n("S4w9");
 
             function s() {
@@ -20335,7 +20316,7 @@
                     props: function(e) {
                         if (e.data) {
                             var t = e.data.currentUser && e.data.currentUser.emoteSets,
-                                n = t && Object(a.a)(t);
+                                n = t && Object(a.b)(t);
                             return {
                                 emoteSetsData: i.a({}, e.data, {
                                     emoteMap: n,
@@ -20537,6 +20518,7 @@
             };
             e.exports = n
         },
+        NM47: function(e, t, n) {},
         NMMG: function(e, t, n) {
             "use strict";
 
@@ -20568,6 +20550,16 @@
                 Offline: "OFFLINE",
                 Online: "ONLINE"
             }
+        },
+        NT6a: function(e, t, n) {
+            "use strict";
+            var i = n("D2+s"),
+                r = n("EuNP");
+            n.d(t, "a", function() {
+                return i.b
+            }), n.d(t, !1, function() {
+                return r.a
+            })
         },
         NZDK: function(e, t, n) {
             "use strict";
@@ -20873,7 +20865,753 @@
                 return Math.floor(((new Date).getTime() - 6e5) / 1e3)
             }
         },
-        NsJI: function(e, t, n) {},
+        NdhY: function(e, t, n) {
+            "use strict";
+            var i = n("uhBA"),
+                r = function() {
+                    function e(e, t, n) {
+                        this.sniffers = e, this.trackFunc = t, this.filterFunc = n, this.startCalled = !1
+                    }
+                    return e.prototype.start = function() {
+                        return !this.startCalled && (this.startCalled = !0, this.sniffers.forEach(this.processSniffer.bind(this)), !0)
+                    }, e.prototype.flush = function() {
+                        this.sniffers.forEach(function(e) {
+                            return e.getAvailableResourceTimings()
+                        })
+                    }, e.prototype.processSniffer = function(e) {
+                        var t = e.frameURL,
+                            n = e.getFrameTiming(),
+                            i = n.navigationStart;
+                        this.processFrameTiming(t, n), e.addResourceListener(this.processResourceTiming.bind(this, i)), e.getAvailableResourceTimings().forEach(this.processResourceTiming.bind(this, i))
+                    }, e.prototype.processFrameTiming = function(e, t) {
+                        if (this.shouldSend(e)) {
+                            var n = this.createFrameNetworkEventData(e, t);
+                            this.trackFunc(n)
+                        }
+                    }, e.prototype.processResourceTiming = function(e, t) {
+                        if (this.shouldSend(t.name)) {
+                            var n = this.createResourceNetworkEventData(e, t);
+                            this.trackFunc(n)
+                        }
+                    }, e.prototype.shouldSend = function(e) {
+                        return !this.filterFunc || this.filterFunc(e)
+                    }, e.prototype.createFrameNetworkEventData = function(e, t) {
+                        return {
+                            type: "frame",
+                            request_url: e,
+                            start_time: t.navigationStart,
+                            duration: Math.round(t.responseEnd - t.fetchStart),
+                            dns_duration: this.computeDuration(t.domainLookupStart, t.domainLookupEnd),
+                            connect_duration: this.computeDuration(t.connectStart, t.connectEnd),
+                            request_duration: this.computeDuration(t.requestStart, t.responseStart),
+                            response_duration: this.computeDuration(t.responseStart, t.responseEnd),
+                            redirect_duration: this.computeDuration(t.redirectStart, t.redirectEnd)
+                        }
+                    }, e.prototype.createResourceNetworkEventData = function(e, t) {
+                        return {
+                            type: "resource",
+                            request_url: t.name,
+                            start_time: e + t.startTime,
+                            duration: Math.round(t.duration),
+                            dns_duration: this.computeDuration(t.domainLookupStart, t.domainLookupEnd),
+                            connect_duration: this.computeDuration(t.connectStart, t.connectEnd),
+                            request_duration: this.computeDuration(t.requestStart, t.responseStart),
+                            response_duration: this.computeDuration(t.responseStart, t.responseEnd),
+                            redirect_duration: this.computeDuration(t.redirectStart, t.redirectEnd),
+                            transfer_size: t.transferSize,
+                            decoded_size: t.decodedBodySize
+                        }
+                    }, e.prototype.computeDuration = function(e, t) {
+                        return e > 0 && t > 0 ? t - e : void 0
+                    }, e
+                }(),
+                a = "resource";
+
+            function o(e) {
+                return !!(e && e.timing && e.getEntriesByType && e.setResourceTimingBufferSize && e.clearResourceTimings)
+            }
+            var s = function() {
+                    function e(e, t, n) {
+                        var r = this;
+                        this.performance = t, this.frameURL = n, this.startCalled = !1, this.eventEmitter = new i.EventEmitter, this.emitterName = "network-sniffer", this.processNewResourceTimings = function() {
+                            var e = r.performance.getEntriesByType(a);
+                            if (0 !== e.length) {
+                                for (var t = 0, n = e; t < n.length; t++) {
+                                    var i = n[t];
+                                    r.fireResourceListeners(i)
+                                }
+                                r.clearResourceBuffer()
+                            }
+                        }, this.logger = e.withCategory("network-sniffer"), o(t) ? this.logger.debug("Created") : this.logger.warn("No sniffing allowed!")
+                    }
+                    return e.prototype.start = function() {
+                        return !this.startCalled && (this.startCalled = !0, this.setResourceBufferSize(), setInterval(this.processNewResourceTimings, 500), !0)
+                    }, e.prototype.getFrameTiming = function() {
+                        return this.performance.timing
+                    }, e.prototype.getAvailableResourceTimings = function() {
+                        return this.processNewResourceTimings(), this.performance.getEntriesByType(a)
+                    }, e.prototype.addResourceListener = function(e) {
+                        this.eventEmitter.addListener(this.emitterName, e)
+                    }, e.prototype.removeResourceListener = function(e) {
+                        this.eventEmitter.removeListener(this.emitterName, e)
+                    }, e.prototype.setResourceBufferSize = function() {
+                        this.performance.setResourceTimingBufferSize(1e3)
+                    }, e.prototype.clearResourceBuffer = function() {
+                        this.performance.clearResourceTimings(), this.setResourceBufferSize()
+                    }, e.prototype.fireResourceListeners = function(e) {
+                        this.eventEmitter.emit(this.emitterName, e)
+                    }, e
+                }(),
+                l = function() {
+                    function e(e) {
+                        var t = this;
+                        this.buffer = [], this.eventEmitter = new i.EventEmitter, this.emitterName = "network-metrics", this.loggedHostWarnings = {}, this.shouldLogHosts = function(e) {
+                            return function(n) {
+                                var i = new URL(n),
+                                    r = i.hostname,
+                                    a = r.split(".");
+                                a.length > 2 && (r = a[a.length - 2] + "." + a[a.length - 1]);
+                                var o = e.some(function(e) {
+                                    return 0 === r.indexOf(e)
+                                });
+                                return o || t.loggedHostWarnings[r] || (t.loggedHostWarnings[r] = !0, t.logger.debug("Request not in whitelist", {
+                                    urlHost: r,
+                                    url: i
+                                })), o
+                            }
+                        }, this.onRequestCompleted = function(e) {
+                            if (t.eventEmitter.listeners(t.emitterName, !0)) {
+                                if (t.buffer.length > 0) {
+                                    for (var n = 0, i = t.buffer; n < i.length; n++) {
+                                        var r = i[n];
+                                        t.eventEmitter.emit(t.emitterName, r)
+                                    }
+                                    t.buffer = []
+                                }
+                                t.eventEmitter.emit(t.emitterName, e)
+                            } else t.buffer.push(e)
+                        }, this.logger = e.logger.withCategory("network monitoring"), this.window = e.window;
+                        var n = this.createSniffers();
+                        n.map(function(e) {
+                            t.logger.debug("Starting network sniffer"), e.start()
+                        }), this.networkLogger = new r(n, this.onRequestCompleted, this.shouldLogHosts(e.config.networkLoggingHostNames)), this.logger.debug("Starting network logger"), this.networkLogger.start()
+                    }
+                    return e.prototype.flush = function() {
+                        this.networkLogger.flush()
+                    }, e.prototype.subscribeToUpdates = function(e) {
+                        this.eventEmitter.addListener(this.emitterName, e)
+                    }, e.prototype.removeQueryMetricsListener = function(e) {
+                        this.eventEmitter.removeListener(this.emitterName, e)
+                    }, e.prototype.createSniffers = function() {
+                        var e = [];
+                        this.canAccessPerformance(this.window) && ((n = this.createSniffer(this.window)) && (this.logger.debug("Creating network sniffer for main window"), e.push(n)));
+                        for (var t = 0; t < this.window.frames.length; t++) {
+                            var n;
+                            if (this.canAccessFrame(t) && this.canAccessPerformance(this.window.frames[t].window))(n = this.createSniffer(this.window.frames[t].window)) && (this.logger.debug("Creating network sniffer for frame", t), e.push(n))
+                        }
+                        return e
+                    }, e.prototype.canAccessFrame = function(e) {
+                        try {
+                            return !!this.window.frames[e].window
+                        } catch (t) {
+                            return this.logger.warn("Can't access frame", {
+                                index: e,
+                                err: t
+                            }), !1
+                        }
+                    }, e.prototype.canAccessPerformance = function(e) {
+                        try {
+                            return o(e.performance)
+                        } catch (e) {
+                            return this.logger.warn("Unable to determine if network sniffing is allowed", e), !1
+                        }
+                    }, e.prototype.createSniffer = function(e) {
+                        try {
+                            return new s(this.logger, e.performance, e.location.href)
+                        } catch (e) {
+                            this.logger.warn("Unable to create network sniffer", e)
+                        }
+                    }, e
+                }(),
+                c = n("mrSG"),
+                d = n("JOxF"),
+                u = n("kz7j"),
+                p = n("DiGQ"),
+                m = n("NvVO"),
+                h = function() {
+                    function e(t, n) {
+                        var i = this;
+                        if (this.componentDuration = {
+                                latencyStatus: p.a.Unknown
+                            }, this.isRoot = !1, this.hasReportedInteractive = !1, this.customEvents = {}, this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.getHasReportedInteractive = function() {
+                                return i.hasReportedInteractive
+                            }, this.setLocation = function(e) {
+                                i.root.setLocation(e)
+                            }, this.sendInitializingEvent = function(e, t, n) {
+                                i.hasSentInitializing || (i.tracker.trackInitialize(e, t, n, i.componentName, i.relativeStartTime, i.id.toString(), i.startTimestamp, i.isPrePageLoad, i.root && i.root.hasLostVisibility, i.parent && i.parent.id.toString()), i.hasSentInitializing = !0)
+                            }, this.sendInteractiveEvent = function(e, t, n) {
+                                !i.hasSentInteractive && i.componentDuration.value && (i.tracker.trackInteractive(e, t, n, i.componentName, i.relativeStartTime, i.id.toString(), i.completedTimestamp, i.componentDuration.value, i.isPrePageLoad, i.root && i.root.hasLostVisibility, i.parent && i.parent.id.toString(), i.parent && i.parent.componentName), i.hasSentInteractive = !0)
+                            }, this.shouldWarnChild = function() {
+                                return i.getCurrentTimestamp() - i.completedTimestamp < 500
+                            }, this.id = e.counter++, this.componentName = t, this.parent = n && n.parent, this.children = [], this.parent ? (this.tracker = this.parent.tracker, this.root = this.parent.root || this.parent, this.depth = this.parent.depth + 1, this.parent.registerChild(this)) : this.depth = 0, this.logger = n.logger, this.isPageComponent = this.componentName.endsWith("Page"), this.isPrePageLoad = this.isRoot || this.root && !this.root.completedTimestamp, this.isPageComponent) {
+                            var r = n && n.destination;
+                            r || (this.logger.error(new Error("The " + this.componentName + " component must supply a canonical destination, ex: directory.index"), "Invalid withLatencyTracking options"), r = m.a.Unknown), this.logger.debug("Set root page to: " + r), this.root && this.root.setPage(this, r)
+                        }
+                        n && n.destination && !this.isPageComponent && this.logger.error(new Error("The " + this.componentName + ' component supplied a destination but the component name does not end in "Page".'), "Invalid withLatencyTracking options"), this.resetStartTime(), this.raiseUpdate(), this.logger.debug("Latency tracker created")
+                    }
+                    return e.prototype.reset = function(e) {
+                        void 0 === e && (e = !0), this.completedTimestamp && (e && (this.children = [], this.hasReportedInteractive = !1), this.resetStartTime(), this.parent && this.parent.childReset(this), this.logger.debug(this.componentName + " reset", {
+                            children: this.children
+                        }), this.raiseUpdate())
+                    }, e.prototype.resetChildren = function() {
+                        if (this.children && this.children.length)
+                            for (var e = 0, t = this.children; e < t.length; e++) {
+                                t[e].resetChildren()
+                            }
+                        this.children = []
+                    }, e.prototype.reportInteractive = function(e) {
+                        this.hasReportedInteractive ? this.logger.debug("Already reported interactive") : (this.hasReportedInteractive = !0, this.logger.debug(this.componentName + " reported interactive", {
+                            expectedChildCount: e,
+                            children: this.getChildNames()
+                        }), e && (this.expectedChildCount = e), this.checkChildCompleted())
+                    }, e.prototype.unregister = function() {
+                        this.hasReportedInteractive || (this.parent ? (this.parent.unregisterChild(this), this.logger.debug("Unregistering component which has not reported interactive yet", {
+                            component: this.componentName
+                        })) : this.logger.debug("Attempted to unregister a parent-less component. This is a no-op.", {
+                            component: this.componentName
+                        }))
+                    }, e.prototype.resetCustomEvents = function(e) {
+                        this.root.customEvents[e] = []
+                    }, e.prototype.registerCustomEvent = function(e) {
+                        var t, n = !1;
+                        switch (e.start) {
+                            case u.d.Registration:
+                                t = this.getCurrentTimestamp();
+                                break;
+                            default:
+                                this.root.customEvents[e.group] && this.root.customEvents[e.group].find(function(t) {
+                                    return t.key === e.key
+                                }) && (n = !0, this.logger.warn("Registered a custom event timed from navigation start, that was previously registered. Reporting this event will be a no-op.", {
+                                    customEventOptions: e
+                                })), t = this.getRootInitTimestamp()
+                        }
+                        var i = c.a({}, e, {
+                            doNotTrack: n,
+                            duration: {
+                                latencyStatus: p.a.Unknown
+                            },
+                            startTime: t
+                        });
+                        return this.logger.debug("[" + e.group + "][" + e.label + "] Event registered", {
+                            customEvent: i
+                        }), n || (this.root.customEvents[e.group] || (this.root.customEvents[e.group] = []), this.root.customEvents[e.group].push(i)), this.raiseUpdate(), i
+                    }, e.prototype.reportCustomEvent = function(e) {
+                        if (!(e.duration && e.duration.value || e.doNotTrack)) {
+                            var t = Math.round(this.getCurrentTimestamp() - e.startTime),
+                                n = t <= e.benchmark ? p.a.Pass : p.a.Fail;
+                            e.duration.value = t, e.duration.latencyStatus = n, this.logger.debug("[" + e.group + "][" + e.label + "] Event reported", {
+                                customEvent: e
+                            }), this.raiseUpdate(), this.root.sendCustomEventToSpade(e)
+                        }
+                    }, e.prototype.createChild = function(t, n) {
+                        return new e(t, {
+                            destination: n,
+                            parent: this,
+                            logger: this.logger.withCategory(t)
+                        })
+                    }, e.prototype.sendBenchmarkEventsToSpade = function() {
+                        if (this.root) {
+                            var e = this.root.getLocation(),
+                                t = this.root.getDestination(),
+                                n = this.root.getPageComponentName();
+                            if (t && e && n) {
+                                this.sendInitializingEvent(t, e, n), this.sendInteractiveEvent(t, e, n);
+                                for (var i = 0, r = this.children; i < r.length; i++) {
+                                    r[i].sendBenchmarkEventsToSpade()
+                                }
+                            }
+                        }
+                    }, e.prototype.raiseUpdate = function() {
+                        this.root && this.root.raiseUpdate()
+                    }, e.prototype.markCompleted = function() {
+                        if (!this.completedTimestamp) {
+                            this.completedTimestamp = this.getCurrentTimestamp();
+                            var e = Math.round(this.completedTimestamp - this.startTimestamp);
+                            this.componentDuration = {
+                                value: e,
+                                latencyStatus: p.a.Unknown
+                            }, this.logger.debug("Done", {
+                                componantName: this.componentName,
+                                durationMs: this.componentDuration.value
+                            }), this.parent && this.parent.childCompleted(this), this.raiseUpdate()
+                        }
+                    }, e.prototype.checkChildCompleted = function() {
+                        var e = this.expectedChildCount ? this.expectedChildCount : this.children.length;
+                        this.children.filter(function(e) {
+                            return e.completedTimestamp
+                        }).length >= e && (this.logger.debug("All children completed", {
+                            componentName: this.componentName,
+                            expectedChildCount: e,
+                            children: this.getChildNames()
+                        }), this.markCompleted())
+                    }, e.prototype.registerChild = function(e) {
+                        if (this.completedTimestamp) {
+                            if (this.root && this.root.completedTimestamp) return void(this.shouldWarnChild() && this.logger.warn("Child attempted to register itself, but parent is already completed", {
+                                child: e.componentName,
+                                parent: this.componentName
+                            }));
+                            this.reset(!1)
+                        }
+                        this.root.resetFirstPageLoadedFailsafe(), this.children.push(e)
+                    }, e.prototype.unregisterChild = function(e) {
+                        var t = this.children.indexOf(e);
+                        t > -1 ? (this.children.splice(t, 1), this.expectedChildCount && this.expectedChildCount--) : this.logger.warn("Child attempted to unregister itself, but was not registered", {
+                            child: e.componentName,
+                            parent: this.componentName
+                        }), this.hasReportedInteractive && this.checkChildCompleted()
+                    }, e.prototype.getChildNames = function() {
+                        return this.children.map(function(e) {
+                            return e.componentName
+                        })
+                    }, e.prototype.getRootInitTimestamp = function() {
+                        return this.root.startTimestamp
+                    }, e.prototype.getNavigationStartTimestamp = function() {
+                        return this.root ? this.root.navigationStart : Date.now()
+                    }, e.prototype.getCurrentTimestamp = function() {
+                        return performance.timing.navigationStart + performance.now()
+                    }, e.prototype.getRelativeStartTimestamp = function() {
+                        return Math.round(this.startTimestamp - this.getNavigationStartTimestamp())
+                    }, e.prototype.resetStartTime = function() {
+                        var e = this.getCurrentTimestamp();
+                        this.startTimestamp = e, this.relativeStartTime = this.getRelativeStartTimestamp(), this.completedTimestamp = 0, this.componentDuration = {
+                            value: void 0,
+                            latencyStatus: p.a.Unknown
+                        }
+                    }, e.prototype.childReset = function(e) {
+                        this.children.includes(e) || this.children.push(e), this.completedTimestamp ? this.logger.warn("Child component reset after this one completed", {
+                            child: e.componentName
+                        }) : this.logger.debug("Child component reset", {
+                            child: e.componentName
+                        })
+                    }, e.prototype.childCompleted = function(e) {
+                        this.completedTimestamp ? this.shouldWarnChild() && this.logger.warn("Child attempted to report completed, but parent is already completed", {
+                            child: e.componentName,
+                            parent: this.componentName
+                        }) : (this.logger.debug(this.componentName + " child " + e.componentName + " completed", {
+                            children: this.getChildNames()
+                        }), this.hasReportedInteractive && this.checkChildCompleted())
+                    }, e.counter = 1, e
+                }(),
+                f = n("2xye"),
+                g = function() {
+                    function e(e, t) {
+                        this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
+                    }
+                    return e.prototype.trackNetworkRequestEvent = function(e, t, n, i, r, a) {
+                        a.request_url !== this.tracking.getEndpoint() ? this.tracking.trackBenchmark(f.SpadeEventType.NetworkRequest, c.a({
+                            is_pre_pageload: i,
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            client_time: a.start_time / 1e3,
+                            relative_start_time: r
+                        }, a)) : this.logger.debug("Skipping Spade network request.")
+                    }, e.prototype.trackCompleteTransition = function(e, t, n, i, r, a, o) {
+                        this.tracking.trackBenchmark(f.SpadeEventType.CompleteTransition, {
+                            client_time: i / 1e3,
+                            lost_visibility: o,
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            is_app_launch: a,
+                            time_from_fetch: r
+                        })
+                    }, e.prototype.trackCustomEvent = function(e, t, n, i, r) {
+                        this.tracking.trackCustomEventBenchmark({
+                            benchmark: e.benchmark,
+                            destination: i,
+                            duration: Math.round(e.duration && e.duration.value || 0),
+                            group: e.group,
+                            is_app_launch: t,
+                            key: e.key,
+                            label: e.label,
+                            lost_visibility: n,
+                            page_component_name: r
+                        })
+                    }, e.prototype.trackAppBooted = function(e, t, n, i, r, a) {
+                        this.tracking.trackBenchmark(f.SpadeEventType.AppBooted, {
+                            client_time: i / 1e3,
+                            lost_visibility: a,
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            time_from_fetch: r
+                        })
+                    }, e.prototype.trackInitialize = function(e, t, n, i, r, a, o, s, l, c) {
+                        this.tracking.trackBenchmark(f.SpadeEventType.ComponentInitializing, {
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            component: i,
+                            component_id: a,
+                            parent_component_id: c,
+                            client_time: o / 1e3,
+                            lost_visibility: l,
+                            is_pre_pageload: s,
+                            relative_start_time: r
+                        })
+                    }, e.prototype.trackInteractive = function(e, t, n, i, r, a, o, s, l, c, d, u) {
+                        this.tracking.trackBenchmark(f.SpadeEventType.ComponentInteractive, {
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            component: i,
+                            component_id: a,
+                            parent_component_id: d,
+                            parent_component: u,
+                            client_time: o / 1e3,
+                            time_from_initializing: s / 1e3,
+                            duration: s,
+                            lost_visibility: c,
+                            relative_start_time: r,
+                            is_pre_pageload: l
+                        })
+                    }, e.prototype.trackFetchStart = function(e, t, n, i, r) {
+                        this.tracking.trackBenchmark(f.SpadeEventType.FetchStart, {
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            client_time: i / 1e3,
+                            lost_visibility: r
+                        })
+                    }, e.prototype.trackApiQuery = function(e, t, n, i, r, a, o, s, l) {
+                        this.tracking.trackApiQueryBenchmark({
+                            destination: e,
+                            location: t,
+                            client_time: i / 1e3,
+                            page_component_name: r,
+                            query_name: a,
+                            is_pre_pageload: l,
+                            execution_time: o,
+                            request_time: s,
+                            relative_start_time: n
+                        })
+                    }, e
+                }(),
+                v = "first_page_loaded_timeout",
+                b = function(e) {
+                    function t(t) {
+                        var n = e.call(this, "Root", {
+                            logger: t.logger.withCategory("latency-tracker")
+                        }) || this;
+                        if (n.rootInitDuration = {
+                                latencyStatus: p.a.Unknown
+                            }, n.firstPaint = {
+                                latencyStatus: p.a.Unknown
+                            }, n.pageLoadDuration = {
+                                latencyStatus: p.a.Unknown
+                            }, n.networkEvents = [], n.queryBatchMetrics = [], n.queryEvents = [], n.isFirstLoad = !0, n.isRoot = !0, n.hasLostVisibility = !1, n.emitter = new i.EventEmitter, n.hasDispatchedFirstPageLoaded = !1, n.firstPageLoadedFailsafe = 0, n.firstPageLoadedTimeout = 1e4, n.getLocation = function() {
+                                return n.location
+                            }, n.setLocation = function(e) {
+                                n.logger.debug("Updating location", {
+                                    location: e
+                                }), n.location = e, n.sendBenchmarkEventsToSpade()
+                            }, n.getDestination = function() {
+                                return n.destination
+                            }, n.getPageComponentName = function() {
+                                return n.page && n.page.componentName
+                            }, n.setPage = function(e, t) {
+                                n.page = e, n.destination = t, n.sentinel.setPageComponentName(e.componentName)
+                            }, n.sendCustomEventToSpade = function(e) {
+                                n.componentEventsEnabled && n.tracker.trackCustomEvent(e, n.isFirstLoad, n.hasLostVisibility, n.destination, n.getPageComponentName())
+                            }, n.addPageLoadFailedListener = function(e) {
+                                n.emitter.addListener("firstPageLoadFailed", e)
+                            }, n.removePageLoadFailedListener = function(e) {
+                                n.emitter.removeListener("firstPageLoadFailed", e)
+                            }, n.sendAllEvents = function() {
+                                n.networkMonitor && (n.networkMonitor.flush(), n.doReconcileQueries(!0)), n.sendBenchmarkEventsToSpade(), n.sendNetworkRequestsToSpade()
+                            }, n.sendFetchStartEvent = function(e, t, i) {
+                                n.isFirstLoad && !n.hasSentFetchStart && (n.tracker.trackFetchStart(e, t, i, performance.timing.fetchStart, n.hasLostVisibility), n.hasSentFetchStart = !0)
+                            }, n.sendCompleteTransitionEvent = function(e, t, i) {
+                                !n.hasSentCompleteTransition && n.pageLoadDuration.value && (n.tracker.trackCompleteTransition(e, t, i, n.completedTimestamp, n.pageLoadDuration.value, n.isFirstLoad, n.hasLostVisibility), n.hasSentCompleteTransition = !0)
+                            }, n.sendAppBootedEvent = function(e, t, i) {
+                                if (n.isFirstLoad && !n.hasSentAppBooted && n.rootInitDuration.value) {
+                                    n.tracker.trackAppBooted(e, t, i, n.startTimestamp, n.rootInitDuration.value, n.hasLostVisibility);
+                                    try {
+                                        var r = performance.getEntriesByType("paint").find(function(e) {
+                                            return "first-contentful-paint" === e.name
+                                        });
+                                        r && (n.firstPaint.value = r.startTime, r.startTime > 250 ? n.firstPaint.latencyStatus = p.a.Fail : n.firstPaint.latencyStatus = p.a.Pass, n.tracker.trackCustomEvent({
+                                            benchmark: 250,
+                                            duration: n.firstPaint,
+                                            group: u.a.Page,
+                                            key: u.b.FirstPaint,
+                                            label: u.c.FirstPaint,
+                                            startTime: n.navigationStart
+                                        }, n.isFirstLoad, n.hasLostVisibility, n.destination, n.getPageComponentName()))
+                                    } catch (e) {
+                                        n.logger.debug("First paint metrics not available on this platform", e)
+                                    }
+                                    n.hasSentAppBooted = !0
+                                }
+                            }, n.onNetworkRequest = function(e) {
+                                var t = e.request_url.startsWith(n.graphqlEndpoint),
+                                    i = !n.completedTimestamp || e.start_time <= n.completedTimestamp,
+                                    r = Math.round(e.start_time - n.getNavigationStartTimestamp());
+                                n.networkEvents.push({
+                                    networkEvent: e,
+                                    latencyStatus: p.a.Unknown,
+                                    relativeStartTime: r,
+                                    isPendingSpade: !0,
+                                    isApiRequest: t,
+                                    isPrePageload: i,
+                                    duration: {
+                                        value: e.duration,
+                                        latencyStatus: p.a.Unknown
+                                    }
+                                }), n.reconcileQueries()
+                            }, n.reconcileQueries = function() {
+                                n.queryReconciliationTimer || (n.queryReconciliationTimer = setTimeout(function() {
+                                    n.queryReconciliationTimer = null, n.doReconcileQueries(!1), n.sendNetworkRequestsToSpade()
+                                }, 250))
+                            }, n.doReconcileQueries = function(e) {
+                                for (var t = n.networkEvents.filter(function(e) {
+                                        return e.isApiRequest
+                                    }), i = function(i) {
+                                        var r = t.find(function(e) {
+                                            return e.networkEvent.duration >= i.slowestQueryInBatch && e.networkEvent.start_time >= i.batchTimestamp && e.networkEvent.start_time - i.batchTimestamp < 10
+                                        });
+                                        !r && e && (r = t.find(function(e) {
+                                            return e.networkEvent.duration >= i.slowestQueryInBatch && e.networkEvent.start_time >= i.batchTimestamp
+                                        })), r ? (i.relatedNetworkEvent = r.networkEvent, i.isPrePageload = r.isPrePageload, i.requestDuration = {
+                                            value: Math.round(r.networkEvent.duration),
+                                            latencyStatus: p.a.Unknown
+                                        }) : e && n.logger.warn("Unable to find a related network event for query", {
+                                            queryEvent: i,
+                                            filteredApiRequests: t,
+                                            allNetworkRequests: n.networkEvents.slice()
+                                        })
+                                    }, r = 0, a = n.queryEvents.filter(function(e) {
+                                        return !e.relatedNetworkEvent
+                                    }); r < a.length; r++) {
+                                    i(a[r])
+                                }
+                                n.raiseUpdate()
+                            }, n.onQuery = function(e) {
+                                if (n.completedTimestamp && e.batchTimestamp > n.completedTimestamp) n.logger.debug("Query event data skipped, it is post page load.", e);
+                                else {
+                                    var t = Math.max.apply(Math, e.queries.map(function(e) {
+                                        return e.durationMs
+                                    }));
+                                    n.queryBatchMetrics.push({
+                                        batchID: e.batchID,
+                                        batchTimestamp: e.batchTimestamp,
+                                        latencyStatus: p.a.Unknown,
+                                        slowestQueryInBatch: t
+                                    });
+                                    for (var i = 0, r = e.queries; i < r.length; i++) {
+                                        var a = r[i];
+                                        n.queryEvents.push({
+                                            batchID: e.batchID,
+                                            batchTimestamp: e.batchTimestamp,
+                                            relativeStartTime: Math.round(e.batchTimestamp - n.getNavigationStartTimestamp()),
+                                            queryDuration: {
+                                                value: a.durationMs,
+                                                latencyStatus: p.a.Unknown
+                                            },
+                                            requestDuration: {
+                                                latencyStatus: p.a.Unknown
+                                            },
+                                            operationName: a.operationName,
+                                            queryID: a.queryID,
+                                            slowestQueryInBatch: t,
+                                            variables: a.variables,
+                                            latencyStatus: p.a.Unknown,
+                                            isPendingSpade: !0,
+                                            isPrePageload: !1
+                                        })
+                                    }
+                                    n.logger.debug("GraphQL query completed: ", {
+                                        latestQueryData: e,
+                                        allBatches: n.queryBatchMetrics
+                                    }), n.reconcileQueries()
+                                }
+                            }, n.sendNetworkRequestsToSpade = function() {
+                                if (n.networkEventsEnabled && n.destination && n.location && n.page) {
+                                    n.logger.debug("Sending ready network and query events to Spade");
+                                    var e = n.networkEvents.filter(function(e) {
+                                        return e.isPendingSpade
+                                    });
+                                    if (e.length) {
+                                        for (var t = 0, i = e; t < i.length; t++) {
+                                            var r = i[t];
+                                            r.isPendingSpade = !1, n.tracker.trackNetworkRequestEvent(n.destination, n.location, n.page.componentName, r.isPrePageload, r.relativeStartTime, r.networkEvent)
+                                        }
+                                        n.logger.debug("Sent network events to spade:", {
+                                            count: e.length
+                                        })
+                                    }
+                                    var a = n.queryEvents.filter(function(e) {
+                                        return e.isPendingSpade && e.isPrePageload
+                                    });
+                                    if (a.length > 0) {
+                                        for (var o = 0, s = 0, l = a; s < l.length; s++) {
+                                            var c = l[s];
+                                            void 0 !== c.requestDuration.value && void 0 !== c.queryDuration.value && (c.isPendingSpade = !1, n.tracker.trackApiQuery(n.destination, n.location, c.relativeStartTime, c.batchTimestamp, n.page.componentName, c.operationName, c.queryDuration.value, c.requestDuration.value, c.isPrePageload), o += 1)
+                                        }
+                                        n.logger.debug("Sent " + o + " query events to Spade, " + (a.length - o) + " events skipped because they are not yet ready.")
+                                    }
+                                }
+                            }, n.checkLostVisibility = function() {
+                                n.hasLostVisibility || (n.hasLostVisibility = document.hidden)
+                            }, n.dispatchFirstPageLoaded = function() {
+                                n.store.dispatch(Object(d.f)()), n.hasDispatchedFirstPageLoaded = !0
+                            }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new g(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
+                                value: Math.round(n.startTimestamp - n.navigationStart),
+                                latencyStatus: p.a.Unknown
+                            }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.stats = t.stats, n.firstPageLoadedTimeout = t.dyanmicSettings.get(v, 1e4), n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
+                            n.checkLostVisibility(), document.addEventListener("visibilitychange", n.checkLostVisibility)
+                        } catch (e) {
+                            n.logger.warn("Failed to attach event listener for document visibility change, assuming visibility has been lost.", e), n.hasLostVisibility = !0
+                        }
+                        return n.raiseUpdate(), n
+                    }
+                    return c.d(t, e), t.prototype.resetFirstPageLoadedFailsafe = function() {
+                        var e = this;
+                        this.clearFirstPageLoadedFailsafeTimer();
+                        var t = function() {
+                            return void 0 !== e.componentDuration.value || !e.isFirstLoad || !e.page || e.hasDispatchedFirstPageLoaded
+                        };
+                        t() || (this.firstPageLoadedFailsafe = setTimeout(function() {
+                            if (!t()) {
+                                var n = e.page ? e.page.componentName : "Unknown",
+                                    i = [],
+                                    r = function(t) {
+                                        for (var a = 0, o = t; a < o.length; a++) {
+                                            var s = o[a];
+                                            s.getHasReportedInteractive() || (i.push(s.componentName), e.stats.recordFailsafeError([n, s.componentName].join("_"))), s.children && s.children.length && r(s.children)
+                                        }
+                                    };
+                                r(e.children || []), i.length || e.stats.recordFailsafeError(n), e.logger.error(new Error("First Page Loaded Failsafe Triggered"), "The first page loaded failsafe was triggered for page " + n + (i.length ? " and components " + i.join(", ") : "")), e.emitter.emit("firstPageLoadFailed"), e.dispatchFirstPageLoaded()
+                            }
+                        }, this.firstPageLoadedTimeout))
+                    }, t.prototype.subscribeToUpdates = function(e) {
+                        this.emitter.addListener("root-latency-tracker", e)
+                    }, t.prototype.getCustomEvents = function() {
+                        return this.customEvents
+                    }, t.prototype.reset = function() {
+                        this.isFirstLoad && this.dispatchFirstPageLoaded(), this.clearFirstPageLoadedFailsafeTimer();
+                        var e = this.getCurrentTimestamp();
+                        this.customEvents = {}, this.resetChildren(), this.children = [], this.startTimestamp = e, this.navigationStart = e, this.relativeStartTime = 0, this.rootInitDuration = {
+                            latencyStatus: p.a.Unknown
+                        }, this.firstPaint = {
+                            latencyStatus: p.a.Unknown
+                        }, this.completedTimestamp = 0, this.componentDuration = {
+                            latencyStatus: p.a.Unknown
+                        }, this.hasReportedInteractive = !1, this.page = void 0, this.isFirstLoad = !1, this.pageLoadDuration = {
+                            latencyStatus: p.a.Unknown
+                        }, this.networkEvents = [], this.queryEvents = [], this.queryBatchMetrics = [], this.hasSentInitializing = !1, this.hasSentInteractive = !1, this.hasSentAppBooted = !1, this.hasSentCompleteTransition = !1, this.hasReportedInteractive = !1, this.hasLostVisibility = !1, this.raiseUpdate(), this.logger.debug("Reset Root")
+                    }, t.prototype.raiseUpdate = function() {
+                        var e = this;
+                        this.toolsEnabled && !this.dispatchTimer && (this.dispatchTimer = setTimeout(function() {
+                            e.dispatchTimer = null, e.emitter.emit("root-latency-tracker")
+                        }, 100))
+                    }, t.prototype.sendBenchmarkEventsToSpade = function() {
+                        if (this.destination && this.location && this.page) {
+                            if (this.sendFetchStartEvent(this.destination, this.location, this.page.componentName), this.sendAppBootedEvent(this.destination, this.location, this.page.componentName), this.componentEventsEnabled && (this.sendInitializingEvent(this.destination, this.location, this.page.componentName), this.sendInteractiveEvent(this.destination, this.location, this.page.componentName)), this.sendCompleteTransitionEvent(this.destination, this.location, this.page.componentName), this.componentEventsEnabled)
+                                for (var e = 0, t = this.children; e < t.length; e++) {
+                                    t[e].sendBenchmarkEventsToSpade()
+                                }
+                        } else this.logger.debug("Unable to send events to spade. destination or location is not set")
+                    }, t.prototype.registerChild = function(t) {
+                        e.prototype.registerChild.call(this, t), this.logger.debug("Root page got a new child", {
+                            newChild: t.componentName,
+                            allChildren: this.getChildNames()
+                        })
+                    }, t.prototype.checkChildCompleted = function() {
+                        this.page ? e.prototype.checkChildCompleted.call(this) : this.logger.debug("Root page incomplete, pending a page to register.")
+                    }, t.prototype.markCompleted = function() {
+                        if (!this.completedTimestamp)
+                            if (this.page) {
+                                if (this.completedTimestamp = this.getCurrentTimestamp(), this.componentDuration = {
+                                        value: Math.round(this.completedTimestamp - this.startTimestamp),
+                                        latencyStatus: p.a.Unknown
+                                    }, this.logger.debug("Root tracker done", {
+                                        durationMs: this.componentDuration
+                                    }), this.pageLoadDuration = {
+                                        value: (this.componentDuration.value || 0) + (this.rootInitDuration.value || 0),
+                                        latencyStatus: p.a.Unknown
+                                    }, this.logger.debug("Root page completed", {
+                                        pageLoadDuration: this.pageLoadDuration,
+                                        rootInitDuration: this.rootInitDuration,
+                                        componentDuration: this.componentDuration,
+                                        children: this.getChildNames()
+                                    }), this.raiseUpdate(), this.sendAllEvents(), this.isFirstLoad) {
+                                    this.clearFirstPageLoadedFailsafeTimer(), this.dispatchFirstPageLoaded();
+                                    var e = document.getElementById("root");
+                                    e && e.setAttribute("data-a-page-loaded", Date.now().toString())
+                                }
+                            } else this.logger.warn("Root page attemped to complete without a registered page component.")
+                    }, t.prototype.getNavigationStartTimestamp = function() {
+                        return this.navigationStart > 0 ? this.navigationStart : performance.timing.navigationStart
+                    }, t.prototype.clearFirstPageLoadedFailsafeTimer = function() {
+                        this.firstPageLoadedFailsafe && (clearTimeout(this.firstPageLoadedFailsafe), this.firstPageLoadedFailsafe = 0)
+                    }, t
+                }(h);
+            n.d(t, "b", function() {
+                return y
+            }), n.d(t, "a", function() {
+                return S
+            });
+            var y = {
+                    forceNetworkLoggingStorageKey: "twilight.force-component-benchmarking",
+                    forceComponentBenchmarkingStorageKey: "twilight.force-network-monitoring",
+                    forceToolsStorageKey: "twilight.force-benchmarking-tools"
+                },
+                k = {
+                    networkingThreshold: "benchmark_networking_threshold",
+                    componentThreshold: "benchmark_component_threshold"
+                },
+                S = function() {
+                    function e(e) {
+                        var t = this;
+                        this.getRootLatencyTracker = function() {
+                            return t.latencyTracker
+                        }, this.logger = e.logger.withCategory("Benchmarking"), this.seed = Math.round(100 * Math.random()) / 100, this.storage = e.storage;
+                        var n = e.dynamicSettings.get(k.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
+                            i = e.dynamicSettings.get(k.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
+                        this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new l(e)), this.latencyTracker = new b({
+                            componentEventsEnabled: this.componentsEnabled,
+                            dyanmicSettings: e.dynamicSettings,
+                            networkEventsEnabled: this.networkingEnabled,
+                            toolsEnabled: this.toolsEnabled,
+                            config: e.config,
+                            logger: e.logger,
+                            apollo: e.apollo,
+                            networkMonitor: this.networkMonitoring,
+                            sentinel: e.sentinel,
+                            tracking: e.tracking,
+                            stats: e.stats,
+                            store: e.store,
+                            trackVisibility: !0
+                        }), this.logger.debug("Initialized", {
+                            seed: this.seed,
+                            toolsEnabled: this.toolsEnabled,
+                            componentsEnabled: this.componentsEnabled,
+                            componentThreshold: i,
+                            networkingEnabled: this.networkingEnabled,
+                            networkingThreshold: n
+                        })
+                    }
+                    return e.prototype.shouldEnableTools = function(e) {
+                        return e.forceBenchmarkingTools ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(y.forceToolsStorageKey, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
+                    }, e.prototype.shouldEnableComponentBenchmarking = function(e, t, n) {
+                        return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(y.forceComponentBenchmarkingStorageKey, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
+                    }, e.prototype.shouldEnableNetworkBenchmarking = function(e, t, n, i) {
+                        return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(y.forceNetworkLoggingStorageKey, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
+                    }, e
+                }()
+        },
         NvVO: function(e, t, n) {
             "use strict";
             var i;
@@ -21687,6 +22425,7 @@
                 return i.q
             })
         },
+        Pxir: function(e, t, n) {},
         QA0N: function(e, t, n) {
             "use strict";
             var i, r, a, o, s;
@@ -22371,8 +23110,8 @@
                 I = n("H/lO"),
                 _ = n("NZDK"),
                 R = n("9kXc"),
-                D = n("8/mp"),
-                O = n("QVaV"),
+                O = n("8/mp"),
+                D = n("QVaV"),
                 P = n("fvjX"),
                 x = n("k91D"),
                 L = function(e) {
@@ -22394,7 +23133,7 @@
                         }, e))
                     }, t
                 }(a.Component),
-                F = Object(P.d)(Object(l.d)("GiftRecipientIneligibleMessage"), Object(u.a)(x, {
+                F = Object(P.d)(Object(l.c)("GiftRecipientIneligibleMessage"), Object(u.a)(x, {
                     options: function(e) {
                         return {
                             variables: {
@@ -22466,9 +23205,9 @@
                         }, a.createElement(y.Ca, {
                             overflow: y.La.Hidden,
                             position: y.Sa.Relative
-                        }, a.createElement(D.b, {
+                        }, a.createElement(O.b, {
                             suppressScrollX: !0
-                        }, a.createElement(y.Ia, null, e, a.createElement(D.a, {
+                        }, a.createElement(y.Ia, null, e, a.createElement(O.a, {
                             enabled: !this.props.isWaiting && this.props.hasInput,
                             loadMore: this.props.loadMore
                         }))))), a.createElement(y.Ia, null, a.createElement(y.Ia, {
@@ -22500,7 +23239,7 @@
                             isEsportChannel: this.props.isEsportChannel
                         })
                     }, t.prototype.getFormattedDisplayName = function() {
-                        return this.state.selectedUser ? Object(O.a)(this.state.selectedUser.login, this.state.selectedUser.name) : ""
+                        return this.state.selectedUser ? Object(D.a)(this.state.selectedUser.login, this.state.selectedUser.name) : ""
                     }, t.prototype.getErrorMessage = function() {
                         return a.createElement(y.Ia, {
                             fullWidth: !0,
@@ -22510,7 +23249,7 @@
                     }, t.prototype.getUserResultContent = function() {
                         var e = this;
                         return this.props.userResults ? this.props.userResults.results.map(function(t) {
-                            var n = Object(O.a)(t.login || "", t.name || "");
+                            var n = Object(D.a)(t.login || "", t.name || "");
                             return a.createElement(y.Ga, {
                                 tabIndex: -1,
                                 "data-ts_selectable": !0,
@@ -22547,7 +23286,7 @@
                         }, a.createElement(y.Q, {
                             color: y.K.Alt2
                         }, Object(c.d)("No Results", "GiftRecipientSearchResult")))
-                    }, t = r.c([Object(l.d)("GiftRecipientSearchResultPanel")], t)
+                    }, t = r.c([Object(l.c)("GiftRecipientSearchResultPanel")], t)
                 }(a.Component)),
                 j = (n("DNc1"), function(e) {
                     function t() {
@@ -22772,7 +23511,7 @@
                                 currentFocus: a
                             })
                         }
-                    }, t = r.c([Object(l.d)("GiftRecipientSearch")], t)
+                    }, t = r.c([Object(l.c)("GiftRecipientSearch")], t)
                 }(a.Component);
             ! function(e) {
                 e[e.Top = 0] = "Top", e[e.SubOptions = 1] = "SubOptions", e[e.GiftOptions = 2] = "GiftOptions", e[e.RecipientSelect = 3] = "RecipientSelect"
@@ -23417,7 +24156,7 @@
                         skip: function(e) {
                             return !e.channelLogin
                         }
-                    }), Object(l.d)("SubscribeBalloon")], t)
+                    }), Object(l.c)("SubscribeBalloon")], t)
                 }(a.Component),
                 J = n("z+dA"),
                 Z = function(e) {
@@ -23563,7 +24302,7 @@
                             reportInteractive: this.reportInteractive,
                             isInSideNav: this.props.isInSideNav
                         })
-                    }, t = r.c([Object(l.d)("SubscribeButton")], t)
+                    }, t = r.c([Object(l.c)("SubscribeButton")], t)
                 }(a.Component);
             var te = Object(o.b)(function(e) {
                 return {
@@ -23652,7 +24391,7 @@
                             }
                         }
                     }
-                }), Object(c.d)("ReportReasonSelect"))(m),
+                }), Object(c.c)("ReportReasonSelect"))(m),
                 f = (n("HkFb"), n("GNna"));
             n.d(t, "a", function() {
                 return v
@@ -23884,7 +24623,7 @@
                             onClick: this.onSignUpClick,
                             "data-a-target": "signup-button"
                         }, Object(a.d)("Sign up", "top-nav"))))
-                    }, t = i.c([Object(o.d)("AnonUser")], t)
+                    }, t = i.c([Object(o.c)("AnonUser")], t)
                 }(r.Component);
             n.d(t, "a", function() {
                 return l
@@ -25429,7 +26168,7 @@
                             },
                             "data-a-target": "side-nav-card-hover"
                         }, this.props.slideInContent) : null
-                    }, t = i.c([Object(g.d)("SideNavCard"), Object(S.c)()], t)
+                    }, t = i.c([Object(g.c)("SideNavCard"), Object(S.c)()], t)
                 }(a.Component)),
                 C = function(e) {
                     function t(t) {
@@ -25481,7 +26220,7 @@
                             metadataLeft: this.renderGame(),
                             slideInContent: this.getSlideInContent()
                         }, Object(b.a)(this.props)))
-                    }, t = i.c([Object(g.d)("Featured Channel")], t)
+                    }, t = i.c([Object(g.c)("Featured Channel")], t)
                 }(a.Component);
             var N, T = Object(v.b)(function(e) {
                     return {
@@ -25578,11 +26317,11 @@
                         }))
                     }, t
                 }(a.Component),
-                _ = Object(g.d)("Side Nav Header", {
+                _ = Object(g.c)("Side Nav Header", {
                     autoReportInteractive: !0
                 })(Object(S.c)()(I)),
                 R = n("AKKo"),
-                D = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getFeaturedChannels = function() {
@@ -25658,9 +26397,9 @@
                                 }
                             }
                         }
-                    }), Object(g.d)("Featured Channels")], t)
+                    }), Object(g.c)("Featured Channels")], t)
                 }(a.Component),
-                O = Object(g.d)("No Online Friends", {
+                D = Object(g.c)("No Online Friends", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var t = Object(l.d)("Online Friends", "NoOnlineFriends"),
@@ -25729,20 +26468,20 @@
                         "data-a-target": r
                     }, e.hasOfflineFriends ? i : n)))
                 }),
-                P = Object(g.d)("Anon Side Nav", {
+                P = Object(g.c)("Anon Side Nav", {
                     autoReportInteractive: !0
                 })(function(e) {
                     return e.collapsed ? a.createElement(w.Ia, {
                         className: "anon-side-nav",
                         fullWidth: !0
-                    }, a.createElement(D, {
+                    }, a.createElement(O, {
                         collapsed: e.collapsed
                     })) : a.createElement(w.Ia, {
                         className: "anon-side-nav",
                         fullWidth: !0
-                    }, a.createElement(D, {
+                    }, a.createElement(O, {
                         collapsed: e.collapsed
-                    }), !e.collapsed && a.createElement(O, null))
+                    }), !e.collapsed && a.createElement(D, null))
                 }),
                 x = n("eDVu"),
                 L = n("0Log"),
@@ -25979,7 +26718,7 @@
                         return this.isChannelOffline() ? this.props.recentChannelVideos && this.props.recentChannelVideos.length > 0 ? "/videos/" + this.props.recentChannelVideos[0].id : "/" + this.props.user.login + "/videos/all" : "/" + this.props.user.login
                     }, t
                 }(a.Component),
-                G = Object(B.d)(Object(g.d)("SideNavChannel"))(W),
+                G = Object(B.d)(Object(g.c)("SideNavChannel"))(W),
                 q = 5,
                 Q = function(e) {
                     function t() {
@@ -26046,7 +26785,7 @@
                         }), this.renderChannels(), this.renderShowMore())
                     }, t
                 }(a.Component),
-                K = Object(g.d)("SideNavChannelList", {
+                K = Object(g.c)("SideNavChannelList", {
                     autoReportInteractive: !0
                 })(Q),
                 Y = n("ua1/"),
@@ -26281,7 +27020,7 @@
                             videos: {},
                             onChannelClick: ce,
                             onShowMore: oe
-                        }), e && a.createElement(D, {
+                        }), e && a.createElement(O, {
                             collapsed: this.props.collapsed
                         }), !e && a.createElement(K, {
                             collapsed: this.props.collapsed,
@@ -26377,7 +27116,7 @@
                             })), t
                         }
                     }
-                }), Object(g.d)("FollowedAndSubscribedChannels"))(he),
+                }), Object(g.c)("FollowedAndSubscribedChannels"))(he),
                 ge = n("JbHs"),
                 ve = n("CzFK"),
                 be = n("l1Uh"),
@@ -26465,7 +27204,7 @@
                             slideInContent: this.renderJoinButton(),
                             collapsed: this.props.collapsed
                         }, Object(w.Ob)(this.props))))
-                    }, t = i.c([Object(g.d)("OnlineFriend")], t)
+                    }, t = i.c([Object(g.c)("OnlineFriend")], t)
                 }(a.Component);
             var Ne = Object(v.b)(function(e) {
                     return {
@@ -26527,7 +27266,7 @@
                             hasSorted: !0
                         })
                     }, t.prototype.render = function() {
-                        return this.props.friends && 0 !== this.props.friends.length || this.props.errored || this.props.loading || this.props.collapsed ? !this.props.errored && !this.props.loading && this.props.friends && this.state.hasSorted && this.props.friends.length > 0 && 0 === this.state.sortedFriends.length && !this.props.collapsed ? a.createElement(O, {
+                        return this.props.friends && 0 !== this.props.friends.length || this.props.errored || this.props.loading || this.props.collapsed ? !this.props.errored && !this.props.loading && this.props.friends && this.state.hasSorted && this.props.friends.length > 0 && 0 === this.state.sortedFriends.length && !this.props.collapsed ? a.createElement(D, {
                             hasOfflineFriends: !0
                         }) : a.createElement("div", {
                             className: "online-friends",
@@ -26537,7 +27276,7 @@
                             title: Object(l.d)("Online Friends", "OnlineFriends"),
                             collapsed: this.props.collapsed,
                             collapsedIcon: w.cb.FriendsSC
-                        }), this.renderOnlineFriends()) : a.createElement(O, null)
+                        }), this.renderOnlineFriends()) : a.createElement(D, null)
                     }, t = i.c([Object(x.a)(function(e) {
                         return {
                             query: Te,
@@ -26583,11 +27322,11 @@
                                 return r >= 0 && n.currentUser.friends.edges.splice(r, 1), n
                             }
                         }
-                    }), Object(g.d)("OnlineFriends")], t)
+                    }), Object(g.c)("OnlineFriends")], t)
                 }(a.Component),
                 _e = n("/IfK"),
                 Re = n("f00E"),
-                De = function(e) {
+                Oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getSlideInContent = function() {
@@ -26625,13 +27364,13 @@
                             collapsed: this.props.collapsed,
                             tooltipLabel: t
                         }, Object(w.Ob)(this.props)))
-                    }, t = i.c([Object(g.d)("RecommendedChannel")], t)
+                    }, t = i.c([Object(g.c)("RecommendedChannel")], t)
                 }(a.Component);
-            var Oe = Object(v.b)(function(e) {
+            var De = Object(v.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                })(De),
+                })(Oe),
                 Pe = n("PkHO"),
                 xe = function(e) {
                     function t() {
@@ -26641,7 +27380,7 @@
                         }, t.getRecommendedChannels = function() {
                             var e = t.dataToDisplay();
                             return e ? e.slice(0, t.getNodesToDisplayCount()).map(function(e, n) {
-                                return e.broadcaster && e.broadcaster.id && e.broadcaster.login ? a.createElement(Oe, {
+                                return e.broadcaster && e.broadcaster.id && e.broadcaster.login ? a.createElement(De, {
                                     id: e.broadcaster.id,
                                     key: "recommended-channels-" + e.id,
                                     collapsed: t.props.collapsed,
@@ -26697,7 +27436,7 @@
                                 }
                             }
                         }
-                    }), Object(g.d)("RecommendedChannels")], t)
+                    }), Object(g.c)("RecommendedChannels")], t)
                 }(a.Component),
                 Le = n("geRD"),
                 Fe = n("FAZm"),
@@ -26774,7 +27513,7 @@
                         name: "createFriendRequest"
                     }), Object(d.a)(Ae, {
                         name: "dismissFriendRecommendation"
-                    }), Object(g.d)("RecommendedFriend")], t)
+                    }), Object(g.c)("RecommendedFriend")], t)
                 }(a.Component);
             var Me = Object(v.b)(function(e) {
                     return {
@@ -26825,7 +27564,7 @@
                         return this.props.data.currentUser.recommendations.friends.forEach(function(e) {
                             e.user && e.user.id && t.push(e.user)
                         }), 0 === t.length ? null : t.slice(0, e)
-                    }, t = i.c([Object(d.a)(je), Object(g.d)("RecommendedFriends")], t)
+                    }, t = i.c([Object(d.a)(je), Object(g.c)("RecommendedFriends")], t)
                 }(a.Component),
                 ze = n("yLwq"),
                 He = n("H/lO"),
@@ -26917,7 +27656,7 @@
                         name: "createFriendRequest"
                     }), Object(d.a)(We, {
                         name: "cancelFriendRequest"
-                    }), Object(g.d)("Search Friend Result")], t)
+                    }), Object(g.c)("Search Friend Result")], t)
                 }(a.Component);
             var Qe = Object(v.b)(function(e) {
                     return {
@@ -27042,7 +27781,7 @@
                                 }
                             })
                         })
-                    }, t = i.c([Object(g.d)("Search Friend Results")], t)
+                    }, t = i.c([Object(g.c)("Search Friend Results")], t)
                 }(a.Component),
                 Ye = function(e) {
                     function t() {
@@ -27324,7 +28063,7 @@
                         return l.l.get(l.o.config.layoutCacheKey, h.a)
                     }, t
                 }(a.Component),
-                rt = Object(o.compose)(Object(g.d)("SideNav"), Object(d.a)(Te, {
+                rt = Object(o.compose)(Object(g.c)("SideNav"), Object(d.a)(Te, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
@@ -27540,7 +28279,7 @@
             function(e) {
                 e.Default = "tw-z-default", e.Above = "tw-z-above", e.Below = "tw-z-below"
             }(_ || (_ = {}));
-            var R, D, O, P, x, L = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
+            var R, O, D, P, x, L = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
                 F = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -27597,10 +28336,10 @@
             }(R || (R = {})),
             function(e) {
                 e.Short = "tw-animation--duration-short", e.Medium = "tw-animation--duration-medium", e.Long = "tw-animation--duration-long", e.ExtraLong = "tw-animation--duration-extra-long"
-            }(D || (D = {})),
+            }(O || (O = {})),
             function(e) {
                 e.Both = "tw-animation--fill-mode-both", e.None = "tw-animation--fill-mode-none", e.Forwards = "tw-animation--fill-mode-forwards", e.Backwards = "tw-animation--fill-mode-backwards"
-            }(O || (O = {})),
+            }(D || (D = {})),
             function(e) {
                 e.Ease = "tw-animation--timing-ease", e.Linear = "tw-animation--timing-linear", e.EaseIn = "tw-animation--timing-ease-in", e.EaseOut = "tw-animation--timing-ease-out", e.EaseInOut = "tw-animation--timing-ease-in-out"
             }(P || (P = {})),
@@ -27613,7 +28352,7 @@
                     "tw-animation--animate": e.enabled,
                     "tw-animation--loop": e.loop
                 };
-                return e.delay && (t[e.delay] = !0), e.duration ? t[e.duration] = !0 : t[D.Short] = !0, e.fillMode ? t[e.fillMode] = !0 : t[O.Both] = !0, e.timing ? t[e.timing] = !0 : t[P.Ease] = !0, e.type && (t[e.type] = !0), d.createElement(F, c.a({
+                return e.delay && (t[e.delay] = !0), e.duration ? t[e.duration] = !0 : t[O.Short] = !0, e.fillMode ? t[e.fillMode] = !0 : t[D.Both] = !0, e.timing ? t[e.timing] = !0 : t[P.Ease] = !0, e.type && (t[e.type] = !0), d.createElement(F, c.a({
                     className: p(t)
                 }, m(e)), d.createElement("div", {
                     onAnimationStart: e.onAnimationStart,
@@ -29311,7 +30050,7 @@
                     width: 24,
                     height: 24
                 }, Te),
-                De = function(e) {
+                Oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.buttonElement = null, t.refHandler = function(e) {
@@ -29468,13 +30207,13 @@
             function(e) {
                 e.Default = "", e.Small = "tw-button-icon--small", e.Large = "tw-button-icon--large"
             }(_e || (_e = {}));
-            var Oe, Pe, xe, Le = ((Oe = {})[_e.Small] = {
+            var De, Pe, xe, Le = ((De = {})[_e.Small] = {
                     width: 16,
                     height: 16
-                }, Oe[_e.Large] = {
+                }, De[_e.Large] = {
                     width: 24,
                     height: 24
-                }, Oe),
+                }, De),
                 Fe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -30453,7 +31192,7 @@
             };
             Rt.displayName = "TabWrapper";
             n("q7Ot");
-            var Dt = function(e) {
+            var Ot = function(e) {
                 var t, n = {
                     "tw-textarea": !0,
                     "tw-textarea--no-resize": e.noResize,
@@ -30486,9 +31225,9 @@
                     ref: e.refDelegate
                 }, m(e))))
             };
-            Dt.displayName = "TextArea";
+            Ot.displayName = "TextArea";
             n("QNoE");
-            var Ot = function(e) {
+            var Dt = function(e) {
                 var t;
                 return t = d.createElement(he, {
                     key: e.title
@@ -30530,7 +31269,7 @@
                     className: "tw-thumbnail-card"
                 }, m(e)), t)
             };
-            Ot.displayName = "ThumbnailCard";
+            Dt.displayName = "ThumbnailCard";
             n("xytL");
             var Pt = function(e) {
                 return d.createElement(A, {
@@ -30764,7 +31503,7 @@
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.renderIndexControl = function(e) {
-                        return d.createElement(De, {
+                        return d.createElement(Oe, {
                             type: we.Text,
                             ariaLabel: e.toString(),
                             onClick: t.handleClickIndex,
@@ -30821,9 +31560,9 @@
             }), n.d(t, "f", function() {
                 return R
             }), n.d(t, "g", function() {
-                return D
-            }), n.d(t, "h", function() {
                 return O
+            }), n.d(t, "h", function() {
+                return D
             }), n.d(t, "i", function() {
                 return P
             }), n.d(t, "j", function() {
@@ -30843,7 +31582,7 @@
             }), n.d(t, !1, function() {}), n.d(t, "u", function() {
                 return ye
             }), n.d(t, !1, function() {}), n.d(t, "v", function() {
-                return De
+                return Oe
             }), n.d(t, "z", function() {
                 return Ee
             }), n.d(t, "B", function() {
@@ -31031,9 +31770,9 @@
             }), n.d(t, !1, function() {}), n.d(t, "ob", function() {
                 return Rt
             }), n.d(t, !1, function() {}), n.d(t, "xb", function() {
-                return Dt
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {
                 return Ot
+            }), n.d(t, !1, function() {}), n.d(t, !1, function() {
+                return Dt
             }), n.d(t, !1, function() {}), n.d(t, "Bb", function() {
                 return Pt
             }), n.d(t, !1, function() {}), n.d(t, "pb", function() {
@@ -32338,10 +33077,12 @@
             "use strict";
             n.d(t, "a", function() {
                 return r
-            }), n.d(t, "c", function() {
+            }), n.d(t, "d", function() {
                 return o
-            }), n.d(t, "b", function() {
+            }), n.d(t, "c", function() {
                 return s
+            }), n.d(t, "b", function() {
+                return l
             });
             var i = n("RcPG"),
                 r = {
@@ -32353,46 +33094,48 @@
             function o(e, t) {
                 var n = [],
                     r = e.split(/\s+/);
-                return r.forEach(function(e, o) {
-                    var l = function(e, t) {
-                        var n = e.match(a);
-                        if (!n) return null;
-                        var r = n[1].toLowerCase(),
-                            o = Number(n[2]),
-                            l = t.indexedActions[r];
-                        if (l) {
-                            var c = l.orderedTiers.find(function(e) {
-                                return e.bits <= o
-                            });
-                            if (!c && o && (c = l.orderedTiers[0]), c) return {
-                                type: i.a.Emote,
-                                content: {
-                                    images: s(c),
-                                    alt: l.prefix,
-                                    cheerAmount: o,
-                                    cheerColor: c.color
-                                }
-                            }
-                        }
-                        return null
-                    }(e, t);
-                    if (l) n.push(l);
+                return r.forEach(function(e, a) {
+                    var o = s(e, t);
+                    if (o) n.push(o);
                     else {
-                        var c = n.length && n[n.length - 1],
-                            d = "";
-                        if (o < r.length - 1 && (d = " "), c && c.type === i.a.Text) c.content += e + d;
+                        var l = n.length && n[n.length - 1],
+                            c = "";
+                        if (a < r.length - 1 && (c = " "), l && l.type === i.a.Text) l.content += e + c;
                         else {
-                            var u = "";
-                            o && (u = " "), n.push({
+                            var d = "";
+                            a && (d = " "), n.push({
                                 type: i.a.Text,
-                                content: u + e + d
+                                content: d + e + c
                             })
                         }
                     }
                 }), n
             }
 
-            function s(e, t, n) {
+            function s(e, t) {
+                var n = e.match(a);
+                if (!n) return null;
+                var r = n[1].toLowerCase(),
+                    o = Number(n[2]),
+                    s = t.indexedActions[r];
+                if (s) {
+                    var c = s.orderedTiers.find(function(e) {
+                        return e.bits <= o
+                    });
+                    if (!c && o && (c = s.orderedTiers[0]), c) return {
+                        type: i.a.Emote,
+                        content: {
+                            images: l(c),
+                            alt: s.prefix,
+                            cheerAmount: o,
+                            cheerColor: c.color
+                        }
+                    }
+                }
+                return null
+            }
+
+            function l(e, t, n) {
                 void 0 === n && (n = !0);
                 var i, r, a = n ? "animated" : "static";
                 return t ? {
@@ -32485,7 +33228,7 @@
                 m = n("NvVO"),
                 h = n("2xye"),
                 f = n("GnwI");
-            var g = Object(r.d)(Object(f.d)("LoginRequiredPage", {
+            var g = Object(r.d)(Object(f.c)("LoginRequiredPage", {
                 autoReportInteractive: !0,
                 destination: m.a.LoginRequired
             }), Object(p.a)({
@@ -32950,7 +33693,7 @@
                 T = n("UMvU"),
                 I = n("d0ua"),
                 _ = n("kRBY");
-            var R, D = Object(o.b)(function(e) {
+            var R, O = Object(o.b)(function(e) {
                     return {
                         collapsed: !e.ui.sideNavExpanded,
                         isLoggedIn: Object(_.d)(e),
@@ -32962,7 +33705,7 @@
                         expandSideNav: I.y
                     }, e)
                 })(T.a),
-                O = function(e) {
+                D = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -33293,7 +34036,7 @@
                         }))
                     }, t
                 }(r.Component),
-                fe = Object(H.compose)(Object(z.d)("ChannelPageRedesignRouter", {
+                fe = Object(H.compose)(Object(z.c)("ChannelPageRedesignRouter", {
                     autoReportInteractive: !0
                 }), A.f)(he),
                 ge = a.a.wrap(function() {
@@ -33338,10 +34081,10 @@
                 Re = a.a.wrap(function() {
                     return n.e(60).then(n.bind(null, "O0y+"))
                 }, "FriendRequestsPage"),
-                De = a.a.wrap(function() {
+                Oe = a.a.wrap(function() {
                     return n.e(59).then(n.bind(null, "2W9R"))
                 }, "FriendsPage"),
-                Oe = a.a.wrap(function() {
+                De = a.a.wrap(function() {
                     return n.e(58).then(n.bind(null, "UqZg"))
                 }, "InventoryPage"),
                 Pe = a.a.wrap(function() {
@@ -33544,7 +34287,7 @@
                             component: Re
                         }), r.createElement(A.d, {
                             path: "/friends",
-                            component: De
+                            component: Oe
                         }), r.createElement(A.d, {
                             path: "/following",
                             render: He
@@ -33553,7 +34296,7 @@
                             component: Pe
                         }), r.createElement(A.d, {
                             path: "/inventory",
-                            component: Oe
+                            component: De
                         }), r.createElement(A.d, {
                             path: "/messages/:pageName?",
                             component: Pe
@@ -33612,7 +34355,7 @@
                         }))
                     }, t
                 }(r.Component),
-                Ke = Object(z.d)("DefaultRootRouter", {
+                Ke = Object(z.c)("DefaultRootRouter", {
                     autoReportInteractive: !0
                 })(Qe);
             n.d(t, "b", function() {
@@ -33648,7 +34391,7 @@
                             position: k.Sa.Relative,
                             overflow: k.La.Hidden,
                             fullHeight: !0
-                        }, r.createElement(D, null), r.createElement(k.Ca, {
+                        }, r.createElement(O, null), r.createElement(k.Ca, {
                             overflow: k.La.Hidden,
                             position: k.Sa.Relative,
                             flexGrow: 1,
@@ -33665,7 +34408,7 @@
                             isLoggedIn: this.props.isLoggedIn
                         }), r.createElement(E.b, {
                             mainRef: this.state.rootScrollableContentRef
-                        })), r.createElement(O, null), this.props.firstPageLoaded && r.createElement(Ye, null))), r.createElement(C.a, null)))
+                        })), r.createElement(D, null), this.props.firstPageLoaded && r.createElement(Ye, null))), r.createElement(C.a, null)))
                     }, t
                 }(r.Component)
         },
@@ -33743,179 +34486,97 @@
         Zsw8: function(e, t, n) {},
         a1OF: function(e, t, n) {
             "use strict";
+            n.d(t, "a", function() {
+                return u
+            }), n.d(t, "b", function() {
+                return p
+            }), n.d(t, "f", function() {
+                return m
+            }), n.d(t, "c", function() {
+                return h
+            }), n.d(t, "e", function() {
+                return f
+            }), n.d(t, "d", function() {
+                return g
+            });
             var i = n("mrSG"),
                 r = n("/7QA"),
-                a = n("i6WW"),
-                o = n("gTu3"),
-                s = n("RcPG"),
-                l = /^(['"*([{</]*)@((?:[^\u0000-\u007F]|[\w-])+)/;
+                a = n("oe5X"),
+                o = n("0FG4"),
+                s = n("kRBY"),
+                l = n("60o1"),
+                c = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
+                d = {};
 
-            function c(e, t) {
-                if (!t) return !1;
-                var n = t.displayName,
-                    i = t.login;
-                return e === n || e.toLowerCase() === i
-            }
-            var d = n("kRBY"),
-                u = n("XmgI"),
-                p = n("uwZC"),
-                m = n("60o1");
-            n.d(t, "a", function() {
-                return g
-            }), n.d(t, "b", function() {
-                return v
-            }), n.d(t, "f", function() {
-                return b
-            }), n.d(t, "c", function() {
-                return y
-            }), n.d(t, "g", function() {
-                return S
-            }), n.d(t, "e", function() {
-                return w
-            }), n.d(t, "d", function() {
-                return E
-            });
-            var h = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
-                f = {};
-
-            function g(e, t, n, r, a, o) {
-                var s;
-                void 0 === o && (o = !1), s = a ? Object(p.b)(e, a) : function(e) {
-                    var t = [];
-                    e && Object.keys(e).forEach(function(n) {
-                        var i = e[n];
-                        i.forEach(function(e) {
-                            t[e.startIndex] = {
-                                startIndex: e.startIndex,
-                                endIndex: e.endIndex + 1,
-                                data: {
-                                    images: {
-                                        themed: !1,
-                                        sources: {
-                                            "1x": w(n, 1),
-                                            "2x": w(n, 2),
-                                            "4x": w(n, 4)
-                                        }
-                                    }
+            function u(e, t, n, r, a) {
+                void 0 === a && (a = !1);
+                var o = function(e) {
+                        var t = {};
+                        e && Object.keys(e).forEach(function(n) {
+                            var i = e[n];
+                            i.forEach(function(e) {
+                                t[e.startIndex] = {
+                                    startIndex: e.startIndex,
+                                    endIndex: e.endIndex,
+                                    id: n
                                 }
-                            }
-                        })
-                    });
-                    return t
-                }(t.emotes);
-                var l = Object(m.a)(t.displayName, t.username);
+                            })
+                        });
+                        return t
+                    }(t.emotes),
+                    s = Object(l.a)(t.displayName, t.username);
                 return {
                     badges: t.badges || {},
                     bits: t.bits,
-                    user: i.a({}, l, {
+                    user: i.a({}, s, {
                         userLogin: t.username,
                         userID: t.userID,
                         userType: t.userType,
-                        color: t.color || v(t.userID)
+                        color: t.color || p(t.userID)
                     }),
-                    messageParts: e ? b(e, s, t.bits, n, r, t.username) : [],
-                    deleted: o,
+                    messageParts: m(e, o, t.bits, n, r, t.username),
+                    deleted: a,
                     timestamp: Date.now()
                 }
             }
 
-            function v(e, t) {
-                return void 0 === t && (t = 15), "number" != typeof f[e] && (f[e] = Math.floor(Math.random() * t)), h[f[e]]
+            function p(e, t) {
+                return void 0 === t && (t = 15), "number" != typeof d[e] && (d[e] = Math.floor(Math.random() * t)), c[d[e]]
             }
 
-            function b(e, t, n, r, a, o) {
-                void 0 === t && (t = []);
-                var l = [],
-                    c = 0,
-                    d = y(e);
-                t.forEach(function(t) {
-                    var u = d ? d.slice(c, t.startIndex).join("") : e.slice(c, t.startIndex);
-                    u && (l = n ? l.concat(k(u, o, a, r)) : l.concat(S(u, o, a))), l.push({
-                        type: s.a.Emote,
-                        content: i.a({
-                            alt: d ? d.slice(t.startIndex, t.endIndex).join("") : e.slice(t.startIndex, t.endIndex)
-                        }, t.data)
-                    }), c = t.endIndex
-                });
-                var u = d ? d.slice(c).join("") : e.slice(c);
-                return u && (l = n ? l.concat(k(u, o, a, r)) : l.concat(S(u, o, a))), l
+            function m(e, t, n, i, l, c) {
+                var d = Object(s.c)(r.o.store.getState()),
+                    u = {
+                        cheers: n ? i : void 0,
+                        emotes: {
+                            type: o.a.Position,
+                            map: t
+                        },
+                        links: {
+                            blockLinks: l,
+                            parseClips: !0,
+                            parseVods: !0
+                        },
+                        mentions: {
+                            senderLogin: c,
+                            sessionUser: d
+                        }
+                    };
+                return Object(a.a)(e, u)
             }
 
-            function y(e) {
+            function h(e) {
                 return e.match(/[^\uD800-\uDFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g)
             }
 
-            function k(e, t, n, i) {
-                var r = Object(u.c)(e, i).map(function(e) {
-                    return e.type === s.a.Text ? S(e.content, t, n) : e
-                });
-                return [].concat.apply([], r)
-            }
-
-            function S(e, t, n) {
-                var i = [],
-                    u = e.split(/\s+/),
-                    p = Object(d.c)(r.o.store.getState());
-                return u.forEach(function(e, r) {
-                    var d = 0 === r,
-                        m = r === u.length - 1,
-                        h = Object(a.b)(e, {
-                            blockLinks: n,
-                            parseClips: !0,
-                            parseVods: !0
-                        }),
-                        f = function(e, t, n, i, r) {
-                            var a = [],
-                                d = e.match(l);
-                            if (!d) return a;
-                            var u = d[1],
-                                p = d[2],
-                                m = e.slice(d[0].length);
-                            u.length && a.push({
-                                type: s.a.Text,
-                                content: (n ? "" : " ") + u
-                            });
-                            var h = o.a.Default;
-                            return c(p, r) ? h = o.a.Recipient : r && r.login === t && (h = o.a.Sender), a.push({
-                                type: s.a.Mention,
-                                content: {
-                                    recipient: p,
-                                    currentUserMentionRelation: h
-                                }
-                            }), m.length && a.push({
-                                type: s.a.Text,
-                                content: m + (i ? "" : " ")
-                            }), a
-                        }(e, t, d, m, p);
-                    if (h) i.push(h);
-                    else if (f.length > 0) i.push.apply(i, f);
-                    else if (c(e, p)) i.push({
-                        type: s.a.CurrentUserHighlight,
-                        content: e
-                    });
-                    else {
-                        var g = i.length && i[i.length - 1],
-                            v = m ? "" : " ";
-                        if (g && g.type === s.a.Text) g.content += e + v;
-                        else {
-                            var b = d ? "" : " ";
-                            i.push({
-                                type: s.a.Text,
-                                content: b + e + v
-                            })
-                        }
-                    }
-                }), i
-            }
-
-            function w(e, t) {
+            function f(e, t) {
                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
             }
 
-            function E(e) {
+            function g(e) {
                 return {
-                    src: w(e, 1),
-                    srcSet: w(e, 1) + " 1x, " + w(e, 2) + " 2x, " + w(e, 3) + " 4x"
+                    src: f(e, 1),
+                    srcSet: f(e, 1) + " 1x, " + f(e, 2) + " 2x, " + f(e, 3) + " 4x"
                 }
             }
         },
@@ -34834,7 +35495,7 @@
             }), n.d(t, "o", function() {
                 return R
             }), n.d(t, "z", function() {
-                return D
+                return O
             });
             var i = "core.ui.PERSISTENT_PLAYER_TOGGLED",
                 r = "core.ui.PERSISTENT_PLAYER_BEGAN_PERSISTING",
@@ -34930,7 +35591,7 @@
                 }
             }
 
-            function D() {
+            function O() {
                 return {
                     type: a
                 }
@@ -35770,7 +36431,7 @@
                         return Object(l.d)("What would you like to report? (Please choose the most relevant statement that applies.)", "ReportModalWizard")
                     }
                 },
-                D = {
+                O = {
                     report: function(e) {
                         return Object(l.d)("Report {username}", {
                             username: e
@@ -35806,24 +36467,24 @@
                         return Object(l.d)("Thank you for your concern", "ReportModalWizard")
                     }
                 },
-                O = {
+                D = {
                     getDescription: function() {
                         return Object(l.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                     },
                     blockPrompt: !0,
-                    getTitle: D.thanks,
+                    getTitle: O.thanks,
                     type: S.Info,
                     value: "end card"
                 },
                 P = {
-                    socialMedia: r.a({}, O, {
+                    socialMedia: r.a({}, D, {
                         items: [E.endBlurb_socialmedia]
                     }),
-                    violence: r.a({}, O, {
+                    violence: r.a({}, D, {
                         items: [E.endBlurb_threat]
                     }),
                     legal: {
-                        getTitle: D.thanksConcern,
+                        getTitle: O.thanksConcern,
                         getDescription: function() {
                             return Object(l.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
@@ -35832,7 +36493,7 @@
                         value: "ip end"
                     },
                     selfharm: {
-                        getTitle: D.thanksConcern,
+                        getTitle: O.thanksConcern,
                         getDescription: function() {
                             return Object(l.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
@@ -35841,7 +36502,7 @@
                         value: "selfharm end"
                     },
                     twitchEvent: {
-                        getTitle: D.thanksConcern,
+                        getTitle: O.thanksConcern,
                         getDescription: function() {
                             return Object(l.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
@@ -35851,7 +36512,7 @@
                     }
                 },
                 x = {
-                    getTitle: D.report,
+                    getTitle: O.report,
                     getLabel: function() {
                         return Object(l.d)("Where is the problem?", "ReportModalWizard")
                     },
@@ -35861,21 +36522,21 @@
                 },
                 L = {
                     identifyUser: {
-                        getTitle: D.reportVideo,
+                        getTitle: O.reportVideo,
                         getLabel: R.identifyUser,
                         items: [E.video_streamer, E.video_someoneElse, E.video_chatSomeone],
                         type: S.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
-                        getTitle: D.reportVideo,
+                        getTitle: O.reportVideo,
                         getLabel: R.contentGeneral,
                         items: [E.revealPersonalInfo, E.video_labeling, E.video_inactive, E.video_general, E.report_ip, E.violateDevAgreement, E.selfharm],
                         type: S.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
-                        getTitle: D.reportVideo,
+                        getTitle: O.reportVideo,
                         getLabel: R.content,
                         items: [E.report_username, E.violence, E.abusive, E.cheating, E.scam, E.inappropriateContent, E.evasion, E.impersonation, E.underage, E.bitsViolation],
                         type: S.MultipleChoice,
@@ -35884,14 +36545,14 @@
                 },
                 F = {
                     content: {
-                        getTitle: D.reportMessage,
+                        getTitle: O.reportMessage,
                         getLabel: R.contentGeneral,
                         items: [E.revealPersonalInfo, E.evasion, E.spam, E.maliciousRaid, E.report_username, E.messaging_general, E.selfharm],
                         type: S.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
-                        getTitle: D.reportMessage,
+                        getTitle: O.reportMessage,
                         getLabel: R.content,
                         items: [E.report_emotes, E.violence, E.abusive, E.inappropriateContent, E.impersonation, E.underage, E.bitsViolation],
                         type: S.MultipleChoice,
@@ -35905,14 +36566,14 @@
                 }),
                 U = {
                     content: {
-                        getTitle: D.reportProfile,
+                        getTitle: O.reportProfile,
                         getLabel: R.contentGeneral,
                         items: [E.revealPersonalInfo, E.inappropriateBadge, E.inappropriateExtension, E.noModeration, E.profile_general, E.report_ip, E.violateDevAgreement, E.selfharm],
                         type: S.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
-                        getTitle: D.reportProfile,
+                        getTitle: O.reportProfile,
                         getLabel: R.content,
                         items: [E.report_username, E.violence, E.abusive, E.scam, E.inappropriateContent, E.evasion, E.impersonation, E.underage, E.bitsViolation],
                         type: S.MultipleChoice,
@@ -35931,7 +36592,7 @@
                     type: S.MultipleChoice
                 },
                 j = {
-                    getTitle: D.tellUsMore,
+                    getTitle: O.tellUsMore,
                     items: [E.input_description],
                     type: S.Confirm,
                     value: "tell us more"
@@ -35949,7 +36610,7 @@
                 },
                 z = {
                     content: {
-                        getTitle: D.reportAbusive,
+                        getTitle: O.reportAbusive,
                         getLabel: R.relevantStatements,
                         items: [E.hateSpeech, E.harassment, E.abusiveViolence, E.commitingViolence, E.swatting, E.personalInfo],
                         type: S.MultipleChoice,
@@ -36061,7 +36722,7 @@
                 },
                 Q = x,
                 K = j,
-                Y = O,
+                Y = D,
                 $ = {
                     video: L.identifyUser,
                     whisper: A,
@@ -36559,7 +37220,7 @@
                         }
                     }
                 }
-            }), Object(f.d)("ReportUser", {
+            }), Object(f.c)("ReportUser", {
                 autoReportInteractive: !0
             }), Object(d.a)(), Object(u.a)(), Object(o.b)(function(e) {
                 return {
@@ -36886,7 +37547,7 @@
                     name: "followUser"
                 }), Object(p.a)(C, {
                     name: "unfollowUser"
-                }), Object(k.d)("FollowButton"))(T);
+                }), Object(k.c)("FollowButton"))(T);
 
             function _(e) {
                 return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
@@ -37447,8 +38108,8 @@
                 I = n("XDQu"),
                 _ = n("KxT4"),
                 R = n("S1Za"),
-                D = n("AKMF"),
-                O = n("TSYQ"),
+                O = n("AKMF"),
+                D = n("TSYQ"),
                 P = n("1hWM"),
                 x = n("imBb"),
                 L = n("cr+I"),
@@ -37674,17 +38335,17 @@
                             this.props.allowSimultaneousPlaying || t === n || (n === this.state.playerRefID && this.state.playerPaused ? this.togglePause(!1) : n === this.state.playerRefID || this.state.playerPaused || this.togglePause(!0))
                         }
                     }, t.prototype.render = function() {
-                        var e = O("video-player", {
+                        var e = D("video-player", {
                                 "video-player--theatre": this.props.theatreModeEnabled,
                                 "video-player--theatre-whispers": this.props.theatreModeEnabled && this.props.isWhispersBottomBarVisible && !this.state.isFullScreen,
                                 "video-player--logged-in": this.props.isLoggedIn,
                                 "video-player--fullscreen": this.state.isFullScreen
                             }),
-                            t = O("video-player__container", {
+                            t = D("video-player__container", {
                                 "video-player__container--clips": V.a.includes(this.playerType)
                             });
                         return r.createElement("div", {
-                            className: O(e),
+                            className: D(e),
                             "data-test-selector": "video-player"
                         }, r.createElement("div", {
                             className: t,
@@ -37761,7 +38422,7 @@
                         x.unbind("alt+x")
                     }, t.tagInjected = !1, t
                 }(r.Component),
-                $ = Object(B.d)("VideoPlayer")(Y);
+                $ = Object(B.c)("VideoPlayer")(Y);
             var X = Object(g.d)(Object(f.b)(function(e) {
                 return {
                     isWhispersBottomBarVisible: Object(I.b)(e),
@@ -37770,7 +38431,7 @@
                     sideNavExpanded: e.ui.sideNavExpanded,
                     isLoggedIn: Object(k.d)(e),
                     authToken: Object(k.a)(e),
-                    activeVideoPlayerRefID: Object(D.a)(e),
+                    activeVideoPlayerRefID: Object(O.a)(e),
                     gdprBlockAmazonContent: Object(_.g)(e, _.c.Amazon),
                     gdprBlockComScoreContent: Object(_.g)(e, _.c.ComScore),
                     gdprBlockGoogleContent: Object(_.g)(e, _.c.Google)
@@ -37867,7 +38528,6 @@
                     e.Loading = "loading", e.Error = "error", e.Skip = "skip", e.BelowMinimumAge = "below-min-age", e.ConsentRequired = "consent-required", e.ConsentSaved = "consent-saved"
                 }(i || (i = {}))
         },
-        eQXm: function(e, t, n) {},
         eW5E: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -40523,7 +41183,7 @@
                                 skip: e.userData
                             }
                         }
-                    }), Object(g.d)("UserCard")], t)
+                    }), Object(g.c)("UserCard")], t)
                 }(a.Component);
             var k = Object(c.b)(function(e) {
                     return {
@@ -40843,7 +41503,7 @@
                         }, o.createElement(b.Ia, null, n, e, i))
                     }, t
                 }(o.Component)),
-                N = Object(s.compose)(Object(w.d)("GetBitsButtonContent"), Object(u.a)(E, {
+                N = Object(s.compose)(Object(w.c)("GetBitsButtonContent"), Object(u.a)(E, {
                     name: "data",
                     props: function(e) {
                         var t, n, i, r;
@@ -40918,7 +41578,7 @@
                         }, e))
                     }, t
                 }(o.Component),
-                _ = Object(s.compose)(Object(w.d)("GetBitsButton"))(I);
+                _ = Object(s.compose)(Object(w.c)("GetBitsButton"))(I);
             var R = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(r.d)(e)
@@ -42178,7 +42838,7 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                m = Object(u.d)("EmotePicker")(p);
+                m = Object(u.c)("EmotePicker")(p);
             var h = Object(i.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
@@ -42516,7 +43176,7 @@
                     PrimaryCta: "primary_cta",
                     Dismiss: "dismiss"
                 },
-                D = function(e) {
+                O = function(e) {
                     var t = {
                         notification_id: e.notification.id,
                         notification_type: e.notification.type,
@@ -42524,7 +43184,7 @@
                     };
                     o.n.track(E.SpadeEventType.NotificationImpression, t)
                 },
-                O = function(e) {
+                D = function(e) {
                     var t = {
                         unseen_view_count: e.unseenCount,
                         action: e.action
@@ -42664,7 +43324,7 @@
                     }, t.prototype.checkVisible = function(e) {
                         return i.b(this, void 0, void 0, function() {
                             return i.e(this, function(t) {
-                                return !this.impressionEventFired && this.isVisible(e) && (D({
+                                return !this.impressionEventFired && this.isVisible(e) && (O({
                                     uiContext: I.Center,
                                     notification: this.props.data
                                 }), this.impressionEventFired = !0), [2]
@@ -42672,7 +43332,7 @@
                         })
                     }, t.contextTypes = {
                         registerReceiver: S.func
-                    }, t = i.c([Object(f.d)("PersistentNotification")], t)
+                    }, t = i.c([Object(f.c)("PersistentNotification")], t)
                 }(a.Component),
                 A = n("9aiH"),
                 U = function(e) {
@@ -42883,7 +43543,7 @@
                             loadMore: this.loadMore,
                             pixelThreshold: 200
                         }))), this.renderUnreadNotificationsFooterElement())
-                    }, t = i.c([Object(f.d)("OnsiteNotificationsCenterWindow")], t)
+                    }, t = i.c([Object(f.c)("OnsiteNotificationsCenterWindow")], t)
                 }(a.Component),
                 G = n("/MKj"),
                 q = n("kRBY"),
@@ -42912,7 +43572,7 @@
                     return i.d(t, e), t.prototype.componentWillMount = function() {
                         this.scheduleCloseTimer()
                     }, t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive(), D({
+                        this.props.latencyTracking.reportInteractive(), O({
                             uiContext: I.Toast,
                             notification: this.props.item
                         })
@@ -43037,7 +43697,7 @@
                         this.closeTimeout && (clearTimeout(this.closeTimeout), this.closeTimeout = 0)
                     }, t
                 }(a.Component)),
-                Y = Object(f.d)("OnsiteNotificationToast")(K);
+                Y = Object(f.c)("OnsiteNotificationToast")(K);
 
             function $(e, t) {
                 return {
@@ -43132,7 +43792,7 @@
                         n > -1 && t.splice(n, 1), t.unshift(e), t.length > 3 && t.pop(), this.setState({
                             notifications: t
                         })
-                    }, t = i.c([Object(f.d)("OnsiteNotificationToastManager"), Object(Q.a)([{
+                    }, t = i.c([Object(f.c)("OnsiteNotificationToastManager"), Object(Q.a)([{
                         topic: function(e) {
                             return Object(m.l)("" + (e.currentUser && e.currentUser.id))
                         },
@@ -43270,7 +43930,7 @@
                                 }
                             }
                         }, t.toggleCenter = function(e) {
-                            e || (t.props.stopDeferring(), t.getUnseenNotificationsAndApplyTimer(), t.viewNotifications()), O({
+                            e || (t.props.stopDeferring(), t.getUnseenNotificationsAndApplyTimer(), t.viewNotifications()), D({
                                 unseenCount: t.getUnseenNotificationsCount(t.props),
                                 action: e ? _.Close : _.Open
                             })
@@ -43376,7 +44036,7 @@
                             if (t.setState({
                                     isFriendRequestsNotificationUnread: !1
                                 }), t.listDataLoaded()) {
-                                O({
+                                D({
                                     unseenCount: t.getUnseenNotificationsCount(t.props),
                                     action: _.MarkAllRead
                                 });
@@ -43635,14 +44295,16 @@
                             types: [u.PubsubMessageType.OnsiteNotificationsRead, u.PubsubMessageType.OnsiteNotificationUpdate, u.PubsubMessageType.OnsiteNotificationCreate, u.PubsubMessageType.OnsiteNotificationDelete],
                             mutator: ie
                         }
-                    }), Object(f.d)("OnsiteNotifications", {
+                    }), Object(f.c)("OnsiteNotifications", {
                         autoReportInteractive: !0
                     })], t)
                 }(a.Component)
         },
         oUNp: function(e, t, n) {
             "use strict";
-            n.d(t, "a", function() {
+            n.d(t, "b", function() {
+                return i
+            }), n.d(t, "a", function() {
                 return r
             });
             var i = "twilight.dynamic_settings_overrides",
@@ -43689,6 +44351,89 @@
                 return s
             }), n.d(t, "a", function() {
                 return o.a
+            })
+        },
+        oe5X: function(e, t, n) {
+            "use strict";
+            var i = n("XmgI"),
+                r = n("RcPG"),
+                a = n("0FG4"),
+                o = n("i6WW"),
+                s = n("gTu3");
+
+            function l(e) {
+                return {
+                    type: r.a.Text,
+                    content: e
+                }
+            }
+            var c = /^(['"*([{</]*)@((?:[^\u0000-\u007F]|[\w-])+)/;
+
+            function d(e, t) {
+                var n = e.match(c);
+                if (!n) return u(e, t.sessionUser) ? [{
+                    type: r.a.CurrentUserHighlight,
+                    content: e
+                }] : null;
+                var i = [],
+                    a = n[1],
+                    o = n[2],
+                    d = e.slice(n[0].length);
+                a.length && i.push(l(a));
+                var p = s.a.Default;
+                return u(o, t.sessionUser) ? p = s.a.Recipient : t.sessionUser && t.sessionUser.login === t.senderLogin && (p = s.a.Sender), i.push({
+                    type: r.a.Mention,
+                    content: {
+                        recipient: o,
+                        currentUserMentionRelation: p
+                    }
+                }), d.length && i.push(l(d)), i
+            }
+
+            function u(e, t) {
+                if (!t) return !1;
+                var n = t.displayName,
+                    i = t.login;
+                return e === n || e.toLowerCase() === i
+            }
+
+            function p(e, t) {
+                void 0 === t && (t = {});
+                for (var n = new RegExp(/[^\s]+/g), r = t.cheers, s = t.emotes, c = t.links, u = t.mentions, p = [], h = n.exec(e); h;) {
+                    var f = h[0],
+                        g = h.index;
+                    h = n.exec(e);
+                    var v = s && Object(a.c)(f, g, s);
+                    if (v) p.push(v);
+                    else {
+                        var b = r && Object(i.c)(f, r);
+                        if (b) p.push(b);
+                        else {
+                            var y = c && Object(o.b)(f, c);
+                            if (y) p.push(y);
+                            else {
+                                var k = u && d(f, u);
+                                k ? p.push(k) : p.push(l(f))
+                            }
+                        }
+                    }
+                }
+                return m(p)
+            }
+
+            function m(e) {
+                return e.reduce(function(e, t, n) {
+                    return 0 === n ? [].concat.call(e, t) : [].concat.call(e, l(" "), t)
+                }, []).reduce(function(e, t, n) {
+                    if (0 === n) return e.concat(t);
+                    var i = e[e.length - 1];
+                    return t.type === r.a.Text && i.type === r.a.Text ? (i.content = "" + i.content + t.content, e) : e.concat(t)
+                }, [])
+            }
+            n.d(t, "a", function() {
+                return p
+            }), n.d(t, !1, function() {
+                return m
             })
         },
         okS7: function(e, t, n) {
@@ -44309,7 +45054,7 @@
                     }, t)))
                 },
                 R = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-                D = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -44340,7 +45085,7 @@
                         }))
                     }, t
                 }(c.Component),
-                O = n("lhih"),
+                D = n("lhih"),
                 P = n("5zXJ"),
                 x = n("XmgI"),
                 L = n("ebRM"),
@@ -44363,10 +45108,10 @@
                         }, t
                     }
                     return l.d(t, e), t.prototype.render = function() {
-                        if (this.props.offer.type === O.a) {
+                        if (this.props.offer.type === D.a) {
                             if (!this.props.channelLogin) return null;
                             var e = this.props.currentUserSHA || "";
-                            return c.createElement(D, {
+                            return c.createElement(O, {
                                 key: "wateb",
                                 minPayout: this.props.offer.bits,
                                 onWatchAdClick: this.props.handleWatchAdClick,
@@ -44382,13 +45127,13 @@
                         }, c.createElement(v.Q, {
                             type: v.Ab.Strong,
                             fontSize: v.V.Size6
-                        }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(L.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === O.c ? t = c.createElement(v.Ia, {
+                        }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(L.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === D.c ? t = c.createElement(v.Ia, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "black-friday-promo-form"
                         }, c.createElement(v.Q, {
                             type: v.Ab.Strong,
                             fontSize: v.V.Size6
-                        }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(L.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === O.d && (t = c.createElement(v.Ia, {
+                        }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(L.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === D.d && (t = c.createElement(v.Ia, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "prime-promo-promo-form"
                         }, c.createElement(v.Q, {
@@ -44489,7 +45234,7 @@
                             }),
                             s = Object(L.d)(r),
                             l = Object(L.c)(r),
-                            d = r.type === O.a;
+                            d = r.type === D.a;
                         l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : d && !e.hideWateb ? i = o : d || s || n.push(o)
                     }), e.fullsize ? c.createElement(v.Ia, {
                         className: "bits-buy-card-offers__full-size",
@@ -44895,15 +45640,15 @@
                         var r = [];
                         this.props.data.currentUser && this.props.data.currentUser.bitsOffers ? r = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (r = this.props.data.bitsOffers);
                         var a = r.filter(function(e) {
-                                return e.type === O.b
+                                return e.type === D.b
                             }).some(function(e) {
                                 return e.includesVAT
                             }),
                             o = "",
                             s = r.filter(function(e) {
-                                return e.type === O.b
+                                return e.type === D.b
                             }).pop();
-                        s && s.type === O.b && (o = s.currencyCode);
+                        s && s.type === D.b && (o = s.currencyCode);
                         var d = this.props.data.user ? this.props.data.user.id : "",
                             p = c.createElement(M, {
                                 offers: r,
@@ -44978,7 +45723,7 @@
                         }
                     })], t)
                 }(c.Component),
-                $ = Object(E.compose)(Object(W.d)("BitsBuyCard", {
+                $ = Object(E.compose)(Object(W.c)("BitsBuyCard", {
                     autoReportInteractive: !0
                 }))(Y);
 
@@ -45155,20 +45900,22 @@
                 I = n("GnwI"),
                 _ = n("eO8H"),
                 R = n("eJ65"),
-                D = n("BhFH"),
-                O = n("EvYO"),
+                O = n("BhFH"),
+                D = n("EvYO"),
                 P = n("TvOw"),
                 x = n("2xye"),
                 L = n("m98o"),
                 F = n("as+V"),
                 A = n("iS14"),
-                U = n("RQ6e"),
-                M = n("4qQ0"),
-                j = n("PrJw"),
-                B = n("Ue10"),
-                z = n("dr/4"),
-                H = "whispers-report-user-button",
-                V = function(e) {
+                U = n("0tEc"),
+                M = n("/rr3"),
+                j = n("RQ6e"),
+                B = n("4qQ0"),
+                z = n("PrJw"),
+                H = n("Ue10"),
+                V = n("dr/4"),
+                W = "whispers-report-user-button",
+                G = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderReportButton = function() {
@@ -45176,11 +45923,11 @@
                                 n = Object(h.d)("Report {displayName}", {
                                     displayName: e
                                 }, "ThreadSettings");
-                            return r.createElement(B.Ga, {
-                                "data-test-selector": H,
+                            return r.createElement(H.Ga, {
+                                "data-test-selector": W,
                                 ariaLabel: n,
                                 onClick: t.reportUser
-                            }, r.createElement(B.Ia, {
+                            }, r.createElement(H.Ia, {
                                 padding: {
                                     y: .5,
                                     x: 1
@@ -45205,13 +45952,13 @@
                                         }
                                     }
                                 });
-                            t.props.setMuteThread && (e ? Object(j.j)(t.props.threadID) : Object(j.k)(t.props.threadID), t.props.setMuteThread(n))
+                            t.props.setMuteThread && (e ? Object(z.j)(t.props.threadID) : Object(z.k)(t.props.threadID), t.props.setMuteThread(n))
                         }, t.reportUser = function() {
                             var e = t.props.displayName || t.props.login;
                             t.props.showReportUserModal({
                                 onClose: t.onReportModalClose,
                                 reportContext: {
-                                    contentType: M.a.Whisper,
+                                    contentType: B.a.Whisper,
                                     targetUserID: t.props.userID,
                                     contentID: t.props.threadID
                                 },
@@ -45220,7 +45967,7 @@
                                 }, "ReportUserModal")
                             })
                         }, t.onReportModalClose = function(e, n) {
-                            e === U.b.Success && n && t.props.onBlock && t.props.onBlock(t.props.threadID)
+                            e === j.b.Success && n && t.props.onBlock && t.props.onBlock(t.props.threadID)
                         }, t.blockUser = function() {
                             t.props.blockUserMutation(t.props.userID, P.b.Other, P.a.Whisper, t.props.currentUser), t.props.onBlock && t.props.onBlock(t.props.threadID)
                         }, t.unblockUser = function() {
@@ -45233,29 +45980,32 @@
                             n = Object(h.d)("Go to {displayName}'s Channel", {
                                 displayName: e
                             }, "ThreadSettings");
-                        return r.createElement(B.Ia, {
-                            display: B.R.Flex,
-                            flexDirection: B.T.Column,
+                        return r.createElement(H.Ia, {
+                            display: H.R.Flex,
+                            flexDirection: H.T.Column,
                             margin: 1
-                        }, r.createElement(B.Ga, {
+                        }, r.createElement(H.Ga, {
                             ariaLabel: t,
                             onClick: this.toggleMutethread
-                        }, r.createElement(B.Ia, {
+                        }, r.createElement(H.Ia, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, t)), r.createElement(B.mb, {
+                        }, t)), r.createElement(H.mb, {
                             borderBottom: !0,
                             margin: {
                                 y: 1,
                                 left: .5
                             }
-                        }), this.renderBlockButton(), this.renderReportButton(), r.createElement(B.Ga, {
+                        }), r.createElement(U.a, {
+                            friendButtonUIType: M.a.WhisperSettings,
+                            targetID: this.props.userID
+                        }), this.renderBlockButton(), this.renderReportButton(), r.createElement(H.Ga, {
                             linkTo: "/" + this.props.login,
                             onClick: this.onChannelRedirect,
                             ariaLabel: n
-                        }, r.createElement(B.Ia, {
+                        }, r.createElement(H.Ia, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -45263,15 +46013,15 @@
                         }, n)))
                     }, t.prototype.renderBlockButton = function() {
                         var e, t, n = this.props.displayName || this.props.login;
-                        return this.isBlocked ? (e = Object(h.d)("Unblock {displayName}...", {
+                        return this.isBlocked ? (e = Object(h.d)("Unblock {displayName}", {
                             displayName: n
-                        }, "ThreadSettings"), t = this.unblockUser) : (e = Object(h.d)("Block {displayName}...", {
+                        }, "ThreadSettings"), t = this.unblockUser) : (e = Object(h.d)("Block {displayName}", {
                             displayName: n
-                        }, "ThreadSettings"), t = this.blockUser), r.createElement(B.Ga, {
+                        }, "ThreadSettings"), t = this.blockUser), r.createElement(H.Ga, {
                             "data-test-selector": "whispers-block-user-button",
                             ariaLabel: e,
                             onClick: t
-                        }, r.createElement(B.Ia, {
+                        }, r.createElement(H.Ia, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -45288,102 +46038,102 @@
                         configurable: !0
                     }), t
                 }(r.Component),
-                W = Object(m.compose)(Object(v.a)(z, {
+                q = Object(m.compose)(Object(v.a)(V, {
                     name: "setMuteThread"
-                }), Object(D.a)(), Object(A.a)())(V),
-                G = n("pORx");
-            var q = n("NKxy");
-            var Q = n("NSwr");
-            var K, Y = n("vGFN"),
-                $ = (n("vty9"), "report-as-spam-button"),
-                X = "mark-not-spam-button",
-                J = "dismiss-prompt-button",
-                Z = "spam-prompt-pending-target",
-                ee = "spam-prompt-reported-target",
-                te = {
+                }), Object(O.a)(), Object(A.a)())(G),
+                Q = n("pORx");
+            var K = n("NKxy");
+            var Y = n("NSwr");
+            var $, X = n("vGFN"),
+                J = (n("vty9"), "report-as-spam-button"),
+                Z = "mark-not-spam-button",
+                ee = "dismiss-prompt-button",
+                te = "spam-prompt-pending-target",
+                ne = "spam-prompt-reported-target",
+                ie = {
                     displayName: "???",
                     login: "???",
                     displayBadges: [],
                     id: ""
                 },
-                ne = function(e) {
+                re = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.renderPotentialSpamPrompt = function() {
                             if (n.props.spamInfo && "low" !== n.props.spamInfo.likelihood && null === n.props.spamInfo.lastMarkedNotSpamAt) {
-                                if ("pending" === n.state.potentialSpamResolution) return r.createElement(B.Ia, {
-                                    "data-a-target": Z,
+                                if ("pending" === n.state.potentialSpamResolution) return r.createElement(H.Ia, {
+                                    "data-a-target": te,
                                     className: "thread-header__potential-spam-prompt",
                                     attachRight: !0,
                                     attachLeft: !0,
                                     attachTop: !0
-                                }, r.createElement(B.mb, {
-                                    background: B.n.Alt2,
+                                }, r.createElement(H.mb, {
+                                    background: H.n.Alt2,
                                     padding: .5,
                                     elevation: 2
-                                }, r.createElement(B.Ia, {
-                                    display: B.R.InlineBlock,
+                                }, r.createElement(H.Ia, {
+                                    display: H.R.InlineBlock,
                                     margin: .5
-                                }, r.createElement(B.Q, {
-                                    type: B.Ab.Span,
-                                    fontSize: B.V.Size6,
-                                    color: B.K.Alt2
-                                }, Object(h.d)("It looks like this conversation triggered our spam detector. If it is spam, please report it!", "ThreadHeader"))), r.createElement(B.Ia, {
-                                    display: B.R.InlineBlock,
+                                }, r.createElement(H.Q, {
+                                    type: H.Ab.Span,
+                                    fontSize: H.V.Size6,
+                                    color: H.K.Alt2
+                                }, Object(h.d)("It looks like this conversation triggered our spam detector. If it is spam, please report it!", "ThreadHeader"))), r.createElement(H.Ia, {
+                                    display: H.R.InlineBlock,
                                     margin: .5
-                                }, r.createElement(B.v, {
-                                    "data-a-target": $,
-                                    type: B.B.Alert,
+                                }, r.createElement(H.v, {
+                                    "data-a-target": J,
+                                    type: H.B.Alert,
                                     onClick: n.reportSpam,
-                                    size: B.z.Small
-                                }, Object(h.d)("Report spam", "ThreadHeader"))), r.createElement(B.Ia, {
-                                    display: B.R.InlineBlock,
+                                    size: H.z.Small
+                                }, Object(h.d)("Report spam", "ThreadHeader"))), r.createElement(H.Ia, {
+                                    display: H.R.InlineBlock,
                                     margin: .5
-                                }, r.createElement(B.v, {
-                                    "data-a-target": X,
+                                }, r.createElement(H.v, {
+                                    "data-a-target": Z,
                                     onClick: n.markNotSpam,
-                                    size: B.z.Small
+                                    size: H.z.Small
                                 }, Object(h.d)("This is not spam", "ThreadHeader")))));
-                                if ("reported" === n.state.potentialSpamResolution && n.interlocutor.displayName) return r.createElement(B.Ia, {
-                                    "data-a-target": ee,
+                                if ("reported" === n.state.potentialSpamResolution && n.interlocutor.displayName) return r.createElement(H.Ia, {
+                                    "data-a-target": ne,
                                     className: "thread-header__potential-spam-prompt",
                                     attachRight: !0,
                                     attachLeft: !0,
                                     attachTop: !0
-                                }, r.createElement(B.mb, {
-                                    background: B.n.Alt2,
+                                }, r.createElement(H.mb, {
+                                    background: H.n.Alt2,
                                     padding: .5,
                                     elevation: 2
-                                }, r.createElement(B.Ia, {
-                                    display: B.R.InlineBlock,
+                                }, r.createElement(H.Ia, {
+                                    display: H.R.InlineBlock,
                                     margin: .5
-                                }, r.createElement(B.Q, {
-                                    type: B.Ab.Span,
-                                    fontSize: B.V.Size6,
-                                    color: B.K.Alt2
+                                }, r.createElement(H.Q, {
+                                    type: H.Ab.Span,
+                                    fontSize: H.V.Size6,
+                                    color: H.K.Alt2
                                 }, Object(h.d)("Thank you for helping us fight spam. We've blocked {user} from sending you further whispers. You can undo this from the Whisper Settings Menu.", {
                                     user: n.interlocutor.displayName
-                                }, "ThreadHeader"))), r.createElement(B.Ia, {
-                                    display: B.R.InlineBlock,
+                                }, "ThreadHeader"))), r.createElement(H.Ia, {
+                                    display: H.R.InlineBlock,
                                     margin: .5
-                                }, r.createElement(B.v, {
-                                    "data-a-target": J,
-                                    type: B.B.Text,
+                                }, r.createElement(H.v, {
+                                    "data-a-target": ee,
+                                    type: H.B.Text,
                                     onClick: n.dismissSpamPrompt,
-                                    size: B.z.Small
+                                    size: H.z.Small
                                 }, Object(h.d)("Dismiss", "ThreadHeader")))))
                             }
                             return null
                         }, n.reportSpam = function() {
-                            n.props.reportUserMutation(n.interlocutor.id, P.c.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, P.b.Other, P.a.Whisper, n.props.participants.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(Y.l)(n.interlocutor.login, Y.a.SpamPropmt), n.setState({
+                            n.props.reportUserMutation(n.interlocutor.id, P.c.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, P.b.Other, P.a.Whisper, n.props.participants.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(X.l)(n.interlocutor.login, X.a.SpamPropmt), n.setState({
                                 potentialSpamResolution: "reported"
                             })
                         }, n.markNotSpam = function() {
-                            n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(Y.o)(n.props.threadID), n.setState({
+                            n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(X.o)(n.props.threadID), n.setState({
                                 potentialSpamResolution: "dismissed"
                             })
                         }, n.dismissSpamPrompt = function() {
-                            n.props.onBlock && n.props.onBlock(n.props.threadID), Object(Y.n)(n.props.threadID), n.setState({
+                            n.props.onBlock && n.props.onBlock(n.props.threadID), Object(X.n)(n.props.threadID), n.setState({
                                 potentialSpamResolution: "dismissed"
                             })
                         }, n.onSettingsClick = function(e) {
@@ -45403,7 +46153,7 @@
                             var i = n.props.participants.currentUser && n.props.participants.currentUser.friends.edges.find(function(e) {
                                 return !(!e.node || e.node.id !== n.interlocutor.id)
                             });
-                            n.props.participants.user && i && i.activity ? Object(O.b)({
+                            n.props.participants.user && i && i.activity ? Object(D.b)({
                                 context: e,
                                 friendActivity: i.activity,
                                 friendLogin: n.props.participants.user.login
@@ -45433,27 +46183,27 @@
                             }),
                             o = Object(h.d)("Close", "WhisperThreadHeader"),
                             s = Object(h.d)("Settings", "WhisperThreadHeader");
-                        if (this.props.isLoading || !this.props.participants.currentUser || !this.props.participants.user) return r.createElement(B.Ia, {
+                        if (this.props.isLoading || !this.props.participants.currentUser || !this.props.participants.user) return r.createElement(H.Ia, {
                             className: n,
-                            display: B.R.Flex,
-                            justifyContent: B.Ha.Between,
+                            display: H.R.Flex,
+                            justifyContent: H.Ha.Between,
                             fullWidth: !0,
-                            alignItems: B.c.Center,
+                            alignItems: H.c.Center,
                             padding: {
                                 y: .5,
                                 x: 1
                             },
                             flexShrink: 0,
                             flexGrow: 0,
-                            flexWrap: B.U.NoWrap
-                        }, r.createElement(B.Ra, {
+                            flexWrap: H.U.NoWrap
+                        }, r.createElement(H.Ra, {
                             height: 20,
                             width: 80
-                        }), r.createElement(B.Ia, {
-                            display: B.R.Flex
-                        }, r.createElement(B.w, {
+                        }), r.createElement(H.Ia, {
+                            display: H.R.Flex
+                        }, r.createElement(H.w, {
                             ariaLabel: o,
-                            icon: B.cb.RemoveTag,
+                            icon: H.cb.RemoveTag,
                             "data-a-target": "whispers-thread__close-button-" + this.props.threadID,
                             onClick: this.props.onClose
                         })));
@@ -45465,26 +46215,26 @@
                                 return !(!t.node || t.node.id !== e.interlocutor.id)
                             });
                         if (m) {
-                            c = r.createElement(B.Ia, {
+                            c = r.createElement(H.Ia, {
                                 margin: {
                                     left: 1
                                 },
-                                display: B.R.Flex,
-                                alignItems: B.c.Center
-                            }, r.createElement(B.Ta, {
+                                display: H.R.Flex,
+                                alignItems: H.c.Center
+                            }, r.createElement(H.Ta, {
                                 status: function(e) {
                                     switch (e) {
-                                        case Q.a.Online:
-                                            return B.Ua.Online;
-                                        case Q.a.Away:
-                                        case Q.a.Idle:
-                                            return B.Ua.Away;
-                                        case Q.a.Busy:
-                                            return B.Ua.Busy;
-                                        case Q.a.Offline:
-                                        case Q.a.Invisible:
+                                        case Y.a.Online:
+                                            return H.Ua.Online;
+                                        case Y.a.Away:
+                                        case Y.a.Idle:
+                                            return H.Ua.Away;
+                                        case Y.a.Busy:
+                                            return H.Ua.Busy;
+                                        case Y.a.Offline:
+                                        case Y.a.Invisible:
                                         default:
-                                            return B.Ua.Offline
+                                            return H.Ua.Offline
                                     }
                                 }(m.availability)
                             }));
@@ -45511,31 +46261,32 @@
                                     d = r.createElement(_.a, {
                                         className: S,
                                         title: Object(L.b)(v) || "",
-                                        onClick: this.onPresenceClick.bind(this, O.a.WhisperHeaderLink),
+                                        onClick: this.onPresenceClick.bind(this, D.a.WhisperHeaderLink),
                                         to: y,
                                         "data-test-selector": "whispers-thread__presence-link"
                                     }, b)
                                 } else d = b;
-                                this.props.isCollapsed || (u = r.createElement(B.Ia, {
+                                this.props.isCollapsed || (u = r.createElement(H.Ia, {
                                     padding: {
                                         right: .5
                                     }
                                 }, r.createElement(F.a, {
                                     availability: g,
                                     link: y,
-                                    onClick: this.onPresenceClick.bind(this, O.a.WhisperHeaderButton),
+                                    onClick: this.onPresenceClick.bind(this, D.a.WhisperHeaderButton),
                                     shouldHollowOverlay: this.props.isHighlighted
                                 })))
                             }
                         }
-                        this.props.isCollapsed || !this.props.participants.currentUser || this.props.interactionsDisabled || (l = r.createElement(R.a, null, r.createElement(B.w, {
+                        this.props.isCollapsed || !this.props.participants.currentUser || this.props.interactionsDisabled || (l = r.createElement(R.a, null, r.createElement(H.w, {
                             ariaLabel: s,
-                            icon: B.cb.Gear,
+                            icon: H.cb.Gear,
                             overlay: t
-                        }), r.createElement(B.q, {
-                            direction: B.r.BottomRight,
-                            offsetX: "0.5rem"
-                        }, r.createElement(W, {
+                        }), r.createElement(H.q, {
+                            direction: H.r.BottomRight,
+                            offsetX: "0.5rem",
+                            size: H.s.Small
+                        }, r.createElement(q, {
                             login: this.interlocutor.login,
                             displayName: this.interlocutor.displayName,
                             currentUser: this.props.participants.currentUser,
@@ -45548,7 +46299,7 @@
                             showReportUserModal: this.props.showReportUserModal
                         }))));
                         var w = this.interlocutor.displayBadges.map(function(e) {
-                            return r.createElement(B.Ca, {
+                            return r.createElement(H.Ca, {
                                 key: e.id,
                                 flexShrink: 0,
                                 margin: {
@@ -45561,9 +46312,9 @@
                                 src: e.imageURL
                             }))
                         });
-                        return r.createElement(B.Ia, {
+                        return r.createElement(H.Ia, {
                             className: i,
-                            position: B.Sa.Relative,
+                            position: H.Sa.Relative,
                             fullWidth: !0
                         }, r.createElement("div", {
                             className: "thread-header__click-area",
@@ -45573,56 +46324,56 @@
                             onBlur: this.onBlur,
                             "data-a-target": "thread-header__click-area",
                             tabIndex: 0
-                        }, r.createElement(B.Ia, {
+                        }, r.createElement(H.Ia, {
                             className: n,
                             fullWidth: !0,
                             padding: {
                                 x: 1,
                                 y: .5
                             },
-                            alignItems: B.c.Center,
+                            alignItems: H.c.Center,
                             flexGrow: 1,
-                            display: B.R.Flex,
+                            display: H.R.Flex,
                             "data-a-target": "whisper-thread-title-bar-" + (this.props.participants.user && this.props.participants.user.login),
                             "data-click-out-id": "thread-expand-close",
-                            flexWrap: B.U.NoWrap
-                        }, r.createElement(B.Ia, {
-                            display: B.R.Flex,
-                            flexDirection: B.T.Column,
+                            flexWrap: H.U.NoWrap
+                        }, r.createElement(H.Ia, {
+                            display: H.R.Flex,
+                            flexDirection: H.T.Column,
                             flexGrow: 1,
                             fullHeight: !0,
-                            overflow: B.La.Hidden
-                        }, r.createElement(B.Ia, {
-                            display: B.R.Flex,
+                            overflow: H.La.Hidden
+                        }, r.createElement(H.Ia, {
+                            display: H.R.Flex,
                             flexGrow: 1,
-                            alignItems: B.c.Center,
-                            flexWrap: B.U.NoWrap,
+                            alignItems: H.c.Center,
+                            flexWrap: H.U.NoWrap,
                             padding: {
                                 right: 1
                             },
                             ellipsis: !0
-                        }, w, r.createElement(B.Q, {
+                        }, w, r.createElement(H.Q, {
                             className: a,
-                            type: B.Ab.Span,
+                            type: H.Ab.Span,
                             bold: !0,
                             ellipsis: !0
-                        }, this.interlocutor.displayName ? this.interlocutor.displayName : te.displayName), c), r.createElement(B.mb, {
+                        }, this.interlocutor.displayName ? this.interlocutor.displayName : ie.displayName), c), r.createElement(H.mb, {
                             className: "thread-header__activity",
-                            color: this.props.isHighlighted ? B.K.Overlay : B.K.Base,
+                            color: this.props.isHighlighted ? H.K.Overlay : H.K.Base,
                             padding: {
                                 right: 1
                             },
                             ellipsis: !0
-                        }, d)), r.createElement(B.Ia, {
-                            display: B.R.Flex,
+                        }, d)), r.createElement(H.Ia, {
+                            display: H.R.Flex,
                             flexShrink: 0,
-                            flexDirection: B.T.Row,
-                            alignItems: B.c.Center
+                            flexDirection: H.T.Row,
+                            alignItems: H.c.Center
                         }, u, r.createElement("div", {
                             onClick: this.onSettingsClick
-                        }, l), r.createElement(B.w, {
+                        }, l), r.createElement(H.w, {
                             ariaLabel: o,
-                            icon: B.cb.RemoveTag,
+                            icon: H.cb.RemoveTag,
                             "data-a-target": "thread-close-button-" + (this.props.participants.user && this.props.participants.user.login),
                             "data-test-selector": "thread-header__close-button-" + this.props.threadID,
                             onClick: this.props.onClose,
@@ -45630,15 +46381,15 @@
                         })))), this.renderPotentialSpamPrompt())
                     }, Object.defineProperty(t.prototype, "interlocutor", {
                         get: function() {
-                            return this.props.participants.user || te
+                            return this.props.participants.user || ie
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(r.Component),
-                ie = Object(s.d)(Object(D.a)(), function() {
+                ae = Object(s.d)(Object(O.a)(), function() {
                     var e = this;
-                    return Object(v.a)(G, {
+                    return Object(v.a)(Q, {
                         props: function(t) {
                             return {
                                 reportUserMutation: function(n, r, a) {
@@ -45674,7 +46425,7 @@
                     })
                 }(), function() {
                     var e = this;
-                    return Object(v.a)(q, {
+                    return Object(v.a)(K, {
                         props: function(t) {
                             return {
                                 setThreadSpamStatusMutation: function(n, r) {
@@ -45707,59 +46458,59 @@
                             }
                         }
                     })
-                }())(ne),
-                re = n("szP+"),
-                ae = n("8/mp"),
-                oe = n("HAa/");
+                }())(re),
+                oe = n("szP+"),
+                se = n("8/mp"),
+                le = n("HAa/");
             ! function(e) {
                 e[e.Timestamp = 0] = "Timestamp", e[e.Whisper = 1] = "Whisper", e[e.Warning = 2] = "Warning", e[e.InactiveUserNotice = 3] = "InactiveUserNotice", e[e.NewMessages = 4] = "NewMessages", e[e.Notification = 5] = "Notification"
-            }(K || (K = {}));
+            }($ || ($ = {}));
             n("PaqN");
-            var se = n("tQZM"),
-                le = function(e) {
+            var ce = n("tQZM"),
+                de = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.d(t, e), t.prototype.render = function() {
                         var e = this.props.message;
                         switch (e.type) {
-                            case K.Timestamp:
-                                return r.createElement(B.mb, {
+                            case $.Timestamp:
+                                return r.createElement(H.mb, {
                                     className: "thread-message__timestamp",
-                                    color: B.K.Alt2,
-                                    fontSize: B.V.Size7
-                                }, Object(se.e)(e));
-                            case K.Warning:
-                                return r.createElement(B.mb, {
+                                    color: H.K.Alt2,
+                                    fontSize: H.V.Size7
+                                }, Object(ce.e)(e));
+                            case $.Warning:
+                                return r.createElement(H.mb, {
                                     className: "thread-message__warning",
-                                    color: B.K.Alt2
-                                }, Object(se.f)());
-                            case K.InactiveUserNotice:
-                                return r.createElement(B.mb, {
+                                    color: H.K.Alt2
+                                }, Object(ce.f)());
+                            case $.InactiveUserNotice:
+                                return r.createElement(H.mb, {
                                     className: "thread-message__inactive-user",
-                                    color: B.K.Alt2
-                                }, Object(se.b)());
-                            case K.Whisper:
-                                return this.props.reportOutgoingWhisperRendered && this.props.reportOutgoingWhisperRendered(e.content), r.createElement(B.Ia, {
+                                    color: H.K.Alt2
+                                }, Object(ce.b)());
+                            case $.Whisper:
+                                return this.props.reportOutgoingWhisperRendered && this.props.reportOutgoingWhisperRendered(e.content), r.createElement(H.Ia, {
                                     className: "thread-message__message",
                                     "data-a-target": "whisper-message"
-                                }, Object(se.g)(e));
-                            case K.NewMessages:
-                                return r.createElement(B.mb, {
+                                }, Object(ce.g)(e));
+                            case $.NewMessages:
+                                return r.createElement(H.mb, {
                                     className: "thread-message__new-messages",
-                                    color: B.K.OverlayAlt,
-                                    fontSize: B.V.Size7
-                                }, Object(se.c)());
-                            case K.Notification:
-                                return r.createElement(B.Ia, {
+                                    color: H.K.OverlayAlt,
+                                    fontSize: H.V.Size7
+                                }, Object(ce.c)());
+                            case $.Notification:
+                                return r.createElement(H.Ia, {
                                     className: "thread-message__notification"
-                                }, Object(se.d)(e));
+                                }, Object(ce.d)(e));
                             default:
                                 return null
                         }
                     }, t
                 }(r.Component),
-                ce = function(e) {
+                ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -45774,7 +46525,7 @@
                             return t.props.loadMore()
                         }, t.renderMessages = function(e) {
                             return e.map(function(e, n) {
-                                return r.createElement(le, {
+                                return r.createElement(de, {
                                     message: e,
                                     reportOutgoingWhisperRendered: t.props.reportOutgoingWhisperRendered || void 0,
                                     key: t.generateMessageKey(e, n.toString())
@@ -45784,7 +46535,7 @@
                             var e = t.props.unreadMessagesCount,
                                 n = t.props.thread.messages.edges.map(function(e) {
                                     return {
-                                        type: K.Whisper,
+                                        type: $.Whisper,
                                         content: e.node.content.content,
                                         from: e.node.from && t.props.participantsByID[+e.node.from.id],
                                         emotes: e.node.content.emotes,
@@ -45808,7 +46559,7 @@
                             return e.sentAt.valueOf() - t.sentAt.valueOf() > 6e5 || e.sentAt.toDateString() !== t.sentAt.toDateString()
                         }, t.createTimestampMessage = function(e) {
                             return {
-                                type: K.Timestamp,
+                                type: $.Timestamp,
                                 timestamp: new Date(e.sentAt)
                             }
                         }, t.notificationsFor = function(e) {
@@ -45817,20 +46568,20 @@
                             }).map(t.createNotificationLine)
                         }, t.createNotificationLine = function(e) {
                             return {
-                                type: K.Notification,
+                                type: $.Notification,
                                 content: e.content
                             }
                         }, t.createNewMessagesIndicator = function() {
                             return {
-                                type: K.NewMessages
+                                type: $.NewMessages
                             }
                         }, t.createWarningMessage = function() {
                             return {
-                                type: K.Warning
+                                type: $.Warning
                             }
                         }, t.createInactiveUserMessage = function() {
                             return {
-                                type: K.InactiveUserNotice
+                                type: $.InactiveUserNotice
                             }
                         }, t.saveScrollRef = function(e) {
                             return t.scroll = e
@@ -45860,47 +46611,47 @@
                         this.props.notifications.length > e.notifications.length && this.scrollToBottom(), e.collapsed && !this.props.collapsed && this.scrollToBottom()
                     }, t.prototype.render = function() {
                         var e = this.getMessages();
-                        return r.createElement(B.Ia, {
+                        return r.createElement(H.Ia, {
                             fullHeight: !0
-                        }, r.createElement(ae.b, {
+                        }, r.createElement(se.b, {
                             scrollRef: this.saveScrollRef,
                             suppressScrollX: !0
-                        }, r.createElement(B.Ia, null, r.createElement(ae.a, {
+                        }, r.createElement(H.Ia, null, r.createElement(se.a, {
                             enabled: !this.state.disableInfiniteTrigger,
                             loadMore: this.loadMore,
                             pixelThreshold: 200,
-                            orientation: oe.b.Down,
+                            orientation: le.b.Down,
                             contentLength: e.length
                         }), this.renderMessages(e))))
                     }, t.prototype.generateMessageKey = function(e, t) {
                         switch (e.type) {
-                            case K.NewMessages:
-                            case K.Warning:
-                            case K.InactiveUserNotice:
+                            case $.NewMessages:
+                            case $.Warning:
+                            case $.InactiveUserNotice:
                                 return "" + e.type;
-                            case K.Timestamp:
+                            case $.Timestamp:
                                 return e.type + "-" + e.timestamp.getTime();
-                            case K.Whisper:
+                            case $.Whisper:
                                 return e.type + "-" + e.id;
-                            case K.Notification:
+                            case $.Notification:
                                 return e.type + "-" + t;
                             default:
                                 return h.j.warn("[ThreadMessages] Encountered an unknown message type."), t
                         }
                     }, t
                 }(r.Component);
-            var de, ue = Object(o.b)(function(e, t) {
+            var pe, me = Object(o.b)(function(e, t) {
                     return {
-                        notifications: Object(re.a)(e, t.thread.id)
+                        notifications: Object(oe.a)(e, t.thread.id)
                     }
-                })(ce),
-                pe = n("bAm+"),
-                me = n("TOso"),
-                he = n("NMMG"),
-                fe = n("xJpr"),
-                ge = n("rDH2"),
-                ve = (n("DLia"), n("Jpf8")),
-                be = function(e) {
+                })(ue),
+                he = n("bAm+"),
+                fe = n("TOso"),
+                ge = n("NMMG"),
+                ve = n("xJpr"),
+                be = n("rDH2"),
+                ye = (n("DLia"), n("Jpf8")),
+                ke = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.hadError = !1, n.onEmoticonClick = function(e) {
@@ -45923,13 +46674,13 @@
                         }, n.handleHeaderInteract = function() {
                             n.props.collapsed ? n.expand() : n.collapse()
                         }, n.expand = function() {
-                            n.props.participants.currentUser && Object(j.h)(n.props.threadID), n.props.onExpand(n.props.threadID)
+                            n.props.participants.currentUser && Object(z.h)(n.props.threadID), n.props.onExpand(n.props.threadID)
                         }, n.onClickOut = function() {
                             n.props.focused && n.props.onUnfocus(n.props.threadID)
                         }, n.handleClose = function() {
-                            n.props.participants.currentUser && Object(j.c)(n.props.threadID), n.props.onClose(n.props.threadID)
+                            n.props.participants.currentUser && Object(z.c)(n.props.threadID), n.props.onClose(n.props.threadID)
                         }, n.collapse = function() {
-                            n.props.participants.currentUser && Object(j.d)(n.props.threadID), n.props.onCollapse(n.props.threadID)
+                            n.props.participants.currentUser && Object(z.d)(n.props.threadID), n.props.onCollapse(n.props.threadID)
                         }, n.handleKeydown = function(e) {
                             if ((e.charCode || e.keyCode) === y.a.Enter) {
                                 var t = n.autocompleteInput.getValue();
@@ -45940,7 +46691,7 @@
                         }, n.markThreadMessagesAsRead = function() {
                             if (!n.props.data.loading && !n.hadError && n.props.data.whisperThread && 0 !== n.props.data.whisperThread.messages.edges.length && 0 !== n.props.data.whisperThread.unreadMessagesCount) {
                                 var e = n.props.data.whisperThread && +n.props.data.whisperThread.messages.edges[0].cursor;
-                                e && !isNaN(e) || (e = 0), Object(pe.a)({
+                                e && !isNaN(e) || (e = 0), Object(he.a)({
                                     threadID: n.props.threadID,
                                     lastReadMessageID: n.props.data.whisperThread && n.props.data.whisperThread.messages.edges[0].node.id || ""
                                 }, e)
@@ -45954,11 +46705,11 @@
                                     label: C.c.RenderSent,
                                     start: C.d.Registration
                                 }), n.outgoingWhisperMessage = e;
-                                var t = Object(he.b)(n.props.threadID, n.props.currentUserID);
-                                t ? (n.props.participants.currentUser && n.props.participants.user && Object(j.m)({
+                                var t = Object(ge.b)(n.props.threadID, n.props.currentUserID);
+                                t ? (n.props.participants.currentUser && n.props.participants.user && Object(z.m)({
                                     threadID: n.props.threadID,
                                     targetUserLogin: n.props.participants.user.login
-                                }), Object(me.b)({
+                                }), Object(fe.b)({
                                     currentUserID: n.props.currentUserID,
                                     emotes: n.props.emoteSetsData && n.props.emoteSetsData.emoteMap || {},
                                     message: e,
@@ -45968,13 +46719,13 @@
                                 }).catch(function(e) {
                                     var t, i;
                                     switch (e.message) {
-                                        case me.a.RestrictedRecipient:
+                                        case fe.a.RestrictedRecipient:
                                             t = Object(h.d)("Your whisper was not delivered because the recipient's settings prevent them from receiving it.", "Thread");
                                             break;
-                                        case me.a.BodyEmpty:
+                                        case fe.a.BodyEmpty:
                                             t = Object(h.d)("Your whisper was not delivered because it was empty.", "Thread");
                                             break;
-                                        case me.a.TargetBanned:
+                                        case fe.a.TargetBanned:
                                             t = Object(h.d)("Your whisper was not delivered because the recipient is suspended.", "Thread");
                                             break;
                                         default:
@@ -46013,30 +46764,30 @@
                         var t = this.props.emoteSetsData && this.props.emoteSetsData.emoteSets || [];
                         return r.createElement(f.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(B.mb, {
+                        }, r.createElement(H.mb, {
                             className: e,
-                            display: B.R.Flex,
+                            display: H.R.Flex,
                             flexShrink: 0,
                             flexGrow: 0,
-                            position: B.Sa.Relative,
-                            overflow: B.La.Hidden,
-                            background: B.n.Base,
+                            position: H.Sa.Relative,
+                            overflow: H.La.Hidden,
+                            background: H.n.Base,
                             margin: {
                                 left: 1
                             },
-                            alignItems: B.c.Center,
-                            justifyContent: B.Ha.Center,
+                            alignItems: H.c.Center,
+                            justifyContent: H.Ha.Center,
                             "data-a-target": "whisper-thread-" + (this.props.participants.user && this.props.participants.user.login) + (this.props.collapsed ? "-collapsed" : ""),
                             elevation: 3
-                        }, r.createElement(B.Ia, {
+                        }, r.createElement(H.Ia, {
                             className: "whispers-thread__autocomplete-container",
-                            position: B.Sa.Absolute,
+                            position: H.Sa.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
                             refDelegate: this.setContainerRef
-                        }, r.createElement(B.Ia, {
-                            position: B.Sa.Absolute,
+                        }, r.createElement(H.Ia, {
+                            position: H.Sa.Absolute,
                             fullWidth: !0,
                             padding: {
                                 x: 1,
@@ -46066,23 +46817,23 @@
                                 x: 1,
                                 bottom: 1
                             },
-                            position: B.Sa.Absolute,
+                            position: H.Sa.Absolute,
                             shouldCloseOnClickOut: !0
-                        }))), r.createElement(B.Ca, {
+                        }))), r.createElement(H.Ca, {
                             fullWidth: !0,
                             attachLeft: !0
                         }, r.createElement("div", {
                             className: "whispers-thread__content",
                             onClick: this.handleContentClick
-                        }, this.renderContent())), r.createElement(B.Ia, {
-                            position: B.Sa.Absolute,
+                        }, this.renderContent())), r.createElement(H.Ia, {
+                            position: H.Sa.Absolute,
                             fullWidth: !0,
                             flexShrink: 0,
-                            display: B.R.Flex,
-                            alignItems: B.c.Center,
+                            display: H.R.Flex,
+                            alignItems: H.c.Center,
                             attachTop: !0,
                             attachLeft: !0
-                        }, r.createElement(ie, {
+                        }, r.createElement(ae, {
                             isHighlighted: !!(this.props.data.whisperThread && this.props.data.whisperThread.unreadMessagesCount > 0),
                             isFocused: !!this.props.focused,
                             isMuted: !!this.props.data.whisperThread && this.props.data.whisperThread.isMuted,
@@ -46102,14 +46853,14 @@
                     }, t.prototype.renderContent = function() {
                         return this.hadError ? r.createElement(g.a, {
                             message: Object(h.d)("Sorry, something went wrong loading this conversation.", "WhisperThread")
-                        }) : this.props.data.loading || this.props.participants.loading || !this.props.data.whisperThread ? r.createElement(B.Ia, {
-                            display: B.R.Flex,
-                            justifyContent: B.Ha.Center,
-                            alignItems: B.c.Center,
+                        }) : this.props.data.loading || this.props.participants.loading || !this.props.data.whisperThread ? r.createElement(H.Ia, {
+                            display: H.R.Flex,
+                            justifyContent: H.Ha.Center,
+                            alignItems: H.c.Center,
                             margin: 2,
                             fullHeight: !0,
                             flexGrow: 1
-                        }, r.createElement(B.Ka, null)) : r.createElement(ue, {
+                        }, r.createElement(H.Ka, null)) : r.createElement(me, {
                             thread: this.props.data.whisperThread,
                             participantsByID: this.getUsersByID(this.props.data.whisperThread.participants),
                             unreadMessagesCount: this.props.data.whisperThread.unreadMessagesCount,
@@ -46126,17 +46877,17 @@
                         return t
                     }, t
                 }(r.Component),
-                ye = Object(m.compose)(Object(v.a)(ge, {
+                Se = Object(m.compose)(Object(v.a)(be, {
                     options: function(e) {
                         return {
                             variables: {
-                                targetUserID: Object(he.b)(e.threadID, e.currentUserID) || ""
+                                targetUserID: Object(ge.b)(e.threadID, e.currentUserID) || ""
                             },
                             skip: !e.currentUserID || !e.threadID
                         }
                     },
                     name: "participants"
-                }), Object(v.a)(ve, {
+                }), Object(v.a)(ye, {
                     options: function(e) {
                         return {
                             variables: {
@@ -46149,7 +46900,7 @@
                             loadMore: function() {
                                 var t = "";
                                 return e.data.whisperThread && e.data.whisperThread.messages.edges.length > 0 && (t = e.data.whisperThread.messages.edges[e.data.whisperThread.messages.edges.length - 1].cursor), e.data.fetchMore({
-                                    query: ve,
+                                    query: ye,
                                     variables: i.a({}, e.data.variables, {
                                         cursor: t
                                     }),
@@ -46178,14 +46929,14 @@
                     topic: function(e) {
                         return Object(E.B)(e.currentUserID)
                     },
-                    mapMessageTypesToProps: (de = {}, de[k.PubsubMessageType.WhisperReceived] = "whisperReceived", de[k.PubsubMessageType.WhisperSent] = "whisperSent", de),
+                    mapMessageTypesToProps: (pe = {}, pe[k.PubsubMessageType.WhisperReceived] = "whisperReceived", pe[k.PubsubMessageType.WhisperSent] = "whisperSent", pe),
                     skipMessage: function(e, t) {
-                        return !Object(fe.e)(e) && !Object(fe.d)(e) || e.data_object.thread_id !== t.threadID
+                        return !Object(ve.e)(e) && !Object(ve.d)(e) || e.data_object.thread_id !== t.threadID
                     }
-                }]), Object(S.a)(), Object(I.d)("WhispersThread", {
+                }]), Object(S.a)(), Object(I.c)("WhispersThread", {
                     autoReportInteractive: !0
-                }))(be);
-            var ke, Se = Object(o.b)(function(e) {
+                }))(ke);
+            var we, Ee = Object(o.b)(function(e) {
                 return {
                     isLoggedIn: Object(c.d)(e)
                 }
@@ -46197,18 +46948,18 @@
                         return Object(l.d)(d.a, t)
                     }
                 }, e)
-            })(ye);
+            })(Se);
             n("fuJa");
             n.d(t, "b", function() {
-                return ke
-            }), n.d(t, "a", function() {
                 return we
+            }), n.d(t, "a", function() {
+                return Ce
             });
-            var we = function(e) {
+            var Ce = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.resizeAnimationHandle = null, t.renderThread = function(e) {
-                        return e ? r.createElement(Se, {
+                        return e ? r.createElement(Ee, {
                             key: e.threadID,
                             currentUserID: t.props.currentUserID,
                             collapsed: e.collapsed,
@@ -46226,7 +46977,7 @@
                     }, t.onBlock = function(e) {
                         t.props.archiveThread(e), t.props.onBlockThread(e)
                     }, t.setOpenThreadsRef = function(e) {
-                        return ke = e
+                        return we = e
                     }, t.handleContentResize = function() {
                         t.resizeAnimationHandle || (t.resizeAnimationHandle = requestAnimationFrame(function() {
                             t.props.onResizeContent(), t.resizeAnimationHandle = null
@@ -46238,12 +46989,12 @@
                         t = this.props.openedThreads.map(function(t) {
                             return e.renderThread(t)
                         });
-                    return r.createElement(B.Ia, {
+                    return r.createElement(H.Ia, {
                         className: "whispers-open-threads",
-                        display: B.R.Flex,
-                        flexDirection: B.T.RowReverse,
-                        alignItems: B.c.End,
-                        position: B.Sa.Absolute,
+                        display: H.R.Flex,
+                        flexDirection: H.T.RowReverse,
+                        alignItems: H.c.End,
+                        position: H.Sa.Absolute,
                         attachBottom: !0,
                         attachLeft: !0,
                         refDelegate: this.setOpenThreadsRef
@@ -46799,7 +47550,7 @@
                         }, n)
                     }, t
                 }(d.Component),
-                f = Object(r.d)(Object(p.d)("WhisperButton", {
+                f = Object(r.d)(Object(p.c)("WhisperButton", {
                     autoReportInteractive: !0
                 }))(h);
             var g = Object(i.b)(null, function(e) {
@@ -46861,6 +47612,7 @@
                 return l
             })
         },
+        ryLB: function(e, t, n) {},
         sAKk: function(e, t, n) {},
         sNlA: function(e, t, n) {
             "use strict";
@@ -46892,8 +47644,8 @@
                 I = n("WroD"),
                 _ = "https://www.googletagservices.com/tag/js/gpt.js",
                 R = "https://c.amazon-adsystem.com/aax2/apstag.js",
-                D = 3036,
-                O = function(e) {
+                O = 3036,
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -46910,7 +47662,7 @@
                                     n = e, i = t
                                 }),
                                 o = {
-                                    pubID: D,
+                                    pubID: O,
                                     adServer: "googletag",
                                     bidTimeout: 2e3
                                 },
@@ -46987,7 +47739,7 @@
                         return this.isInjected && e.gdpr.blockConsentRequiredContent !== t.gdpr.blockConsentRequiredContent
                     }, t
                 }(i.Component),
-                P = Object(y.d)(Object(w.a)(I), Object(T.a)(N.c.Amazon))(O);
+                P = Object(y.d)(Object(w.a)(I), Object(T.a)(N.c.Amazon))(D);
             var x = Object(u.b)(null, function(e) {
                     return Object(y.b)({
                         trackingSet: k.b
@@ -47175,29 +47927,30 @@
                         }), t
                     }, t
                 }(i.Component),
-                W = n("HuHG"),
-                G = n("Ar2k"),
-                q = n("Grq2"),
-                Q = "update_chunks",
-                K = "twilight.update_manager.known_builds",
-                Y = /^assets\/(.+)-.+\.(.+?)$/i;
+                W = n("NT6a"),
+                G = n("HuHG"),
+                q = n("Ar2k"),
+                Q = n("Grq2"),
+                K = "update_chunks",
+                Y = "twilight.update_manager.known_builds",
+                $ = /^assets\/(.+)-.+\.(.+?)$/i;
 
-            function $(e) {
-                var t = Y.exec(e);
+            function X(e) {
+                var t = $.exec(e);
                 if (t) return t[1] + "." + t[2]
             }
 
-            function X(e, t) {
+            function J(e, t) {
                 return c.b(this, void 0, void 0, function() {
                     var n, i, r, o, s, l, d, u, p, m, h, f;
                     return c.e(this, function(c) {
                         switch (c.label) {
                             case 0:
-                                for (n = a.o.dynamicSettings.get(Q, []), i = {
+                                for (n = a.o.dynamicSettings.get(K, []), i = {
                                         headers: new Headers({
                                             "Content-Type": "application/octet-stream"
                                         })
-                                    }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (d = $(l)) && n.includes(d) && r.push(fetch("" + a.o.config.cdnURL + l, i));
+                                    }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (d = X(l)) && n.includes(d) && r.push(fetch("" + a.o.config.cdnURL + l, i));
                                 return 0 === r.length ? [2, !1] : [4, Promise.all(r)];
                             case 1:
                                 for (u = c.sent(), p = !1, m = 0, h = u; m < h.length; m++)(f = h[m]).ok || (p = !0, t.warn("Failed to preload chunk.", {
@@ -47210,21 +47963,21 @@
                 })
             }
 
-            function J() {
-                return new Set(a.m.get(K, [])).add(a.o.config.buildID)
+            function Z() {
+                return new Set(a.m.get(Y, [])).add(a.o.config.buildID)
             }
 
-            function Z(e) {
-                a.m.set(K, Array.from(J().add(e)))
+            function ee(e) {
+                a.m.set(Y, Array.from(Z().add(e)))
             }
-            var ee = function(e) {
+            var te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             newBuilds: new Set,
                             rejectedBuilds: new Set,
                             shouldReloadOnTransition: !1
-                        }, t.knownBuilds = J(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
+                        }, t.knownBuilds = Z(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
                             t.state.shouldReloadOnTransition && window.location.reload(!0)
                         }, t.processManifest = function() {
                             return c.b(t, void 0, void 0, function() {
@@ -47257,7 +48010,7 @@
                                                 })
                                             }(this.logger)];
                                         case 1:
-                                            return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, X(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
+                                            return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, J(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
                                                 currentBuildID: a.o.config.buildID
                                             }), [2]);
                                         case 2:
@@ -47265,7 +48018,7 @@
                                                 currentBuildID: a.o.config.buildID,
                                                 releaseBuildID: e.release.buildId
                                             }), this.setState(function(t) {
-                                                return Z(e.release.buildId), {
+                                                return ee(e.release.buildId), {
                                                     newBuilds: new Set(t.newBuilds).add(e.release.buildId),
                                                     shouldReloadOnTransition: !e.canary || a.o.config.buildID !== e.canary.buildId
                                                 }
@@ -47283,13 +48036,13 @@
                                                 }
                                             }), i.label = 6;
                                         case 6:
-                                            return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, X(e.canary.files, this.logger)]) : [3, 10];
+                                            return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, J(e.canary.files, this.logger)]) : [3, 10];
                                         case 7:
                                             i.sent() && (this.logger.debug("Preloading canary chunks succeeded", {
                                                 currentBuildID: a.o.config.buildID,
                                                 canaryBuildID: t
                                             }), this.setState(function(e) {
-                                                return Z(t), {
+                                                return ee(t), {
                                                     newBuilds: new Set(e.newBuilds).add(t)
                                                 }
                                             })), i.label = 8;
@@ -47322,39 +48075,39 @@
                         return null
                     }, t
                 }(i.Component),
-                te = n("xlgz"),
-                ne = n("jytb"),
-                ie = n("ZPFX");
-            var re = Object(u.b)(function(e) {
+                ne = n("xlgz"),
+                ie = n("jytb"),
+                re = n("ZPFX");
+            var ae = Object(u.b)(function(e) {
                     return {
                         isLoggedIn: Object(s.d)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         theatreModeEnabled: e.ui.theatreModeEnabled
                     }
-                })(ie.a),
-                ae = (n("cGJr"), f.a.wrap(function() {
+                })(re.a),
+                oe = (n("cGJr"), f.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(37)]).then(n.bind(null, "mdlQ"))
                 }, "DashboardRoot")),
-                oe = f.a.wrap(function() {
+                se = f.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(32), n.e(0), n.e(36)]).then(n.bind(null, "Pnqn"))
                 }, "TeamsDashboardRoot"),
-                se = f.a.wrap(function() {
+                le = f.a.wrap(function() {
                     return n.e(35).then(n.bind(null, "hy6r"))
                 }, "TeamsLandingPage"),
-                le = f.a.wrap(function() {
+                ce = f.a.wrap(function() {
                     return n.e(34).then(n.bind(null, "8n14"))
                 }, "OnboardingRoot"),
-                ce = function(e) {
+                de = function(e) {
                     return i.createElement(m.c, {
                         to: "/teams/" + e.match.params.teamName + "/dashboard"
                     })
                 },
-                de = function(e) {
+                ue = function(e) {
                     return i.createElement(m.c, {
                         to: "/team/" + e.match.params.teamName
                     })
                 },
-                ue = function(e) {
+                pe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onHistoryChange = function(e, n) {
@@ -47387,59 +48140,57 @@
                             attachLeft: !0
                         }, a.o.benchmarking.toolsEnabled && i.createElement(z, null), i.createElement(N.a, null), i.createElement(x, null), i.createElement(U.a, null), i.createElement(M.b, null), i.createElement(m.e, null, i.createElement(m.d, {
                             path: "/hi",
-                            component: le
+                            component: ce
                         }), i.createElement(m.d, {
                             path: "/(manager|dashboard)/:pageName?",
                             component: h.a
                         }), i.createElement(m.d, {
                             path: "/event/:teamName",
-                            component: de
+                            component: ue
                         }), i.createElement(m.d, {
                             exact: !0,
                             path: "/team/:teamName/edit",
-                            render: ce
+                            render: de
                         }), i.createElement(m.d, {
                             path: "/team/:teamName",
-                            component: se
+                            component: le
                         }), i.createElement(m.d, {
                             path: "/teams/:teamName/dashboard/:pageName?",
-                            component: oe
+                            component: se
                         }), i.createElement(m.d, {
                             path: "/:channelName/manager",
-                            component: ae
+                            component: oe
                         }), i.createElement(m.d, {
                             path: "/:channelName/dashboard/:pageName?",
-                            component: ae
+                            component: oe
                         }), i.createElement(m.d, {
                             path: "/",
-                            component: re
-                        })), i.createElement(ne.b, null), i.createElement(G.b, null), i.createElement(g.a, null), this.props.firstPageLoaded && i.createElement(W.a, null), this.props.firstPageLoaded && i.createElement(q.a, {
+                            component: ae
+                        })), i.createElement(ie.b, null), i.createElement(q.b, null), i.createElement(g.a, null), this.props.firstPageLoaded && i.createElement(G.a, null), this.props.firstPageLoaded && i.createElement(Q.a, {
                             history: this.props.history
-                        }), this.props.isLoggedIn && i.createElement(te.a, null), a.o.benchmarking.toolsEnabled && i.createElement(j.c, {
-                            benchmarking: a.o.benchmarking
-                        }), this.props.firstPageLoaded && i.createElement(V, {
+                        }), this.props.isLoggedIn && i.createElement(ne.a, null), a.o.benchmarking.toolsEnabled && i.createElement(W.a, null), this.props.firstPageLoaded && i.createElement(V, {
                             history: this.props.history
-                        }), this.props.firstPageLoaded && i.createElement(ee, null), this.props.firstPageLoaded && i.createElement(A, null))
+                        }), this.props.firstPageLoaded && i.createElement(te, null), this.props.firstPageLoaded && i.createElement(A, null))
                     }, t
                 }(i.Component),
-                pe = Object(j.d)("Root", {
+                me = Object(j.c)("Root", {
                     isRoot: !0
-                })(ue);
-            var me, he, fe, ge = Object(u.b)(function(e) {
+                })(pe);
+            var he, fe, ge, ve = Object(u.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isLoggedIn: Object(s.d)(e),
                         theme: Object(p.a)(e)
                     }
-                })(pe),
-                ve = Object(r.f)(ge);
+                })(me),
+                be = Object(r.f)(ve);
 
-            function be() {
+            function ye() {
                 a.o.mount(i.createElement(r.d, {
                     history: a.o.history
-                }, i.createElement(ve, null)), document.getElementById("root"))
+                }, i.createElement(be, null)), document.getElementById("root"))
             }
-            a.o.integrations.desklight && (me = a.o.integrations.desklight, he = [], me.logger && function(e) {
+            a.o.integrations.desklight && (he = a.o.integrations.desklight, fe = [], he.logger && function(e) {
                 c.b(this, void 0, void 0, function() {
                     var t, i;
                     return c.e(this, function(r) {
@@ -47455,17 +48206,17 @@
                         }
                     })
                 })
-            }(me.logger), me.window && (he.push(me.window.onBack(function() {
+            }(he.logger), he.window && (fe.push(he.window.onBack(function() {
                 return a.o.history.goBack()
-            })), he.push(me.window.onForward(function() {
+            })), fe.push(he.window.onForward(function() {
                 return a.o.history.goForward()
             }))), window.addEventListener("unload", function() {
-                for (var e = 0, t = he; e < t.length; e++)(0, t[e])()
+                for (var e = 0, t = fe; e < t.length; e++)(0, t[e])()
             }), a.o.tracking.setPlatform(d.SpadePlatform.Desktop));
-            var ye = !1;
-            fe = a.o.store.getReduxStore().subscribe(function() {
+            var ke = !1;
+            ge = a.o.store.getReduxStore().subscribe(function() {
                 var e = a.o.store.getState();
-                !ye && Object(s.e)(e) && (ye = !0, fe(), a.a.optimizedBuild ? be() : setTimeout(be, 500))
+                !ke && Object(s.e)(e) && (ke = !0, ge(), a.a.optimizedBuild ? ye() : setTimeout(ye, 500))
             }), Object(l.a)(), a.o.store.dispatch(Object(o.e)())
         },
         sSlw: function(e, t, n) {
@@ -47936,6 +48687,42 @@
             }
             r.o.store.registerReducer("whispers", g)
         },
+        "t/yO": function(e, t, n) {
+            "use strict";
+            var i = n("/MKj"),
+                r = n("kRBY"),
+                a = n("mrSG"),
+                o = n("q1tI"),
+                s = n("/7QA"),
+                l = n("zB42"),
+                c = n("NdhY"),
+                d = n("D2+s"),
+                u = n("Ue10"),
+                p = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            isEnabled: s.l.get(c.b.forceToolsStorageKey, !1)
+                        }, t.toggleLocalCookie = function() {
+                            s.l.set(d.a, t.state.isEnabled), s.l.set(c.b.forceToolsStorageKey, !t.state.isEnabled), location.reload()
+                        }, t
+                    }
+                    return a.d(t, e), t.prototype.render = function() {
+                        return this.props.isStaff || s.a.buildType !== l.a.Production ? o.createElement(u.v, {
+                            onClick: this.toggleLocalCookie
+                        }, this.state.isEnabled ? "Disable" : "Enable", " Staff Console & Reload") : null
+                    }, t
+                }(o.Component);
+            var m = Object(i.b)(function(e) {
+                var t = Object(r.c)(e);
+                return {
+                    isStaff: t && t.roles && t.roles.isStaff
+                }
+            })(p);
+            n.d(t, "a", function() {
+                return m
+            })
+        },
         t5Gm: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -48329,80 +49116,6 @@
                     e.Emote = "emote", e.Mention = "mention", e.Hashtag = "hashtag", e.None = "none"
                 }(i || (i = {}))
         },
-        uwZC: function(e, t, n) {
-            "use strict";
-            n.d(t, "b", function() {
-                return r
-            }), n.d(t, "a", function() {
-                return s
-            });
-            var i = n("a1OF");
-
-            function r(e, t) {
-                var n = [];
-                if (!e || !t) return n;
-                for (var r = /[^\s\.,\!]+/g, a = r.exec(e); a;) {
-                    var o = a[0],
-                        s = t[o];
-                    if (s && "function" != typeof s) {
-                        var l = Object(i.c)(e.slice(0, a.index)),
-                            c = l ? l.length : a.index;
-                        n[c] = {
-                            startIndex: c,
-                            endIndex: c + o.length,
-                            data: {
-                                alt: o,
-                                images: {
-                                    themed: !1,
-                                    sources: {
-                                        "1x": Object(i.e)(s.id, 1),
-                                        "2x": Object(i.e)(s.id, 2),
-                                        "4x": Object(i.e)(s.id, 4)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    a = r.exec(e)
-                }
-                return n
-            }
-            var a = {
-                    "\\:\\&gt\\;": [":>"],
-                    "\\&gt\\;\\(": [">("],
-                    "\\&lt\\;\\]": ["<]"],
-                    "\\&lt\\;3": ["<3"],
-                    ":-?(?:7|L)": [":-7", ":-L", ":7", ":L"],
-                    "[oO](_|\\.)[oO]": ["o_o", "O_O", "o_O", "O_o", "o.o", "O.O", "o.O", "O.o"],
-                    "\\;-?(p|P)": [";-p", ";-P", ";p", ";P"],
-                    "\\;-?\\)": [";-)", ";)"],
-                    "\\:-?(o|O)": [":-o", ":-O", ":o", ":O"],
-                    "\\:-?(p|P)": [":-p", ":-P", ":p", ":P"],
-                    "\\:-?(S|s)": [":-S", ":-s", ":s", ":S"],
-                    "\\:-?[\\\\/]": [":-/", ":-\\", ":/", ":\\"],
-                    "\\:-?[z|Z|\\|]": [":-|", ":-Z", ":-z", ":|", ":Z", ":z"],
-                    "\\:-?\\(": [":-(", ":("],
-                    "\\:-?\\)": [":-)", ":)"],
-                    "\\:-?D": [":-D", ":D"],
-                    "#-?[\\\\/]": ["#-/", "#-\\", "#/", "#\\"],
-                    "B-?\\)": ["B-)", "B)"],
-                    "R-?\\)": ["R-)", "R)"]
-                },
-                o = "0";
-
-            function s(e) {
-                for (var t = {}, n = 0, i = e; n < i.length; n++)
-                    for (var r = i[n], s = 0, l = r.emotes; s < l.length; s++)
-                        for (var c = l[s], d = 0, u = a[c.token] || [c.token]; d < u.length; d++) {
-                            var p = u[d];
-                            t[p] && r.id === o || (t[p] = {
-                                id: c.id,
-                                token: p
-                            })
-                        }
-                return t
-            }
-        },
         v2f3: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -48602,7 +49315,7 @@
             }), n.d(t, "c", function() {
                 return R
             }), n.d(t, "q", function() {
-                return O
+                return D
             }), n.d(t, "p", function() {
                 return P
             });
@@ -48624,7 +49337,7 @@
                     return l.e(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, D()];
+                                return [4, O()];
                             case 1:
                                 return t = n.sent(), c.o.tracking.track(d.SpadeEventType.WhisperIgnoreUser, {
                                     ui_context: e.context,
@@ -48644,7 +49357,7 @@
                     return l.e(this, function(i) {
                         switch (i.label) {
                             case 0:
-                                return [4, D()];
+                                return [4, O()];
                             case 1:
                                 return n = i.sent(), c.o.tracking.track(d.SpadeEventType.WhisperThreadMod, {
                                     conversation_id: e,
@@ -48751,7 +49464,7 @@
                 })
             }
 
-            function D() {
+            function O() {
                 var e = this;
                 return new Promise(function(t) {
                     setTimeout(function() {
@@ -48778,13 +49491,13 @@
                 })
             }
 
-            function O(e) {
+            function D(e) {
                 return l.b(this, void 0, void 0, function() {
                     var t;
                     return l.e(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, D()];
+                                return [4, O()];
                             case 1:
                                 return t = n.sent(), c.o.tracking.track(d.SpadeEventType.WhisperSent, {
                                     to: e.targetUserLogin,
@@ -48805,7 +49518,7 @@
                     return l.e(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                return [4, D()];
+                                return [4, O()];
                             case 1:
                                 return t = n.sent(), c.o.tracking.track(d.SpadeEventType.WhisperReceived, {
                                     to: t && t.login,
@@ -48833,7 +49546,6 @@
                 e.Archive = "archive", e.MarkNotSpam = "mark_not_spam"
             }(s || (s = {}))
         },
-        vQMB: function(e, t, n) {},
         "vR4/": function(e, t, n) {
             "use strict";
             var i, r;
@@ -50268,7 +50980,7 @@
                         }))
                     }, t
                 }(o.Component),
-                S = Object(f.d)("PassportModal", {
+                S = Object(f.c)("PassportModal", {
                     autoReportInteractive: !0
                 })(k),
                 w = n("aCAx"),
@@ -50280,14 +50992,14 @@
                 _ = n("t5Gm"),
                 R = n("vdE0");
 
-            function D(e) {
+            function O(e) {
                 return Object(w.d)(S, {
                     action: e,
                     initialTab: c.a.Login
                 })
             }
 
-            function O(e) {
+            function D(e) {
                 return Object(w.d)(S, {
                     action: e,
                     initialTab: c.a.Signup
@@ -50396,9 +51108,9 @@
                 }
             }
             n.d(t, "f", function() {
-                return D
-            }), n.d(t, "h", function() {
                 return O
+            }), n.d(t, "h", function() {
+                return D
             }), n.d(t, "g", function() {
                 return P
             }), n.d(t, "a", function() {
@@ -51111,7 +51823,7 @@
                         }, e))))
                     }, t
                 }(r.Component),
-                c = Object(a.d)("PrimeError", {
+                c = Object(a.c)("PrimeError", {
                     autoReportInteractive: !0
                 })(l);
             n.d(t, "a", function() {
@@ -51635,6 +52347,6 @@
         }
     },
     [
-        [165, 89, 0]
+        [167, 89, 0]
     ]
 ]);
