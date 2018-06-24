@@ -54,7 +54,7 @@ window.__twilightSettings = {
     "legacy_routes_enabled": true,
     "longtask_tracking_sample_rate": 0.1,
     "mobile_subs_feature_flag": "on",
-    "native_broadcast_blacklist": ["germenchrestream"],
+    "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
     "onsite_notifications_launch": true,
