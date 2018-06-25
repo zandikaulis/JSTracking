@@ -221,6 +221,30 @@ window.__twilightSettings = {
                 "value": "no_archives"
             }]
         },
+        "164332c9-759a-46f5-92de-63d43ff2fd35": {
+            "name": "twilight_web_side_nav_upsell_center_channels",
+            "v": 4088,
+            "t": 1,
+            "groups": [{
+                "weight": 1,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "learn"
+            }, {
+                "weight": 0,
+                "value": "support"
+            }, {
+                "weight": 0,
+                "value": "liveup"
+            }, {
+                "weight": 0,
+                "value": "rec"
+            }, {
+                "weight": 0,
+                "value": "bullet"
+            }]
+        },
         "1adeeefb-a0cc-48a4-adbd-8c9a1bdaa06f": {
             "name": "TWILIGHT_PAYMENTS_MANAGEMENT_PAGE",
             "v": 3122,
