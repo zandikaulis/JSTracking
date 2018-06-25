@@ -1063,13 +1063,13 @@ window.__twilightSettings = {
         },
         "f3920cff-ef57-46c9-8dd9-b4f145acf6e5": {
             "name": "twilight_discovery_frontpage_mvp",
-            "v": 4023,
+            "v": 4084,
             "t": 2,
             "groups": [{
-                "weight": 75,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 25,
+                "weight": 50,
                 "value": "variant"
             }]
         },
