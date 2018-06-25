@@ -12,7 +12,7 @@ window.__twilightSettings = {
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
     "bits_world_cup_event": true,
-    "bounty_board_available_bounties_date": "Fri June 22 2018 00:00:00 GMT-0700 (PDT)",
+    "bounty_board_available_bounties_date": "Wed June 27 2018 00:00:00 GMT-0700 (PDT)",
     "browser_notifications_launch": true,
     "channel_feed_enabled": true,
     "chatrooms_enabled": true,
