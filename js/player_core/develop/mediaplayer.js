@@ -1034,14 +1034,6 @@ var KEY_SYSTEMS_BY_STRING = {
     'org.w3.clearkey': KEY_SYSTEMS.CLEAR_KEY,
 };
 
-// This is an auth.xml in base64, this works with sample data provided by BuyDRM.
-// The other one is currently in use since it does not allow testing in
-// Windows VM, but this should be used/tested when on Windows machine
-// var TEST_AUTH_XML = 'PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxLZXlPU0F1dGhlbnRpY2F0aW9uWE1MPjxEYXRhPjxXaWRldmluZVBvbGljeSBmbF9DYW5QZXJzaXN0PSJmYWxzZSIgZmxfQ2FuUGxheT0idHJ1ZSIvPjxXaWRldmluZUNvbnRlbnRLZXlTcGVjIFRyYWNrVHlwZT0iSEQiPjxTZWN1cml0eUxldmVsPjE8L1NlY3VyaXR5TGV2ZWw+PC9XaWRldmluZUNvbnRlbnRLZXlTcGVjPjxGYWlyUGxheVBvbGljeSBwZXJzaXN0ZW50PSJmYWxzZSIvPjxMaWNlbnNlIHR5cGU9InNpbXBsZSIvPjxHZW5lcmF0aW9uVGltZT4yMDE4LTAyLTIyIDIwOjU2OjI5LjAwMDwvR2VuZXJhdGlvblRpbWU+PEV4cGlyYXRpb25UaW1lPjIwMTgtMDQtMjIgMjA6NTY6MjkuMDAwPC9FeHBpcmF0aW9uVGltZT48VW5pcXVlSWQ+MmQ2ZGVjZjRmOTJkNmNhNDRkMjA5MTE4NmI0YzM3YWY8L1VuaXF1ZUlkPjxSU0FQdWJLZXlJZD5hMTdmZDMzZDM4NDNkZjliMTc2NzljY2Y1MGE0MTliMjwvUlNBUHViS2V5SWQ+PC9EYXRhPjxTaWduYXR1cmU+Q3hxUTFwOUtRVi9rSlRCdXdsK2QwTnVEa25uWnBqdktHY08zOEZ6MFh5RXBtajlPV0h0eCtvdVJPT3pUWDdEdkU1elU5SG50MXlWZEc4UUZYc043WSsvUHRWVDZuV1NFdWNwL1gzdit3MWFadG1leFpCa1BDc3g4VXhxZ1IvT1JlWmJmM1VXNUxMYXZSVkZXdzUzeWJGUUhsK2I3S2lxVTBpaHFTd3BCZ3ROenJIVnRKYXFXeHRmR2xRRXdtZ0ZZcG5aM3NUdHAvVDNCeCtRMjRKTHhOSjFhb3p3elhwdGlNaTE0alhLU2c1MXdOWWh6cm84YTJrVml2UzdRbTE0SEFCUnRGb1lCbjhGUldmanhHNTlXVk1IUlhUTGRJUlR6dDJmVFR5dUhTSS9xRkpjYmZ5VmpaSmRTeVlFOEJmTDZvUlNXdkdRMkVTYlJHbFZGTysyMXJRPT08L1NpZ25hdHVyZT48L0tleU9TQXV0aGVudGljYXRpb25YTUw+Cg==';
-
-// This one has 'PlayEnable', allows PlayReady to work on Edge in Windows VM
-var TEST_AUTH_XML = 'PEtleU9TQXV0aGVudGljYXRpb25YTUw+PERhdGE+PEdlbmVyYXRpb25UaW1lPjIwMTgtMDMtMDEgMTk6MjE6NTQuMTEzPC9HZW5lcmF0aW9uVGltZT48RXhwaXJhdGlvblRpbWU+MjAxOC0wNS0wMSAxOToyMTo1NC4xMTQ8L0V4cGlyYXRpb25UaW1lPjxVbmlxdWVJZD5iZDc4OTk2YzU5NTg0OTNmYmQ2YTcwMzI3YzVlNWI1NzwvVW5pcXVlSWQ+PFJTQVB1YktleUlkPmExN2ZkMzNkMzg0M2RmOWIxNzY3OWNjZjUwYTQxOWIyPC9SU0FQdWJLZXlJZD48V2lkZXZpbmVQb2xpY3kgZmxfQ2FuUGxheT0idHJ1ZSIgZmxfQ2FuUGVyc2lzdD0iZmFsc2UiIC8+PFdpZGV2aW5lQ29udGVudEtleVNwZWMgVHJhY2tUeXBlPSJIRCI+PFNlY3VyaXR5TGV2ZWw+MTwvU2VjdXJpdHlMZXZlbD48L1dpZGV2aW5lQ29udGVudEtleVNwZWM+PEZhaXJQbGF5UG9saWN5IC8+PExpY2Vuc2UgdHlwZT0ic2ltcGxlIj48UGxheT48SWQ+YTU0NWRiNTUtNDQ3Ny00ODhhLTlhNzEtMWNkZGUyMzNkZGUxPC9JZD48L1BsYXk+PC9MaWNlbnNlPjxQbGF5IGlkPSJhNTQ1ZGI1NS00NDc3LTQ4OGEtOWE3MS0xY2RkZTIzM2RkZTEiPjxFbmFibGVycz48SWQ+Nzg2NjI3ZDgtYzJhNi00NGJlLThmODgtMDhhZTI1NWIwMWE3PC9JZD48L0VuYWJsZXJzPjwvUGxheT48L0RhdGE+PFNpZ25hdHVyZT5HTVEzbFF2Q0I3SVo5ekY3b3U4eVJmMHdYTmttZXV0NitEdXVBY0pwMnJ3L3ZaTSt6ZllnOU1GbkpJa0N6cTdWb1p3a3hTdUQ1K0FSV2lvMm9wMTVRVHBlVHVubHZ2MktJYTRHM3p5Ukc5MmkzZk5qbmlFSTVROFVJeXcwMmxIVjEyZkU1eFdSTlJhc255azlISlFHSUlqWkIxazFad2RUMmpNVTNoK1JSNjFXdUpRcjlHVzgxSXdHYld3dGtlOSs3aXRxZ2Qxa2JmbGR4aHRnK2RnQW5YM3pnVzlDOFRoNm8vdnVBVUI3dVdBSFlGVWc2WEQrYTBteHpPQ29DZnh2aFg3VlQ3YzhWa1RKQzE1dCtTUmgyTUlpUUdidzNtRlNZWHpvaUljc2tFbnBtakVmWFJnazZxMFQxR1VJQTN4MXM4US8rS2RsMXg2WWpmV2UvOUltM3c9PTwvU2lnbmF0dXJlPjwvS2V5T1NBdXRoZW50aWNhdGlvblhNTD4=';
-
 var ENCRYPTION_TYPES = {
     CENC: 'cenc',
     CBCS: 'cbcs',
@@ -1117,6 +1109,8 @@ var DEFAULT_VIDEO_CAPABILITIES = [{
     "contentType": 'video/mp4;codecs="avc1.42E01E"'
 }];
 
+var AUTH_XML_URL = 'https://vizima.twitch.tv/api/authxml/';
+
 var NO_CDM_SUPPORT_ERROR = {
     code: 4,
     message: 'Your browser does not support any DRM Content Decryption Modules',
@@ -1160,7 +1154,6 @@ module.exports = {
     MODES: MODES,
     KEY_SYSTEMS: KEY_SYSTEMS,
     KEY_SYSTEMS_BY_STRING: KEY_SYSTEMS_BY_STRING,
-    TEST_AUTH_XML: TEST_AUTH_XML,
     ENCRYPTION_TYPES: ENCRYPTION_TYPES,
     SUPPORTED_DRM_MAP: SUPPORTED_DRM_MAP,
     DRM_SUPPORT_BY_BROWSER: DRM_SUPPORT_BY_BROWSER,
@@ -1169,6 +1162,7 @@ module.exports = {
     SUPPORTED_BROWSERS: SUPPORTED_BROWSERS,
     DEFAULT_VIDEO_CAPABILITIES: DEFAULT_VIDEO_CAPABILITIES,
     DEFAULT_AUDIO_CAPABILITIES: DEFAULT_AUDIO_CAPABILITIES,
+    AUTH_XML_URL: AUTH_XML_URL,
     ERRORS: ERRORS,
 };
 
@@ -1428,7 +1422,7 @@ var parseAllPSSHData = function(data) {
     return uuids;
 };
 
-var fetchArrayBuffer = function (url, options) {
+var httpRequest = function (url, options) {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
         xhr.open(options.method, url, true);
@@ -1438,7 +1432,7 @@ var fetchArrayBuffer = function (url, options) {
                 xhr.setRequestHeader(h, options.headers[h]);
             }
         }
-        xhr.responseType = "arraybuffer";
+        xhr.responseType = options.responseType;
 
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
@@ -1476,7 +1470,7 @@ module.exports = {
     arrayBufferFrom: arrayBufferFrom,
     uintArrayToString: uintArrayToString,
     getHostnameFromUri: getHostnameFromUri,
-    fetchArrayBuffer: fetchArrayBuffer,
+    httpRequest: httpRequest,
     parsePSSHSupport: parsePSSHSupport,
     parsePSSHSupportFromInitData: parsePSSHSupportFromInitData,
     checkErrorFormat: checkErrorFormat,
@@ -1501,7 +1495,6 @@ var MODES = Constants.MODES;
 var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
 var ALL_KEY_SYSTEMS = ALL_KEY_SYSTEMS;
 var KEY_SYSTEMS_BY_STRING = Constants.KEY_SYSTEMS_BY_STRING;
-var TEST_AUTH_XML = Constants.TEST_AUTH_XML;
 var ENCRYPTION_TYPES = Constants.ENCRYPTION_TYPES;
 var SUPPORTED_DRM_MAP = Constants.SUPPORTED_DRM_MAP;
 var DRM_SUPPORT_BY_BROWSER = Constants.DRM_SUPPORT_BY_BROWSER;
@@ -1509,21 +1502,17 @@ var DRM_SUPPORT_VALUES = Constants.DRM_SUPPORT_VALUES;
 var SUPPORTED_BROWSERS = Constants.SUPPORTED_BROWSERS;
 var DEFAULT_AUDIO_CAPABILITIES = Constants.DEFAULT_AUDIO_CAPABILITIES;
 var DEFAULT_VIDEO_CAPABILITIES = Constants.DEFAULT_VIDEO_CAPABILITIES;
+var AUTH_XML_URL = Constants.AUTH_XML_URL;
 var arrayBuffersEqual = Utils.arrayBuffersEqual;
 var getHostnameFromUri = Utils.getHostnameFromUri;
 var arrayBufferFrom = Utils.arrayBufferFrom;
 var uintArrayToString = Utils.uintArrayToString;
-var fetchArrayBuffer = Utils.fetchArrayBuffer;
+var httpRequest = Utils.httpRequest;
 var parsePSSHSupport = Utils.parsePSSHSupport;
 var parsePSSHSupportFromInitData = Utils.parsePSSHSupportFromInitData;
 var checkErrorFormat = Utils.checkErrorFormat;
 
 var ERRORS = Constants.ERRORS;
-
-// When using this fetch shim, FF loses support for response.arrayBuffer();
-// not sure if I should use a different shim like `github/fetch` for this instead
-// current browser support: https://caniuse.com/#feat=fetch
-// var fetch = require('./fetch'); // get fetch or fetchShim
 
 /* TODO Robustness levels for Chrome best practices
     Spec notes that:
@@ -1577,6 +1566,7 @@ var DRMManager = function(config) {
     this._currentSrc = null;
     this._pendingSessions = [];
     this._sessions = [];
+    this._authUrl = ''; // Based on the channel name
 
     this._init();
 };
@@ -1691,6 +1681,13 @@ DRMManager.prototype.configureCDMSupport = function(protectionData) {
     if (this.cdmSupport === null && protectionData.length > 0) {
         this.cdmSupport = parsePSSHSupport(protectionData);
     }
+};
+
+DRMManager.prototype.setUrl = function (url) {
+    var parsed = new URL(url).pathname.split('/');
+    var filename = parsed[parsed.length - 1];
+    var channelName = filename.split('.')[0]; //remove extension
+    this._authUrl = AUTH_XML_URL + channelName;
 };
 
 /**
@@ -1937,18 +1934,22 @@ DRMManager.prototype._generateLicense = function(message) {
         }));
         return Promise.resolve(result);
     } else {
-        var requestData = this._prepareLicenseRequest(message);
-        return fetchArrayBuffer(requestData.url, requestData.options)
-            .catch(function(error) {
-                return Promise.reject(ERRORS.LICENSE_REQUEST);
-            });
+        return httpRequest(this._authUrl, {
+            method: 'GET',
+            responseType: 'text',
+        }).then(function (authXml) {
+            var requestData = this._prepareLicenseRequest(message, authXml);
+            return httpRequest(requestData.url, requestData.options);
+        }).catch(function () {
+            return Promise.reject(ERRORS.LICENSE_REQUEST);
+        });
     }
 };
 
-DRMManager.prototype._prepareLicenseRequest = function(message) {
+DRMManager.prototype._prepareLicenseRequest = function(message, authXml) {
     var body = message;
     var headers = {
-        customdata: TEST_AUTH_XML
+        customdata: authXml,
     };
 
     // get additional data for specifics CDM license request calls
@@ -1968,6 +1969,7 @@ DRMManager.prototype._prepareLicenseRequest = function(message) {
         url: this.selectedCDM.licenseUrl,
         options: {
             method: 'POST',
+            responseType: 'arraybuffer',
             body: body,
             headers: headers,
         }
@@ -2491,9 +2493,9 @@ MediaPlayer.prototype.getHTMLVideoElement = function () {
 }
 
 MediaPlayer.prototype.load = function (url) {
-    this._srcUrl = url;
     this._postMessage(WorkerMessage.LOAD, url);
     this._resetState();
+    this._mediaSink.setUrl(url);
 }
 
 MediaPlayer.prototype.play = function () {
@@ -2584,7 +2586,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-32def779";
+    return "2.3.0-1754ac68";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3363,6 +3365,13 @@ MediaSink.prototype.droppedFrames = function () {
  */
 MediaSink.prototype.videoElement = function () {
     return this._video;
+};
+
+/**
+ * Set master manifest URL for this stream
+ */
+MediaSink.prototype.setUrl = function (url) {
+    return this._drmManager.setUrl(url);
 };
 
 /**
