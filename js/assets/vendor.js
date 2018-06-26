@@ -2764,7 +2764,7 @@
         "2UD4": function(e, t, n) {
             "use strict";
             var r = n("lVBX").default;
-            n(72), (t = e.exports = r).default = t
+            n(75), (t = e.exports = r).default = t
         },
         "2XXS": function(e, t, n) {
             var r = n("yNUO");
@@ -4730,7 +4730,7 @@
         "7Inb": function(e, t, n) {
             "use strict";
             var r = n("W6Rk").default;
-            n(70), (t = e.exports = r).default = t
+            n(73), (t = e.exports = r).default = t
         },
         "7KIa": function(e, t, n) {
             var r = n("yNUO");
@@ -9894,7 +9894,7 @@
                         return m.port2.postMessage(0)
                     }) : _ = void 0 === c ? function() {
                         try {
-                            var e = n(119);
+                            var e = n(122);
                             return void 0 !== (a = e.runOnLoop || e.runOnContext) ? function() {
                                 a(v)
                             } : h()
@@ -17702,13 +17702,15 @@
             See the Apache Version 2.0 License for specific language governing permissions
             and limitations under the License.
             ***************************************************************************** */
-            var r = Object.setPrototypeOf || {
-                __proto__: []
-            }
-            instanceof Array && function(e, t) {
-                e.__proto__ = t
-            } || function(e, t) {
-                for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
+            var r = function(e, t) {
+                return (r = Object.setPrototypeOf || {
+                        __proto__: []
+                    }
+                    instanceof Array && function(e, t) {
+                        e.__proto__ = t
+                    } || function(e, t) {
+                        for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
+                    })(e, t)
             };
 
             function o(e, t) {
@@ -17717,10 +17719,12 @@
                 }
                 r(e, t), e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n)
             }
-            var i = Object.assign || function(e) {
-                for (var t, n = 1, r = arguments.length; n < r; n++)
-                    for (var o in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
-                return e
+            var i = function() {
+                return (i = Object.assign || function(e) {
+                    for (var t, n = 1, r = arguments.length; n < r; n++)
+                        for (var o in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+                    return e
+                }).apply(this, arguments)
             };
 
             function a(e, t, n, r) {
@@ -17773,8 +17777,8 @@
                         return function(i) {
                             if (n) throw new TypeError("Generator is already executing.");
                             for (; a;) try {
-                                if (n = 1, r && (o = r[2 & i[0] ? "return" : i[0] ? "throw" : "next"]) && !(o = o.call(r, i[1])).done) return o;
-                                switch (r = 0, o && (i = [0, o.value]), i[0]) {
+                                if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
+                                switch (r = 0, o && (i = [2 & i[0], o.value]), i[0]) {
                                     case 0:
                                     case 1:
                                         o = i;
@@ -19479,74 +19483,76 @@
                     function e(e, t) {
                         this.emitter = e, this.logger = t
                     }
-                    return e.prototype.connecting = function(e) {
-                        this.add("connecting", e)
-                    }, e.prototype.connected = function(e) {
-                        this.add("connected", e)
-                    }, e.prototype.disconnected = function(e) {
-                        this.add("disconnected", e)
-                    }, e.prototype.reconnecting = function(e) {
-                        this.add("reconnecting", e)
-                    }, e.prototype.reconnected = function(e) {
-                        this.add("reconnected", e)
-                    }, e.prototype.joined = function(e) {
-                        this.add("joined", e)
-                    }, e.prototype.parted = function(e) {
-                        this.add("parted", e)
-                    }, e.prototype.hosted = function(e) {
-                        this.add("hosted", e)
-                    }, e.prototype.hosting = function(e) {
-                        this.add("hosting", e)
-                    }, e.prototype.unhost = function(e) {
-                        this.add("unhost", e)
-                    }, e.prototype.chat = function(e) {
-                        this.add("chat", e)
-                    }, e.prototype.usernotice = function(e) {
-                        this.add("usernotice", e)
-                    }, e.prototype.action = function(e) {
+                    return e.prototype.action = function(e) {
                         this.add("action", e)
-                    }, e.prototype.timeout = function(e) {
-                        this.add("timeout", e)
+                    }, e.prototype.badgesupdated = function(e) {
+                        this.add("badgesupdated", e)
                     }, e.prototype.ban = function(e) {
                         this.add("ban", e)
-                    }, e.prototype.subscription = function(e) {
-                        this.add("subscription", e)
-                    }, e.prototype.resub = function(e) {
-                        this.add("resub", e)
-                    }, e.prototype.subgift = function(e) {
-                        this.add("subgift", e)
-                    }, e.prototype.mods = function(e) {
-                        this.add("mods", e)
-                    }, e.prototype.roomstate = function(e) {
-                        this.add("roomstate", e)
-                    }, e.prototype.slowmode = function(e) {
-                        this.add("slowmode", e)
-                    }, e.prototype.followersonly = function(e) {
-                        this.add("followersonly", e)
-                    }, e.prototype.subscribers = function(e) {
-                        this.add("subscribers", e)
                     }, e.prototype.charity = function(e) {
                         this.add("charity", e)
+                    }, e.prototype.chat = function(e) {
+                        this.add("chat", e)
                     }, e.prototype.clearchat = function(e) {
                         this.add("clearchat", e)
                     }, e.prototype.crate = function(e) {
                         this.add("crate", e)
-                    }, e.prototype.rewardgift = function(e) {
-                        this.add("rewardgift", e)
-                    }, e.prototype.purchase = function(e) {
-                        this.add("purchase", e)
-                    }, e.prototype.unraid = function(e) {
-                        this.add("unraid", e)
-                    }, e.prototype.raid = function(e) {
-                        this.add("raid", e)
-                    }, e.prototype.ritual = function(e) {
-                        this.add("ritual", e)
-                    }, e.prototype.notice = function(e) {
-                        this.add("notice", e)
-                    }, e.prototype.badgesupdated = function(e) {
-                        this.add("badgesupdated", e)
+                    }, e.prototype.connected = function(e) {
+                        this.add("connected", e)
+                    }, e.prototype.connecting = function(e) {
+                        this.add("connecting", e)
+                    }, e.prototype.disconnected = function(e) {
+                        this.add("disconnected", e)
                     }, e.prototype.emoteonlymode = function(e) {
                         this.add("emoteonlymode", e)
+                    }, e.prototype.followersonly = function(e) {
+                        this.add("followersonly", e)
+                    }, e.prototype.hosted = function(e) {
+                        this.add("hosted", e)
+                    }, e.prototype.hosting = function(e) {
+                        this.add("hosting", e)
+                    }, e.prototype.joined = function(e) {
+                        this.add("joined", e)
+                    }, e.prototype.mods = function(e) {
+                        this.add("mods", e)
+                    }, e.prototype.notice = function(e) {
+                        this.add("notice", e)
+                    }, e.prototype.parted = function(e) {
+                        this.add("parted", e)
+                    }, e.prototype.purchase = function(e) {
+                        this.add("purchase", e)
+                    }, e.prototype.r9kmode = function(e) {
+                        this.add("r9kmode", e)
+                    }, e.prototype.raid = function(e) {
+                        this.add("raid", e)
+                    }, e.prototype.reconnected = function(e) {
+                        this.add("reconnected", e)
+                    }, e.prototype.reconnecting = function(e) {
+                        this.add("reconnecting", e)
+                    }, e.prototype.resub = function(e) {
+                        this.add("resub", e)
+                    }, e.prototype.rewardgift = function(e) {
+                        this.add("rewardgift", e)
+                    }, e.prototype.ritual = function(e) {
+                        this.add("ritual", e)
+                    }, e.prototype.roomstate = function(e) {
+                        this.add("roomstate", e)
+                    }, e.prototype.slowmode = function(e) {
+                        this.add("slowmode", e)
+                    }, e.prototype.subgift = function(e) {
+                        this.add("subgift", e)
+                    }, e.prototype.subscribers = function(e) {
+                        this.add("subscribers", e)
+                    }, e.prototype.subscription = function(e) {
+                        this.add("subscription", e)
+                    }, e.prototype.timeout = function(e) {
+                        this.add("timeout", e)
+                    }, e.prototype.unhost = function(e) {
+                        this.add("unhost", e)
+                    }, e.prototype.unraid = function(e) {
+                        this.add("unraid", e)
+                    }, e.prototype.usernotice = function(e) {
+                        this.add("usernotice", e)
                     }, e.prototype.removeAll = function() {
                         this.logger.debug("Removed all event listeners"), this.emitter.removeAllListeners()
                     }, e.prototype.add = function(e, t) {
@@ -33794,7 +33800,7 @@
         ty1X: function(e, t, n) {
             "use strict";
             var r = n("p8t8").default;
-            n(71), (t = e.exports = r).default = t
+            n(74), (t = e.exports = r).default = t
         },
         u3z5: function(e, t, n) {
             var r = n("yHON"),
