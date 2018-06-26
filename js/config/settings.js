@@ -792,18 +792,6 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
-        "9a93c54d-a771-4dd6-ab25-02216c2d6c2a": {
-            "name": "twilight_pubg_filters",
-            "v": 3918,
-            "t": 1,
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "variant"
-            }]
-        },
         "9ba74270-ecf4-466d-b04e-f66b9883d632": {
             "name": "TWILIGHT_WORLD_CUP_EVENT_SETTINGS",
             "v": 3973,
