@@ -84,9 +84,6 @@ window.__twilightSettings = {
     "sizmek_versatag_teams": ["wrestling"],
     "spade_url": "https://video-edge-397d2a.sjc02.hls.ttvnw.net/v1/segment/CkzkEo2Wu5zMRQ9GIhigmz8kRBl8hwhBR4toBvtOZFZCjgDxLo98Kiv00bUDbSRKOpu_nAvWQgDgxDj4KRJi7_37VY4fa3MOpWxlq5CbC5tl82fFCAYPnCFHfkV1Hxta8Wu-yayZcttA1U2xjca9mkeiSw15wqL-8pJ9IjzNOxSUcwTTGgYTqxp_kiSfn-VF8UMDnUK72-Pt9dl4qkY3-Dm-HUpqLMvkQQOaO_TgfJI_imdh8mEftHT275sZ9_I-_gBWFMlkKWcB3SDMpBQcZvwQ8rZF_xLNyMvOYAE8vCmYs2t3g7XETgnIDTcz8_gyHAmOzuX3V6XLu1qql9clRqVEJ0vNG0pos9SS3Bo8UxSaJkt17sTERdpLJ_F3Q7sC9ZGXKEeazKmX2ZthAagZm_4UV8r7I_q40psfC75Uos72zu447AsrEK2qiLFQy2ujqQ90rAXDO-oK2anBCU2oQdoNIgl3VJhQNXzobXxDymYAdTNsocTP9WTFrEjNITFAMc38bbV-8GcoKC6ItGL3BqsN4X-d6RV0Rw.ts",
     "stats_sample_rate": 100,
-    "stream_summary_new_referrals": true,
-    "stream_summary_timeseries_panel": true,
-    "stream_summary_vod_panel": true,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "throttled_experiment_event_enabled": false,
     "tvapp_ps4_ads_enabled": true,
@@ -98,7 +95,6 @@ window.__twilightSettings = {
     "tvapp_xbox_preroll_frequency": 900,
     "twilight_clips_already": "on",
     "twilight_collections_manager_enabled": true,
-    "twilight_dashboard_permissions": "on",
     "twilight_owl_sub_only_vod": true,
     "twitch_prime_fortnite": true,
     "twitch_prime_fortnite_link_url": "https://www.epicgames.com/fortnite/twitch-prime-pack2",
@@ -584,18 +580,6 @@ window.__twilightSettings = {
                 "value": "last"
             }]
         },
-        "59c5198b-ea6d-423d-b337-ea93d0dc8d66": {
-            "name": "TWILIGHT_LEEROY_JENKINS",
-            "v": 2282,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
-            }]
-        },
         "5c8e4a59-8c63-4000-9c4e-6224f34b7c21": {
             "name": "twilight_web_onboarding_channel_surfing",
             "v": 3549,
@@ -685,18 +669,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "variation"
-            }]
-        },
-        "6f35b29f-bedf-4023-8002-652a308ee963": {
-            "name": "TWILIGHT_REMOVE_DASHBOARD_STATS_AND_REVENUE",
-            "v": 3810,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
             }]
         },
         "6f822381-f41d-445e-bf88-36fb9095a7b5": {
@@ -1093,18 +1065,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "variant1"
-            }]
-        },
-        "f866f89d-85de-4a5b-9b00-d97c791bc16d": {
-            "name": "TWILIGHT_RAID_AUTO_JOIN",
-            "v": 3413,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
             }]
         },
         "fa443b30-d363-4978-a831-14c653eb6f41": {
