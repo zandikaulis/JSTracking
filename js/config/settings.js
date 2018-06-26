@@ -746,7 +746,7 @@ window.__twilightSettings = {
         },
         "7aa589f3-34d8-425f-8227-29007d50757e": {
             "name": "twilight_growth_email_verify_bar",
-            "v": 2955,
+            "v": 4100,
             "t": 2,
             "groups": [{
                 "weight": 1,
@@ -778,18 +778,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "expanded"
-            }]
-        },
-        "9619b63b-2e9a-4e20-af4b-cce72346691d": {
-            "name": "twilight_web_onboarding_follow_categories",
-            "v": 3965,
-            "t": 2,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "enabled"
             }]
         },
         "9ba74270-ecf4-466d-b04e-f66b9883d632": {
@@ -1039,18 +1027,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "experiment"
-            }]
-        },
-        "e9fe3136-84bc-4a61-9079-0c7df78abeb3": {
-            "name": "twilight_web_onboarding_categories",
-            "v": 3964,
-            "t": 2,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "yes"
             }]
         },
         "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": {
