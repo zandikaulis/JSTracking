@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".db73da3adebb680e86c2.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".4e47fb0b1493b839f1d3.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2068,7 +2068,7 @@
             x = 8e3,
             R = 5e3,
             j = [u.j, u.a, u.g, u.r, u.i, u.h, u.c, u.d, u.n, u.u, u.q, u.p, u.f, u.e, u.s, u.l, u.k, u.t, u.o],
-            I = ["usherfail", a.AD_END, a.AD_START, a.COMPANION_RENDERED, a.AD_IMPRESSION, a.AD_IMPRESSION_COMPLETE, l.a, c.a, s.a, s.b, s.c, s.i, s.k, s.l, s.p, s.f, s.m, s.t, s.u, s.w, s.B, s.D, s.E, s.J, s.n, s.x, s.s, s.q, s.z, s.y],
+            I = ["usherfail", a.AD_END, a.AD_START, a.COMPANION_RENDERED, a.AD_IMPRESSION, a.AD_IMPRESSION_COMPLETE, l.a, c.a, s.a, s.b, s.c, s.i, s.k, s.l, s.p, s.f, s.m, s.t, s.u, s.w, s.B, s.D, s.E, s.J, s.n, s.x, s.s, s.q, s.z, s.y, s.e],
             A = i()(j, I),
             N = [u.s, s.a],
             M = Object.freeze(["autoplay", "channel", "channelId", "collection", "controls", "debug", "debug_ads", "force_manifest_node", "html5", "flash", "muted", "origin", "playsinline", "quality", "showMature", "stream", "t", "time", "tt_content", "tt_medium", "video"]),
@@ -2705,7 +2705,8 @@
                 }),
                 k = {
                     realtimeQos: u.get(p.l),
-                    fastBread: void 0 !== y.params.fast_bread ? Promise.resolve(y.params.fast_bread) : u.get(p.c)
+                    fastBread: void 0 !== y.params.fast_bread ? Promise.resolve(y.params.fast_bread) : u.get(p.c),
+                    reassignmentsSupported: u.get(p.m)
                 },
                 O = void 0;
             r === I ? O = new h.b(g, _, y.params, a.params, k) : r === A && (O = new m.b(b, _, y.params, a.params, k)), t(Object(T.q)(T.n, v.performance.now())), O.accessToken.then(function() {
@@ -4247,9 +4248,9 @@
         function o(e) {
             var t, n;
             return new l.a({
-                defaults: (t = {}, r(t, m, "no"), r(t, y, "no"), r(t, v, "no"), r(t, g, "keep"), r(t, b, "pad_control"), r(t, _, "no"), r(t, w, "control"), r(t, k, "control"), r(t, E, "2.5.4"), r(t, S, "no"), r(t, O, "control"), r(t, C, "control"), r(t, P, "variant1"), r(t, T, "asmjs"), r(t, x, "2.5.4"), r(t, R, "no"), t),
+                defaults: (t = {}, r(t, m, "no"), r(t, y, "no"), r(t, v, "no"), r(t, g, "keep"), r(t, b, "no"), r(t, _, "control"), r(t, w, "control"), r(t, k, "2.5.4"), r(t, E, "no"), r(t, S, "control"), r(t, P, "control"), r(t, O, "variant1"), r(t, C, "asmjs"), r(t, T, "2.5.4"), r(t, x, "no"), r(t, R, "no"), t),
                 deviceID: e.deviceID,
-                overrides: u()((n = {}, r(n, y, i("vca")), r(n, v, i("yes")), r(n, _, i("yes")), r(n, w, i("show")), r(n, S, i("yes")), r(n, P, "variant1"), r(n, T, i("wasm")), n), JSON.parse(a.cookie.get("experiment_overrides", "{}"))),
+                overrides: u()((n = {}, r(n, y, i("vca")), r(n, v, i("yes")), r(n, b, i("yes")), r(n, _, i("show")), r(n, E, i("yes")), r(n, O, "variant1"), r(n, C, i("wasm")), n), JSON.parse(a.cookie.get("experiment_overrides", "{}"))),
                 platform: "web",
                 login: e.login,
                 provider: new f.a(f.a.SERVICE_URL),
@@ -4265,22 +4266,24 @@
         }), n.d(t, "d", function() {
             return g
         }), n.d(t, "l", function() {
-            return k
+            return w
         }), n.d(t, "f", function() {
-            return E
+            return k
         }), n.d(t, "c", function() {
-            return O
+            return S
         }), n.d(t, "a", function() {
-            return P
+            return O
         }), n.d(t, "b", function() {
-            return C
+            return P
         }), n.d(t, "k", function() {
-            return T
+            return C
         }), n.d(t, "j", function() {
-            return x
+            return T
         }), n.d(t, "g", function() {
+            return x
+        }), n.d(t, "m", function() {
             return R
-        }), t.m = o;
+        }), t.n = o;
         var a = n(84),
             s = (n.n(a), n(5)),
             u = n.n(s),
@@ -4294,18 +4297,18 @@
             y = "9e5fffd0-9693-412b-913d-7da332fdeea4",
             v = "1a42d36b-3f3f-4b80-8252-bdd6cc675ec3",
             g = "354aaebd-7643-434f-be37-98fe12c01220",
-            b = "b8d1e7be-59f7-4ee3-a0c6-54ce94366d14",
-            _ = "d0518b75-fbba-418a-9445-ff7c517beb32",
-            w = "74d6faab-1794-458a-a5f6-b92602254e9e",
-            k = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98",
-            E = "ec70bd08-dbc8-4f48-9f60-d035fec3eb20",
-            S = "4d3d19a7-38c5-4328-9730-7d99565d5edd",
-            O = "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1",
-            P = "1b959783-5196-4c52-863d-06949b814e43",
-            C = "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7",
-            T = "49083595-80d4-4c13-93a2-20a605b3318e",
-            x = "3c3a5d48-117f-43ac-8b35-091f13b2d479",
-            R = "ae1b5fbf-a91a-45e7-b87e-80afc5704418"
+            b = "d0518b75-fbba-418a-9445-ff7c517beb32",
+            _ = "74d6faab-1794-458a-a5f6-b92602254e9e",
+            w = "6a2630a4-edc7-4f2a-8cfe-e4de75eb0d98",
+            k = "ec70bd08-dbc8-4f48-9f60-d035fec3eb20",
+            E = "4d3d19a7-38c5-4328-9730-7d99565d5edd",
+            S = "fd5223cb-3ae7-4a9f-9af8-ce0d44d4b9f1",
+            O = "1b959783-5196-4c52-863d-06949b814e43",
+            P = "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7",
+            C = "49083595-80d4-4c13-93a2-20a605b3318e",
+            T = "3c3a5d48-117f-43ac-8b35-091f13b2d479",
+            x = "ae1b5fbf-a91a-45e7-b87e-80afc5704418",
+            R = "e2fecbd4-98e4-45e0-aad5-624cc70d6b85"
     }, function(e, t, n) {
         "use strict";
 
@@ -10302,13 +10305,14 @@
                     key: "_commonExperimentParams",
                     value: function() {
                         var e = this;
-                        return Promise.all([this.accessToken, this._experimentSettings.realtimeQos, this._experimentSettings.fastBread]).then(function(t) {
-                            var n = o(t, 3),
+                        return Promise.all([this.accessToken, this._experimentSettings.realtimeQos, this._experimentSettings.fastBread, this._experimentSettings.reassignmentsSupported]).then(function(t) {
+                            var n = o(t, 4),
                                 r = n[0],
                                 i = n[1],
                                 a = n[2],
-                                s = {};
-                            return s.rtqos = i, s.fast_bread = "control" !== a, e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, s
+                                s = n[3],
+                                u = {};
+                            return u.rtqos = i, u.fast_bread = "control" !== a, u.reassignments_supported = "yes" === s, e._restrictedBitrates = JSON.parse(r.token).chansub.restricted_bitrates, u
                         })
                     }
                 }, {
@@ -36677,7 +36681,7 @@
         }
 
         function eo(e) {
-            return Zi(Object(Fp.m)(e))
+            return Zi(Object(Fp.n)(e))
         }
 
         function to() {
@@ -38360,7 +38364,7 @@
             ks = /^(\d+)\.(\d+)\.(\d+)[+|-]?(.*)?$/,
             Es = /^(\d+)\.(\d+)[+|-]?(.*)?$/,
             Ss = /^(\d+)$/,
-            Os = "3.12.1",
+            Os = "4.0.0",
             Ps = "desktop",
             Cs = "ember",
             Ts = [os.e, os.d, os.v, os.p],
@@ -48512,7 +48516,7 @@
                 var n = document.createElement("script");
                 document.body.appendChild(n), n.onerror = t, n.onload = e, n.async = !0, n.src = "//imasdk.googleapis.com/js/sdkloader/ima3.js", window.setTimeout(t, 2e3)
             })
-        }()), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.video.Player = Aa, window.Twitch.Player = Aa, window.Twitch.Player.PROMPT_LOGIN = Hs.s, n.d(t, "Player", function() {
+        }()), window.Twitch = window.Twitch || {}, window.Twitch.video = window.Twitch.video || {}, window.Twitch.Player = Aa, window.Twitch.Player.PROMPT_LOGIN = Hs.s, n.d(t, "Player", function() {
             return jS
         });
         var RS = function() {
