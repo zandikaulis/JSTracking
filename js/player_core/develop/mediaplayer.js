@@ -2586,7 +2586,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-3794bffa";
+    return "2.3.0-f62a3635";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2654,8 +2654,24 @@ MediaPlayer.prototype.setAdInsertionEnabled = function (enable) {
     this._postMessage(WorkerMessage.SET_AD_INSERTION_ENABLED, enable);
 }
 
+/**
+ * Sets a target live latency, during buffering events if the latency would exceed this value
+ * the live stream will be re-syncd to the live window to prevent the latency exceeding this
+ * value.
+ * @param {number} latency max latency before attempting to skip content during live playback
+ */
 MediaPlayer.prototype.setLiveMaxLatency = function (latency) {
     this._postMessage(WorkerMessage.SET_LIVE_MAX_LATENCY, latency);
+}
+
+/**
+ * Enables low latency playback for streams which support it. Defaults to true, changing the
+ * value during playback will restart the stream.
+ *
+ * @param {boolean} enable true to enable, false to disable
+ */
+MediaPlayer.prototype.setLiveLowLatencyEnabled = function (enable) {
+    this._postMessage(WorkerMessage.SET_LIVE_LOW_LATENCY_ENABLED, enable);
 }
 
 MediaPlayer.prototype.setAnalyticsSendEvents = function (enable) {
@@ -3886,6 +3902,11 @@ module.exports = {
      * @param {number} latency max latency value
      */
     SET_LIVE_MAX_LATENCY: 'WorkerSetLiveMaxLatency',
+    /**
+     * Sets low latency enabled or disabled for a live stream
+     * @param {boolean} enable true to enable
+     */
+    SET_LIVE_LOW_LATENCY_ENABLED: 'WorkerSetLiveLowLatencyEnabled',
     /**
      * Enable player core analytics
      * @param {boolean} enable The boolean value to enable/disable
