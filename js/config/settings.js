@@ -103,10 +103,11 @@ window.__twilightSettings = {
     "twitch_prime_fortnite_signup_url": "https://twitch.amazon.com/prime/country?ingress=epic-fortnite",
     "twitch_prime_offerpage_signup_url": "https://twitch.amazon.com/prime/country",
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
-    "update_manager_enabled": false,
+    "update_manager_enabled": true,
     "update_manager_reload_jitter": 5000,
     "viewer_milestones_enabled": true,
     "vod_archives_vira_grand": "on",
+    "vod_editing_used_to_this": false,
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
             "name": "twilight_sub_gifting",
