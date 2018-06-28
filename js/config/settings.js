@@ -746,6 +746,18 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "8c505ba8-1381-4f54-ad7f-5dbbde9beee0": {
+            "name": "TWILIGHT_INSTREAM_CHECKOUT",
+            "v": 4130,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
+            }]
+        },
         "8e177f68-71cc-491c-96f5-35e25db2b61d": {
             "name": "twilight_native_login",
             "v": 4128,
