@@ -36,6 +36,9 @@ window.__twilightSettings = {
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
     "esport_insider_prime_bits_launch": "on",
     "esport_insider_prime_bits_launch_user_whitelist": ["186243532", "215590603"],
+    "esport_prime_promotion_end_date": "2018-06-29T01:00:00+00:00",
+    "esport_prime_promotion_start_date": "1990-01-01T00:00:00Z",
+    "esport_prime_promotion_user_whitelist": ["180833069", "203316457", "129809526"],
     "esports_room_cheering_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249-staff", "104874624"],
     "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on", "wrestling", "eternal"],
     "extensions_bits_banner_enabled": true,
@@ -108,7 +111,7 @@ window.__twilightSettings = {
     "update_manager_reload_jitter": 5000,
     "viewer_milestones_enabled": true,
     "vod_archives_vira_grand": "on",
-    "vod_editing_used_to_this": false,
+    "vod_editing_used_to_this": true,
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
             "name": "twilight_sub_gifting",
