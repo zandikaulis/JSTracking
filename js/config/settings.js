@@ -107,7 +107,7 @@ window.__twilightSettings = {
     "twitch_prime_offerpage_signup_url": "https://twitch.amazon.com/prime/country",
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "vendor.js"],
     "update_manager_eager": true,
-    "update_manager_enabled": false,
+    "update_manager_enabled": true,
     "update_manager_reload_jitter": 5000,
     "viewer_milestones_enabled": true,
     "vod_archives_vira_grand": "on",
