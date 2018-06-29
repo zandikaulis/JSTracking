@@ -15,7 +15,7 @@ window.__twilightSettings = {
     "bits_world_cup_event_phase_2": false,
     "bounty_board_available_bounties_date": "Wed June 27 2018 00:00:00 GMT-0700 (PDT)",
     "browser_notifications_launch": true,
-    "channel_feed_enabled": false,
+    "channel_feed_enabled": true,
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
     "commerce_amendment_v2": "staff",
