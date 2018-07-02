@@ -2492,10 +2492,19 @@ MediaPlayer.prototype.getHTMLVideoElement = function () {
     return this._mediaSink.videoElement();
 }
 
-MediaPlayer.prototype.load = function (url) {
-    this._postMessage(WorkerMessage.LOAD, url);
+/**
+ * Loads the given stream.
+ *
+ * @param path of the stream to load (e.g. a url or file)
+ * @param mediaType Media type of the content if known, e.g. "video/mp4" or "application/x-mpegURL"
+ */
+MediaPlayer.prototype.load = function (path, mediaType) {
+    this._postMessage(WorkerMessage.LOAD, {
+        path:path, 
+        mediaType:mediaType || ''
+    });
     this._resetState();
-    this._mediaSink.setUrl(url);
+    this._mediaSink.setUrl(path);
 }
 
 MediaPlayer.prototype.play = function () {
@@ -2586,7 +2595,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-ec2ccd52";
+    return "2.3.0-493fe120";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3836,7 +3845,8 @@ module.exports = {
     SINK_CUE: 'WorkerSinkCue',
     /**
      * Load a stream by url
-     * @param {string} url - master manifest
+     * @param {string} path - media path
+     * @param {string} mediaType - media type of the content if known
      */
     LOAD: 'WorkerLoad',
     /**
