@@ -87,6 +87,7 @@ window.__twilightSettings = {
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
     "spade_url": "https://video-edge-a10aed.sjc02.hls.ttvnw.net/v1/segment/Cplban-xVtGv5vA-I7AMPfvs5xbiTePNPjyJDPHTiW8ZCU5Q8yAQSN2JiaOT7cAKdnvaG-rNGO7iNmD9RGmpnvyfllwhmH1tFiKc31WEzNMsyBoChtgHct7Su6XwupWLBV_SHTmaIV8jU7he6AagNgf4NE07LGfF-pkuL4s5mN01M9Ou2KmzbgkHO_F7T1Lw-88Ge_2db01KohAfBwXtBcNQTXvy3lgfq13rcpzRBQhKr9e8UhYLjnvt_PpqypuEe2279V7vcOcTjuOVWi3hOIKBL3rEH3fVJGAr-8vo7OdSyxL8HbUCbELkk8Aznz3aHKzqhEi4pkrf271np37FHeCNH6Jd3y0wbztJkFlutq8dncCm-N40SCcFgwK8cqfJyS84gLluJoFPgbicZVXusCiji_U7SCsOJDVJGxrHOVpj1jcYtA7YgfjqCplhy5pViH1eqS_qubXjKlSs3ssQ_wwCZHaVMiI2AturlboW1MI_Fd12FoSEyILM4Ts67mRB2jvqcpCaQIv1g3_5nRIzWYTiqTYqOBGH6TYeJcNYe.ts",
+    "squad_stream_banner_whitelist": ["bern"],
     "squad_stream_feature": "off",
     "stats_sample_rate": 100,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
