@@ -58,6 +58,7 @@ window.__twilightSettings = {
     "legacy_routes": ["^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/health_check$", "^/search$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/user!?(/legal)$", "^/yt/.+$"],
     "legacy_routes_enabled": true,
     "longtask_tracking_sample_rate": 0.1,
+    "mass_mystery_gifting": "off",
     "mobile_subs_feature_flag": "on",
     "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
