@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".d32f998cbe26d8df9f97.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".6659c921f1d8fa8a1a6f.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -8499,7 +8499,7 @@
                     key: "setMuted",
                     value: function(e) {
                         if (null === this._mediaPlayer) return void this._apiCallQueue.push(this.setMuted.bind(this, e));
-                        e ? this._mediaPlayer.getHTMLVideoElement().setAttribute("muted", "") : this._mediaPlayer.getHTMLVideoElement().removeAttribute("muted"), this._mediaPlayer.setMuted(e)
+                        e ? this._mediaPlayer.getHTMLVideoElement().setAttribute("muted", "") : this._mediaPlayer.getHTMLVideoElement().removeAttribute("muted"), this._mediaPlayer.setMuted(e), this._eventEmitter.emit(u.t)
                     }
                 }, {
                     key: "getMuted",
@@ -11151,7 +11151,7 @@
             }
 
             function f(e) {
-                s()(e.volume) && (Ze || (Xe = Math.min(Math.max(e.volume, 0), 1), De.emit(g.t)))
+                s()(e.volume) && (Ze || (Xe = Math.min(Math.max(e.volume, 0), 1)), De.emit(g.t))
             }
 
             function h(e) {
@@ -33441,7 +33441,7 @@
             Q._loadVideoAPI = function() {
                     t.dispatch(Object(du.x)(Q))
                 }, Q._propagateBackendMutliEvents = function() {
-                    [Ds.e, Fs.p, Ds.j, Ds.i, Ds.l, Ds.k, Ds.u, Ds.n, Ds.f, Ds.q, Ds.s, Ds.c, Fs.w, Fs.a, Fs.u, Ds.p, Fs.y].forEach(function(e) {
+                    [Ds.e, Fs.p, Ds.j, Ds.i, Ds.l, Ds.k, Ds.u, Ds.n, Ds.f, Ds.q, Ds.s, Ds.c, Fs.w, Fs.a, Fs.u, Ds.p, Fs.y, Ds.t].forEach(function(e) {
                         J.addEventListener(e, function(t) {
                             Y.emit(e, t)
                         })
@@ -38435,7 +38435,7 @@
             }(),
             us = n(106),
             cs = n(10),
-            ls = "//video-edge-293091.sjc02.hls.ttvnw.net/v1/segment/CtpF4ah3BAnQbwQqE-gx2UMDeYjq3PhHnTvuubndAgOdJLFIqerW5Lke0oSFXCmp3Kn_9ChvHBYiwwqh4QydCPam8LesqoHBeKipQKYLsN1Uf9_6zz8TrpPCUuO1xavck6tKU_TcZORLKp2FWfXWYJr1U0lz6N0yBqYhR8EXVXU-pFHsoaOfSLhBMOZF8Zn1xmKEX0wsLmwEpH63GLNaPV0i9wuVGvvSwQrpiEuHb6xm7XBlhasMR6GZKHWRvLFI7y_a17zrxxx0J0CWVI16SiJGKKMEcwpKyDl7lR2BddsgyCSWbJVNNOoPU5ZTDqbPhs54-t6ZL2ZhGDwjJAGjVQSd3nhniDuu-27_964RG6GOHw4csJcNUdoUsqRRSp1OKIdK7XSrpUlcycZFyrwvkd3w3xQKXwOmcFHoSW-tqHr4LwiTPMYP3E4Sudd_qNjb5ZJZIXme172OzGoqoNWpqxdGezTdjdvHB502NQR5X5wzxgNbKkUt2D32XmFmBy20-4bu8t5mD2kpir-dHrwkrfJYOQSMiBIx.ts",
+            ls = "//video-edge-a10aed.sjc02.hls.ttvnw.net/v1/segment/Cplban-xVtGv5vA-I7AMPfvs5xbiTePNPjyJDPHTiW8ZCU5Q8yAQSN2JiaOT7cAKdnvaG-rNGO7iNmD9RGmpnvyfllwhmH1tFiKc31WEzNMsyBoChtgHct7Su6XwupWLBV_SHTmaIV8jU7he6AagNgf4NE07LGfF-pkuL4s5mN01M9Ou2KmzbgkHO_F7T1Lw-88Ge_2db01KohAfBwXtBcNQTXvy3lgfq13rcpzRBQhKr9e8UhYLjnvt_PpqypuEe2279V7vcOcTjuOVWi3hOIKBL3rEH3fVJGAr-8vo7OdSyxL8HbUCbELkk8Aznz3aHKzqhEi4pkrf271np37FHeCNH6Jd3y0wbztJkFlutq8dncCm-N40SCcFgwK8cqfJyS84gLluJoFPgbicZVXusCiji_U7SCsOJDVJGxrHOVpj1jcYtA7YgfjqCplhy5pViH1eqS_qubXjKlSs3ssQ_wwCZHaVMiI2AturlboW1MI_Fd12FoSEyILM4Ts67mRB2jvqcpCaQIv1g3_5nRIzWYTiqTYqOBGH6TYeJcNYe.ts",
             ds = n(48),
             fs = n(271),
             ps = n(139),
@@ -38472,7 +38472,7 @@
             _s = /^(\d+)\.(\d+)\.(\d+)[+|-]?(.*)?$/,
             ws = /^(\d+)\.(\d+)[+|-]?(.*)?$/,
             ks = /^(\d+)$/,
-            Es = "4.1.2",
+            Es = "4.3.0",
             Ss = "desktop",
             Ps = "ember",
             Os = [rs.e, rs.d, rs.v, rs.p],
