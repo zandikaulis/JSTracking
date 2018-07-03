@@ -86,7 +86,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-293091.sjc02.hls.ttvnw.net/v1/segment/CtpF4ah3BAnQbwQqE-gx2UMDeYjq3PhHnTvuubndAgOdJLFIqerW5Lke0oSFXCmp3Kn_9ChvHBYiwwqh4QydCPam8LesqoHBeKipQKYLsN1Uf9_6zz8TrpPCUuO1xavck6tKU_TcZORLKp2FWfXWYJr1U0lz6N0yBqYhR8EXVXU-pFHsoaOfSLhBMOZF8Zn1xmKEX0wsLmwEpH63GLNaPV0i9wuVGvvSwQrpiEuHb6xm7XBlhasMR6GZKHWRvLFI7y_a17zrxxx0J0CWVI16SiJGKKMEcwpKyDl7lR2BddsgyCSWbJVNNOoPU5ZTDqbPhs54-t6ZL2ZhGDwjJAGjVQSd3nhniDuu-27_964RG6GOHw4csJcNUdoUsqRRSp1OKIdK7XSrpUlcycZFyrwvkd3w3xQKXwOmcFHoSW-tqHr4LwiTPMYP3E4Sudd_qNjb5ZJZIXme172OzGoqoNWpqxdGezTdjdvHB502NQR5X5wzxgNbKkUt2D32XmFmBy20-4bu8t5mD2kpir-dHrwkrfJYOQSMiBIx.ts",
+    "spade_url": "https://video-edge-a10aed.sjc02.hls.ttvnw.net/v1/segment/Cplban-xVtGv5vA-I7AMPfvs5xbiTePNPjyJDPHTiW8ZCU5Q8yAQSN2JiaOT7cAKdnvaG-rNGO7iNmD9RGmpnvyfllwhmH1tFiKc31WEzNMsyBoChtgHct7Su6XwupWLBV_SHTmaIV8jU7he6AagNgf4NE07LGfF-pkuL4s5mN01M9Ou2KmzbgkHO_F7T1Lw-88Ge_2db01KohAfBwXtBcNQTXvy3lgfq13rcpzRBQhKr9e8UhYLjnvt_PpqypuEe2279V7vcOcTjuOVWi3hOIKBL3rEH3fVJGAr-8vo7OdSyxL8HbUCbELkk8Aznz3aHKzqhEi4pkrf271np37FHeCNH6Jd3y0wbztJkFlutq8dncCm-N40SCcFgwK8cqfJyS84gLluJoFPgbicZVXusCiji_U7SCsOJDVJGxrHOVpj1jcYtA7YgfjqCplhy5pViH1eqS_qubXjKlSs3ssQ_wwCZHaVMiI2AturlboW1MI_Fd12FoSEyILM4Ts67mRB2jvqcpCaQIv1g3_5nRIzWYTiqTYqOBGH6TYeJcNYe.ts",
     "stats_sample_rate": 100,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "throttled_experiment_event_enabled": false,
@@ -784,6 +784,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "expanded"
+            }]
+        },
+        "96bdeb52-260d-4b6d-8ff8-5f4c13f450c2": {
+            "name": "TWILIGHT_RAID_NOW",
+            "v": 4150,
+            "t": 3,
+            "groups": [{
+                "weight": 0,
+                "value": "test"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "9ba74270-ecf4-466d-b04e-f66b9883d632": {
