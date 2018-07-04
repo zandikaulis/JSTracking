@@ -619,18 +619,6 @@ window.__twilightSettings = {
                 "value": "control"
             }]
         },
-        "5f87357b-df98-49be-a55f-1919a05624d2": {
-            "name": "TWILIGHT_CAROUSEL_CONTEXT",
-            "v": 4163,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "experiment"
-            }]
-        },
         "5fd568be-2073-4f99-84d5-565e8b2a3343": {
             "name": "TWILIGHT_AAX_DISPLAY",
             "v": 3615,
