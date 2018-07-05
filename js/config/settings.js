@@ -905,13 +905,13 @@ window.__twilightSettings = {
         },
         "bf00cae3-c729-4ff9-816c-f9ede2f69f02": {
             "name": "twilight_vod_used_to_this",
-            "v": 4171,
+            "v": 4172,
             "t": 1,
             "groups": [{
-                "weight": 75,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 25,
+                "weight": 50,
                 "value": "variant1"
             }]
         },
