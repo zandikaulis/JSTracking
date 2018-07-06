@@ -1321,6 +1321,7 @@ var DRMManager = function(config) {
     this.mediaKeys = undefined; // we will reserve null
     this._handleError = config.onerror;
     this._currentSrc = null;
+    this._isProtected = false;
     this._pendingSessions = [];
     this._sessions = [];
     this._authUrl = ''; // Based on the channel name
@@ -1335,7 +1336,12 @@ DRMManager.prototype.onLoad = function (url) {
     var channelName = filename.split('.')[0]; //remove extension
     this._authUrl = AUTH_XML_URL + channelName;
 
+    this._isProtected = false;
     this._sessions = [];
+};
+
+DRMManager.prototype.isProtected = function () {
+    return this._isProtected;
 };
 
 /**
@@ -1386,6 +1392,8 @@ DRMManager.prototype._createKeySystemSupportChain = function() {
  * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
  */
 DRMManager.prototype._handleEncrypted = function(event){
+    this._isProtected = true;
+
     // if we already have this same session setup, ignore this event;
     if (this._hasSession(event.initData)) {
         return;
@@ -1599,6 +1607,7 @@ DRMManager.prototype._prepareLicenseRequest = function(message, authXml) {
 // SAFARI FAIRPLAY SUPPORT
 // untested since it does not allow for clearkey testing
 DRMManager.prototype._handleSafariEncrypted = function(event){
+    this._isProtected = true;
     this._getSafariCertificate()
         .then(this._setupSafariMediaKeys.bind(this, event))
         .catch(function(err){
@@ -2214,7 +2223,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-8a0ad34c";
+    return "2.3.0-926be5ae";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2361,6 +2370,13 @@ MediaPlayer.prototype.getTranscoderLatency = function () {
 
 MediaPlayer.prototype.getNetworkProfile = function () {
     return this._stats.networkProfile;
+}
+
+/**
+ * @returns {boolean} Are we playing DRM content
+ */
+MediaPlayer.prototype.isProtected = function () {
+    return this._mediaSink.isProtected();
 }
 
 // private helpers
@@ -3015,6 +3031,13 @@ MediaSink.prototype.videoElement = function () {
  */
 MediaSink.prototype.onLoad = function (url) {
     return this._drmManager.onLoad(url);
+};
+
+/**
+ * @returns {boolean} Are we playing DRM content
+ */
+MediaSink.prototype.isProtected = function () {
+    return this._drmManager.isProtected();
 };
 
 /**
