@@ -853,66 +853,23 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./platforms/web/js/capability.js":
-/*!****************************************!*\
-  !*** ./platforms/web/js/capability.js ***!
-  \****************************************/
+/***/ "./platforms/web/js/browser.js":
+/*!*************************************!*\
+  !*** ./platforms/web/js/browser.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var detect = __webpack_require__(/*! detect-browser */ "./node_modules/detect-browser/index.js").detect;
+var browser = __webpack_require__(/*! detect-browser */ "./node_modules/detect-browser/index.js").detect() || {name:'', version:'', os:''};
 
-var BROWSER = (function(){
-    var browser = detect() || {name:'', version:'', os:''};
-    // Parse semver from version string.
-    // NaN if semver value doesn't exist
-    var split = browser.version.split('.');
-    browser.major = parseInt(split[0], 10);
-    browser.minor = parseInt(split[1], 10);
-    browser.patch = parseInt(split[2], 10);
-    return browser;
-}());
+// Parse semver from version string.
+// NaN if semver value doesn't exist
+var split = browser.version.split('.');
+browser.major = parseInt(split[0], 10);
+browser.minor = parseInt(split[1], 10);
+browser.patch = parseInt(split[2], 10);
 
-function supportsSingleFrameFragments(browser) {
-    if (navigator.userAgent.toLowerCase().indexOf('crkey') > -1) {
-        // Don't allow frame by frame for chromecast
-        return false;
-    }
-
-    var name = browser.name,
-        major = browser.major;
-    return (
-        (name == 'chrome' && major >= 50) ||
-        (name == 'firefox' && major >= 45) ||
-        (name == 'safari' && major >= 11)
-    );
-}
-
-// Hardcoded results from DRMManager.DRMBrowserSupportMapping
-function supportedCDMs(browser) {
-    var DRM_CAPABILITIES_BY_BROWSER_BITMASK = {
-        chrome: 5,
-        firefox: 5,
-        edge: 16,
-        safari: 128
-    };
-
-    return DRM_CAPABILITIES_BY_BROWSER_BITMASK[browser.name]
-        ? DRM_CAPABILITIES_BY_BROWSER_BITMASK[browser.name]
-        : 0;
-}
-
-// Only chrome exposes sufficient network information
-function supportsLowLatencyABR(browser) {
-    return browser.name === 'chrome';
-}
-
-module.exports = {
-    browser: BROWSER,
-    supportsSingleFrameFragments: supportsSingleFrameFragments(BROWSER),
-    supportedCDMs: supportedCDMs(BROWSER),
-    supportsLowLatencyABR: supportsLowLatencyABR(BROWSER),
-};
+module.exports = browser;
 
 
 /***/ }),
@@ -981,51 +938,32 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// This is a temporary variable between using ClearKey, or Production.
-// ENV variable/test setup will be a better indicator in future
-var MODES = {
-    DEVELOPMENT: 'DEVELOPMENT',
-    PRODUCTION: 'PRODUCTION',
-};
-
 /**
  * Note:
  * There may need to be multiple uuids, I have seen there
  * are two uuids for clearkey, but have only seen this one
  * used on our content.
  */
-
 var KEY_SYSTEMS = {
     CLEAR_KEY: {
-        title: 'ClearKey',
         keySystem: 'org.w3.clearkey',
         uuid: '1077efec-c0b2-4d02-ace3-3c1e52e2fb4b',
     },
     FAIRPLAY: {
-        title: 'Fairplay',
         keySystem: 'com.apple.fps.1_0',
-        uuid: null,
+        uuid: '94CE86FB-07FF-4F43-ADB8-93D2FA968CA2',
     },
     PLAYREADY: {
-        title: 'PlayReady',
         keySystem: 'com.microsoft.playready',
         licenseUrl: 'https://pr-keyos.licensekeyserver.com/core/rightsmanager.asmx',
         uuid: '9a04f079-9840-4286-ab92-e65be0885f95',
     },
     WIDEVINE: {
-        title: 'Widevine',
         keySystem: 'com.widevine.alpha',
         licenseUrl: 'https://wv-keyos.licensekeyserver.com',
         uuid: 'edef8ba9-79d6-4ace-a3c8-27dcd51d21ed',
     },
 };
-
-var ALL_KEY_SYSTEMS = [
-    KEY_SYSTEMS.WIDEVINE,
-    KEY_SYSTEMS.PLAYREADY,
-    KEY_SYSTEMS.FAIRPLAY,
-    KEY_SYSTEMS.CLEAR_KEY,
-];
 
 var KEY_SYSTEMS_BY_STRING = {
     'com.widevine.alpha': KEY_SYSTEMS.WIDEVINE,
@@ -1033,81 +971,6 @@ var KEY_SYSTEMS_BY_STRING = {
     'com.apple.fps.1_0': KEY_SYSTEMS.FAIRPLAY,
     'org.w3.clearkey': KEY_SYSTEMS.CLEAR_KEY,
 };
-
-var ENCRYPTION_TYPES = {
-    CENC: 'cenc',
-    CBCS: 'cbcs',
-};
-
-var SUPPORTED_DRM_MAP = {
-    ClearKey_CENC: {
-        cdm: KEY_SYSTEMS.CLEAR_KEY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 1,
-    },
-    ClearKey_CBCS: {
-        cdm: KEY_SYSTEMS.CLEAR_KEY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 2,
-    },
-    Widevine_CENC: {
-        cdm: KEY_SYSTEMS.WIDEVINE,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 4,
-    },
-    Widevine_CBCS: {
-        cdm: KEY_SYSTEMS.WIDEVINE,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 8,
-    },
-    PlayReady_CENC: {
-        cdm: KEY_SYSTEMS.PLAYREADY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 16,
-    },
-    PlayReady_CBCS: {
-        cdm: KEY_SYSTEMS.PLAYREADY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 32,
-    },
-    FairPlay_CENC: {
-        cdm: KEY_SYSTEMS.FAIRPLAY,
-        type: ENCRYPTION_TYPES.CENC,
-        value: 64,
-    },
-    FairPlay_CBCS: {
-        cdm: KEY_SYSTEMS.FAIRPLAY,
-        type: ENCRYPTION_TYPES.CBCS,
-        value: 128,
-    },
-};
-
-var DRM_SUPPORT_BY_BROWSER = {
-    'chrome': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
-    'firefox': [SUPPORTED_DRM_MAP.ClearKey_CENC, SUPPORTED_DRM_MAP.Widevine_CENC],
-    'edge': [SUPPORTED_DRM_MAP.PlayReady_CENC],
-    'safari': [SUPPORTED_DRM_MAP.FairPlay_CBCS]
-};
-var SUPPORTED_BROWSERS = ['chrome', 'firefox', 'edge', 'safari'];
-
-// Turns mapping above into an iterable array (usually would use lodash or Object.values)
-var DRM_SUPPORT_VALUES = [
-    SUPPORTED_DRM_MAP.ClearKey_CENC,
-    SUPPORTED_DRM_MAP.ClearKey_CBCS,
-    SUPPORTED_DRM_MAP.Widevine_CENC,
-    SUPPORTED_DRM_MAP.Widevine_CBCS,
-    SUPPORTED_DRM_MAP.PlayReady_CENC,
-    SUPPORTED_DRM_MAP.PlayReady_CBCS,
-    SUPPORTED_DRM_MAP.FairPlay_CENC,
-    SUPPORTED_DRM_MAP.FairPlay_CBCS,
-];
-
-var DEFAULT_AUDIO_CAPABILITIES = [{
-    "contentType": 'audio/mp4;codecs="mp4a.40.2"'
-}];
-var DEFAULT_VIDEO_CAPABILITIES = [{
-    "contentType": 'video/mp4;codecs="avc1.42E01E"'
-}];
 
 var AUTH_XML_URL = 'https://vizima.twitch.tv/api/authxml/';
 
@@ -1151,17 +1014,8 @@ var ERRORS = {
 };
 
 module.exports = {
-    MODES: MODES,
     KEY_SYSTEMS: KEY_SYSTEMS,
     KEY_SYSTEMS_BY_STRING: KEY_SYSTEMS_BY_STRING,
-    ENCRYPTION_TYPES: ENCRYPTION_TYPES,
-    SUPPORTED_DRM_MAP: SUPPORTED_DRM_MAP,
-    DRM_SUPPORT_BY_BROWSER: DRM_SUPPORT_BY_BROWSER,
-    DRM_SUPPORT_VALUES: DRM_SUPPORT_VALUES,
-    ALL_KEY_SYSTEMS: ALL_KEY_SYSTEMS,
-    SUPPORTED_BROWSERS: SUPPORTED_BROWSERS,
-    DEFAULT_VIDEO_CAPABILITIES: DEFAULT_VIDEO_CAPABILITIES,
-    DEFAULT_AUDIO_CAPABILITIES: DEFAULT_AUDIO_CAPABILITIES,
     AUTH_XML_URL: AUTH_XML_URL,
     ERRORS: ERRORS,
 };
@@ -1178,7 +1032,7 @@ module.exports = {
 
 var Constants = __webpack_require__(/*! ./constants */ "./platforms/web/js/drm/constants.js");
 
-var ALL_KEY_SYSTEMS = Constants.ALL_KEY_SYSTEMS;
+var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
 
 // some utils from https://github.com/videojs/videojs-contrib-eme/
 // should probably revise these if our needs differ
@@ -1233,94 +1087,17 @@ var parsePSSHSupportFromInitData = function(initData) {
     return mapPSSHSystemIds(uuids);
 };
 
-/**
- * Takes in array of PSSH data and returns KEY_SYSTEM objects
- * that are supported.
- *
- * @param {Array} psshArrayBuffer
- */
-var parsePSSHSupport = function(psshArrayBuffer) {
-    var uuids = psshArrayBuffer.map(parsePSSHList);
-    return mapPSSHSystemIds(uuids);
-}
-
 var mapPSSHSystemIds = function(uuids){
     var supportedKeySystems = [];
     uuids.forEach(function(uuid) {
-        ALL_KEY_SYSTEMS.forEach(function(ks) {
+        Object.keys(KEY_SYSTEMS).forEach(function(key) {
+            var ks = KEY_SYSTEMS[key];
             if (ks.uuid === uuid) {
                 supportedKeySystems.push(ks);
             }
         });
     });
     return supportedKeySystems;
-};
-
-/**
- * Takes in PSSH box data and returns key system uuid
- * This is from the Dash.js implementation to dynamically read
- * media's CDM support
- *
- * @param {ArrayBuffer} data - event.initData
- */
-var parsePSSHList = function(data) {
-    var uint8a = new Uint8Array(data);
-    var dv = new DataView(uint8a.buffer);
-    // first 4 bytes for size
-    var byteCursor = 4;
-
-    // verify PSSH
-    if (dv.getUint32(byteCursor) !== 0x70737368) {
-        byteCursor = nextBox;
-        console.warn('pssh was not verified')
-        return null;
-    }
-    byteCursor += 4;
-
-    /* Version must be 0 or 1 */
-    version = dv.getUint8(byteCursor);
-    if (version !== 0 && version !== 1) {
-        byteCursor = nextBox;
-        console.warn('pssh version must be 0 or 1')
-        return null;
-    }
-    byteCursor++;
-    byteCursor += 3; /* skip flags */
-
-    // 16-byte UUID/SystemID
-    systemID = '';
-    var i, val;
-    for (i = 0; i < 4; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 4;
-    systemID += '-';
-    for (i = 0; i < 2; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 2;
-    systemID += '-';
-    for (i = 0; i < 2; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 2;
-    systemID += '-';
-    for (i = 0; i < 2; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 2;
-    systemID += '-';
-    for (i = 0; i < 6; i++) {
-        val = dv.getUint8(byteCursor + i).toString(16);
-        systemID += (val.length === 1) ? '0' + val : val;
-    }
-    byteCursor += 6;
-
-    return systemID.toLowerCase();
 };
 
 /**
@@ -1471,7 +1248,6 @@ module.exports = {
     uintArrayToString: uintArrayToString,
     getHostnameFromUri: getHostnameFromUri,
     httpRequest: httpRequest,
-    parsePSSHSupport: parsePSSHSupport,
     parsePSSHSupportFromInitData: parsePSSHSupportFromInitData,
     checkErrorFormat: checkErrorFormat,
 };
@@ -1491,24 +1267,14 @@ var Utils = __webpack_require__(/*! ./drm/utils */ "./platforms/web/js/drm/utils
 var PlayReady = __webpack_require__(/*! ./drm/PlayReady */ "./platforms/web/js/drm/PlayReady.js");
 
 //setup constants/utils
-var MODES = Constants.MODES;
 var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
-var ALL_KEY_SYSTEMS = ALL_KEY_SYSTEMS;
 var KEY_SYSTEMS_BY_STRING = Constants.KEY_SYSTEMS_BY_STRING;
-var ENCRYPTION_TYPES = Constants.ENCRYPTION_TYPES;
-var SUPPORTED_DRM_MAP = Constants.SUPPORTED_DRM_MAP;
-var DRM_SUPPORT_BY_BROWSER = Constants.DRM_SUPPORT_BY_BROWSER;
-var DRM_SUPPORT_VALUES = Constants.DRM_SUPPORT_VALUES;
-var SUPPORTED_BROWSERS = Constants.SUPPORTED_BROWSERS;
-var DEFAULT_AUDIO_CAPABILITIES = Constants.DEFAULT_AUDIO_CAPABILITIES;
-var DEFAULT_VIDEO_CAPABILITIES = Constants.DEFAULT_VIDEO_CAPABILITIES;
 var AUTH_XML_URL = Constants.AUTH_XML_URL;
 var arrayBuffersEqual = Utils.arrayBuffersEqual;
 var getHostnameFromUri = Utils.getHostnameFromUri;
 var arrayBufferFrom = Utils.arrayBufferFrom;
 var uintArrayToString = Utils.uintArrayToString;
 var httpRequest = Utils.httpRequest;
-var parsePSSHSupport = Utils.parsePSSHSupport;
 var parsePSSHSupportFromInitData = Utils.parsePSSHSupportFromInitData;
 var checkErrorFormat = Utils.checkErrorFormat;
 
@@ -1533,21 +1299,14 @@ var ERRORS = Constants.ERRORS;
 
 // this is only used for W3C spec following EME feature check
 var supportedConfig = [{
-  "initDataTypes": [ENCRYPTION_TYPES.CENC],
-  "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
-  "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
+    'initDataTypes': ['cenc'],
+    'audioCapabilities': [{
+        'contentType': 'audio/mp4;codecs="mp4a.40.2"'
+    }],
+    'videoCapabilities': [{
+        "contentType": 'video/mp4;codecs="avc1.42E01E"'
+    }],
 }];
-
-/**
- * This is a temporary setting that makes sure development player
- * doesn't break when trying to use clearkey implementation.
- * This can be set to false and/or cleaned up once `configureCDMSupport`
- * call always accurately describes the PSSH on the media.
- * When this is set to true, it manually parses the entire `event.initData`
- * passed to `encrypted` event instead of listening to mediaSink's configure
- * track data `track.protectionData`.
- */
-var PARSE_PSSH_DURING_ENCRYPTED_EVENT = true;
 
 /**
  * DRMManager sets up and handles media that contains DRM encryption
@@ -1560,134 +1319,23 @@ var DRMManager = function(config) {
     this.cdmSupport = null;
     this.selectedCDM = null;
     this.mediaKeys = undefined; // we will reserve null
-    this.initialized = false;
     this._handleError = config.onerror;
-    this._certificate = null;
     this._currentSrc = null;
     this._pendingSessions = [];
     this._sessions = [];
     this._authUrl = ''; // Based on the channel name
 
-    this._init();
-};
-
-/**
- * Check Browser CDM Capabilities
- * Based on the recommendations of MDN, a feature check could result in
- * 'user-visible effects such as asking for permission to access one or more
- * system resources.' It also would need to be an async check.
- * @param {string} browserName - browser name
- */
-DRMManager.CDMCapabilitiesByBrowser = function(browserName) {
-    if (DRM_SUPPORT_BY_BROWSER[browserName]) {
-        return DRM_SUPPORT_BY_BROWSER[browserName].reduce(function(total, drm) {
-            var value = drm ? drm.value : 0;
-            return total + value;
-        }, 0);
-    } else {
-        // TODO: may want to warn/error here, since browser settings was not found
-        return 0;
-    }
-};
-
-/**
- * Used to create the hardcoded bitmask map in 'capability.js'
- * This helper saves workers from importing this entire file to
- * use constants relevant to only DRM.
- * @param {Array} browsers
- */
-DRMManager.DRMBrowserSupportMapping = function(browsers) {
-    var browserMapping = {};
-    SUPPORTED_BROWSERS.forEach(function(browserName) {
-        browserMapping[browserName] = DRMManager.CDMCapabilitiesByBrowser(browserName);
-    });
-    return browserMapping;
-};
-
-/*  Feature check of browsers capabilities
-    Notes: This is more accurate than checking by browser, but currently not used because:
-        1. It has to be async, navigator.requestMediaKeySystemAccess returns a promise, which makes it hard to make a constant.
-        2. MDN web docs don't seem to be very keen on using except when necessary:
-            From: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess
-            "This method may have user-visible effects such as asking for permission to access one or more system resources. Consider that when deciding when to call requestMediaKeySystemAccess(); you don't want those requests to happen at inconvenient times. As a general rule, this function should be called only when it's about time to create and use a MediaKeys object by calling the returned MediaKeySystemAccess object's createMediaKeys() method."
-*/
-DRMManager.CDMCapabilitiesFeatureCheck = function() {
-    var checkSupported = function(settings) {
-        var config = [{
-            "initDataTypes": [settings.type],
-            "audioCapabilities": DEFAULT_AUDIO_CAPABILITIES,
-            "videoCapabilities": DEFAULT_VIDEO_CAPABILITIES,
-        }]
-        return navigator.requestMediaKeySystemAccess(settings.cdm.keySystem, config)
-            .then(function() {
-                return settings;
-            })
-            .catch(function() {
-                // not a supported type
-            });
-    };
-
-    var checkSupportedSafari = function(settings) {
-        // Apple devices only support 'cbcs'
-        // fMP4 sample encryption which is specified in ISO/IEC 23001:7 2016, Common Encryption in ISO BMFF [CENC]. Apple devices only support 'cbcs', which is specified in CENC Section 10.4. [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
-        if (settings.type !== ENCRYPTION_TYPES.CBCS){
-            return Promise.resolve(undefined);
-        } else {
-            try {
-                return WebKitMediaKeys.isTypeSupported(settings.cdm.keySystem)
-                    ? Promise.resolve(settings)
-                    : Promise.resolve(undefined);
-            } catch(err) {
-                return Promise.resolve(undefined);
-            }
-        }
-    };
-
-    var promiseRequests;
-    if (navigator.requestMediaKeySystemAccess) {
-        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
-            return checkSupported(settings);
-        });
-    } else if (window.WebKitMediaKeys) {
-        promiseRequests = DRM_SUPPORT_VALUES.map(function(settings){
-            return checkSupportedSafari(settings);
-        });
-    } else {
-        // if the browser supports no DRM
-        return Promise.resolve(0);
-    }
-    return Promise.all(promiseRequests)
-        .then(function(results){
-            // results is an array of SUPPORTED_DRM_MAP values or undefined if not supported
-            return results.reduce(function(memo, result){
-                var value = result ? result.value : 0;
-                return memo + value;
-            }, 0);
-        });
-}
-/**
- * Initializes instance, and adds 'encrypted' handlers
- * to support DRM functionality
- */
-DRMManager.prototype._init = function() {
-    this._checkSrcSessions();
     this.video.addEventListener('encrypted', this._handleEncrypted.bind(this), false);
     this.video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false);
 };
 
-DRMManager.prototype.configureCDMSupport = function(protectionData) {
-    // if we want to directly parse the encrypted event
-    if (PARSE_PSSH_DURING_ENCRYPTED_EVENT) return;
-    if (this.cdmSupport === null && protectionData.length > 0) {
-        this.cdmSupport = parsePSSHSupport(protectionData);
-    }
-};
-
-DRMManager.prototype.setUrl = function (url) {
+DRMManager.prototype.onLoad = function (url) {
     var parsed = new URL(url).pathname.split('/');
     var filename = parsed[parsed.length - 1];
     var channelName = filename.split('.')[0]; //remove extension
     this._authUrl = AUTH_XML_URL + channelName;
+
+    this._sessions = [];
 };
 
 /**
@@ -1704,19 +1352,6 @@ DRMManager.prototype._hasSession = function(initData) {
         }
     }
     return false;
-};
-
-/**
- * Clears out sessions when video source changes.
- * TODO: Our system currently doesn't not change the src, but may need
- * to clear out sessions at some point?
- */
-DRMManager.prototype._checkSrcSessions = function() {
-    var src = this.video.src;
-    if (src !== this._currentSrc) {
-        this._currentSrc = src;
-        this._sessions = [];
-    }
 };
 
 /**
@@ -1751,15 +1386,13 @@ DRMManager.prototype._createKeySystemSupportChain = function() {
  * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
  */
 DRMManager.prototype._handleEncrypted = function(event){
-    this._checkSrcSessions();
     // if we already have this same session setup, ignore this event;
     if (this._hasSession(event.initData)) {
         return;
     }
     this._sessions.push({ initData: event.initData });
 
-    // this can be removed once `configureCDMSupport` gets all DRM implementations
-    if (PARSE_PSSH_DURING_ENCRYPTED_EVENT && this.cdmSupport === null) {
+    if (this.cdmSupport === null) {
         this.cdmSupport = parsePSSHSupportFromInitData(event.initData);
     }
 
@@ -1773,10 +1406,10 @@ DRMManager.prototype._handleEncrypted = function(event){
 
         // create a promise chain of keySystem support
         keySystemPromise = this._createKeySystemSupportChain()
-            .then(this._getCertificate.bind(this))
             .then(function(keySystemAccess){
+                this.selectedCDM = KEY_SYSTEMS_BY_STRING[keySystemAccess.keySystem]
                 return keySystemAccess.createMediaKeys();
-            })
+            }.bind(this))
             .then(this._setMediaKeys.bind(this))
             .catch(function(err) {
                 this._handleError(checkErrorFormat(err));
@@ -1794,10 +1427,6 @@ DRMManager.prototype._handleEncrypted = function(event){
  */
 DRMManager.prototype._setMediaKeys = function(createdMediaKeys){
     this.mediaKeys = createdMediaKeys;
-
-    if (this._certificate) {
-        this.setServerCertificate(certificate);
-    }
     this._pendingSessions.forEach(function(pending){
         this._createSessionRequest(pending.initDataType, pending.initData);
     }.bind(this));
@@ -1884,16 +1513,6 @@ DRMManager.prototype._removeSession = function(initData) {
             return;
         }
     }
-}
-
-/**
- * Requests a certificate
- * TODO: Still needs implementation for FairPlay Cert
- * @param {Object} keySystemAccess - [https://www.w3.org/TR/encrypted-media/#dom-mediakeysystemaccess]
- */
-DRMManager.prototype._getCertificate = function(keySystemAccess) {
-    this.selectedCDM = KEY_SYSTEMS_BY_STRING[keySystemAccess.keySystem];
-    return Promise.resolve(keySystemAccess);
 }
 
 /**
@@ -2389,8 +2008,8 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var EventEmiter = __webpack_require__(/*! events */ "./node_modules/events/events.js");
-var MediaSink = __webpack_require__(/*! ./mediasink */ "./platforms/web/js/mediasink.js").MediaSink;
-var Browser = __webpack_require__(/*! ./capability */ "./platforms/web/js/capability.js").browser;
+var MediaSink = __webpack_require__(/*! ./mediasink */ "./platforms/web/js/mediasink.js");
+var Browser = __webpack_require__(/*! ./browser */ "./platforms/web/js/browser.js");
 var WorkerMessage = __webpack_require__(/*! ./message/worker */ "./platforms/web/js/message/worker.js");
 var ClientMessage = __webpack_require__(/*! ./message/client */ "./platforms/web/js/message/client.js");
 
@@ -2500,11 +2119,11 @@ MediaPlayer.prototype.getHTMLVideoElement = function () {
  */
 MediaPlayer.prototype.load = function (path, mediaType) {
     this._postMessage(WorkerMessage.LOAD, {
-        path:path, 
-        mediaType:mediaType || ''
+        path: path,
+        mediaType: mediaType || '',
     });
     this._resetState();
-    this._mediaSink.setUrl(path);
+    this._mediaSink.onLoad(path);
 }
 
 MediaPlayer.prototype.play = function () {
@@ -2595,7 +2214,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-7554dd54";
+    return "2.3.0-8a0ad34c";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3117,8 +2736,8 @@ function getClientTrackingInfo() {
 
 /* WEBPACK VAR INJECTION */(function(global) {var DRMManager = __webpack_require__(/*! ./drmmanager */ "./platforms/web/js/drmmanager.js");
 var Queue = __webpack_require__(/*! ./queue */ "./platforms/web/js/queue.js");
-var Promise = global.Promise ? global.Promise : __webpack_require__(/*! promise-polyfill */ "./node_modules/promise-polyfill/promise.js");
-var VTTCue = global.VTTCue ? global.VTTCue : global.TextTrackCue;
+var Promise = global.Promise || __webpack_require__(/*! promise-polyfill */ "./node_modules/promise-polyfill/promise.js");
+var VTTCue = global.VTTCue || global.TextTrackCue;
 
 // constants
 var UNKNOWN = -1;
@@ -3137,7 +2756,7 @@ var HEARTBEAT_INTERVAL = 2000; // Interval to check for stalled
  * @param {function()} config.onidle - fired when playback interrupted while playing
  * @param {function(MediaError)} config.onerror - video error with error code
  */
-var MediaSink = exports.MediaSink = function MediaSink(config) {
+var MediaSink = module.exports = function MediaSink(config) {
     this._video = document.createElement('video');
     this._metadataTrack = this._video.addTextTrack('metadata');
     this._codecs = Object.create(null);
@@ -3155,7 +2774,6 @@ var MediaSink = exports.MediaSink = function MediaSink(config) {
  * Prepare for video playback
  */
 MediaSink.prototype.configure = function (track) {
-    this._drmManager.configureCDMSupport(track.protectionData);
     // Add a native source directly
     if (track.src) {
         this._video.src = track.src;
@@ -3395,8 +3013,8 @@ MediaSink.prototype.videoElement = function () {
 /**
  * Set master manifest URL for this stream
  */
-MediaSink.prototype.setUrl = function (url) {
-    return this._drmManager.setUrl(url);
+MediaSink.prototype.onLoad = function (url) {
+    return this._drmManager.onLoad(url);
 };
 
 /**
