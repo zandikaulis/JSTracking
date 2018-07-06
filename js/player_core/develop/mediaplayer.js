@@ -1907,7 +1907,7 @@ DRMManager.prototype._handleMessage = function(event) {
     this._generateLicense(event.message)
         .then(function(license){
             return keySession.update(license)
-                .catch(function(error) {
+                .catch(function() {
                     return Promise.reject(ERRORS.SESSION_UPDATE);
                 });
         })
@@ -1940,7 +1940,7 @@ DRMManager.prototype._generateLicense = function(message) {
         }).then(function (authXml) {
             var requestData = this._prepareLicenseRequest(message, authXml);
             return httpRequest(requestData.url, requestData.options);
-        }).catch(function () {
+        }.bind(this)).catch(function () {
             return Promise.reject(ERRORS.LICENSE_REQUEST);
         });
     }
@@ -2595,7 +2595,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-59007f85";
+    return "2.3.0-25ec9d24";
 }
 
 MediaPlayer.prototype.isLooping = function () {
