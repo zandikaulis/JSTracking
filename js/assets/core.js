@@ -9072,7 +9072,7 @@
                                 scrollableProps: {}
                             })
                         }, t.onHistoryChange = function(e, n) {
-                            t.scrollableAreaRef && "POP" !== n && e.pathname !== t.currentPath && t.scrollableAreaRef.scrollToTop(), t.currentPath = e.pathname
+                            !t.scrollableAreaRef || "POP" === n || e.pathname === t.currentPath || t.state.scrollableProps && t.state.scrollableProps.suppressScrollToTop || t.scrollableAreaRef.scrollToTop(), t.currentPath = e.pathname
                         }, t.setScrollableAreaRef = function(e) {
                             return t.scrollableAreaRef = e
                         }, t
@@ -9115,7 +9115,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.shouldSetRootScrollableProps = function(e, t) {
-                            return !(!e || !t) && (e.disableDebounce !== t.disableDebounce || (e.scrollRef !== t.scrollRef || (e.contentClassName !== t.contentClassName || (e.scrollContentClassName !== t.scrollContentClassName || (e.suppressScrollX !== t.suppressScrollX || (e.suppressScrollY !== t.suppressScrollY || e.className !== t.className))))))
+                            return !(!e || !t) && (e.disableDebounce !== t.disableDebounce || (e.scrollRef !== t.scrollRef || (e.contentClassName !== t.contentClassName || (e.scrollContentClassName !== t.scrollContentClassName || (e.suppressScrollToTop !== t.suppressScrollToTop || (e.suppressScrollX !== t.suppressScrollX || (e.suppressScrollY !== t.suppressScrollY || e.className !== t.className)))))))
                         }, t
                     }
                     return o.d(t, e), t.prototype.componentDidMount = function() {
@@ -10271,7 +10271,8 @@
                     "10c75b60-f4c7-460b-99c8-e5caa22fd61f": "control",
                     "6147aed8-6beb-4c24-a00b-a9ec189a4c1d": "no",
                     "40f4fd80-86ca-44f4-9abc-0324d24908bc": "control",
-                    "8e177f68-71cc-491c-96f5-35e25db2b61d": "control"
+                    "8e177f68-71cc-491c-96f5-35e25db2b61d": "control",
+                    "099f5ff5-819d-4927-a1c4-8c9061545ac6": "control"
                 },
                 r = {
                     TWILIGHT_AAX_DISPLAY: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -10319,7 +10320,8 @@
                     TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER: "10c75b60-f4c7-460b-99c8-e5caa22fd61f",
                     TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS: "6147aed8-6beb-4c24-a00b-a9ec189a4c1d",
                     TWILIGHT_RAID_UPSELL: "40f4fd80-86ca-44f4-9abc-0324d24908bc",
-                    TWILIGHT_NATIVE_LOGIN: "8e177f68-71cc-491c-96f5-35e25db2b61d"
+                    TWILIGHT_NATIVE_LOGIN: "8e177f68-71cc-491c-96f5-35e25db2b61d",
+                    TWILIGHT_VOD_VOLTRON: "099f5ff5-819d-4927-a1c4-8c9061545ac6"
                 },
                 a = {
                     TWILIGHT_AAX_DISPLAY: "yes",
@@ -34922,7 +34924,7 @@
                             message: Object(l.d)("An error occurred on this page", "ChannelPageRouter")
                         });
                         var e = Object(H.a)();
-                        return !Object(H.c)() && Object(H.b)(this.props.location.pathname) && (e = !1), r.createElement(M.e, null, e ? r.createElement(M.d, {
+                        return !Object(H.d)() && Object(H.c)(this.props.location.pathname) && (e = !1), r.createElement(M.e, null, e ? r.createElement(M.d, {
                             path: "/collections/:collectionID",
                             component: re
                         }) : r.createElement(M.d, {
@@ -50040,27 +50042,34 @@
         tuvy: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return s
-            }), n.d(t, "c", function() {
                 return l
-            }), n.d(t, "b", function() {
+            }), n.d(t, "d", function() {
                 return c
+            }), n.d(t, "c", function() {
+                return d
+            }), n.d(t, "b", function() {
+                return u
             });
             var i = n("/7QA"),
                 r = null,
                 a = null,
-                o = new RegExp("^/(" + ["overwatchleague", "overwatchleague_allaccess", "overwatchleague_kr", "overwatchleague_fr", "overwatchleague_zh", "overwatchleague_zhtw", "blizzheroes", "BlizzHeroesKR", "BlizzHeroesDE", "BlizzHeroesRU", "BlizzHeroesFR"].join("|") + ")", "i");
+                o = null,
+                s = new RegExp("^/(" + ["overwatchleague", "overwatchleague_allaccess", "overwatchleague_kr", "overwatchleague_fr", "overwatchleague_zh", "overwatchleague_zhtw", "blizzheroes", "BlizzHeroesKR", "BlizzHeroesDE", "BlizzHeroesRU", "BlizzHeroesFR"].join("|") + ")", "i");
 
-            function s() {
+            function l() {
                 return null !== r ? r : r = "on" === i.o.experiments.getAssignment("TWILIGHT_WATCH_SYMMETRA")
             }
 
-            function l() {
+            function c() {
                 return null !== a ? a : a = "on" === i.o.experiments.getAssignment("TWILIGHT_WATCH_SOMBRA")
             }
 
-            function c(e) {
-                return !!e.match(o)
+            function d(e) {
+                return !!e.match(s)
+            }
+
+            function u() {
+                return null !== o ? o : o = l() || "variant1" === i.o.experiments.getAssignment("TWILIGHT_VOD_VOLTRON")
             }
         },
         u0aY: function(e, t, n) {
