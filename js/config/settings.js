@@ -112,6 +112,7 @@ window.__twilightSettings = {
     "update_chunks": ["core.css", "core.js", "pages.anon-front.js", "pages.browse.js", "pages.channel.js", "pages.directory-game.js", "pages.following.js", "pages.front.js", "pages.video-watch.js", "pages.settings.js", "pages.dashboard.js", "pages.dashboard.components.live-page.js", "vendor.js"],
     "update_manager_eager": true,
     "update_manager_enabled": true,
+    "update_manager_interval": 60000,
     "update_manager_reload_jitter": 5000,
     "viewer_milestones_enabled": true,
     "vod_archives_vira_grand": "on",
