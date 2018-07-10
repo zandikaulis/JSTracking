@@ -1431,9 +1431,8 @@
                 e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.BitsCheckoutPage = "bits_checkout_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelSubscriptionButton = "channel_subscription_button", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.ClipsOptions = "clips_options", e.CodeRedemptionPage = "code_redemption", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.DashboardPage = "dashboard_page", e.DirectoryFollowButton = "directory-follow-button", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.ExtensionInstallButton = "extension_install_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.LoginRequiredInterstitial = "login_required_interstitial", e.MessagesPage = "messages_page", e.PartnershipSignupPage = "partnership_signup_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SideNavUpsellCenter = "side-nav-upsell-center", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
             }(i || (i = {}))
         },
-        123: function(e, t) {},
         "14MF": function(e, t, n) {},
-        170: function(e, t, n) {
+        169: function(e, t, n) {
             n("/cy1"), n("gg62"), n("LVaA"), e.exports = n("sNlA")
         },
         "19zd": function(e, t) {
@@ -1760,8 +1759,8 @@
                             isError: !1,
                             options: null,
                             hovering: !1
-                        }, n.logger = o.o.logger.withCategory("balloon-layer"), n.clearTimeoutAndRun = function(e, t) {
-                            void 0 === t && (t = 400), n.displayTimeout && (clearTimeout(n.displayTimeout), n.displayTimeout = 0), n.displayTimeout = setTimeout(function() {
+                        }, n.logger = o.o.logger.withCategory("balloon-layer"), n.historyUnlisten = null, n.clearTimeoutAndRun = function(e, t) {
+                            void 0 === t && (t = 0), n.displayTimeout && (clearTimeout(n.displayTimeout), n.displayTimeout = 0), n.displayTimeout = setTimeout(function() {
                                 e(), n.displayTimeout = 0
                             }, t)
                         }, n.setRef = function(e) {
@@ -1782,9 +1781,13 @@
                             })
                         }, n.shouldAutoClose = function(e) {
                             return !(!e.options || e.options.persistOnMouseExit)
+                        }, n.handleHistoryChange = function() {
+                            n.hideBalloon()
                         }, i = n, n
                     }
-                    return r.d(t, e), t.prototype.componentDidCatch = function(e, t) {
+                    return r.d(t, e), t.prototype.componentDidMount = function() {
+                        this.historyUnlisten = o.o.history.listen(this.handleHistoryChange)
+                    }, t.prototype.componentDidCatch = function(e, t) {
                         var n = this;
                         this.setState({
                             isError: !0
@@ -1798,7 +1801,7 @@
                             i = this.shouldAutoClose(t);
                         this.ref && n !== i && (n ? this.addEventListeners(this.ref) : this.removeEventListeners())
                     }, t.prototype.componentWillUnmount = function() {
-                        this.removeEventListeners()
+                        this.removeEventListeners(), this.historyUnlisten && this.historyUnlisten()
                     }, t.prototype.render = function() {
                         if (this.state.isError) return null;
                         var e = null;
@@ -1830,7 +1833,7 @@
                             t.setState({
                                 options: e
                             })
-                        })
+                        }, e.timeout)
                     }, t.prototype.hideBalloon = function(e) {
                         var t = this;
                         void 0 === e && (e = {}), this.clearTimeoutAndRun(function() {
@@ -1913,7 +1916,8 @@
                             y: t.coords.y
                         },
                         tailOffset: t.offset,
-                        persistOnMouseExit: e.persistOnMouseExit
+                        persistOnMouseExit: e.persistOnMouseExit,
+                        timeout: e.timeout
                     })
                 }
             }
@@ -7044,105 +7048,109 @@
         },
         "8ssJ": function(e, t, n) {
             "use strict";
-            var i = n("/MKj"),
-                r = n("fvjX"),
-                a = n("d0ua"),
-                o = n("kRBY"),
-                s = n("mrSG"),
-                l = n("q1tI"),
-                c = n("eO8H"),
-                d = n("/7QA"),
-                u = n("TSYQ"),
-                p = n("tuvy"),
-                m = n("oXhC"),
-                h = n("UMvU"),
-                f = n("eFQ3"),
-                g = n("lTz2"),
-                v = n("Ue10"),
-                b = (n("wksc"), function(e) {
+            var i, r = n("/MKj"),
+                a = n("fvjX"),
+                o = n("d0ua"),
+                s = n("kRBY"),
+                l = n("mrSG"),
+                c = n("q1tI"),
+                d = n("eO8H"),
+                u = n("/7QA"),
+                p = n("TSYQ"),
+                m = n("tuvy"),
+                h = n("oXhC"),
+                f = n("UMvU"),
+                g = n("eFQ3"),
+                v = n("lTz2"),
+                b = n("Ue10");
+            n("wksc");
+            ! function(e) {
+                e.ClipsPlayer = "clips-player", e.DefaultPlayer = "default-player"
+            }(i || (i = {}));
+            var y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sideNavCollapsedByCSSBreakpoint: window.innerWidth < h.b
+                            sideNavCollapsedByCSSBreakpoint: window.innerWidth < f.b
                         }, t.resizeAnimationFrame = 0, t.renderMiniHoverControls = function() {
-                            var e = t.state.isPaused ? Object(d.d)("Play", "PersistentPlayerMini") : Object(d.d)("Pause", "PersistentPlayerMini");
-                            return l.createElement(v.qb, {
+                            var e = t.state.isPaused ? Object(u.d)("Play", "PersistentPlayerMini") : Object(u.d)("Pause", "PersistentPlayerMini");
+                            return c.createElement(b.qb, {
                                 className: "persistent-player__hover-controls",
                                 attachTop: !0,
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0,
-                                borderRadius: v.t.Medium,
-                                overflow: v.Pa.Hidden,
-                                position: v.Wa.Absolute,
-                                zIndex: v.Tb.Above,
+                                borderRadius: b.t.Medium,
+                                overflow: b.Pa.Hidden,
+                                position: b.Wa.Absolute,
+                                zIndex: b.Tb.Above,
                                 "data-test-selector": "persistent-player-mini-hover"
-                            }, l.createElement(v.Ma, {
+                            }, c.createElement(b.Ma, {
                                 className: "persistent-player__title",
-                                alignItems: v.c.Center,
-                                display: v.R.Flex,
-                                flexDirection: v.T.Row,
-                                flexWrap: v.U.NoWrap,
-                                justifyContent: v.La.Between,
+                                alignItems: b.c.Center,
+                                display: b.R.Flex,
+                                flexDirection: b.T.Row,
+                                flexWrap: b.U.NoWrap,
+                                justifyContent: b.La.Between,
                                 padding: {
                                     y: .5,
                                     right: .5
                                 },
-                                zIndex: v.Tb.Above,
+                                zIndex: b.Tb.Above,
                                 "data-test-selector": "persistent-player-mini-title"
-                            }, l.createElement(v.Ma, {
+                            }, c.createElement(b.Ma, {
                                 ellipsis: !0,
                                 margin: {
                                     x: 1
                                 }
-                            }, l.createElement(v.Q, {
-                                fontSize: v.V.Size5,
-                                type: v.Gb.Span
-                            }, t.props.options.miniPlayerTitle)), l.createElement(v.Ma, {
+                            }, c.createElement(b.Q, {
+                                fontSize: b.V.Size5,
+                                type: b.Gb.Span
+                            }, t.props.options.miniPlayerTitle)), c.createElement(b.Ma, {
                                 flexShrink: 0
-                            }, l.createElement(v.w, {
-                                ariaLabel: Object(d.d)("Dismiss Mini Player", "PersistentPlayerMini"),
-                                icon: v.gb.Close,
+                            }, c.createElement(b.w, {
+                                ariaLabel: Object(u.d)("Dismiss Mini Player", "PersistentPlayerMini"),
+                                icon: b.gb.Close,
                                 overlay: !0,
                                 onClick: t.props.onClickDismiss,
                                 "data-test-selector": "persistent-player-mini-dismiss"
-                            }))), l.createElement(v.Ma, {
+                            }))), c.createElement(b.Ma, {
                                 attachTop: !0,
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0,
-                                alignItems: v.c.Center,
-                                display: v.R.Flex,
-                                flexDirection: v.T.Row,
-                                justifyContent: v.La.Center,
+                                alignItems: b.c.Center,
+                                display: b.R.Flex,
+                                flexDirection: b.T.Row,
+                                justifyContent: b.La.Center,
                                 margin: {
                                     top: 4
                                 },
-                                position: v.Wa.Absolute
-                            }, t.renderMiniControl(v.gb.MiniPlayerExpand, Object(d.d)("Expand Player", "PersistentPlayerMini"), "persistent-player-mini-expand", t.props.onClickExpand), l.createElement(v.Ma, {
+                                position: b.Wa.Absolute
+                            }, t.renderMiniControl(b.gb.MiniPlayerExpand, Object(u.d)("Expand Player", "PersistentPlayerMini"), "persistent-player-mini-expand", t.props.onClickExpand), c.createElement(b.Ma, {
                                 margin: {
                                     left: 2
                                 }
-                            }, t.renderMiniControl(t.state.isPaused ? v.gb.MiniPlayerPlay : v.gb.MiniPlayerPause, e, "persistent-player-mini-pause-play", t.togglePause))))
+                            }, t.renderMiniControl(t.state.isPaused ? b.gb.MiniPlayerPlay : b.gb.MiniPlayerPause, e, "persistent-player-mini-pause-play", t.togglePause))))
                         }, t.renderMiniControl = function(e, t, n, i) {
-                            return l.createElement("button", {
+                            return c.createElement("button", {
                                 className: "persistent-player__control",
                                 onClick: i,
                                 "aria-label": t,
                                 "data-test-selector": n
-                            }, l.createElement(v.fb, {
+                            }, c.createElement(b.fb, {
                                 asset: e,
                                 width: 30,
                                 height: 30
                             }))
                         }, t.renderMiniInterceptPointerView = function() {
-                            return l.createElement(v.Ma, {
+                            return c.createElement(b.Ma, {
                                 className: "persistent-player__intercept-view",
-                                position: v.Wa.Absolute,
+                                position: b.Wa.Absolute,
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0,
-                                zIndex: v.Tb.Above,
+                                zIndex: b.Tb.Above,
                                 "data-test-selector": "persistent-player-mini-cover"
                             })
                         }, t.togglePause = function() {
@@ -7158,9 +7166,9 @@
                             })
                         }, t.collapseOnBreakpoint = function() {
                             var e = window.innerWidth;
-                            e < h.b && !t.state.sideNavCollapsedByCSSBreakpoint ? t.setState({
+                            e < f.b && !t.state.sideNavCollapsedByCSSBreakpoint ? t.setState({
                                 sideNavCollapsedByCSSBreakpoint: !0
-                            }) : e >= h.b && t.state.sideNavCollapsedByCSSBreakpoint && t.setState({
+                            }) : e >= f.b && t.state.sideNavCollapsedByCSSBreakpoint && t.setState({
                                 sideNavCollapsedByCSSBreakpoint: !1
                             }), t.resizeAnimationFrame = 0
                         }, t.handleWindowResize = function() {
@@ -7169,8 +7177,8 @@
                             t.props.theatreModeEnabled && t.props.disableTheatreMode()
                         }, t
                     }
-                    return s.d(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                        this.props.location.pathname !== e.location.pathname && this.handleLocationChange(), Object(g.b)(this.props.options.playerProps, e.options.playerProps) && this.setState({
+                    return l.d(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                        this.props.location.pathname !== e.location.pathname && this.handleLocationChange(), Object(v.b)(this.props.options.playerProps, e.options.playerProps) && this.setState({
                             shouldPause: !1
                         })
                     }, t.prototype.componentDidMount = function() {
@@ -7179,95 +7187,109 @@
                         this.handleLocationChange(), window.removeEventListener("resize", this.handleWindowResize), this.resizeAnimationFrame && cancelAnimationFrame(this.resizeAnimationFrame)
                     }, t.prototype.render = function() {
                         var e, t = this.props.theatreModeEnabled && !this.props.mini,
-                            n = u({
+                            n = p({
                                 "persistent-player--theatre": t
                             }),
-                            i = this.props.mainRef.getBoundingClientRect(),
-                            r = 0;
+                            r = this.props.mainRef.getBoundingClientRect(),
+                            a = 0;
                         if (t) e = {
                             position: "fixed",
                             left: 0,
                             top: 0,
                             maxHeight: "100vh",
                             height: "100%",
-                            width: window.innerWidth < 820 || this.props.rightNavCollapsed ? "100%" : "calc(100% - " + m.a + ")",
+                            width: window.innerWidth < 820 || this.props.rightNavCollapsed ? "100%" : "calc(100% - " + h.a + ")",
                             zIndex: 3e3
                         };
                         else if (this.props.mini) e = {
                             position: "fixed",
                             width: "28rem",
                             height: "15.75rem",
-                            left: i.left,
+                            left: r.left,
                             bottom: 0,
                             margin: "1rem",
                             zIndex: 1e3
-                        }, r = 5;
+                        }, a = 5;
                         else {
-                            var a = this.props.contentRef.getBoundingClientRect(),
-                                o = a.left - i.left,
-                                c = i.right - a.right;
+                            var o = this.props.contentRef.getBoundingClientRect(),
+                                s = o.left - r.left,
+                                d = r.right - o.right;
                             e = {
-                                top: a.top - i.top,
-                                left: o,
+                                top: o.top - r.top,
+                                left: s,
                                 position: "absolute",
                                 width: "100%",
-                                maxWidth: "calc(100% - " + (o + c) + "px)",
+                                maxWidth: "calc(100% - " + (s + d) + "px)",
                                 maxHeight: "calc(100vh - 16rem)",
                                 overflow: "hidden",
                                 height: "auto"
-                            }, Object(p.a)() && (r = 3)
+                            }, Object(m.a)() && (a = 3)
                         }
-                        return l.createElement(v.Ga, {
-                            elevation: r,
-                            className: u({
+                        var u = c.createElement(g.c, l.a({
+                                key: i.DefaultPlayer,
+                                "data-test-selector": i.DefaultPlayer
+                            }, this.props.options.playerProps, {
+                                instanceRef: this.props.onVideoPlayerInstance,
+                                miniModeEnabled: this.props.mini,
+                                paused: this.state.shouldPause,
+                                onPauseToggled: this.onPauseToggled
+                            })),
+                            f = c.createElement(g.c, l.a({
+                                key: i.ClipsPlayer,
+                                "data-test-selector": i.ClipsPlayer
+                            }, this.props.options.playerProps, {
+                                instanceRef: this.props.onVideoPlayerInstance,
+                                miniModeEnabled: this.props.mini,
+                                paused: this.state.shouldPause,
+                                onPauseToggled: this.onPauseToggled
+                            })),
+                            v = this.props.options.playerProps.clipSlug ? f : u;
+                        return c.createElement(b.Ga, {
+                            elevation: a,
+                            className: p({
                                 "persistent-player__border--mini": this.props.mini
                             }),
-                            borderRadius: this.props.mini ? v.t.Medium : v.t.None,
-                            overflow: this.props.mini ? v.Pa.Hidden : void 0
-                        }, l.createElement("div", {
-                            className: u("persistent-player", n),
+                            borderRadius: this.props.mini ? b.t.Medium : b.t.None,
+                            overflow: this.props.mini ? b.Pa.Hidden : void 0
+                        }, c.createElement("div", {
+                            className: p("persistent-player", n),
                             style: e
-                        }, l.createElement(v.k, null, l.createElement(f.c, s.a({}, this.props.options.playerProps, {
-                            instanceRef: this.props.onVideoPlayerInstance,
-                            miniModeEnabled: this.props.mini,
-                            paused: this.state.shouldPause,
-                            onPauseToggled: this.onPauseToggled
-                        }))), this.props.mini && this.renderMiniInterceptPointerView(), this.props.mini && this.renderMiniHoverControls()))
+                        }, c.createElement(b.k, null, v), this.props.mini && this.renderMiniInterceptPointerView(), this.props.mini && this.renderMiniHoverControls()))
                     }, t
-                }(l.Component)),
-                y = Object(c.f)(b);
-            var k, S, w = Object(i.b)(function(e) {
+                }(c.Component),
+                k = Object(d.f)(y);
+            var S, w, E = Object(r.b)(function(e) {
                 return {
                     sideNavCollapsed: !e.ui.sideNavExpanded,
                     rightNavCollapsed: !e.ui.rightColumnExpanded,
                     theatreModeEnabled: e.ui.theatreModeEnabled
                 }
             }, function(e) {
-                return Object(r.b)({
-                    disableTheatreMode: a.t
+                return Object(a.b)({
+                    disableTheatreMode: o.t
                 }, e)
-            })(y);
+            })(k);
             ! function(e) {
                 e.CloseMini = "close", e.OpenMini = "open", e.ExpandPlayer = "expand", e.ContentChange = "content_change"
-            }(k || (k = {})),
+            }(S || (S = {})),
             function(e) {
                 e.Minimize = "minimize", e.Maximize = "maximize", e.UserMinimize = "user_minimize", e.UserMaximize = "user_maximize"
-            }(S || (S = {}));
-            var E, C = n("p5Wp"),
-                N = function(e) {
+            }(w || (w = {}));
+            var C, N = n("p5Wp"),
+                T = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        n.logger = d.j.withCategory("PersistentPlayerRoot"), n.trackMiniPlayerAction = function(e, t) {
+                        n.logger = u.j.withCategory("PersistentPlayerRoot"), n.trackMiniPlayerAction = function(e, t) {
                             n.videoPlayerComponent && n.videoPlayerComponent.trackMiniPlayerAction(e, t)
                         }, n.setVideoPlayerRef = function(e) {
                             return n.videoPlayerComponent = e
                         }, n.onClickExpand = function() {
-                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerExpand ? n.state.overrides.onMiniPlayerExpand() : (n.props.history.push(n.state.options.miniPlayerContentRoute), n.trackMiniPlayerAction(k.ExpandPlayer, S.UserMaximize)))
+                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerExpand ? n.state.overrides.onMiniPlayerExpand() : (n.props.history.push(n.state.options.miniPlayerContentRoute), n.trackMiniPlayerAction(S.ExpandPlayer, w.UserMaximize)))
                         }, n.onClickDismiss = function() {
-                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerDismiss ? n.state.overrides.onMiniPlayerDismiss() : (n.destroyPlayer(), n.trackMiniPlayerAction(k.CloseMini, S.UserMinimize)))
+                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerDismiss ? n.state.overrides.onMiniPlayerDismiss() : (n.destroyPlayer(), n.trackMiniPlayerAction(S.CloseMini, w.UserMinimize)))
                         }, n.onHistoryChange = function(e) {
                             var t = n.props.isLoggedIn,
-                                i = Object(C.a)({
+                                i = Object(N.a)({
                                     isLoggedIn: t,
                                     location: e
                                 });
@@ -7280,27 +7302,27 @@
                         return n.state = {
                             isError: !1,
                             mini: !1,
-                            hideSideNav: Object(C.a)({
+                            hideSideNav: Object(N.a)({
                                 isLoggedIn: i,
                                 location: r
                             })
-                        }, E && n.logger.warn("attempting to create a second instance of the Persistent Player Root. There should only be one in <Root>, use <PersistentPlayerContent> instead."), E = n, n
+                        }, C && n.logger.warn("attempting to create a second instance of the Persistent Player Root. There should only be one in <Root>, use <PersistentPlayerContent> instead."), C = n, n
                     }
-                    return s.d(t, e), t.prototype.componentDidCatch = function(e, t) {
+                    return l.d(t, e), t.prototype.componentDidCatch = function(e, t) {
                         var n = this;
                         this.setState({
                             isError: !0
                         }, function() {
-                            d.o.stats.recordComponentError("PersistentPlayerRoot"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            u.o.stats.recordComponentError("PersistentPlayerRoot"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
                     }, t.prototype.componentDidMount = function() {
-                        this.historyUnlisten = d.o.history.listen(this.onHistoryChange)
+                        this.historyUnlisten = u.o.history.listen(this.onHistoryChange)
                     }, t.prototype.componentWillUnmount = function() {
                         this.historyUnlisten && this.historyUnlisten()
                     }, t.prototype.render = function() {
-                        return !this.state.isError && this.state.options && this.state.contentRef && this.props.mainRef ? l.createElement(w, {
+                        return !this.state.isError && this.state.options && this.state.contentRef && this.props.mainRef ? c.createElement(E, {
                             options: this.state.options,
                             contentRef: this.state.contentRef,
                             mainRef: this.props.mainRef,
@@ -7323,7 +7345,7 @@
                         })
                     }, t.prototype.requestVideoContent = function(e) {
                         var t = this.state.options && this.state.options.playerProps;
-                        Object(g.b)(t, e.options.playerProps) && this.trackMiniPlayerAction(k.ContentChange, ""), this.setState({
+                        Object(v.b)(t, e.options.playerProps) && this.trackMiniPlayerAction(S.ContentChange, ""), this.setState({
                             contentRef: e.ref,
                             options: e.options,
                             overrides: e.overrides
@@ -7331,41 +7353,41 @@
                     }, t.prototype.transitionToMiniPlayer = function(e) {
                         this.setState({
                             mini: !0
-                        }), this.props.beginPersistingPlayer(), e && this.trackMiniPlayerAction(k.OpenMini, e)
+                        }), this.props.beginPersistingPlayer(), e && this.trackMiniPlayerAction(S.OpenMini, e)
                     }, t.prototype.transitionToAnchoredPlayer = function(e) {
                         this.setState({
                             mini: !1
-                        }), this.props.stopPersistingPlayer(), e && this.trackMiniPlayerAction(k.CloseMini, e)
+                        }), this.props.stopPersistingPlayer(), e && this.trackMiniPlayerAction(S.CloseMini, e)
                     }, t.prototype.reposition = function() {
                         var e = this.state.forcePresentationRender;
                         this.setState({
                             forcePresentationRender: e ? e + 1 : 1
                         })
                     }, t
-                }(l.Component),
-                T = Object(c.f)(N);
-            var _ = Object(i.b)(function(e) {
+                }(c.Component),
+                _ = Object(d.f)(T);
+            var R = Object(r.b)(function(e) {
                     return {
-                        isLoggedIn: Object(o.e)(e)
+                        isLoggedIn: Object(s.e)(e)
                     }
                 }, function(e) {
-                    return Object(r.b)({
-                        beginPersistingPlayer: a.o,
-                        stopPersistingPlayer: a.z
+                    return Object(a.b)({
+                        beginPersistingPlayer: o.o,
+                        stopPersistingPlayer: o.z
                     }, e)
-                })(T),
-                R = n("17x9"),
-                O = n("76Lv"),
-                I = null,
-                D = function(e) {
+                })(_),
+                O = n("17x9"),
+                I = n("76Lv"),
+                D = null,
+                P = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
                             userHasDismissedContent: !1
-                        }, n.logger = d.j.withCategory("PersistentPlayer"), n.setDomRef = function(e) {
+                        }, n.logger = u.j.withCategory("PersistentPlayer"), n.setDomRef = function(e) {
                             return n.domRef = e
                         }, n.onMiniPlayerDismiss = function() {
-                            n.transitionToAnchoredPlayer(S.UserMinimize), n.setState({
+                            n.transitionToAnchoredPlayer(w.UserMinimize), n.setState({
                                 userHasDismissedContent: !0
                             })
                         }, n.onMiniPlayerExpand = function() {
@@ -7375,11 +7397,11 @@
                                 onMiniPlayerDismiss: n.onMiniPlayerDismiss,
                                 onMiniPlayerExpand: n.onMiniPlayerExpand
                             }
-                        }, I && n.logger.error(new Error, "there should only ever be one <PersistentPlayer> rendered at a time. Verify that no other component above or below this in the tree has rendered one as well."), I = n, n
+                        }, D && n.logger.error(new Error, "there should only ever be one <PersistentPlayer> rendered at a time. Verify that no other component above or below this in the tree has rendered one as well."), D = n, n
                     }
-                    return s.d(t, e), t.prototype.componentDidMount = function() {
+                    return l.d(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
-                        E || this.logger.error(new Error, "No <PersistentPlayerRoot> found. Make sure it is mounted in the Root component"), this.unregister = this.context.registerReceiver(this), E.requestVideoContent({
+                        C || this.logger.error(new Error, "No <PersistentPlayerRoot> found. Make sure it is mounted in the Root component"), this.unregister = this.context.registerReceiver(this), C.requestVideoContent({
                             ref: this.domRef,
                             options: this.props,
                             overrides: this.getPersistentPlayerOverrides(),
@@ -7388,14 +7410,14 @@
                             }
                         }), this.props.repositionPlayerRef && this.props.repositionPlayerRef(this.reposition)
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        E.requestVideoContent({
+                        C.requestVideoContent({
                             ref: this.domRef,
                             options: e,
                             overrides: this.getPersistentPlayerOverrides()
                         }), e.repositionPlayerRef && e.repositionPlayerRef !== this.props.repositionPlayerRef && e.repositionPlayerRef(this.reposition)
                     }, t.prototype.componentWillUnmount = function() {
                         var e = this;
-                        if (this.unregister(), this.props.repositionPlayerRef && this.props.repositionPlayerRef(null), this.props.disablePersistenceOnUnmount || this.state.userHasDismissedContent || !this.props.persistentPlayerEnabled) return E.destroyPlayer(), void(I = null);
+                        if (this.unregister(), this.props.repositionPlayerRef && this.props.repositionPlayerRef(null), this.props.disablePersistenceOnUnmount || this.state.userHasDismissedContent || !this.props.persistentPlayerEnabled) return C.destroyPlayer(), void(D = null);
                         var t = this.props,
                             n = t.playerProps,
                             i = t.miniPlayerTitle,
@@ -7414,61 +7436,61 @@
                                 miniPlayerTitle: i,
                                 miniPlayerContentRoute: r
                             };
-                        E.requestVideoContent({
+                        C.requestVideoContent({
                             ref: this.domRef,
                             options: a,
                             onCompletion: function() {
-                                return e.transitionToMiniPlayer(S.Minimize)
+                                return e.transitionToMiniPlayer(w.Minimize)
                             }
-                        }), I = null
+                        }), D = null
                     }, t.prototype.render = function() {
-                        return l.createElement(v.qb, {
-                            background: v.n.Alt2,
-                            position: v.Wa.Absolute,
+                        return c.createElement(b.qb, {
+                            background: b.n.Alt2,
+                            position: b.Wa.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
                             refDelegate: this.setDomRef,
                             "data-target": "persistent-player-content",
-                            className: Object(O.a)(this.props.theme)
+                            className: Object(I.a)(this.props.theme)
                         })
                     }, t.prototype.transitionToMiniPlayer = function(e) {
-                        E.transitionToMiniPlayer(e)
+                        C.transitionToMiniPlayer(e)
                     }, t.prototype.transitionToAnchoredPlayer = function(e) {
-                        E.transitionToAnchoredPlayer(e)
+                        C.transitionToAnchoredPlayer(e)
                     }, t.prototype.isMini = function() {
-                        return E.state.mini
+                        return C.state.mini
                     }, t.prototype.checkVisible = function(e, t) {
                         var n = this.context.getScrollContent();
                         if (t && n) {
                             var i = this.domRef.getBoundingClientRect(),
                                 r = n.getBoundingClientRect(),
                                 a = i.top + i.height - r.top;
-                            a <= 100 && this.props.persistentPlayerEnabled && !this.isMini() && !this.props.disablePersistenceOnScroll && !this.state.userHasDismissedContent && this.transitionToMiniPlayer(S.Minimize), a > 100 && (this.isMini() && this.transitionToAnchoredPlayer(S.Maximize), this.state.userHasDismissedContent && this.setState({
+                            a <= 100 && this.props.persistentPlayerEnabled && !this.isMini() && !this.props.disablePersistenceOnScroll && !this.state.userHasDismissedContent && this.transitionToMiniPlayer(w.Minimize), a > 100 && (this.isMini() && this.transitionToAnchoredPlayer(w.Maximize), this.state.userHasDismissedContent && this.setState({
                                 userHasDismissedContent: !1
                             }))
                         }
                     }, t.prototype.reposition = function() {
-                        E.reposition()
+                        C.reposition()
                     }, t.contextTypes = {
-                        registerReceiver: R.func,
-                        getScrollContent: R.func,
-                        scrollToTop: R.func
+                        registerReceiver: O.func,
+                        getScrollContent: O.func,
+                        scrollToTop: O.func
                     }, t
-                }(l.Component);
-            var P = Object(i.b)(function(e) {
+                }(c.Component);
+            var x = Object(r.b)(function(e) {
                 return {
                     theme: e.ui.theme,
                     persistentPlayerEnabled: e.ui.persistentPlayerEnabled
                 }
-            })(D);
+            })(P);
             n.d(t, "b", function() {
-                return _
+                return R
             }), n.d(t, "a", function() {
-                return P
+                return x
             }), n.d(t, !1, function() {
-                return S
+                return w
             })
         },
         "9aiH": function(e, t) {
@@ -10176,7 +10198,8 @@
                         padding: {
                             left: 1,
                             top: 1
-                        }
+                        },
+                        overflow: p.Pa.Hidden
                     }, this.renderTabContent(this.state.selectedTab)), a.createElement(p.qb, {
                         flexShrink: 0,
                         flexGrow: 0,
@@ -22681,7 +22704,7 @@
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
                 }(r || (r = {})),
                 function(e) {
-                    e.AnnouncementBanner = "announcement_banner", e.ChannelMetadata = "channel_metadata", e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.ClipCuratorName = "curator_name", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionCard = "extension_card", e.ExtensionCategoryPreview = "extension_category_preview", e.ExtensionDetails = "extension_details", e.ExtensionNavTabLink = "extension_nav_tab_link", e.ExtensionPanel = "extension_panel", e.ExtensionSearchBar = "extension_search_bar", e.ExtensionConfigureButton = "extension_configure_button", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.GameBoxart = "game_boxart", e.GameMetadata = "game_metadata", e.GameName = "game_name", e.Games = "directory_games", e.HeaderGameName = "header_game_name", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.InstalledExtensionCard = "installed_extension_card", e.LatestCollection = "latest_collection", e.Live = "live_channel", e.LiveHost = "live_host", e.LocalLiveChannel = "local_live_channel", e.LocalPopularChannel = "local_popular_channel", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.UserThumbnail = "user_thumbnail", e.Video = "video", e.VideoThumbnail = "video_thumbnail", e.VideoTitle = "video_title", e.VideoShelf = "video_shelf"
+                    e.AnnouncementBanner = "announcement_banner", e.ChannelMetadata = "channel_metadata", e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.ClipCuratorName = "curator_name", e.ClipsCuratorCarousel = "clips_curator_carousel", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionCard = "extension_card", e.ExtensionCategoryPreview = "extension_category_preview", e.ExtensionDetails = "extension_details", e.ExtensionNavTabLink = "extension_nav_tab_link", e.ExtensionPanel = "extension_panel", e.ExtensionSearchBar = "extension_search_bar", e.ExtensionConfigureButton = "extension_configure_button", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.GameBoxart = "game_boxart", e.GameMetadata = "game_metadata", e.GameName = "game_name", e.Games = "directory_games", e.HeaderGameName = "header_game_name", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.InstalledExtensionCard = "installed_extension_card", e.LatestCollection = "latest_collection", e.Live = "live_channel", e.LiveHost = "live_host", e.LocalLiveChannel = "local_live_channel", e.LocalPopularChannel = "local_popular_channel", e.Logo = "twitch_logo", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.RecentVideos = "recent_videos", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.UserThumbnail = "user_thumbnail", e.Video = "video", e.VideoThumbnail = "video_thumbnail", e.VideoTitle = "video_title", e.VideoShelf = "video_shelf"
                 }(a || (a = {})),
                 function(e) {
                     e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.ClipsWatchPage = "clips_watch_page", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.DashboardLive = "dashboard_live", e.EventDetails = "event_details", e.ExtensionCategory = "extension_category", e.ExtensionConfiguration = "extension_configuration", e.ExtensionPage = "extension_page", e.ExtensionSearch = "extension_search", e.ExtensionDiscovery = "extension_discovery", e.ExtensionManagement = "extension_management", e.ExtensionDashboardTopNav = "extension_dashboard_top_nav", e.ExtensionInstalledModal = "extension_modal_installed", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.ExtensionsWhitelisted = "extensions_whitelisted", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopNav = "twitch_topnav", e.TwitchHome = "twitch_home", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
@@ -36076,7 +36099,7 @@
                     this.setState({
                         showBalloon: !1
                     }, function() {
-                        e.props.onToggle && e.props.onToggle(!1)
+                        e.props.onToggle && e.props.onToggle(!0)
                     })
                 }, t
             }(a.Component)
@@ -44245,7 +44268,7 @@
                     return r
                 }),
                 function(e) {
-                    e.AnimatedThumbnails = "animated_thumbnails", e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding", e.ClipsViewing = "clips-viewing", e.ClipsEditing = "clips-editing", e.ClipsEmbed = "clips-embed", e.Dashboard = "dashboard"
+                    e.AnimatedThumbnails = "animated_thumbnails", e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding", e.ClipsViewing = "clips-viewing", e.ClipsWatchPage = "clips-watch", e.ClipsEditing = "clips-editing", e.ClipsEmbed = "clips-embed", e.Dashboard = "dashboard"
                 }(i || (i = {}));
             var r, a = [i.ClipsEditing, i.ClipsViewing, i.ClipsEmbed];
             ! function(e) {
@@ -48893,14 +48916,14 @@
                     }, t
                 }(i.Component),
                 x = Object(k.d)(Object(E.a)(R), Object(_.a)(T.c.Amazon))(P);
-            var L = Object(u.b)(null, function(e) {
+            var L, F = Object(u.b)(null, function(e) {
                     return Object(k.b)({
                         trackingSet: S.b
                     }, e)
                 })(x),
-                F = n("gOYK"),
-                M = n("d2C5"),
-                A = function(e) {
+                M = n("gOYK"),
+                A = n("d2C5"),
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.logger = a.o.logger.withCategory("browser-push-notifications"), t
@@ -48911,10 +48934,10 @@
                             return c.e(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        if (!Object(M.a)()) return this.logger.debug("unsupported browser"), [2];
+                                        if (!Object(A.a)()) return this.logger.debug("unsupported browser"), [2];
                                         t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, F.a.initialize()];
+                                        return t.trys.push([1, 3, , 4]), [4, M.a.initialize()];
                                     case 2:
                                         return t.sent(), [3, 4];
                                     case 3:
@@ -48928,11 +48951,11 @@
                         return null
                     }, t
                 }(i.Component),
-                U = n("eW5E"),
-                B = n("5zC2"),
-                j = n("GnwI"),
-                z = n("Ue10"),
-                W = (n("LGxt"), function(e) {
+                B = n("eW5E"),
+                j = n("5zC2"),
+                z = n("GnwI"),
+                W = n("Ue10"),
+                V = (n("LGxt"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -48965,32 +48988,32 @@
                                 }, e)
                             }
                         }, "Namespace");
-                        return i.createElement(z.qb, {
+                        return i.createElement(W.qb, {
                             className: "red-banner",
-                            display: z.R.Flex,
-                            justifyContent: z.La.Center,
-                            alignItems: z.c.Center,
+                            display: W.R.Flex,
+                            justifyContent: W.La.Center,
+                            alignItems: W.c.Center,
                             elevation: 1,
                             padding: 1
-                        }, i.createElement(z.qb, {
-                            display: z.R.Flex,
-                            alignItems: z.c.Center,
+                        }, i.createElement(W.qb, {
+                            display: W.R.Flex,
+                            alignItems: W.c.Center,
                             margin: {
                                 right: 1
                             },
                             padding: {
                                 right: .5
                             },
-                            color: z.K.Overlay
-                        }, i.createElement(z.fb, {
-                            asset: z.gb.NotificationWarning,
-                            type: z.hb.Inherit
-                        })), i.createElement(z.Q, {
-                            fontSize: z.V.Size5,
-                            color: z.K.Overlay
-                        }, e), i.createElement(z.qb, {
+                            color: W.K.Overlay
+                        }, i.createElement(W.fb, {
+                            asset: W.gb.NotificationWarning,
+                            type: W.hb.Inherit
+                        })), i.createElement(W.Q, {
+                            fontSize: W.V.Size5,
+                            color: W.K.Overlay
+                        }, e), i.createElement(W.qb, {
                             className: "red-banner__dismiss",
-                            position: z.Wa.Absolute,
+                            position: W.Wa.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
@@ -48999,20 +49022,20 @@
                                 x: 1,
                                 y: .5
                             },
-                            color: z.K.Overlay
-                        }, i.createElement(z.O, {
-                            type: z.P.Inherit,
+                            color: W.K.Overlay
+                        }, i.createElement(W.O, {
+                            type: W.P.Inherit,
                             onClick: this.dismissBarClickHandler,
                             hoverColorInherit: !0,
                             hoverUnderlineNone: !0
-                        }, i.createElement(z.fb, {
-                            asset: z.gb.Close,
-                            type: z.hb.Inherit
+                        }, i.createElement(W.fb, {
+                            asset: W.gb.Close,
+                            type: W.hb.Inherit
                         }))))
                     }, t
                 }(i.Component)),
-                V = "legacy_routes_enabled",
-                H = function(e) {
+                H = "legacy_routes_enabled",
+                G = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.isEnabled = !1, n.onHistoryChange = function(e, t) {
@@ -49051,7 +49074,7 @@
                                     })
                                 }
                             }
-                        }, n.isEnabled = a.b.get(V, !1), n.logger = a.j.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
+                        }, n.isEnabled = a.b.get(H, !1), n.logger = a.j.withCategory("legacy-routes"), n.legacyRoutes = n.buildRoutes(), n.props.history.listen(n.onHistoryChange), n
                     }
                     return c.d(t, e), t.prototype.render = function() {
                         return null
@@ -49080,189 +49103,356 @@
                         }), t
                     }, t
                 }(i.Component),
-                G = n("NT6a"),
-                q = n("HuHG"),
-                Q = n("Ar2k"),
-                K = n("Grq2"),
-                Y = "update_chunks",
-                X = "twilight.update_manager.known_builds",
-                $ = /^assets\/(.+)-.+\.(.+?)$/i;
-
-            function J(e) {
-                var t = $.exec(e);
-                if (t) return t[1] + "." + t[2]
-            }
-
-            function Z(e, t) {
-                return c.b(this, void 0, void 0, function() {
-                    var n, i, r, o, s, l, d, u, p, m, h, f;
-                    return c.e(this, function(c) {
-                        switch (c.label) {
-                            case 0:
-                                for (n = a.o.dynamicSettings.get(Y, []), i = {
-                                        headers: new Headers({
-                                            "Content-Type": "application/octet-stream"
-                                        })
-                                    }, r = [], o = 0, s = e; o < s.length; o++) l = s[o], (d = J(l)) && n.includes(d) && r.push(fetch("" + a.o.config.cdnURL + l, i));
-                                return 0 === r.length ? [2, !1] : [4, Promise.all(r)];
-                            case 1:
-                                for (u = c.sent(), p = !1, m = 0, h = u; m < h.length; m++)(f = h[m]).ok || (p = !0, t.warn("Failed to preload chunk.", {
-                                    status: f.status,
-                                    url: f.url
-                                }));
-                                return [2, !p]
+                q = n("NT6a"),
+                Q = n("HuHG"),
+                K = n("Ar2k"),
+                Y = n("Grq2"),
+                X = /^assets\/(.+)-.+\.(.+?)$/i,
+                $ = function() {
+                    function e(e, t) {
+                        this.enabled = !0, this.logger = e.withCategory("update-manager"), this.config = t, t.manifestURL || (this.logger.warn("Disabling update loader. manifestURL is undefined."), this.enabled = !1), t.cdnURL || (this.logger.warn("Disabling update loader. cdnURL is undefined."), this.enabled = !1)
+                    }
+                    return e.prototype.getManifest = function() {
+                        return c.b(this, void 0, void 0, function() {
+                            var e, t, n;
+                            return c.e(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return this.config.manifestURL ? (this.logger.debug("Downloading manifest", {
+                                            url: this.config.manifestURL
+                                        }), [4, fetch(this.config.manifestURL)]) : (this.logger.error(new Error("Unable to download manifest: The manifest URL is not set."), "Unable to download manifest: The manifest URL is not set."), [2]);
+                                    case 1:
+                                        if (!(e = i.sent()).ok) return this.logger.error(new Error("Unable to download manifest"), "Unable to download manifest.", {
+                                            status: e.status
+                                        }), [2];
+                                        i.label = 2;
+                                    case 2:
+                                        return i.trys.push([2, 4, , 5]), [4, e.json()];
+                                    case 3:
+                                        if (!(t = i.sent()).channels) throw new Error("Update manager could not load manifest. It appears to be an invalid format.");
+                                        return [2, t];
+                                    case 4:
+                                        return n = i.sent(), this.logger.error(n, "Unable to parse manifest."), [3, 5];
+                                    case 5:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, e.prototype.getChunkURLs = function(e) {
+                        for (var t = [], n = 0, i = e; n < i.length; n++) {
+                            var r = i[n],
+                                a = this.getChunk(r);
+                            a && this.config.chunksToPreload.includes(a) && t.push("" + this.config.cdnURL + r)
                         }
-                    })
-                })
-            }
-
-            function ee() {
-                return new Set(a.m.get(X, [])).add(a.o.config.buildID)
-            }
-
-            function te(e) {
-                a.m.set(X, Array.from(ee().add(e)))
-            }
-            var ne = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            newBuilds: new Set,
-                            rejectedBuilds: new Set,
-                            shouldReloadOnTransition: !1
-                        }, t.knownBuilds = ee(), t.logger = a.o.logger.withCategory("update-manager"), t.handleHistoryChange = function() {
-                            t.state.shouldReloadOnTransition && window.location.reload(!0)
-                        }, t.processManifest = function() {
-                            return c.b(t, void 0, void 0, function() {
+                        return t
+                    }, e.prototype.preloadChunks = function(e) {
+                        return c.b(this, void 0, void 0, function() {
+                            var t, n, i, r, a, o;
+                            return c.e(this, function(s) {
+                                switch (s.label) {
+                                    case 0:
+                                        if (!e.length) return [2, !1];
+                                        if (!this.config.cdnURL) return this.logger.error(new Error("Missing CDN URL"), "Unable to preload chunks."), [2, !1];
+                                        if (!(t = this.getChunkURLs(e)).length) return [2, !1];
+                                        for (n = [], i = 0, r = t; i < r.length; i++) a = r[i], n.push(this.prefetchResource(a));
+                                        if (0 === n.length) return [2, !1];
+                                        this.logger.debug("Prefetching " + n.length + " assets..."), s.label = 1;
+                                    case 1:
+                                        return s.trys.push([1, 3, , 4]), [4, Promise.all(n)];
+                                    case 2:
+                                        return s.sent(), this.logger.debug("All assets finished"), [2, !0];
+                                    case 3:
+                                        return o = s.sent(), this.logger.warn("One or more resources failed to load", {
+                                            error: o
+                                        }), [2, !1];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, e.prototype.getChunk = function(e) {
+                        var t = X.exec(e);
+                        if (t) return t[1] + "." + t[2]
+                    }, e.prototype.prefetchResource = function(e) {
+                        var t = this;
+                        return new Promise(function(n, i) {
+                            try {
+                                var r = document.createElement("link");
+                                r.rel = "prefetch", r.href = e, r.onload = function() {
+                                    return n()
+                                }, r.onerror = function() {
+                                    t.logger.debug("Failed to prefetch asset", {
+                                        url: e
+                                    }), i()
+                                }, document.body.appendChild(r)
+                            } catch (n) {
+                                t.logger.error(n, "Unable to append prefetch tag", {
+                                    url: e
+                                }), i()
+                            }
+                        })
+                    }, e
+                }();
+            ! function(e) {
+                e.Canary = "canary", e.Live = "live", e.Staging = "staging"
+            }(L || (L = {}));
+            var J = "twilight.update_manager.known_builds",
+                Z = function() {
+                    function e(e, t, n, i) {
+                        var r = this;
+                        this.shouldReloadOnTransition = !1, this.started = !1, this.isUpdating = !1, this.checkForUpdates = function() {
+                            return c.b(r, void 0, void 0, function() {
                                 var e, t, n;
                                 return c.e(this, function(i) {
                                     switch (i.label) {
                                         case 0:
-                                            return i.trys.push([0, 11, , 12]), [4, function(e) {
-                                                return c.b(this, void 0, void 0, function() {
-                                                    var t, n;
-                                                    return c.e(this, function(i) {
-                                                        switch (i.label) {
-                                                            case 0:
-                                                                return a.o.config.manifestURL ? [4, fetch(a.o.config.manifestURL)] : (e.error(new Error("Unable to download manifest: The manifest URL is not set."), "Unable to download manifest: The manifest URL is not set."), [2]);
-                                                            case 1:
-                                                                if (!(t = i.sent()).ok) return e.error(new Error("Unable to download manifest"), "Unable to download manifest.", {
-                                                                    status: t.status
-                                                                }), [2];
-                                                                i.label = 2;
-                                                            case 2:
-                                                                return i.trys.push([2, 4, , 5]), [4, t.json()];
-                                                            case 3:
-                                                                return [2, i.sent()];
-                                                            case 4:
-                                                                return n = i.sent(), e.error(n, "Unable to parse manifest."), [3, 5];
-                                                            case 5:
-                                                                return [2]
-                                                        }
-                                                    })
-                                                })
-                                            }(this.logger)];
+                                            if (this.isUpdating) return [2];
+                                            this.isUpdating = !0, i.label = 1;
                                         case 1:
-                                            return (e = i.sent()) ? this.knownBuilds.has(e.release.buildId) || this.state.rejectedBuilds.has(e.release.buildId) ? [3, 5] : this.state.newBuilds.has(e.release.buildId) ? [3, 3] : [4, Z(e.release.files, this.logger)] : (this.logger.debug("Manifest is missing. Skipping preload", {
-                                                currentBuildID: a.o.config.buildID
-                                            }), [2]);
+                                            return i.trys.push([1, 3, 4, 5]), this.logger.debug("Checking for updates..."), [4, this.loader.getManifest()];
                                         case 2:
-                                            return i.sent() && (this.logger.debug("Preloading release chunks succeeded", {
-                                                currentBuildID: a.o.config.buildID,
-                                                releaseBuildID: e.release.buildId
-                                            }), this.setState(function(t) {
-                                                return te(e.release.buildId), {
-                                                    newBuilds: new Set(t.newBuilds).add(e.release.buildId),
-                                                    shouldReloadOnTransition: !e.canary || a.o.config.buildID !== e.canary.buildId
-                                                }
-                                            })), [3, 4];
+                                            return (e = i.sent()) ? (t = this.getLoadingInstructions(e), this.applyInstructions(t), [3, 5]) : (this.logger.debug("Manifest is missing. Skipping preload", {
+                                                currentBuildID: this.config.currentBuildID
+                                            }), [2]);
                                         case 3:
-                                            e.canary && a.o.config.buildID === e.canary.buildId || this.setState({
-                                                shouldReloadOnTransition: !0
-                                            }), i.label = 4;
+                                            return n = i.sent(), this.logger.error(n, "Unable to update chunks"), [3, 5];
                                         case 4:
-                                            return [3, 6];
+                                            return this.isUpdating = !1, [7];
                                         case 5:
-                                            this.setState(function(t) {
-                                                return {
-                                                    rejectedBuilds: new Set(t.rejectedBuilds).add(e.release.buildId)
-                                                }
-                                            }), i.label = 6;
-                                        case 6:
-                                            return e.canary ? (t = e.canary.buildId, this.knownBuilds.has(t) || this.state.rejectedBuilds.has(t) ? [3, 9] : this.state.newBuilds.has(t) ? [3, 8] : [4, Z(e.canary.files, this.logger)]) : [3, 10];
-                                        case 7:
-                                            i.sent() && (this.logger.debug("Preloading canary chunks succeeded", {
-                                                currentBuildID: a.o.config.buildID,
-                                                canaryBuildID: t
-                                            }), this.setState(function(e) {
-                                                return te(t), {
-                                                    newBuilds: new Set(e.newBuilds).add(t)
-                                                }
-                                            })), i.label = 8;
-                                        case 8:
-                                            return [3, 10];
-                                        case 9:
-                                            this.setState(function(e) {
-                                                return {
-                                                    rejectedBuilds: new Set(e.rejectedBuilds).add(t)
-                                                }
-                                            }), i.label = 10;
-                                        case 10:
-                                            return [3, 12];
-                                        case 11:
-                                            return n = i.sent(), this.logger.error(n, "Unable to update chunks"), [3, 12];
-                                        case 12:
                                             return [2]
                                     }
                                 })
                             })
-                        }, t
+                        }, this.handleHistoryChange = function() {
+                            r.shouldReloadOnTransition && (r.logger.info("Reloading to current live release."), window.location.reload(!0))
+                        }, this.config = i, this.logger = e.withCategory("update-manager"), this.loader = t, this.knownBuilds = this.getKnownBuilds(), this.historyListener = n
+                    }
+                    return e.prototype.start = function() {
+                        this.started ? this.logger.warn("Update manager is already started!") : this.config.enabled ? this.loader.enabled ? (this.started = !0, this.historyUnlisten = this.historyListener(this.handleHistoryChange), this.processManifestInterval = setInterval(this.checkForUpdates, this.config.updateCheckFrequency), this.logger.debug("Update manager has started!", {
+                            options: this.config
+                        }), this.config.eager && this.prefetchCurrentRelease()) : this.logger.debug("Update manager cannot start. The loader is not enabled.", {
+                            options: this.config
+                        }) : this.logger.debug("Update manager will not start. It is not enabled.", {
+                            options: this.config
+                        })
+                    }, e.prototype.stop = function() {
+                        this.historyUnlisten && this.historyUnlisten(), clearInterval(this.processManifestInterval), this.started = !1, this.logger.debug("Update manager stopped.")
+                    }, e.prototype.isKnownBuild = function(e) {
+                        return this.knownBuilds.has(e)
+                    }, e.prototype.getKnownBuilds = function() {
+                        return new Set(a.m.get(J, []))
+                    }, e.prototype.addKnownBuild = function(e) {
+                        this.knownBuilds.add(e), a.m.set(J, Array.from(this.knownBuilds))
+                    }, e.prototype.resetKnownBuilds = function() {
+                        a.m.remove(J), this.knownBuilds = new Set
+                    }, e.prototype.getEagerLoadingInstructions = function(e) {
+                        if (this.isKnownBuild(this.config.currentBuildID)) return this.logger.debug("Skipping current release preload. It is already known."), {};
+                        var t = this.findCurrentRelease(e);
+                        return t && t.current ? t.current.files ? {
+                            current: t.current,
+                            prefetch: [t.current]
+                        } : (this.logger.debug("Current release has no files in the manifest. It will not be eagerly loaded."), {
+                            current: t.current
+                        }) : (this.logger.debug("Current release not in manifest. It will not be eagerly loaded."), {})
+                    }, e.prototype.prefetchCurrentRelease = function() {
+                        return c.b(this, void 0, void 0, function() {
+                            var e, t, n;
+                            return c.e(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        this.isUpdating = !0, i.label = 1;
+                                    case 1:
+                                        return i.trys.push([1, 3, 4, 5]), this.logger.debug("Preloading current release..."), [4, this.loader.getManifest()];
+                                    case 2:
+                                        return (e = i.sent()) ? (t = this.getEagerLoadingInstructions(e), this.applyInstructions(t), [3, 5]) : (this.logger.debug("Manifest is missing. Skipping preload", {
+                                            currentBuildID: this.config.currentBuildID
+                                        }), [2]);
+                                    case 3:
+                                        return n = i.sent(), this.logger.error(n, "Unable to preload current release"), [3, 5];
+                                    case 4:
+                                        return this.isUpdating = !1, [7];
+                                    case 5:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, e.prototype.getLoadingInstructions = function(e) {
+                        var t = this.findChannel(e, {
+                                primary: !0,
+                                active: !0
+                            }),
+                            n = this.findChannel(e, {
+                                primary: !1,
+                                active: !0
+                            }),
+                            i = this.findChannel(e, {
+                                primary: !1,
+                                active: !1
+                            }),
+                            r = n && n.live ? n : t,
+                            a = this.findCurrentRelease(e);
+                        if (!r || !r.live) return this.logger.warn("Manifest contains no default live release."), {
+                            current: a && a.current
+                        };
+                        if (!a) return this.logger.debug("Unable to determine the current release. We will reload the default live.", {
+                            current: this.config.currentBuildID
+                        }), {
+                            current: void 0,
+                            reload: r.live,
+                            prefetch: r.canary && [r.canary]
+                        };
+                        this.logger.debug("Determined current release", {
+                            releaseId: a.current.buildId,
+                            releaseStage: a.current.stage,
+                            channel: a.channel
+                        });
+                        var o, s = [];
+                        return n && a.channel.id !== n.channel.id && (n.live && (a.channel.primary ? o = n.live : s.push(n.live)), n.canary && s.push(n.canary)), !n && t && a.channel.id !== t.channel.id && (t.live && s.push(t.live), t.canary && s.push(t.canary)), i && a.channel.id !== i.channel.id && (i.live && s.push(i.live), i.canary && s.push(i.canary)), a.current.stage === L.Live && a.canary && a.canary.files ? s.push(a.canary) : a.current.stage === L.Canary && a.live && a.live.files && s.push(a.live), s.length ? {
+                            current: a.current,
+                            prefetch: s,
+                            reload: o
+                        } : {
+                            current: a.current
+                        }
+                    }, e.prototype.applyInstructions = function(e) {
+                        return c.b(this, void 0, void 0, function() {
+                            var t, n, i;
+                            return c.e(this, function(r) {
+                                switch (r.label) {
+                                    case 0:
+                                        return e.reload ? [4, this.prefetchRelease(e.reload)] : [3, 2];
+                                    case 1:
+                                        r.sent(), this.isKnownBuild(e.reload.buildId) ? this.shouldReloadOnTransition = !0 : this.logger.warn("Unable to reload on transition, due to failed prefetch."), r.label = 2;
+                                    case 2:
+                                        if (!e.prefetch) return [3, 6];
+                                        t = 0, n = e.prefetch, r.label = 3;
+                                    case 3:
+                                        return t < n.length ? (i = n[t], [4, this.prefetchRelease(i)]) : [3, 6];
+                                    case 4:
+                                        r.sent(), r.label = 5;
+                                    case 5:
+                                        return t++, [3, 3];
+                                    case 6:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, e.prototype.prefetchRelease = function(e) {
+                        return c.b(this, void 0, void 0, function() {
+                            var t;
+                            return c.e(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        return t = e.buildId, this.knownBuilds.has(t) ? (this.logger.debug("Release already known. Skipping", {
+                                            buildID: t
+                                        }), [2]) : e.files ? (this.logger.debug("Prefetching a release", t), [4, this.loader.preloadChunks(e.files)]) : (this.logger.debug("Skipping release prefetch. It has no files.", {
+                                            buildID: t
+                                        }), [2]);
+                                    case 1:
+                                        return n.sent() ? (this.logger.debug("Successfully prefetched release", {
+                                            buildID: t
+                                        }), this.addKnownBuild(t), [2]) : (this.logger.debug("Failed to prefetch release", {
+                                            buildID: t
+                                        }), [2])
+                                }
+                            })
+                        })
+                    }, e.prototype.findCurrentRelease = function(e) {
+                        for (var t = 0, n = e.channels; t < n.length; t++)
+                            for (var i = n[t], r = 0, a = i.releases; r < a.length; r++) {
+                                var o = a[r];
+                                if (o.buildId === this.config.currentBuildID) return {
+                                    channel: i,
+                                    current: o,
+                                    canary: i.releases.find(function(e) {
+                                        return e.stage === L.Canary
+                                    }),
+                                    live: i.releases.find(function(e) {
+                                        return e.stage === L.Live
+                                    })
+                                }
+                            }
+                    }, e.prototype.findChannel = function(e, t) {
+                        var n = e.channels.find(function(e) {
+                            return e.active === t.active && e.primary === t.primary && e.releases.some(function(e) {
+                                return !!e.files
+                            })
+                        });
+                        if (n) {
+                            var i = n.releases.find(function(e) {
+                                    return e.stage === L.Live
+                                }),
+                                r = n.releases.find(function(e) {
+                                    return e.stage === L.Canary
+                                });
+                            if (i || r) return {
+                                channel: n,
+                                live: i,
+                                canary: r
+                            };
+                            this.logger.debug("Manifest " + (t.primary ? "primary" : "alternate") + " channel has no releases")
+                        }
+                    }, e
+                }(),
+                ee = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
                     }
                     return c.d(t, e), t.prototype.componentDidMount = function() {
-                        a.o.dynamicSettings.get("update_manager_enabled", !1) ? a.o.config.manifestURL ? (this.historyUnlisten = a.o.history.listen(this.handleHistoryChange), this.processManifestInterval = setInterval(this.processManifest, 6e5), this.processManifest()) : this.logger.debug("Maniest URL is not set. Chunks will not be preloaded.") : this.logger.debug("Update manager not enabled. Chunks will not be preloaded.")
+                        var e = new $(a.o.logger, {
+                            manifestURL: a.o.config.manifestURL || "",
+                            cdnURL: a.o.config.cdnURL || "",
+                            chunksToPreload: a.o.dynamicSettings.get("update_chunks", [])
+                        });
+                        this.updateManager = new Z(a.o.logger, e, a.o.history.listen, {
+                            enabled: a.o.dynamicSettings.get("update_manager_enabled", !1),
+                            currentBuildID: a.o.config.buildID,
+                            updateCheckFrequency: a.o.dynamicSettings.get("update_manager_interval", 6e5),
+                            eager: a.o.dynamicSettings.get("update_manager_eager", !0)
+                        }), this.updateManager.start()
                     }, t.prototype.componentWillUnmount = function() {
-                        clearInterval(this.processManifestInterval), this.historyUnlisten && this.historyUnlisten()
+                        this.updateManager.stop()
                     }, t.prototype.shouldComponentUpdate = function() {
                         return !1
                     }, t.prototype.render = function() {
                         return null
                     }, t
                 }(i.Component),
-                ie = n("xlgz"),
-                re = n("ZPFX");
-            var ae = Object(u.b)(function(e) {
+                te = n("xlgz"),
+                ne = n("ZPFX");
+            var ie = Object(u.b)(function(e) {
                     return {
                         isLoggedIn: Object(l.e)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         theatreModeEnabled: e.ui.theatreModeEnabled
                     }
-                })(re.a),
-                oe = (n("cGJr"), g.a.wrap(function() {
+                })(ne.a),
+                re = (n("cGJr"), g.a.wrap(function() {
                     return n.e(39).then(n.bind(null, "dumY"))
                 }, "CodeRedemptionPage")),
-                se = g.a.wrap(function() {
+                ae = g.a.wrap(function() {
                     return n.e(38).then(n.bind(null, "mdlQ"))
                 }, "DashboardRoot"),
-                le = g.a.wrap(function() {
+                oe = g.a.wrap(function() {
                     return Promise.all([n.e(32), n.e(33), n.e(0), n.e(37)]).then(n.bind(null, "Pnqn"))
                 }, "TeamsDashboardRoot"),
-                ce = g.a.wrap(function() {
+                se = g.a.wrap(function() {
                     return n.e(36).then(n.bind(null, "hy6r"))
                 }, "TeamsLandingPage"),
-                de = g.a.wrap(function() {
+                le = g.a.wrap(function() {
                     return n.e(35).then(n.bind(null, "8n14"))
                 }, "OnboardingRoot"),
-                ue = function(e) {
+                ce = function(e) {
                     return i.createElement(m.c, {
                         to: "/teams/" + e.match.params.teamName + "/dashboard"
                     })
                 },
-                pe = function(e) {
+                de = function(e) {
                     return i.createElement(m.c, {
                         to: "/team/" + e.match.params.teamName
                     })
                 },
-                me = function(e) {
+                ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onHistoryChange = function(e, n) {
@@ -49282,73 +49472,73 @@
                             t && document.body.classList.remove(t), n && document.body.classList.add(n)
                         }
                     }, t.prototype.render = function() {
-                        return i.createElement(z.Ma, {
+                        return i.createElement(W.Ma, {
                             className: "twilight-root",
-                            overflow: z.Pa.Hidden,
-                            display: z.R.Flex,
-                            flexDirection: z.T.Column,
-                            flexWrap: z.U.NoWrap,
-                            position: z.Wa.Absolute,
+                            overflow: W.Pa.Hidden,
+                            display: W.R.Flex,
+                            flexDirection: W.T.Column,
+                            flexWrap: W.U.NoWrap,
+                            position: W.Wa.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             attachBottom: !0,
                             attachLeft: !0
-                        }, a.o.benchmarking.toolsEnabled && i.createElement(W, null), i.createElement(T.a, null), i.createElement(L, null), i.createElement(U.a, null), i.createElement(B.b, null), i.createElement(m.e, null, i.createElement(m.d, {
+                        }, a.o.benchmarking.toolsEnabled && i.createElement(V, null), i.createElement(T.a, null), i.createElement(F, null), i.createElement(B.a, null), i.createElement(j.b, null), i.createElement(m.e, null, i.createElement(m.d, {
                             path: "/hi",
-                            component: de
+                            component: le
                         }), i.createElement(m.d, {
                             path: "/(manager|dashboard)/:pageName?",
                             component: f.a
                         }), i.createElement(m.d, {
                             path: "/event/:teamName",
-                            component: pe
+                            component: de
                         }), i.createElement(m.d, {
                             exact: !0,
                             path: "/team/:teamName/edit",
-                            render: ue
+                            render: ce
                         }), i.createElement(m.d, {
                             path: "/team/:teamName",
-                            component: ce
+                            component: se
                         }), i.createElement(m.d, {
                             path: "/teams/:teamName/dashboard/:pageName?",
-                            component: le
-                        }), i.createElement(m.d, {
-                            path: "/(claim|redeem)",
                             component: oe
                         }), i.createElement(m.d, {
+                            path: "/(claim|redeem)",
+                            component: re
+                        }), i.createElement(m.d, {
                             path: "/:channelName/manager",
-                            component: se
+                            component: ae
                         }), i.createElement(m.d, {
                             path: "/:channelName/dashboard/:pageName?",
-                            component: se
+                            component: ae
                         }), i.createElement(m.d, {
                             path: "/",
-                            component: ae
-                        })), i.createElement(h.a, null), i.createElement(Q.b, null), i.createElement(v.a, null), this.props.firstPageLoaded && i.createElement(q.a, null), this.props.firstPageLoaded && i.createElement(K.a, {
+                            component: ie
+                        })), i.createElement(h.a, null), i.createElement(K.b, null), i.createElement(v.a, null), this.props.firstPageLoaded && i.createElement(Q.a, null), this.props.firstPageLoaded && i.createElement(Y.a, {
                             history: this.props.history
-                        }), this.props.isLoggedIn && i.createElement(ie.a, null), a.o.benchmarking.toolsEnabled && i.createElement(G.a, null), this.props.firstPageLoaded && i.createElement(H, {
+                        }), this.props.isLoggedIn && i.createElement(te.a, null), a.o.benchmarking.toolsEnabled && i.createElement(q.a, null), this.props.firstPageLoaded && i.createElement(G, {
                             history: this.props.history
-                        }), this.props.firstPageLoaded && i.createElement(ne, null), this.props.firstPageLoaded && i.createElement(A, null))
+                        }), this.props.firstPageLoaded && i.createElement(ee, null), this.props.firstPageLoaded && i.createElement(U, null))
                     }, t
                 }(i.Component),
-                he = Object(j.c)("Root", {
+                pe = Object(z.c)("Root", {
                     isRoot: !0
-                })(me);
-            var fe, ge, ve, be = Object(u.b)(function(e) {
+                })(ue);
+            var me, he, fe, ge = Object(u.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isLoggedIn: Object(l.e)(e),
                         theme: Object(p.a)(e)
                     }
-                })(he),
-                ye = Object(r.f)(be);
+                })(pe),
+                ve = Object(r.f)(ge);
 
-            function ke() {
+            function be() {
                 a.o.mount(i.createElement(r.d, {
                     history: a.o.history
-                }, i.createElement(ye, null)), document.getElementById("root"))
+                }, i.createElement(ve, null)), document.getElementById("root"))
             }
-            a.o.integrations.desklight && (fe = a.o.integrations.desklight, ge = [], fe.logger && function(e) {
+            a.o.integrations.desklight && (me = a.o.integrations.desklight, he = [], me.logger && function(e) {
                 c.b(this, void 0, void 0, function() {
                     var t, i;
                     return c.e(this, function(r) {
@@ -49364,17 +49554,17 @@
                         }
                     })
                 })
-            }(fe.logger), fe.window && (ge.push(fe.window.onBack(function() {
+            }(me.logger), me.window && (he.push(me.window.onBack(function() {
                 return a.o.history.goBack()
-            })), ge.push(fe.window.onForward(function() {
+            })), he.push(me.window.onForward(function() {
                 return a.o.history.goForward()
             }))), window.addEventListener("unload", function() {
-                for (var e = 0, t = ge; e < t.length; e++)(0, t[e])()
+                for (var e = 0, t = he; e < t.length; e++)(0, t[e])()
             }), a.o.tracking.setPlatform(d.SpadePlatform.Desktop));
-            var Se = !1;
-            ve = a.o.store.getReduxStore().subscribe(function() {
+            var ye = !1;
+            fe = a.o.store.getReduxStore().subscribe(function() {
                 var e = a.o.store.getState();
-                !Se && Object(l.f)(e) && (Se = !0, ve(), a.a.optimizedBuild ? ke() : setTimeout(ke, 500))
+                !ye && Object(l.f)(e) && (ye = !0, fe(), a.a.optimizedBuild ? be() : setTimeout(be, 500))
             }), Object(s.a)(), a.o.store.dispatch(Object(o.e)())
         },
         sSlw: function(e, t, n) {
@@ -52684,30 +52874,34 @@
         y9X1: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return s
-            }), n.d(t, "a", function() {
                 return l
+            }), n.d(t, "a", function() {
+                return c
             });
             var i = n("q1tI"),
                 r = n("2+sX"),
                 a = n("jytb"),
-                o = n("Ue10");
+                o = n("Ue10"),
+                s = 400;
 
-            function s(e, t, n) {
-                var s = i.createElement(a.b, {
+            function l(e, t, n) {
+                var l = i.createElement(a.b, {
                     id: e,
                     bodyType: n || a.c.Default
                 });
                 Object(r.c)({
                     direction: o.r.Right,
                     ref: t,
-                    content: s,
-                    contentHeight: a.a
+                    content: l,
+                    contentHeight: a.a,
+                    timeout: s
                 })
             }
 
-            function l(e) {
-                Object(r.b)(e)
+            function c(e) {
+                e ? Object(r.b)(e) : Object(r.b)({
+                    timeout: s
+                })
             }
         },
         yH8i: function(e, t, n) {},
@@ -53783,6 +53977,6 @@
         }
     },
     [
-        [170, 93, 0]
+        [169, 93, 0]
     ]
 ]);
