@@ -113,7 +113,6 @@ window.__twilightSettings = {
     "update_manager_eager": true,
     "update_manager_enabled": true,
     "update_manager_interval": 60000,
-    "update_manager_reload_jitter": 5000,
     "viewer_milestones_enabled": true,
     "vod_archives_vira_grand": "on",
     "vod_editing_used_to_this": true,
