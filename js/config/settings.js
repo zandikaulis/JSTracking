@@ -132,7 +132,7 @@ window.__twilightSettings = {
         },
         "03f25f55-ded6-417a-b241-d656571c4a1f": {
             "name": "twilight_watch_symmetra",
-            "v": 3999,
+            "v": 4191,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -140,6 +140,12 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "on"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }, {
+                "weight": 0,
+                "value": "variant_b"
             }]
         },
         "080c0331-3073-4539-992f-93274236a97d": {
