@@ -110,7 +110,7 @@ window.__twilightSettings = {
     "twitch_prime_fortnite_offer_id": "c0b1816d-300b-d234-828e-59e76119bffe",
     "twitch_prime_fortnite_signup_url": "https://twitch.amazon.com/prime/country?ref_=SM_CM_FNStart_LP&ingress=epic-fortnite",
     "twitch_prime_offerpage_signup_url": "https://twitch.amazon.com/prime/country",
-    "update_chunks": ["vendor.js", "core.css", "core.js", "pages.channel.css", "pages.channel.js", "pages.front.css", "pages.front.js", "pages.anon-front.css", "pages.anon-front.js", "pages.browse.css", "pages.browse.js", "pages.directory-game.css", "pages.directory-game.js", "pages.following.css", "pages.following.js", "pages.video-watch.css", "pages.video-watch.js", "pages.dashboard.css", "pages.dashboard.js", "pages.dashboard.components.live-page.css", "pages.dashboard.components.live-page.js", "pages.settings.css", "pages.settings.js", "clips-main.css", "clips-main.js"],
+    "update_chunks": ["vendor.js", "core.css", "core.js", "pages.channel.css", "pages.channel.js", "pages.front.css", "pages.front.js", "pages.anon-front.css", "pages.anon-front.js", "pages.browse.css", "pages.browse.js", "pages.directory-game.css", "pages.directory-game.js", "pages.following.css", "pages.following.js", "pages.video-watch.css", "pages.video-watch.js", "pages.dashboard.css", "pages.dashboard.js", "pages.dashboard.components.live-page.css", "pages.dashboard.components.live-page.js", "pages.settings.css", "pages.settings.js", "clips-main.css", "clips-main.js", "minimal.css", "minimal.js", "pages.subs-checkout.components.subs-checkout-page.css", "pages.subs-checkout.components.subs-checkout-page.js"],
     "update_manager_eager": true,
     "update_manager_enabled": true,
     "update_manager_interval": 60000,
