@@ -65,6 +65,7 @@ window.__twilightSettings = {
     "net_neutrality_visible": false,
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
     "onsite_notifications_launch": true,
+    "partner_signup_app_v2": false,
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
     "persisted_queries_enabled": true,
     "player_routes_exact": ["", "activate", "bits", "bits-checkout", "directory", "following", "popout", "prime", "store", "subs"],
