@@ -1015,6 +1015,18 @@ window.__twilightSettings = {
                 "value": "boxart"
             }]
         },
+        "de013c6f-a800-45ee-9ab4-7965c405e3eb": {
+            "name": "TWILIGHT_ARCHER",
+            "v": 4189,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant"
+            }]
+        },
         "e0fdfc17-389d-4ba5-8596-065352ddc01e": {
             "name": "twilight_browser_notifications_upsell",
             "v": 3659,
