@@ -346,7 +346,7 @@ window.__twilightSettings = {
         },
         "326523fd-48bf-4043-9635-7bef334069e0": {
             "name": "TWILIGHT_AUTOMOD_LAUNCH",
-            "v": 3631,
+            "v": 4201,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -783,6 +783,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 50,
                 "value": "variant"
+            }]
+        },
+        "92431fe1-66e1-4f09-9533-83c8f6c82fbd": {
+            "name": "twilight_bits_button_balance",
+            "v": 4200,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "treatment"
+            }, {
+                "weight": 100,
+                "value": "control"
             }]
         },
         "9452d9e2-6588-408c-b8aa-1e54ff1e2f4a": {
