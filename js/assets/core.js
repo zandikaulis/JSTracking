@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [162], {
+    [156], {
         "+H9m": function(e, t, n) {},
         "+Jjl": function(e, t, n) {
             "use strict";
@@ -134,8 +134,8 @@
                         }), a.createElement(l.a, null))
                     }, t
                 }(a.Component));
-            var m = Object(s.compose)(Object(d.c)("ReportUserModal"), Object(o.connect)(null, function(e) {
-                return Object(s.bindActionCreators)({
+            var m = Object(s.d)(Object(d.c)("ReportUserModal"), Object(o.b)(null, function(e) {
+                return Object(s.b)({
                     closeModal: c.c
                 }, e)
             }))(p);
@@ -887,7 +887,7 @@
                         return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
                     }, t
                 }(r.Component);
-            var I = Object(a.compose)(Object(o.connect)(function(e) {
+            var I = Object(a.compose)(Object(o.b)(function(e) {
                 return {
                     currentUserID: e.session.user && e.session.user.id,
                     sessionUser: e.session.user,
@@ -1208,8 +1208,8 @@
                 k = n("/rr3"),
                 S = n("Ue10"),
                 w = n("heM0");
-            var E = Object(i.compose)(Object(r.connect)(null, function(e) {
-                    return Object(d.bindActionCreators)({
+            var E = Object(i.compose)(Object(r.b)(null, function(e) {
+                    return Object(d.b)({
                         onLoginClick: function() {
                             return m.f(p.a.FriendAdd)
                         }
@@ -1376,7 +1376,7 @@
                     }, t
                 }(c.Component),
                 P = n("GGok");
-            var x = Object(i.compose)(Object(s.c)("FriendButton"), Object(r.connect)(function(e) {
+            var x = Object(i.compose)(Object(s.c)("FriendButton"), Object(r.b)(function(e) {
                 var t = Object(o.d)(e);
                 return {
                     currentUserID: t && t.id,
@@ -3421,7 +3421,7 @@
                         }))
                     }, t
                 }(a.Component)),
-                F = Object(x.compose)(Object(d.c)("CopyButton"))(L),
+                F = Object(x.d)(Object(d.c)("CopyButton"))(L),
                 M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3457,7 +3457,7 @@
                         }))) : null
                     }, t
                 }(a.Component),
-                A = Object(x.compose)(Object(d.c)("CopyableItem"))(M),
+                A = Object(x.d)(Object(d.c)("CopyableItem"))(M),
                 U = (n("2b5K"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -4136,7 +4136,7 @@
                         return !e.firstPageLoaded && !e.ignoreFirstPageLoad
                     }
                 }), Object(d.c)("PrimeOfferList"))(J);
-            var ee = Object(i.connect)(function(e) {
+            var ee = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
@@ -4237,7 +4237,7 @@
                         }, "CampaignsTabs")
                     }, t
                 }(o.PureComponent);
-            var S = Object(i.connect)(function(e) {
+            var S = Object(i.b)(function(e) {
                 return {
                     user: Object(r.d)(e)
                 }
@@ -5388,7 +5388,7 @@
                                         }
                             }
                             return a ? r : e
-                        }, this.reduxStore = Object(V.createStore)(this.rootReducer, (e.buildType !== l.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || V.compose)(Object(V.applyMiddleware)(G.a)))
+                        }, this.reduxStore = Object(V.e)(this.rootReducer, (e.buildType !== l.a.Production && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || V.d)(Object(V.a)(G.a)))
                     }
                     return e.prototype.getReduxStore = function() {
                         return this.reduxStore
@@ -5736,7 +5736,7 @@
                 }, e.prototype.wrap = function(e) {
                     return r.createElement(a.ApolloProvider, {
                         client: this.apollo.client
-                    }, r.createElement(s.Provider, {
+                    }, r.createElement(s.a, {
                         store: this.store.getReduxStore()
                     }, e))
                 }, e.prototype.setPageTitle = function(e) {
@@ -6132,7 +6132,7 @@
                     authToken: Object(f.a)(e)
                 }
             }
-            var b = Object(h.connect)(v)(g);
+            var b = Object(h.b)(v)(g);
             n.d(t, !1, function() {
                 return "iframe_container_selector"
             }), n.d(t, !1, function() {
@@ -6860,7 +6860,7 @@
                         yScrollTo: s.func
                     }, t
                 }(l.Component);
-            var p = Object(a.connect)(function(e) {
+            var p = Object(a.b)(function(e) {
                 return {
                     sideNavExpanded: e.ui.sideNavExpanded
                 }
@@ -7258,14 +7258,14 @@
                     }, t
                 }(c.Component),
                 k = Object(d.f)(y);
-            var S, w, E = Object(r.connect)(function(e) {
+            var S, w, E = Object(r.b)(function(e) {
                 return {
                     sideNavCollapsed: !e.ui.sideNavExpanded,
                     rightNavCollapsed: !e.ui.rightColumnExpanded,
                     theatreModeEnabled: e.ui.theatreModeEnabled
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(a.b)({
                     disableTheatreMode: o.t
                 }, e)
             })(k);
@@ -7366,12 +7366,12 @@
                     }, t
                 }(c.Component),
                 _ = Object(d.f)(T);
-            var R = Object(r.connect)(function(e) {
+            var R = Object(r.b)(function(e) {
                     return {
                         isLoggedIn: Object(s.e)(e)
                     }
                 }, function(e) {
-                    return Object(a.bindActionCreators)({
+                    return Object(a.b)({
                         beginPersistingPlayer: o.o,
                         stopPersistingPlayer: o.z
                     }, e)
@@ -7479,7 +7479,7 @@
                         scrollToTop: O.func
                     }, t
                 }(c.Component);
-            var x = Object(r.connect)(function(e) {
+            var x = Object(r.b)(function(e) {
                 return {
                     theme: e.ui.theme,
                     persistentPlayerEnabled: e.ui.persistentPlayerEnabled
@@ -8013,7 +8013,7 @@
                 }), Object(u.a)(E, {
                     name: "updatePrimeOfferStatus"
                 }), Object(f.c)("PrimeOffers"))(T);
-            var R = Object(r.connect)(function(e) {
+            var R = Object(r.b)(function(e) {
                     return {
                         firstPageLoaded: !!e.session.firstPageLoaded
                     }
@@ -8139,7 +8139,7 @@
                         }, u)))))
                     }, t
                 }(s.Component),
-                L = Object(l.compose)(Object(r.connect)(function(e) {
+                L = Object(l.compose)(Object(r.b)(function(e) {
                     return {
                         blockBannerForGDPR: Object(I.h)(e)
                     }
@@ -9059,7 +9059,7 @@
                 }), Object(c.a)(m, {
                     name: "followUser"
                 }), Object(u.a)("LiveNotificationsToggle"))(f);
-            var v = Object(i.connect)(function(e) {
+            var v = Object(i.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
                     isLoggedIn: Object(r.e)(e)
@@ -9134,7 +9134,7 @@
                         resetRootScrollableProps: l.func
                     }, t
                 }(c.Component));
-            var m = Object(a.compose)(r.f, Object(i.connect)(function(e) {
+            var m = Object(a.d)(r.f, Object(i.b)(function(e) {
                     return {
                         playerIsPersisting: e.ui.persistentPlayerEnabled && e.ui.persistentPlayerIsPersisting
                     }
@@ -9235,40 +9235,6 @@
         },
         BndF: function(e, t, n) {},
         By5U: function(e, t) {},
-        C94G: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return o
-            });
-            var i, r = n("mrSG"),
-                a = n("/7QA");
-
-            function o(e) {
-                return r.b(this, void 0, void 0, function() {
-                    var t, o;
-                    return r.e(this, function(r) {
-                        switch (r.label) {
-                            case 0:
-                                if (i) return e && e(i), [2];
-                                r.label = 1;
-                            case 1:
-                                return r.trys.push([1, 3, , 4]), [4, Promise.all([n.e(0), n.e(88)]).then(function() {
-                                    var e = n("gtFp");
-                                    return "object" == typeof e && e && e.__esModule ? e : Object.assign({}, "object" == typeof e && e, {
-                                        default: e
-                                    })
-                                })];
-                            case 2:
-                                return t = r.sent(), i = t.Player, e && e(i), [3, 4];
-                            case 3:
-                                return o = r.sent(), a.o.logger.error(o, "Unable to load player-ui chunk"), [3, 4];
-                            case 4:
-                                return [2]
-                        }
-                    })
-                })
-            }
-        },
         CZEr: function(e, t) {
             var n = {
                 kind: "Document",
@@ -11308,7 +11274,7 @@
                 s = n("NvVO"),
                 l = n("2xye"),
                 c = n("GnwI");
-            var d = Object(r.compose)(Object(c.c)("ContentUnavailablePage", {
+            var d = Object(r.d)(Object(c.c)("ContentUnavailablePage", {
                 autoReportInteractive: !0,
                 destination: s.a.ContentUnavailable
             }), Object(o.a)({
@@ -13430,7 +13396,7 @@
                         }) : null
                     }, t
                 }(o.Component),
-                f = Object(s.compose)(Object(p.c)("AmazonAds", {
+                f = Object(s.d)(Object(p.c)("AmazonAds", {
                     autoReportInteractive: !0
                 }), Object(m.i)(m.c.Amazon))(h),
                 g = n("eO8H"),
@@ -13475,7 +13441,7 @@
                         }) : null
                     }, t
                 }(o.Component),
-                b = Object(s.compose)(g.f, Object(p.c)("Comscore"), Object(m.i)(m.c.ComScore))(v),
+                b = Object(s.d)(g.f, Object(p.c)("Comscore"), Object(m.i)(m.c.ComScore))(v),
                 y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -13666,7 +13632,7 @@
                         })
                     }, t
                 }(o.Component),
-                N = Object(s.compose)(g.f, Object(p.c)("Krux", {
+                N = Object(s.d)(g.f, Object(p.c)("Krux", {
                     autoReportInteractive: !0
                 }), Object(m.i)(m.c.SalesforceDMP))(C),
                 T = n("AOPA");
@@ -13719,7 +13685,7 @@
                         !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(o.Component),
-                R = Object(s.compose)(Object(c.a)(T), Object(p.c)("TrackingManager"))(_)
+                R = Object(s.d)(Object(c.a)(T), Object(p.c)("TrackingManager"))(_)
         },
         Gw3k: function(e, t, n) {
             "use strict";
@@ -13774,12 +13740,12 @@
                         }) : null
                     }, t
                 }(d.Component),
-                _ = Object(i.connect)(function(e) {
+                _ = Object(i.b)(function(e) {
                     return {
                         status: e.gdpr.status
                     }
                 }, function(e) {
-                    return Object(a.bindActionCreators)({
+                    return Object(a.b)({
                         showConsentTool: function() {
                             return Object(S.d)(E.a, {})
                         }
@@ -13788,7 +13754,7 @@
                 R = n("GnwI"),
                 O = n("TDc0"),
                 I = n("oSPo");
-            var D = Object(i.connect)(function(e) {
+            var D = Object(i.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         languageCode: e.session.languageCode,
@@ -14933,7 +14899,7 @@
                         autoReportInteractive: !0
                     })], t)
                 }(d.Component);
-            var fe, ge = Object(i.connect)(function(e) {
+            var fe, ge = Object(i.b)(function(e) {
                     return {
                         isLoggedIn: Object(l.e)(e)
                     }
@@ -15423,13 +15389,13 @@
                         }
                     })], t)
                 }(d.Component);
-            var Ue = Object(i.connect)(function(e) {
+            var Ue = Object(i.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         theme: Object(De.a)(e)
                     }
                 }, function(e) {
-                    return Object(a.bindActionCreators)({
+                    return Object(a.b)({
                         changeTheme: Ie.b,
                         logout: s.g
                     }, e)
@@ -15737,14 +15703,14 @@
                         }
                     }]), Object(R.c)("User")], t)
                 }(d.Component);
-            var He, Ge = Object(i.connect)(function(e) {
+            var He, Ge = Object(i.b)(function(e) {
                     return {
                         theme: Object(De.a)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         initialUserAvailabilityIsSet: e.session.initialUserAvailabilityIsSet
                     }
                 }, function(e) {
-                    return Object(a.bindActionCreators)({
+                    return Object(a.b)({
                         changeTheme: Ie.b,
                         initialUserAvailabilitySet: Oe.g
                     }, e)
@@ -16095,12 +16061,12 @@
                         autoReportInteractive: !0
                     })], t)
                 }(d.Component));
-            var Ye = Object(r.f)(Object(i.connect)(function(e) {
+            var Ye = Object(r.f)(Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(l.e)(e)
                 }
             }, function(e) {
-                return Object(a.bindActionCreators)({
+                return Object(a.b)({
                     login: function() {
                         return Object(s.f)(o.a.TopNavSignupButton)
                     },
@@ -16792,7 +16758,7 @@
                     }, t
                 }(r.Component),
                 h = Object(l.a)(d)(m),
-                f = Object(o.connect)(function(e) {
+                f = Object(o.b)(function(e) {
                     return {
                         status: e.gdpr.status
                     }
@@ -17571,12 +17537,12 @@
                         }, d.a.locales.slice(e).map(this.renderLink)))
                     }, t
                 }(c.Component));
-            var m = Object(i.connect)(function(e) {
+            var m = Object(i.b)(function(e) {
                 return {
                     currentUserID: e.session.user && e.session.user.id || null
                 }
             }, function(e) {
-                return Object(r.bindActionCreators)({
+                return Object(r.b)({
                     changeLanguage: l
                 }, e)
             })(p);
@@ -19683,12 +19649,12 @@
                         return e || f() || window.location.search.includes("eea")
                     }, t
                 }(u.Component),
-                k = Object(m.compose)(Object(p.connect)(function(e) {
+                k = Object(m.d)(Object(p.b)(function(e) {
                     return {
                         status: e.gdpr.status
                     }
                 }, function(e) {
-                    return Object(m.bindActionCreators)({
+                    return Object(m.b)({
                         updateGDPRStatus: a.e,
                         updateGDPRVendorPreferences: a.f
                     }, e)
@@ -23430,7 +23396,7 @@
                         }, e))
                     }, t
                 }(a.Component),
-                z = Object(s.compose)(Object(m.c)("GiftRecipientIneligibleMessage"), Object(b.a)(B, {
+                z = Object(s.d)(Object(m.c)("GiftRecipientIneligibleMessage"), Object(b.a)(B, {
                     options: function(e) {
                         return {
                             variables: {
@@ -24661,13 +24627,13 @@
                         })
                     }, t = r.c([Object(m.c)("SubscribeButton")], t)
                 }(a.Component);
-            var le = Object(o.connect)(function(e) {
+            var le = Object(o.b)(function(e) {
                 return {
                     authToken: Object(p.a)(e),
                     sessionUser: Object(p.d)(e)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
+                return Object(s.b)({
                     showLoginModal: Object(c.d)(d.a.ChannelSubscriptionButton),
                     showSubscriptionCheckoutModal: function(e) {
                         var t = r.g(e, []);
@@ -24754,7 +24720,7 @@
                         }, t), e)))
                     }, t
                 }(a.Component),
-                h = Object(o.compose)(Object(l.a)(p, {
+                h = Object(o.d)(Object(l.a)(p, {
                     options: function(e) {
                         return {
                             variables: {
@@ -24941,7 +24907,7 @@
                         }, e)
                     }, t
                 }(a.Component),
-                y = Object(o.compose)(Object(l.a)(f, {
+                y = Object(o.d)(Object(l.a)(f, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -26666,7 +26632,7 @@
                         }, Object(b.a)(this.props)))
                     }, t = i.c([Object(g.c)("Featured Channel")], t)
                 }(a.Component);
-            var N, T, _ = Object(v.connect)(function(e) {
+            var N, T, _ = Object(v.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -26983,8 +26949,8 @@
             var W, V = Object(U.a)("UpsellCenter", {
                     percentage: 75
                 })(z),
-                H = Object(v.connect)(null, function(e) {
-                    return Object(x.bindActionCreators)({
+                H = Object(v.b)(null, function(e) {
+                    return Object(x.b)({
                         signup: function() {
                             return Object(A.h)(M.a.SideNavUpsellCenter)
                         }
@@ -27253,7 +27219,7 @@
                         return this.isChannelOffline() ? this.props.recentChannelVideos && this.props.recentChannelVideos.length > 0 ? "/videos/" + this.props.recentChannelVideos[0].id : "/" + this.props.user.login + "/videos/all" : "/" + this.props.user.login
                     }, t
                 }(a.Component),
-                ae = Object(x.compose)(Object(g.c)("SideNavChannel"))(re),
+                ae = Object(x.d)(Object(g.c)("SideNavChannel"))(re),
                 oe = 5,
                 se = function(e) {
                     function t() {
@@ -27738,12 +27704,12 @@
                         }, Object(w.Ub)(this.props))))
                     }, t = i.c([Object(g.c)("OnlineFriend")], t)
                 }(a.Component);
-            var je = Object(v.connect)(function(e) {
+            var je = Object(v.b)(function(e) {
                     return {
                         currentUserID: e.session.user && "" + e.session.user.id || ""
                     }
                 }, function(e) {
-                    return Object(x.bindActionCreators)({
+                    return Object(x.b)({
                         openThread: function(e) {
                             return Object(De.l)({
                                 collapsed: !1,
@@ -27898,7 +27864,7 @@
                         }, Object(w.Ub)(this.props)))
                     }, t = i.c([Object(g.c)("RecommendedChannel")], t)
                 }(a.Component);
-            var qe = Object(v.connect)(function(e) {
+            var qe = Object(v.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -28043,12 +28009,12 @@
                         name: "dismissFriendRecommendation"
                     }), Object(g.c)("RecommendedFriend")], t)
                 }(a.Component);
-            var Ze = Object(v.connect)(function(e) {
+            var Ze = Object(v.b)(function(e) {
                     return {
                         currentUserID: e.session.user && "" + e.session.user.id || ""
                     }
                 }, function(e) {
-                    return Object(x.bindActionCreators)({
+                    return Object(x.b)({
                         openThread: function(e) {
                             return Object(De.l)({
                                 collapsed: !1,
@@ -28186,12 +28152,12 @@
                         name: "cancelFriendRequest"
                     }), Object(g.c)("Search Friend Result")], t)
                 }(a.Component);
-            var lt = Object(v.connect)(function(e) {
+            var lt = Object(v.b)(function(e) {
                     return {
                         currentUserID: e.session.user && "" + e.session.user.id || ""
                     }
                 }, function(e) {
-                    return Object(x.bindActionCreators)({
+                    return Object(x.b)({
                         openThread: function(e) {
                             return Object(De.l)({
                                 collapsed: !1,
@@ -34330,7 +34296,7 @@
                 m = n("NvVO"),
                 h = n("2xye"),
                 f = n("GnwI");
-            var g = Object(r.compose)(Object(f.c)("LoginRequiredPage", {
+            var g = Object(r.d)(Object(f.c)("LoginRequiredPage", {
                 autoReportInteractive: !0,
                 destination: m.a.LoginRequired
             }), Object(p.a)({
@@ -34340,14 +34306,14 @@
                     message: Object(d.d)("You must be logged in to view this page", "LoginRequiredPage")
                 })
             });
-            var v = Object(i.connect)(function(e) {
+            var v = Object(i.b)(function(e) {
                 var t = Object(s.d)(e);
                 return {
                     isLoggedIn: Object(s.e)(e),
                     userLogin: t && t.login
                 }
             }, function(e) {
-                return Object(r.bindActionCreators)({
+                return Object(r.b)({
                     login: function() {
                         return Object(o.f)(a.a.LoginRequiredInterstitial)
                     }
@@ -34438,7 +34404,7 @@
                 r = n("ClZk");
 
             function a(e) {
-                return Object(i.connect)(function(t) {
+                return Object(i.b)(function(t) {
                     return {
                         gdpr: {
                             status: t.gdpr.status,
@@ -34831,14 +34797,14 @@
                         }, Object(l.d)("Accept", "GDPRConsentBanner"))))))) : null
                     }, t
                 }(r.Component)),
-                w = Object(o.connect)(function(e) {
+                w = Object(o.b)(function(e) {
                     var t = e.gdpr,
                         n = e.ui;
                     return {
                         display: Object(b.d)(t.status) && !n.theatreModeEnabled
                     }
                 }, function(e) {
-                    return Object(s.bindActionCreators)({
+                    return Object(s.b)({
                         giveConsentToAllVendors: g.a,
                         showConsentTool: function() {
                             return Object(f.d)(v.a, {})
@@ -34851,14 +34817,14 @@
                 T = n("UMvU"),
                 _ = n("d0ua"),
                 R = n("kRBY");
-            var O, I = Object(o.connect)(function(e) {
+            var O, I = Object(o.b)(function(e) {
                     return {
                         collapsed: !e.ui.sideNavExpanded,
                         isLoggedIn: Object(R.e)(e),
                         firstPageLoaded: e.session.firstPageLoaded
                     }
                 }, function(e) {
-                    return Object(s.bindActionCreators)({
+                    return Object(s.b)({
                         collapseSideNav: _.r,
                         expandSideNav: _.y
                     }, e)
@@ -34926,7 +34892,7 @@
                 V = n("Fxe2"),
                 H = n("tuvy"),
                 G = n("dtw8");
-            var q = Object(o.connect)(function(e) {
+            var q = Object(o.b)(function(e) {
                     var t = Object(R.d)(e);
                     return {
                         isLoggedIn: Object(R.e)(e),
@@ -35993,7 +35959,7 @@
                         }, this.props.component && s.createElement(this.props.component, o.a({}, this.props.componentProps)))
                     }, t
                 }(s.Component);
-            var m = Object(i.connect)(function(e) {
+            var m = Object(i.b)(function(e) {
                 return {
                     showModal: e.modal.show,
                     component: e.modal.modalID ? Object(r.a)(e) : null,
@@ -38409,7 +38375,7 @@
                     configurable: !0
                 }), t
             }(a.Component);
-            var ce = Object(s.compose)(Object(c.a)(ae, {
+            var ce = Object(s.d)(Object(c.a)(ae, {
                 name: "reportUserInCommunity"
             }), Object(c.a)(oe, {
                 name: "reportUser"
@@ -38423,7 +38389,7 @@
                 }
             }), Object(f.c)("ReportUser", {
                 autoReportInteractive: !0
-            }), Object(d.a)(), Object(u.a)(), Object(o.connect)(function(e) {
+            }), Object(d.a)(), Object(u.a)(), Object(o.b)(function(e) {
                 return {
                     sessionUser: e.session.user
                 }
@@ -38744,7 +38710,7 @@
                         O(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                R = Object(r.compose)(Object(m.a)(T, {
+                R = Object(r.d)(Object(m.a)(T, {
                     options: function(e) {
                         return {
                             variables: {
@@ -38764,14 +38730,14 @@
             function O(e) {
                 return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
             }
-            var I = Object(i.connect)(function(e) {
+            var I = Object(i.b)(function(e) {
                 var t = Object(s.d)(e);
                 return {
                     currentUserLogin: t && t.login,
                     isLoggedIn: Object(s.e)(e)
                 }
             }, function(e) {
-                return Object(r.bindActionCreators)({
+                return Object(r.b)({
                     login: function() {
                         return Object(o.f)(a.a.FollowButton)
                     }
@@ -38820,7 +38786,7 @@
                         })) : null
                     }, t
                 }(o.Component);
-            var m = Object(i.connect)(function(e) {
+            var m = Object(i.b)(function(e) {
                 var t = Object(r.d)(e);
                 return {
                     isStaff: t && t.roles && t.roles.isStaff
@@ -39445,12 +39411,12 @@
                 k = n("y5D0"),
                 S = n("kRBY"),
                 w = n("/HY+");
-            var E = Object(g.connect)(function(e) {
+            var E = Object(g.b)(function(e) {
                     return {
                         isLoggedIn: Object(S.e)(e)
                     }
                 }, function(e) {
-                    return Object(v.bindActionCreators)({
+                    return Object(v.b)({
                         login: function() {
                             return Object(k.f)(b.a.ReportHoster)
                         },
@@ -39487,14 +39453,13 @@
                 V = n("kxrW"),
                 H = n("oKCn"),
                 G = n("lTz2"),
-                q = n("C94G"),
-                Q = (n("JRTt"), n("Addw")),
-                K = {
+                q = (n("JRTt"), n("Addw")),
+                Q = {
                     amazon: !1,
                     comscore: !1,
                     google: !1
                 },
-                Y = {
+                K = {
                     allowfullscreen: !0,
                     externalfullscreen: !1,
                     autoplay: !0,
@@ -39511,26 +39476,19 @@
                     },
                     width: "100%",
                     oauth_token: "",
-                    gdpr: K
-                },
-                X = function(e) {
+                    gdpr: Q
+                };
+
+            function Y() {
+                return !!window.Twitch && !!window.Twitch.Player
+            }
+            var X = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.lastGDPR = K, n.hasInitializedOffsets = !1, n.logger = s.j.withCategory("video-player"), n.initializePlayer = function(e) {
-                            var t = r.a({}, Y, {
-                                    showtheatre: !n.props.disableTheatreButton,
-                                    allowfullscreen: !n.props.disableFullscreen,
-                                    externalfullscreen: n.props.fullscreen.supported(),
-                                    autoplay: !n.props.paused,
-                                    gdpr: n.createPlayerGDPROptions(n.props),
-                                    muted: !!n.props.muteOnInitialization
-                                }),
-                                i = n.props.playerTypeOverride;
-                            i && (t.player = i, n.playerType = i, i === H.c.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(U.b)(n.props.vodID), s.n.setVideoPlayerTrackingData({
-                                vodID: n.props.vodID
-                            })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(Q.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", n.logger.debug("Initializing", t);
-                            var a = new e(n.playerRef, t);
-                            n.player = a, a.addEventListener(V.a.PlayerReady, n.onPlayerReady), a.addEventListener(V.a.Online, n.onStreamStatusOnline), a.addEventListener(V.a.Offline, n.onStreamStatusOffline), a.addEventListener(W.a.Ended, n.onStreamStatusOffline), a.addEventListener(W.a.Play, n.onPlayerPlay), a.addEventListener(W.a.Playing, n.onPlayerPlaying), a.addEventListener(W.a.Seeked, n.onSeek), a.addEventListener(W.a.TimeUpdate, n.onTimeUpdate), a.addEventListener(V.a.TheatreChange, n.onTheatreChange), a.addEventListener(V.a.FullscreenChange, n.onFullScreenChange), a.addEventListener(V.a.ExternalFullscreenChange, n.onExternalFullScreenChange), a.addEventListener(V.a.ClipsModerationOpen, n.onClipsModerationOpen), a.addEventListener(V.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), a.addEventListener(V.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), a.addEventListener(V.a.OpenStream, n.onOpenStream), a.addEventListener(W.a.Pause, n.onPause), a.addEventListener(V.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), a.addEventListener(W.a.LoadedMetadata, n.onMetadataLoaded), x.extensionService.registerPlayer(n.player), x.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(a), n.maybeAttachToWindow(n.props)
+                        return n.lastGDPR = Q, n.hasInitializedOffsets = !1, n.logger = s.j.withCategory("video-player"), n.checkPlayerDependencyStatus = function() {
+                            Y() ? (n.setState({
+                                canInitializePlayer: !0
+                            }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
                         }, n.attachRef = function(e) {
                             return n.playerRef = e
                         }, n.onMetadataLoaded = function() {
@@ -39544,7 +39502,7 @@
                                 if (n.props.channelLogin) s.o.history.push("/" + n.props.channelLogin);
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
-                                s.o.history.push("/videos/" + n.props.vodID + "?t=" + Object(Q.a)(e))
+                                s.o.history.push("/videos/" + n.props.vodID + "?t=" + Object(q.a)(e))
                             } else n.props.collectionID && s.o.history.push("/collections/" + n.props.collectionID)
                         }, n.onPlayerReady = function() {
                             n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
@@ -39623,7 +39581,7 @@
                         }, n.updatePlayerTrackingDataFromProps = function() {
                             n.updatePlayerTrackingData(n.props)
                         }, n.updatePlayerType = function(e) {
-                            var t = e || Y.player;
+                            var t = e || K.player;
                             n.player && n.playerType !== t && (n.player.setPlayerType(t), n.playerType = t)
                         }, n.maybeRecordClip = function() {
                             n.player && n.state.playerInitialized && !Object(j.a)() && n.player.recordClip()
@@ -39648,48 +39606,57 @@
                                 })
                             }
                         }, n.playerBuffering = n.registerBufferingEvent(), n.playerCreated = n.registerCreatedEvent(), n.playerLoaded = n.registerLoadedEvent(), n.playerPlayed = n.registerPlayedEvent(), n.state = {
+                            canInitializePlayer: Y(),
                             playerInitialized: !1,
                             isFullScreen: !1,
-                            playerPaused: !!t.paused,
+                            playerPaused: !1,
                             playerRefID: Object(A.a)()
-                        }, n.playerType = t.playerTypeOverride || Y.player, n.lastSetChannel = t.channelLogin, n.lastPausedProp = t.paused, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
+                        }, n.playerType = t.playerTypeOverride || K.player, n.lastSetChannel = t.channelLogin, n.lastGDPR = n.createPlayerGDPROptions(t), t.fullscreen.addChangeListener(n.onTwilightFullscreenChange), t.instanceRef && t.instanceRef(n), n
                     }
                     return r.d(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), Object(q.a)(this.initializePlayer), s.n.eventEmitter.addListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps)
-                    }, t.prototype.componentWillUpdate = function(e, t) {
-                        if (t.playerInitialized) {
-                            if (this.updatePlayerTrackingData(e), this.updatePlayerType(e.playerTypeOverride), this.player && t.isFullScreen !== this.player.fullscreen && this.player.setFullscreen(t.isFullScreen), this.player) {
-                                var n = this.props.editing || {},
-                                    i = e.editing || {},
-                                    r = n.startOffset,
-                                    a = n.endOffset,
-                                    o = n.videoUrl,
-                                    l = n.isPostEdit;
-                                o !== i.videoUrl && i.slug && this.player.setEditClipStream({
-                                    videoUrl: i.videoUrl,
-                                    slug: i.slug
-                                }), l !== i.isPostEdit && this.player.updateClipsEditing({
-                                    isPostEdit: i.isPostEdit
-                                }), (!(this.hasInitializedOffsets || !i.startOffset || !i.endOffset) || r !== i.startOffset || a !== i.endOffset) && (this.player.updateEditingOffsets([{
-                                    startOffset: i.startOffset,
-                                    endOffset: i.endOffset
-                                }]), this.hasInitializedOffsets || (this.hasInitializedOffsets = !0))
-                            }
-                            this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.updatePlayerGDPRConsent(e);
-                            var c = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (c || Object(G.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void s.n.setVideoPlayerTrackingData({
-                                vodID: void 0
-                            });
-                            var d = e.collectionID && this.props.collectionID !== e.collectionID,
-                                u = e.vodID && this.props.vodID !== e.vodID;
-                            if (d || u) {
-                                var p = e.vodID ? Object(U.b)(e.vodID) : "";
-                                if ("" !== p && s.n.setVideoPlayerTrackingData({
-                                        vodID: e.vodID
-                                    }), !this.player) return;
-                                d || e.collectionID && u ? this.player.setCollection(e.collectionID, p, e.nextVideoOffset) : this.player.setVideo(p, e.nextVideoOffset)
-                            } else void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset)
+                        if (this.props.latencyTracking.reportCustomEvent(this.playerCreated), this.bindHotKeys(), this.historyUnlistener = this.props.history.listen(this.onHistoryChange), this.state.canInitializePlayer ? this.initializePlayer() : this.checkPlayerDependencyAnimationFrame = window.requestAnimationFrame(this.checkPlayerDependencyStatus), s.n.eventEmitter.addListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), window.__playerScriptChunk && !t.tagInjected) {
+                            this.logger.debug("Loading player chunk after page loaded");
+                            var e = document.createElement("script");
+                            e.async = !0, e.crossOrigin = "anonymous", e.src = window.__playerScriptChunk, document.body.appendChild(e);
+                            var n = document.createElement("link");
+                            n.href = window.__playerStyleChunk, n.media = "screen", n.rel = "stylesheet", n.type = "text/css", document.body.appendChild(n), t.tagInjected = !0
                         }
+                    }, t.prototype.componentWillUpdate = function(e, t) {
+                        if (this.state.canInitializePlayer || !t.canInitializePlayer) {
+                            if (t.canInitializePlayer && t.playerInitialized) {
+                                if (this.updatePlayerTrackingData(e), this.updatePlayerType(e.playerTypeOverride), this.player && t.isFullScreen !== this.player.fullscreen && this.player.setFullscreen(t.isFullScreen), this.player) {
+                                    var n = this.props.editing || {},
+                                        i = e.editing || {},
+                                        r = n.startOffset,
+                                        a = n.endOffset,
+                                        o = n.videoUrl,
+                                        l = n.isPostEdit;
+                                    o !== i.videoUrl && i.slug && this.player.setEditClipStream({
+                                        videoUrl: i.videoUrl,
+                                        slug: i.slug
+                                    }), l !== i.isPostEdit && this.player.updateClipsEditing({
+                                        isPostEdit: i.isPostEdit
+                                    }), (!(this.hasInitializedOffsets || !i.startOffset || !i.endOffset) || r !== i.startOffset || a !== i.endOffset) && (this.player.updateEditingOffsets([{
+                                        startOffset: i.startOffset,
+                                        endOffset: i.endOffset
+                                    }]), this.hasInitializedOffsets || (this.hasInitializedOffsets = !0))
+                                }
+                                this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.updatePlayerGDPRConsent(e);
+                                var c = e.channelLogin !== this.lastSetChannel;
+                                if (this.player && e.channelLogin && (c || Object(G.a)(this.props, e))) return this.logger.debug("Setting Channel: ", e.channelLogin), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void s.n.setVideoPlayerTrackingData({
+                                    vodID: void 0
+                                });
+                                var d = e.collectionID && this.props.collectionID !== e.collectionID,
+                                    u = e.vodID && this.props.vodID !== e.vodID;
+                                if (d || u) {
+                                    var p = e.vodID ? Object(U.b)(e.vodID) : "";
+                                    if ("" !== p && s.n.setVideoPlayerTrackingData({
+                                            vodID: e.vodID
+                                        }), !this.player) return;
+                                    d || e.collectionID && u ? this.player.setCollection(e.collectionID, p, e.nextVideoOffset) : this.player.setVideo(p, e.nextVideoOffset)
+                                } else void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset)
+                            }
+                        } else this.initializePlayer()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         if (void 0 !== e.paused && this.props.paused !== e.paused) this.togglePause(e.paused);
                         else {
@@ -39715,11 +39682,26 @@
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), s.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(V.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(V.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(V.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(W.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(W.a.Play, this.onPlayerPlay), this.player.removeEventListener(W.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(V.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(V.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(W.a.Seeked, this.onSeek), this.player.removeEventListener(W.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(V.a.OpenStream, this.onOpenStream), this.player.removeEventListener(W.a.Pause, this.onPause), this.player.removeEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(W.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.unregisterPlayer(), this.player.destroy()), s.n.setVideoPlayerTrackingData({
+                        this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.checkPlayerDependencyAnimationFrame && cancelAnimationFrame(this.checkPlayerDependencyAnimationFrame), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), s.n.eventEmitter.removeListener(c.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(V.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(V.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(V.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(W.a.Ended, this.onStreamStatusOffline), this.player.removeEventListener(W.a.Play, this.onPlayerPlay), this.player.removeEventListener(W.a.Playing, this.onPlayerPlaying), this.player.removeEventListener(V.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(V.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(W.a.Seeked, this.onSeek), this.player.removeEventListener(W.a.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(V.a.OpenStream, this.onOpenStream), this.player.removeEventListener(W.a.Pause, this.onPause), this.player.removeEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(W.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.unregisterPlayer(), this.player.destroy()), s.n.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
                         this.player && this.state.playerInitialized && this.player.trackMiniPlayerAction(e, t)
+                    }, t.prototype.initializePlayer = function() {
+                        var e = r.a({}, K, {
+                                showtheatre: !this.props.disableTheatreButton,
+                                allowfullscreen: !this.props.disableFullscreen,
+                                externalfullscreen: this.props.fullscreen.supported(),
+                                autoplay: !this.props.paused,
+                                gdpr: this.createPlayerGDPROptions(this.props),
+                                muted: !!this.props.muteOnInitialization
+                            }),
+                            t = this.props.playerTypeOverride;
+                        t && (e.player = t, this.playerType = t, t === H.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(U.b)(this.props.vodID), s.n.setVideoPlayerTrackingData({
+                            vodID: this.props.vodID
+                        })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(q.a)(this.props.nextVideoOffset)), this.lastPausedProp = this.props.paused, e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
+                        var n = new window.Twitch.Player(this.playerRef, e);
+                        this.player = n, n.addEventListener(V.a.PlayerReady, this.onPlayerReady), n.addEventListener(V.a.Online, this.onStreamStatusOnline), n.addEventListener(V.a.Offline, this.onStreamStatusOffline), n.addEventListener(W.a.Ended, this.onStreamStatusOffline), n.addEventListener(W.a.Play, this.onPlayerPlay), n.addEventListener(W.a.Playing, this.onPlayerPlaying), n.addEventListener(W.a.Seeked, this.onSeek), n.addEventListener(W.a.TimeUpdate, this.onTimeUpdate), n.addEventListener(V.a.TheatreChange, this.onTheatreChange), n.addEventListener(V.a.FullscreenChange, this.onFullScreenChange), n.addEventListener(V.a.ExternalFullscreenChange, this.onExternalFullScreenChange), n.addEventListener(V.a.ClipsModerationOpen, this.onClipsModerationOpen), n.addEventListener(V.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), n.addEventListener(V.a.TransitionToRecommendedVOD, this.onTransitionToRecommendedVod), n.addEventListener(V.a.OpenStream, this.onOpenStream), n.addEventListener(W.a.Pause, this.onPause), n.addEventListener(V.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), n.addEventListener(W.a.LoadedMetadata, this.onMetadataLoaded), x.extensionService.registerPlayer(this.player), x.extensionService.setPlayerWindow(window), this.props.onInit && this.props.onInit(n), this.maybeAttachToWindow(this.props)
                     }, t.prototype.registerBufferingEvent = function() {
                         return this.props.latencyTracking.registerCustomEvent({
                             benchmark: 1e3,
@@ -39768,10 +39750,10 @@
                         L.bind("alt+x", this.maybeRecordClip)
                     }, t.prototype.unbindHotKeys = function() {
                         L.unbind("alt+x")
-                    }, t
+                    }, t.tagInjected = !1, t
                 }(a.Component),
                 $ = Object(z.c)("VideoPlayer")(X);
-            var J = Object(v.compose)(Object(g.connect)(function(e) {
+            var J = Object(v.d)(Object(g.b)(function(e) {
                 return {
                     isWhispersBottomBarVisible: Object(R.b)(e),
                     theatreModeEnabled: e.ui.theatreModeEnabled,
@@ -39785,7 +39767,7 @@
                     gdprBlockGoogleContent: Object(O.g)(e, O.c.Google)
                 }
             }, function(e) {
-                return Object(v.bindActionCreators)({
+                return Object(v.b)({
                     enableTheatreMode: _.v,
                     disableTheatreMode: _.t,
                     togglePersistentPlayer: _.B,
@@ -39873,7 +39855,7 @@
             });
             var i = n("/MKj"),
                 r = n("ztUO");
-            var a = Object(i.connect)(function(e) {
+            var a = Object(i.b)(function(e) {
                 return {
                     authToken: e.session.user && e.session.user.authToken,
                     username: e.session.user && e.session.user.login
@@ -40981,7 +40963,7 @@
                             loader: function() {
                                 return n.e(1).then(n.bind(null, "7I49"))
                             }
-                        }], this.passportBaseURL = "https://id.twitch.tv", this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "twitch.tech", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv", this.persistentPlayerEnabledKey = "persistenceEnabled", this.manifestURL = "https://static.twitchcdn.net/config/manifest.json?v=1", this.cdnURL = "https://static.twitchcdn.net/", this.playerBaseURL = "https://player.twitch.tv", this.currentSite = window.__twilightSite, this.defaultAuthSite = "www", this.captchaKey = "6Ld65QcTAAAAAMBbAE8dkJq4Wi4CsJy7flvKhYqX"
+                        }], this.passportBaseURL = "https://id.twitch.tv", this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "twitch.tech", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.tmiHost = "irc-ws.chat.twitch.tv", this.persistentPlayerEnabledKey = "persistenceEnabled", this.manifestURL = "https://static.twitchcdn.net/config/manifest.json?v=1", this.cdnURL = "https://static.twitchcdn.net/", this.playerBaseURL = window.__playerBaseURL, this.currentSite = window.__twilightSite, this.defaultAuthSite = "www", this.captchaKey = "6Ld65QcTAAAAAMBbAE8dkJq4Wi4CsJy7flvKhYqX"
                     }
                     return Object.defineProperty(e.prototype, "authSettings", {
                         get: function() {
@@ -42453,7 +42435,7 @@
                     }
                 }), Object(m.c)("UserCard")], t)
             }(o.Component);
-            var k = Object(r.connect)(function(e) {
+            var k = Object(r.b)(function(e) {
                 return {
                     currentUserID: e.session.user && "" + e.session.user.id
                 }
@@ -42764,7 +42746,7 @@
                     }, t
                 }(o.Component),
                 R = Object(s.compose)(Object(w.c)("GetBitsButton"))(_);
-            var O = Object(i.connect)(function(e) {
+            var O = Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(r.e)(e)
                 }
@@ -44030,7 +44012,7 @@
                     }), t
                 }(a.Component),
                 m = Object(u.c)("EmotePicker")(p);
-            var h = Object(i.connect)(function(e) {
+            var h = Object(i.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -44180,7 +44162,7 @@
             n.d(t, "a", function() {
                 return u
             });
-            var u = Object(i.connect)(null, function(e, t) {
+            var u = Object(i.b)(null, function(e, t) {
                 return {
                     onClose: function() {
                         t.onClose && t.onClose(), e(Object(r.c)())
@@ -44992,7 +44974,7 @@
                         }
                     }])], t)
                 }(a.Component);
-            var ee = Object(G.connect)(function(e) {
+            var ee = Object(G.b)(function(e) {
                 return {
                     currentUser: Object(q.d)(e)
                 }
@@ -45522,7 +45504,7 @@
                 r = n("fvjX"),
                 a = n("d0ua"),
                 o = n("G4ap");
-            var s = Object(i.connect)(function(e) {
+            var s = Object(i.b)(function(e) {
                 return {
                     isExpanded: e.ui.rightColumnExpanded,
                     fullscreenTheatreModeEnabled: e.ui.fullscreenTheatreModeEnabled,
@@ -45530,7 +45512,7 @@
                     sideNavExpanded: e.ui.sideNavExpanded
                 }
             }, function(e) {
-                return Object(r.bindActionCreators)({
+                return Object(r.b)({
                     collapseRightColumn: a.q,
                     expandRightColumn: a.x,
                     collapseFullscreenRightColumn: a.p,
@@ -46168,8 +46150,8 @@
                         name: "redeemTrueXAd"
                     })], t)
                 }(c.Component));
-            var k, S = Object(r.connect)(null, function(e) {
-                    return Object(d.bindActionCreators)({
+            var k, S = Object(r.b)(null, function(e) {
+                    return Object(d.b)({
                         closeModal: a.c
                     }, e)
                 })(y),
@@ -46931,7 +46913,7 @@
                     }
                 }
             }
-            var Z = Object(r.connect)($, J)(X);
+            var Z = Object(r.b)($, J)(X);
             n.d(t, !1, function() {
                 return $
             }), n.d(t, !1, function() {
@@ -47577,7 +47559,7 @@
                         configurable: !0
                     }), t
                 }(r.Component),
-                ae = Object(s.compose)(Object(I.a)(), function() {
+                ae = Object(s.d)(Object(I.a)(), function() {
                     var e = this;
                     return Object(v.a)(Q, {
                         props: function(t) {
@@ -47832,7 +47814,7 @@
                         }
                     }, t
                 }(r.Component);
-            var pe, me = Object(o.connect)(function(e, t) {
+            var pe, me = Object(o.b)(function(e, t) {
                     return {
                         notifications: Object(oe.a)(e, t.thread.id)
                     }
@@ -48128,12 +48110,12 @@
                 }]), Object(S.a)(), Object(_.c)("WhispersThread", {
                     autoReportInteractive: !0
                 }))(ke);
-            var we, Ee = Object(o.connect)(function(e) {
+            var we, Ee = Object(o.b)(function(e) {
                 return {
                     isLoggedIn: Object(c.e)(e)
                 }
             }, function(e) {
-                return Object(s.bindActionCreators)({
+                return Object(s.b)({
                     notifyWhisperThread: u.b,
                     showReportUserModal: function(e) {
                         var t = i.g(e, []);
@@ -48742,11 +48724,11 @@
                         }, n)
                     }, t
                 }(d.Component),
-                f = Object(r.compose)(Object(p.c)("WhisperButton", {
+                f = Object(r.d)(Object(p.c)("WhisperButton", {
                     autoReportInteractive: !0
                 }))(h);
-            var g = Object(i.connect)(null, function(e) {
-                return Object(r.bindActionCreators)({
+            var g = Object(i.b)(null, function(e) {
+                return Object(r.b)({
                     login: function() {
                         return Object(o.f)(a.a.WhisperButton)
                     },
@@ -48933,9 +48915,9 @@
                         return this.isInjected && e.gdpr.blockConsentRequiredContent !== t.gdpr.blockConsentRequiredContent
                     }, t
                 }(i.Component),
-                x = Object(k.compose)(Object(E.a)(R), Object(_.a)(T.c.Amazon))(P);
-            var L, F = Object(u.connect)(null, function(e) {
-                    return Object(k.bindActionCreators)({
+                x = Object(k.d)(Object(E.a)(R), Object(_.a)(T.c.Amazon))(P);
+            var L, F = Object(u.b)(null, function(e) {
+                    return Object(k.b)({
                         trackingSet: S.b
                     }, e)
                 })(x),
@@ -49121,32 +49103,12 @@
                         }), t
                     }, t
                 }(i.Component),
-                q = n("C94G"),
-                Q = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return c.d(t, e), t.prototype.componentDidMount = function() {
-                        this.maybePreloadPlayer()
-                    }, t.prototype.shouldComponentUpdate = function() {
-                        return !1
-                    }, t.prototype.render = function() {
-                        return null
-                    }, t.prototype.maybePreloadPlayer = function() {
-                        var e = window.location.pathname.substr(1),
-                            t = a.o.dynamicSettings.get("player_routes_startswith", []),
-                            n = a.o.dynamicSettings.get("player_routes_exact", []);
-                        t.some(function(t) {
-                            return e.startsWith(t)
-                        }) || n.includes(e) || Object(q.a)()
-                    }, t
-                }(i.Component),
-                K = n("NT6a"),
-                Y = n("HuHG"),
-                X = n("Ar2k"),
-                $ = n("Grq2"),
-                J = /^assets\/(.+)-.+\.(.+?)$/i,
-                Z = function() {
+                q = n("NT6a"),
+                Q = n("HuHG"),
+                K = n("Ar2k"),
+                Y = n("Grq2"),
+                X = /^assets\/(.+)-.+\.(.+?)$/i,
+                $ = function() {
                     function e(e, t) {
                         this.enabled = !0, this.logger = e.withCategory("update-manager"), this.config = t, t.manifestURL || (this.logger.warn("Disabling update loader. manifestURL is undefined."), this.enabled = !1), t.cdnURL || (this.logger.warn("Disabling update loader. cdnURL is undefined."), this.enabled = !1)
                     }
@@ -49209,7 +49171,7 @@
                             })
                         })
                     }, e.prototype.getChunk = function(e) {
-                        var t = J.exec(e);
+                        var t = X.exec(e);
                         if (t) return t[1] + "." + t[2]
                     }, e.prototype.prefetchResource = function(e) {
                         var t = this;
@@ -49234,8 +49196,8 @@
             ! function(e) {
                 e.Canary = "canary", e.Live = "live", e.Staging = "staging"
             }(L || (L = {}));
-            var ee = "twilight.update_manager.known_builds",
-                te = function() {
+            var J = "twilight.update_manager.known_builds",
+                Z = function() {
                     function e(e, t, n, i) {
                         var r = this;
                         this.shouldReloadOnTransition = !1, this.started = !1, this.isUpdating = !1, this.checkForUpdates = function() {
@@ -49278,11 +49240,11 @@
                     }, e.prototype.isKnownBuild = function(e) {
                         return this.knownBuilds.has(e)
                     }, e.prototype.getKnownBuilds = function() {
-                        return new Set(a.m.get(ee, []))
+                        return new Set(a.m.get(J, []))
                     }, e.prototype.addKnownBuild = function(e) {
-                        this.knownBuilds.add(e), a.m.set(ee, Array.from(this.knownBuilds))
+                        this.knownBuilds.add(e), a.m.set(J, Array.from(this.knownBuilds))
                     }, e.prototype.resetKnownBuilds = function() {
-                        a.m.remove(ee), this.knownBuilds = new Set
+                        a.m.remove(J), this.knownBuilds = new Set
                     }, e.prototype.getEagerLoadingInstructions = function(e) {
                         if (this.isKnownBuild(this.config.currentBuildID)) return this.logger.debug("Skipping current release preload. It is already known."), {};
                         var t = this.findCurrentRelease(e);
@@ -49432,17 +49394,17 @@
                         }
                     }, e
                 }(),
-                ne = function(e) {
+                ee = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return c.d(t, e), t.prototype.componentDidMount = function() {
-                        var e = new Z(a.o.logger, {
+                        var e = new $(a.o.logger, {
                             manifestURL: a.o.config.manifestURL || "",
                             cdnURL: a.o.config.cdnURL || "",
                             chunksToPreload: a.o.dynamicSettings.get("update_chunks", [])
                         });
-                        this.updateManager = new te(a.o.logger, e, a.o.history.listen, {
+                        this.updateManager = new Z(a.o.logger, e, a.o.history.listen, {
                             enabled: a.o.dynamicSettings.get("update_manager_enabled", !1),
                             currentBuildID: a.o.config.buildID,
                             updateCheckFrequency: a.o.dynamicSettings.get("update_manager_interval", 6e5),
@@ -49456,41 +49418,41 @@
                         return null
                     }, t
                 }(i.Component),
-                ie = n("xlgz"),
-                re = n("ZPFX");
-            var ae = Object(u.connect)(function(e) {
+                te = n("xlgz"),
+                ne = n("ZPFX");
+            var ie = Object(u.b)(function(e) {
                     return {
                         isLoggedIn: Object(l.e)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         theatreModeEnabled: e.ui.theatreModeEnabled
                     }
-                })(re.a),
-                oe = (n("cGJr"), g.a.wrap(function() {
+                })(ne.a),
+                re = (n("cGJr"), g.a.wrap(function() {
                     return n.e(39).then(n.bind(null, "dumY"))
                 }, "CodeRedemptionPage")),
-                se = g.a.wrap(function() {
+                ae = g.a.wrap(function() {
                     return n.e(38).then(n.bind(null, "mdlQ"))
                 }, "DashboardRoot"),
-                le = g.a.wrap(function() {
+                oe = g.a.wrap(function() {
                     return Promise.all([n.e(32), n.e(33), n.e(0), n.e(37)]).then(n.bind(null, "Pnqn"))
                 }, "TeamsDashboardRoot"),
-                ce = g.a.wrap(function() {
+                se = g.a.wrap(function() {
                     return n.e(36).then(n.bind(null, "hy6r"))
                 }, "TeamsLandingPage"),
-                de = g.a.wrap(function() {
+                le = g.a.wrap(function() {
                     return n.e(35).then(n.bind(null, "8n14"))
                 }, "OnboardingRoot"),
-                ue = function(e) {
+                ce = function(e) {
                     return i.createElement(m.c, {
                         to: "/teams/" + e.match.params.teamName + "/dashboard"
                     })
                 },
-                pe = function(e) {
+                de = function(e) {
                     return i.createElement(m.c, {
                         to: "/team/" + e.match.params.teamName
                     })
                 },
-                me = function(e) {
+                ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onHistoryChange = function(e, n) {
@@ -49523,60 +49485,60 @@
                             attachLeft: !0
                         }, a.o.benchmarking.toolsEnabled && i.createElement(V, null), i.createElement(T.a, null), i.createElement(F, null), i.createElement(B.a, null), i.createElement(j.b, null), i.createElement(m.e, null, i.createElement(m.d, {
                             path: "/hi",
-                            component: de
+                            component: le
                         }), i.createElement(m.d, {
                             path: "/(manager|dashboard)/:pageName?",
                             component: f.a
                         }), i.createElement(m.d, {
                             path: "/event/:teamName",
-                            component: pe
+                            component: de
                         }), i.createElement(m.d, {
                             exact: !0,
                             path: "/team/:teamName/edit",
-                            render: ue
+                            render: ce
                         }), i.createElement(m.d, {
                             path: "/team/:teamName",
-                            component: ce
+                            component: se
                         }), i.createElement(m.d, {
                             path: "/teams/:teamName/dashboard/:pageName?",
-                            component: le
-                        }), i.createElement(m.d, {
-                            path: "/(claim|redeem)",
                             component: oe
                         }), i.createElement(m.d, {
+                            path: "/(claim|redeem)",
+                            component: re
+                        }), i.createElement(m.d, {
                             path: "/:channelName/manager",
-                            component: se
+                            component: ae
                         }), i.createElement(m.d, {
                             path: "/:channelName/dashboard/:pageName?",
-                            component: se
+                            component: ae
                         }), i.createElement(m.d, {
                             path: "/",
-                            component: ae
-                        })), i.createElement(h.a, null), i.createElement(X.b, null), i.createElement(v.a, null), i.createElement(Q, null), this.props.firstPageLoaded && i.createElement(Y.a, null), this.props.firstPageLoaded && i.createElement($.a, {
+                            component: ie
+                        })), i.createElement(h.a, null), i.createElement(K.b, null), i.createElement(v.a, null), this.props.firstPageLoaded && i.createElement(Q.a, null), this.props.firstPageLoaded && i.createElement(Y.a, {
                             history: this.props.history
-                        }), this.props.isLoggedIn && i.createElement(ie.a, null), a.o.benchmarking.toolsEnabled && i.createElement(K.a, null), this.props.firstPageLoaded && i.createElement(G, {
+                        }), this.props.isLoggedIn && i.createElement(te.a, null), a.o.benchmarking.toolsEnabled && i.createElement(q.a, null), this.props.firstPageLoaded && i.createElement(G, {
                             history: this.props.history
-                        }), this.props.firstPageLoaded && i.createElement(ne, null), this.props.firstPageLoaded && i.createElement(U, null))
+                        }), this.props.firstPageLoaded && i.createElement(ee, null), this.props.firstPageLoaded && i.createElement(U, null))
                     }, t
                 }(i.Component),
-                he = Object(z.c)("Root", {
+                pe = Object(z.c)("Root", {
                     isRoot: !0
-                })(me);
-            var fe, ge, ve, be = Object(u.connect)(function(e) {
+                })(ue);
+            var me, he, fe, ge = Object(u.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isLoggedIn: Object(l.e)(e),
                         theme: Object(p.a)(e)
                     }
-                })(he),
-                ye = Object(r.f)(be);
+                })(pe),
+                ve = Object(r.f)(ge);
 
-            function ke() {
+            function be() {
                 a.o.mount(i.createElement(r.d, {
                     history: a.o.history
-                }, i.createElement(ye, null)), document.getElementById("root"))
+                }, i.createElement(ve, null)), document.getElementById("root"))
             }
-            a.o.integrations.desklight && (fe = a.o.integrations.desklight, ge = [], fe.logger && function(e) {
+            a.o.integrations.desklight && (me = a.o.integrations.desklight, he = [], me.logger && function(e) {
                 c.b(this, void 0, void 0, function() {
                     var t, i;
                     return c.e(this, function(r) {
@@ -49592,17 +49554,17 @@
                         }
                     })
                 })
-            }(fe.logger), fe.window && (ge.push(fe.window.onBack(function() {
+            }(me.logger), me.window && (he.push(me.window.onBack(function() {
                 return a.o.history.goBack()
-            })), ge.push(fe.window.onForward(function() {
+            })), he.push(me.window.onForward(function() {
                 return a.o.history.goForward()
             }))), window.addEventListener("unload", function() {
-                for (var e = 0, t = ge; e < t.length; e++)(0, t[e])()
+                for (var e = 0, t = he; e < t.length; e++)(0, t[e])()
             }), a.o.tracking.setPlatform(d.SpadePlatform.Desktop));
-            var Se = !1;
-            ve = a.o.store.getReduxStore().subscribe(function() {
+            var ye = !1;
+            fe = a.o.store.getReduxStore().subscribe(function() {
                 var e = a.o.store.getState();
-                !Se && Object(l.f)(e) && (Se = !0, ve(), a.a.optimizedBuild ? ke() : setTimeout(ke, 500))
+                !ye && Object(l.f)(e) && (ye = !0, fe(), a.a.optimizedBuild ? be() : setTimeout(be, 500))
             }), Object(s.a)(), a.o.store.dispatch(Object(o.e)())
         },
         sSlw: function(e, t, n) {
@@ -49944,7 +49906,7 @@
             }), n.d(t, "a", function() {
                 return y
             });
-            var g = Object(i.combineReducers)({
+            var g = Object(i.c)({
                 display: function(e, t) {
                     switch (void 0 === e && (e = {
                         byID: {},
@@ -50632,14 +50594,14 @@
                         }
                     }, t
                 }(r.Component)),
-                v = Object(a.connect)(function(e) {
+                v = Object(a.b)(function(e) {
                     var t = e.gdpr;
                     return {
                         initialPreferences: t.vendorPreferences,
                         status: t.status
                     }
                 }, function(e) {
-                    return Object(o.bindActionCreators)({
+                    return Object(o.b)({
                         saveVendorPreferences: u.c,
                         closeModal: c.c
                     }, e)
@@ -51671,7 +51633,7 @@
                         }))
                     }, t
                 }(r.Component);
-            var c = Object(a.connect)(function(e) {
+            var c = Object(a.b)(function(e) {
                 return {
                     darkModeEnabled: Object(s.a)(e) === o.a.Dark
                 }
@@ -54015,6 +53977,6 @@
         }
     },
     [
-        [169, 94, 0]
+        [169, 93, 0]
     ]
 ]);
