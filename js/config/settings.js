@@ -113,7 +113,7 @@ window.__twilightSettings = {
     "update_chunks": ["vendor.js", "core.css", "core.js", "pages.channel.css", "pages.channel.js", "pages.front.css", "pages.front.js", "pages.anon-front.css", "pages.anon-front.js", "pages.browse.css", "pages.browse.js", "pages.directory-game.css", "pages.directory-game.js", "pages.following.css", "pages.following.js", "pages.video-watch.css", "pages.video-watch.js", "pages.dashboard.css", "pages.dashboard.js", "pages.dashboard.components.live-page.css", "pages.dashboard.components.live-page.js", "pages.settings.css", "pages.settings.js", "clips-main.css", "clips-main.js", "minimal.css", "minimal.js", "pages.subs-checkout.components.subs-checkout-page.css", "pages.subs-checkout.components.subs-checkout-page.js"],
     "update_manager_eager": true,
     "update_manager_enabled": true,
-    "update_manager_interval": 60000,
+    "update_manager_interval": 300000,
     "viewer_milestones_enabled": true,
     "vod_archives_vira_grand": "on",
     "vod_editing_used_to_this": true,
