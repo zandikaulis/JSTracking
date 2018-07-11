@@ -713,18 +713,6 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
-        "73fd722c-5197-4677-9a89-bb61a6aadc1d": {
-            "name": "twilight_test_experiment",
-            "v": 1674,
-            "t": 1,
-            "groups": [{
-                "weight": 99,
-                "value": "control"
-            }, {
-                "weight": 1,
-                "value": "treatment"
-            }]
-        },
         "74156eb2-ed95-482c-b006-60c1428e8846": {
             "name": "twilight_web_onboarding_channel_ranking",
             "v": 3463,
