@@ -37,7 +37,7 @@ window.__twilightSettings = {
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
     "esport_insider_prime_bits_launch": "on",
     "esport_insider_prime_bits_launch_user_whitelist": ["186243532", "215590603"],
-    "esport_prime_promotion_end_date": "2018-07-11T23:00:00+00:00",
+    "esport_prime_promotion_end_date": "2018-07-12T00:00:00+00:00",
     "esport_prime_promotion_start_date": "1990-01-01T00:00:00Z",
     "esport_prime_promotion_user_whitelist": ["180833069", "203316457", "129809526", "218339222", "218339525"],
     "esports_room_cheering_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249-staff", "104874624"],
