@@ -16,7 +16,7 @@ window.__twilightSettings = {
     "bounty_board_available_bounties_date": "Wed June 27 2018 00:00:00 GMT-0700 (PDT)",
     "bounty_board_live_dashboard_widget": "off",
     "browser_notifications_launch": true,
-    "channel_feed_enabled": true,
+    "channel_feed_enabled": false,
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
     "commerce_amendment_v2": "staff",
