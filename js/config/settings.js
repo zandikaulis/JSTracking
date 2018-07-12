@@ -63,6 +63,7 @@ window.__twilightSettings = {
     "mobile_subs_feature_flag": "on",
     "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
+    "new_live_announcements": false,
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
     "onsite_notifications_launch": true,
     "partner_signup_app_v2": false,
