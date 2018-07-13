@@ -18323,7 +18323,7 @@
                 }(),
                 v = function() {
                     function e(e) {
-                        this.emoteMap = {}, this.globaluserstate = {}, this.lastChannelJoined = "", this.username = "", this.channelstate = {}, this.logger = e
+                        this.emoteSets = [], this.globaluserstate = {}, this.lastChannelJoined = "", this.username = "", this.channelstate = {}, this.logger = e
                     }
                     return e.prototype.reset = function() {
                         for (var e = 0, t = Object.keys(this.channelstate); e < t.length; e++) {
@@ -18368,8 +18368,6 @@
                         e = l.channel(e);
                         var n = this.getChannelState(e);
                         n && (n.updateUserState(t), this.logger.debug("Updated user state", t))
-                    }, e.prototype.updateEmoteMap = function(e) {
-                        this.emoteMap = e
                     }, e.prototype.updateBadges = function(e, t) {
                         e = l.channel(e);
                         var n = this.getChannelState(e);
@@ -18508,7 +18506,7 @@
                             badges: e.badges || null,
                             color: l.decodeTag(e.tags.color),
                             displayName: n,
-                            emotes: e.emotes || {},
+                            emotes: e.emotes || null,
                             userID: l.decodeTag(e.tags["user-id"]),
                             username: t,
                             turbo: l.getBoolean(e.tags.turbo),
@@ -19480,38 +19478,8 @@
                     return o(t, e), t.prototype.getCommandText = function(e) {
                         return ["/r9kbeta"]
                     }, t
-                }(b);
-
-            function I(e, t) {
-                var n = {},
-                    r = function(e) {
-                        return e.match(/[^\uD800-\uDFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g) || []
-                    }(e),
-                    o = "",
-                    i = 0;
-                return r.forEach(function(e, a) {
-                    if (!N(e) && (0 === o.length && (i = a), o += e, a === r.length - 1 || N(r[a + 1]))) {
-                        var s = null;
-                        (s = l.isRegex(o) ? function(e, t) {
-                            for (var n = 0, r = Object.keys(t); n < r.length; n++) {
-                                var o = r[n],
-                                    i = "" + l.unescapeHtml(o),
-                                    a = new RegExp(i);
-                                if (a.test(e)) return t[o].id
-                            }
-                            return null
-                        }(o, t) : t[o] ? t[o].id : null) && (n[i] = {
-                            startIndex: i,
-                            id: s
-                        }), o = ""
-                    }
-                }), n
-            }
-
-            function N(e) {
-                return /\s/.test(e)
-            }
-            var L = function(e) {
+                }(b),
+                I = function(e) {
                     function t(t, n, r) {
                         var o = e.call(this, t, n) || this;
                         return o.events = r, o
@@ -19520,39 +19488,54 @@
                         return [e.message]
                     }, t.prototype.beforeSendCommand = function(e) {
                         return a(this, void 0, void 0, function() {
-                            var t, n, r, o, a, u, c, l;
+                            var t, n, r, o, a, u, c, f, p, d, y, v, m, g;
                             return s(this, function(s) {
-                                return this.logger.debug("beforeSendCommand", {
-                                    data: e
-                                }), e.channel ? (t = this.isCommand(e.message), n = this.isAction(e.message), r = e.message, t && !n ? [2] : (n && (e.message = "ACTION " + e.message.substr(4) + ""), o = I(e.message, this.session.emoteMap), (a = this.session.getUserState(e.channel)) ? (u = i({}, a, {
+                                if (this.logger.debug("beforeSendCommand", {
+                                        data: e
+                                    }), !e.channel) return this.logger.warn("Unable to send message. No channel specified."), [2];
+                                if (t = this.isCommand(e.message), n = this.isAction(e.message), r = e.message, t && !n) return [2];
+                                if (n && (e.message = "ACTION " + r.substr(4) + ""), o = {}, this.session.emoteSets)
+                                    for (a = 0, u = this.session.emoteSets; a < u.length; a++)
+                                        for (c = u[a], f = 0, p = c.emotes; f < p.length; f++) d = p[f], l.isRegex(d.token) ? this.emoteRegex(e.message, d.token, d.id, o) : this.emoteString(e.message, d.token, d.id, o);
+                                return (y = this.session.getUserState(e.channel)) ? (v = i({}, y, {
                                     emotes: o,
                                     id: Date.now().toString()
-                                }), c = {
+                                }), m = {
                                     body: e.message,
                                     timestamp: Date.now(),
-                                    user: u
-                                }, l = {
+                                    user: v
+                                }, g = {
                                     channel: e.channel,
-                                    message: c,
+                                    message: m,
                                     sentByCurrentUser: !0,
                                     timestamp: Date.now()
-                                }, n ? this.events.action(i({}, l, {
-                                    action: r,
+                                }, n ? this.events.action(i({}, g, {
+                                    action: r.substr(4),
                                     type: h.Action
-                                })) : this.events.chat(i({}, l, {
+                                })) : this.events.chat(i({}, g, {
                                     type: h.Message
                                 })), [2]) : (this.logger.warn("Unable to send message. No channel user state.", {
                                     data: e
-                                }), [2]))) : (this.logger.warn("Unable to send message. No channel specified."), [2])
+                                }), [2])
                             })
                         })
                     }, t.prototype.isAction = function(e) {
                         return this.isCommand(e) && "me " === e.substr(1, 3)
                     }, t.prototype.isCommand = function(e) {
                         return e.startsWith(".") && !e.startsWith("..") || e.startsWith("/") || e.startsWith("\\")
+                    }, t.prototype.emoteRegex = function(e, t, n, r) {
+                        for (var o = /\S+/g, i = new RegExp("(\\b|^|s)" + l.unescapeHtml(t) + "(\\b|$|s)"), a = o.exec(e); a;) i.test(a[0]) && (r[n] = r[n] || [], r[n].push({
+                            startIndex: a.index,
+                            endIndex: o.lastIndex - 1
+                        })), a = o.exec(e)
+                    }, t.prototype.emoteString = function(e, t, n, r) {
+                        for (var o = /\S+/g, i = o.exec(e); i;) i[0] === l.unescapeHtml(t) && (r[n] = r[n] || [], r[n].push({
+                            startIndex: i.index,
+                            endIndex: o.lastIndex - 1
+                        })), i = o.exec(e)
                     }, t
                 }(b),
-                F = function(e) {
+                N = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -19560,7 +19543,7 @@
                         return ["/slowoff"]
                     }, t
                 }(b),
-                q = function(e) {
+                L = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -19568,7 +19551,7 @@
                         return ["/slow " + (e.seconds || 30)]
                     }, t
                 }(b),
-                U = function(e) {
+                F = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -19576,7 +19559,7 @@
                         return ["/subscribersoff"]
                     }, t
                 }(b),
-                B = function(e) {
+                q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -19584,7 +19567,7 @@
                         return ["/subscribers"]
                     }, t
                 }(b),
-                H = function(e) {
+                U = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -19592,7 +19575,7 @@
                         return ["/timeout " + e.username + " " + e.seconds + " " + e.reason]
                     }, t
                 }(b),
-                Q = function(e) {
+                B = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -19600,7 +19583,7 @@
                         return ["/unban " + e.username]
                     }, t
                 }(b),
-                z = function(e) {
+                H = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -19608,7 +19591,7 @@
                         return ["/unhost"]
                     }, t
                 }(b),
-                W = function(e) {
+                Q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -19616,7 +19599,7 @@
                         return ["/w " + e.username + " " + e.message]
                     }, t
                 }(b),
-                V = function() {
+                z = function() {
                     function e(e) {
                         this.commands = e
                     }
@@ -19654,9 +19637,9 @@
                         }
                     }, e
                 }(),
-                Y = function() {
+                W = function() {
                     function e(e, t, n) {
-                        this.connection = e, this.session = t, this.events = n, this.commandProcessor = new V(this), this.ban = new w(this.connection, this.session), this.clearChat = new _(this.connection, this.session), this.color = new x(this.connection, this.session), this.commercial = new k(this.connection, this.session), this.connect = new E(this.connection, this.session), this.emoteOnlyModeOff = new O(this.connection, this.session), this.emoteOnlyModeOn = new C(this.connection, this.session), this.followersOnlyOff = new T(this.connection, this.session), this.followersOnlyOn = new S(this.connection, this.session), this.host = new P(this.connection, this.session), this.join = new A(this.connection, this.session), this.part = new M(this.connection, this.session), this.ping = new R(this.connection, this.session), this.rk9ModeOff = new j(this.connection, this.session), this.rk9ModeOn = new D(this.connection, this.session), this.sendMessage = new L(this.connection, this.session, this.events), this.slowModeOff = new F(this.connection, this.session), this.slowModeOn = new q(this.connection, this.session), this.subscriberModeOff = new U(this.connection, this.session), this.subscriberModeOn = new B(this.connection, this.session), this.timeout = new H(this.connection, this.session), this.unban = new Q(this.connection, this.session), this.unhost = new z(this.connection, this.session), this.whisper = new W(this.connection, this.session)
+                        this.connection = e, this.session = t, this.events = n, this.commandProcessor = new z(this), this.ban = new w(this.connection, this.session), this.clearChat = new _(this.connection, this.session), this.color = new x(this.connection, this.session), this.commercial = new k(this.connection, this.session), this.connect = new E(this.connection, this.session), this.emoteOnlyModeOff = new O(this.connection, this.session), this.emoteOnlyModeOn = new C(this.connection, this.session), this.followersOnlyOff = new T(this.connection, this.session), this.followersOnlyOn = new S(this.connection, this.session), this.host = new P(this.connection, this.session), this.join = new A(this.connection, this.session), this.part = new M(this.connection, this.session), this.ping = new R(this.connection, this.session), this.rk9ModeOff = new j(this.connection, this.session), this.rk9ModeOn = new D(this.connection, this.session), this.sendMessage = new I(this.connection, this.session, this.events), this.slowModeOff = new N(this.connection, this.session), this.slowModeOn = new L(this.connection, this.session), this.subscriberModeOff = new F(this.connection, this.session), this.subscriberModeOn = new q(this.connection, this.session), this.timeout = new U(this.connection, this.session), this.unban = new B(this.connection, this.session), this.unhost = new H(this.connection, this.session), this.whisper = new Q(this.connection, this.session)
                     }
                     return e.prototype.processCommand = function(e, t) {
                         return a(this, void 0, void 0, function() {
@@ -19748,7 +19731,7 @@
                         })
                     }, e
                 }(),
-                K = function() {
+                V = function() {
                     function e(e, t, n, r, o, i, u) {
                         var c = this;
                         this.isActive = !1, this.pingLoopHandle = 0, this.currentLatency = 0, this.onReconnect = function() {
@@ -19786,7 +19769,7 @@
                                     }
                                 })
                             })
-                        }, this.client = e, this.timestampCreated = Date.now(), this.logger = u, this.session = o, this.configuration = t, this.eventProcessors = new m(r, n), this.commands = new Y(this, o, this.eventProcessors), this.messageProcessor = new g(i, this.eventProcessors, o, this)
+                        }, this.client = e, this.timestampCreated = Date.now(), this.logger = u, this.session = o, this.configuration = t, this.eventProcessors = new m(r, n), this.commands = new W(this, o, this.eventProcessors), this.messageProcessor = new g(i, this.eventProcessors, o, this)
                     }
                     return e.prototype.tryConnect = function() {
                         return a(this, void 0, void 0, function() {
@@ -19865,7 +19848,7 @@
                         }), this.session.reset(), this.shutdownSocket()
                     }, e
                 }(),
-                G = function() {
+                Y = function() {
                     function e(e, t) {
                         this.emitter = e, this.logger = t
                     }
@@ -19945,7 +19928,7 @@
                         this.emitter.addListener(e, t)
                     }, e
                 }(),
-                X = function() {
+                K = function() {
                     function e(e) {
                         this.logger = e
                     }
@@ -19962,7 +19945,7 @@
                             }
                         }
                     }, e.prototype.emotes = function(e) {
-                        if (!e.emotes || !Object.keys(e.emotes).length) {
+                        if (!e.emotes) {
                             var t = e.tags && e.tags.emotes;
                             if (t) {
                                 for (var n = {}, r = 0, o = t.split("/"); r < o.length; r++) {
@@ -19971,22 +19954,24 @@
                                     if (2 === a.length) {
                                         var s = a[0],
                                             u = a[1];
-                                        if (s && u)
-                                            for (var c = 0, l = u.split(","); c < l.length; c++) {
-                                                var f = l[c].split("-");
-                                                if (2 === f.length) {
-                                                    var p = +f[0],
-                                                        d = {
-                                                            startIndex: p,
-                                                            id: s
-                                                        };
-                                                    n[p] = d
+                                        if (s && u) {
+                                            var c = u.split(",");
+                                            n[s] = [];
+                                            for (var l = 0, f = c; l < f.length; l++) {
+                                                var p = f[l].split("-");
+                                                if (2 === p.length) {
+                                                    var d = {
+                                                        startIndex: +p[0],
+                                                        endIndex: +p[1]
+                                                    };
+                                                    n[s].push(d)
                                                 }
-                                            } else this.logger.debug("[Emotes] Skipping invalid emote", {
-                                                emote: i,
-                                                emoteKey: s,
-                                                emoteValue: u
-                                            })
+                                            }
+                                        } else this.logger.debug("[Emotes] Skipping invalid emote", {
+                                            emote: i,
+                                            emoteKey: s,
+                                            emoteValue: u
+                                        })
                                     } else this.logger.debug("[Emotes] Skipping invalid emote", {
                                         emote: i,
                                         parts: a
@@ -20037,11 +20022,11 @@
                     }, e
                 }();
             n.d(t, "a", function() {
-                return J
+                return G
             });
-            var J = function() {
+            var G = function() {
                 function e(e) {
-                    this.reconnectAttempts = 0, this.logger = e.logger || console, this.eventEmitter = new c.EventEmitter, this.session = new v(this.logger), this.events = new G(this.eventEmitter, this.logger), this.parser = new X(this.logger), this.configuration = new f(e), this.connection = new K(this, this.configuration, !1, this.eventEmitter, this.session, this.parser, this.logger), this.commands = this.connection.commands, this.logger.debug("Created", {
+                    this.reconnectAttempts = 0, this.logger = e.logger || console, this.eventEmitter = new c.EventEmitter, this.session = new v(this.logger), this.events = new Y(this.eventEmitter, this.logger), this.parser = new K(this.logger), this.configuration = new f(e), this.connection = new V(this, this.configuration, !1, this.eventEmitter, this.session, this.parser, this.logger), this.commands = this.connection.commands, this.logger.debug("Created", {
                         pingInterval: this.configuration.pingInterval,
                         reconnectJitter: this.configuration.reconnectJitter,
                         server: this.configuration.server,
@@ -20074,14 +20059,9 @@
                     this.connection.injectMessage(e)
                 }, e.prototype.updateIdentity = function(e) {
                     this.configuration.updateIdentity(e)
-                }, e.prototype.updateEmoteMap = function(e) {
-                    for (var t = {}, n = 0, r = e; n < r.length; n++)
-                        for (var o = 0, a = r[n].emotes; o < a.length; o++) {
-                            var s = a[o];
-                            t[s.token] = i({}, s)
-                        }
-                    this.session.updateEmoteMap(t), this.logger.debug("Updated emote map", {
-                        emoteMap: t
+                }, e.prototype.updateEmoteSets = function(e) {
+                    this.session.emoteSets = e, this.logger.debug("Updated emote sets", {
+                        emoteSets: e
                     })
                 }, e.prototype.updateChannelBadges = function(e, t) {
                     this.session.updateBadges(e, t), this.logger.debug("Updated channel badges", {
@@ -20155,7 +20135,7 @@
                                 case 0:
                                     this.logger.debug("Reconnect initiated"), o.label = 1;
                                 case 1:
-                                    return o.trys.push([1, 3, , 4]), this.connection.notifyReconnect("None"), [4, (e = new K(this, this.configuration, !0, this.eventEmitter, this.session, this.parser, this.logger)).tryConnect()];
+                                    return o.trys.push([1, 3, , 4]), this.connection.notifyReconnect("None"), [4, (e = new V(this, this.configuration, !0, this.eventEmitter, this.session, this.parser, this.logger)).tryConnect()];
                                 case 2:
                                     return (t = o.sent()).state === u.Connected ? (this.logger.debug("Reconnect connection succeeded", t), (n = this.connection).suppressEvents(), e.unsuppressEvents(), this.connection = e, this.commands = e.commands, n.disconnect(!1), [2, !0]) : (this.logger.info("Reconnect connection failed", t), [2, !1]);
                                 case 3:
