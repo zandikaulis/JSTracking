@@ -999,18 +999,12 @@ var NO_PSSH_FOUND_ERROR = {
     message: "Unable to find valid CDM support on media",
 };
 
-var UNCAUGHT_ERROR = {
-    code: 4,
-    message: 'An uncaught error occurred',
-};;
-
 var ERRORS = {
     NO_CDM_SUPPORT: NO_CDM_SUPPORT_ERROR,
     SESSION_UPDATE: SESSION_UPDATE_ERROR,
     LICENSE_REQUEST: LICENSE_REQUEST_ERROR,
     KEY_SESSION_CREATION: KEY_SESSION_CREATION_ERROR,
     NO_PSSH_FOUND: NO_PSSH_FOUND_ERROR,
-    UNCAUGHT_ERROR: UNCAUGHT_ERROR,
 };
 
 module.exports = {
@@ -1232,13 +1226,10 @@ var httpRequest = function (url, options) {
  * in case we have an issue we weren't expecting, we should handle
  * the error in the same format.
  */
-var checkErrorFormat = function(err) {
-    if (err.code && err.message) {
-        return err;
-    } else {
-        // you can use this to debug uncaught errors
-        //console.warn('uncaught error contents:', err);
-        return Constants.ERRORS.UNCAUGHT_ERROR;
+var checkErrorFormat = function (err) {
+    return {
+        code: err.code || 4,
+        message: err.message || '',
     }
 };
 
@@ -2035,7 +2026,6 @@ var ProfileEvent = exports.Profile = exports.ProfileEvent = __webpack_require__(
 var PAUSE_HIDDEN_SILENT_TAB = (
     (Browser.name === 'chrome' && Browser.major === 63)
     || Browser.name === 'opera'
-    || Browser.name === 'safari'
 );
 
 // Prefix all localstorage keys to avoid namespace collisions
@@ -2223,7 +2213,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-f789c805";
+    return "2.3.0-37780d61";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2614,7 +2604,7 @@ MediaPlayer.prototype._onSinkStop = function () {
     if (document.hidden) {
         // If we're stopped while hidden, internally pause.
         // We'll attempt to resume when we become visible again.
-        this._emitter.emit(WorkerMessage.PAUSE);
+        this._postMessage(WorkerMessage.PAUSE);
     } else if (!this.isMuted()) {
         // "autoplay" can be blocked for video with sound.
         // Retry playback while muted
@@ -2776,7 +2766,7 @@ var MediaSink = module.exports = function MediaSink(config) {
     this._video = document.createElement('video');
     this._metadataTrack = this._video.addTextTrack('metadata');
     this._codecs = Object.create(null);
-    this._onerror = config.error || noop;
+    this._onerror = config.onerror || noop;
     this._playbackMonitor = new PlaybackMonitor(this._video, config);
     this._drmManager = new DRMManager({
         video: this._video,
