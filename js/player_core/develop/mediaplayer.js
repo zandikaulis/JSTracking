@@ -2213,7 +2213,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-34fb15eb";
+    return "2.3.0-9d8c77c5";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2758,15 +2758,17 @@ var HEARTBEAT_INTERVAL = 2000; // Interval to check for stalled
  * MediaSink implements the "MediaSink" interface in javascript
  * This unfortunatly has to live in the client since it must access
  * the DOM. MediaSink handles all MSE logic.
- * @param {function()} config.ontimeupdate - playback information as changed
+ * @param {function()} config.ontimeupdate - playhead position has changed
+ * @param {function()} config.onbufferupdate - buffered range has changed
  * @param {function()} config.onidle - fired when playback interrupted while playing
+ * @param {function()} config.onstop - fired when playback paused by browers
  * @param {function(MediaError)} config.onerror - video error with error code
  */
 var MediaSink = module.exports = function MediaSink(config) {
     this._video = document.createElement('video');
     this._metadataTrack = this._video.addTextTrack('metadata');
     this._codecs = Object.create(null);
-    this._onerror = config.onerror || noop;
+    this._onerror = config.onerror;
     this._playbackMonitor = new PlaybackMonitor(this._video, config);
     this._drmManager = new DRMManager({
         video: this._video,
@@ -3170,11 +3172,11 @@ SafeSourceBuffer.prototype._updating = function () {
  * Monitor playback and fire events accordingly
  */
 function PlaybackMonitor(video, config) {
-    this._onidle = config.onidle || noop;
-    this._onstop = config.onstop || noop;
-    this._onerror = config.onerror || noop;
-    this._onbufferupdate = config.onbufferupdate || noop;
-    this._ontimeupdate = config.ontimeupdate || noop;
+    this._onidle = config.onidle;
+    this._onstop = config.onstop;
+    this._onerror = config.onerror;
+    this._onbufferupdate = config.onbufferupdate;
+    this._ontimeupdate = config.ontimeupdate;
     this._boundHeartbeat = this._heartbeat.bind(this);
     this._boundCheckStopped = this._checkStopped.bind(this);
 
