@@ -93,6 +93,7 @@ window.__twilightSettings = {
     "spade_url": "https://video-edge-a170e2.sjc02.hls.ttvnw.net/v1/segment/CpMDhLizXzDfji8lOTU2Q6piFXTIZuj1nyXx7k6w7Td69CoQlP1_fjmLm-B_hM1WFukaifi36XvStPsPSN0a7LKrwiuLFvkf-TQV4TE3tUwBwHRKJGbJkVjexg1-W5UZhhfJeKwxeLOT9u1xFd98vhn_4JaOyC3D959urHVjKBBjLW9gIdTDD8n_9mgKc7-lGB5Ur7Q3f-S2DSXCAX8AMuAokIut9tjiZzw4_fARvDrodydTWdaifH0Z9EmbSawbiROppX8pCPK4LYiLY5uOUhJ-VvkEin0dE0_JauMloBNvRs5PlOiDXID_tSZrs34O4CX7NFXBB-OUG8TGoqVWRIPHnlHHxEe-cMsQCeQnLdsQ-ZLQpr5QYU9oHQXE9GhS6l1U7z2JnY2K2QaCn6GdrMQ9tF2VpkFt6Uko3s5dlzSanj9dehSv9try-1XaBJIyWORu4-lilbCk7etEyZRCviTweI0x683uHP_bzJZKs_Q4zCwPKo3qS17KwlLo3xftfK_SdJ_WZ5UWn9WweVK9K3Ggw7XPHBIQApkVSrVltffwLrOG7fysvhoMmeUi2Mr7OeJ-u6RR.ts",
     "squad_stream_banner_whitelist": [],
     "squad_stream_feature": "off",
+    "squad_stream_uxr_logins": [],
     "stats_sample_rate": 100,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "throttled_experiment_event_enabled": false,
