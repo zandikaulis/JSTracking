@@ -234,6 +234,18 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
+        "11611bbf-0188-4d2f-a200-84358cfaaf57": {
+            "name": "twilight_editing_les_poissons",
+            "v": 4244,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "experiment"
+            }]
+        },
         "1318509a-bf97-475d-acdc-df6a24ef6e3e": {
             "name": "twilight_videos_in_sidenav",
             "v": 2842,
