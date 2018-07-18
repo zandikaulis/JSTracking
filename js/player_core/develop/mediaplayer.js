@@ -2213,7 +2213,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-bb457954";
+    return "2.3.0-90c9d816";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2432,6 +2432,7 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(PlayerEvent.VOLUME_CHANGED, this._onVolumeChanged.bind(this));
     em.on(PlayerEvent.MUTED_CHANGED, this._onMutedChanged.bind(this));
     em.on(PlayerEvent.SEEK_COMPLETED, this._onSeekCompleted.bind(this));
+    em.on(PlayerEvent.ERROR, this._onError.bind(this));
     em.on(PlayerEvent.TWITCH_INFO, this._onTwitchInfo.bind(this));
     em.on(ClientMessage.STATS, function (stats) {
         objectAssign(this._stats, stats);
