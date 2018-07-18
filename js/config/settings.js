@@ -107,7 +107,7 @@ window.__twilightSettings = {
     "twilight_clips_already": "on",
     "twilight_collections_manager_enabled": true,
     "twilight_owl_sub_only_vod": true,
-    "twitch_prime_fortnite": false,
+    "twitch_prime_fortnite": true,
     "twitch_prime_fortnite_link_url": "https://www.epicgames.com/fortnite/twitch-prime-pack2",
     "twitch_prime_fortnite_offer_id": "c0b1816d-300b-d234-828e-59e76119bffe",
     "twitch_prime_fortnite_signup_url": "https://twitch.amazon.com/prime/country?ref_=SM_CM_FNStart_LP&ingress=epic-fortnite",
@@ -1162,13 +1162,13 @@ window.__twilightSettings = {
         },
         "cc8f3a72-0b42-4f44-88ab-c63fd6211e97": {
             "name": "TWILIGHT_VOD_LINNAEUS",
-            "v": 4210,
+            "v": 4252,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "on"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }]
         },
