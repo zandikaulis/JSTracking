@@ -285,6 +285,24 @@ window.__twilightSettings = {
                 "value": "bullet"
             }]
         },
+        "198744b6-e96f-413b-aaf6-eab0128c9833": {
+            "name": "signup_redirect_search",
+            "v": 2153,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "games"
+            }, {
+                "weight": 0,
+                "value": "popular"
+            }, {
+                "weight": 0,
+                "value": "search"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "1adeeefb-a0cc-48a4-adbd-8c9a1bdaa06f": {
             "name": "TWILIGHT_PAYMENTS_MANAGEMENT_PAGE",
             "v": 3122,
@@ -297,6 +315,18 @@ window.__twilightSettings = {
                 "value": "no"
             }]
         },
+        "1d1ef835-74d2-4fad-9918-656dccaf6410": {
+            "name": "twilight_v_ember_aa",
+            "v": 3439,
+            "t": 1,
+            "groups": [{
+                "weight": 2,
+                "value": "treatment"
+            }, {
+                "weight": 98,
+                "value": "control"
+            }]
+        },
         "1f57c754-ceb2-40e4-8d49-c51cfc007f14": {
             "name": "TWILIGHT_SUB_CHECKOUT",
             "v": 3621,
@@ -307,6 +337,42 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "2005226d-07fe-46cf-a229-d91dd03d8d3a": {
+            "name": "delete_XP",
+            "v": 3634,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
+            }]
+        },
+        "21084181-ee54-486d-8eb2-09a317143a8e": {
+            "name": "pushy_notifications_fatigue_v2",
+            "v": 3960,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
+        "2402b465-5769-4591-a8d2-365d11ba67d8": {
+            "name": "pushy_notifications_disable_actual",
+            "v": 3505,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
             }]
         },
         "298a5f39-228a-487a-ad06-422c18458403": {
@@ -457,6 +523,18 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
+        "462fee3f-7c32-430d-854f-c31707139b12": {
+            "name": "twilight_live_dashboard_stats_clips_polling_rate",
+            "v": 4223,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "30-second-polling-rate-experiment"
+            }]
+        },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
             "v": 2637,
@@ -482,6 +560,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "streams"
+            }]
+        },
+        "49083595-80d4-4c13-93a2-20a605b3318e": {
+            "name": "Player Core WASM experiment",
+            "v": 4139,
+            "t": 1,
+            "groups": [{
+                "weight": 99,
+                "value": "wasm"
+            }, {
+                "weight": 1,
+                "value": "asmjs"
             }]
         },
         "49f40b88-2044-409d-b306-2eb308489a60": {
@@ -597,6 +687,31 @@ window.__twilightSettings = {
             }, {
                 "weight": 50,
                 "value": "last"
+            }]
+        },
+        "59cbe6c8-2355-403e-aa3a-ab22310adebe": {
+            "name": "aml_ranking_follows",
+            "v": 4106,
+            "t": 2,
+            "s": 3,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "two_then_one"
+            }, {
+                "weight": 0,
+                "value": "every_other"
+            }, {
+                "weight": 0,
+                "value": "just_two"
+            }, {
+                "weight": 0,
+                "value": "just_one"
+            }, {
+                "weight": 0,
+                "value": "complete"
             }]
         },
         "5c8e4a59-8c63-4000-9c4e-6224f34b7c21": {
@@ -763,6 +878,30 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "842f8360-8948-42f2-a088-92e266724cc8": {
+            "name": "twilight_vp_preview_sharing",
+            "v": 3372,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "active"
+            }]
+        },
+        "86332d5a-1141-4aa6-8fb7-7bcb0c5690d7": {
+            "name": "STREAMER_TRAILERS",
+            "v": 2165,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "8c505ba8-1381-4f54-ad7f-5dbbde9beee0": {
             "name": "TWILIGHT_INSTREAM_CHECKOUT",
             "v": 4186,
@@ -823,6 +962,24 @@ window.__twilightSettings = {
                 "value": "control"
             }]
         },
+        "99c425d5-7d9f-47bd-a13a-409903cd6515": {
+            "name": "SIGNUP_REDIRECT",
+            "v": 2033,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "games"
+            }, {
+                "weight": 0,
+                "value": "popular"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "search"
+            }]
+        },
         "9ba74270-ecf4-466d-b04e-f66b9883d632": {
             "name": "TWILIGHT_WORLD_CUP_EVENT_SETTINGS",
             "v": 4229,
@@ -845,6 +1002,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "on"
+            }]
+        },
+        "a451e1bd-07af-443f-ade7-9e7dcdf8e9a8": {
+            "name": "pushy_device_token_pruning",
+            "v": 4022,
+            "t": 2,
+            "groups": [{
+                "weight": 50,
+                "value": "control"
+            }, {
+                "weight": 50,
+                "value": "treatment"
             }]
         },
         "a9667563-723a-4cf7-b253-674d9eef0a53": {
@@ -1003,6 +1172,18 @@ window.__twilightSettings = {
                 "value": "control"
             }]
         },
+        "d02fef29-1d9f-4ad1-b44e-6359d96a8501": {
+            "name": "pushy_device_token_pruning",
+            "v": 4005,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
+            }]
+        },
         "d1fe9a0a-e9f2-4450-ac57-4ff2eefa0dcf": {
             "name": "twilight_get_bits_top_nav",
             "v": 4017,
@@ -1112,6 +1293,31 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "enabled"
+            }]
+        },
+        "e33a85a2-43ab-425b-bc2e-555a650b7f2a": {
+            "name": "BROADCASTER_AD_REVENUE_ESTIMATE",
+            "v": 3259,
+            "t": 3,
+            "s": 2,
+            "groups": [{
+                "weight": 10,
+                "value": "yes"
+            }, {
+                "weight": 0,
+                "value": "no"
+            }]
+        },
+        "e7695c6c-c6e6-47da-ae97-10eb79e7a116": {
+            "name": "twilight_transition_preload",
+            "v": 4008,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant"
             }]
         },
         "e911d915-baca-46b8-b6fe-e991baee776b": {
