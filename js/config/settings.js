@@ -913,6 +913,21 @@ window.__twilightSettings = {
                 "value": "variant1"
             }]
         },
+        "b40e065c-7a73-4c4f-b060-a6b1647fc1a2": {
+            "name": "twilight_editing_im_upset",
+            "v": 4248,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }, {
+                "weight": 0,
+                "value": "variant2"
+            }]
+        },
         "ba44e8c9-0beb-4982-b48f-87457bfa962c": {
             "name": "twilight_extensions_discovery_release",
             "v": 4029,
