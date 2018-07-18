@@ -1062,7 +1062,7 @@ window.__twilightSettings = {
         },
         "de013c6f-a800-45ee-9ab4-7965c405e3eb": {
             "name": "TWILIGHT_ARCHER",
-            "v": 4189,
+            "v": 4247,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -1070,6 +1070,9 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "variant"
+            }, {
+                "weight": 0,
+                "value": "variant1"
             }]
         },
         "e0fdfc17-389d-4ba5-8596-065352ddc01e": {
