@@ -465,6 +465,15 @@ window.__twilightSettings = {
                 "value": "recs"
             }]
         },
+        "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
+            "name": "MediaPlayer Staff Version",
+            "v": 4258,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "2.5.16"
+            }]
+        },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
             "name": "twilight_watch_winston",
             "v": 3998,
@@ -1332,6 +1341,15 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "experiment"
+            }]
+        },
+        "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
+            "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
+            "v": 4257,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "2.5.16"
             }]
         },
         "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": {
