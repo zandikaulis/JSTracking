@@ -994,6 +994,11 @@ var KEY_SESSION_CREATION_ERROR = {
     message: 'Error while requesting DRM license',
 };
 
+var KEY_SESSION_INTERNAL_ERROR = {
+    code: 4,
+    message: 'Encryption key not usable because of internal error in CDM',
+};
+
 var NO_PSSH_FOUND_ERROR = {
     code: 4,
     message: "Unable to find valid CDM support on media",
@@ -1004,6 +1009,7 @@ var ERRORS = {
     SESSION_UPDATE: SESSION_UPDATE_ERROR,
     LICENSE_REQUEST: LICENSE_REQUEST_ERROR,
     KEY_SESSION_CREATION: KEY_SESSION_CREATION_ERROR,
+    KEY_SESSION_INTERNAL: KEY_SESSION_INTERNAL_ERROR,
     NO_PSSH_FOUND: NO_PSSH_FOUND_ERROR,
 };
 
@@ -1488,7 +1494,7 @@ DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, init
                 break;
             case 'internal-error':
                 // https://www.w3.org/TR/encrypted-media/#dom-mediakeystatus-internal-error
-                console.warn("Key status reported 'internal-error'. Leaving it open since we aren't sure it is fatal", event);
+                this._handleError(ERRORS.KEY_SESSION_INTERNAL);
                 break;
         }
     });
@@ -2213,7 +2219,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-e1c074e6";
+    return "2.3.0-7ab0dc03";
 }
 
 MediaPlayer.prototype.isLooping = function () {
