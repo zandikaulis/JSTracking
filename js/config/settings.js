@@ -658,33 +658,6 @@ window.__twilightSettings = {
                 "value": "left_nav_order_exp"
             }]
         },
-        "51efc82d-cfe8-42bd-ae4b-9304112ed9df": {
-            "name": "twilight_vod_provocateur",
-            "v": 4241,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "variant1"
-            }, {
-                "weight": 0,
-                "value": "variant4"
-            }, {
-                "weight": 0,
-                "value": "variant5"
-            }, {
-                "weight": 0,
-                "value": "variant6"
-            }, {
-                "weight": 0,
-                "value": "variant7"
-            }, {
-                "weight": 0,
-                "value": "variant8"
-            }]
-        },
         "54b18ea6-2b6a-4ed7-9128-2497572d31e2": {
             "name": "twilight_web_onboarding_following_for_you",
             "v": 2919,
