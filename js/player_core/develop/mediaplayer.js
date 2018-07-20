@@ -1497,7 +1497,7 @@ DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, init
                 this._handleError(ERRORS.KEY_SESSION_INTERNAL);
                 break;
         }
-    });
+    }.bind(this));
 
     if (expired) {
         keySession.close().then(function(){
@@ -2219,7 +2219,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-e5fd00fd";
+    return "2.3.0-a2c54e29";
 }
 
 MediaPlayer.prototype.isLooping = function () {
