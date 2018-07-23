@@ -238,13 +238,13 @@ window.__twilightSettings = {
         },
         "11611bbf-0188-4d2f-a200-84358cfaaf57": {
             "name": "twilight_editing_les_poissons",
-            "v": 4277,
+            "v": 4279,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 75,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 25,
                 "value": "experiment"
             }]
         },
