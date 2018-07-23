@@ -1068,7 +1068,7 @@ window.__twilightSettings = {
         },
         "b40e065c-7a73-4c4f-b060-a6b1647fc1a2": {
             "name": "twilight_editing_im_upset",
-            "v": 4248,
+            "v": 4271,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -1079,6 +1079,9 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "variant2"
+            }, {
+                "weight": 0,
+                "value": "variant3"
             }]
         },
         "ba44e8c9-0beb-4982-b48f-87457bfa962c": {
