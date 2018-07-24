@@ -538,13 +538,13 @@ window.__twilightSettings = {
         },
         "462fee3f-7c32-430d-854f-c31707139b12": {
             "name": "twilight_live_dashboard_stats_clips_polling_rate",
-            "v": 4278,
+            "v": 4294,
             "t": 2,
             "groups": [{
-                "weight": 80,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 50,
                 "value": "30-second-polling-rate-experiment"
             }]
         },
