@@ -87,6 +87,7 @@ window.__twilightSettings = {
     "quantcast_account": "p-16uNVwiyGoWyg",
     "quantcast_labels": "gaming",
     "quantcast_url": "https://edge.quantserve.com/quant.js",
+    "raids_use_legacy_api": false,
     "search_tracking_enabled": true,
     "sizmek_versatag_channels": ["riotgames", "tekken", "rocketleague"],
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
