@@ -950,7 +950,9 @@ var KEY_SYSTEMS = {
         uuid: '1077efec-c0b2-4d02-ace3-3c1e52e2fb4b',
     },
     FAIRPLAY: {
-        keySystem: 'com.apple.fps.1_0',
+        keySystem: 'com.apple.fps.2_0',
+        certUrl: 'https://fp-keyos.licensekeyserver.com/cert/a17fd33d3843df9b17679ccf50a419b2.der',
+        licenseUrl: 'https://fp-keyos.licensekeyserver.com/getkey',
         uuid: '94CE86FB-07FF-4F43-ADB8-93D2FA968CA2',
     },
     PLAYREADY: {
@@ -968,7 +970,7 @@ var KEY_SYSTEMS = {
 var KEY_SYSTEMS_BY_STRING = {
     'com.widevine.alpha': KEY_SYSTEMS.WIDEVINE,
     'com.microsoft.playready': KEY_SYSTEMS.PLAYREADY,
-    'com.apple.fps.1_0': KEY_SYSTEMS.FAIRPLAY,
+    'com.apple.fps.2_0': KEY_SYSTEMS.FAIRPLAY,
     'org.w3.clearkey': KEY_SYSTEMS.CLEAR_KEY,
 };
 
@@ -1037,6 +1039,9 @@ var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
 // some utils from https://github.com/videojs/videojs-contrib-eme/
 // should probably revise these if our needs differ
 var arrayBuffersEqual = function(arrayBuffer1, arrayBuffer2) {
+    arrayBuffer1 = arrayBufferFrom(arrayBuffer1);
+    arrayBuffer2 = arrayBufferFrom(arrayBuffer2);
+
     if (arrayBuffer1 === arrayBuffer2) {
         return true;
     }
@@ -1062,18 +1067,6 @@ var arrayBufferFrom = function (bufferOrTypedArray) {
         return bufferOrTypedArray.buffer;
     }
     return bufferOrTypedArray;
-};
-
-var uintArrayToString = function (array) {
-    return array instanceof Uint8Array
-        ? String.fromCharCode.apply(null, new Uint8Array(array))
-        : String.fromCharCode.apply(null, new Uint16Array(array));
-};
-
-var getHostnameFromUri = function (uri) {
-    var link = document.createElement('a');
-    link.href = uri;
-    return link.hostname;
 };
 
 /**
@@ -1226,6 +1219,64 @@ var httpRequest = function (url, options) {
     });
 };
 
+function contentIdFromInitData(initData) {
+    // Get the SINF data part.
+    var sinfData = initData.subarray(20, initData.length - 7);
+    // Uint -> Base64 -> Decode Base64 as SINF data is base64 encoded.
+    var sinfBase64 = atob(base64EncodeUint8Array(sinfData));
+     // Base64 to hex to get access to bytes.
+    var sinfBytes = base64ToHex(sinfBase64.replace('\\', ''));
+    // Get the KeyID. Proper SINF parser would be a better solution.
+    return sinfBytes.slice(sinfBytes.length - 33, sinfBytes.length - 17).join('');
+}
+
+function base64ToHex(str) {
+    for (var i = 0, bin = atob(str.replace(/[ \r\n]+$/, "")), hex = []; i < bin.length; ++i) {
+        var tmp = bin.charCodeAt(i).toString(16);
+        if (tmp.length === 1) tmp = '0' + tmp;
+        hex[hex.length] = tmp;
+    }
+    return hex;
+}
+
+function base64DecodeUint8Array(input) {
+    var raw = atob(input);
+    var rawLength = raw.length;
+    var array = new Uint8Array(new ArrayBuffer(rawLength));
+
+    for (i = 0; i < rawLength; i++)
+        array[i] = raw.charCodeAt(i);
+
+    return array;
+}
+
+function base64EncodeUint8Array(input) {
+    var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+    var output = '';
+    var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+    var i = 0;
+
+    while (i < input.length) {
+        chr1 = input[i++];
+        chr2 = i < input.length ? input[i++] : Number.NaN; // Not sure if the index
+        chr3 = i < input.length ? input[i++] : Number.NaN; // checks are needed here
+
+        enc1 = chr1 >> 2;
+        enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+        enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+        enc4 = chr3 & 63;
+
+        if (isNaN(chr2)) {
+            enc3 = enc4 = 64;
+        } else if (isNaN(chr3)) {
+            enc4 = 64;
+        }
+        output += keyStr.charAt(enc1) + keyStr.charAt(enc2) +
+            keyStr.charAt(enc3) + keyStr.charAt(enc4);
+    }
+    return output;
+}
+
 /**
  * Ensuring that uncaught errors are sent in the correct format.
  * Most issues should be a constant error found in ERRORS, but
@@ -1241,11 +1292,11 @@ var checkErrorFormat = function (err) {
 
 module.exports = {
     arrayBuffersEqual: arrayBuffersEqual,
-    arrayBufferFrom: arrayBufferFrom,
-    uintArrayToString: uintArrayToString,
-    getHostnameFromUri: getHostnameFromUri,
     httpRequest: httpRequest,
     parsePSSHSupportFromInitData: parsePSSHSupportFromInitData,
+    contentIdFromInitData: contentIdFromInitData,
+    base64DecodeUint8Array: base64DecodeUint8Array,
+    base64EncodeUint8Array: base64EncodeUint8Array,
     checkErrorFormat: checkErrorFormat,
 };
 
@@ -1268,11 +1319,11 @@ var KEY_SYSTEMS = Constants.KEY_SYSTEMS;
 var KEY_SYSTEMS_BY_STRING = Constants.KEY_SYSTEMS_BY_STRING;
 var AUTH_XML_URL = Constants.AUTH_XML_URL;
 var arrayBuffersEqual = Utils.arrayBuffersEqual;
-var getHostnameFromUri = Utils.getHostnameFromUri;
-var arrayBufferFrom = Utils.arrayBufferFrom;
-var uintArrayToString = Utils.uintArrayToString;
 var httpRequest = Utils.httpRequest;
 var parsePSSHSupportFromInitData = Utils.parsePSSHSupportFromInitData;
+var contentIdFromInitData =  Utils.contentIdFromInitData;
+var base64DecodeUint8Array =  Utils.base64DecodeUint8Array;
+var base64EncodeUint8Array =  Utils.base64EncodeUint8Array;
 var checkErrorFormat = Utils.checkErrorFormat;
 
 var ERRORS = Constants.ERRORS;
@@ -1346,11 +1397,11 @@ DRMManager.prototype.isProtected = function () {
  * a session that matches initData
  * @param {ArrayBuffer} initData
  */
-DRMManager.prototype._hasSession = function(initData) {
+DRMManager.prototype._hasSession = function (initData) {
     for (var i = 0; i < this._sessions.length; i++) {
         var session = this._sessions[i];
         if (!session.initData) continue;
-        if (arrayBuffersEqual(arrayBufferFrom(session.initData), arrayBufferFrom(initData))) {
+        if (arrayBuffersEqual(session.initData, initData)) {
             return true;
         }
     }
@@ -1602,87 +1653,67 @@ DRMManager.prototype._prepareLicenseRequest = function(message, authXml) {
 
 
 // SAFARI FAIRPLAY SUPPORT
-// untested since it does not allow for clearkey testing
-DRMManager.prototype._handleSafariEncrypted = function(event){
+DRMManager.prototype._handleSafariEncrypted = function (event) {
     this._isProtected = true;
-    this._getSafariCertificate()
-        .then(this._setupSafariMediaKeys.bind(this, event))
-        .catch(function(err){
-            console.error('there was an error creating safari key', err);
-        })
+    this.selectedCDM = KEY_SYSTEMS.FAIRPLAY;
+    httpRequest(KEY_SYSTEMS.FAIRPLAY.certUrl, {
+        method: 'GET',
+        responseType: 'arraybuffer',
+        headers: {
+            'Pragma': 'Cache-Control: no-cache',
+            'Cache-Control': 'max-age=0',
+        }
+    }).then(function (certificate) {
+        return this._setupSafariMediaKeys(event, certificate);
+    }.bind(this)).catch(function (err) {
+        this._handleError(checkErrorFormat(err));
+    }.bind(this));
 };
-
-// TODO: Fairplay Cert, once we have test video/BuyDRM
-DRMManager.prototype._getSafariCertificate = function(){
-    return Promise.resolve();
-};
-
-DRMManager.prototype._getSafariContentId = function(initData){
-    return getHostnameFromUri(uintArrayToString(initData));
-};
-
-/*
-    Safari Events for Fairplay [https://developer.apple.com/library/content/technotes/tn2454/_index.html]
-
-    Notes:
-    - Depending on the Fairplay key version we plan on targetting,
-    'com.apple.fps.1_0' will need to concat initData and Certificate, where may not be necessary with 'com.apple.fps.2_0'
-
-    3 year old clearkey test, doesn't seem to work:
-    ClearKey (AES128-encrypted HLS)
-    https://github.com/WebKit/webkit/blob/master/LayoutTests/http/tests/media/clearkey/clear-key-hls-aes128.html
-
-    WORK IN PROGRESS
-*/
 
 /**
  * Safari's 'encrypted' initialization event. This works to
  * start initialization
- * TODO: needs some work to be split up a bit more
- * @param {Object} needKeyEvent - Similar to 'encrypted' event
  */
-DRMManager.prototype._setupSafariMediaKeys = function(needKeyEvent){
+DRMManager.prototype._setupSafariMediaKeys = function(event, certificate){
     return new Promise(function(resolve, reject) {
         if (!this.video.webkitKeys){
-            // this.video.webkitSetMediaKeys(new window.WebkitMediaKeys(KEY_SYSTEMS.FAIRPLAY.keySystem));
-            this.video.webkitSetMediaKeys(new WebkitMediaKeys(KEY_SYSTEMS.CLEAR_KEY.keySystem));
+            this.video.webkitSetMediaKeys(new WebKitMediaKeys(KEY_SYSTEMS.FAIRPLAY.keySystem));
         }
 
         if (!this.video.webkitKeys){
             reject('Issue setting fairplay media keys');
         }
 
-        // this may be needed for 1_0 it appears
-        // var keySession = this.video.webkitKeys.createSession(
-        //     'video/mp4',
-        //     concatInitDataIdAndCertificate(contentId, initData, cert));
-        var keySession = this.video.webkitKeys.createSession(
-            'video/mp4',
-            needKeyEvent.initData);
+        // Get the KeyID
+        var contentId = contentIdFromInitData(event.initData);
+
+        var keySession = this.video.webkitKeys.createSession('video/mp4', event.initData);
 
         if (!keySession) {
             return reject('Could not create key session');
         }
 
         keySession.contentId = contentId;
-        keySession.addEventListener('webkitkeymessage', function(keyMessageEvent){
-            // get license, and keySession.update()
-            this._getWebkitLicense(keyMessageEvent)
-                .then(function(license) {
-                    keySession.update(new Uint8Array(license));
-                })
-                .catch(function(err){
-                    reject(err);
-                });
-        });
 
-        keySession.addEventListener('webkitkeyadded', function(event){
-            resolve(event);
-        });
+        keySession.addEventListener('webkitkeymessage', function (event) {
+            var session = event.target;
+            var message = event.message;
 
-        keySession.addEventListener('webkitkeyerror', function(event){
-            reject(event);
-        });
+            if ((String.fromCharCode.apply(null, event.message)) === 'certificate') {
+                session.update(new Uint8Array(certificate));
+            } else {
+                // get license, and keySession.update()
+                this._getWebkitLicense(message, contentId).then(function (license) {
+                    var keyText = license.trim();
+                    if (keyText.substr(0, 5) === '<ckc>' && keyText.substr(-6) === '</ckc>') {
+                        keyText = keyText.slice(5, -6);
+                    }
+                    session.update(base64DecodeUint8Array(keyText));
+                }).catch(reject);
+            }
+        }.bind(this));
+        keySession.addEventListener('webkitkeyadded', resolve);
+        keySession.addEventListener('webkitkeyerror', reject);
     }.bind(this));
 };
 
@@ -1690,8 +1721,26 @@ DRMManager.prototype._setupSafariMediaKeys = function(needKeyEvent){
  * Get the webkit license
  * @param {Object} keyMessageEvent - Message event from current session
  */
-DRMManager.prototype._getWebkitLicense = function(keyMessageEvent) {
-    return Promise.reject('Non-development License is not implemented');
+DRMManager.prototype._getWebkitLicense = function(message, contentId) {
+    return httpRequest(this._authUrl, {
+        method: 'GET',
+        responseType: 'text',
+    }).then(function (authXml) {
+        var licenseUrl = KEY_SYSTEMS.FAIRPLAY.licenseUrl;
+        var body = 'spc=' + base64EncodeUint8Array(message) + '&assetId=' + contentId;
+        var options = {
+            method: 'POST',
+            body: body,
+            responseType: 'text',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'customdata': authXml,
+            }
+        };
+        return httpRequest(licenseUrl, options);
+    }).catch(function (e) {
+        return Promise.reject(ERRORS.LICENSE_REQUEST);
+    });
 };
 
 module.exports = DRMManager;
@@ -2219,7 +2268,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-e642031d";
+    return "2.3.0-6bc1441f";
 }
 
 MediaPlayer.prototype.isLooping = function () {
