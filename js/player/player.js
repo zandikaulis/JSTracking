@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".e9d9de3786087903f979.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".15e37a705b7933329bd4.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -15905,6 +15905,18 @@
                         }, n))
                     }
                 }, {
+                    key: "renderClipsWatchMenu",
+                    value: function() {
+                        var e = this._renderQualityButton(),
+                            t = this._renderPlaybackSpeedButton(),
+                            n = this._renderClipsKeyboardShortcutsButton();
+                        return H.a.createElement("div", {
+                            className: "pl-menu__inner"
+                        }, e, t, H.a.createElement("div", {
+                            className: "pl-menu__section pl-menu__section--with-sep"
+                        }, n))
+                    }
+                }, {
                     key: "renderStandardMenu",
                     value: function() {
                         var e = this.props.shouldShowQualityMenu,
@@ -15929,8 +15941,16 @@
                 }, {
                     key: "render",
                     value: function() {
-                        var e = this.props.playerType;
-                        return e === re.h ? this.renderClipsEmbedMenu() : e === re.i || e === re.j ? this.renderClipsViewingMenu() : this.renderStandardMenu()
+                        switch (this.props.playerType) {
+                            case re.h:
+                                return this.renderClipsEmbedMenu();
+                            case re.i:
+                                return this.renderClipsViewingMenu();
+                            case re.j:
+                                return this.renderClipsWatchMenu();
+                            default:
+                                return this.renderStandardMenu()
+                        }
                     }
                 }, {
                     key: "_renderReportClipButton",
@@ -38208,7 +38228,7 @@
             ks = /^(\d+)\.(\d+)\.(\d+)[+|-]?(.*)?$/,
             Es = /^(\d+)\.(\d+)[+|-]?(.*)?$/,
             Ss = /^(\d+)$/,
-            Ps = "6.1.0",
+            Ps = "6.1.1",
             Os = "desktop",
             Cs = "ember",
             Ts = [os.e, os.d, os.w, os.q],
