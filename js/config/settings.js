@@ -1259,16 +1259,16 @@ window.__twilightSettings = {
         },
         "de013c6f-a800-45ee-9ab4-7965c405e3eb": {
             "name": "TWILIGHT_ARCHER",
-            "v": 4309,
+            "v": 4311,
             "t": 1,
             "groups": [{
                 "weight": 99,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 3,
                 "value": "balloon"
             }, {
-                "weight": 1,
+                "weight": 3,
                 "value": "inline"
             }]
         },
@@ -1335,13 +1335,10 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4302,
+            "v": 4310,
             "t": 1,
             "groups": [{
-                "weight": 50,
-                "value": "2.5.16"
-            }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "2.5.20"
             }]
         },
