@@ -415,6 +415,18 @@ window.__twilightSettings = {
                 "value": "on"
             }]
         },
+        "2efa4966-3554-439a-a142-34a1dd5444c9": {
+            "name": "channel_page_redesign",
+            "v": 4303,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }]
+        },
         "301a4a68-7d71-4dcb-a35c-890690fd2671": {
             "name": "TWILIGHT_HOMEPAGE_REDESIGN",
             "v": 2973,
