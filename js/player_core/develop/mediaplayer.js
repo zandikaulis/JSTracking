@@ -2054,6 +2054,7 @@ var MediaSink = __webpack_require__(/*! ./mediasink */ "./platforms/web/js/media
 var Browser = __webpack_require__(/*! ./browser */ "./platforms/web/js/browser.js");
 var WorkerMessage = __webpack_require__(/*! ./message/worker */ "./platforms/web/js/message/worker.js");
 var ClientMessage = __webpack_require__(/*! ./message/client */ "./platforms/web/js/message/client.js");
+var KEY_SYSTEMS = __webpack_require__(/*! ./drm/constants */ "./platforms/web/js/drm/constants.js").KEY_SYSTEMS;
 
 // Export events and states to public consumers
 var PlayerEvent = exports.PlayerEvent = __webpack_require__(/*! ./event/player */ "./platforms/web/js/event/player.js");
@@ -2115,7 +2116,8 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
         logLevel: String(config.logLevel), // must be a string
         localStorage: getLocalStorage(LOCAL_STORAGE_PREFIX),
         clientTrackingInfo: getClientTrackingInfo(),
-        mseSupported: isMSESupported()
+        mseSupported: isMSESupported(),
+        keySystem: getSupportedKeySystem(Browser),
     });
 
     // Not needed anymore, but still need to emit async for backwards compatibility
@@ -2255,7 +2257,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-f2497728";
+    return "2.3.0-b71918fc";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2702,6 +2704,31 @@ function safeParseJSON(jsonStr) {
  */
 function isMSESupported() {
     return (typeof MediaSource !== 'undefined')
+}
+
+/**
+ * @returns {string} UUID of the supported key system, or empty if no supported keysystem.
+ */
+function getSupportedKeySystem(browser) {
+    // Safari
+    if (window.WebKitMediaKeys && typeof WebKitMediaKeys.isTypeSupported === 'function') {
+        if (WebKitMediaKeys.isTypeSupported(KEY_SYSTEMS.FAIRPLAY.keySystem)) {
+            return KEY_SYSTEMS.FAIRPLAY.uuid
+        }
+    }
+
+    // We can't synchronously check playready or widevine
+    if (typeof navigator.requestMediaKeySystemAccess === 'function') {
+        switch (browser.name) {
+        case 'edge':
+        case 'ie':
+            return KEY_SYSTEMS.PLAYREADY.uuid;
+        default:
+            return KEY_SYSTEMS.WIDEVINE.uuid;
+        }
+    }
+
+    return '';
 }
 
 /**
