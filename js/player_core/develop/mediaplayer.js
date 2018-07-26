@@ -1347,12 +1347,13 @@ var ERRORS = Constants.ERRORS;
 
 // this is only used for W3C spec following EME feature check
 var supportedConfig = [{
-    'initDataTypes': ['cenc'],
-    'audioCapabilities': [{
-        'contentType': 'audio/mp4;codecs="mp4a.40.2"'
+    initDataTypes: ['cenc'],
+    audioCapabilities: [{
+        contentType: 'audio/mp4;codecs="mp4a.40.2"'
     }],
-    'videoCapabilities': [{
-        "contentType": 'video/mp4;codecs="avc1.42E01E"'
+    videoCapabilities: [{
+        contentType: 'video/mp4;codecs="avc1.42E01E"',
+        robustness: 'SW_SECURE_CRYPTO'
     }],
 }];
 
@@ -1362,7 +1363,7 @@ var supportedConfig = [{
  * @param {HTMLElement} config.video - video element
  * @param {function(MediaError)} config.onerror - video error with error code
  */
-var DRMManager = function(config) {
+var DRMManager = function (config) {
     this.video = config.video;
     this.cdmSupport = null;
     this.selectedCDM = null;
@@ -1413,19 +1414,15 @@ DRMManager.prototype._hasSession = function (initData) {
  * This will get refactored once we have real systems working and we know
  * which format is requested/returned
  */
-DRMManager.prototype._createKeySystemSupportChain = function() {
+DRMManager.prototype._createKeySystemSupportChain = function () {
     if (this.cdmSupport === null || this.cdmSupport.length === 0){
         return Promise.reject(ERRORS.NO_PSSH_FOUND);
     }
-    var promise;
-    this.cdmSupport.forEach(function(cdm){
-        if (!promise) {
-            promise = navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
-        } else {
-            promise = promise.catch(function(e) {
-                return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
-            });
-        }
+    var promise = Promise.reject();
+    this.cdmSupport.forEach(function (cdm) {
+        promise = promise.catch(function (e) {
+            return navigator.requestMediaKeySystemAccess(cdm.keySystem, supportedConfig);
+        });
     });
 
     promise = promise.catch(function() {
@@ -1439,7 +1436,7 @@ DRMManager.prototype._createKeySystemSupportChain = function() {
  * Handles embeded DRM in initial video file
  * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
  */
-DRMManager.prototype._handleEncrypted = function(event){
+DRMManager.prototype._handleEncrypted = function (event) {
     this._isProtected = true;
 
     // if we already have this same session setup, ignore this event;
@@ -1481,7 +1478,7 @@ DRMManager.prototype._handleEncrypted = function(event){
  * It will also create sessions for any sessions that are pending to be created
  * @param {Object} createdMediaKeys - MediaKeys [https://www.w3.org/TR/encrypted-media/#dom-mediakeys]
  */
-DRMManager.prototype._setMediaKeys = function(createdMediaKeys){
+DRMManager.prototype._setMediaKeys = function (createdMediaKeys) {
     this.mediaKeys = createdMediaKeys;
     this._pendingSessions.forEach(function(pending){
         this._createSessionRequest(pending.initDataType, pending.initData);
@@ -1496,7 +1493,7 @@ DRMManager.prototype._setMediaKeys = function(createdMediaKeys){
  * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
  * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
  */
-DRMManager.prototype._addSession = function(initDataType, initData){
+DRMManager.prototype._addSession = function (initDataType, initData) {
     if (this.mediaKeys) {
         this._createSessionRequest(initDataType, initData)
             .catch(function(err){
@@ -1516,7 +1513,7 @@ DRMManager.prototype._addSession = function(initDataType, initData){
  * @param {string} initDataType - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdatatype]
  * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedeventinit-initdata]
  */
-DRMManager.prototype._createSessionRequest = function(initDataType, initData){
+DRMManager.prototype._createSessionRequest = function (initDataType, initData) {
     var keySession = this.mediaKeys.createSession();
     keySession.addEventListener('message', this._handleMessage.bind(this), false);
     keySession.addEventListener('keystatuseschange', function(event) {
@@ -1532,11 +1529,11 @@ DRMManager.prototype._createSessionRequest = function(initDataType, initData){
  * @param {Object} event - Event
  * @param {ArrayBuffer} initData - ArrayBuffer [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
  */
-DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, initData) {
+DRMManager.prototype._handleKeyStatusesChange = function (keySession, event, initData) {
     var expired = false;
 
     // based on https://www.w3.org/TR/encrypted-media/#example-using-all-events
-    keySession.keyStatuses.forEach(function(status, keyId){
+    keySession.keyStatuses.forEach(function (status, keyId) {
         switch (status) {
             case 'expired':
                 // "All other keys in the session must have this status."
@@ -1561,7 +1558,7 @@ DRMManager.prototype._handleKeyStatusesChange = function(keySession, event, init
  * Removes a session that matches initData
  * @param {ArrayBuffer} initData - [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent-initdata]
  */
-DRMManager.prototype._removeSession = function(initData) {
+DRMManager.prototype._removeSession = function (initData) {
     for (var i = 0; i < this._sessions.length; i++) {
         var session = this._sessions[i];
         if (session.initData === initData) {
@@ -1576,7 +1573,7 @@ DRMManager.prototype._removeSession = function(initData) {
  * license
  * @param {Object} event - [https://www.w3.org/TR/encrypted-media/#dom-mediakeymessageevent]
  */
-DRMManager.prototype._handleMessage = function(event) {
+DRMManager.prototype._handleMessage = function (event) {
     // grabs relevant session
     var keySession = event.target;
     this._generateLicense(event.message)
@@ -1595,7 +1592,7 @@ DRMManager.prototype._handleMessage = function(event) {
  * Currently a ClearKey license generation
  * @param {Object} message - Message returned from CDM message event
  */
-DRMManager.prototype._generateLicense = function(message) {
+DRMManager.prototype._generateLicense = function (message) {
     if (this.selectedCDM === KEY_SYSTEMS.CLEAR_KEY) {
         // clearkey implementation where KID is key
         var request = JSON.parse(new TextDecoder().decode(message));
@@ -1613,42 +1610,32 @@ DRMManager.prototype._generateLicense = function(message) {
             method: 'GET',
             responseType: 'text',
         }).then(function (authXml) {
-            var requestData = this._prepareLicenseRequest(message, authXml);
-            return httpRequest(requestData.url, requestData.options);
+            return this._requestLicense(message, authXml);
         }.bind(this)).catch(function () {
             return Promise.reject(ERRORS.LICENSE_REQUEST);
         });
     }
 };
 
-DRMManager.prototype._prepareLicenseRequest = function(message, authXml) {
-    var body = message;
-    var headers = {
-        customdata: authXml,
-    };
+DRMManager.prototype._requestLicense = function (message, authXml) {
+    var options = {
+        method: 'POST',
+        responseType: 'arraybuffer',
+        body: message,
+        headers: {
+            'customdata': authXml,
+            'Content-Type': 'application/octet-stream',
+        },
+    }
 
     // get additional data for specifics CDM license request calls
-    var additionalData = {};
     if (this.selectedCDM === KEY_SYSTEMS.PLAYREADY) {
-        additionalData = PlayReady.licenseRequestData(message);
+        var additionalData = PlayReady.licenseRequestData(message);
+        options.body = additionalData.body;
+        options.headers = Object.assign(options.headers, additionalData.headers);
     }
 
-    if (additionalData.body) {
-        body = additionalData.body;
-    }
-    if (additionalData.headers) {
-        headers = Object.assign(headers, additionalData.headers);
-    }
-
-    return {
-        url: this.selectedCDM.licenseUrl,
-        options: {
-            method: 'POST',
-            responseType: 'arraybuffer',
-            body: body,
-            headers: headers,
-        }
-    };
+    return httpRequest(this.selectedCDM.licenseUrl, options);
 }
 
 
@@ -1674,7 +1661,7 @@ DRMManager.prototype._handleSafariEncrypted = function (event) {
  * Safari's 'encrypted' initialization event. This works to
  * start initialization
  */
-DRMManager.prototype._setupSafariMediaKeys = function(event, certificate){
+DRMManager.prototype._setupSafariMediaKeys = function (event, certificate) {
     return new Promise(function(resolve, reject) {
         if (!this.video.webkitKeys){
             this.video.webkitSetMediaKeys(new WebKitMediaKeys(KEY_SYSTEMS.FAIRPLAY.keySystem));
@@ -1721,7 +1708,7 @@ DRMManager.prototype._setupSafariMediaKeys = function(event, certificate){
  * Get the webkit license
  * @param {Object} keyMessageEvent - Message event from current session
  */
-DRMManager.prototype._getWebkitLicense = function(message, contentId) {
+DRMManager.prototype._getWebkitLicense = function (message, contentId) {
     return httpRequest(this._authUrl, {
         method: 'GET',
         responseType: 'text',
@@ -2268,7 +2255,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-6bc1441f";
+    return "2.3.0-a17bed6e";
 }
 
 MediaPlayer.prototype.isLooping = function () {
