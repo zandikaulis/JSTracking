@@ -551,13 +551,13 @@ window.__twilightSettings = {
         },
         "462fee3f-7c32-430d-854f-c31707139b12": {
             "name": "twilight_live_dashboard_stats_clips_polling_rate",
-            "v": 4316,
+            "v": 4330,
             "t": 2,
             "groups": [{
-                "weight": 25,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 75,
+                "weight": 100,
                 "value": "30-second-polling-rate-experiment"
             }]
         },
@@ -1260,7 +1260,7 @@ window.__twilightSettings = {
         },
         "de013c6f-a800-45ee-9ab4-7965c405e3eb": {
             "name": "TWILIGHT_ARCHER",
-            "v": 4326,
+            "v": 4331,
             "t": 1,
             "groups": [{
                 "weight": 96,
