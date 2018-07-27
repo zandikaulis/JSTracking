@@ -44,7 +44,7 @@ window.__twilightSettings = {
     "esport_prime_promotion_start_date": "2018-07-16T17:00:00+00:00",
     "esport_prime_promotion_user_whitelist": ["-1"],
     "esports_room_cheering_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249-staff", "104874624"],
-    "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "rocket league", "tekken 7", "talk shows", "always on", "wrestling", "eternal"],
+    "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "dota 2", "league of legends", "call of duty: wwii", "tekken 7", "talk shows", "always on", "eternal"],
     "extensions_bits_banner_enabled": true,
     "extensions_discovery_enabled": true,
     "extensions_mobile_banner_enabled": false,
