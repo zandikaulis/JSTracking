@@ -38,7 +38,7 @@
             r[2] = o;
             var a = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".da8c14183c3302bb4bca.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".b8281694437fa240f230.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, a.appendChild(s), o
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2183,7 +2183,7 @@
             C = 8e3,
             T = 5e3,
             x = [u.j, u.a, u.g, u.r, u.i, u.h, u.c, u.d, u.n, u.u, u.q, u.p, u.f, u.e, u.s, u.l, u.k, u.t, u.o],
-            R = ["usherfail", a.AD_END, a.AD_START, a.COMPANION_RENDERED, a.AD_IMPRESSION, a.AD_IMPRESSION_COMPLETE, l.a, c.a, s.a, s.b, s.c, s.i, s.k, s.l, s.p, s.f, s.m, s.t, s.u, s.w, s.B, s.D, s.E, s.J, s.n, s.x, s.s, s.q, s.z, s.y, s.e],
+            R = ["usherfail", a.AD_END, a.AD_START, a.COMPANION_AD_BUFFERED, a.COMPANION_RENDERED, a.AD_IMPRESSION, a.AD_IMPRESSION_COMPLETE, l.a, c.a, s.a, s.b, s.c, s.i, s.k, s.l, s.p, s.f, s.m, s.t, s.u, s.w, s.B, s.D, s.E, s.J, s.n, s.x, s.s, s.q, s.z, s.y, s.e],
             j = i()(x, R),
             A = [u.s, s.a],
             I = Object.freeze(["autoplay", "channel", "channelId", "collection", "controls", "debug", "debug_ads", "force_manifest_node", "html5", "flash", "muted", "origin", "playsinline", "quality", "showMature", "stream", "t", "time", "tt_content", "tt_medium", "video"]),
@@ -2569,7 +2569,11 @@
 
         function r(e) {
             return function(t, n) {
-                switch (t(Object(k.f)()), e.contentType) {
+                t(Object(k.f)());
+                var r = n(),
+                    c = r.playback,
+                    l = r.window;
+                switch (c.playbackCount >= 1 && t(Object(T.v)("web_ttv_base", l.performance.now())), e.contentType) {
                     case N:
                         return i(e, t, n);
                     case L:
@@ -7070,7 +7074,7 @@
             me = 700,
             ye = 300,
             ve = function(e) {
-                return ["hz584ynr8wyug0tnajrps6d48hy0qk", "7hoqd16sufw9f9h3swlkdt6lqdn3ud", "d4uvtfdr04uq6raoenvj7m86gdk16v", "dpapioxqc6nckcaa2nh2wgl31uthhc", "v813hdg6t2txwoz9v4q46lw11c7zce", "ntoy7596k38wxwaj4rfb5vaw9jsimn", "t14llordj5qbtzbg07s3ravgjqi8np", "r5fn1ribun5c47bbzzbu4zx6m9iw62", "hpm5zfea2627d3uw20jz58r4e80ucc", "rh6jq1q334hqc2rr1qlzqbvwlfl3x0", "gx88g80z9qd0zf1g338gwj3dtu2zu4"].indexOf(e) > -1
+                return ["hz584ynr8wyug0tnajrps6d48hy0qk", "7hoqd16sufw9f9h3swlkdt6lqdn3ud", "d4uvtfdr04uq6raoenvj7m86gdk16v", "dpapioxqc6nckcaa2nh2wgl31uthhc", "v813hdg6t2txwoz9v4q46lw11c7zce", "ntoy7596k38wxwaj4rfb5vaw9jsimn", "t14llordj5qbtzbg07s3ravgjqi8np", "r5fn1ribun5c47bbzzbu4zx6m9iw62", "hpm5zfea2627d3uw20jz58r4e80ucc", "rh6jq1q334hqc2rr1qlzqbvwlfl3x0", "gx88g80z9qd0zf1g338gwj3dtu2zu4", "v97gb4kog4zwlb86mwmhkk4g33gqjw", "5ir8oppel9oq9706ib639v8fqhurpr"].indexOf(e) > -1
             },
             ge = function(e) {
                 function t(t) {
@@ -8133,19 +8137,21 @@
             }
         }
 
-        function o(e) {
+        function o() {
+            var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "web_ttv_base",
+                t = arguments[1];
             return {
-                type: c,
+                type: l,
                 milestone: {
-                    name: "web_player_init",
-                    time: e
+                    name: e,
+                    time: t
                 }
             }
         }
 
         function a(e) {
             return {
-                type: l,
+                type: c,
                 timeSpentHidden: e
             }
         }
@@ -8153,9 +8159,9 @@
             return s
         }), n.d(t, "a", function() {
             return u
-        }), n.d(t, "c", function() {
-            return c
         }), n.d(t, "d", function() {
+            return c
+        }), n.d(t, "c", function() {
             return l
         }), n.d(t, "g", function() {
             return d
@@ -8190,8 +8196,8 @@
         }), t.u = r, t.t = i, t.v = o, t.w = a;
         var s = "performance timed milestone reached",
             u = "performance metric recorded",
-            c = "player init milestone reached",
-            l = "update time spent hidden",
+            c = "update time spent hidden",
+            l = "set base milestone",
             d = "mp_player_loaded_in_worker",
             f = "mp_master_manifest_ready",
             p = "mp_master_manifest_request",
@@ -9706,7 +9712,7 @@
             }),
             Me = function() {
                 function e(t, n, r, i) {
-                    g(this, e), this.player = t, this.tracker = n, this.store = r, this.options = i, this.firstPlayAutoMuted = !1, this.hasPlayed = !1, this.hasFiredVideoPlay = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -1 / 0, this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.store.getState().experiments.get(pe.h), this.nSecondPlayTimer = new q, this.countessTracker = new a({
+                    g(this, e), this.player = t, this.tracker = n, this.store = r, this.options = i, this.firstPlayAutoMuted = !1, this.hasPlayed = !1, this.bufferEmptyStartTime = null, this.bufferEmptyCount = 0, this.lastNetworkProfile = -1 / 0, this.lastSeekTime = null, this.timeStampBeforeSeek = 0, this.isSeekInProgress = !1, this.trackNetworkProfile = this.store.getState().experiments.get(pe.h), this.nSecondPlayTimer = new q, this.countessTracker = new a({
                         host: fe.i
                     }), this.comscore = new de(this, this.player, this.store), this.latencyTracker = new W(this, .001, this.player, this.store), this.initProperties(), this.initEvents(), this.unsubscribes = [], this.unsubscribes.push(this._subscribeCaptions(this.store)), this.unsubscribes.push(Object(he.a)(this.store, ["quality.current", "quality.selected"], this.onQualityChange.bind(this))), this.unsubscribes.push(Object(he.a)(this.store, ["collection.id"], this.onCollectionChange.bind(this))), this.unsubscribes.push(Object(he.a)(this.store, ["ui.isMini"], this.onMiniChange.bind(this))), this.unsubscribes.push(Object(he.a)(this.store, ["playback.ended"], this.onPlaybackEnded.bind(this))), this.unsubscribes.push(Object(he.a)(this.store, ["error"], this.onError.bind(this))), this.unsubscribes.push(Object(he.a)(this.store, ["stream"], this.onStreamChange.bind(this))), this.unsubscribes.push(Object(he.a)(this.store, ["watchParty.vodId"], this.onWatchPartyVodChange.bind(this))), this.unsubscribes.push(Object(he.a)(this.store, ["watchParty.watchPartyId"], this.onWatchPartyChange.bind(this))), this.unsubscribes.push(Object(he.a)(this.store, ["chromecast.castingState"], this.onCastingChange.bind(this))), this.onError()
                 }
@@ -10013,12 +10019,12 @@
                                 auto_muted: this.firstPlayAutoMuted,
                                 using_wasm_backend: r.isWasm
                             };
-                            if (this.hasFiredVideoPlay || (s.timedMilestones.forEach(function(e) {
+                            if (s.timedMilestones.forEach(function(e) {
                                     var t = "time_to_" + e.name;
                                     f[t] = parseInt(e.time - s.initTime, 10)
                                 }), s.otherMetrics.forEach(function(e) {
                                     f[e.name] = e.value
-                                }), f.time_spent_hidden = parseInt(s.timeHidden, 10)), u.contentType === ne.a && (Object(te.A)(u.videoId).then(function(t) {
+                                }), f.is_first_video_play = 1 === l.playbackCount, f.player_instance_plays = l.playbackCount, f.time_spent_hidden = parseInt(s.timeHidden, 10), u.contentType === ne.a && (Object(te.A)(u.videoId).then(function(t) {
                                     e.countessTracker.trackVODView(t)
                                 }), i.id)) {
                                 var p = B.b.get(we.j),
@@ -10027,7 +10033,7 @@
                                     itemId: u.videoId.substr(1)
                                 }), f.collection_id = i.id, f.collection_session_id = h
                             }
-                            this.trackEvent(ge.b.VIDEO_PLAY, f), this.hasPlayed = !0, this.hasFiredVideoPlay = !0, this.store.dispatch(re.c()), this.store.dispatch(re.d()), this.nSecondPlayTimer.start()
+                            this.trackEvent(ge.b.VIDEO_PLAY, f), this.hasPlayed = !0, this.store.dispatch(re.c()), this.store.dispatch(re.d()), this.nSecondPlayTimer.start()
                         }
                         this.minutesWatchedTimer.start()
                     }
@@ -10356,6 +10362,8 @@
             return u
         }), n.d(t, "AD_ERROR", function() {
             return c
+        }), n.d(t, "COMPANION_AD_BUFFERED", function() {
+            return l
         });
         var r = "adstart",
             i = "adend",
@@ -10363,7 +10371,8 @@
             a = "adImpression",
             s = "adImpressionComplete",
             u = "adSkipped",
-            c = "adError"
+            c = "adError",
+            l = "companionadbuffered"
     }, function(e, t, n) {
         "use strict";
         var r = n(257)();
@@ -11752,7 +11761,8 @@
 
         function r() {
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : y,
-                t = arguments[1];
+                t = arguments[1],
+                n = void 0;
             switch (t.type) {
                 case d.a:
                     return a()({}, e, {
@@ -11806,7 +11816,9 @@
                 case c.k:
                     return a()({}, e, v, k);
                 case c.f:
-                    return a()({}, e, g, k);
+                    return n = e.playbackCount + (e.contentShowing ? 0 : 1), a()({}, e, g, k, {
+                        playbackCount: n
+                    });
                 case c.m:
                     return a()({}, e, {
                         restrictedQualityError: !0
@@ -11893,6 +11905,7 @@
                 automatedMute: !1,
                 paused: !1,
                 playing: !1,
+                playbackCount: 0,
                 playbackRate: 1,
                 restrictedQualityError: !1,
                 volume: .5,
@@ -32539,35 +32552,37 @@
                         p = o.manifestInfo,
                         h = o.analytics,
                         m = o.env,
-                        y = a.Date.now() / 1e3;
+                        y = o.settings,
+                        v = a.Date.now() / 1e3;
                     Promise.all(c).then(function(e) {
                         var o = qa.a.apply(null, e),
                             a = r(),
                             c = m.platform,
-                            v = m.playerType,
-                            g = i.map(function(e) {
+                            g = m.playerType,
+                            b = i.map(function(e) {
                                 var t = qa()({}, l, o, e.properties, f, s(f), {
-                                    platform: v === es.l ? ws : c,
+                                    platform: g === es.l ? ws : c,
                                     play_session_id: h.playSessionId,
                                     url: Object(cs.a)(a.href),
                                     host: a.host,
                                     domain: n(a.host),
+                                    latency_mode_toggle: y.lowLatencyModeEnabled,
                                     low_latency: p.future,
                                     muted: u.muted,
                                     volume: u.volume,
                                     hidden: d.hidden
                                 });
-                                return t.time || (t.time = y), {
+                                return t.time || (t.time = v), {
                                     event: e.event,
                                     properties: t
                                 }
                             });
-                        t.debug && g.forEach(function(e) {
+                        t.debug && b.forEach(function(e) {
                             var t = e.event,
                                 n = e.properties;
                             console.log("track event:", t, n)
                         }), h.trackingClients.forEach(function(e) {
-                            e.trackEvents(g)
+                            e.trackEvents(b)
                         })
                     })
                 }, u.trackEvent = function(e, t) {
@@ -36886,11 +36901,6 @@
                     return n = e.timedMilestones.slice(), n.push(t.milestone), Va()({}, e, {
                         timedMilestones: n
                     });
-                case wc.c:
-                    return n = e.timedMilestones.slice(), n.push(t.milestone), Va()({}, e, {
-                        timedMilestones: n,
-                        initTime: t.milestone.time
-                    });
                 case wc.d:
                     return Va()({}, e, {
                         timeHidden: e.timeHidden + t.timeSpentHidden
@@ -36898,6 +36908,11 @@
                 case wc.a:
                     return r = e.otherMetrics.slice(), r.push(t.metric), Va()({}, e, {
                         otherMetrics: r
+                    });
+                case wc.c:
+                    return Va()({}, e, {
+                        timedMilestones: [t.milestone],
+                        initTime: t.milestone.time
                     });
                 default:
                     return e
@@ -38239,7 +38254,7 @@
                 function() {
                     var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         r = void 0;
-                    if (r = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, p.dispatch(Object(sE.b)(window)), p.dispatch(Object(wc.v)(d)), p.dispatch(fo(t)), Object(Ms.y)(t), t.debug && t.verbose && p.subscribe(function() {
+                    if (r = "string" == typeof e || e instanceof String ? document.getElementById(e) : e, p.dispatch(Object(sE.b)(window)), p.dispatch(Object(wc.v)("web_player_init", d)), p.dispatch(fo(t)), Object(Ms.y)(t), t.debug && t.verbose && p.subscribe(function() {
                             console.debug("state change: %o", p.getState())
                         }), t.force_manifest_node && p.dispatch(H(t.force_manifest_node)), p.dispatch(Gi({
                             login: Ts.cookie.get("login") || null,
@@ -38405,7 +38420,7 @@
             }(),
             os = n(106),
             as = n(11),
-            ss = "//video-edge-37a061.sjc02.hls.ttvnw.net/v1/segment/CpUDQzartTHbx1vMmwNXb5xAXTdbn5_rvqlfFTbzpeOPzY5q3XITpiZyjVQW9Vf_Zu5G4UuYqH0Fh-wyjpobHROuogR5jJ-Ya8B6UPB0djHQc2Kd6V59gnwsghYnaCTH0k2OuxzLBaR2uVGtlDziOFRKBJf35AFDaxOjyT88Quu83yMJuQnTZC3AuoLmdDYbfG34cYJtdrD7VAh3I9hIY11VkIwEemSSyJGfFyjzM-1DWWMHFgFmKHAayoLIyQyflhhrNofi-qpoSVnhUqtuxFfjD0GrcwT9K7FbeABM0xKXRpp2rgbPEI38PM-9V9iudt4d5YVCyX8gNdXr1h0rKyMsJfppasP5ayAYiIcKQEfRJWO1CQTo8sl7mFRPNOE1uIvQyn3R08J6XxqsfYBY18Grqeo4t-750LDCdM7Hy_0tVG0cTzFS_qnJ5jdfKoGMiLreNweUkWNGr99qXorNmM6rf3-5WAOLwyyBjBrEmoyGX0BuY7ZlJpv_b_El-Aajc7DdgYMsB-tKzYQ9Jm0bHu8VKn2rZBH3EhDEDCl0uDCG2thB0SfgJppNGgwuJ6HWGsw53zaYyYQ.ts",
+            ss = "//video-edge-e61ed4.sjc02.hls.ttvnw.net/v1/segment/CpUDQzartTHbx1vMmwNXb5xAXTdbn5_rvqlfFTbzpeOPzY5q3XITpiZyjVQW9Vf_Zu5G4UuYqH0Fh-wyjpobHROuogR5jJ-Ya8B6UPB0djHQc2Kd6V59gnwsghYnaCTH0k2OuxzLBaR2uVGtlDziOFRKBJf35AFDaxOjyT88Quu83yMJuQnTZC3AuoLmdDYbfG34cYJtdrD7VAh3I9hIY11VkIwEemSSyJGfFyjzM-1DWWMHFgFmKHAayoLIyQyflhhrNofi-qpoSVnhUqtuxFfjD0GrcwT9K7FbeABM0xKXRpp2rgbPEI38PM-9V9iudt4d5YVCyX8gNdXr1h0rKyMsJfppasP5ayAYiIcKQEfRJWO1CQTo8sl7mFRPNOE1uIvQyn3R08J6XxqsfYBY18Grqeo4t-750LDCdM7Hy_0tVG0cTzFS_qnJ5jdfKoGMiLreNweUkWNGr99qXorNmM6rf3-5WAOLwyyBjBrEmoyGX0BuY7ZlJpv_b_El-Aajc7DdgYMsB-tKzYQ9Jm0bHu8VKn2rZBH3EhDEDCl0uDCG2thB0SfgJppNGgwuJ6HWGsw53zaYyYQ.ts",
             us = n(47),
             cs = n(270),
             ls = n(141),
@@ -38442,7 +38457,7 @@
             vs = /^(\d+)\.(\d+)\.(\d+)[+|-]?(.*)?$/,
             gs = /^(\d+)\.(\d+)[+|-]?(.*)?$/,
             bs = /^(\d+)$/,
-            _s = "6.2.0",
+            _s = "6.3.0",
             ws = "desktop",
             ks = "ember",
             Es = [es.e, es.d, es.w, es.q],
@@ -39350,13 +39365,24 @@
                     key: "_onAdStarted",
                     value: function(e) {
                         var t = e.getAd();
-                        Au.reduce(function(e, n) {
-                            return e + t.getCompanionAds(n.width, n.height).length
-                        }, 0) > 0 && (this._eventEmitter.emit(ou.COMPANION_RENDERED, {
-                            provider: "ima"
-                        }), this._store.dispatch(Object(Xa.f)(ou.COMPANION_RENDERED, {
-                            provider: "ima"
-                        }))), this._store.dispatch(Object(Za.m)())
+                        if (Au.reduce(function(e, n) {
+                                return e + t.getCompanionAds(n.width, n.height).length
+                            }, 0) > 0) {
+                            var n = Au.reduce(function(e, n) {
+                                var r = t.getCompanionAds(n.width, n.height)[0];
+                                return e || r || null
+                            }, null);
+                            n && this._eventEmitter.emit(ou.COMPANION_AD_BUFFERED, {
+                                content: n.getContent(),
+                                height: n.getHeight(),
+                                width: n.getWidth()
+                            }), this._eventEmitter.emit(ou.COMPANION_RENDERED, {
+                                provider: "ima"
+                            }), this._store.dispatch(Object(Xa.f)(ou.COMPANION_RENDERED, {
+                                provider: "ima"
+                            }))
+                        }
+                        this._store.dispatch(Object(Za.m)())
                     }
                 }, {
                     key: "_onAdImpression",
