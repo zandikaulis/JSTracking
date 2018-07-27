@@ -1260,16 +1260,16 @@ window.__twilightSettings = {
         },
         "de013c6f-a800-45ee-9ab4-7965c405e3eb": {
             "name": "TWILIGHT_ARCHER",
-            "v": 4331,
+            "v": 4332,
             "t": 1,
             "groups": [{
-                "weight": 96,
+                "weight": 98,
                 "value": "control"
             }, {
-                "weight": 2,
+                "weight": 1,
                 "value": "balloon"
             }, {
-                "weight": 2,
+                "weight": 1,
                 "value": "inline"
             }]
         },
