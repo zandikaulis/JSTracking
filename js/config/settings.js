@@ -44,7 +44,7 @@ window.__twilightSettings = {
     "esport_prime_promotion_start_date": "2018-07-16T17:00:00+00:00",
     "esport_prime_promotion_user_whitelist": ["-1"],
     "esports_room_cheering_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249-staff", "104874624"],
-    "event_directory_enabled_games": ["overwatch", "twitchcon 2017", "twitch presents", "league of legends", "call of duty: wwii", "always on", "eternal"],
+    "event_directory_enabled_games": ["overwatch"],
     "extensions_bits_banner_enabled": true,
     "extensions_discovery_enabled": true,
     "extensions_mobile_banner_enabled": false,
@@ -153,6 +153,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "variant_b"
+            }]
+        },
+        "05dc2471-5696-4e15-9ff6-57d2fd4837c2": {
+            "name": "pushy_onsite_email_verification",
+            "v": 4337,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "treatment"
             }]
         },
         "080c0331-3073-4539-992f-93274236a97d": {
