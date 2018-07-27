@@ -1129,7 +1129,7 @@ var parseAllPSSHData = function(data) {
         byteCursor += 4;
 
         /* Verify PSSH */
-        if (dv.getUint32(byteCursor) !== 0x70737368) {
+        if (dv.getUint32(byteCursor) !== boxTypeToInt('pssh')) {
             byteCursor = nextBox;
             continue;
         }
@@ -1147,34 +1147,29 @@ var parseAllPSSHData = function(data) {
 
         // 16-byte UUID/SystemID
         systemID = '';
-        var i, val;
+        var i;
         for (i = 0; i < 4; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
+            systemID += byteToHex(dv.getUint8(byteCursor + i));
         }
         byteCursor += 4;
         systemID += '-';
         for (i = 0; i < 2; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
+            systemID += byteToHex(dv.getUint8(byteCursor + i));
         }
         byteCursor += 2;
         systemID += '-';
         for (i = 0; i < 2; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
+            systemID += byteToHex(dv.getUint8(byteCursor + i));
         }
         byteCursor += 2;
         systemID += '-';
         for (i = 0; i < 2; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
+            systemID += byteToHex(dv.getUint8(byteCursor + i));
         }
         byteCursor += 2;
         systemID += '-';
         for (i = 0; i < 6; i++) {
-            val = dv.getUint8(byteCursor + i).toString(16);
-            systemID += (val.length === 1) ? '0' + val : val;
+            systemID += byteToHex(dv.getUint8(byteCursor + i));
         }
         byteCursor += 6;
 
@@ -1219,62 +1214,72 @@ var httpRequest = function (url, options) {
     });
 };
 
+/**
+ *
+ * initData is an ascii encoded json object as follows
+ * {
+ *     "sinf":[...base64sinfbody...]
+ * }
+ */
 function contentIdFromInitData(initData) {
-    // Get the SINF data part.
-    var sinfData = initData.subarray(20, initData.length - 7);
-    // Uint -> Base64 -> Decode Base64 as SINF data is base64 encoded.
-    var sinfBase64 = atob(base64EncodeUint8Array(sinfData));
-     // Base64 to hex to get access to bytes.
-    var sinfBytes = base64ToHex(sinfBase64.replace('\\', ''));
-    // Get the KeyID. Proper SINF parser would be a better solution.
-    return sinfBytes.slice(sinfBytes.length - 33, sinfBytes.length - 17).join('');
+    var parsedInit = JSON.parse(String.fromCharCode.apply(null, initData));
+    var sinf = base64DecodeUint8Array(parsedInit.sinf[0]);
+    var schi = searchForBox(sinf, 'schi');
+    var tenc = searchForBox(schi, 'tenc');
+    return arrayToHex(tenc.subarray(8, 24));
 }
 
-function base64ToHex(str) {
-    for (var i = 0, bin = atob(str.replace(/[ \r\n]+$/, "")), hex = []; i < bin.length; ++i) {
-        var tmp = bin.charCodeAt(i).toString(16);
-        if (tmp.length === 1) tmp = '0' + tmp;
-        hex[hex.length] = tmp;
+function searchForBox(buffer, boxType) {
+    var view = new DataView(buffer.buffer, buffer.byteOffset, buffer.byteLength);
+    var boxTypeValue = boxTypeToInt(boxType);
+    var offset = 0;
+
+    while (offset < buffer.byteLength) {
+        var size = view.getUint32(offset);
+        var type = view.getUint32(offset + 4);
+        if (type === boxTypeValue) {
+            return buffer.subarray(offset + 8, offset + size);
+        }
+        offset += size;
+    }
+
+    return new Uint8Array();
+}
+
+function boxTypeToInt(name) {
+    return (
+        (name.charCodeAt(0) << 24) +
+        (name.charCodeAt(1) << 16) +
+        (name.charCodeAt(2) << 8) +
+        name.charCodeAt(3)
+    )
+}
+
+function arrayToHex(buffer) {
+    var hex = '';
+    for (var i = 0; i < buffer.length; i++) {
+        hex += byteToHex(buffer[i]);
     }
     return hex;
+}
+
+function byteToHex(byte) {
+    var hex = byte.toString(16);
+    return (hex.length === 1 ? '0' + hex : hex);
 }
 
 function base64DecodeUint8Array(input) {
     var raw = atob(input);
     var rawLength = raw.length;
-    var array = new Uint8Array(new ArrayBuffer(rawLength));
-
-    for (i = 0; i < rawLength; i++)
+    var array = new Uint8Array(rawLength);
+    for (var i = 0; i < rawLength; i++) {
         array[i] = raw.charCodeAt(i);
-
+    }
     return array;
 }
 
 function base64EncodeUint8Array(input) {
-    var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
-    var output = '';
-    var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
-    var i = 0;
-
-    while (i < input.length) {
-        chr1 = input[i++];
-        chr2 = i < input.length ? input[i++] : Number.NaN; // Not sure if the index
-        chr3 = i < input.length ? input[i++] : Number.NaN; // checks are needed here
-
-        enc1 = chr1 >> 2;
-        enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
-        enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
-        enc4 = chr3 & 63;
-
-        if (isNaN(chr2)) {
-            enc3 = enc4 = 64;
-        } else if (isNaN(chr3)) {
-            enc4 = 64;
-        }
-        output += keyStr.charAt(enc1) + keyStr.charAt(enc2) +
-            keyStr.charAt(enc3) + keyStr.charAt(enc4);
-    }
-    return output;
+    return btoa(String.fromCharCode.apply(null, input));
 }
 
 /**
@@ -2257,7 +2262,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-f5c20b4d";
+    return "2.3.0-b281410e";
 }
 
 MediaPlayer.prototype.isLooping = function () {
