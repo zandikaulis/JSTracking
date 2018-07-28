@@ -2262,7 +2262,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-b281410e";
+    return "2.3.0-3ec8a4ac";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2348,6 +2348,22 @@ MediaPlayer.prototype.setLiveMaxLatency = function (latency) {
  */
 MediaPlayer.prototype.setLiveLowLatencyEnabled = function (enable) {
     this._postMessage(WorkerMessage.SET_LIVE_LOW_LATENCY_ENABLED, enable);
+}
+
+/**
+ * Sets the minimum buffer size needed to start playback.
+ * @param {number} duration duration of buffer to set in seconds
+ */
+MediaPlayer.prototype.setMinBuffer = function (duration) {
+    this._postMessage(WorkerMessage.SET_MIN_BUFFER, duration);
+}
+
+/**
+ * Sets the target buffer size to buffer ahead of the playhead.
+ * @param {number} duration duration of buffer to set in seconds
+ */
+MediaPlayer.prototype.setMaxBuffer = function (duration) {
+    this._postMessage(WorkerMessage.SET_MIN_BUFFER, duration);
 }
 
 MediaPlayer.prototype.setAnalyticsSendEvents = function (enable) {
@@ -3629,7 +3645,17 @@ module.exports = {
      * Enable player core analytics
      * @param {boolean} enable The boolean value to enable/disable
      */
-    SET_ANALYTICS_SEND_EVENTS: 'WorkerSetAnalyticsSendEvents'
+    SET_ANALYTICS_SEND_EVENTS: 'WorkerSetAnalyticsSendEvents',
+    /**
+     * Set min buffer size
+     * @param {number} min buffer duration
+     */
+    SET_MIN_BUFFER: 'WorkerSetMinBuffer',
+    /**
+     * Set max buffer size
+     * @param {number} max buffer duration
+     */
+    SET_MAX_BUFFER: 'WorkerSetMaxBuffer'
 };
 
 
