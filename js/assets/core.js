@@ -1972,14 +1972,14 @@
                     i.showBalloon({
                         content: e.content,
                         direction: e.direction,
+                        size: e.size,
                         from: {
                             x: t.coords.x,
                             y: t.coords.y
                         },
                         tailOffset: t.offset,
                         persistOnMouseExit: e.persistOnMouseExit,
-                        timeout: e.timeout,
-                        size: e.size
+                        timeout: e.timeout
                     })
                 }
             }
@@ -3467,8 +3467,7 @@
                         var e = this.state.copied ? Object(s.d)("copied", "CopyButton") : Object(s.d)("copy", "CopyButton");
                         return a.createElement(u.Qa, {
                             className: "copy-button copy-btn",
-                            display: u.S.Flex,
-                            "data-test-target": "copy-button"
+                            display: u.S.Flex
                         }, a.createElement(u.Ia, {
                             className: "copy-button__btn"
                         }, a.createElement(u.v, {
@@ -9150,7 +9149,7 @@
             }
             n.d(t, "a", function() {
                 return d
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "c", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "c", function() {
                 return m
             }), n.d(t, "b", function() {
                 return p
@@ -9272,24 +9271,23 @@
             "use strict";
             var i, r = n("/MKj"),
                 a = n("kRBY"),
-                o = n("XDQu"),
-                s = n("mrSG"),
-                l = n("TSYQ"),
-                c = n("q1tI"),
-                d = n("oJmH"),
-                u = n("/7QA"),
-                p = n("yR8l"),
-                m = n("/0dD"),
-                h = n("geRD"),
-                f = n("0OKo"),
-                g = n("Ar2k"),
-                v = n("Ue10"),
-                b = n("htqZ"),
-                y = (n("7pCu"), n("i46O"));
+                o = n("mrSG"),
+                s = n("TSYQ"),
+                l = n("q1tI"),
+                c = n("oJmH"),
+                d = n("/7QA"),
+                u = n("yR8l"),
+                p = n("geRD"),
+                m = n("JcRA"),
+                h = n("0OKo"),
+                f = n("Ar2k"),
+                g = n("Ue10"),
+                v = n("htqZ"),
+                b = (n("7pCu"), n("i46O"));
             ! function(e) {
                 e.Toggle = "type_toggle", e.Button = "type_button"
             }(i || (i = {}));
-            var k = function(e) {
+            var y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -9322,7 +9320,7 @@
                                             }
                                         }
                                     };
-                                t.props.followUser(Object(h.b)(i, r)), t.setState(function(e) {
+                                t.props.followUser(Object(p.b)(i, r)), t.setState(function(e) {
                                     return {
                                         disableNotifications: !e.disableNotifications
                                     }
@@ -9334,18 +9332,18 @@
                             t.buttonContainerRef !== e && (t.removeEventListeners(), t.buttonContainerRef = e, t.addEventListeners())
                         }, t.onMouseEnter = function() {
                             if (t.buttonContainerRef && t.props.showTooltips) {
-                                var e = t.state.disableNotifications ? Object(u.d)("Turn notifications on", "LiveNotificationsToggle") : Object(u.d)("Turn notifications off", "LiveNotificationsToggle");
+                                var e = t.state.disableNotifications ? Object(d.d)("Turn notifications on", "LiveNotificationsToggle") : Object(d.d)("Turn notifications off", "LiveNotificationsToggle");
                                 t.props.tooltipLayer.show({
                                     from: t.buttonContainerRef,
                                     label: e,
-                                    direction: v.Pb.Right
+                                    direction: g.Pb.Right
                                 })
                             }
                         }, t.onMouseLeave = function() {
                             t.props.tooltipLayer.hide()
                         }, t
                     }
-                    return s.d(t, e), t.prototype.componentWillMount = function() {
+                    return o.d(t, e), t.prototype.componentWillMount = function() {
                         var e = this.props.followData;
                         if (e) {
                             var t = e.user && e.user.self && e.user.self.follower && e.user.self.follower.disableNotifications;
@@ -9368,72 +9366,55 @@
                         return this.props.toggleType && this.props.toggleType === i.Button ? this.renderTypeButton() : this.renderTypeToggle()
                     }, t.prototype.renderTypeButton = function() {
                         var e = this.state.disableNotifications,
-                            t = e ? Object(u.d)("Turn on notifications", "LiveNotificationsToggle") : Object(u.d)("Turn off notifications", "LiveNotificationsToggle"),
-                            n = e ? v.kb.NotificationBellOff : v.kb.NotificationBell,
-                            i = e ? v.kb.NotificationBell : v.kb.NotificationBellOff,
-                            r = l("live-notifications__btn", {
-                                "live-notifications__btn--dark": this.props.activeTheme === m.a.Dark
-                            });
-                        return c.createElement(v.Qa, {
-                            className: "live-notifications__btn-container",
+                            t = e ? g.kb.NotificationBellOff : g.kb.NotificationBell,
+                            n = e ? g.kb.NotificationBell : g.kb.NotificationBellOff,
+                            i = s("live-notifications__btn");
+                        return l.createElement(g.ub, {
+                            className: i,
                             refDelegate: this.setButtonContainerRef
-                        }, c.createElement("button", {
+                        }, l.createElement(m.a, {
                             tabIndex: this.props.tabIndex || 0,
-                            className: r,
-                            "aria-label": t,
+                            icon: t,
+                            iconOnHover: n,
+                            type: g.B.Text,
                             onClick: this.toggleNotificationsEnabled
-                        }, c.createElement(v.Qa, {
-                            padding: {
-                                x: .5
-                            },
-                            className: "live-notifications__btn-inner",
-                            fullWidth: !0,
-                            fullHeight: !0
-                        }, c.createElement("span", {
-                            className: "live-notifications__btn-label"
-                        }, c.createElement(v.jb, {
-                            asset: n
-                        })), c.createElement("span", {
-                            className: "live-notifications__btn-label--hover"
-                        }, c.createElement(v.jb, {
-                            asset: i
-                        })))))
+                        }))
                     }, t.prototype.renderTypeToggle = function() {
                         var e, t;
-                        return this.state.isFollowing ? this.state.disableNotifications ? (t = "live-notifications-toggle__status-text--disabled", e = Object(u.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (t = "live-notifications-toggle__status-text--enabled", e = Object(u.d)("You will be notified on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (e = Object(u.d)("Follow this channel to receive notifications when they go live.", "LiveNotificationsToggle"), t = "live-notifications-toggle__status-text--not-following"), c.createElement(v.ub, {
-                            color: v.K.Base,
-                            display: v.S.Flex,
-                            flexWrap: v.V.Wrap
-                        }, c.createElement(v.Qa, {
-                            display: v.S.Flex,
-                            flexWrap: v.V.NoWrap,
+                        return this.state.isFollowing ? this.state.disableNotifications ? (t = "live-notifications-toggle__status-text--disabled", e = Object(d.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (t = "live-notifications-toggle__status-text--enabled", e = Object(d.d)("You will be notified on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (e = Object(d.d)("Follow this channel to receive notifications when they go live.", "LiveNotificationsToggle"), t = "live-notifications-toggle__status-text--not-following"), l.createElement(g.ub, {
+                            color: g.K.Base,
+                            display: g.S.Flex,
+                            flexWrap: g.V.Wrap
+                        }, l.createElement(g.Qa, {
+                            display: g.S.Flex,
+                            flexWrap: g.V.NoWrap,
                             fullWidth: !0,
-                            justifyContent: v.Pa.Between
-                        }, c.createElement(v.Qa, {
-                            display: v.S.Flex,
+                            justifyContent: g.Pa.Between
+                        }, l.createElement(g.Qa, {
+                            display: g.S.Flex,
                             padding: {
                                 right: 2
                             }
-                        }, c.createElement("span", null, c.createElement(v.R, {
-                            fontSize: v.W.Size4,
+                        }, l.createElement("span", null, l.createElement(g.R, {
+                            fontSize: g.W.Size4,
                             bold: !0
-                        }, Object(u.d)("Notifications", "LiveNotificationsToggle")))), c.createElement(v.Qa, {
-                            display: v.S.Flex,
+                        }, Object(d.d)("Notifications", "LiveNotificationsToggle")))), l.createElement(g.Qa, {
+                            display: g.S.Flex,
                             flexShrink: 0
-                        }, c.createElement(v.Mb, {
+                        }, l.createElement(g.Mb, {
                             onChange: this.toggleNotificationsEnabled,
                             checked: !this.state.disableNotifications,
                             "data-test-selector": "live-notifications-toggle__toggle",
                             "data-a-target": "notifications-toggle",
                             disabled: !this.state.isFollowing
-                        }))), c.createElement(v.Qa, {
-                            display: v.S.InlineFlex,
+                        }))), l.createElement(g.Qa, {
+                            display: g.S.InlineFlex,
                             padding: {
                                 bottom: 1
                             }
-                        }, c.createElement(v.R, {
-                            type: v.Kb.Span,
-                            color: v.K.Alt2,
+                        }, l.createElement(g.R, {
+                            type: g.Kb.Span,
+                            color: g.K.Alt2,
                             "data-test-selector": t
                         }, e)))
                     }, t.prototype.addEventListeners = function() {
@@ -9441,8 +9422,8 @@
                     }, t.prototype.removeEventListeners = function() {
                         this.buttonContainerRef && (this.buttonContainerRef.removeEventListener("mouseover", this.onMouseEnter), this.buttonContainerRef.removeEventListener("mouseleave", this.onMouseLeave))
                     }, t
-                }(c.Component),
-                S = Object(d.compose)(Object(p.a)(y, {
+                }(l.Component),
+                k = Object(c.compose)(Object(u.a)(b, {
                     options: function(e) {
                         return {
                             variables: {
@@ -9453,18 +9434,17 @@
                     skip: function(e) {
                         return !(e.firstPageLoaded && e.isLoggedIn && e.channelLogin && !e.followData)
                     }
-                }), Object(p.a)(b, {
+                }), Object(u.a)(v, {
                     name: "followUser"
-                }), Object(g.c)(), Object(f.a)("LiveNotificationsToggle"))(k);
-            var E = Object(r.b)(function(e) {
+                }), Object(f.c)(), Object(h.a)("LiveNotificationsToggle"))(y);
+            var S = Object(r.b)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded,
-                    isLoggedIn: Object(a.f)(e),
-                    activeTheme: Object(o.a)(e)
+                    isLoggedIn: Object(a.f)(e)
                 }
-            })(S);
+            })(k);
             n.d(t, "a", function() {
-                return E
+                return S
             }), n.d(t, "b", function() {
                 return i
             })
@@ -10131,7 +10111,7 @@
                     TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV: {
                         id: "50e947d4-24b7-4000-a046-f48f4072b7cf",
                         default: "control",
-                        staffOverride: "variant_a"
+                        staffOverride: "left_nav_order_exp"
                     },
                     TWILIGHT_SUBS_AFFILIATE_BADGES: {
                         id: "c9fb1ee5-b3ff-4bfb-9584-4412a8878f16",
@@ -10539,15 +10519,13 @@
             var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, C, w, N, T, _, R, O, I, D, P, A, L, F, x, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, Z, $, J, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, Ce, we, Ne, Te, _e, Re, Oe, Ie, De, Pe, Ae, Le, Fe, xe, Me, Ue, Be, je, Ve, He, We, ze, Ge;
             n.d(t, "a", function() {
                     return m
-                }), n.d(t, "e", function() {
+                }), n.d(t, "d", function() {
                     return S
                 }), n.d(t, "c", function() {
                     return ue
-                }), n.d(t, "d", function() {
-                    return pe
                 }), n.d(t, "b", function() {
                     return Ee
-                }), n.d(t, "f", function() {
+                }), n.d(t, "e", function() {
                     return Ce
                 }),
                 function(e) {
@@ -14809,8 +14787,15 @@
             ! function(e) {
                 e.Disable = "disable", e.Enable = "enable"
             }(Oe || (Oe = {}));
-            var Qe = n("NT6a"),
-                Ke = (n("g6pS"), function(e) {
+            var Qe, Ke, Ye = n("NT6a");
+            n("g6pS");
+            ! function(e) {
+                e.ChannelLink = "user-menu__channel-link", e.DarkModeToggle = "user-menu__dark-mode-toggle", e.DashboardLink = "user-menu__dashboard-link", e.DropdownDown = "user-menu__dropdown-down", e.DropdownUp = "user-menu__dropdown-up", e.FriendsLink = "user-menu__friends-link", e.InboxLink = "user-menu__inbox-link", e.InventoryLink = "user-menu__inventory-link", e.InvisibleAvailability = "user-menu__invisible-availability", e.LogoutButton = "user-menu__logout-button", e.OnlineAvailability = "user-menu__online-availability", e.PaymentsLink = "user-menu__payments-link", e.SettingsLink = "user-menu__settings-link", e.ShareActivityToggle = "user-menu__share-activity-toggle", e.SubscriptionsLink = "user-menu__subscriptions-link", e.VideoManagerLink = "user-menu__video-manager-link"
+            }(Qe || (Qe = {})),
+            function(e) {
+                e.DropdownDown = "dropdown-down", e.DropdownUp = "dropdown-up"
+            }(Ke || (Ke = {}));
+            var Xe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onLogoutClick = function(e) {
@@ -14832,8 +14817,8 @@
                         var e = ae("top-nav-user-menu-dropdown", {
                                 "top-nav-user-menu-dropdown--toggled": this.props.dropdownOpen
                             }),
-                            t = this.props.dropdownOpen ? "dropdown-down" : "dropdown-up",
-                            n = this.props.dropdownOpen ? "dropdown-down" : "dropdown-up",
+                            t = this.props.dropdownOpen ? Ke.DropdownDown : Ke.DropdownUp,
+                            n = this.props.dropdownOpen ? Qe.DropdownDown : Qe.DropdownUp,
                             i = !1,
                             r = T.K.Alt2,
                             a = T.K.Alt2,
@@ -14872,7 +14857,7 @@
                             disabled: !i,
                             onClick: this.onOnlineClick,
                             "data-a-target": "online-dropdown-button",
-                            "data-test-selector": "online-dropdown-button"
+                            "data-test-selector": Qe.OnlineAvailability
                         }, d.createElement(T.ub, {
                             color: T.K.Alt2,
                             display: T.S.Flex,
@@ -14895,7 +14880,7 @@
                             disabled: !i,
                             onClick: this.onInvisibleClick,
                             "data-a-target": "invisible-dropdown-button",
-                            "data-test-selector": "invisible-dropdown-button"
+                            "data-test-selector": Qe.InvisibleAvailability
                         }, d.createElement(T.ub, {
                             color: T.K.Base,
                             display: T.S.Flex,
@@ -14919,12 +14904,12 @@
                                 x: 2,
                                 bottom: 1,
                                 top: .5
-                            }
+                            },
+                            "data-test-selector": Qe.ShareActivityToggle
                         }, d.createElement(T.J, {
                             id: "share-activity-toggle",
                             label: Object(u.d)("Share my activity", "UserMenuDropdown"),
                             "data-a-target": "share-activity-toggle",
-                            "data-test-selector": "share-activity-toggle",
                             "data-a-value": o,
                             checked: o,
                             onChange: this.onShareCheckboxClick,
@@ -14947,18 +14932,19 @@
                             id: "dark-mode-toggle",
                             label: Object(u.d)("Dark Mode", "UserMenuDropdown"),
                             "data-a-target": "dark-mode-toggle",
-                            "data-test-selector": "dark-mode-toggle",
+                            "data-test-selector": Qe.DarkModeToggle,
                             "data-a-value": this.props.theme,
                             checked: this.props.theme === Be.a.Dark,
                             onChange: this.onDarkModeCheckboxClick
-                        })), d.createElement(Qe.b, null)), d.createElement(T.Qa, {
+                        })), d.createElement(Ye.b, null)), d.createElement(T.Qa, {
                             margin: {
                                 y: 1
                             }
                         }, d.createElement(T.Na, {
                             disabled: !i,
                             linkTo: p,
-                            "data-a-target": "channel-dropdown-link"
+                            "data-a-target": "channel-dropdown-link",
+                            "data-test-selector": Qe.ChannelLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -14980,7 +14966,8 @@
                         })), d.createElement(T.R, null, Object(u.d)("Channel", "UserMenuDropdown")))), d.createElement(T.Na, {
                             disabled: !i,
                             linkTo: m,
-                            "data-a-target": "video-manager-dropdown-link"
+                            "data-a-target": "video-manager-dropdown-link",
+                            "data-test-selector": Qe.VideoManagerLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15002,7 +14989,8 @@
                         })), d.createElement(T.R, null, Object(u.d)("Video Producer", "UserMenuDropdown")))), d.createElement(T.Na, {
                             disabled: !i,
                             linkTo: h,
-                            "data-a-target": "dashboard-dropdown-link"
+                            "data-a-target": "dashboard-dropdown-link",
+                            "data-test-selector": Qe.DashboardLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15029,7 +15017,8 @@
                             }
                         }), d.createElement(T.Na, {
                             linkTo: "/friends",
-                            "data-a-target": "friends-dropdown-link"
+                            "data-a-target": "friends-dropdown-link",
+                            "data-test-selector": Qe.FriendsLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15050,7 +15039,8 @@
                             width: 20
                         })), d.createElement(T.R, null, Object(u.d)("Friends", "UserMenuDropdown")))), d.createElement(T.Na, {
                             linkTo: "/messages/inbox",
-                            "data-a-target": "inbox-dropdown-link"
+                            "data-a-target": "inbox-dropdown-link",
+                            "data-test-selector": Qe.InboxLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15071,7 +15061,8 @@
                             width: 20
                         })), d.createElement(T.R, null, Object(u.d)("Messages", "UserMenuDropdown")))), d.createElement(T.Na, {
                             linkTo: "/subscriptions",
-                            "data-a-target": "subscriptions-dropdown-link"
+                            "data-a-target": "subscriptions-dropdown-link",
+                            "data-test-selector": Qe.SubscriptionsLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15092,7 +15083,8 @@
                             width: 20
                         })), d.createElement(T.R, null, Object(u.d)("Subscriptions", "UserMenuDropdown")))), d.createElement(T.Na, {
                             linkTo: "/inventory",
-                            "data-a-target": "inventory-dropdown-link"
+                            "data-a-target": "inventory-dropdown-link",
+                            "data-test-selector": Qe.InventoryLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15113,7 +15105,8 @@
                             width: 20
                         })), d.createElement(T.R, null, Object(u.d)("Inventory", "UserMenuDropdown")))), d.createElement(T.Na, {
                             linkTo: "/payments",
-                            "data-a-target": "payments-dropdown-link"
+                            "data-a-target": "payments-dropdown-link",
+                            "data-test-selector": Qe.PaymentsLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15140,7 +15133,8 @@
                             }
                         }), d.createElement(T.Na, {
                             linkTo: "/settings/profile",
-                            "data-a-target": "settings-dropdown-link"
+                            "data-a-target": "settings-dropdown-link",
+                            "data-test-selector": Qe.SettingsLink
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15160,8 +15154,9 @@
                             height: 20,
                             width: 20
                         })), d.createElement(T.R, null, Object(u.d)("Settings", "UserMenuDropdown")))), d.createElement(T.Na, {
+                            onClick: this.onLogoutClick,
                             "data-a-target": "dropdown-logout",
-                            onClick: this.onLogoutClick
+                            "data-test-selector": Qe.LogoutButton
                         }, d.createElement(T.ub, {
                             color: T.K.Alt,
                             display: T.S.Flex,
@@ -15181,11 +15176,12 @@
                             height: 20,
                             width: 20
                         })), d.createElement(T.R, null, Object(u.d)("Log Out", "UserMenuDropdown"))))))))
-                    }, t = c.c([Object(I.c)("UserMenuDropdown")], t)
-                }(d.Component)),
-                Ye = n("6qmu"),
-                Xe = n("3KNA"),
-                Ze = function(e) {
+                    }, t
+                }(d.Component),
+                Ze = Object(I.c)("UserMenuDropdown")(Xe),
+                $e = n("6qmu"),
+                Je = n("3KNA"),
+                et = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.toggleShareActivity = function() {
@@ -15221,7 +15217,7 @@
                         }, t
                     }
                     return c.d(t, e), t.prototype.render = function() {
-                        return d.createElement(Ke, {
+                        return d.createElement(Ze, {
                             data: this.props.data,
                             dropdownOpen: this.props.dropdownOpen,
                             toggleShareActivity: this.toggleShareActivity,
@@ -15230,15 +15226,15 @@
                             logout: this.props.logout,
                             theme: this.props.theme
                         })
-                    }, t = c.c([Object(g.a)(Ye, {
+                    }, t = c.c([Object(g.a)($e, {
                         skip: function(e) {
                             return !e.firstPageLoaded
                         }
-                    }), Object(g.a)(Xe, {
+                    }), Object(g.a)(Je, {
                         name: "updateIsSharingActivity"
                     }), Object(xe.a)(function(e) {
                         return {
-                            query: Ye,
+                            query: $e,
                             topic: e.data && e.data.currentUser ? Object(je.o)(e.data.currentUser.id) : "",
                             skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                             type: Ue.PubsubMessageType.PresenceSettings,
@@ -15248,18 +15244,20 @@
                         }
                     })], t)
                 }(d.Component);
-            var $e, Je = Object(i.b)(function(e) {
-                    return {
-                        firstPageLoaded: e.session.firstPageLoaded,
-                        theme: Object(Ge.a)(e)
-                    }
-                }, function(e) {
-                    return Object(a.b)({
-                        changeTheme: ze.b,
-                        logout: s.f
-                    }, e)
-                })(Ze),
-                et = (n("ENuL"), function(e) {
+            var tt, nt = Object(i.b)(function(e) {
+                return {
+                    firstPageLoaded: e.session.firstPageLoaded,
+                    theme: Object(Ge.a)(e)
+                }
+            }, function(e) {
+                return Object(a.b)({
+                    changeTheme: ze.b,
+                    logout: s.f
+                }, e)
+            })(et);
+            n("ENuL");
+            (tt || (tt = {})).Toggle = "user-menu-placeholder__toggle";
+            var it, rt = function(e) {
                     return d.createElement(T.Qa, {
                         position: T.ab.Relative,
                         display: T.S.Flex,
@@ -15275,7 +15273,7 @@
                     }, d.createElement(T.Na, {
                         onClick: e.onMenuCardClick,
                         "data-a-target": "user-menu-toggle",
-                        "data-test-selector": "user-menu-toggle"
+                        "data-test-selector": tt.Toggle
                     }, d.createElement(T.Qa, {
                         display: T.S.Flex,
                         flexGrow: 1,
@@ -15338,9 +15336,13 @@
                     }, d.createElement(T.jb, {
                         asset: T.kb.GlyphArrDown
                     })))))))
-                }),
-                tt = n("m98o"),
-                nt = (n("rF0/"), function(e) {
+                },
+                at = n("m98o");
+            n("rF0/");
+            ! function(e) {
+                e.Toggle = "user-menu__toggle", e.DisplayName = "user-menu__display-name"
+            }(it || (it = {}));
+            var ot, st = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onCardClick = function() {
@@ -15389,7 +15391,7 @@
                         }, d.createElement(T.Na, {
                             onClick: this.onCardClick,
                             "data-a-target": "user-menu-toggle",
-                            "data-test-selector": "user-menu-toggle"
+                            "data-test-selector": it.Toggle
                         }, d.createElement(T.Qa, {
                             display: T.S.Flex,
                             flexWrap: T.V.NoWrap,
@@ -15428,7 +15430,8 @@
                             color: T.K.Base,
                             fontSize: T.W.Size5,
                             className: "top-nav-user-menu__username",
-                            "data-a-target": "user-display-name"
+                            "data-a-target": "user-display-name",
+                            "data-test-selector": it.DisplayName
                         }, d.createElement(T.R, {
                             lineHeight: T.Ra.Heading
                         }, n)), d.createElement(T.ub, {
@@ -15447,7 +15450,7 @@
                             noWrap: !0,
                             "data-a-target": "online-status",
                             lineHeight: T.Ra.Heading
-                        }, this.props.data.currentUser && d.createElement(tt.a, {
+                        }, this.props.data.currentUser && d.createElement(at.a, {
                             activity: this.props.data.currentUser.activity,
                             availability: i === Me.a.Offline ? Me.a.Invisible : i
                         }))))), d.createElement(T.ub, {
@@ -15460,9 +15463,9 @@
                             asset: T.kb.GlyphArrDown
                         }))))))
                     }, t
-                }(d.Component)),
-                it = n("jeWT"),
-                rt = function(e) {
+                }(d.Component),
+                lt = n("jeWT"),
+                ct = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.isSettingNewSession = !1, n.onMenuCardClick = function() {
@@ -15522,9 +15525,9 @@
                                 "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                             }),
                             t = null;
-                        return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(et, {
+                        return t = this.props.data.loading && !this.props.data.currentUser || this.props.data.error ? d.createElement(rt, {
                             onMenuCardClick: this.onMenuCardClick
-                        }) : d.createElement(nt, {
+                        }) : d.createElement(st, {
                             data: this.props.data,
                             onMenuCardClick: this.onMenuCardClick,
                             theme: this.props.theme
@@ -15537,14 +15540,14 @@
                         }, d.createElement(re.a, {
                             onClickOut: this.onClickOut,
                             className: e
-                        }, t, d.createElement(Je, {
+                        }, t, d.createElement(nt, {
                             dropdownOpen: this.state.dropdownOpen
                         })))
                     }, t.prototype.reportInteractive = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
-                    }, t = c.c([Object(g.a)(it), Object(xe.a)(function(e) {
+                    }, t = c.c([Object(g.a)(lt), Object(xe.a)(function(e) {
                         return {
-                            query: it,
+                            query: lt,
                             topic: e.data.currentUser ? Object(je.o)(e.data.currentUser.id) : "",
                             skip: !(e.data && !e.data.loading && !e.data.error && e.data.currentUser),
                             type: Ue.PubsubMessageType.PresenceSettings,
@@ -15556,13 +15559,13 @@
                         topic: function(e) {
                             return e.data.currentUser ? Object(je.o)(e.data.currentUser.id) : ""
                         },
-                        mapMessageTypesToProps: ($e = {}, $e[Ue.PubsubMessageType.Presence] = "presence", $e),
+                        mapMessageTypesToProps: (ot = {}, ot[Ue.PubsubMessageType.Presence] = "presence", ot),
                         skip: function(e) {
                             return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                         }
                     }]), Object(I.c)("User")], t)
                 }(d.Component);
-            var at, ot = Object(i.b)(function(e) {
+            var dt, ut = Object(i.b)(function(e) {
                     return {
                         theme: Object(Ge.a)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
@@ -15573,14 +15576,14 @@
                         changeTheme: ze.b,
                         initialUserAvailabilitySet: We.g
                     }, e)
-                })(Object(r.f)(rt)),
-                st = n("9pSj"),
-                lt = n("DS6v");
+                })(Object(r.f)(ct)),
+                pt = n("9pSj"),
+                mt = n("DS6v");
             n("Rh8e");
             ! function(e) {
                 e.BrowseLink = "top-nav__browse-link", e.DropdownStoreLink = "top-nav__dropdown-store-link", e.FollowingLink = "top-nav__following-link", e.LanguageBalloonWrapper = "top-nav__language-balloon-Wrapper", e.LanguageMenuItem = "top-nav__language-menu-item"
-            }(at || (at = {}));
-            var ct = function(e) {
+            }(dt || (dt = {}));
+            var ht = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.logger = u.o.logger.withCategory("top-nav"), n.renderBitsButton = function() {
@@ -15616,7 +15619,7 @@
                                 },
                                 alignSelf: T.d.Center,
                                 flexWrap: T.V.NoWrap
-                            }, !e && d.createElement(st.d, null))
+                            }, !e && d.createElement(pt.d, null))
                         }, n.renderStoreLink = function() {
                             var e = !1;
                             if (n.props.data) {
@@ -15627,7 +15630,7 @@
                                 targetBlank: !0,
                                 linkTo: M.a,
                                 "data-a-target": "store-link-dropdown",
-                                "data-test-selector": at.DropdownStoreLink,
+                                "data-test-selector": dt.DropdownStoreLink,
                                 title: Object(u.d)("Store", "TopNav")
                             }) : null
                         }, n.saveEllipsisRef = function(e) {
@@ -15641,7 +15644,7 @@
                             return d.createElement(r.a, {
                                 className: "top-nav__nav-link" + (n ? " active" : ""),
                                 "data-a-target": "browse-link",
-                                "data-test-selector": at.BrowseLink,
+                                "data-test-selector": dt.BrowseLink,
                                 title: i,
                                 to: {
                                     pathname: "/directory",
@@ -15700,7 +15703,7 @@
                                 },
                                 className: "top-nav__nav-link",
                                 "data-a-target": "following-link",
-                                "data-test-selector": at.FollowingLink,
+                                "data-test-selector": dt.FollowingLink,
                                 title: t
                             }, t)
                         }
@@ -15841,9 +15844,9 @@
                             title: Object(u.d)("Jobs", "TopNav")
                         }), d.createElement(f.a, {
                             display: T.S.Block,
-                            "data-test-selector": at.LanguageBalloonWrapper
+                            "data-test-selector": dt.LanguageBalloonWrapper
                         }, d.createElement(V, {
-                            "data-test-selector": at.LanguageMenuItem,
+                            "data-test-selector": dt.LanguageMenuItem,
                             "data-a-target": "language-selector",
                             title: Object(u.d)("Language", "TopNav")
                         }), d.createElement(T.q, {
@@ -15911,20 +15914,20 @@
                             flexWrap: T.V.NoWrap,
                             flexGrow: 0,
                             flexShrink: 0
-                        }, this.props.isLoggedIn ? d.createElement(ot, null) : d.createElement(Te.a, {
+                        }, this.props.isLoggedIn ? d.createElement(ut, null) : d.createElement(Te.a, {
                             login: this.props.login,
                             signup: this.props.signup
                         })))))
                     }, t
                 }(d.Component),
-                dt = Object(a.d)(Object(g.a)(lt, {
+                ft = Object(a.d)(Object(g.a)(mt, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
                 }), Object(I.c)("TopNav", {
                     autoReportInteractive: !0
-                }))(ct);
-            var ut = Object(r.f)(Object(i.b)(function(e) {
+                }))(ht);
+            var gt = Object(r.f)(Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(l.f)(e)
                 }
@@ -15938,13 +15941,13 @@
                         return Object(s.g)(o.a.TopNavSignupButton)
                     }
                 }, e)
-            })(dt));
+            })(ft));
             n.d(t, !1, function() {
                 return "5rem"
             }), n.d(t, !1, function() {
                 return "9.5rem"
             }), n.d(t, "a", function() {
-                return ut
+                return gt
             })
         },
         Gw6o: function(e, t, n) {
@@ -17360,46 +17363,52 @@
                     })
                 }
             }
-            var c = n("q1tI"),
-                d = n("/7QA"),
-                u = n("Ue10"),
-                p = (n("siWu"), function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.renderLink = function(e) {
-                            return c.createElement(u.Na, {
-                                key: e.languageCode,
-                                onClick: t.handleLanguageClick,
-                                "data-target": "language-selector-link",
-                                "data-language": e.languageCode
-                            }, c.createElement(u.Qa, {
-                                padding: {
-                                    y: .5,
-                                    x: 1
-                                },
-                                "data-a-target": "language-" + e.languageCode
-                            }, e.name))
-                        }, t.handleLanguageClick = function(e) {
-                            var n = e.currentTarget.getAttribute("data-language");
-                            n && t.props.changeLanguage(n, t.props.currentUserID)
-                        }, t
-                    }
-                    return a.d(t, e), t.prototype.render = function() {
-                        var e = Math.floor(d.a.locales.length / 2);
-                        return c.createElement(u.Qa, {
-                            className: "language-selector",
-                            display: u.S.Flex,
+            var c, d = n("q1tI"),
+                u = n("/7QA"),
+                p = n("Ue10");
+            n("siWu");
+            ! function(e) {
+                e.LeftColumn = "language-selector__left-column", e.RightColumn = "language-selector__right-column"
+            }(c || (c = {}));
+            var m = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.renderLink = function(e) {
+                        return d.createElement(p.Na, {
+                            key: e.languageCode,
+                            onClick: t.handleLanguageClick,
+                            "data-target": "language-selector-link",
+                            "data-language": e.languageCode
+                        }, d.createElement(p.Qa, {
                             padding: {
-                                y: 1
-                            }
-                        }, c.createElement("div", {
-                            className: "language-selector__list language-selector__list--border-right"
-                        }, d.a.locales.slice(0, e).map(this.renderLink)), c.createElement("div", {
-                            className: "language-selector__list"
-                        }, d.a.locales.slice(e).map(this.renderLink)))
+                                y: .5,
+                                x: 1
+                            },
+                            "data-a-target": "language-" + e.languageCode
+                        }, e.name))
+                    }, t.handleLanguageClick = function(e) {
+                        var n = e.currentTarget.getAttribute("data-language");
+                        n && t.props.changeLanguage(n, t.props.currentUserID)
                     }, t
-                }(c.Component));
-            var m = Object(i.b)(function(e) {
+                }
+                return a.d(t, e), t.prototype.render = function() {
+                    var e = Math.floor(u.a.locales.length / 2);
+                    return d.createElement(p.Qa, {
+                        className: "language-selector",
+                        display: p.S.Flex,
+                        padding: {
+                            y: 1
+                        }
+                    }, d.createElement("div", {
+                        className: "language-selector__list language-selector__list--border-right",
+                        "data-test-selector": c.LeftColumn
+                    }, u.a.locales.slice(0, e).map(this.renderLink)), d.createElement("div", {
+                        className: "language-selector__list",
+                        "data-test-selector": c.RightColumn
+                    }, u.a.locales.slice(e).map(this.renderLink)))
+                }, t
+            }(d.Component);
+            var h = Object(i.b)(function(e) {
                 return {
                     currentUserID: e.session.user && e.session.user.id || null
                 }
@@ -17407,9 +17416,9 @@
                 return Object(r.b)({
                     changeLanguage: l
                 }, e)
-            })(p);
+            })(m);
             n.d(t, "a", function() {
-                return m
+                return h
             })
         },
         J9w5: function(e, t) {
@@ -18632,6 +18641,141 @@
                         return null
                 }
             }
+        },
+        JcRA: function(e, t, n) {
+            "use strict";
+            var i = n("mrSG"),
+                r = n("q1tI"),
+                a = n("Ue10"),
+                o = 300,
+                s = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.onClick = function(e) {
+                            n.state.isIconAnimationEnabled || n.props.onClick && (n.setState({
+                                isFocused: !1
+                            }), n.props.onClick(e), n.props.onClickAnimationEnd && setTimeout(n.props.onClickAnimationEnd, o))
+                        }, n.setTextRef = function(e) {
+                            n.textRef = e
+                        }, n.onFocus = function() {
+                            var e = n.props.text || "";
+                            n.setState({
+                                currentText: void 0 !== n.props.textOnHover ? n.props.textOnHover : e,
+                                isFocused: !0
+                            })
+                        }, n.onBlur = function() {
+                            n.setState({
+                                currentText: n.props.text || "",
+                                isFocused: !1
+                            })
+                        }, n.onIconAnimationComplete = function() {
+                            n.setState({
+                                isIconAnimationEnabled: !1
+                            })
+                        }, n.state = {
+                            currentText: t.text || "",
+                            currentIcon: t.icon,
+                            currentIconOnHover: t.iconOnHover,
+                            isFocused: !1,
+                            offsetPixels: 0,
+                            isIconAnimationEnabled: !1
+                        }, n
+                    }
+                    return i.d(t, e), t.getDerivedStateFromProps = function(e, t) {
+                        var n = {};
+                        return t.currentText !== e.text && t.currentText !== e.textOnHover && (n.currentText = e.text || ""), t.currentIcon !== e.icon && (n.currentIcon = e.icon, n.isIconAnimationEnabled = !0), t.currentIconOnHover !== e.iconOnHover && (n.currentIconOnHover = e.iconOnHover, n.isIconAnimationEnabled = !0), Object.keys(n).length > 0 ? n : null
+                    }, t.prototype.getSnapshotBeforeUpdate = function(e, t) {
+                        return this.state.currentText !== t.currentText && this.textRef && (this.prevTextSize = this.textRef.getBoundingClientRect().width), null
+                    }, t.prototype.componentDidUpdate = function(e, t) {
+                        this.state.currentText !== t.currentText && this.triggerTextTransition()
+                    }, t.prototype.render = function() {
+                        return r.createElement(a.Ia, {
+                            fullWidth: !0
+                        }, r.createElement("div", {
+                            onMouseEnter: this.onFocus,
+                            onMouseLeave: this.onBlur,
+                            onFocus: this.onFocus,
+                            onBlur: this.onBlur
+                        }, r.createElement(a.v, {
+                            fullWidth: !0,
+                            blurAfterClick: !0,
+                            onClick: this.onClick,
+                            type: this.getCurrentType(),
+                            tabIndex: this.props.tabIndex
+                        }, r.createElement(a.Qa, {
+                            display: a.S.Flex,
+                            justifyContent: a.Pa.Center,
+                            alignItems: a.c.Center
+                        }, this.renderIcon(), this.renderText()))))
+                    }, t.prototype.renderIcon = function() {
+                        return r.createElement(a.Ia, {
+                            display: a.S.Flex,
+                            justifyContent: a.Pa.Center,
+                            alignItems: a.c.Center,
+                            margin: {
+                                right: .5
+                            }
+                        }, r.createElement("div", {
+                            style: {
+                                transform: this.getIconTransform(),
+                                transition: this.getIconTransition()
+                            }
+                        }, r.createElement(a.e, {
+                            enabled: this.state.isIconAnimationEnabled,
+                            onAnimationEnd: this.onIconAnimationComplete,
+                            duration: a.g.Long,
+                            type: a.j.BounceIn
+                        }, r.createElement(a.Qa, {
+                            display: a.S.Flex,
+                            justifyContent: a.Pa.Center,
+                            alignItems: a.c.Center
+                        }, r.createElement(a.jb, {
+                            type: a.lb.Inherit,
+                            asset: this.getIcon()
+                        })))))
+                    }, t.prototype.renderText = function() {
+                        return r.createElement("span", {
+                            ref: this.setTextRef,
+                            style: {
+                                opacity: this.getTextOpacity(),
+                                transition: this.getTextTransition()
+                            }
+                        }, this.state.currentText)
+                    }, t.prototype.getIconTransform = function() {
+                        var e = "scale(1)",
+                            t = "translateX(0px)";
+                        return this.state.isFocused && (e = "scale(1.2)"), Math.abs(this.state.offsetPixels) > 15 && (t = "translateX(" + this.state.offsetPixels / 2 + "px)"), t + " " + e
+                    }, t.prototype.getIconTransition = function() {
+                        return 0 === this.state.offsetPixels ? o + "ms transform ease" : void 0
+                    }, t.prototype.getTextOpacity = function() {
+                        return 0 !== this.state.offsetPixels ? 0 : 1
+                    }, t.prototype.getTextTransition = function() {
+                        return 0 !== this.state.offsetPixels ? void 0 : o + "ms opacity ease"
+                    }, t.prototype.getCurrentType = function() {
+                        return this.state.isFocused && this.props.typeOnHover ? this.props.typeOnHover : this.props.type
+                    }, t.prototype.getIcon = function() {
+                        return this.state.isFocused && this.state.currentIconOnHover ? this.state.currentIconOnHover : this.state.currentIcon
+                    }, t.prototype.triggerTextTransition = function() {
+                        var e = this;
+                        if (this.textRef) {
+                            var t = this.textRef.getBoundingClientRect().width;
+                            this.setState({
+                                offsetPixels: t - this.prevTextSize
+                            }, function() {
+                                e.prevTextSize = t, requestAnimationFrame(function() {
+                                    requestAnimationFrame(function() {
+                                        e.setState({
+                                            offsetPixels: 0
+                                        })
+                                    })
+                                })
+                            })
+                        }
+                    }, t
+                }(r.Component);
+            n.d(t, "a", function() {
+                return s
+            })
         },
         Je81: function(e, t) {
             var n = {
@@ -20140,25 +20284,31 @@
         },
         LA8z: function(e, t, n) {
             "use strict";
-            var i = n("q1tI"),
-                r = n("/7QA"),
-                a = n("ZDlU"),
-                o = n("Ue10"),
-                s = function(e) {
-                    var t = i.createElement(o.v, {
-                        linkTo: "/directory",
-                        "data-a-target": "browse-channels-button"
-                    }, Object(r.d)("Browse channels", "PageNotFound"));
-                    return i.createElement(a.a, {
-                        message: Object(r.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "PageNotFound")
-                    }, i.createElement(o.Qa, {
-                        margin: {
-                            top: 2
-                        }
-                    }, e.children || t))
-                };
-            s.displayName = "PageNotFound", n.d(t, "a", function() {
-                return s
+            var i, r = n("q1tI"),
+                a = n("/7QA"),
+                o = n("ZDlU"),
+                s = n("Ue10");
+            ! function(e) {
+                e.BrowseChannelsButton = "page-not-found__browse-channels-button"
+            }(i || (i = {}));
+            var l = function(e) {
+                var t = r.createElement(s.v, {
+                    linkTo: "/directory",
+                    "data-a-target": "browse-channels-button",
+                    "data-test-selector": i.BrowseChannelsButton
+                }, Object(a.d)("Browse channels", "PageNotFound"));
+                return r.createElement(o.a, {
+                    message: Object(a.d)("Sorry. Unless you’ve got a time machine, that content is unavailable.", "PageNotFound")
+                }, r.createElement(s.Qa, {
+                    margin: {
+                        top: 2
+                    }
+                }, e.children || t))
+            };
+            l.displayName = "PageNotFound", n.d(t, !1, function() {
+                return i
+            }), n.d(t, "a", function() {
+                return l
             })
         },
         LGxt: function(e, t, n) {},
@@ -33517,9 +33667,9 @@
 
             function o(e) {
                 switch (e) {
-                    case r.g.Newest:
+                    case r.f.Newest:
                         return i.Newest;
-                    case r.g.Popular:
+                    case r.f.Popular:
                         return i.Popular;
                     default:
                         return e
@@ -36577,10 +36727,10 @@
                     return window.location.replace(l.a.playerBaseURL + "/?channel=" + e.match.params.channelLogin), null
                 },
                 un = function(e) {
-                    var t = e.match.params.contentType === Mt.h.Video ? e.match.params.contentID : void 0,
-                        n = e.match.params.contentType === Mt.h.Collection ? e.match.params.contentID : void 0;
+                    var t = e.match.params.contentType === Mt.g.Video ? e.match.params.contentID : void 0,
+                        n = e.match.params.contentType === Mt.g.Collection ? e.match.params.contentID : void 0;
                     return t || n ? r.createElement(R.c, {
-                        to: Object(Mt.j)(null, t, n)
+                        to: Object(Mt.i)(null, t, n)
                     }) : r.createElement(jt.a, null)
                 };
 
@@ -40547,33 +40697,32 @@
                 a = n("1/iK"),
                 o = n("y5D0"),
                 s = n("kRBY"),
-                l = n("XDQu"),
-                c = n("mrSG"),
-                d = n("TSYQ"),
-                u = n("q1tI"),
-                p = n("/7QA"),
-                m = n("eJ65"),
-                h = n("yR8l"),
-                f = n("/0dD"),
-                g = n("geRD"),
-                v = n("J9w5"),
-                b = n("I6K6"),
-                y = n("sgJZ"),
-                k = {
+                l = n("mrSG"),
+                c = n("TSYQ"),
+                d = n("q1tI"),
+                u = n("/7QA"),
+                p = n("eJ65"),
+                m = n("yR8l"),
+                h = n("geRD"),
+                f = n("J9w5"),
+                g = n("I6K6"),
+                v = n("sgJZ"),
+                b = {
                     Channel: "channel"
                 };
-            var S, E = n("2xye"),
-                C = n("GnwI"),
-                w = n("Ba7Q"),
-                N = n("Ar2k"),
-                T = n("Ue10"),
-                _ = n("ZBeb"),
-                R = (n("ouUS"), n("CZEr")),
-                O = n("Qdxp");
+            var y, k = n("2xye"),
+                S = n("JcRA"),
+                E = n("GnwI"),
+                C = n("Ba7Q"),
+                w = n("Ar2k"),
+                N = n("Ue10"),
+                T = n("ZBeb"),
+                _ = (n("ouUS"), n("CZEr")),
+                R = n("Qdxp");
             ! function(e) {
                 e[e.IconOnly = 0] = "IconOnly", e[e.TextOnly = 1] = "TextOnly", e[e.IconAndText = 2] = "IconAndText"
-            }(S || (S = {}));
-            var I = function(e) {
+            }(y || (y = {}));
+            var O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -40584,59 +40733,59 @@
                             return t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.user
                         }, t.toggleFollowing = function() {
                             var e;
-                            t.state.isFollowing ? (t.unfollowUser(), e = E.SpadeEventType.Unfollow) : (t.followUser(), e = E.SpadeEventType.Follow);
+                            t.state.isFollowing ? (t.unfollowUser(), e = k.SpadeEventType.Unfollow) : (t.followUser(), e = k.SpadeEventType.Follow);
                             var n = t.getFollowData();
                             n && function(e, t) {
-                                c.b(this, void 0, void 0, function() {
-                                    var n, i, r, a, o, s, l, d, u, m;
-                                    return c.e(this, function(c) {
-                                        switch (c.label) {
+                                l.b(this, void 0, void 0, function() {
+                                    var n, i, r, a, o, s, c, d, p, m;
+                                    return l.e(this, function(l) {
+                                        switch (l.label) {
                                             case 0:
                                                 if (n = null, i = null, r = null, a = null, o = null, !t.channelID) return [3, 5];
-                                                c.label = 1;
+                                                l.label = 1;
                                             case 1:
-                                                return c.trys.push([1, 3, , 4]), [4, p.o.apollo.client.query({
-                                                    query: y,
+                                                return l.trys.push([1, 3, , 4]), [4, u.o.apollo.client.query({
+                                                    query: v,
                                                     variables: {
                                                         id: t.channelID
                                                     }
                                                 })];
                                             case 2:
-                                                return a = c.sent(), [3, 4];
+                                                return a = l.sent(), [3, 4];
                                             case 3:
-                                                return l = c.sent(), p.j.error(l, "Failed to make query for channel info in FollowEvent reporting.", {
+                                                return c = l.sent(), u.j.error(c, "Failed to make query for channel info in FollowEvent reporting.", {
                                                     channelID: t.channelID
                                                 }), [3, 4];
                                             case 4:
-                                                (r = a && a.data && a.data.user) ? o = r.hosting.stream && r.hosting.stream.game ? r.hosting.stream.game.name : r.stream && r.stream.game && r.stream.game.name: p.j.error(new Error("GraphQL empty response"), "Query for channel info in FollowEvent reporting return no data.", {
+                                                (r = a && a.data && a.data.user) ? o = r.hosting.stream && r.hosting.stream.game ? r.hosting.stream.game.name : r.stream && r.stream.game && r.stream.game.name: u.j.error(new Error("GraphQL empty response"), "Query for channel info in FollowEvent reporting return no data.", {
                                                     channelID: t.channelID
-                                                }), c.label = 5;
+                                                }), l.label = 5;
                                             case 5:
-                                                if (!(d = p.n.getVideoPlayerTrackingData().vodID)) return [3, 10];
-                                                c.label = 6;
+                                                if (!(d = u.n.getVideoPlayerTrackingData().vodID)) return [3, 10];
+                                                l.label = 6;
                                             case 6:
-                                                return c.trys.push([6, 8, , 9]), [4, p.o.apollo.client.query({
-                                                    query: v,
+                                                return l.trys.push([6, 8, , 9]), [4, u.o.apollo.client.query({
+                                                    query: f,
                                                     variables: {
                                                         id: d
                                                     }
                                                 })];
                                             case 7:
-                                                return n = c.sent(), [3, 9];
+                                                return n = l.sent(), [3, 9];
                                             case 8:
-                                                return u = c.sent(), p.j.error(u, "Failed to make query for VOd info in FollowEvent reporting.", {
+                                                return p = l.sent(), u.j.error(p, "Failed to make query for VOd info in FollowEvent reporting.", {
                                                     currentVODID: d
                                                 }), [3, 9];
                                             case 9:
-                                                (i = n && n.data && n.data.video) ? s = Object(b.a)(i.broadcastType): (s = null, p.j.error(new Error("GraphQL empty response"), "Query for video info in FollowEvent reporting return no data.", {
+                                                (i = n && n.data && n.data.video) ? s = Object(g.a)(i.broadcastType): (s = null, u.j.error(new Error("GraphQL empty response"), "Query for video info in FollowEvent reporting return no data.", {
                                                     currentVODID: d
-                                                })), c.label = 10;
+                                                })), l.label = 10;
                                             case 10:
                                                 return m = {
                                                     channel: t.channelLogin,
                                                     channel_id: t.channelID,
                                                     channel_game: o,
-                                                    cta_visible: p.n.getVideoPlayerTrackingData().followCTAVisible,
+                                                    cta_visible: u.n.getVideoPlayerTrackingData().followCTAVisible,
                                                     host_channel: t.hostChannelLogin,
                                                     host_channel_id: t.hostChannelID,
                                                     game: t.game,
@@ -40644,7 +40793,7 @@
                                                     src: t.src,
                                                     vod_id: d,
                                                     vod_type: s
-                                                }, p.n.track(e, m), [2]
+                                                }, u.n.track(e, m), [2]
                                         }
                                     })
                                 })
@@ -40653,7 +40802,7 @@
                                 channelID: n.user && n.user.id || "",
                                 hostChannelLogin: t.props.hostChannelLogin,
                                 hostChannelID: t.props.hostChannelID,
-                                src: k.Channel
+                                src: b.Channel
                             }), t.setState(function(e) {
                                 return {
                                     isFollowing: !e.isFollowing,
@@ -40666,7 +40815,7 @@
                                 t.setState({
                                     showDropdown: !0
                                 });
-                                var n = c.a({}, Object(g.a)({
+                                var n = l.a({}, Object(h.a)({
                                     disableNotifications: !1,
                                     targetID: e.user && e.user.id || ""
                                 }), {
@@ -40681,7 +40830,7 @@
                                     }
                                 });
                                 t.props.followUser(n).then(function(e) {
-                                    Object(g.e)(O, {
+                                    Object(h.e)(R, {
                                         login: t.props.channelLogin
                                     }, function(t) {
                                         var n = t.user;
@@ -40695,7 +40844,7 @@
                         }, t.unfollowUser = function() {
                             var e = t.getFollowData();
                             if (t.props.unfollowUser && e) {
-                                var n = c.a({}, Object(g.a)({
+                                var n = l.a({}, Object(h.a)({
                                     targetID: e.user && e.user.id || ""
                                 }), {
                                     optimisticResponse: {
@@ -40709,7 +40858,7 @@
                                     }
                                 });
                                 t.props.unfollowUser(n).then(function() {
-                                    Object(g.e)(O, {
+                                    Object(h.e)(R, {
                                         login: t.props.channelLogin
                                     }, function(e) {
                                         var t = e.user;
@@ -40728,13 +40877,15 @@
                             t.buttonContainerRef && t.state.isFollowing && t.props.showTooltips && t.props.tooltipLayer.show({
                                 from: t.buttonContainerRef,
                                 label: t.getUnfollowText(),
-                                direction: T.Pb.Top
+                                direction: N.Pb.Top
                             })
                         }, t.onMouseLeave = function() {
                             t.props.tooltipLayer.hide()
+                        }, t.onAnimatedButtonComplete = function() {
+                            t.props.onToggleAnimationComplete && t.props.onToggleAnimationComplete(t.state.isFollowing)
                         }, t
                     }
-                    return c.d(t, e), t.prototype.componentDidMount = function() {
+                    return l.d(t, e), t.prototype.componentDidMount = function() {
                         this.reportInteractive(), this.addEventListeners()
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.channelLogin && !this.userDataLoaded() || !this.props.updateContainerWidth || this.props.updateContainerWidth(), this.reportInteractive()
@@ -40762,32 +40913,44 @@
                         if (this.props.showLoadingPlaceholder && (!this.props.data || this.props.data.loading)) return this.renderPlaceholder();
                         if (this.props.hideWhenFollowing || this.props.currentUserLogin === this.props.channelLogin || !this.props.followUser || !this.props.unfollowUser || !this.props.followData && (!this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user)) return null;
                         var e = null;
-                        return e = this.state.isFollowing ? this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown() : this.renderFollowButton(this.toggleFollowing), u.createElement(T.Qa, {
+                        return e = !this.state.isFollowing || this.props.animatedButton ? this.renderFollowButton(this.toggleFollowing) : this.props.hideDropdownWhenFollowing ? this.renderUnfollowButton() : this.renderUnfollowButtonWithDropdown(), d.createElement(N.Qa, {
                             refDelegate: this.setButtonContainerRef
                         }, e)
                     }, t.prototype.renderPlaceholder = function() {
                         switch (this.props.size) {
-                            case T.z.Large:
-                                return u.createElement(T.Za, {
+                            case N.z.Large:
+                                return d.createElement(N.Za, {
                                     width: this.props.fullWidthButton ? void 0 : 93,
                                     height: 36
                                 });
-                            case T.z.Small:
-                                return u.createElement(T.Za, {
+                            case N.z.Small:
+                                return d.createElement(N.Za, {
                                     width: this.props.fullWidthButton ? void 0 : 66,
                                     height: 24
                                 });
                             default:
-                                return u.createElement(T.Za, {
+                                return d.createElement(N.Za, {
                                     width: this.props.fullWidthButton ? void 0 : 70,
                                     height: 30
                                 })
                         }
                     }, t.prototype.renderFollowButton = function(e) {
-                        var t = this.props.isHostedFollow && this.props.channelName ? Object(p.d)("Follow {username}", {
-                            username: this.props.channelName
-                        }, "FollowButton") : Object(p.d)("Follow", "FollowButton");
-                        return u.createElement(T.v, c.a({
+                        var t = this.props.isHostedFollow && this.props.channelName ? Object(u.d)("Follow {username}", {
+                                username: this.props.channelName
+                            }, "FollowButton") : Object(u.d)("Follow", "FollowButton"),
+                            n = c("follow-btn--animated"),
+                            i = this.state.isFollowing;
+                        return this.props.animatedButton ? d.createElement("div", {
+                            className: n
+                        }, d.createElement(S.a, {
+                            text: i ? void 0 : t,
+                            icon: i ? N.kb.Heart : N.kb.FollowHollow,
+                            iconOnHover: i ? N.kb.Unheart : N.kb.Heart,
+                            type: i ? N.B.Text : N.B.Default,
+                            typeOnHover: i ? N.B.Alert : void 0,
+                            onClick: e,
+                            onClickAnimationEnd: this.onAnimatedButtonComplete
+                        })) : d.createElement(N.v, l.a({
                             ariaLabel: t,
                             blurAfterClick: this.props.blurAfterClick,
                             "data-a-target": "follow-button",
@@ -40796,96 +40959,92 @@
                             onClick: e,
                             size: this.props.size,
                             tabIndex: this.props.tabIndex,
-                            type: this.props.followButtonType || T.B.Default,
+                            type: this.props.followButtonType || N.B.Default,
                             fullWidth: this.props.fullWidthButton
-                        }, Object(T.Yb)(this.props)), this.props.followUIType === S.IconOnly ? null : t)
+                        }, Object(N.Yb)(this.props)), this.props.followUIType === y.IconOnly ? null : t)
                     }, t.prototype.renderUnfollowButton = function(e) {
-                        var t = !!this.props.unfollowAltColor,
-                            n = this.getUnfollowText(),
-                            i = d("follow-btn follow-btn--following", {
-                                "follow-btn--following-alt": t,
-                                "follow-btn--following-alt--dark": this.props.activeTheme === f.a.Dark,
-                                "follow-btn--following-default": !t,
+                        var t = this.getUnfollowText(),
+                            n = c("follow-btn follow-btn--following", {
                                 "follow-btn--with-dropdown": e
                             });
-                        return u.createElement("button", c.a({
-                            className: i,
-                            "aria-label": n,
+                        return d.createElement("button", l.a({
+                            className: n,
+                            "aria-label": t,
                             "data-a-target": "unfollow-button",
                             "data-test-selector": "unfollow-button",
                             tabIndex: this.props.tabIndex,
                             onClick: this.toggleFollowing
-                        }, Object(T.Yb)(this.props)), u.createElement(T.Qa, {
+                        }, Object(N.Yb)(this.props)), d.createElement(N.Qa, {
                             padding: {
                                 x: .5
                             },
                             className: "follow-btn__inner",
                             fullWidth: !0,
                             fullHeight: !0
-                        }, u.createElement("span", {
+                        }, d.createElement("span", {
                             className: "follow-btn__label",
                             "data-test-selector": "unfollow-button-label"
-                        }, this.props.unfollowUIType !== S.TextOnly && u.createElement(T.jb, {
-                            asset: T.kb.Heart
-                        }), this.props.unfollowUIType !== S.IconOnly && u.createElement(T.Qa, {
+                        }, this.props.unfollowUIType !== y.TextOnly && d.createElement(N.jb, {
+                            asset: N.kb.Heart
+                        }), this.props.unfollowUIType !== y.IconOnly && d.createElement(N.Qa, {
                             padding: {
                                 x: .5
                             }
-                        }, Object(p.d)("Following", "FollowButton"))), u.createElement("span", {
+                        }, Object(u.d)("Following", "FollowButton"))), d.createElement("span", {
                             className: "follow-btn__label-hover",
                             "data-test-selector": "unfollow-button-label-hover"
-                        }, this.props.unfollowUIType !== S.TextOnly && u.createElement(T.jb, {
-                            asset: T.kb.Unheart
-                        }), this.props.unfollowUIType !== S.IconOnly && u.createElement(T.Qa, {
+                        }, this.props.unfollowUIType !== y.TextOnly && d.createElement(N.jb, {
+                            asset: N.kb.Unheart
+                        }), this.props.unfollowUIType !== y.IconOnly && d.createElement(N.Qa, {
                             padding: {
                                 x: .5
                             }
-                        }, n))))
+                        }, t))))
                     }, t.prototype.renderUnfollowButtonWithDropdown = function() {
-                        var e = this.props.balloonDirection ? this.props.balloonDirection : T.r.BottomRight;
-                        return u.createElement(T.Qa, {
-                            display: T.S.Flex,
+                        var e = this.props.balloonDirection ? this.props.balloonDirection : N.r.BottomRight;
+                        return d.createElement(N.Qa, {
+                            display: N.S.Flex,
                             className: "follow-btn",
                             "data-test-selector": "unfollow-button__dropdown"
-                        }, u.createElement(T.Qa, null, this.renderUnfollowButton(!0)), u.createElement(m.a, {
-                            display: T.S.InlineFlex,
+                        }, d.createElement(N.Qa, null, this.renderUnfollowButton(!0)), d.createElement(p.a, {
+                            display: N.S.InlineFlex,
                             openByDefault: this.state.showDropdown
-                        }, u.createElement("button", {
+                        }, d.createElement("button", {
                             tabIndex: this.props.tabIndex,
-                            "aria-label": Object(p.d)("Dropdown", "FollowButton"),
+                            "aria-label": Object(u.d)("Dropdown", "FollowButton"),
                             className: "follow-btn__dropdown-toggle",
                             "data-a-target": "follow-dropdown-toggle"
-                        }, u.createElement(T.Qa, {
-                            justifyContent: T.Pa.Center,
-                            display: T.S.Flex,
-                            alignItems: T.c.Stretch,
+                        }, d.createElement(N.Qa, {
+                            justifyContent: N.Pa.Center,
+                            display: N.S.Flex,
+                            alignItems: N.c.Stretch,
                             fullHeight: !0
-                        }, u.createElement(T.jb, {
-                            asset: T.kb.GlyphArrDown
-                        }))), u.createElement(T.q, {
-                            size: T.s.Small,
+                        }, d.createElement(N.jb, {
+                            asset: N.kb.GlyphArrDown
+                        }))), d.createElement(N.q, {
+                            size: N.s.Small,
                             direction: e,
                             "data-a-target": "follow-notifications-balloon"
-                        }, u.createElement(T.Qa, {
+                        }, d.createElement(N.Qa, {
                             padding: 1
-                        }, u.createElement(w.a, {
+                        }, d.createElement(C.a, {
                             followData: this.getFollowData(),
                             channelLogin: this.props.channelLogin
                         })))))
                     }, t.prototype.getButtonIcon = function() {
-                        var e = this.props.hollowIcons && !this.state.isFollowing ? T.kb.FollowHollow : T.kb.Heart;
-                        return this.props.followUIType === S.TextOnly ? void 0 : e
+                        var e = this.props.hollowIcons && !this.state.isFollowing ? N.kb.FollowHollow : N.kb.Heart;
+                        return this.props.followUIType === y.TextOnly ? void 0 : e
                     }, t.prototype.reportInteractive = function() {
-                        P(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
+                        D(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.addEventListeners = function() {
                         this.buttonContainerRef && (this.buttonContainerRef.addEventListener("mouseover", this.onMouseEnter), this.buttonContainerRef.addEventListener("mouseleave", this.onMouseLeave))
                     }, t.prototype.removeEventListeners = function() {
                         this.buttonContainerRef && (this.buttonContainerRef.removeEventListener("mouseover", this.onMouseEnter), this.buttonContainerRef.removeEventListener("mouseleave", this.onMouseLeave))
                     }, t.prototype.getUnfollowText = function() {
-                        return Object(p.d)("Unfollow", "FollowButton")
+                        return Object(u.d)("Unfollow", "FollowButton")
                     }, t
-                }(u.Component),
-                D = Object(r.d)(Object(h.a)(O, {
+                }(d.Component),
+                I = Object(r.d)(Object(m.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -40894,23 +41053,22 @@
                         }
                     },
                     skip: function(e) {
-                        return P(e)
+                        return D(e)
                     }
-                }), Object(h.a)(_, {
+                }), Object(m.a)(T, {
                     name: "followUser"
-                }), Object(h.a)(R, {
+                }), Object(m.a)(_, {
                     name: "unfollowUser"
-                }), Object(N.c)(), Object(C.c)("FollowButton"))(I);
+                }), Object(w.c)(), Object(E.c)("FollowButton"))(O);
 
-            function P(e) {
+            function D(e) {
                 return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
             }
-            var A = Object(i.b)(function(e) {
+            var P = Object(i.b)(function(e) {
                 var t = Object(s.e)(e);
                 return {
                     currentUserLogin: t && t.login,
-                    isLoggedIn: Object(s.f)(e),
-                    activeTheme: Object(l.a)(e)
+                    isLoggedIn: Object(s.f)(e)
                 }
             }, function(e) {
                 return Object(r.b)({
@@ -40918,11 +41076,11 @@
                         return Object(o.e)(a.a.FollowButton)
                     }
                 }, e)
-            })(D);
+            })(I);
             n.d(t, "b", function() {
-                return S
+                return y
             }), n.d(t, !1, function() {}), n.d(t, "a", function() {
-                return A
+                return P
             })
         },
         dPg0: function(e, t, n) {},
@@ -41778,7 +41936,7 @@
                                 var d = e.collectionID && this.props.collectionID !== e.collectionID,
                                     u = e.vodID && this.props.vodID !== e.vodID;
                                 if (d || u) {
-                                    var p = e.vodID ? Object(B.o)(e.vodID) : "";
+                                    var p = e.vodID ? Object(B.n)(e.vodID) : "";
                                     if ("" !== p && s.n.setVideoPlayerTrackingData({
                                             vodID: e.vodID
                                         }), !this.player) return;
@@ -41830,7 +41988,7 @@
                         });
                         this.playerBuffering = this.registerBufferingEvent(!!this.props.paused), this.playerPlayed = this.registerPlayedEvent(!!this.props.paused);
                         var t = this.props.playerTypeOverride;
-                        t && (e.player = t, this.playerType = t, t === z.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(B.o)(this.props.vodID), s.n.setVideoPlayerTrackingData({
+                        t && (e.player = t, this.playerType = t, t === z.c.ClipsEditing && (e.muted = !0)), this.props.channelLogin && (e.channel = this.props.channelLogin, this.lastSetChannel = this.props.channelLogin), this.props.collectionID && (e.collection = this.props.collectionID), this.props.clipSlug && (e.clip = this.props.clipSlug), this.props.vodID && (e.video = Object(B.n)(this.props.vodID), s.n.setVideoPlayerTrackingData({
                             vodID: this.props.vodID
                         })), this.props.showChannelInfoOnHover && (e.showInfo = this.props.showChannelInfoOnHover), void 0 !== this.props.nextVideoOffset && this.props.nextVideoOffset >= 0 && (e.time = Object(q.a)(this.props.nextVideoOffset)), e.oauth_token = this.props.authToken || "", this.logger.debug("Initializing", e);
                         var n = new window.Twitch.Player(this.playerRef, e);
@@ -52775,52 +52933,48 @@
                 return v
             }), n.d(t, "b", function() {
                 return i
-            }), n.d(t, "g", function() {
-                return r
             }), n.d(t, "f", function() {
-                return a
+                return r
             }), n.d(t, "e", function() {
-                return o
-            }), n.d(t, "h", function() {
+                return a
+            }), n.d(t, "g", function() {
                 return s
-            }), n.d(t, "s", function() {
-                return b
-            }), n.d(t, "q", function() {
-                return y
             }), n.d(t, "r", function() {
-                return k
-            }), n.d(t, "m", function() {
-                return E
-            }), n.d(t, "o", function() {
-                return C
-            }), n.d(t, "n", function() {
-                return w
-            }), n.d(t, "A", function() {
-                return N
-            }), n.d(t, "z", function() {
-                return T
-            }), n.d(t, "x", function() {
-                return _
-            }), n.d(t, "y", function() {
-                return R
-            }), n.d(t, "u", function() {
-                return O
-            }), n.d(t, "t", function() {
-                return I
-            }), n.d(t, "w", function() {
-                return D
-            }), n.d(t, "v", function() {
-                return P
+                return b
             }), n.d(t, "p", function() {
+                return y
+            }), n.d(t, "q", function() {
+                return k
+            }), n.d(t, "l", function() {
+                return S
+            }), n.d(t, "n", function() {
+                return E
+            }), n.d(t, "m", function() {
+                return C
+            }), n.d(t, "y", function() {
+                return w
+            }), n.d(t, "w", function() {
+                return N
+            }), n.d(t, "x", function() {
+                return T
+            }), n.d(t, "t", function() {
+                return _
+            }), n.d(t, "s", function() {
+                return R
+            }), n.d(t, "v", function() {
+                return O
+            }), n.d(t, "u", function() {
+                return I
+            }), n.d(t, "o", function() {
+                return D
+            }), n.d(t, "i", function() {
+                return P
+            }), n.d(t, "h", function() {
                 return A
             }), n.d(t, "j", function() {
                 return L
-            }), n.d(t, "i", function() {
-                return F
             }), n.d(t, "k", function() {
-                return x
-            }), n.d(t, "l", function() {
-                return M
+                return F
             });
             var i, r, a, o, s, l = n("cr+I"),
                 c = n("/7QA"),
@@ -52834,14 +52988,24 @@
                 v = "range";
 
             function b(e, t, n, i) {
-                var r = i || y(t),
-                    a = "";
-                r && (a = "?" + f + "=" + S(r));
-                var o = n ? n.toLowerCase() : function(e) {
+                var a = i || y(t),
+                    o = "";
+                a && (o = "?" + f + "=" + function(e) {
+                    switch (e) {
+                        case h.a.Popular:
+                            return r.Popular;
+                        case h.a.Newest:
+                            return r.Newest;
+                        default:
+                            var t = e;
+                            return t
+                    }
+                }(a));
+                var s = n ? n.toLowerCase() : function(e) {
                     var t = k(e);
                     return t ? t.toLowerCase() : "all"
                 }(t);
-                c.o.history.push(e + "/" + o + a)
+                c.o.history.push(e + "/" + s + o)
             }
 
             function y(e) {
@@ -52865,47 +53029,19 @@
             }
 
             function S(e) {
-                switch (e) {
-                    case h.a.Popular:
-                        return r.Popular;
-                    case h.a.Newest:
-                        return r.Newest;
-                    default:
-                        return e
-                }
-            }
-
-            function E(e) {
                 var t = l.parse(e.location.search);
                 return e.match.params.collectionID || t.collection || null
             }
 
-            function C(e) {
+            function E(e) {
                 return "" === e ? "" : e.startsWith("v") ? e : "v" + e
             }
 
-            function w() {
+            function C() {
                 return Object(m.b)() ? "videos" : "videos/all"
             }
 
-            function N(e) {
-                switch (e) {
-                    case d.a.Archive:
-                        return o.PastBroadcasts;
-                    case d.a.Highlight:
-                        return o.Highlights;
-                    case d.a.PastPremiere:
-                        return o.PastPremieres;
-                    case d.a.Upload:
-                        return o.Uploads;
-                    case d.a.PremiereUpload:
-                        return null;
-                    default:
-                        return e
-                }
-            }
-
-            function T(e) {
+            function w(e) {
                 switch (e) {
                     case d.a.Archive:
                         return a.PastBroadcasts;
@@ -52922,7 +53058,7 @@
                 }
             }
 
-            function _(e) {
+            function N(e) {
                 switch (e) {
                     case a.Clips:
                         return o.Clips;
@@ -52941,7 +53077,7 @@
                 }
             }
 
-            function R(e) {
+            function T(e) {
                 switch (e) {
                     case o.Clips:
                         return a.Clips;
@@ -52960,11 +53096,11 @@
                 }
             }
 
-            function O(e) {
+            function _(e) {
                 return e.includes(o.Clips) ? o.Clips : e.includes(o.Collections) ? o.Collections : e.includes(o.Highlights) ? o.Highlights : e.includes(o.PastBroadcasts) ? o.PastBroadcasts : e.includes(o.PastPremieres) ? o.PastPremieres : e.includes(o.Uploads) ? o.Uploads : null
             }
 
-            function I(e) {
+            function R(e) {
                 var t = Object(u.a)(e, v);
                 if (!t) return null;
                 switch (t.toLowerCase()) {
@@ -52983,7 +53119,7 @@
                 }
             }
 
-            function D(e) {
+            function O(e) {
                 var t = Object(u.a)(e, f);
                 if (!t) return null;
                 switch (t.toLowerCase()) {
@@ -52996,7 +53132,7 @@
                 }
             }
 
-            function P(e) {
+            function I(e) {
                 var t = Object(u.a)(e, g);
                 if (!t) return null;
                 switch (t.toLowerCase()) {
@@ -53017,28 +53153,28 @@
                 }
             }
 
-            function A(e, t) {
-                var n = "" + w();
+            function D(e, t) {
+                var n = "" + C();
                 t && t.filter && (n = t.filter);
                 var i = "";
-                return t && t.sort && (i = "?" + f + "=" + S(t.sort)), "/" + e + "/" + n + i
+                return t && t.sort && (i = "?" + f + "=" + t.sort), "/" + e + "/" + n + i
             }
 
-            function L(e, t, n) {
+            function P(e, t, n) {
                 return !t && n ? e ? "/" + e + "/" + s.Collection + "/" + n : "/collections/" + n : e ? "/" + e + "/" + s.Video + "/" + t + (n ? "?collection=" + n : "") : "/videos/" + t + (n ? "?collection=" + n : "")
             }
 
-            function F(e, t) {
+            function A(e, t) {
                 return "/" + e + "/" + s.Clip + "/" + t
             }
 
-            function x(e, t) {
+            function L(e, t) {
                 var n = "/" + e + "/videos",
                     i = {};
-                return t && (t.sort && (i[f] = t.sort), t.filter && (i[g] = t.filter), Object.keys(i).length > 0) ? n + "?" + l.stringify(i) : n
+                return t && (t.sort && (i[f] = t.sort), t.filter && (i[g] = t.filter), t.range && (i[v] = t.range), Object.keys(i).length > 0) ? n + "?" + l.stringify(i) : n
             }
 
-            function M(e) {
+            function F(e) {
                 switch (e) {
                     case i.All:
                         return p.c.ALL_TIME;
