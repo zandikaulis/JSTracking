@@ -2117,7 +2117,7 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
 
     // Create a companion instance instance in the worker.
     this._postMessage(WorkerMessage.CREATE, {
-        settings: loadSettings(config.settings || config.latencyValue),
+        settings: loadSettings(config.settings),
         logLevel: String(config.logLevel), // must be a string
         localStorage: getLocalStorage(LOCAL_STORAGE_PREFIX),
         clientTrackingInfo: getClientTrackingInfo(),
@@ -2262,7 +2262,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-566d00ed";
+    return "2.3.0-7c5f9dfe";
 }
 
 MediaPlayer.prototype.isLooping = function () {
