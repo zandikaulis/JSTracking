@@ -430,13 +430,13 @@ window.__twilightSettings = {
         },
         "2efa4966-3554-439a-a142-34a1dd5444c9": {
             "name": "channel_page_redesign",
-            "v": 4303,
+            "v": 4355,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 80,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 20,
                 "value": "variant_a"
             }]
         },
@@ -527,13 +527,13 @@ window.__twilightSettings = {
         },
         "40f4fd80-86ca-44f4-9abc-0324d24908bc": {
             "name": "TWILIGHT_RAID_UPSELL",
-            "v": 4129,
+            "v": 4359,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "test"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }]
         },
