@@ -63,6 +63,7 @@ window.__twilightSettings = {
     "legacy_routes_enabled": true,
     "longtask_tracking_sample_rate": 0.1,
     "mass_mystery_gifting": "off",
+    "messages_disclosure_enabled": false,
     "mobile_subs_feature_flag": "on",
     "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
