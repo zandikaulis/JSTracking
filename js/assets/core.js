@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [167], {
+    [165], {
         "+GjP": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -6224,7 +6224,7 @@
                             parentElement: this.iframeContainer,
                             platform: r.ExtensionPlatform.Web,
                             trackingProperties: {
-                                channel: this.props.channelName,
+                                channel: this.props.channelLogin,
                                 device_id: s.o.session.deviceID,
                                 login: this.props.login,
                                 platform: s.o.tracking.getPlatform(),
@@ -10033,7 +10033,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionsDiscoveryRelease = "TWILIGHT_EXTENSIONS_DISCOVERY_RELEASE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.LiveDashboardStatsPollingRate = "TWILIGHT_LIVE_DASHBOARD_STATS_POLLING_RATE", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PaySavedPaymentMethods = "TWILIGHT_PAY__SAVED_PAYMENT_METHODS", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VideoFeaturoEn = "TWILIGHT_VIDEO_FEATURO_EN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.WorldCupEvent = "TWILIGHT_WORLD_CUP_EVENT", e.WorldCupEventSettings = "TWILIGHT_WORLD_CUP_EVENT_SETTINGS"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PaySavedPaymentMethods = "TWILIGHT_PAY__SAVED_PAYMENT_METHODS", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VideoFeaturoEn = "TWILIGHT_VIDEO_FEATURO_EN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.WorldCupEvent = "TWILIGHT_WORLD_CUP_EVENT", e.WorldCupEventSettings = "TWILIGHT_WORLD_CUP_EVENT_SETTINGS"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -10131,10 +10131,6 @@
                 }, i[r.WorldCupEventSettings] = {
                     id: "9ba74270-ecf4-466d-b04e-f66b9883d632",
                     default: "control"
-                }, i[r.ExtensionsDiscoveryRelease] = {
-                    id: "ba44e8c9-0beb-4982-b48f-87457bfa962c",
-                    default: "off",
-                    staffOverride: "on"
                 }, i[r.PreviewCardIconicImages] = {
                     id: "db6dc127-b372-48fe-9d8b-493ea6c51c57",
                     default: "control",
@@ -10159,9 +10155,6 @@
                     default: "control"
                 }, i[r.WebSideNavUpsellCenterChannels] = {
                     id: "164332c9-759a-46f5-92de-63d43ff2fd35",
-                    default: "control"
-                }, i[r.LiveDashboardStatsPollingRate] = {
-                    id: "462fee3f-7c32-430d-854f-c31707139b12",
                     default: "control"
                 }, i[r.EditingImUpset] = {
                     id: "b40e065c-7a73-4c4f-b060-a6b1647fc1a2",
@@ -10469,31 +10462,41 @@
         DLia: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, R, O, I, D, L, A, P, x, F, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, J, Z, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Re, Oe, Ie, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, Ve, He, We, ze, Ge, qe;
-            n.d(t, "c", function() {
+            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, R, O, I, D, L, A, P, x, F, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, J, Z, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Re, Oe, Ie, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, Ve, He, We, ze, Ge;
+            n.d(t, "d", function() {
                     return m
-                }), n.d(t, "a", function() {
-                    return b
                 }), n.d(t, "b", function() {
+                    return b
+                }), n.d(t, "c", function() {
                     return y
-                }), n.d(t, "h", function() {
-                    return E
-                }), n.d(t, "j", function() {
-                    return L
                 }), n.d(t, "i", function() {
+                    return E
+                }), n.d(t, "o", function() {
+                    return L
+                }), n.d(t, "n", function() {
                     return A
-                }), n.d(t, "k", function() {
+                }), n.d(t, "p", function() {
                     return P
-                }), n.d(t, "g", function() {
-                    return pe
-                }), n.d(t, "f", function() {
-                    return _e
+                }), n.d(t, "a", function() {
+                    return H
+                }), n.d(t, "j", function() {
+                    return W
                 }), n.d(t, "l", function() {
+                    return z
+                }), n.d(t, "h", function() {
+                    return pe
+                }), n.d(t, "g", function() {
+                    return _e
+                }), n.d(t, "q", function() {
                     return Ce
-                }), n.d(t, "e", function() {
+                }), n.d(t, "m", function() {
+                    return we
+                }), n.d(t, "f", function() {
                     return De
-                }), n.d(t, "d", function() {
+                }), n.d(t, "e", function() {
                     return Le
+                }), n.d(t, "k", function() {
+                    return Ae
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.COMMUNITY_REPORT = "COMMUNITY_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -10751,44 +10754,41 @@
                     e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.RELEASED = "RELEASED"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(Pe || (Pe = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(je || (je = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(He || (He = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(We || (We = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
-                }(Ge || (Ge = {})),
-                function(e) {
                     e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
-                }(qe || (qe = {}))
+                }(Ge || (Ge = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -13229,7 +13229,7 @@
                             window.Krux ? n.trackPageload() : l.j.debug("Failed to track pageview; Krux not available.")
                         }, n.retrieve = function(e) {
                             var t = "kx" + e;
-                            if (window.localStorage) return window.localStorage[t] || "";
+                            if (window.localStorage) return l.l.get(t, "");
                             if (navigator.cookieEnabled) {
                                 var n = _.get(t);
                                 return n && decodeURI(n[1]) || ""
@@ -25600,17 +25600,15 @@
                                 refDelegate: t.setBalloonContentRefDelegate
                             }, t.balloonWrapperContent))
                         }, t.handleButtonClick = function() {
-                            t.balloonContentRef ? Object(f.b)({
-                                force: !0
-                            }) : Object(f.c)({
+                            t.balloonContentRef || (Object(f.c)({
                                 direction: t.getBalloonDirection(),
                                 ref: t.containerRef,
                                 content: t.renderBalloonContentForBalloonLayer(),
                                 contentHeight: 0,
                                 persistOnMouseExit: !0
-                            })
+                            }), t.handleMenuToggle(!1))
                         }, t.handleBalloonClickOut = function() {
-                            Object(f.b)({
+                            t.handleMenuToggle(!0), Object(f.b)({
                                 force: !0
                             })
                         }, t.setBalloonWrapperContent = function(e) {
@@ -34805,7 +34803,7 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.showExtraChannels || (this.initialDisplayAmount = le)
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        if (e.showExtraChannels && -1 === this.initialDisplayAmount && e.channels.length > 0) {
+                        if (e.showExtraChannels && -1 === this.initialDisplayAmount && e.channels.length > 0 && 0 === this.props.channels.length) {
                             var t = function(e, t) {
                                 void 0 === t && (t = 12), t = e.length < t ? e.length : t;
                                 for (var n = 0, i = 0; i < t && (n++, !e[i] || !e[i].stream || e[i].stream.type) && (!e[i] || e[i].stream); i++);
@@ -52812,15 +52810,15 @@
             function M(e) {
                 switch (e) {
                     case i.All:
-                        return p.g.ALL_TIME;
+                        return p.h.ALL_TIME;
                     case i.Day:
-                        return p.g.LAST_DAY;
+                        return p.h.LAST_DAY;
                     case i.Week:
-                        return p.g.LAST_WEEK;
+                        return p.h.LAST_WEEK;
                     case i.Month:
-                        return p.g.LAST_MONTH;
+                        return p.h.LAST_MONTH;
                     case i.Trending:
-                        return p.g.TRENDING;
+                        return p.h.TRENDING;
                     default:
                         return e
                 }
