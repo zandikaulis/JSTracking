@@ -2263,7 +2263,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-029daeeb";
+    return "2.3.0-9adb0e9a";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3168,25 +3168,35 @@ function getBufferedRange(video) {
     // We only allow one buffered region.
     for (var i = 0; i < buffered.length; i++) {
         var start = buffered.start(i);
-        if (playhead >= start) {
-            // Find end of the "playable region", which
-            // ignores gaps that can be played through
-            var end = buffered.end(i);
-            for (i++; i < buffered.length; i++) {
-                if (buffered.start(i) - end > MIN_PLAYABLE_BUFFER) {
-                    break;
-                }
-                end = buffered.end(i);
-            }
+        var end = buffered.end(i);
 
-            // Return "playback region" if it contains playhead
-            if (playhead < end) {
-                return {start: start, end: end};
-            }
+        // keep looping until we find range containing playhead
+        if (end <= playhead) {
+            continue;
+        }
 
-            // No buffered region containing playhead
+        // No region contains playhead
+        if (start > playhead) {
             break;
         }
+
+        // Include ranges past the end if there's a small gap
+        for (var e = i + 1; e < buffered.length; e++) {
+            if (buffered.start(e) - end > MIN_PLAYABLE_BUFFER) {
+                break;
+            }
+            end = buffered.end(e);
+        }
+
+        // Include ranges before the start if there's a small gap
+        for (var s = i - 1; s >= 0; s--) {
+            if (start - buffered.end(s) > MIN_PLAYABLE_BUFFER) {
+                break;
+            }
+            start = buffered.start(s);
+        }
+
+        return {start: start, end: end};
     }
 
     return {start: playhead, end: playhead};
