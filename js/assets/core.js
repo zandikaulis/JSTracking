@@ -36535,13 +36535,13 @@
                         }), r.createElement(R.d, {
                             path: "/:channelLogin/subscribe",
                             component: Wt
-                        }), l.a.buildType !== Pt.a.Production && (e ? r.createElement(R.d, {
-                            path: "/:channelLogin/squad",
-                            component: Xt
-                        }) : r.createElement(R.d, {
+                        }), l.a.buildType !== Pt.a.Production && e ? r.createElement(R.d, {
                             path: "/:channelLogin/squad",
                             component: rn
-                        })), e ? r.createElement(R.d, {
+                        }) : r.createElement(R.d, {
+                            path: "/:channelLogin/squad",
+                            component: jt.a
+                        }), e ? r.createElement(R.d, {
                             path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?",
                             exact: !0,
                             component: Xt
