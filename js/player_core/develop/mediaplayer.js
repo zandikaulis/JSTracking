@@ -1357,8 +1357,9 @@ var supportedConfig = [{
         contentType: 'audio/mp4;codecs="mp4a.40.2"'
     }],
     videoCapabilities: [{
-        contentType: 'video/mp4;codecs="avc1.42E01E"',
-        robustness: 'SW_SECURE_CRYPTO'
+        // comment out robustness for testing clearkey
+        robustness: 'SW_SECURE_CRYPTO',
+        contentType: 'video/mp4;codecs="avc1.42E01E"'
     }],
 }];
 
@@ -2262,7 +2263,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-0d146700";
+    return "2.3.0-029daeeb";
 }
 
 MediaPlayer.prototype.isLooping = function () {
