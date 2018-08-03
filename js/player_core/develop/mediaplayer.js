@@ -2176,15 +2176,7 @@ MediaPlayer.prototype.load = function (path, mediaType) {
 }
 
 MediaPlayer.prototype.play = function () {
-    // In mobile and cellular data environment, the first call to play/pause
-    // has to happen as part of the user's intent to play.
-    // Calling pause captures the user's intent in the first call to play.
-    // Worker will call play programmatically after min-buffer criterion is met.
-    if (this._mediaSink.videoElement().paused) {
-        this._mediaSink.play();
-        this._mediaSink.pause();
-    }
-
+    this._mediaSink.captureGesture();
     this._isPaused = false;
     this._attemptPlay();
 }
@@ -2263,7 +2255,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-49ded703";
+    return "2.3.0-4c4680e2";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2843,7 +2835,6 @@ var NOT_SUPPORTED = 4; // HTMLMediaElement error code
 
 // configurations
 var MIN_PLAYABLE_BUFFER = 0.1; // consider buffers smaller than this as empty
-var STARTING_PLAYBACK_INTERVAL = 500; // Interval to check for stalled when starting playback
 var HEARTBEAT_INTERVAL = 2000; // Interval to check for stalled
 
 /**
@@ -2949,6 +2940,19 @@ MediaSink.prototype.setTimestampOffset = function (update) {
         }, noop) // Error already sent when track failed to configure
     }
 }
+
+/**
+ * In mobile and cellular data environment, the first call to play/pause
+ * has to happen as part of the user's intent to play. This function provides
+ * a noop to do this, and should be called from within a user gesture so we
+ * can programmatically play later.
+ */
+MediaSink.prototype.captureGesture = function () {
+    if (this._video.paused) {
+        Promise.resolve(this._video.play()).catch(noop);
+        this._video.pause();
+    }
+};
 
 /**
  * Start/resume playback
@@ -3279,15 +3283,12 @@ function PlaybackMonitor(video, config) {
     this._onerror = config.onerror;
     this._onbufferupdate = config.onbufferupdate;
     this._ontimeupdate = config.ontimeupdate;
-    this._boundHeartbeat = this._heartbeat.bind(this);
-    this._boundCheckStopped = this._checkStopped.bind(this);
 
     this._video = video;
     this._intervalId = 0;
     this._onDelete = [];
     this._idle = true;
     this._paused = true;
-    this._startingPlayback = true;
     this._webkitFullScreen = false;
     this._lastPlayhead = 0;
     this._lastBufferEnd = 0;
@@ -3300,6 +3301,7 @@ function PlaybackMonitor(video, config) {
     }.bind(this);
     addListener('play', this._onVideoPlay.bind(this));
     addListener('pause', this._onVideoPause.bind(this));
+    addListener('waiting', this._onVideoWaiting.bind(this));
     addListener('timeupdate', this._onVideoTimeUpdate.bind(this));
     addListener('error', this._onVideoError.bind(this));
     addListener('webkitbeginfullscreen', this._onWebkitBeginFullscreen.bind(this));
@@ -3315,7 +3317,7 @@ PlaybackMonitor.prototype.delete = function () {
 PlaybackMonitor.prototype.play = function () {
     this._paused = false;
     var started = Promise.resolve(this._video.play());
-    started.catch(this._boundCheckStopped);
+    started.catch(this._checkStopped.bind(this));
     return started;
 };
 
@@ -3325,10 +3327,9 @@ PlaybackMonitor.prototype.pause = function () {
 };
 
 PlaybackMonitor.prototype._onVideoPlay = function () {
-    this._startingPlayback = true;
     this._lastPlayhead = this._video.currentTime;
     clearInterval(this._intervalId);
-    this._intervalId = setInterval(this._boundHeartbeat, STARTING_PLAYBACK_INTERVAL);
+    this._intervalId = setInterval(this._heartbeat.bind(this), HEARTBEAT_INTERVAL);
 };
 
 PlaybackMonitor.prototype._onVideoPause = function () {
@@ -3337,10 +3338,14 @@ PlaybackMonitor.prototype._onVideoPause = function () {
 };
 
 PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
-    var buffered = getBufferedRange(this._video);
-    this._updateIdle(buffered);
-    this._checkBufferUpdate(buffered);
     this._ontimeupdate();
+    var buffered = getBufferedRange(this._video);
+    this._checkBufferUpdate(buffered);
+    this._updateIdle(buffered);
+};
+
+PlaybackMonitor.prototype._onVideoWaiting = function () {
+    this._updateIdle(getBufferedRange(this._video));
 };
 
 PlaybackMonitor.prototype._onVideoError = function () {
@@ -3360,22 +3365,22 @@ PlaybackMonitor.prototype._onWebkitEndFullscreen = function() {
 }
 
 PlaybackMonitor.prototype._heartbeat = function () {
-    var buffered = getBufferedRange(this._video);
-
     if (this._video.paused) {
         // This shouldn't happen, but stop heartbeat
         // if we get into a bad state.
         clearInterval(this._intervalId);
     } else if (this._video.currentTime === this._lastPlayhead) {
-        this._fixStall(buffered);
+        this._fixStall();
     } else {
-        this._checkBufferUpdate(buffered);
+        this._checkBufferUpdate(getBufferedRange(this._video));
         this._lastPlayhead = this._video.currentTime;
-        if (this._startingPlayback) {
-            this._startingPlayback = false;
-            clearInterval(this._intervalId);
-            this._intervalId = setInterval(this._boundHeartbeat, HEARTBEAT_INTERVAL);
-        }
+    }
+};
+
+PlaybackMonitor.prototype._checkBufferUpdate = function (buffered) {
+    if (buffered.end !== this._lastBufferEnd) {
+        this._lastBufferEnd = buffered.end;
+        this._onbufferupdate();
     }
 };
 
@@ -3391,13 +3396,6 @@ PlaybackMonitor.prototype._updateIdle = function (buffered) {
     }
 };
 
-PlaybackMonitor.prototype._checkBufferUpdate = function (buffered) {
-    if (buffered.end !== this._lastBufferEnd) {
-        this._lastBufferEnd = buffered.end;
-        this._onbufferupdate();
-    }
-};
-
 PlaybackMonitor.prototype._checkStopped = function (buffered) {
     // Notify mediaplayer if the browser paused on its own. This can happen
     // when the player is muted and hidden. When iOS is in fullscreen, native
@@ -3408,8 +3406,8 @@ PlaybackMonitor.prototype._checkStopped = function (buffered) {
     }
 };
 
-PlaybackMonitor.prototype._fixStall = function (bufferedRange) {
-    var bufferDuration = bufferedRange.end - this._video.currentTime;
+PlaybackMonitor.prototype._fixStall = function () {
+    var bufferDuration = getBufferedRange(this._video).end - this._video.currentTime;
     var inBuffer = (bufferDuration > MIN_PLAYABLE_BUFFER);
     var buffered = this._video.buffered;
 
