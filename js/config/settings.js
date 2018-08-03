@@ -547,6 +547,18 @@ window.__twilightSettings = {
                 "value": "fork"
             }]
         },
+        "41cc8630-60da-4689-a8aa-7bf6f414faca": {
+            "name": "ride_the_wave",
+            "v": 4375,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "wave"
+            }]
+        },
         "44a503af-d77f-4f1d-9fa4-c99c5f783f9c": {
             "name": "twilight_video_manager_release",
             "v": 2850,
