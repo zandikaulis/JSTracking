@@ -571,18 +571,6 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
-        "462fee3f-7c32-430d-854f-c31707139b12": {
-            "name": "twilight_live_dashboard_stats_clips_polling_rate",
-            "v": 4330,
-            "t": 2,
-            "groups": [{
-                "weight": 0,
-                "value": "control"
-            }, {
-                "weight": 100,
-                "value": "30-second-polling-rate-experiment"
-            }]
-        },
         "47597570-dd4e-4996-85eb-86db164cae9c": {
             "name": "TWILIGHT_AML_RANKING_FOLLOWS",
             "v": 2637,
