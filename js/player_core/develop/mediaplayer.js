@@ -881,7 +881,7 @@ module.exports = browser;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var getBody = function(xmlDoc) {
+var getBody = function (xmlDoc) {
     var licenseRequest = null;
     if (xmlDoc.getElementsByTagName('Challenge').length > 0 && xmlDoc.getElementsByTagName('Challenge')[0]) {
         var Challenge = xmlDoc.getElementsByTagName('Challenge')[0].childNodes[0].nodeValue;
@@ -892,7 +892,7 @@ var getBody = function(xmlDoc) {
     return licenseRequest;
 };
 
-var getHeaders = function(xmlDoc) {
+var getHeaders = function (xmlDoc) {
     var headers = {};
     var headerNameList = xmlDoc.getElementsByTagName('name');
     var headerValueList = xmlDoc.getElementsByTagName('value');
@@ -908,16 +908,9 @@ var getHeaders = function(xmlDoc) {
  * Based on Window's Docs/Dash implementation: https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn457474(v%3dieb.10)
  * @param {ArrayBuffer} message - https://www.w3.org/TR/2014/WD-encrypted-media-20140828/encrypted-media.html#dom-mediakeymessageevent
  */
-var licenseRequestData = function(message) {
-    var messageFormat = 'utf16';
-    var msg;
-    var xmlDoc;
-    var parser = new DOMParser();
-    var dataview = (messageFormat === 'utf16') ? new Uint16Array(message) : new Uint8Array(message);
-
-    msg = String.fromCharCode.apply(null, dataview);
-    xmlDoc = parser.parseFromString(msg, 'application/xml');
-
+var licenseRequestData = function (message) {
+    var msg = String.fromCharCode.apply(null, new Uint16Array(message));
+    var xmlDoc = new DOMParser().parseFromString(msg, 'application/xml');
     return {
         headers: getHeaders(xmlDoc),
         body: getBody(xmlDoc),
@@ -1223,7 +1216,7 @@ var httpRequest = function (url, options) {
  */
 function contentIdFromInitData(initData) {
     var parsedInit = JSON.parse(String.fromCharCode.apply(null, initData));
-    var sinf = base64DecodeUint8Array(parsedInit.sinf[0]);
+    var sinf = decodeBase64(parsedInit.sinf[0]);
     var schi = searchForBox(sinf, 'schi');
     var tenc = searchForBox(schi, 'tenc');
     return arrayToHex(tenc.subarray(8, 24));
@@ -1268,7 +1261,7 @@ function byteToHex(byte) {
     return (hex.length === 1 ? '0' + hex : hex);
 }
 
-function base64DecodeUint8Array(input) {
+function decodeBase64(input) {
     var raw = atob(input);
     var rawLength = raw.length;
     var array = new Uint8Array(rawLength);
@@ -1278,7 +1271,7 @@ function base64DecodeUint8Array(input) {
     return array;
 }
 
-function base64EncodeUint8Array(input) {
+function encodeBase64(input) {
     return btoa(String.fromCharCode.apply(null, input));
 }
 
@@ -1300,8 +1293,8 @@ module.exports = {
     httpRequest: httpRequest,
     parsePSSHSupportFromInitData: parsePSSHSupportFromInitData,
     contentIdFromInitData: contentIdFromInitData,
-    base64DecodeUint8Array: base64DecodeUint8Array,
-    base64EncodeUint8Array: base64EncodeUint8Array,
+    decodeBase64: decodeBase64,
+    encodeBase64: encodeBase64,
     checkErrorFormat: checkErrorFormat,
 };
 
@@ -1327,8 +1320,8 @@ var arrayBuffersEqual = Utils.arrayBuffersEqual;
 var httpRequest = Utils.httpRequest;
 var parsePSSHSupportFromInitData = Utils.parsePSSHSupportFromInitData;
 var contentIdFromInitData =  Utils.contentIdFromInitData;
-var base64DecodeUint8Array =  Utils.base64DecodeUint8Array;
-var base64EncodeUint8Array =  Utils.base64EncodeUint8Array;
+var decodeBase64 =  Utils.decodeBase64;
+var encodeBase64 =  Utils.encodeBase64;
 var checkErrorFormat = Utils.checkErrorFormat;
 
 var ERRORS = Constants.ERRORS;
@@ -1431,7 +1424,7 @@ DRMManager.prototype._createKeySystemSupportChain = function () {
         });
     });
 
-    promise = promise.catch(function() {
+    promise = promise.catch(function () {
         return Promise.reject(ERRORS.NO_CDM_SUPPORT);
     });
 
@@ -1449,7 +1442,7 @@ DRMManager.prototype._handleEncrypted = function (event) {
     if (this._hasSession(event.initData)) {
         return;
     }
-    this._sessions.push({ initData: event.initData });
+    this._sessions.push({initData: event.initData});
 
     if (this.cdmSupport === null) {
         this.cdmSupport = parsePSSHSupportFromInitData(event.initData);
@@ -1465,12 +1458,12 @@ DRMManager.prototype._handleEncrypted = function (event) {
 
         // create a promise chain of keySystem support
         keySystemPromise = this._createKeySystemSupportChain()
-            .then(function(keySystemAccess){
+            .then(function (keySystemAccess) {
                 this.selectedCDM = KEY_SYSTEMS_BY_STRING[keySystemAccess.keySystem]
                 return keySystemAccess.createMediaKeys();
             }.bind(this))
             .then(this._setMediaKeys.bind(this))
-            .catch(function(err) {
+            .catch(function (err) {
                 this._handleError(checkErrorFormat(err));
             }.bind(this));
     }
@@ -1486,7 +1479,7 @@ DRMManager.prototype._handleEncrypted = function (event) {
  */
 DRMManager.prototype._setMediaKeys = function (createdMediaKeys) {
     this.mediaKeys = createdMediaKeys;
-    this._pendingSessions.forEach(function(pending){
+    this._pendingSessions.forEach(function (pending) {
         this._createSessionRequest(pending.initDataType, pending.initData);
     }.bind(this));
     this._pendingSessions = [];
@@ -1502,7 +1495,7 @@ DRMManager.prototype._setMediaKeys = function (createdMediaKeys) {
 DRMManager.prototype._addSession = function (initDataType, initData) {
     if (this.mediaKeys) {
         this._createSessionRequest(initDataType, initData)
-            .catch(function(err){
+            .catch(function (err) {
                 this._handleError(ERRORS.KEY_SESSION_CREATION);
             }.bind(this));
     } else {
@@ -1522,7 +1515,7 @@ DRMManager.prototype._addSession = function (initDataType, initData) {
 DRMManager.prototype._createSessionRequest = function (initDataType, initData) {
     var keySession = this.mediaKeys.createSession();
     keySession.addEventListener('message', this._handleMessage.bind(this), false);
-    keySession.addEventListener('keystatuseschange', function(event) {
+    keySession.addEventListener('keystatuseschange', function (event) {
         this._handleKeyStatusesChange(keySession, event, initData);
     }.bind(this), false);
     return keySession.generateRequest(initDataType, initData);
@@ -1554,7 +1547,7 @@ DRMManager.prototype._handleKeyStatusesChange = function (keySession, event, ini
     }.bind(this));
 
     if (expired) {
-        keySession.close().then(function(){
+        keySession.close().then(function () {
             this._removeSession(initData);
         }.bind(this));
     }
@@ -1582,16 +1575,14 @@ DRMManager.prototype._removeSession = function (initData) {
 DRMManager.prototype._handleMessage = function (event) {
     // grabs relevant session
     var keySession = event.target;
-    this._generateLicense(event.message)
-        .then(function(license){
-            return keySession.update(license)
-                .catch(function() {
-                    return Promise.reject(ERRORS.SESSION_UPDATE);
-                });
-        })
-        .catch(function(error) {
-            this._handleError(checkErrorFormat(error));
-        }.bind(this));
+    this._generateLicense(event.message).then(function (license) {
+        return keySession.update(license).catch(function () {
+            return Promise.reject(ERRORS.SESSION_UPDATE);
+        });
+    })
+    .catch(function (error) {
+        this._handleError(checkErrorFormat(error));
+    }.bind(this));
 };
 
 /**
@@ -1603,7 +1594,7 @@ DRMManager.prototype._generateLicense = function (message) {
         // clearkey implementation where KID is key
         var request = JSON.parse(new TextDecoder().decode(message));
 
-        var _keys = request.kids.map(function(keyid) {
+        var _keys = request.kids.map(function (keyid) {
             return {kty: 'oct', alg: 'A128KW', kid: keyid, k: keyid};
         });
 
@@ -1668,7 +1659,7 @@ DRMManager.prototype._handleSafariEncrypted = function (event) {
  * start initialization
  */
 DRMManager.prototype._setupSafariMediaKeys = function (event, certificate) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
         if (!this.video.webkitKeys){
             this.video.webkitSetMediaKeys(new WebKitMediaKeys(KEY_SYSTEMS.FAIRPLAY.keySystem));
         }
@@ -1701,7 +1692,7 @@ DRMManager.prototype._setupSafariMediaKeys = function (event, certificate) {
                     if (keyText.substr(0, 5) === '<ckc>' && keyText.substr(-6) === '</ckc>') {
                         keyText = keyText.slice(5, -6);
                     }
-                    session.update(base64DecodeUint8Array(keyText));
+                    session.update(decodeBase64(keyText));
                 }).catch(reject);
             }
         }.bind(this));
@@ -1720,7 +1711,7 @@ DRMManager.prototype._getWebkitLicense = function (message, contentId) {
         responseType: 'text',
     }).then(function (authXml) {
         var licenseUrl = KEY_SYSTEMS.FAIRPLAY.licenseUrl;
-        var body = 'spc=' + base64EncodeUint8Array(message) + '&assetId=' + contentId;
+        var body = 'spc=' + encodeBase64(message) + '&assetId=' + contentId;
         var options = {
             method: 'POST',
             body: body,
@@ -2255,7 +2246,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-97a89022";
+    return "2.3.0-51abc34c";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2883,7 +2874,7 @@ MediaSink.prototype.configure = function (track) {
     // Lazily attach a new MediaSource
     if (!this._mediaSource) {
         // Attach a new MediaSource
-        this._mediaSource = new Promise(function(resolve, reject) {
+        this._mediaSource = new Promise(function (resolve, reject) {
             var mediaSource = new MediaSource();
             mediaSource.addEventListener('sourceopen', function onSourceOpen() {
                 mediaSource.removeEventListener('sourceopen', onSourceOpen);
@@ -3356,11 +3347,11 @@ PlaybackMonitor.prototype._onVideoError = function () {
     });
 };
 
-PlaybackMonitor.prototype._onWebkitBeginFullscreen = function() {
+PlaybackMonitor.prototype._onWebkitBeginFullscreen = function () {
     this._webkitFullScreen = true;
 };
 
-PlaybackMonitor.prototype._onWebkitEndFullscreen = function() {
+PlaybackMonitor.prototype._onWebkitEndFullscreen = function () {
     this._webkitFullScreen = false;
 }
 
