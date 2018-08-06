@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".db8fa93c1f651e8d2ad1.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".3beaef579fb4d74a8e2a.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -2777,7 +2777,7 @@
             E = n(88),
             S = n(68),
             P = n(108),
-            O = n(26),
+            O = n(20),
             C = n(51),
             T = n(69),
             x = n(11),
@@ -3404,6 +3404,30 @@
             a = n.n(i),
             o = n(239),
             s = n.n(o)
+    }, function(e, t, n) {
+        "use strict";
+
+        function r(e) {
+            return {
+                type: a,
+                tracker: e
+            }
+        }
+
+        function i(e, t) {
+            return {
+                type: o,
+                eventName: e,
+                eventProperties: t
+            }
+        }
+        n.d(t, "a", function() {
+            return a
+        }), n.d(t, "b", function() {
+            return o
+        }), t.c = r, t.d = i;
+        var a = "set analytics tracker",
+            o = "track event"
     }, function(e, t) {
         var n = Array.isArray;
         e.exports = n
@@ -3779,30 +3803,6 @@
             s = "online",
             u = "offline",
             c = "unknown"
-    }, function(e, t, n) {
-        "use strict";
-
-        function r(e) {
-            return {
-                type: a,
-                tracker: e
-            }
-        }
-
-        function i(e, t) {
-            return {
-                type: o,
-                eventName: e,
-                eventProperties: t
-            }
-        }
-        n.d(t, "a", function() {
-            return a
-        }), n.d(t, "b", function() {
-            return o
-        }), t.c = r, t.d = i;
-        var a = "set analytics tracker",
-            o = "track event"
     }, function(e, t) {
         function n(e) {
             var t = typeof e;
@@ -4209,8 +4209,8 @@
             h = n.n(p),
             m = n(43),
             y = n(13),
-            v = n(24),
-            g = n(25),
+            v = n(25),
+            g = n(26),
             b = n(18),
             _ = n(56),
             w = "none",
@@ -8363,10 +8363,10 @@
             P = n(31),
             O = n(143),
             C = n(196),
-            T = n(26),
+            T = n(20),
             x = n(57),
             R = n(72),
-            j = n(25),
+            j = n(26),
             A = n(69),
             I = n(9),
             N = n(197),
@@ -9366,7 +9366,7 @@
             w = n.n(_),
             k = n(32),
             E = n.n(k),
-            S = n(23),
+            S = n(24),
             P = n.n(S),
             O = n(55),
             C = n.n(O),
@@ -10241,7 +10241,7 @@
         function r(e, t) {
             return i(e) ? e : a(e, t) ? [e] : o(s(e))
         }
-        var i = n(20),
+        var i = n(21),
             a = n(160),
             o = n(349),
             s = n(100);
@@ -10262,7 +10262,7 @@
         var i = n(371),
             a = n(390),
             o = n(123),
-            s = n(20),
+            s = n(21),
             u = n(391);
         e.exports = r
     }, function(e, t, n) {
@@ -10298,7 +10298,7 @@
             a = n(134),
             o = n(80),
             s = n(402),
-            u = n(20);
+            u = n(21);
         e.exports = r
     }, function(e, t, n) {
         var r;
@@ -11939,7 +11939,7 @@
         }), t.e = r, t.d = i;
         var a = n(5),
             o = n.n(a),
-            s = n(23),
+            s = n(24),
             u = n.n(s),
             c = n(17),
             l = n(16),
@@ -13144,7 +13144,7 @@
             return "string" == typeof e || !a(e) && o(e) && i(e) == s
         }
         var i = n(53),
-            a = n(20),
+            a = n(21),
             o = n(37),
             s = "[object String]";
         e.exports = r
@@ -14427,7 +14427,7 @@
             var n = typeof e;
             return !("number" != n && "symbol" != n && "boolean" != n && null != e && !a(e)) || (s.test(e) || !o.test(e) || null != t && e in Object(t))
         }
-        var i = n(20),
+        var i = n(21),
             a = n(117),
             o = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
             s = /^\w*$/;
@@ -14462,7 +14462,7 @@
         }
         var i = n(73),
             a = n(62),
-            o = n(20),
+            o = n(21),
             s = n(117),
             u = 1 / 0,
             c = i ? i.prototype : void 0,
@@ -15864,6 +15864,7 @@
                 showReportClip: W.a.bool,
                 isVod: W.a.bool.isRequired,
                 isClip: W.a.bool.isRequired,
+                trackAdvancedClick: W.a.func,
                 onMenuTransition: W.a.func,
                 onPopoutPlayer: W.a.func,
                 onShowCaptionsOptions: W.a.func,
@@ -15885,6 +15886,7 @@
                 showDeleteAllClips: !1,
                 showDeleteClip: !1,
                 showReportClip: !0,
+                trackAdvancedClick: function() {},
                 onMenuTransition: function() {},
                 onPopoutPlayer: function() {},
                 onShowCaptionsOptions: function() {},
@@ -15952,7 +15954,7 @@
                 }, {
                     key: "handleAdvancedClick",
                     value: function() {
-                        this.props.onMenuTransition(Mn)
+                        this.props.trackAdvancedClick(), this.props.onMenuTransition(Mn)
                     }
                 }, {
                     key: "handleReportIssueClick",
@@ -16236,11 +16238,11 @@
             Ee = n(106),
             Se = n(71),
             Pe = n(290),
-            Oe = n(21),
+            Oe = n(22),
             Ce = n(34),
             Te = n(12),
             xe = n(203),
-            Re = n(24),
+            Re = n(25),
             je = function(e) {
                 return e.user.loggedInStatus === Re.a
             },
@@ -16264,7 +16266,8 @@
             qe = function(e) {
                 return Ae(e) || je(e) && !(Ie(e) || Ne(e))
             },
-            De = function() {
+            De = n(20),
+            Be = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -16275,8 +16278,8 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Be = [Se.a, Pe.a],
-            Ue = {
+            Ue = [Se.a, Pe.a],
+            Fe = {
                 availableQualities: W.a.array.isRequired,
                 backendType: W.a.string.isRequired,
                 captionsAvailable: W.a.bool.isRequired,
@@ -16290,6 +16293,7 @@
                 showDeleteAllClips: W.a.bool.isRequired,
                 showDeleteClip: W.a.bool.isRequired,
                 showReportClip: W.a.bool.isRequired,
+                trackAdvancedClick: W.a.func,
                 onMenuTransition: W.a.func,
                 pausePlayback: W.a.func,
                 playback: W.a.object.isRequired,
@@ -16303,16 +16307,17 @@
                 t: W.a.func.isRequired,
                 windowObj: W.a.object.isRequired
             },
-            Fe = {
+            Ve = {
                 currentTime: 0,
                 isStaffUser: !1,
                 hideSettingsMenu: function() {},
+                trackAdvancedClick: function() {},
                 onMenuTransition: function() {},
                 pausePlayback: function() {},
                 streamUrl: "",
                 playerType: ""
             },
-            Ve = function(e) {
+            He = function(e) {
                 var t = e.backendInfo,
                     n = e.captions,
                     r = e.collection,
@@ -16344,8 +16349,18 @@
                     windowObj: l
                 }
             },
-            He = function(e) {
+            ze = function(e) {
                 return {
+                    trackAdvancedClick: function() {
+                        e({
+                            type: De.b,
+                            eventName: "player_click",
+                            eventProperties: {
+                                component: "advanced_menu",
+                                component_state: "show"
+                            }
+                        })
+                    },
                     pausePlayback: function() {
                         e(Object(ke.s)())
                     },
@@ -16363,13 +16378,18 @@
                     }
                 }
             },
-            ze = function(e) {
+            We = function(e) {
                 function t() {
                     u(this, t);
                     var e = c(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.showCaptionsOptions = e.showCaptionsOptions.bind(e), e.popoutPlayer = e.popoutPlayer.bind(e), e
+                    return e.trackAdvancedClick = e.trackAdvancedClick.bind(e), e.showCaptionsOptions = e.showCaptionsOptions.bind(e), e.popoutPlayer = e.popoutPlayer.bind(e), e
                 }
-                return l(t, e), De(t, [{
+                return l(t, e), Be(t, [{
+                    key: "trackAdvancedClick",
+                    value: function() {
+                        this.props.trackAdvancedClick()
+                    }
+                }, {
                     key: "showCaptionsOptions",
                     value: function() {
                         this.props.hideSettingsMenu(), this.props.showCaptionsOptions()
@@ -16408,7 +16428,7 @@
                             v = e.t,
                             g = e.openClipsModerationModal,
                             b = e.windowObj,
-                            _ = G()(Be, n) || G()(re.c, p),
+                            _ = G()(Ue, n) || G()(re.c, p),
                             w = p !== re.e,
                             k = m + "?t=" + Object(X.d)(i),
                             E = t.length > 0,
@@ -16423,6 +16443,7 @@
                             isStaffUser: o,
                             isVod: s,
                             isClip: u,
+                            trackAdvancedClick: this.trackAdvancedClick,
                             onMenuTransition: f,
                             onPopoutPlayer: this.popoutPlayer,
                             onShowCaptionsOptions: this.showCaptionsOptions,
@@ -16439,9 +16460,9 @@
                     }
                 }]), t
             }(H.a.Component);
-        ze.propTypes = Ue, ze.defaultProps = Fe;
-        var We = Object(Y.c)()(Object(Q.b)(Ve, He)(ze)),
-            Ke = function() {
+        We.propTypes = Fe, We.defaultProps = Ve;
+        var Ke = Object(Y.c)()(Object(Q.b)(He, ze)(We)),
+            Ge = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -16452,27 +16473,27 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Ge = {
+            Qe = {
                 isActive: W.a.bool,
                 selectItem: W.a.object,
                 onSelectItem: W.a.func,
                 displayName: W.a.string
             },
-            Qe = {
+            Ye = {
                 isActive: !1,
                 onSelectItem: function() {}
             },
-            Ye = ee()({
+            Je = ee()({
                 ellipsis: !0,
                 "pl-quality-option-button": !0
             }),
-            Je = function(e) {
+            $e = function(e) {
                 function t() {
                     d(this, t);
                     var e = f(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleClick = e.handleClick.bind(e), e
                 }
-                return p(t, e), Ke(t, [{
+                return p(t, e), Ge(t, [{
                     key: "handleClick",
                     value: function() {
                         this.props.onSelectItem(this.props.selectItem)
@@ -16491,14 +16512,14 @@
                         return H.a.createElement("div", {
                             className: r
                         }, H.a.createElement(te.a, {
-                            className: Ye,
+                            className: Je,
                             onClick: this.handleClick
                         }, H.a.createElement("span", null, n)))
                     }
                 }]), t
             }(H.a.Component);
-        Je.propTypes = Ge, Je.defaultProps = Qe;
-        var $e = function() {
+        $e.propTypes = Qe, $e.defaultProps = Ye;
+        var Xe = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
@@ -16509,7 +16530,7 @@
                     return n && e(t.prototype, n), r && e(t, r), t
                 }
             }(),
-            Xe = {
+            Ze = {
                 availableQualities: W.a.arrayOf(W.a.shape({
                     group: W.a.string,
                     name: W.a.string
@@ -16519,26 +16540,26 @@
                 onQualitySelect: W.a.func,
                 t: W.a.func.isRequired
             },
-            Ze = {
+            et = {
                 onMenuTransition: function() {},
                 onQualitySelect: function() {}
             },
-            et = ee()({
+            tt = ee()({
                 "pl-menu__item": !0,
                 "pl-menu__item--block": !0,
                 "pl-menu__item--with-caret-left": !0
             }),
-            tt = ee()({
+            nt = ee()({
                 "pl-menu__section": !0,
                 "pl-menu__section--with-sep": !0
             }),
-            nt = function(e) {
+            rt = function(e) {
                 function t() {
                     h(this, t);
                     var e = m(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
                     return e.handleMenuTransition = e.handleMenuTransition.bind(e), e
                 }
-                return y(t, e), $e(t, [{
+                return y(t, e), Xe(t, [{
                     key: "handleMenuTransition",
                     value: function() {
                         this.props.onMenuTransition(In)
@@ -16551,12 +16572,12 @@
                         return H.a.createElement("div", {
                             className: "pl-menu__inner"
                         }, H.a.createElement("div", {
-                            className: et
+                            className: tt
                         }, H.a.createElement("button", {
                             className: "qa-header-button",
                             onClick: this.handleMenuTransition
                         }, e("Video Quality"))), H.a.createElement("div", {
-                            className: tt
+                            className: nt
                         }, t))
                     }
                 }, {
@@ -16570,7 +16591,7 @@
                         return t.map(function(e) {
                             var a = e.group === n,
                                 o = Object(xe.a)(t, e.group, i);
-                            return H.a.createElement(Je, {
+                            return H.a.createElement($e, {
                                 isActive: a,
                                 key: e.group,
                                 displayName: o,
@@ -16581,10 +16602,9 @@
                     }
                 }]), t
             }(H.a.Component);
-        nt.propTypes = Xe, nt.defaultProps = Ze;
-        var rt = Object(Y.c)()(nt),
-            it = n(51),
-            at = n(26),
+        rt.propTypes = Ze, rt.defaultProps = et;
+        var it = Object(Y.c)()(rt),
+            at = n(51),
             ot = {
                 availableQualities: W.a.array.isRequired,
                 selectedQuality: W.a.string.isRequired,
@@ -16605,7 +16625,7 @@
             ct = function(e) {
                 return {
                     handleSelectQuality: function(t) {
-                        e(Object(it.l)(t.group)), e(Object(it.p)(t)), e(Object(Oe.u)(Oe.l)), e(Object(at.d)("player_click_quality_change"))
+                        e(Object(at.l)(t.group)), e(Object(at.p)(t)), e(Object(Oe.u)(Oe.l)), e(Object(De.d)("player_click_quality_change"))
                     }
                 }
             },
@@ -16614,7 +16634,7 @@
                     n = e.selectedQuality,
                     r = e.handleSelectQuality,
                     i = e.onMenuTransition;
-                return H.a.createElement(rt, {
+                return H.a.createElement(it, {
                     availableQualities: t,
                     selectedQuality: n,
                     onMenuTransition: i,
@@ -16641,6 +16661,7 @@
                 isShowingVideoStats: W.a.bool.isRequired,
                 miniPlayerEnabled: W.a.bool.isRequired,
                 miniPlayerToggleEnabled: W.a.bool.isRequired,
+                trackAdvancedHeaderClick: W.a.func,
                 onHTML5Toggle: W.a.func,
                 onMenuTransition: W.a.func,
                 onMiniPlayerToggle: W.a.func,
@@ -16648,6 +16669,7 @@
                 t: W.a.func.isRequired
             },
             mt = {
+                trackAdvancedHeaderClick: function() {},
                 onHTML5Toggle: function() {},
                 onMenuTransition: function() {},
                 onMiniPlayerToggle: function() {},
@@ -16684,7 +16706,7 @@
                 return b(t, e), pt(t, [{
                     key: "handleMenuTransition",
                     value: function() {
-                        this.props.onMenuTransition(In)
+                        this.props.trackAdvancedHeaderClick(), this.props.onMenuTransition(In)
                     }
                 }, {
                     key: "render",
@@ -16756,6 +16778,7 @@
                 isHTML5Player: W.a.bool.isRequired,
                 isMiniPlayerEnabled: W.a.bool.isRequired,
                 isSitePlayer: W.a.bool.isRequired,
+                trackAdvancedHeaderClick: W.a.func,
                 onMenuTransition: W.a.func,
                 statsDisplayed: W.a.bool.isRequired,
                 toggleHTML5Player: W.a.func.isRequired,
@@ -16763,6 +16786,7 @@
                 toggleVideoStats: W.a.func.isRequired
             },
             xt = {
+                trackAdvancedHeaderClick: function() {},
                 onMenuTransition: function() {}
             },
             Rt = function(e) {
@@ -16782,6 +16806,16 @@
             },
             jt = function(e) {
                 return {
+                    trackAdvancedHeaderClick: function() {
+                        e({
+                            type: De.b,
+                            eventName: "player_click",
+                            eventProperties: {
+                                component: "advanced_menu",
+                                component_state: "hide"
+                            }
+                        })
+                    },
                     toggleVideoStats: function() {
                         var t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                         e(t ? Object(Et.d)(!0) : Object(Et.d)(!1))
@@ -16800,9 +16834,14 @@
                 function t() {
                     _(this, t);
                     var e = w(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
-                    return e.toggleVideoStats = e.toggleVideoStats.bind(e), e.toggleMiniPlayer = e.toggleMiniPlayer.bind(e), e.toggleHTML5Player = e.toggleHTML5Player.bind(e), e
+                    return e.trackAdvancedHeaderClick = e.trackAdvancedHeaderClick.bind(e), e.toggleVideoStats = e.toggleVideoStats.bind(e), e.toggleMiniPlayer = e.toggleMiniPlayer.bind(e), e.toggleHTML5Player = e.toggleHTML5Player.bind(e), e
                 }
                 return k(t, e), Ct(t, [{
+                    key: "trackAdvancedHeaderClick",
+                    value: function() {
+                        this.props.trackAdvancedHeaderClick()
+                    }
+                }, {
                     key: "toggleVideoStats",
                     value: function() {
                         this.props.toggleVideoStats(!this.props.statsDisplayed)
@@ -16844,6 +16883,7 @@
                             isShowingVideoStats: n,
                             miniPlayerEnabled: a,
                             miniPlayerToggleEnabled: o,
+                            trackAdvancedHeaderClick: this.trackAdvancedHeaderClick,
                             onMenuTransition: s,
                             onMiniPlayerToggle: this.toggleMiniPlayer,
                             onStatsToggle: this.toggleVideoStats,
@@ -16857,6 +16897,7 @@
                             isShowingVideoStats: n,
                             miniPlayerEnabled: a,
                             miniPlayerToggleEnabled: o,
+                            trackAdvancedHeaderClick: this.trackAdvancedHeaderClick,
                             onMenuTransition: s,
                             onMiniPlayerToggle: this.toggleMiniPlayer,
                             onStatsToggle: this.toggleVideoStats,
@@ -17488,7 +17529,7 @@
                                 });
                             case In:
                             default:
-                                return H.a.createElement(We, {
+                                return H.a.createElement(Ke, {
                                     onMenuTransition: this.handleMenuTransition
                                 })
                         }
@@ -17701,7 +17742,7 @@
             l = n(1),
             d = n.n(l),
             f = n(280),
-            p = n(23),
+            p = n(24),
             h = n.n(p),
             m = n(2),
             y = n.n(m),
@@ -17871,8 +17912,8 @@
             l = n(145),
             d = n(13),
             f = n(10),
-            p = n(24),
-            h = n(25),
+            p = n(25),
+            h = n(26),
             m = n(6),
             y = n(7),
             v = n.n(y),
@@ -17896,7 +17937,7 @@
         var i = n(62),
             a = n(80),
             o = n(553),
-            s = n(20);
+            s = n(21);
         e.exports = r
     }, function(e, t, n) {
         "use strict";
@@ -17940,7 +17981,7 @@
             }()
     }, function(e, t, n) {
         "use strict";
-        var r = n(24),
+        var r = n(25),
             i = n(241),
             a = n(114),
             o = n(89),
@@ -19137,7 +19178,7 @@
         }
         var i = n(330),
             a = n(118),
-            o = n(20),
+            o = n(21),
             s = n(119),
             u = n(120),
             c = n(157),
@@ -19659,7 +19700,7 @@
         }
         var i = n(78),
             a = n(118),
-            o = n(20),
+            o = n(21),
             s = n(120),
             u = n(155),
             c = n(79);
@@ -19730,7 +19771,7 @@
             return a(e) ? r : i(r, n(e))
         }
         var i = n(130),
-            a = n(20);
+            a = n(21);
         e.exports = r
     }, function(e, t) {
         function n() {
@@ -25516,7 +25557,7 @@
             y = n(505),
             v = n(506),
             g = n(246),
-            b = n(20),
+            b = n(21),
             _ = n(119),
             w = n(510),
             k = n(27),
@@ -26421,7 +26462,7 @@
             S = n(1),
             P = n.n(S),
             O = n(202),
-            C = n(22),
+            C = n(23),
             T = n(2),
             x = n.n(T),
             R = n(4),
@@ -26712,7 +26753,7 @@
         var re = Object(R.c)()(ne),
             ie = n(5),
             ae = n.n(ie),
-            oe = n(23),
+            oe = n(24),
             se = n.n(oe),
             ue = n(9),
             ce = function() {
@@ -28624,7 +28665,7 @@
             u = n(1),
             c = n.n(u),
             l = n(3),
-            d = n(21),
+            d = n(22),
             f = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -28995,8 +29036,8 @@
             M = n(295),
             L = n(88),
             q = n(42),
-            D = n(22),
-            B = n(24),
+            D = n(23),
+            B = n(25),
             U = n(33),
             F = function() {
                 function e(e, t) {
@@ -29886,12 +29927,12 @@
             u = n(1),
             c = n.n(u),
             l = n(3),
-            d = n(21),
+            d = n(22),
             f = n(2),
             p = n.n(f),
             h = n(45),
             m = n.n(h),
-            y = n(25),
+            y = n(26),
             v = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -30007,7 +30048,7 @@
             h = n.n(p),
             m = n(3),
             y = n(15),
-            v = n(26),
+            v = n(20),
             g = n(303),
             b = n(12),
             _ = n(43),
@@ -30326,7 +30367,7 @@
             }(m.Component);
         M.propTypes = I;
         var L = n(15),
-            q = n(26),
+            q = n(20),
             D = n(6),
             B = function() {
                 function e(e, t) {
@@ -31012,7 +31053,7 @@
             A = n.n(j),
             I = n(3),
             N = n(294),
-            M = n(21),
+            M = n(22),
             L = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -31446,8 +31487,8 @@
             };
         Ae.propTypes = Re, Ae.defaultProps = je;
         var Ie = n(295),
-            Ne = n(22),
-            Me = n(24),
+            Ne = n(23),
+            Me = n(25),
             Le = n(33),
             qe = n(88),
             De = n(31),
@@ -31606,7 +31647,7 @@
         var Ge = H()(Ke),
             Qe = Object(I.b)(ze, We)(Ge),
             Ye = n(34),
-            Je = n(26),
+            Je = n(20),
             $e = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
@@ -32558,7 +32599,7 @@
             v = n.n(y),
             g = n(201),
             b = n.n(g),
-            _ = n(23),
+            _ = n(24),
             w = n.n(_),
             k = {
                 captionsText: p.a.array.isRequired,
@@ -32646,7 +32687,7 @@
             d = n(10),
             f = n(58),
             p = n(12),
-            h = n(25),
+            h = n(26),
             m = n(60),
             y = {
                 showOverlay: s.a.bool.isRequired,
@@ -38677,7 +38718,7 @@
                 }]), e
             }(),
             $o = n(195),
-            Xo = n(23),
+            Xo = n(24),
             Zo = n.n(Xo),
             es = n(70),
             ts = n(42),
@@ -38719,7 +38760,7 @@
             }(),
             ss = n(107),
             us = n(11),
-            cs = "//video-edge-0b6d37.sjc02.hls.ttvnw.net/v1/segment/CnnfQCcmoxm7_t_TxiLdUgAuGsoVV8pkwcurZGYvNPIAePsIKr9enOgb9CdnEiUPC2WdSJwJ_1FXcTpG4RN_RUnYgobDNHLdksD0zVFqExA3ur4NN1XSsL3IHHgu-XsrzojqxFhOLlfDpUwd7Ht9TJUvC1MPgPMINRGdqrtziJdUO6ELXT2bUwzbpJVaLZR73AcMEdOKLLFl9ZX4aaUk231_ayXpJfklEDrmzTaD9WQ2GFGWuOwGOeSD--FzEjhoJj8Xaj0H_lWWcP6L63p1JtAjkKtNi7hQv3FAcu_ZJxk8fCI83x_G-o2c3IspaQ1TPU1OwJdrTXlCdUBQcObHHcIMxXyUpgq56mAcGBj3sm6Rp8Fz-OG17EwGkjzCcy0m3fC6rJWZFD3dznlakmuXxTMpOvGMMN_qCkhlZ6mis3FH2pF04hXL-MfJHDGeS4W7HyUKWd7j-9EjSCtOdk3a9GCIfj21XTjJPVPLfOWgF7tOFlPoNzCH88iHsLUF385nA7lr2AU23lokV0Xj1ck60uSMwEqn_htySDKDQzEuIStKhHl5cdssxTl3K9wIpZXlDpJ__qOGOZAaZVf2OGROEFiwYCBo79-M534e-XupabG_a92K17auODWdCtsXvD-eXfw8PCWx9oXUrmM1QguAsDxdjKyIQybixooo3yECHCEWbq_BnqwEWLjFNsn77PBVUSBVPctnoo41NqnLLLxSIZHzXTw7eOgXzoaRbn8OP2dT6CHTo9d96uk9-qYSpNLf08aPVdh5L2C8WBM9PtMIY.ts",
+            cs = "//video-edge-6fcd66.sjc02.hls.ttvnw.net/v1/segment/CkJbA_kmiZ8OSKBrR7qii9lZlHju9QSXxB7oqLdyMD9BScPA-NgvAhhKDZfKXnjwYRQxS-E_ySm2WItbhcH2r_VsCs-tXSQACTcx5yIjRPbdWpifibWeqVxM41vbU-Qs-fde90yYR_9TP3w7beyQ8oJkJg2HXBy9Iozc6L0_LRLfISdwwoTGlcUjQWo4Sk20R41tcIZJBXUjbRj1ZYUbLMxzGTXQG4L6ASqwTkFc1xGu-MtdznL8ku8CQmhDNIURuDM8_o-1-SSwvbGbUGZAgAvXRKxOfy0iAX3jpg0o_0akB03IZYvmaRR80R8IAgo4KTKrrG1hkYzijsvJf4RKuJ88uaMaPDlG18XGqr9AjbUk2UdBkNEgqXS3IE4EgHWmlK8TJ3eGMDneYyWc1IPYZZ3CicHUydUV6gNwZfcoRSlsA5FD00ZknY-5xnQVmdJUtYjA3eiaKPoWB7nuukus4b_-q0yEtbxpky7VSRUO9xYJ03fEf3lNSMxBfz8J73rdL0ahppgVVtpvKKZqNNe2raVGsHfi3nslU5-zveA_SzFrxgGYn2FJml-mnMlPx_Nn0EXmQujfL8liTKoSS1n05C8aYYecp_-H7zW7x3wvbI5KR-2eLlt0mcZHI4ORv-KWnm88vcz1WpfYHJVduMGrljgksnXAPTeblUQgzuIe12AQTe5p0Sassly1sosW-nhNQh8c6OxrUXBB40Ndg4rN1Z0gE82INW33d6wvfsq1GqtXuWGhIroSN7scasCNOJgi3t.ts",
             ls = n(48),
             ds = n(270),
             fs = n(141),
@@ -38756,7 +38797,7 @@
             bs = /^(\d+)\.(\d+)\.(\d+)[+|-]?(.*)?$/,
             _s = /^(\d+)\.(\d+)[+|-]?(.*)?$/,
             ws = /^(\d+)$/,
-            ks = "6.5.1",
+            ks = "6.6.0",
             Es = "desktop",
             Ss = "ember",
             Ps = [ns.e, ns.d, ns.w, ns.q],
@@ -39265,7 +39306,7 @@
                     }
                 }]), e
             }(),
-            Pu = (n(517), n(24)),
+            Pu = (n(517), n(25)),
             Ou = function() {
                 function e(e, t) {
                     for (var n = 0; n < t.length; n++) {
@@ -40105,7 +40146,7 @@
                 }]), e
             }(),
             Gu = "create ads manager",
-            Qu = n(26),
+            Qu = n(20),
             Yu = n(198),
             Ju = "set access token params",
             $u = ["adblock", "need_https", "platform", "player_type"],
@@ -40130,7 +40171,7 @@
             yc = n(520),
             vc = n.n(yc),
             gc = n(110),
-            bc = n(25),
+            bc = n(26),
             _c = n(289),
             wc = n(291),
             kc = n(69),
@@ -40138,7 +40179,7 @@
             Sc = n(27),
             Pc = n.n(Sc),
             Oc = n(16),
-            Cc = n(21),
+            Cc = n(22),
             Tc = n(40),
             xc = n(59),
             Rc = n.n(xc),
@@ -42988,7 +43029,7 @@
             Jf = n(262),
             $f = n(49),
             Xf = n(33),
-            Zf = n(22),
+            Zf = n(23),
             ep = n(206),
             tp = n(148),
             np = {
@@ -49541,7 +49582,7 @@
         }
         var i = n(73),
             a = n(118),
-            o = n(20),
+            o = n(21),
             s = i ? i.isConcatSpreadable : void 0;
         e.exports = r
     }, function(e, t, n) {
@@ -49672,7 +49713,7 @@
             o = n(382),
             s = n(384),
             u = n(132),
-            c = n(20),
+            c = n(21),
             l = n(119),
             d = n(157),
             f = 1,
@@ -49981,7 +50022,7 @@
             s = n(133),
             u = n(246),
             c = n(118),
-            l = n(20),
+            l = n(21),
             d = n(176),
             f = n(119),
             p = n(96),
@@ -53299,7 +53340,7 @@
         var i = n(284),
             a = n(134),
             o = n(288),
-            s = n(20);
+            s = n(21);
         e.exports = r
     }, function(e, t, n) {
         var r = n(62),
@@ -58097,6 +58138,7 @@
             "Backend Version": "Backend Version",
             "This channel is not configured in Low Latency mode": "This channel is not configured in Low Latency mode",
             "This channel is configured in Low Latency mode. Low Latency enables you to interact with the broadcaster with minimal delay. However, some users may experience increased buffering as a result. You can disable Low latency mode using this toggle.": "This channel is configured in Low Latency mode. Low Latency enables you to interact with the broadcaster with minimal delay. However, some users may experience increased buffering as a result. You can disable Low latency mode using this toggle.",
+            "Is video buffering? Use the Low Latency toggle under the Advanced menu in Settings to disable low latency mode": "Is video buffering? Use the Low Latency toggle under the Advanced menu in Settings to disable low latency mode",
             "This video is only available to subscribers. Subscribe now to watch and support {{channelName}}.": "This video is only available to subscribers. Subscribe now to watch and support {{channelName}}.",
             "This video quality is only available to subscribers. Subscribe now to watch and support %s.": "This video quality is only available to subscribers. Subscribe now to watch and support %s.",
             "Playing on {{device}}": "Playing on {{device}}",
@@ -58271,7 +58313,8 @@
             "By clicking ": "By clicking ",
             "You need {{bitsRequired}} more Bits to proceed.": "You need {{bitsRequired}} more Bits to proceed.",
             "Sorry, something went wrong. Please try again.": "Sorry, something went wrong. Please try again.",
-            "Command Center view: Watch with All-Access Pass": "Command Center view: Watch with All-Access Pass"
+            "Command Center view: Watch with All-Access Pass": "Command Center view: Watch with All-Access Pass",
+            "Chapter Select": "Chapter Select"
         }
     }, function(e, t, n) {
         /**
@@ -58530,7 +58573,7 @@
         var i = n(556),
             a = n(557),
             o = n(80),
-            s = n(20);
+            s = n(21);
         e.exports = r
     }, function(e, t) {
         function n(e, t, n, r) {
@@ -58604,7 +58647,7 @@
         var i = n(130),
             a = n(165),
             o = n(133),
-            s = n(20);
+            s = n(21);
         e.exports = r
     }, function(e, t, n) {
         function r(e, t, n) {
