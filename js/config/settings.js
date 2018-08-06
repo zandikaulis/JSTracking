@@ -1373,6 +1373,18 @@ window.__twilightSettings = {
                 "value": "off"
             }]
         },
+        "f1825646-3eac-4bac-8be3-ab9f736b7dd8": {
+            "name": "new_search_backend",
+            "v": 4391,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant"
+            }]
+        },
         "f3920cff-ef57-46c9-8dd9-b4f145acf6e5": {
             "name": "twilight_discovery_frontpage_mvp",
             "v": 4127,
