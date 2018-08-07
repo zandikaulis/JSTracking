@@ -555,38 +555,44 @@
                 r = n("q1tI"),
                 a = n("oJmH"),
                 o = n("/MKj"),
-                s = n("yR8l"),
-                l = n("x7UT"),
-                c = n("Mj6i"),
-                d = n("kRBY"),
-                u = n("OpME"),
-                p = n("/7QA"),
-                m = n("cpJf"),
-                h = n("W8Fi"),
-                f = n("GnwI"),
-                g = n("br9A"),
-                v = n("TSYQ"),
-                b = n("8/mp"),
-                y = n("8Ad5");
+                s = n("fvjX"),
+                l = n("/7QA"),
+                c = n("ZS2+"),
+                d = n("yR8l"),
+                u = n("x7UT"),
+                p = n("Mj6i"),
+                m = n("UUve"),
+                h = n("1/iK"),
+                f = n("aCAx"),
+                g = n("D7An"),
+                v = n("kRBY"),
+                b = n("OpME"),
+                y = n("cpJf"),
+                k = n("W8Fi"),
+                S = n("GnwI"),
+                E = n("br9A"),
+                _ = n("TSYQ"),
+                C = n("8/mp"),
+                w = n("8Ad5");
 
-            function k(e) {
-                return e.charCode === y.a.Enter || e.charCode === y.a.Space
+            function T(e) {
+                return e.charCode === w.a.Enter || e.charCode === w.a.Space
             }
-            var S = n("7SjK"),
-                E = n("4rCz"),
-                _ = n("Ue10"),
-                C = (n("UmTV"), function(e) {
+            var N = n("7SjK"),
+                R = n("4rCz"),
+                O = n("Ue10"),
+                I = (n("UmTV"), function(e) {
                     var t = {
                             "emote-picker__tab": !0
                         },
                         n = null,
                         a = null;
                     if (e.channelTabVisible) {
-                        var o = v(i.__assign({}, t, {
+                        var o = _(i.__assign({}, t, {
                             "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
                             "emote-picker__tab--disabled": !e.channelTabEnabled
                         }));
-                        n = r.createElement(_.Ja, {
+                        n = r.createElement(O.Ja, {
                             padding: {
                                 x: 1
                             }
@@ -598,13 +604,13 @@
                             onKeyPress: e.channelTabEnabled ? e.selectChannelTabKeypress : void 0,
                             "data-a-target": "emote-channel-tab",
                             tabIndex: 0
-                        }, r.createElement("span", null, Object(E.d)("Channel", "EmotePicker"))))
+                        }, r.createElement("span", null, Object(R.d)("Channel", "EmotePicker"))))
                     }
                     if (e.allTabVisible) {
-                        var s = v(i.__assign({}, t, {
+                        var s = _(i.__assign({}, t, {
                             "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
                         }));
-                        a = r.createElement(_.Ja, {
+                        a = r.createElement(O.Ja, {
                             padding: {
                                 x: 1
                             }
@@ -616,16 +622,16 @@
                             onKeyPress: e.selectAllTabKeypress,
                             "data-a-target": "emote-all-tab",
                             tabIndex: 0
-                        }, r.createElement("span", null, Object(E.d)("All", "EmotePicker"))))
+                        }, r.createElement("span", null, Object(R.d)("All", "EmotePicker"))))
                     }
-                    return r.createElement(_.vb, {
-                        background: _.o.Base,
+                    return r.createElement(O.vb, {
+                        background: O.o.Base,
                         borderTop: !0,
                         className: "emote-picker__tabs-container"
                     }, n, a)
                 }),
-                w = n("DnOo"),
-                T = function(e) {
+                D = n("DnOo"),
+                L = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -650,39 +656,39 @@
                                 emotes: this.props.plan.emotes || []
                             },
                             a = {};
-                        return this.props.plan.price && (a.purchase = this.props.plan.price), r.createElement(_.Ra, {
+                        return this.props.plan.price && (a.purchase = this.props.plan.price), r.createElement(O.Ra, {
                             className: "emote-picker-plan-upsell",
-                            display: _.T.Flex,
-                            flexDirection: _.V.Column,
-                            alignItems: _.d.Center,
+                            display: O.T.Flex,
+                            flexDirection: O.V.Column,
+                            alignItems: O.d.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(S.a, {
+                        }, r.createElement(N.a, {
                             emoteSet: i,
                             locked: !0
-                        }), r.createElement(_.Ra, {
+                        }), r.createElement(O.Ra, {
                             margin: 1,
-                            alignItems: _.d.Center
-                        }, e), r.createElement(w.a, {
+                            alignItems: O.d.Center
+                        }, e), r.createElement(D.a, {
                             isSubbedToTier: !1,
                             tierPrice: a.purchase || "",
-                            reportSubAction: this.props.reportSubAction,
+                            handleSubAction: this.props.handleSubAction,
                             productName: this.props.plan.name,
                             url: this.props.plan.url,
                             isEsportChannel: this.props.isEsportChannel
                         }))
                     }, t
                 }(r.Component),
-                N = (n("E6oy"), function(e) {
+                A = (n("E6oy"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.channelTabSelectionKeypress = function(e) {
-                            k(e) && n.selectChannelTab(e)
+                            T(e) && n.selectChannelTab(e)
                         }, n.allTabSelectionKeypress = function(e) {
-                            k(e) && n.selectAllTab(e)
+                            T(e) && n.selectAllTab(e)
                         }, n.closeOnEsc = function(e) {
-                            e.keyCode === y.a.Esc && n.props.toggleVisibility()
+                            e.keyCode === w.a.Esc && n.props.toggleVisibility()
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
                                 i = t.toLowerCase(),
@@ -728,28 +734,28 @@
                                 channelTabEnabled: e.ownedChannelEmoteSets.length > 0 || e.availableUpsells.length > 0
                             })
                     }, t.prototype.render = function() {
-                        return r.createElement(_.r, {
+                        return r.createElement(O.r, {
                             "data-a-target": "emote-picker",
-                            direction: this.props.direction ? this.props.direction : _.s.TopRight,
-                            size: this.props.size ? this.props.size : _.t.Medium,
+                            direction: this.props.direction ? this.props.direction : O.s.TopRight,
+                            size: this.props.size ? this.props.size : O.t.Medium,
                             noTail: !0,
                             show: !0
-                        }, r.createElement(_.Ra, {
-                            className: v("emote-picker")
-                        }, this.renderTabContent(), r.createElement(_.Ra, {
+                        }, r.createElement(O.Ra, {
+                            className: _("emote-picker")
+                        }, this.renderTabContent(), r.createElement(O.Ra, {
                             className: "emote-picker__controls-container",
-                            position: _.bb.Relative
-                        }, r.createElement(_.vb, {
+                            position: O.bb.Relative
+                        }, r.createElement(O.vb, {
                             padding: 1,
                             borderTop: !0
-                        }, r.createElement(_.La, {
+                        }, r.createElement(O.La, {
                             autoFocus: !0,
                             onChange: this.handleFilterChange,
                             onKeyDown: this.closeOnEsc,
-                            placeholder: Object(p.d)("Search for Emotes", "EmotePicker"),
-                            type: _.Na.Text,
+                            placeholder: Object(l.d)("Search for Emotes", "EmotePicker"),
+                            type: O.Na.Text,
                             value: this.state.inputValue
-                        })), r.createElement(C, {
+                        })), r.createElement(I, {
                             allTabVisible: this.props.allEmoteSets.length > 0,
                             channelTabEnabled: this.state.channelTabEnabled,
                             channelTabSelected: this.state.channelTabSelected,
@@ -762,57 +768,57 @@
                     }, t.prototype.renderTabContent = function() {
                         var e = this,
                             t = [];
-                        return this.props.gqlError ? t.push(r.createElement(_.Ra, {
+                        return this.props.gqlError ? t.push(r.createElement(O.Ra, {
                             key: "emotePicker-error"
-                        }, r.createElement(_.S, {
-                            color: _.L.Error
-                        }, Object(p.d)("Unable to load available emotes.", "EmotePicker")))) : this.props.loading ? t.push(r.createElement(_.Ra, {
-                            alignItems: _.d.Center,
-                            display: _.T.Flex,
+                        }, r.createElement(O.S, {
+                            color: O.L.Error
+                        }, Object(l.d)("Unable to load available emotes.", "EmotePicker")))) : this.props.loading ? t.push(r.createElement(O.Ra, {
+                            alignItems: O.d.Center,
+                            display: O.T.Flex,
                             key: "loading",
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: _.Qa.Center
-                        }, r.createElement(_.Ta, {
+                            justifyContent: O.Qa.Center
+                        }, r.createElement(O.Ta, {
                             key: "LoadingSpinner"
-                        }))) : this.state.channelTabEnabled && this.state.channelTabSelected ? (this.state.filteredOwnedChannelEmoteSets.length > 0 && t.push(r.createElement(_.Ra, {
+                        }))) : this.state.channelTabEnabled && this.state.channelTabSelected ? (this.state.filteredOwnedChannelEmoteSets.length > 0 && t.push(r.createElement(O.Ra, {
                             className: "emote-picker__content-block",
                             key: "ownedChannelEmoteSets",
                             padding: 1,
-                            position: _.bb.Relative
-                        }, r.createElement(S.a, {
+                            position: O.bb.Relative
+                        }, r.createElement(N.a, {
                             emoteSet: this.state.filteredOwnedChannelEmoteSets[0],
                             onClickEmote: this.props.onClickEmote,
                             locked: !1
                         }))), t = t.concat(this.state.filteredAvailableUpsells.map(function(t) {
-                            return r.createElement(_.Ra, {
+                            return r.createElement(O.Ra, {
                                 className: "emote-picker__content-block",
                                 key: "planUpsell:" + t.level,
                                 padding: 1,
-                                position: _.bb.Relative
-                            }, r.createElement(T, {
+                                position: O.bb.Relative
+                            }, r.createElement(L, {
                                 plan: t,
                                 isEsportChannel: e.props.isEsportChannel,
                                 subscribeTexts: e.props.subscribeTexts,
-                                reportSubAction: e.props.reportSubAction
+                                handleSubAction: e.props.handleSubAction
                             }))
                         }))) : t = this.state.filteredAllEmoteSets.map(function(t) {
-                            return r.createElement(_.Ra, {
+                            return r.createElement(O.Ra, {
                                 key: "emoteGrid" + t.id,
-                                position: _.bb.Relative,
+                                position: O.bb.Relative,
                                 padding: {
                                     top: 1,
                                     bottom: 2
                                 },
                                 className: "emote-picker__content-block"
-                            }, r.createElement(S.a, {
+                            }, r.createElement(N.a, {
                                 emoteSet: t,
                                 onClickEmote: e.props.onClickEmote,
                                 locked: !1
                             }))
-                        }), t.length > 0 ? r.createElement(b.b, {
+                        }), t.length > 0 ? r.createElement(C.b, {
                             className: "emote-picker__tab-content"
-                        }, r.createElement(_.Ra, {
+                        }, r.createElement(O.Ra, {
                             padding: 1
                         }, t)) : null
                     }, t.prototype.filterEmoteSet = function(e, t) {
@@ -844,17 +850,17 @@
                             }
                         }
                         return n
-                    }, t = i.__decorate([Object(f.c)("EmotePickerMenu", {
+                    }, t = i.__decorate([Object(S.c)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(r.Component)),
-                R = n("DB+C"),
-                O = function(e) {
+                P = n("DB+C"),
+                x = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        n.trackSubEvent = function(e) {
-                            Object(g.b)(i.__assign({}, e, {
-                                action: g.a.ClickCheckout,
+                        n.handleSubEvent = function(e) {
+                            e.action === E.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(E.b)(i.__assign({}, e, {
+                                action: E.a.ClickCheckout,
                                 channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
                                 channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
                                 isMenuOpen: null,
@@ -891,7 +897,7 @@
                         }
                     }, t.prototype.render = function() {
                         var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.campaignProperties && this.props.channelData.user.campaignProperties.domains && this.props.channelData.user.campaignProperties.domains.length > 0 || !1;
-                        return this.props.visible ? r.createElement(N, {
+                        return this.props.visible ? r.createElement(A, {
                             allEmoteSets: this.state.allEmoteSets,
                             availableUpsells: this.state.availableUpsells,
                             channelTabVisible: this.state.channelTabVisible,
@@ -902,7 +908,7 @@
                             ownedChannelEmoteSets: this.state.ownedChannelEmoteSets,
                             toggleVisibility: this.props.toggleVisibility,
                             subscribeTexts: this.state.subscribeTexts,
-                            reportSubAction: this.trackSubEvent,
+                            handleSubAction: this.handleSubEvent,
                             direction: this.props.direction,
                             size: this.props.size
                         }) : null
@@ -918,24 +924,24 @@
                         var n, r, a, o, s = i.__assign({}, t);
                         if (e.emoteSetsData && e.emoteSetsData.emoteSets && (s.ownedSetIDs = new Set(e.emoteSetsData.emoteSets.map(function(e) {
                                 return parseInt(e.id, 10)
-                            })), s.allEmoteSets = Object(u.a)(e.emoteSetsData.emoteSets)), e.channelData && e.channelData.user) {
-                            var l = void 0;
-                            e.channelData.user.self && e.channelData.user.self.subscriptionBenefit && (l = e.channelData.user.self.subscriptionBenefit.platform), s.availableUpsells = (n = s.ownedSetIDs, r = e.channelData.user.subscriptionProducts, o = [], !(a = l) || a !== m.a.IOS && a !== m.a.Android ? (r.forEach(function(e, t) {
+                            })), s.allEmoteSets = Object(b.a)(e.emoteSetsData.emoteSets)), e.channelData && e.channelData.user) {
+                            var c = void 0;
+                            e.channelData.user.self && e.channelData.user.self.subscriptionBenefit && (c = e.channelData.user.self.subscriptionBenefit.platform), s.availableUpsells = (n = s.ownedSetIDs, r = e.channelData.user.subscriptionProducts, o = [], !(a = c) || a !== y.a.IOS && a !== y.a.Android ? (r.forEach(function(e, t) {
                                 var a = e.price;
-                                0 === t && Object(h.d)(r) && (a = Object(h.a)(r[0])), e.emotes && e.emotes.length && e.emoteSetID && !n.has(parseInt(e.emoteSetID, 10)) && o.push(i.__assign({}, e, {
-                                    emotes: Object(u.b)(e.emotes),
+                                0 === t && Object(k.d)(r) && (a = Object(k.a)(r[0])), e.emotes && e.emotes.length && e.emoteSetID && !n.has(parseInt(e.emoteSetID, 10)) && o.push(i.__assign({}, e, {
+                                    emotes: Object(b.b)(e.emotes),
                                     level: t,
                                     price: a
                                 }))
                             }), o) : o), s.subscribeTexts = function(e) {
                                 for (var t = [], n = 0; n < e.length; n++) {
                                     var i = e[n];
-                                    0 === n && i.emotes && i.emotes.length > 1 ? t[n] = Object(p.d)("Unlock {numEmotes, number} Sub Emotes", {
+                                    0 === n && i.emotes && i.emotes.length > 1 ? t[n] = Object(l.d)("Unlock {numEmotes, number} Sub Emotes", {
                                         numEmotes: i.emotes.length
-                                    }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(p.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : i.emotes && i.emotes.length > 1 ? t[n] = Object(p.d)("{numEmotes, number} Extra {price} Sub Emotes", {
+                                    }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(l.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : i.emotes && i.emotes.length > 1 ? t[n] = Object(l.d)("{numEmotes, number} Extra {price} Sub Emotes", {
                                         numEmotes: i.emotes.length,
                                         price: i.price
-                                    }, "assembleSubscribeTexts") : i.emotes && i.emotes.length && (t[n] = Object(p.d)("1 Extra {price} Sub Emote", {
+                                    }, "assembleSubscribeTexts") : i.emotes && i.emotes.length && (t[n] = Object(l.d)("1 Extra {price} Sub Emote", {
                                         price: i.price
                                     }, "assembleSubscribeTexts"))
                                 }
@@ -946,7 +952,7 @@
                                         emotes: []
                                     }], i = 0, r = t; i < r.length; i++) {
                                     var a = r[i];
-                                    a.emotes && a.emoteSetID && e.has(parseInt(a.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(u.b)(a.emotes)))
+                                    a.emotes && a.emoteSetID && e.has(parseInt(a.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(b.b)(a.emotes)))
                                 }
                                 return n[0].emotes.length ? n : []
                             }(s.ownedSetIDs, e.channelData.user.subscriptionProducts)
@@ -954,15 +960,43 @@
                         return s.channelTabVisible = e.channelData && e.channelData.user && e.channelData.user.subscriptionProducts.filter(this.subscriptionProductHasEmotes).length > 0 || !1, s
                     }, t.prototype.subscriptionProductHasEmotes = function(e) {
                         return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
+                    }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
+                        if ("yes" === l.o.experiments.getAssignment(g.b.InstreamCheckout)) {
+                            var e = l.m.get(m.b, ""),
+                                t = l.m.get(m.c, ""),
+                                n = l.m.get(m.a, ""),
+                                i = Number(n);
+                            e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
+                                return e.name
+                            }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
+                                recipientLogin: t,
+                                productName: e,
+                                mysteryGiftCount: i
+                            }) : this.props.showLoginModal() : Object(m.d)())
+                        }
                     }, t
                 }(r.Component);
-            var I = Object(a.compose)(Object(o.b)(function(e) {
+            var F = Object(a.compose)(Object(o.b)(function(e) {
                 return {
                     currentUserID: e.session.user && e.session.user.id,
                     sessionUser: e.session.user,
-                    isLoggedIn: Object(d.f)(e)
+                    isLoggedIn: Object(v.f)(e)
                 }
-            }), Object(s.a)(R, {
+            }, function(e) {
+                return Object(s.b)({
+                    showLoginModal: Object(m.e)(h.a.EmotePickerSubscriptionButton),
+                    showSubscriptionCheckoutModal: function(e) {
+                        var t = i.__rest(e, []);
+                        return Object(f.d)(c.a, {
+                            component: "CheckoutModal",
+                            loader: function() {
+                                return Promise.all([n.e(0), n.e(89)]).then(n.bind(null, "KJv/"))
+                            },
+                            componentProps: t
+                        })
+                    }
+                }, e)
+            }), Object(d.a)(P, {
                 name: "channelData",
                 skip: function(e) {
                     return !e.channelOwnerID
@@ -974,7 +1008,7 @@
                         }
                     }
                 }
-            }), Object(l.a)([{
+            }), Object(u.a)([{
                 topic: function(e) {
                     return "user-subscribe-events-v1." + e.currentUserID
                 },
@@ -984,9 +1018,9 @@
                 skip: function(e) {
                     return !e.currentUserID
                 }
-            }]), Object(f.c)("EmotePicker"), Object(c.a)())(O);
+            }]), Object(S.c)("EmotePicker"), Object(p.a)())(x);
             n.d(t, "a", function() {
-                return I
+                return F
             })
         },
         "0FG4": function(e, t, n) {
@@ -1508,7 +1542,7 @@
                 }
                 return e
             }! function(e) {
-                e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.BitsCheckoutPage = "bits_checkout_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelSubscriptionButton = "channel_subscription_button", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.ClipsOptions = "clips_options", e.CodeRedemptionPage = "code_redemption", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.DashboardPage = "dashboard_page", e.DeleteAccountPage = "delete-account", e.DirectoryFollowButton = "directory-follow-button", e.DisableAccountPage = "disable-account", e.DropsLoginButton = "drops-login-button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.ExtensionInstallButton = "extension_install_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.LoginRequiredInterstitial = "login_required_interstitial", e.MessagesPage = "messages_page", e.PartnershipSignupPage = "partnership_signup_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SideNavUpsellCenter = "side-nav-upsell-center", e.StartUserFlow = "start_user_flow", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
+                e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.BitsCheckoutPage = "bits_checkout_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelSubscriptionButton = "channel_subscription_button", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.ClipsOptions = "clips_options", e.CodeRedemptionPage = "code_redemption", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.ChangeEmail = "change_email", e.DashboardPage = "dashboard_page", e.DeleteAccountPage = "delete-account", e.DirectoryFollowButton = "directory-follow-button", e.DisableAccountPage = "disable-account", e.DropsLoginButton = "drops-login-button", e.EmotePickerSubscriptionButton = "emote_picker_subscription_button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.ExtensionInstallButton = "extension_install_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.LoginRequiredInterstitial = "login_required_interstitial", e.MessagesPage = "messages_page", e.PartnershipSignupPage = "partnership_signup_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SideNavUpsellCenter = "side-nav-upsell-center", e.StartUserFlow = "start_user_flow", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
             }(i || (i = {}))
         },
         "14MF": function(e, t, n) {},
@@ -1906,7 +1940,7 @@
                             },
                             startTime: 0
                         })
-                    }, e.prototype.reportCustomEvent = function(e) {}, e.prototype.resetCustomEvents = function(e) {}, e.prototype.unregister = function() {}, e
+                    }, e.prototype.reportCustomEvent = function(e) {}, e.prototype.resetCustomEvents = function(e) {}, e.prototype.subscribeToInteractivityCompletion = function() {}, e.prototype.unregister = function() {}, e.prototype.unsubscribeFromInteractivityCompletion = function() {}, e
                 }()
         },
         "2+sX": function(e, t, n) {
@@ -10186,7 +10220,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PaySavedPaymentMethods = "TWILIGHT_PAY__SAVED_PAYMENT_METHODS", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VideoFeaturoEn = "TWILIGHT_VIDEO_FEATURO_EN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.WorldCupEvent = "TWILIGHT_WORLD_CUP_EVENT", e.WorldCupEventSettings = "TWILIGHT_WORLD_CUP_EVENT_SETTINGS"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PaySavedPaymentMethods = "TWILIGHT_PAY__SAVED_PAYMENT_METHODS", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -10221,9 +10255,6 @@
                     id: "080c0331-3073-4539-992f-93274236a97d",
                     default: "off",
                     staffOverride: "yes"
-                }, i[r.VideoFeaturoEn] = {
-                    id: "afc307f3-4011-40ba-9406-56c474b5922b",
-                    default: "control"
                 }, i[r.TheatreFullscreen] = {
                     id: "4cfb5972-e20e-4ae1-92dd-7287ec58b4a4",
                     default: "control"
@@ -10277,12 +10308,6 @@
                     default: "off"
                 }, i[r.ClipsOnTheBrain] = {
                     id: "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7",
-                    default: "control"
-                }, i[r.WorldCupEvent] = {
-                    id: "7a149a1e-2edd-403a-8e1a-bc466fa8ae46",
-                    default: "control"
-                }, i[r.WorldCupEventSettings] = {
-                    id: "9ba74270-ecf4-466d-b04e-f66b9883d632",
                     default: "control"
                 }, i[r.PreviewCardIconicImages] = {
                     id: "db6dc127-b372-48fe-9d8b-493ea6c51c57",
@@ -10461,6 +10486,14 @@
                                             kind: "Field",
                                             name: {
                                                 kind: "Name",
+                                                value: "name"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
                                                 value: "url"
                                             },
                                             arguments: [],
@@ -10598,11 +10631,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 317
+                    end: 322
                 }
             };
             n.loc.source = {
-                body: "query EmotePicker_EmotePicker_UserSubscriptionProducts($channelOwnerID: ID!) {\nuser(id: $channelOwnerID) {\nid\nlogin\ncampaignProperties {\ndomains\n}\ndisplayName\nsubscriptionProducts {\nid\nurl\nprice\nemotes {\nid\ntoken\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\n}\n}\n}\nself {\nsubscriptionBenefit {\nid\nplatform\n}\n}\n}\n}",
+                body: "query EmotePicker_EmotePicker_UserSubscriptionProducts($channelOwnerID: ID!) {\nuser(id: $channelOwnerID) {\nid\nlogin\ncampaignProperties {\ndomains\n}\ndisplayName\nsubscriptionProducts {\nid\nname\nurl\nprice\nemotes {\nid\ntoken\n}\nemoteSetID\nself {\npromotion {\nnewPrice\noldPrice\n}\n}\n}\nself {\nsubscriptionBenefit {\nid\nplatform\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -10615,7 +10648,7 @@
         DLia: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, R, O, I, D, L, A, P, x, F, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, J, Z, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Re, Oe, Ie, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, Ve, He, We, ze, Ge, qe, Qe;
+            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, R, O, I, D, L, A, P, x, F, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, J, Z, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Re, Oe, Ie, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, Ve, He, We, ze, Ge, qe, Qe, Ke;
             n.d(t, "d", function() {
                     return m
                 }), n.d(t, "b", function() {
@@ -10624,11 +10657,11 @@
                     return y
                 }), n.d(t, "i", function() {
                     return E
-                }), n.d(t, "p", function() {
-                    return L
-                }), n.d(t, "n", function() {
-                    return A
                 }), n.d(t, "q", function() {
+                    return L
+                }), n.d(t, "o", function() {
+                    return A
+                }), n.d(t, "r", function() {
                     return P
                 }), n.d(t, "a", function() {
                     return H
@@ -10640,9 +10673,9 @@
                     return pe
                 }), n.d(t, "g", function() {
                     return _e
-                }), n.d(t, "r", function() {
+                }), n.d(t, "s", function() {
                     return Ce
-                }), n.d(t, "m", function() {
+                }), n.d(t, "n", function() {
                     return we
                 }), n.d(t, "f", function() {
                     return De
@@ -10650,8 +10683,10 @@
                     return Le
                 }), n.d(t, "k", function() {
                     return Ae
-                }), n.d(t, "o", function() {
+                }), n.d(t, "p", function() {
                     return xe
+                }), n.d(t, "m", function() {
+                    return Ve
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.COMMUNITY_REPORT = "COMMUNITY_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -10930,26 +10965,29 @@
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(je || (je = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(He || (He = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(We || (We = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(qe || (qe = {})),
                 function(e) {
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                }(Qe || (Qe = {})),
+                function(e) {
                     e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
-                }(Qe || (Qe = {}))
+                }(Ke || (Ke = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -11049,7 +11087,7 @@
                         if (n.state = {
                                 hasPopupExperiment: !1
                             }, n.handleClick = function() {
-                                n.openCheckout(), n.props.reportSubAction({
+                                n.openCheckout(), n.props.handleSubAction({
                                     action: d.a.ClickCheckout,
                                     checkoutButtonTier: n.props.tierPrice
                                 })
@@ -11186,7 +11224,7 @@
                         }) : a.createElement(p.a, {
                             isSubbedToTier: n.state.subbedTier === n.state.activeTab,
                             tierPrice: n.state.currentPurchasePrice,
-                            reportSubAction: n.props.handleSubMenuAction,
+                            handleSubAction: n.props.handleSubMenuAction,
                             productName: e.name,
                             url: e.url,
                             "data-a-target": "subscribe-now-button",
@@ -23141,6 +23179,10 @@
                                 }
                             }
                         }
+                    }, e.prototype.subscribeToInteractivityCompletion = function(e) {
+                        this.interactivityEmitter || (this.interactivityEmitter = new i.EventEmitter), this.interactivityEmitter.addListener("interactive", e)
+                    }, e.prototype.unsubscribeFromInteractivityCompletion = function(e) {
+                        this.interactivityEmitter && this.interactivityEmitter.removeListener("interactive", e)
                     }, e.prototype.raiseUpdate = function() {
                         this.root && this.root.raiseUpdate()
                     }, e.prototype.markCompleted = function() {
@@ -23153,7 +23195,7 @@
                             }, this.logger.debug("Done", {
                                 componantName: this.componentName,
                                 durationMs: this.componentDuration.value
-                            }), this.parent && this.parent.childCompleted(this), this.raiseUpdate()
+                            }), this.parent && this.parent.childCompleted(this), this.interactivityEmitter && this.interactivityEmitter.emit("interactive"), this.raiseUpdate()
                         }
                     }, e.prototype.checkChildCompleted = function() {
                         var e = this.expectedChildCount ? this.expectedChildCount : this.children.length;
@@ -23212,104 +23254,9 @@
                         }), this.hasReportedInteractive && this.checkChildCompleted())
                     }, e.counter = 1, e
                 }(),
-                f = n("2xye"),
-                g = function() {
-                    function e(e, t) {
-                        this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
-                    }
-                    return e.prototype.trackNetworkRequestEvent = function(e, t, n, i, r, a) {
-                        a.request_url !== this.tracking.getEndpoint() ? this.tracking.trackBenchmark(f.SpadeEventType.NetworkRequest, c.__assign({
-                            is_pre_pageload: i,
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            client_time: a.start_time / 1e3,
-                            relative_start_time: r
-                        }, a)) : this.logger.debug("Skipping Spade network request.")
-                    }, e.prototype.trackCompleteTransition = function(e, t, n, i, r, a, o) {
-                        this.tracking.trackBenchmark(f.SpadeEventType.CompleteTransition, {
-                            client_time: i / 1e3,
-                            lost_visibility: o,
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            is_app_launch: a,
-                            time_from_fetch: r
-                        })
-                    }, e.prototype.trackCustomEvent = function(e, t, n, i, r) {
-                        this.tracking.trackCustomEventBenchmark({
-                            benchmark: e.benchmark,
-                            destination: i,
-                            duration: Math.round(e.duration && e.duration.value || 0),
-                            group: e.group,
-                            is_app_launch: t,
-                            key: e.key,
-                            label: e.label,
-                            lost_visibility: n,
-                            page_component_name: r
-                        })
-                    }, e.prototype.trackAppBooted = function(e, t, n, i, r, a) {
-                        this.tracking.trackBenchmark(f.SpadeEventType.AppBooted, {
-                            client_time: i / 1e3,
-                            lost_visibility: a,
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            time_from_fetch: r
-                        })
-                    }, e.prototype.trackInitialize = function(e, t, n, i, r, a, o, s, l, c) {
-                        this.tracking.trackBenchmark(f.SpadeEventType.ComponentInitializing, {
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            component: i,
-                            component_id: a,
-                            parent_component_id: c,
-                            client_time: o / 1e3,
-                            lost_visibility: l,
-                            is_pre_pageload: s,
-                            relative_start_time: r
-                        })
-                    }, e.prototype.trackInteractive = function(e, t, n, i, r, a, o, s, l, c, d, u) {
-                        this.tracking.trackBenchmark(f.SpadeEventType.ComponentInteractive, {
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            component: i,
-                            component_id: a,
-                            parent_component_id: d,
-                            parent_component: u,
-                            client_time: o / 1e3,
-                            time_from_initializing: s / 1e3,
-                            duration: s,
-                            lost_visibility: c,
-                            relative_start_time: r,
-                            is_pre_pageload: l
-                        })
-                    }, e.prototype.trackFetchStart = function(e, t, n, i, r) {
-                        this.tracking.trackBenchmark(f.SpadeEventType.FetchStart, {
-                            destination: e,
-                            location: t,
-                            page_component_name: n,
-                            client_time: i / 1e3,
-                            lost_visibility: r
-                        })
-                    }, e.prototype.trackApiQuery = function(e, t, n, i, r, a, o, s, l) {
-                        this.tracking.trackApiQueryBenchmark({
-                            destination: e,
-                            location: t,
-                            client_time: i / 1e3,
-                            page_component_name: r,
-                            query_name: a,
-                            is_pre_pageload: l,
-                            execution_time: o,
-                            request_time: s,
-                            relative_start_time: n
-                        })
-                    }, e
-                }(),
-                v = "first_page_loaded_timeout",
-                b = function(e) {
+                f = n("Nk81"),
+                g = "first_page_loaded_timeout",
+                v = function(e) {
                     function t(t) {
                         var n = e.call(this, "Root", {
                             logger: t.logger.withCategory("latency-tracker")
@@ -23476,10 +23423,10 @@
                                 n.hasLostVisibility || (n.hasLostVisibility = document.hidden)
                             }, n.dispatchFirstPageLoaded = function() {
                                 n.store.dispatch(Object(d.f)()), n.hasDispatchedFirstPageLoaded = !0
-                            }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new g(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
+                            }, n.root = n, n.store = t.store, n.networkEventsEnabled = t.networkEventsEnabled, n.componentEventsEnabled = t.componentEventsEnabled, n.toolsEnabled = t.toolsEnabled, n.graphqlEndpoint = t.config.graphqlEndpoint, n.tracker = new f.a(t.tracking, n.logger), n.navigationStart = performance.timing.navigationStart, n.rootInitDuration = {
                                 value: Math.round(n.startTimestamp - n.navigationStart),
                                 latencyStatus: p.a.Unknown
-                            }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.stats = t.stats, n.firstPageLoadedTimeout = t.dyanmicSettings.get(v, 1e4), n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
+                            }, n.networkMonitor = t.networkMonitor, n.sentinel = t.sentinel, n.stats = t.stats, n.firstPageLoadedTimeout = t.dyanmicSettings.get(g, 1e4), n.networkEventsEnabled && n.networkMonitor && n.networkMonitor.subscribeToUpdates(n.onNetworkRequest), n.networkEventsEnabled && t.apollo && t.apollo.addQueryMetricsListener(n.onQuery), t.trackVisibility) try {
                             n.checkLostVisibility(), document.addEventListener("visibilitychange", n.checkLostVisibility)
                         } catch (e) {
                             n.logger.warn("Failed to attach event listener for document visibility change, assuming visibility has been lost.", e), n.hasLostVisibility = !0
@@ -23569,28 +23516,28 @@
                     }, t
                 }(h);
             n.d(t, "b", function() {
-                return y
+                return b
             }), n.d(t, "a", function() {
-                return S
+                return k
             });
-            var y = {
+            var b = {
                     forceNetworkLoggingStorageKey: "twilight.force-component-benchmarking",
                     forceComponentBenchmarkingStorageKey: "twilight.force-network-monitoring",
                     forceToolsStorageKey: "twilight.force-benchmarking-tools"
                 },
-                k = {
+                y = {
                     networkingThreshold: "benchmark_networking_threshold",
                     componentThreshold: "benchmark_component_threshold"
                 },
-                S = function() {
+                k = function() {
                     function e(e) {
                         var t = this;
                         this.getRootLatencyTracker = function() {
                             return t.latencyTracker
                         }, this.logger = e.logger.withCategory("Benchmarking"), this.seed = Math.round(100 * Math.random()) / 100, this.storage = e.storage;
-                        var n = e.dynamicSettings.get(k.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
-                            i = e.dynamicSettings.get(k.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
-                        this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new l(e)), this.latencyTracker = new b({
+                        var n = e.dynamicSettings.get(y.networkingThreshold, e.config.defaultNetworkLoggingThreshold),
+                            i = e.dynamicSettings.get(y.componentThreshold, e.config.defaultComponentBenchmarkingThreshold);
+                        this.toolsEnabled = this.shouldEnableTools(e.config), this.componentsEnabled = this.shouldEnableComponentBenchmarking(e.config, i, this.toolsEnabled), this.networkingEnabled = this.shouldEnableNetworkBenchmarking(e.config, n, this.componentsEnabled, this.toolsEnabled), this.networkingEnabled && (this.networkMonitoring = new l(e)), this.latencyTracker = new v({
                             componentEventsEnabled: this.componentsEnabled,
                             dyanmicSettings: e.dynamicSettings,
                             networkEventsEnabled: this.networkingEnabled,
@@ -23614,11 +23561,114 @@
                         })
                     }
                     return e.prototype.shouldEnableTools = function(e) {
-                        return e.forceBenchmarkingTools ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(y.forceToolsStorageKey, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
+                        return e.forceBenchmarkingTools ? (this.logger.debug("Tools enabled, due to config."), !0) : !!this.storage.get(b.forceToolsStorageKey, !1) && (this.logger.debug("Tools enabled, due to local storage."), !0)
                     }, e.prototype.shouldEnableComponentBenchmarking = function(e, t, n) {
-                        return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(y.forceComponentBenchmarkingStorageKey, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
+                        return n ? (this.logger.debug("Components enabled, due to Tools being enabled"), !0) : e.forceComponentBenchmarking ? (this.logger.debug("Components enabled, due to config."), !0) : this.storage.get(b.forceComponentBenchmarkingStorageKey, !1) ? (this.logger.debug("Components enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Components enabled, due to random selection"), !0)
                     }, e.prototype.shouldEnableNetworkBenchmarking = function(e, t, n, i) {
-                        return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(y.forceNetworkLoggingStorageKey, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
+                        return n || i ? (this.logger.debug("Networking enabled, due to Components or Tools being enabled"), !0) : e.forceNetworkLogging ? (this.logger.debug("Networking enabled, due to config."), !0) : this.storage.get(b.forceNetworkLoggingStorageKey, !1) ? (this.logger.debug("Networking enabled, due to local storage."), !0) : this.seed <= t && (this.logger.debug("Networking enabled, due to random selection"), !0)
+                    }, e
+                }()
+        },
+        Nk81: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return a
+            });
+            var i = n("mrSG"),
+                r = n("2xye"),
+                a = function() {
+                    function e(e, t) {
+                        this.tracking = e, this.logger = t.withCategory("tracker"), this.logger.debug("Created")
+                    }
+                    return e.prototype.trackNetworkRequestEvent = function(e, t, n, a, o, s) {
+                        s.request_url !== this.tracking.getEndpoint() ? this.tracking.trackBenchmark(r.SpadeEventType.NetworkRequest, i.__assign({
+                            is_pre_pageload: a,
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            client_time: s.start_time / 1e3,
+                            relative_start_time: o
+                        }, s)) : this.logger.debug("Skipping Spade network request.")
+                    }, e.prototype.trackCompleteTransition = function(e, t, n, i, a, o, s) {
+                        this.tracking.trackBenchmark(r.SpadeEventType.CompleteTransition, {
+                            client_time: i / 1e3,
+                            lost_visibility: s,
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            is_app_launch: o,
+                            time_from_fetch: a
+                        })
+                    }, e.prototype.trackCustomEvent = function(e, t, n, i, r) {
+                        this.tracking.trackCustomEventBenchmark({
+                            benchmark: e.benchmark,
+                            destination: i,
+                            duration: Math.round(e.duration && e.duration.value || 0),
+                            group: e.group,
+                            is_app_launch: t,
+                            key: e.key,
+                            label: e.label,
+                            lost_visibility: n,
+                            page_component_name: r
+                        })
+                    }, e.prototype.trackAppBooted = function(e, t, n, i, a, o) {
+                        this.tracking.trackBenchmark(r.SpadeEventType.AppBooted, {
+                            client_time: i / 1e3,
+                            lost_visibility: o,
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            time_from_fetch: a
+                        })
+                    }, e.prototype.trackInitialize = function(e, t, n, i, a, o, s, l, c, d) {
+                        this.tracking.trackBenchmark(r.SpadeEventType.ComponentInitializing, {
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            component: i,
+                            component_id: o,
+                            parent_component_id: d,
+                            client_time: s / 1e3,
+                            lost_visibility: c,
+                            is_pre_pageload: l,
+                            relative_start_time: a
+                        })
+                    }, e.prototype.trackInteractive = function(e, t, n, i, a, o, s, l, c, d, u, p) {
+                        this.tracking.trackBenchmark(r.SpadeEventType.ComponentInteractive, {
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            component: i,
+                            component_id: o,
+                            parent_component_id: u,
+                            parent_component: p,
+                            client_time: s / 1e3,
+                            time_from_initializing: l / 1e3,
+                            duration: l,
+                            lost_visibility: d,
+                            relative_start_time: a,
+                            is_pre_pageload: c
+                        })
+                    }, e.prototype.trackFetchStart = function(e, t, n, i, a) {
+                        this.tracking.trackBenchmark(r.SpadeEventType.FetchStart, {
+                            destination: e,
+                            location: t,
+                            page_component_name: n,
+                            client_time: i / 1e3,
+                            lost_visibility: a
+                        })
+                    }, e.prototype.trackApiQuery = function(e, t, n, i, r, a, o, s, l) {
+                        this.tracking.trackApiQueryBenchmark({
+                            destination: e,
+                            location: t,
+                            client_time: i / 1e3,
+                            page_component_name: r,
+                            query_name: a,
+                            is_pre_pageload: l,
+                            execution_time: o,
+                            request_time: s,
+                            relative_start_time: n
+                        })
                     }, e
                 }()
         },
@@ -23629,7 +23679,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.Unknown = "unknown"
+                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.Unknown = "unknown"
                 }(i || (i = {}))
         },
         O4UZ: function(e, t, n) {
@@ -24454,7 +24504,7 @@
                     return s
                 }),
                 function(e) {
-                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
+                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
                 }(i || (i = {})),
                 function(e) {
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -25082,7 +25132,7 @@
                         isSubbedToTier: !1,
                         tierPrice: t,
                         "data-a-target": "tier1-subscribe-button",
-                        reportSubAction: e.handleTopPageSubButtonClick,
+                        handleSubAction: e.handleTopPageSubButtonClick,
                         productName: e.subscriptionProducts[0].name,
                         url: e.subscriptionProducts[0].url,
                         isEsportChannel: !0
@@ -25237,7 +25287,7 @@
                         isSubbedToTier: !1,
                         tierPrice: r,
                         "data-a-target": "tier1-subscribe-button",
-                        reportSubAction: e.handleTopPageSubButtonClick,
+                        handleSubAction: e.handleTopPageSubButtonClick,
                         productName: e.subscriptionProducts[0].name,
                         url: e.subscriptionProducts[0].url
                     })))), a.createElement(N.Ra, {
@@ -26506,12 +26556,8 @@
                 return o
             }), n.d(t, "g", function() {
                 return m
-            }), n.d(t, "k", function() {
-                return h
-            }), n.d(t, "j", function() {
-                return f
             }), n.d(t, "i", function() {
-                return g
+                return h
             });
             var i = n("/7QA"),
                 r = n("2xye");
@@ -26608,22 +26654,6 @@
                     channel_id: e.channelID
                 };
                 i.n.track(r.SpadeEventType.LeaderboardExpandClick, t)
-            }
-
-            function f(e) {
-                var t = {
-                    user_id: e.userID,
-                    opt_out: e.optOut
-                };
-                i.n.track(r.SpadeEventType.BitsCheerBombOptOut, t)
-            }
-
-            function g(e) {
-                var t = {
-                    user_id: e.userID,
-                    channel_id: e.channelID
-                };
-                i.n.track(r.SpadeEventType.BitsCheerBombHideNotifications, t)
             }! function(e) {
                 e.ShowAdButton = "show_ad_button"
             }(o || (o = {}))
@@ -40986,7 +41016,6 @@
                         }, d.createElement(w.Ra, {
                             padding: 1
                         }, d.createElement(_.a, {
-                            followData: this.getFollowData(),
                             channelLogin: this.props.channelLogin
                         })))))
                     }, t.prototype.getButtonIcon = function() {
@@ -52113,31 +52142,24 @@
         },
         tIid: function(e, t, n) {
             "use strict";
-            n.d(t, "b", function() {
+            n.d(t, "a", function() {
+                return o
+            }), n.d(t, "b", function() {
                 return s
-            }), n.d(t, "a", function() {
-                return l
-            }), n.d(t, "c", function() {
-                return c
             });
             var i = n("/7QA"),
-                r = "esport_channel_page_whitelist",
-                a = "esport_insider_pass_whitelist",
-                o = "esports_room_cheering_whitelist";
+                r = "esport_insider_pass_whitelist",
+                a = "esports_room_cheering_whitelist";
 
-            function s(e, t, n) {
-                return void 0 === n && (n = !1), d(r, e, t, n)
+            function o(e, t, n) {
+                return void 0 === n && (n = !1), l(r, e, t, n)
             }
 
-            function l(e, t, n) {
-                return void 0 === n && (n = !1), d(a, e, t, n)
+            function s(e, t) {
+                return l(a, e, t)
             }
 
-            function c(e, t) {
-                return d(o, e, t)
-            }
-
-            function d(e, t, n, r) {
+            function l(e, t, n, r) {
                 void 0 === r && (r = !1);
                 var a = i.b.get(e, []),
                     o = n && n.roles && n.roles.isStaff || r;
