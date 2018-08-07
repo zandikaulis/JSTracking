@@ -2246,7 +2246,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-b49b149f";
+    return "2.3.0-3fef0690";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3170,8 +3170,9 @@ function getBufferedRange(video) {
             continue;
         }
 
-        // No region contains playhead
-        if (start > playhead) {
+        // No region contains playhead.
+        // Consider MIN_PLAYABLE_BUFFER before start as part of this region
+        if (start - MIN_PLAYABLE_BUFFER > playhead) {
             break;
         }
 
@@ -3191,7 +3192,7 @@ function getBufferedRange(video) {
             start = buffered.start(s);
         }
 
-        return {start: start, end: end};
+        return {start: Math.min(start, playhead), end: end};
     }
 
     return {start: playhead, end: playhead};
