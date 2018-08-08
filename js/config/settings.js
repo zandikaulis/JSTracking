@@ -1147,6 +1147,18 @@ window.__twilightSettings = {
                 "value": "variant1"
             }]
         },
+        "c01a11fa-e59e-4d4e-a715-153328d69c2d": {
+            "name": "twilight_vod_editing_circle_of_life",
+            "v": 4404,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "c5aad1ae-5be5-4a6c-8279-ecb3a0de10e9": {
             "name": "twilight_vod_shoryuken",
             "v": 4012,
