@@ -817,6 +817,18 @@ window.__twilightSettings = {
                 "value": "variation"
             }]
         },
+        "6c1591ea-6186-4310-bb23-c350eb713d52": {
+            "name": "TWILIGHT_DASHBOARD_COLLAB",
+            "v": 4402,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "control"
+            }]
+        },
         "6f822381-f41d-445e-bf88-36fb9095a7b5": {
             "name": "twilight_v_ember",
             "v": 3139,
