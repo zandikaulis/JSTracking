@@ -2246,7 +2246,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-b53b74c7";
+    return "2.3.0-bd245208";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3293,7 +3293,6 @@ function PlaybackMonitor(video, config) {
     }.bind(this);
     addListener('play', this._onVideoPlay.bind(this));
     addListener('pause', this._onVideoPause.bind(this));
-    addListener('waiting', this._onVideoWaiting.bind(this));
     addListener('timeupdate', this._onVideoTimeUpdate.bind(this));
     addListener('error', this._onVideoError.bind(this));
     addListener('webkitbeginfullscreen', this._onWebkitBeginFullscreen.bind(this));
@@ -3334,10 +3333,6 @@ PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
     var buffered = getBufferedRange(this._video);
     this._checkBufferUpdate(buffered);
     this._updateIdle(buffered);
-};
-
-PlaybackMonitor.prototype._onVideoWaiting = function () {
-    this._updateIdle(getBufferedRange(this._video));
 };
 
 PlaybackMonitor.prototype._onVideoError = function () {
