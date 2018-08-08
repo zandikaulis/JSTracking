@@ -23,7 +23,7 @@ window.__twilightSettings = {
     "chatrooms_staff_beta": true,
     "commerce_amendment_v2": "staff",
     "commerce_bar_experience": "sponsored",
-    "community_sub_gifting_banner_timeouts": [5, 10, 20, 30, 40, 50, 60],
+    "community_sub_gifting_banner_timeouts": [0, 25, 35, 45, 55, 60, 60],
     "comscore_config_c1": 2,
     "comscore_config_c2": 6745306,
     "comscore_config_c3": 1,
@@ -927,13 +927,13 @@ window.__twilightSettings = {
         },
         "8c505ba8-1381-4f54-ad7f-5dbbde9beee0": {
             "name": "TWILIGHT_INSTREAM_CHECKOUT",
-            "v": 4186,
+            "v": 4405,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 100,
                 "value": "yes"
             }, {
-                "weight": 50,
+                "weight": 0,
                 "value": "no"
             }]
         },
