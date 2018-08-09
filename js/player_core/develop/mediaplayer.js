@@ -1378,15 +1378,25 @@ var DRMManager = function (config) {
     this.video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false);
 };
 
-DRMManager.prototype.onLoad = function (url) {
-    var parsed = new URL(url).pathname.split('/');
-    var filename = parsed[parsed.length - 1];
+DRMManager.prototype.configure = function (path) {
+    var parsed = new URL(path);
+    var token = parsed.searchParams.get('token');
+    var sig = parsed.searchParams.get('sig');
+    var parts = parsed.pathname.split('/');
+    var filename = parts[parts.length - 1];
     var channelName = filename.split('.')[0]; //remove extension
-    this._authUrl = AUTH_XML_URL + channelName;
 
+    var authUrl = new URL(channelName, AUTH_XML_URL);
+    authUrl.searchParams.append('token', token);
+    authUrl.searchParams.append('sig', sig);
+
+    this._authUrl = authUrl.href;
+};
+
+DRMManager.prototype.reset = function () {
     this._isProtected = false;
     this._sessions = [];
-};
+}
 
 DRMManager.prototype.isProtected = function () {
     return this._isProtected;
@@ -2163,7 +2173,6 @@ MediaPlayer.prototype.load = function (path, mediaType) {
         mediaType: mediaType || '',
     });
     this._resetState();
-    this._mediaSink.onLoad(path);
 }
 
 MediaPlayer.prototype.play = function () {
@@ -2246,7 +2255,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-01c8013c";
+    return "2.3.0-8545cc65";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2856,10 +2865,15 @@ var MediaSink = module.exports = function MediaSink(config) {
  * Prepare for video playback
  */
 MediaSink.prototype.configure = function (track) {
-    // Add a native source directly
-    if (track.src) {
-        this._video.src = track.src;
-        return;
+    if (track.path) {
+        // Update authxml path
+        this._drmManager.configure(track.path);
+
+        // Add a native source directly
+        if (track.passthrough) {
+            this._video.src = track.path;
+            return;
+        }
     }
 
     var video = this._video; // Capture 'video' so we don't need to bind 'this'
@@ -2967,6 +2981,7 @@ MediaSink.prototype.reset = function () {
     this._mediaSource = null;
     this._tracks = Object.create(null);
     this._playbackMonitor.pause();
+    this._drmManager.reset();
 
     removeCues(this._metadataTrack, 0, Infinity);
 
@@ -3103,13 +3118,6 @@ MediaSink.prototype.droppedFrames = function () {
  */
 MediaSink.prototype.videoElement = function () {
     return this._video;
-};
-
-/**
- * Set master manifest URL for this stream
- */
-MediaSink.prototype.onLoad = function (url) {
-    return this._drmManager.onLoad(url);
 };
 
 /**
