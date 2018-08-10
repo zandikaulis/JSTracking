@@ -652,6 +652,18 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
+        "4e43dfb7-0fed-4a27-9792-bf1c6bf16978": {
+            "name": "extension_configure_modal",
+            "v": 4424,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "off"
+            }, {
+                "weight": 0,
+                "value": "on"
+            }]
+        },
         "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
             "name": "twilight_new_browse",
             "v": 2683,
