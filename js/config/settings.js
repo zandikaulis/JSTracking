@@ -65,6 +65,7 @@ window.__twilightSettings = {
     "mass_mystery_gifting": "on",
     "messages_disclosure_enabled": false,
     "mobile_subs_feature_flag": "on",
+    "moby": ["136121224"],
     "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
     "new_live_announcements": true,
