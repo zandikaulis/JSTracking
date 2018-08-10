@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [170], {
+    [168], {
         "+GjP": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -990,7 +990,7 @@
                         return Object(f.d)(c.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(89)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(87)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -10220,7 +10220,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PaySavedPaymentMethods = "TWILIGHT_PAY__SAVED_PAYMENT_METHODS", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PaySavedPaymentMethods = "TWILIGHT_PAY__SAVED_PAYMENT_METHODS", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -10299,6 +10299,9 @@
                 }, i[r.WatchSombra] = {
                     id: "647bfc96-3fc6-4f5e-ab95-38c4eab60830",
                     default: "off"
+                }, i[r.DashboardCollab] = {
+                    id: "6c1591ea-6186-4310-bb23-c350eb713d52",
+                    default: "control"
                 }, i[r.DiscoveryFrontpageMVP] = {
                     id: "f3920cff-ef57-46c9-8dd9-b4f145acf6e5",
                     default: "control",
@@ -10648,7 +10651,7 @@
         DLia: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, R, O, I, D, L, A, P, x, F, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, J, Z, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Re, Oe, Ie, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, Ve, He, We, ze, Ge, qe, Qe, Ke, Ye, Xe;
+            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, R, O, I, D, L, A, P, x, F, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, J, Z, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Re, Oe, Ie, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, Ve, He, We, ze, Ge, qe, Qe, Ke, Ye, Xe, Je;
             n.d(t, "d", function() {
                     return m
                 }), n.d(t, "b", function() {
@@ -10994,8 +10997,11 @@
                     e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(Ye || (Ye = {})),
                 function(e) {
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
+                }(Xe || (Xe = {})),
+                function(e) {
                     e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
-                }(Xe || (Xe = {}))
+                }(Je || (Je = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -23687,7 +23693,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.Unknown = "unknown"
+                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.DevSiteGamesOnePager = "dev.games.onepager", e.Unknown = "unknown"
                 }(i || (i = {}))
         },
         O4UZ: function(e, t, n) {
@@ -25178,7 +25184,7 @@
             }(i || (i = {}));
             var A = n("br9A"),
                 P = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(93)]).then(n.bind(null, "Br/p"))
+                    return Promise.all([n.e(0), n.e(91)]).then(n.bind(null, "Br/p"))
                 }, "GiftRecipientSearch"),
                 x = function(e) {
                     function t() {
@@ -25356,16 +25362,16 @@
                 e[e.GiftOptions = 0] = "GiftOptions", e[e.MysteryGiftSelect = 1] = "MysteryGiftSelect", e[e.SubOptions = 2] = "SubOptions"
             }(z || (z = {}));
             var G = l.a.wrap(function() {
-                    return n.e(94).then(n.bind(null, "N+wj"))
+                    return n.e(92).then(n.bind(null, "N+wj"))
                 }, "GiftOptions"),
                 q = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(91)]).then(n.bind(null, "pCKU"))
+                    return Promise.all([n.e(0), n.e(89)]).then(n.bind(null, "pCKU"))
                 }, "CurrentSubscription"),
                 Q = l.a.wrap(function() {
-                    return n.e(92).then(n.bind(null, "RHPu"))
+                    return n.e(90).then(n.bind(null, "RHPu"))
                 }, "MysteryGiftBundleSelection"),
                 K = l.a.wrap(function() {
-                    return n.e(90).then(n.bind(null, "Igrc"))
+                    return n.e(88).then(n.bind(null, "Igrc"))
                 }, "SubOptions"),
                 Y = function(e) {
                     function t() {
@@ -25677,13 +25683,13 @@
             n("7deH");
             var X, J = n("wEyv"),
                 Z = l.a.wrap(function() {
-                    return n.e(94).then(n.bind(null, "N+wj"))
+                    return n.e(92).then(n.bind(null, "N+wj"))
                 }, "GiftOptions"),
                 $ = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(93)]).then(n.bind(null, "Br/p"))
+                    return Promise.all([n.e(0), n.e(91)]).then(n.bind(null, "Br/p"))
                 }, "GiftRecipientSearch"),
                 ee = l.a.wrap(function() {
-                    return n.e(92).then(n.bind(null, "RHPu"))
+                    return n.e(90).then(n.bind(null, "RHPu"))
                 }, "MysteryGiftBundleSelection"),
                 te = function(e) {
                     function t() {
@@ -26189,7 +26195,7 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(89)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(87)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -34384,7 +34390,7 @@
                 d = n("GnwI"),
                 u = n("Ue10"),
                 p = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(31)]).then(n.bind(null, "4uwt"))
+                    return Promise.all([n.e(0), n.e(29)]).then(n.bind(null, "4uwt"))
                 }, "AuthForm"),
                 m = function(e) {
                     function t(t) {
@@ -36763,46 +36769,46 @@
                     }
                 })(Ht),
                 zt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(54)]).then(n.bind(null, "XH7V"))
+                    return Promise.all([n.e(0), n.e(52)]).then(n.bind(null, "XH7V"))
                 }, "ChannelClipsPage"),
                 Gt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(53)]).then(n.bind(null, "5qQ0"))
+                    return Promise.all([n.e(0), n.e(51)]).then(n.bind(null, "5qQ0"))
                 }, "ChannelCollectionsPage"),
                 qt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(52)]).then(n.bind(null, "0PcG"))
+                    return Promise.all([n.e(0), n.e(50)]).then(n.bind(null, "0PcG"))
                 }, "ChannelEventsPage"),
                 Qt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(51)]).then(n.bind(null, "ibCL"))
+                    return Promise.all([n.e(0), n.e(49)]).then(n.bind(null, "ibCL"))
                 }, "ChannelFollowersPage"),
                 Kt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(50)]).then(n.bind(null, "Zcpz"))
+                    return Promise.all([n.e(0), n.e(48)]).then(n.bind(null, "Zcpz"))
                 }, "ChannelFollowingPage"),
                 Yt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(49)]).then(n.bind(null, "JNF5"))
+                    return Promise.all([n.e(0), n.e(47)]).then(n.bind(null, "JNF5"))
                 }, "ChannelPage"),
                 Xt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(48)]).then(n.bind(null, "DOLr"))
+                    return Promise.all([n.e(0), n.e(46)]).then(n.bind(null, "DOLr"))
                 }, "ChannelRoot"),
                 Jt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(47)]).then(n.bind(null, "JCPk"))
+                    return Promise.all([n.e(0), n.e(45)]).then(n.bind(null, "JCPk"))
                 }, "ChannelVideosOverviewPage"),
                 Zt = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(46)]).then(n.bind(null, "AaPt"))
+                    return Promise.all([n.e(0), n.e(44)]).then(n.bind(null, "AaPt"))
                 }, "ChannelVideosPage"),
                 $t = a.a.wrap(function() {
-                    return n.e(63).then(n.bind(null, "rVsl"))
+                    return n.e(61).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
                 en = a.a.wrap(function() {
-                    return n.e(45).then(n.bind(null, "juOe"))
+                    return n.e(43).then(n.bind(null, "juOe"))
                 }, "ReportUserPage"),
                 tn = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(44)]).then(n.bind(null, "4JFD"))
+                    return Promise.all([n.e(0), n.e(42)]).then(n.bind(null, "4JFD"))
                 }, "VideoWatchPage"),
                 nn = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(43)]).then(n.bind(null, "dlEs"))
+                    return Promise.all([n.e(0), n.e(41)]).then(n.bind(null, "dlEs"))
                 }, "ClipsWatchPage"),
                 rn = a.a.wrap(function() {
-                    return n.e(42).then(n.bind(null, "QE/F"))
+                    return n.e(40).then(n.bind(null, "QE/F"))
                 }, "SquadStreamPage"),
                 an = function(e) {
                     return r.createElement(R.c, {
@@ -37029,82 +37035,82 @@
                 }(r.Component),
                 hn = Object(R.f)(mn),
                 fn = a.a.wrap(function() {
-                    return n.e(79).then(n.bind(null, "wh8/"))
+                    return n.e(77).then(n.bind(null, "wh8/"))
                 }, "AnonFrontPage"),
                 gn = a.a.wrap(function() {
-                    return n.e(78).then(n.bind(null, "moen"))
+                    return n.e(76).then(n.bind(null, "moen"))
                 }, "BroadcastPage"),
                 vn = a.a.wrap(function() {
-                    return n.e(77).then(n.bind(null, "99ae"))
+                    return n.e(75).then(n.bind(null, "99ae"))
                 }, "BrowseRootPage"),
                 bn = a.a.wrap(function() {
-                    return n.e(76).then(n.bind(null, "otOH"))
+                    return n.e(74).then(n.bind(null, "otOH"))
                 }, "CommunityModerationRoot"),
                 yn = a.a.wrap(function() {
-                    return n.e(75).then(n.bind(null, "FvFK"))
+                    return n.e(73).then(n.bind(null, "FvFK"))
                 }, "CreateCommunityPage"),
                 kn = a.a.wrap(function() {
-                    return n.e(74).then(n.bind(null, "dQAD"))
+                    return n.e(72).then(n.bind(null, "dQAD"))
                 }, "DevOnlyRoot"),
                 Sn = a.a.wrap(function() {
-                    return n.e(73).then(n.bind(null, "mpcK"))
+                    return n.e(71).then(n.bind(null, "mpcK"))
                 }, "DirectoryRootPage"),
                 En = a.a.wrap(function() {
-                    return n.e(72).then(n.bind(null, "AtgE"))
+                    return n.e(70).then(n.bind(null, "AtgE"))
                 }, "EmailUnsubscribePage"),
                 _n = a.a.wrap(function() {
-                    return n.e(71).then(n.bind(null, "VkGE"))
+                    return n.e(69).then(n.bind(null, "VkGE"))
                 }, "EmailVerificationPage"),
                 Cn = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(70)]).then(n.bind(null, "4c/Z"))
+                    return Promise.all([n.e(0), n.e(68)]).then(n.bind(null, "4c/Z"))
                 }, "EventLandingPage"),
                 wn = a.a.wrap(function() {
-                    return n.e(69).then(n.bind(null, "lQdQ"))
+                    return n.e(67).then(n.bind(null, "lQdQ"))
                 }, "ExtensionsRoot"),
                 Tn = a.a.wrap(function() {
-                    return n.e(68).then(n.bind(null, "Uyt6"))
+                    return n.e(66).then(n.bind(null, "Uyt6"))
                 }, "FollowingRootPage"),
                 Nn = a.a.wrap(function() {
-                    return n.e(67).then(n.bind(null, "0fnA"))
+                    return n.e(65).then(n.bind(null, "0fnA"))
                 }, "FrontPage"),
                 Rn = a.a.wrap(function() {
-                    return n.e(66).then(n.bind(null, "O0y+"))
+                    return n.e(64).then(n.bind(null, "O0y+"))
                 }, "FriendRequestsPage"),
                 On = a.a.wrap(function() {
-                    return n.e(65).then(n.bind(null, "2W9R"))
+                    return n.e(63).then(n.bind(null, "2W9R"))
                 }, "FriendsPage"),
                 In = a.a.wrap(function() {
-                    return n.e(64).then(n.bind(null, "UqZg"))
+                    return n.e(62).then(n.bind(null, "UqZg"))
                 }, "InventoryPage"),
                 Dn = a.a.wrap(function() {
-                    return n.e(63).then(n.bind(null, "rVsl"))
+                    return n.e(61).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
                 Ln = a.a.wrap(function() {
-                    return n.e(62).then(n.bind(null, "uHYy"))
+                    return n.e(60).then(n.bind(null, "uHYy"))
                 }, "PartnershipSignupLoader"),
                 An = a.a.wrap(function() {
-                    return n.e(61).then(n.bind(null, "4Agi"))
+                    return n.e(59).then(n.bind(null, "4Agi"))
                 }, "DesklightModsRootPage"),
                 Pn = a.a.wrap(function() {
-                    return Promise.all([n.e(32), n.e(0), n.e(60)]).then(n.bind(null, "cz4h"))
+                    return Promise.all([n.e(30), n.e(0), n.e(58)]).then(n.bind(null, "cz4h"))
                 }, "PaymentsLandingPage"),
                 xn = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(59)]).then(n.bind(null, "EOaz"))
+                    return Promise.all([n.e(0), n.e(57)]).then(n.bind(null, "EOaz"))
                 }, "SettingsRoot"),
                 Fn = a.a.wrap(function() {
-                    return n.e(58).then(n.bind(null, "rzjD"))
+                    return n.e(56).then(n.bind(null, "rzjD"))
                 }, "StartLogin"),
                 Mn = a.a.wrap(function() {
-                    return n.e(58).then(n.bind(null, "rzjD"))
+                    return n.e(56).then(n.bind(null, "rzjD"))
                 }, "StartSignup"),
                 Un = a.a.wrap(function() {
-                    return n.e(57).then(n.bind(null, "UGMo"))
+                    return n.e(55).then(n.bind(null, "UGMo"))
                 }, "SubscriptionsManagementPage"),
                 Bn = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(56)]).then(n.bind(null, "c0BZ"))
+                    return Promise.all([n.e(0), n.e(54)]).then(n.bind(null, "c0BZ"))
                 }, "UnsubscribePage"),
                 jn = a.a.wrap(function() {
-                    return n.e(55).then(n.bind(null, "xuFZ"))
+                    return n.e(53).then(n.bind(null, "xuFZ"))
                 }, "UserRoot");
 
             function Vn() {
@@ -37362,7 +37368,7 @@
                 return Zn
             });
             var Xn = a.a.wrap(function() {
-                    return n.e(80).then(n.bind(null, "3iFw"))
+                    return n.e(78).then(n.bind(null, "3iFw"))
                 }, "Whispers", {
                     failSilently: !0,
                     placeholder: null
@@ -37807,6 +37813,8 @@
                     }
                     return o.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         u = null
+                    }, t.prototype.componentDidMount = function() {
+                        l.setAppElement(document.body)
                     }, t.prototype.componentDidCatch = function(e, t) {
                         var n = this;
                         this.setState({
@@ -43179,14 +43187,14 @@
                             languageCode: "da",
                             locale: "da-DK",
                             loader: function() {
-                                return n.e(30).then(n.bind(null, "Sw9J"))
+                                return n.e(28).then(n.bind(null, "Sw9J"))
                             }
                         }, {
                             name: "Deutsch",
                             languageCode: "de",
                             locale: "de-DE",
                             loader: function() {
-                                return n.e(29).then(n.bind(null, "8lzT"))
+                                return n.e(27).then(n.bind(null, "8lzT"))
                             }
                         }, {
                             name: "English - UK",
@@ -43194,14 +43202,14 @@
                             locale: "en-GB",
                             intlMessageFormatKey: "en",
                             loader: function() {
-                                return n.e(28).then(n.bind(null, "QB/O"))
+                                return n.e(26).then(n.bind(null, "QB/O"))
                             }
                         }, {
                             name: "Español - España",
                             languageCode: "es",
                             locale: "es-ES",
                             loader: function() {
-                                return n.e(27).then(n.bind(null, "TX++"))
+                                return n.e(25).then(n.bind(null, "TX++"))
                             }
                         }, {
                             name: "Español - Latinoamérica",
@@ -43209,42 +43217,42 @@
                             locale: "es-MX",
                             intlMessageFormatKey: "es",
                             loader: function() {
-                                return n.e(26).then(n.bind(null, "Qg/R"))
+                                return n.e(24).then(n.bind(null, "Qg/R"))
                             }
                         }, {
                             name: "Français",
                             languageCode: "fr",
                             locale: "fr-FR",
                             loader: function() {
-                                return n.e(25).then(n.bind(null, "jtc8"))
+                                return n.e(23).then(n.bind(null, "jtc8"))
                             }
                         }, {
                             name: "Italiano",
                             languageCode: "it",
                             locale: "it-IT",
                             loader: function() {
-                                return n.e(24).then(n.bind(null, "XOgv"))
+                                return n.e(22).then(n.bind(null, "XOgv"))
                             }
                         }, {
                             name: "Magyar",
                             languageCode: "hu",
                             locale: "hu-HU",
                             loader: function() {
-                                return n.e(23).then(n.bind(null, "iC4P"))
+                                return n.e(21).then(n.bind(null, "iC4P"))
                             }
                         }, {
                             name: "Nederlands",
                             languageCode: "nl",
                             locale: "nl-NL",
                             loader: function() {
-                                return n.e(22).then(n.bind(null, "PEbi"))
+                                return n.e(20).then(n.bind(null, "PEbi"))
                             }
                         }, {
                             name: "Norsk",
                             languageCode: "no",
                             locale: "no-NO",
                             loader: function() {
-                                return n.e(21).then(n.bind(null, "PqU8"))
+                                return n.e(19).then(n.bind(null, "PqU8"))
                             },
                             cldrLocale: "nb"
                         }, {
@@ -43252,7 +43260,7 @@
                             languageCode: "pl",
                             locale: "pl-PL",
                             loader: function() {
-                                return n.e(20).then(n.bind(null, "S3Qj"))
+                                return n.e(18).then(n.bind(null, "S3Qj"))
                             }
                         }, {
                             name: "Português",
@@ -43260,7 +43268,7 @@
                             locale: "pt-PT",
                             intlMessageFormatKey: "pt-pt",
                             loader: function() {
-                                return n.e(19).then(n.bind(null, "RK9r"))
+                                return n.e(17).then(n.bind(null, "RK9r"))
                             },
                             cldrLocale: "pt-pt"
                         }, {
@@ -43269,7 +43277,7 @@
                             locale: "pt-BR",
                             intlMessageFormatKey: "pt",
                             loader: function() {
-                                return n.e(18).then(n.bind(null, "YEG4"))
+                                return n.e(16).then(n.bind(null, "YEG4"))
                             },
                             cldrLocale: "pt"
                         }, {
@@ -43277,77 +43285,70 @@
                             languageCode: "sk",
                             locale: "sk-SK",
                             loader: function() {
-                                return n.e(17).then(n.bind(null, "7J+f"))
+                                return n.e(15).then(n.bind(null, "7J+f"))
                             }
                         }, {
                             name: "Suomi",
                             languageCode: "fi",
                             locale: "fi-FI",
                             loader: function() {
-                                return n.e(16).then(n.bind(null, "26v5"))
+                                return n.e(14).then(n.bind(null, "26v5"))
                             }
                         }, {
                             name: "Svenska",
                             languageCode: "sv",
                             locale: "sv-SE",
                             loader: function() {
-                                return n.e(15).then(n.bind(null, "ekTR"))
+                                return n.e(13).then(n.bind(null, "ekTR"))
                             }
                         }, {
                             name: "Tiếng Việt",
                             languageCode: "vi",
                             locale: "vi-VN",
                             loader: function() {
-                                return n.e(14).then(n.bind(null, "7ZS+"))
+                                return n.e(12).then(n.bind(null, "7ZS+"))
                             }
                         }, {
                             name: "Türkçe",
                             languageCode: "tr",
                             locale: "tr-TR",
                             loader: function() {
-                                return n.e(13).then(n.bind(null, "9klv"))
+                                return n.e(11).then(n.bind(null, "9klv"))
                             }
                         }, {
                             name: "Čeština",
                             languageCode: "cs",
                             locale: "cs-CZ",
                             loader: function() {
-                                return n.e(12).then(n.bind(null, "3RK4"))
+                                return n.e(10).then(n.bind(null, "3RK4"))
                             }
                         }, {
                             name: "Ελληνικά",
                             languageCode: "el",
                             locale: "el-GR",
                             loader: function() {
-                                return n.e(11).then(n.bind(null, "6liR"))
+                                return n.e(9).then(n.bind(null, "6liR"))
                             }
                         }, {
                             name: "Български",
                             languageCode: "bg",
                             locale: "bg-BG",
                             loader: function() {
-                                return n.e(10).then(n.bind(null, "/BRg"))
+                                return n.e(8).then(n.bind(null, "/BRg"))
                             }
                         }, {
                             name: "Русский",
                             languageCode: "ru",
                             locale: "ru-RU",
                             loader: function() {
-                                return n.e(9).then(n.bind(null, "w56/"))
-                            }
-                        }, {
-                            name: "العربية",
-                            languageCode: "ar",
-                            locale: "ar-SA",
-                            loader: function() {
-                                return n.e(8).then(n.bind(null, "LhZ9"))
+                                return n.e(7).then(n.bind(null, "w56/"))
                             }
                         }, {
                             name: "ภาษาไทย",
                             languageCode: "th",
                             locale: "th-TH",
                             loader: function() {
-                                return n.e(7).then(n.bind(null, "UB8r"))
+                                return n.e(6).then(n.bind(null, "UB8r"))
                             }
                         }, {
                             name: "中文 简体",
@@ -43355,7 +43356,7 @@
                             locale: "zh-CN",
                             intlMessageFormatKey: "zh",
                             loader: function() {
-                                return n.e(6).then(n.bind(null, "de7V"))
+                                return n.e(5).then(n.bind(null, "de7V"))
                             },
                             cldrLocale: "zh-hans"
                         }, {
@@ -43364,7 +43365,7 @@
                             locale: "zh-TW",
                             intlMessageFormatKey: "zh-hant",
                             loader: function() {
-                                return n.e(5).then(n.bind(null, "Z+PZ"))
+                                return n.e(4).then(n.bind(null, "Z+PZ"))
                             },
                             cldrLocale: "zh-hant"
                         }, {
@@ -43372,21 +43373,14 @@
                             languageCode: "ja",
                             locale: "ja-JP",
                             loader: function() {
-                                return n.e(4).then(n.bind(null, "q22T"))
+                                return n.e(3).then(n.bind(null, "q22T"))
                             }
                         }, {
                             name: "한국어",
                             languageCode: "ko",
                             locale: "ko-KR",
                             loader: function() {
-                                return n.e(3).then(n.bind(null, "t37q"))
-                            }
-                        }, {
-                            name: "हिंदी",
-                            languageCode: "hi",
-                            locale: "hi-IN",
-                            loader: function() {
-                                return n.e(2).then(n.bind(null, "szeX"))
+                                return n.e(2).then(n.bind(null, "t37q"))
                             }
                         }, {
                             name: "Română",
@@ -46331,7 +46325,7 @@
                         }
                     }, e[i.ENABLED] = function() {
                         return s.a.wrap(function() {
-                            return n.e(41).then(n.bind(null, "lEVP"))
+                            return n.e(39).then(n.bind(null, "lEVP"))
                         }, "VerifyEmailBar", {
                             failSilently: !0,
                             placeholder: null
@@ -47074,7 +47068,7 @@
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
-                                        return o.a.buildType !== d.a.Production && r.parse(window.location.search).onsite_test_data ? [4, n.e(40).then(n.bind(null, "Pm5e"))] : [3, 2];
+                                        return o.a.buildType !== d.a.Production && r.parse(window.location.search).onsite_test_data ? [4, n.e(38).then(n.bind(null, "Pm5e"))] : [3, 2];
                                     case 1:
                                         e = i.sent().MockOnsiteNotifications, t = e.getMockOnsiteNotificationModels(3), this.setState({
                                             notifications: t
@@ -47206,7 +47200,7 @@
                                 return i.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
-                                            return this.listDataLoaded() && !this.hasInsertedListNotificationsData && o.a.buildType !== d.a.Production && r.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(40).then(n.bind(null, "Pm5e"))]) : [3, 2];
+                                            return this.listDataLoaded() && !this.hasInsertedListNotificationsData && o.a.buildType !== d.a.Production && r.parse(window.location.search).onsite_test_data ? (this.hasInsertedListNotificationsData = !0, [4, n.e(38).then(n.bind(null, "Pm5e"))]) : [3, 2];
                                         case 1:
                                             e = t.sent().MockOnsiteNotifications, Object(p.e)(re, i.__assign({}, this.props.listData.variables), function(t) {
                                                 return t.currentUser.notifications.edges = e.getMockOnsiteNotificationEdges(r.parse(window.location.search).onsite_test_data), t
@@ -50733,7 +50727,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AbandonedSearch = "search_input_clear", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionInstall = "extension_install_button_click", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQueryBegan = "search_query_began", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AbandonedSearch = "search_input_clear", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionInstall = "extension_install_button_click", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQueryBegan = "search_query_began", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -51477,19 +51471,19 @@
                     }
                 })(ne.a),
                 re = (n("cGJr"), g.a.wrap(function() {
-                    return n.e(39).then(n.bind(null, "dumY"))
+                    return n.e(37).then(n.bind(null, "dumY"))
                 }, "CodeRedemptionPage")),
                 ae = g.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(38)]).then(n.bind(null, "mdlQ"))
+                    return Promise.all([n.e(0), n.e(36)]).then(n.bind(null, "mdlQ"))
                 }, "DashboardRoot"),
                 oe = g.a.wrap(function() {
-                    return Promise.all([n.e(32), n.e(34), n.e(0), n.e(37)]).then(n.bind(null, "Pnqn"))
+                    return Promise.all([n.e(30), n.e(32), n.e(0), n.e(35)]).then(n.bind(null, "Pnqn"))
                 }, "TeamsDashboardRoot"),
                 se = g.a.wrap(function() {
-                    return n.e(36).then(n.bind(null, "hy6r"))
+                    return n.e(34).then(n.bind(null, "hy6r"))
                 }, "TeamsLandingPage"),
                 le = g.a.wrap(function() {
-                    return n.e(35).then(n.bind(null, "8n14"))
+                    return n.e(33).then(n.bind(null, "8n14"))
                 }, "OnboardingRoot"),
                 ce = function(e) {
                     return i.createElement(m.c, {
@@ -52260,7 +52254,7 @@
                         return i.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return i.trys.push([0, 2, , 3]), [4, n.e(33).then(n.bind(null, "sA1O"))];
+                                    return i.trys.push([0, 2, , 3]), [4, n.e(31).then(n.bind(null, "sA1O"))];
                                 case 1:
                                     return t = i.sent(), r.o.logger.addMessageListener(t.desktopLogger(e)), [3, 3];
                                 case 2:
@@ -56540,6 +56534,6 @@
         }
     },
     [
-        [173, 101, 0]
+        [173, 99, 0]
     ]
 ]);
