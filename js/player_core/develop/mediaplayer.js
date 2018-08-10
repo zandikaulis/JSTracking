@@ -2261,7 +2261,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-454ea49e";
+    return "2.3.0-064e0574";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2833,7 +2833,6 @@ function getClientTrackingInfo() {
 /* WEBPACK VAR INJECTION */(function(global) {var DRMManager = __webpack_require__(/*! ./drmmanager */ "./platforms/web/js/drmmanager.js");
 var Queue = __webpack_require__(/*! ./queue */ "./platforms/web/js/queue.js");
 var Promise = global.Promise || __webpack_require__(/*! promise-polyfill */ "./node_modules/promise-polyfill/promise.js");
-var VTTCue = global.VTTCue || global.TextTrackCue;
 
 // constants
 var UNKNOWN = -1;
@@ -3065,6 +3064,10 @@ MediaSink.prototype.addCue = function (time, duration, onCue) {
     if (duration <= 0) {
         duration = 1;
     }
+    // `var VTTCue` was in closure scope. However, with videojs hls tech,
+    // gloval.VTTCue is temporarily polyfilled on Edge and then restored.
+    // So avoiding closure scope. More details - https://jira.twitch.com/browse/CVP-2513
+    var VTTCue = global.VTTCue || global.TextTrackCue;
     var cue = new VTTCue(time, time + duration, '');
     cue.onenter = onCue;
     this._metadataTrack.addCue(cue);
