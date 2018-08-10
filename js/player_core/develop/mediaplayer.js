@@ -1852,10 +1852,12 @@ module.exports = {
     /**
      * Stitched ad has started
      * @param Object containing key/values from segment attributes
+     * @deprecated use TIMED_METADATA
      */
     SPLICE_OUT: 'MetaSpliceOut',
     /**
      * Stitched ad has ended
+     * @deprecated use TIMED_METADATA
      */
     SPLICE_IN: 'MetaSpliceIn',
 };
@@ -1973,7 +1975,11 @@ module.exports = {
      * Notifies a failed API call inside the worker message handler
      * @param {string} message The message of exception
      */
-    WORKER_ERROR: 'PlayerWorkerError'
+    WORKER_ERROR: 'PlayerWorkerError',
+    /**
+     * Generic Timed metadata
+     */
+    TIMED_METADATA: 'TimedMetadata',
 };
 
 
@@ -2255,7 +2261,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-8545cc65";
+    return "2.3.0-dd1f76fa";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2283,7 +2289,7 @@ MediaPlayer.prototype.setVolume = function (volume) {
     this._emitter.emit(PlayerEvent.VOLUME_CHANGED);
 }
 
-MediaPlayer.prototype.getVolume = function (volume) {
+MediaPlayer.prototype.getVolume = function () {
     return this._mediaSink.videoElement().volume;
 }
 
@@ -2600,9 +2606,9 @@ MediaPlayer.prototype._startPlayback = function () {
     }.bind(this)).catch(noop); // catch to prevent logged warning
 }
 
-MediaPlayer.prototype._addCue = function (time) {
-    this._mediaSink.addCue(time, function () {
-        this._postMessage(WorkerMessage.SINK_CUE, time);
+MediaPlayer.prototype._addCue = function (cue) {
+    this._mediaSink.addCue(cue.time, cue.duration, function () {
+        this._postMessage(WorkerMessage.SINK_CUE, cue.time);
     }.bind(this));
 }
 
@@ -3051,11 +3057,15 @@ MediaSink.prototype.setPlaybackRate = function (rate) {
  * Add a cue that will be fired when the playhead crosses
  * the specified time. Only fired once.
  * @param {number} time - when to fire the cue
+ * @param {number} duration - duration of the cue
  * @param {function} onCue - called when the cue is fired
  */
-MediaSink.prototype.addCue = function (time, onCue) {
+MediaSink.prototype.addCue = function (time, duration, onCue) {
     // endTime must be larger than startTime on Edge
-    var cue = new VTTCue(time, time+1, '');
+    if (duration <= 0) {
+        duration = 1;
+    }
+    var cue = new VTTCue(time, time + duration, '');
     cue.onenter = onCue;
     this._metadataTrack.addCue(cue);
 };
@@ -3518,7 +3528,7 @@ module.exports = {
     /**
      * Add a timed metadata cue to the text track
      * @param {number} cue.time - time to fire the metadata event
-     * @param {string} cue.metadata - opaque metadata payload
+     * @param {number} cue.duration - duration of the metadata event
      */
     ADD_CUE: 'ClientAddCue',
 };

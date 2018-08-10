@@ -97,6 +97,7 @@ window.__twilightSettings = {
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
     "spade_url": "https://video-edge-a1f23f.sjc02.hls.ttvnw.net/v1/segment/CuAaRhSWN13bM7J8LnV1SPCq0QtM6zDChaY0DNQrcnj9xCG8EgOUL-Q9PkLdpQx666z7IPZFvmD1kqolBH94akn0iHg13lix4shPiXbWSKg5YqFZwoIAfd2Puc-L-VoI8sKTw3HmI2_ue1qa6067Dwb8fBUW70dDM945yBclsqrKQr_w7o3g2UbFAGZ4tfoixeZS6Jsqvvwu_zEY6k7HcEZ1KynC3kBe2JHszi3jqON20pz7DZ3jTEKIk67cFR-EytVKNNElLHv0CEkczMoMKp9oKK1vUomU1R3l5DmMvo7Sj8AtdeKd8c3aD9v1pk9uNz5Oe0fsDZ_LI4jrnwDDo7Z84L8qwWETJpRH1kWKwD9-PYM9U2T1dP3cB5S0EG-isqzk4OKdmrDsqekDbH7O42CaZBbC89_37ygDI_uFZIYhbi3J0L1MZwdLRPMrLxltx_Xql8kJ9ci3U-NTDoEGvfbP25PJbza2_F8YRKXit9kN93qYfNKLiI8Vttnxq-sR6pgbUn3RfjtJVy1xf6XOCHUyMMZq7aMojWqQ0YaBSXoSGIOuDErRzg40qSVb56wazsvCUBjlsH3fUVjpS-FWLDCw7vtnpCSnw0J0VX-njGMx6Mf8lb20te-Z-La2dJvSbbnXsZoyb274cXD_i79vRCAnkZ126fv61Z5uqvTB7ta78sJm0_Girq59rgY9y28hzsM5beIs13n8-oJHVTT7jtRGHLNHxsXHQNnb6psnAvctVahCkPLUUTcwfcOy.ts",
+    "squad_stream_banner_query_enabled": false,
     "squad_stream_banner_whitelist": [],
     "squad_stream_feature": "off",
     "squad_stream_uxr_logins": [],
