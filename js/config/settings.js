@@ -373,13 +373,13 @@ window.__twilightSettings = {
         },
         "21084181-ee54-486d-8eb2-09a317143a8e": {
             "name": "pushy_notifications_fatigue_v2",
-            "v": 4367,
+            "v": 4430,
             "t": 2,
             "groups": [{
-                "weight": 80,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 50,
                 "value": "active"
             }]
         },
