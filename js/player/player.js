@@ -38,7 +38,7 @@
             r[2] = a;
             var o = document.getElementsByTagName("head")[0],
                 s = document.createElement("script");
-            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".78513eef10a48af29da9.js";
+            s.type = "text/javascript", s.charset = "utf-8", s.async = !0, s.timeout = 12e4, t.nc && s.setAttribute("nonce", t.nc), s.src = t.p + "js/" + e + ".542632950484da9da138.js";
             var u = setTimeout(n, 12e4);
             return s.onerror = s.onload = n, o.appendChild(s), a
         }, t.m = e, t.c = r, t.d = function(e, n, r) {
@@ -1873,7 +1873,7 @@
             F = n(11),
             V = n(6),
             H = n(58),
-            z = n(103),
+            z = n(104),
             W = n(50),
             K = n(33),
             G = n(482);
@@ -5698,14 +5698,15 @@
         t.a = r
     }, function(e, t, n) {
         "use strict";
-        var r, i = n(182);
+        var r, i = n(182),
+            a = n(136);
         ! function(e) {
             e.SupervisorReady = "supervisor-ready", e.SupervisorInit = "supervisor-init"
         }(r || (r = {}));
-        var a, o = n(136);
+        var o;
         ! function(e) {
             e.ExtensionFrameLoaded = "extensionFrameLoaded", e.IdentityLinked = "identityLinked", e.RequestModal = "requestModal", e.ShowBitsBalance = "showBitsBalance", e.ShowUseBitsSuccess = "showUseBitsSuccess", e.UseBitsError = "useBitsError"
-        }(a || (a = {}));
+        }(o || (o = {}));
         var s;
         ! function(e) {
             e.Video = "video", e.Audio = "audio", e.Remote = "remote", e.ChatOnly = "chat-only"
@@ -5735,17 +5736,17 @@
         }), n.d(t, "m", function() {
             return r
         }), n.d(t, "k", function() {
-            return o.a
+            return a.a
         }), n.d(t, !1, function() {
             return 300
         }), n.d(t, "e", function() {
-            return a
+            return o
         }), n.d(t, "l", function() {
             return s
         }), n.d(t, "j", function() {
             return u
         });
-        var c = [r.SupervisorReady, i.b.TwitchExtLoaded, i.b.TwitchExtLongtask, i.b.TwitchExtUserAction, i.b.TwitchExtNetworkTiming, i.b.TwitchExtBeginPurchase, i.b.TwitchExtBitsOnHover, i.b.TwitchExtUseBits, i.b.TwitchExtPubSubReceived, i.b.TwitchExtPubsubListen, i.b.TwitchExtPubsubUnlisten, o.a.FollowAction, o.a.FollowStatusRequest, o.a.IdShareRequest]
+        var c = [r.SupervisorReady, i.b.TwitchExtLoaded, i.b.TwitchExtLongtask, i.b.TwitchExtUserAction, i.b.TwitchExtNetworkTiming, i.b.TwitchExtBeginPurchase, i.b.TwitchExtBitsOnHover, i.b.TwitchExtUseBits, i.b.TwitchExtPubSubReceived, i.b.TwitchExtPubsubListen, i.b.TwitchExtPubsubUnlisten, a.a.FollowAction, a.a.FollowStatusRequest, a.a.IdShareRequest]
     }, function(e, t, n) {
         "use strict";
         var r = n(88);
@@ -6178,7 +6179,21 @@
     }, function(e, t, n) {
         "use strict";
 
-        function r(e, t) {
+        function r() {
+            var e = window.localStorage.getItem("twilight.theme");
+            if (e) return R[e];
+            if (e = window.localStorage.getItem("storage:theme")) {
+                var t = JSON.parse(e);
+                if (t.activeTheme) return j[t.activeTheme] || s.Light
+            }
+            return s.Light
+        }
+
+        function i(e, t) {
+            return "USD" === t ? "$" + e : e + " " + t
+        }
+
+        function a(e, t) {
             var n = document.createElement("a");
             n.href = e;
             var r = n.search.slice(1),
@@ -6194,62 +6209,170 @@
             return s.length > 0 ? a + "?" + s.join("&") : e
         }
 
-        function i() {
-            var e = window.localStorage.getItem("twilight.theme");
-            if (e) return N[e];
-            if (e = window.localStorage.getItem("storage:theme")) {
-                var t = JSON.parse(e);
-                if (t.activeTheme) return L[t.activeTheme] || w.Light
-            }
-            return w.Light
-        }
-
-        function a(e, t) {
-            return "USD" === t ? "$" + e : e + " " + t
-        }
-
         function o(e) {
-            if (Z.has(e)) return Z.get(e);
+            if (de.has(e)) return de.get(e);
             var t = e();
-            return Z.set(e, t), t
+            return de.set(e, t), t
         }
-        var s, u = (n(408), n(409), n(216), n(102)),
-            c = function(e) {
-                var t = document.createElement("a");
-                return t.href = e, {
-                    host: t.host
-                }
-            },
+        var s, u = (n(408), n(216), n(411), n(102)),
+            c = n(103),
             l = function(e) {
-                return e ? e.split(".").pop() || "" : ""
+                var t = "twitch.ext." + e,
+                    n = c.a.newRequest("/v5/bits/extensions/" + t + "/products", {
+                        method: "GET"
+                    });
+                return c.a.authRequest(n)
             },
-            d = function() {
-                return window.innerHeight
+            d = function(e, t, n) {
+                var r = c.a.newRequest("/v5/bits/extensions/is-eligible/" + e, {
+                    body: JSON.stringify({
+                        channel_id: t,
+                        extension_client_id: n
+                    }),
+                    method: "POST"
+                });
+                return c.a.authRequest(r)
             },
             f = function(e) {
-                return e.getBoundingClientRect()
+                var t = c.a.newRequest("/v5/bits/extensions/use-bits/" + e, {
+                    method: "POST"
+                });
+                return c.a.authRequest(t)
             },
-            p = {
-                getWindowInnerHeight: d,
-                getElementBoundingClientRect: f
-            },
-            h = function(e, t) {
-                var n = !1;
-                return function() {
-                    for (var r = [], i = 0; i < arguments.length; i++) r[i] = arguments[i];
-                    n || (n = !0, setTimeout(function() {
-                        n = !1
-                    }, t), e.apply(null, r))
-                }
-            },
-            m = .9,
+            p = n(104),
+            h = n(50),
+            m = n(254),
             y = function() {
+                function e() {
+                    this.driver = m.a.getInstance("production")
+                }
+                return e.prototype.setEnvironment = function(e) {
+                    this.driver = m.a.getInstance(e)
+                }, e.prototype.subscribe = function(e) {
+                    var t = this,
+                        n = e.topic,
+                        r = e.success,
+                        i = e.failure,
+                        a = e.message,
+                        o = e.token,
+                        s = this.createSubscribeCallback(a);
+                    return this.driver.Listen({
+                            topic: n,
+                            success: r,
+                            failure: i,
+                            message: s,
+                            auth: o
+                        }),
+                        function() {
+                            return t.unsubscribe(n, s)
+                        }
+                }, e.prototype.unsubscribe = function(e, t) {
+                    this.driver.Unlisten({
+                        topic: e,
+                        success: function() {},
+                        failure: function(e) {},
+                        message: t
+                    })
+                }, e.prototype.createSubscribeCallback = function(e) {
+                    return function(t) {
+                        var n;
+                        try {
+                            n = JSON.parse(t)
+                        } catch (e) {
+                            return
+                        }
+                        e(n)
+                    }
+                }, e
+            }(),
+            v = function() {
+                function e() {
+                    this.SUPERVISOR_LOCATION = {
+                        production: "https://supervisor.ext-twitch.tv",
+                        staging: "https://supervisor.ext-assets.internal.justin.tv"
+                    }, this.env = "production"
+                }
+                return Object.defineProperty(e.prototype, "environment", {
+                    get: function() {
+                        return this.env
+                    },
+                    set: function(e) {
+                        this.env = e
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(e.prototype, "supervisorOrigin", {
+                    get: function() {
+                        return this.SUPERVISOR_LOCATION[this.env] || this.SUPERVISOR_LOCATION.production
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), Object.defineProperty(e.prototype, "supervisorURL", {
+                    get: function() {
+                        return this.supervisorOrigin + "/supervisor/v1/index.html"
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), e
+            }(),
+            g = new v,
+            b = function() {
+                function e() {
+                    var e = this;
+                    this.clockSkew = 0, this.tokens = {}, this.timers = {}, this.tokenEmitter = new u.EventEmitter2, this.clearTokenManager = function() {
+                        e.clockSkew = 0, e.tokenEmitter.removeAllListeners();
+                        for (var t in e.tokens) e.tokens[t] && (delete e.tokens[t], e.timers[t] && (clearTimeout(e.timers[t]), delete e.timers[t]))
+                    }, this.getToken = function(t) {
+                        return e.tokens[t]
+                    }, this.registerToken = function(t, n) {
+                        var r = new k(n),
+                            i = e.tokens[t] || r;
+                        e.tokens[t] = new k(n), e.tokenEmitter.emit(t, r, i), e.updateRefreshTimer(t)
+                    }, this.updateRefreshTimer = function(t) {
+                        var n = e.getToken(t),
+                            r = e.tokenEmitter.listeners(t).length > 0,
+                            i = void 0 !== e.timers[t];
+                        r && !i ? e.timers[t] = setTimeout(function() {
+                            delete e.timers[t], e.refreshToken(t)
+                        }, n.refreshAfter) : !r && i && (clearTimeout(e.timers[t]), delete e.timers[t])
+                    }, this.refreshToken = function(t) {
+                        var n = e.getToken(t);
+                        Object(p.e)(t, n).catch(function() {
+                            return e.getTokenFromExtensions(t, n)
+                        }).then(function(n) {
+                            var r = n.token;
+                            r && e.registerToken(t, r)
+                        })
+                    }, this.getTokenFromExtensions = function(e, t) {
+                        return Object(p.c)(t.payload.channel_id).then(function(t) {
+                            return {
+                                token: t.tokens.reduce(function(t, n) {
+                                    var r = n.extension_id,
+                                        i = n.token;
+                                    return r === e ? i : t
+                                }, "")
+                            }
+                        })
+                    }
+                }
+                return e.prototype.setClockSkew = function(e) {
+                    var t = new Date(e).getTime();
+                    this.clockSkew = Date.now() - t
+                }, e.prototype.subscribe = function(e, t) {
+                    this.tokenEmitter.on(e, t), this.getToken(e) && this.updateRefreshTimer(e)
+                }, e.prototype.unsubscribe = function(e, t) {
+                    this.tokenEmitter.off(e, t), this.getToken(e) && this.updateRefreshTimer(e)
+                }, e
+            }(),
+            _ = new b,
+            w = .9,
+            k = function() {
                 function e(e) {
                     this.token = e;
                     var t = Date.now(),
                         n = t,
-                        r = 1e3 * this.payload.exp + b.clockSkew;
-                    this.refreshAt = t + (r - n) * m
+                        r = 1e3 * this.payload.exp + _.clockSkew;
+                    this.refreshAt = t + (r - n) * w
                 }
                 return Object.defineProperty(e.prototype, "payload", {
                     get: function() {
@@ -6302,61 +6425,780 @@
                     configurable: !0
                 }), e
             }(),
-            v = n(103),
-            g = function() {
-                function e() {
+            E = n(181),
+            S = this && this.__extends || function() {
+                var e = function(t, n) {
+                    return (e = Object.setPrototypeOf || {
+                            __proto__: []
+                        }
+                        instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
+                        })(t, n)
+                };
+                return function(t, n) {
+                    function r() {
+                        this.constructor = t
+                    }
+                    e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
+                }
+            }(),
+            P = "playercontext",
+            O = "contextupdate",
+            T = function(e) {
+                function t(t) {
+                    var n = e.call(this) || this;
+                    return n.currentControlHandlers = {
+                        onShouldFetchExtensions: function() {},
+                        onDestroyExtension: function() {},
+                        onActivationChanged: function() {}
+                    }, n.currentExtensionUnsubscribes = Object(E.a)(), n.hasPurchaseCompletedSubscriptionList = Object(E.a)(), n.hasBitsTransactionCompletedSubscriptionList = Object(E.a)(), n.onPlayerContextUpdate = function() {
+                        n.emit(P)
+                    }, n.onTwilightContextUpdate = function(e) {
+                        n.emit(O, e)
+                    }, n.onExtensionControlMessage = function(e) {
+                        switch (e.status) {
+                            case "activate":
+                                if (e.maxDelayMS > 0) {
+                                    var t = Math.random() * e.maxDelayMS;
+                                    setTimeout(function() {
+                                        n.currentControlHandlers.onShouldFetchExtensions()
+                                    }, t)
+                                } else n.currentControlHandlers.onShouldFetchExtensions();
+                                break;
+                            case "anchor_changed":
+                                var r = e.activationConfig;
+                                r && n.currentControlHandlers.onActivationChanged && n.currentControlHandlers.onActivationChanged(e.extensionId, r);
+                                break;
+                            case "deactivate":
+                            case "uninstall":
+                                n.currentControlHandlers.onDestroyExtension(e.extensionId)
+                        }
+                    }, n.onExtensionMassControlMessage = function(e) {
+                        switch (e.status) {
+                            case "mass_deactivate":
+                                n.currentControlHandlers.onDestroyExtension(e.extensionId)
+                        }
+                    }, n.onBroadcastSettingsUpdateMessage = function(e) {
+                        var t = e.channel_id,
+                            r = e.game,
+                            i = e.old_game;
+                        n.currentChannelId && t === n.currentChannelId || !n.broadcastSettingsUnsubscribe ? r !== i && n.emit(O, {
+                            game: r
+                        }) : n.broadcastSettingsUnsubscribe()
+                    }, n.pubsub = t || new y, n
+                }
+                return S(t, e), t.prototype.getInstalledExtensions = function(e) {
+                    var t = this;
+                    return Object(p.c)(e).then(function(e) {
+                        return t.registerExtensionInstallations(e)
+                    })
+                }, t.prototype.registerExtensionInstallations = function(e) {
+                    var t = this;
+                    return _.setClockSkew(e.issued_at), e.tokens.forEach(function(n) {
+                        var r = e.installed_extensions,
+                            i = r.reduce(function(e, t) {
+                                var r = t.extension,
+                                    i = t.installation_status;
+                                return e || (r.id === n.extension_id ? "active" === i.activation_state : e)
+                            }, !1),
+                            a = new k(n.token).isBroadcaster;
+                        (i || a) && (_.registerToken(n.extension_id, n.token), t.subscribeToMassExtensionControl(n.extension_id))
+                    }), e
+                }, t.prototype.setEnvironmentOptions = function(e) {
+                    e.env && (this.pubsub.setEnvironment(this.getPubsubEnvironment(e.env)), g.environment = e.env), c.a.setApiOptions({
+                        apiUrl: e.apiUrl,
+                        authToken: e.authToken
+                    })
+                }, t.prototype.subscribeToExtensionControl = function(e, t) {
+                    this.currentChannelId && e !== this.currentChannelId && this.unsubscribeFromExtensionControl(this.currentChannelId), this.currentChannelId = e, this.currentControlHandlers = t, this.currentChannelUnsubscribe = this.pubsub.subscribe({
+                        topic: "extension-control." + e,
+                        success: this.onSubscribeSuccess,
+                        failure: this.onSubscribeFailure,
+                        message: this.onExtensionControlMessage
+                    }), this.broadcastSettingsUnsubscribe = this.pubsub.subscribe({
+                        topic: "broadcast-settings-update." + e,
+                        success: this.onSubscribeSuccess,
+                        failure: this.onSubscribeFailure,
+                        message: this.onBroadcastSettingsUpdateMessage
+                    })
+                }, t.prototype.unsubscribeFromExtensionControl = function(e) {
+                    if (this.currentChannelId && e === this.currentChannelId) {
+                        this.currentChannelUnsubscribe && this.currentChannelUnsubscribe(), this.broadcastSettingsUnsubscribe && this.broadcastSettingsUnsubscribe();
+                        for (var t = 0, n = Object.keys(this.currentExtensionUnsubscribes); t < n.length; t++) {
+                            var r = n[t];
+                            this.currentExtensionUnsubscribes[r]()
+                        }
+                    }
+                }, t.prototype.registerPlayer = function(e) {
+                    this.player = e, this.player.addEventListener("pause", this.onPlayerContextUpdate), this.player.addEventListener("play", this.onPlayerContextUpdate), this.player.addEventListener("statsupdate", this.onPlayerContextUpdate), this.player.addEventListener("volumechange", this.onPlayerContextUpdate)
+                }, t.prototype.unregisterPlayer = function() {
+                    this.player && (this.player.removeEventListener("pause", this.onPlayerContextUpdate), this.player.removeEventListener("play", this.onPlayerContextUpdate), this.player.removeEventListener("statsupdate", this.onPlayerContextUpdate), this.player.removeEventListener("volumechange", this.onPlayerContextUpdate), this.player = void 0)
+                }, t.prototype.setPlayerWindow = function(e) {
+                    this.playerWindow = e
+                }, t.prototype.postContext = function(e) {
+                    this.playerWindow && this.playerWindow.postMessage({
+                        event: O,
+                        context: e
+                    }, "*"), this.emit(O, e)
+                }, t.prototype.listenForContext = function() {
                     var e = this;
-                    this.clockSkew = 0, this.tokens = {}, this.timers = {}, this.tokenEmitter = new u.EventEmitter2, this.clearTokenManager = function() {
-                        e.clockSkew = 0, e.tokenEmitter.removeAllListeners();
-                        for (var t in e.tokens) e.tokens[t] && (delete e.tokens[t], e.timers[t] && (clearTimeout(e.timers[t]), delete e.timers[t]))
-                    }, this.getToken = function(t) {
-                        return e.tokens[t]
-                    }, this.registerToken = function(t, n) {
-                        var r = new y(n),
-                            i = e.tokens[t] || r;
-                        e.tokens[t] = new y(n), e.tokenEmitter.emit(t, r, i), e.updateRefreshTimer(t)
-                    }, this.updateRefreshTimer = function(t) {
-                        var n = e.getToken(t),
-                            r = e.tokenEmitter.listeners(t).length > 0,
-                            i = void 0 !== e.timers[t];
-                        r && !i ? e.timers[t] = setTimeout(function() {
-                            delete e.timers[t], e.refreshToken(t)
-                        }, n.refreshAfter) : !r && i && (clearTimeout(e.timers[t]), delete e.timers[t])
-                    }, this.refreshToken = function(t) {
-                        var n = e.getToken(t);
-                        Object(v.e)(t, n).catch(function() {
-                            return e.getTokenFromExtensions(t, n)
-                        }).then(function(n) {
-                            var r = n.token;
-                            r && e.registerToken(t, r)
-                        })
-                    }, this.getTokenFromExtensions = function(e, t) {
-                        return Object(v.c)(t.payload.channel_id).then(function(t) {
-                            return {
-                                token: t.tokens.reduce(function(t, n) {
-                                    var r = n.extension_id,
-                                        i = n.token;
-                                    return r === e ? i : t
-                                }, "")
+                    window.addEventListener("message", function(t) {
+                        var n = t.data;
+                        if (t.origin === window.location.origin && n.event && n.event === O) {
+                            var r = n.context;
+                            e.onTwilightContextUpdate(r)
+                        }
+                    }, !1)
+                }, t.prototype.onPurchaseCompleted = function(e, t) {
+                    var n = this,
+                        r = "purchase-completed." + e;
+                    if (this.on(r, t), !this.hasPurchaseCompletedSubscriptionList[e]) {
+                        var i = c.a.authToken;
+                        this.hasPurchaseCompletedSubscriptionList[e] = !0, this.pubsub.subscribe({
+                            token: i,
+                            topic: "user-extensionpurchase-events." + e,
+                            success: function() {},
+                            failure: function() {},
+                            message: function(e) {
+                                n.emit(r, e)
                             }
                         })
                     }
+                }, t.prototype.onBitsTransactionCompleted = function(e, t, n, r) {
+                    var i = this,
+                        a = "bits-transaction-completed." + e + "-" + t;
+                    this.on(a, r), this.hasBitsTransactionCompletedSubscriptionList[a] || (this.hasBitsTransactionCompletedSubscriptionList[a] = !0, this.pubsub.subscribe({
+                        token: c.a.authToken,
+                        topic: "bits-ext-v1-transaction." + e + "-" + t,
+                        success: function() {},
+                        failure: function() {},
+                        message: function(e) {
+                            i.emit(a, e)
+                        }
+                    }), null !== n && this.pubsub.subscribe({
+                        token: c.a.authToken,
+                        topic: "bits-ext-v1-user-transaction." + n + "." + e + "-" + t,
+                        success: function() {},
+                        failure: function() {},
+                        message: function(e) {
+                            i.emit(a, e)
+                        }
+                    }))
+                }, t.prototype.onSubscribeFailure = function(e) {}, t.prototype.onSubscribeSuccess = function() {}, t.prototype.getPubsubEnvironment = function(e) {
+                    return "staging" === e ? "darklaunch" : "test" === e ? "production" : e
+                }, t.prototype.subscribeToMassExtensionControl = function(e) {
+                    this.currentExtensionUnsubscribes[e] || (this.currentExtensionUnsubscribes[e] = this.pubsub.subscribe({
+                        topic: "extension-control." + e,
+                        success: this.onSubscribeSuccess,
+                        failure: this.onSubscribeFailure,
+                        message: this.onExtensionMassControlMessage
+                    }))
+                }, t
+            }(u.EventEmitter2),
+            C = new T;
+        ! function(e) {
+            e.Light = "light", e.Dark = "dark"
+        }(s || (s = {}));
+        var x, R = {
+                0: s.Light,
+                1: s.Dark
+            },
+            j = {
+                "": s.Light,
+                "theme--dark": s.Dark
+            },
+            A = this && this.__extends || function() {
+                var e = function(t, n) {
+                    return (e = Object.setPrototypeOf || {
+                            __proto__: []
+                        }
+                        instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
+                        })(t, n)
+                };
+                return function(t, n) {
+                    function r() {
+                        this.constructor = t
+                    }
+                    e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                 }
-                return e.prototype.setClockSkew = function(e) {
-                    var t = new Date(e).getTime();
-                    this.clockSkew = Date.now() - t
-                }, e.prototype.subscribe = function(e, t) {
-                    this.tokenEmitter.on(e, t), this.getToken(e) && this.updateRefreshTimer(e)
-                }, e.prototype.unsubscribe = function(e, t) {
-                    this.tokenEmitter.off(e, t), this.getToken(e) && this.updateRefreshTimer(e)
+            }(),
+            I = this && this.__assign || function() {
+                return I = Object.assign || function(e) {
+                    for (var t, n = 1, r = arguments.length; n < r; n++) {
+                        t = arguments[n];
+                        for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                    }
+                    return e
+                }, I.apply(this, arguments)
+            },
+            M = "en",
+            N = function(e) {
+                function t(t, n) {
+                    void 0 === n && (n = M);
+                    var i = e.call(this) || this;
+                    return i.extensionMode = t, i.language = n, i.context = {}, i.isContextInitialized = !1, i.destroy = function() {
+                        C.off(P, i.updateLocalContext), C.off(O, i.updateLocalContext)
+                    }, i.initializeContext = function() {
+                        i.isContextInitialized = !0, i.emit("context", i.context, Object.keys(i.context))
+                    }, i.getPlayerContext = function() {
+                        var e = C.player;
+                        if (!e) return {};
+                        var t = e.getPlaybackStats();
+                        return {
+                            bitrate: t.playbackRate,
+                            bufferSize: t.bufferSize,
+                            displayResolution: t.displayResolution,
+                            hlsLatencyBroadcaster: t.hlsLatencyBroadcaster,
+                            isFullScreen: e.getFullscreen(),
+                            isPaused: e.isPaused(),
+                            isTheatreMode: e.getTheatre(),
+                            videoResolution: t.videoResolution,
+                            isMuted: e.getMuted(),
+                            volume: e.getVolume()
+                        }
+                    }, i.getBaseContext = function() {
+                        return {
+                            mode: i.extensionMode,
+                            language: i.language
+                        }
+                    }, i.updateLocalContext = function(e) {
+                        void 0 === e && (e = {});
+                        var t = I({}, i.context, e, i.getPlayerContext(), i.getBaseContext());
+                        void 0 !== t.theme && (t.theme = i.translateTheme(t.theme)), i.diffAndEmitContext(t)
+                    }, i.diffAndEmitContext = function(e) {
+                        var t = i.context;
+                        if (i.context = e, i.isContextInitialized) {
+                            var n = Object.keys(e),
+                                r = n.reduce(function(n, r) {
+                                    return t[r] !== e[r] && n.push(r), n
+                                }, []);
+                            r.length > 0 && i.emit("context", e, r)
+                        }
+                    }, i.translateTheme = function(e) {
+                        return "number" == typeof e ? R[e] || s.Light : e
+                    }, C.on(P, i.updateLocalContext), C.on(O, i.updateLocalContext), i.context = i.getBaseContext(), i.context.theme = r(), t === h.f.Viewer && (i.context.game = "", i.context.playbackMode = h.l.Video), i
+                }
+                return A(t, e), t
+            }(u.EventEmitter2),
+            L = this && this.__extends || function() {
+                var e = function(t, n) {
+                    return (e = Object.setPrototypeOf || {
+                            __proto__: []
+                        }
+                        instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
+                        })(t, n)
+                };
+                return function(t, n) {
+                    function r() {
+                        this.constructor = t
+                    }
+                    e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
+                }
+            }();
+        ! function(e) {
+            e.CurrentUser = "current_user", e.Other = "other"
+        }(x || (x = {}));
+        var q, D = function(e) {
+                function t(t, n) {
+                    void 0 === n && (n = {});
+                    var r = e.call(this) || this;
+                    return r.iframe = t, r.featureOverrides = n, r.destroy = function() {
+                        r.iframe.ownerDocument.defaultView.removeEventListener("message", r.handleMessage)
+                    }, r.sendContext = function(e, t) {
+                        r.sendMessage({
+                            action: h.a.TwitchExtContext,
+                            context: e,
+                            updatedFields: t
+                        })
+                    }, r.sendExtensionAuth = function(e) {
+                        r.sendMessage({
+                            action: h.a.TwitchExtAuth,
+                            auth: e
+                        })
+                    }, r.sendExtensionBootstrap = function(e) {
+                        r.sendMessage({
+                            action: h.a.TwitchExtBootstrap,
+                            auth: e,
+                            features: Object.assign({}, h.j, r.featureOverrides)
+                        })
+                    }, r.sendSupervisorInit = function(e) {
+                        r.sendMessage({
+                            action: h.m.SupervisorInit,
+                            options: e
+                        })
+                    }, r.sendFunctionReply = function(e) {
+                        r.sendMessage(e)
+                    }, r.sendExtensionReloadEntitlementsMessage = function() {
+                        r.sendMessage({
+                            action: h.a.TwitchExtReloadEntitlements
+                        })
+                    }, r.sendVisibilityChanged = function(e, t) {
+                        r.sendMessage({
+                            action: h.a.TwitchExtVisibilityChanged,
+                            isVisible: e,
+                            context: t
+                        })
+                    }, r.sendPositionChange = function(e) {
+                        r.sendMessage({
+                            action: h.a.TwitchExtPositionChanged,
+                            position: e
+                        })
+                    }, r.sendBitsProductsMessage = function(e) {
+                        r.sendMessage({
+                            action: h.a.TwitchExtBitsProducts,
+                            products: e
+                        })
+                    }, r.sendBitsTransactionCompleteMessage = function(e) {
+                        r.sendMessage(e)
+                    }, r.sendHelperPubsubMessage = function(e, t, n) {
+                        r.sendMessage({
+                            action: h.a.TwitchExtPubsubMessage,
+                            payload: {
+                                target: e,
+                                contentType: t,
+                                content: n
+                            }
+                        })
+                    }, r.sendHelperPubsubBindFailure = function(e, t) {
+                        r.sendMessage({
+                            action: h.a.TwitchExtPubsubBindFailure,
+                            payload: {
+                                target: e,
+                                error: t
+                            }
+                        })
+                    }, r.handleMessage = function(e) {
+                        var t = e.source,
+                            n = e.data;
+                        if (t === r.iframe.contentWindow) try {
+                            r.handleExtensionAction(n)
+                        } catch (e) {
+                            console.error("Caught Error in Message Handler: " + e.stack)
+                        }
+                    }, r.handleExtensionAction = function(e) {
+                        -1 !== h.d.indexOf(e.action) && r.emit(e.action, e)
+                    }, r.sendMessage = function(e) {
+                        r.iframe && r.iframe.contentWindow && r.iframe.contentWindow.postMessage(e, g.supervisorOrigin)
+                    }, r.iframe.ownerDocument.defaultView.addEventListener("message", r.handleMessage), r
+                }
+                return L(t, e), t.prototype.sendExtensionReloadMessage = function() {
+                    this.sendMessage({
+                        action: h.a.TwitchExtReload
+                    })
+                }, t.prototype.sendExtensionProductPricesMessage = function(e) {
+                    var t = e.products.reduce(function(e, t) {
+                        var n = t.sku,
+                            r = t.price;
+                        return e[n] = {
+                            displayPrice: i(r.price, r.currency_unit)
+                        }, e
+                    }, {});
+                    this.sendMessage({
+                        action: h.a.TwitchExtProductPrices,
+                        prices: t
+                    })
+                }, t
+            }(u.EventEmitter2),
+            B = function() {
+                function e(e, t, n) {
+                    var r = this;
+                    this.coordinator = e, this.loginId = t, this.emitConfirmationRequest = n, this.functionActionMap = Object(E.a)(), this.functionModalMap = Object(E.a)(), this.registerFunctionModal = function(e, t) {
+                        t.onOpen(function(n) {
+                            var i = r.loginId ? e : h.k.LoginRequest,
+                                a = {
+                                    action: i,
+                                    resultCallback: t.resultCallback,
+                                    defaultResult: t.defaultResult
+                                };
+                            n && (a.options = n), r.requestConfirmation(a)
+                        }), t.onModalResult && t.onModalResult(function(e) {
+                            r.sendFunctionReply(e)
+                        }), r.functionModalMap[e] = t, r.functionActionMap[e] = r.functionActionHandler(e), r.coordinator.on(e, r.functionActionMap[e])
+                    }, this.unregisterFunctionModal = function(e) {
+                        r.coordinator.off(e, r.functionActionMap[e]), delete r.functionActionMap[e], delete r.functionModalMap[e]
+                    }, this.functionActionHandler = function(e) {
+                        return function(t) {
+                            var n = r.functionModalMap[e];
+                            n && n.open(t)
+                        }
+                    }, this.requestConfirmation = function(e) {
+                        r.emitConfirmationRequest(e)
+                    }, this.sendFunctionReply = function(e) {
+                        r.coordinator.sendFunctionReply(e)
+                    }
+                }
+                return e
+            }(),
+            U = n(136);
+        ! function(e) {
+            e.UseBitsLinkUserFailure = "extension_use_bits_link_user_fail", e.UseBitsUserIneligible = "extension_use_bits_user_ineligible", e.UseBitsFailure = "extension_use_bits_fail", e.UseBitsInitialization = "extension_use_bits_init", e.UseBitsConfirmation = "extension_use_bits_confirm", e.UseBitsSuccess = "extension_use_bits_success"
+        }(q || (q = {}));
+        var F, V = function(e) {
+                var t = document.createElement("a");
+                return t.href = e, {
+                    host: t.host
+                }
+            },
+            H = function(e) {
+                return e ? e.split(".").pop() || "" : ""
+            },
+            z = this && this.__assign || function() {
+                return z = Object.assign || function(e) {
+                    for (var t, n = 1, r = arguments.length; n < r; n++) {
+                        t = arguments[n];
+                        for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                    }
+                    return e
+                }, z.apply(this, arguments)
+            };
+        ! function(e) {
+            e.Cancelled = "cancelled", e.LoggedOut = "logged_out_user", e.InvalidId = "invalid_id", e.AlreadyFollowed = "already_followed"
+        }(F || (F = {}));
+        var W;
+        ! function(e) {
+            e.Cancelled = "cancelled", e.LoggedOut = "logged_out_user", e.InvalidID = "invalid_id", e.UserIneligible = "user_ineligible", e.InsufficientBalance = "insufficient_balance", e.UnableToGetEligibility = "unable_to_get_eligibility", e.UnableToLinkUser = "unable_to_link_user", e.UseBitsFailure = "use_bits_failure"
+        }(W || (W = {}));
+        var K, G = function() {
+                function e(e) {
+                    this.dobbin = e.dobbin;
+                    var t = V(e.iframe.ownerDocument.referrer);
+                    this.trackingProperties = z({}, e.requiredProps, {
+                        url: e.iframe.ownerDocument.location.href,
+                        host: e.iframe.ownerDocument.location.host,
+                        domain: e.iframe.ownerDocument.domain,
+                        user_agent: e.iframe.ownerDocument.defaultView.navigator.userAgent,
+                        referrer_url: e.iframe.ownerDocument.referrer,
+                        referrer_host: t.host,
+                        extension_id: e.extension.clientId,
+                        extension_version: e.extension.version,
+                        extension_anchor: e.anchor,
+                        extension_mode: e.extensionMode
+                    })
+                }
+                return e.prototype.trackEvent = function(e, t) {
+                    var n = z({}, t, this.trackingProperties);
+                    this.dobbin.trackEvent(e, n, ["spade"])
                 }, e
             }(),
-            b = new g,
-            _ = n(50);
+            Q = this && this.__assign || function() {
+                return Q = Object.assign || function(e) {
+                    for (var t, n = 1, r = arguments.length; n < r; n++) {
+                        t = arguments[n];
+                        for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                    }
+                    return e
+                }, Q.apply(this, arguments)
+            },
+            Y = function() {
+                function e(e, t, n, r, i, a) {
+                    var o = this;
+                    this.loginId = e, this.tracker = t, this.pubsub = n, this.onSuccess = r, this.extension = i, this.extensionBitsProducts = a, this.useBitsInProgress = !1, this.close = function(e) {
+                        void 0 === e && (e = !1), o.replyCallback({
+                            action: U.a.UseBitsComplete,
+                            didConfirm: e,
+                            didUseBits: !1
+                        }), o.track(q.UseBitsFailure)
+                    }, this.onModalResult = function(e) {
+                        o.replyCallback = function(t) {
+                            o.useBitsInProgress = !1, t.didConfirm && t.didUseBits && o.onSuccess(t.bitsBalance || 0), o.loginId && o.offBitsBalanceUpdate(o.loginId), e(t)
+                        }
+                    }, this.onOpen = function(e) {
+                        o.openCallback = function(t) {
+                            o.track(q.UseBitsInitialization), e(t)
+                        }
+                    }, this.resultCallback = function(e) {
+                        return e.didConfirm ? (o.track(q.UseBitsConfirmation), o.useBitsInExtension(o.transactionId, e.didConfirm)) : (o.failReason = W.Cancelled, Promise.resolve(o.close()))
+                    }, this.useBitsPromptRequired = function(e, t, n) {
+                        return void 0 === e && (e = !1), e || t < n
+                    }, this.openBitsConfirmationModal = function(e) {
+                        if (!o.loginId) return void(o.failReason = W.LoggedOut);
+                        o.openCallback && (o.onBitsBalanceUpdate(o.loginId), o.openCallback({
+                            payload: Q({
+                                userId: o.loginId,
+                                isLoggedIn: !!o.loginId,
+                                clientId: o.extension.clientId,
+                                extensionName: o.extension.name,
+                                track: o.track
+                            }, e)
+                        }))
+                    }, this.unsubscribeCallback = function() {}, this.useBitsInExtension = function(e, t) {
+                        return Object(p.d)(o.extension.id, o.token, !0).then(function(n) {
+                            var r = n.token;
+                            return _.registerToken(o.extension.id, r), f(e).then(function(e) {
+                                var n = e.bits_balance,
+                                    r = {
+                                        action: U.a.UseBitsComplete,
+                                        didConfirm: t,
+                                        didUseBits: !0
+                                    };
+                                return o.track(q.UseBitsSuccess), o.replyCallback(Q({}, r, {
+                                    bitsBalance: n
+                                })), n
+                            }).catch(function(e) {
+                                o.handleUseBitsError(e, W.UseBitsFailure, q.UseBitsFailure)
+                            })
+                        }).catch(function(e) {
+                            o.handleUseBitsError(e, W.UnableToLinkUser, q.UseBitsLinkUserFailure)
+                        })
+                    }, this.handleUseBitsError = function(e, t, n) {
+                        o.failReason = t, o.openCallback ? (o.track(n), o.openCallback({
+                            error: e
+                        })) : o.close(!0)
+                    }, this.track = function(e, t) {
+                        void 0 === t && (t = {});
+                        var n = {
+                            target_channel_id: o.channelId,
+                            user_id: o.loginId,
+                            client_id: o.extension.clientId,
+                            fail_reason: o.failReason,
+                            extension_name: o.extension.name,
+                            extension_item_label: o.extensionItemLabel,
+                            sku: o.sku,
+                            transaction_id: o.transactionId,
+                            bits_balance: o.bitsBalance,
+                            extension_id: o.extension.id,
+                            bits_required: o.bitsRequired
+                        };
+                        t = Object.assign(n, t), o.tracker.trackEvent(e, t)
+                    }
+                }
+                return Object.defineProperty(e.prototype, "defaultResult", {
+                    get: function() {
+                        return {
+                            didConfirm: !1,
+                            didUseBits: !1
+                        }
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), e.prototype.open = function(e) {
+                    var t = this;
+                    if (!this.useBitsInProgress) {
+                        this.useBitsInProgress = !0;
+                        var n = _.getToken(this.extension.clientId),
+                            r = d(e.sku, n.payload.channel_id, this.extension.clientId),
+                            i = this.extensionBitsProducts;
+                        Promise.all([r, i]).then(function(r) {
+                            var i = r[0],
+                                a = r[1],
+                                o = i.bits_required,
+                                s = i.transaction_id,
+                                u = i.prompt_required,
+                                c = i.bits_balance,
+                                l = a.products;
+                            if (!t.useBitsPromptRequired(u, c, o)) throw new Error("Use Bits always requires a prompt for now");
+                            var d = l.find(function(t) {
+                                    return t.sku === e.sku
+                                }),
+                                f = d ? d.displayName : "";
+                            t.token = n.token, t.bitsBalance = c, t.bitsRequired = o, t.transactionId = s, t.sku = e.sku, t.channelId = n.payload.channel_id, t.extensionItemLabel = f, n.payload.channel_id || (t.failReason = W.InvalidID), t.openBitsConfirmationModal({
+                                channelId: n.payload.channel_id,
+                                sku: e.sku,
+                                bitsRequired: o,
+                                transactionId: s,
+                                extensionItemLabel: f,
+                                bitsBalance: c
+                            })
+                        }).catch(function(e) {
+                            t.handleUseBitsError(e, W.UserIneligible, q.UseBitsUserIneligible)
+                        })
+                    }
+                }, e.prototype.onBitsBalanceUpdate = function(e) {
+                    var t = this,
+                        n = c.a.authToken;
+                    this.unsubscribeCallback = this.pubsub.subscribe({
+                        token: n,
+                        topic: "user-bits-updates-v1." + e,
+                        success: function() {},
+                        failure: function() {},
+                        message: function(e) {
+                            t.bitsBalance = e.data.balance, t.openCallback({
+                                payload: {
+                                    channelId: t.channelId,
+                                    clientId: t.extension.clientId,
+                                    userId: t.loginId,
+                                    isLoggedIn: !!t.loginId,
+                                    sku: t.sku,
+                                    bitsRequired: t.bitsRequired,
+                                    transactionId: t.transactionId,
+                                    extensionItemLabel: t.extensionItemLabel,
+                                    extensionName: t.extension.name,
+                                    bitsBalance: t.bitsBalance,
+                                    track: t.track
+                                }
+                            })
+                        }
+                    })
+                }, e.prototype.offBitsBalanceUpdate = function(e) {
+                    this.unsubscribeCallback && this.unsubscribeCallback()
+                }, e
+            }(),
+            $ = function(e) {
+                var t = c.a.newRequest("/api/channels/" + e, {
+                    method: "GET"
+                });
+                return c.a.authRequest(t).then(function(e) {
+                    return e ? e._id : 0
+                }).catch(function() {
+                    return 0
+                })
+            },
+            J = function(e, t) {
+                return $(t).then(function(n) {
+                    if (0 === n) return {
+                        channel: null,
+                        channelId: 0,
+                        isFollowing: !1
+                    };
+                    var r = c.a.newRequest("/v5/users/" + e + "/follows/channels/" + n, {
+                        method: "GET"
+                    });
+                    return c.a.authRequest(r).then(function() {
+                        return {
+                            channel: t,
+                            channelId: n,
+                            isFollowing: !0
+                        }
+                    }).catch(function() {
+                        return {
+                            channel: t,
+                            channelId: n,
+                            isFollowing: !1
+                        }
+                    })
+                })
+            },
+            X = function(e, t, n) {
+                return $(t).then(function(r) {
+                    if (0 === r) return {
+                        channel: null,
+                        channelId: 0,
+                        isFollowing: !1
+                    };
+                    var i = c.a.newRequest("/v5/users/" + e + "/follows/channels/" + r, {
+                        method: "PUT",
+                        body: JSON.stringify({
+                            notifications: n
+                        })
+                    });
+                    return c.a.authRequest(i).then(function() {
+                        return {
+                            channel: t,
+                            channelId: r,
+                            isFollowing: !0
+                        }
+                    }).catch(function() {
+                        return {
+                            channel: t,
+                            channelId: r,
+                            isFollowing: !1
+                        }
+                    })
+                })
+            },
+            Z = function() {
+                function e(e, t) {
+                    var n = this;
+                    this.loginId = e, this.tracker = t, this.close = function() {
+                        n.replyCallback({
+                            action: U.a.FollowComplete,
+                            channel: n.channel,
+                            didFollow: !1
+                        }), n.tracker.trackEvent("extension_follow_fail", {
+                            target_channel: n.channel,
+                            target_channel_id: n.channelId,
+                            fail_reason: n.failReason
+                        })
+                    }, this.onModalResult = function(e) {
+                        n.replyCallback = e
+                    }, this.onOpen = function(e) {
+                        n.openCallback = function(t) {
+                            n.tracker.trackEvent("extension_follow_init", {
+                                target_channel: t.channel,
+                                target_channel_id: t.channelId
+                            }), e(t)
+                        }
+                    }, this.resultCallback = function(e) {
+                        e.didFollow ? (n.tracker.trackEvent("extension_follow_confirm", {
+                            target_channel: n.channel,
+                            target_channel_id: n.channelId
+                        }), n.follow(n.loginId, n.channel, e.notifications)) : n.close()
+                    }, this.follow = function(e, t, r) {
+                        X(e, t, r).then(function(e) {
+                            var t = e.channel,
+                                r = e.channelId,
+                                i = e.isFollowing,
+                                a = {
+                                    action: U.a.FollowComplete,
+                                    channel: t,
+                                    didFollow: i
+                                };
+                            n.tracker.trackEvent("extension_follow", {
+                                target_channel: t,
+                                target_channel_id: r
+                            }), n.replyCallback(a)
+                        })
+                    }
+                }
+                return Object.defineProperty(e.prototype, "defaultResult", {
+                    get: function() {
+                        return {
+                            didFollow: !1,
+                            notifications: !1
+                        }
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), e.prototype.open = function(e) {
+                    var t = this;
+                    if (this.channel = e.payload.channel, !this.loginId) return this.channelId = 0, this.openCallback && this.openCallback({
+                        channel: this.channel,
+                        channelId: 0,
+                        isFollowing: !1,
+                        isLoggedIn: !1
+                    }), void(this.failReason = F.LoggedOut);
+                    J(this.loginId, this.channel).then(function(e) {
+                        var n = e.channel,
+                            r = e.channelId,
+                            i = e.isFollowing;
+                        t.channelId = r, t.openCallback && t.openCallback({
+                            channel: n,
+                            channelId: r,
+                            isFollowing: i,
+                            isLoggedIn: !0
+                        }), t.failReason = null === n ? F.InvalidId : i ? F.AlreadyFollowed : F.Cancelled
+                    })
+                }, e
+            }(),
+            ee = function() {
+                function e() {
+                    var e = this;
+                    this.close = function() {}, this.onOpen = function(t) {
+                        e.openCallback = t
+                    }, this.onModalResult = function(e) {}, this.resultCallback = function(e) {}
+                }
+                return Object.defineProperty(e.prototype, "defaultResult", {
+                    get: function() {
+                        return null
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), e.prototype.open = function() {
+                    this.openCallback()
+                }, e
+            }();
         ! function(e) {
             e.Component = "component", e.Config = "config", e.Hidden = "hidden", e.LiveConfig = "liveConfig", e.Mobile = "mobile", e.Panel = "panel", e.VideoOverlay = "videoOverlay"
-        }(s || (s = {}));
-        var w, k = function() {
+        }(K || (K = {}));
+        var te = function() {
                 function e(e) {
                     this.extension = e
                 }
@@ -6471,21 +7313,21 @@
                 }), e.prototype.getViewerUrlForContext = function(e, t, n) {
                     var r = "";
                     switch (e) {
-                        case _.g.Web:
+                        case h.g.Web:
                             r = this.getViewerUrlForWeb(t, n);
                             break;
-                        case _.g.Mobile:
+                        case h.g.Mobile:
                             r = this.getViewerUrlForMobile(t)
                     }
                     return r || ""
                 }, e.prototype.getViewerUrlForWeb = function(e, t) {
                     var n = this.extension.views;
                     switch (e) {
-                        case _.f.Config:
+                        case h.f.Config:
                             return n.config && n.config.viewerUrl;
-                        case _.f.Dashboard:
+                        case h.f.Dashboard:
                             return n.liveConfig && n.liveConfig.viewerUrl;
-                        case _.f.Viewer:
+                        case h.f.Viewer:
                             return this.getViewerUrlForAnchor(t)
                     }
                 }, e.prototype.getViewerUrlForMobile = function(e) {
@@ -6493,878 +7335,18 @@
                 }, e.prototype.getViewerUrlForAnchor = function(e) {
                     var t = this.extension.views;
                     switch (e) {
-                        case _.c.Component:
+                        case h.c.Component:
                             return t.component.viewerUrl;
-                        case _.c.Hidden:
+                        case h.c.Hidden:
                             return t.hidden.viewerUrl;
-                        case _.c.Overlay:
+                        case h.c.Overlay:
                             return t.videoOverlay.viewerUrl;
-                        case _.c.Panel:
+                        case h.c.Panel:
                             return t.panel.viewerUrl
                     }
                 }, e
             }(),
-            E = n(104),
-            S = n(181),
-            P = function() {
-                function e() {
-                    this.SUPERVISOR_LOCATION = {
-                        production: "https://supervisor.ext-twitch.tv",
-                        staging: "https://supervisor.ext-assets.internal.justin.tv"
-                    }, this.env = "production"
-                }
-                return Object.defineProperty(e.prototype, "environment", {
-                    get: function() {
-                        return this.env
-                    },
-                    set: function(e) {
-                        this.env = e
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(e.prototype, "supervisorOrigin", {
-                    get: function() {
-                        return this.SUPERVISOR_LOCATION[this.env] || this.SUPERVISOR_LOCATION.production
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), Object.defineProperty(e.prototype, "supervisorURL", {
-                    get: function() {
-                        return this.supervisorOrigin + "/supervisor/v1/index.html"
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), e
-            }(),
-            O = new P,
-            T = n(254),
-            C = function() {
-                function e() {
-                    this.driver = T.a.getInstance("production")
-                }
-                return e.prototype.setEnvironment = function(e) {
-                    this.driver = T.a.getInstance(e)
-                }, e.prototype.subscribe = function(e) {
-                    var t = this,
-                        n = e.topic,
-                        r = e.success,
-                        i = e.failure,
-                        a = e.message,
-                        o = e.token,
-                        s = this.createSubscribeCallback(a);
-                    return this.driver.Listen({
-                            topic: n,
-                            success: r,
-                            failure: i,
-                            message: s,
-                            auth: o
-                        }),
-                        function() {
-                            return t.unsubscribe(n, s)
-                        }
-                }, e.prototype.unsubscribe = function(e, t) {
-                    this.driver.Unlisten({
-                        topic: e,
-                        success: function() {},
-                        failure: function(e) {},
-                        message: t
-                    })
-                }, e.prototype.createSubscribeCallback = function(e) {
-                    return function(t) {
-                        var n;
-                        try {
-                            n = JSON.parse(t)
-                        } catch (e) {
-                            return
-                        }
-                        e(n)
-                    }
-                }, e
-            }(),
-            x = this && this.__extends || function() {
-                var e = Object.setPrototypeOf || {
-                    __proto__: []
-                }
-                instanceof Array && function(e, t) {
-                    e.__proto__ = t
-                } || function(e, t) {
-                    for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
-                };
-                return function(t, n) {
-                    function r() {
-                        this.constructor = t
-                    }
-                    e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
-                }
-            }(),
-            R = "playercontext",
-            j = "contextupdate",
-            A = function(e) {
-                function t(t) {
-                    var n = e.call(this) || this;
-                    return n.currentControlHandlers = {
-                        onShouldFetchExtensions: function() {},
-                        onDestroyExtension: function() {},
-                        onActivationChanged: function() {}
-                    }, n.currentExtensionUnsubscribes = Object(S.a)(), n.hasPurchaseCompletedSubscriptionList = Object(S.a)(), n.hasBitsTransactionCompletedSubscriptionList = Object(S.a)(), n.onPlayerContextUpdate = function() {
-                        n.emit(R)
-                    }, n.onTwilightContextUpdate = function(e) {
-                        n.emit(j, e)
-                    }, n.onExtensionControlMessage = function(e) {
-                        switch (e.status) {
-                            case "activate":
-                                if (e.maxDelayMS > 0) {
-                                    var t = Math.random() * e.maxDelayMS;
-                                    setTimeout(function() {
-                                        n.currentControlHandlers.onShouldFetchExtensions()
-                                    }, t)
-                                } else n.currentControlHandlers.onShouldFetchExtensions();
-                                break;
-                            case "anchor_changed":
-                                var r = e.activationConfig;
-                                r && n.currentControlHandlers.onActivationChanged && n.currentControlHandlers.onActivationChanged(e.extensionId, r);
-                                break;
-                            case "deactivate":
-                            case "uninstall":
-                                n.currentControlHandlers.onDestroyExtension(e.extensionId)
-                        }
-                    }, n.onExtensionMassControlMessage = function(e) {
-                        switch (e.status) {
-                            case "mass_deactivate":
-                                n.currentControlHandlers.onDestroyExtension(e.extensionId)
-                        }
-                    }, n.onBroadcastSettingsUpdateMessage = function(e) {
-                        var t = e.channel_id,
-                            r = e.game,
-                            i = e.old_game;
-                        n.currentChannelId && t === n.currentChannelId || !n.broadcastSettingsUnsubscribe ? r !== i && n.emit(j, {
-                            game: r
-                        }) : n.broadcastSettingsUnsubscribe()
-                    }, n.pubsub = t || new C, n
-                }
-                return x(t, e), t.prototype.getInstalledExtensions = function(e) {
-                    var t = this;
-                    return Object(v.c)(e).then(function(e) {
-                        return t.registerExtensionInstallations(e)
-                    })
-                }, t.prototype.registerExtensionInstallations = function(e) {
-                    var t = this;
-                    return b.setClockSkew(e.issued_at), e.tokens.forEach(function(n) {
-                        var r = e.installed_extensions,
-                            i = r.reduce(function(e, t) {
-                                var r = t.extension,
-                                    i = t.installation_status;
-                                return e || (r.id === n.extension_id ? "active" === i.activation_state : e)
-                            }, !1),
-                            a = new y(n.token).isBroadcaster;
-                        (i || a) && (b.registerToken(n.extension_id, n.token), t.subscribeToMassExtensionControl(n.extension_id))
-                    }), e
-                }, t.prototype.setEnvironmentOptions = function(e) {
-                    e.env && (this.pubsub.setEnvironment(this.getPubsubEnvironment(e.env)), O.environment = e.env), E.a.setApiOptions({
-                        apiUrl: e.apiUrl,
-                        authToken: e.authToken
-                    })
-                }, t.prototype.subscribeToExtensionControl = function(e, t) {
-                    this.currentChannelId && e !== this.currentChannelId && this.unsubscribeFromExtensionControl(this.currentChannelId), this.currentChannelId = e, this.currentControlHandlers = t, this.currentChannelUnsubscribe = this.pubsub.subscribe({
-                        topic: "extension-control." + e,
-                        success: this.onSubscribeSuccess,
-                        failure: this.onSubscribeFailure,
-                        message: this.onExtensionControlMessage
-                    }), this.broadcastSettingsUnsubscribe = this.pubsub.subscribe({
-                        topic: "broadcast-settings-update." + e,
-                        success: this.onSubscribeSuccess,
-                        failure: this.onSubscribeFailure,
-                        message: this.onBroadcastSettingsUpdateMessage
-                    })
-                }, t.prototype.unsubscribeFromExtensionControl = function(e) {
-                    if (this.currentChannelId && e === this.currentChannelId) {
-                        this.currentChannelUnsubscribe && this.currentChannelUnsubscribe(), this.broadcastSettingsUnsubscribe && this.broadcastSettingsUnsubscribe();
-                        for (var t = 0, n = Object.keys(this.currentExtensionUnsubscribes); t < n.length; t++) {
-                            var r = n[t];
-                            this.currentExtensionUnsubscribes[r]()
-                        }
-                    }
-                }, t.prototype.registerPlayer = function(e) {
-                    this.player = e, this.player.addEventListener("pause", this.onPlayerContextUpdate), this.player.addEventListener("play", this.onPlayerContextUpdate), this.player.addEventListener("statsupdate", this.onPlayerContextUpdate), this.player.addEventListener("volumechange", this.onPlayerContextUpdate)
-                }, t.prototype.unregisterPlayer = function() {
-                    this.player && (this.player.removeEventListener("pause", this.onPlayerContextUpdate), this.player.removeEventListener("play", this.onPlayerContextUpdate), this.player.removeEventListener("statsupdate", this.onPlayerContextUpdate), this.player.removeEventListener("volumechange", this.onPlayerContextUpdate), this.player = void 0)
-                }, t.prototype.setPlayerWindow = function(e) {
-                    this.playerWindow = e
-                }, t.prototype.postContext = function(e) {
-                    this.playerWindow && this.playerWindow.postMessage({
-                        event: j,
-                        context: e
-                    }, "*"), this.emit(j, e)
-                }, t.prototype.listenForContext = function() {
-                    var e = this;
-                    window.addEventListener("message", function(t) {
-                        var n = t.data;
-                        if (t.origin === window.location.origin && n.event && n.event === j) {
-                            var r = n.context;
-                            e.onTwilightContextUpdate(r)
-                        }
-                    }, !1)
-                }, t.prototype.onPurchaseCompleted = function(e, t) {
-                    var n = this,
-                        r = "purchase-completed." + e;
-                    if (this.on(r, t), !this.hasPurchaseCompletedSubscriptionList[e]) {
-                        var i = E.a.authToken;
-                        this.hasPurchaseCompletedSubscriptionList[e] = !0, this.pubsub.subscribe({
-                            token: i,
-                            topic: "user-extensionpurchase-events." + e,
-                            success: function() {},
-                            failure: function() {},
-                            message: function(e) {
-                                n.emit(r, e)
-                            }
-                        })
-                    }
-                }, t.prototype.onBitsTransactionCompleted = function(e, t, n, r) {
-                    var i = this,
-                        a = "bits-transaction-completed." + e + "-" + t;
-                    this.on(a, r), this.hasBitsTransactionCompletedSubscriptionList[a] || (this.hasBitsTransactionCompletedSubscriptionList[a] = !0, this.pubsub.subscribe({
-                        token: E.a.authToken,
-                        topic: "bits-ext-v1-transaction." + e + "-" + t,
-                        success: function() {},
-                        failure: function() {},
-                        message: function(e) {
-                            i.emit(a, e)
-                        }
-                    }), null !== n && this.pubsub.subscribe({
-                        token: E.a.authToken,
-                        topic: "bits-ext-v1-user-transaction." + n + "." + e + "-" + t,
-                        success: function() {},
-                        failure: function() {},
-                        message: function(e) {
-                            i.emit(a, e)
-                        }
-                    }))
-                }, t.prototype.onSubscribeFailure = function(e) {}, t.prototype.onSubscribeSuccess = function() {}, t.prototype.getPubsubEnvironment = function(e) {
-                    return "staging" === e ? "darklaunch" : "test" === e ? "production" : e
-                }, t.prototype.subscribeToMassExtensionControl = function(e) {
-                    this.currentExtensionUnsubscribes[e] || (this.currentExtensionUnsubscribes[e] = this.pubsub.subscribe({
-                        topic: "extension-control." + e,
-                        success: this.onSubscribeSuccess,
-                        failure: this.onSubscribeFailure,
-                        message: this.onExtensionMassControlMessage
-                    }))
-                }, t
-            }(u.EventEmitter2),
-            I = new A;
-        ! function(e) {
-            e.Light = "light", e.Dark = "dark"
-        }(w || (w = {}));
-        var M, N = {
-                0: w.Light,
-                1: w.Dark
-            },
-            L = {
-                "": w.Light,
-                "theme--dark": w.Dark
-            },
-            q = this && this.__extends || function() {
-                var e = Object.setPrototypeOf || {
-                    __proto__: []
-                }
-                instanceof Array && function(e, t) {
-                    e.__proto__ = t
-                } || function(e, t) {
-                    for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
-                };
-                return function(t, n) {
-                    function r() {
-                        this.constructor = t
-                    }
-                    e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
-                }
-            }(),
-            D = this && this.__assign || Object.assign || function(e) {
-                for (var t, n = 1, r = arguments.length; n < r; n++) {
-                    t = arguments[n];
-                    for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-                }
-                return e
-            },
-            B = "en",
-            U = function(e) {
-                function t(t, n) {
-                    void 0 === n && (n = B);
-                    var r = e.call(this) || this;
-                    return r.extensionMode = t, r.language = n, r.context = {}, r.isContextInitialized = !1, r.destroy = function() {
-                        I.off(R, r.updateLocalContext), I.off(j, r.updateLocalContext)
-                    }, r.initializeContext = function() {
-                        r.isContextInitialized = !0, r.emit("context", r.context, Object.keys(r.context))
-                    }, r.getPlayerContext = function() {
-                        var e = I.player;
-                        if (!e) return {};
-                        var t = e.getPlaybackStats();
-                        return {
-                            bitrate: t.playbackRate,
-                            bufferSize: t.bufferSize,
-                            displayResolution: t.displayResolution,
-                            hlsLatencyBroadcaster: t.hlsLatencyBroadcaster,
-                            isFullScreen: e.getFullscreen(),
-                            isPaused: e.isPaused(),
-                            isTheatreMode: e.getTheatre(),
-                            videoResolution: t.videoResolution,
-                            isMuted: e.getMuted(),
-                            volume: e.getVolume()
-                        }
-                    }, r.getBaseContext = function() {
-                        return {
-                            mode: r.extensionMode,
-                            language: r.language
-                        }
-                    }, r.updateLocalContext = function(e) {
-                        void 0 === e && (e = {});
-                        var t = D({}, r.context, e, r.getPlayerContext(), r.getBaseContext());
-                        void 0 !== t.theme && (t.theme = r.translateTheme(t.theme)), r.diffAndEmitContext(t)
-                    }, r.diffAndEmitContext = function(e) {
-                        var t = r.context;
-                        if (r.context = e, r.isContextInitialized) {
-                            var n = Object.keys(e),
-                                i = n.reduce(function(n, r) {
-                                    return t[r] !== e[r] && n.push(r), n
-                                }, []);
-                            i.length > 0 && r.emit("context", e, i)
-                        }
-                    }, r.translateTheme = function(e) {
-                        return "number" == typeof e ? N[e] || w.Light : e
-                    }, I.on(R, r.updateLocalContext), I.on(j, r.updateLocalContext), r.context = r.getBaseContext(), r.context.theme = i(), t === _.f.Viewer && (r.context.game = "", r.context.playbackMode = _.l.Video), r
-                }
-                return q(t, e), t
-            }(u.EventEmitter2),
-            F = this && this.__assign || Object.assign || function(e) {
-                for (var t, n = 1, r = arguments.length; n < r; n++) {
-                    t = arguments[n];
-                    for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-                }
-                return e
-            };
-        ! function(e) {
-            e.Cancelled = "cancelled", e.LoggedOut = "logged_out_user", e.InvalidId = "invalid_id", e.AlreadyFollowed = "already_followed"
-        }(M || (M = {}));
-        var V;
-        ! function(e) {
-            e.Cancelled = "cancelled", e.LoggedOut = "logged_out_user", e.InvalidID = "invalid_id", e.UserIneligible = "user_ineligible", e.InsufficientBalance = "insufficient_balance", e.UnableToGetEligibility = "unable_to_get_eligibility", e.UnableToLinkUser = "unable_to_link_user", e.UseBitsFailure = "use_bits_failure"
-        }(V || (V = {}));
-        var H, z = function() {
-                function e(e) {
-                    this.dobbin = e.dobbin;
-                    var t = c(e.iframe.ownerDocument.referrer);
-                    this.trackingProperties = F({}, e.requiredProps, {
-                        url: e.iframe.ownerDocument.location.href,
-                        host: e.iframe.ownerDocument.location.host,
-                        domain: e.iframe.ownerDocument.domain,
-                        user_agent: e.iframe.ownerDocument.defaultView.navigator.userAgent,
-                        referrer_url: e.iframe.ownerDocument.referrer,
-                        referrer_host: t.host,
-                        extension_id: e.extension.clientId,
-                        extension_version: e.extension.version,
-                        extension_anchor: e.anchor,
-                        extension_mode: e.extensionMode
-                    })
-                }
-                return e.prototype.trackEvent = function(e, t) {
-                    var n = F({}, t, this.trackingProperties);
-                    this.dobbin.trackEvent(e, n, ["spade"])
-                }, e
-            }(),
-            W = this && this.__extends || function() {
-                var e = Object.setPrototypeOf || {
-                    __proto__: []
-                }
-                instanceof Array && function(e, t) {
-                    e.__proto__ = t
-                } || function(e, t) {
-                    for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
-                };
-                return function(t, n) {
-                    function r() {
-                        this.constructor = t
-                    }
-                    e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
-                }
-            }();
-        ! function(e) {
-            e.CurrentUser = "current_user", e.Other = "other"
-        }(H || (H = {}));
-        var K, G = function(e) {
-                function t(t, n) {
-                    void 0 === n && (n = {});
-                    var r = e.call(this) || this;
-                    return r.iframe = t, r.featureOverrides = n, r.destroy = function() {
-                        r.iframe.ownerDocument.defaultView.removeEventListener("message", r.handleMessage)
-                    }, r.sendContext = function(e, t) {
-                        r.sendMessage({
-                            action: _.a.TwitchExtContext,
-                            context: e,
-                            updatedFields: t
-                        })
-                    }, r.sendExtensionAuth = function(e) {
-                        r.sendMessage({
-                            action: _.a.TwitchExtAuth,
-                            auth: e
-                        })
-                    }, r.sendExtensionBootstrap = function(e) {
-                        r.sendMessage({
-                            action: _.a.TwitchExtBootstrap,
-                            auth: e,
-                            features: Object.assign({}, _.j, r.featureOverrides)
-                        })
-                    }, r.sendSupervisorInit = function(e) {
-                        r.sendMessage({
-                            action: _.m.SupervisorInit,
-                            options: e
-                        })
-                    }, r.sendFunctionReply = function(e) {
-                        r.sendMessage(e)
-                    }, r.sendExtensionReloadEntitlementsMessage = function() {
-                        r.sendMessage({
-                            action: _.a.TwitchExtReloadEntitlements
-                        })
-                    }, r.sendVisibilityChanged = function(e, t) {
-                        r.sendMessage({
-                            action: _.a.TwitchExtVisibilityChanged,
-                            isVisible: e,
-                            context: t
-                        })
-                    }, r.sendPositionChange = function(e) {
-                        r.sendMessage({
-                            action: _.a.TwitchExtPositionChanged,
-                            position: e
-                        })
-                    }, r.sendBitsProductsMessage = function(e) {
-                        r.sendMessage({
-                            action: _.a.TwitchExtBitsProducts,
-                            products: e
-                        })
-                    }, r.sendBitsTransactionCompleteMessage = function(e) {
-                        r.sendMessage(e)
-                    }, r.sendHelperPubsubMessage = function(e, t, n) {
-                        r.sendMessage({
-                            action: _.a.TwitchExtPubsubMessage,
-                            payload: {
-                                target: e,
-                                contentType: t,
-                                content: n
-                            }
-                        })
-                    }, r.sendHelperPubsubBindFailure = function(e, t) {
-                        r.sendMessage({
-                            action: _.a.TwitchExtPubsubBindFailure,
-                            payload: {
-                                target: e,
-                                error: t
-                            }
-                        })
-                    }, r.handleMessage = function(e) {
-                        var t = e.source,
-                            n = e.data;
-                        if (t === r.iframe.contentWindow) try {
-                            r.handleExtensionAction(n)
-                        } catch (e) {
-                            console.error("Caught Error in Message Handler: " + e.stack)
-                        }
-                    }, r.handleExtensionAction = function(e) {
-                        -1 !== _.d.indexOf(e.action) && r.emit(e.action, e)
-                    }, r.sendMessage = function(e) {
-                        r.iframe && r.iframe.contentWindow && r.iframe.contentWindow.postMessage(e, O.supervisorOrigin)
-                    }, r.iframe.ownerDocument.defaultView.addEventListener("message", r.handleMessage), r
-                }
-                return W(t, e), t.prototype.sendExtensionReloadMessage = function() {
-                    this.sendMessage({
-                        action: _.a.TwitchExtReload
-                    })
-                }, t.prototype.sendExtensionProductPricesMessage = function(e) {
-                    var t = e.products.reduce(function(e, t) {
-                        var n = t.sku,
-                            r = t.price;
-                        return e[n] = {
-                            displayPrice: a(r.price, r.currency_unit)
-                        }, e
-                    }, {});
-                    this.sendMessage({
-                        action: _.a.TwitchExtProductPrices,
-                        prices: t
-                    })
-                }, t
-            }(u.EventEmitter2),
-            Q = function() {
-                function e(e, t, n) {
-                    var r = this;
-                    this.coordinator = e, this.loginId = t, this.emitConfirmationRequest = n, this.functionActionMap = Object(S.a)(), this.functionModalMap = Object(S.a)(), this.registerFunctionModal = function(e, t) {
-                        t.onOpen(function(n) {
-                            var i = r.loginId ? e : _.k.LoginRequest,
-                                a = {
-                                    action: i,
-                                    resultCallback: t.resultCallback,
-                                    defaultResult: t.defaultResult
-                                };
-                            n && (a.options = n), r.requestConfirmation(a)
-                        }), t.onModalResult && t.onModalResult(function(e) {
-                            r.sendFunctionReply(e)
-                        }), r.functionModalMap[e] = t, r.functionActionMap[e] = r.functionActionHandler(e), r.coordinator.on(e, r.functionActionMap[e])
-                    }, this.unregisterFunctionModal = function(e) {
-                        r.coordinator.off(e, r.functionActionMap[e]), delete r.functionActionMap[e], delete r.functionModalMap[e]
-                    }, this.functionActionHandler = function(e) {
-                        return function(t) {
-                            var n = r.functionModalMap[e];
-                            n && n.open(t)
-                        }
-                    }, this.requestConfirmation = function(e) {
-                        r.emitConfirmationRequest(e)
-                    }, this.sendFunctionReply = function(e) {
-                        r.coordinator.sendFunctionReply(e)
-                    }
-                }
-                return e
-            }(),
-            Y = n(253),
-            $ = function() {
-                function e() {}
-                return e.prototype.makePurchase = function(e, t, n) {
-                    return Promise.resolve().then(function() {
-                        window.open(e.action_details.destination_url + "&br_id=" + Object(Y.b)("" + t) + "&locale=" + n, "Twitch", "width=1024,height=600,scrollbars=yes")
-                    })
-                }, e
-            }(),
-            J = n(417),
-            X = n.n(J),
-            Z = new X.a,
-            ee = function(e) {
-                var t = E.a.newRequest("/api/channels/" + e, {
-                    method: "GET"
-                });
-                return E.a.authRequest(t).then(function(e) {
-                    return e ? e._id : 0
-                }).catch(function() {
-                    return 0
-                })
-            },
-            te = function(e, t) {
-                return ee(t).then(function(n) {
-                    if (0 === n) return {
-                        channel: null,
-                        channelId: 0,
-                        isFollowing: !1
-                    };
-                    var r = E.a.newRequest("/v5/users/" + e + "/follows/channels/" + n, {
-                        method: "GET"
-                    });
-                    return E.a.authRequest(r).then(function() {
-                        return {
-                            channel: t,
-                            channelId: n,
-                            isFollowing: !0
-                        }
-                    }).catch(function() {
-                        return {
-                            channel: t,
-                            channelId: n,
-                            isFollowing: !1
-                        }
-                    })
-                })
-            },
-            ne = function(e, t, n) {
-                return ee(t).then(function(r) {
-                    if (0 === r) return {
-                        channel: null,
-                        channelId: 0,
-                        isFollowing: !1
-                    };
-                    var i = E.a.newRequest("/v5/users/" + e + "/follows/channels/" + r, {
-                        method: "PUT",
-                        body: JSON.stringify({
-                            notifications: n
-                        })
-                    });
-                    return E.a.authRequest(i).then(function() {
-                        return {
-                            channel: t,
-                            channelId: r,
-                            isFollowing: !0
-                        }
-                    }).catch(function() {
-                        return {
-                            channel: t,
-                            channelId: r,
-                            isFollowing: !1
-                        }
-                    })
-                })
-            },
-            re = n(136),
-            ie = function() {
-                function e(e, t) {
-                    var n = this;
-                    this.loginId = e, this.tracker = t, this.close = function() {
-                        n.replyCallback({
-                            action: re.a.FollowComplete,
-                            channel: n.channel,
-                            didFollow: !1
-                        }), n.tracker.trackEvent("extension_follow_fail", {
-                            target_channel: n.channel,
-                            target_channel_id: n.channelId,
-                            fail_reason: n.failReason
-                        })
-                    }, this.onModalResult = function(e) {
-                        n.replyCallback = e
-                    }, this.onOpen = function(e) {
-                        n.openCallback = function(t) {
-                            n.tracker.trackEvent("extension_follow_init", {
-                                target_channel: t.channel,
-                                target_channel_id: t.channelId
-                            }), e(t)
-                        }
-                    }, this.resultCallback = function(e) {
-                        e.didFollow ? (n.tracker.trackEvent("extension_follow_confirm", {
-                            target_channel: n.channel,
-                            target_channel_id: n.channelId
-                        }), n.follow(n.loginId, n.channel, e.notifications)) : n.close()
-                    }, this.follow = function(e, t, r) {
-                        ne(e, t, r).then(function(e) {
-                            var t = e.channel,
-                                r = e.channelId,
-                                i = e.isFollowing,
-                                a = {
-                                    action: re.a.FollowComplete,
-                                    channel: t,
-                                    didFollow: i
-                                };
-                            n.tracker.trackEvent("extension_follow", {
-                                target_channel: t,
-                                target_channel_id: r
-                            }), n.replyCallback(a)
-                        })
-                    }
-                }
-                return Object.defineProperty(e.prototype, "defaultResult", {
-                    get: function() {
-                        return {
-                            didFollow: !1,
-                            notifications: !1
-                        }
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), e.prototype.open = function(e) {
-                    var t = this;
-                    if (this.channel = e.payload.channel, !this.loginId) return this.channelId = 0, this.openCallback && this.openCallback({
-                        channel: this.channel,
-                        channelId: 0,
-                        isFollowing: !1,
-                        isLoggedIn: !1
-                    }), void(this.failReason = M.LoggedOut);
-                    te(this.loginId, this.channel).then(function(e) {
-                        var n = e.channel,
-                            r = e.channelId,
-                            i = e.isFollowing;
-                        t.channelId = r, t.openCallback && t.openCallback({
-                            channel: n,
-                            channelId: r,
-                            isFollowing: i,
-                            isLoggedIn: !0
-                        }), t.failReason = null === n ? M.InvalidId : i ? M.AlreadyFollowed : M.Cancelled
-                    })
-                }, e
-            }(),
-            ae = function() {
-                function e() {
-                    var e = this;
-                    this.close = function() {}, this.onOpen = function(t) {
-                        e.openCallback = t
-                    }, this.onModalResult = function(e) {}, this.resultCallback = function(e) {}
-                }
-                return Object.defineProperty(e.prototype, "defaultResult", {
-                    get: function() {
-                        return null
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), e.prototype.open = function() {
-                    this.openCallback()
-                }, e
-            }(),
-            oe = function(e) {
-                var t = "twitch.ext." + e,
-                    n = E.a.newRequest("/v5/bits/extensions/" + t + "/products", {
-                        method: "GET"
-                    });
-                return E.a.authRequest(n)
-            },
-            se = function(e, t, n) {
-                var r = E.a.newRequest("/v5/bits/extensions/is-eligible/" + e, {
-                    body: JSON.stringify({
-                        channel_id: t,
-                        extension_client_id: n
-                    }),
-                    method: "POST"
-                });
-                return E.a.authRequest(r)
-            },
-            ue = function(e) {
-                var t = E.a.newRequest("/v5/bits/extensions/use-bits/" + e, {
-                    method: "POST"
-                });
-                return E.a.authRequest(t)
-            };
-        ! function(e) {
-            e.UseBitsLinkUserFailure = "extension_use_bits_link_user_fail", e.UseBitsUserIneligible = "extension_use_bits_user_ineligible", e.UseBitsFailure = "extension_use_bits_fail", e.UseBitsInitialization = "extension_use_bits_init", e.UseBitsConfirmation = "extension_use_bits_confirm", e.UseBitsSuccess = "extension_use_bits_success"
-        }(K || (K = {}));
-        var ce = this && this.__assign || Object.assign || function(e) {
-                for (var t, n = 1, r = arguments.length; n < r; n++) {
-                    t = arguments[n];
-                    for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-                }
-                return e
-            },
-            le = function() {
-                function e(e, t, n, r, i, a) {
-                    var o = this;
-                    this.loginId = e, this.tracker = t, this.pubsub = n, this.onSuccess = r, this.extension = i, this.extensionBitsProducts = a, this.useBitsInProgress = !1, this.close = function(e) {
-                        void 0 === e && (e = !1), o.replyCallback({
-                            action: re.a.UseBitsComplete,
-                            didConfirm: e,
-                            didUseBits: !1
-                        }), o.track(K.UseBitsFailure)
-                    }, this.onModalResult = function(e) {
-                        o.replyCallback = function(t) {
-                            o.useBitsInProgress = !1, t.didConfirm && t.didUseBits && o.onSuccess(t.bitsBalance || 0), o.loginId && o.offBitsBalanceUpdate(o.loginId), e(t)
-                        }
-                    }, this.onOpen = function(e) {
-                        o.openCallback = function(t) {
-                            o.track(K.UseBitsInitialization), e(t)
-                        }
-                    }, this.resultCallback = function(e) {
-                        return e.didConfirm ? (o.track(K.UseBitsConfirmation), o.useBitsInExtension(o.transactionId, e.didConfirm)) : (o.failReason = V.Cancelled, Promise.resolve(o.close()))
-                    }, this.useBitsPromptRequired = function(e, t, n) {
-                        return void 0 === e && (e = !1), e || t < n
-                    }, this.openBitsConfirmationModal = function(e) {
-                        if (!o.loginId) return void(o.failReason = V.LoggedOut);
-                        o.openCallback && (o.onBitsBalanceUpdate(o.loginId), o.openCallback({
-                            payload: ce({
-                                userId: o.loginId,
-                                isLoggedIn: !!o.loginId,
-                                clientId: o.extension.clientId,
-                                extensionName: o.extension.name,
-                                track: o.track
-                            }, e)
-                        }))
-                    }, this.unsubscribeCallback = function() {}, this.useBitsInExtension = function(e, t) {
-                        return Object(v.d)(o.extension.id, o.token, !0).then(function(n) {
-                            var r = n.token;
-                            return b.registerToken(o.extension.id, r), ue(e).then(function(e) {
-                                var n = e.bits_balance,
-                                    r = {
-                                        action: re.a.UseBitsComplete,
-                                        didConfirm: t,
-                                        didUseBits: !0
-                                    };
-                                return o.track(K.UseBitsSuccess), o.replyCallback(ce({}, r, {
-                                    bitsBalance: n
-                                })), n
-                            }).catch(function(e) {
-                                o.handleUseBitsError(e, V.UseBitsFailure, K.UseBitsFailure)
-                            })
-                        }).catch(function(e) {
-                            o.handleUseBitsError(e, V.UnableToLinkUser, K.UseBitsLinkUserFailure)
-                        })
-                    }, this.handleUseBitsError = function(e, t, n) {
-                        o.failReason = t, o.openCallback ? (o.track(n), o.openCallback({
-                            error: e
-                        })) : o.close(!0)
-                    }, this.track = function(e, t) {
-                        void 0 === t && (t = {});
-                        var n = {
-                            target_channel_id: o.channelId,
-                            user_id: o.loginId,
-                            client_id: o.extension.clientId,
-                            fail_reason: o.failReason,
-                            extension_name: o.extension.name,
-                            extension_item_label: o.extensionItemLabel,
-                            sku: o.sku,
-                            transaction_id: o.transactionId,
-                            bits_balance: o.bitsBalance,
-                            extension_id: o.extension.id,
-                            bits_required: o.bitsRequired
-                        };
-                        t = Object.assign(n, t), o.tracker.trackEvent(e, t)
-                    }
-                }
-                return Object.defineProperty(e.prototype, "defaultResult", {
-                    get: function() {
-                        return {
-                            didConfirm: !1,
-                            didUseBits: !1
-                        }
-                    },
-                    enumerable: !0,
-                    configurable: !0
-                }), e.prototype.open = function(e) {
-                    var t = this;
-                    if (!this.useBitsInProgress) {
-                        this.useBitsInProgress = !0;
-                        var n = b.getToken(this.extension.clientId),
-                            r = se(e.sku, n.payload.channel_id, this.extension.clientId),
-                            i = this.extensionBitsProducts;
-                        Promise.all([r, i]).then(function(r) {
-                            var i = r[0],
-                                a = r[1],
-                                o = i.bits_required,
-                                s = i.transaction_id,
-                                u = i.prompt_required,
-                                c = i.bits_balance,
-                                l = a.products;
-                            if (!t.useBitsPromptRequired(u, c, o)) throw new Error("Use Bits always requires a prompt for now");
-                            var d = l.find(function(t) {
-                                    return t.sku === e.sku
-                                }),
-                                f = d ? d.displayName : "";
-                            t.token = n.token, t.bitsBalance = c, t.bitsRequired = o, t.transactionId = s, t.sku = e.sku, t.channelId = n.payload.channel_id, t.extensionItemLabel = f, n.payload.channel_id || (t.failReason = V.InvalidID), t.openBitsConfirmationModal({
-                                channelId: n.payload.channel_id,
-                                sku: e.sku,
-                                bitsRequired: o,
-                                transactionId: s,
-                                extensionItemLabel: f,
-                                bitsBalance: c
-                            })
-                        }).catch(function(e) {
-                            t.handleUseBitsError(e, V.UserIneligible, K.UseBitsUserIneligible)
-                        })
-                    }
-                }, e.prototype.onBitsBalanceUpdate = function(e) {
-                    var t = this,
-                        n = E.a.authToken;
-                    this.unsubscribeCallback = this.pubsub.subscribe({
-                        token: n,
-                        topic: "user-bits-updates-v1." + e,
-                        success: function() {},
-                        failure: function() {},
-                        message: function(e) {
-                            t.bitsBalance = e.data.balance, t.openCallback({
-                                payload: {
-                                    channelId: t.channelId,
-                                    clientId: t.extension.clientId,
-                                    userId: t.loginId,
-                                    isLoggedIn: !!t.loginId,
-                                    sku: t.sku,
-                                    bitsRequired: t.bitsRequired,
-                                    transactionId: t.transactionId,
-                                    extensionItemLabel: t.extensionItemLabel,
-                                    extensionName: t.extension.name,
-                                    bitsBalance: t.bitsBalance,
-                                    track: t.track
-                                }
-                            })
-                        }
-                    })
-                }, e.prototype.offBitsBalanceUpdate = function(e) {
-                    this.unsubscribeCallback && this.unsubscribeCallback()
-                }, e
-            }(),
-            de = function() {
+            ne = function() {
                 function e(e, t, n, r) {
                     var i = this;
                     this.coordinator = e, this.tracker = t, this.authData = n, this.unsubscribeMap = {}, this.lastSequenceInfoMap = {}, this.onHelperListenMessage = function(e) {
@@ -7380,10 +7362,10 @@
                             if (!i.isExtensionTarget(e)) return void i.coordinator.sendHelperPubsubMessage(e, "application/plain", [JSON.stringify(t)]);
                             i.coordinator.sendHelperPubsubMessage(e, t.content_type, t.content), t.sequence && i.trackSequence(i.convertToTopic(e), e, t.sequence.start, t.sequence.number)
                         }
-                    }, this.pubsub = r || new C, this.coordinator.on(_.a.TwitchExtPubsubListen, this.onHelperListenMessage), this.coordinator.on(_.a.TwitchExtPubsubUnlisten, this.onHelperUnlistenMessage)
+                    }, this.pubsub = r || new y, this.coordinator.on(h.a.TwitchExtPubsubListen, this.onHelperListenMessage), this.coordinator.on(h.a.TwitchExtPubsubUnlisten, this.onHelperUnlistenMessage)
                 }
                 return e.prototype.destroy = function() {
-                    this.coordinator.off(_.a.TwitchExtPubsubListen, this.onHelperListenMessage), this.coordinator.off(_.a.TwitchExtPubsubUnlisten, this.onHelperUnlistenMessage)
+                    this.coordinator.off(h.a.TwitchExtPubsubListen, this.onHelperListenMessage), this.coordinator.off(h.a.TwitchExtPubsubUnlisten, this.onHelperUnlistenMessage)
                 }, e.prototype.listen = function(e) {
                     this.unsubscribeMap[e] = this.pubsub.subscribe({
                         topic: this.convertToTopic(e),
@@ -7435,14 +7417,47 @@
                     }
                 }, e
             }(),
-            fe = this && this.__extends || function() {
-                var e = Object.setPrototypeOf || {
-                    __proto__: []
+            re = n(253),
+            ie = function() {
+                function e() {}
+                return e.prototype.makePurchase = function(e, t, n) {
+                    return Promise.resolve().then(function() {
+                        window.open(e.action_details.destination_url + "&br_id=" + Object(re.b)("" + t) + "&locale=" + n, "Twitch", "width=1024,height=600,scrollbars=yes")
+                    })
+                }, e
+            }(),
+            ae = function() {
+                return window.innerHeight
+            },
+            oe = function(e) {
+                return e.getBoundingClientRect()
+            },
+            se = {
+                getWindowInnerHeight: ae,
+                getElementBoundingClientRect: oe
+            },
+            ue = function(e, t) {
+                var n = !1;
+                return function() {
+                    for (var r = [], i = 0; i < arguments.length; i++) r[i] = arguments[i];
+                    n || (n = !0, setTimeout(function() {
+                        n = !1
+                    }, t), e.apply(null, r))
                 }
-                instanceof Array && function(e, t) {
-                    e.__proto__ = t
-                } || function(e, t) {
-                    for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
+            },
+            ce = n(417),
+            le = n.n(ce),
+            de = new le.a,
+            fe = this && this.__extends || function() {
+                var e = function(t, n) {
+                    return (e = Object.setPrototypeOf || {
+                            __proto__: []
+                        }
+                        instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n])
+                        })(t, n)
                 };
                 return function(t, n) {
                     function r() {
@@ -7451,12 +7466,14 @@
                     e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                 }
             }(),
-            pe = this && this.__assign || Object.assign || function(e) {
-                for (var t, n = 1, r = arguments.length; n < r; n++) {
-                    t = arguments[n];
-                    for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-                }
-                return e
+            pe = this && this.__assign || function() {
+                return pe = Object.assign || function(e) {
+                    for (var t, n = 1, r = arguments.length; n < r; n++) {
+                        t = arguments[n];
+                        for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                    }
+                    return e
+                }, pe.apply(this, arguments)
             },
             he = ["allow-forms", "allow-scripts", "allow-same-origin"],
             me = 700,
@@ -7484,23 +7501,32 @@
                             var t = e.payload,
                                 n = this.iframe.getBoundingClientRect(),
                                 r = n.left,
-                                i = n.top;
-                            this.iframe.dispatchEvent(new MouseEvent("mousemove", {
-                                bubbles: !0,
-                                clientX: t.clientX,
-                                clientY: t.clientY,
-                                screenX: r + t.clientX,
-                                screenY: i + t.clientY
-                            }))
+                                i = n.top,
+                                a = t.clientX,
+                                o = t.clientY,
+                                s = r + a,
+                                u = i + o;
+                            try {
+                                this.iframe.dispatchEvent(new MouseEvent("mousemove", {
+                                    clientX: a,
+                                    clientY: o,
+                                    screenX: s,
+                                    screenY: u,
+                                    bubbles: !0
+                                }))
+                            } catch (e) {
+                                var c = document.createEvent("MouseEvent");
+                                c.initMouseEvent("mousemove", !0, !1, window, 0, s, u, a, o, !1, !1, !1, !1, 0, null), this.iframe.dispatchEvent(c)
+                            }
                         },
                         focusin: function(e) {
                             e.payload;
-                            if (this.params.anchor === _.c.Overlay) {
+                            if (this.params.anchor === h.c.Overlay) {
                                 for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
                                 t && t.focus()
                             }
                         }
-                    }, n.hasSentViewEvent = !1, n.hasBootstrapped = !1, n.hasLoaded = !1, n.throttleDblClick = h(function(e, t) {
+                    }, n.hasSentViewEvent = !1, n.hasBootstrapped = !1, n.hasLoaded = !1, n.throttleDblClick = ue(function(e, t) {
                         var n = t.payload,
                             r = e.getBoundingClientRect(),
                             i = r.left,
@@ -7516,27 +7542,27 @@
                         n.unsetupListeners(), n.contextManager.destroy(), n.coordinator.destroy(), n.iframe.remove()
                     }, n.linkIdentity = function() {
                         var e = n.extension.clientId,
-                            t = b.getToken(e);
-                        t.isLinked || Object(v.d)(e, t.token, !0).then(function(t) {
+                            t = _.getToken(e);
+                        t.isLinked || Object(p.d)(e, t.token, !0).then(function(t) {
                             var r = t.token;
-                            b.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
+                            _.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
                                 extension_interaction: "grant"
                             })
                         })
                     }, n.unlinkIdentity = function() {
                         var e = n.extension.clientId,
-                            t = b.getToken(e);
-                        t.isLinked && Object(v.d)(e, t.token, !1).then(function(t) {
+                            t = _.getToken(e);
+                        t.isLinked && Object(p.d)(e, t.token, !1).then(function(t) {
                             var r = t.token;
-                            b.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
+                            _.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
                                 extension_interaction: "revoke"
                             })
                         })
                     }, n.visibilityChanged = function() {
-                        if (!n.hasSentViewEvent && n.params.anchor === _.c.Panel && n.params.mode === _.f.Viewer) {
-                            var e = p.getElementBoundingClientRect(n.iframe),
+                        if (!n.hasSentViewEvent && n.params.anchor === h.c.Panel && n.params.mode === h.f.Viewer) {
+                            var e = se.getElementBoundingClientRect(n.iframe),
                                 t = e.bottom - e.top,
-                                r = p.getWindowInnerHeight();
+                                r = se.getWindowInnerHeight();
                             100 * (Math.min(Math.max(r - e.top, 0), t) / t) >= 75 && (n.tracker.trackEvent("extension_view", {
                                 pct_view_visible: 75,
                                 px_view_visible: Math.floor(75 * t / 100)
@@ -7552,7 +7578,7 @@
                         n.coordinator.sendPositionChange(e)
                     }, n.buildTracker = function() {
                         var e = n.params;
-                        return e.extensionTracker || new z({
+                        return e.extensionTracker || new G({
                             anchor: e.anchor,
                             dobbin: e.dobbin,
                             extension: n.extension,
@@ -7571,34 +7597,34 @@
                         })
                     }, n.buildContextManager = function() {
                         var e = n.params;
-                        return e.contextManager || new U(e.mode)
+                        return e.contextManager || new N(e.mode)
                     }, n.buildCoordinator = function() {
-                        return n.params.extensionCoordinator || new G(n.iframe, n.params.features)
+                        return n.params.extensionCoordinator || new D(n.iframe, n.params.features)
                     }, n.buildFunctionManager = function() {
-                        return n.params.functionManager || new Q(n.coordinator, n.params.loginId, n.emitConfirmationRequest)
+                        return n.params.functionManager || new B(n.coordinator, n.params.loginId, n.emitConfirmationRequest)
                     }, n.buildPurchaseService = function() {
-                        return n.params.purchaseService || new $
+                        return n.params.purchaseService || new ie
                     }, n.getExtensionHeight = function() {
                         var e = n.params.mode,
                             t = n.extension.panelHeight;
-                        return e === _.f.Config ? me : t ? Number(t) : ye
+                        return e === h.f.Config ? me : t ? Number(t) : ye
                     }, n.getDefaultAnchorAttributes = function() {
                         var e = {};
-                        return n.params.mode === _.f.Viewer && n.extensionOptions.platform !== _.g.Mobile && (e.scrolling = "no"), e
+                        return n.params.mode === h.f.Viewer && n.extensionOptions.platform !== h.g.Mobile && (e.scrolling = "no"), e
                     }, n.getAnchorAttributes = function() {
                         var e = {};
                         switch (n.params.anchor) {
-                            case _.c.Panel:
-                                if (n.extensionOptions.platform === _.g.Mobile) {
+                            case h.c.Panel:
+                                if (n.extensionOptions.platform === h.g.Mobile) {
                                     e.style = "height: 100%;";
                                     break
                                 }
                                 var t = n.getExtensionHeight();
                                 e.style = "height: " + t + "px;";
                                 break;
-                            case _.c.Overlay:
-                            case _.c.Component:
-                            case _.c.Hidden:
+                            case h.c.Overlay:
+                            case h.c.Component:
+                            case h.c.Hidden:
                                 return n.getDefaultAnchorAttributes()
                         }
                         return e
@@ -7609,35 +7635,35 @@
                         var i = n.params.mode,
                             a = document.createElement("iframe"),
                             o = n.getViewWithPermissions();
-                        switch (a.setAttribute("class", e), a.setAttribute("frameBorder", "0"), a.setAttribute("scrolling", "no"), a.setAttribute("src", O.supervisorURL), a.setAttribute("sandbox", n.getSandboxFlags(o)), i) {
-                            case _.f.Viewer:
+                        switch (a.setAttribute("class", e), a.setAttribute("frameBorder", "0"), a.setAttribute("scrolling", "no"), a.setAttribute("src", g.supervisorURL), a.setAttribute("sandbox", n.getSandboxFlags(o)), i) {
+                            case h.f.Viewer:
                                 n.applyAnchorAttributes(a, t);
                                 break;
-                            case _.f.Dashboard:
+                            case h.f.Dashboard:
                                 var s = n.extension.panelHeight || ye;
                                 a.setAttribute("style", "height: " + s + "px;");
                                 break;
-                            case _.f.Config:
+                            case h.f.Config:
                                 a.setAttribute("style", "width: 100%; height: " + me + "px;")
                         }
                         return a.style.display = "none", a
                     }, n.initSupervisedExtension = function() {
                         var e = n.params,
                             t = e.anchor,
-                            i = e.mode,
-                            a = n.extensionOptions.platform,
-                            o = n.extension.getViewerUrlForContext(a, i, t),
+                            r = e.mode,
+                            i = n.extensionOptions.platform,
+                            o = n.extension.getViewerUrlForContext(i, r, t),
                             s = n.getViewWithPermissions(),
                             u = n.getAnchorAttributes();
                         u.sandbox = n.getSandboxFlags(s);
                         var c = {
-                            extensionURL: r(o, n.extensionOptions),
+                            extensionURL: a(o, n.extensionOptions),
                             hostOrigin: window.location.origin,
                             iframeAttrs: u
                         };
                         n.coordinator.sendSupervisorInit(c)
                     }, n.getExtensionAuth = function() {
-                        var e = b.getToken(n.extension.clientId);
+                        var e = _.getToken(n.extension.clientId);
                         return {
                             channelId: e.payload.channel_id,
                             clientId: n.extension.clientId,
@@ -7657,8 +7683,8 @@
                         return r && !e.isLinked || r && !n.extension.bitsEnabled
                     }, n.onExtensionLoaded = function(e) {
                         n.hasLoaded = !0, n.contextManager.initializeContext(), n.tracker.trackEvent("extension_helper_load_success", {}), n.iframe.style.removeProperty("display");
-                        var t = b.getToken(n.extension.clientId);
-                        n.handleToken(t, t), n.emit(_.e.ExtensionFrameLoaded, n.extension.asObject), n.sendExtensionProductPrices(), n.sendExtensionBitsProductPrices(), n.sendExtensionDisplayState()
+                        var t = _.getToken(n.extension.clientId);
+                        n.handleToken(t, t), n.emit(h.e.ExtensionFrameLoaded, n.extension.asObject), n.sendExtensionProductPrices(), n.sendExtensionBitsProductPrices(), n.sendExtensionDisplayState()
                     }, n.onExtensionUserAction = function(e) {
                         n.handleUserAction[e.payload.type].call(n, e)
                     }, n.onExtensionPubSubRecived = function(e) {
@@ -7668,19 +7694,19 @@
                         n.tracker.trackEvent("extension_network_request", {
                             request_duration: e.payload.duration,
                             request_end_time: e.payload.endTime,
-                            request_file_type: l(e.payload.url),
+                            request_file_type: H(e.payload.url),
                             request_start_time: e.payload.startTime,
                             request_url: e.payload.url
                         })
                     }, n.emitConfirmationRequest = function(e) {
-                        n.emit(_.e.RequestModal, e)
+                        n.emit(h.e.RequestModal, e)
                     }, n.sendAuthUpdate = function(e) {
                         n.sendIdentityLinkUpdate(e), n.coordinator.sendExtensionAuth(n.getExtensionAuth())
                     }, n.sendBootstrap = function(e) {
                         n.hasBootstrapped = !0, n.sendIdentityLinkUpdate(e), n.coordinator.sendExtensionBootstrap(n.getExtensionAuth())
                     }, n.sendIdentityLinkUpdate = function(e) {
                         var t = e.isUserLoggedIn && n.canRequestIdLink;
-                        n.emit(_.e.IdentityLinked, e.isLinked, t)
+                        n.emit(h.e.IdentityLinked, e.isLinked, t)
                     }, n.beginPurchase = function(e) {
                         var t = e.payload.sku,
                             r = n.extension.vendorCode;
@@ -7717,19 +7743,19 @@
                             callback: n.onMouseEnter.bind(n)
                         }], n.eventListeners.forEach(function(e) {
                             e.target.addEventListener(e.event, e.callback)
-                        }), n.contextManager.on("context", n.onContextUpdate), n.coordinator.on(_.m.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(_.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(_.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(_.a.TwitchExtUserAction, n.onExtensionUserAction), n.onBeginPurchase && n.coordinator.on(_.a.TwitchExtBeginPurchase, n.beginPurchase), n.coordinator.on(_.a.TwitchExtBitsOnHover, n.showBitsBalance), n.coordinator.on(_.a.TwitchExtPubSubReceived, n.onExtensionPubSubRecived), n.coordinator.on(_.a.TwitchExtLongtask, n.onLongtask), b.subscribe(n.extension.clientId, n.handleToken);
-                        var e = b.getToken(n.extension.clientId);
+                        }), n.contextManager.on("context", n.onContextUpdate), n.coordinator.on(h.m.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(h.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(h.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(h.a.TwitchExtUserAction, n.onExtensionUserAction), n.onBeginPurchase && n.coordinator.on(h.a.TwitchExtBeginPurchase, n.beginPurchase), n.coordinator.on(h.a.TwitchExtBitsOnHover, n.showBitsBalance), n.coordinator.on(h.a.TwitchExtPubSubReceived, n.onExtensionPubSubRecived), n.coordinator.on(h.a.TwitchExtLongtask, n.onLongtask), _.subscribe(n.extension.clientId, n.handleToken);
+                        var e = _.getToken(n.extension.clientId);
                         e && !e.isNearExpiration && n.handleToken(e, e), n.bindHelperPubsub()
                     }, n.reloadExtension = function() {
                         n.hasLoaded = !1, n.hasBootstrapped = !1, n.coordinator.sendExtensionReloadMessage()
                     }, n.unsetupListeners = function() {
                         n.eventListeners.forEach(function(e) {
                             e.target.removeEventListener(e.event, e.callback)
-                        }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(_.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(_.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(_.a.TwitchExtUserAction, n.onExtensionUserAction), n.coordinator.off(_.a.TwitchExtLongtask, n.onLongtask), n.unregisterFunctionModals(), b.unsubscribe(n.extension.clientId, n.handleToken), n.helperPubsubAdapter && n.helperPubsubAdapter.destroy()
+                        }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(h.a.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(h.a.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(h.a.TwitchExtUserAction, n.onExtensionUserAction), n.coordinator.off(h.a.TwitchExtLongtask, n.onLongtask), n.unregisterFunctionModals(), _.unsubscribe(n.extension.clientId, n.handleToken), n.helperPubsubAdapter && n.helperPubsubAdapter.destroy()
                     }, n.registerFunctionModals = function() {
-                        n.functionManager.registerFunctionModal(_.k.FollowAction, new ie(n.params.loginId, n.tracker)), n.canRequestIdLink && n.functionManager.registerFunctionModal(_.k.IdShareRequest, new ae), n.extension.bitsEnabled && n.functionManager.registerFunctionModal(_.k.UseBits, new le(String(n.params.loginId), n.tracker, new C, n.showUseBitsSuccess, n.extension, n.extensionBitsProducts))
+                        n.functionManager.registerFunctionModal(h.k.FollowAction, new Z(n.params.loginId, n.tracker)), n.canRequestIdLink && n.functionManager.registerFunctionModal(h.k.IdShareRequest, new ee), n.extension.bitsEnabled && n.functionManager.registerFunctionModal(h.k.UseBits, new Y(String(n.params.loginId), n.tracker, new y, n.showUseBitsSuccess, n.extension, n.extensionBitsProducts))
                     }, n.unregisterFunctionModals = function() {
-                        n.functionManager.unregisterFunctionModal(_.k.FollowAction), n.extension.bitsEnabled && n.functionManager.unregisterFunctionModal(_.k.UseBits)
+                        n.functionManager.unregisterFunctionModal(h.k.FollowAction), n.extension.bitsEnabled && n.functionManager.unregisterFunctionModal(h.k.UseBits)
                     }, n.handlePurchaseCompleted = function(e) {
                         var t = e.msg.sku;
                         n.extensionProducts.then(function(e) {
@@ -7738,12 +7764,12 @@
                             }) && n.coordinator.sendExtensionReloadEntitlementsMessage()
                         })
                     }, n.showBitsBalance = function() {
-                        n.emit(_.e.ShowBitsBalance)
+                        n.emit(h.e.ShowBitsBalance)
                     }, n.showUseBitsSuccess = function(e) {
-                        n.emit(_.e.ShowUseBitsSuccess, e)
+                        n.emit(h.e.ShowUseBitsSuccess, e)
                     }, n.handleBitsTransactionCompleted = function(e) {
-                        var t = H.Other;
-                        String(n.params.loginId) === e.user_id && (t = H.CurrentUser);
+                        var t = x.Other;
+                        String(n.params.loginId) === e.user_id && (t = x.CurrentUser);
                         var r = {
                             sku: e.sku,
                             displayName: e.sku,
@@ -7757,7 +7783,7 @@
                                 return t.sku === e.sku
                             });
                             n.coordinator.sendBitsTransactionCompleteMessage({
-                                action: _.a.TwitchExtBitsTransactionComplete,
+                                action: h.a.TwitchExtBitsTransactionComplete,
                                 product: a || r,
                                 transactionId: e.transaction_id,
                                 userId: e.user_id,
@@ -7767,7 +7793,7 @@
                             })
                         }).catch(function() {
                             n.coordinator.sendBitsTransactionCompleteMessage({
-                                action: _.a.TwitchExtBitsTransactionComplete,
+                                action: h.a.TwitchExtBitsTransactionComplete,
                                 product: r,
                                 transactionId: e.transaction_id,
                                 userId: e.user_id,
@@ -7776,11 +7802,11 @@
                                 initiator: t
                             })
                         })
-                    }, n.extension = new k(t.extension), n.params = pe({
-                        platform: _.g.Web
+                    }, n.extension = new te(t.extension), n.params = pe({
+                        platform: h.g.Web
                     }, t, {
-                        mode: t.platform === _.g.Mobile ? _.f.Viewer : t.mode
-                    }), n.iframe = n.createSupervisorIFrame(t.iframeClassName, t.anchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.extension.token && !b.getToken(n.extension.clientId) && b.registerToken(n.extension.clientId, n.extension.token), n.registerFunctionModals(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && I.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), I.onBitsTransactionCompleted(n.params.channelId, n.params.extension.clientId, n.params.loginId, n.handleBitsTransactionCompleted), n
+                        mode: t.platform === h.g.Mobile ? h.f.Viewer : t.mode
+                    }), n.iframe = n.createSupervisorIFrame(t.iframeClassName, t.anchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.extension.token && !_.getToken(n.extension.clientId) && _.registerToken(n.extension.clientId, n.extension.token), n.registerFunctionModals(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && C.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), C.onBitsTransactionCompleted(n.params.channelId, n.params.extension.clientId, n.params.loginId, n.handleBitsTransactionCompleted), n
                 }
                 return fe(t, e), Object.defineProperty(t.prototype, "tracker", {
                     get: function() {
@@ -7806,7 +7832,7 @@
                             anchor: this.params.anchor,
                             language: this.language,
                             mode: this.params.mode,
-                            state: _.i[this.extension.state],
+                            state: h.i[this.extension.state],
                             platform: this.params.platform
                         }
                     },
@@ -7838,7 +7864,7 @@
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "canRequestIdLink", {
                     get: function() {
-                        var e = b.getToken(this.extension.clientId);
+                        var e = _.getToken(this.extension.clientId);
                         return !e.isBroadcaster && (e.isLinked || this.extension.requestIdentityLink)
                     },
                     enumerable: !0,
@@ -7848,20 +7874,20 @@
                 }, t.prototype.getViewWithPermissions = function() {
                     var e = this.extension.views;
                     switch (this.params.mode) {
-                        case _.f.Config:
-                            return e[s.Config];
-                        case _.f.Dashboard:
-                            return e[s.LiveConfig];
-                        case _.f.Viewer:
+                        case h.f.Config:
+                            return e[K.Config];
+                        case h.f.Dashboard:
+                            return e[K.LiveConfig];
+                        case h.f.Viewer:
                             switch (this.params.anchor) {
-                                case _.c.Component:
-                                    return e[s.Component];
-                                case _.c.Hidden:
-                                    return e[s.Hidden];
-                                case _.c.Overlay:
-                                    return e[s.VideoOverlay];
-                                case _.c.Panel:
-                                    return e[s.Panel]
+                                case h.c.Component:
+                                    return e[K.Component];
+                                case h.c.Hidden:
+                                    return e[K.Hidden];
+                                case h.c.Overlay:
+                                    return e[K.VideoOverlay];
+                                case h.c.Panel:
+                                    return e[K.Panel]
                             }
                     }
                 }, t.prototype.trackSequence = function(e, t, n, r) {
@@ -7898,7 +7924,7 @@
                             var t = this.extension,
                                 n = t.sku,
                                 r = t.vendorCode;
-                            this.extension.isMonetized ? (this.extensionProductsCache = Object(v.b)(r, n, this.language), e = this.extensionProductsCache) : e = Promise.resolve({
+                            this.extension.isMonetized ? (this.extensionProductsCache = Object(p.b)(r, n, this.language), e = this.extensionProductsCache) : e = Promise.resolve({
                                 products: []
                             })
                         }
@@ -7911,7 +7937,7 @@
                         var e = this.extensionBitsProductsCache;
                         if (void 0 === e) {
                             var t = this.extension.clientId;
-                            this.extensionBitsProductsCache = oe(t), e = this.extensionBitsProductsCache
+                            this.extensionBitsProductsCache = l(t), e = this.extensionBitsProductsCache
                         }
                         return e
                     },
@@ -7921,7 +7947,7 @@
                     return {
                         description: e.description,
                         developerName: e.developer_name,
-                        displayPrice: a(e.price.price, e.price.currency_unit),
+                        displayPrice: i(e.price.price, e.price.currency_unit),
                         extensionName: this.extension.name,
                         shortDescription: e.short_description,
                         sku: e.sku,
@@ -7937,14 +7963,14 @@
                     if (!this.extension.bitsEnabled) return void this.coordinator.sendBitsProductsMessage([]);
                     this.extensionBitsProducts.then(function(t) {
                         var n = t.products.filter(function(t) {
-                            return e.extension.state !== _.h.Released || !0 !== t.inDevelopment
+                            return e.extension.state !== h.h.Released || !0 !== t.inDevelopment
                         }).map(function(t) {
                             var n = {
                                 cost: t.cost,
                                 displayName: t.displayName,
                                 sku: t.sku
                             };
-                            return e.extension.state !== _.h.Released && (n.inDevelopment = t.inDevelopment), n
+                            return e.extension.state !== h.h.Released && (n.inDevelopment = t.inDevelopment), n
                         });
                         e.coordinator.sendBitsProductsMessage(n)
                     })
@@ -7953,52 +7979,52 @@
                     if (e) {
                         var t = e();
                         switch (t.anchor) {
-                            case _.c.Overlay:
+                            case h.c.Overlay:
                                 this.setVisible(t.isVisible);
                                 break;
-                            case _.c.Component:
+                            case h.c.Component:
                                 this.setVisible(t.isVisible), this.setPosition(t.position)
                         }
                     }
                 }, t.prototype.bindHelperPubsub = function() {
-                    this.helperPubsubAdapter = this.params.helperPubsubAdapter || new de(this.coordinator, this.tracker)
+                    this.helperPubsubAdapter = this.params.helperPubsubAdapter || new ne(this.coordinator, this.tracker)
                 }, t
             }(u.EventEmitter2),
             ge = n(263);
         n.d(t, "c", function() {
             return ve
         }), n.d(t, "g", function() {
-            return I
+            return C
         }), n.d(t, !1, function() {
-            return s
+            return K
         }), n.d(t, !1, function() {
-            return k
+            return te
         }), n.d(t, !1, function() {
-            return _.d
+            return h.d
         }), n.d(t, "a", function() {
-            return _.b
+            return h.b
         }), n.d(t, "b", function() {
-            return _.c
+            return h.c
         }), n.d(t, "d", function() {
-            return _.f
+            return h.f
         }), n.d(t, "e", function() {
-            return _.g
+            return h.g
         }), n.d(t, !1, function() {
-            return _.h
+            return h.h
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return _.i
+            return h.i
         }), n.d(t, !1, function() {
-            return _.a
+            return h.a
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return _.m
+            return h.m
         }), n.d(t, "f", function() {
-            return _.k
+            return h.k
         }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-            return _.e
+            return h.e
         }), n.d(t, !1, function() {
-            return _.l
+            return h.l
         }), n.d(t, !1, function() {
-            return _.j
+            return h.j
         }), n.d(t, !1, function() {
             return ge.a
         }), n.d(t, !1, function() {
@@ -8006,7 +8032,7 @@
         });
         ! function() {
             function e() {}
-            e.ExtensionFrame = ve, e.ExtensionService = I
+            e.ExtensionFrame = ve, e.ExtensionService = C
         }()
     }, function(e, t, n) {
         "use strict";
@@ -12569,86 +12595,16 @@
     }, function(e, t, n) {
         "use strict";
         n.d(t, "a", function() {
-            return r
-        }), n.d(t, "c", function() {
-            return c
-        }), n.d(t, "b", function() {
-            return l
-        }), n.d(t, "d", function() {
-            return d
-        }), n.d(t, "e", function() {
-            return f
-        });
-        var r, i = n(104),
-            a = n(412),
-            o = n.n(a),
-            s = n(253);
-        ! function(e) {
-            e.Square100 = "100x100", e.Square24 = "24x24", e.DiscoverySplash = "300x200"
-        }(r || (r = {}));
-        var u = function(e) {
-                var t = {
-                        factor: 2,
-                        minTimeout: 1e3,
-                        randomize: !0,
-                        retries: 16
-                    },
-                    n = function(t) {
-                        return i.a.authRequest(e).catch(function(e) {
-                            if (e.response && e.response.status) {
-                                if (!(e.response.status >= 500 || 429 === e.response.status)) throw e;
-                                t()
-                            } else t()
-                        })
-                    };
-                return o()(n, t)
-            },
-            c = function(e) {
-                var t = i.a.newRequest("/v5/channels/" + e + "/extensions", {
-                    method: "GET"
-                });
-                return u(t)
-            },
-            l = function(e, t, n) {
-                var r = new s.a;
-                r.append("vendor_code", e), r.append("sku", t), r.append("language", n);
-                var a = "/v5/extensions/products?" + r,
-                    o = i.a.newRequest(a, {
-                        method: "GET"
-                    });
-                return u(o)
-            },
-            d = function(e, t, n) {
-                var r = i.a.newRequest("/v5/extensions/" + e + "/auth/link_user", {
-                    body: JSON.stringify({
-                        show_user: n,
-                        token: t
-                    }),
-                    method: "POST"
-                });
-                return u(r)
-            },
-            f = function(e, t) {
-                var n = t.payload.channel_id,
-                    r = i.a.newRequest("/v5/extensions/" + e + "/auth/refresh/" + n, {
-                        body: JSON.stringify({
-                            token: t.token
-                        }),
-                        method: "POST"
-                    });
-                return u(r)
-            }
-    }, function(e, t, n) {
-        "use strict";
-        n.d(t, "a", function() {
             return a
         });
-        var r = this && this.__assign || Object.assign || function(e) {
-                for (var t, n = 1, r = arguments.length; n < r; n++) {
-                    t = arguments[n];
-                    for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
-                }
-                return e
+        var r = this && this.__assign || function() {
+                return r = Object.assign || function(e) {
+                    for (var t, n = 1, r = arguments.length; n < r; n++) {
+                        t = arguments[n];
+                        for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i])
+                    }
+                    return e
+                }, r.apply(this, arguments)
             },
             i = function() {
                 function e() {
@@ -12678,6 +12634,78 @@
                 }, e
             }(),
             a = new i
+    }, function(e, t, n) {
+        "use strict";
+        n.d(t, "a", function() {
+            return r
+        }), n.d(t, "c", function() {
+            return c
+        }), n.d(t, "b", function() {
+            return l
+        }), n.d(t, "d", function() {
+            return d
+        }), n.d(t, "e", function() {
+            return f
+        });
+        var r, i = n(412),
+            a = n.n(i),
+            o = n(253),
+            s = n(103);
+        ! function(e) {
+            e.Square100 = "100x100", e.Square24 = "24x24", e.DiscoverySplash = "300x200"
+        }(r || (r = {}));
+        var u = function(e) {
+                var t = {
+                        factor: 2,
+                        minTimeout: 1e3,
+                        randomize: !0,
+                        retries: 16
+                    },
+                    n = function(t) {
+                        return s.a.authRequest(e).catch(function(e) {
+                            if (e.response && e.response.status) {
+                                if (!(e.response.status >= 500 || 429 === e.response.status)) throw e;
+                                t()
+                            } else t()
+                        })
+                    };
+                return a()(n, t)
+            },
+            c = function(e) {
+                var t = s.a.newRequest("/v5/channels/" + e + "/extensions", {
+                    method: "GET"
+                });
+                return u(t)
+            },
+            l = function(e, t, n) {
+                var r = new o.a;
+                r.append("vendor_code", e), r.append("sku", t), r.append("language", n);
+                var i = "/v5/extensions/products?" + r,
+                    a = s.a.newRequest(i, {
+                        method: "GET"
+                    });
+                return u(a)
+            },
+            d = function(e, t, n) {
+                var r = s.a.newRequest("/v5/extensions/" + e + "/auth/link_user", {
+                    body: JSON.stringify({
+                        show_user: n,
+                        token: t
+                    }),
+                    method: "POST"
+                });
+                return u(r)
+            },
+            f = function(e, t) {
+                var n = t.payload.channel_id,
+                    r = s.a.newRequest("/v5/extensions/" + e + "/auth/refresh/" + n, {
+                        body: JSON.stringify({
+                            token: t.token
+                        }),
+                        method: "POST"
+                    });
+                return u(r)
+            }
     }, function(e, t, n) {
         "use strict";
         var r, i = n(184),
@@ -15022,51 +15050,51 @@
     }, function(e, t, n) {
         "use strict";
         n.d(t, "c", function() {
-            return r
-        }), n.d(t, "d", function() {
             return i
-        }), n.d(t, "e", function() {
+        }), n.d(t, "d", function() {
             return a
-        }), n.d(t, "f", function() {
+        }), n.d(t, "e", function() {
             return o
-        }), n.d(t, "g", function() {
+        }), n.d(t, "f", function() {
             return s
+        }), n.d(t, "g", function() {
+            return u
         }), n.d(t, "h", function() {
-            return l
+            return d
         }), n.d(t, "b", function() {
-            return c
+            return l
         }), n.d(t, "a", function() {
             return f
         });
-        var r;
+        var r, i;
         ! function(e) {
             e.Active = "active", e.Inactive = "inactive"
-        }(r || (r = {}));
-        var i;
-        ! function(e) {
-            e.Hidden = "hidden", e.Panel = "panel", e.Overlay = "video_overlay", e.Component = "component"
         }(i || (i = {}));
         var a;
         ! function(e) {
-            e.Config = "config", e.Dashboard = "dashboard", e.Viewer = "viewer"
+            e.Hidden = "hidden", e.Panel = "panel", e.Overlay = "video_overlay", e.Component = "component"
         }(a || (a = {}));
         var o;
         ! function(e) {
-            e.Mobile = "mobile", e.Web = "web"
+            e.Config = "config", e.Dashboard = "dashboard", e.Viewer = "viewer"
         }(o || (o = {}));
         var s;
         ! function(e) {
-            e.Testing = "Testing", e.HostedTest = "Assets Uploaded", e.Approved = "Approved", e.Released = "Released", e.ReadyForReview = "Ready For Review", e.InReview = "In Review", e.PendingAction = "Pending Action", e.Uploading = "Uploading"
+            e.Mobile = "mobile", e.Web = "web"
         }(s || (s = {}));
         var u;
         ! function(e) {
-            e.Testing = "testing", e.HostedTest = "hosted_test", e.Approved = "approved", e.Released = "released", e.ReadyForReview = "ready_for_review", e.InReview = "in_review", e.PendingAction = "pending_action", e.Uploading = "uploading"
+            e.Testing = "Testing", e.HostedTest = "Assets Uploaded", e.Approved = "Approved", e.Released = "Released", e.ReadyForReview = "Ready For Review", e.InReview = "In Review", e.PendingAction = "Pending Action", e.Uploading = "Uploading"
         }(u || (u = {}));
-        var c, l = (d = {}, d[s.Testing] = u.Testing, d[s.HostedTest] = u.HostedTest, d[s.Approved] = u.Approved, d[s.Released] = u.Released, d[s.ReadyForReview] = u.ReadyForReview, d[s.InReview] = u.InReview, d[s.PendingAction] = u.PendingAction, d[s.Uploading] = u.Uploading, d);
+        var c;
+        ! function(e) {
+            e.Testing = "testing", e.HostedTest = "hosted_test", e.Approved = "approved", e.Released = "released", e.ReadyForReview = "ready_for_review", e.InReview = "in_review", e.PendingAction = "pending_action", e.Uploading = "uploading"
+        }(c || (c = {}));
+        var l, d = (r = {}, r[u.Testing] = c.Testing, r[u.HostedTest] = c.HostedTest, r[u.Approved] = c.Approved, r[u.Released] = c.Released, r[u.ReadyForReview] = c.ReadyForReview, r[u.InReview] = c.InReview, r[u.PendingAction] = c.PendingAction, r[u.Uploading] = c.Uploading, r);
         ! function(e) {
             e.TwitchExtAuth = "twitch-ext-auth", e.TwitchExtBootstrap = "twitch-ext-bootstrap", e.TwitchExtContext = "twitch-ext-context", e.TwitchExtError = "twitch-ext-error", e.TwitchExtLoaded = "twitch-ext-loaded", e.TwitchExtLongtask = "twitch-ext-longtask", e.TwitchExtNetworkTiming = "twitch-ext-network-timing", e.TwitchExtReload = "twitch-ext-reload", e.TwitchExtUserAction = "twitch-ext-user-action", e.TwitchExtConfirmationRequest = "twitch-ext-confirmation-request", e.TwitchExtBeginPurchase = "twitch-ext-begin-purchase", e.TwitchExtReloadEntitlements = "twitch-ext-reload-entitlements", e.TwitchExtProductPrices = "twitch-ext-product-prices", e.TwitchExtVisibilityChanged = "twitch-ext-visibility-changed", e.TwitchExtBitsProducts = "twitch-ext-bits-products", e.TwitchExtUseBits = "twitch-ext-use-bits", e.TwitchExtBitsTransactionComplete = "twitch-ext-bits-transaction-complete", e.TwitchExtBitsOnHover = "twitch-ext-bits-on-hover", e.TwitchExtPubSubReceived = "twitch-ext-pubsub-received", e.TwitchExtPositionChanged = "twitch-ext-position-changed", e.TwitchExtPubsubMessage = "twitch-ext-pubsub-message", e.TwitchExtPubsubBindFailure = "twitch-ext-pubsub-bind-failure", e.TwitchExtPubsubListen = "twitch-ext-pubsub-listen", e.TwitchExtPubsubUnlisten = "twitch-ext-pubsub-unlisten"
-        }(c || (c = {}));
-        var d, f = 1024
+        }(l || (l = {}));
+        var f = 1024
     }, function(e, t, n) {
         "use strict";
         e.exports = n(255)() ? Object.setPrototypeOf : n(256)
@@ -39341,7 +39369,7 @@
             }(),
             ss = n(108),
             us = n(11),
-            cs = "//video-edge-284b44.sjc02.hls.ttvnw.net/v1/segment/CiqjBCZRBbiiT5he0ZOLMSdjLJlhhFqQDqEyhcCkIvDckZizC5JqDzeIp05ElHjZ8GiEdWq2mMcT-wTdixTrx-fn2X04mWf4eegRuZSayLpwCNzmaK73AX-Bm5zr0Qh9gaQTPJ_PrLx_S_jF9YlMWAlScMVMkX5d_Y3zZ6tR2Q72vM4bG8s-p6VLsum9cbW6DLiFUB_shrf9FZa0azjunVkyJ2CLjzc3Trdl5Wbv7HXFJhHJ6O6J7ubJui46JGbz4ViNK2j4e2nkxPucscDOfMiNW5b5sN8ESH-Q0TLivZQuX2zBRyjRQdMTlCVQoOr7oAgchHKPF_kbCIyhbq8wT3pitM-OLcimr98iFMECWjEjNelN03p0b5cFhpbR6ubBJw7RvItAKlAgXUPNYAnABz3-nG2hkVy1yLgYyixCJbsTnC6abnnDtdXC6yboGDjOAmT403ZFyfXp-SOo2RnVglb0lAhRAr3bz9ftu2CqlOx1Ahx3D_KsV-GmSCM50WQYOcSg_5WiElPDELjcdHf5nEn71am5PW1Ns8XfzvVsBCbzkHnIF_00rVyVQzYA7RjIx7SgqpeyGUf5M6UoKfbCNHwLI4wnjzE4-Wu0BpPAHM1zLyA9yvdOcuaph6rRYM7FIRInfjhmG2-m4ydbqMP05zSU4DB-G9CzPJZbmXTdXDI05jSqzgKnvxEmzZ-YZ9PPkPEKBaOp3YyM6tthtRQi8BtacqZxGx4p4hVsJRdnOmf9Qyb_7EZKgVrmYb0Q2_cAEruU5XPx.ts",
+            cs = "//video-edge-11af3d.sjc02.hls.ttvnw.net/v1/segment/CvffNSAYNY-FaFB7DbaZnyc9S9H6N27Qqz8Gb4od2SX_KRd2T--rdORT9TUZiMpT5mjrqKmOFQ_dJtRCUcPVKN8cKHk_afshjMFm339jg4IFp03ze39Pc9wN4-kPmmOowJ7ECekGxkOBzK-iy0zKUo8ZWjlOE0fpgRRlGPYy_OSYPwFd-OI_LW7ljli3rmmfrFbzTSz_aWtdIPYg0o9ZnWl5anGYdUA6tE9w0U0TVFwg140bg-Vmhe-FvHt0ekGFv267XQ_NHYiSJuzEI-KNTfVjUYzCewvHOn8D4POjjd1BWvnTNCD8IDmZSl1nUWij6OC4DOyC6Rpsr5gFrvPBhDdCtssykIrsxvMc6_FR3DtSC_uphCGAA0r2lpLz6ZvPVrAvk-2kGkVepgCkaJgvL0tvqkoT9Xa2o2_s2tPWKc7hAZ96_68AYuYFht5xrY1wR0QIvlm_0Uvsig8kzLaioInu0yo9HgysfWtrhjbGkqv-VWu5udWNeS1FpI5Ghpk_yHBE9blxLEty9HBJK2uhYOfAUpAA9IF_7n403KK4kJHDcGm9OK7s4JciCtZNYpbci33GIJzgUlORcjvvWwed9VfUfmJpuKm9m_tQxozi_-dMOHUagK5L3zFDOb7boLwjKLmx70n7qB4NCGqPA58UXPZO53ME3cQdIEe8BVn_LHbxUp0nBvWLW1drmU8MVmJmxvoYk7S0gLMy7PlJ9RlFP8ug8KLmhpG1s7FtsRcXdMVaH44KhBYmju0hedh006lBYUM_dXdA0IW8x_q_BKfUr9Z1E5qW.ts",
             ls = n(49),
             ds = n(270),
             fs = n(141),
@@ -39378,7 +39406,7 @@
             bs = /^(\d+)\.(\d+)\.(\d+)[+|-]?(.*)?$/,
             _s = /^(\d+)\.(\d+)[+|-]?(.*)?$/,
             ws = /^(\d+)$/,
-            ks = "6.9.0",
+            ks = "6.11.0",
             Es = "desktop",
             Ss = "ember",
             Ps = [ns.e, ns.d, ns.w, ns.q],
@@ -44207,6 +44235,7 @@
                 }
             }(),
             Up = {
+                arePlayerControlsVisible: id.a.bool.isRequired,
                 game: id.a.string.isRequired,
                 height: id.a.number.isRequired,
                 installations: id.a.arrayOf(rp.a.isRequired).isRequired,
@@ -44243,6 +44272,7 @@
             },
             Fp = function(e) {
                 return {
+                    arePlayerControlsVisible: e.ui.showUI,
                     installations: e.extensions.activeInstallations,
                     extensionNotification: e.extensions.notification,
                     modalRequest: e.extensions.menuState.modalOptions,
@@ -44325,7 +44355,10 @@
                 }]), Bp(t, [{
                     key: "componentWillReceiveProps",
                     value: function(e) {
-                        e.game !== this.props.game && Ms.g.postContext({
+                        var t = e.game !== this.props.game,
+                            n = e.arePlayerControlsVisible !== this.props.arePlayerControlsVisible;
+                        (t || n) && Ms.g.postContext({
+                            arePlayerControlsVisible: e.arePlayerControlsVisible,
                             game: e.game
                         })
                     }
@@ -50741,27 +50774,6 @@
     }, function(e, t) {
         function n() {}
         e.exports = n
-    }, function(e, t) {
-        try {
-            new MouseEvent("test")
-        } catch (e) {
-            window.MouseEvent = function(e, t) {
-                var n = document.createEvent("MouseEvent"),
-                    r = Object.assign({
-                        bubbles: !1,
-                        cancelable: !1,
-                        clientX: 0,
-                        clientY: 0,
-                        ctrlKey: !1,
-                        altKey: !1,
-                        shiftKey: !1,
-                        metaKey: !1,
-                        button: 0,
-                        relatedTarget: null
-                    }, t || {});
-                return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget), n
-            }, window.MouseEvent.prototype = Event.prototype
-        }
     }, function(e, t, n) {
         (function(t) {
             ! function(n) {
@@ -50888,7 +50900,7 @@
                     a._unhandledRejectionFn = e
                 }, void 0 !== e && e.exports ? e.exports = a : n.Promise || (n.Promise = a)
             }(this)
-        }).call(t, n(410).setImmediate)
+        }).call(t, n(409).setImmediate)
     }, function(e, t, n) {
         (function(e) {
             function r(e, t) {
@@ -50914,7 +50926,7 @@
                 t >= 0 && (e._idleTimeoutId = setTimeout(function() {
                     e._onTimeout && e._onTimeout()
                 }, t))
-            }, n(411), t.setImmediate = "undefined" != typeof self && self.setImmediate || void 0 !== e && e.setImmediate || this && this.setImmediate, t.clearImmediate = "undefined" != typeof self && self.clearImmediate || void 0 !== e && e.clearImmediate || this && this.clearImmediate
+            }, n(410), t.setImmediate = "undefined" != typeof self && self.setImmediate || void 0 !== e && e.setImmediate || this && this.setImmediate, t.clearImmediate = "undefined" != typeof self && self.clearImmediate || void 0 !== e && e.clearImmediate || this && this.clearImmediate
         }).call(t, n(63))
     }, function(e, t, n) {
         (function(e, t) {
@@ -51021,6 +51033,27 @@
                 }
             }("undefined" == typeof self ? void 0 === e ? this : e : self)
         }).call(t, n(63), n(153))
+    }, function(e, t) {
+        try {
+            new MouseEvent("test")
+        } catch (e) {
+            window.MouseEvent = function(e, t) {
+                var n = document.createEvent("MouseEvent"),
+                    r = Object.assign({
+                        bubbles: !1,
+                        cancelable: !1,
+                        clientX: 0,
+                        clientY: 0,
+                        ctrlKey: !1,
+                        altKey: !1,
+                        shiftKey: !1,
+                        metaKey: !1,
+                        button: 0,
+                        relatedTarget: null
+                    }, t || {});
+                return n.initMouseEvent(e, r.bubbles, r.cancelable, window, r.ctrlKey, r.altKey, r.shiftKey, r.metaKey, r.button, r.relatedTarget), n
+            }, window.MouseEvent.prototype = Event.prototype
+        }
     }, function(e, t, n) {
         "use strict";
 
