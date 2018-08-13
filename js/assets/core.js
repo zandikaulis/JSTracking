@@ -10654,40 +10654,42 @@
                     return b
                 }), n.d(t, "c", function() {
                     return y
-                }), n.d(t, "i", function() {
+                }), n.d(t, "j", function() {
                     return E
-                }), n.d(t, "p", function() {
+                }), n.d(t, "q", function() {
                     return _
-                }), n.d(t, "r", function() {
-                    return A
-                }), n.d(t, "o", function() {
-                    return P
                 }), n.d(t, "s", function() {
+                    return A
+                }), n.d(t, "p", function() {
+                    return P
+                }), n.d(t, "t", function() {
                     return x
                 }), n.d(t, "a", function() {
                     return W
-                }), n.d(t, "j", function() {
+                }), n.d(t, "k", function() {
                     return z
-                }), n.d(t, "l", function() {
+                }), n.d(t, "m", function() {
                     return G
                 }), n.d(t, "h", function() {
                     return me
                 }), n.d(t, "g", function() {
                     return Ce
-                }), n.d(t, "t", function() {
+                }), n.d(t, "u", function() {
                     return we
-                }), n.d(t, "n", function() {
+                }), n.d(t, "o", function() {
                     return Te
                 }), n.d(t, "f", function() {
                     return Le
                 }), n.d(t, "e", function() {
                     return Ae
-                }), n.d(t, "k", function() {
+                }), n.d(t, "l", function() {
                     return Pe
-                }), n.d(t, "q", function() {
+                }), n.d(t, "r", function() {
                     return Fe
-                }), n.d(t, "m", function() {
+                }), n.d(t, "n", function() {
                     return We
+                }), n.d(t, "i", function() {
+                    return Xe
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.COMMUNITY_REPORT = "COMMUNITY_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -46385,7 +46387,7 @@
                     return r
                 }),
                 function(e) {
-                    e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding", e.ClipsViewing = "clips-viewing", e.ClipsWatchPage = "clips-watch", e.ClipsEditing = "clips-editing", e.ClipsEmbed = "clips-embed", e.Dashboard = "dashboard"
+                    e.Embed = "embed", e.Feed = "feed", e.Frontpage = "frontpage", e.Site = "site", e.Highlighter = "highlighter", e.Onboarding = "onboarding", e.ClipsViewing = "clips-viewing", e.ClipsWatchPage = "clips-watch", e.ClipsEditing = "clips-editing", e.ClipsEmbed = "clips-embed", e.Dashboard = "dashboard", e.SquadStreamPrimary = "squad-primary", e.SquadStreamSecondary = "squad-secondary"
                 }(i || (i = {}));
             var r, a = [i.ClipsEditing, i.ClipsViewing, i.ClipsEmbed];
             ! function(e) {
