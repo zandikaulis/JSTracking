@@ -2271,7 +2271,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-586d7237";
+    return "2.3.0-32f7f865";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2441,7 +2441,14 @@ MediaPlayer.prototype.getNetworkProfile = function () {
  */
 MediaPlayer.prototype.isProtected = function () {
     return this._mediaSink.isProtected();
-}
+};
+
+/**
+ * @returns {string} URL to the current playing source
+ */
+MediaPlayer.prototype.getSourceUrl = function () {
+    return this._mediaSink.srcUrl();
+};
 
 // private helpers
 
@@ -2867,6 +2874,7 @@ var MediaSink = module.exports = function MediaSink(config) {
     this._metadataTrack = this._video.addTextTrack('metadata');
     this._codecs = Object.create(null);
     this._onerror = config.onerror;
+    this._srcUrl = '';
     this._playbackMonitor = new PlaybackMonitor(this._video, config);
     this._drmManager = new DRMManager({
         video: this._video,
@@ -2881,6 +2889,7 @@ var MediaSink = module.exports = function MediaSink(config) {
  */
 MediaSink.prototype.configure = function (track) {
     if (track.path) {
+        this._srcUrl = track.path;
         // Update authxml path
         this._drmManager.configure(track.path);
 
@@ -2995,6 +3004,7 @@ MediaSink.prototype.pause = function () {
 MediaSink.prototype.reset = function () {
     this._mediaSource = null;
     this._tracks = Object.create(null);
+    this._srcUrl = '';
     this._playbackMonitor.pause();
     this._drmManager.reset();
 
@@ -3148,6 +3158,13 @@ MediaSink.prototype.videoElement = function () {
  */
 MediaSink.prototype.isProtected = function () {
     return this._drmManager.isProtected();
+};
+
+/**
+ * @returns {string} URL to current content
+ */
+MediaSink.prototype.srcUrl = function () {
+    return this._srcUrl;
 };
 
 /**
