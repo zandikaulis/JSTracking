@@ -1275,6 +1275,17 @@ function encodeBase64(input) {
     return btoa(String.fromCharCode.apply(null, input));
 }
 
+function getParamsFromUrl(url) {
+    var params = {};
+        var query = url.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+        }
+        return params;
+}
+
 /**
  * Ensuring that uncaught errors are sent in the correct format.
  * Most issues should be a constant error found in ERRORS, but
@@ -1296,6 +1307,7 @@ module.exports = {
     decodeBase64: decodeBase64,
     encodeBase64: encodeBase64,
     checkErrorFormat: checkErrorFormat,
+    getParamsFromUrl: getParamsFromUrl
 };
 
 
@@ -1323,6 +1335,7 @@ var contentIdFromInitData =  Utils.contentIdFromInitData;
 var decodeBase64 =  Utils.decodeBase64;
 var encodeBase64 =  Utils.encodeBase64;
 var checkErrorFormat = Utils.checkErrorFormat;
+var getParamsFromUrl = Utils.getParamsFromUrl;
 
 var ERRORS = Constants.ERRORS;
 
@@ -1380,17 +1393,14 @@ var DRMManager = function (config) {
 
 DRMManager.prototype.configure = function (path) {
     var parsed = new URL(path);
-    var token = parsed.searchParams.get('token');
-    var sig = parsed.searchParams.get('sig');
     var parts = parsed.pathname.split('/');
     var filename = parts[parts.length - 1];
     var channelName = filename.split('.')[0]; //remove extension
 
-    var authUrl = new URL(channelName, AUTH_XML_URL);
-    authUrl.searchParams.append('token', token);
-    authUrl.searchParams.append('sig', sig);
-
-    this._authUrl = authUrl.href;
+    var params = getParamsFromUrl(path);
+    var token = params['token'];
+    var sig = params['sig'];
+    this._authUrl = AUTH_XML_URL + channelName + '?token=' + encodeURIComponent(token) + '&sig=' + sig;
 };
 
 DRMManager.prototype.reset = function () {
@@ -2261,7 +2271,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-09fc48b1";
+    return "2.3.0-73a6ab38";
 }
 
 MediaPlayer.prototype.isLooping = function () {
