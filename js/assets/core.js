@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [168], {
+    [178], {
         "+GjP": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -990,7 +990,7 @@
                         return Object(f.d)(c.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(87)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(88)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -1542,7 +1542,7 @@
                 }
                 return e
             }! function(e) {
-                e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.BitsCheckoutPage = "bits_checkout_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelSubscriptionButton = "channel_subscription_button", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.ClipsOptions = "clips_options", e.CodeRedemptionPage = "code_redemption", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.ChangeEmail = "change_email", e.DashboardPage = "dashboard_page", e.DeleteAccountPage = "delete-account", e.DirectoryFollowButton = "directory-follow-button", e.DisableAccountPage = "disable-account", e.DropsLoginButton = "drops-login-button", e.EmotePickerSubscriptionButton = "emote_picker_subscription_button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.ExtensionInstallButton = "extension_install_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.LoginRequiredInterstitial = "login_required_interstitial", e.MessagesPage = "messages_page", e.PartnershipSignupPage = "partnership_signup_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SideNavUpsellCenter = "side-nav-upsell-center", e.StartUserFlow = "start_user_flow", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
+                e.ActivateDevice = "activate_device_page", e.BitsLandingPage = "bits_landing_page", e.BitsCheckoutPage = "bits_checkout_page", e.ChatLoginButton = "chat_login_button", e.ChatSignupButton = "chat_signup_button", e.Chat = "chat", e.ChannelSubscriptionButton = "channel_subscription_button", e.ChannelUpsellLogin = "channel_upsell_login", e.ChannelUpsellSignup = "channel_upsell_signup", e.ClipsManager = "clips_manager", e.ClipsOptions = "clips_options", e.CodeRedemptionPage = "code_redemption", e.CommunityModeration = "community_moderation", e.CommunityCreate = "community_create", e.ChangeEmail = "change_email", e.DashboardPage = "dashboard_page", e.DeleteAccountPage = "delete-account", e.DirectoryFollowButton = "directory-follow-button", e.DisableAccountPage = "disable-account", e.DropsLoginButton = "drops-login-button", e.EmotePickerSubscriptionButton = "emote_picker_subscription_button", e.EsportsCampaignTabsFTUE = "esports_campaign_tabs_ftue", e.EsportsCampaignTabsMilestoneBalloon = "esports_campaign_tabs_milestone_balloon", e.EventFollowButton = "event_follow_button", e.ExtensionInstallButton = "extension_install_button", e.FeedReactionToggle = "feed_reaction_toggle", e.FollowButton = "follow-button", e.FollowGameButton = "follow-game-button", e.FollowingPage = "following_page", e.FriendAdd = "friend_add", e.FriendsPage = "friends-require-login", e.InventoryPage = "inventory_page", e.LoginRequiredInterstitial = "login_required_interstitial", e.MessagesPage = "messages_page", e.MessagesDisclosurePage = "messages_disclosure_page", e.NflRequireLoginPlayer = "nfl-require-login-player", e.PartnershipSignupPage = "partnership_signup_page", e.PaymentsLandingPage = "payments_landing_page", e.RaidJoin = "raid_join", e.ReportHoster = "report_hoster", e.ReportChannel = "report_channel", e.SettingsPage = "settings_page", e.SideNavUpsellCenter = "side-nav-upsell-center", e.StartUserFlow = "start_user_flow", e.SubsLandingPage = "subs_landing_Page", e.SubsCheckoutPage = "subs_checkout_page", e.SubsManagementPage = "backpack", e.TopNavLoginButton = "topnav_login_button", e.TopNavSignupButton = "topnav_signup_button", e.TrendingEmotesLogin = "trending-emotes-login", e.TrendingEmotesSignup = "trending-emotes-signup", e.ViewerCard = "viewer_card", e.VODComment = "vod_comment", e.VODOptions = "vod_options", e.WhisperButton = "whisper_button"
             }(i || (i = {}))
         },
         "14MF": function(e, t, n) {},
@@ -1629,7 +1629,7 @@
                 }, e
             }()
         },
-        173: function(e, t, n) {
+        174: function(e, t, n) {
             n("/cy1"), n("gg62"), n("LVaA"), e.exports = n("sNlA")
         },
         "19zd": function(e, t) {
@@ -2636,6 +2636,31 @@
                     type: i
                 }
             }
+        },
+        "2aBk": function(e, t, n) {
+            "use strict";
+            var i = n("/MKj"),
+                r = n("fvjX"),
+                a = n("d0ua"),
+                o = n("kRBY"),
+                s = n("WVpp");
+            var l = Object(i.b)(function(e) {
+                return {
+                    isLoggedIn: Object(o.f)(e)
+                }
+            }, function(e) {
+                return Object(r.b)({
+                    beginPersistingPlayer: a.s,
+                    stopPersistingPlayer: a.H
+                }, e)
+            })(s.a);
+            n.d(t, "a", function() {
+                return l
+            }), n.d(t, "b", function() {
+                return s.b
+            }), n.d(t, !1, function() {
+                return s.a
+            })
         },
         "2b5K": function(e, t, n) {},
         "2oG4": function(e, t, n) {},
@@ -7582,333 +7607,26 @@
         },
         "8ssJ": function(e, t, n) {
             "use strict";
-            var i, r = n("/MKj"),
-                a = n("fvjX"),
-                o = n("d0ua"),
-                s = n("kRBY"),
-                l = n("mrSG"),
-                c = n("q1tI"),
-                d = n("eO8H"),
-                u = n("/7QA"),
-                p = n("TSYQ"),
-                m = n("oXhC"),
-                h = n("eFQ3"),
-                f = n("lTz2"),
-                g = n("Ue10");
-            n("wksc");
-            ! function(e) {
-                e.ClipsPlayer = "clips-player", e.DefaultPlayer = "default-player"
-            }(i || (i = {}));
-            var v = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {}, t.renderMiniHoverControls = function() {
-                            var e = t.state.isPaused ? Object(u.d)("Play", "PersistentPlayerMini") : Object(u.d)("Pause", "PersistentPlayerMini");
-                            return c.createElement(g.vb, {
-                                className: "persistent-player__hover-controls",
-                                attachTop: !0,
-                                attachBottom: !0,
-                                attachLeft: !0,
-                                attachRight: !0,
-                                borderRadius: g.u.Medium,
-                                overflow: g.Ua.Hidden,
-                                position: g.bb.Absolute,
-                                zIndex: g.Yb.Above,
-                                "data-test-selector": "persistent-player-mini-hover"
-                            }, c.createElement(g.Ra, {
-                                className: "persistent-player__title",
-                                alignItems: g.d.Center,
-                                display: g.T.Flex,
-                                flexDirection: g.V.Row,
-                                flexWrap: g.W.NoWrap,
-                                justifyContent: g.Qa.Between,
-                                padding: {
-                                    y: .5,
-                                    right: .5
-                                },
-                                zIndex: g.Yb.Above,
-                                "data-test-selector": "persistent-player-mini-title"
-                            }, c.createElement(g.Ra, {
-                                ellipsis: !0,
-                                margin: {
-                                    x: 1
-                                }
-                            }, c.createElement(g.S, {
-                                fontSize: g.X.Size5,
-                                type: g.Lb.Span
-                            }, t.props.options.miniPlayerTitle)), c.createElement(g.Ra, {
-                                flexShrink: 0
-                            }, c.createElement(g.x, {
-                                ariaLabel: Object(u.d)("Dismiss Mini Player", "PersistentPlayerMini"),
-                                icon: g.lb.Close,
-                                overlay: !0,
-                                onClick: t.props.onClickDismiss,
-                                "data-test-selector": "persistent-player-mini-dismiss"
-                            }))), c.createElement(g.Ra, {
-                                attachTop: !0,
-                                attachBottom: !0,
-                                attachLeft: !0,
-                                attachRight: !0,
-                                alignItems: g.d.Center,
-                                display: g.T.Flex,
-                                flexDirection: g.V.Row,
-                                justifyContent: g.Qa.Center,
-                                margin: {
-                                    top: 4
-                                },
-                                position: g.bb.Absolute
-                            }, t.renderMiniControl(g.lb.MiniPlayerExpand, Object(u.d)("Expand Player", "PersistentPlayerMini"), "persistent-player-mini-expand", t.props.onClickExpand), c.createElement(g.Ra, {
-                                margin: {
-                                    left: 2
-                                }
-                            }, t.renderMiniControl(t.state.isPaused ? g.lb.MiniPlayerPlay : g.lb.MiniPlayerPause, e, "persistent-player-mini-pause-play", t.togglePause))))
-                        }, t.renderMiniControl = function(e, t, n, i) {
-                            return c.createElement("button", {
-                                className: "persistent-player__control",
-                                onClick: i,
-                                "aria-label": t,
-                                "data-test-selector": n
-                            }, c.createElement(g.kb, {
-                                asset: e,
-                                width: 30,
-                                height: 30
-                            }))
-                        }, t.renderMiniInterceptPointerView = function() {
-                            return c.createElement(g.Ra, {
-                                className: "persistent-player__intercept-view",
-                                position: g.bb.Absolute,
-                                attachBottom: !0,
-                                attachLeft: !0,
-                                attachRight: !0,
-                                zIndex: g.Yb.Above,
-                                "data-test-selector": "persistent-player-mini-cover"
-                            })
-                        }, t.togglePause = function() {
-                            t.setState(function(e) {
-                                return {
-                                    shouldPause: !e.isPaused
-                                }
-                            })
-                        }, t.onPauseToggled = function(e) {
-                            t.setState({
-                                isPaused: e,
-                                shouldPause: e
-                            })
-                        }, t.handleLocationChange = function() {
-                            t.props.theatreModeEnabled && t.props.disableTheatreMode()
-                        }, t
-                    }
-                    return l.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                        Object(f.b)(this.props.options.playerProps, e.options.playerProps) && this.setState({
-                            shouldPause: !1
-                        })
-                    }, t.prototype.componentDidMount = function() {
-                        this.historyUnlisten = this.props.history.listen(this.handleLocationChange)
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.handleLocationChange(), this.historyUnlisten()
-                    }, t.prototype.render = function() {
-                        var e, t = this.props.theatreModeEnabled && !this.props.mini,
-                            n = p({
-                                "persistent-player--theatre": t
-                            }),
-                            r = this.props.mainRef.getBoundingClientRect(),
-                            a = 0;
-                        if (t) e = {
-                            position: "fixed",
-                            left: 0,
-                            top: 0,
-                            maxHeight: "100vh",
-                            height: "100%",
-                            width: window.innerWidth < 820 || this.props.rightNavCollapsed ? "100%" : "calc(100% - " + m.a + ")",
-                            zIndex: 3e3
-                        };
-                        else if (this.props.mini) e = {
-                            position: "fixed",
-                            width: "28rem",
-                            height: "15.75rem",
-                            left: r.left,
-                            bottom: 0,
-                            margin: "1rem",
-                            zIndex: 1e3
-                        }, a = 5;
-                        else {
-                            var o = this.props.contentRef.getBoundingClientRect(),
-                                s = o.left - r.left,
-                                d = r.right - o.right;
-                            e = {
-                                top: o.top - r.top,
-                                left: s,
-                                position: "absolute",
-                                width: "100%",
-                                maxWidth: "calc(100% - " + (s + d) + "px)",
-                                maxHeight: "calc(100vh - 16rem)",
-                                overflow: "hidden",
-                                height: "auto"
-                            }
-                        }
-                        var u = c.createElement(h.c, l.__assign({
-                                key: i.DefaultPlayer,
-                                "data-test-selector": i.DefaultPlayer
-                            }, this.props.options.playerProps, {
-                                instanceRef: this.props.onVideoPlayerInstance,
-                                miniModeEnabled: this.props.mini,
-                                paused: this.state.shouldPause,
-                                onPauseToggled: this.onPauseToggled
-                            })),
-                            f = c.createElement(h.c, l.__assign({
-                                key: i.ClipsPlayer,
-                                "data-test-selector": i.ClipsPlayer
-                            }, this.props.options.playerProps, {
-                                instanceRef: this.props.onVideoPlayerInstance,
-                                miniModeEnabled: this.props.mini,
-                                paused: this.state.shouldPause,
-                                onPauseToggled: this.onPauseToggled
-                            })),
-                            v = this.props.options.playerProps.clipSlug ? f : u;
-                        return c.createElement(g.Ka, {
-                            elevation: a,
-                            className: p({
-                                "persistent-player__border--mini": this.props.mini
-                            }),
-                            borderRadius: this.props.mini ? g.u.Medium : g.u.None,
-                            overflow: this.props.mini ? g.Ua.Hidden : void 0
-                        }, c.createElement("div", {
-                            className: p("persistent-player", n),
-                            style: e
-                        }, c.createElement(g.l, null, v), this.props.mini && this.renderMiniInterceptPointerView(), this.props.mini && this.renderMiniHoverControls()))
-                    }, t
-                }(c.Component),
-                b = Object(d.f)(v);
-            var y, k, S = Object(r.b)(function(e) {
-                return {
-                    sideNavCollapsed: !e.ui.sideNavExpanded,
-                    rightNavCollapsed: !e.ui.rightColumnExpanded,
-                    theatreModeEnabled: e.ui.theatreModeEnabled
-                }
-            }, function(e) {
-                return Object(a.b)({
-                    disableTheatreMode: o.z
-                }, e)
-            })(b);
-            ! function(e) {
-                e.CloseMini = "close", e.OpenMini = "open", e.ExpandPlayer = "expand", e.ContentChange = "content_change"
-            }(y || (y = {})),
-            function(e) {
-                e.Minimize = "minimize", e.Maximize = "maximize", e.UserMinimize = "user_minimize", e.UserMaximize = "user_maximize"
-            }(k || (k = {}));
-            var E, _ = n("p5Wp"),
-                C = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        n.logger = u.j.withCategory("PersistentPlayerRoot"), n.trackMiniPlayerAction = function(e, t) {
-                            n.videoPlayerComponent && n.videoPlayerComponent.trackMiniPlayerAction(e, t)
-                        }, n.setVideoPlayerRef = function(e) {
-                            return n.videoPlayerComponent = e
-                        }, n.onClickExpand = function() {
-                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerExpand ? n.state.overrides.onMiniPlayerExpand() : (n.props.history.push(n.state.options.miniPlayerContentRoute), n.trackMiniPlayerAction(y.ExpandPlayer, k.UserMaximize)))
-                        }, n.onClickDismiss = function() {
-                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerDismiss ? n.state.overrides.onMiniPlayerDismiss() : (n.destroyPlayer(), n.trackMiniPlayerAction(y.CloseMini, k.UserMinimize)))
-                        }, n.onHistoryChange = function(e) {
-                            var t = n.props.isLoggedIn,
-                                i = Object(_.a)({
-                                    isLoggedIn: t,
-                                    location: e
-                                });
-                            i !== n.state.hideSideNav && n.setState({
-                                hideSideNav: i
-                            })
-                        };
-                        var i = t.isLoggedIn,
-                            r = t.location;
-                        return n.state = {
-                            isError: !1,
-                            mini: !1,
-                            hideSideNav: Object(_.a)({
-                                isLoggedIn: i,
-                                location: r
-                            })
-                        }, E && n.logger.warn("attempting to create a second instance of the Persistent Player Root. There should only be one in <Root>, use <PersistentPlayerContent> instead."), E = n, n
-                    }
-                    return l.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
-                        var n = this;
-                        this.setState({
-                            isError: !0
-                        }, function() {
-                            u.o.stats.recordComponentError("PersistentPlayerRoot"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
-                                info: t
-                            })
-                        })
-                    }, t.prototype.componentDidMount = function() {
-                        this.historyUnlisten = u.o.history.listen(this.onHistoryChange)
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.historyUnlisten && this.historyUnlisten()
-                    }, t.prototype.render = function() {
-                        return !this.state.isError && this.state.options && this.state.contentRef && this.props.mainRef ? c.createElement(S, {
-                            options: this.state.options,
-                            contentRef: this.state.contentRef,
-                            mainRef: this.props.mainRef,
-                            mini: this.state.mini,
-                            hideSideNav: this.state.hideSideNav,
-                            forceRender: this.state.forcePresentationRender,
-                            onClickExpand: this.onClickExpand,
-                            onClickDismiss: this.onClickDismiss,
-                            onVideoPlayerInstance: this.setVideoPlayerRef
-                        }) : null
-                    }, t.prototype.destroyPlayer = function(e) {
-                        var t = this;
-                        this.setState({
-                            mini: !1,
-                            options: void 0,
-                            overrides: void 0,
-                            contentRef: void 0
-                        }, function() {
-                            t.props.stopPersistingPlayer(), e && e()
-                        })
-                    }, t.prototype.requestVideoContent = function(e) {
-                        var t = this.state.options && this.state.options.playerProps;
-                        Object(f.b)(t, e.options.playerProps) && this.trackMiniPlayerAction(y.ContentChange, ""), this.setState({
-                            contentRef: e.ref,
-                            options: e.options,
-                            overrides: e.overrides
-                        }, e.onCompletion)
-                    }, t.prototype.transitionToMiniPlayer = function(e) {
-                        this.setState({
-                            mini: !0
-                        }), this.props.beginPersistingPlayer(), e && this.trackMiniPlayerAction(y.OpenMini, e)
-                    }, t.prototype.transitionToAnchoredPlayer = function(e) {
-                        this.setState({
-                            mini: !1
-                        }), this.props.stopPersistingPlayer(), e && this.trackMiniPlayerAction(y.CloseMini, e)
-                    }, t.prototype.reposition = function() {
-                        var e = this.state.forcePresentationRender;
-                        this.setState({
-                            forcePresentationRender: e ? e + 1 : 1
-                        })
-                    }, t
-                }(c.Component),
-                w = Object(d.f)(C);
-            var T = Object(r.b)(function(e) {
-                    return {
-                        isLoggedIn: Object(s.f)(e)
-                    }
-                }, function(e) {
-                    return Object(a.b)({
-                        beginPersistingPlayer: o.s,
-                        stopPersistingPlayer: o.H
-                    }, e)
-                })(w),
-                N = n("17x9"),
-                R = n("76Lv"),
-                O = null,
-                I = function(e) {
+            var i = n("2aBk"),
+                r = n("/MKj"),
+                a = n("mrSG"),
+                o = n("17x9"),
+                s = n("q1tI"),
+                l = n("/7QA"),
+                c = n("76Lv"),
+                d = n("WVpp"),
+                u = n("9UKx"),
+                p = n("Ue10"),
+                m = null,
+                h = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
                             userHasDismissedContent: !1
-                        }, n.logger = u.j.withCategory("PersistentPlayer"), n.setDomRef = function(e) {
+                        }, n.logger = l.j.withCategory("PersistentPlayer"), n.setDomRef = function(e) {
                             return n.domRef = e
                         }, n.onMiniPlayerDismiss = function() {
-                            n.transitionToAnchoredPlayer(k.UserMinimize), n.setState({
+                            n.transitionToAnchoredPlayer(u.b.UserMinimize), n.setState({
                                 userHasDismissedContent: !0
                             })
                         }, n.onMiniPlayerExpand = function() {
@@ -7918,11 +7636,11 @@
                                 onMiniPlayerDismiss: n.onMiniPlayerDismiss,
                                 onMiniPlayerExpand: n.onMiniPlayerExpand
                             }
-                        }, O && n.logger.error(new Error, "there should only ever be one <PersistentPlayer> rendered at a time. Verify that no other component above or below this in the tree has rendered one as well."), O = n, n
+                        }, m && n.logger.error(new Error, "there should only ever be one <PersistentPlayer> rendered at a time. Verify that no other component above or below this in the tree has rendered one as well."), m = n, n
                     }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
-                        E || this.logger.error(new Error, "No <PersistentPlayerRoot> found. Make sure it is mounted in the Root component"), this.unregister = this.context.registerReceiver(this), E.requestVideoContent({
+                        d.b || this.logger.error(new Error, "No <PersistentPlayerRoot> found. Make sure it is mounted in the Root component"), this.unregister = this.context.registerReceiver(this), d.b.requestVideoContent({
                             ref: this.domRef,
                             options: this.props,
                             overrides: this.getPersistentPlayerOverrides(),
@@ -7931,14 +7649,14 @@
                             }
                         }), this.props.repositionPlayerRef && this.props.repositionPlayerRef(this.reposition)
                     }, t.prototype.componentWillReceiveProps = function(e) {
-                        E.requestVideoContent({
+                        d.b.requestVideoContent({
                             ref: this.domRef,
                             options: e,
                             overrides: this.getPersistentPlayerOverrides()
                         }), e.repositionPlayerRef && e.repositionPlayerRef !== this.props.repositionPlayerRef && e.repositionPlayerRef(this.reposition)
                     }, t.prototype.componentWillUnmount = function() {
                         var e = this;
-                        if (this.unregister(), this.props.repositionPlayerRef && this.props.repositionPlayerRef(null), this.props.disablePersistenceOnUnmount || this.state.userHasDismissedContent || !this.props.persistentPlayerEnabled) return E.destroyPlayer(), void(O = null);
+                        if (this.unregister(), this.props.repositionPlayerRef && this.props.repositionPlayerRef(null), this.props.disablePersistenceOnUnmount || this.state.userHasDismissedContent || !this.props.persistentPlayerEnabled) return d.b.destroyPlayer(), void(m = null);
                         var t = this.props,
                             n = t.playerProps,
                             i = t.miniPlayerTitle,
@@ -7957,62 +7675,77 @@
                                 miniPlayerTitle: i,
                                 miniPlayerContentRoute: r
                             };
-                        E.requestVideoContent({
+                        d.b.requestVideoContent({
                             ref: this.domRef,
                             options: a,
                             onCompletion: function() {
-                                return e.transitionToMiniPlayer(k.Minimize)
+                                return e.transitionToMiniPlayer(u.b.Minimize)
                             }
-                        }), O = null
+                        }), m = null
                     }, t.prototype.render = function() {
-                        return c.createElement(g.vb, {
-                            background: g.o.Alt2,
-                            position: g.bb.Absolute,
+                        return s.createElement(p.vb, {
+                            background: p.o.Alt2,
+                            position: p.bb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
                             refDelegate: this.setDomRef,
                             "data-target": "persistent-player-content",
-                            className: Object(R.a)(this.props.theme)
+                            className: Object(c.a)(this.props.theme)
                         })
                     }, t.prototype.transitionToMiniPlayer = function(e) {
-                        E.transitionToMiniPlayer(e)
+                        d.b.transitionToMiniPlayer(e)
                     }, t.prototype.transitionToAnchoredPlayer = function(e) {
-                        E.transitionToAnchoredPlayer(e)
+                        d.b.transitionToAnchoredPlayer(e)
                     }, t.prototype.isMini = function() {
-                        return E.state.mini
+                        return d.b.state.mini
                     }, t.prototype.checkVisible = function(e, t) {
                         var n = this.context.getScrollContent();
                         if (t && n) {
                             var i = this.domRef.getBoundingClientRect(),
                                 r = n.getBoundingClientRect(),
                                 a = i.top + i.height - r.top;
-                            a <= 100 && this.props.persistentPlayerEnabled && !this.isMini() && !this.props.disablePersistenceOnScroll && !this.state.userHasDismissedContent && this.transitionToMiniPlayer(k.Minimize), a > 100 && (this.isMini() && this.transitionToAnchoredPlayer(k.Maximize), this.state.userHasDismissedContent && this.setState({
+                            a <= 100 && this.props.persistentPlayerEnabled && !this.isMini() && !this.props.disablePersistenceOnScroll && !this.state.userHasDismissedContent && this.transitionToMiniPlayer(u.b.Minimize), a > 100 && (this.isMini() && this.transitionToAnchoredPlayer(u.b.Maximize), this.state.userHasDismissedContent && this.setState({
                                 userHasDismissedContent: !1
                             }))
                         }
                     }, t.prototype.reposition = function() {
-                        E.reposition()
+                        d.b.reposition()
                     }, t.contextTypes = {
-                        registerReceiver: N.func,
-                        getScrollContent: N.func,
-                        scrollToTop: N.func
+                        registerReceiver: o.func,
+                        getScrollContent: o.func,
+                        scrollToTop: o.func
                     }, t
-                }(c.Component);
-            var D = Object(r.b)(function(e) {
+                }(s.Component);
+            var f = Object(r.b)(function(e) {
                 return {
                     theme: e.ui.theme,
                     persistentPlayerEnabled: e.ui.persistentPlayerEnabled
                 }
-            })(I);
+            })(h);
             n.d(t, "b", function() {
-                return T
+                return i.a
             }), n.d(t, "a", function() {
-                return D
+                return f
             }), n.d(t, !1, function() {
-                return k
+                return u.b
             })
+        },
+        "9UKx": function(e, t, n) {
+            "use strict";
+            var i, r;
+            n.d(t, "a", function() {
+                    return i
+                }), n.d(t, "b", function() {
+                    return r
+                }),
+                function(e) {
+                    e.CloseMini = "close", e.OpenMini = "open", e.ExpandPlayer = "expand", e.ContentChange = "content_change"
+                }(i || (i = {})),
+                function(e) {
+                    e.Minimize = "minimize", e.Maximize = "maximize", e.UserMinimize = "user_minimize", e.UserMaximize = "user_maximize"
+                }(r || (r = {}))
         },
         "9aiH": function(e, t) {
             var n = {
@@ -10220,7 +9953,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODCircleOfLife = "TWILIGHT_VOD_EDITING_CIRCLE_OF_LIFE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -10312,6 +10045,9 @@
                     id: "db6dc127-b372-48fe-9d8b-493ea6c51c57",
                     default: "control",
                     staffOverride: "control"
+                }, i[r.Tags] = {
+                    id: "e911d915-baca-46b8-b6fe-e991baee776b",
+                    default: "control"
                 }, i[r.ChannelAnalyticsContentOverlapPanels] = {
                     id: "6147aed8-6beb-4c24-a00b-a9ec189a4c1d",
                     default: "no"
@@ -10320,6 +10056,9 @@
                     default: "control"
                 }, i[r.RaidNow] = {
                     id: "96bdeb52-260d-4b6d-8ff8-5f4c13f450c2",
+                    default: "control"
+                }, i[r.VODCircleOfLife] = {
+                    id: "c01a11fa-e59e-4d4e-a715-153328d69c2d",
                     default: "control"
                 }, i[r.NativeLogin] = {
                     id: "8e177f68-71cc-491c-96f5-35e25db2b61d",
@@ -10647,51 +10386,55 @@
         DLia: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, R, O, I, D, L, A, P, x, F, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, J, Z, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Re, Oe, Ie, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, Ve, He, We, ze, Ge, qe, Qe, Ke, Ye, Xe, Je, Ze;
+            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, R, O, I, D, L, A, P, x, F, M, U, B, j, V, H, W, z, G, q, Q, K, Y, X, J, Z, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Re, Oe, Ie, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, Ve, He, We, ze, Ge, qe, Qe, Ke, Ye, Xe, Je, Ze, $e, et, tt, nt;
             n.d(t, "d", function() {
                     return m
                 }), n.d(t, "b", function() {
                     return b
                 }), n.d(t, "c", function() {
                     return y
-                }), n.d(t, "j", function() {
-                    return E
-                }), n.d(t, "q", function() {
-                    return _
-                }), n.d(t, "t", function() {
-                    return A
-                }), n.d(t, "p", function() {
-                    return P
-                }), n.d(t, "u", function() {
-                    return x
-                }), n.d(t, "a", function() {
-                    return W
                 }), n.d(t, "k", function() {
-                    return z
-                }), n.d(t, "m", function() {
-                    return G
+                    return E
                 }), n.d(t, "r", function() {
-                    return le
-                }), n.d(t, "h", function() {
-                    return he
-                }), n.d(t, "g", function() {
-                    return we
+                    return w
+                }), n.d(t, "u", function() {
+                    return A
+                }), n.d(t, "q", function() {
+                    return P
                 }), n.d(t, "v", function() {
-                    return Te
-                }), n.d(t, "o", function() {
-                    return Ne
-                }), n.d(t, "f", function() {
-                    return Ae
-                }), n.d(t, "e", function() {
-                    return Pe
+                    return x
+                }), n.d(t, "j", function() {
+                    return H
+                }), n.d(t, "a", function() {
+                    return z
                 }), n.d(t, "l", function() {
-                    return xe
-                }), n.d(t, "s", function() {
-                    return Me
+                    return G
                 }), n.d(t, "n", function() {
-                    return ze
+                    return q
+                }), n.d(t, "s", function() {
+                    return ce
+                }), n.d(t, "w", function() {
+                    return de
+                }), n.d(t, "h", function() {
+                    return ge
+                }), n.d(t, "g", function() {
+                    return Ne
+                }), n.d(t, "x", function() {
+                    return Re
+                }), n.d(t, "p", function() {
+                    return Oe
+                }), n.d(t, "f", function() {
+                    return xe
+                }), n.d(t, "e", function() {
+                    return Fe
+                }), n.d(t, "m", function() {
+                    return Me
+                }), n.d(t, "t", function() {
+                    return Be
+                }), n.d(t, "o", function() {
+                    return qe
                 }), n.d(t, "i", function() {
-                    return Je
+                    return $e
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.COMMUNITY_REPORT = "COMMUNITY_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -10754,28 +10497,28 @@
                     e.ARCHIVES_DISABLED = "ARCHIVES_DISABLED", e.BROADCASTER_NOT_LIVE = "BROADCASTER_NOT_LIVE", e.BROADCAST_FORMAT_INVALID_PREMIERE = "BROADCAST_FORMAT_INVALID_PREMIERE", e.BROADCAST_FORMAT_INVALID_RERUN = "BROADCAST_FORMAT_INVALID_RERUN", e.INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED", e.VOD_NOT_READY = "VOD_NOT_READY"
                 }(E || (E = {})),
                 function(e) {
-                    e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
+                    e.DARK = "DARK", e.LIGHT = "LIGHT"
                 }(_ || (_ = {})),
                 function(e) {
-                    e.NEW_CHATTER = "NEW_CHATTER"
+                    e.CUSTOM = "CUSTOM", e.FIRST_PARTY = "FIRST_PARTY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY"
                 }(C || (C = {})),
                 function(e) {
-                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
+                    e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
                 }(w || (w = {})),
                 function(e) {
-                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
+                    e.NEW_CHATTER = "NEW_CHATTER"
                 }(T || (T = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(N || (N = {})),
                 function(e) {
-                    e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
+                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
                 }(R || (R = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.FIRST_PARTY = "FIRST_PARTY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY"
+                    e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(O || (O = {})),
                 function(e) {
-                    e.DARK = "DARK", e.LIGHT = "LIGHT"
+                    e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
                 }(I || (I = {})),
                 function(e) {
                     e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
@@ -10811,200 +10554,212 @@
                     e.AVATAR = "AVATAR", e.BANNER = "BANNER"
                 }(V || (V = {})),
                 function(e) {
-                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
+                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.STREAM = "STREAM", e.VOD = "VOD"
                 }(H || (H = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
+                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(W || (W = {})),
                 function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(z || (z = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(G || (G = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }(q || (q = {})),
                 function(e) {
-                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }(Q || (Q = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }(K || (K = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(Y || (Y = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(X || (X = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(J || (J = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(Z || (Z = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }($ || ($ = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(te || (te = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(re || (re = {})),
                 function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
+                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(se || (se = {})),
                 function(e) {
-                    e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING"
+                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(le || (le = {})),
                 function(e) {
-                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                    e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
+                    e.CONTENT = "CONTENT", e.TOP = "TOP"
                 }(de || (de = {})),
                 function(e) {
-                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
+                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
+                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(pe || (pe = {})),
                 function(e) {
-                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
+                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
                 }(me || (me = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
+                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(he || (he = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
+                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
                 }(fe || (fe = {})),
                 function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(ge || (ge = {})),
                 function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(ve || (ve = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(be || (be = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(ye || (ye = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(ke || (ke = {})),
                 function(e) {
-                    e.COMMUNITIES = "COMMUNITIES", e.CREATIVE = "CREATIVE", e.GAMES = "GAMES"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Se || (Se = {})),
                 function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(Ee || (Ee = {})),
                 function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                    e.COMMUNITIES = "COMMUNITIES", e.CREATIVE = "CREATIVE", e.GAMES = "GAMES"
                 }(_e || (_e = {})),
                 function(e) {
-                    e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
+                    e.ASC = "ASC", e.DESC = "DESC"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(we || (we = {})),
                 function(e) {
-                    e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
+                    e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
                 }(Ne || (Ne = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
+                    e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
                 }(Re || (Re = {})),
                 function(e) {
-                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Oe || (Oe = {})),
                 function(e) {
-                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(Ie || (Ie = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
+                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
                 }(De || (De = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(je || (je = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(He || (He = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(We || (We = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(Je || (Je = {})),
                 function(e) {
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                }(Ze || (Ze = {})),
+                function(e) {
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
+                }($e || ($e = {})),
+                function(e) {
                     e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
-                }(Ze || (Ze = {}))
+                }(et || (et = {})),
+                function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(tt || (tt = {})),
+                function(e) {
+                    e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
+                }(nt || (nt = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -23696,7 +23451,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteOverview = "dev.overview", e.DevSiteGamesOnePager = "dev.games.onepager", e.Unknown = "unknown"
+                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "channel.dashboard.settings.revenue.game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesDisclosurePage = "messages-disclosure", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteGames = "dev.games", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteDropsCreate = "dev.drops.create", e.DevSiteDropsEdit = "dev.drops.edit", e.DevSiteGamesOnePager = "dev.games.onepager", e.Unknown = "unknown"
                 }(i || (i = {}))
         },
         O4UZ: function(e, t, n) {
@@ -24521,13 +24276,13 @@
                     return s
                 }),
                 function(e) {
-                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit"
+                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueGameCommerceV2 = "dashboard/settings/revenue/game-commerce-v2", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteGames = "dev/games", e.DevSiteCompanyOverview = "dev/company", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteDropsCreate = "dev/drops-create", e.DevSiteDropsEdit = "dev/drops-create"
                 }(i || (i = {})),
                 function(e) {
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
                 }(r || (r = {})),
                 function(e) {
-                    e.AnnouncementBanner = "announcement_banner", e.ChannelMetadata = "channel_metadata", e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCarousel = "collection_carousel", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.ClipCuratorName = "curator_name", e.ClipsCuratorCarousel = "clips_curator_carousel", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionCard = "extension_card", e.ExtensionCategoryPreview = "extension_category_preview", e.ExtensionDetails = "extension_details", e.ExtensionNavTabLink = "extension_nav_tab_link", e.ExtensionPanel = "extension_panel", e.ExtensionSearchBar = "extension_search_bar", e.ExtensionConfigureButton = "extension_configure_button", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.GameBoxart = "game_boxart", e.GameMetadata = "game_metadata", e.GameName = "game_name", e.Games = "directory_games", e.HeaderGameName = "header_game_name", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.InstalledExtensionCard = "installed_extension_card", e.LatestCollection = "latest_collection", e.Live = "live_channel", e.LiveHost = "live_host", e.LocalLiveChannel = "local_live_channel", e.LocalPopularChannel = "local_popular_channel", e.Logo = "twitch_logo", e.PayoutsHistoryBack = "payouts_history_back", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.PreviewCardGameBalloonGame = "preview_card_game_balloon_game", e.PreviewCardGameName = "preview_card_game_name", e.RecentVideos = "recent_videos", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.UserThumbnail = "user_thumbnail", e.Video = "video", e.VideoThumbnail = "video_thumbnail", e.VideoTitle = "video_title", e.VideoShelf = "video_shelf"
+                    e.AnnouncementBanner = "announcement_banner", e.ChannelMetadata = "channel_metadata", e.ChatCard = "chat_card", e.CollectionCard = "collection_card", e.CollectionCarousel = "collection_carousel", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.ClipCuratorName = "curator_name", e.ClipsCuratorCarousel = "clips_curator_carousel", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionCard = "extension_card", e.ExtensionCategoryPreview = "extension_category_preview", e.ExtensionDetails = "extension_details", e.ExtensionNavTabLink = "extension_nav_tab_link", e.ExtensionPanel = "extension_panel", e.ExtensionSearchBar = "extension_search_bar", e.ExtensionConfigureButton = "extension_configure_button", e.Following = "directory_following", e.FollowedChannels = "followed_channels", e.Game = "game", e.GameBoxart = "game_boxart", e.GameMetadata = "game_metadata", e.GameName = "game_name", e.Games = "directory_games", e.HeaderGameName = "header_game_name", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.InstalledExtensionCard = "installed_extension_card", e.LatestCollection = "latest_collection", e.Live = "live_channel", e.LiveHost = "live_host", e.LocalLiveChannel = "local_live_channel", e.LocalPopularChannel = "local_popular_channel", e.Logo = "twitch_logo", e.PayoutsHistoryBack = "payouts_history_back", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.PreviewCardGameBalloonGame = "preview_card_game_balloon_game", e.PreviewCardGameName = "preview_card_game_name", e.RecentVideos = "recent_videos", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.TopClips = "topclips", e.TopStatsChart = "topstats_chart", e.TopClipsDetails = "topclips_details", e.TopStreams = "topstreams", e.TextLink = "text_link", e.User = "user", e.UserThumbnail = "user_thumbnail", e.Video = "video", e.VideoQueueCollection = "video_queue_collection", e.VideoThumbnail = "video_thumbnail", e.VideoTitle = "video_title", e.VideoShelf = "video_shelf"
                 }(a || (a = {})),
                 function(e) {
                     e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.ClipsWatchPage = "clips_watch_page", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.DashboardLive = "dashboard_live", e.EventDetails = "event_details", e.ExtensionCategory = "extension_category", e.ExtensionConfiguration = "extension_configuration", e.ExtensionPage = "extension_page", e.ExtensionSearch = "extension_search", e.ExtensionDiscovery = "extension_discovery", e.ExtensionManagement = "extension_management", e.ExtensionDashboardTopNav = "extension_dashboard_top_nav", e.ExtensionInstalledModal = "extension_modal_installed", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.ExtensionsWhitelisted = "extensions_whitelisted", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopClips = "top_clips", e.TopNav = "twitch_topnav", e.TwitchHome = "twitch_home", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoWatchPage = "vod", e.Whispers = "conversations"
@@ -25187,7 +24942,7 @@
             }(i || (i = {}));
             var A = n("br9A"),
                 P = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(91)]).then(n.bind(null, "Br/p"))
+                    return Promise.all([n.e(0), n.e(92)]).then(n.bind(null, "Br/p"))
                 }, "GiftRecipientSearch"),
                 x = function(e) {
                     function t() {
@@ -25365,16 +25120,16 @@
                 e[e.GiftOptions = 0] = "GiftOptions", e[e.MysteryGiftSelect = 1] = "MysteryGiftSelect", e[e.SubOptions = 2] = "SubOptions"
             }(z || (z = {}));
             var G = l.a.wrap(function() {
-                    return n.e(92).then(n.bind(null, "N+wj"))
+                    return n.e(93).then(n.bind(null, "N+wj"))
                 }, "GiftOptions"),
                 q = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(89)]).then(n.bind(null, "pCKU"))
+                    return Promise.all([n.e(0), n.e(90)]).then(n.bind(null, "pCKU"))
                 }, "CurrentSubscription"),
                 Q = l.a.wrap(function() {
-                    return n.e(90).then(n.bind(null, "RHPu"))
+                    return n.e(91).then(n.bind(null, "RHPu"))
                 }, "MysteryGiftBundleSelection"),
                 K = l.a.wrap(function() {
-                    return n.e(88).then(n.bind(null, "Igrc"))
+                    return n.e(89).then(n.bind(null, "Igrc"))
                 }, "SubOptions"),
                 Y = function(e) {
                     function t() {
@@ -25686,13 +25441,13 @@
             n("7deH");
             var X, J = n("wEyv"),
                 Z = l.a.wrap(function() {
-                    return n.e(92).then(n.bind(null, "N+wj"))
+                    return n.e(93).then(n.bind(null, "N+wj"))
                 }, "GiftOptions"),
                 $ = l.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(91)]).then(n.bind(null, "Br/p"))
+                    return Promise.all([n.e(0), n.e(92)]).then(n.bind(null, "Br/p"))
                 }, "GiftRecipientSearch"),
                 ee = l.a.wrap(function() {
-                    return n.e(90).then(n.bind(null, "RHPu"))
+                    return n.e(91).then(n.bind(null, "RHPu"))
                 }, "MysteryGiftBundleSelection"),
                 te = function(e) {
                     function t() {
@@ -26198,7 +25953,7 @@
                         return Object(u.d)(l.a, {
                             component: "CheckoutModal",
                             loader: function() {
-                                return Promise.all([n.e(0), n.e(87)]).then(n.bind(null, "KJv/"))
+                                return Promise.all([n.e(0), n.e(88)]).then(n.bind(null, "KJv/"))
                             },
                             componentProps: t
                         })
@@ -33339,10 +33094,10 @@
                     SelfRequested: "self_requested"
                 };
             ! function(e) {
-                e.AddBlockedTerm = "add_blocked_term", e.AddPermittedTerm = "add_permitted_term", e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.Ban = "ban", e.Clear = "clear", e.DeleteBlockedTerm = "delete_blocked_term", e.DeletePermittedTerm = "delete_permitted_term", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.ModifiedAutoModProperties = "modified_automod_properties", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
+                e.AddBlockedTerm = "add_blocked_term", e.AddPermittedTerm = "add_permitted_term", e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.AutoModCheerRejected = "automod_cheer_rejected", e.Ban = "ban", e.Clear = "clear", e.DeleteBlockedTerm = "delete_blocked_term", e.DeletePermittedTerm = "delete_permitted_term", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.ModifiedAutoModProperties = "modified_automod_properties", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
             }(i || (i = {})),
             function(e) {
-                e.AutoModMessageRejected = "automod_message_rejected", e.AutoModMessageApproved = "automod_message_approved", e.AutoModMessageDenied = "automod_message_denied"
+                e.AutoModMessageRejected = "automod_message_rejected", e.AutoModMessageApproved = "automod_message_approved", e.AutoModMessageDenied = "automod_message_denied", e.AutoModCheerDenied = "automod-cheer-message-denied", e.AutoModCheerTimeout = "automod-cheer-message-timeout"
             }(r || (r = {})),
             function(e) {
                 e.Archive = "archive", e.Highlight = "highlight", e.Upload = "upload", e.Premiere = "premiere", e.Rerun = "rerun", e.WatchPartyPremiere = "watch_party_premiere", e.WatchPartyRerun = "watch_party_rerun"
@@ -33368,6 +33123,313 @@
                     content: t
                 }
             }
+        },
+        WVpp: function(e, t, n) {
+            "use strict";
+            var i, r = n("mrSG"),
+                a = n("q1tI"),
+                o = n("eO8H"),
+                s = n("/7QA"),
+                l = n("/MKj"),
+                c = n("fvjX"),
+                d = n("d0ua"),
+                u = n("TSYQ"),
+                p = n("oXhC"),
+                m = n("eFQ3"),
+                h = n("lTz2"),
+                f = n("Ue10");
+            n("wksc");
+            ! function(e) {
+                e.ClipsPlayer = "clips-player", e.DefaultPlayer = "default-player"
+            }(i || (i = {}));
+            var g = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {}, t.renderMiniHoverControls = function() {
+                            var e = t.state.isPaused ? Object(s.d)("Play", "PersistentPlayerMini") : Object(s.d)("Pause", "PersistentPlayerMini");
+                            return a.createElement(f.vb, {
+                                className: "persistent-player__hover-controls",
+                                attachTop: !0,
+                                attachBottom: !0,
+                                attachLeft: !0,
+                                attachRight: !0,
+                                borderRadius: f.u.Medium,
+                                overflow: f.Ua.Hidden,
+                                position: f.bb.Absolute,
+                                zIndex: f.Yb.Above,
+                                "data-test-selector": "persistent-player-mini-hover"
+                            }, a.createElement(f.Ra, {
+                                className: "persistent-player__title",
+                                alignItems: f.d.Center,
+                                display: f.T.Flex,
+                                flexDirection: f.V.Row,
+                                flexWrap: f.W.NoWrap,
+                                justifyContent: f.Qa.Between,
+                                padding: {
+                                    y: .5,
+                                    right: .5
+                                },
+                                zIndex: f.Yb.Above,
+                                "data-test-selector": "persistent-player-mini-title"
+                            }, a.createElement(f.Ra, {
+                                ellipsis: !0,
+                                margin: {
+                                    x: 1
+                                }
+                            }, a.createElement(f.S, {
+                                fontSize: f.X.Size5,
+                                type: f.Lb.Span
+                            }, t.props.options.miniPlayerTitle)), a.createElement(f.Ra, {
+                                flexShrink: 0
+                            }, a.createElement(f.x, {
+                                ariaLabel: Object(s.d)("Dismiss Mini Player", "PersistentPlayerMini"),
+                                icon: f.lb.Close,
+                                overlay: !0,
+                                onClick: t.props.onClickDismiss,
+                                "data-test-selector": "persistent-player-mini-dismiss"
+                            }))), a.createElement(f.Ra, {
+                                attachTop: !0,
+                                attachBottom: !0,
+                                attachLeft: !0,
+                                attachRight: !0,
+                                alignItems: f.d.Center,
+                                display: f.T.Flex,
+                                flexDirection: f.V.Row,
+                                justifyContent: f.Qa.Center,
+                                margin: {
+                                    top: 4
+                                },
+                                position: f.bb.Absolute
+                            }, t.renderMiniControl(f.lb.MiniPlayerExpand, Object(s.d)("Expand Player", "PersistentPlayerMini"), "persistent-player-mini-expand", t.props.onClickExpand), a.createElement(f.Ra, {
+                                margin: {
+                                    left: 2
+                                }
+                            }, t.renderMiniControl(t.state.isPaused ? f.lb.MiniPlayerPlay : f.lb.MiniPlayerPause, e, "persistent-player-mini-pause-play", t.togglePause))))
+                        }, t.renderMiniControl = function(e, t, n, i) {
+                            return a.createElement("button", {
+                                className: "persistent-player__control",
+                                onClick: i,
+                                "aria-label": t,
+                                "data-test-selector": n
+                            }, a.createElement(f.kb, {
+                                asset: e,
+                                width: 30,
+                                height: 30
+                            }))
+                        }, t.renderMiniInterceptPointerView = function() {
+                            return a.createElement(f.Ra, {
+                                className: "persistent-player__intercept-view",
+                                position: f.bb.Absolute,
+                                attachBottom: !0,
+                                attachLeft: !0,
+                                attachRight: !0,
+                                zIndex: f.Yb.Above,
+                                "data-test-selector": "persistent-player-mini-cover"
+                            })
+                        }, t.togglePause = function() {
+                            t.setState(function(e) {
+                                return {
+                                    shouldPause: !e.isPaused
+                                }
+                            })
+                        }, t.onPauseToggled = function(e) {
+                            t.setState({
+                                isPaused: e,
+                                shouldPause: e
+                            })
+                        }, t.handleLocationChange = function() {
+                            t.props.theatreModeEnabled && t.props.disableTheatreMode()
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                        Object(h.b)(this.props.options.playerProps, e.options.playerProps) && this.setState({
+                            shouldPause: !1
+                        })
+                    }, t.prototype.componentDidMount = function() {
+                        this.historyUnlisten = this.props.history.listen(this.handleLocationChange)
+                    }, t.prototype.componentWillUnmount = function() {
+                        this.handleLocationChange(), this.historyUnlisten()
+                    }, t.prototype.render = function() {
+                        var e, t = this.props.theatreModeEnabled && !this.props.mini,
+                            n = u({
+                                "persistent-player--theatre": t
+                            }),
+                            o = this.props.mainRef.getBoundingClientRect(),
+                            s = 0;
+                        if (t) e = {
+                            position: "fixed",
+                            left: 0,
+                            top: 0,
+                            maxHeight: "100vh",
+                            height: "100%",
+                            width: window.innerWidth < 820 || this.props.rightNavCollapsed ? "100%" : "calc(100% - " + p.a + ")",
+                            zIndex: 3e3
+                        };
+                        else if (this.props.mini) e = {
+                            position: "fixed",
+                            width: "28rem",
+                            height: "15.75rem",
+                            left: o.left,
+                            bottom: 0,
+                            margin: "1rem",
+                            zIndex: 1e3
+                        }, s = 5;
+                        else {
+                            var l = this.props.contentRef.getBoundingClientRect(),
+                                c = l.left - o.left,
+                                d = o.right - l.right;
+                            e = {
+                                top: l.top - o.top,
+                                left: c,
+                                position: "absolute",
+                                width: "100%",
+                                maxWidth: "calc(100% - " + (c + d) + "px)",
+                                maxHeight: "calc(100vh - 16rem)",
+                                overflow: "hidden",
+                                height: "auto"
+                            }
+                        }
+                        var h = a.createElement(m.c, r.__assign({
+                                key: i.DefaultPlayer,
+                                "data-test-selector": i.DefaultPlayer
+                            }, this.props.options.playerProps, {
+                                instanceRef: this.props.onVideoPlayerInstance,
+                                miniModeEnabled: this.props.mini,
+                                paused: this.state.shouldPause,
+                                onPauseToggled: this.onPauseToggled
+                            })),
+                            g = a.createElement(m.c, r.__assign({
+                                key: i.ClipsPlayer,
+                                "data-test-selector": i.ClipsPlayer
+                            }, this.props.options.playerProps, {
+                                instanceRef: this.props.onVideoPlayerInstance,
+                                miniModeEnabled: this.props.mini,
+                                paused: this.state.shouldPause,
+                                onPauseToggled: this.onPauseToggled
+                            })),
+                            v = this.props.options.playerProps.clipSlug ? g : h;
+                        return a.createElement(f.Ka, {
+                            elevation: s,
+                            className: u({
+                                "persistent-player__border--mini": this.props.mini
+                            }),
+                            borderRadius: this.props.mini ? f.u.Medium : f.u.None,
+                            overflow: this.props.mini ? f.Ua.Hidden : void 0
+                        }, a.createElement("div", {
+                            className: u("persistent-player", n),
+                            style: e
+                        }, a.createElement(f.l, null, v), this.props.mini && this.renderMiniInterceptPointerView(), this.props.mini && this.renderMiniHoverControls()))
+                    }, t
+                }(a.Component),
+                v = Object(o.f)(g);
+            var b, y = Object(l.b)(function(e) {
+                    return {
+                        sideNavCollapsed: !e.ui.sideNavExpanded,
+                        rightNavCollapsed: !e.ui.rightColumnExpanded,
+                        theatreModeEnabled: e.ui.theatreModeEnabled
+                    }
+                }, function(e) {
+                    return Object(c.b)({
+                        disableTheatreMode: d.z
+                    }, e)
+                })(v),
+                k = n("9UKx"),
+                S = n("p5Wp");
+            n.d(t, "b", function() {
+                return b
+            }), n.d(t, "a", function() {
+                return _
+            });
+            var E = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        n.logger = s.j.withCategory("PersistentPlayerRoot"), n.trackMiniPlayerAction = function(e, t) {
+                            n.videoPlayerComponent && n.videoPlayerComponent.trackMiniPlayerAction(e, t)
+                        }, n.setVideoPlayerRef = function(e) {
+                            return n.videoPlayerComponent = e
+                        }, n.onClickExpand = function() {
+                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerExpand ? n.state.overrides.onMiniPlayerExpand() : (n.props.history.push(n.state.options.miniPlayerContentRoute), n.trackMiniPlayerAction(k.a.ExpandPlayer, k.b.UserMaximize)))
+                        }, n.onClickDismiss = function() {
+                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerDismiss ? n.state.overrides.onMiniPlayerDismiss() : (n.destroyPlayer(), n.trackMiniPlayerAction(k.a.CloseMini, k.b.UserMinimize)))
+                        }, n.onHistoryChange = function(e) {
+                            var t = n.props.isLoggedIn,
+                                i = Object(S.a)({
+                                    isLoggedIn: t,
+                                    location: e
+                                });
+                            i !== n.state.hideSideNav && n.setState({
+                                hideSideNav: i
+                            })
+                        };
+                        var i = t.isLoggedIn,
+                            r = t.location;
+                        return n.state = {
+                            isError: !1,
+                            mini: !1,
+                            hideSideNav: Object(S.a)({
+                                isLoggedIn: i,
+                                location: r
+                            })
+                        }, b && n.logger.warn("attempting to create a second instance of the Persistent Player Root. There should only be one in <Root>, use <PersistentPlayerContent> instead."), b = n, n
+                    }
+                    return r.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
+                        var n = this;
+                        this.setState({
+                            isError: !0
+                        }, function() {
+                            s.o.stats.recordComponentError("PersistentPlayerRoot"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                                info: t
+                            })
+                        })
+                    }, t.prototype.componentDidMount = function() {
+                        this.historyUnlisten = s.o.history.listen(this.onHistoryChange)
+                    }, t.prototype.componentWillUnmount = function() {
+                        this.historyUnlisten && this.historyUnlisten()
+                    }, t.prototype.render = function() {
+                        return !this.state.isError && this.state.options && this.state.contentRef && this.props.mainRef ? a.createElement(y, {
+                            options: this.state.options,
+                            contentRef: this.state.contentRef,
+                            mainRef: this.props.mainRef,
+                            mini: this.state.mini,
+                            hideSideNav: this.state.hideSideNav,
+                            forceRender: this.state.forcePresentationRender,
+                            onClickExpand: this.onClickExpand,
+                            onClickDismiss: this.onClickDismiss,
+                            onVideoPlayerInstance: this.setVideoPlayerRef
+                        }) : null
+                    }, t.prototype.destroyPlayer = function(e) {
+                        var t = this;
+                        this.setState({
+                            mini: !1,
+                            options: void 0,
+                            overrides: void 0,
+                            contentRef: void 0
+                        }, function() {
+                            t.props.stopPersistingPlayer(), e && e()
+                        })
+                    }, t.prototype.requestVideoContent = function(e) {
+                        var t = this.state.options && this.state.options.playerProps;
+                        Object(h.b)(t, e.options.playerProps) && this.trackMiniPlayerAction(k.a.ContentChange, ""), this.setState({
+                            contentRef: e.ref,
+                            options: e.options,
+                            overrides: e.overrides
+                        }, e.onCompletion)
+                    }, t.prototype.transitionToMiniPlayer = function(e) {
+                        this.setState({
+                            mini: !0
+                        }), this.props.beginPersistingPlayer(), e && this.trackMiniPlayerAction(k.a.OpenMini, e)
+                    }, t.prototype.transitionToAnchoredPlayer = function(e) {
+                        this.setState({
+                            mini: !1
+                        }), this.props.stopPersistingPlayer(), e && this.trackMiniPlayerAction(k.a.CloseMini, e)
+                    }, t.prototype.reposition = function() {
+                        var e = this.state.forcePresentationRender;
+                        this.setState({
+                            forcePresentationRender: e ? e + 1 : 1
+                        })
+                    }, t
+                }(a.Component),
+                _ = Object(o.f)(E)
         },
         WcZC: function(e, t) {
             var n = {
@@ -37038,121 +37100,124 @@
                 }(r.Component),
                 hn = Object(R.f)(mn),
                 fn = a.a.wrap(function() {
-                    return n.e(77).then(n.bind(null, "wh8/"))
+                    return n.e(78).then(n.bind(null, "wh8/"))
                 }, "AnonFrontPage"),
                 gn = a.a.wrap(function() {
-                    return n.e(76).then(n.bind(null, "moen"))
+                    return n.e(77).then(n.bind(null, "moen"))
                 }, "BroadcastPage"),
                 vn = a.a.wrap(function() {
-                    return n.e(75).then(n.bind(null, "99ae"))
+                    return n.e(76).then(n.bind(null, "99ae"))
                 }, "BrowseRootPage"),
                 bn = a.a.wrap(function() {
-                    return n.e(74).then(n.bind(null, "otOH"))
+                    return n.e(75).then(n.bind(null, "otOH"))
                 }, "CommunityModerationRoot"),
                 yn = a.a.wrap(function() {
-                    return n.e(73).then(n.bind(null, "FvFK"))
+                    return n.e(74).then(n.bind(null, "FvFK"))
                 }, "CreateCommunityPage"),
                 kn = a.a.wrap(function() {
-                    return n.e(72).then(n.bind(null, "dQAD"))
+                    return n.e(73).then(n.bind(null, "dQAD"))
                 }, "DevOnlyRoot"),
                 Sn = a.a.wrap(function() {
-                    return n.e(71).then(n.bind(null, "mpcK"))
+                    return n.e(72).then(n.bind(null, "mpcK"))
                 }, "DirectoryRootPage"),
                 En = a.a.wrap(function() {
-                    return n.e(70).then(n.bind(null, "AtgE"))
+                    return n.e(71).then(n.bind(null, "AtgE"))
                 }, "EmailUnsubscribePage"),
                 _n = a.a.wrap(function() {
-                    return n.e(69).then(n.bind(null, "VkGE"))
+                    return n.e(70).then(n.bind(null, "VkGE"))
                 }, "EmailVerificationPage"),
                 Cn = a.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(68)]).then(n.bind(null, "4c/Z"))
+                    return Promise.all([n.e(0), n.e(69)]).then(n.bind(null, "4c/Z"))
                 }, "EventLandingPage"),
                 wn = a.a.wrap(function() {
-                    return n.e(67).then(n.bind(null, "lQdQ"))
+                    return n.e(68).then(n.bind(null, "lQdQ"))
                 }, "ExtensionsRoot"),
                 Tn = a.a.wrap(function() {
-                    return n.e(66).then(n.bind(null, "Uyt6"))
+                    return n.e(67).then(n.bind(null, "Uyt6"))
                 }, "FollowingRootPage"),
                 Nn = a.a.wrap(function() {
-                    return n.e(65).then(n.bind(null, "0fnA"))
+                    return n.e(66).then(n.bind(null, "0fnA"))
                 }, "FrontPage"),
                 Rn = a.a.wrap(function() {
-                    return n.e(64).then(n.bind(null, "O0y+"))
+                    return n.e(65).then(n.bind(null, "O0y+"))
                 }, "FriendRequestsPage"),
                 On = a.a.wrap(function() {
-                    return n.e(63).then(n.bind(null, "2W9R"))
+                    return n.e(64).then(n.bind(null, "2W9R"))
                 }, "FriendsPage"),
                 In = a.a.wrap(function() {
-                    return n.e(62).then(n.bind(null, "UqZg"))
+                    return n.e(63).then(n.bind(null, "UqZg"))
                 }, "InventoryPage"),
                 Dn = a.a.wrap(function() {
+                    return n.e(62).then(n.bind(null, "WtmX"))
+                }, "MessagesDisclosurePage"),
+                Ln = a.a.wrap(function() {
                     return n.e(61).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                Ln = a.a.wrap(function() {
+                An = a.a.wrap(function() {
                     return n.e(60).then(n.bind(null, "uHYy"))
                 }, "PartnershipSignupLoader"),
-                An = a.a.wrap(function() {
+                Pn = a.a.wrap(function() {
                     return n.e(59).then(n.bind(null, "4Agi"))
                 }, "DesklightModsRootPage"),
-                Pn = a.a.wrap(function() {
+                xn = a.a.wrap(function() {
                     return Promise.all([n.e(30), n.e(0), n.e(58)]).then(n.bind(null, "cz4h"))
                 }, "PaymentsLandingPage"),
-                xn = a.a.wrap(function() {
+                Fn = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(57)]).then(n.bind(null, "EOaz"))
                 }, "SettingsRoot"),
-                Fn = a.a.wrap(function() {
-                    return n.e(56).then(n.bind(null, "rzjD"))
-                }, "StartLogin"),
                 Mn = a.a.wrap(function() {
                     return n.e(56).then(n.bind(null, "rzjD"))
-                }, "StartSignup"),
+                }, "StartLogin"),
                 Un = a.a.wrap(function() {
+                    return n.e(56).then(n.bind(null, "rzjD"))
+                }, "StartSignup"),
+                Bn = a.a.wrap(function() {
                     return n.e(55).then(n.bind(null, "UGMo"))
                 }, "SubscriptionsManagementPage"),
-                Bn = a.a.wrap(function() {
+                jn = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(54)]).then(n.bind(null, "c0BZ"))
                 }, "UnsubscribePage"),
-                jn = a.a.wrap(function() {
+                Vn = a.a.wrap(function() {
                     return n.e(53).then(n.bind(null, "xuFZ"))
                 }, "UserRoot");
 
-            function Vn() {
+            function Hn() {
                 return window.location.assign(window.location.href), null
             }
 
-            function Hn(e) {
+            function Wn(e) {
                 return r.createElement(R.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             }
 
-            function Wn() {
+            function zn() {
                 return r.createElement(R.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             }
 
-            function zn() {
+            function Gn() {
                 return r.createElement(R.c, {
                     to: "/directory/all/xbox"
                 })
             }
 
-            function Gn() {
+            function qn() {
                 return r.createElement(R.c, {
                     to: "/manager/upload"
                 })
             }
 
-            function qn() {
+            function Qn() {
                 return window.location.replace("/p/terms-of-service"), null
             }
 
-            function Qn() {
+            function Kn() {
                 return window.location.replace(xt.a), null
             }
-            var Kn = function(e) {
+            var Yn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -37180,31 +37245,31 @@
                             component: this.props.isLoggedIn ? Nn : fn
                         }), r.createElement(R.d, {
                             path: "/activate",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/bits",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/bits-checkout",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/checkout",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/products",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/embed",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/popout",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/prime",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/subs",
-                            render: Vn
+                            render: Hn
                         }), r.createElement(R.d, {
                             path: "/broadcast",
                             component: gn
@@ -37246,7 +37311,7 @@
                             component: Sn
                         }), r.createElement(R.d, {
                             path: "/directory/game/:encodedCommunityName/videos",
-                            render: Hn
+                            render: Wn
                         }), r.createElement(R.d, {
                             path: "/directory/game/:encodedCommunityName/:encodedLanguage",
                             component: Sn
@@ -37258,7 +37323,7 @@
                             component: vn
                         }), r.createElement(R.d, {
                             path: "/directory/all/xb1",
-                            render: zn
+                            render: Gn
                         }), r.createElement(R.d, {
                             path: "/directory/all/xbox",
                             component: vn
@@ -37291,62 +37356,65 @@
                             component: On
                         }), r.createElement(R.d, {
                             path: "/following",
-                            render: Wn
+                            render: zn
                         }), r.createElement(R.d, {
                             path: "/inbox",
-                            component: Dn
+                            component: Ln
                         }), r.createElement(R.d, {
                             path: "/inventory",
                             component: In
                         }), r.createElement(R.d, {
                             path: "/login",
-                            component: Fn
+                            component: Mn
+                        }), r.createElement(R.d, {
+                            path: "/messages/archive",
+                            component: Dn
                         }), r.createElement(R.d, {
                             path: "/messages/:pageName?",
-                            component: Dn
+                            component: Ln
                         }), r.createElement(R.d, {
                             path: "/outbox",
-                            component: Dn
+                            component: Ln
                         }), r.createElement(R.d, {
                             exact: !0,
                             path: "/partner/signup",
-                            component: Ln
+                            component: An
                         }), r.createElement(R.d, {
                             path: "/payments",
-                            component: Pn
+                            component: xn
                         }), r.createElement(R.d, {
                             path: "/profile",
                             component: Lt.a,
                             exact: !0
                         }), r.createElement(R.d, {
                             path: "/signup",
-                            component: Mn
-                        }), r.createElement(R.d, {
-                            path: "/store",
-                            render: Qn
-                        }), r.createElement(R.d, {
-                            path: "/store/merch",
-                            render: Qn
-                        }), r.createElement(R.d, {
-                            path: "/subscriptions",
                             component: Un
                         }), r.createElement(R.d, {
-                            path: "/settings/:tab?",
-                            component: xn
+                            path: "/store",
+                            render: Kn
                         }), r.createElement(R.d, {
-                            path: "/unsubscribe/:productName",
+                            path: "/store/merch",
+                            render: Kn
+                        }), r.createElement(R.d, {
+                            path: "/subscriptions",
                             component: Bn
                         }), r.createElement(R.d, {
-                            path: "/upload",
-                            render: Gn,
-                            exact: !0
+                            path: "/settings/:tab?",
+                            component: Fn
                         }), r.createElement(R.d, {
-                            path: "/user/legal",
+                            path: "/unsubscribe/:productName",
+                            component: jn
+                        }), r.createElement(R.d, {
+                            path: "/upload",
                             render: qn,
                             exact: !0
                         }), r.createElement(R.d, {
+                            path: "/user/legal",
+                            render: Qn,
+                            exact: !0
+                        }), r.createElement(R.d, {
                             path: "/user",
-                            render: jn
+                            render: Vn
                         }), r.createElement(R.d, {
                             path: "/videos/v:videoID",
                             component: hn
@@ -37355,29 +37423,29 @@
                             component: hn
                         }), l.a.buildType !== Pt.a.Production && l.o.integrations.mods && r.createElement(R.d, {
                             path: "/mods",
-                            component: An
+                            component: Pn
                         }), r.createElement(R.d, {
                             path: "*",
                             component: hn
                         }))
                     }, t
                 }(r.Component),
-                Yn = Object(x.c)("DefaultRootRouter", {
+                Xn = Object(x.c)("DefaultRootRouter", {
                     autoReportInteractive: !0
-                })(Kn);
+                })(Yn);
             n.d(t, "b", function() {
-                return Jn
-            }), n.d(t, "a", function() {
                 return Zn
+            }), n.d(t, "a", function() {
+                return $n
             });
-            var Xn = a.a.wrap(function() {
-                    return n.e(78).then(n.bind(null, "3iFw"))
+            var Jn = a.a.wrap(function() {
+                    return n.e(79).then(n.bind(null, "3iFw"))
                 }, "Whispers", {
                     failSilently: !0,
                     placeholder: null
                 }),
-                Jn = "twilight-main",
-                Zn = function(e) {
+                Zn = "twilight-main",
+                $n = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -37408,14 +37476,14 @@
                             flexDirection: k.V.Column,
                             zIndex: this.props.theatreModeEnabled || this.props.squadModeEnabled ? void 0 : k.Yb.Default
                         }, r.createElement("main", {
-                            className: Jn
+                            className: Zn
                         }, r.createElement(Ot.b, null), r.createElement(w.a, {
                             contentRefDelegate: this.setRootScrollableContentRef
-                        }, r.createElement(Yn, {
+                        }, r.createElement(Xn, {
                             isLoggedIn: this.props.isLoggedIn
                         }), r.createElement(_.b, {
                             mainRef: this.state.rootScrollableContentRef
-                        })), r.createElement(Nt, null), this.props.firstPageLoaded && r.createElement(Xn, null))), r.createElement(C.a, null)))
+                        })), r.createElement(Nt, null), this.props.firstPageLoaded && r.createElement(Jn, null))), r.createElement(C.a, null)))
                     }, t
                 }(r.Component)
         },
@@ -37526,7 +37594,7 @@
                     e[e.Ban = 0] = "Ban", e[e.Timeout = 1] = "Timeout"
                 }(a || (a = {})),
                 function(e) {
-                    e[e.MessageRejectedPrompt = 0] = "MessageRejectedPrompt", e[e.MessageRejected = 1] = "MessageRejected", e[e.MessageAllowed = 2] = "MessageAllowed", e[e.MessageDenied = 3] = "MessageDenied"
+                    e[e.MessageRejectedPrompt = 0] = "MessageRejectedPrompt", e[e.CheerMessageRejectedPrompt = 1] = "CheerMessageRejectedPrompt", e[e.MessageRejected = 2] = "MessageRejected", e[e.MessageAllowed = 3] = "MessageAllowed", e[e.MessageDenied = 4] = "MessageDenied", e[e.CheerMessageDenied = 5] = "CheerMessageDenied", e[e.CheerMessageTimeout = 6] = "CheerMessageTimeout"
                 }(o || (o = {}))
         },
         a1OF: function(e, t, n) {
@@ -50730,7 +50798,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AbandonedSearch = "search_input_clear", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionInstall = "extension_install_button_click", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQueryBegan = "search_query_began", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AbandonedSearch = "search_input_clear", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DevButtonClick = "cobalt_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionInstall = "extension_install_button_click", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQueryBegan = "search_query_began", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -56537,6 +56605,6 @@
         }
     },
     [
-        [173, 99, 0]
+        [174, 104, 0]
     ]
 ]);
