@@ -1019,7 +1019,7 @@ window.__twilightSettings = {
         },
         "96bdeb52-260d-4b6d-8ff8-5f4c13f450c2": {
             "name": "TWILIGHT_RAID_NOW",
-            "v": 4448,
+            "v": 4451,
             "t": 3,
             "groups": [{
                 "weight": 0,
