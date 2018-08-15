@@ -39,6 +39,7 @@ window.__twilightSettings = {
     "drops_itemnames_enabled": false,
     "env_test": "This is a test in Production.",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249", "104874624", "139075904", "180833069", "48937001", "170846405", "189906299", "166458814", "189905698", "203316457"],
+    "esport_charity_launch": "off",
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
     "esport_insider_prime_bits_launch": "on",
