@@ -16,7 +16,7 @@ window.__twilightSettings = {
     "bits_world_cup_event_phase_2": false,
     "bounty_board_available_bounties_date": "Wed June 27 2018 00:00:00 GMT-0700 (PDT)",
     "bounty_board_brand_portal_enabled": "off",
-    "bounty_board_live_dashboard_widget": "off",
+    "bounty_board_live_dashboard_widget": "on",
     "browser_notifications_launch": true,
     "channel_feed_enabled": false,
     "chatrooms_enabled": true,
@@ -1019,13 +1019,13 @@ window.__twilightSettings = {
         },
         "96bdeb52-260d-4b6d-8ff8-5f4c13f450c2": {
             "name": "TWILIGHT_RAID_NOW",
-            "v": 4437,
+            "v": 4448,
             "t": 3,
             "groups": [{
-                "weight": 5,
+                "weight": 0,
                 "value": "test"
             }, {
-                "weight": 95,
+                "weight": 100,
                 "value": "control"
             }]
         },
