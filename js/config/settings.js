@@ -1205,7 +1205,7 @@ window.__twilightSettings = {
         },
         "c01a11fa-e59e-4d4e-a715-153328d69c2d": {
             "name": "twilight_vod_editing_circle_of_life",
-            "v": 4404,
+            "v": 4453,
             "t": 1,
             "groups": [{
                 "weight": 100,
