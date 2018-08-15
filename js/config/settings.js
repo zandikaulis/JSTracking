@@ -1083,6 +1083,18 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
+        "a78dcb04-44d2-4ca7-9c6b-44904b267e8e": {
+            "name": "twilight_vod_editing_second_chance",
+            "v": 4452,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "a9667563-723a-4cf7-b253-674d9eef0a53": {
             "name": "twilight_web_onboarding_user",
             "v": 2506,
