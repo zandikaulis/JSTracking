@@ -2271,7 +2271,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-fb8b4435";
+    return "2.3.0-1836cfd6";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2624,7 +2624,7 @@ MediaPlayer.prototype._startPlayback = function () {
 }
 
 MediaPlayer.prototype._addCue = function (cue) {
-    this._mediaSink.addCue(cue.time, cue.duration, function () {
+    this._mediaSink.addCue(cue.time, cue.duration, cue.type, function () {
         this._postMessage(WorkerMessage.SINK_CUE, cue.time);
     }.bind(this));
 }
@@ -2871,7 +2871,15 @@ var HEARTBEAT_INTERVAL = 2000; // Interval to check for stalled
  */
 var MediaSink = module.exports = function MediaSink(config) {
     this._video = document.createElement('video');
-    this._metadataTrack = this._video.addTextTrack('metadata');
+
+    // Creating two tracks for metadata and format change.
+    // Reason - Edge doesn't allow out of order cues which can happen while
+    // adding metadata cue and format change one after the other. Details https://jira.twitch.com/browse/CVP-2538
+    this._metaTracks = {
+        'metadata': this._video.addTextTrack('metadata'),
+        'format': this._video.addTextTrack('metadata')
+    }
+
     this._codecs = Object.create(null);
     this._onerror = config.onerror;
     this._srcUrl = '';
@@ -3008,7 +3016,7 @@ MediaSink.prototype.reset = function () {
     this._playbackMonitor.pause();
     this._drmManager.reset();
 
-    removeCues(this._metadataTrack, 0, Infinity);
+    this._removeCues(0, Infinity);
 
     // Detach MediaSource
     if (this._video.src) {
@@ -3035,9 +3043,33 @@ MediaSink.prototype.remove = function (range) {
         this._tracks[key].then(removeRange);
     }
 
-    // Handle metadata track explicitly
-    removeCues(this._metadataTrack, start, end);
+    // Handle metadata tracks explicitly
+    this._removeCues(start, end);
 };
+
+/**
+ * Remove all cues from the metadata track in the range
+ * Iterate backwards to preserve cue index
+ * @param {number} start - start of range to remove
+ * @param {number} end - end of range to remove
+ */
+MediaSink.prototype._removeCues = function (start, end) {
+    for(var key in this._metaTracks) {
+        if (this._metaTracks.hasOwnProperty(key)) {
+            var metaTrack = this._metaTracks[key];
+            var cues = metaTrack.cues;
+            for (var c = cues.length-1; c >= 0; c--) {
+                var cue = cues[c],
+                    time = cue.startTime;
+
+                if (time < start) { break }
+                if (time < end) {
+                    metaTrack.removeCue(cue);
+                }
+            }
+        }
+    }
+}
 
 /**
  * Move to playhead to a new position
@@ -3079,7 +3111,7 @@ MediaSink.prototype.setPlaybackRate = function (rate) {
  * @param {number} duration - duration of the cue
  * @param {function} onCue - called when the cue is fired
  */
-MediaSink.prototype.addCue = function (time, duration, onCue) {
+MediaSink.prototype.addCue = function (time, duration, type, onCue) {
     // endTime must be larger than startTime on Edge
     if (duration <= 0) {
         duration = 1;
@@ -3088,9 +3120,12 @@ MediaSink.prototype.addCue = function (time, duration, onCue) {
     // gloval.VTTCue is temporarily polyfilled on Edge and then restored.
     // So avoiding closure scope. More details - https://jira.twitch.com/browse/CVP-2513
     var VTTCue = global.VTTCue || global.TextTrackCue;
-    var cue = new VTTCue(time, time + duration, '');
+    var endTime = time + duration;
+    var cue = new VTTCue(time, endTime, '');
     cue.onenter = onCue;
-    this._metadataTrack.addCue(cue);
+
+    var track = this._metaTracks[type];
+    track && track.addCue(cue);
 };
 
 /**
@@ -3177,27 +3212,12 @@ MediaSink.prototype.delete = function () {
     this._audioSource = null;
     this._videoSource = null;
     this._video = null;
-    this._metadataTrack = null;
+    this._metaTracks = null;
 };
 
 // internal
 
 function noop() {}
-
-// Remove all cues from the metadata track in the range
-// Iterate backwards to preserve cue index
-function removeCues(metaTrack, start, end) {
-    var cues = metaTrack.cues;
-    for (var c = cues.length-1; c >= 0; c--) {
-        var cue = cues[c],
-            time = cue.startTime;
-
-        if (time < start) { break }
-        if (time < end) {
-            metaTrack.removeCue(cue);
-        }
-    }
-}
 
 /**
  * @return {Number} buffered.start - start of current buffer
