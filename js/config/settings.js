@@ -9,6 +9,7 @@ window.__twilightSettings = {
     "bits_special_promo_base_payout": 1000,
     "bits_special_promo_bonus_payout": 0,
     "bits_special_promo_offer_id": "B073RTRHTZ",
+    "bits_sponsored_cheermote_dashboard_settings": "off",
     "bits_truex_api_url": "https://get.truex.com/v2",
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
     "bits_truex_script_url": "https://static.truex.com/js/client.js",
