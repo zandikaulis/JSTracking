@@ -945,17 +945,17 @@ var KEY_SYSTEMS = {
     FAIRPLAY: {
         keySystem: 'com.apple.fps.2_0',
         certUrl: 'https://fp-keyos.licensekeyserver.com/cert/a17fd33d3843df9b17679ccf50a419b2.der',
-        licenseUrl: 'https://fp-keyos.licensekeyserver.com/getkey',
+        licenseUrl: 'https://fp-keyos-twitch.licensekeyserver.com/getkey',
         uuid: '94CE86FB-07FF-4F43-ADB8-93D2FA968CA2',
     },
     PLAYREADY: {
         keySystem: 'com.microsoft.playready',
-        licenseUrl: 'https://pr-keyos.licensekeyserver.com/core/rightsmanager.asmx',
+        licenseUrl: 'https://pr-keyos-twitch.licensekeyserver.com/core/rightsmanager.asmx',
         uuid: '9a04f079-9840-4286-ab92-e65be0885f95',
     },
     WIDEVINE: {
         keySystem: 'com.widevine.alpha',
-        licenseUrl: 'https://wv-keyos.licensekeyserver.com',
+        licenseUrl: 'https://wv-keyos-twitch.licensekeyserver.com',
         uuid: 'edef8ba9-79d6-4ace-a3c8-27dcd51d21ed',
     },
 };
@@ -986,7 +986,7 @@ var LICENSE_REQUEST_ERROR = {
 
 var KEY_SESSION_CREATION_ERROR = {
     code: 4,
-    message: 'Error while requesting DRM license',
+    message: 'Error creating key session',
 };
 
 var KEY_SESSION_INTERNAL_ERROR = {
@@ -2271,7 +2271,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-b15d644a";
+    return "2.3.0-fb8b4435";
 }
 
 MediaPlayer.prototype.isLooping = function () {
