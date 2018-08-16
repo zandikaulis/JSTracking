@@ -288,25 +288,25 @@ window.__twilightSettings = {
         },
         "164332c9-759a-46f5-92de-63d43ff2fd35": {
             "name": "twilight_web_side_nav_upsell_center_channels",
-            "v": 4256,
+            "v": 4456,
             "t": 1,
             "groups": [{
                 "weight": 20,
                 "value": "control"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "learn"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "support"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "liveup"
             }, {
-                "weight": 16,
+                "weight": 0,
                 "value": "rec"
             }, {
-                "weight": 16,
+                "weight": 80,
                 "value": "bullet"
             }]
         },
