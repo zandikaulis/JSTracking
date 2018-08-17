@@ -2271,7 +2271,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-1836cfd6";
+    return "2.3.0-3a229380";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3125,7 +3125,12 @@ MediaSink.prototype.addCue = function (time, duration, type, onCue) {
     cue.onenter = onCue;
 
     var track = this._metaTracks[type];
-    track && track.addCue(cue);
+    try {
+        track && track.addCue(cue);
+    } catch (e) {
+        // MS Edge 15 has issues with cues added out of order.
+        // Details here https://jira.twitch.com/browse/CVP-2544
+    }
 };
 
 /**
