@@ -622,6 +622,18 @@ window.__twilightSettings = {
                 "value": "streams"
             }]
         },
+        "4834149f-513b-4f16-98f3-0f587e5a2e99": {
+            "name": "twilight_vod_editing_third_chance",
+            "v": 4461,
+            "t": 3,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "49083595-80d4-4c13-93a2-20a605b3318e": {
             "name": "Player Core WASM experiment",
             "v": 4139,
@@ -1202,18 +1214,6 @@ window.__twilightSettings = {
                 "value": "control"
             }, {
                 "weight": 100,
-                "value": "variant1"
-            }]
-        },
-        "c01a11fa-e59e-4d4e-a715-153328d69c2d": {
-            "name": "twilight_vod_editing_circle_of_life",
-            "v": 4453,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
                 "value": "variant1"
             }]
         },
