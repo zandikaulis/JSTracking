@@ -43,6 +43,7 @@ window.__twilightSettings = {
     "esport_charity_end_date": "2018-08-26T19:59:00Z",
     "esport_charity_launch": "off",
     "esport_charity_start_date": "2018-08-15T07:01:00Z",
+    "esport_insider_allstars_launch": "2018-08-24T16:00:00Z",
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
     "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
     "esport_insider_prime_bits_launch": "on",
