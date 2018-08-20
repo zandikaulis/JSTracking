@@ -36,7 +36,7 @@ window.__twilightSettings = {
     "dashboard_vp_widget_enabled": true,
     "deprecated_messages_download_enabled": true,
     "detector_urls": ["https://s0.2mdn.net/", "https://adservice.google.com", "https://pagead2.googlesyndication.com/", "https://r.nexac.com/e/getdata.xgi?foo=bar"],
-    "dev_insights_feature_launch": "off",
+    "dev_insights_feature_launch": "on",
     "drops_itemnames_enabled": false,
     "env_test": "This is a test in Production.",
     "esport_channel_page_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249", "104874624", "139075904", "180833069", "48937001", "170846405", "189906299", "166458814", "189905698", "203316457"],
