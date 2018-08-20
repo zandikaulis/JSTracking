@@ -37494,7 +37494,7 @@
                             exact: !0
                         }), r.createElement(p.d, {
                             path: "/user",
-                            render: Rn
+                            component: Rn
                         }), r.createElement(p.d, {
                             path: "/videos/v:videoID",
                             component: rn
@@ -37572,30 +37572,56 @@
             var i = n("mrSG"),
                 r = n("q1tI"),
                 a = n("/7QA"),
-                o = n("gvGA"),
-                s = n("ZDlU"),
-                l = n("Ue10"),
-                c = function(e) {
+                o = n("/MKj"),
+                s = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.firstPageLoaded && this.props.loader()
+                    }, t.prototype.componentWillReceiveProps = function(e) {
+                        e.firstPageLoaded && !this.props.firstPageLoaded && this.props.loader()
+                    }, t.prototype.render = function() {
+                        return null
+                    }, t
+                }(r.Component);
+            var l = Object(o.b)(function(e) {
+                    return {
+                        firstPageLoaded: e.session.firstPageLoaded
+                    }
+                })(s),
+                c = n("gvGA"),
+                d = n("ZDlU"),
+                u = n("Ue10"),
+                p = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
-                            showLoader: !1,
                             error: !1
                         }, n
                     }
-                    return i.__extends(t, e), t.wrap = function(e, n, i) {
-                        return function(a) {
-                            return r.createElement(o.a, {
-                                content: r.createElement(s.a, null)
-                            }, r.createElement(t, {
-                                loader: e,
-                                component: n,
-                                componentProps: a,
-                                failSilently: !(!i || !i.failSilently),
-                                onRendered: i && i.onRendered,
-                                placeholder: i && i.placeholder
-                            }))
-                        }
+                    return i.__extends(t, e), t.wrap = function(e, n, a) {
+                        return function(o) {
+                            function s() {
+                                return null !== o && o.apply(this, arguments) || this
+                            }
+                            return i.__extends(s, o), s.Preload = function() {
+                                return r.createElement(l, {
+                                    loader: e
+                                })
+                            }, s.prototype.render = function() {
+                                return r.createElement(c.a, {
+                                    content: r.createElement(d.a, null)
+                                }, r.createElement(t, {
+                                    loader: e,
+                                    component: n,
+                                    componentProps: this.props,
+                                    failSilently: !(!a || !a.failSilently),
+                                    onRendered: a && a.onRendered,
+                                    placeholder: a && a.placeholder
+                                }))
+                            }, s
+                        }(r.Component)
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         !t.Component && this.state.Component && this.props.onRendered && this.props.onRendered()
                     }, t.prototype.componentDidMount = function() {
@@ -37610,7 +37636,6 @@
                                             component: this.props.component
                                         }), this.setState({
                                             Component: t,
-                                            showLoader: !1,
                                             error: !t
                                         }), [3, 3];
                                     case 2:
@@ -37618,7 +37643,6 @@
                                             component: this.props.component
                                         }), this.setState({
                                             Component: void 0,
-                                            showLoader: !1,
                                             error: !0
                                         }), [3, 3];
                                     case 3:
@@ -37627,15 +37651,15 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.Component ? r.createElement(this.state.Component, i.__assign({}, this.props.componentProps)) : this.state.error ? this.props.failSilently ? null : r.createElement(s.a, {
+                        return this.state.Component ? r.createElement(this.state.Component, i.__assign({}, this.props.componentProps)) : this.state.error ? this.props.failSilently ? null : r.createElement(d.a, {
                             message: Object(a.d)("Failed to load module.", "Loadable")
-                        }) : void 0 !== this.props.placeholder ? this.props.placeholder : r.createElement(l.ub, {
+                        }) : void 0 !== this.props.placeholder ? this.props.placeholder : r.createElement(u.ub, {
                             fillContent: !0
                         })
                     }, t
                 }(r.Component);
             n.d(t, "a", function() {
-                return c
+                return p
             })
         },
         "ZqP/": function(e, t, n) {
@@ -46419,29 +46443,30 @@
             ! function(e) {
                 e.ENABLED = "enabled", e.CONTROL = "control"
             }(i || (i = {}));
-            var c = function() {
-                var e, t = {
-                    name: l.b.GrowthEmailVerifyBar,
-                    assignments: (e = {
-                        fallback: function() {
+            var c = s.a.wrap(function() {
+                    return n.e(54).then(n.bind(null, "lEVP"))
+                }, "VerifyEmailBar", {
+                    failSilently: !0,
+                    placeholder: null
+                }),
+                d = function() {
+                    var e, t = {
+                        name: l.b.GrowthEmailVerifyBar,
+                        assignments: (e = {
+                            fallback: function() {
+                                return null
+                            }
+                        }, e[i.ENABLED] = function() {
+                            return a.createElement(c, null)
+                        }, e),
+                        loader: function() {
                             return null
                         }
-                    }, e[i.ENABLED] = function() {
-                        return s.a.wrap(function() {
-                            return n.e(54).then(n.bind(null, "lEVP"))
-                        }, "VerifyEmailBar", {
-                            failSilently: !0,
-                            placeholder: null
-                        })({})
-                    }, e),
-                    loader: function() {
-                        return null
-                    }
+                    };
+                    return a.createElement(o.a, r.__assign({}, t))
                 };
-                return a.createElement(o.a, r.__assign({}, t))
-            };
             n.d(t, "a", function() {
-                return c
+                return d
             })
         },
         ndwU: function(e, t, n) {
