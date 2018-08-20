@@ -685,14 +685,14 @@ window.__twilightSettings = {
         },
         "4d203dab-d9e9-4726-a438-6bc557cddcb2": {
             "name": "extension_configure_modal",
-            "v": 4478,
+            "v": 4482,
             "t": 2,
             "groups": [{
-                "weight": 100,
-                "value": "off"
+                "weight": 5,
+                "value": "control"
             }, {
-                "weight": 0,
-                "value": "on"
+                "weight": 95,
+                "value": "test"
             }]
         },
         "4d3d19a7-38c5-4328-9730-7d99565d5edd": {
