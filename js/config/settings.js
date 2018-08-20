@@ -50,9 +50,6 @@ window.__twilightSettings = {
     "esport_insider_prime_bits_launch_user_whitelist": ["186243532", "215590603"],
     "esports_room_cheering_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249-staff", "104874624"],
     "event_directory_enabled_games": [],
-    "extensions_bits_banner_enabled": true,
-    "extensions_discovery_enabled": true,
-    "extensions_mobile_banner_enabled": false,
     "extensions_mve_banner_enabled": true,
     "extensions_popout_enabled": "off",
     "first_page_loaded_timeout": 30000,
@@ -1076,13 +1073,13 @@ window.__twilightSettings = {
         },
         "9edf91e6-0499-49f2-b171-30f85573bf5a": {
             "name": "TWILIGHT_VOD_TOP_SHELF",
-            "v": 4240,
+            "v": 4483,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 90,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 10,
                 "value": "on"
             }]
         },
