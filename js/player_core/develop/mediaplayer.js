@@ -944,7 +944,7 @@ var KEY_SYSTEMS = {
     },
     FAIRPLAY: {
         keySystem: 'com.apple.fps.2_0',
-        certUrl: 'https://fp-keyos.licensekeyserver.com/cert/a17fd33d3843df9b17679ccf50a419b2.der',
+        certUrl: 'https://fp-keyos-twitch.licensekeyserver.com/cert/a17fd33d3843df9b17679ccf50a419b2.der',
         licenseUrl: 'https://fp-keyos-twitch.licensekeyserver.com/getkey',
         uuid: '94CE86FB-07FF-4F43-ADB8-93D2FA968CA2',
     },
@@ -2271,7 +2271,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-327ca045";
+    return "2.3.0-ae7a5d0c";
 }
 
 MediaPlayer.prototype.isLooping = function () {
