@@ -2271,7 +2271,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-cf8ed6b9";
+    return "2.3.0-d0c9a18c";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2521,6 +2521,7 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(ClientMessage.STATE_CHANGED, this._onStateChanged.bind(this));
     em.on(ClientMessage.SAVE_ITEM, this._saveItem.bind(this));
     em.on(ClientMessage.CONFIGURE, sink.configure.bind(sink));
+    em.on(ClientMessage.REINIT, sink.reinit.bind(sink));
     em.on(ClientMessage.ENQUEUE, sink.enqueue.bind(sink));
     em.on(ClientMessage.SET_TIMESTAMP_OFFSET, sink.setTimestampOffset.bind(sink));
     em.on(ClientMessage.PLAY, this._startPlayback.bind(this));
@@ -2908,7 +2909,6 @@ MediaSink.prototype.configure = function (track) {
         }
     }
 
-    var video = this._video; // Capture 'video' so we don't need to bind 'this'
     var trackID = track.trackID;
     var codec = track.codec;
     if (codec) {
@@ -2919,40 +2919,12 @@ MediaSink.prototype.configure = function (track) {
 
     // Lazily attach a new MediaSource
     if (!this._mediaSource) {
-        // Attach a new MediaSource
-        this._mediaSource = new Promise(function (resolve, reject) {
-            var mediaSource = new MediaSource();
-            mediaSource.addEventListener('sourceopen', function onSourceOpen() {
-                mediaSource.removeEventListener('sourceopen', onSourceOpen);
-                // This can be fired even if the source has already been removed
-                if (mediaSource.readyState === 'open') {
-                    mediaSource.duration = 1<<30; // ~34 years
-                    resolve(mediaSource);
-                } else {
-                    reject(new Error('MediaSource not opened'));
-                }
-            });
-            video.src = URL.createObjectURL(mediaSource);
-        });
+        this._mediaSource = createMediaSource(this._video);
     }
 
     // Add track if it doesn't exist
     if (!(trackID in this._tracks)) {
-        var track = this._mediaSource.then(function (mediaSource) {
-            var srcBuf = mediaSource.addSourceBuffer('video/mp4;' + codec);
-            return new SafeSourceBuffer(video, srcBuf)
-        });
-
-        // Want to leave promise in tracks map rejected
-        // to block any future calls to 'enqueue'
-        track.catch(function (e) {
-            this._onerror({
-                code: NOT_SUPPORTED,
-                message: e.toString(),
-            });
-        }.bind(this));
-
-        this._tracks[trackID] = track;
+        this._addSourceBuffer(trackID, codec, 0);
     }
 };
 
@@ -2972,6 +2944,7 @@ MediaSink.prototype.enqueue = function (sample) {
 MediaSink.prototype.setTimestampOffset = function (update) {
     var track = this._tracks[update.trackID];
     if (track) {
+        this._trackOffsets[update.trackID] = update.offset;
         track.then(function (srcBuf) {
             srcBuf.setTimestampOffset(update.offset)
         }, noop) // Error already sent when track failed to configure
@@ -3012,6 +2985,7 @@ MediaSink.prototype.pause = function () {
 MediaSink.prototype.reset = function () {
     this._mediaSource = null;
     this._tracks = Object.create(null);
+    this._trackOffsets = Object.create(null);
     this._srcUrl = '';
     this._playbackMonitor.pause();
     this._drmManager.reset();
@@ -3025,6 +2999,31 @@ MediaSink.prototype.reset = function () {
         this._video.load(); //https://github.com/w3c/media-source/issues/53
         URL.revokeObjectURL(src);
     }
+};
+
+/**
+ * Reinit creates a new MediaSource with the same number of tracks
+ * This effectively 'resets' all of the tracks, but keeps codec info,
+ * timestampOffset, and the current playhead. This is needed when transitioning
+ * from unprotected content to protected content (Stitched preroll CVP-2500).
+ */
+MediaSink.prototype.reinit = function () {
+    this._playbackMonitor.pause();
+    var playhead = this._video.currentTime;
+
+    // Remove cues in current buffer
+    var buffered = this.buffered();
+    this._removeCues(buffered.start, buffered.end);
+
+    var oldSrc = this._video.src;
+    this._mediaSource = createMediaSource(this._video);
+    URL.revokeObjectURL(oldSrc);
+
+    for (var trackID in this._tracks) {
+        this._addSourceBuffer(trackID, this._codecs[trackID], this._trackOffsets[trackID]);
+    }
+
+    this._video.currentTime = playhead;
 };
 
 /**
@@ -3220,6 +3219,25 @@ MediaSink.prototype.delete = function () {
     this._metaTracks = null;
 };
 
+MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
+    var track = this._mediaSource.then(function (mediaSource) {
+        var srcBuf = mediaSource.addSourceBuffer('video/mp4;' + codec);
+        srcBuf.timestampOffset = offset;
+        return new SafeSourceBuffer(this._video, srcBuf)
+    }.bind(this));
+
+    // Want to leave promise in tracks map rejected
+    // to block any future calls to 'enqueue'
+    track.catch(function (e) {
+        this._onerror({
+            code: NOT_SUPPORTED,
+            message: e.toString(),
+        });
+    }.bind(this));
+
+    this._tracks[trackID] = track;
+}
+
 // internal
 
 function noop() {}
@@ -3269,6 +3287,23 @@ function getBufferedRange(video) {
     }
 
     return {start: playhead, end: playhead};
+};
+
+function createMediaSource(video) {
+    return new Promise(function (resolve, reject) {
+        var mediaSource = new MediaSource();
+        mediaSource.addEventListener('sourceopen', function onSourceOpen() {
+            mediaSource.removeEventListener('sourceopen', onSourceOpen);
+            // This can be fired even if the source has already been removed
+            if (mediaSource.readyState === 'open') {
+                mediaSource.duration = 1<<30; // ~34 years
+                resolve(mediaSource);
+            } else {
+                reject(new Error('MediaSource not opened'));
+            }
+        });
+        video.src = URL.createObjectURL(mediaSource);
+    });
 };
 
 /**
@@ -3539,6 +3574,10 @@ module.exports = {
      * @param {String} track.src - use this source directly (passthrough)
      */
     CONFIGURE: 'ClientConfigure',
+    /**
+     * Reinitialize all tracks
+     */
+    REINIT: 'ClientReinit',
     /**
      * Append an mp4 buffer to MSE
      * @param {Number} sample.trackID - which track to add the sample to.
