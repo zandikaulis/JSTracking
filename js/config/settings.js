@@ -1453,13 +1453,13 @@ window.__twilightSettings = {
         },
         "f1825646-3eac-4bac-8be3-ab9f736b7dd8": {
             "name": "new_search_backend",
-            "v": 4480,
+            "v": 4485,
             "t": 1,
             "groups": [{
-                "weight": 99,
+                "weight": 98,
                 "value": "control"
             }, {
-                "weight": 1,
+                "weight": 2,
                 "value": "variant"
             }]
         },
