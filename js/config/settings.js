@@ -72,7 +72,7 @@ window.__twilightSettings = {
     "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
     "new_live_announcements": true,
-    "nfl_channels": ["primevideo", "cctester33", "stevemz", "twitchmedia_the_nerdy_fox"],
+    "nfl_channels": ["primevideo", "cctester33", "stevemz", "twitchmedia_the_nerdy_fox", "k8b9DzMih42t"],
     "nfl_game_id": "14017",
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
     "onsite_notifications_launch": true,
@@ -1417,11 +1417,14 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4488,
+            "v": 4493,
             "t": 1,
             "groups": [{
-                "weight": 95,
+                "weight": 90,
                 "value": "2.6.1"
+            }, {
+                "weight": 5,
+                "value": "2.6.3"
             }, {
                 "weight": 5,
                 "value": "2.6.2"
