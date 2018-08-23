@@ -31,7 +31,7 @@ window.__twilightSettings = {
     "comscore_config_c3": 1,
     "comscore_config_c5": "01",
     "comscore_url": "https://sb.scorecardresearch.com/beacon.js",
-    "creator_camp_launch": "english",
+    "creator_camp_launch": "all",
     "dashboard_moderation_settings_enabled": true,
     "dashboard_payout_history": true,
     "dashboard_vp_widget_enabled": true,
