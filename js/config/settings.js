@@ -107,6 +107,7 @@ window.__twilightSettings = {
     "squad_stream_banner_query_enabled": false,
     "squad_stream_banner_whitelist": [],
     "squad_stream_feature": "off",
+    "squad_stream_survey_url": "",
     "squad_stream_uxr_logins": [],
     "stats_sample_rate": 100,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
