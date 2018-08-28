@@ -441,13 +441,13 @@ window.__twilightSettings = {
         },
         "2efa4966-3554-439a-a142-34a1dd5444c9": {
             "name": "channel_page_redesign",
-            "v": 4355,
+            "v": 4529,
             "t": 2,
             "groups": [{
-                "weight": 80,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 20,
+                "weight": 0,
                 "value": "variant_a"
             }]
         },
