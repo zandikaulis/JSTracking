@@ -2271,7 +2271,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-eecdfba2";
+    return "2.3.0-536fa5fb";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2625,7 +2625,7 @@ MediaPlayer.prototype._startPlayback = function () {
 }
 
 MediaPlayer.prototype._addCue = function (cue) {
-    this._mediaSink.addCue(cue.time, cue.duration, cue.type, function () {
+    this._mediaSink.addCue(cue.time, cue.duration, function () {
         this._postMessage(WorkerMessage.SINK_CUE, cue.time);
     }.bind(this));
 }
@@ -2872,15 +2872,7 @@ var HEARTBEAT_INTERVAL = 2000; // Interval to check for stalled
  */
 var MediaSink = module.exports = function MediaSink(config) {
     this._video = document.createElement('video');
-
-    // Creating two tracks for metadata and format change.
-    // Reason - Edge doesn't allow out of order cues which can happen while
-    // adding metadata cue and format change one after the other. Details https://jira.twitch.com/browse/CVP-2538
-    this._metaTracks = {
-        'metadata': this._video.addTextTrack('metadata'),
-        'format': this._video.addTextTrack('metadata')
-    }
-
+    this._metaTrack = new SafeTextTrack(this._video);
     this._codecs = Object.create(null);
     this._onerror = config.onerror;
     this._srcUrl = '';
@@ -2989,8 +2981,7 @@ MediaSink.prototype.reset = function () {
     this._srcUrl = '';
     this._playbackMonitor.pause();
     this._drmManager.reset();
-
-    this._removeCues(0, Infinity);
+    this._metaTrack.remove(0, Infinity);
 
     // Detach MediaSource
     if (this._video.src) {
@@ -3013,7 +3004,7 @@ MediaSink.prototype.reinit = function () {
 
     // Remove cues in current buffer
     var buffered = this.buffered();
-    this._removeCues(buffered.start, buffered.end);
+    this._metaTrack.remove(buffered.start, buffered.end);
 
     var oldSrc = this._video.src;
     this._mediaSource = createMediaSource(this._video);
@@ -3043,32 +3034,8 @@ MediaSink.prototype.remove = function (range) {
     }
 
     // Handle metadata tracks explicitly
-    this._removeCues(start, end);
+    this._metaTrack.remove(start, end);
 };
-
-/**
- * Remove all cues from the metadata track in the range
- * Iterate backwards to preserve cue index
- * @param {number} start - start of range to remove
- * @param {number} end - end of range to remove
- */
-MediaSink.prototype._removeCues = function (start, end) {
-    for(var key in this._metaTracks) {
-        if (this._metaTracks.hasOwnProperty(key)) {
-            var metaTrack = this._metaTracks[key];
-            var cues = metaTrack.cues;
-            for (var c = cues.length-1; c >= 0; c--) {
-                var cue = cues[c],
-                    time = cue.startTime;
-
-                if (time < start) { break }
-                if (time < end) {
-                    metaTrack.removeCue(cue);
-                }
-            }
-        }
-    }
-}
 
 /**
  * Move to playhead to a new position
@@ -3110,7 +3077,7 @@ MediaSink.prototype.setPlaybackRate = function (rate) {
  * @param {number} duration - duration of the cue
  * @param {function} onCue - called when the cue is fired
  */
-MediaSink.prototype.addCue = function (time, duration, type, onCue) {
+MediaSink.prototype.addCue = function (time, duration, onCue) {
     // endTime must be larger than startTime on Edge
     if (duration <= 0) {
         duration = 1;
@@ -3122,14 +3089,7 @@ MediaSink.prototype.addCue = function (time, duration, type, onCue) {
     var endTime = time + duration;
     var cue = new VTTCue(time, endTime, '');
     cue.onenter = onCue;
-
-    var track = this._metaTracks[type];
-    try {
-        track && track.addCue(cue);
-    } catch (e) {
-        // MS Edge 15 has issues with cues added out of order.
-        // Details here https://jira.twitch.com/browse/CVP-2544
-    }
+    this._metaTrack.addCue(cue);
 };
 
 /**
@@ -3212,11 +3172,11 @@ MediaSink.prototype.srcUrl = function () {
  */
 MediaSink.prototype.delete = function () {
     this.reset();
+    this._metaTrack.delete();
     this._playbackMonitor.delete();
     this._audioSource = null;
     this._videoSource = null;
     this._video = null;
-    this._metaTracks = null;
 };
 
 MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
@@ -3372,6 +3332,45 @@ SafeSourceBuffer.prototype._process = function () {
 
 SafeSourceBuffer.prototype._updating = function () {
     return (!this._srcBuf || this._srcBuf.updating || this._video.error !== null);
+};
+
+function SafeTextTrack(video) {
+    this._video = video;
+    this._tracks = [ video.addTextTrack('metadata') ];
+}
+
+SafeTextTrack.prototype.addCue = function (cue) {
+    var track = this._tracks.find(function (track) {
+        var cues = track.cues;
+        return !cues.length || cues[cues.length-1].startTime <= cue.startTime;
+    });
+
+    if (!track) {
+        track = video.addTextTrack('metadata');
+        this._tracks.push(track);
+    }
+
+    track.addCue(cue);
+};
+
+SafeTextTrack.prototype.remove = function (start, end) {
+    this._tracks.forEach(function (track) {
+        var cues = track.cues;
+        for (var c = cues.length-1; c >= 0; c--) {
+            var cue = cues[c];
+            var time = cue.startTime;
+
+            if (time < start) { break }
+            if (time < end) {
+                track.removeCue(cue);
+            }
+        }
+    })
+};
+
+SafeTextTrack.prototype.delete = function () {
+    this._video = null;
+    this._tracks = null;
 };
 
 /**
