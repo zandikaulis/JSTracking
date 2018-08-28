@@ -6588,137 +6588,21 @@
         },
         "5zC2": function(e, t, n) {
             "use strict";
-            var i = n("mrSG"),
-                r = n("1hWM"),
-                a = n("17x9"),
-                o = n("q1tI"),
-                s = n("/7QA"),
-                l = n("GnwI"),
-                c = n("eFQ3"),
-                d = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.setIframeContainer = function(e) {
-                            t.iframeContainer = e
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = this.context.registerReceiver;
-                        e ? this.unregister = e(this) : s.j.warn("<ExtensionFrame /> initialized missing a <ScrollableArea /> provider"), this.props.latencyTracking.reportInteractive();
-                        var t = this.props,
-                            n = t.languageCode,
-                            i = t.locale;
-                        this.extensionFrameAPI = new r.ExtensionFrame({
-                            anchor: this.props.anchor,
-                            channelId: parseInt(this.props.channelID, 10),
-                            loginId: this.props.loginID ? parseInt(this.props.loginID, 10) : null,
-                            dobbin: {
-                                trackEvent: s.n.track.bind(s.n)
-                            },
-                            extension: this.props.extension,
-                            iframeClassName: this.props.className,
-                            language: n,
-                            locale: i,
-                            mode: this.props.extensionMode,
-                            parentElement: this.iframeContainer,
-                            platform: r.ExtensionPlatform.Web,
-                            trackingProperties: {
-                                channel: this.props.channelLogin,
-                                device_id: s.o.session.deviceID,
-                                login: this.props.login,
-                                platform: s.o.tracking.getPlatform(),
-                                player_type: c.b.Site
-                            },
-                            onBeginPurchase: this.props.onBeginPurchase,
-                            features: {
-                                sharePubsub: !0
-                            }
-                        }), this.props.saveExtensionAPI && this.props.saveExtensionAPI(this.extensionFrameAPI)
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.unregister && this.unregister(), this.extensionFrameAPI.destroy()
-                    }, t.prototype.render = function() {
-                        return o.createElement("div", {
-                            ref: this.setIframeContainer,
-                            "data-test-selector": "iframe_container_selector"
-                        })
-                    }, t.prototype.checkVisible = function() {
-                        this.extensionFrameAPI && this.extensionFrameAPI.visibilityChanged()
-                    }, t.contextTypes = {
-                        registerReceiver: a.func
-                    }, t
-                }(o.Component),
-                u = Object(l.c)("ExtensionFrame")(d),
-                p = n("lBSt");
-
-            function m(e) {
-                return function(t) {
-                    return function(n) {
-                        function a() {
-                            var t = null !== n && n.apply(this, arguments) || this;
-                            return t.state = {
-                                data: null,
-                                loading: !1
-                            }, t.fetchExtensions = function(n) {
-                                return i.__awaiter(t, void 0, void 0, function() {
-                                    var t, a;
-                                    return i.__generator(this, function(i) {
-                                        switch (i.label) {
-                                            case 0:
-                                                this.setState({
-                                                    loading: !0
-                                                }), t = null, i.label = 1;
-                                            case 1:
-                                                return i.trys.push([1, 3, , 4]), n = n || e.options(this.props).variables.channelID, [4, r.extensionService.getInstalledExtensions(n)];
-                                            case 2:
-                                                return a = i.sent(), t = Object(p.extensionInstallationsFromRest)(a), [3, 4];
-                                            case 3:
-                                                return i.sent(), this.setState({
-                                                    loading: !1,
-                                                    error: "Failed to load data."
-                                                }), [3, 4];
-                                            case 4:
-                                                return this.setState({
-                                                    loading: !1,
-                                                    data: t
-                                                }), [2]
-                                        }
-                                    })
-                                })
-                            }, t
-                        }
-                        return i.__extends(a, n), a.prototype.componentDidMount = function() {
-                            if (!this.shouldSkip(this.props)) {
-                                var t = e.options(this.props).variables.channelID;
-                                this.fetchExtensions(t)
-                            }
-                        }, a.prototype.componentWillReceiveProps = function(t) {
-                            if (!this.shouldSkip(t)) {
-                                var n = e.options(this.props).variables.channelID,
-                                    i = e.options(t).variables.channelID;
-                                n !== i && this.fetchExtensions(i)
-                            }
-                        }, a.prototype.render = function() {
-                            var n;
-                            if (this.shouldSkip(this.props)) return o.createElement(t, i.__assign({}, this.props));
-                            var r = ((n = {})[e.name || "data"] = i.__assign({
-                                refetch: this.fetchExtensions
-                            }, this.state), n);
-                            return o.createElement(t, i.__assign({}, this.props, r))
-                        }, a.prototype.shouldSkip = function(t) {
-                            return void 0 !== e.skip && ("function" == typeof e.skip ? e.skip(t) : e.skip)
-                        }, a
-                    }(o.Component)
-                }
-            }
-            var h = n("/MKj"),
-                f = n("kRBY"),
-                g = function(e) {
+            var i = n("qCDY"),
+                r = n("YyE3"),
+                a = n("/MKj"),
+                o = n("kRBY"),
+                s = n("mrSG"),
+                l = n("1hWM"),
+                c = n("q1tI"),
+                d = n("/7QA"),
+                u = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        r.extensionService.setEnvironmentOptions({
-                            apiUrl: s.a.apiBaseURL
+                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                        l.extensionService.setEnvironmentOptions({
+                            apiUrl: d.a.apiBaseURL
                         }), this.setExtensionServiceAuthToken(this.props)
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         e.authToken !== this.props.authToken && this.setExtensionServiceAuthToken(e)
@@ -6728,22 +6612,22 @@
                         return null
                     }, t.prototype.setExtensionServiceAuthToken = function(e) {
                         var t = e.authToken || "";
-                        r.extensionService.setEnvironmentOptions({
+                        l.extensionService.setEnvironmentOptions({
                             authToken: t
                         })
                     }, t
-                }(o.Component);
-            var v = Object(h.b)(function(e) {
+                }(c.Component);
+            var p = Object(a.b)(function(e) {
                 return {
-                    authToken: Object(f.a)(e)
+                    authToken: Object(o.a)(e)
                 }
-            })(g);
+            })(u);
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "a", function() {
-                return u
+                return i.a
             }), n.d(t, "c", function() {
-                return m
+                return r.a
             }), n.d(t, !1, function() {}), n.d(t, "b", function() {
-                return v
+                return p
             })
         },
         "5zXJ": function(e, t, n) {
@@ -10140,7 +10024,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EditingUnderTheSea = "EDITING_UNDER_THE_SEA", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NativeLogin = "TWILIGHT_NATIVE_LOGIN", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingCategoriesAnonFrontPage = "TWILIGHT_WEB_ONBOARDING_CATEGORIES_ANON_FRONT_PAGE", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -10149,6 +10033,10 @@
                 }, i[r.AdDensityWidget] = {
                     id: "fa443b30-d363-4978-a831-14c653eb6f41",
                     default: "no"
+                }, i[r.ExtensionConfigureModal] = {
+                    id: "4d203dab-d9e9-4726-a438-6bc557cddcb2",
+                    default: "control",
+                    staffOverride: " test"
                 }, i[r.WebOnboarding] = {
                     id: "a9667563-723a-4cf7-b253-674d9eef0a53",
                     default: "control"
@@ -10578,55 +10466,57 @@
         DLia: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, O, I, R, D, L, A, P, x, F, M, U, B, j, W, V, H, z, G, q, Q, K, Y, X, $, Z, J, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Oe, Ie, Re, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, We, Ve, He, ze, Ge, qe, Qe, Ke, Ye, Xe, $e, Ze, Je, et, tt, nt;
-            n.d(t, "d", function() {
+            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, S, E, _, C, w, T, N, O, I, R, D, L, A, P, x, F, M, U, B, j, W, V, H, z, G, q, Q, K, Y, X, $, Z, J, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Se, Ee, _e, Ce, we, Te, Ne, Oe, Ie, Re, De, Le, Ae, Pe, xe, Fe, Me, Ue, Be, je, We, Ve, He, ze, Ge, qe, Qe, Ke, Ye, Xe, $e, Ze, Je, et, tt, nt, it;
+            n.d(t, "e", function() {
                     return m
-                }), n.d(t, "b", function() {
-                    return v
                 }), n.d(t, "c", function() {
+                    return v
+                }), n.d(t, "d", function() {
                     return b
-                }), n.d(t, "k", function() {
+                }), n.d(t, "l", function() {
                     return S
-                }), n.d(t, "r", function() {
+                }), n.d(t, "s", function() {
                     return C
-                }), n.d(t, "u", function() {
-                    return L
-                }), n.d(t, "q", function() {
-                    return A
                 }), n.d(t, "v", function() {
+                    return L
+                }), n.d(t, "r", function() {
+                    return A
+                }), n.d(t, "w", function() {
                     return P
-                }), n.d(t, "j", function() {
+                }), n.d(t, "k", function() {
                     return W
                 }), n.d(t, "a", function() {
                     return H
-                }), n.d(t, "l", function() {
-                    return z
-                }), n.d(t, "n", function() {
-                    return G
-                }), n.d(t, "s", function() {
-                    return ce
-                }), n.d(t, "w", function() {
-                    return de
-                }), n.d(t, "i", function() {
-                    return ge
-                }), n.d(t, "h", function() {
-                    return ve
-                }), n.d(t, "g", function() {
-                    return Oe
-                }), n.d(t, "x", function() {
-                    return Ie
-                }), n.d(t, "p", function() {
-                    return Re
-                }), n.d(t, "f", function() {
-                    return Fe
-                }), n.d(t, "e", function() {
-                    return Me
                 }), n.d(t, "m", function() {
-                    return Ue
-                }), n.d(t, "t", function() {
-                    return je
+                    return z
                 }), n.d(t, "o", function() {
+                    return G
+                }), n.d(t, "t", function() {
+                    return ce
+                }), n.d(t, "x", function() {
+                    return de
+                }), n.d(t, "j", function() {
+                    return ge
+                }), n.d(t, "i", function() {
+                    return ve
+                }), n.d(t, "h", function() {
+                    return Oe
+                }), n.d(t, "y", function() {
+                    return Ie
+                }), n.d(t, "q", function() {
+                    return Re
+                }), n.d(t, "g", function() {
+                    return Fe
+                }), n.d(t, "f", function() {
+                    return Me
+                }), n.d(t, "n", function() {
+                    return Ue
+                }), n.d(t, "u", function() {
+                    return je
+                }), n.d(t, "p", function() {
                     return Qe
+                }), n.d(t, "b", function() {
+                    return tt
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.COMMUNITY_REPORT = "COMMUNITY_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -10947,11 +10837,14 @@
                     e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(et || (et = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(tt || (tt = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(nt || (nt = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(nt || (nt = {}))
+                }(it || (it = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -28258,6 +28151,7 @@
                         }, this.baseProps), this.props.children)
                     }
                     return d.createElement("button", c.__assign({
+                        autoFocus: this.props.autoFocus || void 0,
                         disabled: this.props.disabled || void 0,
                         ref: this.props.refHandler
                     }, this.baseProps), this.props.children)
@@ -28423,7 +28317,7 @@
                 e.Inherit = "tw-svg__asset--inherit", e.Alt = "tw-svg__asset--alt", e.Alt2 = "tw-svg__asset--alt-2", e.Brand = "tw-svg__asset--brand", e.Live = "tw-svg__asset--live", e.Warn = "tw-svg__asset--warn", e.Alert = "tw-svg__asset--alert", e.Success = "tw-svg__asset--success", e.Prime = "tw-svg__asset--prime", e.Placeholder = "tw-svg__asset--placeholder", e.OverlayPlaceholder = "tw-svg__asset--overlay-placeholder"
             }(F || (F = {})),
             function(e) {
-                e.AddFriend = "AddFriend", e.AddUser = "AddUser", e.AddReaction = "AddReaction", e.Amazon = "Amazon", e.Android = "Android", e.AngleDown = "AngleDown", e.AngleLeft = "AngleLeft", e.AngleRight = "AngleRight", e.AngleUp = "AngleUp", e.ArrowDown = "ArrowDown", e.ArrowLeft = "ArrowLeft", e.ArrowRight = "ArrowRight", e.ArrowUp = "ArrowUp", e.Automod = "Automod", e.Ban = "Ban", e.Battlenet = "Battlenet", e.Bits = "Bits", e.CC = "CC", e.CCOff = "CCOff", e.Carat = "Carat", e.Camera = "Camera", e.ChatRiskFlag = "ChatRiskFlag", e.ChatSettingsBack = "ChatSettingsBack", e.Check = "Check", e.Clip = "Clip", e.Close = "Close", e.Collections = "Collections", e.Comments = "Comments", e.Communities = "Communities", e.Conversations = "Conversations", e.Copy = "Copy", e.Crate = "Crate", e.Crown = "Crown", e.DeadGlitch = "DeadGlitch", e.Desktop = "Desktop", e.Document = "Document", e.Download = "Download", e.DragHandle = "DragHandle", e.Drops = "Drops", e.Edit = "Edit", e.Emoticons = "Emoticons", e.Events = "Events", e.EventsReminderAdd = "EventsReminderAdd", e.EventsReminderAdded = "EventsReminderAdded", e.EventsReminderRemove = "EventsReminderRemove", e.Experiment = "Experiment", e.Extensions = "Extensions", e.Facebook = "Facebook", e.Featured = "Featured", e.Filter = "Filter", e.FollowCheck = "FollowCheck", e.FollowHollow = "FollowHollow", e.FollowX = "FollowX", e.Friends = "Friends", e.FriendsSC = "FriendsSC", e.Fullscreen = "Fullscreen", e.FullscreenExit = "FullscreenExit", e.Gear = "Gear", e.Gift = "Gift", e.Github = "Github", e.Global = "Global", e.GlyphArrDown = "GlyphArrDown", e.GlyphArrLeft = "GlyphArrLeft", e.GlyphArrRight = "GlyphArrRight", e.GlyphArrUp = "GlyphArrUp", e.GlyphArrUpDown = "GlyphArrUpDown", e.GlyphFollowers = "GlyphFollowers", e.GlyphLength = "GlyphLength", e.GlyphLive = "GlyphLive", e.GlyphLiveSmall = "GlyphLiveSmall", e.GlyphViews = "GlyphViews", e.GridLayout = "GridLayout", e.Halt = "Halt", e.Hash = "Hash", e.Heart = "Heart", e.HGCNexus = "HGCNexus", e.Hide = "Hide", e.HourGlass = "HourGlass", e.HTCVibe = "HTCVibe", e.Ignore = "Ignore", e.IOS = "IOS", e.LeagueOfLegends = "LeagueOfLegends", e.Like = "Like", e.Liked = "Liked", e.Link = "Link", e.Lock = "Lock", e.LogoGlitch = "LogoGlitch", e.LogoTwitch = "LogoTwitch", e.LogoTwitchDevelopers = "LogoTwitchDevelopers", e.LogoTwitchPrime = "LogoTwitchPrime", e.LogoTwitchPrimeHorizontal = "LogoTwitchPrimeHorizontal", e.MacOs = "MacOs", e.Maximize = "Maximize", e.MessagesSC = "MessagesSC", e.Minimize = "Minimize", e.MiniPlayerExpand = "MiniPlayerExpand", e.MiniPlayerPause = "MiniPlayerPause", e.MiniPlayerPlay = "MiniPlayerPlay", e.More = "More", e.Muted = "Muted", e.NavBackpack = "NavBackpack", e.NavBug = "NavBug", e.NavChannels = "NavChannels", e.NavCreative = "NavCreative", e.NavDashboard = "NavDashboard", e.NavDiscover = "NavDiscover", e.NavFollowing = "NavFollowing", e.NavGames = "NavGames", e.NavLogout = "NavLogout", e.NavManager = "NavManager", e.NavMessages = "NavMessages", e.NavMore = "NavMore", e.NavMyChannel = "NavMyChannel", e.NavProfile = "NavProfile", e.NavSearch = "NavSearch", e.NavSettings = "NavSettings", e.NavVideos = "NavVideos", e.Neck = "Neck", e.NintendoSwitch = "NintendoSwitch", e.NotificationBell = "NotificationBell", e.NotificationBellOff = "NotificationBellOff", e.NotificationError = "NotificationError", e.NotificationInfo = "NotificationInfo", e.NotificationSuccess = "NotificationSuccess", e.NotificationWarning = "NotificationWarning", e.OculusVR = "OculusVR", e.OP = "OP", e.PermissionsAdd = "PermissionsAdd", e.PermissionsAdded = "PermissionsAdded", e.PermissionsRemove = "PermissionsRemove", e.Pin = "Pin", e.Pinned = "Pinned", e.Play = "Play", e.Playlist = "Playlist", e.PlayStation = "PlayStation", e.Plus = "Plus", e.Popout = "Popout", e.QuestionMark = "QuestionMark", e.Reddit = "Reddit", e.Refresh = "Refresh", e.RemoveTag = "RemoveTag", e.RequestsSC = "RequestsSC", e.Reshare = "Reshare", e.Roman1 = "Roman1", e.Roman2 = "Roman2", e.Roman3 = "Roman3", e.Roman4 = "Roman4", e.Roman5 = "Roman5", e.RoomList = "RoomList", e.RoomListOpen = "RoomListOpen", e.Scissors = "Scissors", e.SearchNoResults = "SearchNoResults", e.Share = "Share", e.Shirt = "Shirt", e.Star = "Star", e.StarHollow = "StarHollow", e.Steam = "Steam", e.Streaming = "Streaming", e.Sword = "Sword", e.Team = "Team", e.Theater = "Theater", e.TheaterExit = "TheaterExit", e.Timeout = "Timeout", e.Timer = "Timer", e.ToBottom = "ToBottom", e.ToTop = "ToTop", e.Trash = "Trash", e.Trophy = "Trophy", e.Twitter = "Twitter", e.Unheart = "Unheart", e.Unignore = "Unignore", e.Unlock = "Unlock", e.Upload = "Upload", e.VKontakte = "VKontakte", e.Verified = "Verified", e.VideoPremiere = "VideoPremiere", e.VideoRerun = "VideoRerun", e.ViewerList = "ViewerList", e.VisibilityShown = "VisibilityShown", e.VisibilityHidden = "VisibilityHidden", e.VolumeMax = "VolumeMax", e.VolumeMid = "VolumeMid", e.VolumeMuted = "VolumeMuted", e.Warning = "Warning", e.Whisper = "Whisper", e.WhisperMuted = "WhisperMuted", e.Windows = "Windows", e.XboxOne = "XboxOne", e.YouTube = "YouTube"
+                e.AddFriend = "AddFriend", e.AddUser = "AddUser", e.AddReaction = "AddReaction", e.Amazon = "Amazon", e.Android = "Android", e.AngleDown = "AngleDown", e.AngleLeft = "AngleLeft", e.AngleRight = "AngleRight", e.AngleUp = "AngleUp", e.ArrowDown = "ArrowDown", e.ArrowLeft = "ArrowLeft", e.ArrowRight = "ArrowRight", e.ArrowUp = "ArrowUp", e.Automod = "Automod", e.Ban = "Ban", e.Battlenet = "Battlenet", e.Bits = "Bits", e.CC = "CC", e.CCOff = "CCOff", e.Carat = "Carat", e.Camera = "Camera", e.ChatRiskFlag = "ChatRiskFlag", e.ChatSettingsBack = "ChatSettingsBack", e.Check = "Check", e.Clip = "Clip", e.Close = "Close", e.Collections = "Collections", e.Comments = "Comments", e.Communities = "Communities", e.Conversations = "Conversations", e.Copy = "Copy", e.Crate = "Crate", e.Crown = "Crown", e.DeadGlitch = "DeadGlitch", e.Desktop = "Desktop", e.Document = "Document", e.Download = "Download", e.DragHandle = "DragHandle", e.Drops = "Drops", e.Edit = "Edit", e.Email = "Email", e.Emoticons = "Emoticons", e.Events = "Events", e.EventsReminderAdd = "EventsReminderAdd", e.EventsReminderAdded = "EventsReminderAdded", e.EventsReminderRemove = "EventsReminderRemove", e.Experiment = "Experiment", e.Extensions = "Extensions", e.Facebook = "Facebook", e.Featured = "Featured", e.Filter = "Filter", e.FollowCheck = "FollowCheck", e.FollowHollow = "FollowHollow", e.FollowX = "FollowX", e.Friends = "Friends", e.FriendsSC = "FriendsSC", e.Fullscreen = "Fullscreen", e.FullscreenExit = "FullscreenExit", e.Gear = "Gear", e.Gift = "Gift", e.Github = "Github", e.Global = "Global", e.GlyphArrDown = "GlyphArrDown", e.GlyphArrLeft = "GlyphArrLeft", e.GlyphArrRight = "GlyphArrRight", e.GlyphArrUp = "GlyphArrUp", e.GlyphArrUpDown = "GlyphArrUpDown", e.GlyphFollowers = "GlyphFollowers", e.GlyphLength = "GlyphLength", e.GlyphLive = "GlyphLive", e.GlyphLiveSmall = "GlyphLiveSmall", e.GlyphViews = "GlyphViews", e.GridLayout = "GridLayout", e.Halt = "Halt", e.Hash = "Hash", e.Heart = "Heart", e.HGCNexus = "HGCNexus", e.Hide = "Hide", e.HourGlass = "HourGlass", e.HTCVibe = "HTCVibe", e.Ignore = "Ignore", e.IOS = "IOS", e.LeagueOfLegends = "LeagueOfLegends", e.Like = "Like", e.Liked = "Liked", e.Link = "Link", e.Lock = "Lock", e.LogoGlitch = "LogoGlitch", e.LogoTwitch = "LogoTwitch", e.LogoTwitchDevelopers = "LogoTwitchDevelopers", e.LogoTwitchPrime = "LogoTwitchPrime", e.LogoTwitchPrimeHorizontal = "LogoTwitchPrimeHorizontal", e.MacOs = "MacOs", e.Maximize = "Maximize", e.MessagesSC = "MessagesSC", e.Minimize = "Minimize", e.MiniPlayerExpand = "MiniPlayerExpand", e.MiniPlayerPause = "MiniPlayerPause", e.MiniPlayerPlay = "MiniPlayerPlay", e.More = "More", e.Muted = "Muted", e.NavBackpack = "NavBackpack", e.NavBug = "NavBug", e.NavChannels = "NavChannels", e.NavCreative = "NavCreative", e.NavDashboard = "NavDashboard", e.NavDiscover = "NavDiscover", e.NavFollowing = "NavFollowing", e.NavGames = "NavGames", e.NavLogout = "NavLogout", e.NavManager = "NavManager", e.NavMessages = "NavMessages", e.NavMore = "NavMore", e.NavMyChannel = "NavMyChannel", e.NavProfile = "NavProfile", e.NavSearch = "NavSearch", e.NavSettings = "NavSettings", e.NavVideos = "NavVideos", e.Neck = "Neck", e.NintendoSwitch = "NintendoSwitch", e.NotificationBell = "NotificationBell", e.NotificationBellOff = "NotificationBellOff", e.NotificationError = "NotificationError", e.NotificationInfo = "NotificationInfo", e.NotificationSuccess = "NotificationSuccess", e.NotificationWarning = "NotificationWarning", e.OculusVR = "OculusVR", e.OP = "OP", e.PermissionsAdd = "PermissionsAdd", e.PermissionsAdded = "PermissionsAdded", e.PermissionsRemove = "PermissionsRemove", e.Pin = "Pin", e.Pinned = "Pinned", e.Play = "Play", e.Playlist = "Playlist", e.PlayStation = "PlayStation", e.Plus = "Plus", e.Popout = "Popout", e.QuestionMark = "QuestionMark", e.Reddit = "Reddit", e.Refresh = "Refresh", e.RemoveTag = "RemoveTag", e.RequestsSC = "RequestsSC", e.Reshare = "Reshare", e.Roman1 = "Roman1", e.Roman2 = "Roman2", e.Roman3 = "Roman3", e.Roman4 = "Roman4", e.Roman5 = "Roman5", e.RoomList = "RoomList", e.RoomListOpen = "RoomListOpen", e.Scissors = "Scissors", e.SearchNoResults = "SearchNoResults", e.Share = "Share", e.Shirt = "Shirt", e.Star = "Star", e.StarHollow = "StarHollow", e.Steam = "Steam", e.Streaming = "Streaming", e.Sword = "Sword", e.Team = "Team", e.Theater = "Theater", e.TheaterExit = "TheaterExit", e.Timeout = "Timeout", e.Timer = "Timer", e.ToBottom = "ToBottom", e.ToTop = "ToTop", e.Trash = "Trash", e.Trophy = "Trophy", e.Twitter = "Twitter", e.Unheart = "Unheart", e.Unignore = "Unignore", e.Unlock = "Unlock", e.Upload = "Upload", e.VKontakte = "VKontakte", e.Verified = "Verified", e.VideoPremiere = "VideoPremiere", e.VideoRerun = "VideoRerun", e.ViewerList = "ViewerList", e.VisibilityShown = "VisibilityShown", e.VisibilityHidden = "VisibilityHidden", e.VolumeMax = "VolumeMax", e.VolumeMid = "VolumeMid", e.VolumeMuted = "VolumeMuted", e.Warning = "Warning", e.Whisper = "Whisper", e.WhisperMuted = "WhisperMuted", e.Windows = "Windows", e.XboxOne = "XboxOne", e.YouTube = "YouTube"
             }(M || (M = {}));
             var B = ((x = {})[M.AddFriend] = {
                     path: d.createElement("path", {
@@ -28693,6 +28587,13 @@
                 }, x[M.Edit] = {
                     path: d.createElement("path", {
                         d: "M10.614 6.113l3.269 3.27a.5.5 0 0 1 0 .707l-6.76 6.763a.5.5 0 0 1-.354.147H3.5a.5.5 0 0 1-.5-.5v-3.271c0-.134.052-.26.146-.354l6.761-6.762a.5.5 0 0 1 .707 0zm6.24.299a.5.5 0 0 1 0 .707l-1.125 1.123a.499.499 0 0 1-.707 0l-3.269-3.27a.5.5 0 0 1 0-.707l1.123-1.125a.515.515 0 0 1 .707 0l3.27 3.272z",
+                        fillRule: "evenodd"
+                    }),
+                    width: 20,
+                    height: 20
+                }, x[M.Email] = {
+                    path: d.createElement("path", {
+                        d: "M18.998 15.001l-4.913-4.886 4.913-5.114v10zM17.997 17h-16l5.417-5.385 1.738 1.738a1.2 1.2 0 0 0 1.697 0l1.732-1.733L17.997 17zm-16.995-2V5.002l4.91 5.11-4.91 4.885zM1.999 3H18l-7.577 7.774a.6.6 0 0 1-.85 0L2 3z",
                         fillRule: "evenodd"
                     }),
                     width: 20,
@@ -34344,6 +34245,77 @@
                 function(e) {
                     e.Auto = "auto", e.HighHighFPS = "1080p60", e.High = "1080p30", e.MediumHighFPS = "720p60", e.Medium = "720p30", e.Low = "360p30", e.VeryLow = "160p30"
                 }(r || (r = {}))
+        },
+        YyE3: function(e, t, n) {
+            "use strict";
+            var i = n("mrSG"),
+                r = n("1hWM"),
+                a = n("lBSt"),
+                o = n("q1tI");
+
+            function s(e) {
+                return function(t) {
+                    return function(n) {
+                        function s() {
+                            var t = null !== n && n.apply(this, arguments) || this;
+                            return t.state = {
+                                data: null,
+                                loading: !1
+                            }, t.fetchExtensions = function(n) {
+                                return i.__awaiter(t, void 0, void 0, function() {
+                                    var t, o;
+                                    return i.__generator(this, function(i) {
+                                        switch (i.label) {
+                                            case 0:
+                                                this.setState({
+                                                    loading: !0
+                                                }), t = null, i.label = 1;
+                                            case 1:
+                                                return i.trys.push([1, 3, , 4]), n = n || e.options(this.props).variables.channelID, [4, r.extensionService.getInstalledExtensions(n)];
+                                            case 2:
+                                                return o = i.sent(), t = Object(a.extensionInstallationsFromRest)(o), [3, 4];
+                                            case 3:
+                                                return i.sent(), this.setState({
+                                                    loading: !1,
+                                                    error: "Failed to load data."
+                                                }), [3, 4];
+                                            case 4:
+                                                return this.setState({
+                                                    loading: !1,
+                                                    data: t
+                                                }), [2]
+                                        }
+                                    })
+                                })
+                            }, t
+                        }
+                        return i.__extends(s, n), s.prototype.componentDidMount = function() {
+                            if (!this.shouldSkip(this.props)) {
+                                var t = e.options(this.props).variables.channelID;
+                                this.fetchExtensions(t)
+                            }
+                        }, s.prototype.componentWillReceiveProps = function(t) {
+                            if (!this.shouldSkip(t)) {
+                                var n = e.options(this.props).variables.channelID,
+                                    i = e.options(t).variables.channelID;
+                                n !== i && this.fetchExtensions(i)
+                            }
+                        }, s.prototype.render = function() {
+                            var n;
+                            if (this.shouldSkip(this.props)) return o.createElement(t, i.__assign({}, this.props));
+                            var r = ((n = {})[e.name || "data"] = i.__assign({
+                                refetch: this.fetchExtensions
+                            }, this.state), n);
+                            return o.createElement(t, i.__assign({}, this.props, r))
+                        }, s.prototype.shouldSkip = function(t) {
+                            return void 0 !== e.skip && ("function" == typeof e.skip ? e.skip(t) : e.skip)
+                        }, s
+                    }(o.Component)
+                }
+            }
+            n.d(t, "a", function() {
+                return s
+            })
         },
         "Z+W3": function(e, t, n) {},
         Z9JJ: function(e, t) {
@@ -49452,6 +49424,75 @@
         },
         q7Ot: function(e, t, n) {},
         qAOU: function(e, t, n) {},
+        qCDY: function(e, t, n) {
+            "use strict";
+            var i = n("mrSG"),
+                r = n("1hWM"),
+                a = n("17x9"),
+                o = n("q1tI"),
+                s = n("/7QA"),
+                l = n("GnwI"),
+                c = n("eFQ3"),
+                d = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.setIframeContainer = function(e) {
+                            t.iframeContainer = e
+                        }, t
+                    }
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this.props.installation,
+                            t = this.context.registerReceiver;
+                        t ? this.unregister = t(this) : s.j.warn("<ExtensionFrame /> initialized missing a <ScrollableArea /> provider"), this.props.latencyTracking.reportInteractive();
+                        var n = this.props,
+                            i = n.languageCode,
+                            a = n.locale;
+                        this.extensionFrameAPI = new r.ExtensionFrame({
+                            anchor: e.activationConfig.anchor,
+                            channelId: parseInt(this.props.channelID, 10),
+                            dobbin: {
+                                trackEvent: s.n.track.bind(s.n)
+                            },
+                            extension: e.extension,
+                            features: {
+                                bits: !0,
+                                sharePubsub: !0
+                            },
+                            iframeClassName: this.props.className,
+                            installationAbilities: e.abilities,
+                            locale: a,
+                            loginId: this.props.loginID ? parseInt(this.props.loginID, 10) : null,
+                            language: i,
+                            mode: this.props.extensionMode,
+                            onBeginPurchase: this.props.onBeginPurchase,
+                            parentElement: this.iframeContainer,
+                            platform: r.ExtensionPlatform.Web,
+                            trackingProperties: {
+                                channel: this.props.channelLogin,
+                                device_id: s.o.session.deviceID,
+                                login: this.props.login,
+                                platform: s.o.tracking.getPlatform(),
+                                player_type: c.b.Site
+                            }
+                        }), this.props.saveExtensionAPI && this.props.saveExtensionAPI(this.extensionFrameAPI)
+                    }, t.prototype.componentWillUnmount = function() {
+                        this.unregister && this.unregister(), this.extensionFrameAPI.destroy()
+                    }, t.prototype.render = function() {
+                        return o.createElement("div", {
+                            ref: this.setIframeContainer,
+                            "data-test-selector": "iframe_container_selector"
+                        })
+                    }, t.prototype.checkVisible = function() {
+                        this.extensionFrameAPI && this.extensionFrameAPI.visibilityChanged()
+                    }, t.contextTypes = {
+                        registerReceiver: a.func
+                    }, t
+                }(o.Component),
+                u = Object(l.c)("ExtensionFrame")(d);
+            n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "a", function() {
+                return u
+            })
+        },
         qH9u: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -50777,7 +50818,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AbandonedSearch = "search_input_clear", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DevButtonClick = "cobalt_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionInstall = "extension_install_button_click", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQueryBegan = "search_query_began", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AbandonedSearch = "search_input_clear", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DevButtonClick = "cobalt_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQueryBegan = "search_query_began", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -53564,15 +53605,15 @@
             function B(e) {
                 switch (e) {
                     case i.All:
-                        return p.h.ALL_TIME;
+                        return p.i.ALL_TIME;
                     case i.Day:
-                        return p.h.LAST_DAY;
+                        return p.i.LAST_DAY;
                     case i.Week:
-                        return p.h.LAST_WEEK;
+                        return p.i.LAST_WEEK;
                     case i.Month:
-                        return p.h.LAST_MONTH;
+                        return p.i.LAST_MONTH;
                     case i.Trending:
-                        return p.h.TRENDING;
+                        return p.i.TRENDING;
                     default:
                         return e
                 }
