@@ -625,13 +625,13 @@ window.__twilightSettings = {
         },
         "4834149f-513b-4f16-98f3-0f587e5a2e99": {
             "name": "twilight_vod_editing_third_chance",
-            "v": 4528,
+            "v": 4531,
             "t": 3,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "variant1"
             }]
         },
