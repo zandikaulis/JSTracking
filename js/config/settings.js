@@ -4,6 +4,7 @@ window.__twilightSettings = {
     "benchmark_component_threshold": 0.1,
     "benchmark_networking_threshold": 0.15,
     "bits_automod_cheering_enabled": "off",
+    "bits_charity_event": false,
     "bits_code_redemption_redeem_page": false,
     "bits_prime_offer": false,
     "bits_special_promo_base_payout": 1000,
