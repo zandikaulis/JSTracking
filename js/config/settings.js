@@ -1088,13 +1088,13 @@ window.__twilightSettings = {
         },
         "9edf91e6-0499-49f2-b171-30f85573bf5a": {
             "name": "TWILIGHT_VOD_TOP_SHELF",
-            "v": 4483,
+            "v": 4535,
             "t": 2,
             "groups": [{
-                "weight": 90,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "on"
             }]
         },
