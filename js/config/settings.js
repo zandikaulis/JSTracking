@@ -180,18 +180,6 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
-        "080c0331-3073-4539-992f-93274236a97d": {
-            "name": "TWILIGHT_PAY__SAVED_PAYMENT_METHODS",
-            "v": 3958,
-            "t": 2,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
-            }]
-        },
         "099f5ff5-819d-4927-a1c4-8c9061545ac6": {
             "name": "TWILIGHT_VOD_VOLTRON",
             "v": 4212,
@@ -331,18 +319,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "control"
-            }]
-        },
-        "1adeeefb-a0cc-48a4-adbd-8c9a1bdaa06f": {
-            "name": "TWILIGHT_PAYMENTS_MANAGEMENT_PAGE",
-            "v": 3122,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
             }]
         },
         "1d1ef835-74d2-4fad-9918-656dccaf6410": {
