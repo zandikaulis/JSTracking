@@ -969,33 +969,41 @@ var KEY_SYSTEMS_BY_STRING = {
 
 var AUTH_XML_URL = 'https://vizima.twitch.tv/api/authxml/';
 
+var NOT_SUPPORTED = 4;
+
 var NO_CDM_SUPPORT_ERROR = {
-    code: 4,
+    value: NOT_SUPPORTED,
+    code: 11,
     message: 'Your browser does not support any DRM Content Decryption Modules',
 };
 
 var SESSION_UPDATE_ERROR = {
-    code: 4,
+    value: NOT_SUPPORTED,
+    code: 12,
     message: 'There was an issue while updating DRM License',
 };
 
 var LICENSE_REQUEST_ERROR = {
-    code: 4,
+    value: NOT_SUPPORTED,
+    code: 13,
     message: 'Error while requesting DRM license',
 };
 
 var KEY_SESSION_CREATION_ERROR = {
-    code: 4,
+    value: NOT_SUPPORTED,
+    code: 14,
     message: 'Error creating key session',
 };
 
 var KEY_SESSION_INTERNAL_ERROR = {
-    code: 4,
+    value: NOT_SUPPORTED,
+    code: 15,
     message: 'Encryption key not usable because of internal error in CDM',
 };
 
 var NO_PSSH_FOUND_ERROR = {
-    code: 4,
+    value: NOT_SUPPORTED,
+    code: 16,
     message: "Unable to find valid CDM support on media",
 };
 
@@ -1292,9 +1300,11 @@ function getParamsFromUrl(url) {
  * in case we have an issue we weren't expecting, we should handle
  * the error in the same format.
  */
+var NOT_SUPPORTED = 4;
 var checkErrorFormat = function (err) {
     return {
-        code: err.code || 4,
+        value: err.value || NOT_SUPPORTED,
+        code: err.code || 10,
         message: err.message || '',
     }
 };
@@ -2271,7 +2281,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-996e1ff0";
+    return "2.3.0-c29386ee";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3190,6 +3200,7 @@ MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
     // to block any future calls to 'enqueue'
     track.catch(function (e) {
         this._onerror({
+            value: NOT_SUPPORTED,
             code: NOT_SUPPORTED,
             message: e.toString(),
         });
@@ -3445,6 +3456,7 @@ PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
 PlaybackMonitor.prototype._onVideoError = function () {
     var error = this._video.error;
     this._onerror({
+        value: error.code,
         code: error.code,
         message: error.message || '',
     });
