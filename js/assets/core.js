@@ -1105,7 +1105,7 @@
                                 var r = [];
                                 return !n || n !== y.a.IOS && n !== y.a.Android ? (t.forEach(function(n, a) {
                                     var o = n.price;
-                                    0 === a && Object(k.d)(t) && (o = Object(k.a)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(i.__assign({}, n, {
+                                    0 === a && Object(k.f)(t) && (o = Object(k.b)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(i.__assign({}, n, {
                                         emotes: Object(b.b)(n.emotes),
                                         level: a,
                                         price: o
@@ -1311,13 +1311,15 @@
                                 right: .5,
                                 bottom: .5
                             }
+                        }, i.createElement(r.T, {
+                            color: r.M.Base
                         }, i.createElement(r.gc, {
                             label: t.localizedName,
                             type: e.style,
                             linkTo: e.linkToDirectory ? function(e) {
                                 return "/directory/tags/" + e.id
                             }(t) : void 0
-                        }))
+                        })))
                     }))
                 };
             n.d(t, "a", function() {
@@ -1407,7 +1409,7 @@
                             bits: 1e5,
                             canCheer: !1,
                             canShowInBitsCard: !1,
-                            color: a.i[r.a.Yellow],
+                            color: a.j[r.a.Yellow],
                             images: n
                         })
                     }()), o.sort(function(e, t) {
@@ -4156,11 +4158,13 @@
                                 margin: {
                                     top: 1
                                 }
-                            }, a.createElement(u.x, {
+                            }, a.createElement(u.tb, {
                                 fullWidth: !0,
-                                type: u.D.Text,
+                                justifyContent: u.sb.Center,
+                                textAlign: u.jc.Center
+                            }, a.createElement(u.R, {
                                 onClick: n.toggleShowDescription
-                            }, n.getDescriptionButtonText()), n.state.showDescription && a.createElement(u.Xb, {
+                            }, n.getDescriptionButtonText())), n.state.showDescription && a.createElement(u.Xb, {
                                 className: "prime-claim-instructions__body",
                                 "data-a-target": "prime-claim-instructions--horizontal",
                                 border: !0,
@@ -5499,7 +5503,7 @@
                     }),
                     g = a.createElement(c.a, {
                         className: f,
-                        sources: Object(s.b)(n, e.size || i.Large, e.animated)
+                        sources: Object(s.c)(n, e.size || i.Large, e.animated)
                     });
                 return e.showImage || (g = null), a.createElement(d.lb, {
                     className: "cheermote-for-amount",
@@ -5524,13 +5528,13 @@
             var i = n("uYEN"),
                 r = n("5zXJ"),
                 a = {
-                    Cheer: r.e,
-                    Kreygasm: r.e,
-                    Kappa: r.e,
-                    Muxy: r.f,
-                    Streamlabs: r.f,
-                    SwiftRage: r.e,
-                    VoHiYo: r.e
+                    Cheer: r.f,
+                    Kreygasm: r.f,
+                    Kappa: r.f,
+                    Muxy: r.g,
+                    Streamlabs: r.g,
+                    SwiftRage: r.f,
+                    VoHiYo: r.f
                 },
                 o = ["LIGHT", "DARK"],
                 s = [1, 1.5, 2, 3, 4],
@@ -5594,10 +5598,10 @@
                     }
                 return {
                     id: e + ";" + t,
-                    canCheer: t <= r.n,
+                    canCheer: t <= r.o,
                     canShowInBitsCard: !0,
                     bits: t,
-                    color: r.i[t],
+                    color: r.j[t],
                     images: n,
                     indexedImages: i
                 }
@@ -5639,14 +5643,14 @@
                         }
                         return null
                     }, t.prototype.getMessage = function() {
-                        var e = Object(o.b)(this.props.subscriptionProducts[0], this.props.isGift);
+                        var e = Object(o.c)(this.props.subscriptionProducts[0], this.props.isGift);
                         return this.props.isGift ? Object(a.d)("Gift a sub and get {percent} off!", {
                             percent: Object(a.e)(e / 100, "percent")
                         }, "SubDiscountBanner") : Object(a.d)("Get {percent} off the first month of any paid subscription!", {
                             percent: Object(a.e)(e / 100, "percent")
                         }, "SubDiscountBanner")
                     }, t.prototype.hasDiscount = function(e) {
-                        return this.props.isGift ? Object(o.c)(e) : Object(o.d)(e)
+                        return this.props.isGift ? Object(o.d)(e) : Object(o.f)(e)
                     }, t
                 }(r.Component));
             n.d(t, !1, function() {}), n.d(t, "a", function() {
@@ -6917,7 +6921,7 @@
         },
         "5zXJ": function(e, t, n) {
             "use strict";
-            n.d(t, "q", function() {
+            n.d(t, "s", function() {
                 return a
             }), n.d(t, "c", function() {
                 return o
@@ -6925,32 +6929,36 @@
                 return s
             }), n.d(t, "a", function() {
                 return l
-            }), n.d(t, "l", function() {
+            }), n.d(t, "r", function() {
                 return c
-            }), n.d(t, "n", function() {
+            }), n.d(t, "m", function() {
                 return d
             }), n.d(t, "o", function() {
                 return u
-            }), n.d(t, "m", function() {
-                return p
             }), n.d(t, "p", function() {
+                return p
+            }), n.d(t, "n", function() {
                 return m
-            }), n.d(t, "j", function() {
+            }), n.d(t, "q", function() {
                 return h
             }), n.d(t, "k", function() {
                 return f
-            }), n.d(t, "h", function() {
+            }), n.d(t, "l", function() {
                 return g
-            }), n.d(t, "e", function() {
-                return v
-            }), n.d(t, "d", function() {
-                return b
-            }), n.d(t, "g", function() {
-                return y
-            }), n.d(t, "f", function() {
-                return k
             }), n.d(t, "i", function() {
+                return v
+            }), n.d(t, "f", function() {
+                return b
+            }), n.d(t, "d", function() {
+                return y
+            }), n.d(t, "h", function() {
+                return k
+            }), n.d(t, "g", function() {
                 return E
+            }), n.d(t, "e", function() {
+                return S
+            }), n.d(t, "j", function() {
+                return _
             });
             var i, r = n("uYEN"),
                 a = {
@@ -6961,19 +6969,21 @@
                 o = "https://d3aqoihi2n8ty8.cloudfront.net",
                 s = o + "/cheer",
                 l = o + "/actions",
-                c = 8e5,
-                d = 1e5,
-                u = 25e4,
-                p = 500,
-                m = 1e3,
-                h = "cheer",
-                f = r.a.Purple,
-                g = "UNKNOWN",
-                v = "FIRST_PARTY",
-                b = "CUSTOM",
-                y = "SPONSORED",
-                k = "THIRD_PARTY",
-                E = ((i = {})[r.a.Gray] = "#979797", i[r.a.Purple] = "#9c3ee8", i[r.a.Green] = "#1db2a5", i[r.a.Blue] = "#0099fe", i[r.a.Red] = "#f43021", i[r.a.Yellow] = "#f3a71a", i)
+                c = "bonus",
+                d = 8e5,
+                u = 1e5,
+                p = 25e4,
+                m = 500,
+                h = 1e3,
+                f = "cheer",
+                g = r.a.Purple,
+                v = "UNKNOWN",
+                b = "FIRST_PARTY",
+                y = "CUSTOM",
+                k = "SPONSORED",
+                E = "THIRD_PARTY",
+                S = "DISPLAY_ONLY",
+                _ = ((i = {})[r.a.Gray] = "#979797", i[r.a.Purple] = "#9c3ee8", i[r.a.Green] = "#1db2a5", i[r.a.Blue] = "#0099fe", i[r.a.Red] = "#f43021", i[r.a.Yellow] = "#f3a71a", i)
         },
         "5zf8": function(e, t, n) {
             "use strict";
@@ -7133,6 +7143,20 @@
             })
         },
         "6Add": function(e, t, n) {},
+        "6j5V": function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return r
+            });
+            var i = n("RcPG");
+
+            function r(e) {
+                return {
+                    type: i.a.Text,
+                    content: e
+                }
+            }
+        },
         "6qmu": function(e, t) {
             var n = {
                 kind: "Document",
@@ -10988,7 +11012,7 @@
                     e.AR = "AR", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.EN_GB = "EN_GB", e.ES = "ES", e.ES_MX = "ES_MX", e.FI = "FI", e.FR = "FR", e.HI = "HI", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.PL = "PL", e.PT = "PT", e.PT_BR = "PT_BR", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_CN = "ZH_CN", e.ZH_TW = "ZH_TW"
                 }(u || (u = {})),
                 function(e) {
-                    e.AR = "AR", e.ASL = "ASL", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.ES = "ES", e.FI = "FI", e.FR = "FR", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.OTHER = "OTHER", e.PL = "PL", e.PT = "PT", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH"
+                    e.AR = "AR", e.ASL = "ASL", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.ES = "ES", e.FI = "FI", e.FR = "FR", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.OTHER = "OTHER", e.PL = "PL", e.PT = "PT", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_HK = "ZH_HK"
                 }(p || (p = {})),
                 function(e) {
                     e.ARCHIVE = "ARCHIVE", e.HIGHLIGHT = "HIGHLIGHT", e.PAST_PREMIERE = "PAST_PREMIERE", e.PREMIERE_UPLOAD = "PREMIERE_UPLOAD", e.UPLOAD = "UPLOAD"
@@ -11009,7 +11033,7 @@
                     e.AVAILABLE = "AVAILABLE", e.CANCELLED = "CANCELLED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE"
                 }(b || (b = {})),
                 function(e) {
-                    e.NONE = "NONE", e.PERCENT_OFF = "PERCENT_OFF"
+                    e.FIXED_VALUE_OFF = "FIXED_VALUE_OFF", e.NONE = "NONE", e.PERCENT_OFF = "PERCENT_OFF"
                 }(y || (y = {})),
                 function(e) {
                     e.CHEER = "CHEER"
@@ -11659,13 +11683,13 @@
                     }, this.getTierSubscribeButton())))
                 }, t.prototype.getInitialState = function() {
                     var e = this.props.subscriptionProducts[0].price;
-                    return (Object(m.d)(this.props.subscriptionProducts) || Object(m.c)(this.props.subscriptionProducts)) && (e = Object(m.a)(this.props.subscriptionProducts[0], this.props.isGift)), {
+                    return (Object(m.f)(this.props.subscriptionProducts) || Object(m.d)(this.props.subscriptionProducts)) && (e = Object(m.b)(this.props.subscriptionProducts[0], this.props.isGift)), {
                         activeTab: i.Tier1,
                         currentPurchasePrice: e,
                         subbedTier: null
                     }
                 }, t.prototype.getPrice = function(e) {
-                    return Object(m.d)(this.props.subscriptionProducts) || Object(m.c)(this.props.subscriptionProducts) ? Object(m.a)(e, this.props.isGift) : e.price
+                    return Object(m.f)(this.props.subscriptionProducts) || Object(m.d)(this.props.subscriptionProducts) ? Object(m.b)(e, this.props.isGift) : e.price
                 }, t
             }(a.Component);
 
@@ -19554,15 +19578,16 @@
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         this.state.currentText !== t.currentText && this.triggerTextTransition()
                     }, t.prototype.render = function() {
+                        var e = void 0 === this.props.fullWidthButton || this.props.fullWidthButton;
                         return r.createElement(a.lb, {
-                            fullWidth: !0
+                            fullWidth: e
                         }, r.createElement("div", {
                             onMouseEnter: this.onFocus,
                             onMouseLeave: this.onBlur,
                             onFocus: this.onFocus,
                             onBlur: this.onBlur
                         }, r.createElement(a.x, i.__assign({
-                            fullWidth: !0,
+                            fullWidth: e,
                             blurAfterClick: !0,
                             onClick: this.onClick,
                             type: this.getCurrentType(),
@@ -20583,13 +20608,13 @@
                     bitsAmount: e.count.toString()
                 }, "Bits--BitsCount");
                 if (e.withImage) {
-                    var d = e.bitsConfig && e.bitsConfig.indexedActions[o.j];
+                    var d = e.bitsConfig && e.bitsConfig.indexedActions[o.k];
                     d || (d = Object(l.b)());
                     var u = d.orderedTiers.find(function(t) {
                         return t.bits <= e.count
                     });
                     if (u) {
-                        var p = Object(s.b)(u, void 0, e.animated);
+                        var p = Object(s.c)(u, void 0, e.animated);
                         return void 0 !== e.themeOverride && (e.themeOverride === a.a.Light ? p.dark = p.light : p.light = p.dark), t = i.createElement(c.a, {
                             className: "bits-count--img",
                             sources: p
@@ -21062,28 +21087,32 @@
                     var t = e.subscriptionProduct;
                     if (void 0 === t) return i.createElement("div", null);
                     var n = e.isOneTime ? Object(r.d)("{price} / One-time purchase", {
-                        price: t.price
-                    }, "SubDiscountPriceLabel") : Object(r.d)("{price} / Month", {
-                        price: t.price
-                    }, "SubDiscountPriceLabel");
-                    if (e.isGift ? Object(a.c)([e.subscriptionProduct]) : Object(a.d)([e.subscriptionProduct])) {
-                        var s = void 0;
-                        return s = e.isGift ? Object(r.d)("{price} (Save {percent})", {
-                            price: Object(a.a)(e.subscriptionProduct, e.isGift),
-                            percent: Object(r.e)(Object(a.b)(e.subscriptionProduct, e.isGift) / 100, "percent")
-                        }, "SubDiscountPriceLabel") : Object(r.d)("{price} for the first month (Save {percent})", {
-                            price: Object(a.a)(e.subscriptionProduct, e.isGift),
-                            percent: Object(r.e)(Object(a.b)(e.subscriptionProduct, e.isGift) / 100, "percent")
-                        }, "SubDiscountPriceLabel"), i.createElement(o.tb, {
+                            price: t.price
+                        }, "SubDiscountPriceLabel") : Object(r.d)("{price} / Month", {
+                            price: t.price
+                        }, "SubDiscountPriceLabel"),
+                        s = Object(a.d)([e.subscriptionProduct]),
+                        l = Object(a.f)([e.subscriptionProduct]),
+                        c = Object(a.e)([e.subscriptionProduct]);
+                    if (a.d || a.f || a.e) {
+                        var d = void 0;
+                        if (e.isGift && s ? d = Object(r.d)("{price} (Save {percent})", {
+                                price: Object(a.b)(e.subscriptionProduct, e.isGift),
+                                percent: Object(r.e)(Object(a.c)(e.subscriptionProduct, e.isGift) / 100, "percent")
+                            }, "SubDiscountPriceLabel") : e.isPaidUpgrade && c ? d = Object(r.d)("{price} / First Month", {
+                                price: Object(a.a)(e.subscriptionProduct)
+                            }, "SubDiscountPriceLabel") : l && (d = Object(r.d)("{price} for the first month (Save {percent})", {
+                                price: Object(a.b)(e.subscriptionProduct, e.isGift),
+                                percent: Object(r.e)(Object(a.c)(e.subscriptionProduct, e.isGift) / 100, "percent")
+                            }, "SubDiscountPriceLabel")), d) return i.createElement(o.tb, {
                             "data-test-selector": "sub-discount-price-label__discounted"
                         }, i.createElement(o.T, {
                             color: o.M.Alt2,
                             decoration: o.lc.Strikethrough
                         }, n), i.createElement(o.T, {
                             className: "sub-discount-price-label__discount-price",
-                            type: o.nc.H5,
                             bold: !0
-                        }, s))
+                        }, d))
                     }
                     return i.createElement(o.tb, {
                         "data-test-selector": "sub-discount-price-label__non-discounted"
@@ -26055,7 +26084,7 @@
                 D = n("DnOo"),
                 I = n("W8Fi"),
                 R = (n("Tp30"), function(e) {
-                    var t = Object(I.d)(e.subscriptionProducts) ? Object(I.a)(e.subscriptionProducts[0]) : e.subscriptionProducts[0].price,
+                    var t = Object(I.f)(e.subscriptionProducts) ? Object(I.b)(e.subscriptionProducts[0]) : e.subscriptionProducts[0].price,
                         n = Object(h.d)("Gift All-Access Pass", "CampaignsNonSubbedTopPage"),
                         i = a.createElement(T.x, {
                             ariaLabel: n,
@@ -26163,7 +26192,7 @@
                         n = null,
                         i = null,
                         r = e.subscriptionProducts[0].price;
-                    if (Object(I.d)(e.subscriptionProducts) && (r = Object(I.a)(e.subscriptionProducts[0])), e.channelLogin && (e.inPrimeRegion || e.userHasPrime)) {
+                    if (Object(I.f)(e.subscriptionProducts) && (r = Object(I.b)(e.subscriptionProducts[0])), e.channelLogin && (e.inPrimeRegion || e.userHasPrime)) {
                         var o = e.userHasPrime ? Object(h.d)("Use your free channel subscription to directly support your favorite streamer. {upsellTextLink}", {
                             upsellTextLink: a.createElement("a", {
                                 href: "https://help.twitch.tv/customer/en/portal/articles/2572060-twitch-prime-guide",
@@ -26337,12 +26366,10 @@
                                     giftSender: this.props.giftSender,
                                     handleSubMenuAction: this.props.handleSubMenuAction,
                                     isGift: this.props.isGift,
-                                    isNonStandardSub: this.props.isNonStandardSub,
                                     onUpgradeTier: this.showSubOptions,
                                     subbedTier: this.props.subbedTier,
-                                    subProduct: this.getCurrentSubProduct(),
                                     subEndDate: this.props.subEndDate,
-                                    subRenewDate: this.props.renewsAt
+                                    subProduct: this.getCurrentSubProduct()
                                 })));
                             case L.MysteryGiftSelect:
                                 return a.createElement(z, {
@@ -33936,23 +33963,37 @@
                 })
             }
 
-            function a(e, t) {
-                var n;
-                return t ? n = e.giftPromotion : e.self && (n = e.self.promotion), n ? n.newPrice : e.price
+            function a(e) {
+                return e.some(function(e) {
+                    return !!e.self && !!e.self.paidUpgradePromotion
+                })
             }
 
             function o(e, t) {
                 var n;
+                return t ? n = e.giftPromotion : e.self && (n = e.self.promotion), n ? n.newPrice : e.price
+            }
+
+            function s(e, t) {
+                var n;
                 return t ? n = e.giftPromotion : e.self && (n = e.self.promotion), n ? n.discountValue : 0
             }
-            n.d(t, "d", function() {
+
+            function l(e) {
+                return e.self && e.self.paidUpgradePromotion ? e.self.paidUpgradePromotion.newPrice : e.price
+            }
+            n.d(t, "f", function() {
                 return i
-            }), n.d(t, "c", function() {
+            }), n.d(t, "d", function() {
                 return r
-            }), n.d(t, "a", function() {
+            }), n.d(t, "e", function() {
                 return a
             }), n.d(t, "b", function() {
                 return o
+            }), n.d(t, "c", function() {
+                return s
+            }), n.d(t, "a", function() {
+                return l
             })
         },
         WQCf: function(e, t, n) {
@@ -34941,35 +34982,38 @@
         XmgI: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
-            }), n.d(t, "d", function() {
-                return o
-            }), n.d(t, "c", function() {
+                return a
+            }), n.d(t, "e", function() {
                 return s
-            }), n.d(t, "b", function() {
+            }), n.d(t, "d", function() {
                 return l
+            }), n.d(t, "b", function() {
+                return c
+            }), n.d(t, "c", function() {
+                return d
             });
-            var i = n("RcPG"),
-                r = {
+            var i = n("5zXJ"),
+                r = n("RcPG"),
+                a = {
                     indexedActions: {},
                     orderedActions: []
                 },
-                a = /^((?:[A-Za-z0-9]+)(?:[A-Za-z]))([\d]+)$/;
+                o = /^((?:[A-Za-z0-9]+)(?:[A-Za-z]))([\d]+)$/;
 
-            function o(e, t) {
+            function s(e, t) {
                 var n = [],
-                    r = e.split(/\s+/);
-                return r.forEach(function(e, a) {
-                    var o = s(e, t);
+                    i = e.split(/\s+/);
+                return i.forEach(function(e, a) {
+                    var o = l(e, t);
                     if (o) n.push(o);
                     else {
-                        var l = n.length && n[n.length - 1],
+                        var s = n.length && n[n.length - 1],
                             c = "";
-                        if (a < r.length - 1 && (c = " "), l && l.type === i.a.Text) l.content += e + c;
+                        if (a < i.length - 1 && (c = " "), s && s.type === r.a.Text) s.content += e + c;
                         else {
                             var d = "";
                             a && (d = " "), n.push({
-                                type: i.a.Text,
+                                type: r.a.Text,
                                 content: d + e + c
                             })
                         }
@@ -34977,30 +35021,65 @@
                 }), n
             }
 
-            function s(e, t) {
-                var n = e.match(a);
+            function l(e, t) {
+                var n = e.match(o);
                 if (!n) return null;
-                var r = n[1].toLowerCase(),
-                    o = Number(n[2]),
-                    s = t.indexedActions[r];
+                var i = n[1].toLowerCase(),
+                    a = Number(n[2]),
+                    s = t.indexedActions[i];
                 if (s) {
-                    var c = s.orderedTiers.find(function(e) {
-                        return e.bits <= o
+                    var l = s.orderedTiers.find(function(e) {
+                        return e.bits <= a
                     });
-                    if (!c && o && (c = s.orderedTiers[0]), c) return {
-                        type: i.a.Emote,
+                    if (!l && a && (l = s.orderedTiers[0]), l) return {
+                        type: r.a.Emote,
                         content: {
-                            images: l(c),
+                            images: d(l),
                             alt: s.prefix,
-                            cheerAmount: o,
-                            cheerColor: c.color
+                            cheerAmount: a,
+                            cheerColor: l.color
                         }
                     }
                 }
                 return null
             }
 
-            function l(e, t, n) {
+            function c(e, t) {
+                var n = function(e) {
+                        var t = new Map;
+                        return e.orderedActions.forEach(function(e) {
+                            e.campaign && t.set(e.prefix, e.campaign)
+                        }), t
+                    }(t),
+                    r = new Map;
+                e.forEach(function(e, t) {
+                    if (e.alt && n.has(e.alt))
+                        if (r.has(e.alt)) {
+                            (i = r.get(e.alt)) && (i.total += e.cheerAmount || 0, i.lastAppearance = t)
+                        } else {
+                            var i = {
+                                total: e.cheerAmount || 0,
+                                lastAppearance: t,
+                                campaign: n.get(e.alt)
+                            };
+                            r.set(e.alt, i)
+                        }
+                });
+                var a = 1;
+                return r.forEach(function(n) {
+                    var r = 0;
+                    n.campaign.thresholds.forEach(function(e) {
+                        n.total >= e.minimumBits && (r = e.matchedPercent)
+                    });
+                    var o = Math.trunc(n.total * r);
+                    if (o > 0) {
+                        var s = l(i.r + o, t);
+                        s && e.splice(n.lastAppearance + a++, 0, s.content)
+                    }
+                }), e
+            }
+
+            function d(e, t, n) {
                 var i, r;
                 void 0 === n && (n = !0);
                 var a = n ? "animated" : "static";
@@ -43686,11 +43765,13 @@
             function u(e) {
                 var t = 0,
                     n = 0,
-                    i = 0;
+                    i = 0,
+                    r = 0;
                 return e.forEach(function(e) {
-                    e.cheerAmount && (t = Math.max(t, e.cheerAmount), n = n ? Math.min(n, e.cheerAmount) : e.cheerAmount, i += e.cheerAmount)
+                    e.cheerAmount && (e.alt !== o.r ? (t = Math.max(t, e.cheerAmount), n = n ? Math.min(n, e.cheerAmount) : e.cheerAmount, i += e.cheerAmount) : r += e.cheerAmount)
                 }), {
                     total: i,
+                    bonus: r,
                     smallestCheermote: n,
                     largestCheermote: t
                 }
@@ -43703,11 +43784,11 @@
                     a = t.smallestCheermote;
                 if (n) {
                     var s = {
-                        cheerAboveMaxBitsPerEmote: r > o.n,
+                        cheerAboveMaxBitsPerEmote: r > o.o,
                         totalAboveBalance: n > e.balance,
                         totalBelowCheerMinimum: n < e.cheerMinimumBits,
                         totalBelowEmoteMinimum: a < e.emoteMinimumBits,
-                        inputLongerThanMaxBitsMessage: e.inputValue.length > o.m,
+                        inputLongerThanMaxBitsMessage: e.inputValue.length > o.n,
                         inputStartsWithCommand: e.inputValue.startsWith("/")
                     };
                     if (Object.keys(s).some(function(e) {
@@ -48974,15 +49055,9 @@
                 r = n("RcPG"),
                 a = n("0FG4"),
                 o = n("i6WW"),
-                s = n("gTu3");
-
-            function l(e) {
-                return {
-                    type: r.a.Text,
-                    content: e
-                }
-            }
-            var c = /^(['"*([{</]*)@((?:[^\u0000-\u007F]|[\w-])+)/;
+                s = n("gTu3"),
+                l = n("6j5V"),
+                c = /^(['"*([{</]*)@((?:[^\u0000-\u007F]|[\w-])+)/;
 
             function d(e, t) {
                 if (!t) return !1;
@@ -49004,7 +49079,7 @@
                     v = 0;
                 return function(e) {
                     return e.reduce(function(e, t, n) {
-                        return 0 === n ? [].concat.call(e, t) : [].concat.call(e, l(" "), t)
+                        return 0 === n ? [].concat.call(e, t) : [].concat.call(e, Object(l.a)(" "), t)
                     }, []).reduce(function(e, t, n) {
                         if (0 === n) return e.concat(t);
                         var i = e[e.length - 1];
@@ -49015,7 +49090,7 @@
                     if (0 === g.length && (v = b), g += t, b !== f.length - 1 && !p(f[b + 1])) return e;
                     var y = u && Object(a.c)(g, v, u);
                     if (y) return e.concat(y);
-                    var k = n && Object(i.c)(g, n);
+                    var k = n && Object(i.d)(g, n);
                     if (k) return e.concat(k);
                     var E = m && Object(o.a)(g, m);
                     if (E) return e.concat(E);
@@ -49029,7 +49104,7 @@
                             a = n[1],
                             o = n[2],
                             u = e.slice(n[0].length);
-                        a.length && i.push(l(a));
+                        a.length && i.push(Object(l.a)(a));
                         var p = s.a.Default;
                         return d(o, t.sessionUser) ? p = s.a.Recipient : t.sessionUser && t.sessionUser.login === t.senderLogin && (p = s.a.Sender), i.push({
                             type: r.a.Mention,
@@ -49037,9 +49112,9 @@
                                 recipient: o,
                                 currentUserMentionRelation: p
                             }
-                        }), u.length && i.push(l(u)), i
+                        }), u.length && i.push(Object(l.a)(u)), i
                     }(g, h);
-                    return S ? e.concat([S]) : e.concat(l(g))
+                    return S ? e.concat([S]) : e.concat(Object(l.a)(g))
                 }, []))
             }
 
@@ -49820,7 +49895,7 @@
                             borderBottom: !0
                         }), a))
                     }, t.prototype.getAvailableTiers = function(e) {
-                        var t = this.props.bitsConfig && this.props.bitsConfig.indexedActions[A.j];
+                        var t = this.props.bitsConfig && this.props.bitsConfig.indexedActions[A.k];
                         t || (t = Object(x.b)());
                         var n = t.orderedTiers.filter(function(t) {
                             return t.bits <= e
@@ -49833,7 +49908,7 @@
                         }, n.map(function(e) {
                             return c.createElement(F.a, {
                                 key: e.bits,
-                                sources: Object(L.b)(e, 2, !1)
+                                sources: Object(L.c)(e, 2, !1)
                             })
                         }))
                     }, t
@@ -52108,7 +52183,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AbandonedSearch = "search_input_clear", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DevButtonClick = "cobalt_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQueryBegan = "search_query_began", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AbandonedSearch = "search_input_clear", e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DevButtonClick = "cobalt_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchQueryBegan = "search_query_began", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -55335,6 +55410,50 @@
                                                             directives: []
                                                         }]
                                                     }
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "paidUpgradePromotion"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "newPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "oldPrice"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountType"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "discountValue"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
                                                 }]
                                             }
                                         }, {
@@ -55623,11 +55742,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 654
+                    end: 724
                 }
             };
             n.loc.source = {
-                body: "query ChannelPage_SubscribeBalloon_User($login: String! $productId: String!) {\nuser(login: $login) {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\ntier\nhasAdFree\nemotes {\nid\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\nself {\ncanPrimeSubscribe\ncanGiftInChannel(product: $productId)\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\nplatform\nrenewsAt\nendsAt\npaidUpgrade {\nprice\nstartsAt\n}\ngift {\nisGift\ngifter {\nid\ndisplayName\n}\n}\n}\n}\n}\ncurrentUser {\nid\nlogin\nhasPrime\n}\nrequestInfo {\ncountryCode\n}\n}",
+                body: "query ChannelPage_SubscribeBalloon_User($login: String! $productId: String!) {\nuser(login: $login) {\nid\nlogin\ndisplayName\nprofileImageURL(width: 50)\nsubscriptionProducts {\nid\nprice\nurl\nemoteSetID\ndisplayName\nname\ntier\nhasAdFree\nemotes {\nid\n}\nself {\npromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\npaidUpgradePromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\ngiftPromotion {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\nself {\ncanPrimeSubscribe\ncanGiftInChannel(product: $productId)\nsubscriptionBenefit {\nid\npurchasedWithPrime\ntier\nplatform\nrenewsAt\nendsAt\npaidUpgrade {\nprice\nstartsAt\n}\ngift {\nisGift\ngifter {\nid\ndisplayName\n}\n}\n}\n}\n}\ncurrentUser {\nid\nlogin\nhasPrime\n}\nrequestInfo {\ncountryCode\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,

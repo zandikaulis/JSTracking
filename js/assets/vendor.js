@@ -303,7 +303,7 @@
                     }, {
                         key: "receiveMessage",
                         value: function(e) {
-                            if ("pubsub" == e.data.twitch_protocol) switch (c.debug("Received message: " + JSON.stringify(e.data)), e.data.type) {
+                            if (e.data && "pubsub" == e.data.twitch_protocol) switch (c.debug("Received message: " + JSON.stringify(e.data)), e.data.type) {
                                 case "connected":
                                     this._trigger("connected");
                                     break;
@@ -14075,8 +14075,10 @@
                                 n.applyAnchorAttributesForSupervisor(i, t);
                                 break;
                             case s.ExtensionMode.Dashboard:
-                                var u = n.extension.panelHeight || j;
-                                i.setAttribute("style", "height: " + u + "px;");
+                                if (!n.params.isPopout) {
+                                    var u = n.extension.panelHeight || j;
+                                    i.setAttribute("style", "height: " + u + "px;")
+                                }
                                 break;
                             case s.ExtensionMode.Config:
                                 i.setAttribute("style", "width: 100%; height: " + M + "px;")

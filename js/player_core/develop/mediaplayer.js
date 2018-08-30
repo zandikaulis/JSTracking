@@ -2281,7 +2281,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-c29386ee";
+    return "2.3.0-d8af1c75";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3357,7 +3357,7 @@ SafeTextTrack.prototype.addCue = function (cue) {
     });
 
     if (!track) {
-        track = video.addTextTrack('metadata');
+        track = this._video.addTextTrack('metadata');
         this._tracks.push(track);
     }
 

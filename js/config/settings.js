@@ -54,7 +54,7 @@ window.__twilightSettings = {
     "esports_room_cheering_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249-staff", "104874624"],
     "event_directory_enabled_games": [],
     "extensions_mve_banner_enabled": true,
-    "extensions_popout_enabled": "off",
+    "extensions_popout_enabled": "on",
     "first_page_loaded_timeout": 30000,
     "gdpr_consent_enabled": true,
     "gdpr_disabled_eea_consent": false,
