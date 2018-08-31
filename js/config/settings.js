@@ -135,7 +135,7 @@ window.__twilightSettings = {
     "viewer_milestones_enabled": true,
     "vod_archives_vira_grand": "on",
     "vod_editing_used_to_this": true,
-    "vodcast_deprecation_announcement_enabled": false,
+    "vodcast_deprecation_announcement_enabled": true,
     "withgraphql_guarded_loading_enabled": true,
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
