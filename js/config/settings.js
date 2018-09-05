@@ -359,6 +359,18 @@ window.__twilightSettings = {
                 "value": "on"
             }]
         },
+        "20be9241-4fa5-4903-9ada-e1e7762eda23": {
+            "name": "vod_colors_of_the_wind",
+            "v": 4557,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "21084181-ee54-486d-8eb2-09a317143a8e": {
             "name": "pushy_notifications_fatigue_v2",
             "v": 4514,
