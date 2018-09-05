@@ -4499,7 +4499,7 @@
                     value: !0
                 }),
                 function(e) {
-                    e.AccountConnection = "accountConnection", e.App = "app", e.Demo = "demo", e.Logging = "logging", e.Mods = "mods", e.Performance = "performance", e.Release = "release", e.Window = "window", e.Process = "process"
+                    e.AccountConnection = "accountConnection", e.App = "app", e.Demo = "demo", e.Logging = "logging", e.Mods = "mods", e.Performance = "performance", e.Release = "release", e.Session = "session", e.Window = "window", e.Process = "process"
                 }(t.IntegrationType || (t.IntegrationType = {}))
         },
         "6WtA": function(e, t, n) {
