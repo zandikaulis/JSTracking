@@ -361,7 +361,7 @@ window.__twilightSettings = {
         },
         "20be9241-4fa5-4903-9ada-e1e7762eda23": {
             "name": "vod_colors_of_the_wind",
-            "v": 4558,
+            "v": 4560,
             "t": 2,
             "groups": [{
                 "weight": 100,
@@ -1115,18 +1115,6 @@ window.__twilightSettings = {
             }, {
                 "weight": 50,
                 "value": "treatment"
-            }]
-        },
-        "a78dcb04-44d2-4ca7-9c6b-44904b267e8e": {
-            "name": "twilight_vod_editing_second_chance",
-            "v": 4452,
-            "t": 2,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "variant1"
             }]
         },
         "a9667563-723a-4cf7-b253-674d9eef0a53": {
