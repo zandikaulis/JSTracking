@@ -903,6 +903,21 @@ window.__twilightSettings = {
                 "value": "yes"
             }]
         },
+        "744750a4-a3c6-4791-981e-815fde73aa9a": {
+            "name": "social_buttons_move",
+            "v": 4555,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }, {
+                "weight": 0,
+                "value": "variant_b"
+            }]
+        },
         "75397567-90b5-413c-9500-e3d35d6b8669": {
             "name": "press_the_button",
             "v": 4509,
