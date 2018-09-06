@@ -1997,9 +1997,13 @@ module.exports = {
      */
     WORKER_ERROR: 'PlayerWorkerError',
     /**
-     * Generic Timed metadata
+     * Generic Timed metadata enter
      */
-    TIMED_METADATA: 'TimedMetadata',
+    METADATA_CUE_ENTER: 'PlayerMetadataCueEnter',
+        /**
+     * Generic Timed metadata exit
+     */
+    METADATA_CUE_EXIT: 'PlayerMetadataCueExit',
 };
 
 
@@ -2281,7 +2285,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-d30b673b";
+    return "2.3.0-954c49b5";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2635,8 +2639,11 @@ MediaPlayer.prototype._startPlayback = function () {
 }
 
 MediaPlayer.prototype._addCue = function (cue) {
-    this._mediaSink.addCue(cue.time, cue.duration, function () {
-        this._postMessage(WorkerMessage.SINK_CUE, cue.time);
+    this._mediaSink.addCue(cue.start, cue.end, function (enter) {
+        this._postMessage(WorkerMessage.SINK_CUE, {
+            id: cue.id,
+            enter: enter,
+        });
     }.bind(this));
 }
 
@@ -3083,22 +3090,26 @@ MediaSink.prototype.setPlaybackRate = function (rate) {
 /**
  * Add a cue that will be fired when the playhead crosses
  * the specified time. Only fired once.
- * @param {number} time - when to fire the cue
- * @param {number} duration - duration of the cue
+ * @param {number} start - when the cue begins
+ * @param {number} end - when the cue ends
  * @param {function} onCue - called when the cue is fired
  */
-MediaSink.prototype.addCue = function (time, duration, onCue) {
-    // endTime must be larger than startTime on Edge
-    if (duration <= 0) {
-        duration = 1;
+MediaSink.prototype.addCue = function (start, end, onCue) {
+    // endTime musst be larger than startTime on Edge
+    if (end <= start) {
+        end = start + 1;
     }
     // `var VTTCue` was in closure scope. However, with videojs hls tech,
     // gloval.VTTCue is temporarily polyfilled on Edge and then restored.
     // So avoiding closure scope. More details - https://jira.twitch.com/browse/CVP-2513
     var VTTCue = global.VTTCue || global.TextTrackCue;
-    var endTime = time + duration;
-    var cue = new VTTCue(time, endTime, '');
-    cue.onenter = onCue;
+    var cue = new VTTCue(start, end, '');
+    cue.onenter = function () {
+        onCue(true);
+    };
+    cue.onexit = function () {
+        onCue(false);
+    };
     this._metaTrack.addCue(cue);
 };
 
