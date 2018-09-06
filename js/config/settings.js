@@ -112,7 +112,7 @@ window.__twilightSettings = {
     "squad_stream_page_whitelist": [],
     "squad_stream_survey_url": "",
     "squad_stream_uxr_logins": [],
-    "squad_stream_whitelist": ["shangtee_test", "ihatebadwords", "packofferrets", "signal___"],
+    "squad_stream_whitelist": [],
     "stats_sample_rate": 100,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "throttled_experiment_event_enabled": false,
@@ -934,8 +934,9 @@ window.__twilightSettings = {
         },
         "75397567-90b5-413c-9500-e3d35d6b8669": {
             "name": "press_the_button",
-            "v": 4565,
+            "v": 4566,
             "t": 1,
+            "s": 1,
             "groups": [{
                 "weight": 100,
                 "value": "control"
