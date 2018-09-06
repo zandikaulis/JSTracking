@@ -1056,55 +1056,57 @@
                     dispatch: i.a.func.isRequired,
                     getState: i.a.func.isRequired
                 });
-            var u = function() {
-                    var e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "store",
-                        n = arguments[1] || t + "Subscription",
-                        o = function(e) {
-                            function o(n, r) {
-                                ! function(e, t) {
-                                    if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-                                }(this, o);
-                                var i = function(e, t) {
-                                    if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                    return !t || "object" != typeof t && "function" != typeof t ? e : t
-                                }(this, e.call(this, n, r));
-                                return i[t] = n.store, i
-                            }
-                            return function(e, t) {
-                                if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-                                e.prototype = Object.create(t && t.prototype, {
-                                    constructor: {
-                                        value: e,
-                                        enumerable: !1,
-                                        writable: !0,
-                                        configurable: !0
-                                    }
-                                }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-                            }(o, e), o.prototype.getChildContext = function() {
-                                var e;
-                                return (e = {})[t] = this[t], e[n] = null, e
-                            }, o.prototype.render = function() {
-                                return r.Children.only(this.props.children)
-                            }, o
-                        }(r.Component);
-                    return o.propTypes = {
-                        store: s.isRequired,
-                        children: i.a.element.isRequired
-                    }, o.childContextTypes = ((e = {})[t] = s.isRequired, e[n] = a, e), o
-                }(),
-                c = n("/LiH"),
-                l = n.n(c),
-                f = n("QLaP"),
-                p = n.n(f);
-            var d = null,
-                h = {
+
+            function u() {
+                var e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "store",
+                    n = arguments[1] || t + "Subscription",
+                    o = function(e) {
+                        function o(n, r) {
+                            ! function(e, t) {
+                                if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+                            }(this, o);
+                            var i = function(e, t) {
+                                if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                return !t || "object" != typeof t && "function" != typeof t ? e : t
+                            }(this, e.call(this, n, r));
+                            return i[t] = n.store, i
+                        }
+                        return function(e, t) {
+                            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+                            e.prototype = Object.create(t && t.prototype, {
+                                constructor: {
+                                    value: e,
+                                    enumerable: !1,
+                                    writable: !0,
+                                    configurable: !0
+                                }
+                            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+                        }(o, e), o.prototype.getChildContext = function() {
+                            var e;
+                            return (e = {})[t] = this[t], e[n] = null, e
+                        }, o.prototype.render = function() {
+                            return r.Children.only(this.props.children)
+                        }, o
+                    }(r.Component);
+                return o.propTypes = {
+                    store: s.isRequired,
+                    children: i.a.element.isRequired
+                }, o.childContextTypes = ((e = {})[t] = s.isRequired, e[n] = a, e), o
+            }
+            var c = u(),
+                l = n("/LiH"),
+                f = n.n(l),
+                p = n("QLaP"),
+                d = n.n(p);
+            var h = null,
+                v = {
                     notify: function() {}
                 };
-            var v = function() {
+            var m = function() {
                     function e(t, n, r) {
                         ! function(e, t) {
                             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-                        }(this, e), this.store = t, this.parentSub = n, this.onStateChange = r, this.unsubscribe = null, this.listeners = h
+                        }(this, e), this.store = t, this.parentSub = n, this.onStateChange = r, this.unsubscribe = null, this.listeners = v
                     }
                     return e.prototype.addNestedSub = function(e) {
                         return this.trySubscribe(), this.listeners.subscribe(e)
@@ -1118,7 +1120,7 @@
                                 t = [];
                             return {
                                 clear: function() {
-                                    t = d, e = d
+                                    t = h, e = h
                                 },
                                 notify: function() {
                                     for (var n = e = t, r = 0; r < n.length; r++) n[r]()
@@ -1130,39 +1132,39 @@
                                     var r = !0;
                                     return t === e && (t = e.slice()), t.push(n),
                                         function() {
-                                            r && e !== d && (r = !1, t === e && (t = e.slice()), t.splice(t.indexOf(n), 1))
+                                            r && e !== h && (r = !1, t === e && (t = e.slice()), t.splice(t.indexOf(n), 1))
                                         }
                                 }
                             }
                         }())
                     }, e.prototype.tryUnsubscribe = function() {
-                        this.unsubscribe && (this.unsubscribe(), this.unsubscribe = null, this.listeners.clear(), this.listeners = h)
+                        this.unsubscribe && (this.unsubscribe(), this.unsubscribe = null, this.listeners.clear(), this.listeners = v)
                     }, e
                 }(),
-                m = Object.assign || function(e) {
+                y = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
                         for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                     }
                     return e
                 };
-            var y = 0,
-                g = {};
+            var g = 0,
+                b = {};
 
-            function b() {}
+            function _() {}
 
-            function _(e) {
+            function w(e) {
                 var t, n, o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     i = o.getDisplayName,
                     u = void 0 === i ? function(e) {
                         return "ConnectAdvanced(" + e + ")"
                     } : i,
                     c = o.methodName,
-                    f = void 0 === c ? "connectAdvanced" : c,
-                    d = o.renderCountProp,
-                    h = void 0 === d ? void 0 : d,
-                    _ = o.shouldHandleStateChanges,
-                    w = void 0 === _ || _,
+                    l = void 0 === c ? "connectAdvanced" : c,
+                    p = o.renderCountProp,
+                    h = void 0 === p ? void 0 : p,
+                    v = o.shouldHandleStateChanges,
+                    w = void 0 === v || v,
                     x = o.storeKey,
                     k = void 0 === x ? "store" : x,
                     E = o.withRef,
@@ -1173,16 +1175,16 @@
                         return n
                     }(o, ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef"]),
                     S = k + "Subscription",
-                    T = y++,
+                    T = g++,
                     P = ((t = {})[k] = s, t[S] = a, t),
                     A = ((n = {})[S] = a, n);
                 return function(t) {
-                    p()("function" == typeof t, "You must pass a component to the function returned by connect. Instead received " + JSON.stringify(t));
+                    d()("function" == typeof t, "You must pass a component to the function returned by connect. Instead received " + JSON.stringify(t));
                     var n = t.displayName || t.name || "Component",
                         o = u(n),
-                        i = m({}, C, {
+                        i = y({}, C, {
                             getDisplayName: u,
-                            methodName: f,
+                            methodName: l,
                             renderCountProp: h,
                             shouldHandleStateChanges: w,
                             storeKey: k,
@@ -1200,7 +1202,7 @@
                                     if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
                                     return !t || "object" != typeof t && "function" != typeof t ? e : t
                                 }(this, n.call(this, e, t));
-                                return r.version = T, r.state = {}, r.renderCount = 0, r.store = e[k] || t[k], r.propsMode = Boolean(e[k]), r.setWrappedInstance = r.setWrappedInstance.bind(r), p()(r.store, 'Could not find "' + k + '" in either the context or props of "' + o + '". Either wrap the root component in a <Provider>, or explicitly pass "' + k + '" as a prop to "' + o + '".'), r.initSelector(), r.initSubscription(), r
+                                return r.version = T, r.state = {}, r.renderCount = 0, r.store = e[k] || t[k], r.propsMode = Boolean(e[k]), r.setWrappedInstance = r.setWrappedInstance.bind(r), d()(r.store, 'Could not find "' + k + '" in either the context or props of "' + o + '". Either wrap the root component in a <Provider>, or explicitly pass "' + k + '" as a prop to "' + o + '".'), r.initSelector(), r.initSubscription(), r
                             }
                             return function(e, t) {
                                 if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -1222,9 +1224,9 @@
                             }, a.prototype.shouldComponentUpdate = function() {
                                 return this.selector.shouldComponentUpdate
                             }, a.prototype.componentWillUnmount = function() {
-                                this.subscription && this.subscription.tryUnsubscribe(), this.subscription = null, this.notifyNestedSubs = b, this.store = null, this.selector.run = b, this.selector.shouldComponentUpdate = !1
+                                this.subscription && this.subscription.tryUnsubscribe(), this.subscription = null, this.notifyNestedSubs = _, this.store = null, this.selector.run = _, this.selector.shouldComponentUpdate = !1
                             }, a.prototype.getWrappedInstance = function() {
-                                return p()(O, "To access the wrapped instance, you need to specify { withRef: true } in the options argument of the " + f + "() call."), this.wrappedInstance
+                                return d()(O, "To access the wrapped instance, you need to specify { withRef: true } in the options argument of the " + l + "() call."), this.wrappedInstance
                             }, a.prototype.setWrappedInstance = function(e) {
                                 this.wrappedInstance = e
                             }, a.prototype.initSelector = function() {
@@ -1245,17 +1247,17 @@
                             }, a.prototype.initSubscription = function() {
                                 if (w) {
                                     var e = (this.propsMode ? this.props : this.context)[S];
-                                    this.subscription = new v(this.store, e, this.onStateChange.bind(this)), this.notifyNestedSubs = this.subscription.notifyNestedSubs.bind(this.subscription)
+                                    this.subscription = new m(this.store, e, this.onStateChange.bind(this)), this.notifyNestedSubs = this.subscription.notifyNestedSubs.bind(this.subscription)
                                 }
                             }, a.prototype.onStateChange = function() {
-                                this.selector.run(this.props), this.selector.shouldComponentUpdate ? (this.componentDidUpdate = this.notifyNestedSubsOnComponentDidUpdate, this.setState(g)) : this.notifyNestedSubs()
+                                this.selector.run(this.props), this.selector.shouldComponentUpdate ? (this.componentDidUpdate = this.notifyNestedSubsOnComponentDidUpdate, this.setState(b)) : this.notifyNestedSubs()
                             }, a.prototype.notifyNestedSubsOnComponentDidUpdate = function() {
                                 this.componentDidUpdate = void 0, this.notifyNestedSubs()
                             }, a.prototype.isSubscribed = function() {
                                 return Boolean(this.subscription) && this.subscription.isSubscribed()
                             }, a.prototype.addExtraProps = function(e) {
                                 if (!(O || h || this.propsMode && this.subscription)) return e;
-                                var t = m({}, e);
+                                var t = y({}, e);
                                 return O && (t.ref = this.setWrappedInstance), h && (t[h] = this.renderCount++), this.propsMode && this.subscription && (t[S] = this.subscription), t
                             }, a.prototype.render = function() {
                                 var e = this.selector;
@@ -1263,29 +1265,29 @@
                                 return Object(r.createElement)(t, this.addExtraProps(e.props))
                             }, a
                         }(r.Component);
-                    return a.WrappedComponent = t, a.displayName = o, a.childContextTypes = A, a.contextTypes = P, a.propTypes = P, l()(a, t)
+                    return a.WrappedComponent = t, a.displayName = o, a.childContextTypes = A, a.contextTypes = P, a.propTypes = P, f()(a, t)
                 }
             }
-            var w = Object.prototype.hasOwnProperty;
+            var x = Object.prototype.hasOwnProperty;
 
-            function x(e, t) {
+            function k(e, t) {
                 return e === t ? 0 !== e || 0 !== t || 1 / e == 1 / t : e != e && t != t
             }
 
-            function k(e, t) {
-                if (x(e, t)) return !0;
+            function E(e, t) {
+                if (k(e, t)) return !0;
                 if ("object" != typeof e || null === e || "object" != typeof t || null === t) return !1;
                 var n = Object.keys(e),
                     r = Object.keys(t);
                 if (n.length !== r.length) return !1;
                 for (var o = 0; o < n.length; o++)
-                    if (!w.call(t, n[o]) || !x(e[n[o]], t[n[o]])) return !1;
+                    if (!x.call(t, n[o]) || !k(e[n[o]], t[n[o]])) return !1;
                 return !0
             }
-            var E = n("fvjX");
+            var O = n("fvjX");
             n("6LIB");
 
-            function O(e) {
+            function C(e) {
                 return function(t, n) {
                     var r = e(t, n);
 
@@ -1296,44 +1298,44 @@
                 }
             }
 
-            function C(e) {
+            function S(e) {
                 return null !== e.dependsOnOwnProps && void 0 !== e.dependsOnOwnProps ? Boolean(e.dependsOnOwnProps) : 1 !== e.length
             }
 
-            function S(e, t) {
+            function T(e, t) {
                 return function(t, n) {
                     n.displayName;
                     var r = function(e, t) {
                         return r.dependsOnOwnProps ? r.mapToProps(e, t) : r.mapToProps(e)
                     };
                     return r.dependsOnOwnProps = !0, r.mapToProps = function(t, n) {
-                        r.mapToProps = e, r.dependsOnOwnProps = C(e);
+                        r.mapToProps = e, r.dependsOnOwnProps = S(e);
                         var o = r(t, n);
-                        return "function" == typeof o && (r.mapToProps = o, r.dependsOnOwnProps = C(o), o = r(t, n)), o
+                        return "function" == typeof o && (r.mapToProps = o, r.dependsOnOwnProps = S(o), o = r(t, n)), o
                     }, r
                 }
             }
-            var T = [function(e) {
-                return "function" == typeof e ? S(e) : void 0
+            var P = [function(e) {
+                return "function" == typeof e ? T(e) : void 0
             }, function(e) {
-                return e ? void 0 : O(function(e) {
+                return e ? void 0 : C(function(e) {
                     return {
                         dispatch: e
                     }
                 })
             }, function(e) {
-                return e && "object" == typeof e ? O(function(t) {
-                    return Object(E.b)(e, t)
+                return e && "object" == typeof e ? C(function(t) {
+                    return Object(O.b)(e, t)
                 }) : void 0
             }];
-            var P = [function(e) {
-                    return "function" == typeof e ? S(e) : void 0
+            var A = [function(e) {
+                    return "function" == typeof e ? T(e) : void 0
                 }, function(e) {
-                    return e ? void 0 : O(function() {
+                    return e ? void 0 : C(function() {
                         return {}
                     })
                 }],
-                A = Object.assign || function(e) {
+                M = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
                         for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
@@ -1341,10 +1343,10 @@
                     return e
                 };
 
-            function M(e, t, n) {
-                return A({}, n, e, t)
+            function j(e, t, n) {
+                return M({}, n, e, t)
             }
-            var j = [function(e) {
+            var R = [function(e) {
                 return "function" == typeof e ? function(e) {
                     return function(t, n) {
                         n.displayName;
@@ -1360,17 +1362,17 @@
                 }(e) : void 0
             }, function(e) {
                 return e ? void 0 : function() {
-                    return M
+                    return j
                 }
             }];
 
-            function R(e, t, n, r) {
+            function I(e, t, n, r) {
                 return function(o, i) {
                     return n(e(o, i), t(r, i), i)
                 }
             }
 
-            function I(e, t, n, r, o) {
+            function D(e, t, n, r, o) {
                 var i = o.areStatesEqual,
                     a = o.areOwnPropsEqual,
                     s = o.areStatePropsEqual,
@@ -1397,7 +1399,7 @@
                 }
             }
 
-            function D(e, t) {
+            function N(e, t) {
                 var n = t.initMapStateToProps,
                     r = t.initMapDispatchToProps,
                     o = t.initMergeProps,
@@ -1409,9 +1411,9 @@
                     a = n(e, i),
                     s = r(e, i),
                     u = o(e, i);
-                return (i.pure ? I : R)(a, s, u, e, i)
+                return (i.pure ? D : I)(a, s, u, e, i)
             }
-            var N = Object.assign || function(e) {
+            var L = Object.assign || function(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = arguments[t];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
@@ -1419,7 +1421,7 @@
                 return e
             };
 
-            function L(e, t, n) {
+            function F(e, t, n) {
                 for (var r = t.length - 1; r >= 0; r--) {
                     var o = t[r](e);
                     if (o) return o
@@ -1429,42 +1431,42 @@
                 }
             }
 
-            function F(e, t) {
+            function q(e, t) {
                 return e === t
             }
-            var q = function() {
+            var U = function() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = e.connectHOC,
-                    n = void 0 === t ? _ : t,
+                    n = void 0 === t ? w : t,
                     r = e.mapStateToPropsFactories,
-                    o = void 0 === r ? P : r,
+                    o = void 0 === r ? A : r,
                     i = e.mapDispatchToPropsFactories,
-                    a = void 0 === i ? T : i,
+                    a = void 0 === i ? P : i,
                     s = e.mergePropsFactories,
-                    u = void 0 === s ? j : s,
+                    u = void 0 === s ? R : s,
                     c = e.selectorFactory,
-                    l = void 0 === c ? D : c;
+                    l = void 0 === c ? N : c;
                 return function(e, t, r) {
                     var i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
                         s = i.pure,
                         c = void 0 === s || s,
                         f = i.areStatesEqual,
-                        p = void 0 === f ? F : f,
+                        p = void 0 === f ? q : f,
                         d = i.areOwnPropsEqual,
-                        h = void 0 === d ? k : d,
+                        h = void 0 === d ? E : d,
                         v = i.areStatePropsEqual,
-                        m = void 0 === v ? k : v,
+                        m = void 0 === v ? E : v,
                         y = i.areMergedPropsEqual,
-                        g = void 0 === y ? k : y,
+                        g = void 0 === y ? E : y,
                         b = function(e, t) {
                             var n = {};
                             for (var r in e) t.indexOf(r) >= 0 || Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
                             return n
                         }(i, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]),
-                        _ = L(e, o, "mapStateToProps"),
-                        w = L(t, a, "mapDispatchToProps"),
-                        x = L(r, u, "mergeProps");
-                    return n(l, N({
+                        _ = F(e, o, "mapStateToProps"),
+                        w = F(t, a, "mapDispatchToProps"),
+                        x = F(r, u, "mergeProps");
+                    return n(l, L({
                         methodName: "connect",
                         getDisplayName: function(e) {
                             return "Connect(" + e + ")"
@@ -1482,11 +1484,13 @@
                 }
             }();
             n.d(t, "a", function() {
+                return c
+            }), n.d(t, !1, function() {
                 return u
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return _
+            }), n.d(t, !1, function() {
+                return w
             }), n.d(t, "b", function() {
-                return q
+                return U
             })
         },
         "/Tkk": function(e, t, n) {
@@ -2213,7 +2217,7 @@
         "12bw": function(e, t, n) {
             "use strict";
             var r = n("NfvW").default;
-            n(72), (t = e.exports = r).default = t
+            n(74), (t = e.exports = r).default = t
         },
         "16Al": function(e, t, n) {
             "use strict";
@@ -4746,7 +4750,7 @@
         "7Inb": function(e, t, n) {
             "use strict";
             var r = n("W6Rk").default;
-            n(74), (t = e.exports = r).default = t
+            n(72), (t = e.exports = r).default = t
         },
         "7Ix3": function(e, t) {
             e.exports = function(e) {
@@ -17760,6 +17764,8 @@
                         this.raise("r9kmode", e)
                     }, e.prototype.resub = function(e) {
                         this.raise("resub", e)
+                    }, e.prototype.giftpaidupgrade = function(e) {
+                        this.raise("giftpaidupgrade", e)
                     }, e.prototype.roomstate = function(e) {
                         this.raise("roomstate", e)
                     }, e.prototype.slowmode = function(e) {
@@ -18207,7 +18213,15 @@
                                                     planName: v
                                                 }
                                             })
-                                        } else if ("sub" === s) {
+                                        } else if ("giftpaidupgrade" === s) this.events.giftpaidupgrade({
+                                            channel: o,
+                                            promoGiftTotal: a.getInteger(e.tags["msg-param-promo-gift-total"], 0),
+                                            promoName: a.decodeTag(e.tags["msg-param-promo-name"]),
+                                            senderLogin: a.decodeTag(e.tags["msg-param-sender-login"]),
+                                            senderName: a.decodeTag(e.tags["msg-param-sender-name"]),
+                                            user: this.createUser(e)
+                                        });
+                                        else if ("sub" === s) {
                                             h = a.decodeTag(e.tags["msg-param-sub-plan"]), v = a.decodeTag(e.tags["msg-param-sub-plan-name"]), y = h.includes("Prime");
                                             i && (e.tags["message-type"] = "sub"), this.events.subscription({
                                                 channel: o,
@@ -19241,6 +19255,8 @@
                         this.add("reconnecting", e)
                     }, e.prototype.resub = function(e) {
                         this.add("resub", e)
+                    }, e.prototype.giftpaidupgrade = function(e) {
+                        this.add("giftpaidupgrade", e)
                     }, e.prototype.rewardgift = function(e) {
                         this.add("rewardgift", e)
                     }, e.prototype.ritual = function(e) {
@@ -23145,21 +23161,22 @@
                 keyLength: u.a.number,
                 children: u.a.node
             };
-            var h = n("1YKV"),
-                v = n.n(h);
+            var h = d,
+                v = n("1YKV"),
+                m = n.n(v);
 
-            function m(e, t) {
+            function y(e, t) {
                 if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
                 return !t || "object" != typeof t && "function" != typeof t ? e : t
             }
-            var y = function(e) {
+            var g = function(e) {
                 function t() {
                     var n, r;
                     ! function(e, t) {
                         if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
                     }(this, t);
                     for (var o = arguments.length, i = Array(o), a = 0; a < o; a++) i[a] = arguments[a];
-                    return n = r = m(this, e.call.apply(e, [this].concat(i))), r.history = v()(r.props), m(r, n)
+                    return n = r = y(this, e.call.apply(e, [this].concat(i))), r.history = m()(r.props), y(r, n)
                 }
                 return function(e, t) {
                     if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -23180,15 +23197,16 @@
                     })
                 }, t
             }(a.a.Component);
-            y.propTypes = {
+            g.propTypes = {
                 basename: u.a.string,
                 getUserConfirmation: u.a.func,
                 hashType: u.a.oneOf(["hashbang", "noslash", "slash"]),
                 children: u.a.node
             };
-            var g = n("vaFA"),
-                b = n.n(g),
-                _ = Object.assign || function(e) {
+            var b = g,
+                _ = n("vaFA"),
+                w = n.n(_),
+                x = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
                         for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
@@ -23196,22 +23214,22 @@
                     return e
                 };
 
-            function w(e, t) {
+            function k(e, t) {
                 if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
                 return !t || "object" != typeof t && "function" != typeof t ? e : t
             }
-            var x = function(e) {
+            var E = function(e) {
                     return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey)
                 },
-                k = function(e) {
+                O = function(e) {
                     function t() {
                         var n, r;
                         ! function(e, t) {
                             if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
                         }(this, t);
                         for (var o = arguments.length, i = Array(o), a = 0; a < o; a++) i[a] = arguments[a];
-                        return n = r = w(this, e.call.apply(e, [this].concat(i))), r.handleClick = function(e) {
-                            if (r.props.onClick && r.props.onClick(e), !e.defaultPrevented && 0 === e.button && !r.props.target && !x(e)) {
+                        return n = r = k(this, e.call.apply(e, [this].concat(i))), r.handleClick = function(e) {
+                            if (r.props.onClick && r.props.onClick(e), !e.defaultPrevented && 0 === e.button && !r.props.target && !E(e)) {
                                 e.preventDefault();
                                 var t = r.context.router.history,
                                     n = r.props,
@@ -23219,7 +23237,7 @@
                                     i = n.to;
                                 o ? t.replace(i) : t.push(i)
                             }
-                        }, w(r, n)
+                        }, k(r, n)
                     }
                     return function(e, t) {
                         if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -23240,26 +23258,26 @@
                                 for (var r in e) t.indexOf(r) >= 0 || Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
                                 return n
                             }(e, ["replace", "to", "innerRef"]);
-                        b()(this.context.router, "You should not use <Link> outside a <Router>");
+                        w()(this.context.router, "You should not use <Link> outside a <Router>");
                         var o = this.context.router.history.createHref("string" == typeof t ? {
                             pathname: t
                         } : t);
-                        return a.a.createElement("a", _({}, r, {
+                        return a.a.createElement("a", x({}, r, {
                             onClick: this.handleClick,
                             href: o,
                             ref: n
                         }))
                     }, t
                 }(a.a.Component);
-            k.propTypes = {
+            O.propTypes = {
                 onClick: u.a.func,
                 target: u.a.string,
                 replace: u.a.bool,
                 to: u.a.oneOfType([u.a.string, u.a.object]).isRequired,
                 innerRef: u.a.oneOfType([u.a.string, u.a.func])
-            }, k.defaultProps = {
+            }, O.defaultProps = {
                 replace: !1
-            }, k.contextTypes = {
+            }, O.contextTypes = {
                 router: u.a.shape({
                     history: u.a.shape({
                         push: u.a.func.isRequired,
@@ -23268,21 +23286,22 @@
                     }).isRequired
                 }).isRequired
             };
-            var E = k,
-                O = (n("8Wa3").a, n("4p7I").a),
-                C = Object.assign || function(e) {
+            var C = O,
+                S = n("8Wa3").a,
+                T = n("4p7I").a,
+                P = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
                         for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                     }
                     return e
                 },
-                S = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                A = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
                     return typeof e
                 } : function(e) {
                     return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
                 };
-            var T = function(e) {
+            var M = function(e) {
                 var t = e.to,
                     n = e.exact,
                     r = e.strict,
@@ -23298,8 +23317,8 @@
                         for (var r in e) t.indexOf(r) >= 0 || Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
                         return n
                     }(e, ["to", "exact", "strict", "location", "activeClassName", "className", "activeStyle", "style", "isActive", "ariaCurrent"]);
-                return a.a.createElement(O, {
-                    path: "object" === (void 0 === t ? "undefined" : S(t)) ? t.pathname : t,
+                return a.a.createElement(T, {
+                    path: "object" === (void 0 === t ? "undefined" : A(t)) ? t.pathname : t,
                     exact: n,
                     strict: r,
                     location: o,
@@ -23307,19 +23326,19 @@
                         var n = e.location,
                             r = e.match,
                             o = !!(l ? l(r, n) : r);
-                        return a.a.createElement(E, C({
+                        return a.a.createElement(C, P({
                             to: t,
                             className: o ? [s, i].filter(function(e) {
                                 return e
                             }).join(" ") : s,
-                            style: o ? C({}, c, u) : c,
+                            style: o ? P({}, c, u) : c,
                             "aria-current": o && f
                         }, p))
                     }
                 })
             };
-            T.propTypes = {
-                to: E.propTypes.to,
+            M.propTypes = {
+                to: C.propTypes.to,
                 exact: u.a.bool,
                 strict: u.a.bool,
                 location: u.a.object,
@@ -23329,28 +23348,43 @@
                 style: u.a.object,
                 isActive: u.a.func,
                 ariaCurrent: u.a.oneOf(["page", "step", "location", "true"])
-            }, T.defaultProps = {
+            }, M.defaultProps = {
                 activeClassName: "active",
                 ariaCurrent: "true"
             };
-            var P = T,
-                A = (n("LWYa").a, n("mLw1").a),
-                M = (n("yczp").a, n("yoKv").a),
-                j = (n("SsKX").a, n("9C/b").a);
-            n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "a", function() {
-                return E
-            }), n.d(t, !1, function() {}), n.d(t, "b", function() {
-                return P
-            }), n.d(t, !1, function() {}), n.d(t, "c", function() {
-                return A
+            var j = M,
+                R = n("LWYa").a,
+                I = n("mLw1").a,
+                D = n("yczp").a,
+                N = n("yoKv").a,
+                L = n("SsKX").a,
+                F = n("9C/b").a;
+            n.d(t, !1, function() {
+                return h
+            }), n.d(t, !1, function() {
+                return b
+            }), n.d(t, "a", function() {
+                return C
+            }), n.d(t, !1, function() {
+                return S
+            }), n.d(t, "b", function() {
+                return j
+            }), n.d(t, !1, function() {
+                return R
+            }), n.d(t, "c", function() {
+                return I
             }), n.d(t, "d", function() {
-                return O
+                return T
             }), n.d(t, !1, function() {
                 return f
-            }), n.d(t, !1, function() {}), n.d(t, "e", function() {
-                return M
-            }), n.d(t, !1, function() {}), n.d(t, "f", function() {
-                return j
+            }), n.d(t, !1, function() {
+                return D
+            }), n.d(t, "e", function() {
+                return N
+            }), n.d(t, !1, function() {
+                return L
+            }), n.d(t, "f", function() {
+                return F
             })
         },
         eUgh: function(e, t) {
@@ -29993,6 +30027,40 @@
             }
 
             function L(e) {
+                var t = e.result,
+                    n = e.query,
+                    r = e.storeFactory,
+                    o = void 0 === r ? j : r,
+                    i = e.store,
+                    a = void 0 === i ? o() : i,
+                    s = e.variables,
+                    u = e.dataIdFromObject,
+                    l = e.fragmentMap,
+                    f = void 0 === l ? {} : l,
+                    p = e.fragmentMatcherFunction,
+                    h = d(n);
+                s = c({}, v(h), s);
+                try {
+                    return q({
+                        dataId: "ROOT_QUERY",
+                        result: t,
+                        selectionSet: h.selectionSet,
+                        context: {
+                            store: a,
+                            storeFactory: o,
+                            processedData: {},
+                            variables: s,
+                            dataIdFromObject: u,
+                            fragmentMap: f,
+                            fragmentMatcherFunction: p
+                        }
+                    })
+                } catch (e) {
+                    throw N(e, n)
+                }
+            }
+
+            function F(e) {
                 var t = e.dataId,
                     n = e.result,
                     r = e.document,
@@ -30008,7 +30076,7 @@
                     g = h(p(r));
                 u = c({}, v(m), u);
                 try {
-                    return F({
+                    return q({
                         result: n,
                         dataId: t,
                         selectionSet: y,
@@ -30027,7 +30095,7 @@
                 }
             }
 
-            function F(e) {
+            function q(e) {
                 var t = e.result,
                     n = e.dataId,
                     o = e.selectionSet,
@@ -30104,7 +30172,7 @@
                                                     var u = o.dataIdFromObject(t);
                                                     u && (a = u, s = !1)
                                                 }
-                                                U(a, r, o.processedData) || F({
+                                                B(a, r, o.processedData) || q({
                                                     dataId: a,
                                                     result: t,
                                                     selectionSet: r,
@@ -30121,12 +30189,12 @@
                                     } else {
                                         var y = u + "." + d,
                                             g = !0;
-                                        if (q(y) || (y = "$" + y), f) {
+                                        if (U(y) || (y = "$" + y), f) {
                                             var b = f(s);
-                                            if (b && q(b)) throw new Error('IDs returned by dataIdFromObject cannot begin with the "$" character.');
+                                            if (b && U(b)) throw new Error('IDs returned by dataIdFromObject cannot begin with the "$" character.');
                                             b && (y = b, g = !1)
                                         }
-                                        if (U(y, o, c.processedData) || F({
+                                        if (B(y, o, c.processedData) || q({
                                                 dataId: y,
                                                 result: s,
                                                 selectionSet: o.selectionSet,
@@ -30152,7 +30220,7 @@
                                     Object.keys(o).forEach(function(s) {
                                         var u = o[s],
                                             c = i[s];
-                                        a(u) && q(u.id) && a(c) && e(u.id, c.id, r), r.delete(t), r.set(n, I({}, o, i))
+                                        a(u) && U(u.id) && a(c) && e(u.id, c.id, r), r.delete(t), r.set(n, I({}, o, i))
                                     })
                                 }(v, t.id, p);
                                 (n = p.get(u)) && t === n[d] || p.set(u, x)
@@ -30187,7 +30255,7 @@
                                 generated: !1
                             }, p.typeCondition.name.value, h), !Object(_.b)() && h.returnPartialData && console.error("WARNING: heuristic fragment matching going on!")
                         }
-                        o && d && F({
+                        o && d && q({
                             result: t,
                             selectionSet: p.selectionSet,
                             dataId: n,
@@ -30197,11 +30265,11 @@
                 }), c
             }
 
-            function q(e) {
+            function U(e) {
                 return "$" === e[0]
             }
 
-            function U(e, t, n) {
+            function B(e, t, n) {
                 if (!n) return !1;
                 if (n[e]) {
                     if (n[e].indexOf(t) >= 0) return !0;
@@ -30210,7 +30278,7 @@
                 return !1
             }
 
-            function B(e, t, n, r) {
+            function H(e, t, n, r) {
                 if (function(e) {
                         return "IntValue" === e.kind
                     }(n) || function(e) {
@@ -30226,7 +30294,7 @@
                     }(n)) {
                     var o = {};
                     n.fields.map(function(e) {
-                        return B(o, e.name, e.value, r)
+                        return H(o, e.name, e.value, r)
                     }), e[t.value] = o
                 } else if (function(e) {
                         return "Variable" === e.kind
@@ -30237,7 +30305,7 @@
                         return "ListValue" === e.kind
                     }(n)) e[t.value] = n.values.map(function(e) {
                     var n = {};
-                    return B(n, t, e, r), n[t.value]
+                    return H(n, t, e, r), n[t.value]
                 });
                 else if (function(e) {
                         return "EnumValue" === e.kind
@@ -30250,25 +30318,25 @@
                 }
             }
 
-            function H(e, t) {
+            function Q(e, t) {
                 if (e.arguments && e.arguments.length) {
                     var n = {};
                     return e.arguments.forEach(function(e) {
                         var r = e.name,
                             o = e.value;
-                        return B(n, r, o, t)
+                        return H(n, r, o, t)
                     }), n
                 }
                 return null
             }
 
-            function Q(e) {
+            function z(e) {
                 return e.alias ? e.alias.value : e.name.value
             }
             new Map;
             Object.assign;
 
-            function z(e) {
+            function W(e) {
                 if ("Document" !== e.kind) throw new Error('Expecting a parsed GraphQL document. Perhaps you need to wrap the query string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql');
                 var t = e.definitions.filter(function(e) {
                     return "FragmentDefinition" !== e.kind
@@ -30279,13 +30347,13 @@
                 if (t.length > 1) throw new Error("Ambiguous GraphQL document: contains " + t.length + " operations")
             }
 
-            function W(e) {
+            function V(e) {
                 return e.definitions.filter(function(e) {
                     return "FragmentDefinition" === e.kind
                 })
             }
 
-            function V(e) {
+            function Y(e) {
                 void 0 === e && (e = []);
                 var t = {};
                 return e.forEach(function(e) {
@@ -30297,11 +30365,11 @@
             n("8dH3");
             Object.create({});
 
-            function Y(e, t, n, r, o, i) {
+            function K(e, t, n, r, o, i) {
                 void 0 === i && (i = {});
                 var a = function(e) {
                         var t;
-                        z(e);
+                        W(e);
                         for (var n = 0, r = e.definitions; n < r.length; n++) {
                             var o = r[n];
                             if ("OperationDefinition" === o.kind) {
@@ -30314,7 +30382,7 @@
                         throw new Error("Expected a parsed GraphQL query with a query, mutation, subscription, or a fragment.")
                     }(t),
                     s = {
-                        fragmentMap: V(W(t)),
+                        fragmentMap: Y(V(t)),
                         contextValue: r,
                         variableValues: o,
                         resultMapper: i.resultMapper,
@@ -30323,10 +30391,10 @@
                             return !0
                         }
                     };
-                return K(a.selectionSet, n, s)
+                return G(a.selectionSet, n, s)
             }
 
-            function K(e, t, n) {
+            function G(e, t, n) {
                 var r = n.fragmentMap,
                     o = n.contextValue,
                     i = n.variableValues,
@@ -30361,15 +30429,15 @@
                                         o = n.contextValue,
                                         i = n.resolver,
                                         a = e.name.value,
-                                        s = H(e, r),
+                                        s = Q(e, r),
                                         u = {
                                             isLeaf: !e.selectionSet,
-                                            resultKey: Q(e),
+                                            resultKey: z(e),
                                             directives: function(e, t) {
                                                 if (e.directives && e.directives.length) {
                                                     var n = {};
                                                     return e.directives.forEach(function(e) {
-                                                        n[e.name.value] = H(e, t)
+                                                        n[e.name.value] = Q(e, t)
                                                     }), n
                                                 }
                                                 return null
@@ -30380,13 +30448,13 @@
                                     if (null == c) return c;
                                     if (Array.isArray(c)) return function e(t, n, r) {
                                         return n.map(function(n) {
-                                            return null === n ? null : Array.isArray(n) ? e(t, n, r) : K(t.selectionSet, n, r)
+                                            return null === n ? null : Array.isArray(n) ? e(t, n, r) : G(t.selectionSet, n, r)
                                         })
                                     }(e, c, n);
-                                    return K(e.selectionSet, c, n)
+                                    return G(e.selectionSet, c, n)
                                 }(e, t, n),
-                                u = Q(e);
-                            void 0 !== s && (void 0 === a[u] ? a[u] = s : G(a[u], s))
+                                u = z(e);
+                            void 0 !== s && (void 0 === a[u] ? a[u] = s : X(a[u], s))
                         } else {
                             var c = void 0;
                             if (function(e) {
@@ -30395,45 +30463,43 @@
                             else if (!(c = r[e.name.value])) throw new Error("No fragment named " + e.name.value);
                             var l = c.typeCondition.name.value;
                             if (n.fragmentMatcher(t, l, o)) {
-                                var f = K(c.selectionSet, t, n);
-                                G(a, f)
+                                var f = G(c.selectionSet, t, n);
+                                X(a, f)
                             }
                         }
                 }), n.resultMapper ? n.resultMapper(a, t) : a
             }
 
-            function G(e, t) {
+            function X(e, t) {
                 if (null === t || "object" != typeof t) return t;
                 Object.keys(e).forEach(function(n) {
-                    t.hasOwnProperty(n) && G(e[n], t[n])
+                    t.hasOwnProperty(n) && X(e[n], t[n])
                 }), Object.keys(t).forEach(function(n) {
                     e.hasOwnProperty(n) || (e[n] = t[n])
                 })
             }
 
-            function X(e) {
+            function J(e) {
                 this.message = e, this.stack = ""
             }
-            X.prototype = Error.prototype;
-            var J = Y,
-                $ = Object.assign || function(e) {
+            J.prototype = Error.prototype;
+            var $ = K,
+                Z = Object.assign || function(e) {
                     for (var t, n = 1, r = arguments.length; n < r; n++)
                         for (var o in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
                     return e
                 },
-                Z = "undefined" != typeof Symbol ? Symbol("id") : "@@id";
+                ee = "undefined" != typeof Symbol ? Symbol("id") : "@@id";
 
-            function ee(e) {
-                return ne($({}, e, {
+            function te(e) {
+                return re(Z({}, e, {
                     returnPartialData: !1
                 })).result
             }
-            var te = function(e, t, n, r, o) {
+            var ne = function(e, t, n, r, o) {
                 var s = o.resultKey,
                     u = o.directives;
-                ! function(e) {
-                    if (!a(e)) throw new Error("Encountered a sub-selection on the query, but the store doesn't have an object reference. This should never happen during normal use unless you have custom code that is directly manipulating the store; please file an issue.")
-                }(t);
+                oe(t);
                 var c = t.id,
                     l = r.store.get(c),
                     f = i(e, n, u),
@@ -30477,13 +30543,13 @@
                     }
                     return !1
                 }(t.previousResult[s], p.json) ? t.previousResult[s] : p.json : (t.previousResult && (p = function e(t, n) {
-                    if (a(t)) return $({}, t, {
+                    if (a(t)) return Z({}, t, {
                         previousResult: n
                     });
                     if (Array.isArray(t)) {
                         var r = new Map;
                         return Array.isArray(n) && n.forEach(function(e) {
-                            e && e[Z] && r.set(e[Z], e)
+                            e && e[ee] && r.set(e[ee], e)
                         }), t.map(function(t, o) {
                             var i = n && n[o];
                             return a(t) && (i = r.get(t.id) || i), e(t, i)
@@ -30493,7 +30559,7 @@
                 }(p, t.previousResult[s])), p)
             };
 
-            function ne(e) {
+            function re(e) {
                 var t = e.store,
                     n = e.query,
                     r = e.variables,
@@ -30513,19 +30579,23 @@
                     hasMissingField: !1
                 };
                 return {
-                    result: J(te, n, {
+                    result: $(ne, n, {
                         type: "id",
                         id: u,
                         previousResult: o
                     }, p, r, {
                         fragmentMatcher: l,
-                        resultMapper: re
+                        resultMapper: ie
                     }),
                     complete: !p.hasMissingField
                 }
             }
 
-            function re(e, t) {
+            function oe(e) {
+                if (!a(e)) throw new Error("Encountered a sub-selection on the query, but the store doesn't have an object reference. This should never happen during normal use unless you have custom code that is directly manipulating the store; please file an issue.")
+            }
+
+            function ie(e, t) {
                 if (t.previousResult) {
                     var n = Object.keys(e);
                     if (Object.keys(t.previousResult).reduce(function(e, t) {
@@ -30540,19 +30610,19 @@
                             }(e[n], t.previousResult[n])
                         })) return t.previousResult
                 }
-                return Object.defineProperty(e, Z, {
+                return Object.defineProperty(e, ee, {
                     enumerable: !1,
                     configurable: !1,
                     writable: !1,
                     value: t.id
                 }), e
             }
-            var oe = Object.assign || function(e) {
+            var ae = Object.assign || function(e) {
                     for (var t, n = 1, r = arguments.length; n < r; n++)
                         for (var o in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
                     return e
                 },
-                ie = function() {
+                se = function() {
                     function e(e) {
                         void 0 === e && (e = {}), this.data = e, this.recordedData = {}
                     }
@@ -30561,7 +30631,7 @@
                         var t = this.recordedData;
                         return this.recordedData = {}, t
                     }, e.prototype.toObject = function() {
-                        return oe({}, this.data, this.recordedData)
+                        return ae({}, this.data, this.recordedData)
                     }, e.prototype.get = function(e) {
                         return this.recordedData.hasOwnProperty(e) ? this.recordedData[e] : this.data[e]
                     }, e.prototype.set = function(e, t) {
@@ -30574,14 +30644,14 @@
                             return e.delete(t)
                         }), this.recordedData = {}
                     }, e.prototype.replace = function(e) {
-                        this.clear(), this.recordedData = oe({}, e)
+                        this.clear(), this.recordedData = ae({}, e)
                     }, e
                 }();
 
-            function ae(e, t) {
-                return new ie(e).record(t)
+            function ue(e, t) {
+                return new se(e).record(t)
             }
-            var se = function() {
+            var ce = function() {
                     var e = Object.setPrototypeOf || {
                         __proto__: []
                     }
@@ -30597,32 +30667,32 @@
                         e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                     }
                 }(),
-                ue = Object.assign || function(e) {
+                le = Object.assign || function(e) {
                     for (var t, n = 1, r = arguments.length; n < r; n++)
                         for (var o in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
                     return e
                 },
-                ce = {
+                fe = {
                     fragmentMatcher: new T,
-                    dataIdFromObject: le,
+                    dataIdFromObject: pe,
                     addTypename: !0,
                     storeFactory: j
                 };
 
-            function le(e) {
+            function pe(e) {
                 if (e.__typename) {
                     if (void 0 !== e.id) return e.__typename + ":" + e.id;
                     if (void 0 !== e._id) return e.__typename + ":" + e._id
                 }
                 return null
             }
-            var fe = function(e) {
+            var de = function(e) {
                 function t(t) {
                     void 0 === t && (t = {});
                     var n = e.call(this) || this;
-                    return n.optimistic = [], n.watches = [], n.silenceBroadcast = !1, n.config = ue({}, ce, t), n.config.customResolvers && (console.warn("customResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating customResolvers in the next major version."), n.config.cacheRedirects = n.config.customResolvers), n.config.cacheResolvers && (console.warn("cacheResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating cacheResolvers in the next major version."), n.config.cacheRedirects = n.config.cacheResolvers), n.addTypename = n.config.addTypename, n.data = n.config.storeFactory(), n
+                    return n.optimistic = [], n.watches = [], n.silenceBroadcast = !1, n.config = le({}, fe, t), n.config.customResolvers && (console.warn("customResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating customResolvers in the next major version."), n.config.cacheRedirects = n.config.customResolvers), n.config.cacheResolvers && (console.warn("cacheResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating cacheResolvers in the next major version."), n.config.cacheRedirects = n.config.cacheResolvers), n.addTypename = n.config.addTypename, n.data = n.config.storeFactory(), n
                 }
-                return se(t, e), t.prototype.restore = function(e) {
+                return ce(t, e), t.prototype.restore = function(e) {
                     return e && this.data.replace(e), this
                 }, t.prototype.extract = function(e) {
                     if (void 0 === e && (e = !1), e && this.optimistic.length > 0) {
@@ -30633,7 +30703,7 @@
                     }
                     return this.data.toObject()
                 }, t.prototype.read = function(e) {
-                    return e.rootId && void 0 === this.data.get(e.rootId) ? null : ee({
+                    return e.rootId && void 0 === this.data.get(e.rootId) ? null : te({
                         store: this.config.storeFactory(this.extract(e.optimistic)),
                         query: this.transformDocument(e.query),
                         variables: e.variables,
@@ -30643,7 +30713,7 @@
                         config: this.config
                     })
                 }, t.prototype.write = function(e) {
-                    L({
+                    F({
                         dataId: e.dataId,
                         result: e.result,
                         variables: e.variables,
@@ -30653,7 +30723,7 @@
                         fragmentMatcherFunction: this.config.fragmentMatcher.match
                     }), this.broadcastWatches()
                 }, t.prototype.diff = function(e) {
-                    return ne({
+                    return re({
                         store: this.config.storeFactory(this.extract(e.optimistic)),
                         query: this.transformDocument(e.query),
                         variables: e.variables,
@@ -30688,7 +30758,7 @@
                 }, t.prototype.recordOptimisticTransaction = function(e, t) {
                     var n = this;
                     this.silenceBroadcast = !0;
-                    var r = ae(this.extract(!0), function(t) {
+                    var r = ue(this.extract(!0), function(t) {
                         var r = n.data;
                         n.data = t, n.performTransaction(e), n.data = r
                     });
@@ -30740,16 +30810,28 @@
                 }, t
             }(C);
             n.d(t, "a", function() {
-                return fe
+                return de
             }), n.d(t, "c", function() {
-                return le
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {
+                return pe
+            }), n.d(t, !1, function() {
                 return ee
             }), n.d(t, !1, function() {
-                return ne
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
+                return te
+            }), n.d(t, !1, function() {
+                return re
+            }), n.d(t, !1, function() {
+                return oe
+            }), n.d(t, !1, function() {
+                return D
+            }), n.d(t, !1, function() {
+                return N
+            }), n.d(t, !1, function() {
                 return L
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {
+            }), n.d(t, !1, function() {
+                return F
+            }), n.d(t, !1, function() {
+                return q
+            }), n.d(t, !1, function() {
                 return T
             }), n.d(t, "b", function() {
                 return P
@@ -30757,8 +30839,10 @@
                 return M
             }), n.d(t, !1, function() {
                 return j
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return ae
+            }), n.d(t, !1, function() {
+                return se
+            }), n.d(t, !1, function() {
+                return ue
             })
         },
         oJmH: function(e, t, n) {
@@ -32971,7 +33055,8 @@
             function c(e) {
                 return e.request.length <= 1
             }
-            var l = function(e) {
+
+            function l(e) {
                 var t = !1;
                 return new Promise(function(n, r) {
                     e.subscribe({
@@ -32981,15 +33066,24 @@
                         error: r
                     })
                 })
-            };
+            }
+            var f = l;
 
-            function f(e) {
+            function p(e) {
+                return new o(function(t) {
+                    e.then(function(e) {
+                        t.next(e), t.complete()
+                    }).catch(t.error.bind(t))
+                })
+            }
+
+            function d(e) {
                 return new o(function(t) {
                     t.error(e)
                 })
             }
 
-            function p(e, t) {
+            function h(e, t) {
                 var n = s({}, e);
                 return Object.defineProperty(t, "setContext", {
                     enumerable: !1,
@@ -33010,61 +33104,61 @@
                     }
                 }), t
             }
-            var d = function(e, t) {
+            var v = function(e, t) {
                     return t ? t(e) : o.of()
                 },
-                h = function(e) {
-                    return "function" == typeof e ? new b(e) : e
+                m = function(e) {
+                    return "function" == typeof e ? new w(e) : e
                 },
-                v = function() {
-                    return new b(function(e, t) {
+                y = function() {
+                    return new w(function(e, t) {
                         return o.of()
                     })
                 },
-                m = function(e) {
-                    return 0 === e.length ? v() : e.map(h).reduce(function(e, t) {
+                g = function(e) {
+                    return 0 === e.length ? y() : e.map(m).reduce(function(e, t) {
                         return e.concat(t)
                     })
                 },
-                y = function(e, t, n) {
-                    void 0 === n && (n = new b(d));
-                    var r = h(t),
-                        i = h(n);
-                    return c(r) && c(i) ? new b(function(t) {
+                b = function(e, t, n) {
+                    void 0 === n && (n = new w(v));
+                    var r = m(t),
+                        i = m(n);
+                    return c(r) && c(i) ? new w(function(t) {
                         return e(t) ? r.request(t) || o.of() : i.request(t) || o.of()
-                    }) : new b(function(t, n) {
+                    }) : new w(function(t, n) {
                         return e(t) ? r.request(t, n) || o.of() : i.request(t, n) || o.of()
                     })
                 },
-                g = function(e, t) {
-                    var n = h(e);
+                _ = function(e, t) {
+                    var n = m(e);
                     if (c(n)) return console.warn(new u("You are calling concat on a terminating link, which will have no effect", n)), n;
-                    var r = h(t);
-                    return c(r) ? new b(function(e) {
+                    var r = m(t);
+                    return c(r) ? new w(function(e) {
                         return n.request(e, function(e) {
                             return r.request(e) || o.of()
                         }) || o.of()
-                    }) : new b(function(e, t) {
+                    }) : new w(function(e, t) {
                         return n.request(e, function(e) {
                             return r.request(e, t) || o.of()
                         }) || o.of()
                     })
                 },
-                b = function() {
+                w = function() {
                     function e(e) {
                         e && (this.request = e)
                     }
                     return e.prototype.split = function(t, n, r) {
-                        return void 0 === r && (r = new e(d)), this.concat(y(t, n, r))
+                        return void 0 === r && (r = new e(v)), this.concat(b(t, n, r))
                     }, e.prototype.concat = function(e) {
-                        return g(this, e)
+                        return _(this, e)
                     }, e.prototype.request = function(e, t) {
                         throw new Error("request is not implemented")
-                    }, e.empty = v, e.from = m, e.split = y, e.execute = _, e
+                    }, e.empty = y, e.from = g, e.split = b, e.execute = x, e
                 }();
 
-            function _(e, t) {
-                return e.request(p(t.context, function(e) {
+            function x(e, t) {
+                return e.request(h(t.context, function(e) {
                     var t = {
                         variables: e.variables || {},
                         extensions: e.extensions || {},
@@ -33086,16 +33180,28 @@
                     return e
                 }(t)))) || o.of()
             }
-            n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "a", function() {
+            n.d(t, !1, function() {
+                return y
+            }), n.d(t, !1, function() {
+                return g
+            }), n.d(t, !1, function() {
                 return b
-            }), n.d(t, "c", function() {
+            }), n.d(t, !1, function() {
                 return _
+            }), n.d(t, "a", function() {
+                return w
+            }), n.d(t, "c", function() {
+                return x
+            }), n.d(t, !1, function() {
+                return h
+            }), n.d(t, "e", function() {
+                return f
+            }), n.d(t, !1, function() {
+                return l
             }), n.d(t, !1, function() {
                 return p
-            }), n.d(t, "e", function() {
-                return l
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "d", function() {
-                return f
+            }), n.d(t, "d", function() {
+                return d
             }), n.d(t, "b", function() {
                 return o
             })
