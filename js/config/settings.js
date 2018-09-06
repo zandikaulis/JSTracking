@@ -108,7 +108,7 @@ window.__twilightSettings = {
     "spade_url": "https://video-edge-e9a0cd.sjc02.hls.ttvnw.net/v1/segment/CveO5ge_3rV16TjWCHRSMSsjM3ubYrWYNG4bI3BrzgXqvq8FcBKHgPS9iGQ8s2Rgr0MvS-u8pWtEOZuiu7MLT3LwZGQbjYGvjJbJi2sKBgAXUyLLnEJIqD1ZY3JHvurXixDE34E-SVG27m_fDuyVwR-irR7Z1YVOHXiIV1GXpC78ohXrco-sVCFTB0KbepUJgS60vXTJ89UHqOxk-MaM-6m8AxREqFZzqm9yz18bmtiLj_RnpbWfQb7y82hKub8pl8sS6KK4raC-2tFePl269t4dUpU_nZoktLlnQdmajFhQHYQeVzgs8JG5fgcX6rqBfQuSfgOPKYg0KyoitnCsGJDY8zehf4krqH4P782Rq0q7bk1q--1vJB3zNQsqcj08HuxrZb08Iwk2lBRiQetRpCLD-8D5k1jtBTLgQuXRiam3Lde8pJMA7HT6JX87BpmMBHt3tKRpeZpKVRo8PAhX3aEKTWylWTMSv90ll-fHa1F_z7mPLQXQCBgzbSTS47tDlCKalrggcTlP8MJl2eF4kjENF_6H6BaQIpOuIVwUlkUpDXo3RKlM7TFszvgUHbtgoZG4OWFIqOLkNMkVmmFxhFTl16zCC0hT6UCBicjAN6XOVFdeeVhgvmJiJYHZnwFGDJLA-Lr3xhRw6XhtCAhEFPXs-1FD7q-Ff3UdcaX4v-TH4LIuPeWvQR-PCTfaoBL8xufHKAtVmYYA06BbcsGGj1qvZRtQOKbbeOkw8tPwVLLzuiiESTKE85HFiGx3ZD4NaXMgAm4.ts",
     "squad_stream_banner_query_enabled": true,
     "squad_stream_banner_whitelist": [],
-    "squad_stream_feature": "off",
+    "squad_stream_feature": "on",
     "squad_stream_page_whitelist": [],
     "squad_stream_survey_url": "",
     "squad_stream_uxr_logins": [],
