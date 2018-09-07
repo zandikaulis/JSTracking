@@ -34,7 +34,7 @@ window.__twilightSettings = {
     "comscore_url": "https://sb.scorecardresearch.com/beacon.js",
     "consolidated_dashboard_settings": "off",
     "creator_camp_launch": "all",
-    "creator_subtember2018_launch": "off",
+    "creator_subtember2018_launch": "on",
     "dashboard_moderation_settings_enabled": true,
     "dashboard_payout_history": true,
     "dashboard_vp_widget_enabled": true,
@@ -1435,13 +1435,13 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4563,
+            "v": 4570,
             "t": 1,
             "groups": [{
-                "weight": 5,
+                "weight": 20,
                 "value": "2.6.7"
             }, {
-                "weight": 95,
+                "weight": 80,
                 "value": "2.6.3"
             }]
         },
