@@ -30519,56 +30519,13 @@
                 h = n("lTz2"),
                 f = n("Ue10");
             n("wksc");
-
-            function g(e) {
-                return e.theatreModeEnabled && !e.mini
-            }
-
-            function v(e) {
-                var t, n = e.mainRef.getBoundingClientRect();
-                if (g(e)) t = {
-                    position: "fixed",
-                    left: 0,
-                    top: 0,
-                    maxHeight: "100vh",
-                    height: "100%",
-                    width: e.rightNavCollapsed ? "100%" : "calc(100% - " + p.a + ")",
-                    zIndex: 3e3
-                };
-                else if (e.mini) t = {
-                    position: "fixed",
-                    width: "28rem",
-                    height: "15.75rem",
-                    left: n.left,
-                    bottom: 0,
-                    margin: "1rem",
-                    zIndex: 1e3
-                };
-                else {
-                    var i = e.contentRef.getBoundingClientRect(),
-                        r = i.left - n.left,
-                        a = n.right - i.right;
-                    t = {
-                        top: i.top - n.top,
-                        left: r,
-                        position: "absolute",
-                        width: "100%",
-                        maxWidth: "calc(100% - " + (r + a) + "px)",
-                        maxHeight: "calc(100vh - 16rem)",
-                        overflow: "hidden",
-                        height: "auto"
-                    }
-                }
-                return t
-            }! function(e) {
+            ! function(e) {
                 e.ClipsPlayer = "clips-player", e.DefaultPlayer = "default-player"
             }(i || (i = {}));
-            var b = function(e) {
+            var g = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            playerStyles: v(t.props)
-                        }, t.renderMiniHoverControls = function() {
+                        return t.state = {}, t.renderMiniHoverControls = function() {
                             var e = t.state.isPaused ? Object(s.d)("Play", "PersistentPlayerMini") : Object(s.d)("Pause", "PersistentPlayerMini");
                             return a.createElement(f.ub, {
                                 className: "persistent-player__hover-controls",
@@ -30664,24 +30621,55 @@
                             t.props.theatreModeEnabled && t.props.disableTheatreMode()
                         }, t
                     }
-                    return r.__extends(t, e), t.getDerivedStateFromProps = function(e) {
-                        var t = {};
-                        return t.playerStyles = v(e), t
+                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                        Object(h.b)(this.props.options.playerProps, e.options.playerProps) && this.setState({
+                            shouldPause: !1
+                        })
                     }, t.prototype.componentDidMount = function() {
                         this.historyUnlisten = this.props.history.listen(this.handleLocationChange)
                     }, t.prototype.componentWillUnmount = function() {
                         this.handleLocationChange(), this.historyUnlisten()
-                    }, t.prototype.componentDidUpdate = function(e) {
-                        this.props.mini && e.sideNavCollapsed !== this.props.sideNavCollapsed && this.setState({
-                            playerStyles: v(this.props)
-                        }), Object(h.b)(e.options.playerProps, this.props.options.playerProps) && this.setState({
-                            shouldPause: !1
-                        })
                     }, t.prototype.render = function() {
-                        var e = d({
-                                "persistent-player--theatre": g(this.props)
+                        var e, t = this.props.theatreModeEnabled && !this.props.mini,
+                            n = d({
+                                "persistent-player--theatre": t
                             }),
-                            t = a.createElement(m.c, r.__assign({
+                            o = this.props.mainRef.getBoundingClientRect(),
+                            s = 0;
+                        if (t) e = {
+                            position: "fixed",
+                            left: 0,
+                            top: 0,
+                            maxHeight: "100vh",
+                            height: "100%",
+                            width: this.props.rightNavCollapsed ? "100%" : "calc(100% - " + p.a + ")",
+                            zIndex: 3e3
+                        };
+                        else if (this.props.mini) e = {
+                            position: "fixed",
+                            width: "28rem",
+                            height: "15.75rem",
+                            left: o.left,
+                            bottom: 0,
+                            margin: "1rem",
+                            zIndex: 1e3
+                        }, s = 5;
+                        else {
+                            var l = this.props.contentRef.getBoundingClientRect(),
+                                c = l.left - o.left,
+                                u = o.right - l.right;
+                            e = {
+                                top: l.top - o.top,
+                                left: c,
+                                position: "absolute",
+                                width: "100%",
+                                maxWidth: "calc(100% - " + (c + u) + "px)",
+                                maxHeight: "calc(100vh - 16rem)",
+                                overflow: "hidden",
+                                height: "auto"
+                            }
+                        }
+                        var h = a.createElement(m.c, r.__assign({
                                 key: i.DefaultPlayer,
                                 "data-test-selector": i.DefaultPlayer
                             }, this.props.options.playerProps, {
@@ -30690,7 +30678,7 @@
                                 paused: this.state.shouldPause,
                                 onPauseToggled: this.onPauseToggled
                             })),
-                            n = a.createElement(m.c, r.__assign({
+                            g = a.createElement(m.c, r.__assign({
                                 key: i.ClipsPlayer,
                                 "data-test-selector": i.ClipsPlayer
                             }, this.props.options.playerProps, {
@@ -30699,22 +30687,22 @@
                                 paused: this.state.shouldPause,
                                 onPauseToggled: this.onPauseToggled
                             })),
-                            o = this.props.options.playerProps.clipSlug ? n : t;
+                            v = this.props.options.playerProps.clipSlug ? g : h;
                         return a.createElement(f.Ma, {
-                            elevation: this.props.mini ? 5 : 0,
+                            elevation: s,
                             className: d({
                                 "persistent-player__border--mini": this.props.mini
                             }),
                             borderRadius: this.props.mini ? f.v.Medium : f.v.None,
                             overflow: this.props.mini ? f.Wa.Hidden : void 0
                         }, a.createElement("div", {
-                            className: d("persistent-player", e),
-                            style: this.state.playerStyles
-                        }, a.createElement(f.m, null, o), this.props.mini && this.renderMiniInterceptPointerView(), this.props.mini && this.renderMiniHoverControls()))
+                            className: d("persistent-player", n),
+                            style: e
+                        }, a.createElement(f.m, null, v), this.props.mini && this.renderMiniInterceptPointerView(), this.props.mini && this.renderMiniHoverControls()))
                     }, t
                 }(a.Component),
-                y = Object(o.f)(b);
-            var k, E = Object(l.b)(function(e) {
+                v = Object(o.f)(g);
+            var b, y = Object(l.b)(function(e) {
                     return {
                         sideNavCollapsed: !e.ui.sideNavExpanded,
                         rightNavCollapsed: !e.ui.rightColumnExpanded,
@@ -30724,15 +30712,15 @@
                     return Object(c.b)({
                         disableTheatreMode: u.C
                     }, e)
-                })(y),
-                S = n("9UKx"),
-                _ = n("p5Wp");
+                })(v),
+                k = n("9UKx"),
+                E = n("p5Wp");
             n.d(t, "b", function() {
-                return k
+                return b
             }), n.d(t, "a", function() {
-                return w
+                return _
             });
-            var C = function(e) {
+            var S = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.logger = s.j.withCategory("PersistentPlayerRoot"), n.trackMiniPlayerAction = function(e, t) {
@@ -30740,12 +30728,12 @@
                         }, n.setVideoPlayerRef = function(e) {
                             return n.videoPlayerComponent = e
                         }, n.onClickExpand = function() {
-                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerExpand ? n.state.overrides.onMiniPlayerExpand() : (n.props.history.push(n.state.options.miniPlayerContentRoute), n.trackMiniPlayerAction(S.a.ExpandPlayer, S.b.UserMaximize)))
+                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerExpand ? n.state.overrides.onMiniPlayerExpand() : (n.props.history.push(n.state.options.miniPlayerContentRoute), n.trackMiniPlayerAction(k.a.ExpandPlayer, k.b.UserMaximize)))
                         }, n.onClickDismiss = function() {
-                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerDismiss ? n.state.overrides.onMiniPlayerDismiss() : (n.destroyPlayer(), n.trackMiniPlayerAction(S.a.CloseMini, S.b.UserMinimize)))
+                            n.state.options && (n.state.overrides && n.state.overrides.onMiniPlayerDismiss ? n.state.overrides.onMiniPlayerDismiss() : (n.destroyPlayer(), n.trackMiniPlayerAction(k.a.CloseMini, k.b.UserMinimize)))
                         }, n.onHistoryChange = function(e) {
                             var t = n.props.isLoggedIn,
-                                i = Object(_.a)({
+                                i = Object(E.a)({
                                     isLoggedIn: t,
                                     location: e
                                 });
@@ -30758,11 +30746,11 @@
                         return n.state = {
                             isError: !1,
                             mini: !1,
-                            hideSideNav: Object(_.a)({
+                            hideSideNav: Object(E.a)({
                                 isLoggedIn: i,
                                 location: r
                             })
-                        }, k && n.logger.warn("attempting to create a second instance of the Persistent Player Root. There should only be one in <Root>, use <PersistentPlayerContent> instead."), k = n, n
+                        }, b && n.logger.warn("attempting to create a second instance of the Persistent Player Root. There should only be one in <Root>, use <PersistentPlayerContent> instead."), b = n, n
                     }
                     return r.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
                         var n = this;
@@ -30778,7 +30766,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.historyUnlisten && this.historyUnlisten()
                     }, t.prototype.render = function() {
-                        return !this.state.isError && this.state.options && this.state.contentRef && this.props.mainRef ? a.createElement(E, {
+                        return !this.state.isError && this.state.options && this.state.contentRef && this.props.mainRef ? a.createElement(y, {
                             options: this.state.options,
                             contentRef: this.state.contentRef,
                             mainRef: this.props.mainRef,
@@ -30801,7 +30789,7 @@
                         })
                     }, t.prototype.requestVideoContent = function(e) {
                         var t = this.state.options && this.state.options.playerProps;
-                        Object(h.b)(t, e.options.playerProps) && this.trackMiniPlayerAction(S.a.ContentChange, ""), this.setState({
+                        Object(h.b)(t, e.options.playerProps) && this.trackMiniPlayerAction(k.a.ContentChange, ""), this.setState({
                             contentRef: e.ref,
                             options: e.options,
                             overrides: e.overrides
@@ -30809,11 +30797,11 @@
                     }, t.prototype.transitionToMiniPlayer = function(e) {
                         this.setState({
                             mini: !0
-                        }), this.props.beginPersistingPlayer(), e && this.trackMiniPlayerAction(S.a.OpenMini, e)
+                        }), this.props.beginPersistingPlayer(), e && this.trackMiniPlayerAction(k.a.OpenMini, e)
                     }, t.prototype.transitionToAnchoredPlayer = function(e) {
                         this.setState({
                             mini: !1
-                        }), this.props.stopPersistingPlayer(), e && this.trackMiniPlayerAction(S.a.CloseMini, e)
+                        }), this.props.stopPersistingPlayer(), e && this.trackMiniPlayerAction(k.a.CloseMini, e)
                     }, t.prototype.reposition = function() {
                         var e = this.state.forcePresentationRender;
                         this.setState({
@@ -30821,7 +30809,7 @@
                         })
                     }, t
                 }(a.Component),
-                w = Object(o.f)(C)
+                _ = Object(o.f)(S)
         },
         WroD: function(e, t) {
             var n = {
