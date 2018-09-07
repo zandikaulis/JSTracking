@@ -2277,7 +2277,7 @@ MediaPlayer.prototype.getVideoHeight = function () {
 }
 
 MediaPlayer.prototype.getVideoFrameRate = function () {
-    return this._stats.videoFrameRate;
+    return this._mediaSink.framerate();
 }
 
 MediaPlayer.prototype.getVideoBitRate = function () {
@@ -2285,7 +2285,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-f4415c16";
+    return "2.3.0-e1bbd42d";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2496,7 +2496,6 @@ MediaPlayer.prototype._resetState = function () {
     // Statistics calculated in the client
     objectAssign(this._stats, {
         videoBitRate: 0,
-        videoFrameRate: 0, // fps in Hz
         broadcasterLatency: 0, // seconds of end-to-end latency
         transcoderLatency: 0, // seconds of latency from gotranscoder to the player
         networkProfile: [], // moving window of network stats for segment downloads
@@ -2686,7 +2685,8 @@ MediaPlayer.prototype._onSinkTimeUpdate = function () {
         this._postMessage(WorkerMessage.SINK_UPDATE, {
             currentTime: this._mediaSink.currentTime(),
             decodedFrames: this._mediaSink.decodedFrames(),
-            droppedFrames: this._mediaSink.droppedFrames()
+            droppedFrames: this._mediaSink.droppedFrames(),
+            framerate: this._mediaSink.framerate(),
         });
         this._emitter.emit(PlayerEvent.TIME_UPDATE);
     }
@@ -3140,13 +3140,7 @@ MediaSink.prototype.bufferDuration = function () {
  * @return {number} num decoded frames
  */
 MediaSink.prototype.decodedFrames = function () {
-    if (typeof this._video.webkitDecodedFrameCount === 'number') {
-        return this._video.webkitDecodedFrameCount;
-    } else if (typeof this._video.mozDecodedFrames === 'number') {
-        return this._video.mozDecodedFrames;
-    } else {
-        return UNKNOWN;
-    }
+    return getDecodedFrames(this._video);
 };
 
 /**
@@ -3162,6 +3156,10 @@ MediaSink.prototype.droppedFrames = function () {
     } else {
         return UNKNOWN;
     }
+};
+
+MediaSink.prototype.framerate = function () {
+    return this._playbackMonitor.framerate();
 };
 
 /**
@@ -3223,6 +3221,16 @@ MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
 // internal
 
 function noop() {}
+
+function getDecodedFrames(video){
+    if (typeof video.webkitDecodedFrameCount === 'number') {
+        return video.webkitDecodedFrameCount;
+    } else if (typeof this._video.mozDecodedFrames === 'number') {
+        return video.mozDecodedFrames;
+    } else {
+        return UNKNOWN;
+    }
+}
 
 /**
  * @return {Number} buffered.start - start of current buffer
@@ -3413,6 +3421,9 @@ function PlaybackMonitor(video, config) {
     this._webkitFullScreen = false;
     this._lastPlayhead = 0;
     this._lastBufferEnd = 0;
+    this._fps = 0;
+    this._lastDecodedFrames = 0;
+    this._lastTimeUpdate = performance.now();
 
     var addListener = function (type, handler) {
         this._video.addEventListener(type, handler);
@@ -3446,6 +3457,10 @@ PlaybackMonitor.prototype.pause = function () {
     this._video.pause();
 };
 
+PlaybackMonitor.prototype.framerate = function () {
+    return this._fps;
+};
+
 PlaybackMonitor.prototype._onVideoPlay = function () {
     this._lastPlayhead = this._video.currentTime;
     clearInterval(this._intervalId);
@@ -3458,6 +3473,13 @@ PlaybackMonitor.prototype._onVideoPause = function () {
 };
 
 PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
+    // Update framerate
+    var decoded = getDecodedFrames(this._video);
+    var now = performance.now();
+    this._fps = 1000 * Math.max(decoded - this._lastDecodedFrames, 0) / (now - this._lastTimeUpdate);
+    this._lastDecodedFrames = decoded;
+    this._lastTimeUpdate = now;
+
     this._ontimeupdate();
     var buffered = getBufferedRange(this._video);
     this._checkBufferUpdate(buffered);
