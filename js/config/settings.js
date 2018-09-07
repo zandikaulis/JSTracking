@@ -136,6 +136,7 @@ window.__twilightSettings = {
     "update_manager_enabled": true,
     "update_manager_interval": 300000,
     "viewer_milestones_enabled": true,
+    "vip_badge": false,
     "vod_archives_vira_grand": "on",
     "vod_editing_used_to_this": true,
     "vodcast_deprecation_announcement_enabled": true,
