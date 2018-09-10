@@ -2285,7 +2285,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-3f94cb70";
+    return "2.3.0-ea80fc54";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2766,11 +2766,13 @@ function isMSESupported() {
  */
 function getSupportedKeySystem(browser) {
     // Safari
-    if (window.WebKitMediaKeys && typeof WebKitMediaKeys.isTypeSupported === 'function') {
-        if (WebKitMediaKeys.isTypeSupported(KEY_SYSTEMS.FAIRPLAY.keySystem)) {
-            return KEY_SYSTEMS.FAIRPLAY.uuid
-        }
-    }
+    // We've currently disabled Safari due to playback issues.
+    // TODO: Add this back once Safari works
+    // if (window.WebKitMediaKeys && typeof WebKitMediaKeys.isTypeSupported === 'function') {
+    //     if (WebKitMediaKeys.isTypeSupported(KEY_SYSTEMS.FAIRPLAY.keySystem)) {
+    //         return KEY_SYSTEMS.FAIRPLAY.uuid
+    //     }
+    // }
 
     // We can't synchronously check playready or widevine
     if (typeof navigator.requestMediaKeySystemAccess === 'function') {
@@ -3225,7 +3227,7 @@ function noop() {}
 function getDecodedFrames(video){
     if (typeof video.webkitDecodedFrameCount === 'number') {
         return video.webkitDecodedFrameCount;
-    } else if (typeof this._video.mozDecodedFrames === 'number') {
+    } else if (typeof video.mozDecodedFrames === 'number') {
         return video.mozDecodedFrames;
     } else {
         return UNKNOWN;
