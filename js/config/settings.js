@@ -42,7 +42,7 @@ window.__twilightSettings = {
     "detector_urls": ["https://s0.2mdn.net/", "https://adservice.google.com", "https://pagead2.googlesyndication.com/", "https://r.nexac.com/e/getdata.xgi?foo=bar"],
     "dev_insights_feature_launch": "on",
     "drops_itemnames_enabled": false,
-    "earth_wind_fire": false,
+    "earth_wind_fire": true,
     "earth_wind_fire_end": "2018-11-02T59:59:59Z",
     "earth_wind_fire_start": "2018-09-10T00:00:00Z",
     "env_test": "This is a test in Production.",
