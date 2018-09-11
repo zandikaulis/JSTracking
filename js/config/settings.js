@@ -57,6 +57,7 @@ window.__twilightSettings = {
     "esport_insider_prime_bits_launch": "on",
     "esport_insider_prime_bits_launch_user_whitelist": ["186243532", "215590603"],
     "esports_room_cheering_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249-staff", "104874624"],
+    "eu_respawn_enabled": "off",
     "event_directory_enabled_games": [],
     "extensions_mve_banner_enabled": true,
     "extensions_popout_enabled": "on",
