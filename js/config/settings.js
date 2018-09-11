@@ -94,7 +94,7 @@ window.__twilightSettings = {
     "prime-free-offer-ids": [],
     "prime-loot-page-hidden-ids": [],
     "prime_blocked_regions": ["IN", "IND", "CU", "CUB", "SD", "SUD", "IR", "IRN", "CHN", "CN", "SY", "SYR", "PRK", "KP"],
-    "prime_gift_experiment_offer_ids": [],
+    "prime_gift_experiment_offer_ids": ["5cb2b166-f152-786b-c6bd-f885d83ca38f"],
     "prime_landing_page_base_url": "https://twitch.amazon.com/prime/country",
     "prime_loot_top_offer_list": "Game",
     "prime_promo_content_base_url": "https://twitch.amazon.com/prime",
