@@ -128,7 +128,7 @@
                         !this.props.display && e.display && Object(b.d)()
                     }, t.prototype.render = function() {
                         return this.props.display ? r.createElement(y.Ta, {
-                            className: Object(m.a)(p.a.Dark),
+                            className: Object(m.b)(p.a.Dark),
                             flexShrink: 0
                         }, r.createElement(y.ub, {
                             className: "gdpr-consent-banner",
@@ -687,7 +687,11 @@
                         }, i.createElement(r.Db, {
                             label: t.localizedName,
                             type: e.style,
-                            linkTo: e.createTagURL(t)
+                            linkTo: e.linkPath && e.linkPath.replace(":tagID", t.id),
+                            onClick: function() {
+                                e.callback && e.callback(t)
+                            },
+                            "data-a-target": t.localizedName
                         }))
                     }))
                 };
@@ -1963,6 +1967,16 @@
                 }
             };
             e.exports = n
+        },
+        "3W+h": function(e, t, n) {
+            "use strict";
+            var i;
+            n.d(t, "a", function() {
+                    return i
+                }),
+                function(e) {
+                    e.Communities = "/directory/communities", e.CreativeCommunities = "/directory/creative", e.Games = "/directory", e.DirectoryCategory = "/directory/:category?", e.DirectoryTag = "/directory/tags/:tagID", e.Popular = "/directory/all", e.PopularEncodedLanguage = "/directory/all/:encodedLanguage", e.PopularPlaystation = "/directory/all/ps4", e.PopularTag = "/directory/all/tags/:tagID", e.PopularXbox = "/directory/all/xbox", e.TagCreative = "/directory/tags/creative"
+                }(i || (i = {}))
         },
         "3qZk": function(e, t, n) {
             e.exports = n.p + "assets/friend_requests-aec9595d7e19764bc23d.png"
@@ -4043,7 +4057,7 @@
                 T = n("Two0"),
                 N = function() {
                     function e(e, t) {
-                        this.activeOperations = [], this.logger = e.withCategory("tmi");
+                        this.logger = e.withCategory("tmi");
                         var n = this.getConnectionOptions(t);
                         this.disabled = n.disabled, this.logger.debug("Creating TMI client", n), this.client = new T.a({
                             connection: n,
@@ -4085,100 +4099,43 @@
                         } catch (e) {
                             this.logger.warn("Failed to disconnect client!", e)
                         }
-                    }, e.prototype.getCurrentChannel = function() {
-                        return this.currentChannel
                     }, e.prototype.join = function(e) {
                         return C.__awaiter(this, void 0, void 0, function() {
-                            return C.__generator(this, function(t) {
-                                switch (t.label) {
+                            var t, n;
+                            return C.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return this.disabled ? [2] : [4, this.setChannel(e)];
+                                        if (this.disabled) return [2];
+                                        (t = this.logger.withCategory("setChannel").withCategory("join")).info("begin", e), i.label = 1;
                                     case 1:
-                                        return t.sent(), [2]
-                                }
-                            })
-                        })
-                    }, e.prototype.part = function() {
-                        return C.__awaiter(this, void 0, void 0, function() {
-                            return C.__generator(this, function(e) {
-                                switch (e.label) {
-                                    case 0:
-                                        return [4, this.setChannel(null)];
-                                    case 1:
-                                        return e.sent(), [2]
-                                }
-                            })
-                        })
-                    }, e.prototype.setChannel = function(e) {
-                        return C.__awaiter(this, void 0, void 0, function() {
-                            var t, n, i, r, a = this;
-                            return C.__generator(this, function(o) {
-                                switch (o.label) {
-                                    case 0:
-                                        (t = this.logger.withCategory("setChannel").withCategory(e ? "join" : "part")).info("begin", {
-                                            channel: e,
-                                            prevChannel: this.currentChannel
-                                        }), o.label = 1;
-                                    case 1:
-                                        o.trys.push([1, 6, , 7]), n = null, o.label = 2;
+                                        return i.trys.push([1, 4, , 5]), [4, this.ensureConnected()];
                                     case 2:
-                                        return o.trys.push([2, , 4, 5]), n = new Promise(function(n) {
-                                            return C.__awaiter(a, void 0, void 0, function() {
-                                                var i, r;
-                                                return C.__generator(this, function(a) {
-                                                    switch (a.label) {
-                                                        case 0:
-                                                            return a.trys.push([0, 8, 9, 10]), this.activeOperations.length > 0 ? (t.info("awaiting active operations", {
-                                                                channel: e,
-                                                                prevChannel: this.currentChannel
-                                                            }), [4, Promise.all(this.activeOperations)]) : [3, 2];
-                                                        case 1:
-                                                            a.sent(), a.label = 2;
-                                                        case 2:
-                                                            return [4, this.ensureConnected()];
-                                                        case 3:
-                                                            return a.sent(), this.currentChannel ? [4, this.client.partChannel(this.currentChannel)] : [3, 5];
-                                                        case 4:
-                                                            if (!a.sent().response.succeeded) throw new Error("failed to part channel");
-                                                            i = e ? "parted previous channel" : "success", t.info(i, {
-                                                                channel: e,
-                                                                prevChannel: this.currentChannel
-                                                            }), this.currentChannel = null, a.label = 5;
-                                                        case 5:
-                                                            return e ? [4, this.client.joinChannel(e)] : [3, 7];
-                                                        case 6:
-                                                            if (!a.sent().response.succeeded) throw new Error("failed to join channel");
-                                                            t.info("success", {
-                                                                channel: e
-                                                            }), this.currentChannel = e, a.label = 7;
-                                                        case 7:
-                                                            return [3, 10];
-                                                        case 8:
-                                                            return r = a.sent(), t.warn(r, "operation failed to complete", {
-                                                                channel: e,
-                                                                prevChannel: this.currentChannel
-                                                            }), [3, 10];
-                                                        case 9:
-                                                            return n(), [7];
-                                                        case 10:
-                                                            return [2]
-                                                    }
-                                                })
-                                            })
-                                        }), this.activeOperations.push(n), [4, n];
+                                        return i.sent(), [4, this.client.joinChannel(e)];
                                     case 3:
-                                        return o.sent(), [3, 5];
+                                        return (n = i.sent()) ? n.response.succeeded ? t.info("success", e) : t.warn("failed to join channel", e) : t.warn("received no acknowledgement", e), [3, 5];
                                     case 4:
-                                        return n && (i = this.activeOperations.indexOf(n)) >= 0 && this.activeOperations.splice(i, 1), [7];
+                                        return i.sent(), t.warn("failed to join channel", e), [3, 5];
                                     case 5:
-                                        return [3, 7];
-                                    case 6:
-                                        return r = o.sent(), t.warn("failed to set channel", {
-                                            channel: e,
-                                            err: r,
-                                            previousChannel: this.currentChannel
-                                        }), [3, 7];
-                                    case 7:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, e.prototype.part = function(e) {
+                        return C.__awaiter(this, void 0, void 0, function() {
+                            var t, n;
+                            return C.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        (t = this.logger.withCategory("setChannel").withCategory("part")).info("begin", e), i.label = 1;
+                                    case 1:
+                                        return i.trys.push([1, 4, , 5]), [4, this.ensureConnected()];
+                                    case 2:
+                                        return i.sent(), [4, this.client.partChannel(e)];
+                                    case 3:
+                                        return (n = i.sent()) ? n.response.succeeded ? t.info("success", e) : t.warn("failed to part channel", e) : t.warn("received no acknowledgement", e), [3, 5];
+                                    case 4:
+                                        return i.sent(), t.warn("failed to part channel", e), [3, 5];
+                                    case 5:
                                         return [2]
                                 }
                             })
@@ -5568,13 +5525,15 @@
         },
         "76Lv": function(e, t, n) {
             "use strict";
-            n.d(t, "c", function() {
-                return u
+            n.d(t, "a", function() {
+                return o
             }), n.d(t, "d", function() {
+                return u
+            }), n.d(t, "e", function() {
                 return p
-            }), n.d(t, "b", function() {
+            }), n.d(t, "c", function() {
                 return m
-            }), n.d(t, "a", function() {
+            }), n.d(t, "b", function() {
                 return h
             });
             var i = n("TSYQ"),
@@ -5947,7 +5906,7 @@
                             attachTop: !0,
                             refDelegate: this.setDomRef,
                             "data-target": "persistent-player-content",
-                            className: Object(c.a)(this.props.theme)
+                            className: Object(c.b)(this.props.theme)
                         })
                     }, t.prototype.transitionToMiniPlayer = function(e) {
                         d.b.transitionToMiniPlayer(e)
@@ -7179,7 +7138,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        var e, t = ((e = {})[Object(l.a)(s.a.Dark)] = this.props.forceDarkTheme, e),
+                        var e, t = ((e = {})[Object(l.b)(s.a.Dark)] = this.props.forceDarkTheme, e),
                             n = r.__assign({
                                 direction: c.t.Right,
                                 show: !0
@@ -7968,19 +7927,19 @@
                     return b
                 }), n.d(t, "h", function() {
                     return E
-                }), n.d(t, "y", function() {
+                }), n.d(t, "z", function() {
                     return _
-                }), n.d(t, "t", function() {
+                }), n.d(t, "u", function() {
                     return S
                 }), n.d(t, "l", function() {
                     return C
-                }), n.d(t, "s", function() {
+                }), n.d(t, "t", function() {
                     return N
-                }), n.d(t, "v", function() {
+                }), n.d(t, "w", function() {
                     return P
                 }), n.d(t, "r", function() {
                     return F
-                }), n.d(t, "w", function() {
+                }), n.d(t, "x", function() {
                     return U
                 }), n.d(t, "k", function() {
                     return G
@@ -7990,7 +7949,9 @@
                     return Q
                 }), n.d(t, "o", function() {
                     return K
-                }), n.d(t, "x", function() {
+                }), n.d(t, "s", function() {
+                    return X
+                }), n.d(t, "y", function() {
                     return me
                 }), n.d(t, "j", function() {
                     return _e
@@ -8004,7 +7965,7 @@
                     return Ve
                 }), n.d(t, "n", function() {
                     return He
-                }), n.d(t, "u", function() {
+                }), n.d(t, "v", function() {
                     return Ge
                 }), n.d(t, "p", function() {
                     return Ze
@@ -10727,14 +10688,14 @@
                 }), Object(ae.b)())(oe),
                 le = n("fk61"),
                 ce = n("N0BP"),
-                de = n("0LAi"),
-                ue = n("fVj5"),
-                pe = n("v85w"),
+                de = n("3W+h"),
+                ue = n("0LAi"),
+                pe = n("fVj5"),
                 me = (n("+nzp"), n("KRR4")),
                 he = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.tagExperiment = Object(ue.a)(), t.onClick = function(e) {
+                        return t.tagExperiment = Object(pe.a)(), t.onClick = function(e) {
                             t.props.trackClick(parseInt(t.props.id, 10)), t.props.onClick && t.props.onClick(e)
                         }, t
                     }
@@ -10824,9 +10785,9 @@
                             padding: {
                                 top: .5
                             }
-                        }, d.createElement(de.a, {
+                        }, d.createElement(ue.a, {
                             tags: this.props.tags,
-                            createTagURL: pe.b,
+                            linkPath: de.a.PopularTag,
                             style: w.Fb.Default
                         })))))));
                         var t = {
@@ -11169,7 +11130,7 @@
                 Re = (n("OjLy"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.tagExperiment = Object(ue.a)(), t.getGameCards = function(e) {
+                        return t.tagExperiment = Object(pe.a)(), t.getGameCards = function(e) {
                             return t.props.gameResults ? t.props.gameResults.results.map(function(n, i) {
                                 return d.createElement(le.a, {
                                     onClick: t.onClick,
@@ -11359,7 +11320,7 @@
                             headerSelect: this.videoHeaderSelect,
                             results: this.props.videoResults
                         }];
-                        Object(ue.a)() || e.push({
+                        Object(pe.a)() || e.push({
                             key: "communities-section",
                             getCardsFn: this.getCommunityCards,
                             index: be.a.Communities,
@@ -12481,7 +12442,7 @@
                         flexGrow: 1,
                         alignItems: w.d.Stretch,
                         fullHeight: !0,
-                        className: Object(tt.a)(Je.a.Dark)
+                        className: Object(tt.b)(Je.a.Dark)
                     }, d.createElement(w.Ta, {
                         display: w.U.Flex,
                         flexGrow: 1,
@@ -12738,7 +12699,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.unsubscribeFromHistory(), this.setUserToOffline()
                     }, t.prototype.render = function() {
-                        var e = te(Object(tt.a)(Je.a.Dark), {
+                        var e = te(Object(tt.b)(Je.a.Dark), {
                                 "top-nav-user-menu--dropdown-open": this.state.dropdownOpen
                             }),
                             t = null;
@@ -18005,7 +17966,7 @@
                         var e = Object.keys(h()).length > 0,
                             t = Object.keys(m()).length > 0;
                         return v.createElement(C.ub, {
-                            className: "staff-console staff-console--size-" + this.state.size + " " + Object(_.a)(E.a.Dark),
+                            className: "staff-console staff-console--size-" + this.state.size + " " + Object(_.b)(E.a.Dark),
                             position: C.ab.Fixed,
                             display: C.U.Flex
                         }, v.createElement(C.ub, {
@@ -27326,7 +27287,7 @@
                             },
                             time: Date.now()
                         }),
-                        t = Object(o.c)();
+                        t = Object(o.d)();
                     return u({
                         persistentPlayerEnabled: r.l.get(r.o.config.persistentPlayerEnabledKey, !0),
                         persistentPlayerIsPersisting: !1,
@@ -30341,7 +30302,7 @@
                         }, r.createElement(I.Ta, null, r.createElement(Me.a, null), r.createElement(M, {
                             collapsed: e
                         })))));
-                        var a = d("side-nav", Object(v.a)(g.a.Dark), {
+                        var a = d("side-nav", Object(v.b)(g.a.Dark), {
                                 "side-nav--collapsed": e
                             }),
                             o = e ? "side-nav-bar-collapsed" : "side-nav-bar",
@@ -31557,7 +31518,7 @@
                             isOpen: this.props.showModal,
                             contentLabel: "Modal",
                             className: "modal__content",
-                            overlayClassName: "modal__backdrop js-modal-backdrop " + Object(d.a)(this.props.theme),
+                            overlayClassName: "modal__backdrop js-modal-backdrop " + Object(d.b)(this.props.theme),
                             shouldCloseOnOverlayClick: !1
                         }, this.props.component && s.createElement(this.props.component, o.__assign({}, this.props.componentProps)))
                     }, t
@@ -34057,17 +34018,17 @@
                 o = n("/7QA"),
                 s = n("yR8l"),
                 l = n("N0BP"),
-                c = n("JVUd"),
-                d = n("25n4"),
-                u = n("0LAi"),
-                p = n("fVj5"),
-                m = n("v85w"),
+                c = n("3W+h"),
+                d = n("JVUd"),
+                u = n("25n4"),
+                p = n("0LAi"),
+                m = n("fVj5"),
                 h = n("Ue10"),
                 f = n("5hPa"),
                 g = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.isExperiment = Object(p.a)(), t.onClick = function(e) {
+                        return t.isExperiment = Object(m.a)(), t.onClick = function(e) {
                             t.props.trackClick(t.props.id), t.props.onClick && t.props.onClick(e)
                         }, t
                     }
@@ -34109,9 +34070,9 @@
                             padding: {
                                 top: .5
                             }
-                        }, r.createElement(u.a, {
+                        }, r.createElement(p.a, {
                             tags: this.props.tags,
-                            createTagURL: m.a,
+                            linkPath: c.a.DirectoryTag,
                             style: h.Fb.Default
                         })))))))
                     }, t
@@ -34124,9 +34085,9 @@
                             }
                         }
                     }
-                }), Object(c.a)("SearchGameResultCard", {
+                }), Object(d.a)("SearchGameResultCard", {
                     percentage: 75
-                }), Object(d.c)())(g);
+                }), Object(u.c)())(g);
             n.d(t, "a", function() {
                 return v
             })
@@ -35544,7 +35505,7 @@
             function s(e, t, n) {
                 return void 0 === n && (n = !0),
                     function(i) {
-                        i(Object(a.M)(e)), n && Object(r.d)(e), t && Object(o.b)(e, t)
+                        i(Object(a.M)(e)), n && Object(r.e)(e), t && Object(o.b)(e, t)
                     }
             }! function(e) {
                 e[e.UserMenu = 1] = "UserMenu", e[e.TypedCommand = 2] = "TypedCommand"
@@ -40427,12 +40388,12 @@
                         this.props.history.listen(this.onHistoryChange), a.o.setPageTitle()
                     }, t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive();
-                        var e = Object(b.b)(this.props.theme);
+                        var e = Object(b.c)(this.props.theme);
                         e && document.body.classList.add(e)
                     }, t.prototype.componentDidUpdate = function(e) {
                         if (this.props.location !== e.location && window.scrollTo(0, 0), this.props.latencyTracking.reportInteractive(), e.theme !== this.props.theme) {
-                            var t = Object(b.b)(e.theme),
-                                n = Object(b.b)(this.props.theme);
+                            var t = Object(b.c)(e.theme),
+                                n = Object(b.c)(this.props.theme);
                             t && document.body.classList.remove(t), n && document.body.classList.add(n)
                         }
                     }, t.prototype.render = function() {
@@ -41292,22 +41253,6 @@
                 return v
             }), n.d(t, "a", function() {
                 return b
-            })
-        },
-        v85w: function(e, t, n) {
-            "use strict";
-
-            function i(e) {
-                return "/directory/tags/" + e.id
-            }
-
-            function r(e) {
-                return "/directory/all/tags/" + e.id
-            }
-            n.d(t, "a", function() {
-                return i
-            }), n.d(t, "b", function() {
-                return r
             })
         },
         "vR4/": function(e, t, n) {

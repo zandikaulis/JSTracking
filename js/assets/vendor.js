@@ -18267,6 +18267,7 @@
                                                 S = e.tags["msg-param-charity-learn-more"];
                                             if (isNaN(k) || isNaN(E) || isNaN(O) || !x || !C || !S) break;
                                             this.events.charity({
+                                                channel: o,
                                                 total: k,
                                                 charityName: a.decodeTag(x),
                                                 daysLeft: E,
@@ -18301,6 +18302,7 @@
                                             var R = a.getInteger(e.tags["msg-param-selectedCount"]),
                                                 I = this.createChatMessage(e, i);
                                             this.events.crate({
+                                                channel: o,
                                                 selectedCount: R,
                                                 message: I,
                                                 timestamp: Date.now(),
@@ -18365,6 +18367,7 @@
                                                 body: i
                                             };
                                             this.events.purchase({
+                                                channel: o,
                                                 message: I,
                                                 purchase: q,
                                                 timestamp: Date.now(),
@@ -18378,6 +18381,7 @@
                                                 body: i
                                             };
                                             this.events.ritual({
+                                                channel: o,
                                                 type: z,
                                                 message: I
                                             })
@@ -19281,6 +19285,8 @@
                         this.add("unraid", e)
                     }, e.prototype.usernotice = function(e) {
                         this.add("usernotice", e)
+                    }, e.prototype.remove = function(e, t) {
+                        this.emitter.removeListener(e, t)
                     }, e.prototype.removeAll = function() {
                         this.logger.debug("Removed all event listeners"), this.emitter.removeAllListeners()
                     }, e.prototype.add = function(e, t) {
