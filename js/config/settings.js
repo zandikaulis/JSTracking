@@ -226,8 +226,8 @@ window.__twilightSettings = {
             }]
         },
         "0e3ada5b-bd45-44ba-aafe-1600e4215672": {
-            "name": "artificial_latency_experiment",
-            "v": 4591,
+            "name": "ale",
+            "v": 4592,
             "t": 1,
             "groups": [{
                 "weight": 96,
