@@ -225,6 +225,27 @@ window.__twilightSettings = {
                 "value": "enabled"
             }]
         },
+        "0e3ada5b-bd45-44ba-aafe-1600e4215672": {
+            "name": "artificial_latency_experiment",
+            "v": 4591,
+            "t": 1,
+            "groups": [{
+                "weight": 96,
+                "value": "variant0"
+            }, {
+                "weight": 1,
+                "value": "variant1"
+            }, {
+                "weight": 1,
+                "value": "variant2"
+            }, {
+                "weight": 1,
+                "value": "variant3"
+            }, {
+                "weight": 1,
+                "value": "variant4"
+            }]
+        },
         "0e636d13-56a8-44f4-bd51-7e65cd5a5225": {
             "name": "twilight_clips_howdy_partner",
             "v": 3193,
