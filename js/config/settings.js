@@ -121,7 +121,7 @@ window.__twilightSettings = {
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "throttled_experiment_event_enabled": false,
     "tvapp_ps4_ads_enabled": true,
-    "tvapp_ps4_channel_blacklist": [133497623, 157092761],
+    "tvapp_ps4_channel_blacklist": [133497623, 157092761, 168843586],
     "tvapp_ps4_preroll_duration": 30,
     "tvapp_ps4_preroll_frequency": 900,
     "tvapp_xbox_ads_enabled": true,
