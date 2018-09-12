@@ -390,6 +390,18 @@ window.__twilightSettings = {
                 "value": "on"
             }]
         },
+        "20432910-585e-428d-be53-f5de0d93e2de": {
+            "name": "french_vanilla",
+            "v": 4601,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }]
+        },
         "20be9241-4fa5-4903-9ada-e1e7762eda23": {
             "name": "vod_colors_of_the_wind",
             "v": 4560,
