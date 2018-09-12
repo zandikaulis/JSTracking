@@ -114,7 +114,7 @@ window.__twilightSettings = {
     "squad_stream_banner_whitelist": [],
     "squad_stream_feature": "off",
     "squad_stream_page_whitelist": [],
-    "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={DEVICE_ID}",
+    "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={SESSION_ID}",
     "squad_stream_uxr_logins": [],
     "squad_stream_whitelist": [],
     "stats_sample_rate": 100,
