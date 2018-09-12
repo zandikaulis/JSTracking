@@ -125,6 +125,7 @@ window.__twilightSettings = {
     "tvapp_ps4_preroll_duration": 30,
     "tvapp_ps4_preroll_frequency": 900,
     "tvapp_xbox_ads_enabled": true,
+    "tvapp_xbox_channel_blacklist": [168843586],
     "tvapp_xbox_preroll_duration": 30,
     "tvapp_xbox_preroll_frequency": 900,
     "twilight_clips_already": "on",
