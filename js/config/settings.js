@@ -142,6 +142,7 @@ window.__twilightSettings = {
     "update_manager_interval": 300000,
     "viewer_milestones_enabled": true,
     "vip_badge": false,
+    "vip_badge_gate": "off",
     "vod_archives_vira_grand": "on",
     "vod_editing_used_to_this": true,
     "vod_premieres_sunset": "off",
