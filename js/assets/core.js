@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [205], {
+    [206], {
         "+GjP": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -409,9 +409,9 @@
             }), n.d(t, "D", function() {
                 return R
             }), n.d(t, "I", function() {
-                return O
-            }), n.d(t, "q", function() {
                 return D
+            }), n.d(t, "q", function() {
+                return O
             }), n.d(t, "w", function() {
                 return L
             }), n.d(t, "f", function() {
@@ -531,11 +531,11 @@
                 return r.PubsubTopic.UserCommerceEvents + "." + e
             }
 
-            function O(e) {
+            function D(e) {
                 return r.PubsubTopic.Whispers + "." + e
             }
 
-            function D(e) {
+            function O(e) {
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
@@ -1015,7 +1015,7 @@
                     }, t)
                 }),
                 R = n("IRYN"),
-                O = Object(i.compose)(Object(a.a)(R, {
+                D = Object(i.compose)(Object(a.a)(R, {
                     name: "onUnfriendUser",
                     options: function(e) {
                         return l.__assign({}, Object(u.a)({
@@ -1033,7 +1033,7 @@
                         "data-test-selector": "unfriend-button"
                     }, t)
                 }),
-                D = function(e) {
+                O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1054,7 +1054,7 @@
                         });
                         switch (t.user.self.friendship ? t.user.self.friendship.__typename : g) {
                             case h:
-                                return c.createElement(O, {
+                                return c.createElement(D, {
                                     friendButtonUIType: e,
                                     targetID: this.props.targetID
                                 });
@@ -1096,7 +1096,7 @@
                 skip: function(e) {
                     return !!e.friendData || !e.isLoggedIn || e.currentUserID === e.targetID
                 }
-            }))(D);
+            }))(O);
             n.d(t, "a", function() {
                 return A
             })
@@ -2504,10 +2504,10 @@
                 N = n("kRBY"),
                 I = n("ZS2+"),
                 R = n("cZKs"),
-                O = I.a.wrap(function() {
+                D = I.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(79)]).then(n.bind(null, "+Zk8"))
                 }, "GiftForm"),
-                D = function(e) {
+                O = function(e) {
                     function t(t) {
                         return e.call(this, t) || this
                     }
@@ -2516,7 +2516,7 @@
                             className: "prime-gift-modal",
                             position: u.ab.Relative,
                             "data-a-target": "passport-modal"
-                        }, a.createElement(O, {
+                        }, a.createElement(D, {
                             action: this.props.action,
                             offerID: this.props.offerID,
                             offer: this.props.offer
@@ -2528,7 +2528,7 @@
                 }(a.Component),
                 L = Object(d.c)("PrimeGiftModal", {
                     autoReportInteractive: !0
-                })(D),
+                })(O),
                 A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4184,8 +4184,8 @@
                 }(),
                 I = n("o4DC"),
                 R = n("lmy8"),
-                O = n("h9Rz"),
-                D = n("+0NX"),
+                D = n("h9Rz"),
+                O = n("+0NX"),
                 L = n("uhBA"),
                 A = n("dqQ1"),
                 x = new I.b({
@@ -4265,7 +4265,7 @@
                         this.eventEmitter.removeListener("query-metrics", e)
                     }, e.prototype.createApolloClient = function() {
                         var e = this.createBatchHTTPLink();
-                        return this.dynamicSettings.get("persisted_queries_enabled", !1) && (e = Object(D.a)().concat(e)), new R.ApolloClient({
+                        return this.dynamicSettings.get("persisted_queries_enabled", !1) && (e = Object(O.a)().concat(e)), new R.ApolloClient({
                             cache: new I.a({
                                 fragmentMatcher: x
                             }),
@@ -4309,7 +4309,7 @@
                         })
                     }, e.prototype.createBatchHTTPLink = function() {
                         var e = this;
-                        return new O.a({
+                        return new D.a({
                             batchMax: 25,
                             uri: this.config.graphqlEndpoint,
                             includeExtensions: !0,
@@ -4776,6 +4776,33 @@
                     } else document.title = this.pageTitle
                 }, e
             }()
+        },
+        "50oY": function(e, t, n) {
+            "use strict";
+            var i, r;
+            n.d(t, "e", function() {
+                    return i
+                }), n.d(t, "a", function() {
+                    return r
+                }), n.d(t, "b", function() {
+                    return s
+                }), n.d(t, "c", function() {
+                    return a
+                }), n.d(t, "d", function() {
+                    return l
+                }),
+                function(e) {
+                    e.Videos = "videos", e.Collections = "collections"
+                }(i || (i = {})),
+                function(e) {
+                    e.Video = "video", e.Clip = "clip", e.Collection = "collection"
+                }(r || (r = {}));
+            var a, o = new Set([r.Video, r.Clip, r.Collection]),
+                s = Array.from(o).join("|");
+            ! function(e) {
+                e.About = "about", e.Clips = "clips", e.Videos = "videos", e.Collections = "collections", e.Events = "events", e.Followers = "followers", e.Following = "following", e.EsportsLoot = "esports-loot", e.EsportsProgress = "esports-progress", e.EsportsPass = "esports-pass"
+            }(a || (a = {}));
+            var l = new Set([a.About, a.Clips, a.Videos, a.Collections, a.Events, a.Followers, a.Following, a.EsportsLoot, a.EsportsProgress, a.EsportsPass])
         },
         "5DzM": function(e, t, n) {},
         "5IL7": function(e, t, n) {},
@@ -5816,7 +5843,7 @@
                     return i
                 }),
                 function(e) {
-                    e[e.Backspace = 8] = "Backspace", e[e.Tab = 9] = "Tab", e[e.Enter = 13] = "Enter", e[e.Esc = 27] = "Esc", e[e.Space = 32] = "Space", e[e.Left = 37] = "Left", e[e.Up = 38] = "Up", e[e.Right = 39] = "Right", e[e.Down = 40] = "Down", e[e.Colon = 58] = "Colon", e[e.At = 64] = "At", e[e.B = 66] = "B", e[e.F = 70] = "F", e[e.M = 77] = "M", e[e.P = 80] = "P", e[e.S = 83] = "S"
+                    e[e.Backspace = 8] = "Backspace", e[e.Tab = 9] = "Tab", e[e.Enter = 13] = "Enter", e[e.Esc = 27] = "Esc", e[e.Space = 32] = "Space", e[e.Left = 37] = "Left", e[e.Up = 38] = "Up", e[e.Right = 39] = "Right", e[e.Down = 40] = "Down", e[e.Digit0 = 48] = "Digit0", e[e.Digit1 = 49] = "Digit1", e[e.Digit2 = 50] = "Digit2", e[e.Digit3 = 51] = "Digit3", e[e.Digit4 = 52] = "Digit4", e[e.Digit5 = 53] = "Digit5", e[e.Digit6 = 54] = "Digit6", e[e.Digit7 = 55] = "Digit7", e[e.Digit8 = 56] = "Digit8", e[e.Digit9 = 57] = "Digit9", e[e.Colon = 58] = "Colon", e[e.At = 64] = "At", e[e.A = 65] = "A", e[e.B = 66] = "B", e[e.C = 67] = "C", e[e.D = 68] = "D", e[e.E = 69] = "E", e[e.F = 70] = "F", e[e.G = 71] = "G", e[e.H = 72] = "H", e[e.I = 73] = "I", e[e.J = 74] = "J", e[e.K = 75] = "K", e[e.L = 76] = "L", e[e.M = 77] = "M", e[e.N = 78] = "N", e[e.O = 79] = "O", e[e.P = 80] = "P", e[e.Q = 81] = "Q", e[e.R = 82] = "R", e[e.S = 83] = "S", e[e.T = 84] = "T", e[e.U = 85] = "U", e[e.V = 86] = "V", e[e.W = 87] = "W", e[e.X = 88] = "X", e[e.Y = 89] = "Y", e[e.Z = 90] = "Z"
                 }(i || (i = {}))
         },
         "8ssJ": function(e, t, n) {
@@ -6683,8 +6710,8 @@
                     }
                 })(N),
                 R = n("6x+I"),
-                O = n("KxT4"),
-                D = n("j3KY"),
+                D = n("KxT4"),
+                O = n("j3KY"),
                 L = (n("gQ2q"), n("487o")),
                 A = function(e) {
                     function t() {
@@ -6707,10 +6734,10 @@
                             i = t.currentUser && t.currentUser.hasPrime,
                             r = t.requestInfo && t.requestInfo.countryCode;
                         if (!Object(_.o)(i, r) || t.loading || n) return null;
-                        var a = Object(D.e)(D.a, ""),
+                        var a = Object(O.e)(O.a, ""),
                             o = Object(c.d)("Twitch Prime", "BlueBar"),
                             l = s.createElement("span", null, Object(c.d)("Monthly games and in-game loot, exclusives, and access to hundreds of movies & TV shows with Prime Video.", "BlueBar")),
-                            d = Object(D.e)(D.a, ""),
+                            d = Object(O.e)(O.a, ""),
                             u = Object(c.d)("Start Your Free Trial", "BlueBar");
                         return t.loading || t.error || t.primePromotions && t.primePromotions.forEach(function(e) {
                             switch (e.id) {
@@ -6805,7 +6832,7 @@
                 }(s.Component),
                 x = Object(l.compose)(Object(r.b)(function(e) {
                     return {
-                        blockBannerForGDPR: Object(O.h)(e)
+                        blockBannerForGDPR: Object(D.h)(e)
                     }
                 }), Object(u.a)(L, {
                     options: function() {
@@ -7918,7 +7945,7 @@
         DBPb: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, E, _, S, C, w, T, N, I, R, O, D, L, A, x, P, F, U, M, B, j, V, z, H, G, W, q, Q, K, Y, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Ee, _e, Se, Ce, we, Te, Ne, Ie, Re, Oe, De, Le, Ae, xe, Pe, Fe, Ue, Me, Be, je, Ve, ze, He, Ge, We, qe, Qe, Ke, Ye, Xe, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st;
+            var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, E, _, S, C, w, T, N, I, R, D, O, L, A, x, P, F, U, M, B, j, V, z, H, G, W, q, Q, K, Y, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Ee, _e, Se, Ce, we, Te, Ne, Ie, Re, De, Oe, Le, Ae, xe, Pe, Fe, Ue, Me, Be, je, Ve, ze, He, Ge, We, qe, Qe, Ke, Ye, Xe, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt;
             n.d(t, "e", function() {
                     return m
                 }), n.d(t, "c", function() {
@@ -7957,20 +7984,22 @@
                     return _e
                 }), n.d(t, "i", function() {
                     return Se
+                }), n.d(t, "A", function() {
+                    return Ne
                 }), n.d(t, "q", function() {
-                    return xe
+                    return Pe
                 }), n.d(t, "g", function() {
-                    return je
-                }), n.d(t, "f", function() {
                     return Ve
-                }), n.d(t, "n", function() {
+                }), n.d(t, "f", function() {
                     return ze
+                }), n.d(t, "n", function() {
+                    return He
                 }), n.d(t, "v", function() {
-                    return Ge
+                    return We
                 }), n.d(t, "p", function() {
-                    return Ze
+                    return Je
                 }), n.d(t, "b", function() {
-                    return at
+                    return ot
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.COMMUNITY_REPORT = "COMMUNITY_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -8055,10 +8084,10 @@
                 }(R || (R = {})),
                 function(e) {
                     e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
-                }(O || (O = {})),
+                }(D || (D = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(D || (D = {})),
+                }(O || (O = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
                 }(L || (L = {})),
@@ -8207,110 +8236,113 @@
                     e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(Ne || (Ne = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Ie || (Ie = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Re || (Re = {})),
+                function(e) {
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                }(De || (De = {})),
                 function(e) {
                     e.COMMUNITIES = "COMMUNITIES", e.CREATIVE = "CREATIVE", e.GAMES = "GAMES"
                 }(Oe || (Oe = {})),
                 function(e) {
                     e.ASC = "ASC", e.DESC = "DESC"
-                }(De || (De = {})),
-                function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
+                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
+                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(je || (je = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(He || (He = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(We || (We = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(qe || (qe = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }($e || ($e = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(et || (et = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(it || (it = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(at || (at = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(ot || (ot = {})),
                 function(e) {
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
+                }(st || (st = {})),
+                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(st || (st = {}))
+                }(lt || (lt = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -10381,8 +10413,8 @@
                 N = n("lhih"),
                 I = n("0Lz3"),
                 R = n("GnwI"),
-                O = n("Gw6o"),
-                D = (n("IvMc"), function(e) {
+                D = n("Gw6o"),
+                O = (n("IvMc"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -10484,7 +10516,7 @@
                         })))
                     }, t
                 }(d.Component)),
-                L = Object(v.compose)(Object(R.c)("GetBitsButtonContent"), Object(h.a)(O, {
+                L = Object(v.compose)(Object(R.c)("GetBitsButtonContent"), Object(h.a)(D, {
                     props: function(e) {
                         var t, n, i, r;
                         return e.data && e.data.user && e.data.user.cheer && (t = Object(I.a)(e.data.user.cheer.emotes), n = e.data.user.id), e.data && e.data.currentUser ? (r = e.data.currentUser.bitsBalance, i = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (i = e.data.bitsOffers), {
@@ -10504,7 +10536,7 @@
                             }
                         }
                     }
-                }))(D),
+                }))(O),
                 A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -11426,7 +11458,7 @@
                         requestVisibilityCheck: q.func
                     }, t
                 }(d.Component)),
-                Oe = (n("PLUE"), function(e) {
+                De = (n("PLUE"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -11488,7 +11520,7 @@
                         }
                     }, t
                 }(d.Component)),
-                De = (n("1i0o"), "nav-search-input"),
+                Oe = (n("1i0o"), "nav-search-input"),
                 Le = {
                     align: w.Ob.Center,
                     direction: w.Pb.Bottom,
@@ -11513,7 +11545,7 @@
                                 onFocus: t.props.onFocus,
                                 onKeyDown: t.props.onKeyDown,
                                 placeholder: Le.label,
-                                id: De,
+                                id: Oe,
                                 "data-a-target": "nav-search-input",
                                 spellCheck: !1,
                                 refDelegate: t.setNavSearchInputRef
@@ -11577,7 +11609,7 @@
                             show: this.props.isOpen,
                             offsetY: "5px",
                             "data-a-target": "nav-search-balloon"
-                        }, d.createElement(Re, c.__assign({}, this.getSearchPanelProps()))), d.createElement(Oe, {
+                        }, d.createElement(Re, c.__assign({}, this.getSearchPanelProps()))), d.createElement(De, {
                             isVisible: this.props.isOpen && !!this.props.currentCategory,
                             currentCategory: this.props.currentCategory,
                             onClick: this.categoryTagClicked
@@ -12755,7 +12787,7 @@
             ! function(e) {
                 e.BrowseLink = "top-nav__browse-link", e.DropdownStoreLink = "top-nav__dropdown-store-link", e.FollowingLink = "top-nav__following-link", e.LanguageBalloonWrapper = "top-nav__language-balloon-Wrapper", e.LanguageMenuItem = "top-nav__language-menu-item"
             }(Tt || (Tt = {}));
-            var Ot = function(e) {
+            var Dt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.logger = u.o.logger.withCategory("top-nav"), n.renderBitsButton = function() {
@@ -13086,13 +13118,13 @@
                         })))))
                     }, t
                 }(d.Component),
-                Dt = Object(a.d)(Object(h.a)(Rt, {
+                Ot = Object(a.d)(Object(h.a)(Rt, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
                 }), Object(R.c)("TopNav", {
                     autoReportInteractive: !0
-                }))(Ot);
+                }))(Dt);
             var Lt = Object(r.f)(Object(i.b)(function(e) {
                 return {
                     isLoggedIn: Object(l.f)(e)
@@ -13107,7 +13139,7 @@
                         return Object(s.g)(o.a.TopNavSignupButton)
                     }
                 }, e)
-            })(Dt));
+            })(Ot));
             n.d(t, !1, function() {
                 return "5rem"
             }), n.d(t, !1, function() {
@@ -16676,7 +16708,7 @@
                         roles: e.roles,
                         version: f
                     };
-                i.debug("Saving user cookie"), r.set(n.authSettings.cookieName, JSON.stringify(a), v), O(e.authToken, {
+                i.debug("Saving user cookie"), r.set(n.authSettings.cookieName, JSON.stringify(a), v), D(e.authToken, {
                     config: n,
                     logger: i
                 })
@@ -16697,7 +16729,7 @@
                     if (a.version) {
                         if ("number" != typeof a.version) throw new Error('Invalid "version" value stored in user cookie.')
                     } else n.debug("Unversioned user cookie, using default."), a.version = 1;
-                    return O(a.authToken, {
+                    return D(a.authToken, {
                         config: t,
                         logger: n
                     }), n.debug("Successfully loaded user data.", a), a
@@ -16752,7 +16784,7 @@
                 if (e.config.authSettings.primary) return r.get(s)
             }
 
-            function O(e, t) {
+            function D(e, t) {
                 var n = t.config,
                     i = t.logger;
                 n.authSettings.primary && (r.get(s) !== e && (i.info("Primary auth token cookie out of sync, updating."), r.set(s, e, v)))
@@ -17184,7 +17216,7 @@
                     }, t
                 }(v.Component),
                 R = n("pCxu"),
-                O = function(e) {
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onOverrideSelect = function(e) {
@@ -17235,7 +17267,7 @@
                         }))))
                     }, t
                 }(v.Component);
-            var D, L = function(e) {
+            var O, L = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.experiments = Object.keys(window.__twilightSettings.experiments).filter(function(e) {
@@ -17317,7 +17349,7 @@
                             }
                         }, this.filteredExperiments().map(function(t) {
                             var n = e.state.overrides[t];
-                            return v.createElement(O, {
+                            return v.createElement(D, {
                                 key: t,
                                 experimentData: e.experiments[t],
                                 override: n,
@@ -17893,7 +17925,7 @@
                 K = 3;
             ! function(e) {
                 e.Latency = "Latency", e.Experiments = "Experiments", e.DynamicSettings = "Dynamic Settings"
-            }(D || (D = {}));
+            }(O || (O = {}));
             var Y = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -17946,7 +17978,7 @@
                             o = i || a ? g.OverridesOnLoad : g.None;
                         return n.state = {
                             size: r.l.get(q, 0),
-                            selectedTab: r.l.get(Q, D.Latency),
+                            selectedTab: r.l.get(Q, O.Latency),
                             urgentMessage: o
                         }, n
                     }
@@ -17973,7 +18005,7 @@
                             display: C.U.Flex,
                             flexDirection: C.W.Column,
                             borderRight: !0
-                        }, this.renderStaffTabButton(D.Latency, C.kb.OP), this.renderStaffTabButton(D.Experiments, C.kb.Experiment, e), this.renderStaffTabButton(D.DynamicSettings, C.kb.NavSettings, t)), v.createElement(C.Ta, {
+                        }, this.renderStaffTabButton(O.Latency, C.kb.OP), this.renderStaffTabButton(O.Experiments, C.kb.Experiment, e), this.renderStaffTabButton(O.DynamicSettings, C.kb.NavSettings, t)), v.createElement(C.Ta, {
                             flexGrow: 1,
                             display: C.U.Flex,
                             flexDirection: C.W.Column,
@@ -18047,15 +18079,15 @@
                         }, 'Press "Ctr/Cmd + Shift + S" to toggle Staff Console')))))
                     }, t.prototype.renderTabContent = function(e) {
                         switch (e) {
-                            case D.Latency:
+                            case O.Latency:
                                 return v.createElement(G, {
                                     benchmarking: r.o.benchmarking
                                 });
-                            case D.Experiments:
+                            case O.Experiments:
                                 return v.createElement(L, {
                                     showUrgentMessage: this.showUrgentMessage
                                 });
-                            case D.DynamicSettings:
+                            case O.DynamicSettings:
                                 return v.createElement(I, {
                                     showUrgentMessage: this.showUrgentMessage
                                 });
@@ -19280,7 +19312,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsModeration = "channel.dashboard.settings.moderation", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ExtensionsPopout = "extensions.popout", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesDisclosurePage = "messages-disclosure", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteGames = "dev.games", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteDropsCreateCampaign = "dev.drops.campaign.create", e.DevSiteDropsEditCampaign = "dev.drops.campaign.edit", e.DevSiteGamesOnePager = "dev.games.onepager", e.Unknown = "unknown"
+                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.DownloadKeyCodePage = "download-keys", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsModeration = "channel.dashboard.settings.moderation", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ExtensionsPopout = "extensions.popout", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesDisclosurePage = "messages-disclosure", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteGames = "dev.games", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteDropsCreateCampaign = "dev.drops.campaign.create", e.DevSiteDropsEditCampaign = "dev.drops.campaign.edit", e.DevSiteGamesOnePager = "dev.games.onepager", e.Unknown = "unknown"
                 }(i || (i = {}))
         },
         NvZ5: function(e, t, n) {},
@@ -20250,7 +20282,7 @@
                     return s
                 }),
                 function(e) {
-                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsModeration = "dashboard/settings/moderation", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.ExtensionsPopout = "extensions_popout", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteGames = "dev/games", e.DevSiteCompanyOverview = "dev/company", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteDropsCreateCampaign = "dev/drops-create-campaign", e.DevSiteDropsEditCampaign = "dev/drops-edit-campaign"
+                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.DownloadKeyCodePage = "code_redemption_download_keys", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsModeration = "dashboard/settings/moderation", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.ExtensionsPopout = "extensions_popout", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteGames = "dev/games", e.DevSiteCompanyOverview = "dev/company", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteDropsCreateCampaign = "dev/drops-create-campaign", e.DevSiteDropsEditCampaign = "dev/drops-edit-campaign"
                 }(i || (i = {})),
                 function(e) {
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -22122,7 +22154,7 @@
                 }
                 return t
             }
-            var v, b, y, k, E, _, S, C, w, T, N, I, R, O;
+            var v, b, y, k, E, _, S, C, w, T, N, I, R, D;
             n("hED0");
             ! function(e) {
                 e.Start = "align-content-start", e.End = "align-content-end", e.Center = "align-content-center", e.Baseline = "align-content-baseline", e.Stretch = "align-content-stretch"
@@ -22165,8 +22197,8 @@
             }(R || (R = {})),
             function(e) {
                 e.Default = "tw-z-default", e.Above = "tw-z-above", e.Below = "tw-z-below"
-            }(O || (O = {}));
-            var D, L = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
+            }(D || (D = {}));
+            var O, L = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
                 A = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -22220,7 +22252,7 @@
             n("miPW");
             ! function(e) {
                 e.Default = "", e.Small = "tw-loading-spinner--small", e.Large = "tw-loading-spinner--large"
-            }(D || (D = {}));
+            }(O || (O = {}));
             var P, F, U, M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -23766,12 +23798,12 @@
                     }), t.prototype.getSpinnerSize = function(e) {
                         switch (e) {
                             case H.Small:
-                                return D.Small;
+                                return O.Small;
                             case H.Large:
-                                return D.Large;
+                                return O.Large;
                             case H.Default:
                             default:
-                                return D.Default
+                                return O.Default
                         }
                     }, t.prototype.successIconSize = function(e) {
                         switch (e) {
@@ -24306,7 +24338,7 @@
                             }, t.props.imageLabelOverlay && d.createElement(me, {
                                 position: w.Relative,
                                 fullHeight: !0,
-                                zIndex: O.Above,
+                                zIndex: D.Above,
                                 display: k.Flex,
                                 alignItems: b.Center,
                                 justifyContent: S.Center,
@@ -24345,7 +24377,7 @@
                         }, d.createElement(x, {
                             display: k.Flex,
                             position: w.Relative,
-                            zIndex: O.Above
+                            zIndex: D.Above
                         }, d.createElement(x, {
                             flexGrow: 0,
                             flexShrink: 0,
@@ -24391,7 +24423,7 @@
             ! function(e) {
                 e.mouseEnter = "mouse-enter", e.mouseLeave = "mouse-leave", e.mouseDown = "mouse-down", e.mouseUp = "mouse-up"
             }(Ce || (Ce = {}));
-            var Ie, Re, Oe, De, Le, Ae = function(e) {
+            var Ie, Re, De, Oe, Le, Ae = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -24476,10 +24508,10 @@
             }(Re || (Re = {})),
             function(e) {
                 e.Both = "tw-animation--fill-mode-both", e.None = "tw-animation--fill-mode-none", e.Forwards = "tw-animation--fill-mode-forwards", e.Backwards = "tw-animation--fill-mode-backwards"
-            }(Oe || (Oe = {})),
+            }(De || (De = {})),
             function(e) {
                 e.Ease = "tw-animation--timing-ease", e.Linear = "tw-animation--timing-linear", e.EaseIn = "tw-animation--timing-ease-in", e.EaseOut = "tw-animation--timing-ease-out", e.EaseInOut = "tw-animation--timing-ease-in-out"
-            }(De || (De = {})),
+            }(Oe || (Oe = {})),
             function(e) {
                 e.Bounce = "tw-animation--bounce", e.BounceIn = "tw-animation--bounce-in", e.BounceOut = "tw-animation--bounce-out", e.FadeIn = "tw-animation--fade-in", e.FadeOut = "tw-animation--fade-out", e.SlideInTop = "tw-animation--slide-in-top", e.SlideInRight = "tw-animation--slide-in-right", e.SlideInBottom = "tw-animation--slide-in-bottom", e.SlideInLeft = "tw-animation--slide-in-left", e.SlideOutTop = "tw-animation--slide-out-top", e.SlideOutRight = "tw-animation--slide-out-right", e.SlideOutBottom = "tw-animation--slide-out-bottom", e.SlideOutLeft = "tw-animation--slide-out-left"
             }(Le || (Le = {}));
@@ -24489,7 +24521,7 @@
                     "tw-animation--animate": e.enabled,
                     "tw-animation--loop": e.loop
                 };
-                return e.delay && (t[e.delay] = !0), e.duration ? t[e.duration] = !0 : t[Re.Short] = !0, e.fillMode ? t[e.fillMode] = !0 : t[Oe.Both] = !0, e.timing ? t[e.timing] = !0 : t[De.Ease] = !0, e.type && (t[e.type] = !0), d.createElement(A, c.__assign({
+                return e.delay && (t[e.delay] = !0), e.duration ? t[e.duration] = !0 : t[Re.Short] = !0, e.fillMode ? t[e.fillMode] = !0 : t[De.Both] = !0, e.timing ? t[e.timing] = !0 : t[Oe.Ease] = !0, e.type && (t[e.type] = !0), d.createElement(A, c.__assign({
                     className: p(t)
                 }, m(e)), d.createElement("div", {
                     onAnimationStart: e.onAnimationStart,
@@ -25077,7 +25109,7 @@
                     attachLeft: e.icon && !e.iconRight,
                     attachRight: e.iconRight,
                     attachTop: !0,
-                    zIndex: O.Default,
+                    zIndex: D.Default,
                     color: $.Alt2,
                     display: k.Flex,
                     alignItems: b.Center,
@@ -25300,7 +25332,7 @@
             function(e) {
                 e.Left = "tw-tooltip--align-left", e.Center = "tw-tooltip--align-center", e.Right = "tw-tooltip--align-right"
             }(Rt || (Rt = {}));
-            var Ot = function(e) {
+            var Dt = function(e) {
                 var t, n, i, r, a = it(),
                     o = {
                         "tw-tooltip": !0,
@@ -25332,9 +25364,9 @@
                     id: e.id || a
                 }, e.label)))
             };
-            Ot.displayName = "Tooltip";
+            Dt.displayName = "Tooltip";
             n("sAKk");
-            var Dt = function(e) {
+            var Ot = function(e) {
                 var t;
                 e.icon && (t = d.createElement(j, {
                     type: F.Inherit,
@@ -25350,13 +25382,13 @@
                     className: "tw-stat__value",
                     "data-a-target": "tw-stat-value"
                 }, e.value));
-                return e.label ? d.createElement(Ot, {
+                return e.label ? d.createElement(Dt, {
                     direction: e.tooltipDirection ? e.tooltipDirection : It.Bottom,
                     align: e.tooltipAlign ? e.tooltipAlign : Rt.Center,
                     label: e.label
                 }, n) : n
             };
-            Dt.displayName = "Stat";
+            Ot.displayName = "Stat";
             var Lt;
             n("M/Go");
             ! function(e) {
@@ -25667,11 +25699,13 @@
                     return c.__extends(t, e), t.prototype.render = function() {
                         return d.createElement("li", c.__assign({
                             className: this.className,
-                            role: "presentation"
-                        }, m(this.props)), d.createElement(f, {
-                            className: this.props.active ? "active" : void 0,
+                            role: l.Presentation
+                        }, m(this.props)), d.createElement(A, {
+                            display: k.InlineFlex
+                        }, d.createElement(f, {
+                            className: "tw-tab__link " + (this.props.active ? "tw-tab__link--active" : ""),
                             "data-a-target": "tw-tab-link",
-                            role: "tab",
+                            role: l.Tab,
                             ariaLabel: this.props.ariaLabel,
                             disabled: this.props.disabled,
                             download: this.props.download,
@@ -25680,13 +25714,12 @@
                             renderLink: this.props.renderLink,
                             tabIndex: this.props.tabIndex,
                             targetBlank: this.props.targetBlank
-                        }, this.props.children))
+                        }, this.props.children)))
                     }, Object.defineProperty(t.prototype, "className", {
                         get: function() {
                             return p({
-                                "tw-tab-nav__item": !0,
-                                "mg-l-auto": this.props.pullRight,
-                                "tw-tab-nav__item--disabled": this.props.disabled
+                                "tw-tab": !0,
+                                "tw-tab--disabled": this.props.disabled
                             })
                         },
                         enumerable: !0,
@@ -25694,11 +25727,13 @@
                     }), t
                 }(d.Component),
                 Xt = (n("jeqg"), function(e) {
-                    return d.createElement("div", c.__assign({
-                        className: e.alignRight ? "flex" : ""
+                    return d.createElement(A, c.__assign({
+                        fullWidth: !0,
+                        display: k.Flex,
+                        justifyContent: e.alignRight ? S.End : void 0,
+                        role: l.TabList
                     }, m(e)), d.createElement("ul", {
-                        className: "tw-tab-nav " + (e.alignRight ? "mg-l-auto" : ""),
-                        role: "tablist"
+                        className: "tw-tab-wrapper"
                     }, e.children))
                 });
             Xt.displayName = "TabWrapper";
@@ -26099,9 +26134,9 @@
             }), n.d(t, "i", function() {
                 return Re
             }), n.d(t, "j", function() {
-                return Oe
-            }), n.d(t, "k", function() {
                 return De
+            }), n.d(t, "k", function() {
+                return Oe
             }), n.d(t, "l", function() {
                 return Le
             }), n.d(t, !1, function() {}), n.d(t, "m", function() {
@@ -26239,7 +26274,7 @@
             }), n.d(t, "Gb", function() {
                 return N
             }), n.d(t, "Xb", function() {
-                return O
+                return D
             }), n.d(t, "Ub", function() {
                 return I
             }), n.d(t, "Vb", function() {
@@ -26253,9 +26288,9 @@
             }), n.d(t, !1, function() {}), n.d(t, "Va", function() {
                 return M
             }), n.d(t, "sb", function() {
-                return D
+                return O
             }), n.d(t, !1, function() {}), n.d(t, "tb", function() {
-                return Dt
+                return Ot
             }), n.d(t, !1, function() {}), n.d(t, "Db", function() {
                 return Ye
             }), n.d(t, "Eb", function() {
@@ -26343,7 +26378,7 @@
             }), n.d(t, !1, function() {}), n.d(t, "Cb", function() {
                 return sn
             }), n.d(t, !1, function() {}), n.d(t, "Nb", function() {
-                return Ot
+                return Dt
             }), n.d(t, "Pb", function() {
                 return It
             }), n.d(t, "Ob", function() {
@@ -28520,7 +28555,7 @@
                         }, this.props.slideInContent) : null
                     }, t = i.__decorate([Object(E.c)("SideNavCard"), Object(N.c)()], t)
                 }(r.Component)),
-                O = function(e) {
+                D = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderGame = function() {
@@ -28572,11 +28607,11 @@
                         }, Object(C.a)(this.props)))
                     }, t = i.__decorate([Object(E.c)("Featured Channel")], t)
                 }(r.Component);
-            var D, L = Object(S.b)(function(e) {
+            var O, L = Object(S.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
-                })(O),
+                })(D),
                 A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -28775,7 +28810,7 @@
             n("Rq1o");
             ! function(e) {
                 e[e.ShowMore = 0] = "ShowMore", e[e.ShowLess = 1] = "ShowLess"
-            }(D || (D = {}));
+            }(O || (O = {}));
             var W = function(e) {
                     return r.createElement(I.Ta, {
                         padding: {
@@ -28790,14 +28825,14 @@
                     }, !e.moreDisabled && r.createElement(I.R, {
                         onClick: e.onClickMore,
                         "data-a-target": "side-nav-show-more-button",
-                        "data-test-selector": D.ShowMore
+                        "data-test-selector": O.ShowMore
                     }, r.createElement(I.T, {
                         type: I.Kb.Span,
                         fontSize: I.Y.Size7
                     }, Object(m.d)("Show More", "SideNavShowMoreToggleButton"))), !e.lessDisabled && r.createElement(I.R, {
                         onClick: e.onClickLess,
                         "data-a-target": "side-nav-show-less-button",
-                        "data-test-selector": D.ShowLess
+                        "data-test-selector": O.ShowLess
                     }, r.createElement(I.T, {
                         type: I.Kb.Span,
                         fontSize: I.Y.Size7
@@ -29499,13 +29534,13 @@
                 }
             }
 
-            function Oe(e) {
+            function De(e) {
                 return {
                     force: e,
                     timeout: Te.b
                 }
             }
-            var De = n("m98o"),
+            var Oe = n("m98o"),
                 Le = n("as+V"),
                 Ae = n("NMMG"),
                 xe = function(e) {
@@ -29513,7 +29548,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderJoinButton = function() {
                             var e = null,
-                                n = Object(De.c)(t.props.user.login, t.props.activity);
+                                n = Object(Oe.c)(t.props.user.login, t.props.activity);
                             return n && (e = {
                                 pathname: n,
                                 state: {
@@ -29529,7 +29564,7 @@
                         }, t.handleClick = function(e) {
                             e.preventDefault();
                             var n = Object(Ae.a)(t.props.user.id, t.props.currentUserID);
-                            t.props.openThread(n), t.props.balloonLayer.hide(Oe(!0))
+                            t.props.openThread(n), t.props.balloonLayer.hide(De(!0))
                         }, t.handleJoinClick = function() {
                             Object(Ne.b)({
                                 context: Ne.a.FriendsListButton,
@@ -29552,7 +29587,7 @@
                             var e = Re(t.props.user.id, t.ref, Ie.c.Presence);
                             t.props.balloonLayer.show(e)
                         }, t.onMouseLeave = function() {
-                            return t.props.balloonLayer.hide(Oe())
+                            return t.props.balloonLayer.hide(De())
                         }, t.setRefDelegate = function(e) {
                             t.ref = e
                         }, t
@@ -29573,7 +29608,7 @@
                             presenceStatus: this.getPresenceStatus(),
                             onClick: this.handleClick,
                             linkTo: "#",
-                            metadataLeft: r.createElement(De.a, {
+                            metadataLeft: r.createElement(Oe.a, {
                                 availability: this.props.availability,
                                 activity: this.props.activity,
                                 condensed: !0
@@ -29840,7 +29875,7 @@
                         }, n.handleClick = function(e) {
                             e.preventDefault();
                             var t = Object(Ae.a)(n.props.user.id, n.props.currentUserID);
-                            n.props.openThread(t), n.props.balloonLayer.hide(Oe(!0))
+                            n.props.openThread(t), n.props.balloonLayer.hide(De(!0))
                         }, n.onClickAddFriend = function() {
                             n.setState({
                                 working: !0
@@ -29858,7 +29893,7 @@
                             var e = Re(n.props.user.id, n.ref);
                             n.props.balloonLayer.show(e)
                         }, n.onMouseLeave = function() {
-                            return n.props.balloonLayer.hide(Oe())
+                            return n.props.balloonLayer.hide(De())
                         }, n.setRefDelegate = function(e) {
                             n.ref = e
                         }, n.state = {
@@ -30469,24 +30504,25 @@
                 Nt = n("zB42"),
                 It = n("VwD5"),
                 Rt = n("Fxe2"),
-                Ot = n("vRsq"),
-                Dt = n("dtw8");
-            var Lt = Object(S.b)(function(e) {
+                Dt = n("vRsq"),
+                Ot = n("50oY"),
+                Lt = n("dtw8");
+            var At = Object(S.b)(function(e) {
                     var t = Object(vt.e)(e);
                     return {
                         isLoggedIn: Object(vt.f)(e),
                         userLogin: t && t.login
                     }
                 })(function(e) {
-                    return e.isLoggedIn && e.userLogin === e.match.params.channelLogin.toLowerCase() ? r.createElement(Dt.b, {
+                    return e.isLoggedIn && e.userLogin === e.match.params.channelLogin.toLowerCase() ? r.createElement(Lt.b, {
                         to: "/settings/profile"
-                    }) : r.createElement(Dt.b, {
+                    }) : r.createElement(Lt.b, {
                         to: "/"
                     })
                 }),
-                At = n("EOHf"),
-                xt = n("Eo7B"),
-                Pt = function(e) {
+                xt = n("EOHf"),
+                Pt = n("Eo7B"),
+                Ft = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.redirectToSubCheckout = function() {
@@ -30503,7 +30539,7 @@
                             fillContent: !0
                         }) : this.props.data.loading ? r.createElement(I.Va, {
                             fillContent: !0
-                        }) : r.createElement(At.a, null)
+                        }) : r.createElement(xt.a, null)
                     }, Object.defineProperty(t.prototype, "productName", {
                         get: function() {
                             if (this.props.data.user && this.props.data.user.subscriptionProducts) {
@@ -30516,7 +30552,7 @@
                         configurable: !0
                     }), t
                 }(r.Component),
-                Ft = Object(f.a)(xt, {
+                Ut = Object(f.a)(Pt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -30524,90 +30560,90 @@
                             }
                         }
                     }
-                })(Pt),
-                Ut = a.a.wrap(function() {
+                })(Ft),
+                Mt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(52)]).then(n.bind(null, "XH7V"))
                 }, "ChannelClipsPage"),
-                Mt = a.a.wrap(function() {
+                Bt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(51)]).then(n.bind(null, "5qQ0"))
                 }, "ChannelCollectionsPage"),
-                Bt = a.a.wrap(function() {
+                jt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(50)]).then(n.bind(null, "0PcG"))
                 }, "ChannelEventsPage"),
-                jt = a.a.wrap(function() {
+                Vt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(49)]).then(n.bind(null, "ibCL"))
                 }, "ChannelFollowersPage"),
-                Vt = a.a.wrap(function() {
+                zt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(48)]).then(n.bind(null, "Zcpz"))
                 }, "ChannelFollowingPage"),
-                zt = a.a.wrap(function() {
+                Ht = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(47)]).then(n.bind(null, "JNF5"))
                 }, "ChannelPage"),
-                Ht = a.a.wrap(function() {
+                Gt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(46)]).then(n.bind(null, "DOLr"))
                 }, "ChannelRoot"),
-                Gt = a.a.wrap(function() {
+                Wt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(45)]).then(n.bind(null, "JCPk"))
                 }, "ChannelVideosOverviewPage"),
-                Wt = a.a.wrap(function() {
+                qt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(44)]).then(n.bind(null, "AaPt"))
                 }, "ChannelVideosPage"),
-                qt = a.a.wrap(function() {
+                Qt = a.a.wrap(function() {
                     return n.e(60).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                Qt = a.a.wrap(function() {
+                Kt = a.a.wrap(function() {
                     return n.e(43).then(n.bind(null, "juOe"))
                 }, "ReportUserPage"),
-                Kt = a.a.wrap(function() {
+                Yt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(42)]).then(n.bind(null, "4JFD"))
                 }, "VideoWatchPage"),
-                Yt = a.a.wrap(function() {
+                Xt = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(41)]).then(n.bind(null, "dlEs"))
                 }, "ClipsWatchPage"),
-                Xt = a.a.wrap(function() {
+                Zt = a.a.wrap(function() {
                     return n.e(40).then(n.bind(null, "QE/F"))
                 }, "SquadStreamPage"),
-                Zt = function(e) {
+                Jt = function(e) {
                     return r.createElement(p.c, {
                         to: "/popout/" + e.match.params.channelLogin + "/chat"
                     })
                 },
-                Jt = function(e) {
-                    return Object(_.b)() ? r.createElement(Gt, null) : $t(e)
-                },
                 $t = function(e) {
+                    return Object(_.b)() ? r.createElement(Wt, null) : en(e)
+                },
+                en = function(e) {
                     return r.createElement(p.c, {
                         to: "/" + e.match.params.channelLogin + "/videos/all"
                     })
                 },
-                en = function(e) {
+                tn = function(e) {
                     return r.createElement(p.c, {
                         to: "/" + e.match.params.channelLogin + "/videos"
                     })
                 },
-                tn = function(e) {
+                nn = function(e) {
                     return r.createElement(p.c, {
                         to: "/" + e.match.params.channelLogin + "/videos/archive"
                     })
                 },
-                nn = function(e) {
+                rn = function(e) {
                     return window.location.replace(m.a.playerBaseURL + "/?channel=" + e.match.params.channelLogin), null
                 },
-                rn = function(e) {
-                    var t = e.match.params.contentType === Ot.g.Video ? e.match.params.contentID : void 0,
-                        n = e.match.params.contentType === Ot.g.Collection ? e.match.params.contentID : void 0;
+                an = function(e) {
+                    var t = e.match.params.contentType === Dt.g.Video ? e.match.params.contentID : void 0,
+                        n = e.match.params.contentType === Dt.g.Collection ? e.match.params.contentID : void 0;
                     return t || n ? r.createElement(p.c, {
-                        to: Object(Ot.i)(null, t, n)
-                    }) : r.createElement(At.a, null)
+                        to: Object(Dt.i)(null, t, n)
+                    }) : r.createElement(xt.a, null)
                 };
 
-            function an(e) {
+            function on(e) {
                 var t = Object(Rt.a)(e.match.params.videoID);
                 return r.createElement(p.c, {
                     to: "/videos/" + t
                 })
             }
-            var on = function(e) {
+            var sn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -30629,274 +30665,274 @@
                         });
                         var e = Object(_.a)();
                         return !Object(_.e)() && Object(_.d)(this.props.location.pathname) && (e = !1), r.createElement(p.e, null, e ? r.createElement(p.d, {
-                            path: "/collections/:collectionID",
-                            component: Ht
+                            path: "/:standaloneType(" + Ot.e.Collections + ")/:collectionID",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/collections/:collectionID",
-                            component: Kt
+                            component: Yt
                         }), r.createElement(p.d, {
                             path: "/videos/v:videoID",
-                            render: an
+                            render: on
                         }), e ? r.createElement(p.d, {
-                            path: "/videos/:videoID",
-                            component: Ht
+                            path: "/:standaloneType(" + Ot.e.Videos + ")/:videoID",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/videos/:videoID",
-                            component: Kt
+                            component: Yt
                         }), e ? r.createElement(p.d, {
                             path: "/:channelLogin",
-                            component: Ht,
+                            component: Gt,
                             exact: !0
                         }) : r.createElement(p.d, {
                             path: "/:channelName",
-                            component: zt,
+                            component: Ht,
                             exact: !0
                         }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/about",
-                            component: Ht
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.About + ")",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelName/about",
-                            component: zt
+                            component: Ht
                         }), !e && r.createElement(p.d, {
                             path: "/:channelLogin/clip/:slugID",
-                            component: Yt
+                            component: Xt
                         }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/clips",
-                            component: Ht
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.Clips + ")",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelName/clips",
-                            component: Ut
-                        }), r.createElement(p.d, {
-                            path: "/:channelLogin/chat",
-                            render: Zt
-                        }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/collections",
-                            component: Ht
-                        }) : r.createElement(p.d, {
-                            path: "/:channelLogin/collections",
                             component: Mt
                         }), r.createElement(p.d, {
-                            path: "/:channelLogin/embed",
-                            render: nn
+                            path: "/:channelLogin/chat",
+                            render: Jt
                         }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/esports-loot",
-                            component: Ht
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.Collections + ")",
+                            component: Gt
+                        }) : r.createElement(p.d, {
+                            path: "/:channelLogin/collections",
+                            component: Bt
+                        }), r.createElement(p.d, {
+                            path: "/:channelLogin/embed",
+                            render: rn
+                        }), e ? r.createElement(p.d, {
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.EsportsLoot + ")",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelLogin/esports-loot",
-                            component: zt
-                        }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/esports-pass",
                             component: Ht
+                        }), e ? r.createElement(p.d, {
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.EsportsPass + ")",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelLogin/esports-pass",
-                            component: zt
-                        }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/esports-progress",
                             component: Ht
+                        }), e ? r.createElement(p.d, {
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.EsportsProgress + ")",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelLogin/esports-progress",
-                            component: zt
-                        }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/events",
                             component: Ht
+                        }), e ? r.createElement(p.d, {
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.Events + ")",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelLogin/events",
-                            component: Bt
-                        }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/followers",
-                            component: Ht
-                        }) : r.createElement(p.d, {
-                            path: "/:channelLogin/followers",
                             component: jt
                         }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/following",
-                            component: Ht
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.Followers + ")",
+                            component: Gt
+                        }) : r.createElement(p.d, {
+                            path: "/:channelLogin/followers",
+                            component: Vt
+                        }), e ? r.createElement(p.d, {
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.Following + ")",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelLogin/following",
-                            component: Vt
+                            component: zt
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/inbox",
-                            component: qt
+                            component: Qt
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/outbox",
-                            component: qt
+                            component: Qt
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/profile",
-                            render: $t
+                            render: en
                         }), r.createElement(p.d, {
                             path: "/:channelName/report",
-                            component: Qt
+                            component: Kt
                         }), e ? r.createElement(p.d, {
                             path: "/:channelLogin/p/:entityID",
-                            component: Ht
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelName/p/:entityID",
-                            component: zt
+                            component: Ht
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/popout",
-                            render: nn
+                            render: rn
                         }), e ? r.createElement(p.d, {
                             path: "/:channelLogin/rooms/:roomName",
-                            component: Ht
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelName/rooms/:roomName",
-                            component: zt
-                        }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?/videos",
-                            exact: !0,
                             component: Ht
+                        }), e ? r.createElement(p.d, {
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?/:page(" + Ot.c.Videos + ")",
+                            exact: !0,
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelLogin/videos",
                             exact: !0,
-                            render: Jt
+                            render: $t
                         }), !e && Object(_.b)() && r.createElement(p.d, {
                             path: "/:channelLogin/videos/all",
-                            render: en
+                            render: tn
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/videos/(past_broadcasts?)",
-                            render: tn
+                            render: nn
                         }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                            component: Ht
+                            path: "/:channelLogin/:page(" + Ot.c.Videos + ")/:filter(all|archive|upload|highlight|past_premiere)",
+                            component: Gt
                         }) : r.createElement(p.d, {
                             path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                            component: Wt
+                            component: qt
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/videos/:unknownFilter?",
-                            render: $t
+                            render: en
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/settings",
-                            component: Lt
+                            component: At
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/subscribe",
-                            component: Ft
+                            component: Ut
                         }), r.createElement(p.d, {
                             path: "/:channelLogin/squad",
-                            component: Xt
+                            component: Zt
                         }), e ? r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?",
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?",
                             exact: !0,
-                            component: Ht
+                            component: Gt
                         }) : r.createElement(p.d, {
-                            path: "/:channelLogin/:contentType(video|clip|collection)?/:contentID?",
+                            path: "/:channelLogin/:contentType(" + Ot.b + ")?/:contentID?",
                             exact: !0,
-                            component: rn
+                            component: an
                         }), r.createElement(p.d, {
                             path: "*",
-                            component: At.a
+                            component: xt.a
                         }))
                     }, t
                 }(r.Component),
-                sn = Object(p.f)(on),
-                ln = a.a.wrap(function() {
+                ln = Object(p.f)(sn),
+                cn = a.a.wrap(function() {
                     return n.e(77).then(n.bind(null, "wh8/"))
                 }, "AnonFrontPage"),
-                cn = a.a.wrap(function() {
+                dn = a.a.wrap(function() {
                     return n.e(76).then(n.bind(null, "moen"))
                 }, "BroadcastPage"),
-                dn = a.a.wrap(function() {
+                un = a.a.wrap(function() {
                     return n.e(75).then(n.bind(null, "99ae"))
                 }, "BrowseRootPage"),
-                un = a.a.wrap(function() {
+                pn = a.a.wrap(function() {
                     return n.e(74).then(n.bind(null, "otOH"))
                 }, "CommunityModerationRoot"),
-                pn = a.a.wrap(function() {
+                mn = a.a.wrap(function() {
                     return n.e(73).then(n.bind(null, "FvFK"))
                 }, "CreateCommunityPage"),
-                mn = a.a.wrap(function() {
+                hn = a.a.wrap(function() {
                     return n.e(72).then(n.bind(null, "dQAD"))
                 }, "DevOnlyRoot"),
-                hn = a.a.wrap(function() {
+                fn = a.a.wrap(function() {
                     return n.e(71).then(n.bind(null, "mpcK"))
                 }, "DirectoryRootPage"),
-                fn = a.a.wrap(function() {
+                gn = a.a.wrap(function() {
                     return n.e(70).then(n.bind(null, "AtgE"))
                 }, "EmailUnsubscribePage"),
-                gn = a.a.wrap(function() {
+                vn = a.a.wrap(function() {
                     return n.e(69).then(n.bind(null, "VkGE"))
                 }, "EmailVerificationPage"),
-                vn = a.a.wrap(function() {
+                bn = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(68)]).then(n.bind(null, "4c/Z"))
                 }, "EventLandingPage"),
-                bn = a.a.wrap(function() {
+                yn = a.a.wrap(function() {
                     return n.e(67).then(n.bind(null, "lQdQ"))
                 }, "ExtensionsRoot"),
-                yn = a.a.wrap(function() {
+                kn = a.a.wrap(function() {
                     return n.e(66).then(n.bind(null, "Uyt6"))
                 }, "FollowingRootPage"),
-                kn = a.a.wrap(function() {
+                En = a.a.wrap(function() {
                     return n.e(65).then(n.bind(null, "0fnA"))
                 }, "FrontPage"),
-                En = a.a.wrap(function() {
+                _n = a.a.wrap(function() {
                     return n.e(64).then(n.bind(null, "O0y+"))
                 }, "FriendRequestsPage"),
-                _n = a.a.wrap(function() {
+                Sn = a.a.wrap(function() {
                     return n.e(63).then(n.bind(null, "2W9R"))
                 }, "FriendsPage"),
-                Sn = a.a.wrap(function() {
+                Cn = a.a.wrap(function() {
                     return n.e(62).then(n.bind(null, "UqZg"))
                 }, "InventoryPage"),
-                Cn = a.a.wrap(function() {
+                wn = a.a.wrap(function() {
                     return n.e(61).then(n.bind(null, "WtmX"))
                 }, "MessagesDisclosurePage"),
-                wn = a.a.wrap(function() {
+                Tn = a.a.wrap(function() {
                     return n.e(60).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                Tn = a.a.wrap(function() {
+                Nn = a.a.wrap(function() {
                     return n.e(59).then(n.bind(null, "4Agi"))
                 }, "DesklightModsRootPage"),
-                Nn = a.a.wrap(function() {
+                In = a.a.wrap(function() {
                     return Promise.all([n.e(30), n.e(0), n.e(58)]).then(n.bind(null, "cz4h"))
                 }, "PaymentsLandingPage"),
-                In = a.a.wrap(function() {
+                Rn = a.a.wrap(function() {
                     return n.e(57).then(n.bind(null, "EOaz"))
                 }, "SettingsRoot"),
-                Rn = a.a.wrap(function() {
+                Dn = a.a.wrap(function() {
                     return n.e(56).then(n.bind(null, "rzjD"))
                 }, "StartLogin"),
                 On = a.a.wrap(function() {
                     return n.e(56).then(n.bind(null, "rzjD"))
                 }, "StartSignup"),
-                Dn = a.a.wrap(function() {
+                Ln = a.a.wrap(function() {
                     return n.e(55).then(n.bind(null, "UGMo"))
                 }, "SubscriptionsManagementPage"),
-                Ln = a.a.wrap(function() {
+                An = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(54)]).then(n.bind(null, "c0BZ"))
                 }, "UnsubscribePage"),
-                An = a.a.wrap(function() {
+                xn = a.a.wrap(function() {
                     return n.e(53).then(n.bind(null, "xuFZ"))
                 }, "UserRoot");
 
-            function xn() {
+            function Pn() {
                 return window.location.assign(window.location.href), null
             }
 
-            function Pn(e) {
+            function Fn(e) {
                 return r.createElement(p.c, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             }
 
-            function Fn() {
+            function Un() {
                 return r.createElement(p.c, {
                     path: "/",
                     to: "/directory/following"
                 })
             }
 
-            function Un() {
+            function Mn() {
                 return r.createElement(p.c, {
                     to: "/directory/all/xbox"
                 })
             }
 
-            function Mn() {
+            function Bn() {
                 return r.createElement(p.c, {
                     to: "/manager/upload"
                 })
             }
 
-            function Bn(e) {
+            function jn(e) {
                 return r.createElement(p.c, {
                     to: {
                         search: e.location.search,
@@ -30905,14 +30941,14 @@
                 })
             }
 
-            function jn() {
+            function Vn() {
                 return window.location.replace("/p/terms-of-service"), null
             }
 
-            function Vn() {
+            function zn() {
                 return window.location.replace(It.a), null
             }
-            var zn = function(e) {
+            var Hn = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -30933,155 +30969,158 @@
                         message: Object(m.d)("An error occurred on this page", "DefaultRootRouter")
                     }) : r.createElement(p.e, null, m.a.buildType !== Nt.a.Production && r.createElement(p.d, {
                         path: "/_dev",
-                        component: mn
+                        component: hn
                     }), r.createElement(p.d, {
                         exact: !0,
                         path: "/",
-                        component: this.props.isLoggedIn ? kn : ln
+                        component: this.props.isLoggedIn ? En : cn
                     }), r.createElement(p.d, {
                         path: "/activate",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/bits",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/bits-checkout",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/checkout",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/products",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/embed",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/popout",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/prime",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/subs",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/(redeem|claim)",
-                        render: xn
-                    }), r.createElement(p.d, {
-                        path: "/broadcast",
-                        component: cn
-                    }), r.createElement(p.d, {
-                        path: "/collections/:collectionID",
-                        component: sn
-                    }), r.createElement(p.d, {
-                        path: "/communities/create",
-                        component: pn
-                    }), r.createElement(p.d, {
-                        path: "/communities/:encodedCommunityName/details",
-                        component: hn
-                    }), r.createElement(p.d, {
-                        path: "/communities/:encodedCommunityName/moderation/:page?",
-                        component: un
-                    }), r.createElement(p.d, {
-                        path: "/communities/:encodedCommunityName/:encodedLanguage",
-                        component: hn
-                    }), r.createElement(p.d, {
-                        path: "/communities/:encodedCommunityName",
-                        component: hn
-                    }), r.createElement(p.d, {
-                        path: "/directory/communities",
-                        component: dn
-                    }), r.createElement(p.d, {
-                        path: "/directory/creative",
-                        component: dn
-                    }), r.createElement(p.d, {
-                        path: "/directory/following/:category?",
-                        component: yn
-                    }), r.createElement(p.d, {
-                        path: "/directory/game/:encodedCommunityName/clips",
-                        component: hn
-                    }), r.createElement(p.d, {
-                        path: "/directory/game/:encodedCommunityName/details",
-                        component: hn
-                    }), r.createElement(p.d, {
-                        path: "/directory/game/:encodedCommunityName/videos/:filter",
-                        component: hn
-                    }), r.createElement(p.d, {
-                        path: "/directory/game/:encodedCommunityName/videos",
                         render: Pn
                     }), r.createElement(p.d, {
-                        path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                        component: hn
+                        path: "/bits",
+                        render: Pn
                     }), r.createElement(p.d, {
-                        path: "/directory/game/:encodedCommunityName",
-                        component: hn
+                        path: "/bits-checkout",
+                        render: Pn
                     }), r.createElement(p.d, {
-                        path: "/directory/tags/:tagID",
+                        path: "/checkout",
+                        render: Pn
+                    }), r.createElement(p.d, {
+                        path: "/products",
+                        render: Pn
+                    }), r.createElement(p.d, {
+                        path: "/embed",
+                        render: Pn
+                    }), r.createElement(p.d, {
+                        path: "/popout",
+                        render: Pn
+                    }), r.createElement(p.d, {
+                        path: "/prime",
+                        render: Pn
+                    }), r.createElement(p.d, {
+                        path: "/subs",
+                        render: Pn
+                    }), r.createElement(p.d, {
+                        path: "/download-keys",
+                        render: Pn
+                    }), r.createElement(p.d, {
+                        path: "/(redeem|claim)",
+                        render: Pn
+                    }), r.createElement(p.d, {
+                        path: "/broadcast",
                         component: dn
                     }), r.createElement(p.d, {
-                        path: "/directory/all/tags/:tagID",
-                        component: dn
+                        path: "/collections/:collectionID",
+                        component: ln
                     }), r.createElement(p.d, {
-                        path: "/directory/all/ps4",
-                        component: dn
+                        path: "/communities/create",
+                        component: mn
                     }), r.createElement(p.d, {
-                        path: "/directory/all/xb1",
-                        render: Un
-                    }), r.createElement(p.d, {
-                        path: "/directory/all/xbox",
-                        component: dn
-                    }), r.createElement(p.d, {
-                        path: "/directory/all/:encodedLanguage",
-                        component: dn
-                    }), r.createElement(p.d, {
-                        path: "/directory/all",
-                        component: dn
-                    }), r.createElement(p.d, {
-                        path: "/directory/:category?",
-                        component: dn
-                    }), r.createElement(p.d, {
-                        path: "/events/:eventName",
-                        component: vn
-                    }), r.createElement(p.d, {
-                        path: "/email-unsubscribe",
+                        path: "/communities/:encodedCommunityName/details",
                         component: fn
                     }), r.createElement(p.d, {
-                        path: "/email-verification/:emailOpaqueId",
-                        component: gn
+                        path: "/communities/:encodedCommunityName/moderation/:page?",
+                        component: pn
                     }), r.createElement(p.d, {
-                        path: "/ext",
-                        component: bn
+                        path: "/communities/:encodedCommunityName/:encodedLanguage",
+                        component: fn
                     }), r.createElement(p.d, {
-                        path: "/friends/requests",
-                        component: En
+                        path: "/communities/:encodedCommunityName",
+                        component: fn
                     }), r.createElement(p.d, {
-                        path: "/friends",
-                        component: _n
+                        path: "/directory/communities",
+                        component: un
                     }), r.createElement(p.d, {
-                        path: "/following",
+                        path: "/directory/creative",
+                        component: un
+                    }), r.createElement(p.d, {
+                        path: "/directory/following/:category?",
+                        component: kn
+                    }), r.createElement(p.d, {
+                        path: "/directory/game/:encodedCommunityName/clips",
+                        component: fn
+                    }), r.createElement(p.d, {
+                        path: "/directory/game/:encodedCommunityName/details",
+                        component: fn
+                    }), r.createElement(p.d, {
+                        path: "/directory/game/:encodedCommunityName/videos/:filter",
+                        component: fn
+                    }), r.createElement(p.d, {
+                        path: "/directory/game/:encodedCommunityName/videos",
                         render: Fn
                     }), r.createElement(p.d, {
-                        path: "/inbox",
-                        component: wn
+                        path: "/directory/game/:encodedCommunityName/:encodedLanguage",
+                        component: fn
                     }), r.createElement(p.d, {
-                        path: "/inventory",
+                        path: "/directory/game/:encodedCommunityName",
+                        component: fn
+                    }), r.createElement(p.d, {
+                        path: "/directory/tags/:tagID",
+                        component: un
+                    }), r.createElement(p.d, {
+                        path: "/directory/all/tags/:tagID",
+                        component: un
+                    }), r.createElement(p.d, {
+                        path: "/directory/all/ps4",
+                        component: un
+                    }), r.createElement(p.d, {
+                        path: "/directory/all/xb1",
+                        render: Mn
+                    }), r.createElement(p.d, {
+                        path: "/directory/all/xbox",
+                        component: un
+                    }), r.createElement(p.d, {
+                        path: "/directory/all/:encodedLanguage",
+                        component: un
+                    }), r.createElement(p.d, {
+                        path: "/directory/all",
+                        component: un
+                    }), r.createElement(p.d, {
+                        path: "/directory/:category?",
+                        component: un
+                    }), r.createElement(p.d, {
+                        path: "/events/:eventName",
+                        component: bn
+                    }), r.createElement(p.d, {
+                        path: "/email-unsubscribe",
+                        component: gn
+                    }), r.createElement(p.d, {
+                        path: "/email-verification/:emailOpaqueId",
+                        component: vn
+                    }), r.createElement(p.d, {
+                        path: "/ext",
+                        component: yn
+                    }), r.createElement(p.d, {
+                        path: "/friends/requests",
+                        component: _n
+                    }), r.createElement(p.d, {
+                        path: "/friends",
                         component: Sn
                     }), r.createElement(p.d, {
-                        path: "/login",
-                        component: Rn
+                        path: "/following",
+                        render: Un
                     }), r.createElement(p.d, {
-                        path: "/messages/archive",
+                        path: "/inbox",
+                        component: Tn
+                    }), r.createElement(p.d, {
+                        path: "/inventory",
                         component: Cn
                     }), r.createElement(p.d, {
-                        path: "/messages/:pageName?",
+                        path: "/login",
+                        component: Dn
+                    }), r.createElement(p.d, {
+                        path: "/messages/archive",
                         component: wn
+                    }), r.createElement(p.d, {
+                        path: "/messages/:pageName?",
+                        component: Tn
                     }), r.createElement(p.d, {
                         path: "/outbox",
-                        component: wn
+                        component: Tn
                     }), r.createElement(p.d, {
                         path: "/payments",
-                        component: Nn
+                        component: In
                     }), r.createElement(p.d, {
                         path: "/profile",
                         component: wt.a,
@@ -31091,61 +31130,61 @@
                         component: On
                     }), r.createElement(p.d, {
                         path: "/store",
-                        render: Vn
+                        render: zn
                     }), r.createElement(p.d, {
                         path: "/store/merch",
-                        render: Vn
+                        render: zn
                     }), r.createElement(p.d, {
                         path: "/subscriptions",
-                        component: Dn
-                    }), r.createElement(p.d, {
-                        path: "/settings/:tab?",
-                        component: In
-                    }), r.createElement(p.d, {
-                        path: "/unsubscribe/:productName",
                         component: Ln
                     }), r.createElement(p.d, {
+                        path: "/settings/:tab?",
+                        component: Rn
+                    }), r.createElement(p.d, {
+                        path: "/unsubscribe/:productName",
+                        component: An
+                    }), r.createElement(p.d, {
                         path: "/upload",
-                        render: Mn,
+                        render: Bn,
                         exact: !0
                     }), r.createElement(p.d, {
                         path: "/user/legal",
-                        render: jn,
+                        render: Vn,
                         exact: !0
                     }), r.createElement(p.d, {
                         path: "/user/remove_me",
-                        render: Bn
+                        render: jn
                     }), r.createElement(p.d, {
                         path: "/user",
-                        component: An
+                        component: xn
                     }), r.createElement(p.d, {
                         path: "/videos/v:videoID",
-                        component: sn
+                        component: ln
                     }), r.createElement(p.d, {
                         path: "/videos/:videoID",
-                        component: sn
+                        component: ln
                     }), m.a.buildType !== Nt.a.Production && m.o.integrations.mods && r.createElement(p.d, {
                         path: "/mods",
-                        component: Tn
+                        component: Nn
                     }), r.createElement(p.d, {
                         path: "*",
-                        component: sn
+                        component: ln
                     }))
                 }, t
             }(r.Component);
             n.d(t, "b", function() {
-                return Gn
-            }), n.d(t, "a", function() {
                 return Wn
+            }), n.d(t, "a", function() {
+                return qn
             });
-            var Hn = a.a.wrap(function() {
+            var Gn = a.a.wrap(function() {
                     return n.e(78).then(n.bind(null, "3iFw"))
                 }, "Whispers", {
                     failSilently: !0,
                     placeholder: null
                 }),
-                Gn = "twilight-main",
-                Wn = function(e) {
+                Wn = "twilight-main",
+                qn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -31176,14 +31215,14 @@
                             flexDirection: I.W.Column,
                             zIndex: this.props.theatreModeEnabled || this.props.squadModeEnabled ? void 0 : I.Xb.Default
                         }, r.createElement("main", {
-                            className: Gn
+                            className: Wn
                         }, r.createElement(_t.b, null), r.createElement(c.a, {
                             contentRefDelegate: this.setRootScrollableContentRef
-                        }, r.createElement(zn, {
+                        }, r.createElement(Hn, {
                             isLoggedIn: this.props.isLoggedIn
                         }), r.createElement(s.b, {
                             mainRef: this.state.rootScrollableContentRef
-                        })), r.createElement(kt, null), this.props.firstPageLoaded && r.createElement(Hn, null))), r.createElement(l.a, null)))
+                        })), r.createElement(kt, null), this.props.firstPageLoaded && r.createElement(Gn, null))), r.createElement(l.a, null)))
                     }, t
                 }(r.Component)
         },
@@ -31221,7 +31260,8 @@
                         }, n
                     }
                     return i.__extends(t, e), t.wrap = function(e, n, a) {
-                        return function(o) {
+                        var o;
+                        return (o = function(o) {
                             function s() {
                                 return null !== o && o.apply(this, arguments) || this
                             }
@@ -31241,7 +31281,7 @@
                                     placeholder: a && a.placeholder
                                 }))
                             }, s
-                        }(r.Component)
+                        }(r.Component)).displayName = "Loadable(" + n + ")", o
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         !t.Component && this.state.Component && this.props.onRendered && this.props.onRendered()
                     }, t.prototype.componentDidMount = function() {
@@ -32172,9 +32212,9 @@
             }), n.d(t, "y", function() {
                 return R
             }), n.d(t, "J", function() {
-                return O
-            }), n.d(t, "F", function() {
                 return D
+            }), n.d(t, "F", function() {
+                return O
             }), n.d(t, "C", function() {
                 return L
             }), n.d(t, "E", function() {
@@ -32261,13 +32301,13 @@
                 }
             }
 
-            function O() {
+            function D() {
                 return {
                     type: E
                 }
             }
 
-            function D() {
+            function O() {
                 return {
                     type: d
                 }
@@ -32519,7 +32559,7 @@
                         this.buttonContainerRef && (this.buttonContainerRef.removeEventListener("mouseover", this.onMouseEnter), this.buttonContainerRef.removeEventListener("mouseleave", this.onMouseLeave))
                     }, t
                 }(d.Component),
-                O = Object(S.compose)(Object(m.a)(I, {
+                D = Object(S.compose)(Object(m.a)(I, {
                     options: function(e) {
                         return {
                             variables: {
@@ -32533,18 +32573,18 @@
                 }), Object(m.a)(N, {
                     name: "followUser"
                 }), Object(w.c)(), Object(C.a)("LiveNotificationsToggle"))(R);
-            var D, L = Object(i.b)(function(e) {
+            var O, L = Object(i.b)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isLoggedIn: Object(s.f)(e)
                     }
-                })(O),
+                })(D),
                 A = n("ZBeb"),
                 x = (n("Kcwz"), n("CZEr")),
                 P = n("Qdxp");
             ! function(e) {
                 e[e.IconOnly = 0] = "IconOnly", e[e.TextOnly = 1] = "TextOnly", e[e.IconAndText = 2] = "IconAndText"
-            }(D || (D = {}));
+            }(O || (O = {}));
             var F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -32786,7 +32826,7 @@
                             tabIndex: this.props.tabIndex,
                             type: this.props.followButtonType || T.D.Default,
                             fullWidth: this.props.fullWidthButton
-                        }, Object(T.Yb)(this.props)), this.props.followUIType === D.IconOnly ? null : t)
+                        }, Object(T.Yb)(this.props)), this.props.followUIType === O.IconOnly ? null : t)
                     }, t.prototype.renderUnfollowButton = function(e) {
                         var t = this.getUnfollowText(),
                             n = c("follow-btn follow-btn--following", {
@@ -32809,18 +32849,18 @@
                         }, d.createElement("span", {
                             className: "follow-btn__label",
                             "data-test-selector": "unfollow-button-label"
-                        }, this.props.unfollowUIType !== D.TextOnly && d.createElement(T.jb, {
+                        }, this.props.unfollowUIType !== O.TextOnly && d.createElement(T.jb, {
                             asset: T.kb.Heart
-                        }), this.props.unfollowUIType !== D.IconOnly && d.createElement(T.Ta, {
+                        }), this.props.unfollowUIType !== O.IconOnly && d.createElement(T.Ta, {
                             padding: {
                                 x: .5
                             }
                         }, Object(u.d)("Following", "FollowButton"))), d.createElement("span", {
                             className: "follow-btn__label-hover",
                             "data-test-selector": "unfollow-button-label-hover"
-                        }, this.props.unfollowUIType !== D.TextOnly && d.createElement(T.jb, {
+                        }, this.props.unfollowUIType !== O.TextOnly && d.createElement(T.jb, {
                             asset: T.kb.Unheart
-                        }), this.props.unfollowUIType !== D.IconOnly && d.createElement(T.Ta, {
+                        }), this.props.unfollowUIType !== O.IconOnly && d.createElement(T.Ta, {
                             padding: {
                                 x: .5
                             }
@@ -32857,7 +32897,7 @@
                         })))))
                     }, t.prototype.getButtonIcon = function() {
                         var e = this.props.hollowIcons && !this.state.isFollowing ? T.kb.FollowHollow : T.kb.Heart;
-                        return this.props.followUIType === D.TextOnly ? void 0 : e
+                        return this.props.followUIType === O.TextOnly ? void 0 : e
                     }, t.prototype.reportInteractive = function() {
                         M(this.props) ? this.props.latencyTracking.reportInteractive() : this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.addEventListeners = function() {
@@ -32900,7 +32940,7 @@
                 }, e)
             })(U);
             n.d(t, "b", function() {
-                return D
+                return O
             }), n.d(t, !1, function() {}), n.d(t, "a", function() {
                 return B
             })
@@ -33265,8 +33305,8 @@
                 N = n("2xye"),
                 I = n("kz7j"),
                 R = n("ndwU"),
-                O = n("GnwI"),
-                D = n("Ym9C");
+                D = n("GnwI"),
+                O = n("Ym9C");
             ! function(e) {
                 e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
             }(d || (d = {}));
@@ -33306,7 +33346,7 @@
             var B = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        return n.lastGDPR = F, n.hasInitializedOffsets = !1, n.logger = S.j.withCategory("video-player"), n.lastPlayerQualityOverride = D.b.Auto, n.checkPlayerDependencyStatus = function() {
+                        return n.lastGDPR = F, n.hasInitializedOffsets = !1, n.logger = S.j.withCategory("video-player"), n.lastPlayerQualityOverride = O.b.Auto, n.checkPlayerDependencyStatus = function() {
                             M() ? (n.setState({
                                 canInitializePlayer: !0
                             }), n.checkPlayerDependencyAnimationFrame = null) : n.checkPlayerDependencyAnimationFrame = requestAnimationFrame(n.checkPlayerDependencyStatus)
@@ -33618,7 +33658,7 @@
                         paused: !1
                     }, t.tagInjected = !1, t
                 }(l.Component),
-                j = Object(O.c)("VideoPlayer")(B);
+                j = Object(D.c)("VideoPlayer")(B);
             var V = Object(a.d)(Object(i.b)(function(e) {
                 return {
                     isWhispersBottomBarVisible: Object(f.b)(e),
@@ -36938,7 +36978,7 @@
                     PrimaryCta: "primary_cta",
                     Dismiss: "dismiss"
                 },
-                O = function(e) {
+                D = function(e) {
                     var t = {
                         notification_id: e.notification.id,
                         notification_type: e.notification.type,
@@ -36946,7 +36986,7 @@
                     };
                     o.n.track(S.SpadeEventType.NotificationImpression, t)
                 },
-                D = function(e) {
+                O = function(e) {
                     var t = {
                         unseen_view_count: e.unseenCount,
                         action: e.action
@@ -37088,7 +37128,7 @@
                     }, t.prototype.checkVisible = function(e) {
                         return i.__awaiter(this, void 0, void 0, function() {
                             return i.__generator(this, function(t) {
-                                return !this.impressionEventFired && this.isVisible(e) && (O({
+                                return !this.impressionEventFired && this.isVisible(e) && (D({
                                     uiContext: N.Center,
                                     notification: this.props.data
                                 }), this.impressionEventFired = !0), [2]
@@ -37347,7 +37387,7 @@
                     return i.__extends(t, e), t.prototype.componentWillMount = function() {
                         this.scheduleCloseTimer()
                     }, t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive(), O({
+                        this.props.latencyTracking.reportInteractive(), D({
                             uiContext: N.Toast,
                             notification: this.props.item
                         })
@@ -37705,7 +37745,7 @@
                                 }
                             }
                         }, t.toggleCenter = function(e) {
-                            e || (t.props.stopDeferring(), t.getUnseenNotificationsAndApplyTimer(), t.viewNotifications()), D({
+                            e || (t.props.stopDeferring(), t.getUnseenNotificationsAndApplyTimer(), t.viewNotifications()), O({
                                 unseenCount: t.getUnseenNotificationsCount(t.props),
                                 action: e ? I.Close : I.Open
                             })
@@ -37811,7 +37851,7 @@
                             if (t.setState({
                                     isFriendRequestsNotificationUnread: !1
                                 }), t.listDataLoaded()) {
-                                D({
+                                O({
                                     unseenCount: t.getUnseenNotificationsCount(t.props),
                                     action: I.MarkAllRead
                                 });
@@ -37922,7 +37962,7 @@
                                 })
                             })
                         }, t.redirectToNotificationsSettings = function() {
-                            o.o.history.push("/settings/notifications"), D({
+                            o.o.history.push("/settings/notifications"), O({
                                 unseenCount: t.getUnseenNotificationsCount(t.props),
                                 action: I.SettingsLink
                             }), t.centerWindowToggleBalloon.toggleBalloon(!1)
@@ -38349,7 +38389,7 @@
                     }, t
                 }(c.Component),
                 R = /version\/([\w\.]+).+?(mobile\s?safari|safari)/i,
-                O = function(e) {
+                D = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -38380,7 +38420,7 @@
                         }))
                     }, t
                 }(c.Component),
-                D = n("lhih"),
+                O = n("lhih"),
                 L = n("5zXJ"),
                 A = n("XmgI"),
                 x = n("ebRM"),
@@ -38403,10 +38443,10 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.offer.type === D.a) {
+                        if (this.props.offer.type === O.a) {
                             if (!this.props.channelLogin) return null;
                             var e = this.props.currentUserSHA || "";
-                            return c.createElement(O, {
+                            return c.createElement(D, {
                                 key: "wateb",
                                 minPayout: this.props.offer.bits,
                                 onWatchAdClick: this.props.handleWatchAdClick,
@@ -38423,13 +38463,13 @@
                         }, c.createElement(v.T, {
                             type: v.Kb.Strong,
                             fontSize: v.Y.Size6
-                        }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(x.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === D.c ? t = c.createElement(v.Ta, {
+                        }, Object(u.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(x.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === O.c ? t = c.createElement(v.Ta, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "black-friday-promo-form"
                         }, c.createElement(v.T, {
                             type: v.Kb.Strong,
                             fontSize: v.Y.Size6
-                        }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(x.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === D.d && (t = c.createElement(v.Ta, {
+                        }, Object(u.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(x.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === O.d && (t = c.createElement(v.Ta, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "prime-promo-promo-form"
                         }, c.createElement(v.T, {
@@ -38532,7 +38572,7 @@
                             }),
                             s = Object(x.d)(r),
                             l = Object(x.c)(r),
-                            d = r.type === D.a;
+                            d = r.type === O.a;
                         l && !e.hidePromos ? t.push(o) : s && !l ? t.push(o) : d && !e.hideWateb ? i = o : d || s || n.push(o)
                     }), e.fullsize ? c.createElement(v.Ta, {
                         className: "bits-buy-card-offers__full-size",
@@ -38945,15 +38985,15 @@
                         var r = [];
                         this.props.data.currentUser && this.props.data.currentUser.bitsOffers ? r = this.props.data.currentUser.bitsOffers : this.props.data.bitsOffers && (r = this.props.data.bitsOffers);
                         var a = r.filter(function(e) {
-                                return e.type === D.b
+                                return e.type === O.b
                             }).some(function(e) {
                                 return e.includesVAT
                             }),
                             o = "",
                             s = r.filter(function(e) {
-                                return e.type === D.b
+                                return e.type === O.b
                             }).pop();
-                        s && s.type === D.b && (o = s.currencyCode);
+                        s && s.type === O.b && (o = s.currencyCode);
                         var d = this.props.data.user ? this.props.data.user.id : "",
                             p = c.createElement(M, {
                                 offers: r,
@@ -39397,7 +39437,7 @@
             }), n.d(t, "j", function() {
                 return R
             }), n.d(t, "l", function() {
-                return O
+                return D
             });
             var i, r, a, o, s = n("mrSG"),
                 l = n("/7QA"),
@@ -39525,7 +39565,7 @@
                 k() && l.o.tracking.track(c.SpadeEventType.SearchUIClick, s.__assign({}, y(e, t, n), g(i)))
             }
 
-            function O(e) {
+            function D(e) {
                 switch (e) {
                     case d.a.Channels:
                         return "channels";
@@ -39552,7 +39592,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DashboardSettingsInteraction = "dashboard_settings_interaction", e.DevButtonClick = "cobalt_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LanguageFilterChange = "language_filter_change", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchBegin = "search_session_begin", e.SearchReset = "search_session_reset", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.SquadStreamBannerAction = "squad_stream_banner_action", e.SquadStreamPresentation = "squad_stream_presentation", e.SquadStreamViewerAction = "squad_stream_viewer_action", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoManagerInteraction = "video_manager_interaction", e.VideoManagerSectionLoad = "video_manager_section_load", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseForYou = "browse_for_you", e.BrowserFingerprint = "browser_fingerprint", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DashboardSettingsInteraction = "dashboard_settings_interaction", e.DevButtonClick = "cobalt_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeatureEducationUpdateBlock = "feature_education_update_block", e.FeatureEducationUpdateBlockImpression = "feature_education_update_block_impression", e.FeatureEducationTour = "feature_education_tour", e.FeatureEducationTourImpression = "feature_education_tour_impression", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LanguageFilterChange = "language_filter_change", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardView = "live_dashboard_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchBegin = "search_session_begin", e.SearchReset = "search_session_reset", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.SquadStreamBannerAction = "squad_stream_banner_action", e.SquadStreamPresentation = "squad_stream_presentation", e.SquadStreamViewerAction = "squad_stream_viewer_action", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoManagerInteraction = "video_manager_interaction", e.VideoManagerSectionLoad = "video_manager_section_load", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperStrangerWarningImpression = "whisper_stranger_prompt", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -39717,8 +39757,8 @@
                 N = n("YUvD"),
                 I = n("WroD"),
                 R = "https://www.googletagservices.com/tag/js/gpt.js",
-                O = "https://c.amazon-adsystem.com/aax2/apstag.js",
-                D = 3036,
+                D = "https://c.amazon-adsystem.com/aax2/apstag.js",
+                O = 3036,
                 L = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -39736,12 +39776,12 @@
                                     n = e, i = t
                                 }),
                                 o = {
-                                    pubID: D,
+                                    pubID: O,
                                     adServer: "googletag",
                                     bidTimeout: 2e3
                                 },
                                 s = document.createElement("script");
-                            return s.async = !0, s.src = O, s.onload = function() {
+                            return s.async = !0, s.src = D, s.onload = function() {
                                 window.apstag && window.apstag.init && window.apstag.init(o, n)
                             }, s.onerror = function() {
                                 a.o.adBlockDetector.setBlockDetectedToTrue(), i()
@@ -41309,9 +41349,9 @@
             }), n.d(t, "y", function() {
                 return R
             }), n.d(t, "x", function() {
-                return O
-            }), n.d(t, "q", function() {
                 return D
+            }), n.d(t, "q", function() {
+                return O
             }), n.d(t, "i", function() {
                 return L
             }), n.d(t, "h", function() {
@@ -41487,7 +41527,7 @@
                 }
             }
 
-            function O(e) {
+            function D(e) {
                 var t = Object(u.a)(e, g);
                 if (!t) return null;
                 switch (t.toLowerCase()) {
@@ -41510,7 +41550,7 @@
                 }
             }
 
-            function D(e, t) {
+            function O(e, t) {
                 var n = "" + S();
                 t && t.filter && (n = t.filter);
                 var i = "";
