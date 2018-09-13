@@ -117,7 +117,7 @@ window.__twilightSettings = {
     "squad_stream_page_whitelist": [],
     "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={SESSION_ID}",
     "squad_stream_uxr_logins": [],
-    "squad_stream_whitelist": ["ihatebadwords", "shangtee_test", "lilypichu", "scarra", "pokimane", "sleightlymusical", "fedmyster"],
+    "squad_stream_whitelist": [],
     "stats_sample_rate": 100,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
     "throttled_experiment_event_enabled": false,
