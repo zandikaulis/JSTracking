@@ -2152,7 +2152,6 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
         settings: loadSettings(config.settings),
         logLevel: String(config.logLevel), // must be a string
         localStorage: getLocalStorage(LOCAL_STORAGE_PREFIX),
-        clientTrackingInfo: getClientTrackingInfo(),
         mseSupported: isMSESupported(),
         keySystem: getSupportedKeySystem(Browser),
     });
@@ -2285,7 +2284,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-ed7c2d2d";
+    return "2.3.0-b80c573a";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2835,25 +2834,6 @@ function loadSettings(settings) {
         return __webpack_require__("./settings sync recursive ^\\.\\/.*\\.json$")("./" + settings + '.json');
     } catch(e) {
         return {};
-    }
-}
-
-function getClientTrackingInfo() {
-    var renderer, vendor;
-
-    try {
-        var canvas = document.createElement('canvas');
-        var glContext = canvas.getContext('experimental-webgl');
-        var debugInfo = glContext.getExtension("WEBGL_debug_renderer_info");
-        renderer = glContext.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
-        vendor = glContext.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
-    } catch (e) {
-        console.error('webgl context not available', e);
-    }
-
-    return {
-        'gl_renderer': renderer || '',
-        'gl_vendor': vendor || '',
     }
 }
 
