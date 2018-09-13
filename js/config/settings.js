@@ -110,7 +110,7 @@ window.__twilightSettings = {
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
-    "spade_url": "https://video-edge-492c2a.sjc02.hls.ttvnw.net/v1/segment/Cl9B5q-RXFnShIMtnuIYzdq7dEdmjjuovJy-M6_YYklqH7pw71ZxfaisNveGyLYRod6R372rnHXycvtUAT-BtY-aisWpmg26-24getnAr6GJxhYcV2hszHuzGzCOfjhcRSR5Oq8bTiXzxwxRmnyWvXIFyCdV-wqA7HOdSSkQA4h51kosw1eDEOPVNwFL88hD0362UJtnqL_R2bIs2np0BLXqnRmjQg9HW88EVmrvk2Dk7Q5lJjvi3-3XUAmLHGq2XbFGe9KLJinzEyx-ZoRH3h4xnkN5oFzkI3HGg4xns-xtf8cd7TJ4uL9fgJ40B6WFI2AiC-Wf_plY4cv6IvabhJ_Ss8o1L-kjqPZBYCDUVXEkhh6PyRB2YAI2_r30ptxT0jMPKa3HoDLTFhN_oycRf9Lz_313GjSwIzK-6sE_zBSjBJEKfrlMxsfEjA-oT0Pg3G7JjuiYEQpI2V2fqlKwkdoTk-XlL30DcVOzq4v4lV7lU0WLJi1lgQFT0s6vVKGDkfp-XhM8Z9Hb2Dd_Xof4uqhnceFXfSSsAISP05wlyDCKQ_sy792_37N-PsQdyukQtCJF1DPnZk19DETOct58kwLgQiF69yUohdaJ5bPnn49zaaefGISX5EPeL3o0JVp03-rAXeGaRkb1QzKC0j1-m1T7B3gSua9daKbShNagRvi_IceiJkbDL4iM2C2NmAjLHyVclmUrf3cWaRERPKlklhrXv5-iv0Ko5A6jzt4F9opK0qR17ufPFkjoIYPcu5fNYLUhDbRe9a.ts",
+    "spade_url": "https://video-edge-8b25cd.sjc02.hls.ttvnw.net/v1/segment/ClqeGkzC71o_DOWc5aleaQSZVKRNd1asiBgY0O5NyfAcsaRHnxpusdck1S3DJR-BsAuWAfag0GK0owwWW5mhWsCb8DmEB-hjc3TVXm2-HurQOj935NCuJGt3P3AEOxlhJGb3-xrraL3pejljE2y-GKW7PJrnmybncyB-w60-F0uXBveY51zgSpzYQDVr-979ajxRVZPBs-aDoCIRvO6J-yweEGaGmdPQUbLLGBA8b-gLkpjSaN-rWyMiKJB6YHmRdoD9iayw8Sbg1RuCBeC2uU3R-KnJRs-DUYFP9PF-4MxosS7r5BvChNRgPb3YQAmWkdz6cqMvmhQqYYRB4TsqsqfWz3vZEa8ppYWEFlyEhGYQaHaNjKYhPGnaX9qof4UIbbFqjLdD1MNEZgZrmJELL2CxlXN8XMHJFIhJ3SIux517vIqV-4_gnnRuZQSyYZ7kkacbNMGvWp1jXBhxFZuBU242KdeJmIYQi8TgLB1dOdQuP9a1FYmTSMG_1cew_bZy6y4ZIQnHDs4kV9LFeR3b_2OOorvxxIveei_s2mWRIhs9G9zhED6raTkdtitgQhdZIEEekWaLhNmHz-64g0l1XtDjF6mzAyuHevhPkML93IosdqSCKVIaN-MlDawiR0J5ASzj2Y4JtGnpVMWTMtwxmy6IcXUuhvCAzgeTBBbQlgzKSs4Jdtod4dRhE3SEuG3ATKFCNEl1dmbfmvY3K_Zw4pQtHUmCOelrCv7bNnGy5HB6wxi3DK5yE9AAi8AhP4B-.ts",
     "squad_stream_banner_query_enabled": true,
     "squad_stream_banner_whitelist": [],
     "squad_stream_feature": "on",
@@ -740,6 +740,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "yes"
+            }]
+        },
+        "4f1b6329-950f-4ce1-99fa-feec59d504c0": {
+            "name": "disco_fever",
+            "v": 4602,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
             }]
         },
         "50ac9a2b-63c2-46ed-9e7d-123363195dfd": {
