@@ -1283,15 +1283,20 @@ function encodeBase64(input) {
     return btoa(String.fromCharCode.apply(null, input));
 }
 
+function decodeQSValue(value) {
+  // decodeURIComponent does not convert + to space, so we have to do that ourselves
+  return decodeURIComponent(value.replace(/\+/g, ' '))
+}
+
 function getParamsFromUrl(url) {
     var params = {};
-        var query = url.substring(1);
-        var vars = query.split('&');
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split('=');
-            params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
-        }
-        return params;
+    var query = url.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        params[decodeQSValue(pair[0])] = decodeQSValue(pair[1]);
+    }
+    return params;
 }
 
 /**
@@ -2284,7 +2289,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-8c7690ae";
+    return "2.3.0-e0c8d56e";
 }
 
 MediaPlayer.prototype.isLooping = function () {

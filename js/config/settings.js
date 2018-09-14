@@ -146,7 +146,7 @@ window.__twilightSettings = {
     "vip_badge_gate": "off",
     "vod_archives_vira_grand": "on",
     "vod_editing_used_to_this": true,
-    "vod_premieres_sunset": "off",
+    "vod_premieres_sunset": "on",
     "vodcast_deprecation_announcement_enabled": true,
     "withgraphql_guarded_loading_enabled": true,
     "experiments": {
