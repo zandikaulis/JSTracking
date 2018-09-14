@@ -552,11 +552,11 @@ window.__twilightSettings = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 4562,
+            "v": 4615,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.6.7"
+                "value": "2.6.11"
             }]
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
