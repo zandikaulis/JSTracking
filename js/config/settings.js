@@ -585,13 +585,13 @@ window.__twilightSettings = {
         },
         "40f4fd80-86ca-44f4-9abc-0324d24908bc": {
             "name": "TWILIGHT_RAID_UPSELL",
-            "v": 4359,
+            "v": 4648,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 0,
                 "value": "test"
             }, {
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }]
         },
