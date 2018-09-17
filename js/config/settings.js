@@ -71,7 +71,7 @@ window.__twilightSettings = {
     "ivw_url": "https://script.ioam.de/iam.js",
     "krux_countries": ["US"],
     "krux_url": "https://cdn.krxd.net/controltag?confid=JYk8LCsC",
-    "legacy_routes": ["^/bug_reports/new$", "^/[a-zA-Z0-9_\\-%]+/esports/.+$", "^/[a-zA-Z0-9_\\-%]+/popout$", "^/[a-zA-Z0-9_\\-%]+/report_form$", "^/[a-zA-Z0-9_\\-%]+/v/.+$", "^/chat/embed$", "^/chromecast/", "^/health_check$", "^/search$", "^/p/.+$", "^/store/games(/.+)?$", "^/streams/[0-9]+/channel/[a-zA-Z0-9]+$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$", "^/yt/.+$"],
+    "legacy_routes": ["^/bug_reports/new$", "^/p/.+$", "^/store/games(/.+)?$", "^/year(/[0-9]{4})?$", "^/year/2016(/.+)?$"],
     "legacy_routes_enabled": true,
     "longtask_tracking_sample_rate": 0.1,
     "mass_mystery_gifting": "on",
