@@ -3,7 +3,7 @@ window.__twilightSettings = {
     "amazon_ads_url": "https://s.amazon-adsystem.com/iui3?d=3p-hbg&ex-src=twitch.tv&ex-hargs=v%3D1.0%3Bc%3D8858214122683%3Bp%3De75425fb-5407-7bd5-fd20-f462e98a8777",
     "benchmark_component_threshold": 0.1,
     "benchmark_networking_threshold": 0.15,
-    "bits_automod_cheering_enabled": "off",
+    "bits_automod_cheering_enabled": "on",
     "bits_charity_event": "off",
     "bits_code_redemption_redeem_page": false,
     "bits_prime_offer": false,
