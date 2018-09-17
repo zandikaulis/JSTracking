@@ -1113,7 +1113,7 @@
             }(i || (i = {}))
         },
         "14MF": function(e, t, n) {},
-        150: function(e, t, n) {
+        152: function(e, t, n) {
             n("/cy1"), n("gg62"), n("LVaA"), e.exports = n("sNlA")
         },
         "15fI": function(e, t, n) {
@@ -8056,7 +8056,7 @@
                     return b
                 }), n.d(t, "h", function() {
                     return E
-                }), n.d(t, "z", function() {
+                }), n.d(t, "A", function() {
                     return _
                 }), n.d(t, "u", function() {
                     return S
@@ -8066,10 +8066,12 @@
                     return N
                 }), n.d(t, "w", function() {
                     return P
-                }), n.d(t, "r", function() {
-                    return F
                 }), n.d(t, "x", function() {
+                    return F
+                }), n.d(t, "r", function() {
                     return U
+                }), n.d(t, "y", function() {
+                    return M
                 }), n.d(t, "k", function() {
                     return G
                 }), n.d(t, "a", function() {
@@ -8080,13 +8082,13 @@
                     return K
                 }), n.d(t, "s", function() {
                     return X
-                }), n.d(t, "y", function() {
+                }), n.d(t, "z", function() {
                     return me
                 }), n.d(t, "j", function() {
                     return _e
                 }), n.d(t, "i", function() {
                     return Se
-                }), n.d(t, "A", function() {
+                }), n.d(t, "B", function() {
                     return Ne
                 }), n.d(t, "q", function() {
                     return Pe
@@ -8200,16 +8202,16 @@
                     e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(x || (x = {})),
                 function(e) {
-                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
+                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(P || (P = {})),
                 function(e) {
-                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
+                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(F || (F = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
+                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(U || (U = {})),
                 function(e) {
-                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
+                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
                 }(M || (M = {})),
                 function(e) {
                     e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
@@ -26088,10 +26090,11 @@
             dn.displayName = "Tower";
             n("E8HR");
             var un, pn = function(e) {
-                return d.createElement("div", c.__assign({
+                return d.createElement(me, c.__assign({
                     className: p({
                         "tw-typeset": !0
-                    })
+                    }),
+                    fontSize: e.baseFontSize || ee.Size5
                 }, m(e)), e.children)
             };
             pn.displayName = "Typeset",
@@ -26593,15 +26596,17 @@
                                     var t = {};
                                     "function" == typeof e.properties ? t = e.properties(r.props) : e.properties && (t = i.__assign({}, e.properties));
                                     var n = i.__assign({}, r.props);
-                                    n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index);
+                                    n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index, t.email_id = n.location.state.email_id);
                                     var a = r.referenceTracking,
                                         o = a.content,
                                         l = a.medium,
-                                        c = a.content_index;
+                                        c = a.content_index,
+                                        d = a.email_id;
                                     s.o.tracking.trackPageview(i.__assign({
                                         content: o,
                                         medium: l,
                                         content_index: c,
+                                        email_id: d,
                                         location: e.location
                                     }, t))
                                 }
@@ -26621,9 +26626,10 @@
                                 n = {
                                     content: t.tt_content,
                                     content_index: t.tt_content_index,
-                                    medium: t.tt_medium
+                                    medium: t.tt_medium,
+                                    email_id: t.tt_email_id
                                 };
-                            if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, n.medium || n.content) {
+                            if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, delete t.tt_email_id, n.medium || n.content || n.email_id) {
                                 var i = "",
                                     a = r.stringify(t);
                                 a.length > 0 && (i = "?" + a), this.props.history.replace({
@@ -43633,6 +43639,6 @@
         }
     },
     [
-        [150, 103, 0]
+        [152, 103, 0]
     ]
 ]);
