@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [213], {
+    [214], {
         "+GjP": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -8048,61 +8048,63 @@
         DMoW: function(e, t, n) {
             "use strict";
             var i, r, a, o, s, l, c, d, u, p, m, h, f, g, v, b, y, k, E, _, S, C, w, T, N, I, R, O, D, A, L, x, P, F, U, M, B, j, V, H, z, G, W, q, Q, K, Y, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, de, ue, pe, me, he, fe, ge, ve, be, ye, ke, Ee, _e, Se, Ce, we, Te, Ne, Ie, Re, Oe, De, Ae, Le, xe, Pe, Fe, Ue, Me, Be, je, Ve, He, ze, Ge, We, qe, Qe, Ke, Ye, Xe, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt;
-            n.d(t, "e", function() {
+            n.d(t, "b", function() {
+                    return r
+                }), n.d(t, "f", function() {
                     return m
-                }), n.d(t, "c", function() {
-                    return v
                 }), n.d(t, "d", function() {
+                    return v
+                }), n.d(t, "e", function() {
                     return b
-                }), n.d(t, "h", function() {
+                }), n.d(t, "i", function() {
                     return E
-                }), n.d(t, "A", function() {
+                }), n.d(t, "B", function() {
                     return _
-                }), n.d(t, "u", function() {
+                }), n.d(t, "v", function() {
                     return S
-                }), n.d(t, "l", function() {
+                }), n.d(t, "m", function() {
                     return C
-                }), n.d(t, "t", function() {
+                }), n.d(t, "u", function() {
                     return N
-                }), n.d(t, "w", function() {
-                    return P
                 }), n.d(t, "x", function() {
-                    return F
-                }), n.d(t, "r", function() {
-                    return U
+                    return P
                 }), n.d(t, "y", function() {
+                    return F
+                }), n.d(t, "s", function() {
+                    return U
+                }), n.d(t, "z", function() {
                     return M
-                }), n.d(t, "k", function() {
+                }), n.d(t, "l", function() {
                     return G
                 }), n.d(t, "a", function() {
                     return q
-                }), n.d(t, "m", function() {
-                    return Q
-                }), n.d(t, "o", function() {
-                    return K
-                }), n.d(t, "s", function() {
-                    return X
-                }), n.d(t, "z", function() {
-                    return me
-                }), n.d(t, "j", function() {
-                    return _e
-                }), n.d(t, "i", function() {
-                    return Se
-                }), n.d(t, "B", function() {
-                    return Ne
-                }), n.d(t, "q", function() {
-                    return Pe
-                }), n.d(t, "g", function() {
-                    return Ve
-                }), n.d(t, "f", function() {
-                    return He
                 }), n.d(t, "n", function() {
-                    return ze
-                }), n.d(t, "v", function() {
-                    return We
+                    return Q
                 }), n.d(t, "p", function() {
+                    return K
+                }), n.d(t, "t", function() {
+                    return X
+                }), n.d(t, "A", function() {
+                    return me
+                }), n.d(t, "k", function() {
+                    return _e
+                }), n.d(t, "j", function() {
+                    return Se
+                }), n.d(t, "C", function() {
+                    return Ne
+                }), n.d(t, "r", function() {
+                    return Pe
+                }), n.d(t, "h", function() {
+                    return Ve
+                }), n.d(t, "g", function() {
+                    return He
+                }), n.d(t, "o", function() {
+                    return ze
+                }), n.d(t, "w", function() {
+                    return We
+                }), n.d(t, "q", function() {
                     return Je
-                }), n.d(t, "b", function() {
+                }), n.d(t, "c", function() {
                     return ot
                 }),
                 function(e) {
@@ -18435,17 +18437,19 @@
                             d = void 0 === c ? 50 : c,
                             p = a.facetFilters,
                             m = void 0 === p ? "" : p,
-                            h = a.numericFilters;
+                            h = a.numericFilters,
+                            f = a.restrictSearchableAttributes,
+                            g = void 0 === f ? [] : f;
                         return i.__awaiter(this, void 0, void 0, function() {
-                            var r, a, o, c, p, f, g, v, b, y = this;
-                            return i.__generator(this, function(k) {
-                                switch (k.label) {
+                            var r, a, o, c, p, f, v, b, y, k = this;
+                            return i.__generator(this, function(E) {
+                                switch (E.label) {
                                     case 0:
                                         switch (r = {
                                             id: n,
                                             currentPage: l
                                         }, a = function(e) {
-                                            return i.__awaiter(y, void 0, void 0, function() {
+                                            return i.__awaiter(k, void 0, void 0, function() {
                                                 var n, a;
                                                 return i.__generator(this, function(i) {
                                                     switch (i.label) {
@@ -18458,7 +18462,8 @@
                                                                     hitsPerPage: d,
                                                                     numericFilters: h || e.singleTypeNumericFilters,
                                                                     facets: "*",
-                                                                    facetFilters: m
+                                                                    facetFilters: m,
+                                                                    restrictSearchableAttributes: g
                                                                 }
                                                             }, [4, this.query([n])];
                                                         case 1:
@@ -18492,31 +18497,31 @@
                                     case 1:
                                         return o = r, [4, a(u.games)];
                                     case 2:
-                                        return o.games = k.sent(), [3, 16];
+                                        return o.games = E.sent(), [3, 16];
                                     case 3:
                                         return c = r, [4, a(u.users)];
                                     case 4:
-                                        return c.users = k.sent(), [3, 16];
+                                        return c.users = E.sent(), [3, 16];
                                     case 5:
                                         return p = r, [4, a(u.channels)];
                                     case 6:
-                                        return p.channels = k.sent(), [3, 16];
+                                        return p.channels = E.sent(), [3, 16];
                                     case 7:
                                         return f = r, [4, a(u.videos)];
                                     case 8:
-                                        return f.videos = k.sent(), [3, 16];
+                                        return f.videos = E.sent(), [3, 16];
                                     case 9:
-                                        return g = r, [4, a(u.communities)];
+                                        return v = r, [4, a(u.communities)];
                                     case 10:
-                                        return g.communities = k.sent(), [3, 16];
+                                        return v.communities = E.sent(), [3, 16];
                                     case 11:
-                                        return v = r, [4, a(u.streamTags)];
+                                        return b = r, [4, a(u.streamTags)];
                                     case 12:
-                                        return v.streamTags = k.sent(), [3, 16];
+                                        return b.streamTags = E.sent(), [3, 16];
                                     case 13:
-                                        return b = r, [4, a(u.tags)];
+                                        return y = r, [4, a(u.tags)];
                                     case 14:
-                                        return b.tags = k.sent(), [3, 16];
+                                        return y.tags = E.sent(), [3, 16];
                                     case 15:
                                         return [2, null];
                                     case 16:
@@ -41723,15 +41728,15 @@
             function B(e) {
                 switch (e) {
                     case i.All:
-                        return p.i.ALL_TIME;
+                        return p.j.ALL_TIME;
                     case i.Day:
-                        return p.i.LAST_DAY;
+                        return p.j.LAST_DAY;
                     case i.Week:
-                        return p.i.LAST_WEEK;
+                        return p.j.LAST_WEEK;
                     case i.Month:
-                        return p.i.LAST_MONTH;
+                        return p.j.LAST_MONTH;
                     case i.Trending:
-                        return p.i.TRENDING;
+                        return p.j.TRENDING;
                     default:
                         return e
                 }
