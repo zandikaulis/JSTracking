@@ -2289,7 +2289,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-8be92c67";
+    return "2.3.0-23172123";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3421,6 +3421,7 @@ function PlaybackMonitor(video, config) {
     addListener('play', this._onVideoPlay.bind(this));
     addListener('pause', this._onVideoPause.bind(this));
     addListener('timeupdate', this._onVideoTimeUpdate.bind(this));
+    addListener('waiting', this._onVideoWaiting.bind(this));
     addListener('error', this._onVideoError.bind(this));
     addListener('webkitbeginfullscreen', this._onWebkitBeginFullscreen.bind(this));
     addListener('webkitendfullscreen', this._onWebkitEndFullscreen.bind(this));
@@ -3476,10 +3477,18 @@ PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
     }
 
     // Update listeners
-    var buffered = getBufferedRange(this._video);
-    this._checkBufferUpdate(buffered);
-    this._updateIdle(buffered);
+    this._checkBufferUpdate();
     this._ontimeupdate();
+};
+
+PlaybackMonitor.prototype._onVideoWaiting = function () {
+    if (!this._video.paused) {
+        var duration = getBufferedRange(this._video).end - this._video.currentTime;
+        if (duration < MIN_PLAYABLE_BUFFER) {
+            this.pause();
+            this._onidle();
+        }
+    }
 };
 
 PlaybackMonitor.prototype._onVideoError = function () {
@@ -3508,6 +3517,7 @@ PlaybackMonitor.prototype._heartbeat = function () {
         clearInterval(this._intervalId);
     } else if (timeSinceUpdate > PLAYHEAD_STUCK_TIMEOUT) {
         console.warn('Playhead stuck for more than ' + PLAYHEAD_STUCK_TIMEOUT + 'ms');
+        this._playbackMonitor.pause();
         this._onidle();
     } else if (timeSinceUpdate > HEARTBEAT_INTERVAL) {
         // We haven't moved since the last heartbeat
@@ -3517,16 +3527,11 @@ PlaybackMonitor.prototype._heartbeat = function () {
     }
 };
 
-PlaybackMonitor.prototype._checkBufferUpdate = function (buffered) {
-    if (buffered.end !== this._lastBufferEnd) {
-        this._lastBufferEnd = buffered.end;
+PlaybackMonitor.prototype._checkBufferUpdate = function () {
+    var bufferEnd = getBufferedRange(this._video).end;
+    if (bufferEnd !== this._lastBufferEnd) {
+        this._lastBufferEnd = bufferEnd;
         this._onbufferupdate();
-    }
-};
-
-PlaybackMonitor.prototype._updateIdle = function (buffered) {
-    if ((buffered.end - this._video.currentTime < MIN_PLAYABLE_BUFFER) && !this._video.paused) {
-        this._onidle();
     }
 };
 
