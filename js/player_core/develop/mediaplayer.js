@@ -2289,7 +2289,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-0c6a52b4";
+    return "2.3.0-fc137a8f";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3083,7 +3083,7 @@ MediaSink.prototype.setPlaybackRate = function (rate) {
  * @param {function} onCue - called when the cue is fired
  */
 MediaSink.prototype.addCue = function (start, end, onCue) {
-    // endTime musst be larger than startTime on Edge
+    // endTime must be larger than startTime on Edge
     if (end <= start) {
         end = start + 1;
     }
