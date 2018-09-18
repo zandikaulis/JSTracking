@@ -86,6 +86,7 @@ window.__twilightSettings = {
     "onsite_notifications_launch": true,
     "partner_signup_app_v2": true,
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
+    "payments_recurly_countries": ["US"],
     "payments_spm_enabled_countries": ["US", "CA", "AT", "BE", "BG", "CH", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"],
     "persisted_queries_enabled": true,
     "player_routes_exact": ["", "activate", "bits", "bits-checkout", "directory", "following", "popout", "prime", "store", "subs"],
