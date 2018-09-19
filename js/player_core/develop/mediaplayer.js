@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-0b0c29b0";
+    return "2.3.0-61cd979d";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2898,11 +2898,11 @@ var MediaSink = module.exports = function MediaSink(config) {
  * Prepare for video playback
  */
 MediaSink.prototype.configure = function (track) {
+    this._playbackMonitor.setPassthrough(track.passthrough);
+
     if (track.path) {
         this._srcUrl = track.path;
-        // Update authxml path
         this._drmManager.configure(track.path);
-
         // Add a native source directly
         if (track.passthrough) {
             this._video.src = track.path;
@@ -3406,6 +3406,7 @@ function PlaybackMonitor(video, config) {
     this._ontimeupdate = config.ontimeupdate;
 
     this._video = video;
+    this._isPassthrough = false;
     this._intervalId = 0;
     this._onDelete = [];
     this._idle = true;
@@ -3435,6 +3436,10 @@ PlaybackMonitor.prototype.delete = function () {
     this._onDelete.forEach(function (fn) { fn() })
     clearInterval(this._intervalId);
     this._video = null;
+};
+
+PlaybackMonitor.prototype.setPassthrough = function (isPassthrough) {
+    this._isPassthrough = isPassthrough;
 };
 
 PlaybackMonitor.prototype.play = function () {
@@ -3486,7 +3491,7 @@ PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
 };
 
 PlaybackMonitor.prototype._onVideoWaiting = function () {
-    if (!this._video.paused) {
+    if (!this._video.paused && !this._isPassthrough) {
         var duration = getBufferedRange(this._video).end - this._video.currentTime;
         if (duration < MIN_PLAYABLE_BUFFER) {
             this.pause();
