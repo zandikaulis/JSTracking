@@ -1290,12 +1290,16 @@ function decodeQSValue(value) {
 
 function getParamsFromUrl(url) {
     var params = {};
-    var query = url.substring(1);
-    var vars = query.split('&');
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split('=');
-        params[decodeQSValue(pair[0])] = decodeQSValue(pair[1]);
+    var queryCharIndex = url.indexOf('?');
+    if (queryCharIndex > -1) {
+        var query = url.substring(queryCharIndex + 1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            params[decodeQSValue(pair[0])] = pair[1] ? decodeQSValue(pair[1]) : '';
+        }
     }
+
     return params;
 }
 
@@ -2289,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-393349e3";
+    return "2.3.0-be2d3b63";
 }
 
 MediaPlayer.prototype.isLooping = function () {
