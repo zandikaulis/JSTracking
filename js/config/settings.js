@@ -541,6 +541,18 @@ window.__twilightSettings = {
                 "value": "ember"
             }]
         },
+        "35b1e483-c6ca-4efa-b58e-fed92ef91290": {
+            "name": "disco_gladiator",
+            "v": 4668,
+            "t": 2,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant1"
+            }]
+        },
         "3763f4e7-c786-4000-a6c3-b91b9c774302": {
             "name": "twilight_fenix_down",
             "v": 2839,
