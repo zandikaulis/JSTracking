@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-dd9b2642";
+    return "2.3.0-b95f0e63";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2343,6 +2343,14 @@ MediaPlayer.prototype.getAutoSwitchQuality = function () {
 
 MediaPlayer.prototype.setAutoSwitchQuality = function (enable) {
     this._postMessage(WorkerMessage.SET_AUTO_SWITCH_QUALITY, enable);
+}
+
+MediaPlayer.prototype.setAutoInitialBitrate = function (bitrate) {
+    this._postMessage(WorkerMessage.SET_AUTO_INITIAL_BITRATE, bitrate);
+}
+
+MediaPlayer.prototype.setAutoMaxBitrate = function (bitrate) {
+    this._postMessage(WorkerMessage.SET_AUTO_MAX_BITRATE, bitrate);
 }
 
 MediaPlayer.prototype.setAutoMaxVideoSize = function (width, height) {
@@ -3807,6 +3815,16 @@ module.exports = {
      * @param {height} height
      */
     SET_AUTO_MAX_VIDEO_SIZE: 'WorkerSetAutoMaxVideoSize',
+    /**
+     * Set ABR initial bitrate
+     * @param {bitrate} to set
+     */
+    SET_AUTO_INITIAL_BITRATE: 'WorkerSetAutoInitialBitrate',
+    /**
+     * Set ABR max bitrate
+     * @param {bitrate} to set
+     */
+    SET_AUTO_MAX_BITRATE: 'WorkerSetAutoMaxBitrate',
     /**
      * Set volume between 0-1
      */
