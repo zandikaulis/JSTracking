@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-28c7e418";
+    return "2.3.0-dd9b2642";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2898,8 +2898,6 @@ var MediaSink = module.exports = function MediaSink(config) {
  * Prepare for video playback
  */
 MediaSink.prototype.configure = function (track) {
-    this._playbackMonitor.setPassthrough(track.passthrough);
-
     if (track.path) {
         this._srcUrl = track.path;
         this._drmManager.configure(track.path);
@@ -2969,14 +2967,21 @@ MediaSink.prototype.captureGesture = function () {
  * Start/resume playback
  */
 MediaSink.prototype.play = function () {
-    return this._playbackMonitor.play();
+    // Make sure all pending buffer appends have completed
+    return this._scheduleUpdate().then(function () {
+        return this._playbackMonitor.play();
+    }.bind(this));
 };
 
 /**
  * Stop playback
  */
 MediaSink.prototype.pause = function () {
-    this._playbackMonitor.pause();
+    // Since we schedule 'play', we need to schedule 'pause' as well
+    // to preserve ordering
+    this._scheduleUpdate().then(function () {
+        this._playbackMonitor.pause();
+    }.bind(this));
 };
 
 /**
@@ -3054,17 +3059,8 @@ MediaSink.prototype.seekTo = function (playhead) {
     var buffered = getBufferedRange(this._video);
     if (playhead >= buffered.start && playhead < buffered.end) {
         // If we're seeking within the buffer, wait for pending operations
-        function schedulePromise(track) {
-            return new Promise(function (resolve) {
-                track.schedule(resolve);
-            });
-        }
-        var promises = [];
-        for (var key in this._tracks) {
-            promises.push(this._tracks[key].then(schedulePromise));
-        }
-        Promise.all(promises).then(function () {
-            this._video.currentTime = playhead
+        this._scheduleUpdate().then(function () {
+            this._video.currentTime = playhead;
         }.bind(this));
     } else {
         this._video.currentTime = playhead;
@@ -3190,6 +3186,12 @@ MediaSink.prototype.delete = function () {
     this._video = null;
 };
 
+/**
+ * Create a source buffer and add it to our MediaSource
+ * @param {Number} trackID to identify this new buffer
+ * @param {String} codec   information for this track
+ * @param {Number} offset  Initial timestamp offset
+ */
 MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
     var track = this._mediaSource.then(function (mediaSource) {
         var srcBuf = mediaSource.addSourceBuffer('video/mp4;' + codec);
@@ -3208,6 +3210,24 @@ MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
     }.bind(this));
 
     this._tracks[trackID] = track;
+}
+
+/**
+ * Create a Promise that resolves when all currently scheduled
+ * SourceBuffer opperations have completed
+ */
+MediaSink.prototype._scheduleUpdate = function () {
+    var promises = [];
+    for (var key in this._tracks) {
+        promises.push(this._tracks[key].then(schedulePromise));
+    }
+    return Promise.all(promises);
+}
+
+function schedulePromise(track) {
+    return new Promise(function (resolve) {
+        track.schedule(resolve);
+    });
 }
 
 // internal
@@ -3406,7 +3426,6 @@ function PlaybackMonitor(video, config) {
     this._ontimeupdate = config.ontimeupdate;
 
     this._video = video;
-    this._isPassthrough = false;
     this._intervalId = 0;
     this._onDelete = [];
     this._idle = true;
@@ -3424,6 +3443,7 @@ function PlaybackMonitor(video, config) {
         }.bind(this))
     }.bind(this);
     addListener('play', this._onVideoPlay.bind(this));
+    addListener('playing', this._onVideoPlaying.bind(this));
     addListener('pause', this._onVideoPause.bind(this));
     addListener('timeupdate', this._onVideoTimeUpdate.bind(this));
     addListener('waiting', this._onVideoWaiting.bind(this));
@@ -3436,10 +3456,6 @@ PlaybackMonitor.prototype.delete = function () {
     this._onDelete.forEach(function (fn) { fn() })
     clearInterval(this._intervalId);
     this._video = null;
-};
-
-PlaybackMonitor.prototype.setPassthrough = function (isPassthrough) {
-    this._isPassthrough = isPassthrough;
 };
 
 PlaybackMonitor.prototype.play = function () {
@@ -3464,7 +3480,12 @@ PlaybackMonitor.prototype._onVideoPlay = function () {
     this._lastTimeUpdate = performance.now();
 };
 
+PlaybackMonitor.prototype._onVideoPlaying = function () {
+    this._idle = false;
+};
+
 PlaybackMonitor.prototype._onVideoPause = function () {
+    this._idle = true;
     clearInterval(this._intervalId);
     this._checkStopped();
 };
@@ -3491,13 +3512,10 @@ PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
 };
 
 PlaybackMonitor.prototype._onVideoWaiting = function () {
-    if (!this._video.paused && !this._isPassthrough) {
-        var duration = getBufferedRange(this._video).end - this._video.currentTime;
-        if (duration < MIN_PLAYABLE_BUFFER) {
-            this.pause();
-            this._onidle();
-        }
+    if (!this._video.paused && !this._video.seeking && !this._idle) {
+        this._onidle();
     }
+    this._idle = true;
 };
 
 PlaybackMonitor.prototype._onVideoError = function () {
