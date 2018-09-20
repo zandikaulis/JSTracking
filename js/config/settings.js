@@ -23,6 +23,7 @@ window.__twilightSettings = {
     "bounty_board_live_dashboard_widget": "on",
     "browser_notifications_launch": true,
     "cc_v2_flag": "off",
+    "cc_v2_trial_test_enabled": false,
     "channel_feed_enabled": false,
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
