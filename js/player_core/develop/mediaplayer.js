@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-76fdf8ea";
+    return "2.3.0-28c7e418";
 }
 
 MediaPlayer.prototype.isLooping = function () {
