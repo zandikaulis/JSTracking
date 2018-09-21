@@ -2162,7 +2162,7 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
         logLevel: String(config.logLevel), // must be a string
         localStorage: getLocalStorage(LOCAL_STORAGE_PREFIX),
         mseSupported: isMSESupported(),
-        keySystem: getSupportedKeySystem(Browser),
+        keySystem: config.keySystem || getSupportedKeySystem(Browser),
     });
 
     // Not needed anymore, but still need to emit async for backwards compatibility
@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-b95f0e63";
+    return "2.3.0-943655e4";
 }
 
 MediaPlayer.prototype.isLooping = function () {
