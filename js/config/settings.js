@@ -25,6 +25,7 @@ window.__twilightSettings = {
     "cc_v2_flag": "off",
     "cc_v2_trial_test_enabled": false,
     "channel_feed_enabled": false,
+    "chat_input_box_restrictions_enabled": false,
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
     "code_redemption_redeem_page": "off",
@@ -569,11 +570,11 @@ window.__twilightSettings = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 4665,
+            "v": 4672,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.6.15"
+                "value": "2.6.16"
             }]
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
@@ -1086,6 +1087,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 0,
                 "value": "no"
+            }]
+        },
+        "8d1b300f-f50d-4a7c-941a-29943cd1ed18": {
+            "name": "emote_picker_v2",
+            "v": 4671,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
             }]
         },
         "8e177f68-71cc-491c-96f5-35e25db2b61d": {
