@@ -1091,14 +1091,14 @@ window.__twilightSettings = {
         },
         "8d1b300f-f50d-4a7c-941a-29943cd1ed18": {
             "name": "emote_picker_v2",
-            "v": 4671,
+            "v": 4680,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "control"
+                "value": "off"
             }, {
                 "weight": 0,
-                "value": "variant_a"
+                "value": "on"
             }]
         },
         "8e177f68-71cc-491c-96f5-35e25db2b61d": {
@@ -1424,13 +1424,13 @@ window.__twilightSettings = {
         },
         "db6dc127-b372-48fe-9d8b-493ea6c51c57": {
             "name": "twilight_preview_card_iconic_images",
-            "v": 4031,
+            "v": 4682,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 0,
                 "value": "boxart"
             }]
         },
