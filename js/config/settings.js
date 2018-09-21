@@ -627,13 +627,13 @@ window.__twilightSettings = {
         },
         "41cc8630-60da-4689-a8aa-7bf6f414faca": {
             "name": "ride_the_wave",
-            "v": 4654,
+            "v": 4677,
             "t": 1,
             "groups": [{
-                "weight": 90,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 10,
+                "weight": 50,
                 "value": "wave"
             }]
         },
@@ -1518,11 +1518,14 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4675,
+            "v": 4678,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 99,
                 "value": "2.6.7"
+            }, {
+                "weight": 1,
+                "value": "2.6.107"
             }]
         },
         "ee491c3c-d6f7-4f00-8c53-c630dfa10f41": {
