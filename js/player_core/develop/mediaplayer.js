@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-881a9863";
+    return "2.3.0-feaefc39";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3552,7 +3552,6 @@ PlaybackMonitor.prototype._heartbeat = function () {
         clearInterval(this._intervalId);
     } else if (timeSinceUpdate > PLAYHEAD_STUCK_TIMEOUT) {
         console.warn('Playhead stuck for more than ' + PLAYHEAD_STUCK_TIMEOUT + 'ms');
-        this._playbackMonitor.pause();
         this._onidle();
     } else if (timeSinceUpdate > HEARTBEAT_INTERVAL) {
         // We haven't moved since the last heartbeat
