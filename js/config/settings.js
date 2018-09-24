@@ -1089,8 +1089,8 @@ window.__twilightSettings = {
             }]
         },
         "8d1b300f-f50d-4a7c-941a-29943cd1ed18": {
-            "name": "emote_picker_v2",
-            "v": 4680,
+            "name": "TWILIGHT_EMOTE_PICKER_V2",
+            "v": 4692,
             "t": 1,
             "groups": [{
                 "weight": 100,
