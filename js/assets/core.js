@@ -445,9 +445,9 @@
             }), n.d(t, "q", function() {
                 return O
             }), n.d(t, "w", function() {
-                return A
-            }), n.d(t, "f", function() {
                 return L
+            }), n.d(t, "f", function() {
+                return A
             }), n.d(t, "g", function() {
                 return x
             }), n.d(t, "x", function() {
@@ -571,11 +571,11 @@
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function A(e) {
+            function L(e) {
                 return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function L(e) {
+            function A(e) {
                 return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
@@ -702,10 +702,11 @@
             var i = n("q1tI"),
                 r = n("Ue10"),
                 a = function(e) {
-                    return i.createElement(r.Ta, {
+                    var t = e.tags;
+                    return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), i.createElement(r.Ta, {
                         display: r.U.InlineBlock,
                         fullWidth: !0
-                    }, e.tags.map(function(t) {
+                    }, t.map(function(t) {
                         return i.createElement(r.ub, {
                             key: t.id,
                             fontSize: r.Y.Size7,
@@ -1110,14 +1111,14 @@
                         }
                     }, t
                 }(c.Component),
-                A = n("GGok");
-            var L = Object(i.compose)(Object(s.c)("FriendButton"), Object(r.connect)(function(e) {
+                L = n("GGok");
+            var A = Object(i.compose)(Object(s.c)("FriendButton"), Object(r.connect)(function(e) {
                 var t = Object(o.e)(e);
                 return {
                     currentUserID: t && t.id,
                     isLoggedIn: Object(o.f)(e)
                 }
-            }), Object(a.a)(A, {
+            }), Object(a.a)(L, {
                 options: function(e) {
                     return {
                         variables: {
@@ -1130,7 +1131,7 @@
                 }
             }))(O);
             n.d(t, "a", function() {
-                return L
+                return A
             })
         },
         "0uWp": function(e, t, n) {
@@ -2674,10 +2675,10 @@
                         }))
                     }, t
                 }(a.Component),
-                A = Object(u.c)("PrimeGiftModal", {
+                L = Object(u.c)("PrimeGiftModal", {
                     autoReportInteractive: !0
                 })(O),
-                L = function(e) {
+                A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function() {
@@ -2697,7 +2698,7 @@
                 }(a.Component),
                 x = Object(o.compose)(Object(u.c)("PrimeGiftButton", {
                     autoReportInteractive: !0
-                }))(L);
+                }))(A);
             var P = Object(i.connect)(function(e) {
                     return {
                         isLoggedIn: Object(N.f)(e)
@@ -2705,7 +2706,7 @@
                 }, function(e, t) {
                     return Object(w.bindActionCreators)({
                         giftPrimeOffer: function() {
-                            return Object(T.d)(A, {
+                            return Object(T.d)(L, {
                                 offerID: t.offerID,
                                 offer: t.offer
                             })
@@ -4334,8 +4335,8 @@
                 R = n("lmy8"),
                 D = n("h9Rz"),
                 O = n("+0NX"),
-                A = n("uhBA"),
-                L = n("dqQ1"),
+                L = n("uhBA"),
+                A = n("dqQ1"),
                 x = new I.b({
                     introspectionQueryResultData: {
                         __schema: {
@@ -4405,7 +4406,7 @@
                 }),
                 P = function() {
                     function e(e) {
-                        this.authToken = null, this.batchID = 0, this.eventEmitter = new A.EventEmitter, this.queryID = 0, this.config = e.config, this.dynamicSettings = e.dynamicSettings, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.client = this.createApolloClient()
+                        this.authToken = null, this.batchID = 0, this.eventEmitter = new L.EventEmitter, this.queryID = 0, this.config = e.config, this.dynamicSettings = e.dynamicSettings, this.logger = e.logger.withCategory("apollo"), this.store = e.store, this.session = e.session, this.client = this.createApolloClient()
                     }
                     return e.prototype.addQueryMetricsListener = function(e) {
                         this.eventEmitter.addListener("query-metrics", e)
@@ -4480,7 +4481,7 @@
                                                 case 0:
                                                     return t.status && (t.status >= 400 || t.status < 200) ? 401 !== t.status ? [3, 4] : this.config.embedded ? (this.logger.warn("Received 401 response from GraphQL."), [3, 3]) : [3, 1] : [3, 6];
                                                 case 1:
-                                                    return this.logger.warn("Received 401 response from GraphQL, logging user out."), [4, Object(L.a)(this.authToken, {
+                                                    return this.logger.warn("Received 401 response from GraphQL, logging user out."), [4, Object(A.a)(this.authToken, {
                                                         config: this.config,
                                                         logger: this.logger
                                                     })];
@@ -4585,7 +4586,7 @@
             var K, Y, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce = function() {
                     function e(e, t) {
                         var n = this;
-                        if (this.eventEmitter = new A.EventEmitter, this.addMessageListener = function(e) {
+                        if (this.eventEmitter = new L.EventEmitter, this.addMessageListener = function(e) {
                                 n.eventEmitter.addListener("message", e)
                             }, this.removeMessageListener = function(e) {
                                 n.eventEmitter.removeListener("message", e)
@@ -6574,11 +6575,12 @@
 
             function u(e) {
                 if (e) return e.map(function(e) {
-                    var t, n = s.b[i.o.intl.getLanguageCode() || s.a];
+                    var t, n = Object(s.a)();
                     return t = n && void 0 !== e.localizations && n in e.localizations ? e.localizations[n] : e.name, {
                         id: e.id,
-                        tagName: e.name,
-                        localizedName: t
+                        isLanguageTag: e.name.includes("auto___lang"),
+                        localizedName: t,
+                        tagName: e.name
                     }
                 })
             }
@@ -6895,8 +6897,8 @@
                 R = n("6x+I"),
                 D = n("KxT4"),
                 O = n("j3KY"),
-                A = (n("gQ2q"), n("487o")),
-                L = function(e) {
+                L = (n("gQ2q"), n("487o")),
+                A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.reportInteractive = function() {
@@ -7017,7 +7019,7 @@
                     return {
                         blockBannerForGDPR: Object(D.h)(e)
                     }
-                }), Object(d.a)(A, {
+                }), Object(d.a)(L, {
                     options: function() {
                         return {
                             variables: {
@@ -7026,7 +7028,7 @@
                             }
                         }
                     }
-                }), Object(f.c)("BlueBarComponent"))(L),
+                }), Object(f.c)("BlueBarComponent"))(A),
                 P = n("z8lI");
             n.d(t, "d", function() {
                 return I
@@ -7433,6 +7435,7 @@
                             direction: this.state.options.direction,
                             align: this.state.options.align,
                             label: this.state.options.label,
+                            width: this.state.options.width,
                             show: !0
                         }, a) : this.state.richOptions && (s = o.createElement(u, {
                             content: this.state.richOptions.richContent,
@@ -8627,13 +8630,13 @@
                 R = "twilight.perf-size",
                 D = "twilight.staff-tab",
                 O = 3,
-                A = c.a.wrap(function() {
+                L = c.a.wrap(function() {
                     return n.e(30).then(n.bind(null, "Msj/"))
                 }, "DesktopInformation");
             ! function(e) {
                 e.Latency = "Latency", e.Experiments = "Experiments", e.DynamicSettings = "Dynamic Settings", e.Desktop = "Desktop Latency"
             }(N || (N = {}));
-            var L = function(e) {
+            var A = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.showUrgentMessage = function(e) {
@@ -8797,7 +8800,7 @@
                                     showUrgentMessage: this.showUrgentMessage
                                 });
                             case N.Desktop:
-                                return a.createElement(A, null);
+                                return a.createElement(L, null);
                             default:
                                 return null
                         }
@@ -8812,7 +8815,7 @@
                         hideStaffConsole: m.b,
                         showStaffConsole: m.c
                     }, e)
-                })(L)
+                })(A)
         },
         D7An: function(e, t, n) {
             "use strict";
@@ -8827,7 +8830,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PreviewCardIconicImages = "TWILIGHT_PREVIEW_CARD_ICONIC_IMAGES", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODColorsOfTheWind = "VOD_COLORS_OF_THE_WIND", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODColorsOfTheWind = "VOD_COLORS_OF_THE_WIND", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -8916,10 +8919,6 @@
                 }, i[r.ClipsOnTheBrain] = {
                     id: "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7",
                     default: "control"
-                }, i[r.PreviewCardIconicImages] = {
-                    id: "db6dc127-b372-48fe-9d8b-493ea6c51c57",
-                    default: "control",
-                    staffOverride: "control"
                 }, i[r.Tags] = {
                     id: "e911d915-baca-46b8-b6fe-e991baee776b",
                     default: "control",
@@ -8991,7 +8990,7 @@
         DBPb: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, k, E, _, S, C, w, T, N, I, R, D, O, A, L, x, P, F, U, M, B, j, V, z, H, G, W, q, Q, K, Y, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, ke, Ee, _e, Se, Ce, we, Te, Ne, Ie, Re, De, Oe, Ae, Le, xe, Pe, Fe, Ue, Me, Be, je, Ve, ze, He, Ge, We, qe, Qe, Ke, Ye, Xe, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt;
+            var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, k, E, _, S, C, w, T, N, I, R, D, O, L, A, x, P, F, U, M, B, j, V, z, H, G, W, q, Q, K, Y, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, ke, Ee, _e, Se, Ce, we, Te, Ne, Ie, Re, De, Oe, Le, Ae, xe, Pe, Fe, Ue, Me, Be, je, Ve, ze, He, Ge, We, qe, Qe, Ke, Ye, Xe, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt;
             n.d(t, "b", function() {
                     return r
                 }), n.d(t, "f", function() {
@@ -9144,10 +9143,10 @@
                 }(O || (O = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
-                }(A || (A = {})),
+                }(L || (L = {})),
                 function(e) {
                     e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
-                }(L || (L = {})),
+                }(A || (A = {})),
                 function(e) {
                     e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(x || (x = {})),
@@ -9306,10 +9305,10 @@
                 }(Oe || (Oe = {})),
                 function(e) {
                     e.ASC = "ASC", e.DESC = "DESC"
-                }(Ae || (Ae = {})),
+                }(Le || (Le = {})),
                 function(e) {
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
-                }(Le || (Le = {})),
+                }(Ae || (Ae = {})),
                 function(e) {
                     e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
                 }(xe || (xe = {})),
@@ -12028,8 +12027,8 @@
                 }(u.Component)),
                 D = n("lhih"),
                 O = n("0Lz3"),
-                A = n("GnwI"),
-                L = n("Gw6o"),
+                L = n("GnwI"),
+                A = n("Gw6o"),
                 x = (n("IvMc"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -12132,7 +12131,7 @@
                         })))
                     }, t
                 }(u.Component)),
-                P = Object(k.compose)(Object(A.c)("GetBitsButtonContent"), Object(v.a)(L, {
+                P = Object(k.compose)(Object(L.c)("GetBitsButtonContent"), Object(v.a)(A, {
                     props: function(e) {
                         var t, n, i, r;
                         return e.data && e.data.user && e.data.user.cheer && (t = Object(O.a)(e.data.user.cheer.emotes), n = e.data.user.id), e.data && e.data.currentUser ? (r = e.data.currentUser.bitsBalance, i = e.data.currentUser.bitsOffers) : e.data && e.data.bitsOffers && (i = e.data.bitsOffers), {
@@ -12199,7 +12198,7 @@
                         })))
                     }, t
                 }(u.Component),
-                U = Object(k.compose)(Object(A.c)("GetBitsButton"))(F);
+                U = Object(k.compose)(Object(L.c)("GetBitsButton"))(F);
             var M = Object(i.connect)(function(e) {
                     return {
                         isLoggedIn: Object(l.f)(e)
@@ -12430,7 +12429,7 @@
                         }, u.createElement(he.a, {
                             tags: this.props.tags,
                             linkPath: me.a.PopularTag,
-                            style: I.Fb.Default
+                            tagNumberLimit: 3
                         })))))));
                         var t = {
                             "search-live-result-card": !0,
@@ -12775,7 +12774,7 @@
                         }, u.createElement(he.a, {
                             tags: this.props.data.video.contentTags,
                             linkPath: me.a.PopularTag,
-                            style: I.Fb.Default
+                            tagNumberLimit: 3
                         }))))))) : u.createElement(I.Qa, {
                             linkTo: t,
                             onClick: this.onClick,
@@ -12832,8 +12831,8 @@
                 }), Object(se.a)("SearchVideoResultCard", {
                     percentage: 75
                 }), Object(le.f)())(De),
-                Ae = n("opSz"),
-                Le = (n("dApd"), function(e) {
+                Le = n("opSz"),
+                Ae = (n("dApd"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.tagExperiment = Object(fe.b)(), t.getGameCards = function(e) {
@@ -12968,7 +12967,7 @@
                             showBack: !1
                         }), t = this.props.isWaiting ? u.createElement(I.Va, {
                             fillContent: !0
-                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.currentCategory && null !== this.props.currentCategory ? this.getCategoryDrillDown(this.props.currentCategory) : this.props.gameResults && this.props.gameResults.totalHits > 0 || this.props.userResults && this.props.userResults.totalHits > 0 || this.props.communityResults && this.props.communityResults.totalHits > 0 || this.props.videoResults && this.props.videoResults.totalHits > 0 || this.props.liveResults && this.props.liveResults.totalHits > 0 ? this.getResultSections() : this.getNoResultsMessage(), this.props.currentCategory === Ee.a.Videos && (n = u.createElement(Ae.a, {
+                        }) : this.props.isErrored ? this.getErrorMessage() : this.props.currentCategory && null !== this.props.currentCategory ? this.getCategoryDrillDown(this.props.currentCategory) : this.props.gameResults && this.props.gameResults.totalHits > 0 || this.props.userResults && this.props.userResults.totalHits > 0 || this.props.communityResults && this.props.communityResults.totalHits > 0 || this.props.videoResults && this.props.videoResults.totalHits > 0 || this.props.liveResults && this.props.liveResults.totalHits > 0 ? this.getResultSections() : this.getNoResultsMessage(), this.props.currentCategory === Ee.a.Videos && (n = u.createElement(Le.a, {
                             key: "video-filters",
                             onOptionsChange: this.props.onVideoOptionsChange
                         })), u.createElement("div", {
@@ -13277,7 +13276,7 @@
                             background: I.p.Alt2,
                             padding: 1,
                             borderBottom: !0
-                        }, this.renderSearchInput()), u.createElement(Le, c.__assign({}, this.getSearchPanelProps())))) : u.createElement("div", {
+                        }, this.renderSearchInput()), u.createElement(Ae, c.__assign({}, this.getSearchPanelProps())))) : u.createElement("div", {
                             className: "top-nav__search-container",
                             "data-click-out-id": "nav-search-balloon"
                         }, u.createElement(ie.a, {
@@ -13289,7 +13288,7 @@
                             show: this.props.isOpen,
                             offsetY: "5px",
                             "data-a-target": "nav-search-balloon"
-                        }, u.createElement(Le, c.__assign({}, this.getSearchPanelProps()))), u.createElement(xe, {
+                        }, u.createElement(Ae, c.__assign({}, this.getSearchPanelProps()))), u.createElement(xe, {
                             isVisible: this.props.isOpen && !!this.props.currentCategory,
                             currentCategory: this.props.currentCategory,
                             onClick: this.categoryTagClicked
@@ -13617,7 +13616,7 @@
                         }
                     }, t.childContextTypes = {
                         getSearchTrackingProps: Y.func
-                    }, t = c.__decorate([Object(A.c)("NavSearch")], t)
+                    }, t = c.__decorate([Object(L.c)("NavSearch")], t)
                 }(u.Component),
                 ze = Object(X.a)(Ve),
                 He = n("RVih"),
@@ -13642,7 +13641,7 @@
                         skip: function(e) {
                             return !e.isLoggedIn
                         }
-                    }), Object(A.c)("TopNavStoreComponent", {
+                    }), Object(L.c)("TopNavStoreComponent", {
                         autoReportInteractive: !0
                     })], t)
                 }(u.Component);
@@ -13680,7 +13679,7 @@
                             }, Object(h.d)("Try Prime", "TopNavUpsell"))
                         }
                         return null
-                    }, t = c.__decorate([Object(v.a)(Xe), Object(A.c)("TopNavUpsellComponent")], t)
+                    }, t = c.__decorate([Object(v.a)(Xe), Object(L.c)("TopNavUpsellComponent")], t)
                 }(u.Component),
                 Je = n("x7UT"),
                 $e = n("eDVu"),
@@ -14058,7 +14057,7 @@
                         })), u.createElement(I.T, null, Object(h.d)("Log Out", "UserMenuDropdown")))), h.o.integrations.process && this.renderAppExit()))))
                     }, t
                 }(u.Component),
-                vt = Object(A.c)("UserMenuDropdown")(gt),
+                vt = Object(L.c)("UserMenuDropdown")(gt),
                 bt = n("6qmu"),
                 yt = n("3KNA"),
                 kt = function(e) {
@@ -14293,7 +14292,7 @@
                             flexShrink: 0
                         }, u.createElement(I.Ta, {
                             className: "top-nav-user-menu__avatar-container"
-                        }, u.createElement(A.a, {
+                        }, u.createElement(L.a, {
                             size: 30,
                             src: t,
                             alt: Object(h.d)("User avatar", "UserMenuToggle"),
@@ -14447,7 +14446,7 @@
                         skip: function(e) {
                             return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                         }
-                    }]), Object(A.c)("User")], t)
+                    }]), Object(L.c)("User")], t)
                 }(u.Component);
             var Dt, Ot = Object(i.connect)(function(e) {
                     return {
@@ -14461,8 +14460,8 @@
                         initialUserAvailabilitySet: ot.g
                     }, e)
                 })(Object(r.a)(Rt)),
-                At = n("9pSj"),
-                Lt = n("DS6v");
+                Lt = n("9pSj"),
+                At = n("DS6v");
             n("tUtL");
             ! function(e) {
                 e.BrowseLink = "top-nav__browse-link", e.DropdownStoreLink = "top-nav__dropdown-store-link", e.FollowingLink = "top-nav__following-link", e.LanguageBalloonWrapper = "top-nav__language-balloon-Wrapper", e.LanguageMenuItem = "top-nav__language-menu-item"
@@ -14503,7 +14502,7 @@
                                 },
                                 alignSelf: I.e.Center,
                                 flexWrap: I.X.NoWrap
-                            }, !e && u.createElement(At.d, null))
+                            }, !e && u.createElement(Lt.d, null))
                         }, n.renderStoreLink = function() {
                             var e = !1;
                             if (n.props.data) {
@@ -14798,11 +14797,11 @@
                         })))))
                     }, t
                 }(u.Component),
-                Pt = Object(a.compose)(Object(v.a)(Lt, {
+                Pt = Object(a.compose)(Object(v.a)(At, {
                     skip: function(e) {
                         return !e.isLoggedIn
                     }
-                }), Object(A.c)("TopNav", {
+                }), Object(L.c)("TopNav", {
                     autoReportInteractive: !0
                 }))(xt);
             var Ft = Object(r.a)(Object(i.connect)(function(e) {
@@ -22580,8 +22579,8 @@
             function(e) {
                 e.Default = "tw-z-default", e.Above = "tw-z-above", e.Below = "tw-z-below"
             }(D || (D = {}));
-            var O, A = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
-                L = function(e) {
+            var O, L = new Set([0, .5, 1, 2, 3, 4, 5, "auto"]),
+                A = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -22617,7 +22616,7 @@
                             var n = [];
                             return void 0 !== t.top && (.5 === t.top ? n.push(e + "-t-05") : n.push(e + "-t-" + t.top)), void 0 !== t.right && (.5 === t.right ? n.push(e + "-r-05") : n.push(e + "-r-" + t.right)), void 0 !== t.bottom && (.5 === t.bottom ? n.push(e + "-b-05") : n.push(e + "-b-" + t.bottom)), void 0 !== t.left && (.5 === t.left ? n.push(e + "-l-05") : n.push(e + "-l-" + t.left)), void 0 !== t.x && (.5 === t.x ? n.push(e + "-x-05") : n.push(e + "-x-" + t.x)), void 0 !== t.y && (.5 === t.y ? n.push(e + "-y-05") : n.push(e + "-y-" + t.y)), n
                         }
-                        if (!A.has(t) || "tw-pd" === e && "auto" === t) throw new Error(t + " is not a valid property of either margin or padding");
+                        if (!L.has(t) || "tw-pd" === e && "auto" === t) throw new Error(t + " is not a valid property of either margin or padding");
                         return .5 === t ? e + "-05" : "auto" === t ? e + "-auto" : e + "-" + t
                     }, t
                 }(u.Component),
@@ -22626,7 +22625,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return c.__extends(t, e), t.prototype.render = function() {
-                        return u.createElement(L, c.__assign({}, this.props), u.createElement("div", {
+                        return u.createElement(A, c.__assign({}, this.props), u.createElement("div", {
                             ref: this.props.refDelegate
                         }, this.props.children))
                     }, t
@@ -24418,7 +24417,7 @@
                     }, m(this.props), g(this.props), {
                         title: n
                     }), this.props.children);
-                    return u.createElement(L, {
+                    return u.createElement(A, {
                         verticalAlign: this.props.align
                     }, h)
                 }, t.prototype.getBreakpointClasses = function(e, t) {
@@ -24461,7 +24460,7 @@
                             f = c.__assign({}, this.props, m(this.props), g(this.props), {
                                 className: p(this.props.className, t, i, n, r, a, o, s, l, d, h)
                             });
-                        return u.createElement(L, c.__assign({}, f))
+                        return u.createElement(A, c.__assign({}, f))
                     }, t.prototype.getBorderRadiusClasses = function(e) {
                         var t = [];
                         return Object.keys(e).map(function(n) {
@@ -24517,7 +24516,7 @@
                             "tw-alert-banner": !0
                         })[e.type] = !0, t),
                         r = [];
-                    return e.link && (n = u.createElement(L, {
+                    return e.link && (n = u.createElement(A, {
                         margin: {
                             left: 1
                         }
@@ -24565,7 +24564,7 @@
                         display: k.Flex,
                         alignItems: b.Center,
                         flexGrow: 1
-                    }, e.status && u.createElement(L, {
+                    }, e.status && u.createElement(A, {
                         margin: {
                             left: 1
                         }
@@ -24733,7 +24732,7 @@
                                 ellipsis: !0
                             }, t.props.description)))
                         }, t.renderBackgroundImage = function() {
-                            if (t.props.backgroundImageProps) return u.createElement(L, {
+                            if (t.props.backgroundImageProps) return u.createElement(A, {
                                 className: "accordion-header__background-image",
                                 position: w.Absolute,
                                 attachTop: !0,
@@ -24847,7 +24846,7 @@
             ! function(e) {
                 e.mouseEnter = "mouse-enter", e.mouseLeave = "mouse-leave", e.mouseDown = "mouse-down", e.mouseUp = "mouse-up"
             }(Ce || (Ce = {}));
-            var Ie, Re, De, Oe, Ae, Le = function(e) {
+            var Ie, Re, De, Oe, Le, Ae = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -24878,7 +24877,7 @@
                 }
                 return c.__extends(t, e), t.prototype.render = function() {
                     var e, t, n = this.state.animationQueue[0];
-                    return u.createElement(L, {
+                    return u.createElement(A, {
                         padding: this.props.padding,
                         display: k.InlineFlex
                     }, u.createElement("div", {
@@ -24887,7 +24886,7 @@
                         onMouseLeave: this.onMouseLeave,
                         onMouseDown: this.onMouseDown,
                         onMouseUp: this.onMouseUp
-                    }, u.createElement(L, {
+                    }, u.createElement(A, {
                         display: k.InlineFlex
                     }, u.createElement("figure", null, u.createElement("svg", {
                         className: "tw-animated-glitch-logo__svg",
@@ -24938,14 +24937,14 @@
             }(Oe || (Oe = {})),
             function(e) {
                 e.Bounce = "tw-animation--bounce", e.BounceIn = "tw-animation--bounce-in", e.BounceOut = "tw-animation--bounce-out", e.FadeIn = "tw-animation--fade-in", e.FadeOut = "tw-animation--fade-out", e.SlideInTop = "tw-animation--slide-in-top", e.SlideInRight = "tw-animation--slide-in-right", e.SlideInBottom = "tw-animation--slide-in-bottom", e.SlideInLeft = "tw-animation--slide-in-left", e.SlideOutTop = "tw-animation--slide-out-top", e.SlideOutRight = "tw-animation--slide-out-right", e.SlideOutBottom = "tw-animation--slide-out-bottom", e.SlideOutLeft = "tw-animation--slide-out-left"
-            }(Ae || (Ae = {}));
+            }(Le || (Le = {}));
             var xe = function(e) {
                 var t = {
                     "tw-animation": !0,
                     "tw-animation--animate": e.enabled,
                     "tw-animation--loop": e.loop
                 };
-                return e.delay && (t[e.delay] = !0), e.duration ? t[e.duration] = !0 : t[Re.Short] = !0, e.fillMode ? t[e.fillMode] = !0 : t[De.Both] = !0, e.timing ? t[e.timing] = !0 : t[Oe.Ease] = !0, e.type && (t[e.type] = !0), u.createElement(L, c.__assign({
+                return e.delay && (t[e.delay] = !0), e.duration ? t[e.duration] = !0 : t[Re.Short] = !0, e.fillMode ? t[e.fillMode] = !0 : t[De.Both] = !0, e.timing ? t[e.timing] = !0 : t[Oe.Ease] = !0, e.type && (t[e.type] = !0), u.createElement(A, c.__assign({
                     className: p(t)
                 }, m(e)), u.createElement("div", {
                     onAnimationStart: e.onAnimationStart,
@@ -25272,7 +25271,7 @@
                     left: l,
                     right: s
                 };
-                return e.noTail || (h = u.createElement(L, {
+                return e.noTail || (h = u.createElement(A, {
                     className: "tw-balloon__tail",
                     position: w.Absolute,
                     overflow: C.Hidden
@@ -25283,7 +25282,7 @@
                     position: w.Absolute,
                     background: e.tailBackground || se.Base,
                     border: !0
-                })))), u.createElement(L, {
+                })))), u.createElement(A, {
                     display: e.show ? k.Block : k.Hide,
                     position: w.Absolute
                 }, u.createElement("div", c.__assign({
@@ -25774,7 +25773,7 @@
                     marginBottom: r,
                     width: e.width
                 };
-                return u.createElement(L, c.__assign({
+                return u.createElement(A, c.__assign({
                     display: e.display ? e.display : k.InlineFlex
                 }, m(e)), u.createElement("div", {
                     className: p(s),
@@ -25813,12 +25812,12 @@
                 }, n) : n
             };
             Ot.displayName = "Stat";
-            var At;
+            var Lt;
             n("M/Go");
             ! function(e) {
                 e.Notification = "tw-pill--notification", e.Brand = "tw-pill--brand", e.Live = "tw-pill--live", e.Alert = "tw-pill--alert", e.Success = "tw-pill--success", e.Prime = "tw-pill--prime", e.Overlay = "tw-pill--overlay", e.Warn = "tw-pill--warn"
-            }(At || (At = {}));
-            var Lt = function(e) {
+            }(Lt || (Lt = {}));
+            var At = function(e) {
                 var t = {
                     "tw-pill": !0
                 };
@@ -25826,7 +25825,7 @@
                     className: p(t)
                 }, m(e)), e.label)
             };
-            Lt.displayName = "Pill";
+            At.displayName = "Pill";
             var xt, Pt, Ft;
             n("rBQp");
             ! function(e) {
@@ -25936,7 +25935,7 @@
                     required: e.required,
                     tabIndex: t,
                     value: e.value
-                }), u.createElement(L, {
+                }), u.createElement(A, {
                     padding: .5,
                     display: k.Block
                 }, u.createElement("label", {
@@ -26008,7 +26007,7 @@
                 var t, n = "tw-" + it();
                 return e.tabIndex && (t = e.tabIndex), u.createElement("div", c.__assign({
                     className: p("tw-search-input")
-                }, m(e)), u.createElement(L, {
+                }, m(e)), u.createElement(A, {
                     display: k.HideAccessible
                 }, u.createElement("label", {
                     htmlFor: e.id ? e.id : n
@@ -26124,7 +26123,7 @@
                         return u.createElement("li", c.__assign({
                             className: this.className,
                             role: l.Presentation
-                        }, m(this.props)), u.createElement(L, {
+                        }, m(this.props)), u.createElement(A, {
                             display: k.InlineFlex
                         }, u.createElement(f, {
                             className: "tw-tab__link " + (this.props.active ? "tw-tab__link--active" : ""),
@@ -26151,7 +26150,7 @@
                     }), t
                 }(u.Component),
                 Xt = (n("jeqg"), function(e) {
-                    return u.createElement(L, c.__assign({
+                    return u.createElement(A, c.__assign({
                         fullWidth: !0,
                         display: k.Flex,
                         justifyContent: e.alignRight ? S.End : void 0,
@@ -26551,7 +26550,7 @@
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {
                 return Ne
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "f", function() {
-                return Le
+                return Ae
             }), n.d(t, !1, function() {}), n.d(t, "g", function() {
                 return xe
             }), n.d(t, "h", function() {
@@ -26563,7 +26562,7 @@
             }), n.d(t, "k", function() {
                 return Oe
             }), n.d(t, "l", function() {
-                return Ae
+                return Le
             }), n.d(t, !1, function() {}), n.d(t, "m", function() {
                 return ke
             }), n.d(t, "n", function() {
@@ -26679,7 +26678,7 @@
             }), n.d(t, "e", function() {
                 return y
             }), n.d(t, "La", function() {
-                return L
+                return A
             }), n.d(t, !1, function() {}), n.d(t, "Ta", function() {
                 return x
             }), n.d(t, !1, function() {}), n.d(t, "U", function() {
@@ -26723,9 +26722,9 @@
             }), n.d(t, !1, function() {}), n.d(t, "Fb", function() {
                 return Qe
             }), n.d(t, "Xa", function() {
-                return Lt
-            }), n.d(t, "Ya", function() {
                 return At
+            }), n.d(t, "Ya", function() {
+                return Lt
             }), n.d(t, !1, function() {}), n.d(t, "Za", function() {
                 return qe
             }), n.d(t, !1, function() {}), n.d(t, "bb", function() {
@@ -29067,7 +29066,7 @@
                         }, Object(C.a)(this.props)))
                     }, t = i.__decorate([Object(E.c)("Featured Channel")], t)
                 }(r.Component);
-            var A, L = Object(S.connect)(function(e) {
+            var L, A = Object(S.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
@@ -29174,7 +29173,7 @@
                             return !t.props.data.loading && !t.props.data.error && t.props.data.featuredStreams && t.props.data.featuredStreams.length - 1 ? t.props.data.featuredStreams.filter(function(e) {
                                 return e.stream && e.stream.broadcaster && e.stream.broadcaster.displayName
                             }).slice(0, 5).map(function(e, n) {
-                                return e.stream && e.stream.broadcaster && e.stream.broadcaster.displayName && e.stream.broadcaster.id ? r.createElement(L, {
+                                return e.stream && e.stream.broadcaster && e.stream.broadcaster.displayName && e.stream.broadcaster.id ? r.createElement(A, {
                                     key: "featured-channels-" + e.stream.id,
                                     id: e.stream.id,
                                     displayName: e.stream.broadcaster.displayName,
@@ -29270,7 +29269,7 @@
             n("Rq1o");
             ! function(e) {
                 e[e.ShowMore = 0] = "ShowMore", e[e.ShowLess = 1] = "ShowLess"
-            }(A || (A = {}));
+            }(L || (L = {}));
             var q = function(e) {
                     return r.createElement(R.Ta, {
                         padding: {
@@ -29285,14 +29284,14 @@
                     }, !e.moreDisabled && r.createElement(R.R, {
                         onClick: e.onClickMore,
                         "data-a-target": "side-nav-show-more-button",
-                        "data-test-selector": A.ShowMore
+                        "data-test-selector": L.ShowMore
                     }, r.createElement(R.T, {
                         type: R.Kb.Span,
                         fontSize: R.Y.Size7
                     }, Object(m.d)("Show More", "SideNavShowMoreToggleButton"))), !e.lessDisabled && r.createElement(R.R, {
                         onClick: e.onClickLess,
                         "data-a-target": "side-nav-show-less-button",
-                        "data-test-selector": A.ShowLess
+                        "data-test-selector": L.ShowLess
                     }, r.createElement(R.T, {
                         type: R.Kb.Span,
                         fontSize: R.Y.Size7
@@ -30000,22 +29999,22 @@
                     timeout: Ne.b
                 }
             }
-            var Ae = n("m98o"),
-                Le = n("as+V"),
+            var Le = n("m98o"),
+                Ae = n("as+V"),
                 xe = n("NMMG"),
                 Pe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderJoinButton = function() {
                             var e = null,
-                                n = Object(Ae.c)(t.props.user.login, t.props.activity);
+                                n = Object(Le.c)(t.props.user.login, t.props.activity);
                             return n && (e = {
                                 pathname: n,
                                 state: {
                                     content: W.PageviewContent.Presence,
                                     medium: W.PageviewMedium.SideNav
                                 }
-                            }), r.createElement(Le.a, {
+                            }), r.createElement(Ae.a, {
                                 availability: t.props.availability,
                                 link: e,
                                 onClick: t.handleJoinClick,
@@ -30068,7 +30067,7 @@
                             presenceStatus: this.getPresenceStatus(),
                             onClick: this.handleClick,
                             linkTo: "#",
-                            metadataLeft: r.createElement(Ae.a, {
+                            metadataLeft: r.createElement(Le.a, {
                                 availability: this.props.availability,
                                 activity: this.props.activity,
                                 condensed: !0
@@ -30965,8 +30964,8 @@
                 Rt = n("XxES"),
                 Dt = n("ZDlU"),
                 Ot = n("zB42"),
-                At = n("VwD5"),
-                Lt = n("Fxe2"),
+                Lt = n("VwD5"),
+                At = n("Fxe2"),
                 xt = n("vRsq"),
                 Pt = n("50oY"),
                 Ft = n("mLw1");
@@ -31101,7 +31100,7 @@
                 };
 
             function un(e) {
-                var t = Object(Lt.a)(e.match.params.videoID);
+                var t = Object(At.a)(e.match.params.videoID);
                 return r.createElement(It.a, {
                     to: "/videos/" + t
                 })
@@ -31344,10 +31343,10 @@
                 On = a.a.wrap(function() {
                     return n.e(62).then(n.bind(null, "4Agi"))
                 }, "DesklightModsRootPage"),
-                An = a.a.wrap(function() {
+                Ln = a.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(0), n.e(61)]).then(n.bind(null, "cz4h"))
                 }, "PaymentsLandingPage"),
-                Ln = a.a.wrap(function() {
+                An = a.a.wrap(function() {
                     return n.e(60).then(n.bind(null, "EOaz"))
                 }, "SettingsRoot"),
                 xn = a.a.wrap(function() {
@@ -31409,7 +31408,7 @@
             }
 
             function qn() {
-                return window.location.replace(At.a), null
+                return window.location.replace(Lt.a), null
             }
             var Qn = function(e) {
                 function t() {
@@ -31587,7 +31586,7 @@
                         component: Dn
                     }), r.createElement(Tt.a, {
                         path: "/payments",
-                        component: An
+                        component: Ln
                     }), r.createElement(Tt.a, {
                         path: "/profile",
                         component: Rt.a,
@@ -31606,7 +31605,7 @@
                         component: Fn
                     }), r.createElement(Tt.a, {
                         path: "/settings/:tab?",
-                        component: Ln
+                        component: An
                     }), r.createElement(Tt.a, {
                         path: "/unsubscribe/:productName",
                         component: Un
@@ -32683,9 +32682,9 @@
             }), n.d(t, "F", function() {
                 return O
             }), n.d(t, "C", function() {
-                return A
-            }), n.d(t, "E", function() {
                 return L
+            }), n.d(t, "E", function() {
+                return A
             }), n.d(t, "B", function() {
                 return x
             }), n.d(t, "D", function() {
@@ -32780,13 +32779,13 @@
                 }
             }
 
-            function A() {
+            function L() {
                 return {
                     type: d
                 }
             }
 
-            function L() {
+            function A() {
                 return {
                     type: p
                 }
@@ -33257,7 +33256,7 @@
             function O(e) {
                 return !e.isLoggedIn || (!e.channelLogin || (!!e.followData || e.channelLogin === e.currentUserLogin))
             }
-            var A = Object(i.connect)(function(e) {
+            var L = Object(i.connect)(function(e) {
                 var t = Object(s.e)(e);
                 return {
                     currentUserLogin: t && t.login,
@@ -33273,7 +33272,7 @@
             n.d(t, "b", function() {
                 return y
             }), n.d(t, !1, function() {}), n.d(t, "a", function() {
-                return A
+                return L
             })
         },
         dPg0: function(e, t, n) {},
@@ -33729,8 +33728,8 @@
             ! function(e) {
                 e.LoadStart = "loadstart", e.Error = "error", e.LoadedMetadata = "loadedmetadata", e.CanPlay = "canplay", e.Playing = "playing", e.Waiting = "waiting", e.Seeking = "seeking", e.Seeked = "seeked", e.Ended = "ended", e.DurationChange = "durationchange", e.TimeUpdate = "timeupdate", e.Play = "play", e.Pause = "pause", e.VolumeChange = "volumechange", e.RateChange = "ratechange"
             }(u || (u = {}));
-            var A = n("kxrW"),
-                L = n("oKCn"),
+            var L = n("kxrW"),
+                A = n("oKCn"),
                 x = n("lTz2"),
                 P = n("C94G"),
                 F = (n("Qqhu"), n("Addw")),
@@ -33749,7 +33748,7 @@
                     controls: !0,
                     height: "100%",
                     playsinline: !0,
-                    player: L.c.Site,
+                    player: A.c.Site,
                     showInfo: !1,
                     showtheatre: !1,
                     trackingProperties: {
@@ -33774,11 +33773,11 @@
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var i = n.props.playerTypeOverride;
-                            i && (t.player = i, n.playerType = i, i === L.c.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(T.p)(n.props.vodID), S.n.setVideoPlayerTrackingData({
+                            i && (t.player = i, n.playerType = i, i === A.c.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(T.p)(n.props.vodID), S.n.setVideoPlayerTrackingData({
                                 vodID: n.props.vodID
                             })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(F.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", n.logger.debug("Initializing", t);
                             var r = new e(n.playerRef, t);
-                            n.player = r, r.addEventListener(A.a.PlayerReady, n.onPlayerReady), r.addEventListener(A.a.CompanionAdBuffered, n.companionAdBuffered), r.addEventListener(A.a.Online, n.onStreamStatusOnline), r.addEventListener(A.a.Offline, n.onStreamStatusOffline), r.addEventListener(u.Ended, n.onStreamStatusOffline), r.addEventListener(u.Play, n.onPlayerPlay), r.addEventListener(u.Playing, n.onPlayerPlaying), r.addEventListener(u.Seeked, n.onSeek), r.addEventListener(u.TimeUpdate, n.onTimeUpdate), r.addEventListener(A.a.TheatreChange, n.onTheatreChange), r.addEventListener(A.a.FullscreenChange, n.onFullScreenChange), r.addEventListener(A.a.ExternalFullscreenChange, n.onExternalFullScreenChange), r.addEventListener(A.a.ClipsModerationOpen, n.onClipsModerationOpen), r.addEventListener(A.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), r.addEventListener(A.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), r.addEventListener(A.a.OpenStream, n.onOpenStream), r.addEventListener(u.Pause, n.onPause), r.addEventListener(A.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), r.addEventListener(u.LoadedMetadata, n.onMetadataLoaded), r.addEventListener(u.VolumeChange, n.onVolumeChange), r.addEventListener(A.a.PromptLoginModal, n.props.promptLogin), r.addEventListener(A.a.FocusPlayer, n.onFocusPlayer), k.extensionService.registerPlayer(n.player), k.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(r), n.maybeAttachToWindow(n.props)
+                            n.player = r, r.addEventListener(L.a.PlayerReady, n.onPlayerReady), r.addEventListener(L.a.CompanionAdBuffered, n.companionAdBuffered), r.addEventListener(L.a.Online, n.onStreamStatusOnline), r.addEventListener(L.a.Offline, n.onStreamStatusOffline), r.addEventListener(u.Ended, n.onStreamStatusOffline), r.addEventListener(u.Play, n.onPlayerPlay), r.addEventListener(u.Playing, n.onPlayerPlaying), r.addEventListener(u.Seeked, n.onSeek), r.addEventListener(u.TimeUpdate, n.onTimeUpdate), r.addEventListener(L.a.TheatreChange, n.onTheatreChange), r.addEventListener(L.a.FullscreenChange, n.onFullScreenChange), r.addEventListener(L.a.ExternalFullscreenChange, n.onExternalFullScreenChange), r.addEventListener(L.a.ClipsModerationOpen, n.onClipsModerationOpen), r.addEventListener(L.a.TransitionToCollectionVOD, n.onTransitionToCollectionVod), r.addEventListener(L.a.TransitionToRecommendedVOD, n.onTransitionToRecommendedVod), r.addEventListener(L.a.OpenStream, n.onOpenStream), r.addEventListener(u.Pause, n.onPause), r.addEventListener(L.a.PersistenPlayerToggle, n.onPersistentPlayerToggled), r.addEventListener(u.LoadedMetadata, n.onMetadataLoaded), r.addEventListener(u.VolumeChange, n.onVolumeChange), r.addEventListener(L.a.PromptLoginModal, n.props.promptLogin), r.addEventListener(L.a.FocusPlayer, n.onFocusPlayer), k.extensionService.registerPlayer(n.player), k.extensionService.setPlayerWindow(window), n.props.onInit && n.props.onInit(r), n.maybeAttachToWindow(n.props)
                         }, n.attachRef = function(e) {
                             return n.playerRef = e
                         }, n.onMetadataLoaded = function() {
@@ -33790,14 +33789,14 @@
                                 metadataLoaded: !0
                             })
                         }, n.onOpenStream = function() {
-                            if (n.props.playerTypeOverride === L.c.Frontpage && n.player)
+                            if (n.props.playerTypeOverride === A.c.Frontpage && n.player)
                                 if (n.props.channelLogin) S.o.history.push("/" + n.props.channelLogin);
                                 else if (n.props.vodID) {
                                 var e = Math.floor(n.player.getCurrentTime());
                                 S.o.history.push("/videos/" + n.props.vodID + "?t=" + Object(F.a)(e))
                             } else n.props.collectionID && S.o.history.push("/collections/" + n.props.collectionID)
                         }, n.onFocusPlayer = function() {
-                            n.props.playerTypeOverride !== L.c.SquadStreamPrimary && n.props.playerTypeOverride !== L.c.SquadStreamSecondary || !n.player || n.props.onFocusPlayer && n.props.channelLogin && n.props.onFocusPlayer()
+                            n.props.playerTypeOverride !== A.c.SquadStreamPrimary && n.props.playerTypeOverride !== A.c.SquadStreamSecondary || !n.player || n.props.onFocusPlayer && n.props.channelLogin && n.props.onFocusPlayer()
                         }, n.onPlayerReady = function() {
                             n.player && (n.logger.debug("Ready"), n.props.latencyTracking.reportInteractive(), n.hasPlayed = !1, n.playerLoaded && n.props.latencyTracking.reportCustomEvent(n.playerLoaded), n.setState({
                                 playerInitialized: !0
@@ -33824,9 +33823,9 @@
                                 playerMuted: e
                             }), n.props.onMuteToggled && n.props.onMuteToggled(e)
                         }, n.onStreamStatusOnline = function() {
-                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(A.a.Online)
+                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(L.a.Online)
                         }, n.onStreamStatusOffline = function() {
-                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(A.a.Offline)
+                            n.props.onStreamStatusChange && n.props.onStreamStatusChange(L.a.Offline)
                         }, n.onTheatreChange = function(e) {
                             e ? (n.logger.debug("Theatre Entered"), n.props.enableTheatreMode && !n.props.theatreModeEnabled && n.props.enableTheatreMode()) : (n.logger.debug("Theatre Exited"), n.props.disableTheatreMode && n.props.theatreModeEnabled && n.props.disableTheatreMode())
                         }, n.onFullScreenChange = function() {
@@ -33984,7 +33983,7 @@
                                 "video-player--fullscreen": this.state.isFullScreen
                             }),
                             t = y("video-player__container", {
-                                "video-player__container--clips": L.a.includes(this.playerType)
+                                "video-player__container--clips": A.a.includes(this.playerType)
                             });
                         return l.createElement("div", {
                             className: y(e),
@@ -33994,7 +33993,7 @@
                             ref: this.attachRef
                         }))
                     }, t.prototype.componentWillUnmount = function() {
-                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), S.n.eventEmitter.removeListener(N.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(A.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(A.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(A.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(A.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(u.Ended, this.onStreamStatusOffline), this.player.removeEventListener(u.Play, this.onPlayerPlay), this.player.removeEventListener(u.Playing, this.onPlayerPlaying), this.player.removeEventListener(A.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(A.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(A.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(A.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(u.Seeked, this.onSeek), this.player.removeEventListener(u.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(A.a.OpenStream, this.onOpenStream), this.player.removeEventListener(u.Pause, this.onPause), this.player.removeEventListener(A.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(u.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(u.VolumeChange, this.onVolumeChange), this.player.removeEventListener(A.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(A.a.FocusPlayer, this.onFocusPlayer), k.extensionService.unregisterPlayer(), this.player.destroy()), S.n.setVideoPlayerTrackingData({
+                        this.state.playerRefID === this.props.activeVideoPlayerRefID && this.props.reportPlayerInstanceStarted && this.props.reportPlayerInstanceStarted(void 0), this.unbindHotKeys(), this.historyUnlistener && this.historyUnlistener(), this.maybeDetachFromWindow(), this.state.isFullScreen && this.exitFullscreen(), this.props.fullscreen.removeChangeListener(this.onTwilightFullscreenChange), this.props.onDestroy && this.props.onDestroy(), S.n.eventEmitter.removeListener(N.SpadeEventType.Pageview, this.updatePlayerTrackingDataFromProps), this.player && (this.player.removeEventListener(L.a.PlayerReady, this.onPlayerReady), this.player.removeEventListener(L.a.CompanionAdBuffered, this.companionAdBuffered), this.player.removeEventListener(L.a.Online, this.onStreamStatusOnline), this.player.removeEventListener(L.a.Offline, this.onStreamStatusOffline), this.player.removeEventListener(u.Ended, this.onStreamStatusOffline), this.player.removeEventListener(u.Play, this.onPlayerPlay), this.player.removeEventListener(u.Playing, this.onPlayerPlaying), this.player.removeEventListener(L.a.TheatreChange, this.onTheatreChange), this.player.removeEventListener(L.a.TransitionToCollectionVOD, this.onTransitionToCollectionVod), this.player.removeEventListener(L.a.FullscreenChange, this.onFullScreenChange), this.player.removeEventListener(L.a.ExternalFullscreenChange, this.onExternalFullScreenChange), this.player.removeEventListener(u.Seeked, this.onSeek), this.player.removeEventListener(u.TimeUpdate, this.onTimeUpdate), this.player.removeEventListener(L.a.OpenStream, this.onOpenStream), this.player.removeEventListener(u.Pause, this.onPause), this.player.removeEventListener(L.a.PersistenPlayerToggle, this.onPersistentPlayerToggled), this.player.removeEventListener(u.LoadedMetadata, this.onMetadataLoaded), this.player.removeEventListener(u.VolumeChange, this.onVolumeChange), this.player.removeEventListener(L.a.PromptLoginModal, this.props.promptLogin), this.player.removeEventListener(L.a.FocusPlayer, this.onFocusPlayer), k.extensionService.unregisterPlayer(), this.player.destroy()), S.n.setVideoPlayerTrackingData({
                             vodID: void 0
                         })
                     }, t.prototype.trackMiniPlayerAction = function(e, t) {
@@ -34139,7 +34138,7 @@
             }), n.d(t, "c", function() {
                 return z
             }), n.d(t, "a", function() {
-                return L.c
+                return A.c
             })
         },
         eJ65: function(e, t, n) {
@@ -34529,7 +34528,7 @@
                         }, r.createElement(p.a, {
                             tags: this.props.tags,
                             linkPath: c.a.DirectoryTag,
-                            style: h.Fb.Default
+                            tagNumberLimit: 3
                         })))))))
                     }, t
                 }(r.Component),
@@ -35892,7 +35891,7 @@
                             kind: "Field",
                             name: {
                                 kind: "Name",
-                                value: "tagName"
+                                value: "isLanguageTag"
                             },
                             arguments: [],
                             directives: []
@@ -35904,16 +35903,24 @@
                             },
                             arguments: [],
                             directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "tagName"
+                            },
+                            arguments: [],
+                            directives: []
                         }]
                     }
                 }],
                 loc: {
                     start: 0,
-                    end: 56
+                    end: 70
                 }
             };
             n.loc.source = {
-                body: "fragment tagFragment on Tag {\nid\ntagName\nlocalizedName\n}",
+                body: "fragment tagFragment on Tag {\nid\nisLanguageTag\nlocalizedName\ntagName\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -37515,7 +37522,7 @@
                     };
                     o.n.track(S.SpadeEventType.NotificationCenterInteraction, t)
                 },
-                A = function(e) {
+                L = function(e) {
                     var t = {
                         notification_id: e.notification.id,
                         notification_type: e.notification.type,
@@ -37524,7 +37531,7 @@
                     };
                     o.n.track(S.SpadeEventType.NotificationInteraction, t)
                 },
-                L = n("Ue10"),
+                A = n("Ue10"),
                 x = (n("vfD6"), "persistent-notification__delete"),
                 P = function(e) {
                     function t() {
@@ -37538,35 +37545,35 @@
                         }, t.setRef = function(e) {
                             return t.element = e
                         }, t.deleteNotification = function() {
-                            A({
+                            L({
                                 uiContext: N.Center,
                                 notification: t.props.data,
                                 action: R.Dismiss
                             }), t.props.onDeleteNotification(t.props.data.id)
                         }, t.clickNotification = function() {
-                            A({
+                            L({
                                 uiContext: N.Center,
                                 notification: t.props.data,
                                 action: R.PrimaryCta
                             }), t.props.onViewNotification(t.props.data.id)
                         }, t.renderDeleteNotification = function() {
-                            return a.createElement(L.Ta, {
+                            return a.createElement(A.Ta, {
                                 className: "persistent-notification__delete",
                                 padding: {
                                     top: 1,
                                     left: 1,
                                     right: .5
                                 },
-                                position: L.ab.Absolute
-                            }, a.createElement(L.Ta, {
-                                display: L.U.Flex,
-                                flexWrap: L.X.NoWrap,
-                                alignItems: L.d.Start
-                            }, a.createElement(L.y, {
+                                position: A.ab.Absolute
+                            }, a.createElement(A.Ta, {
+                                display: A.U.Flex,
+                                flexWrap: A.X.NoWrap,
+                                alignItems: A.d.Start
+                            }, a.createElement(A.y, {
                                 ariaLabel: "delete-notification",
                                 "data-test-selector": x,
-                                icon: L.kb.Close,
-                                size: L.z.Small,
+                                icon: A.kb.Close,
+                                size: A.z.Small,
                                 onClick: t.deleteNotification
                             })))
                         }, t
@@ -37578,74 +37585,74 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.unregister && this.unregister()
                     }, t.prototype.render = function() {
-                        return a.createElement(L.Ta, {
+                        return a.createElement(A.Ta, {
                             className: "persistent-notification",
-                            position: L.ab.Relative,
+                            position: A.ab.Relative,
                             refDelegate: this.setRef,
                             "data-test-selector": "persistent-notification"
-                        }, a.createElement(L.ub, {
-                            display: L.U.Flex,
+                        }, a.createElement(A.ub, {
+                            display: A.U.Flex,
                             className: this.props.data.isRead ? "persistent-notification__read" : "persistent-notification__unread",
                             borderBottom: !0,
-                            flexWrap: L.X.NoWrap
-                        }, a.createElement(L.Qa, i.__assign({
+                            flexWrap: A.X.NoWrap
+                        }, a.createElement(A.Qa, i.__assign({
                             "data-test-selector": "persistent-notification__click",
                             onClick: this.clickNotification
                         }, w(this.props.data, S.PageviewMedium.NotificationCenter), {
-                            type: L.Ra.Alpha
-                        }), a.createElement(L.Ta, {
+                            type: A.Ra.Alpha
+                        }), a.createElement(A.Ta, {
                             className: "persistent-notification__area",
-                            display: L.U.Flex,
-                            flexWrap: L.X.NoWrap,
+                            display: A.U.Flex,
+                            flexWrap: A.X.NoWrap,
                             padding: {
                                 top: 1,
                                 bottom: 1,
                                 left: 1,
                                 right: 3
                             }
-                        }, a.createElement(L.Ta, null, a.createElement(L.G, {
-                            aspect: L.n.Aspect1x1,
+                        }, a.createElement(A.Ta, null, a.createElement(A.G, {
+                            aspect: A.n.Aspect1x1,
                             src: this.props.data.thumbnailURL,
                             alt: Object(o.d)("Notification center item thumbnail", "OnsiteNotifications"),
-                            size: L.H.Size4,
-                            borderRadius: L.v.Medium
-                        })), a.createElement(L.Ta, {
-                            display: L.U.Flex,
-                            flexDirection: L.W.Column,
-                            flexWrap: L.X.NoWrap,
+                            size: A.H.Size4,
+                            borderRadius: A.v.Medium
+                        })), a.createElement(A.Ta, {
+                            display: A.U.Flex,
+                            flexDirection: A.W.Column,
+                            flexWrap: A.X.NoWrap,
                             margin: {
                                 x: 1
                             }
-                        }, a.createElement(L.Ta, {
+                        }, a.createElement(A.Ta, {
                             className: "persistent-notification__body",
-                            overflow: L.Wa.Hidden,
+                            overflow: A.Wa.Hidden,
                             "data-test-selector": "persistent-notification__body"
-                        }, a.createElement(L.T, {
-                            type: L.Kb.Span,
-                            color: L.M.Alt
+                        }, a.createElement(A.T, {
+                            type: A.Kb.Span,
+                            color: A.M.Alt
                         }, a.createElement(_, {
                             source: this.props.data.body || ""
-                        }))), a.createElement(L.Ta, {
-                            display: L.U.Flex,
-                            alignItems: L.d.Center,
+                        }))), a.createElement(A.Ta, {
+                            display: A.U.Flex,
+                            alignItems: A.d.Center,
                             flexShrink: 0,
                             margin: {
                                 top: .5
                             }
-                        }, a.createElement(L.jb, {
+                        }, a.createElement(A.jb, {
                             asset: function(e, t) {
                                 return e in T ? T[e] : t
-                            }(this.props.data.type, L.kb.MessagesSC),
+                            }(this.props.data.type, A.kb.MessagesSC),
                             height: 12,
                             width: 12,
-                            type: L.lb.Alt2
-                        }), a.createElement(L.Ta, {
+                            type: A.lb.Alt2
+                        }), a.createElement(A.Ta, {
                             margin: {
                                 left: .5
                             }
-                        }, a.createElement(L.T, {
-                            type: L.Kb.Span,
-                            color: L.M.Alt2
+                        }, a.createElement(A.T, {
+                            type: A.Kb.Span,
+                            color: A.M.Alt2
                         }, Object(o.g)(new Date(this.props.data.updatedAt)))))))), this.renderDeleteNotification()))
                     }, t.prototype.checkVisible = function(e) {
                         return i.__awaiter(this, void 0, void 0, function() {
@@ -37717,23 +37724,23 @@
                         }, t.renderContent = function() {
                             return !t.props.hasInitiallyLoaded || t.props.data.length || t.props.friendRequestsData ? [t.mapPersistentNotificationElements(), t.renderContentFooter()] : t.renderEmptyCenterWindowElement()
                         }, t.renderContentFooter = function() {
-                            var e = !t.props.hasInitiallyLoaded || t.state.isLoadingMore ? a.createElement(L.Va, {
+                            var e = !t.props.hasInitiallyLoaded || t.state.isLoadingMore ? a.createElement(A.Va, {
                                 delay: 0,
                                 fillContent: !0
-                            }) : a.createElement(L.jb, {
-                                asset: L.kb.LogoGlitch,
+                            }) : a.createElement(A.jb, {
+                                asset: A.kb.LogoGlitch,
                                 width: 24,
                                 height: 24,
-                                type: L.lb.Alt2
+                                type: A.lb.Alt2
                             });
-                            return a.createElement(L.Ta, {
+                            return a.createElement(A.Ta, {
                                 className: "center-window__content-footer",
                                 key: "center-window__content-footer",
-                                display: L.U.Flex,
-                                flexDirection: L.W.Column,
-                                justifyContent: L.Sa.Center,
-                                alignItems: L.d.Center,
-                                textAlign: L.Gb.Center,
+                                display: A.U.Flex,
+                                flexDirection: A.W.Column,
+                                justifyContent: A.Sa.Center,
+                                alignItems: A.d.Center,
+                                textAlign: A.Gb.Center,
                                 padding: 1,
                                 flexGrow: 1
                             }, e)
@@ -37750,29 +37757,29 @@
                                 key: "friend-requests"
                             }, t.props.friendRequestsData))), e
                         }, t.renderEmptyCenterWindowElement = function() {
-                            return a.createElement(L.ub, {
+                            return a.createElement(A.ub, {
                                 "data-test-selector": B,
                                 className: "center-window__empty-state",
-                                background: L.p.Alt,
-                                display: L.U.Flex,
-                                justifyContent: L.Sa.Center,
-                                alignItems: L.d.Center,
-                                textAlign: L.Gb.Center,
-                                flexDirection: L.W.Column,
+                                background: A.p.Alt,
+                                display: A.U.Flex,
+                                justifyContent: A.Sa.Center,
+                                alignItems: A.d.Center,
+                                textAlign: A.Gb.Center,
+                                flexDirection: A.W.Column,
                                 padding: 2,
                                 fullWidth: !0
-                            }, a.createElement(L.jb, {
-                                asset: L.kb.LogoGlitch,
+                            }, a.createElement(A.jb, {
+                                asset: A.kb.LogoGlitch,
                                 width: 100,
                                 height: 100,
-                                type: L.lb.Placeholder
-                            }), a.createElement(L.Ta, {
+                                type: A.lb.Placeholder
+                            }), a.createElement(A.Ta, {
                                 margin: {
                                     top: 1
                                 }
-                            }, a.createElement(L.T, {
-                                type: L.Kb.H5,
-                                color: L.M.Alt2
+                            }, a.createElement(A.T, {
+                                type: A.Kb.H5,
+                                color: A.M.Alt2
                             }, Object(o.d)("Hooray! You're in the clear!", "OnsiteNotifications"))))
                         }, t.areAllNotificationsRead = function() {
                             var e = t.props.data.filter(function(e) {
@@ -37810,19 +37817,19 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return a.createElement(L.ub, {
+                        return a.createElement(A.ub, {
                             className: "center-window",
-                            background: L.p.Alt
+                            background: A.p.Alt
                         }, this.renderNotificationsHeaderElement(), a.createElement(g.b, {
                             className: "center-window__scroll",
                             contentClassName: "center-window__scroll-container",
                             suppressScrollX: !0
-                        }, a.createElement(L.Ta, {
+                        }, a.createElement(A.Ta, {
                             "data-test-selector": "center-window__content",
-                            display: L.U.Flex,
-                            alignItems: L.d.Center,
-                            flexDirection: L.W.Column,
-                            flexWrap: L.X.NoWrap,
+                            display: A.U.Flex,
+                            alignItems: A.d.Center,
+                            flexDirection: A.W.Column,
+                            flexWrap: A.X.NoWrap,
                             flexGrow: 1
                         }, this.renderContent(), a.createElement(g.a, {
                             enabled: this.props.data.length > 0 && !!this.props.data[this.props.data.length - 1].cursor,
@@ -37831,52 +37838,52 @@
                             pixelThreshold: 200
                         }))), this.renderUnreadNotificationsFooterElement())
                     }, t.prototype.renderMarkAsRead = function() {
-                        return 0 !== this.props.data.length || this.props.friendRequestsData ? a.createElement(L.x, {
-                            type: L.D.Text,
-                            size: L.B.Small,
+                        return 0 !== this.props.data.length || this.props.friendRequestsData ? a.createElement(A.x, {
+                            type: A.D.Text,
+                            size: A.B.Small,
                             disabled: this.areAllNotificationsRead(),
                             onClick: this.props.onReadAllNotifications
                         }, Object(o.d)("Mark All as Read", "OnsiteNotifications")) : null
                     }, t.prototype.renderSettingsLink = function() {
-                        return a.createElement(L.x, {
-                            type: L.D.Text,
-                            size: L.B.Small,
+                        return a.createElement(A.x, {
+                            type: A.D.Text,
+                            size: A.B.Small,
                             onClick: this.props.onRedirectToSettings
                         }, Object(o.d)("Settings", "OnsiteNotifications"))
                     }, t.prototype.renderNotificationsHeaderElement = function() {
-                        return a.createElement(L.ub, {
+                        return a.createElement(A.ub, {
                             className: "center-window__header",
                             "data-test-selector": "center-window__header",
-                            background: L.p.Alt,
+                            background: A.p.Alt,
                             padding: {
                                 x: 1,
                                 y: .5
                             },
-                            display: L.U.Flex,
-                            alignItems: L.d.Center,
-                            justifyContent: L.Sa.Between,
+                            display: A.U.Flex,
+                            alignItems: A.d.Center,
+                            justifyContent: A.Sa.Between,
                             borderBottom: !0
-                        }, a.createElement(L.T, {
-                            type: L.Kb.H6,
-                            color: L.M.Alt2,
+                        }, a.createElement(A.T, {
+                            type: A.Kb.H6,
+                            color: A.M.Alt2,
                             bold: !0
-                        }, Object(o.d)("Notifications", "OnsiteNotifications")), a.createElement(L.ub, {
-                            color: L.M.Alt
+                        }, Object(o.d)("Notifications", "OnsiteNotifications")), a.createElement(A.ub, {
+                            color: A.M.Alt
                         }, this.renderMarkAsRead(), "•", this.renderSettingsLink()))
                     }, t.prototype.renderUnreadNotificationsFooterElement = function() {
-                        var e = 0 === this.props.newNotificationsCount ? null : a.createElement(L.T, {
-                            type: L.Kb.H6,
-                            color: L.M.Alt2
+                        var e = 0 === this.props.newNotificationsCount ? null : a.createElement(A.T, {
+                            type: A.Kb.H6,
+                            color: A.M.Alt2
                         }, Object(o.d)("{num, plural, one {1 New Notification} other {{num, number} New Notifications} }", {
                             num: this.props.newNotificationsCount
                         }, "OnsiteNotifications"));
-                        return a.createElement(L.ub, {
+                        return a.createElement(A.ub, {
                             className: "center-window__footer",
                             "data-test-selector": "center-window__footer",
-                            background: L.p.Alt,
+                            background: A.p.Alt,
                             padding: .5,
-                            alignItems: L.d.Center,
-                            textAlign: L.Gb.Center,
+                            alignItems: A.d.Center,
+                            textAlign: A.Gb.Center,
                             borderTop: !0
                         }, e)
                     }, t
@@ -37889,7 +37896,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.closeTimeout = 0, t.close = function() {
-                            A({
+                            L({
                                 uiContext: N.Toast,
                                 notification: t.props.item,
                                 action: R.Dismiss
@@ -37899,7 +37906,7 @@
                         }, t.onMouseLeave = function() {
                             t.scheduleCloseTimer()
                         }, t.view = function() {
-                            A({
+                            L({
                                 uiContext: N.Toast,
                                 notification: t.props.item,
                                 action: R.PrimaryCta
@@ -37916,109 +37923,109 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.cancelCloseTimer()
                     }, t.prototype.render = function() {
-                        return a.createElement(L.g, {
-                            type: L.l.BounceIn,
-                            duration: L.i.Medium,
+                        return a.createElement(A.g, {
+                            type: A.l.BounceIn,
+                            duration: A.i.Medium,
                             enabled: !0
                         }, a.createElement("div", {
                             onMouseEnter: this.onMouseEnter,
                             onMouseLeave: this.onMouseLeave,
                             "data-test-selector": "onsite-notification-toast__mouse-enter-detector"
-                        }, a.createElement(L.ub, {
+                        }, a.createElement(A.ub, {
                             className: "onsite-notification-toast",
-                            background: L.p.Base,
-                            display: L.U.Flex,
-                            flexWrap: L.X.NoWrap,
+                            background: A.p.Base,
+                            display: A.U.Flex,
+                            flexWrap: A.X.NoWrap,
                             margin: {
                                 bottom: 1
                             },
                             border: !0
-                        }, a.createElement(L.Qa, i.__assign({
+                        }, a.createElement(A.Qa, i.__assign({
                             onClick: this.view,
-                            type: L.Ra.Alpha
-                        }, w(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(L.Ta, {
+                            type: A.Ra.Alpha
+                        }, w(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(A.Ta, {
                             className: "onsite-notification-toast__container",
-                            display: L.U.Flex,
-                            flexWrap: L.X.NoWrap
-                        }, a.createElement(L.Ta, {
+                            display: A.U.Flex,
+                            flexWrap: A.X.NoWrap
+                        }, a.createElement(A.Ta, {
                             padding: {
                                 y: 1,
                                 left: 1
                             },
-                            display: L.U.Flex,
+                            display: A.U.Flex,
                             flexShrink: 0
-                        }, a.createElement(L.G, {
-                            aspect: L.n.Aspect1x1,
+                        }, a.createElement(A.G, {
+                            aspect: A.n.Aspect1x1,
                             src: this.props.item.thumbnailURL,
                             alt: Object(o.d)("Notification toast thumbnail", "OnsiteNotifications"),
-                            size: L.H.Size4
-                        })), a.createElement(L.Ta, {
-                            display: L.U.Flex,
-                            flexDirection: L.W.Column,
-                            flexWrap: L.X.NoWrap,
+                            size: A.H.Size4
+                        })), a.createElement(A.Ta, {
+                            display: A.U.Flex,
+                            flexDirection: A.W.Column,
+                            flexWrap: A.X.NoWrap,
                             flexGrow: 1,
                             padding: 1
-                        }, a.createElement(L.Ta, {
+                        }, a.createElement(A.Ta, {
                             className: "onsite-notification-toast__body",
-                            overflow: L.Wa.Hidden
-                        }, a.createElement(L.ub, {
-                            color: L.M.Alt
+                            overflow: A.Wa.Hidden
+                        }, a.createElement(A.ub, {
+                            color: A.M.Alt
                         }, a.createElement(_, {
                             source: this.props.item.body
-                        }))), a.createElement(L.Ta, {
+                        }))), a.createElement(A.Ta, {
                             margin: {
                                 top: .5
                             },
                             flexShrink: 0
-                        }, a.createElement(L.ub, {
-                            color: L.M.Alt2
+                        }, a.createElement(A.ub, {
+                            color: A.M.Alt2
                         }, Object(o.g)(new Date(this.props.item.updatedAt))))))), this.renderActions())))
                     }, t.prototype.renderActions = function() {
-                        return a.createElement(L.ub, {
+                        return a.createElement(A.ub, {
                             className: "onsite-notification-toast__action-wrapper",
-                            display: L.U.Flex,
-                            alignContent: L.c.Stretch,
+                            display: A.U.Flex,
+                            alignContent: A.c.Stretch,
                             flexGrow: 0,
                             flexShrink: 0,
-                            flexDirection: L.W.Column,
+                            flexDirection: A.W.Column,
                             borderLeft: !0
-                        }, a.createElement(L.ub, {
+                        }, a.createElement(A.ub, {
                             className: "onsite-notification-toast__action",
-                            display: L.U.Flex,
-                            alignContent: L.c.Stretch,
+                            display: A.U.Flex,
+                            alignContent: A.c.Stretch,
                             flexGrow: 1,
                             borderBottom: !0
-                        }, a.createElement(L.Qa, i.__assign({
+                        }, a.createElement(A.Qa, i.__assign({
                             onClick: this.view,
                             "data-test-selector": "onsite-notification-toast__view",
-                            type: L.Ra.Alpha
-                        }, w(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(L.ub, {
-                            display: L.U.Flex,
-                            alignItems: L.d.Center,
-                            justifyContent: L.Sa.Center,
+                            type: A.Ra.Alpha
+                        }, w(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(A.ub, {
+                            display: A.U.Flex,
+                            alignItems: A.d.Center,
+                            justifyContent: A.Sa.Center,
                             fullHeight: !0,
                             flexGrow: 1,
                             padding: .5
-                        }, a.createElement(L.T, {
-                            color: L.M.Link
-                        }, this.primaryCTAText())))), a.createElement(L.ub, {
+                        }, a.createElement(A.T, {
+                            color: A.M.Link
+                        }, this.primaryCTAText())))), a.createElement(A.ub, {
                             className: "onsite-notification-toast__action",
-                            display: L.U.Flex,
-                            alignContent: L.c.Stretch,
+                            display: A.U.Flex,
+                            alignContent: A.c.Stretch,
                             flexGrow: 1
-                        }, a.createElement(L.Qa, {
+                        }, a.createElement(A.Qa, {
                             onClick: this.close,
                             "data-test-selector": "onsite-notification-toast__close",
-                            type: L.Ra.Alpha
-                        }, a.createElement(L.ub, {
-                            display: L.U.Flex,
-                            alignItems: L.d.Center,
-                            justifyContent: L.Sa.Center,
+                            type: A.Ra.Alpha
+                        }, a.createElement(A.ub, {
+                            display: A.U.Flex,
+                            alignItems: A.d.Center,
+                            justifyContent: A.Sa.Center,
                             fullHeight: !0,
                             flexGrow: 1,
                             padding: .5
-                        }, a.createElement(L.T, {
-                            color: L.M.Alt2
+                        }, a.createElement(A.T, {
+                            color: A.M.Alt2
                         }, Object(o.d)("Close", "OnsiteNotifications"))))))
                     }, t.prototype.primaryCTAText = function() {
                         var e = this.props.item.actions.find(function(e) {
@@ -38085,9 +38092,9 @@
                             this.onNewNotification(i)
                         }
                     }, t.prototype.render = function() {
-                        return a.createElement(L.Ta, {
+                        return a.createElement(A.Ta, {
                             className: "onsite-notifications-toast-manager",
-                            position: L.ab.Absolute,
+                            position: A.ab.Absolute,
                             margin: {
                                 top: 5
                             },
@@ -38204,8 +38211,8 @@
                 pe = 10,
                 me = 100,
                 he = {
-                    align: L.Ob.Center,
-                    direction: L.Pb.Bottom,
+                    align: A.Ob.Center,
+                    direction: A.Pb.Bottom,
                     label: ""
                 },
                 fe = {
@@ -38326,13 +38333,13 @@
                             var e = t.getUnseenNotificationsCount(t.props);
                             if (e > 0) {
                                 var n = e >= 100 ? ue : e.toString();
-                                return a.createElement(L.Ta, {
+                                return a.createElement(A.Ta, {
                                     className: "onsite-notifications__badge",
                                     "data-test-selector": ce,
-                                    position: L.ab.Absolute
-                                }, a.createElement(L.Xa, {
+                                    position: A.ab.Absolute
+                                }, a.createElement(A.Xa, {
                                     label: n,
-                                    type: L.Ya.Notification
+                                    type: A.Ya.Notification
                                 }))
                             }
                         }, t.deleteNotification = function(e) {
@@ -38516,24 +38523,24 @@
                         e.shouldDefer || this.listNotificationsLoaded || (this.listNotificationsLoaded = this.registerListNotificationsLoadedEvent())
                     }, t.prototype.render = function() {
                         var e = this.props.shouldDefer || !this.listDataLoaded() ? [] : this.props.listData.currentUser.notifications.edges;
-                        return he.label = Object(o.d)("Notifications", "OnsiteNotificationsToolTip"), a.createElement(L.Ta, {
+                        return he.label = Object(o.d)("Notifications", "OnsiteNotificationsToolTip"), a.createElement(A.Ta, {
                             className: "onsite-notifications"
                         }, a.createElement(J, {
                             onViewNotification: this.viewNotification
-                        }), a.createElement(L.Ta, {
-                            position: L.ab.Relative
+                        }), a.createElement(A.Ta, {
+                            position: A.ab.Relative
                         }, a.createElement(s.a, {
                             onToggle: this.toggleCenter,
                             ref: this.saveCenterWindowToggleBalloonRef,
                             tooltipProps: he
-                        }, a.createElement(L.y, {
+                        }, a.createElement(A.y, {
                             ariaLabel: Object(o.d)("Open Notifications", "OnsiteNotifications"),
-                            icon: L.kb.NotificationBell,
+                            icon: A.kb.NotificationBell,
                             overlay: !0
-                        }), a.createElement(L.s, {
+                        }), a.createElement(A.s, {
                             "data-test-selector": "center-window__balloon",
-                            direction: L.t.BottomRight,
-                            size: L.u.Large,
+                            direction: A.t.BottomRight,
+                            size: A.u.Large,
                             offsetX: "7px"
                         }, a.createElement(z, {
                             newNotificationsCount: this.state.newNotificationsCount,
@@ -38943,8 +38950,8 @@
                     }, t
                 }(c.Component),
                 O = n("lhih"),
-                A = n("5zXJ"),
-                L = n("XmgI"),
+                L = n("5zXJ"),
+                A = n("XmgI"),
                 x = n("ebRM"),
                 P = n("4h+t"),
                 F = n("x1M1"),
@@ -39054,7 +39061,7 @@
                             borderBottom: !0
                         }), a))
                     }, t.prototype.getAvailableTiers = function(e) {
-                        var t = this.props.bitsConfig && this.props.bitsConfig.indexedActions[A.l];
+                        var t = this.props.bitsConfig && this.props.bitsConfig.indexedActions[L.l];
                         t || (t = Object(P.b)());
                         var n = t.orderedTiers.filter(function(t) {
                             return t.bits <= e
@@ -39067,7 +39074,7 @@
                         }, n.map(function(e) {
                             return c.createElement(F.a, {
                                 key: e.bits,
-                                sources: Object(L.c)(e, 2, !1)
+                                sources: Object(A.c)(e, 2, !1)
                             })
                         }))
                     }, t
@@ -39315,7 +39322,7 @@
                         }
                     }, c.createElement("img", {
                         className: "watch-ad-error__error-image",
-                        src: A.b + "/light/static/1/" + r + ".png"
+                        src: L.b + "/light/static/1/" + r + ".png"
                     })), c.createElement(v.Ta, {
                         padding: {
                             bottom: 1
@@ -40247,33 +40254,65 @@
         sAKk: function(e, t, n) {},
         sLmD: function(e, t, n) {
             "use strict";
-            n.d(t, "a", function() {
-                return a
-            }), n.d(t, "b", function() {
+            n.d(t, "b", function() {
                 return o
-            }), n.d(t, "c", function() {
+            }), n.d(t, "a", function() {
                 return s
             });
-            var i, r = n("/7QA"),
-                a = "en",
-                o = ((i = {
+            var i = n("/7QA"),
+                r = "en-us",
+                a = {
                     bg: "bg-bg",
                     cs: "cs-cz",
                     da: "da-dk",
                     de: "de-de",
-                    el: "el-gr"
-                })[a] = "en-us", i.es = "es-es", i["es-mx"] = "es-mx", i.fi = "fi-fi", i.fr = "fr-fr", i.hu = "hu-hu", i.it = "it-it", i.ja = "ja-jp", i.ko = "ko-kr", i.nl = "nl-nl", i.no = "no-no", i.pl = "pl-pl", i["pt-br"] = "pt-br", i.pt = "pt-pt", i.ro = "ro-ro", i.ru = "ru-ru", i.sk = "sk-sk", i.sv = "sv-se", i.th = "th-th", i.tr = "tr-tr", i.vi = "vi-vn", i["zh-cn"] = "zh-cn", i["zh-tw"] = "zh-tw", i),
-                s = function(e) {
-                    var t = o[r.o.intl.getLanguageCode() || a],
-                        n = {
-                            id: "",
-                            tagName: "",
-                            localizedName: ""
-                        };
-                    return ! function(e) {
+                    el: "el-gr",
+                    en: r,
+                    "en-gb": r,
+                    es: "es-es",
+                    "es-mx": "es-mx",
+                    fi: "fi-fi",
+                    fr: "fr-fr",
+                    hu: "hu-hu",
+                    it: "it-it",
+                    ja: "ja-jp",
+                    ko: "ko-kr",
+                    nl: "nl-nl",
+                    no: "no-no",
+                    pl: "pl-pl",
+                    "pt-br": "pt-br",
+                    pt: "pt-pt",
+                    ro: "ro-ro",
+                    ru: "ru-ru",
+                    sk: "sk-sk",
+                    sv: "sv-se",
+                    th: "th-th",
+                    tr: "tr-tr",
+                    vi: "vi-vn",
+                    "zh-cn": "zh-cn",
+                    "zh-tw": "zh-tw"
+                },
+                o = function(e) {
+                    var t, n = s();
+                    return t = function(e) {
                         return void 0 !== e.tag_id
-                    }(e) ? (n.id = e.objectID, n.tagName = e.tag_name) : (n.id = e.tag_id, n.tagName = e.tag_name), t && e.localizations && t in e.localizations ? n.localizedName = e.localizations[t] : n.localizedName = n.tagName, n
-                }
+                    }(e) ? {
+                        id: e.tag_id,
+                        isLanguageTag: e.tag_name.includes("auto___lang"),
+                        localizedName: "",
+                        tagName: e.tag_name
+                    } : {
+                        id: e.objectID,
+                        tagName: e.tag_name,
+                        isAutomated: e.automated || !1,
+                        localizedDescription: e.description_localizations && e.description_localizations[n] || "",
+                        localizedName: ""
+                    }, n && e.localizations && n in e.localizations ? t.localizedName = e.localizations[n] : t.localizedName = t.tagName, t
+                };
+
+            function s() {
+                return a[i.o.intl.getLanguageCode() || ""] || r
+            }
         },
         sNlA: function(e, t, n) {
             "use strict";
@@ -40307,8 +40346,8 @@
                 R = n("YUvD"),
                 D = n("WroD"),
                 O = "https://www.googletagservices.com/tag/js/gpt.js",
-                A = "https://c.amazon-adsystem.com/aax2/apstag.js",
-                L = 3036,
+                L = "https://c.amazon-adsystem.com/aax2/apstag.js",
+                A = 3036,
                 x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -40326,12 +40365,12 @@
                                     n = e, i = t
                                 }),
                                 o = {
-                                    pubID: L,
+                                    pubID: A,
                                     adServer: "googletag",
                                     bidTimeout: 2e3
                                 },
                                 s = document.createElement("script");
-                            return s.async = !0, s.src = A, s.onload = function() {
+                            return s.async = !0, s.src = L, s.onload = function() {
                                 window.apstag && window.apstag.init && window.apstag.init(o, n)
                             }, s.onerror = function() {
                                 a.o.adBlockDetector.setBlockDetectedToTrue(), i()
@@ -41963,9 +42002,9 @@
             }), n.d(t, "q", function() {
                 return O
             }), n.d(t, "i", function() {
-                return A
-            }), n.d(t, "h", function() {
                 return L
+            }), n.d(t, "h", function() {
+                return A
             }), n.d(t, "j", function() {
                 return x
             }), n.d(t, "k", function() {
@@ -42167,11 +42206,11 @@
                 return t && t.sort && (i = "?" + f + "=" + t.sort), "/" + e + "/" + n + i
             }
 
-            function A(e, t, n) {
+            function L(e, t, n) {
                 return !t && n ? e ? "/" + e + "/" + s.Collection + "/" + n : "/collections/" + n : e ? "/" + e + "/" + s.Video + "/" + t + (n ? "?collection=" + n : "") : "/videos/" + t + (n ? "?collection=" + n : "")
             }
 
-            function L(e, t) {
+            function A(e, t) {
                 return "/" + e + "/" + s.Clip + "/" + t
             }
 
