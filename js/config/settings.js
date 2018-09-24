@@ -152,7 +152,7 @@ window.__twilightSettings = {
     "vod_archives_vira_grand": "on",
     "vod_editing_used_to_this": true,
     "vod_premieres_sunset": "on",
-    "vodcast_deprecation_announcement_enabled": false,
+    "vodcast_deprecation_announcement_enabled": true,
     "withgraphql_guarded_loading_enabled": true,
     "experiments": {
         "011d1499-61b3-49b2-92b2-b2ffd353ef00": {
@@ -626,13 +626,13 @@ window.__twilightSettings = {
         },
         "41cc8630-60da-4689-a8aa-7bf6f414faca": {
             "name": "ride_the_wave",
-            "v": 4677,
+            "v": 4690,
             "t": 1,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "wave"
             }]
         },
