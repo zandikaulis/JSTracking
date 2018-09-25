@@ -568,11 +568,11 @@ window.__twilightSettings = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 4694,
+            "v": 4695,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.6.7"
+                "value": "2.6.19"
             }]
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
@@ -1516,10 +1516,13 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4693,
+            "v": 4696,
             "t": 1,
             "groups": [{
-                "weight": 99,
+                "weight": 5,
+                "value": "2.6.19"
+            }, {
+                "weight": 94,
                 "value": "2.6.7"
             }, {
                 "weight": 1,
