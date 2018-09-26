@@ -1504,13 +1504,13 @@ window.__twilightSettings = {
         },
         "e911d915-baca-46b8-b6fe-e991baee776b": {
             "name": "TWILIGHT_TAGS",
-            "v": 4726,
+            "v": 4728,
             "t": 1,
             "groups": [{
-                "weight": 40,
+                "weight": 10,
                 "value": "control"
             }, {
-                "weight": 60,
+                "weight": 90,
                 "value": "experiment"
             }]
         },
