@@ -15828,7 +15828,7 @@
                     }, {
                         key: "receiveMessage",
                         value: function(e) {
-                            if ("pubsub" == e.data.twitch_protocol && e.source) switch (i.debug("Received message: " + JSON.stringify(e.data)), e.data.type) {
+                            if (e.data && "pubsub" == e.data.twitch_protocol && e.source) switch (i.debug("Received message: " + JSON.stringify(e.data)), e.data.type) {
                                 case "LISTEN":
                                     this.handleListen(e.source, e.data.nonce, e.data.data);
                                     break;
