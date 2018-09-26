@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-1e201615";
+    return "2.3.0-77bb4e43";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3539,7 +3539,7 @@ PlaybackMonitor.prototype._checkStopped = function (buffered) {
     // when the player is muted and hidden. When iOS is in fullscreen, native
     // playback controls are shown. These may pause the video element directly,
     // so don't count pause events while iOS is fullscreen as a 'browser' pause.
-    if (this._video.paused && !this._video.error && !this._paused && !this._webkitFullScreen) {
+    if (this._video.paused && !this._video.ended && !this._video.error && !this._paused && !this._webkitFullScreen) {
         this._onstop();
     }
 };
