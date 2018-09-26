@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-dfa5017e";
+    return "2.3.0-e878ec64";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2875,7 +2875,6 @@ var NOT_SUPPORTED = 4; // HTMLMediaElement error code
 // configurations
 var MIN_PLAYABLE_BUFFER = 0.1; // consider buffers smaller than this as empty
 var HEARTBEAT_INTERVAL = 2000; // Interval to check for stalled
-var PLAYHEAD_STUCK_TIMEOUT = 20000; // Timeout for playhead not progressing
 
 /**
  * MediaSink implements the "MediaSink" interface in javascript
@@ -2908,7 +2907,9 @@ var MediaSink = module.exports = function MediaSink(config) {
 MediaSink.prototype.configure = function (track) {
     if (track.path) {
         this._srcUrl = track.path;
+        // Update authxml path
         this._drmManager.configure(track.path);
+
         // Add a native source directly
         if (track.passthrough) {
             this._video.src = track.path;
@@ -2975,21 +2976,14 @@ MediaSink.prototype.captureGesture = function () {
  * Start/resume playback
  */
 MediaSink.prototype.play = function () {
-    // Make sure all pending buffer appends have completed
-    return this._scheduleUpdate().then(function () {
-        return this._playbackMonitor.play();
-    }.bind(this));
+    return this._playbackMonitor.play();
 };
 
 /**
  * Stop playback
  */
 MediaSink.prototype.pause = function () {
-    // Since we schedule 'play', we need to schedule 'pause' as well
-    // to preserve ordering
-    this._scheduleUpdate().then(function () {
-        this._playbackMonitor.pause();
-    }.bind(this));
+    this._playbackMonitor.pause();
 };
 
 /**
@@ -3067,8 +3061,17 @@ MediaSink.prototype.seekTo = function (playhead) {
     var buffered = getBufferedRange(this._video);
     if (playhead >= buffered.start && playhead < buffered.end) {
         // If we're seeking within the buffer, wait for pending operations
-        this._scheduleUpdate().then(function () {
-            this._video.currentTime = playhead;
+        function schedulePromise(track) {
+            return new Promise(function (resolve) {
+                track.schedule(resolve);
+            });
+        }
+        var promises = [];
+        for (var key in this._tracks) {
+            promises.push(this._tracks[key].then(schedulePromise));
+        }
+        Promise.all(promises).then(function () {
+            this._video.currentTime = playhead
         }.bind(this));
     } else {
         this._video.currentTime = playhead;
@@ -3091,7 +3094,7 @@ MediaSink.prototype.setPlaybackRate = function (rate) {
  * @param {function} onCue - called when the cue is fired
  */
 MediaSink.prototype.addCue = function (start, end, onCue) {
-    // endTime must be larger than startTime on Edge
+    // endTime musst be larger than startTime on Edge
     if (end <= start) {
         end = start + 1;
     }
@@ -3194,12 +3197,6 @@ MediaSink.prototype.delete = function () {
     this._video = null;
 };
 
-/**
- * Create a source buffer and add it to our MediaSource
- * @param {Number} trackID to identify this new buffer
- * @param {String} codec   information for this track
- * @param {Number} offset  Initial timestamp offset
- */
 MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
     var track = this._mediaSource.then(function (mediaSource) {
         var srcBuf = mediaSource.addSourceBuffer('video/mp4;' + codec);
@@ -3218,24 +3215,6 @@ MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
     }.bind(this));
 
     this._tracks[trackID] = track;
-}
-
-/**
- * Create a Promise that resolves when all currently scheduled
- * SourceBuffer opperations have completed
- */
-MediaSink.prototype._scheduleUpdate = function () {
-    var promises = [];
-    for (var key in this._tracks) {
-        promises.push(this._tracks[key].then(schedulePromise));
-    }
-    return Promise.all(promises);
-}
-
-function schedulePromise(track) {
-    return new Promise(function (resolve) {
-        track.schedule(resolve);
-    });
 }
 
 // internal
@@ -3439,6 +3418,7 @@ function PlaybackMonitor(video, config) {
     this._idle = true;
     this._paused = true;
     this._webkitFullScreen = false;
+    this._lastPlayhead = 0;
     this._lastBufferEnd = 0;
     this._fps = 0;
     this._lastDecodedFrames = 0;
@@ -3451,10 +3431,8 @@ function PlaybackMonitor(video, config) {
         }.bind(this))
     }.bind(this);
     addListener('play', this._onVideoPlay.bind(this));
-    addListener('playing', this._onVideoPlaying.bind(this));
     addListener('pause', this._onVideoPause.bind(this));
     addListener('timeupdate', this._onVideoTimeUpdate.bind(this));
-    addListener('waiting', this._onVideoWaiting.bind(this));
     addListener('error', this._onVideoError.bind(this));
     addListener('webkitbeginfullscreen', this._onWebkitBeginFullscreen.bind(this));
     addListener('webkitendfullscreen', this._onWebkitEndFullscreen.bind(this));
@@ -3483,17 +3461,12 @@ PlaybackMonitor.prototype.framerate = function () {
 };
 
 PlaybackMonitor.prototype._onVideoPlay = function () {
+    this._lastPlayhead = this._video.currentTime;
     clearInterval(this._intervalId);
     this._intervalId = setInterval(this._heartbeat.bind(this), HEARTBEAT_INTERVAL);
-    this._lastTimeUpdate = performance.now();
-};
-
-PlaybackMonitor.prototype._onVideoPlaying = function () {
-    this._idle = false;
 };
 
 PlaybackMonitor.prototype._onVideoPause = function () {
-    this._idle = true;
     clearInterval(this._intervalId);
     this._checkStopped();
 };
@@ -3502,28 +3475,14 @@ PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
     // Update framerate
     var decoded = getDecodedFrames(this._video);
     var now = performance.now();
-    var timeSinceUpdate = now - this._lastTimeUpdate;
-    if (timeSinceUpdate !== 0) {
-        this._fps = 1000 * Math.max(decoded - this._lastDecodedFrames, 0) / timeSinceUpdate;
-    }
+    this._fps = 1000 * Math.max(decoded - this._lastDecodedFrames, 0) / (now - this._lastTimeUpdate);
     this._lastDecodedFrames = decoded;
     this._lastTimeUpdate = now;
 
-    // Jump a gap if we're at the end of a region
-    if (remainingBufferInRegion(this._video) < MIN_PLAYABLE_BUFFER) {
-        tryJumpGap(this._video, Math.max(timeSinceUpdate, MIN_PLAYABLE_BUFFER*1000));
-    }
-
-    // Update listeners
-    this._checkBufferUpdate();
     this._ontimeupdate();
-};
-
-PlaybackMonitor.prototype._onVideoWaiting = function () {
-    if (!this._video.paused && !this._video.seeking && !this._idle) {
-        this._onidle();
-    }
-    this._idle = true;
+    var buffered = getBufferedRange(this._video);
+    this._checkBufferUpdate(buffered);
+    this._updateIdle(buffered);
 };
 
 PlaybackMonitor.prototype._onVideoError = function () {
@@ -3544,83 +3503,73 @@ PlaybackMonitor.prototype._onWebkitEndFullscreen = function () {
 }
 
 PlaybackMonitor.prototype._heartbeat = function () {
-    var timeSinceUpdate = performance.now() - this._lastTimeUpdate;
-
     if (this._video.paused) {
         // This shouldn't happen, but stop heartbeat
         // if we get into a bad state.
         clearInterval(this._intervalId);
-    } else if (timeSinceUpdate > PLAYHEAD_STUCK_TIMEOUT) {
-        console.warn('Playhead stuck for more than ' + PLAYHEAD_STUCK_TIMEOUT + 'ms');
-        this._onidle();
-    } else if (timeSinceUpdate > HEARTBEAT_INTERVAL) {
-        // We haven't moved since the last heartbeat
-        this._fixStall()
+    } else if (this._video.currentTime === this._lastPlayhead) {
+        this._fixStall();
     } else {
         this._checkBufferUpdate(getBufferedRange(this._video));
+        this._lastPlayhead = this._video.currentTime;
     }
 };
 
-PlaybackMonitor.prototype._checkBufferUpdate = function () {
-    var bufferEnd = getBufferedRange(this._video).end;
-    if (bufferEnd !== this._lastBufferEnd) {
-        this._lastBufferEnd = bufferEnd;
+PlaybackMonitor.prototype._checkBufferUpdate = function (buffered) {
+    if (buffered.end !== this._lastBufferEnd) {
+        this._lastBufferEnd = buffered.end;
         this._onbufferupdate();
     }
 };
 
-PlaybackMonitor.prototype._checkStopped = function () {
+PlaybackMonitor.prototype._updateIdle = function (buffered) {
+    if (this._video.paused) {
+        this._idle = true;
+    } else {
+        var idle = (buffered.end - this._video.currentTime < MIN_PLAYABLE_BUFFER);
+        if (idle && !this._idle) {
+            this._onidle();
+        }
+        this._idle = idle;
+    }
+};
+
+PlaybackMonitor.prototype._checkStopped = function (buffered) {
     // Notify mediaplayer if the browser paused on its own. This can happen
     // when the player is muted and hidden. When iOS is in fullscreen, native
     // playback controls are shown. These may pause the video element directly,
     // so don't count pause events while iOS is fullscreen as a 'browser' pause.
-    if (this._video.paused && !this._video.ended && !this._video.error && !this._paused && !this._webkitFullScreen) {
+    if (this._video.paused && !this._video.error && !this._paused && !this._webkitFullScreen) {
         this._onstop();
     }
 };
 
 PlaybackMonitor.prototype._fixStall = function () {
-    var inBuffer = (remainingBufferInRegion(this._video) > MIN_PLAYABLE_BUFFER);
-    var maxGap = inBuffer ? performance.now() - this._lastTimeUpdate : Infinity;
+    var bufferDuration = getBufferedRange(this._video).end - this._video.currentTime;
+    var inBuffer = (bufferDuration > MIN_PLAYABLE_BUFFER);
+    var buffered = this._video.buffered;
 
-    if (!tryJumpGap(this._video, maxGap) && inBuffer) {
+    // Seek to the start of the next region if it exists.
+    if (buffered.length > 1 || !inBuffer) {
+        var playhead = this._video.currentTime;
+        for (var i = 0; i < buffered.length; i++) {
+            var start = buffered.start(i),
+                end = buffered.end(i);
+
+            if (playhead < start && end - start > MIN_PLAYABLE_BUFFER) {
+                console.warn('jumping ' + (start - playhead) + 's gap');
+                this._video.currentTime = start + MIN_PLAYABLE_BUFFER;
+                return;
+            }
+        }
+    }
+
+    // Creep forward to try to get "unstuck"
+    if (inBuffer) {
         console.warn('stalled within buffer');
         this._video.currentTime += MIN_PLAYABLE_BUFFER;
     }
 };
-
-function tryJumpGap(video, maxGap) {
-    var buffered = video.buffered;
-    var currentTime = video.currentTime;
-    var maxGapSecs = maxGap/1000;
-
-    for (var i = 0; i < buffered.length; i++) {
-        var start = buffered.start(i);
-        var end = buffered.end(i);
-        if (start > currentTime && end - start > MIN_PLAYABLE_BUFFER) {
-            var validGap = (start - currentTime < maxGapSecs);
-            if (validGap) {
-                console.warn('jumping ' + (start - currentTime) + 's gap');
-                video.currentTime = start + MIN_PLAYABLE_BUFFER;
-            }
-            return validGap;
-        }
-    }
-
-    return false;
-};
-
-function remainingBufferInRegion(video) {
-    var playhead = video.currentTime;
-    var buffered = video.buffered;
-    for (var i = 0; i < buffered.length; i++) {
-        var end = buffered.end(i);
-        if (buffered.start(i) <= playhead && playhead < end) {
-            return end - playhead;
-        }
-    }
-    return 0;
-}
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
