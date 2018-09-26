@@ -81,7 +81,7 @@ window.__twilightSettings = {
     "messages_disclosure_enabled": true,
     "mobile_subs_feature_flag": "on",
     "multi_account_setting_feature_flag": "off",
-    "native_account_recovery": false,
+    "native_account_recovery": "staff",
     "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
     "new_live_announcements": true,
