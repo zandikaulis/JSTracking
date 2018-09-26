@@ -699,31 +699,32 @@
         "0Hzr": function(e, t, n) {},
         "0LAi": function(e, t, n) {
             "use strict";
-            var i = n("q1tI"),
-                r = n("MXoD"),
-                a = n("2xye"),
-                o = n("Ue10"),
-                s = function(e) {
+            var i = n("mrSG"),
+                r = n("q1tI"),
+                a = n("MXoD"),
+                o = n("2xye"),
+                s = n("Ue10"),
+                l = function(e) {
                     var t = e.tags;
-                    return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), i.createElement(o.Ta, {
-                        display: o.U.InlineBlock,
+                    return void 0 !== e.tagNumberLimit && e.tagNumberLimit > 0 && (t = t.slice(0, e.tagNumberLimit)), r.createElement(s.Ta, {
+                        display: s.U.InlineBlock,
                         fullWidth: !0
                     }, t.map(function(t) {
-                        var n = e.linkTo || {};
-                        e.linkPath && (n.pathname = e.linkPath.replace(":tagID", t.id));
-                        return i.createElement(o.ub, {
+                        var n = i.__assign({}, e.linkTo) || {};
+                        e.linkPath && (n.pathname = e.linkPath), n.pathname && (n.pathname = n.pathname.replace(":tagID", t.id));
+                        return r.createElement(s.ub, {
                             key: t.id,
-                            fontSize: o.Y.Size7,
-                            display: o.U.InlineBlock,
+                            fontSize: s.Y.Size7,
+                            display: s.U.InlineBlock,
                             margin: {
                                 right: .5,
                                 bottom: .5
                             }
-                        }, i.createElement(o.Db, {
+                        }, r.createElement(s.Db, {
                             label: t.localizedName,
                             type: e.style,
-                            linkTo: Object(r.a)({
-                                content: a.PageviewContent.Tag
+                            linkTo: Object(a.a)({
+                                content: o.PageviewContent.Tag
                             }, n),
                             onClick: function() {
                                 e.callback && e.callback(t)
@@ -733,7 +734,7 @@
                     }))
                 };
             n.d(t, "a", function() {
-                return s
+                return l
             })
         },
         "0Log": function(e, t, n) {
