@@ -1075,6 +1075,18 @@ window.__twilightSettings = {
                 "value": "variant1"
             }]
         },
+        "8b4fa811-1db1-4347-8f26-5ff4141317e8": {
+            "name": "bits_new_user_cheer",
+            "v": 4733,
+            "t": 2,
+            "groups": [{
+                "weight": 0,
+                "value": "on"
+            }, {
+                "weight": 100,
+                "value": "off"
+            }]
+        },
         "8c505ba8-1381-4f54-ad7f-5dbbde9beee0": {
             "name": "TWILIGHT_INSTREAM_CHECKOUT",
             "v": 4405,
