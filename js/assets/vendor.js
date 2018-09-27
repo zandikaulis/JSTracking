@@ -1945,7 +1945,7 @@
         "12bw": function(e, t, n) {
             "use strict";
             var r = n("NfvW").default;
-            n(74), (t = e.exports = r).default = t
+            n(75), (t = e.exports = r).default = t
         },
         "16Al": function(e, t, n) {
             "use strict";
@@ -4032,7 +4032,7 @@
         "7Inb": function(e, t, n) {
             "use strict";
             var r = n("W6Rk").default;
-            n(72), (t = e.exports = r).default = t
+            n(73), (t = e.exports = r).default = t
         },
         "7Ix3": function(e, t) {
             e.exports = function(e) {
@@ -13543,12 +13543,15 @@
                             i = n.getViewWithPermissions(),
                             a = n.getAnchorAttributes(r.Extension);
                         a.sandbox = n.getSandboxFlags(i);
-                        var s = {
+                        var u = {
                             extensionURL: (0, T.appendQueryParams)(o, n.extensionOptions),
                             hostOrigin: window.location.origin,
                             iframeAttrs: a
                         };
-                        n.coordinator.sendSupervisorInit(s)
+                        n.coordinator.sendSupervisorInit(u);
+                        n.extension.state !== s.ExtensionState.Released && (n.helperNotLoadedTimeout = setTimeout(function() {
+                            console.warn("Extension Warning (" + n.extension.id + "): Extension Helper Library Not Loaded")
+                        }, 1e4))
                     }, n.getExtensionAuth = function() {
                         var e = _.tokenManager.getToken(n.extension.clientId);
                         return {
@@ -13569,7 +13572,7 @@
                         var r = e.isLinked !== t.isLinked;
                         return r && !e.isLinked || r && !n.extension.bitsEnabled
                     }, n.onExtensionLoaded = function(e) {
-                        n.hasLoaded = !0, n.contextManager.initializeContext(), n.tracker.trackEvent("extension_helper_load_success", {}), n.iframe.style.removeProperty("display");
+                        n.hasLoaded = !0, n.contextManager.initializeContext(), n.helperNotLoadedTimeout && (clearTimeout(n.helperNotLoadedTimeout), delete n.helperNotLoadedTimeout), n.tracker.trackEvent("extension_helper_load_success", {}), n.iframe.style.removeProperty("display");
                         var t = _.tokenManager.getToken(n.extension.clientId);
                         n.handleToken(t, t), n.emit(s.ExtensionFrameEvents.ExtensionFrameLoaded, n.extension.asObject), n.sendExtensionProductPrices(), n.sendExtensionBitsProductPrices(), n.sendExtensionDisplayState()
                     }, n.onExtensionUserAction = function(e) {
@@ -34272,7 +34275,7 @@
         ty1X: function(e, t, n) {
             "use strict";
             var r = n("p8t8").default;
-            n(73), (t = e.exports = r).default = t
+            n(74), (t = e.exports = r).default = t
         },
         u3z5: function(e, t, n) {
             var r = n("yHON"),
