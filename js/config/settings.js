@@ -118,6 +118,7 @@ window.__twilightSettings = {
     "spade_url": "https://video-edge-cc974f.sjc02.hls.ttvnw.net/v1/segment/CpydE_wt5QcjqTuMxkTibUB4Itb9UhmvmGVHI2mwWs-5I9UISSQYsYrjEpH3Msn89-o9Qe8mNFm1NxjpYcoDaiQVOdbbl2hHEr9vaMAcqEhD04lic0Ys3O-FAsrpsXNWMRNS6_Av8N14sbSsFBDRCnygFNwwmbrPIuBHEVtn6J-wFO4dc4WaD_5trePgVs4OSsjRhM82DO39ww8PeoS1b2lmGuiDIa9zTfTu3KypDYfdyalJrzuYLGpY9fjkV_WGaquAmMDsaFsCXAfAKk1aks9qoaKM9H7WVjkPOvViSClKCAZEnuuW7a6Ir9HJK1dS9vguyr4HCrcpOAvOsF13Ppmg7U8MMzX2xo74mVXw_gfzHuLdE7WDcw8OAlbZYpTdiPIOwoaGDSM6aCjtLRd6VXRbe0P2X_TjyW2XitI5kLhQmBJzT9TwVrwGtaAsciMnTH3hE5JLWvu9d3p2dAY_pfpFZ9IHuZaRu_RbAX0wO8aGnoHh8Qt5GOa9t6syKWrSEmk6AxqzJMqhO8-EWYETDeF1mFKiHpsJbH53nH9H1iWQuiTW_UmPrya8VuLk4fvR51WElzysUvL4FFBeyvYq14Sg9Uq4x1Lmf_AnbC371zvTVeL12ObLLMAYSqOupddwaktX-PcyQeYY9FFm5Rpgkk4J0x8mkCrep6OjtJ37ACCu2SZoyscmeeGq7yEAenV8fgejEW6iY9uruf9P3eAEKvAoS6wWQR4U4m-LULhpzk5C5F1TKalmfKEFPcVICO48EIsbGPV78CrtVBx3jSGT.ts",
     "squad_stream_banner_query_enabled": true,
     "squad_stream_banner_whitelist": [],
+    "squad_stream_dashboard": "off",
     "squad_stream_feature": "on",
     "squad_stream_page_whitelist": [],
     "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={SESSION_ID}",
