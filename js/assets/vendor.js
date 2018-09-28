@@ -3785,7 +3785,7 @@
                     value: !0
                 }),
                 function(e) {
-                    e.AccountConnection = "accountConnection", e.App = "app", e.Demo = "demo", e.Logging = "logging", e.Mods = "mods", e.Performance = "performance", e.Release = "release", e.Session = "session", e.Window = "window", e.Process = "process"
+                    e.AccountConnection = "accountConnection", e.App = "app", e.Demo = "demo", e.Logging = "logging", e.Mods = "mods", e.Network = "network", e.Performance = "performance", e.Release = "release", e.Session = "session", e.Window = "window", e.Process = "process"
                 }(t.IntegrationType || (t.IntegrationType = {}))
         },
         "6WtA": function(e, t, n) {
@@ -13300,7 +13300,7 @@
                 value: !0
             });
             var r = n("mrSG");
-            r.__exportStar(n("kGNn"), t), r.__exportStar(n("xoM6"), t), r.__exportStar(n("9ep0"), t), r.__exportStar(n("6Se5"), t), r.__exportStar(n("Z/O+"), t)
+            r.__exportStar(n("kGNn"), t), r.__exportStar(n("XEIr"), t), r.__exportStar(n("xoM6"), t), r.__exportStar(n("9ep0"), t), r.__exportStar(n("6Se5"), t), r.__exportStar(n("Z/O+"), t)
         },
         Ihu7: function(e, t, n) {
             "use strict";
@@ -20090,6 +20090,14 @@
             e.exports = function(e, t) {
                 return e && r(t, o(t), e)
             }
+        },
+        XEIr: function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            var r = n("tGPk");
+            t.NetworkIntegrationConnectionStatus = r.NetworkIntegrationConnectionStatus
         },
         XGnz: function(e, t, n) {
             var r = n("CH3K"),
@@ -33997,6 +34005,15 @@
                     return this.__nextIndex__ === this.__length__ ? n : (t = n.charCodeAt(0)) >= 55296 && t <= 56319 ? n + this.__list__[this.__nextIndex__++] : n
                 })
             }), u(r.prototype, a.toStringTag, i("c", "String Iterator"))
+        },
+        tGPk: function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }),
+                function(e) {
+                    e.NetworkDisconnected = "network-disconnected", e.WebsiteUnreachable = "website-unreachable", e.Online = "online"
+                }(t.NetworkIntegrationConnectionStatus || (t.NetworkIntegrationConnectionStatus = {}))
         },
         tLB3: function(e, t, n) {
             var r = n("GoyQ"),
