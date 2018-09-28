@@ -125,6 +125,7 @@ window.__twilightSettings = {
     "squad_stream_whitelist": [],
     "stats_sample_rate": 100,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
+    "test_browser_3594": [0, 0],
     "throttled_experiment_event_enabled": false,
     "tvapp_ps4_ads_enabled": true,
     "tvapp_ps4_channel_blacklist": [133497623, 157092761, 168843586],
