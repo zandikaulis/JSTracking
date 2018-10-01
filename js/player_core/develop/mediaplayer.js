@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-59299d01";
+    return "2.3.0-33ab9c12";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2552,6 +2552,7 @@ MediaPlayer.prototype._attachHandlers = function () {
     em.on(ClientMessage.CONFIGURE, sink.configure.bind(sink));
     em.on(ClientMessage.REINIT, sink.reinit.bind(sink));
     em.on(ClientMessage.ENQUEUE, sink.enqueue.bind(sink));
+    em.on(ClientMessage.END_OF_STREAM, sink.endOfStream.bind(sink));
     em.on(ClientMessage.SET_TIMESTAMP_OFFSET, sink.setTimestampOffset.bind(sink));
     em.on(ClientMessage.PLAY, this._startPlayback.bind(this));
     em.on(ClientMessage.PAUSE, sink.pause.bind(sink));
@@ -2949,6 +2950,15 @@ MediaSink.prototype.enqueue = function (sample) {
     }
 };
 
+/**
+ * Mark that no more media will be enqueued
+ */
+MediaSink.prototype.endOfStream = function () {
+    this._scheduleUpdate().then(function () {
+        this._playbackMonitor.endOfStream();
+    }.bind(this))
+};
+
 MediaSink.prototype.setTimestampOffset = function (update) {
     var track = this._tracks[update.trackID];
     if (track) {
@@ -2976,14 +2986,18 @@ MediaSink.prototype.captureGesture = function () {
  * Start/resume playback
  */
 MediaSink.prototype.play = function () {
-    return this._playbackMonitor.play();
+    return this._scheduleUpdate().then(function () {
+        return this._playbackMonitor.play();
+    }.bind(this));
 };
 
 /**
  * Stop playback
  */
 MediaSink.prototype.pause = function () {
-    this._playbackMonitor.pause();
+    this._scheduleUpdate().then(function () {
+        this._playbackMonitor.pause();
+    }.bind(this));
 };
 
 /**
@@ -3061,17 +3075,8 @@ MediaSink.prototype.seekTo = function (playhead) {
     var buffered = getBufferedRange(this._video);
     if (playhead >= buffered.start && playhead < buffered.end) {
         // If we're seeking within the buffer, wait for pending operations
-        function schedulePromise(track) {
-            return new Promise(function (resolve) {
-                track.schedule(resolve);
-            });
-        }
-        var promises = [];
-        for (var key in this._tracks) {
-            promises.push(this._tracks[key].then(schedulePromise));
-        }
-        Promise.all(promises).then(function () {
-            this._video.currentTime = playhead
+        this._scheduleUpdate().then(function () {
+            this._video.currentTime = playhead;
         }.bind(this));
     } else {
         this._video.currentTime = playhead;
@@ -3216,6 +3221,20 @@ MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
 
     this._tracks[trackID] = track;
 }
+
+function schedulePromise(track) {
+    return new Promise(function (resolve) {
+        track.schedule(resolve);
+    });
+}
+
+MediaSink.prototype._scheduleUpdate = function () {
+    var promises = [];
+    for (var key in this._tracks) {
+        promises.push(this._tracks[key].then(schedulePromise));
+    }
+    return Promise.all(promises);
+};
 
 // internal
 
@@ -3456,6 +3475,10 @@ PlaybackMonitor.prototype.pause = function () {
     this._video.pause();
 };
 
+PlaybackMonitor.prototype.endOfStream = function () {
+    this._idle = false;
+};
+
 PlaybackMonitor.prototype.framerate = function () {
     return this._fps;
 };
@@ -3627,6 +3650,10 @@ module.exports = {
      * @param {ArrayBuffer} sample.buffer - track buffer
      */
     ENQUEUE: 'ClientEnqueue',
+    /**
+     * No more media will be enqueued in this stream
+     */
+    END_OF_STREAM: 'ClientEndOfStream',
     /**
      * Set the timestamp offset for a track
      * @param {Number} update.trackID - which track to update timestamp offset.

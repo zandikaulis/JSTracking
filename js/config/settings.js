@@ -409,13 +409,13 @@ window.__twilightSettings = {
         },
         "20be9241-4fa5-4903-9ada-e1e7762eda23": {
             "name": "vod_colors_of_the_wind",
-            "v": 4560,
+            "v": 4762,
             "t": 2,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "variant1"
             }]
         },
@@ -602,13 +602,13 @@ window.__twilightSettings = {
         },
         "40f4fd80-86ca-44f4-9abc-0324d24908bc": {
             "name": "TWILIGHT_RAID_UPSELL",
-            "v": 4648,
+            "v": 4763,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "test"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "control"
             }]
         },
