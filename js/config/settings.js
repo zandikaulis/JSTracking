@@ -636,6 +636,21 @@ window.__twilightSettings = {
                 "value": "wave"
             }]
         },
+        "423a8012-5ee8-4514-99cc-ca3c8babb97c": {
+            "name": "TWILIGHT_VOD_KIRK",
+            "v": 4759,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "top"
+            }, {
+                "weight": 0,
+                "value": "bottom"
+            }]
+        },
         "44a503af-d77f-4f1d-9fa4-c99c5f783f9c": {
             "name": "twilight_video_manager_release",
             "v": 2850,
@@ -806,6 +821,21 @@ window.__twilightSettings = {
             }, {
                 "weight": 95,
                 "value": "left_nav_order_exp"
+            }]
+        },
+        "54648285-230e-4448-aba0-74e2b6fce71c": {
+            "name": "TWILIGHT_VOD_KIRK",
+            "v": 4758,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "top"
+            }, {
+                "weight": 0,
+                "value": "bottom"
             }]
         },
         "54b18ea6-2b6a-4ed7-9128-2497572d31e2": {
@@ -1464,6 +1494,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 5,
                 "value": "inline"
+            }]
+        },
+        "dfbed154-e2f1-41e7-962c-10309e62583a": {
+            "name": "TWILIGHT_VOD_PIKE",
+            "v": 4760,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant"
             }]
         },
         "e0fdfc17-389d-4ba5-8596-065352ddc01e": {

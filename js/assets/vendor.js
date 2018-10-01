@@ -3785,7 +3785,7 @@
                     value: !0
                 }),
                 function(e) {
-                    e.AccountConnection = "accountConnection", e.App = "app", e.Demo = "demo", e.Logging = "logging", e.Mods = "mods", e.Network = "network", e.Performance = "performance", e.Release = "release", e.Session = "session", e.Window = "window", e.Process = "process"
+                    e.AccountConnection = "accountConnection", e.App = "app", e.AppSettings = "appSettings", e.Demo = "demo", e.Logging = "logging", e.Mods = "mods", e.Network = "network", e.Performance = "performance", e.Release = "release", e.Session = "session", e.Window = "window", e.Process = "process"
                 }(t.IntegrationType || (t.IntegrationType = {}))
         },
         "6WtA": function(e, t, n) {
@@ -4101,15 +4101,6 @@
                 }), n
             }
         },
-        "7YOe": function(e, t, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                    value: !0
-                }),
-                function(e) {
-                    e.Minimize = "minimize", e.Hide = "hide", e.Close = "close"
-                }(t.WindowIntegrationCloseType || (t.WindowIntegrationCloseType = {}))
-        },
         "7fqy": function(e, t) {
             e.exports = function(e) {
                 var t = -1,
@@ -4344,6 +4335,15 @@
                     return e.apply(void 0, arguments)
                 }
             }
+        },
+        "8My+": function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }),
+                function(e) {
+                    e.Minimize = "minimize", e.Hide = "hide", e.Close = "close"
+                }(t.AppSettingsIntegrationCloseOption || (t.AppSettingsIntegrationCloseOption = {}))
         },
         "8PLQ": function(e) {
             e.exports = {
@@ -8078,14 +8078,6 @@
                 var n = Number(t);
                 return r(e, 3 * n)
             }
-        },
-        "9ep0": function(e, t, n) {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            });
-            var r = n("7YOe");
-            t.WindowIntegrationCloseType = r.WindowIntegrationCloseType
         },
         "9g66": function(e, t, n) {
             "use strict";
@@ -13300,7 +13292,7 @@
                 value: !0
             });
             var r = n("mrSG");
-            r.__exportStar(n("kGNn"), t), r.__exportStar(n("XEIr"), t), r.__exportStar(n("xoM6"), t), r.__exportStar(n("9ep0"), t), r.__exportStar(n("6Se5"), t), r.__exportStar(n("Z/O+"), t)
+            r.__exportStar(n("kGNn"), t), r.__exportStar(n("gaGC"), t), r.__exportStar(n("XEIr"), t), r.__exportStar(n("xoM6"), t), r.__exportStar(n("6Se5"), t), r.__exportStar(n("Z/O+"), t)
         },
         Ihu7: function(e, t, n) {
             "use strict";
@@ -24404,6 +24396,14 @@
                     o = new Date(0);
                 return o.setFullYear(t, n, r + 1), o.setHours(0, 0, 0, 0), o
             }
+        },
+        gaGC: function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            var r = n("8My+");
+            t.AppSettingsIntegrationCloseOption = r.AppSettingsIntegrationCloseOption
         },
         gfz1: function(e, t, n) {
             var r = n("yNUO"),
