@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-9d4d4841";
+    return "2.3.0-a0820771";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3881,8 +3881,7 @@ Queue.prototype.empty = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./nospd.json": "./settings/nospd.json",
-	"./rebuf1.json": "./settings/rebuf1.json"
+	"./2buf.json": "./settings/2buf.json"
 };
 
 
@@ -3909,25 +3908,14 @@ webpackContext.id = "./settings sync recursive ^\\.\\/.*\\.json$";
 
 /***/ }),
 
-/***/ "./settings/nospd.json":
-/*!*****************************!*\
-  !*** ./settings/nospd.json ***!
-  \*****************************/
+/***/ "./settings/2buf.json":
+/*!****************************!*\
+  !*** ./settings/2buf.json ***!
+  \****************************/
 /*! exports provided: buffercontrol, default */
 /***/ (function(module) {
 
-module.exports = {"buffercontrol":{"liveSpeedUpRate":1}};
-
-/***/ }),
-
-/***/ "./settings/rebuf1.json":
-/*!******************************!*\
-  !*** ./settings/rebuf1.json ***!
-  \******************************/
-/*! exports provided: buffercontrol, default */
-/***/ (function(module) {
-
-module.exports = {"buffercontrol":{"rebufferPenalty":1}};
+module.exports = {"buffercontrol":{"minBufferDuration":2}};
 
 /***/ })
 
