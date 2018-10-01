@@ -27,7 +27,7 @@ window.__twilightSettings = {
     "chat_input_box_restrictions_enabled": true,
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
-    "code_redemption_redeem_page": "off",
+    "code_redemption_redeem_page": "staff",
     "commerce_bar_experience": "sponsored",
     "community_sub_gifting_banner_timeouts": [0, 25, 35, 45, 55, 60, 60],
     "comscore_config_c1": 2,
