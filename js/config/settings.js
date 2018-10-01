@@ -46,7 +46,6 @@ window.__twilightSettings = {
     "dev_extension_sandbox_launch": "on",
     "dev_insights_feature_launch": "on",
     "drops_itemnames_enabled": false,
-    "earth_wind_fire": true,
     "earth_wind_fire_end": "2018-11-02T59:59:59Z",
     "earth_wind_fire_start": "2018-09-10T00:00:00Z",
     "env_test": "This is a test in Production.",
