@@ -2293,7 +2293,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-33ab9c12";
+    return "2.3.0-7bf5ca57";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2903,7 +2903,13 @@ var MediaSink = module.exports = function MediaSink(config) {
 };
 
 /**
- * Prepare for video playback
+ * Configure a track. This create a new track if no track with
+ * the id exists. We'll create a new MediaSource and attach it
+ * on the first call after 'reset'.
+ * @param {number} track.trackID - unique indentifier for this track
+ * @param {string} track.codec - codec string for this track
+ * @param {string} track.path - the source url
+ * @param {string} track.passthrough - if true, use path directly with video element
  */
 MediaSink.prototype.configure = function (track) {
     if (track.path) {
@@ -2939,7 +2945,8 @@ MediaSink.prototype.configure = function (track) {
 
 /**
  * Enqueue an audio buffer
- * @param {TypedArray} buf - fmp4 audio buffer
+ * @param {TypedArray} sample.buffer - fmp4 audio buffer
+ * @param {number} sample.trackID - designates the track to update.
  */
 MediaSink.prototype.enqueue = function (sample) {
     var track = this._tracks[sample.trackID];
@@ -2951,7 +2958,7 @@ MediaSink.prototype.enqueue = function (sample) {
 };
 
 /**
- * Mark that no more media will be enqueued
+ * Mark that we've appended the final segment
  */
 MediaSink.prototype.endOfStream = function () {
     this._scheduleUpdate().then(function () {
@@ -2959,6 +2966,11 @@ MediaSink.prototype.endOfStream = function () {
     }.bind(this))
 };
 
+/**
+ * Update the timstamp offset of all future samples in this buffer
+ * @param {number} update.offset - offset to apply in seconds
+ * @param {number} update.trackID - designates the track to update
+ */
 MediaSink.prototype.setTimestampOffset = function (update) {
     var track = this._tracks[update.trackID];
     if (track) {
@@ -3162,6 +3174,9 @@ MediaSink.prototype.droppedFrames = function () {
     }
 };
 
+/**
+ * @return {number} framerate in fps
+ */
 MediaSink.prototype.framerate = function () {
     return this._playbackMonitor.framerate();
 };
@@ -3202,6 +3217,12 @@ MediaSink.prototype.delete = function () {
     this._video = null;
 };
 
+/**
+ * Create a source buffer and add it to our MediaSource
+ * @param {Number} trackID to identify this new buffer
+ * @param {String} codec   information for this track
+ * @param {Number} offset  Initial timestamp offset
+ */
 MediaSink.prototype._addSourceBuffer = function (trackID, codec, offset) {
     var track = this._mediaSource.then(function (mediaSource) {
         var srcBuf = mediaSource.addSourceBuffer('video/mp4;' + codec);
@@ -3228,6 +3249,11 @@ function schedulePromise(track) {
     });
 }
 
+/**
+ * Schedule an update in all tracks. This allows us to order operations
+ * on the video element with operations on the SourceBuffers
+ * @return {Promise} Resolves when the update can be applied
+ */
 MediaSink.prototype._scheduleUpdate = function () {
     var promises = [];
     for (var key in this._tracks) {
@@ -3236,10 +3262,12 @@ MediaSink.prototype._scheduleUpdate = function () {
     return Promise.all(promises);
 };
 
-// internal
-
 function noop() {}
 
+/**
+ * @returns {number} number of frames decoded since last call to 'reset'.
+ *                          Returns -1 if decoded count unavailable.
+ */
 function getDecodedFrames(video){
     if (typeof video.webkitDecodedFrameCount === 'number') {
         return video.webkitDecodedFrameCount;
@@ -3297,6 +3325,11 @@ function getBufferedRange(video) {
     return {start: playhead, end: playhead};
 };
 
+/**
+ * Create a MediaSource and attach it to the video element
+ * @param  {HTMLVideoElement} video - the video element to attach to
+ * @return {Promise(MediaSource)} Resolves when the MediaSource has been succesfully opened
+ */
 function createMediaSource(video) {
     return new Promise(function (resolve, reject) {
         var mediaSource = new MediaSource();
@@ -3337,8 +3370,8 @@ SafeSourceBuffer.prototype.appendBuffer = function (buf) {
 };
 
 /**
- * Append a media buffer
- * @param {TypedArray} buf - fmp4 media buffer
+ * Update timestamp offset
+ * @param {TypedArray} offset - offset to apply in seconds
  */
 SafeSourceBuffer.prototype.setTimestampOffset = function (offset) {
     this.schedule(function (srcBuf) {
@@ -3378,15 +3411,27 @@ SafeSourceBuffer.prototype._process = function () {
     }
 };
 
+/**
+ * Detect if we're updating, which prevents us from performing actions on the SourceBuffer
+ */
 SafeSourceBuffer.prototype._updating = function () {
     return (!this._srcBuf || this._srcBuf.updating || this._video.error !== null);
 };
 
+/**
+ * There's an issue on Edge where text track cues must be added in accending order
+ * To handle this, we create a new text track every time we need to add an out-of-order cue
+ * @param {HTMLVideoElement} video - The video element to use
+ */
 function SafeTextTrack(video) {
     this._video = video;
     this._tracks = [ video.addTextTrack('metadata') ];
 }
 
+/**
+ * Add a VTTCue to the virtual text track
+ * @param {VTTCue} cue - The cue to add
+ */
 SafeTextTrack.prototype.addCue = function (cue) {
     var track = this._tracks.find(function (track) {
         var cues = track.cues;
@@ -3401,6 +3446,11 @@ SafeTextTrack.prototype.addCue = function (cue) {
     track.addCue(cue);
 };
 
+/**
+ * Remove any cues in the range from [start, end)
+ * @param {number} start - start in seconds
+ * @param {number} end - end in seconds
+ */
 SafeTextTrack.prototype.remove = function (start, end) {
     this._tracks.forEach(function (track) {
         var cues = track.cues;
@@ -3416,6 +3466,10 @@ SafeTextTrack.prototype.remove = function (start, end) {
     })
 };
 
+
+/**
+ * Remove all references to allow garbage collection
+ */
 SafeTextTrack.prototype.delete = function () {
     this._video = null;
     this._tracks = null;
@@ -3457,12 +3511,18 @@ function PlaybackMonitor(video, config) {
     addListener('webkitendfullscreen', this._onWebkitEndFullscreen.bind(this));
 };
 
+/**
+ * Cleanup everything so all objects can be garbage collected
+ */
 PlaybackMonitor.prototype.delete = function () {
     this._onDelete.forEach(function (fn) { fn() })
     clearInterval(this._intervalId);
     this._video = null;
 };
 
+/**
+ * Start playback and return promise from 'video.play()'
+ */
 PlaybackMonitor.prototype.play = function () {
     this._paused = false;
     var started = Promise.resolve(this._video.play());
@@ -3470,15 +3530,26 @@ PlaybackMonitor.prototype.play = function () {
     return started;
 };
 
+/**
+ * Pause video playback
+ */
 PlaybackMonitor.prototype.pause = function () {
     this._paused = true;
     this._video.pause();
 };
 
+/**
+ * Mark that no more segments will be appended
+ */
 PlaybackMonitor.prototype.endOfStream = function () {
+    // We need to guarantee a final 'idle' is emitted, so we
+    // don't buffer forever at the end of the stream
     this._idle = false;
 };
 
+/**
+ * @return {number} video framerate is fps
+ */
 PlaybackMonitor.prototype.framerate = function () {
     return this._fps;
 };
@@ -3525,6 +3596,9 @@ PlaybackMonitor.prototype._onWebkitEndFullscreen = function () {
     this._webkitFullScreen = false;
 }
 
+/**
+ * A heartbeat that monitors playback progress and corrects any playback issues.
+ */
 PlaybackMonitor.prototype._heartbeat = function () {
     if (this._video.paused) {
         // This shouldn't happen, but stop heartbeat
@@ -3545,6 +3619,10 @@ PlaybackMonitor.prototype._checkBufferUpdate = function (buffered) {
     }
 };
 
+/**
+ * Update our idle state, and emit 'idle' if we're transitioning too idle.
+ * @param  {Object} buffered - current buffered range
+ */
 PlaybackMonitor.prototype._updateIdle = function (buffered) {
     if (this._video.paused) {
         this._idle = true;
@@ -3557,7 +3635,13 @@ PlaybackMonitor.prototype._updateIdle = function (buffered) {
     }
 };
 
-PlaybackMonitor.prototype._checkStopped = function (buffered) {
+/**
+ * Notify mediaplayer if the browser paused on its own. This can happen
+ * when the player is muted and hidden. When iOS is in fullscreen, native
+ * playback controls are shown. These may pause the video element directly,
+ * so don't count pause events while iOS is fullscreen as a 'browser' pause.
+ */
+PlaybackMonitor.prototype._checkStopped = function () {
     // Notify mediaplayer if the browser paused on its own. This can happen
     // when the player is muted and hidden. When iOS is in fullscreen, native
     // playback controls are shown. These may pause the video element directly,
@@ -3567,6 +3651,12 @@ PlaybackMonitor.prototype._checkStopped = function (buffered) {
     }
 };
 
+/**
+ * Attempt to fix stalled playback. If stalled within a buffer, we try to "inch"
+ * forward to get unstuck. This is most prevelent on Safari. If we're not in a
+ * buffer, we'll attempt to seek forward to the next buffered region. This skips
+ * any gaps that have formed or correct timestamp issues.
+ */
 PlaybackMonitor.prototype._fixStall = function () {
     var bufferDuration = getBufferedRange(this._video).end - this._video.currentTime;
     var inBuffer = (bufferDuration > MIN_PLAYABLE_BUFFER);
