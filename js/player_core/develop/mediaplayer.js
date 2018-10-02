@@ -969,42 +969,49 @@ var KEY_SYSTEMS_BY_STRING = {
 
 var AUTH_XML_URL = 'https://vizima.twitch.tv/api/authxml/';
 
-var NOT_SUPPORTED = 4;
+var NETWORK_ERROR_VALUE = 2;
+var NOT_SUPPORTED_ERROR_VALUE = 4;
 
 var NO_CDM_SUPPORT_ERROR = {
-    value: NOT_SUPPORTED,
+    value: NOT_SUPPORTED_ERROR_VALUE,
     code: 11,
     message: 'Your browser does not support any DRM Content Decryption Modules',
 };
 
 var SESSION_UPDATE_ERROR = {
-    value: NOT_SUPPORTED,
+    value: NOT_SUPPORTED_ERROR_VALUE,
     code: 12,
     message: 'There was an issue while updating DRM License',
 };
 
 var LICENSE_REQUEST_ERROR = {
-    value: NOT_SUPPORTED,
+    value: NETWORK_ERROR_VALUE,
     code: 13,
     message: 'Error while requesting DRM license',
 };
 
 var KEY_SESSION_CREATION_ERROR = {
-    value: NOT_SUPPORTED,
+    value: NOT_SUPPORTED_ERROR_VALUE,
     code: 14,
     message: 'Error creating key session',
 };
 
 var KEY_SESSION_INTERNAL_ERROR = {
-    value: NOT_SUPPORTED,
+    value: NOT_SUPPORTED_ERROR_VALUE,
     code: 15,
     message: 'Encryption key not usable because of internal error in CDM',
 };
 
 var NO_PSSH_FOUND_ERROR = {
-    value: NOT_SUPPORTED,
+    value: NOT_SUPPORTED_ERROR_VALUE,
     code: 16,
     message: "Unable to find valid CDM support on media",
+};
+
+var AUTH_XML_REQUEST_ERROR = {
+    value: NETWORK_ERROR_VALUE,
+    code: 17,
+    message: "Request for auth xml failed",
 };
 
 var ERRORS = {
@@ -1014,6 +1021,7 @@ var ERRORS = {
     KEY_SESSION_CREATION: KEY_SESSION_CREATION_ERROR,
     KEY_SESSION_INTERNAL: KEY_SESSION_INTERNAL_ERROR,
     NO_PSSH_FOUND: NO_PSSH_FOUND_ERROR,
+    AUTH_XML_REQUEST: AUTH_XML_REQUEST_ERROR,
 };
 
 module.exports = {
@@ -1396,15 +1404,12 @@ var supportedConfig = [{
  */
 var DRMManager = function (config) {
     this._video = config.video;
+    this._handleError = config.onerror;
     this._cdmSupport = null;
     this._selectedCDM = null;
     this._mediaKeys = undefined; // we will reserve null
-    this._handleError = config.onerror;
-    this._currentSrc = null;
-    this._isProtected = false;
     this._pendingSessions = [];
-    this._sessions = [];
-    this._authUrl = ''; // Based on the channel name
+    this.reset();
 
     this._video.addEventListener('encrypted', this._handleEncrypted.bind(this), false);
     this._video.addEventListener('webkitneedkey', this._handleSafariEncrypted.bind(this), false);
@@ -1419,11 +1424,19 @@ DRMManager.prototype.configure = function (path) {
     var params = getParamsFromUrl(path);
     var token = params['token'];
     var sig = params['sig'];
-    this._authUrl = AUTH_XML_URL + channelName + '?token=' + encodeURIComponent(token) + '&sig=' + sig;
+    var authUrl = AUTH_XML_URL + channelName + '?token=' + encodeURIComponent(token) + '&sig=' + sig;
+
+    this._authXml = httpRequest(authUrl, {
+        method: 'GET',
+        responseType: 'text',
+    }).catch(function () {
+        return Promise.reject(ERRORS.AUTH_XML_REQUEST);
+    });
 };
 
 DRMManager.prototype.reset = function () {
     this._isProtected = false;
+    this._authXml = Promise.resolve('');
     this._sessions = [];
 }
 
@@ -1493,7 +1506,6 @@ DRMManager.prototype._handleEncrypted = function (event) {
         // TODO there is a better way to check/manage state instead of using undefined -> null as loading
         // this will make sure things will not fire twice, since there is async that could be happening.
         this._mediaKeys = null;
-        this._pendingSessions = [];
 
         // create a promise chain of keySystem support
         keySystemPromise = this._createKeySystemSupportChain()
@@ -1642,14 +1654,11 @@ DRMManager.prototype._generateLicense = function (message) {
         }));
         return Promise.resolve(result);
     } else {
-        return httpRequest(this._authUrl, {
-            method: 'GET',
-            responseType: 'text',
-        }).then(function (authXml) {
-            return this._requestLicense(message, authXml);
-        }.bind(this)).catch(function () {
-            return Promise.reject(ERRORS.LICENSE_REQUEST);
-        });
+        return this._authXml.then(function (authXml) {
+            return this._requestLicense(message, authXml).catch(function () {
+                return Promise.reject(ERRORS.LICENSE_REQUEST);
+            });
+        }.bind(this));
     }
 };
 
@@ -1745,10 +1754,7 @@ DRMManager.prototype._setupSafariMediaKeys = function (event, certificate) {
  * @param {Object} keyMessageEvent - Message event from current session
  */
 DRMManager.prototype._getWebkitLicense = function (message, contentId) {
-    return httpRequest(this._authUrl, {
-        method: 'GET',
-        responseType: 'text',
-    }).then(function (authXml) {
+    return this._authXml.then(function (authXml) {
         var licenseUrl = KEY_SYSTEMS.FAIRPLAY.licenseUrl;
         var body = 'spc=' + encodeBase64(message) + '&assetId=' + contentId;
         var options = {
@@ -1760,9 +1766,9 @@ DRMManager.prototype._getWebkitLicense = function (message, contentId) {
                 'customdata': authXml,
             }
         };
-        return httpRequest(licenseUrl, options);
-    }).catch(function (e) {
-        return Promise.reject(ERRORS.LICENSE_REQUEST);
+        return httpRequest(licenseUrl, options).catch(function () {
+            return Promise.reject(ERRORS.LICENSE_REQUEST);
+        });
     });
 };
 
@@ -2293,7 +2299,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-095a6bb5";
+    return "2.3.0-161707c9";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2909,16 +2915,18 @@ var MediaSink = module.exports = function MediaSink(config) {
  * @param {number} track.trackID - unique indentifier for this track
  * @param {string} track.codec - codec string for this track
  * @param {string} track.path - the source url
- * @param {string} track.passthrough - if true, use path directly with video element
+ * @param {bool} track.isProtected - Is this stream protected by DRM
+ * @param {bool} track.isPassthrough - if true, use path directly with video element
  */
 MediaSink.prototype.configure = function (track) {
     if (track.path) {
         this._srcUrl = track.path;
-        // Update authxml path
-        this._drmManager.configure(track.path);
-
+        // Request AuthXML if protected
+        if (track.isProtected) {
+            this._drmManager.configure(track.path);
+        }
         // Add a native source directly
-        if (track.passthrough) {
+        if (track.isPassthrough) {
             this._video.src = track.path;
             return;
         }
