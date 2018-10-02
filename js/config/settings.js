@@ -78,7 +78,7 @@ window.__twilightSettings = {
     "mass_mystery_gifting": "on",
     "messages_disclosure_enabled": true,
     "mobile_subs_feature_flag": "on",
-    "multi_account_setting_feature_flag": "off",
+    "multi_account_setting_feature_flag": "on",
     "native_account_recovery": "staff",
     "native_broadcast_blacklist": [],
     "net_neutrality_visible": false,
