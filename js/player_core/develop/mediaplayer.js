@@ -2144,6 +2144,7 @@ var MediaPlayer = exports.MediaPlayer = function MediaPlayer(config, worker) {
     this._mediaSink = new MediaSink({
         ontimeupdate: this._onSinkTimeUpdate.bind(this),
         onbufferupdate: this._onSinkBufferUpdate.bind(this),
+        onended: this._onSinkEnded.bind(this),
         onidle: this._onSinkIdle.bind(this),
         onstop: this._onSinkStop.bind(this),
         onerror: this._onSinkError.bind(this),
@@ -2299,7 +2300,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-cb779c76";
+    return "2.3.0-23e23f11";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2719,6 +2720,10 @@ MediaPlayer.prototype._onSinkBufferUpdate = function () {
     this._emitter.emit(PlayerEvent.BUFFER_UPDATE);
 }
 
+MediaPlayer.prototype._onSinkEnded = function () {
+    this._postMessage(WorkerMessage.SINK_ENDED);
+}
+
 MediaPlayer.prototype._onSinkIdle = function () {
     this._postMessage(WorkerMessage.SINK_IDLE);
 }
@@ -2889,6 +2894,7 @@ var HEARTBEAT_INTERVAL = 2000; // Interval to check for stalled
  * the DOM. MediaSink handles all MSE logic.
  * @param {function()} config.ontimeupdate - playhead position has changed
  * @param {function()} config.onbufferupdate - buffered range has changed
+ * @param {function()} config.onended - fired when playback ended
  * @param {function()} config.onidle - fired when playback interrupted while playing
  * @param {function()} config.onstop - fired when playback paused by browers
  * @param {function(MediaError)} config.onerror - video error with error code
@@ -3489,6 +3495,7 @@ SafeTextTrack.prototype.delete = function () {
 function PlaybackMonitor(video, config) {
     this._onidle = config.onidle;
     this._onstop = config.onstop;
+    this._onended = config.onended;
     this._onerror = config.onerror;
     this._onbufferupdate = config.onbufferupdate;
     this._ontimeupdate = config.ontimeupdate;
@@ -3514,6 +3521,7 @@ function PlaybackMonitor(video, config) {
     addListener('play', this._onVideoPlay.bind(this));
     addListener('pause', this._onVideoPause.bind(this));
     addListener('timeupdate', this._onVideoTimeUpdate.bind(this));
+    addListener('ended', this._onVideoEnded.bind(this));
     addListener('error', this._onVideoError.bind(this));
     addListener('webkitbeginfullscreen', this._onWebkitBeginFullscreen.bind(this));
     addListener('webkitendfullscreen', this._onWebkitEndFullscreen.bind(this));
@@ -3587,6 +3595,10 @@ PlaybackMonitor.prototype._onVideoTimeUpdate = function () {
     this._updateIdle(buffered);
 };
 
+PlaybackMonitor.prototype._onVideoEnded = function () {
+    this._onended();
+};
+
 PlaybackMonitor.prototype._onVideoError = function () {
     var error = this._video.error;
     this._onerror({
@@ -3635,7 +3647,9 @@ PlaybackMonitor.prototype._updateIdle = function (buffered) {
     if (this._video.paused) {
         this._idle = true;
     } else {
-        var idle = (buffered.end - this._video.currentTime < MIN_PLAYABLE_BUFFER);
+        var remaining = buffered.end - this._video.currentTime;
+        var ended = this._video.ended || this._video.duration -  this._video.currentTime < MIN_PLAYABLE_BUFFER;
+        var idle = !ended && (remaining < MIN_PLAYABLE_BUFFER);
         if (idle && !this._idle) {
             this._onidle();
         }
@@ -3829,6 +3843,10 @@ module.exports = {
      * @param {number} info.droppedFrames - frames dropped for current source
      */
     SINK_UPDATE: 'WorkerSinkUpdate',
+    /**
+     * Media playback ended
+     */
+    SINK_ENDED: 'WorkerSinkEnded',
     /**
      * Hit end of buffer
      */
