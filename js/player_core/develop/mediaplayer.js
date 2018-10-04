@@ -2300,7 +2300,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-a7d8e5d5";
+    return "2.3.0-1cde1c64";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3620,14 +3620,16 @@ PlaybackMonitor.prototype._onWebkitEndFullscreen = function () {
  * A heartbeat that monitors playback progress and corrects any playback issues.
  */
 PlaybackMonitor.prototype._heartbeat = function () {
+    var buffered = getBufferedRange(this._video);
     if (this._video.paused) {
         // This shouldn't happen, but stop heartbeat
         // if we get into a bad state.
         clearInterval(this._intervalId);
     } else if (this._video.currentTime === this._lastPlayhead) {
         this._fixStall();
+        this._updateIdle(buffered);
     } else {
-        this._checkBufferUpdate(getBufferedRange(this._video));
+        this._checkBufferUpdate(buffered);
         this._lastPlayhead = this._video.currentTime;
     }
 };
