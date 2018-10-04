@@ -1311,21 +1311,6 @@ function getParamsFromUrl(url) {
     return params;
 }
 
-/**
- * Ensuring that uncaught errors are sent in the correct format.
- * Most issues should be a constant error found in ERRORS, but
- * in case we have an issue we weren't expecting, we should handle
- * the error in the same format.
- */
-var NOT_SUPPORTED = 4;
-var checkErrorFormat = function (err) {
-    return {
-        value: err.value || NOT_SUPPORTED,
-        code: err.code || 10,
-        message: err.message || '',
-    }
-};
-
 module.exports = {
     arrayBuffersEqual: arrayBuffersEqual,
     httpRequest: httpRequest,
@@ -1333,7 +1318,6 @@ module.exports = {
     contentIdFromInitData: contentIdFromInitData,
     decodeBase64: decodeBase64,
     encodeBase64: encodeBase64,
-    checkErrorFormat: checkErrorFormat,
     getParamsFromUrl: getParamsFromUrl
 };
 
@@ -1361,7 +1345,6 @@ var parsePSSHSupportFromInitData = Utils.parsePSSHSupportFromInitData;
 var contentIdFromInitData =  Utils.contentIdFromInitData;
 var decodeBase64 =  Utils.decodeBase64;
 var encodeBase64 =  Utils.encodeBase64;
-var checkErrorFormat = Utils.checkErrorFormat;
 var getParamsFromUrl = Utils.getParamsFromUrl;
 
 var ERRORS = Constants.ERRORS;
@@ -1404,7 +1387,7 @@ var supportedConfig = [{
  */
 var DRMManager = function (config) {
     this._video = config.video;
-    this._handleError = config.onerror;
+    this._onerror = config.onerror;
     this._cdmSupport = null;
     this._selectedCDM = null;
     this._mediaKeys = undefined; // we will reserve null
@@ -1416,33 +1399,52 @@ var DRMManager = function (config) {
 };
 
 DRMManager.prototype.configure = function (path) {
-    var parsed = new URL(path);
-    var parts = parsed.pathname.split('/');
-    var filename = parts[parts.length - 1];
-    var channelName = filename.split('.')[0]; //remove extension
+    // Only request authxml once when first configuring drm
+    if (!this._authXml) {
+        var parsed = new URL(path);
+        var parts = parsed.pathname.split('/');
+        var filename = parts[parts.length - 1];
+        var channelName = filename.split('.')[0]; //remove extension
 
-    var params = getParamsFromUrl(path);
-    var token = params['token'];
-    var sig = params['sig'];
-    var authUrl = AUTH_XML_URL + channelName + '?token=' + encodeURIComponent(token) + '&sig=' + sig;
+        var params = getParamsFromUrl(path);
+        var token = params['token'];
+        var sig = params['sig'];
+        var authUrl = AUTH_XML_URL + channelName + '?token=' + encodeURIComponent(token) + '&sig=' + sig;
 
-    this._authXml = httpRequest(authUrl, {
-        method: 'GET',
-        responseType: 'text',
-    }).catch(function () {
-        return Promise.reject(ERRORS.AUTH_XML_REQUEST);
-    });
+        this._authXml = httpRequest(authUrl, {
+            method: 'GET',
+            responseType: 'text',
+        }).catch(function () {
+            return Promise.reject(ERRORS.AUTH_XML_REQUEST);
+        });
+    }
 };
 
 DRMManager.prototype.reset = function () {
-    this._isProtected = false;
-    this._authXml = Promise.resolve('');
+    this._authXml = null;
     this._sessions = [];
 }
 
 DRMManager.prototype.isProtected = function () {
-    return this._isProtected;
+    return this._authXml !== null;
 };
+
+/**
+ * Ensure that uncaught errors are sent in the correct format.
+ * Most issues should be a constant error found in ERRORS, but
+ * in case we have an issue we weren't expecting, we should handle
+ * the error in the same format. Block any errors if we're no
+ * longer playing a DRM stream.
+ */
+DRMManager.prototype._handleError = function (err) {
+    if (this._authXml) {
+        this._onerror({
+            value: err.value || 4, /*NOT_SUPPORTED*/
+            code: err.code || 10, /*UNKNOWN DRM ERROR*/
+            message: err.message || '',
+        });
+    }
+}
 
 /**
  * Checks to see if system is already handling
@@ -1488,8 +1490,6 @@ DRMManager.prototype._createKeySystemSupportChain = function () {
  * @param {Object} event - EncryptedMediaEvent [https://www.w3.org/TR/encrypted-media/#dom-mediaencryptedevent]
  */
 DRMManager.prototype._handleEncrypted = function (event) {
-    this._isProtected = true;
-
     // if we already have this same session setup, ignore this event;
     if (this._hasSession(event.initData)) {
         return;
@@ -1515,7 +1515,7 @@ DRMManager.prototype._handleEncrypted = function (event) {
             }.bind(this))
             .then(this._setMediaKeys.bind(this))
             .catch(function (err) {
-                this._handleError(checkErrorFormat(err));
+                this._handleError(err);
             }.bind(this));
     }
 
@@ -1632,7 +1632,7 @@ DRMManager.prototype._handleMessage = function (event) {
         });
     })
     .catch(function (error) {
-        this._handleError(checkErrorFormat(error));
+        this._handleError(error);
     }.bind(this));
 };
 
@@ -1653,12 +1653,14 @@ DRMManager.prototype._generateLicense = function (message) {
             keys: _keys
         }));
         return Promise.resolve(result);
-    } else {
+    } else if (this._authXml) {
         return this._authXml.then(function (authXml) {
             return this._requestLicense(message, authXml).catch(function () {
                 return Promise.reject(ERRORS.LICENSE_REQUEST);
             });
         }.bind(this));
+    } else {
+        return Promise.reject(ERRORS.AUTH_XML_REQUEST);
     }
 };
 
@@ -1686,7 +1688,6 @@ DRMManager.prototype._requestLicense = function (message, authXml) {
 
 // SAFARI FAIRPLAY SUPPORT
 DRMManager.prototype._handleSafariEncrypted = function (event) {
-    this._isProtected = true;
     this._selectedCDM = KEY_SYSTEMS.FAIRPLAY;
     httpRequest(KEY_SYSTEMS.FAIRPLAY.certUrl, {
         method: 'GET',
@@ -1698,7 +1699,7 @@ DRMManager.prototype._handleSafariEncrypted = function (event) {
     }).then(function (certificate) {
         return this._setupSafariMediaKeys(event, certificate);
     }.bind(this)).catch(function (err) {
-        this._handleError(checkErrorFormat(err));
+        this._handleError(err);
     }.bind(this));
 };
 
@@ -1754,6 +1755,9 @@ DRMManager.prototype._setupSafariMediaKeys = function (event, certificate) {
  * @param {Object} keyMessageEvent - Message event from current session
  */
 DRMManager.prototype._getWebkitLicense = function (message, contentId) {
+    if (!this._authXml) {
+        return Promise.reject(ERRORS.AUTH_XML_REQUEST);
+    }
     return this._authXml.then(function (authXml) {
         var licenseUrl = KEY_SYSTEMS.FAIRPLAY.licenseUrl;
         var body = 'spc=' + encodeBase64(message) + '&assetId=' + contentId;
@@ -2300,7 +2304,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-307ff97f";
+    return "2.3.0-2a97c7fa";
 }
 
 MediaPlayer.prototype.isLooping = function () {
