@@ -14755,7 +14755,7 @@
                         },
                         E = b(),
                         O = function(e) {
-                            C(z, e), z.length = t.length, E.notifyListeners(z.location, z.action)
+                            C(Q, e), Q.length = t.length, E.notifyListeners(Q.location, Q.action)
                         },
                         A = !1,
                         M = null,
@@ -14765,7 +14765,7 @@
                             if (e !== t) P(t);
                             else {
                                 var n = k(),
-                                    r = z.location;
+                                    r = Q.location;
                                 if (!A && g(r, n)) return;
                                 if (M === m(n)) return;
                                 M = null, R(n)
@@ -14780,7 +14780,7 @@
                             })
                         },
                         I = function(e) {
-                            var t = z.location,
+                            var t = Q.location,
                                 n = F.lastIndexOf(m(t)); - 1 === n && (n = 0);
                             var r = F.lastIndexOf(m(e)); - 1 === r && (r = 0);
                             var o = n - r;
@@ -14799,7 +14799,7 @@
                             1 === (U += e) ? window.addEventListener("hashchange", j) : 0 === U && window.removeEventListener("hashchange", j)
                         },
                         H = !1,
-                        z = {
+                        Q = {
                             length: t.length,
                             action: "POP",
                             location: L,
@@ -14808,7 +14808,7 @@
                             },
                             push: function(e, t) {
                                 o()(void 0 === t, "Hash history cannot push state; it is ignored");
-                                var n = y(e, void 0, void 0, z.location);
+                                var n = y(e, void 0, void 0, Q.location);
                                 E.confirmTransitionTo(n, "PUSH", i, function(e) {
                                     if (e) {
                                         var t = m(n),
@@ -14818,7 +14818,7 @@
                                                 function(e) {
                                                     window.location.hash = e
                                                 }(r);
-                                            var i = F.lastIndexOf(m(z.location)),
+                                            var i = F.lastIndexOf(m(Q.location)),
                                                 a = F.slice(0, -1 === i ? 0 : i + 1);
                                             a.push(t), F = a, O({
                                                 action: "PUSH",
@@ -14830,13 +14830,13 @@
                             },
                             replace: function(e, t) {
                                 o()(void 0 === t, "Hash history cannot replace state; it is ignored");
-                                var n = y(e, void 0, void 0, z.location);
+                                var n = y(e, void 0, void 0, Q.location);
                                 E.confirmTransitionTo(n, "REPLACE", i, function(e) {
                                     if (e) {
                                         var t = m(n),
                                             r = v(l + t);
                                         S() !== r && (M = t, P(r));
-                                        var o = F.indexOf(m(z.location)); - 1 !== o && (F[o] = t), O({
+                                        var o = F.indexOf(m(Q.location)); - 1 !== o && (F[o] = t), O({
                                             action: "REPLACE",
                                             location: n
                                         })
@@ -14866,7 +14866,7 @@
                                     }
                             }
                         };
-                    return z
+                    return Q
                 },
                 M = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
                     return typeof e
@@ -15226,17 +15226,6 @@
                 }
                 return s
             }
-        },
-        MnNG: function(e, t) {
-            var n = "/service-worker.js";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = {
-                register: function() {
-                    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    return !!navigator.serviceWorker && navigator.serviceWorker.register(n, e)
-                }
-            }, e.exports = t.default
         },
         MrPd: function(e, t, n) {
             var r = n("hypo"),
@@ -16080,16 +16069,16 @@
                     }
                 }
                 D || (D = new r);
-                var z = D.get(t);
-                if (z) return z;
+                var Q = D.get(t);
+                if (Q) return Q;
                 if (D.set(t, N), x(t)) return t.forEach(function(r) {
                     N.add(e(r, n, j, r, t, D))
                 }), N;
                 if (w(t)) return t.forEach(function(r, o) {
                     N.set(o, e(r, n, j, o, t, D))
                 }), N;
-                var Q = q ? F ? d : p : F ? keysIn : k,
-                    W = U ? void 0 : Q(t);
+                var z = q ? F ? d : p : F ? keysIn : k,
+                    W = U ? void 0 : z(t);
                 return o(W || t, function(r, o) {
                     W && (r = t[o = r]), i(N, o, e(r, n, j, o, t, D))
                 }), N
@@ -18430,8 +18419,8 @@
                                                 quantity: H,
                                                 type: c.Bits
                                             });
-                                            var z = F["msg-param-inGameContent"];
-                                            z && (r = q.crateLoot).push.apply(r, z.split(",").map(function(e) {
+                                            var Q = F["msg-param-inGameContent"];
+                                            Q && (r = q.crateLoot).push.apply(r, Q.split(",").map(function(e) {
                                                 return {
                                                     img: e,
                                                     type: c.InGameContent
@@ -18450,7 +18439,7 @@
                                                 type: l.Purchase
                                             })
                                         } else if ("ritual" === s) {
-                                            var Q = e.tags["msg-param-ritual-name"];
+                                            var z = e.tags["msg-param-ritual-name"];
                                             I = {
                                                 user: this.createUser(e),
                                                 timestamp: a.getInteger(e.tags["tmi-sent-ts"]),
@@ -18458,7 +18447,7 @@
                                             };
                                             this.events.ritual({
                                                 channel: o,
-                                                type: Q,
+                                                type: z,
                                                 message: I
                                             })
                                         } else {
@@ -19072,7 +19061,7 @@
                         }
                     }, e
                 }(),
-                z = function() {
+                Q = function() {
                     function e(e, t, n) {
                         this.connection = e, this.session = t, this.events = n, this.commandProcessor = new H(this), this.ban = new v(this.connection, this.session), this.clearChat = new y(this.connection, this.session), this.color = new g(this.connection, this.session), this.commercial = new b(this.connection, this.session), this.connect = new w(this.connection, this.session), this.emoteOnlyModeOff = new _(this.connection, this.session), this.emoteOnlyModeOn = new x(this.connection, this.session), this.followersOnlyOff = new E(this.connection, this.session), this.followersOnlyOn = new k(this.connection, this.session), this.host = new O(this.connection, this.session), this.join = new C(this.connection, this.session), this.part = new T(this.connection, this.session), this.ping = new S(this.connection, this.session), this.rk9ModeOff = new P(this.connection, this.session), this.rk9ModeOn = new A(this.connection, this.session), this.sendMessage = new R(this.connection, this.session, this.events), this.slowModeOff = new I(this.connection, this.session), this.slowModeOn = new D(this.connection, this.session), this.subscriberModeOff = new N(this.connection, this.session), this.subscriberModeOn = new L(this.connection, this.session), this.timeout = new F(this.connection, this.session), this.unban = new q(this.connection, this.session), this.unhost = new U(this.connection, this.session), this.whisper = new B(this.connection, this.session)
                     }
@@ -19166,7 +19155,7 @@
                         })
                     }, e
                 }(),
-                Q = function() {
+                z = function() {
                     function e(e, t, n, r, i, a, s) {
                         var u = this;
                         this.isActive = !1, this.pingLoopHandle = 0, this.currentLatency = 0, this.onReconnect = function() {
@@ -19204,7 +19193,7 @@
                                     }
                                 })
                             })
-                        }, this.client = e, this.timestampCreated = Date.now(), this.logger = s, this.session = i, this.configuration = t, this.eventProcessors = new d(r, n), this.commands = new z(this, i, this.eventProcessors), this.messageProcessor = new h(a, this.eventProcessors, i, this)
+                        }, this.client = e, this.timestampCreated = Date.now(), this.logger = s, this.session = i, this.configuration = t, this.eventProcessors = new d(r, n), this.commands = new Q(this, i, this.eventProcessors), this.messageProcessor = new h(a, this.eventProcessors, i, this)
                     }
                     return e.prototype.tryConnect = function() {
                         return o.__awaiter(this, void 0, void 0, function() {
@@ -19465,7 +19454,7 @@
             });
             var Y = function() {
                 function e(e) {
-                    this.reconnectAttempts = 0, this.logger = e.logger || console, this.eventEmitter = new i.EventEmitter, this.session = new p(this.logger), this.events = new W(this.eventEmitter, this.logger), this.parser = new V(this.logger), this.configuration = new s(e), this.connection = new Q(this, this.configuration, !1, this.eventEmitter, this.session, this.parser, this.logger), this.commands = this.connection.commands, this.logger.debug("Created", {
+                    this.reconnectAttempts = 0, this.logger = e.logger || console, this.eventEmitter = new i.EventEmitter, this.session = new p(this.logger), this.events = new W(this.eventEmitter, this.logger), this.parser = new V(this.logger), this.configuration = new s(e), this.connection = new z(this, this.configuration, !1, this.eventEmitter, this.session, this.parser, this.logger), this.commands = this.connection.commands, this.logger.debug("Created", {
                         pingInterval: this.configuration.pingInterval,
                         reconnectJitter: this.configuration.reconnectJitter,
                         server: this.configuration.server,
@@ -19579,7 +19568,7 @@
                                 case 0:
                                     this.logger.debug("Reconnect initiated"), o.label = 1;
                                 case 1:
-                                    return o.trys.push([1, 3, , 4]), this.connection.notifyReconnect("None"), [4, (e = new Q(this, this.configuration, !0, this.eventEmitter, this.session, this.parser, this.logger)).tryConnect()];
+                                    return o.trys.push([1, 3, , 4]), this.connection.notifyReconnect("None"), [4, (e = new z(this, this.configuration, !0, this.eventEmitter, this.session, this.parser, this.logger)).tryConnect()];
                                 case 2:
                                     return (t = o.sent()).state === r.Connected ? (this.logger.debug("Reconnect connection succeeded", t), (n = this.connection).suppressEvents(), e.unsuppressEvents(), this.connection = e, this.commands = e.commands, n.disconnect(!1), [2, !0]) : (this.logger.info("Reconnect connection failed", t), [2, !1]);
                                 case 3:
@@ -21227,7 +21216,7 @@
                     var n = new r("HtmlInline");
                     return n._literal = t, e.appendChild(n), !0
                 },
-                z = function(e) {
+                Q = function(e) {
                     var t, n, r, o, i, a, s, c, l, f, p, d = 0,
                         h = this.pos;
                     if (39 === e || 34 === e) d++, this.pos++;
@@ -21239,7 +21228,7 @@
                         can_close: s
                     })
                 },
-                Q = function(e, t) {
+                z = function(e, t) {
                     var n = this.scanDelims(e);
                     if (!n) return !1;
                     var r, o = n.numdelims,
@@ -21457,8 +21446,8 @@
                     parseBackslash: U,
                     parseAutolink: B,
                     parseHtmlTag: H,
-                    scanDelims: z,
-                    handleDelim: Q,
+                    scanDelims: Q,
+                    handleDelim: z,
                     parseLinkTitle: G,
                     parseLinkDestination: K,
                     parseLinkLabel: X,
@@ -27540,7 +27529,7 @@
                         for (var o in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
                     return e
                 },
-                z = function() {
+                Q = function() {
                     function e(e) {
                         var t = e.queryManager,
                             n = e.ssrMode;
@@ -27587,7 +27576,7 @@
                         })
                     }, e
                 }(),
-                Q = function() {
+                z = function() {
                     function e() {
                         this.store = {}
                     }
@@ -27685,7 +27674,7 @@
                             a = void 0 === i ? function() {} : i,
                             s = e.ssrMode,
                             u = void 0 !== s && s;
-                        this.mutationStore = new Q, this.queryStore = new V, this.idCounter = 1, this.queries = new Map, this.fetchQueryPromises = new Map, this.queryIdsByName = {}, this.link = t, this.deduplicator = P.a.from([new B, t]), this.queryDeduplication = r, this.dataStore = o, this.onBroadcast = a, this.scheduler = new z({
+                        this.mutationStore = new z, this.queryStore = new V, this.idCounter = 1, this.queries = new Map, this.fetchQueryPromises = new Map, this.queryIdsByName = {}, this.link = t, this.deduplicator = P.a.from([new B, t]), this.queryDeduplication = r, this.dataStore = o, this.onBroadcast = a, this.scheduler = new Q({
                             queryManager: this,
                             ssrMode: u
                         })
@@ -30395,7 +30384,7 @@
                 }
             }
 
-            function z(e, t) {
+            function Q(e, t) {
                 if (e.arguments && e.arguments.length) {
                     var n = {};
                     return e.arguments.forEach(function(e) {
@@ -30407,7 +30396,7 @@
                 return null
             }
 
-            function Q(e) {
+            function z(e) {
                 return e.alias ? e.alias.value : e.name.value
             }
             new Map;
@@ -30506,15 +30495,15 @@
                                         o = n.contextValue,
                                         i = n.resolver,
                                         a = e.name.value,
-                                        s = z(e, r),
+                                        s = Q(e, r),
                                         u = {
                                             isLeaf: !e.selectionSet,
-                                            resultKey: Q(e),
+                                            resultKey: z(e),
                                             directives: function(e, t) {
                                                 if (e.directives && e.directives.length) {
                                                     var n = {};
                                                     return e.directives.forEach(function(e) {
-                                                        n[e.name.value] = z(e, t)
+                                                        n[e.name.value] = Q(e, t)
                                                     }), n
                                                 }
                                                 return null
@@ -30530,7 +30519,7 @@
                                     }(e, c, n);
                                     return K(e.selectionSet, c, n)
                                 }(e, t, n),
-                                u = Q(e);
+                                u = z(e);
                             void 0 !== s && (void 0 === a[u] ? a[u] = s : X(a[u], s))
                         } else {
                             var c = void 0;
@@ -31582,12 +31571,12 @@
                             e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                         }
                     }(),
-                    z = Object.assign || function(e) {
+                    Q = Object.assign || function(e) {
                         for (var t, n = 1, r = arguments.length; n < r; n++)
                             for (var o in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
                         return e
                     },
-                    Q = n("2mql"),
+                    z = n("2mql"),
                     W = function() {
                         var e = Object.setPrototypeOf || {
                             __proto__: []
@@ -31708,7 +31697,7 @@
                                                         s = u(a);
                                                     return n.withRef && (this.withRef = !0, a = Object.assign({}, a, {
                                                         ref: this.setWrappedInstance
-                                                    })), !s.variables && r.variables.length > 0 && (s.variables = N(r, a, i, D(o))), t.createElement(C, z({}, s, {
+                                                    })), !s.variables && r.variables.length > 0 && (s.variables = N(r, a, i, D(o))), t.createElement(C, Q({}, s, {
                                                         mutation: e,
                                                         ignoreResults: !0
                                                     }), function(e, r) {
@@ -31718,11 +31707,11 @@
                                                             var l = ((s = {})[u] = e, s.ownProps = a, s);
                                                             c = n.props(l)
                                                         }
-                                                        return t.createElement(o, z({}, a, c))
+                                                        return t.createElement(o, Q({}, a, c))
                                                     })
                                                 }, s.displayName = i, s.WrappedComponent = o, s
                                             }(L);
-                                        return Q(a, o, {})
+                                        return z(a, o, {})
                                     }
                             }(e, n);
                         case u.Subscription:
@@ -32050,8 +32039,8 @@
                                 type: "other",
                                 description: "whitespace"
                             },
-                            z = /^[ \t\n\r]/,
-                            Q = {
+                            Q = /^[ \t\n\r]/,
+                            z = {
                                 type: "class",
                                 value: "[ \\t\\n\\r]",
                                 description: "[ \\t\\n\\r]"
@@ -32308,8 +32297,8 @@
 
                         function De() {
                             var e, n;
-                            if (Ee++, e = [], z.test(t.charAt(be)) ? (n = t.charAt(be), be++) : (n = o, 0 === Ee && Se(Q)), n !== o)
-                                for (; n !== o;) e.push(n), z.test(t.charAt(be)) ? (n = t.charAt(be), be++) : (n = o, 0 === Ee && Se(Q));
+                            if (Ee++, e = [], Q.test(t.charAt(be)) ? (n = t.charAt(be), be++) : (n = o, 0 === Ee && Se(z)), n !== o)
+                                for (; n !== o;) e.push(n), Q.test(t.charAt(be)) ? (n = t.charAt(be), be++) : (n = o, 0 === Ee && Se(z));
                             else e = o;
                             return Ee--, e === o && (n = o, 0 === Ee && Se(H)), e
                         }
@@ -34430,80 +34419,6 @@
                 return t.setFullYear(n + 1, 0, 0), t.setHours(0, 0, 0, 0), t
             }
         },
-        uNOt: function(e, t, n) {
-            "use strict";
-            var r = n("q1tI"),
-                o = n.n(r),
-                i = n("nNZz"),
-                a = n.n(i),
-                s = n("2INN"),
-                u = n("2iEm"),
-                c = Object.assign || function(e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = arguments[t];
-                        for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
-                    }
-                    return e
-                },
-                l = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
-                    return typeof e
-                } : function(e) {
-                    return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-                };
-            var f = function(e) {
-                var t = e.to,
-                    n = e.exact,
-                    r = e.strict,
-                    i = e.location,
-                    a = e.activeClassName,
-                    f = e.className,
-                    p = e.activeStyle,
-                    d = e.style,
-                    h = e.isActive,
-                    m = e["aria-current"],
-                    v = function(e, t) {
-                        var n = {};
-                        for (var r in e) t.indexOf(r) >= 0 || Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
-                        return n
-                    }(e, ["to", "exact", "strict", "location", "activeClassName", "className", "activeStyle", "style", "isActive", "aria-current"]),
-                    y = "object" === (void 0 === t ? "undefined" : l(t)) ? t.pathname : t,
-                    g = y && y.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1");
-                return o.a.createElement(s.a, {
-                    path: g,
-                    exact: n,
-                    strict: r,
-                    location: i,
-                    children: function(e) {
-                        var n = e.location,
-                            r = e.match,
-                            i = !!(h ? h(r, n) : r);
-                        return o.a.createElement(u.a, c({
-                            to: t,
-                            className: i ? [f, a].filter(function(e) {
-                                return e
-                            }).join(" ") : f,
-                            style: i ? c({}, d, p) : d,
-                            "aria-current": i && m || null
-                        }, v))
-                    }
-                })
-            };
-            f.propTypes = {
-                to: u.a.propTypes.to,
-                exact: a.a.bool,
-                strict: a.a.bool,
-                location: a.a.object,
-                activeClassName: a.a.string,
-                className: a.a.string,
-                activeStyle: a.a.object,
-                style: a.a.object,
-                isActive: a.a.func,
-                "aria-current": a.a.oneOf(["page", "step", "location", "date", "time", "true"])
-            }, f.defaultProps = {
-                activeClassName: "active",
-                "aria-current": "page"
-            }, t.a = f
-        },
         uPm0: function(e, t, n) {
             var r = n("yNUO");
             e.exports = function(e) {
@@ -35981,7 +35896,7 @@
                 B = "__reactInternalInstance$" + U,
                 H = "__reactEventHandlers$" + U;
 
-            function z(e) {
+            function Q(e) {
                 if (e[B]) return e[B];
                 for (; !e[B];) {
                     if (!e.parentNode) return null;
@@ -35990,7 +35905,7 @@
                 return 5 === (e = e[B]).tag || 6 === e.tag ? e : null
             }
 
-            function Q(e) {
+            function z(e) {
                 if (5 === e.tag || 6 === e.tag) return e.stateNode;
                 p("33")
             }
@@ -36002,11 +35917,11 @@
                 precacheFiberNode: function(e, t) {
                     t[B] = e
                 },
-                getClosestInstanceFromNode: z,
+                getClosestInstanceFromNode: Q,
                 getInstanceFromNode: function(e) {
                     return !(e = e[B]) || 5 !== e.tag && 6 !== e.tag ? null : e
                 },
-                getNodeFromInstance: Q,
+                getNodeFromInstance: z,
                 getFiberCurrentPropsFromNode: W,
                 updateFiberProps: function(e, t) {
                     e[H] = t
@@ -36333,11 +36248,11 @@
                 }
             }
 
-            function ze(e) {
+            function Qe(e) {
                 Ue ? Be ? Be.push(e) : Be = [e] : Ue = e
             }
 
-            function Qe() {
+            function ze() {
                 return null !== Ue || null !== Be
             }
 
@@ -36351,8 +36266,8 @@
             }
             var Ve = {
                 injection: qe,
-                enqueueStateRestore: ze,
-                needsStateRestore: Qe,
+                enqueueStateRestore: Qe,
+                needsStateRestore: ze,
                 restoreStateIfNeeded: We
             };
 
@@ -36373,7 +36288,7 @@
                 try {
                     return Ye(e, t)
                 } finally {
-                    Xe = !1, Qe() && (Ke(), We())
+                    Xe = !1, ze() && (Ke(), We())
                 }
             }
             var Ze = {
@@ -36669,7 +36584,7 @@
             };
 
             function Lt(e, t, n) {
-                return (e = we.getPooled(Nt.change, e, t, n)).type = "change", ze(n), ee(e), e
+                return (e = we.getPooled(Nt.change, e, t, n)).type = "change", Qe(n), ee(e), e
             }
             var Ft = null,
                 qt = null;
@@ -36679,15 +36594,15 @@
             }
 
             function Bt(e) {
-                if (ot(Q(e))) return e
+                if (ot(z(e))) return e
             }
 
             function Ht(e, t) {
                 if ("change" === e) return t
             }
-            var zt = !1;
+            var Qt = !1;
 
-            function Qt() {
+            function zt() {
                 Ft && (Ft.detachEvent("onpropertychange", Wt), qt = Ft = null)
             }
 
@@ -36696,7 +36611,7 @@
             }
 
             function Vt(e, t, n) {
-                "focus" === e ? (Qt(), qt = n, (Ft = t).attachEvent("onpropertychange", Wt)) : "blur" === e && Qt()
+                "focus" === e ? (zt(), qt = n, (Ft = t).attachEvent("onpropertychange", Wt)) : "blur" === e && zt()
             }
 
             function Yt(e) {
@@ -36710,16 +36625,16 @@
             function Kt(e, t) {
                 if ("input" === e || "change" === e) return Bt(t)
             }
-            i.canUseDOM && (zt = tt("input") && (!document.documentMode || 9 < document.documentMode));
+            i.canUseDOM && (Qt = tt("input") && (!document.documentMode || 9 < document.documentMode));
             var Xt = {
                     eventTypes: Nt,
-                    _isInputEventSupported: zt,
+                    _isInputEventSupported: Qt,
                     extractEvents: function(e, t, n, r) {
-                        var o = t ? Q(t) : window,
+                        var o = t ? z(t) : window,
                             i = void 0,
                             a = void 0,
                             s = o.nodeName && o.nodeName.toLowerCase();
-                        if ("select" === s || "input" === s && "file" === o.type ? i = Ht : $e(o) ? zt ? i = Kt : (i = Yt, a = Vt) : (s = o.nodeName) && "input" === s.toLowerCase() && ("checkbox" === o.type || "radio" === o.type) && (i = Gt), i && (i = i(e, t))) return Lt(i, n, r);
+                        if ("select" === s || "input" === s && "file" === o.type ? i = Ht : $e(o) ? Qt ? i = Kt : (i = Yt, a = Vt) : (s = o.nodeName) && "input" === s.toLowerCase() && ("checkbox" === o.type || "radio" === o.type) && (i = Gt), i && (i = i(e, t))) return Lt(i, n, r);
                         a && a(e, o, t), "blur" === e && (e = o._wrapperState) && e.controlled && "number" === o.type && It(o, "number", o.value)
                     }
                 },
@@ -36794,12 +36709,12 @@
                         var o = "mouseover" === e || "pointerover" === e,
                             i = "mouseout" === e || "pointerout" === e;
                         if (o && (n.relatedTarget || n.fromElement) || !i && !o) return null;
-                        if (o = r.window === r ? r : (o = r.ownerDocument) ? o.defaultView || o.parentWindow : window, i ? (i = t, t = (t = n.relatedTarget || n.toElement) ? z(t) : null) : i = null, i === t) return null;
+                        if (o = r.window === r ? r : (o = r.ownerDocument) ? o.defaultView || o.parentWindow : window, i ? (i = t, t = (t = n.relatedTarget || n.toElement) ? Q(t) : null) : i = null, i === t) return null;
                         var a = void 0,
                             s = void 0,
                             u = void 0,
                             c = void 0;
-                        return "mouseout" === e || "mouseover" === e ? (a = tn, s = rn.mouseLeave, u = rn.mouseEnter, c = "mouse") : "pointerout" !== e && "pointerover" !== e || (a = nn, s = rn.pointerLeave, u = rn.pointerEnter, c = "pointer"), e = null == i ? o : Q(i), o = null == t ? o : Q(t), (s = a.getPooled(s, i, n, r)).type = c + "leave", s.target = e, s.relatedTarget = o, (n = a.getPooled(u, t, n, r)).type = c + "enter", n.target = o, n.relatedTarget = e, te(s, n, i, t), [s, n]
+                        return "mouseout" === e || "mouseover" === e ? (a = tn, s = rn.mouseLeave, u = rn.mouseEnter, c = "mouse") : "pointerout" !== e && "pointerover" !== e || (a = nn, s = rn.pointerLeave, u = rn.pointerEnter, c = "pointer"), e = null == i ? o : z(i), o = null == t ? o : z(t), (s = a.getPooled(s, i, n, r)).type = c + "leave", s.target = e, s.relatedTarget = o, (n = a.getPooled(u, t, n, r)).type = c + "enter", n.target = o, n.relatedTarget = e, te(s, n, i, t), [s, n]
                     }
                 };
 
@@ -37197,7 +37112,7 @@
                     var n;
                     for (n = t; n.return;) n = n.return;
                     if (!(n = 3 !== n.tag ? null : n.stateNode.containerInfo)) break;
-                    e.ancestors.push(t), t = z(n)
+                    e.ancestors.push(t), t = Q(n)
                 } while (t);
                 for (n = 0; n < e.ancestors.length; n++) t = e.ancestors[n], F(e.topLevelType, t, e.nativeEvent, et(e.nativeEvent))
             }
@@ -37226,7 +37141,7 @@
             function In(e, t) {
                 if (Pn) {
                     var n = et(t);
-                    if (null === (n = z(n)) || "number" != typeof n.tag || 2 === an(n) || (n = null), Tn.length) {
+                    if (null === (n = Q(n)) || "number" != typeof n.tag || 2 === an(n) || (n = null), Tn.length) {
                         var r = Tn.pop();
                         r.topLevelType = e, r.nativeEvent = t, r.targetInst = n, e = r
                     } else e = {
@@ -37294,8 +37209,8 @@
                 var t = e && e.nodeName && e.nodeName.toLowerCase();
                 return t && ("input" === t && ("text" === e.type || "search" === e.type || "tel" === e.type || "url" === e.type || "password" === e.type) || "textarea" === t || "true" === e.contentEditable)
             }
-            var zn = i.canUseDOM && "documentMode" in document && 11 >= document.documentMode,
-                Qn = {
+            var Qn = i.canUseDOM && "documentMode" in document && 11 >= document.documentMode,
+                zn = {
                     select: {
                         phasedRegistrationNames: {
                             bubbled: "onSelect",
@@ -37320,10 +37235,10 @@
                     anchorOffset: n.anchorOffset,
                     focusNode: n.focusNode,
                     focusOffset: n.focusOffset
-                } : n = void 0, Yn && c(Yn, n) ? null : (Yn = n, (e = we.getPooled(Qn.select, Vn, e, t)).type = "select", e.target = Wn, ee(e), e)
+                } : n = void 0, Yn && c(Yn, n) ? null : (Yn = n, (e = we.getPooled(zn.select, Vn, e, t)).type = "select", e.target = Wn, ee(e), e)
             }
             var Xn = {
-                eventTypes: Qn,
+                eventTypes: zn,
                 extractEvents: function(e, t, n, r) {
                     var o, i = r.window === r ? r.document : 9 === r.nodeType ? r : r.ownerDocument;
                     if (!(o = !i)) {
@@ -37342,7 +37257,7 @@
                         o = !i
                     }
                     if (o) return null;
-                    switch (i = t ? Q(t) : window, e) {
+                    switch (i = t ? z(t) : window, e) {
                         case "focus":
                             ($e(i) || "true" === i.contentEditable) && (Wn = i, Vn = t, Yn = null);
                             break;
@@ -37356,7 +37271,7 @@
                         case "mouseup":
                             return Gn = !1, Kn(n, r);
                         case "selectionchange":
-                            if (zn) break;
+                            if (Qn) break;
                         case "keydown":
                         case "keyup":
                             return Kn(n, r)
@@ -37786,7 +37701,7 @@
                 }
             }
 
-            function zr(e, t, n, r, o) {
+            function Qr(e, t, n, r, o) {
                 var i = null;
                 switch (t) {
                     case "input":
@@ -37829,7 +37744,7 @@
                 return u && (i = i || []).push("style", u), i
             }
 
-            function Qr(e, t, n, r, o) {
+            function zr(e, t, n, r, o) {
                 "input" === n && "radio" === o.type && null != o.name && Mt(e, o), Lr(n, r), r = Lr(n, o);
                 for (var i = 0; i < t.length; i += 2) {
                     var a = t[i],
@@ -37909,8 +37824,8 @@
                     createElement: Ur,
                     createTextNode: Br,
                     setInitialProperties: Hr,
-                    diffProperties: zr,
-                    updateProperties: Qr,
+                    diffProperties: Qr,
+                    updateProperties: zr,
                     diffHydratedProperties: Wr,
                     diffHydratedText: Vr,
                     warnForUnmatchedText: function() {},
@@ -38243,16 +38158,16 @@
                 }
             }
 
-            function zo(e, t) {
+            function Qo(e, t) {
                 "function" != typeof e && p("191", e), e.call(t)
             }
 
-            function Qo(e, t, n) {
+            function zo(e, t, n) {
                 for (null !== t.firstCapturedUpdate && (null !== t.lastUpdate && (t.lastUpdate.next = t.firstCapturedUpdate, t.lastUpdate = t.lastCapturedUpdate), t.firstCapturedUpdate = t.lastCapturedUpdate = null), e = t.firstEffect, t.firstEffect = t.lastEffect = null; null !== e;) {
                     var r = e.callback;
-                    null !== r && (e.callback = null, zo(r, n)), e = e.nextEffect
+                    null !== r && (e.callback = null, Qo(r, n)), e = e.nextEffect
                 }
-                for (e = t.firstCapturedEffect, t.firstCapturedEffect = t.lastCapturedEffect = null; null !== e;) null !== (t = e.callback) && (e.callback = null, zo(t, n)), e = e.nextEffect
+                for (e = t.firstCapturedEffect, t.firstCapturedEffect = t.lastCapturedEffect = null; null !== e;) null !== (t = e.callback) && (e.callback = null, Qo(t, n)), e = e.nextEffect
             }
 
             function Wo(e, t) {
@@ -38820,7 +38735,7 @@
                             var i = e.memoizedProps,
                                 a = t.stateNode,
                                 s = ti(Zo.current);
-                            a = zr(a, o, i, n, r), Di(e, t, a, o, i, n, r, s), e.ref !== t.ref && (t.effectTag |= 128)
+                            a = Qr(a, o, i, n, r), Di(e, t, a, o, i, n, r, s), e.ref !== t.ref && (t.effectTag |= 128)
                         } else {
                             if (!n) return null === t.stateNode && p("166"), null;
                             if (e = ti(Zo.current), ki(t)) n = t.stateNode, o = t.type, i = t.memoizedProps, n[B] = t, n[H] = i, r = Wr(n, o, i, e, r), t.updateQueue = r, null !== r && Ri(t);
@@ -38905,7 +38820,7 @@
                         qi(e);
                         break;
                     case 4:
-                        zi(e)
+                        Qi(e)
                 }
             }
 
@@ -38978,7 +38893,7 @@
                 }
             }
 
-            function zi(e) {
+            function Qi(e) {
                 for (var t = e, n = !1, r = void 0, o = void 0;;) {
                     if (!n) {
                         n = t.return;
@@ -39021,7 +38936,7 @@
                 }
             }
 
-            function Qi(e, t) {
+            function zi(e, t) {
                 switch (t.tag) {
                     case 2:
                         break;
@@ -39032,7 +38947,7 @@
                             e = null !== e ? e.memoizedProps : r;
                             var o = t.type,
                                 i = t.updateQueue;
-                            t.updateQueue = null, null !== i && (n[H] = r, Qr(n, i, o, e, r))
+                            t.updateQueue = null, null !== i && (n[H] = r, zr(n, i, o, e, r))
                         }
                         break;
                     case 6:
@@ -39322,7 +39237,7 @@
                     null !== Ea && eo(Ea)
                 }
                 var t = Zr() - Ki;
-                ka = e, Ea = $r(za, {
+                ka = e, Ea = $r(Qa, {
                     timeout: 10 * (e - 2) - t
                 })
             }
@@ -39333,7 +39248,7 @@
                     var n = e.remainingExpirationTime;
                     (0 === n || t < n) && (e.remainingExpirationTime = t)
                 }
-                Oa || (Ra ? Ia && (Ca = e, Ta = 1, Ga(e, 1, !1)) : 1 === t ? Qa() : Ua(t))
+                Oa || (Ra ? Ia && (Ca = e, Ta = 1, Ga(e, 1, !1)) : 1 === t ? za() : Ua(t))
             }
 
             function Ha() {
@@ -39364,11 +39279,11 @@
                 null !== (n = Ca) && n === t && 1 === e ? Fa++ : Fa = 0, Ca = t, Ta = e
             }
 
-            function za(e) {
+            function Qa(e) {
                 Wa(0, !0, e)
             }
 
-            function Qa() {
+            function za() {
                 Wa(1, !1, null)
             }
 
@@ -39381,7 +39296,7 @@
             }
 
             function Va(e, t) {
-                Oa && p("253"), Ca = e, Ta = t, Ga(e, t, !1), Qa(), Ya()
+                Oa && p("253"), Ca = e, Ta = t, Ga(e, t, !1), za(), Ya()
             }
 
             function Ya() {
@@ -39513,13 +39428,13 @@
                                     Hi(aa), aa.effectTag &= -3;
                                     break;
                                 case 6:
-                                    Hi(aa), aa.effectTag &= -3, Qi(aa.alternate, aa);
+                                    Hi(aa), aa.effectTag &= -3, zi(aa.alternate, aa);
                                     break;
                                 case 4:
-                                    Qi(aa.alternate, aa);
+                                    zi(aa.alternate, aa);
                                     break;
                                 case 8:
-                                    zi(k = aa), k.return = null, k.child = null, k.alternate && (k.alternate.child = null, k.alternate.return = null)
+                                    Qi(k = aa), k.return = null, k.child = null, k.alternate && (k.alternate.child = null, k.alternate.return = null)
                             }
                             aa = aa.nextEffect
                         }
@@ -39555,7 +39470,7 @@
                                                 M.props = S.memoizedProps, M.state = S.memoizedState, M.componentDidUpdate(j, R, M.__reactInternalSnapshotBeforeUpdate)
                                             }
                                         var I = S.updateQueue;
-                                        null !== I && (M.props = S.memoizedProps, M.state = S.memoizedState, Qo(S, I, M));
+                                        null !== I && (M.props = S.memoizedProps, M.state = S.memoizedState, zo(S, I, M));
                                         break;
                                     case 3:
                                         var D = S.updateQueue;
@@ -39567,7 +39482,7 @@
                                                 case 2:
                                                     x = S.child.stateNode
                                             }
-                                            Qo(S, D, x)
+                                            zo(S, D, x)
                                         }
                                         break;
                                     case 5:
@@ -39623,7 +39538,7 @@
                 try {
                     return e(t)
                 } finally {
-                    (Ra = n) || Oa || Qa()
+                    (Ra = n) || Oa || za()
                 }
             }
 
@@ -39646,7 +39561,7 @@
                 try {
                     return wa(e, t)
                 } finally {
-                    Ra = n, Qa()
+                    Ra = n, za()
                 }
             }
 
@@ -39659,7 +39574,7 @@
                 try {
                     return e(t, n)
                 } finally {
-                    Da = r, (Ra = o) || Oa || Qa()
+                    Da = r, (Ra = o) || Oa || za()
                 }
             }
 
@@ -39917,7 +39832,7 @@
                 }
             };
             ss({
-                findFiberByHostInstance: z,
+                findFiberByHostInstance: Q,
                 bundleType: 0,
                 version: "16.4.1",
                 rendererPackageName: "react-dom"
