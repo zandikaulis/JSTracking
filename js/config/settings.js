@@ -729,13 +729,13 @@ window.__twilightSettings = {
         },
         "4942ccc2-faab-4eba-8b05-3d304a3ca655": {
             "name": "twilight_vod_editing_youre_welcome",
-            "v": 4472,
+            "v": 4808,
             "t": 3,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "variant1"
             }]
         },
