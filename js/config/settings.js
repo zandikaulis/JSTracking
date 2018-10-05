@@ -117,12 +117,9 @@ window.__twilightSettings = {
     "sizmek_versatag_teams": ["wrestling"],
     "spade_url": "https://video-edge-4894a4.sjc02.hls.ttvnw.net/v1/segment/ClqQ_ixGuGrkNNnabtF5Rlj8e9lAGpSB5ZpH2pG--2WM_AIZZ0bjVK-uug-KNDwIHF-nuJLluNkwyWS_Fqd0-zREN_SYfpd44m6yXAxu1O8C5F5qRq6MrhzrGo3apPdegjDj2cN_KV3LrpfNuWue0hoFXZPh563ac4oqtGI1wCV_SFNt8FmhUXJG83P8fdhgy2auqlpb-bOEymVCVEk5ScmALwKJY1pezm6EuoQwbZp8gsqarAhH03PlfCr3DHtB__J7HApEDYxFXjPXOTxDjyMZBsH6y2anY1ohpYhrtC9yJf02uKYZJd2pT7UJag_lGIbmL_W2YVIjdKPA5Roybbr-YoaE3Z_vO_K2QgptHIfO6_6m-kMyXaZZR32cEoC4Mka3LeESdZO5zx30fnZxj87ockRoFBG8GCFSfTxIPfDWgDHoEZ2Ej3cGyvXzqtHPyr26fY7uPK1i-oTu1aNs3BrdHpsA1ghQgRtLBb5o_r_guKODJrEkGZN5_rI57FeIuEBZ2QBQZey70RAvg5iBDZzTBgEokEvKI-dDYzn-32TXshsKOpClysd7AMTJfFGZh3ioyJLadHJRWKHBL3aI_YYz03bWUSINaBi31_i1qfUIr9noqApJgeWdEF1-6T1SbGLsQakyaNHj8dLbZM1Q3YYFsbWAZJmc0GkuYaIMTHRLBaP9iS6yFIYqG4HXm5KbezlDF4LZBiK0i4k_IlhzeHuHmhmLdupQGb_nT9Nz5QbahY29lsTHHt778T7kUt-n2gOU7aeq.ts",
     "squad_stream_banner_query_enabled": true,
-    "squad_stream_banner_whitelist": [],
     "squad_stream_dashboard": "off",
     "squad_stream_feature": "on",
-    "squad_stream_page_whitelist": [],
     "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={SESSION_ID}",
-    "squad_stream_uxr_logins": [],
     "squad_stream_whitelist": [],
     "stats_sample_rate": 100,
     "streamer_trailers_start_date": "2017-10-12T23:00:25.75536206Z",
@@ -1572,7 +1569,7 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4804,
+            "v": 4805,
             "t": 1,
             "groups": [{
                 "weight": 90,
