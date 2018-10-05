@@ -441,6 +441,21 @@ window.__twilightSettings = {
                 "value": "treatment"
             }]
         },
+        "26869b8b-7885-4b2e-a677-5ea918c5ab2a": {
+            "name": "sub_reanimator",
+            "v": 4807,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "variant_a"
+            }, {
+                "weight": 0,
+                "value": "variant_b"
+            }]
+        },
         "298a5f39-228a-487a-ad06-422c18458403": {
             "name": "twilight_merch_store_launch",
             "v": 2159,
