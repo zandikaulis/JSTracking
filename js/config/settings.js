@@ -651,7 +651,7 @@ window.__twilightSettings = {
         },
         "423a8012-5ee8-4514-99cc-ca3c8babb97c": {
             "name": "TWILIGHT_VOD_KIRK",
-            "v": 4759,
+            "v": 4815,
             "t": 1,
             "groups": [{
                 "weight": 100,
@@ -1511,13 +1511,13 @@ window.__twilightSettings = {
         },
         "dfbed154-e2f1-41e7-962c-10309e62583a": {
             "name": "TWILIGHT_VOD_PIKE",
-            "v": 4766,
+            "v": 4816,
             "t": 1,
             "groups": [{
-                "weight": 100,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 0,
+                "weight": 50,
                 "value": "variant"
             }]
         },
