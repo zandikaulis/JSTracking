@@ -7946,22 +7946,29 @@
         C94G: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return d
+                return h
+            }), n.d(t, "c", function() {
+                return f
+            }), n.d(t, "d", function() {
+                return g
             }), n.d(t, "b", function() {
-                return p
+                return b
             });
             var i, r, a = n("mrSG"),
                 o = n("ix15"),
                 s = n("cr+I"),
                 l = n("/7QA"),
                 c = n("D7An"),
-                u = {
+                u = n("eFQ3"),
+                d = {
                     key: "cvp-log",
                     validValues: ["debug", "error", "info", "warn"],
                     defaultValue: "error"
-                };
+                },
+                p = {},
+                m = {};
 
-            function d(e) {
+            function h(e) {
                 return a.__awaiter(this, void 0, void 0, function() {
                     var t, r;
                     return a.__generator(this, function(a) {
@@ -7987,7 +7994,48 @@
                 })
             }
 
-            function p() {
+            function f(e, t) {
+                return void 0 === t && (t = u.a.Site), a.__awaiter(this, void 0, void 0, function() {
+                    var n, i;
+                    return a.__generator(this, function(r) {
+                        return n = v(t), p[i = e + "-" + t] || (p[i] = fetch("https://api.twitch.tv/api/channels/" + e + "/access_token?" + n, {
+                            headers: {
+                                "Client-ID": l.o.config.authSettings.clientID
+                            }
+                        }).then(function(e) {
+                            return e.json()
+                        })), [2, p[i]]
+                    })
+                })
+            }
+
+            function g(e, t) {
+                return void 0 === t && (t = u.a.Site), a.__awaiter(this, void 0, void 0, function() {
+                    var n, i;
+                    return a.__generator(this, function(r) {
+                        return n = v(t), m[i = e + "-" + t] || (m[i] = fetch("https://api.twitch.tv/api/vods/" + e + "/access_token?" + n, {
+                            headers: {
+                                "Client-ID": l.o.config.authSettings.clientID
+                            }
+                        }).then(function(e) {
+                            return e.json()
+                        })), [2, m[i]]
+                    })
+                })
+            }
+
+            function v(e) {
+                var t = l.o.store.getState();
+                return s.stringify({
+                    adblock: l.o.adBlockDetector.detected,
+                    need_https: !0,
+                    oauth_token: t.session.user && t.session.user.authToken || null,
+                    platform: "web",
+                    player_type: e
+                })
+            }
+
+            function b() {
                 return a.__awaiter(this, void 0, void 0, function() {
                     var e, t;
                     return a.__generator(this, function(n) {
@@ -8002,8 +8050,8 @@
                                         return {
                                             forceAsmJs: i === r.ASM,
                                             logLevel: function() {
-                                                var e = s.parse(window.location.search)[u.key];
-                                                if (!e || -1 === u.validValues.indexOf(e)) return u.defaultValue;
+                                                var e = s.parse(window.location.search)[d.key];
+                                                if (!e || -1 === d.validValues.indexOf(e)) return d.defaultValue;
                                                 return e
                                             }(),
                                             value: n
@@ -31652,7 +31700,7 @@
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var i = n.props.playerTypeOverride;
-                            i && (t.player = i, n.playerType = i, i === A.e.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(N.p)(n.props.vodID), S.n.setVideoPlayerTrackingData({
+                            i && (t.player = i, n.playerType = i, i === A.e.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.nAuth = Object(x.c)(n.props.channelLogin, n.props.playerTypeOverride), t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.nAuth = Object(x.d)(n.props.vodID, n.props.playerTypeOverride), t.video = Object(N.p)(n.props.vodID), S.n.setVideoPlayerTrackingData({
                                 vodID: n.props.vodID
                             })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(P.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === _.parse(window.location.search)[F], n.logger.debug("Initializing", t);
                             var r = new e(n.playerRef, t);
@@ -31832,7 +31880,10 @@
                             }
                             this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && t.playerMuted !== this.lastMutedProp && (this.player.setMuted(!!t.playerMuted), this.lastMutedProp = !!t.playerMuted), this.updatePlayerGDPRConsent(e);
                             var l = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (l || Object(L.a)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void S.n.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (l || Object(L.a)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel({
+                                channelName: e.channelLogin,
+                                injectedNAuth: Object(x.c)(e.channelLogin, e.playerTypeOverride)
+                            }), this.lastSetChannel = e.channelLogin, void S.n.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var c = e.collectionID && this.props.collectionID !== e.collectionID,
@@ -31842,7 +31893,16 @@
                                 if ("" !== d && S.n.setVideoPlayerTrackingData({
                                         vodID: e.vodID
                                     }), !this.player) return;
-                                return this.player.pause(), this.resetLatencyTracking(!!e.paused), void(c || e.collectionID && u ? this.player.setCollection(e.collectionID, d, e.nextVideoOffset) : this.player.setVideo(d, e.nextVideoOffset))
+                                return this.player.pause(), this.resetLatencyTracking(!!e.paused), void(c || e.collectionID && u ? this.player.setCollection({
+                                    collectionId: e.collectionID,
+                                    videoId: d,
+                                    timestamp: e.nextVideoOffset,
+                                    injectedNAuth: Object(x.d)(d, e.playerTypeOverride)
+                                }) : this.player.setVideo({
+                                    videoId: d,
+                                    timestamp: e.nextVideoOffset,
+                                    injectedNAuth: Object(x.d)(d, e.playerTypeOverride)
+                                }))
                             }
                             void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset), this.player && e.videoMarkers && this.lastVideoMarkersProp !== e.videoMarkers && (this.lastVideoMarkersProp = e.videoMarkers, this.player.setVideoMarkers(e.videoMarkers));
                             var p = e.playerQualityOverride;
@@ -40980,27 +41040,28 @@
                 _n = n("XxES"),
                 Sn = n("ZDlU"),
                 Cn = n("VwD5"),
-                wn = n("Fxe2"),
-                Nn = n("vRsq"),
-                Tn = n("tuvy"),
-                In = n("50oY"),
-                On = n("mLw1");
-            var Rn = Object(u.connect)(function(e) {
+                wn = n("eFQ3"),
+                Nn = n("Fxe2"),
+                Tn = n("vRsq"),
+                In = n("tuvy"),
+                On = n("50oY"),
+                Rn = n("mLw1");
+            var Dn = Object(u.connect)(function(e) {
                     var t = Object(l.e)(e);
                     return {
                         isLoggedIn: Object(l.f)(e),
                         userLogin: t && t.login
                     }
                 })(function(e) {
-                    return e.isLoggedIn && e.userLogin === e.match.params.channelLogin.toLowerCase() ? i.createElement(On.a, {
+                    return e.isLoggedIn && e.userLogin === e.match.params.channelLogin.toLowerCase() ? i.createElement(Rn.a, {
                         to: "/settings/profile"
-                    }) : i.createElement(On.a, {
+                    }) : i.createElement(Rn.a, {
                         to: "/"
                     })
                 }),
-                Dn = n("EOHf"),
-                An = n("Eo7B"),
-                Ln = function(e) {
+                An = n("EOHf"),
+                Ln = n("Eo7B"),
+                xn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.redirectToSubCheckout = function() {
@@ -41017,7 +41078,7 @@
                             fillContent: !0
                         }) : this.props.data.loading ? i.createElement(G.Xa, {
                             fillContent: !0
-                        }) : i.createElement(Dn.a, null)
+                        }) : i.createElement(An.a, null)
                     }, Object.defineProperty(t.prototype, "productName", {
                         get: function() {
                             if (this.props.data.user && this.props.data.user.subscriptionProducts) {
@@ -41030,7 +41091,7 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                xn = Object(w.a)(An, {
+                Pn = Object(w.a)(Ln, {
                     options: function(e) {
                         return {
                             variables: {
@@ -41038,90 +41099,90 @@
                             }
                         }
                     }
-                })(Ln),
-                Pn = b.a.wrap(function() {
+                })(xn),
+                Fn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(48)]).then(n.bind(null, "XH7V"))
                 }, "ChannelClipsPage"),
-                Fn = b.a.wrap(function() {
+                Mn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(47)]).then(n.bind(null, "5qQ0"))
                 }, "ChannelCollectionsPage"),
-                Mn = b.a.wrap(function() {
+                Un = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(46)]).then(n.bind(null, "0PcG"))
                 }, "ChannelEventsPage"),
-                Un = b.a.wrap(function() {
+                Bn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(45)]).then(n.bind(null, "ibCL"))
                 }, "ChannelFollowersPage"),
-                Bn = b.a.wrap(function() {
+                Vn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(44)]).then(n.bind(null, "Zcpz"))
                 }, "ChannelFollowingPage"),
-                Vn = b.a.wrap(function() {
+                jn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(43)]).then(n.bind(null, "JNF5"))
                 }, "ChannelPage"),
-                jn = b.a.wrap(function() {
+                zn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(42)]).then(n.bind(null, "DOLr"))
                 }, "ChannelRoot"),
-                zn = b.a.wrap(function() {
+                Hn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(41)]).then(n.bind(null, "JCPk"))
                 }, "ChannelVideosOverviewPage"),
-                Hn = b.a.wrap(function() {
+                Wn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(40)]).then(n.bind(null, "AaPt"))
                 }, "ChannelVideosPage"),
-                Wn = b.a.wrap(function() {
+                Gn = b.a.wrap(function() {
                     return n.e(55).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                Gn = b.a.wrap(function() {
+                qn = b.a.wrap(function() {
                     return n.e(39).then(n.bind(null, "juOe"))
                 }, "ReportUserPage"),
-                qn = b.a.wrap(function() {
+                Yn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(38)]).then(n.bind(null, "4JFD"))
                 }, "VideoWatchPage"),
-                Yn = b.a.wrap(function() {
+                Qn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(37)]).then(n.bind(null, "dlEs"))
                 }, "ClipsWatchPage"),
-                Qn = b.a.wrap(function() {
+                Kn = b.a.wrap(function() {
                     return n.e(36).then(n.bind(null, "QE/F"))
                 }, "SquadStreamPage"),
-                Kn = function(e) {
+                Xn = function(e) {
                     return i.createElement(f.a, {
                         to: "/popout/" + e.match.params.channelLogin + "/chat"
                     })
                 },
-                Xn = function(e) {
-                    return Object(Tn.b)() ? i.createElement(zn, null) : Zn(e)
-                },
                 Zn = function(e) {
+                    return Object(In.b)() ? i.createElement(Hn, null) : Jn(e)
+                },
+                Jn = function(e) {
                     return i.createElement(f.a, {
                         to: "/" + e.match.params.channelLogin + "/videos/all"
                     })
                 },
-                Jn = function(e) {
+                $n = function(e) {
                     return i.createElement(f.a, {
                         to: "/" + e.match.params.channelLogin + "/videos"
                     })
                 },
-                $n = function(e) {
+                ei = function(e) {
                     return i.createElement(f.a, {
                         to: "/" + e.match.params.channelLogin + "/videos/archive"
                     })
                 },
-                ei = function(e) {
+                ti = function(e) {
                     return window.location.replace(a.a.playerBaseURL + "/?channel=" + e.match.params.channelLogin), null
                 },
-                ti = function(e) {
-                    var t = e.match.params.contentType === Nn.g.Video ? e.match.params.contentID : void 0,
-                        n = e.match.params.contentType === Nn.g.Collection ? e.match.params.contentID : void 0;
+                ni = function(e) {
+                    var t = e.match.params.contentType === Tn.g.Video ? e.match.params.contentID : void 0,
+                        n = e.match.params.contentType === Tn.g.Collection ? e.match.params.contentID : void 0;
                     return t || n ? i.createElement(f.a, {
-                        to: Object(Nn.i)(null, t, n)
-                    }) : i.createElement(Dn.a, null)
+                        to: Object(Tn.i)(null, t, n)
+                    }) : i.createElement(An.a, null)
                 };
 
-            function ni(e) {
-                var t = Object(wn.a)(e.match.params.videoID);
+            function ii(e) {
+                var t = Object(Nn.a)(e.match.params.videoID);
                 return i.createElement(f.a, {
                     to: "/videos/" + t
                 })
             }
-            var ii = function(e) {
+            var ri = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -41141,276 +41202,276 @@
                         if (this.state.isError) return i.createElement(Sn.a, {
                             message: Object(a.d)("An error occurred on this page", "ChannelPageRouter")
                         });
-                        var e = Object(Tn.a)();
-                        return !Object(Tn.e)() && Object(Tn.d)(this.props.location.pathname) && (e = !1), i.createElement(g.a, null, e ? i.createElement(h.a, {
-                            path: "/:standaloneType(" + In.e.Collections + ")/:collectionID",
-                            component: jn
+                        var e = Object(In.a)();
+                        return !Object(In.e)() && Object(In.d)(this.props.location.pathname) && (e = !1), i.createElement(g.a, null, e ? i.createElement(h.a, {
+                            path: "/:standaloneType(" + On.e.Collections + ")/:collectionID",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/collections/:collectionID",
-                            component: qn
+                            component: Yn
                         }), i.createElement(h.a, {
                             path: "/videos/v:videoID",
-                            render: ni
+                            render: ii
                         }), e ? i.createElement(h.a, {
-                            path: "/:standaloneType(" + In.e.Videos + ")/:videoID",
-                            component: jn
+                            path: "/:standaloneType(" + On.e.Videos + ")/:videoID",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/videos/:videoID",
-                            component: qn
+                            component: Yn
                         }), e ? i.createElement(h.a, {
                             path: "/:channelLogin",
-                            component: jn,
+                            component: zn,
                             exact: !0
                         }) : i.createElement(h.a, {
                             path: "/:channelName",
-                            component: Vn,
+                            component: jn,
                             exact: !0
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.About + ")",
-                            component: jn
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.About + ")",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelName/about",
-                            component: Vn
+                            component: jn
                         }), !e && i.createElement(h.a, {
                             path: "/:channelLogin/clip/:slugID",
-                            component: Yn
+                            component: Qn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Clips + ")",
-                            component: jn
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Clips + ")",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelName/clips",
-                            component: Pn
-                        }), i.createElement(h.a, {
-                            path: "/:channelLogin/chat",
-                            render: Kn
-                        }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Collections + ")",
-                            component: jn
-                        }) : i.createElement(h.a, {
-                            path: "/:channelLogin/collections",
                             component: Fn
                         }), i.createElement(h.a, {
-                            path: "/:channelLogin/embed",
-                            render: ei
+                            path: "/:channelLogin/chat",
+                            render: Xn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.EsportsLoot + ")",
-                            component: jn
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Collections + ")",
+                            component: zn
+                        }) : i.createElement(h.a, {
+                            path: "/:channelLogin/collections",
+                            component: Mn
+                        }), i.createElement(h.a, {
+                            path: "/:channelLogin/embed",
+                            render: ti
+                        }), e ? i.createElement(h.a, {
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.EsportsLoot + ")",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/esports-loot",
-                            component: Vn
-                        }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.EsportsPass + ")",
                             component: jn
+                        }), e ? i.createElement(h.a, {
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.EsportsPass + ")",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/esports-pass",
-                            component: Vn
-                        }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.EsportsProgress + ")",
                             component: jn
+                        }), e ? i.createElement(h.a, {
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.EsportsProgress + ")",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/esports-progress",
-                            component: Vn
-                        }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Events + ")",
                             component: jn
+                        }), e ? i.createElement(h.a, {
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Events + ")",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/events",
-                            component: Mn
-                        }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Followers + ")",
-                            component: jn
-                        }) : i.createElement(h.a, {
-                            path: "/:channelLogin/followers",
                             component: Un
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Following + ")",
-                            component: jn
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Followers + ")",
+                            component: zn
+                        }) : i.createElement(h.a, {
+                            path: "/:channelLogin/followers",
+                            component: Bn
+                        }), e ? i.createElement(h.a, {
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Following + ")",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/following",
-                            component: Bn
+                            component: Vn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/inbox",
-                            component: Wn
+                            component: Gn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/outbox",
-                            component: Wn
+                            component: Gn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/profile",
-                            render: Zn
+                            render: Jn
                         }), i.createElement(h.a, {
                             path: "/:channelName/report",
-                            component: Gn
+                            component: qn
                         }), e ? i.createElement(h.a, {
                             path: "/:channelLogin/p/:entityID",
-                            component: jn
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelName/p/:entityID",
-                            component: Vn
+                            component: jn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/popout",
-                            render: ei
+                            render: ti
                         }), e ? i.createElement(h.a, {
                             path: "/:channelLogin/rooms/:roomName",
-                            component: jn
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelName/rooms/:roomName",
-                            component: Vn
-                        }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Videos + ")",
-                            exact: !0,
                             component: jn
+                        }), e ? i.createElement(h.a, {
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Videos + ")",
+                            exact: !0,
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/videos",
                             exact: !0,
-                            render: Xn
-                        }), !e && Object(Tn.b)() && i.createElement(h.a, {
+                            render: Zn
+                        }), !e && Object(In.b)() && i.createElement(h.a, {
                             path: "/:channelLogin/videos/all",
-                            render: Jn
+                            render: $n
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/videos/(past_broadcasts?)",
-                            render: $n
+                            render: ei
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:page(" + In.c.Videos + ")/:filter(all|archive|upload|highlight|past_premiere)",
-                            component: jn
+                            path: "/:channelLogin/:page(" + On.c.Videos + ")/:filter(all|archive|upload|highlight|past_premiere)",
+                            component: zn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                            component: Hn
+                            component: Wn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/videos/:unknownFilter?",
-                            render: Zn
+                            render: Jn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/settings",
-                            component: Rn
+                            component: Dn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/subscribe",
-                            component: xn
+                            component: Pn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/squad",
-                            component: Qn
+                            component: Kn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?",
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?",
                             exact: !0,
-                            component: jn
+                            component: zn
                         }) : i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?",
+                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?",
                             exact: !0,
-                            component: ti
+                            component: ni
                         }), i.createElement(h.a, {
                             path: "*",
-                            component: Dn.a
+                            component: An.a
                         }))
                     }, t
                 }(i.Component),
-                ri = Object(be.a)(ii),
-                ai = b.a.wrap(function() {
+                ai = Object(be.a)(ri),
+                oi = b.a.wrap(function() {
                     return n.e(72).then(n.bind(null, "wh8/"))
                 }, "AnonFrontPage"),
-                oi = b.a.wrap(function() {
+                si = b.a.wrap(function() {
                     return n.e(71).then(n.bind(null, "moen"))
                 }, "BroadcastPage"),
-                si = b.a.wrap(function() {
+                li = b.a.wrap(function() {
                     return n.e(70).then(n.bind(null, "99ae"))
                 }, "BrowseRootPage"),
-                li = b.a.wrap(function() {
+                ci = b.a.wrap(function() {
                     return n.e(69).then(n.bind(null, "otOH"))
                 }, "CommunityModerationRoot"),
-                ci = b.a.wrap(function() {
+                ui = b.a.wrap(function() {
                     return n.e(68).then(n.bind(null, "FvFK"))
                 }, "CreateCommunityPage"),
-                ui = b.a.wrap(function() {
+                di = b.a.wrap(function() {
                     return n.e(67).then(n.bind(null, "dQAD"))
                 }, "DevOnlyRoot"),
-                di = b.a.wrap(function() {
+                pi = b.a.wrap(function() {
                     return n.e(66).then(n.bind(null, "mpcK"))
                 }, "DirectoryRootPage"),
-                pi = b.a.wrap(function() {
+                mi = b.a.wrap(function() {
                     return n.e(65).then(n.bind(null, "AtgE"))
                 }, "EmailUnsubscribePage"),
-                mi = b.a.wrap(function() {
+                hi = b.a.wrap(function() {
                     return n.e(64).then(n.bind(null, "VkGE"))
                 }, "EmailVerificationPage"),
-                hi = b.a.wrap(function() {
+                fi = b.a.wrap(function() {
                     return n.e(63).then(n.bind(null, "4c/Z"))
                 }, "EventLandingPage"),
-                fi = b.a.wrap(function() {
+                gi = b.a.wrap(function() {
                     return n.e(62).then(n.bind(null, "lQdQ"))
                 }, "ExtensionsRoot"),
-                gi = b.a.wrap(function() {
+                vi = b.a.wrap(function() {
                     return n.e(61).then(n.bind(null, "Uyt6"))
                 }, "FollowingRootPage"),
-                vi = b.a.wrap(function() {
+                bi = b.a.wrap(function() {
                     return n.e(60).then(n.bind(null, "0fnA"))
                 }, "FrontPage"),
-                bi = b.a.wrap(function() {
+                yi = b.a.wrap(function() {
                     return n.e(59).then(n.bind(null, "O0y+"))
                 }, "FriendRequestsPage"),
-                yi = b.a.wrap(function() {
+                Ei = b.a.wrap(function() {
                     return n.e(58).then(n.bind(null, "2W9R"))
                 }, "FriendsPage"),
-                Ei = b.a.wrap(function() {
+                ki = b.a.wrap(function() {
                     return n.e(57).then(n.bind(null, "UqZg"))
                 }, "InventoryPage"),
-                ki = b.a.wrap(function() {
+                _i = b.a.wrap(function() {
                     return n.e(56).then(n.bind(null, "WtmX"))
                 }, "MessagesDisclosurePage"),
-                _i = b.a.wrap(function() {
+                Si = b.a.wrap(function() {
                     return n.e(55).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                Si = b.a.wrap(function() {
+                Ci = b.a.wrap(function() {
                     return n.e(54).then(n.bind(null, "4Agi"))
                 }, "DesklightModsRootPage"),
-                Ci = b.a.wrap(function() {
+                wi = b.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(0), n.e(53)]).then(n.bind(null, "cz4h"))
                 }, "PaymentsLandingPage"),
-                wi = b.a.wrap(function() {
+                Ni = b.a.wrap(function() {
                     return n.e(52).then(n.bind(null, "EOaz"))
                 }, "SettingsRoot"),
-                Ni = b.a.wrap(function() {
-                    return n.e(51).then(n.bind(null, "rzjD"))
-                }, "StartLogin"),
                 Ti = b.a.wrap(function() {
                     return n.e(51).then(n.bind(null, "rzjD"))
-                }, "StartSignup"),
+                }, "StartLogin"),
                 Ii = b.a.wrap(function() {
+                    return n.e(51).then(n.bind(null, "rzjD"))
+                }, "StartSignup"),
+                Oi = b.a.wrap(function() {
                     return n.e(50).then(n.bind(null, "UGMo"))
                 }, "SubscriptionsManagementPage"),
-                Oi = b.a.wrap(function() {
+                Ri = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(49)]).then(n.bind(null, "c0BZ"))
                 }, "UnsubscribePage"),
-                Ri = b.a.wrap(function() {
+                Di = b.a.wrap(function() {
                     return n.e(33).then(n.bind(null, "xuFZ"))
                 }, "UserRoot");
 
-            function Di() {
+            function Ai() {
                 return window.location.assign(window.location.href), null
             }
 
-            function Ai(e) {
+            function Li(e) {
                 return i.createElement(f.a, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             }
 
-            function Li() {
+            function xi() {
                 return i.createElement(f.a, {
                     path: "/",
                     to: "/directory/following"
                 })
             }
 
-            function xi() {
+            function Pi() {
                 return i.createElement(f.a, {
                     to: "/directory/all/xbox"
                 })
             }
 
-            function Pi() {
+            function Fi() {
                 return i.createElement(f.a, {
                     to: "/manager/upload"
                 })
             }
 
-            function Fi(e) {
+            function Mi(e) {
                 return i.createElement(f.a, {
                     to: {
                         search: e.location.search,
@@ -41419,14 +41480,18 @@
                 })
             }
 
-            function Mi() {
+            function Ui() {
                 return window.location.replace("https://twitch.tv/p/terms-of-service"), null
             }
 
-            function Ui() {
+            function Bi() {
                 return window.location.replace(Cn.a), null
             }
-            var Bi = function(e) {
+
+            function Vi(e) {
+                return e.match.params.channelLogin ? Object(Y.c)(e.match.params.channelLogin, wn.a.Site) : e.match.params.videoID && Object(Y.d)(e.match.params.videoID, wn.a.Site), i.createElement(ai, m.__assign({}, e))
+            }
+            var ji = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -41447,226 +41512,226 @@
                             message: Object(a.d)("An error occurred on this page", "DefaultRootRouter")
                         }) : i.createElement(g.a, null, a.a.buildType !== N.a.Production && i.createElement(h.a, {
                             path: "/_dev",
-                            component: ui
+                            component: di
                         }), i.createElement(h.a, {
                             exact: !0,
                             path: "/",
-                            component: this.props.isLoggedIn ? vi : ai
+                            component: this.props.isLoggedIn ? bi : oi
                         }), i.createElement(h.a, {
                             path: "/activate",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/bits",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/bits-checkout",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/checkout",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/products",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/embed",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/popout",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/prime",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/subs",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/download-keys",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/(redeem|claim)",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/turbo",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             path: "/user/account_recovery",
-                            render: Di
+                            render: Ai
                         }), i.createElement(h.a, {
                             exact: !0,
                             path: "/broadcast",
-                            component: oi
+                            component: si
                         }), i.createElement(h.a, {
                             path: "/collections/:collectionID",
-                            component: ri
+                            component: Vi
                         }), i.createElement(h.a, {
                             path: "/communities/create",
-                            component: ci
+                            component: ui
                         }), i.createElement(h.a, {
                             path: "/communities/:encodedCommunityName/details",
-                            component: di
-                        }), i.createElement(h.a, {
-                            path: "/communities/:encodedCommunityName/moderation/:page?",
-                            component: li
-                        }), i.createElement(h.a, {
-                            path: "/communities/:encodedCommunityName/:encodedLanguage",
-                            component: di
-                        }), i.createElement(h.a, {
-                            path: "/communities/:encodedCommunityName",
-                            component: di
-                        }), i.createElement(h.a, {
-                            path: "/directory/communities",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/directory/creative",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/directory/following/:category?",
-                            component: gi
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/clips",
-                            component: di
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/details",
-                            component: di
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/videos/:filter",
-                            component: di
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/videos",
-                            render: Ai
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                            component: di
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName",
-                            component: di
-                        }), i.createElement(h.a, {
-                            path: "/directory/tags/:tagID",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/tags/:tagID",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/ps4",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/xb1",
-                            render: xi
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/xbox",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/:encodedLanguage",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/directory/all",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/directory/:category?",
-                            component: si
-                        }), i.createElement(h.a, {
-                            path: "/events/:eventName",
-                            component: hi
-                        }), i.createElement(h.a, {
-                            path: "/email-unsubscribe",
                             component: pi
                         }), i.createElement(h.a, {
-                            path: "/email-verification/:emailOpaqueId",
-                            component: mi
+                            path: "/communities/:encodedCommunityName/moderation/:page?",
+                            component: ci
                         }), i.createElement(h.a, {
-                            path: "/ext",
-                            component: fi
+                            path: "/communities/:encodedCommunityName/:encodedLanguage",
+                            component: pi
                         }), i.createElement(h.a, {
-                            path: "/friends/requests",
-                            component: bi
+                            path: "/communities/:encodedCommunityName",
+                            component: pi
                         }), i.createElement(h.a, {
-                            path: "/friends",
-                            component: yi
+                            path: "/directory/communities",
+                            component: li
                         }), i.createElement(h.a, {
-                            path: "/following",
+                            path: "/directory/creative",
+                            component: li
+                        }), i.createElement(h.a, {
+                            path: "/directory/following/:category?",
+                            component: vi
+                        }), i.createElement(h.a, {
+                            path: "/directory/game/:encodedCommunityName/clips",
+                            component: pi
+                        }), i.createElement(h.a, {
+                            path: "/directory/game/:encodedCommunityName/details",
+                            component: pi
+                        }), i.createElement(h.a, {
+                            path: "/directory/game/:encodedCommunityName/videos/:filter",
+                            component: pi
+                        }), i.createElement(h.a, {
+                            path: "/directory/game/:encodedCommunityName/videos",
                             render: Li
                         }), i.createElement(h.a, {
-                            path: "/inbox",
-                            component: _i
+                            path: "/directory/game/:encodedCommunityName/:encodedLanguage",
+                            component: pi
                         }), i.createElement(h.a, {
-                            path: "/inventory",
+                            path: "/directory/game/:encodedCommunityName",
+                            component: pi
+                        }), i.createElement(h.a, {
+                            path: "/directory/tags/:tagID",
+                            component: li
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/tags/:tagID",
+                            component: li
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/ps4",
+                            component: li
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/xb1",
+                            render: Pi
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/xbox",
+                            component: li
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/:encodedLanguage",
+                            component: li
+                        }), i.createElement(h.a, {
+                            path: "/directory/all",
+                            component: li
+                        }), i.createElement(h.a, {
+                            path: "/directory/:category?",
+                            component: li
+                        }), i.createElement(h.a, {
+                            path: "/events/:eventName",
+                            component: fi
+                        }), i.createElement(h.a, {
+                            path: "/email-unsubscribe",
+                            component: mi
+                        }), i.createElement(h.a, {
+                            path: "/email-verification/:emailOpaqueId",
+                            component: hi
+                        }), i.createElement(h.a, {
+                            path: "/ext",
+                            component: gi
+                        }), i.createElement(h.a, {
+                            path: "/friends/requests",
+                            component: yi
+                        }), i.createElement(h.a, {
+                            path: "/friends",
                             component: Ei
                         }), i.createElement(h.a, {
-                            path: "/login",
-                            component: Ni
+                            path: "/following",
+                            render: xi
                         }), i.createElement(h.a, {
-                            path: "/messages/archive",
+                            path: "/inbox",
+                            component: Si
+                        }), i.createElement(h.a, {
+                            path: "/inventory",
                             component: ki
                         }), i.createElement(h.a, {
-                            path: "/messages/:pageName?",
+                            path: "/login",
+                            component: Ti
+                        }), i.createElement(h.a, {
+                            path: "/messages/archive",
                             component: _i
+                        }), i.createElement(h.a, {
+                            path: "/messages/:pageName?",
+                            component: Si
                         }), i.createElement(h.a, {
                             path: "/outbox",
-                            component: _i
+                            component: Si
                         }), i.createElement(h.a, {
                             path: "/payments",
-                            component: Ci
+                            component: wi
                         }), i.createElement(h.a, {
                             path: "/profile",
                             component: _n.a,
                             exact: !0
                         }), i.createElement(h.a, {
                             path: "/signup",
-                            component: Ti
-                        }), i.createElement(h.a, {
-                            path: "/store",
-                            render: Ui
-                        }), i.createElement(h.a, {
-                            path: "/store/merch",
-                            render: Ui
-                        }), i.createElement(h.a, {
-                            path: "/subscriptions",
                             component: Ii
                         }), i.createElement(h.a, {
-                            path: "/settings/:tab?",
-                            component: wi
+                            path: "/store",
+                            render: Bi
                         }), i.createElement(h.a, {
-                            path: "/unsubscribe/:productName",
+                            path: "/store/merch",
+                            render: Bi
+                        }), i.createElement(h.a, {
+                            path: "/subscriptions",
                             component: Oi
                         }), i.createElement(h.a, {
+                            path: "/settings/:tab?",
+                            component: Ni
+                        }), i.createElement(h.a, {
+                            path: "/unsubscribe/:productName",
+                            component: Ri
+                        }), i.createElement(h.a, {
                             path: "/upload",
-                            render: Pi,
+                            render: Fi,
                             exact: !0
                         }), i.createElement(h.a, {
                             path: "/user/legal",
-                            render: Mi,
+                            render: Ui,
                             exact: !0
                         }), i.createElement(h.a, {
                             path: "/user/remove_me",
-                            render: Fi
+                            render: Mi
                         }), i.createElement(h.a, {
                             path: "/user",
-                            component: Ri
+                            component: Di
                         }), i.createElement(h.a, {
                             path: "/videos/v:videoID",
-                            component: ri
+                            render: Vi
                         }), i.createElement(h.a, {
                             path: "/videos/:videoID",
-                            component: ri
+                            render: Vi
                         }), a.a.buildType !== N.a.Production && a.o.integrations.mods && i.createElement(h.a, {
                             path: "/mods",
-                            component: Si
+                            component: Ci
                         }), i.createElement(h.a, {
                             path: "*",
-                            component: ri
+                            render: Vi
                         }))
                     }, t
                 }(i.Component),
-                Vi = b.a.wrap(function() {
+                zi = b.a.wrap(function() {
                     return n.e(74).then(n.bind(null, "3iFw"))
                 }, "Whispers", {
                     failSilently: !0,
                     placeholder: null
                 }),
-                ji = b.a.wrap(function() {
+                Hi = b.a.wrap(function() {
                     return n.e(73).then(n.bind(null, "bpy9"))
                 }, "NetworkIntegrationManager"),
-                zi = function(e) {
+                Wi = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -41681,7 +41746,7 @@
                             flexDirection: G.Y.Column,
                             flexWrap: G.Z.NoWrap,
                             fullHeight: !0
-                        }, i.createElement(pe.a, null), i.createElement(En.a, null), this.props.firstPageLoaded && a.o.integrations.network && i.createElement(ji, null), this.props.firstPageLoaded && this.props.isLoggedIn && i.createElement(kn.a, null), i.createElement(G.Va, {
+                        }, i.createElement(pe.a, null), i.createElement(En.a, null), this.props.firstPageLoaded && a.o.integrations.network && i.createElement(Hi, null), this.props.firstPageLoaded && this.props.isLoggedIn && i.createElement(kn.a, null), i.createElement(G.Va, {
                             display: G.W.Flex,
                             flexWrap: G.Z.NoWrap,
                             position: G.db.Relative,
@@ -41700,56 +41765,56 @@
                             className: de.a
                         }, i.createElement(yn.b, null), i.createElement(fe.a, {
                             contentRefDelegate: this.setRootScrollableContentRef
-                        }, i.createElement(Bi, {
+                        }, i.createElement(ji, {
                             isLoggedIn: this.props.isLoggedIn
                         }), i.createElement(me.b, {
                             mainRef: this.state.rootScrollableContentRef
-                        })), i.createElement(vn, null), this.props.firstPageLoaded && i.createElement(Vi, null))), i.createElement(he.a, null)))
+                        })), i.createElement(vn, null), this.props.firstPageLoaded && i.createElement(zi, null))), i.createElement(he.a, null)))
                     }, t
                 }(i.Component);
-            var Hi = Object(u.connect)(function(e) {
+            var Gi = Object(u.connect)(function(e) {
                     return {
                         isLoggedIn: Object(l.f)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         theatreModeEnabled: e.ui.theatreModeEnabled,
                         squadModeEnabled: e.ui.squadModeEnabled
                     }
-                })(zi),
-                Wi = (n("AtNS"), b.a.wrap(function() {
+                })(Wi),
+                qi = (n("AtNS"), b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(82)]).then(n.bind(null, "mdlQ"))
                 }, "DashboardRoot")),
-                Gi = b.a.wrap(function() {
+                Yi = b.a.wrap(function() {
                     return n.e(81).then(n.bind(null, "WHo0"))
                 }, "DashboardRedirect"),
-                qi = b.a.wrap(function() {
+                Qi = b.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(32), n.e(0), n.e(80)]).then(n.bind(null, "Pnqn"))
                 }, "TeamsDashboardRoot"),
-                Yi = b.a.wrap(function() {
+                Ki = b.a.wrap(function() {
                     return n.e(79).then(n.bind(null, "hy6r"))
                 }, "TeamsLandingPage"),
-                Qi = b.a.wrap(function() {
+                Xi = b.a.wrap(function() {
                     return n.e(78).then(n.bind(null, "8n14"))
                 }, "OnboardingRoot"),
-                Ki = b.a.wrap(function() {
+                Zi = b.a.wrap(function() {
                     return n.e(77).then(n.bind(null, "q1NB"))
                 }, "DesktopLoginPage"),
-                Xi = b.a.wrap(function() {
+                Ji = b.a.wrap(function() {
                     return n.e(76).then(n.bind(null, "uHYy"))
                 }, "PartnerSignupRoot"),
-                Zi = b.a.wrap(function() {
+                $i = b.a.wrap(function() {
                     return n.e(30).then(n.bind(null, "Msj/"))
                 }, "DesktopBenchmarkingManager"),
-                Ji = function(e) {
+                er = function(e) {
                     return i.createElement(f.a, {
                         to: "/teams/" + e.match.params.teamName + "/dashboard"
                     })
                 },
-                $i = function(e) {
+                tr = function(e) {
                     return i.createElement(f.a, {
                         to: "/team/" + e.match.params.teamName
                     })
                 },
-                er = function(e) {
+                nr = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onHistoryChange = function(e, n) {
@@ -41782,62 +41847,62 @@
                             attachLeft: !0
                         }, a.o.benchmarking.toolsEnabled && i.createElement(q, null), i.createElement(I.a, null), i.createElement(F, null), i.createElement(V.a, null), i.createElement(H.b, null), this.renderContent(), i.createElement(v.a, null), i.createElement(ie.b, null), i.createElement(y.a, null), i.createElement(K, null), this.props.firstPageLoaded && i.createElement(ne.a, null), this.props.firstPageLoaded && i.createElement(re.a, {
                             history: this.props.history
-                        }), this.props.isLoggedIn && i.createElement(ue.a, null), i.createElement(te, null), this.props.firstPageLoaded && i.createElement(ce, null), this.props.firstPageLoaded && i.createElement(B, null), this.props.firstPageLoaded && a.o.integrations.session && i.createElement(z, null), a.o.integrations.performance && i.createElement(Zi, null))
+                        }), this.props.isLoggedIn && i.createElement(ue.a, null), i.createElement(te, null), this.props.firstPageLoaded && i.createElement(ce, null), this.props.firstPageLoaded && i.createElement(B, null), this.props.firstPageLoaded && a.o.integrations.session && i.createElement(z, null), a.o.integrations.performance && i.createElement($i, null))
                     }, t.prototype.renderContent = function() {
-                        return a.o.integrations.app && !this.props.isLoggedIn ? i.createElement(Ki, null) : i.createElement(g.a, null, i.createElement(h.a, {
+                        return a.o.integrations.app && !this.props.isLoggedIn ? i.createElement(Zi, null) : i.createElement(g.a, null, i.createElement(h.a, {
                             path: "/hi",
-                            component: Qi
+                            component: Xi
                         }), i.createElement(h.a, {
                             path: "/event/:teamName",
-                            component: $i
+                            component: tr
                         }), i.createElement(h.a, {
                             exact: !0,
                             path: "/partner/signup",
-                            component: Xi
+                            component: Ji
                         }), i.createElement(h.a, {
                             exact: !0,
                             path: "/team/:teamName/edit",
-                            render: Ji
+                            render: er
                         }), i.createElement(h.a, {
                             path: "/team/:teamName",
-                            component: Yi
+                            component: Ki
                         }), i.createElement(h.a, {
                             path: "/teams/:teamName/dashboard/:pageName?",
-                            component: qi
+                            component: Qi
                         }), i.createElement(h.a, {
                             path: "/(dashboard|manager|broadcast/.+)",
-                            component: Gi
+                            component: Yi
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/(dashboard|manager)",
-                            component: Wi
+                            component: qi
                         }), i.createElement(h.a, {
                             path: "/",
-                            component: Hi
+                            component: Gi
                         }))
                     }, t
                 }(i.Component),
-                tr = Object(W.c)("Root", {
+                ir = Object(W.c)("Root", {
                     isRoot: !0
-                })(er);
-            var nr, ir = Object(u.connect)(function(e) {
+                })(nr);
+            var rr, ar = Object(u.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isLoggedIn: Object(l.f)(e),
                         theme: Object(p.a)(e)
                     }
-                })(tr),
-                rr = Object(d.a)(ir);
+                })(ir),
+                or = Object(d.a)(ar);
 
-            function ar() {
+            function sr() {
                 a.o.mount(i.createElement(r.a, {
                     history: a.o.history
-                }, i.createElement(rr, null)), document.getElementById("root"))
+                }, i.createElement(or, null)), document.getElementById("root"))
             }
             a.o.integrations.app && Object(c.a)(a.o.integrations.app.id);
-            var or = !1;
-            nr = a.o.store.getReduxStore().subscribe(function() {
+            var lr = !1;
+            rr = a.o.store.getReduxStore().subscribe(function() {
                 var e = a.o.store.getState();
-                !or && Object(l.h)(e) && (or = !0, nr(), a.a.optimizedBuild ? ar() : setTimeout(ar, 500))
+                !lr && Object(l.h)(e) && (lr = !0, rr(), a.a.optimizedBuild ? sr() : setTimeout(sr, 500))
             }), Object(s.a)(), a.o.store.dispatch(Object(o.d)())
         },
         sSlw: function(e, t, n) {
