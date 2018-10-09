@@ -2304,7 +2304,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-85cdf906";
+    return "2.3.0-5ea3bb5e";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -2340,8 +2340,8 @@ MediaPlayer.prototype.getQuality = function () {
     return this._state.quality;
 }
 
-MediaPlayer.prototype.setQuality = function (quality) {
-    this._postMessage(WorkerMessage.SET_QUALITY, quality);
+MediaPlayer.prototype.setQuality = function (quality, adaptive) {
+    this._postMessage(WorkerMessage.SET_QUALITY, {quality:quality, adaptive:adaptive || false});
 }
 
 MediaPlayer.prototype.getQualities = function () {
@@ -2414,6 +2414,14 @@ MediaPlayer.prototype.setMinBuffer = function (duration) {
  */
 MediaPlayer.prototype.setMaxBuffer = function (duration) {
     this._postMessage(WorkerMessage.SET_MIN_BUFFER, duration);
+}
+
+/**
+ * Sets the visibility hint, if not visible less resources will be used.
+ * @param {boolean} visible true if the player is visible on screen, false otherwise
+ */
+MediaPlayer.prototype.setVisible = function (visible) {
+    this._postMessage(WorkerMessage.SET_VISIBLE, visible);
 }
 
 MediaPlayer.prototype.setAnalyticsSendEvents = function (enable) {
@@ -3894,6 +3902,7 @@ module.exports = {
     /**
      * Set the current quality
      * @param {object} quality - element returned from 'getQualities'
+     * @param {bool} adaptive - true for an adaptive change, false otherwise, defaults to false
      */
     SET_QUALITY: 'WorkerSetQuality',
     /**
@@ -3965,7 +3974,12 @@ module.exports = {
      * Set max buffer size
      * @param {number} max buffer duration
      */
-    SET_MAX_BUFFER: 'WorkerSetMaxBuffer'
+    SET_MAX_BUFFER: 'WorkerSetMaxBuffer',
+    /**
+     * Set visibility flag
+     * @param {boolean} visible
+     */
+    SET_VISIBLE: 'WorkerSetVisible'
 };
 
 
