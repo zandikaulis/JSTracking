@@ -117,7 +117,6 @@ window.__twilightSettings = {
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
     "sizmek_versatag_teams": ["wrestling"],
     "spade_url": "https://video-edge-6c67c0.sjc02.hls.ttvnw.net/v1/segment/CnbebtTdKP87nG_nvhlFFaHfux_H2NOkd12MfHSn5oYSCPFIqurwyWThEFD9GfvldFlZL9CmjsFATbqzF58X0MVtpPw2Hx5gUofJn37DjixiGhKxVCi0_eaX8yyiVG4s8o1W9ZOUVouMYknplxRMRZ_5duyK3ObFs8MKBGvX7Skukw7bnSqwJmvP-FxQLz4aQSgNPAsAQOyablDzYpX7S_0n7IHnEqtcV8KdZZobDLW0r6uIGdnwj_tqyAny_E_2kKGoBfGu00i79qXdZYReQ8tMpvpD9aqtUngMI090WwZB1jyXYBzqVLSo3chavLMD9VbQX0054dyzNkSck50YgkL08502x7s3xXSDtIg5inv2ga54HPXVf3mcvCXmtjwfhRNUFEOJsOSY_ck6f3B0o7owVgLrLQeFzvyjrTljX7-xRgsF8TySdPUZAhSCPrhobI3m5FrmFXHFqkugXrIMvZmC4rx55_CFqwD4XUQ9ylpZCE1plKYt-wP9zpIQls32AdFPqDhdRbEsZVfnHvHHvjRwM_YRHfbPJhu8V3_tKhR3M7i9s9G1RH1C5lB7YldOWybRkMkzMgKp8xgWa_t0KFf_Xi_e_KvzbVI35N2oopMeDJYz5jMr0fC1Ag1CGgVO-B8QjyegitQzTHCwSJpo2XocRanzMfLsQR9dc8yX03XW6eIXeBARrkIOpj0UhkWA25z2dMS_jg8IrBeerEGRJNcToGKMAAo2DnoqoEDu7G_5m-Du1I1b2zgh.ts",
-    "squad_stream_banner_query_enabled": true,
     "squad_stream_dashboard": "off",
     "squad_stream_feature": "on",
     "squad_stream_survey_url": "https://twitchtv.az1.qualtrics.com/jfe/form/SV_4HZtpVZBKOr6Yv3?PPT={SESSION_ID}",
@@ -1431,14 +1430,14 @@ window.__twilightSettings = {
         },
         "d3dbaf7f-35e8-40b7-8488-df5f6097e50e": {
             "name": "stream_summary_email",
-            "v": 4835,
+            "v": 4837,
             "t": 1,
             "groups": [{
-                "weight": 50,
-                "value": "yes"
+                "weight": 0,
+                "value": "test"
             }, {
-                "weight": 50,
-                "value": "no"
+                "weight": 100,
+                "value": "control"
             }]
         },
         "d4752777-a16a-4128-bcfb-42cbd4a53613": {
