@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [218], {
+    [217], {
         "+GjP": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -1262,9 +1262,6 @@
             }(i || (i = {}))
         },
         "14MF": function(e, t, n) {},
-        154: function(e, t, n) {
-            n("/cy1"), n("gg62"), n("LVaA"), e.exports = n("sNlA")
-        },
         "15fI": function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -2241,6 +2238,9 @@
                 }
             };
             e.exports = n
+        },
+        440: function(e, t, n) {
+            n("/cy1"), n("gg62"), n("LVaA"), e.exports = n("sNlA")
         },
         "487o": function(e, t) {
             var n = {
@@ -8924,7 +8924,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.DiscoGladiator = "DISCO_GLADIATOR", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EmotePickerV2 = "TWILIGHT_EMOTE_PICKER_V2", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODColorsOfTheWind = "VOD_COLORS_OF_THE_WIND", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODKirk = "TWILIGHT_VOD_KIRK", e.VODPike = "TWILIGHT_VOD_PIKE", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.CVPPlayerVersion = "CVP_PLAYER_VERSION", e.CVPStaffVersion = "CVP_STAFF_VERSION", e.CVPPlayerType = "CVP_PLAYER_TYPE"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.DiscoGladiator = "DISCO_GLADIATOR", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EmotePickerV2 = "TWILIGHT_EMOTE_PICKER_V2", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODColorsOfTheWind = "VOD_COLORS_OF_THE_WIND", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODKirk = "TWILIGHT_VOD_KIRK", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.CVPPlayerVersion = "CVP_PLAYER_VERSION", e.CVPStaffVersion = "CVP_STAFF_VERSION", e.CVPPlayerType = "CVP_PLAYER_TYPE"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -9086,9 +9086,6 @@
                 }, i[r.VODKirk] = {
                     id: "423a8012-5ee8-4514-99cc-ca3c8babb97c",
                     default: "control"
-                }, i[r.VODPike] = {
-                    id: "dfbed154-e2f1-41e7-962c-10309e62583a",
-                    default: "control"
                 }, i),
                 o = Object.keys(a),
                 s = o.reduce(function(e, t) {
@@ -9107,79 +9104,75 @@
         DMoW: function(e, t, n) {
             "use strict";
             var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, E, k, _, S, C, w, N, T, I, O, R, D, A, L, x, P, F, M, U, B, V, j, z, H, W, G, q, Y, Q, K, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, Ee, ke, _e, Se, Ce, we, Ne, Te, Ie, Oe, Re, De, Ae, Le, xe, Pe, Fe, Me, Ue, Be, Ve, je, ze, He, We, Ge, qe, Ye, Qe, Ke, Xe, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt, ct, ut;
-            n.d(t, "c", function() {
+            n.d(t, "b", function() {
                     return r
-                }), n.d(t, "A", function() {
+                }), n.d(t, "y", function() {
                     return s
-                }), n.d(t, "w", function() {
+                }), n.d(t, "u", function() {
                     return l
-                }), n.d(t, "g", function() {
-                    return f
-                }), n.d(t, "e", function() {
-                    return y
                 }), n.d(t, "f", function() {
+                    return f
+                }), n.d(t, "d", function() {
+                    return y
+                }), n.d(t, "e", function() {
                     return E
-                }), n.d(t, "j", function() {
+                }), n.d(t, "i", function() {
                     return S
-                }), n.d(t, "J", function() {
+                }), n.d(t, "H", function() {
                     return C
-                }), n.d(t, "C", function() {
+                }), n.d(t, "A", function() {
                     return w
-                }), n.d(t, "o", function() {
+                }), n.d(t, "n", function() {
                     return N
-                }), n.d(t, "B", function() {
+                }), n.d(t, "z", function() {
                     return O
-                }), n.d(t, "b", function() {
-                    return P
-                }), n.d(t, "p", function() {
+                }), n.d(t, "C", function() {
                     return M
                 }), n.d(t, "E", function() {
                     return U
-                }), n.d(t, "G", function() {
+                }), n.d(t, "w", function() {
                     return B
-                }), n.d(t, "y", function() {
-                    return V
-                }), n.d(t, "H", function() {
-                    return j
-                }), n.d(t, "q", function() {
-                    return W
-                }), n.d(t, "n", function() {
-                    return Y
                 }), n.d(t, "F", function() {
-                    return Q
+                    return V
+                }), n.d(t, "o", function() {
+                    return H
+                }), n.d(t, "m", function() {
+                    return q
+                }), n.d(t, "D", function() {
+                    return Y
                 }), n.d(t, "a", function() {
+                    return Q
+                }), n.d(t, "q", function() {
                     return K
                 }), n.d(t, "s", function() {
                     return X
-                }), n.d(t, "u", function() {
-                    return Z
-                }), n.d(t, "z", function() {
-                    return $
-                }), n.d(t, "I", function() {
-                    return fe
-                }), n.d(t, "l", function() {
-                    return Ce
-                }), n.d(t, "k", function() {
-                    return we
-                }), n.d(t, "K", function() {
-                    return Oe
-                }), n.d(t, "m", function() {
-                    return Fe
                 }), n.d(t, "x", function() {
-                    return Me
-                }), n.d(t, "i", function() {
-                    return He
-                }), n.d(t, "h", function() {
-                    return We
-                }), n.d(t, "t", function() {
-                    return Ge
-                }), n.d(t, "D", function() {
-                    return Ye
+                    return J
+                }), n.d(t, "G", function() {
+                    return fe
+                }), n.d(t, "k", function() {
+                    return Ce
+                }), n.d(t, "j", function() {
+                    return we
+                }), n.d(t, "I", function() {
+                    return Oe
+                }), n.d(t, "l", function() {
+                    return Fe
                 }), n.d(t, "v", function() {
-                    return et
-                }), n.d(t, "d", function() {
-                    return lt
+                    return Me
+                }), n.d(t, "h", function() {
+                    return He
+                }), n.d(t, "g", function() {
+                    return We
                 }), n.d(t, "r", function() {
+                    return Ge
+                }), n.d(t, "B", function() {
+                    return Ye
+                }), n.d(t, "t", function() {
+                    return et
+                }), n.d(t, "c", function() {
+                    return lt
+                }), n.d(t, "p", function() {
                     return ct
                 }),
                 function(e) {
@@ -9285,100 +9278,100 @@
                     e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(F || (F = {})),
                 function(e) {
-                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
+                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(M || (M = {})),
                 function(e) {
-                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
+                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(U || (U = {})),
                 function(e) {
-                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
+                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(B || (B = {})),
                 function(e) {
-                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
+                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
                 }(V || (V = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
+                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
                 }(j || (j = {})),
                 function(e) {
-                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(z || (z = {})),
                 function(e) {
-                    e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
+                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(H || (H = {})),
                 function(e) {
-                    e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
+                    e.JPEG = "JPEG", e.PNG = "PNG"
                 }(W || (W = {})),
                 function(e) {
-                    e.JPEG = "JPEG", e.PNG = "PNG"
+                    e.AVATAR = "AVATAR", e.BANNER = "BANNER"
                 }(G || (G = {})),
                 function(e) {
-                    e.AVATAR = "AVATAR", e.BANNER = "BANNER"
+                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
                 }(q || (q = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(Y || (Y = {})),
                 function(e) {
-                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
+                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(Q || (Q = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(K || (K = {})),
                 function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }(X || (X = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
                 }(Z || (Z = {})),
                 function(e) {
-                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }(J || (J = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }($ || ($ = {})),
                 function(e) {
-                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(te || (te = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(re || (re = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(se || (se = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(le || (le = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(de || (de = {})),
                 function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(pe || (pe = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(me || (me = {})),
                 function(e) {
-                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
+                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
                 }(he || (he = {})),
                 function(e) {
                     e.CONTENT = "CONTENT", e.TOP = "TOP"
@@ -18455,181 +18448,177 @@
         },
         MgK0: function(e, t, n) {
             "use strict";
-            n.d(t, "b", function() {
-                return g
-            }), n.d(t, "a", function() {
-                return i
-            }), n.d(t, "k", function() {
-                return y
-            }), n.d(t, "h", function() {
-                return E
-            }), n.d(t, "n", function() {
-                return k
+            n.d(t, "a", function() {
+                return f
             }), n.d(t, "j", function() {
-                return _
-            }), n.d(t, "f", function() {
-                return S
-            }), n.d(t, "e", function() {
-                return C
-            }), n.d(t, "m", function() {
-                return w
-            }), n.d(t, "l", function() {
-                return N
-            }), n.d(t, "i", function() {
-                return T
-            }), n.d(t, "d", function() {
-                return I
+                return b
             }), n.d(t, "g", function() {
-                return O
+                return y
+            }), n.d(t, "m", function() {
+                return E
+            }), n.d(t, "i", function() {
+                return k
+            }), n.d(t, "e", function() {
+                return _
+            }), n.d(t, "d", function() {
+                return S
+            }), n.d(t, "l", function() {
+                return C
+            }), n.d(t, "k", function() {
+                return w
+            }), n.d(t, "h", function() {
+                return N
             }), n.d(t, "c", function() {
-                return R
+                return T
+            }), n.d(t, "f", function() {
+                return I
+            }), n.d(t, "b", function() {
+                return O
             });
-            var i, r = n("mrSG"),
-                a = n("p46w"),
-                o = n("f00E"),
-                s = n("3yfl"),
-                l = "auth-token",
-                c = "login",
-                u = "automation_context",
-                d = "twilight-login-state",
-                p = "passport_trusted_request",
-                m = "api_token",
-                h = "twilight.",
-                f = [d, "persistent", c, m, "_twitch_session_id", "name", "twilight-auth"],
-                g = 2,
-                v = {
-                    domain: Object(s.a)(),
+            var i = n("mrSG"),
+                r = n("p46w"),
+                a = n("f00E"),
+                o = n("3yfl"),
+                s = "auth-token",
+                l = "login",
+                c = "automation_context",
+                u = "twilight-login-state",
+                d = "passport_trusted_request",
+                p = "api_token",
+                m = "twilight.",
+                h = [u, "persistent", l, p, "_twitch_session_id", "name", "twilight-auth"],
+                f = 2,
+                g = {
+                    domain: Object(o.a)(),
                     secure: "https:" === window.location.protocol
                 },
-                b = r.__assign({}, v, {
+                v = i.__assign({}, g, {
                     expires: 183
                 });
 
-            function y(e) {
-                for (var t = e.config, n = 0, i = f; n < i.length; n++) {
-                    var r = i[n];
-                    a.remove(r, b)
+            function b(e) {
+                for (var t = e.config, n = 0, i = h; n < i.length; n++) {
+                    var a = i[n];
+                    r.remove(a, v)
                 }
-                for (var o = 0, s = Object.keys(t.allAuthSettings); o < s.length; o++) {
-                    var c = s[o];
-                    a.remove(t.allAuthSettings[c].cookieName, b)
+                for (var o = 0, l = Object.keys(t.allAuthSettings); o < l.length; o++) {
+                    var c = l[o];
+                    r.remove(t.allAuthSettings[c].cookieName, v)
                 }
-                a.remove(l, b)
+                r.remove(s, v)
             }
 
-            function E(e) {
+            function y(e) {
                 var t = e.config,
                     n = e.logger;
                 return Object.keys(t.allAuthSettings).reduce(function(e, i) {
-                    var r = a.get(t.allAuthSettings[i].cookieName);
-                    if (!r) return e;
+                    var a = r.get(t.allAuthSettings[i].cookieName);
+                    if (!a) return e;
                     try {
-                        var o = JSON.parse(r);
+                        var o = JSON.parse(a);
                         if (!o.authToken || "string" != typeof o.authToken) throw new Error('Missing or invalid "authToken" value stored in user cookie.');
                         e.push(o.authToken)
                     } catch (e) {
                         n.error(e, "Failed to load data from user cookie.", {
-                            data: r
-                        }), a.remove(t.allAuthSettings[i].cookieName)
+                            data: a
+                        }), r.remove(t.allAuthSettings[i].cookieName)
                     }
                     return e
                 }, [])
             }
 
-            function k(e, t) {
+            function E(e, t) {
                 var n = t.config,
                     i = t.logger,
-                    r = {
+                    a = {
                         authToken: e.authToken,
                         displayName: e.displayName,
                         id: e.id,
                         login: e.login,
                         roles: e.roles,
-                        version: g
+                        version: f
                     };
-                i.debug("Saving user cookie"), a.set(n.authSettings.cookieName, JSON.stringify(r), b), D(e.authToken, {
+                i.debug("Saving user cookie"), r.set(n.authSettings.cookieName, JSON.stringify(a), v), R(e.authToken, {
                     config: n,
                     logger: i
                 })
             }
 
-            function _(e) {
+            function k(e) {
                 var t = e.config,
                     n = e.logger,
-                    i = a.get(t.authSettings.cookieName);
+                    i = r.get(t.authSettings.cookieName);
                 if (i) try {
-                    var r = JSON.parse(i);
-                    if (n.debug("Found user cookie.", r), !r.authToken || "string" != typeof r.authToken) throw new Error('Missing or invalid "authToken" value stored in user cookie.');
-                    if (!r.displayName || "string" != typeof r.displayName) throw new Error('Missing or invalid "displayName" value stored in user cookie.');
-                    if (!r.id) throw new Error('Missing "id" value in user cookie.');
-                    if ("number" == typeof r.id) n.debug('Converting numerical user cookie "id" value to string.'), r.id = String(r.id);
-                    else if ("string" != typeof r.id) throw new Error('Invalid "id" value stored in user cookie.');
-                    if (!r.login || "string" != typeof r.login) throw new Error('Missing or invalid "login" value stored in user cookie.');
-                    if (r.version) {
-                        if ("number" != typeof r.version) throw new Error('Invalid "version" value stored in user cookie.')
-                    } else n.debug("Unversioned user cookie, using default."), r.version = 1;
-                    return D(r.authToken, {
+                    var a = JSON.parse(i);
+                    if (n.debug("Found user cookie.", a), !a.authToken || "string" != typeof a.authToken) throw new Error('Missing or invalid "authToken" value stored in user cookie.');
+                    if (!a.displayName || "string" != typeof a.displayName) throw new Error('Missing or invalid "displayName" value stored in user cookie.');
+                    if (!a.id) throw new Error('Missing "id" value in user cookie.');
+                    if ("number" == typeof a.id) n.debug('Converting numerical user cookie "id" value to string.'), a.id = String(a.id);
+                    else if ("string" != typeof a.id) throw new Error('Invalid "id" value stored in user cookie.');
+                    if (!a.login || "string" != typeof a.login) throw new Error('Missing or invalid "login" value stored in user cookie.');
+                    if (a.version) {
+                        if ("number" != typeof a.version) throw new Error('Invalid "version" value stored in user cookie.')
+                    } else n.debug("Unversioned user cookie, using default."), a.version = 1;
+                    return R(a.authToken, {
                         config: t,
                         logger: n
-                    }), n.debug("Successfully loaded user data.", r), r
+                    }), n.debug("Successfully loaded user data.", a), a
                 } catch (e) {
                     n.error(e, "Failed to load data from user cookie.", {
                         data: i
-                    }), a.remove(t.authSettings.cookieName)
+                    }), r.remove(t.authSettings.cookieName)
+                }
+            }
+
+            function _(e) {
+                var t = e.logger;
+                if (Object(o.b)()) {
+                    var n = r.get(p);
+                    return n || (t.info("Legacy CSRF token cookie not found, creating."), n = m + Object(a.b)(), r.set(p, n, v)), n
                 }
             }
 
             function S(e) {
-                var t = e.logger;
-                if (Object(s.b)()) {
-                    var n = a.get(m);
-                    return n || (t.info("Legacy CSRF token cookie not found, creating."), n = h + Object(o.b)(), a.set(m, n, b)), n
-                }
-            }
-
-            function C(e) {
                 var t = e.logger,
-                    n = a.get(d);
+                    n = r.get(u);
                 if (n) try {
                     return JSON.parse(n)
                 } catch (e) {
                     t.withCategory("auth").error(e, "Failed to load login state from cookie.", {
                         state: n
-                    }), a.remove(d)
+                    }), r.remove(u)
                 }
             }
 
-            function w(e) {
-                a.set(d, JSON.stringify(e), v)
+            function C(e) {
+                r.set(u, JSON.stringify(e), g)
+            }
+
+            function w() {
+                r.remove(u, g)
             }
 
             function N() {
-                a.remove(d, v)
+                return r.get(d)
             }
 
             function T() {
-                return a.get(p)
+                return r.get(c)
             }
 
             function I() {
-                return a.get(u)
+                return r.get(l)
             }
 
-            function O() {
-                return a.get(c)
+            function O(e) {
+                if (e.config.authSettings.primary) return r.get(s)
             }
 
-            function R(e) {
-                if (e.config.authSettings.primary) return a.get(l)
-            }
-
-            function D(e, t) {
+            function R(e, t) {
                 var n = t.config,
                     i = t.logger;
-                n.authSettings.primary && (i.info("Updating primary auth token cookie."), a.set(l, e, b))
-            }! function(e) {
-                e.FullPage = "full_page", e.Embed = "embed"
-            }(i || (i = {}))
+                n.authSettings.primary && (i.info("Updating primary auth token cookie."), r.set(s, e, v))
+            }
         },
         Mn7C: function(e, t, n) {
             "use strict";
@@ -20844,7 +20833,7 @@
                     e.ArchiveEnablingUpsell = "archive_enabling_upsell", e.AnnouncementBanner = "announcement_banner", e.ChannelMetadata = "channel_metadata", e.ChatCard = "chat_card", e.ClipCuratorName = "curator_name", e.ClipsCuratorCarousel = "clips_curator_carousel", e.CollectionCard = "collection_card", e.CollectionCarousel = "collection_carousel", e.CollectionCreator = "collection_creator", e.CollectionItemCard = "collection_item_card", e.Community = "community", e.EventLive = "event_suggestion_live", e.EventPast = "event_suggestion_past", e.EventUpcoming = "event_suggestion_upcoming", e.ExtensionCard = "extension_card", e.ExtensionCategoryPreview = "extension_category_preview", e.ExtensionConfigureButton = "extension_configure_button", e.ExtensionDetails = "extension_details", e.ExtensionNavTabLink = "extension_nav_tab_link", e.ExtensionPanel = "extension_panel", e.ExtensionPermissionsCard = "extension_permissions_card", e.ExtensionSearchBar = "extension_search_bar", e.FollowedChannels = "followed_channels", e.Following = "directory_following", e.Game = "game", e.GameBoxart = "game_boxart", e.GameMetadata = "game_metadata", e.GameName = "game_name", e.Games = "directory_games", e.HeaderGameName = "header_game_name", e.HighlighterSuccess = "highlight_creation_success", e.Host = "host_channel", e.InstalledExtensionCard = "installed_extension_card", e.LatestCollection = "latest_collection", e.Live = "live_channel", e.LiveHost = "live_host", e.LocalLiveChannel = "local_live_channel", e.LocalPopularChannel = "local_popular_channel", e.Logo = "twitch_logo", e.PayoutsHistoryBack = "payouts_history_back", e.Popular = "popular_games", e.PopularOverallVideos = "popular_overall_videos", e.PopularVideos = "popular_videos", e.Presence = "friend_presence", e.PreviewCardGameBalloonGame = "preview_card_game_balloon_game", e.PreviewCardGameName = "preview_card_game_name", e.RecentVideos = "recent_videos", e.RecommendedChannels = "recommended_channels", e.RecommendedVideos = "recommended_videos", e.ReferralsBack = "referrals_back", e.ReferralsDetails = "referrals_details", e.ResumeWatchingVideos = "resume_watching_videos", e.SelfChannel = "self_channel", e.SubscribedChannels = "subscribed_channels", e.SuggestedVideos = "suggested_videos", e.Tag = "tag", e.TextLink = "text_link", e.TopClips = "topclips", e.TopClipsDetails = "topclips_details", e.TopStatsChart = "topstats_chart", e.TopStreams = "topstreams", e.User = "user", e.UserThumbnail = "user_thumbnail", e.Video = "video", e.VideoQueueCollection = "video_queue_collection", e.VideoShelf = "video_shelf", e.VideoThumbnail = "video_thumbnail", e.VideoTitle = "video_title"
                 }(a || (a = {})),
                 function(e) {
-                    e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseDirectoryTags = "twitch_browse_directory_tags", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.ClipsWatchPage = "clips_watch_page", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.DashboardLive = "dashboard_live", e.EventDetails = "event_details", e.ExtensionCategory = "extension_category", e.ExtensionConfiguration = "extension_configuration", e.ExtensionDashboardTopNav = "extension_dashboard_top_nav", e.ExtensionDiscovery = "extension_discovery", e.ExtensionInstalledModal = "extension_modal_installed", e.ExtensionManagement = "extension_management", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.ExtensionPage = "extension_page", e.ExtensionPermissions = "extension_permissions", e.ExtensionSearch = "extension_search", e.ExtensionsWhitelisted = "extensions_whitelisted", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.Game = "twitch_game_directory", e.GameDirectoryTags = "twitch_game_directory_tags", e.GameVideos = "twitch_video_game_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopClips = "top_clips", e.TopNav = "twitch_topnav", e.TwitchHome = "twitch_home", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoManager = "video_manager", e.VideoWatchPage = "vod", e.Whispers = "conversations"
+                    e.AnonFrontPage = "anon_home", e.Browse = "twitch_browse_directory", e.BrowseForYou = "twitch_browse_for_you", e.Channel = "twitch_channel", e.ChannelAnalytics = "channel_analytics", e.ChannelCollections = "channel_collections", e.ChannelVideos = "channel_videos", e.Chat = "twitch_chat", e.ChatNotification = "chat_bar_notification", e.ClipsWatchPage = "clips_watch_page", e.Community = "twitch_community_directory", e.DashboardLeftNav = "dashboard_left_nav", e.DashboardLive = "dashboard_live", e.EventDetails = "event_details", e.ExtensionCategory = "extension_category", e.ExtensionConfiguration = "extension_configuration", e.ExtensionDashboardTopNav = "extension_dashboard_top_nav", e.ExtensionDiscovery = "extension_discovery", e.ExtensionInstalledModal = "extension_modal_installed", e.ExtensionManagement = "extension_management", e.ExtensionManagerCarousel = "extension_mgr_carousel", e.ExtensionPage = "extension_page", e.ExtensionPermissions = "extension_permissions", e.ExtensionSearch = "extension_search", e.ExtensionsWhitelisted = "extensions_whitelisted", e.FinishWatching = "finish_watching", e.Following = "following_directory", e.Game = "twitch_game_directory", e.GameVideos = "twitch_video_game_directory", e.NavSearch = "header_search", e.NotificationCenter = "notification_center", e.NotificationToast = "notification_toast", e.OnboardingChannelSurfing = "channel_surfing", e.SideNav = "twitch_socialcolumn", e.StreamSummary = "stream_summary", e.TopClips = "top_clips", e.TopNav = "twitch_topnav", e.TwitchHome = "twitch_home", e.VideoEmbed = "vod_embed", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerCollectionManager = "video_manager_collection_manager", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoNotFoundPage = "vod_not_found", e.VideoManager = "video_manager", e.VideoWatchPage = "vod", e.Whispers = "conversations"
                 }(o || (o = {})),
                 function(e) {
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Overview = "overview", e.Videos = "videos"
@@ -22174,107 +22163,86 @@
         SpjR: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return h
+                return p
             });
-            var i = n("mrSG"),
-                r = n("cr+I"),
-                a = n("/7QA"),
-                o = n("zB42"),
-                s = n("kYGc"),
-                l = n("ctvI"),
-                c = n("y5D0"),
-                u = n("MgK0"),
-                d = n("dqQ1"),
-                p = n("kRBY"),
-                m = n("3yfl");
+            var i = n("cr+I"),
+                r = n("/7QA"),
+                a = n("zB42"),
+                o = n("kYGc"),
+                s = n("ctvI"),
+                l = n("y5D0"),
+                c = n("MgK0"),
+                u = n("dqQ1"),
+                d = n("3yfl");
 
-            function h() {
-                var e = a.o.logger.withCategory("auth"),
-                    t = Object(u.f)({
+            function p() {
+                var e = r.o.logger.withCategory("auth"),
+                    t = Object(c.e)({
                         logger: e
                     });
                 if ("/passport-callback" !== window.location.pathname) {
-                    if (!t && Object(m.b)()) return e.debug("No legacy CSRF token found."), void a.o.store.dispatch(Object(c.a)());
-                    var n = Object(u.g)(),
-                        h = Object(u.j)({
-                            config: a.a,
+                    if (!t && Object(d.b)()) return e.debug("No legacy CSRF token found."), void r.o.store.dispatch(Object(l.a)());
+                    var n = Object(c.f)(),
+                        p = Object(c.i)({
+                            config: r.a,
                             logger: e
                         });
-                    if (!h || !h.login || n && h.login !== n) {
+                    if (!p || !p.login || n && p.login !== n) {
                         if (n) {
                             e.debug("Redirecting to passport for implicit flow.");
-                            var f = Object(l.a)({
-                                initialTab: s.a.Login,
+                            var m = Object(s.a)({
+                                initialTab: o.a.Login,
                                 forceVerify: !1
                             });
-                            window.location.replace(f)
+                            window.location.replace(m)
                         } else {
-                            var g = Object(u.c)({
-                                config: a.a
+                            var h = Object(c.b)({
+                                config: r.a
                             });
-                            if (g) return e.debug("Authenticating using auth-token cookie."), void a.o.store.dispatch(Object(c.b)(g, t))
+                            if (h) return e.debug("Authenticating using auth-token cookie."), void r.o.store.dispatch(Object(l.b)(h, t))
                         }
-                        e.debug("No user data found."), a.o.store.dispatch(Object(c.a)())
-                    } else h.version === u.b ? (e.debug("Using existing user cookie."), a.o.store.dispatch(Object(c.c)({
-                        authToken: h.authToken,
-                        displayName: h.displayName,
-                        id: h.id,
+                        e.debug("No user data found."), r.o.store.dispatch(Object(l.a)())
+                    } else p.version === c.a ? (e.debug("Using existing user cookie."), r.o.store.dispatch(Object(l.c)({
+                        authToken: p.authToken,
+                        displayName: p.displayName,
+                        id: p.id,
                         legacyCSRFToken: t,
-                        login: h.login,
-                        roles: h.roles
-                    }))) : (e.debug("User cookie version mismatch. Refreshing with auth token."), a.o.store.dispatch(Object(c.b)(h.authToken, t)))
+                        login: p.login,
+                        roles: p.roles
+                    }))) : (e.debug("User cookie version mismatch. Refreshing with auth token."), r.o.store.dispatch(Object(l.b)(p.authToken, t)))
                 } else ! function(e, t) {
                     t.debug("Handling passport callback.");
                     var n = function(e, t) {
-                        var n = r.parse(e);
+                        var n = i.parse(e);
                         if (!n) return;
                         try {
-                            var a = JSON.parse(n.state);
-                            return i.__assign({}, a, {
+                            var r = JSON.parse(n.state);
+                            return {
+                                next: r.next,
+                                nonce: r.nonce,
                                 token: n.access_token
-                            })
+                            }
                         } catch (e) {
                             t.error(e, "Failed to parse incoming state.")
                         }
                     }(window.location.hash, t);
-
-                    function s(e, i, r) {
-                        if (n && n.origin === u.a.Embed && window.opener) {
-                            var o = {
-                                msgSrc: "popout-login",
-                                success: !1,
-                                reason: e
-                            };
-                            window.opener.postMessage(o, "*")
-                        } else i || r ? t.error(r || new Error(e), e) : t.debug(e), a.o.store.dispatch(Object(c.a)()), a.o.history.replace("/")
-                    }
-                    if (!n) return Object(d.a)(null, {
-                        config: a.a,
+                    if (!n) return t.debug("Got invalid data from passport, removing existing auth data and reloading."), Object(u.a)(null, {
+                        config: r.a,
                         logger: t
-                    }), void s("Got invalid data from passport, removing existing auth data and reloading.", !1);
-                    var l = document.createElement("a");
-                    if (l.href = n.next, l.hostname !== window.location.hostname) return void(a.a.buildType !== o.a.Production || "twitch.tv" === l.hostname || l.hostname.endsWith(".twitch.tv") ? window.location.assign(l.protocol + "//" + l.host + window.location.pathname + window.location.search + window.location.hash) : s("Attempted to redirect away from site.", !0));
-                    var m = Object(u.e)({
+                    }), r.o.store.dispatch(Object(l.a)()), void r.o.history.replace("/");
+                    var o = document.createElement("a");
+                    if (o.href = n.next, o.hostname !== window.location.hostname) return void(r.a.buildType !== a.a.Production || "twitch.tv" === o.hostname || o.hostname.endsWith(".twitch.tv") ? window.location.assign(o.protocol + "//" + o.host + window.location.pathname + window.location.search + window.location.hash) : (t.error(new Error("Attempted to redirect away from site."), "Attempted to redirect away from site."), r.o.store.dispatch(Object(l.a)()), r.o.history.replace("/")));
+                    var s = Object(c.d)({
                         logger: t
                     });
-                    if (!m) return void s("No passport state cookie found, aborting.", !1);
-                    Object(u.l)();
+                    if (!s) return t.debug("No passport state cookie found, aborting."), r.o.store.dispatch(Object(l.a)()), void r.o.history.replace("/");
+                    Object(c.k)();
                     try {
-                        if (m.nonce !== n.nonce) return void s("Login nonce mismatch.", !0)
+                        if (s.nonce !== n.nonce) return t.error(new Error("Login nonce mismatch."), "Login nonce mismatch."), r.o.store.dispatch(Object(l.a)()), void r.o.history.replace("/")
                     } catch (e) {
-                        return void s("Failed to parse session storage state.", !0, e)
+                        return t.error(e, "Failed to parse session storage state."), r.o.store.dispatch(Object(l.a)()), void r.o.history.replace("/")
                     }
-                    a.o.store.dispatch(Object(c.b)(n.token, e)), n.origin === u.a.Embed && window.opener ? a.o.store.getReduxStore().subscribe(function() {
-                        var e, t = a.o.store.getState();
-                        Object(p.h)(t) && (e = t.session.user ? {
-                            msgSrc: "popout-login",
-                            success: !0
-                        } : {
-                            msgSrc: "popout-login",
-                            success: !1,
-                            reason: "Initial GQL request rejected user."
-                        }, window.opener.postMessage(e, "*"))
-                    }) : a.o.history.replace(l.pathname + l.search)
+                    r.o.store.dispatch(Object(l.b)(n.token, e)), r.o.history.replace(o.pathname + o.search)
                 }(t, e)
             }
         },
@@ -22786,7 +22754,7 @@
                 e.None = "tw-resize-none", e.X = "tw-resize-x", e.Y = "tw-resize-y"
             }(N || (N = {})),
             function(e) {
-                e.Left = "align-left", e.Center = "align-center", e.Right = "align-right", e.Justify = "align-justify"
+                e.Left = "align-left", e.Center = "align-center", e.Right = "align-right"
             }(T || (T = {})),
             function(e) {
                 e.Top = "tw-align-top", e.Middle = "tw-align-middle", e.Baseline = "tw-align-baseline", e.Bottom = "tw-align-bottom", e.TextTop = "tw-align-text-top", e.TextBottom = "tw-align-text-bottom"
@@ -26694,36 +26662,36 @@
             n("gXgt");
             var on = function(e) {
                 var t = {};
-                return e.alternateRows && (t["tw-table--alternate-rows"] = !0), u.createElement("div", c.__assign({
+                return e.alternateRows && (t["tw-table--alternate-rows"] = !0), u.createElement("div", {
                     className: p("tw-table", t)
-                }, m(e)), e.children)
+                }, e.children)
             };
             on.displayName = "Table";
             n("RPqD");
             var sn = function(e) {
-                return u.createElement("div", c.__assign({
+                return u.createElement("div", {
                     className: p("tw-table-body", {})
-                }, m(e)), e.children)
+                }, e.children)
             };
             sn.displayName = "TableBody";
             n("yXTL");
             var ln = function(e) {
-                return u.createElement(x, c.__assign({
+                return u.createElement(x, {
                     padding: 1,
                     className: p({
                         "tw-table-cell": !0
                     }),
                     textAlign: e.textAlign,
                     verticalAlign: e.verticalAlign
-                }, m(e)), e.children)
+                }, e.children)
             };
             ln.displayName = "TableCell";
             n("DiOp");
             var cn = function(e) {
-                return u.createElement(be, c.__assign({
+                return u.createElement(be, {
                     background: me.Alt,
                     className: p("tw-table-header", {})
-                }, m(e)), e.children)
+                }, e.children)
             };
             cn.displayName = "TableHeader";
             var un;
@@ -26774,18 +26742,18 @@
                 }, u.createElement(le, {
                     bold: !0
                 }, e.label));
-                return u.createElement(x, c.__assign({
+                return u.createElement(x, {
                     verticalAlign: e.verticalAlign,
                     textAlign: e.textAlign,
                     className: p("tw-table-heading", {})
-                }, m(e)), t)
+                }, t)
             };
             dn.displayName = "TableHeading";
             n("a8bM");
             var pn = function(e) {
-                return u.createElement("div", c.__assign({
+                return u.createElement("div", {
                     className: p("tw-table-row", {})
-                }, m(e)), e.children)
+                }, e.children)
             };
             pn.displayName = "TableRow";
             var mn, hn;
@@ -27266,13 +27234,7 @@
                 return Ye
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {
                 return ht
-            }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return pt
-            }), n.d(t, !1, function() {
-                return ut
-            }), n.d(t, !1, function() {
-                return mt
-            }), n.d(t, "Qa", function() {
+            }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "Qa", function() {
                 return at
             }), n.d(t, "N", function() {
                 return ct
@@ -29454,85 +29416,17 @@
                 a = n("ZS2+"),
                 o = n("cZKs"),
                 s = n("kz7j"),
-                l = n("/7QA"),
-                c = n("kYGc"),
-                u = n("ctvI"),
-                d = n("edgk"),
-                p = n("MgK0"),
-                m = n("Ue10"),
-                h = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            inProgress: !1,
-                            error: !1
-                        }, t.beginPopoutLogin = function() {
-                            var e = Object(u.a)({
-                                initialTab: c.a.Login,
-                                origin: p.a.Embed
-                            });
-                            t.popup = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes"), t.popup ? (t.setState({
-                                inProgress: !0
-                            }), Object(d.a)(t.popup, t.handlePopoutClose)) : t.setState({
-                                error: !0,
-                                inProgress: !1
-                            })
-                        }, t.handlePopoutClose = function(e) {
-                            e ? t.onSuccess() : t.setState({
-                                inProgress: !1,
-                                error: !0
-                            })
-                        }, t.handlePopoutMessage = function(e) {
-                            if (e.origin === window.location.origin) {
-                                var n = e.data;
-                                if (n && "popout-login" === n.msgSrc) return n.success ? (t.popup && (t.popup.close(), t.popup = void 0), void t.onSuccess()) : void t.setState({
-                                    inProgress: !1,
-                                    error: !0
-                                })
-                            }
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        window.addEventListener("message", this.handlePopoutMessage)
-                    }, t.prototype.componentWillUnmount = function() {
-                        window.removeEventListener("message", this.handlePopoutMessage), this.popup && this.popup.close()
-                    }, t.prototype.render = function() {
-                        return this.state.inProgress ? r.createElement(m.xb, {
-                            background: m.r.Base,
-                            padding: 1
-                        }, r.createElement(m.Xa, {
-                            delay: 0,
-                            fillContent: !0,
-                            size: m.vb.Large
-                        }), r.createElement(m.V, null, Object(l.d)("Waiting for log in from separate window...", "PopoutLogin"))) : (e = this.state.error ? r.createElement(m.V, {
-                            color: m.O.Error
-                        }, Object(l.d)("Please disable popup blockers and try again.", "PopoutLogin")) : r.createElement(m.V, null, Object(l.d)("Log in will open in a separate window.", "PopoutLogin")), r.createElement(m.xb, {
-                            background: m.r.Base,
-                            padding: 1
-                        }, e, r.createElement(m.Va, {
-                            textAlign: m.Jb.Center,
-                            padding: {
-                                top: 1
-                            }
-                        }, r.createElement(m.z, {
-                            onClick: this.beginPopoutLogin
-                        }, Object(l.d)("Log in", "PopoutLogin")))));
-                        var e
-                    }, t.prototype.onSuccess = function() {
-                        window.location.href = window.location.href
-                    }, t
-                }(r.Component),
-                f = n("ZqP/");
-            var g = n("tKDy"),
-                v = n("GnwI"),
-                b = a.a.wrap(function() {
+                l = n("ZqP/"),
+                c = n("tKDy"),
+                u = n("GnwI"),
+                d = n("Ue10"),
+                p = a.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(29)]).then(n.bind(null, "4uwt"))
                 }, "AuthForm"),
-                y = function(e) {
+                m = function(e) {
                     function t(t) {
-                        var n = e.call(this, t) || this;
-                        if (n.usePopout = window.self !== window.top, n.usePopout) return n;
-                        var i = n.props.initialStep === f.a.StartLogin ? s.b.PassportLoginLoaded : s.b.PassportSignUpLoaded;
+                        var n = e.call(this, t) || this,
+                            i = n.props.initialStep === l.a.StartLogin ? s.b.PassportLoginLoaded : s.b.PassportSignUpLoaded;
                         return n.loadedLatencyEvent = n.props.latencyTracking.registerCustomEvent({
                             benchmark: 1e3,
                             group: s.a.Passport,
@@ -29542,36 +29436,34 @@
                         }), n
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(g.h)({
+                        Object(c.g)({
                             step: this.props.initialStep,
-                            source: this.props.action,
-                            style: this.usePopout ? g.b.Popout : g.b.Native
+                            source: this.props.action
                         })
                     }, t.prototype.render = function() {
-                        var e;
-                        return e = this.usePopout ? r.createElement(h, null) : r.createElement(b, {
+                        return r.createElement(d.Va, {
+                            className: "auth-modal",
+                            position: d.db.Relative,
+                            "data-a-target": "passport-modal"
+                        }, r.createElement(p, {
                             action: this.props.action,
                             initialStep: this.props.initialStep,
                             loadedLatencyEvent: this.loadedLatencyEvent
-                        }), r.createElement(m.Va, {
-                            className: "auth-modal",
-                            position: m.db.Relative,
-                            "data-a-target": "passport-modal"
-                        }, e, r.createElement(o.a, {
+                        }), r.createElement(o.a, {
                             closeOnBackdropClick: !0,
                             onClose: this.props.onClose
                         }))
                     }, t
                 }(r.Component),
-                E = Object(v.c)("AuthModal", {
+                h = Object(u.c)("AuthModal", {
                     autoReportInteractive: !0
-                })(y);
+                })(m);
             n.d(t, !1, function() {
-                return y
+                return m
             }), n.d(t, "b", function() {
-                return E
+                return h
             }), n.d(t, "a", function() {
-                return f.a
+                return l.a
             })
         },
         "ZS2+": function(e, t, n) {
@@ -30313,23 +30205,20 @@
             function s(e) {
                 var t = e.initialTab,
                     n = e.forceVerify,
-                    s = e.origin;
-                s || (s = o.a.FullPage);
-                var l = {
-                        origin: s || o.a.FullPage,
-                        next: s === o.a.Embed ? "" : window.location.href,
+                    s = {
+                        next: window.location.href,
                         nonce: Object(r.b)()
                     },
-                    c = {
+                    l = {
                         client_id: i.a.authSettings.clientID,
                         lang: i.o.intl.getLanguageCode() || "en",
                         login_type: t,
                         redirect_uri: i.a.authSettings.redirectURI,
                         response_type: "token",
                         scope: i.a.authSettings.scopes.join(" "),
-                        state: JSON.stringify(l)
+                        state: JSON.stringify(s)
                     };
-                return n && (c.force_verify = "true"), Object(o.m)(l), Object(a.e)(i.a.passportBaseURL + "/oauth2/authorize", c)
+                return n && (l.force_verify = "true"), Object(o.l)(s), Object(a.e)(i.a.passportBaseURL + "/oauth2/authorize", l)
             }
         },
         cx1G: function(e, t) {
@@ -31417,7 +31306,7 @@
                     return i.__generator(this, function(l) {
                         switch (l.label) {
                             case 0:
-                                t = new Set(Object(r.h)({
+                                t = new Set(Object(r.g)({
                                     config: n,
                                     logger: o
                                 })), e && t.add(e), l.label = 1;
@@ -31470,7 +31359,7 @@
                             case 3:
                                 return s = l.sent(), o.error(s, "Failed to revoke one or more OAuth tokens."), [3, 4];
                             case 4:
-                                return Object(r.k)({
+                                return Object(r.j)({
                                     config: n
                                 }), Object(a.a)(), [2]
                         }
@@ -32878,19 +32767,16 @@
                 try {
                     var t = e.id,
                         n = e.fragment,
-                        i = e.fragmentName,
-                        o = e.mutator,
-                        s = a.o.apollo.client.readFragment({
+                        i = e.mutator,
+                        o = a.o.apollo.client.readFragment({
                             id: t,
-                            fragment: n,
-                            fragmentName: i
+                            fragment: n
                         }),
-                        l = r(s, o);
+                        s = r(o, i);
                     a.o.apollo.client.writeFragment({
                         fragment: n,
-                        fragmentName: i,
                         id: t,
-                        data: l
+                        data: s
                     })
                 } catch (e) {
                     a.j.warn("Failed writing updated query to Apollo", e)
@@ -38063,7 +37949,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseFilter = "browse_filter", e.BrowseForYou = "browse_for_you", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CampaignTabSwitch = "campaign_tab_switch", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatInputRestrictedAction = "used_chatbox_interaction", e.ChatInputRestrictedImpression = "viewed_chatbox_interaction", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.ClipsUpsellClick = "clips_upsell_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DashboardSettingsInteraction = "dashboard_settings_interaction", e.DevButtonClick = "devsite_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CollaborationWidgetImpression = "collaboration_widget_impression", e.CollaborationWidgetInteraction = "collaboration_widget_interaction", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EmotePickerClickthrough = "emote_picker_clickthrough", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HighlighterInteraction = "highlighter_interaction", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LanguageFilterChange = "language_filter_change", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardWidgetView = "live_dashboard_widget_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeBlueBarInteraction = "prime_blue_bar_interaction", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchBegin = "search_session_begin", e.SearchReset = "search_session_reset", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.SquadStreamBannerAction = "squad_stream_banner_action", e.SquadStreamPresentation = "squad_stream_presentation", e.SquadStreamViewerAction = "squad_stream_viewer_action", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.ViewedEmotePicker = "viewed_emote_picker", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoManagerInteraction = "video_manager_interaction", e.VideoManagerSectionLoad = "video_manager_section_load", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperStrangerWarningImpression = "whisper_stranger_prompt", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseFilter = "browse_filter", e.BrowseForYou = "browse_for_you", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CampaignTabSwitch = "campaign_tab_switch", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatInputRestrictedAction = "used_chatbox_interaction", e.ChatInputRestrictedImpression = "viewed_chatbox_interaction", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.ClipsUpsellClick = "clips_upsell_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DashboardSettingsInteraction = "dashboard_settings_interaction", e.DevButtonClick = "devsite_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EmotePickerClickthrough = "emote_picker_clickthrough", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HighlighterInteraction = "highlighter_interaction", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LanguageFilterChange = "language_filter_change", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardWidgetView = "live_dashboard_widget_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeBlueBarInteraction = "prime_blue_bar_interaction", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchBegin = "search_session_begin", e.SearchReset = "search_session_reset", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.SquadStreamBannerAction = "squad_stream_banner_action", e.SquadStreamPresentation = "squad_stream_presentation", e.SquadStreamViewerAction = "squad_stream_viewer_action", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.ViewedEmotePicker = "viewed_emote_picker", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoManagerInteraction = "video_manager_interaction", e.VideoManagerSectionLoad = "video_manager_section_load", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperStrangerWarningImpression = "whisper_stranger_prompt", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -42183,140 +42069,137 @@
         },
         tKDy: function(e, t, n) {
             "use strict";
-            n.d(t, "d", function() {
+            n.d(t, "c", function() {
                 return i
-            }), n.d(t, "c", function() {
+            }), n.d(t, "b", function() {
                 return r
             }), n.d(t, "a", function() {
                 return a
-            }), n.d(t, "b", function() {
-                return o
-            }), n.d(t, "e", function() {
+            }), n.d(t, "d", function() {
+                return u
+            }), n.d(t, "f", function() {
                 return d
             }), n.d(t, "g", function() {
                 return p
-            }), n.d(t, "h", function() {
+            }), n.d(t, "e", function() {
                 return m
-            }), n.d(t, "f", function() {
+            }), n.d(t, "h", function() {
                 return h
             }), n.d(t, "i", function() {
                 return f
             }), n.d(t, "j", function() {
                 return g
-            }), n.d(t, "k", function() {
-                return v
             });
-            var i, r, a, o, s = n("mrSG"),
-                l = n("/7QA"),
-                c = n("2xye"),
-                u = n("ZIMp");
+            var i, r, a, o = n("mrSG"),
+                s = n("/7QA"),
+                l = n("2xye"),
+                c = n("ZIMp");
 
-            function d(e) {
+            function u(e) {
                 switch (e) {
-                    case u.a.StartLogin:
-                    case u.a.FacebookLogin:
+                    case c.a.StartLogin:
+                    case c.a.FacebookLogin:
                         return r.Login;
-                    case u.a.LoginCaptcha:
-                    case u.a.FacebookConnectCaptcha:
+                    case c.a.LoginCaptcha:
+                    case c.a.FacebookConnectCaptcha:
                         return r.Captcha;
-                    case u.a.LoginTwoFactor:
-                    case u.a.FacebookLoginTwoFactor:
-                    case u.a.FacebookConnectTwoFactor:
+                    case c.a.LoginTwoFactor:
+                    case c.a.FacebookLoginTwoFactor:
+                    case c.a.FacebookConnectTwoFactor:
                         return r.TwoFactor;
-                    case u.a.StartSignup:
+                    case c.a.StartSignup:
                         return r.Signup;
-                    case u.a.FacebookSignup:
+                    case c.a.FacebookSignup:
                         return r.FacebookSignup;
-                    case u.a.FacebookConnect:
+                    case c.a.FacebookConnect:
                         return r.FacebookConnect;
                     default:
                         return
                 }
             }
 
-            function p(e) {
-                l.n.track(function(e) {
+            function d(e) {
+                s.n.track(function(e) {
                     switch (e) {
                         case r.Login:
                         case r.Captcha:
                         case r.TwoFactor:
                         case r.FacebookConnect:
-                            return c.SpadeEventType.LoginFormInteraction;
+                            return l.SpadeEventType.LoginFormInteraction;
                         case r.FacebookSignup:
                         case r.Signup:
-                            return c.SpadeEventType.SignupFormInteraction;
+                            return l.SpadeEventType.SignupFormInteraction;
                         default:
                             return
                     }
                 }(e.screen), e)
             }
 
-            function m(e) {
-                var t = e.step === u.a.StartLogin ? c.SpadeEventType.LoginShow : c.SpadeEventType.SignupShow;
-                l.n.track(t, s.__assign({}, b(), {
-                    source: e.source,
-                    style: e.style
+            function p(e) {
+                var t = e.step === c.a.StartLogin ? l.SpadeEventType.LoginShow : l.SpadeEventType.SignupShow;
+                s.n.track(t, o.__assign({}, v(), {
+                    source: e.source
                 }))
             }
 
-            function h(e) {
+            function m(e) {
                 var t;
                 switch (e) {
                     case r.Login:
-                        t = c.SpadeEventType.LoginFormLoad;
+                        t = l.SpadeEventType.LoginFormLoad;
                         break;
                     case r.Signup:
-                        t = c.SpadeEventType.SignupFormLoad;
+                        t = l.SpadeEventType.SignupFormLoad;
                         break;
                     case r.Captcha:
-                        t = c.SpadeEventType.CaptchaFormLoad;
+                        t = l.SpadeEventType.CaptchaFormLoad;
                         break;
                     case r.TwoFactor:
-                        t = c.SpadeEventType.TwoFactorFormLoad;
+                        t = l.SpadeEventType.TwoFactorFormLoad;
                         break;
                     default:
                         return
                 }
-                l.n.track(t, b())
+                s.n.track(t, v())
             }
 
-            function f(e) {
-                l.n.track(function(e) {
+            function h(e) {
+                s.n.track(function(e) {
                     switch (e) {
-                        case u.a.StartLogin:
-                        case u.a.LoginCaptcha:
-                        case u.a.LoginTwoFactor:
-                            return c.SpadeEventType.LoginStep;
-                        case u.a.FacebookLogin:
-                        case u.a.FacebookLoginTwoFactor:
-                            return c.SpadeEventType.FacebookLogin;
-                        case u.a.FacebookConnect:
-                        case u.a.FacebookConnectCaptcha:
-                        case u.a.FacebookConnectTwoFactor:
-                            return c.SpadeEventType.FacebookConnect;
-                        case u.a.StartSignup:
-                            return c.SpadeEventType.SignupStep;
-                        case u.a.FacebookSignup:
-                            return c.SpadeEventType.FacebookSignup;
+                        case c.a.StartLogin:
+                        case c.a.LoginCaptcha:
+                        case c.a.LoginTwoFactor:
+                            return l.SpadeEventType.LoginStep;
+                        case c.a.FacebookLogin:
+                        case c.a.FacebookLoginTwoFactor:
+                            return l.SpadeEventType.FacebookLogin;
+                        case c.a.FacebookConnect:
+                        case c.a.FacebookConnectCaptcha:
+                        case c.a.FacebookConnectTwoFactor:
+                            return l.SpadeEventType.FacebookConnect;
+                        case c.a.StartSignup:
+                            return l.SpadeEventType.SignupStep;
+                        case c.a.FacebookSignup:
+                            return l.SpadeEventType.FacebookSignup;
                         default:
                             return
                     }
                 }(e.step), {
                     error_code: e.errorCode,
-                    screen: d(e.step)
+                    screen: u(e.step)
                 })
             }
 
+            function f() {
+                s.n.track(l.SpadeEventType.LoginSuccess, v())
+            }
+
             function g() {
-                l.n.track(c.SpadeEventType.LoginSuccess, b())
+                s.n.track(l.SpadeEventType.SignupSuccess, v())
             }
 
             function v() {
-                l.n.track(c.SpadeEventType.SignupSuccess, b())
-            }
-
-            function b() {
-                var e = l.n.getLastPageview();
+                var e = s.n.getLastPageview();
                 return e ? {
                     medium: e.medium,
                     content: e.content,
@@ -42332,10 +42215,7 @@
             }(r || (r = {})),
             function(e) {
                 e.Blur = "blur", e.Click = "click", e.Complete = "complete", e.Enter = "enter", e.Focus = "focus"
-            }(a || (a = {})),
-            function(e) {
-                e.Native = "native", e.Popout = "popout"
-            }(o || (o = {}))
+            }(a || (a = {}))
         },
         tTVk: function(e, t, n) {},
         tUtL: function(e, t, n) {},
@@ -43022,15 +42902,15 @@
             function B(e) {
                 switch (e) {
                     case i.All:
-                        return p.k.ALL_TIME;
+                        return p.j.ALL_TIME;
                     case i.Day:
-                        return p.k.LAST_DAY;
+                        return p.j.LAST_DAY;
                     case i.Week:
-                        return p.k.LAST_WEEK;
+                        return p.j.LAST_WEEK;
                     case i.Month:
-                        return p.k.LAST_MONTH;
+                        return p.j.LAST_MONTH;
                     case i.Trending:
-                        return p.k.TRENDING;
+                        return p.j.TRENDING;
                     default:
                         return e
                 }
@@ -43986,7 +43866,7 @@
                                         mode: "no-cors"
                                     })]);
                                 case 2:
-                                    i.sent(), u = Object(s.f)({
+                                    i.sent(), u = Object(s.e)({
                                         logger: t
                                     }), i.label = 3;
                                 case 3:
@@ -44048,7 +43928,7 @@
                                                     case 1:
                                                         return (a = i.sent()).data.currentUser ? (l = n().session.user) ? (c = a.data.currentUser.displayName, u = a.data.currentUser.login, d = !!a.data.currentUser.roles && !!a.data.currentUser.roles.isStaff, c !== l.displayName || u !== l.login || l.roles && d !== l.roles.isStaff ? (l.login = u, l.displayName = c, l.roles ? l.roles.isStaff = d : l.roles = {
                                                             isStaff: d
-                                                        }, e.debug("User data changed, updating."), t(Object(o.e)(l))) : e.debug("User data not changed."), Object(s.n)(l, {
+                                                        }, e.debug("User data changed, updating."), t(Object(o.e)(l))) : e.debug("User data not changed."), Object(s.m)(l, {
                                                             config: r.a,
                                                             logger: e
                                                         }), [2]) : (e.error(new Error("Refresh called with no user in session."), "Refresh called with no user in session."), [2]) : (e.error(new Error("Failed to get user data from GraphQL, but there was no client error."), "Failed to get user data from GraphQL, but there was no client error."), [2])
@@ -44090,7 +43970,7 @@
                                             roles: {
                                                 isStaff: !!p.data.currentUser.roles && !!p.data.currentUser.roles.isStaff
                                             }
-                                        }, n && Object(s.n)(h, {
+                                        }, n && Object(s.m)(h, {
                                             config: r.a,
                                             logger: l
                                         }), c(Object(o.e)(h)), f = Object(d.b)(Object(u.a)() || ""), g = p.data.currentUser.settings, !f && g && g.preferredLanguageTag ? Object(u.c)(Object(d.a)(g.preferredLanguageTag)) : f && g && f !== g.preferredLanguageTag && (l.info("Found language preference in cookie that differs from backend. Changing on the backend.", {
@@ -44938,6 +44818,6 @@
         }
     },
     [
-        [154, 109, 0]
+        [440, 109, 0]
     ]
 ]);
