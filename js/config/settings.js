@@ -55,7 +55,7 @@ window.__twilightSettings = {
     "esport_charity_start_date": "2018-08-25T07:01:00Z",
     "esport_insider_allstars_launch": "2018-08-25T23:00:00Z",
     "esport_insider_pass_secondary_channel": "overwatchleague_allaccess",
-    "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff"],
+    "esport_insider_pass_whitelist": ["137512364", "188863650", "188864445", "27697171-staff", "240196222-staff"],
     "esport_insider_prime_bits_launch": "on",
     "esport_insider_prime_bits_launch_user_whitelist": ["186243532", "215590603"],
     "esports_room_cheering_whitelist": ["137512364", "188863650", "188864445", "27697171", "191316249-staff", "104874624"],
