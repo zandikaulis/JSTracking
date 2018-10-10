@@ -185,13 +185,13 @@ window.__twilightSettings = {
         },
         "05dc2471-5696-4e15-9ff6-57d2fd4837c2": {
             "name": "pushy_onsite_email_verification",
-            "v": 4779,
+            "v": 4840,
             "t": 2,
             "groups": [{
-                "weight": 0,
+                "weight": 100,
                 "value": "control"
             }, {
-                "weight": 100,
+                "weight": 0,
                 "value": "treatment"
             }]
         },
