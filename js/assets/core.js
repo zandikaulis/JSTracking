@@ -7946,29 +7946,22 @@
         C94G: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return h
-            }), n.d(t, "c", function() {
-                return f
-            }), n.d(t, "d", function() {
-                return g
+                return d
             }), n.d(t, "b", function() {
-                return b
+                return p
             });
             var i, r, a = n("mrSG"),
                 o = n("ix15"),
                 s = n("cr+I"),
                 l = n("/7QA"),
                 c = n("D7An"),
-                u = n("eFQ3"),
-                d = {
+                u = {
                     key: "cvp-log",
                     validValues: ["debug", "error", "info", "warn"],
                     defaultValue: "error"
-                },
-                p = {},
-                m = {};
+                };
 
-            function h(e) {
+            function d(e) {
                 return a.__awaiter(this, void 0, void 0, function() {
                     var t, r;
                     return a.__generator(this, function(a) {
@@ -7994,48 +7987,7 @@
                 })
             }
 
-            function f(e, t) {
-                return void 0 === t && (t = u.a.Site), a.__awaiter(this, void 0, void 0, function() {
-                    var n, i;
-                    return a.__generator(this, function(r) {
-                        return n = v(t), p[i = e + "-" + t] || (p[i] = fetch("https://api.twitch.tv/api/channels/" + e + "/access_token?" + n, {
-                            headers: {
-                                "Client-ID": l.o.config.authSettings.clientID
-                            }
-                        }).then(function(e) {
-                            return e.json()
-                        })), [2, p[i]]
-                    })
-                })
-            }
-
-            function g(e, t) {
-                return void 0 === t && (t = u.a.Site), a.__awaiter(this, void 0, void 0, function() {
-                    var n, i;
-                    return a.__generator(this, function(r) {
-                        return n = v(t), m[i = e + "-" + t] || (m[i] = fetch("https://api.twitch.tv/api/vods/" + e + "/access_token?" + n, {
-                            headers: {
-                                "Client-ID": l.o.config.authSettings.clientID
-                            }
-                        }).then(function(e) {
-                            return e.json()
-                        })), [2, m[i]]
-                    })
-                })
-            }
-
-            function v(e) {
-                var t = l.o.store.getState();
-                return s.stringify({
-                    adblock: l.o.adBlockDetector.detected,
-                    need_https: !0,
-                    oauth_token: t.session.user && t.session.user.authToken || null,
-                    platform: "web",
-                    player_type: e
-                })
-            }
-
-            function b() {
+            function p() {
                 return a.__awaiter(this, void 0, void 0, function() {
                     var e, t;
                     return a.__generator(this, function(n) {
@@ -8050,8 +8002,8 @@
                                         return {
                                             forceAsmJs: i === r.ASM,
                                             logLevel: function() {
-                                                var e = s.parse(window.location.search)[d.key];
-                                                if (!e || -1 === d.validValues.indexOf(e)) return d.defaultValue;
+                                                var e = s.parse(window.location.search)[u.key];
+                                                if (!e || -1 === u.validValues.indexOf(e)) return u.defaultValue;
                                                 return e
                                             }(),
                                             value: n
@@ -8972,7 +8924,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.DiscoGladiator = "DISCO_GLADIATOR", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EmotePickerV2 = "TWILIGHT_EMOTE_PICKER_V2", e.EventGameDirectory = "TWILIGHT_EVENT_GAME_DIRECTORY", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODColorsOfTheWind = "VOD_COLORS_OF_THE_WIND", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODKirk = "TWILIGHT_VOD_KIRK", e.VODPike = "TWILIGHT_VOD_PIKE", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.CVPPlayerVersion = "CVP_PLAYER_VERSION", e.CVPStaffVersion = "CVP_STAFF_VERSION", e.CVPPlayerType = "CVP_PLAYER_TYPE"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoveryFrontpageMVP = "TWILIGHT_DISCOVERY_FRONTPAGE_MVP", e.DiscoGladiator = "DISCO_GLADIATOR", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EmotePickerV2 = "TWILIGHT_EMOTE_PICKER_V2", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODColorsOfTheWind = "VOD_COLORS_OF_THE_WIND", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODKirk = "TWILIGHT_VOD_KIRK", e.VODPike = "TWILIGHT_VOD_PIKE", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.CVPPlayerVersion = "CVP_PLAYER_VERSION", e.CVPStaffVersion = "CVP_STAFF_VERSION", e.CVPPlayerType = "CVP_PLAYER_TYPE"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -9013,9 +8965,6 @@
                 }, i[r.TheatreFullscreen] = {
                     id: "4cfb5972-e20e-4ae1-92dd-7287ec58b4a4",
                     default: "control"
-                }, i[r.EventGameDirectory] = {
-                    id: "d6bb4aa4-efae-4031-96be-f08950d6c8f4",
-                    default: "shown"
                 }, i[r.AMLRankingFollows] = {
                     id: "47597570-dd4e-4996-85eb-86db164cae9c",
                     default: "control"
@@ -9154,10 +9103,10 @@
         DBPb: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, E, k, _, S, C, w, N, T, I, O, R, D, A, L, x, P, F, M, U, B, V, j, z, H, W, G, q, Y, Q, K, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, Ee, ke, _e, Se, Ce, we, Ne, Te, Ie, Oe, Re, De, Ae, Le, xe, Pe, Fe, Me, Ue, Be, Ve, je, ze, He, We, Ge, qe, Ye, Qe, Ke, Xe, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt, ct, ut;
+            var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, E, k, _, S, C, w, N, T, I, O, R, D, A, L, x, P, F, M, U, B, V, j, z, H, W, G, q, Y, Q, K, X, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, Ee, ke, _e, Se, Ce, we, Ne, Te, Ie, Oe, Re, De, Ae, Le, xe, Pe, Fe, Me, Ue, Be, Ve, je, ze, He, We, Ge, qe, Ye, Qe, Ke, Xe, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt;
             n.d(t, "c", function() {
                     return r
-                }), n.d(t, "A", function() {
+                }), n.d(t, "B", function() {
                     return s
                 }), n.d(t, "w", function() {
                     return l
@@ -9169,66 +9118,68 @@
                     return E
                 }), n.d(t, "j", function() {
                     return S
-                }), n.d(t, "J", function() {
+                }), n.d(t, "K", function() {
                     return C
-                }), n.d(t, "C", function() {
+                }), n.d(t, "D", function() {
                     return w
                 }), n.d(t, "o", function() {
                     return N
-                }), n.d(t, "B", function() {
+                }), n.d(t, "C", function() {
                     return O
                 }), n.d(t, "b", function() {
                     return P
                 }), n.d(t, "p", function() {
                     return M
-                }), n.d(t, "E", function() {
+                }), n.d(t, "F", function() {
                     return U
-                }), n.d(t, "G", function() {
+                }), n.d(t, "H", function() {
                     return B
                 }), n.d(t, "y", function() {
                     return V
-                }), n.d(t, "H", function() {
+                }), n.d(t, "I", function() {
                     return j
                 }), n.d(t, "q", function() {
                     return W
                 }), n.d(t, "n", function() {
-                    return Y
-                }), n.d(t, "F", function() {
-                    return Q
+                    return G
+                }), n.d(t, "G", function() {
+                    return q
                 }), n.d(t, "a", function() {
-                    return K
+                    return Y
                 }), n.d(t, "s", function() {
-                    return X
+                    return Q
                 }), n.d(t, "u", function() {
-                    return Z
+                    return K
                 }), n.d(t, "z", function() {
-                    return $
-                }), n.d(t, "I", function() {
-                    return fe
+                    return Z
+                }), n.d(t, "A", function() {
+                    return J
+                }), n.d(t, "J", function() {
+                    return me
                 }), n.d(t, "l", function() {
-                    return Ce
+                    return _e
                 }), n.d(t, "k", function() {
-                    return we
-                }), n.d(t, "K", function() {
-                    return Oe
+                    return Se
+                }), n.d(t, "L", function() {
+                    return Te
                 }), n.d(t, "m", function() {
-                    return Fe
+                    return xe
                 }), n.d(t, "x", function() {
-                    return Me
+                    return Pe
                 }), n.d(t, "i", function() {
-                    return He
+                    return je
                 }), n.d(t, "h", function() {
-                    return We
+                    return ze
                 }), n.d(t, "t", function() {
+                    return He
+                }), n.d(t, "E", function() {
                     return Ge
-                }), n.d(t, "D", function() {
-                    return Ye
                 }), n.d(t, "v", function() {
-                    return et
+                    return Je
                 }), n.d(t, "d", function() {
-                    return lt
+                    return ot
                 }), n.d(t, "r", function() {
-                    return ct
+                    return st
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -9357,227 +9308,221 @@
                     e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
                 }(W || (W = {})),
                 function(e) {
-                    e.JPEG = "JPEG", e.PNG = "PNG"
+                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
                 }(G || (G = {})),
                 function(e) {
-                    e.AVATAR = "AVATAR", e.BANNER = "BANNER"
+                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(q || (q = {})),
                 function(e) {
-                    e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
+                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
                 }(Y || (Y = {})),
                 function(e) {
-                    e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(Q || (Q = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }(K || (K = {})),
                 function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
+                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
                 }(X || (X = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }(Z || (Z = {})),
                 function(e) {
-                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
                 }(J || (J = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }($ || ($ = {})),
                 function(e) {
-                    e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(te || (te = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(re || (re = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(se || (se = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(le || (le = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
                 }(de || (de = {})),
                 function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(pe || (pe = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                    e.CONTENT = "CONTENT", e.TOP = "TOP"
                 }(me || (me = {})),
                 function(e) {
-                    e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
+                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(he || (he = {})),
                 function(e) {
-                    e.CONTENT = "CONTENT", e.TOP = "TOP"
+                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(fe || (fe = {})),
                 function(e) {
-                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
+                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(ge || (ge = {})),
                 function(e) {
-                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(ve || (ve = {})),
                 function(e) {
-                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
+                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
                 }(be || (be = {})),
                 function(e) {
-                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
+                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
                 }(ye || (ye = {})),
                 function(e) {
-                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
+                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(Ee || (Ee = {})),
                 function(e) {
-                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
+                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
                 }(ke || (ke = {})),
                 function(e) {
-                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
+                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(_e || (_e = {})),
                 function(e) {
-                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
                 }(Se || (Se = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
+                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
+                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
                 }(we || (we = {})),
                 function(e) {
-                    e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(Ne || (Ne = {})),
                 function(e) {
-                    e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Ie || (Ie = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Oe || (Oe = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(Re || (Re = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.COMMUNITIES = "COMMUNITIES", e.CREATIVE = "CREATIVE", e.GAMES = "GAMES"
                 }(De || (De = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.ASC = "ASC", e.DESC = "DESC"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.COMMUNITIES = "COMMUNITIES", e.CREATIVE = "CREATIVE", e.GAMES = "GAMES"
+                    e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.TIME = "TIME", e.VIEWS = "VIEWS"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
+                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(je || (je = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(He || (He = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(We || (We = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(qe || (qe = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }($e || ($e = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }(et || (et = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(it || (it = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(at || (at = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
                 }(st || (st = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
-                }(lt || (lt = {})),
-                function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-                }(ct || (ct = {})),
-                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(ut || (ut = {}))
+                }(lt || (lt = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -19913,7 +19858,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.DownloadKeyCodePage = "download-keys", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsModeration = "channel.dashboard.settings.moderation", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.RecoverAccount = "user.recover-account", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ExtensionsPopout = "extensions.popout", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesDisclosurePage = "messages-disclosure", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.RolesPage = "roles.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TurboLandingPage = "turbo.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DesktopLoginPage = "desktop.login", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteGames = "dev.games", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteDropsCreateCampaign = "dev.drops.campaign.create", e.DevSiteDropsEditCampaign = "dev.drops.campaign.edit", e.DevSiteDropsItems = "dev.drops.items", e.DevSiteDropsCreateItem = "dev.drops.item.create", e.DevSiteDropsEditItem = "dev.drops.item.edit", e.DevSiteGamesOnePager = "dev.games.onepager", e.Unknown = "unknown"
+                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.DownloadKeyCodePage = "download-keys", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsModeration = "channel.dashboard.settings.moderation", e.DashboardSettingsModerationBannedChatters = "channel.dashboard.settings.moderation.banned-chatters", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.RecoverAccount = "user.recover-account", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ExtensionsPopout = "extensions.popout", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesDisclosurePage = "messages-disclosure", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.RolesPage = "roles.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.SettingsRecommendatons = "settings.recommendations", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TurboLandingPage = "turbo.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DesktopLoginPage = "desktop.login", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteGames = "dev.games", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteDropsCreateCampaign = "dev.drops.campaign.create", e.DevSiteDropsEditCampaign = "dev.drops.campaign.edit", e.DevSiteDropsItems = "dev.drops.items", e.DevSiteDropsCreateItem = "dev.drops.item.create", e.DevSiteDropsEditItem = "dev.drops.item.edit", e.DevSiteGamesOnePager = "dev.games.onepager", e.DevSiteLogin = "dev.login", e.Unknown = "unknown"
                 }(i || (i = {}))
         },
         NvZ5: function(e, t, n) {},
@@ -20883,7 +20828,7 @@
                     return s
                 }),
                 function(e) {
-                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.DownloadKeyCodePage = "code_redemption_download_keys", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsModeration = "dashboard/settings/moderation", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.RecoverAccount = "recover_account", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.ExtensionsPopout = "extensions_popout", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TurboLandingPage = "turbo", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DesktopLoginPage = "desktop/login", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteGames = "dev/games", e.DevSiteCompanyOverview = "dev/company", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteDropsCreateCampaign = "dev/drops-create-campaign", e.DevSiteDropsEditCampaign = "dev/drops-edit-campaign", e.DevSiteDropsItems = "dev/drops-items", e.DevSiteDropsCreateItem = "dev/drops-create-item", e.DevSiteDropsEditItems = "dev/drops-items"
+                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.DownloadKeyCodePage = "code_redemption_download_keys", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsModeration = "dashboard/settings/moderation", e.DashboardSettingsModerationBannedChatters = "dashboard/settings/moderation/banned-chatters", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardSettingsRolesPage = "dashboard/settings/roles", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.RecoverAccount = "recover_account", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.ExtensionsPopout = "extensions_popout", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TurboLandingPage = "turbo", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DesktopLoginPage = "desktop/login", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteGames = "dev/games", e.DevSiteCompanyOverview = "dev/company", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteDropsCreateCampaign = "dev/drops-create-campaign", e.DevSiteDropsEditCampaign = "dev/drops-edit-campaign", e.DevSiteDropsItems = "dev/drops-items", e.DevSiteDropsCreateItem = "dev/drops-create-item", e.DevSiteDropsEditItems = "dev/drops-items", e.DevSiteLogin = "dev/login"
                 }(i || (i = {})),
                 function(e) {
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -31707,7 +31652,7 @@
                             });
                             n.playerBuffering = n.registerBufferingEvent(!!n.props.paused), n.playerPlayed = n.registerPlayedEvent(!!n.props.paused);
                             var i = n.props.playerTypeOverride;
-                            i && (t.player = i, n.playerType = i, i === A.e.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.nAuth = Object(x.c)(n.props.channelLogin, n.props.playerTypeOverride), t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.nAuth = Object(x.d)(n.props.vodID, n.props.playerTypeOverride), t.video = Object(N.p)(n.props.vodID), S.n.setVideoPlayerTrackingData({
+                            i && (t.player = i, n.playerType = i, i === A.e.ClipsEditing && (t.muted = !0)), n.props.channelLogin && (t.channel = n.props.channelLogin, n.lastSetChannel = n.props.channelLogin), n.props.collectionID && (t.collection = n.props.collectionID), n.props.clipSlug && (t.clip = n.props.clipSlug), n.props.vodID && (t.video = Object(N.p)(n.props.vodID), S.n.setVideoPlayerTrackingData({
                                 vodID: n.props.vodID
                             })), n.props.showChannelInfoOnHover && (t.showInfo = n.props.showChannelInfoOnHover), void 0 !== n.props.nextVideoOffset && n.props.nextVideoOffset >= 0 && (t.time = Object(P.a)(n.props.nextVideoOffset)), t.oauth_token = n.props.authToken || "", t.debug = "true" === _.parse(window.location.search)[F], n.logger.debug("Initializing", t);
                             var r = new e(n.playerRef, t);
@@ -31887,10 +31832,7 @@
                             }
                             this.player && e.clipSlug && this.props.clipSlug !== e.clipSlug && this.player.setClip(e.clipSlug), this.player && e.theatreModeEnabled !== this.player.getTheatre() && this.player.setTheatre(e.theatreModeEnabled), this.player && e.miniModeEnabled !== this.props.miniModeEnabled && this.player.setMiniPlayerMode(!!e.miniModeEnabled), this.player && t.playerPaused !== this.lastPausedProp && (t.playerPaused ? this.player.pause() : t.playerPaused || this.player.play(), this.lastPausedProp = t.playerPaused), this.player && t.playerMuted !== this.lastMutedProp && (this.player.setMuted(!!t.playerMuted), this.lastMutedProp = !!t.playerMuted), this.updatePlayerGDPRConsent(e);
                             var l = e.channelLogin !== this.lastSetChannel;
-                            if (this.player && e.channelLogin && (l || Object(L.a)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel({
-                                channelName: e.channelLogin,
-                                injectedNAuth: Object(x.c)(e.channelLogin, e.playerTypeOverride)
-                            }), this.lastSetChannel = e.channelLogin, void S.n.setVideoPlayerTrackingData({
+                            if (this.player && e.channelLogin && (l || Object(L.a)(this.props, e))) return this.player.pause(), this.resetLatencyTracking(!!e.paused), this.player.setChannel(e.channelLogin), this.lastSetChannel = e.channelLogin, void S.n.setVideoPlayerTrackingData({
                                 vodID: void 0
                             });
                             var c = e.collectionID && this.props.collectionID !== e.collectionID,
@@ -31900,16 +31842,7 @@
                                 if ("" !== d && S.n.setVideoPlayerTrackingData({
                                         vodID: e.vodID
                                     }), !this.player) return;
-                                return this.player.pause(), this.resetLatencyTracking(!!e.paused), void(c || e.collectionID && u ? this.player.setCollection({
-                                    collectionId: e.collectionID,
-                                    videoId: d,
-                                    timestamp: e.nextVideoOffset,
-                                    injectedNAuth: Object(x.d)(d, e.playerTypeOverride)
-                                }) : this.player.setVideo({
-                                    videoId: d,
-                                    timestamp: e.nextVideoOffset,
-                                    injectedNAuth: Object(x.d)(d, e.playerTypeOverride)
-                                }))
+                                return this.player.pause(), this.resetLatencyTracking(!!e.paused), void(c || e.collectionID && u ? this.player.setCollection(e.collectionID, d, e.nextVideoOffset) : this.player.setVideo(d, e.nextVideoOffset))
                             }
                             void 0 !== e.nextVideoOffset && e.nextVideoOffset >= 0 && this.props.nextVideoOffset !== e.nextVideoOffset && this.player && this.player.setCurrentTime(e.nextVideoOffset), this.player && e.videoMarkers && this.lastVideoMarkersProp !== e.videoMarkers && (this.lastVideoMarkersProp = e.videoMarkers, this.player.setVideoMarkers(e.videoMarkers));
                             var p = e.playerQualityOverride;
@@ -32386,7 +32319,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderBody = function() {
-                            return t.props.showPlaceholder ? r.createElement(s.cb, null) : r.createElement(s.Va, null, r.createElement(s.Pb, {
+                            return t.props.showPlaceholder ? r.createElement(s.Va, null, r.createElement(s.cb, null), t.props.children) : r.createElement(s.Va, null, r.createElement(s.Pb, {
                                 checked: t.props.checked,
                                 error: t.props.error,
                                 disabled: t.props.disabled,
@@ -32396,7 +32329,7 @@
                             }), t.props.description && r.createElement(a.a, {
                                 text: t.props.description,
                                 extraText: t.props.extraDescription
-                            }))
+                            }), t.props.children)
                         }, t.onChange = function(e) {
                             t.props.onChange && t.props.onChange(e.currentTarget.checked)
                         }, t
@@ -33187,7 +33120,7 @@
                             loader: function() {
                                 return n.e(1).then(n.bind(null, "7I49"))
                             }
-                        }], this.passportBaseURL = "https://id.twitch.tv", this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "twitch.tech", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.krakenEndpoint = "https://api.twitch.tv/kraken", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.persistentPlayerEnabledKey = "persistenceEnabled", this.manifestURL = "https://static.twitchcdn.net/config/manifest.json?v=1", this.cdnURL = "https://static.twitchcdn.net/", this.playerBaseURL = "https://player.twitch.tv", this.currentSite = window.__twilightSite, this.defaultAuthSite = "www", this.captchaKey = "6Ld65QcTAAAAAMBbAE8dkJq4Wi4CsJy7flvKhYqX", this.invisibleCaptchaKey = "6Lcjjl8UAAAAAMCzOHbJj-yb2MBElPKqZmlE5bbL"
+                        }], this.passportBaseURL = "https://id.twitch.tv", this.defaultAvatarURL = "https://static-cdn.jtvnw.net/jtv_user_pictures/xarth/404_user_70x70.png", this.defaultStreamPreviewURL = "https://static-cdn.jtvnw.net/ttv-static/404_preview-160x90.jpg", this.defaultBoxArtURL = "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png", this.defaultCollectionPreviewURL = "https://static-cdn.jtvnw.net/ttv-playlists-thumbnails-prod/missing-video-thumb-320x180.png", this.hostingCacheDelay = 2001, this.legacyClientID = "jzkbprff40iqj646a697cyrvl0zt2m6", this.algoliaApplicationID = "XLUO134HOR", this.algoliaAPIKey = "d157112f6fc2cab93ce4b01227c80a6d", this.forceNetworkLogging = !1, this.networkLoggingHostNames = ["twitch.tv", "localhost", "twitch.tech", "jtvnw.net", "twitchcdn.net", "twitchcdn.tech", "twitchcdn-shadow.net", "twitchsvc.net", "twitchsvc.tech", "twitchsvc-shadow.net"], this.defaultNetworkLoggingThreshold = .2, this.layoutCacheKey = "TwitchCache:Layout", this.forceComponentBenchmarking = !1, this.defaultComponentBenchmarkingThreshold = .1, this.forceBenchmarkingTools = !1, this.dfpNetworkCode = "3576121", this.defaultAPIVersion = "5", this.adblockAccount = 58, this.forceMinConsoleLogLevelKey = "twilight.minConsoleLogLevel", this.tryPrimeURI = "https://twitch.amazon.com/prime", this.experimentsOverrideCookie = "experiment_overrides", this.persistentPlayerEnabledKey = "persistenceEnabled", this.manifestURL = "https://static.twitchcdn.net/config/manifest.json?v=1", this.cdnURL = "https://static.twitchcdn.net/", this.playerBaseURL = "https://player.twitch.tv", this.currentSite = window.__twilightSite, this.defaultAuthSite = "www", this.captchaKey = "6Ld65QcTAAAAAMBbAE8dkJq4Wi4CsJy7flvKhYqX", this.invisibleCaptchaKey = "6Lcjjl8UAAAAAMCzOHbJj-yb2MBElPKqZmlE5bbL"
                     }
                     return Object.defineProperty(e.prototype, "authSettings", {
                         get: function() {
@@ -38123,7 +38056,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.AutohostChatImpression = "autohost_chat_impression", e.AutohostChatYes = "autohost_chat_yes", e.AutohostChatDismiss = "autohost_chat_dismiss", e.AutohostChatSettings = "autohost_chat_settings", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseFilter = "browse_filter", e.BrowseForYou = "browse_for_you", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CampaignTabSwitch = "campaign_tab_switch", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatInputRestrictedAction = "used_chatbox_interaction", e.ChatInputRestrictedImpression = "viewed_chatbox_interaction", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.ClipsUpsellClick = "clips_upsell_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DashboardSettingsInteraction = "dashboard_settings_interaction", e.DevButtonClick = "devsite_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CollaborationWidgetImpression = "collaboration_widget_impression", e.CollaborationWidgetInteraction = "collaboration_widget_interaction", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EmotePickerClickthrough = "emote_picker_clickthrough", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HighlighterInteraction = "highlighter_interaction", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LanguageFilterChange = "language_filter_change", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardWidgetView = "live_dashboard_widget_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeBlueBarInteraction = "prime_blue_bar_interaction", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchBegin = "search_session_begin", e.SearchReset = "search_session_reset", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.SquadStreamBannerAction = "squad_stream_banner_action", e.SquadStreamPresentation = "squad_stream_presentation", e.SquadStreamViewerAction = "squad_stream_viewer_action", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.ViewedEmotePicker = "viewed_emote_picker", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoManagerInteraction = "video_manager_interaction", e.VideoManagerSectionLoad = "video_manager_section_load", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperStrangerWarningImpression = "whisper_stranger_prompt", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
+                    e.AdSlotRenderEnded = "ad_slot_render_ended", e.AdImpressionViewableEvent = "ad_impression_viewable", e.AchievementSpotlightImpression = "achievement_spotlight_impression", e.AchievementQuestBannerClick = "achievement_quest_banner_click", e.APIQuery = "benchmark_api_query", e.AppBooted = "benchmark_app_booted", e.AutoHostChannelUpdate = "autohost_channel_update", e.BitsAdsAvailability = "bits_ads_availability", e.BitsAdsImpression = "bits_ads_impression", e.BitsAdsRequest = "bits_ads_request", e.BitsCardInteraction = "bits_card_interaction", e.BitsCheerBombOptOut = "bits_cheer_bomb_opt_out", e.BitsCheerBombHideNotifications = "bits_cheer_bomb_hide_notifications", e.BroadcastPageClick = "broadcast_page_link", e.BrowseClick = "browse_click", e.BrowseFilter = "browse_filter", e.BrowseForYou = "browse_for_you", e.BrowserPushNotificationPrompt = "browser_notification_prompt", e.BrowserPushNotificationDisable = "browser_notification_disable", e.BountyBoardActions = "bounty_board_actions", e.BountyBoardImpressions = "bounty_board_impressions", e.BTTV = "bttv_check", e.CampaignTabSwitch = "campaign_tab_switch", e.CaptchaFormLoad = "captcha_form_load", e.ChannelAnalyticsInteraction = "channel_analytics_interaction", e.ChannelAnalyticsTopStatsView = "channel_analytics_topstats_view", e.Chat = "chat", e.ChatBadgeClick = "chat_badge_click", e.ChatInputRestrictedAction = "used_chatbox_interaction", e.ChatInputRestrictedImpression = "viewed_chatbox_interaction", e.ChatMentionUsed = "chat_mention_used", e.ChatRoomJoined = "chat_room_join", e.ChatRoomWatched = "chatroom-watched", e.ChatSettingsChanged = "chat_client_setting_changed", e.ChatSettingsOpened = "chat_client_settings_open", e.ChatSuggestion = "chat-suggestions", e.ChatSuggestionComplete = "chat-completed-suggestion", e.ChommentCreated = "chomment_create", e.ChommentDeleted = "chomment_delete", e.ChommentUIAction = "chomment_ui_action", e.ClipEdit = "clip_edit", e.ClipChampHelpClick = "clip_champ_help_click", e.ClipsUpsellClick = "clips_upsell_click", e.CollectionCreate = "collection_create", e.CollectionAddItem = "collection_add_item_frontend", e.CollectionRemoveItem = "collection_remove_item", e.CommunityEdit = "community_client_edit", e.CommunityFollow = "community_client_follow", e.CommunityModeration = "community_client_channel_moderation", e.CommunityReport = "community_client_report", e.CommunityRoleEdit = "community_client_role_edit", e.CommunityUnfollow = "community_client_unfollow", e.CompleteTransition = "benchmark_complete_transition", e.ComponentInitializing = "benchmark_component_initializing", e.ComponentInteractive = "benchmark_component_interactive", e.CustomEvent = "benchmark_custom_event", e.CrateNotificationAction = "crate_notification_action", e.DashboardSettingsInteraction = "dashboard_settings_interaction", e.DevButtonClick = "devsite_button_click", e.DevInsightsButtonClick = "insights_games_api_usage", e.DisplayAdAuction = "display_ad_auction", e.DisplayAdAuctionResponse = "display_ad_auction_response", e.CollaborationWidgetImpression = "collaboration_widget_impression", e.CollaborationWidgetInteraction = "collaboration_widget_interaction", e.CrownMenuToggle = "crown_menu_toggle", e.CrownMouseEnter = "crown_mouseenter", e.CrownInteraction = "crown_interaction", e.DashboardHelpInteraction = "dashboard_help_interaction", e.DeprioritizeVodcastToggle = "autohost_deprioritize_vodcast_toggle", e.EmotePickerClickthrough = "emote_picker_clickthrough", e.EventFollowing = "oracle_user_notification_client", e.EventManager = "oracle_event_manager", e.EventShare = "oracle_event_share", e.ExperimentBranch = "experiment_branch", e.ExperimentBranchThrottled = "experiment_branch_throttled", e.ExtensionConfigureView = "extension_configure_view", e.ExtensionInstall = "extension_install_button_click", e.ExtensionPopoutClicked = "extension_popout_clicked", e.ExtensionPopinClicked = "extension_popin_clicked", e.ExtensionStreamerComponentSettings = "extension_streamer_component_settings", e.FacebookConnect = "login_facebook_connect", e.FacebookLogin = "login_facebook_login", e.FacebookSignup = "signup_facebook_signup", e.FeaturedEventPresentation = "event_suggestions_shown", e.FeedCardImpression = "feed_client_card_impression", e.FeedCardEmbedImpression = "feed_client_card_embed_impression", e.FeedCardEmbedPlay = "feed_client_card_embed_play", e.FeedPost = "feed_client_post", e.FeedReaction = "feed_client_reaction", e.FetchStart = "benchmark_fetch_start", e.FilterClick = "filter_click", e.FFZ = "ffz_check", e.FocusSearch = "search_input_focus", e.Follow = "follow", e.FrontPageCarouselClick = "frontpage_carousel_click", e.FrontPageCarouselDisplay = "carousel_display", e.FrontPageCarouselPromotionCardClick = "promotion_card_click", e.FrontPageCarouselPromotionCardView = "promotion_card_view", e.FrontPageCarouselNavButtonClick = "carousel_nav_button_click", e.FuelBuyButton = "fuel_buy_button", e.FuelGetGameClick = "fuel_get_game_click", e.FuelOfferView = "offer_view", e.FuelOfferInteraction = "offer_interaction", e.FuelSocialShare = "fuel_social_share", e.GameFollow = "follow-game", e.GameUnfollow = "unfollow-game", e.GDPRConsentBannerDisplayed = "consent_dialog_served", e.GDPRConsentSet = "consent_set", e.HearthstoneFilterAction = "hearthstone_filter_action", e.HighlighterCurationStart = "highlighter_curation_start", e.HighlighterCurationFinish = "highlighter_curation_finish", e.HighlighterInteraction = "highlighter_interaction", e.HostModeDebug = "host_mode_debug", e.ItemClick = "item_click", e.ItemDisplay = "item_display", e.ItemSectionClick = "item_section_click", e.ItemSectionLoad = "item_section_load", e.LanguageFilterChange = "language_filter_change", e.LeaderboardExpandClick = "bits_leaderboard_expand_click", e.LiveDashboardInteraction = "live_dashboard_interaction", e.LoginFormInteraction = "login_form_interaction", e.LoginFormLoad = "login_form_load", e.LoginShow = "login_show", e.LoginStep = "login_step", e.LoginSuccess = "login_success", e.LiveDashboardBannerInteraction = "live_dashboard_banner_interaction", e.LiveDashboardStreamHealthEvent = "live_dashboard_stream_health", e.LiveDashboardStreamStats = "live_dashboard_stream_stats", e.LiveDashboardWidgetView = "live_dashboard_widget_view", e.OnboardingEvent = "onboarding_web", e.OnboardingSurfAction = "onboarding_surf_action", e.OverwatchFilterAction = "overwatch_filter_action", e.NetworkRequest = "network_request", e.NewChatterTokenStatus = "nca_client_token_status", e.NewChatterOnboardingInteraction = "nca_onboarding_chatbox_interaction", e.NotificationCenterInteraction = "notification_center_interaction", e.NotificationImpression = "notification_impression", e.NotificationInteraction = "notification_interaction", e.Pageview = "pageview", e.PanelClick = "panel_click", e.PanelImpression = "panel_display", e.PartnerAffiliateSettings = "partner_affiliate_settings", e.PartnershipApplicationInteraction = "partnership_application_interaction", e.PassportShow = "auth_show", e.PassportHide = "auth_exit", e.PaymentFormDisplay = "payment_form_display", e.PaymentFormInteraction = "payment_form_interaction", e.PlayerRecShow = "player_rec_show", e.PlayerShowFeatured = "player_show_featured", e.PlayerRecSelect = "player_rec_select", e.PlayerRecAutoplay = "player_rec_autoplay", e.PresenceClick = "friend_presence_click", e.PresenceToggle = "rich_presence_toggle", e.PrimeBlueBarInteraction = "prime_blue_bar_interaction", e.PrimeLootPagePageview = "prime_loot_page_pageview", e.PrimeLootPageTryPrimeClick = "prime_loot_page_try_prime_click", e.PrimeOfferInteraction = "prime_offer_interaction", e.RaidPromptJoin = "raid_prompt_join", e.RaidPromptLeave = "raid_prompt_leave", e.RaidPromptCancel = "raid_prompt_cancel", e.RaidPromptNow = "raid_prompt_now", e.RaidPromptImpression = "raid_prompt_impression", e.RaidUpsellClick = "raid_upsell_click", e.RaidUpsellImpression = "raid_upsell_impression", e.RecRequestClient = "rec_request_client", e.ReportFlowAction = "report_oldmodal_interaction", e.ReportWizardFlowAction = "report_flow_action", e.ReportModalChange = "report_modal_change", e.SearchBegin = "search_session_begin", e.SearchReset = "search_session_reset", e.SearchQuerySubmit = "search_query_submit", e.SearchQueryResult = "search_query_result", e.SearchResultImpression = "search_result_impression", e.SearchResultClick = "search_result_click", e.SearchUIImpression = "search_ui_impression", e.SearchUIClick = "search_ui_click", e.ShareItem = "share_item", e.SideNavChannelClick = "sidenav_channel_click", e.SideNavDetails = "sidenav_details", e.SideNavLoadMore = "sidenav_load_more", e.SimilarHostToggle = "autohost_similar_channels_toggle", e.SignupFormInteraction = "signup_form_interaction", e.SignupFormLoad = "signup_form_load", e.SignupShow = "signup_show", e.SignupStep = "signup_step", e.SignupSuccess = "signup_success", e.SiteLayoutMod = "site_layout_mod", e.SiteToggle = "twilight_site_toggle", e.SquadStreamBannerAction = "squad_stream_banner_action", e.SquadStreamPresentation = "squad_stream_presentation", e.SquadStreamViewerAction = "squad_stream_viewer_action", e.StreamBookmarkListDownload = "stream_bookmark_list_download", e.StreamBookmarkClick = "stream_bookmark_click", e.StreamSummaryBannerClick = "summary_banner_click", e.StreamSummaryChartView = "stream_summary_chart_view", e.StreamSummaryInteraction = "stream_summary_interaction", e.StreamSummarySpotlightImpression = "summary_spotlight_impression", e.StreamSummarySpotlightClick = "summary_spotlight_click", e.StoreMerchClick = "store_item_select", e.StoreMerchView = "store_item_view", e.Subscription = "subscribe_button", e.SubsLandingStreamerClick = "subs_landing_streamer_click", e.SubscribedSideNavChannelClick = "subscribed_sidenav_channel_click", e.TeamHostToggle = "autohost_team_toggle", e.ThemeChange = "dark_mode_toggle", e.TwoFactorFormLoad = "two_factor_form_load", e.Unfollow = "unfollow", e.UserLongtask = "user_longtask", e.VerifyEmailBar = "verify_email_bar", e.ViewedEmotePicker = "viewed_emote_picker", e.VideoChatSettingChanged = "video_chat_setting_changed", e.VideoManagerInteraction = "video_manager_interaction", e.VideoManagerSectionLoad = "video_manager_section_load", e.VideoShare = "video_share", e.VODDownloadClick = "vod_download_click", e.VODExportClick = "vod_export_click", e.VODPageviewMetadata = "vod_pageview_metadata", e.VODProcessingInteraction = "vod_processing_interaction", e.WatchPartyAddVOD = "watch_party_add_vod", e.WatchPartyEnd = "watch_party_end", e.WatchPartyOtherVOD = "watch_party_other_vod", e.WatchPartyReorder = "watch_party_reorder", e.WatchPartyRemoveVOD = "watch_party_remove_vod", e.WatchPartyStart = "watch_party_start", e.WhisperAllThreadsMod = "chat_convo_mod_global", e.WhisperIgnoreUser = "chat_ignore_client", e.WhisperReceived = "whisper_received", e.WhisperSearchClick = "search_click", e.WhisperSent = "whisper", e.WhisperStrangerWarningImpression = "whisper_stranger_prompt", e.WhisperThreadCreate = "chat_convo_create", e.WhisperThreadMod = "chat_convo_mod"
                 }(i || (i = {}))
         },
         rqzT: function(e, t, n) {
@@ -41050,28 +40983,27 @@
                 _n = n("XxES"),
                 Sn = n("ZDlU"),
                 Cn = n("VwD5"),
-                wn = n("eFQ3"),
-                Nn = n("Fxe2"),
-                Tn = n("vRsq"),
-                In = n("tuvy"),
-                On = n("50oY"),
-                Rn = n("mLw1");
-            var Dn = Object(u.connect)(function(e) {
+                wn = n("Fxe2"),
+                Nn = n("vRsq"),
+                Tn = n("tuvy"),
+                In = n("50oY"),
+                On = n("mLw1");
+            var Rn = Object(u.connect)(function(e) {
                     var t = Object(l.e)(e);
                     return {
                         isLoggedIn: Object(l.f)(e),
                         userLogin: t && t.login
                     }
                 })(function(e) {
-                    return e.isLoggedIn && e.userLogin === e.match.params.channelLogin.toLowerCase() ? i.createElement(Rn.a, {
+                    return e.isLoggedIn && e.userLogin === e.match.params.channelLogin.toLowerCase() ? i.createElement(On.a, {
                         to: "/settings/profile"
-                    }) : i.createElement(Rn.a, {
+                    }) : i.createElement(On.a, {
                         to: "/"
                     })
                 }),
-                An = n("EOHf"),
-                Ln = n("Eo7B"),
-                xn = function(e) {
+                Dn = n("EOHf"),
+                An = n("Eo7B"),
+                Ln = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.redirectToSubCheckout = function() {
@@ -41088,7 +41020,7 @@
                             fillContent: !0
                         }) : this.props.data.loading ? i.createElement(G.Xa, {
                             fillContent: !0
-                        }) : i.createElement(An.a, null)
+                        }) : i.createElement(Dn.a, null)
                     }, Object.defineProperty(t.prototype, "productName", {
                         get: function() {
                             if (this.props.data.user && this.props.data.user.subscriptionProducts) {
@@ -41101,7 +41033,7 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                Pn = Object(w.a)(Ln, {
+                xn = Object(w.a)(An, {
                     options: function(e) {
                         return {
                             variables: {
@@ -41109,90 +41041,90 @@
                             }
                         }
                     }
-                })(xn),
-                Fn = b.a.wrap(function() {
+                })(Ln),
+                Pn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(48)]).then(n.bind(null, "XH7V"))
                 }, "ChannelClipsPage"),
-                Mn = b.a.wrap(function() {
+                Fn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(47)]).then(n.bind(null, "5qQ0"))
                 }, "ChannelCollectionsPage"),
-                Un = b.a.wrap(function() {
+                Mn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(46)]).then(n.bind(null, "0PcG"))
                 }, "ChannelEventsPage"),
-                Bn = b.a.wrap(function() {
+                Un = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(45)]).then(n.bind(null, "ibCL"))
                 }, "ChannelFollowersPage"),
-                Vn = b.a.wrap(function() {
+                Bn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(44)]).then(n.bind(null, "Zcpz"))
                 }, "ChannelFollowingPage"),
-                jn = b.a.wrap(function() {
+                Vn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(43)]).then(n.bind(null, "JNF5"))
                 }, "ChannelPage"),
-                zn = b.a.wrap(function() {
+                jn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(42)]).then(n.bind(null, "DOLr"))
                 }, "ChannelRoot"),
-                Hn = b.a.wrap(function() {
+                zn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(41)]).then(n.bind(null, "JCPk"))
                 }, "ChannelVideosOverviewPage"),
-                Wn = b.a.wrap(function() {
+                Hn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(40)]).then(n.bind(null, "AaPt"))
                 }, "ChannelVideosPage"),
-                Gn = b.a.wrap(function() {
+                Wn = b.a.wrap(function() {
                     return n.e(55).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                qn = b.a.wrap(function() {
+                Gn = b.a.wrap(function() {
                     return n.e(39).then(n.bind(null, "juOe"))
                 }, "ReportUserPage"),
-                Yn = b.a.wrap(function() {
+                qn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(38)]).then(n.bind(null, "4JFD"))
                 }, "VideoWatchPage"),
-                Qn = b.a.wrap(function() {
+                Yn = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(37)]).then(n.bind(null, "dlEs"))
                 }, "ClipsWatchPage"),
-                Kn = b.a.wrap(function() {
+                Qn = b.a.wrap(function() {
                     return n.e(36).then(n.bind(null, "QE/F"))
                 }, "SquadStreamPage"),
-                Xn = function(e) {
+                Kn = function(e) {
                     return i.createElement(f.a, {
                         to: "/popout/" + e.match.params.channelLogin + "/chat"
                     })
                 },
-                Zn = function(e) {
-                    return Object(In.b)() ? i.createElement(Hn, null) : Jn(e)
+                Xn = function(e) {
+                    return Object(Tn.b)() ? i.createElement(zn, null) : Zn(e)
                 },
-                Jn = function(e) {
+                Zn = function(e) {
                     return i.createElement(f.a, {
                         to: "/" + e.match.params.channelLogin + "/videos/all"
                     })
                 },
-                $n = function(e) {
+                Jn = function(e) {
                     return i.createElement(f.a, {
                         to: "/" + e.match.params.channelLogin + "/videos"
                     })
                 },
-                ei = function(e) {
+                $n = function(e) {
                     return i.createElement(f.a, {
                         to: "/" + e.match.params.channelLogin + "/videos/archive"
                     })
                 },
-                ti = function(e) {
+                ei = function(e) {
                     return window.location.replace(a.a.playerBaseURL + "/?channel=" + e.match.params.channelLogin), null
                 },
-                ni = function(e) {
-                    var t = e.match.params.contentType === Tn.g.Video ? e.match.params.contentID : void 0,
-                        n = e.match.params.contentType === Tn.g.Collection ? e.match.params.contentID : void 0;
+                ti = function(e) {
+                    var t = e.match.params.contentType === Nn.g.Video ? e.match.params.contentID : void 0,
+                        n = e.match.params.contentType === Nn.g.Collection ? e.match.params.contentID : void 0;
                     return t || n ? i.createElement(f.a, {
-                        to: Object(Tn.i)(null, t, n)
-                    }) : i.createElement(An.a, null)
+                        to: Object(Nn.i)(null, t, n)
+                    }) : i.createElement(Dn.a, null)
                 };
 
-            function ii(e) {
-                var t = Object(Nn.a)(e.match.params.videoID);
+            function ni(e) {
+                var t = Object(wn.a)(e.match.params.videoID);
                 return i.createElement(f.a, {
                     to: "/videos/" + t
                 })
             }
-            var ri = function(e) {
+            var ii = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -41212,276 +41144,276 @@
                         if (this.state.isError) return i.createElement(Sn.a, {
                             message: Object(a.d)("An error occurred on this page", "ChannelPageRouter")
                         });
-                        var e = Object(In.a)();
-                        return !Object(In.e)() && Object(In.d)(this.props.location.pathname) && (e = !1), i.createElement(g.a, null, e ? i.createElement(h.a, {
-                            path: "/:standaloneType(" + On.e.Collections + ")/:collectionID",
-                            component: zn
+                        var e = Object(Tn.a)();
+                        return !Object(Tn.e)() && Object(Tn.d)(this.props.location.pathname) && (e = !1), i.createElement(g.a, null, e ? i.createElement(h.a, {
+                            path: "/:standaloneType(" + In.e.Collections + ")/:collectionID",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/collections/:collectionID",
-                            component: Yn
+                            component: qn
                         }), i.createElement(h.a, {
                             path: "/videos/v:videoID",
-                            render: ii
+                            render: ni
                         }), e ? i.createElement(h.a, {
-                            path: "/:standaloneType(" + On.e.Videos + ")/:videoID",
-                            component: zn
+                            path: "/:standaloneType(" + In.e.Videos + ")/:videoID",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/videos/:videoID",
-                            component: Yn
+                            component: qn
                         }), e ? i.createElement(h.a, {
                             path: "/:channelLogin",
-                            component: zn,
+                            component: jn,
                             exact: !0
                         }) : i.createElement(h.a, {
                             path: "/:channelName",
-                            component: jn,
+                            component: Vn,
                             exact: !0
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.About + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.About + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelName/about",
-                            component: jn
+                            component: Vn
                         }), !e && i.createElement(h.a, {
                             path: "/:channelLogin/clip/:slugID",
-                            component: Qn
+                            component: Yn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Clips + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Clips + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelName/clips",
-                            component: Fn
+                            component: Pn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/chat",
-                            render: Xn
+                            render: Kn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Collections + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Collections + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/collections",
-                            component: Mn
+                            component: Fn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/embed",
-                            render: ti
+                            render: ei
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.EsportsLoot + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.EsportsLoot + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/esports-loot",
-                            component: jn
+                            component: Vn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.EsportsPass + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.EsportsPass + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/esports-pass",
-                            component: jn
+                            component: Vn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.EsportsProgress + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.EsportsProgress + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/esports-progress",
-                            component: jn
+                            component: Vn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Events + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Events + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/events",
-                            component: Un
+                            component: Mn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Followers + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Followers + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/followers",
-                            component: Bn
+                            component: Un
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Following + ")",
-                            component: zn
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Following + ")",
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/following",
-                            component: Vn
+                            component: Bn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/inbox",
-                            component: Gn
+                            component: Wn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/outbox",
-                            component: Gn
+                            component: Wn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/profile",
-                            render: Jn
+                            render: Zn
                         }), i.createElement(h.a, {
                             path: "/:channelName/report",
-                            component: qn
+                            component: Gn
                         }), e ? i.createElement(h.a, {
                             path: "/:channelLogin/p/:entityID",
-                            component: zn
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelName/p/:entityID",
-                            component: jn
+                            component: Vn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/popout",
-                            render: ti
+                            render: ei
                         }), e ? i.createElement(h.a, {
                             path: "/:channelLogin/rooms/:roomName",
-                            component: zn
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelName/rooms/:roomName",
-                            component: jn
+                            component: Vn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?/:page(" + On.c.Videos + ")",
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?/:page(" + In.c.Videos + ")",
                             exact: !0,
-                            component: zn
+                            component: jn
                         }) : i.createElement(h.a, {
                             path: "/:channelLogin/videos",
                             exact: !0,
-                            render: Zn
-                        }), !e && Object(In.b)() && i.createElement(h.a, {
+                            render: Xn
+                        }), !e && Object(Tn.b)() && i.createElement(h.a, {
                             path: "/:channelLogin/videos/all",
-                            render: $n
-                        }), i.createElement(h.a, {
-                            path: "/:channelLogin/videos/(past_broadcasts?)",
-                            render: ei
-                        }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:page(" + On.c.Videos + ")/:filter(all|archive|upload|highlight|past_premiere)",
-                            component: zn
-                        }) : i.createElement(h.a, {
-                            path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
-                            component: Wn
-                        }), i.createElement(h.a, {
-                            path: "/:channelLogin/videos/:unknownFilter?",
                             render: Jn
                         }), i.createElement(h.a, {
+                            path: "/:channelLogin/videos/(past_broadcasts?)",
+                            render: $n
+                        }), e ? i.createElement(h.a, {
+                            path: "/:channelLogin/:page(" + In.c.Videos + ")/:filter(all|archive|upload|highlight|past_premiere)",
+                            component: jn
+                        }) : i.createElement(h.a, {
+                            path: "/:channelLogin/videos/:filter(all|archive|upload|highlight|past_premiere)",
+                            component: Hn
+                        }), i.createElement(h.a, {
+                            path: "/:channelLogin/videos/:unknownFilter?",
+                            render: Zn
+                        }), i.createElement(h.a, {
                             path: "/:channelLogin/settings",
-                            component: Dn
+                            component: Rn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/subscribe",
-                            component: Pn
+                            component: xn
                         }), i.createElement(h.a, {
                             path: "/:channelLogin/squad",
-                            component: Kn
+                            component: Qn
                         }), e ? i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?",
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?",
                             exact: !0,
-                            component: zn
+                            component: jn
                         }) : i.createElement(h.a, {
-                            path: "/:channelLogin/:contentType(" + On.b + ")?/:contentID?",
+                            path: "/:channelLogin/:contentType(" + In.b + ")?/:contentID?",
                             exact: !0,
-                            component: ni
+                            component: ti
                         }), i.createElement(h.a, {
                             path: "*",
-                            component: An.a
+                            component: Dn.a
                         }))
                     }, t
                 }(i.Component),
-                ai = Object(be.a)(ri),
-                oi = b.a.wrap(function() {
+                ri = Object(be.a)(ii),
+                ai = b.a.wrap(function() {
                     return n.e(72).then(n.bind(null, "wh8/"))
                 }, "AnonFrontPage"),
-                si = b.a.wrap(function() {
+                oi = b.a.wrap(function() {
                     return n.e(71).then(n.bind(null, "moen"))
                 }, "BroadcastPage"),
-                li = b.a.wrap(function() {
+                si = b.a.wrap(function() {
                     return n.e(70).then(n.bind(null, "99ae"))
                 }, "BrowseRootPage"),
-                ci = b.a.wrap(function() {
+                li = b.a.wrap(function() {
                     return n.e(69).then(n.bind(null, "otOH"))
                 }, "CommunityModerationRoot"),
-                ui = b.a.wrap(function() {
+                ci = b.a.wrap(function() {
                     return n.e(68).then(n.bind(null, "FvFK"))
                 }, "CreateCommunityPage"),
-                di = b.a.wrap(function() {
+                ui = b.a.wrap(function() {
                     return n.e(67).then(n.bind(null, "dQAD"))
                 }, "DevOnlyRoot"),
-                pi = b.a.wrap(function() {
+                di = b.a.wrap(function() {
                     return n.e(66).then(n.bind(null, "mpcK"))
                 }, "DirectoryRootPage"),
-                mi = b.a.wrap(function() {
+                pi = b.a.wrap(function() {
                     return n.e(65).then(n.bind(null, "AtgE"))
                 }, "EmailUnsubscribePage"),
-                hi = b.a.wrap(function() {
+                mi = b.a.wrap(function() {
                     return n.e(64).then(n.bind(null, "VkGE"))
                 }, "EmailVerificationPage"),
-                fi = b.a.wrap(function() {
+                hi = b.a.wrap(function() {
                     return n.e(63).then(n.bind(null, "4c/Z"))
                 }, "EventLandingPage"),
-                gi = b.a.wrap(function() {
+                fi = b.a.wrap(function() {
                     return n.e(62).then(n.bind(null, "lQdQ"))
                 }, "ExtensionsRoot"),
-                vi = b.a.wrap(function() {
+                gi = b.a.wrap(function() {
                     return n.e(61).then(n.bind(null, "Uyt6"))
                 }, "FollowingRootPage"),
-                bi = b.a.wrap(function() {
+                vi = b.a.wrap(function() {
                     return n.e(60).then(n.bind(null, "0fnA"))
                 }, "FrontPage"),
-                yi = b.a.wrap(function() {
+                bi = b.a.wrap(function() {
                     return n.e(59).then(n.bind(null, "O0y+"))
                 }, "FriendRequestsPage"),
-                Ei = b.a.wrap(function() {
+                yi = b.a.wrap(function() {
                     return n.e(58).then(n.bind(null, "2W9R"))
                 }, "FriendsPage"),
-                ki = b.a.wrap(function() {
+                Ei = b.a.wrap(function() {
                     return n.e(57).then(n.bind(null, "UqZg"))
                 }, "InventoryPage"),
-                _i = b.a.wrap(function() {
+                ki = b.a.wrap(function() {
                     return n.e(56).then(n.bind(null, "WtmX"))
                 }, "MessagesDisclosurePage"),
-                Si = b.a.wrap(function() {
+                _i = b.a.wrap(function() {
                     return n.e(55).then(n.bind(null, "rVsl"))
                 }, "MessagesPage"),
-                Ci = b.a.wrap(function() {
+                Si = b.a.wrap(function() {
                     return n.e(54).then(n.bind(null, "4Agi"))
                 }, "DesklightModsRootPage"),
-                wi = b.a.wrap(function() {
+                Ci = b.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(0), n.e(53)]).then(n.bind(null, "cz4h"))
                 }, "PaymentsLandingPage"),
-                Ni = b.a.wrap(function() {
+                wi = b.a.wrap(function() {
                     return n.e(52).then(n.bind(null, "EOaz"))
                 }, "SettingsRoot"),
-                Ti = b.a.wrap(function() {
+                Ni = b.a.wrap(function() {
                     return n.e(51).then(n.bind(null, "rzjD"))
                 }, "StartLogin"),
-                Ii = b.a.wrap(function() {
+                Ti = b.a.wrap(function() {
                     return n.e(51).then(n.bind(null, "rzjD"))
                 }, "StartSignup"),
-                Oi = b.a.wrap(function() {
+                Ii = b.a.wrap(function() {
                     return n.e(50).then(n.bind(null, "UGMo"))
                 }, "SubscriptionsManagementPage"),
-                Ri = b.a.wrap(function() {
+                Oi = b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(49)]).then(n.bind(null, "c0BZ"))
                 }, "UnsubscribePage"),
-                Di = b.a.wrap(function() {
+                Ri = b.a.wrap(function() {
                     return n.e(33).then(n.bind(null, "xuFZ"))
                 }, "UserRoot");
 
-            function Ai() {
+            function Di() {
                 return window.location.assign(window.location.href), null
             }
 
-            function Li(e) {
+            function Ai(e) {
                 return i.createElement(f.a, {
                     to: "/directory/game/" + e.match.params.encodedCommunityName + "/videos/all"
                 })
             }
 
-            function xi() {
+            function Li() {
                 return i.createElement(f.a, {
                     path: "/",
                     to: "/directory/following"
                 })
             }
 
-            function Pi() {
+            function xi() {
                 return i.createElement(f.a, {
                     to: "/directory/all/xbox"
                 })
             }
 
-            function Fi() {
+            function Pi() {
                 return i.createElement(f.a, {
                     to: "/manager/upload"
                 })
             }
 
-            function Mi(e) {
+            function Fi(e) {
                 return i.createElement(f.a, {
                     to: {
                         search: e.location.search,
@@ -41490,18 +41422,14 @@
                 })
             }
 
-            function Ui() {
+            function Mi() {
                 return window.location.replace("https://twitch.tv/p/terms-of-service"), null
             }
 
-            function Bi() {
+            function Ui() {
                 return window.location.replace(Cn.a), null
             }
-
-            function Vi(e) {
-                return e.match.params.channelLogin ? Object(Y.c)(e.match.params.channelLogin, wn.a.Site) : e.match.params.videoID && Object(Y.d)(e.match.params.videoID, wn.a.Site), i.createElement(ai, m.__assign({}, e))
-            }
-            var ji = function(e) {
+            var Bi = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -41522,226 +41450,226 @@
                             message: Object(a.d)("An error occurred on this page", "DefaultRootRouter")
                         }) : i.createElement(g.a, null, a.a.buildType !== N.a.Production && i.createElement(h.a, {
                             path: "/_dev",
-                            component: di
+                            component: ui
                         }), i.createElement(h.a, {
                             exact: !0,
                             path: "/",
-                            component: this.props.isLoggedIn ? bi : oi
+                            component: this.props.isLoggedIn ? vi : ai
                         }), i.createElement(h.a, {
                             path: "/activate",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/bits",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/bits-checkout",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/checkout",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/products",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/embed",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/popout",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/prime",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/subs",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/download-keys",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/(redeem|claim)",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/turbo",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             path: "/user/account_recovery",
-                            render: Ai
+                            render: Di
                         }), i.createElement(h.a, {
                             exact: !0,
                             path: "/broadcast",
-                            component: si
+                            component: oi
                         }), i.createElement(h.a, {
                             path: "/collections/:collectionID",
-                            component: Vi
+                            component: ri
                         }), i.createElement(h.a, {
                             path: "/communities/create",
-                            component: ui
-                        }), i.createElement(h.a, {
-                            path: "/communities/:encodedCommunityName/details",
-                            component: pi
-                        }), i.createElement(h.a, {
-                            path: "/communities/:encodedCommunityName/moderation/:page?",
                             component: ci
                         }), i.createElement(h.a, {
+                            path: "/communities/:encodedCommunityName/details",
+                            component: di
+                        }), i.createElement(h.a, {
+                            path: "/communities/:encodedCommunityName/moderation/:page?",
+                            component: li
+                        }), i.createElement(h.a, {
                             path: "/communities/:encodedCommunityName/:encodedLanguage",
-                            component: pi
+                            component: di
                         }), i.createElement(h.a, {
                             path: "/communities/:encodedCommunityName",
-                            component: pi
+                            component: di
                         }), i.createElement(h.a, {
                             path: "/directory/communities",
-                            component: li
+                            component: si
                         }), i.createElement(h.a, {
                             path: "/directory/creative",
-                            component: li
+                            component: si
                         }), i.createElement(h.a, {
                             path: "/directory/following/:category?",
-                            component: vi
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/clips",
-                            component: pi
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/details",
-                            component: pi
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/videos/:filter",
-                            component: pi
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/videos",
-                            render: Li
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                            component: pi
-                        }), i.createElement(h.a, {
-                            path: "/directory/game/:encodedCommunityName",
-                            component: pi
-                        }), i.createElement(h.a, {
-                            path: "/directory/tags/:tagID",
-                            component: li
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/tags/:tagID",
-                            component: li
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/ps4",
-                            component: li
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/xb1",
-                            render: Pi
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/xbox",
-                            component: li
-                        }), i.createElement(h.a, {
-                            path: "/directory/all/:encodedLanguage",
-                            component: li
-                        }), i.createElement(h.a, {
-                            path: "/directory/all",
-                            component: li
-                        }), i.createElement(h.a, {
-                            path: "/directory/:category?",
-                            component: li
-                        }), i.createElement(h.a, {
-                            path: "/events/:eventName",
-                            component: fi
-                        }), i.createElement(h.a, {
-                            path: "/email-unsubscribe",
-                            component: mi
-                        }), i.createElement(h.a, {
-                            path: "/email-verification/:emailOpaqueId",
-                            component: hi
-                        }), i.createElement(h.a, {
-                            path: "/ext",
                             component: gi
                         }), i.createElement(h.a, {
-                            path: "/friends/requests",
-                            component: yi
+                            path: "/directory/game/:encodedCommunityName/clips",
+                            component: di
                         }), i.createElement(h.a, {
-                            path: "/friends",
-                            component: Ei
+                            path: "/directory/game/:encodedCommunityName/details",
+                            component: di
                         }), i.createElement(h.a, {
-                            path: "/following",
+                            path: "/directory/game/:encodedCommunityName/videos/:filter",
+                            component: di
+                        }), i.createElement(h.a, {
+                            path: "/directory/game/:encodedCommunityName/videos",
+                            render: Ai
+                        }), i.createElement(h.a, {
+                            path: "/directory/game/:encodedCommunityName/:encodedLanguage",
+                            component: di
+                        }), i.createElement(h.a, {
+                            path: "/directory/game/:encodedCommunityName",
+                            component: di
+                        }), i.createElement(h.a, {
+                            path: "/directory/tags/:tagID",
+                            component: si
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/tags/:tagID",
+                            component: si
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/ps4",
+                            component: si
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/xb1",
                             render: xi
                         }), i.createElement(h.a, {
+                            path: "/directory/all/xbox",
+                            component: si
+                        }), i.createElement(h.a, {
+                            path: "/directory/all/:encodedLanguage",
+                            component: si
+                        }), i.createElement(h.a, {
+                            path: "/directory/all",
+                            component: si
+                        }), i.createElement(h.a, {
+                            path: "/directory/:category?",
+                            component: si
+                        }), i.createElement(h.a, {
+                            path: "/events/:eventName",
+                            component: hi
+                        }), i.createElement(h.a, {
+                            path: "/email-unsubscribe",
+                            component: pi
+                        }), i.createElement(h.a, {
+                            path: "/email-verification/:emailOpaqueId",
+                            component: mi
+                        }), i.createElement(h.a, {
+                            path: "/ext",
+                            component: fi
+                        }), i.createElement(h.a, {
+                            path: "/friends/requests",
+                            component: bi
+                        }), i.createElement(h.a, {
+                            path: "/friends",
+                            component: yi
+                        }), i.createElement(h.a, {
+                            path: "/following",
+                            render: Li
+                        }), i.createElement(h.a, {
                             path: "/inbox",
-                            component: Si
-                        }), i.createElement(h.a, {
-                            path: "/inventory",
-                            component: ki
-                        }), i.createElement(h.a, {
-                            path: "/login",
-                            component: Ti
-                        }), i.createElement(h.a, {
-                            path: "/messages/archive",
                             component: _i
                         }), i.createElement(h.a, {
+                            path: "/inventory",
+                            component: Ei
+                        }), i.createElement(h.a, {
+                            path: "/login",
+                            component: Ni
+                        }), i.createElement(h.a, {
+                            path: "/messages/archive",
+                            component: ki
+                        }), i.createElement(h.a, {
                             path: "/messages/:pageName?",
-                            component: Si
+                            component: _i
                         }), i.createElement(h.a, {
                             path: "/outbox",
-                            component: Si
+                            component: _i
                         }), i.createElement(h.a, {
                             path: "/payments",
-                            component: wi
+                            component: Ci
                         }), i.createElement(h.a, {
                             path: "/profile",
                             component: _n.a,
                             exact: !0
                         }), i.createElement(h.a, {
                             path: "/signup",
-                            component: Ii
+                            component: Ti
                         }), i.createElement(h.a, {
                             path: "/store",
-                            render: Bi
+                            render: Ui
                         }), i.createElement(h.a, {
                             path: "/store/merch",
-                            render: Bi
+                            render: Ui
                         }), i.createElement(h.a, {
                             path: "/subscriptions",
-                            component: Oi
+                            component: Ii
                         }), i.createElement(h.a, {
                             path: "/settings/:tab?",
-                            component: Ni
+                            component: wi
                         }), i.createElement(h.a, {
                             path: "/unsubscribe/:productName",
-                            component: Ri
+                            component: Oi
                         }), i.createElement(h.a, {
                             path: "/upload",
-                            render: Fi,
+                            render: Pi,
                             exact: !0
                         }), i.createElement(h.a, {
                             path: "/user/legal",
-                            render: Ui,
+                            render: Mi,
                             exact: !0
                         }), i.createElement(h.a, {
                             path: "/user/remove_me",
-                            render: Mi
+                            render: Fi
                         }), i.createElement(h.a, {
                             path: "/user",
-                            component: Di
+                            component: Ri
                         }), i.createElement(h.a, {
                             path: "/videos/v:videoID",
-                            render: Vi
+                            component: ri
                         }), i.createElement(h.a, {
                             path: "/videos/:videoID",
-                            render: Vi
+                            component: ri
                         }), a.a.buildType !== N.a.Production && a.o.integrations.mods && i.createElement(h.a, {
                             path: "/mods",
-                            component: Ci
+                            component: Si
                         }), i.createElement(h.a, {
                             path: "*",
-                            render: Vi
+                            component: ri
                         }))
                     }, t
                 }(i.Component),
-                zi = b.a.wrap(function() {
+                Vi = b.a.wrap(function() {
                     return n.e(74).then(n.bind(null, "3iFw"))
                 }, "Whispers", {
                     failSilently: !0,
                     placeholder: null
                 }),
-                Hi = b.a.wrap(function() {
+                ji = b.a.wrap(function() {
                     return n.e(73).then(n.bind(null, "bpy9"))
                 }, "NetworkIntegrationManager"),
-                Wi = function(e) {
+                zi = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.setRootScrollableContentRef = function(e) {
@@ -41756,7 +41684,7 @@
                             flexDirection: G.Y.Column,
                             flexWrap: G.Z.NoWrap,
                             fullHeight: !0
-                        }, i.createElement(pe.a, null), i.createElement(En.a, null), this.props.firstPageLoaded && a.o.integrations.network && i.createElement(Hi, null), this.props.firstPageLoaded && this.props.isLoggedIn && i.createElement(kn.a, null), i.createElement(G.Va, {
+                        }, i.createElement(pe.a, null), i.createElement(En.a, null), this.props.firstPageLoaded && a.o.integrations.network && i.createElement(ji, null), this.props.firstPageLoaded && this.props.isLoggedIn && i.createElement(kn.a, null), i.createElement(G.Va, {
                             display: G.W.Flex,
                             flexWrap: G.Z.NoWrap,
                             position: G.db.Relative,
@@ -41775,56 +41703,56 @@
                             className: de.a
                         }, i.createElement(yn.b, null), i.createElement(fe.a, {
                             contentRefDelegate: this.setRootScrollableContentRef
-                        }, i.createElement(ji, {
+                        }, i.createElement(Bi, {
                             isLoggedIn: this.props.isLoggedIn
                         }), i.createElement(me.b, {
                             mainRef: this.state.rootScrollableContentRef
-                        })), i.createElement(vn, null), this.props.firstPageLoaded && i.createElement(zi, null))), i.createElement(he.a, null)))
+                        })), i.createElement(vn, null), this.props.firstPageLoaded && i.createElement(Vi, null))), i.createElement(he.a, null)))
                     }, t
                 }(i.Component);
-            var Gi = Object(u.connect)(function(e) {
+            var Hi = Object(u.connect)(function(e) {
                     return {
                         isLoggedIn: Object(l.f)(e),
                         firstPageLoaded: e.session.firstPageLoaded,
                         theatreModeEnabled: e.ui.theatreModeEnabled,
                         squadModeEnabled: e.ui.squadModeEnabled
                     }
-                })(Wi),
-                qi = (n("AtNS"), b.a.wrap(function() {
+                })(zi),
+                Wi = (n("AtNS"), b.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(82)]).then(n.bind(null, "mdlQ"))
                 }, "DashboardRoot")),
-                Yi = b.a.wrap(function() {
+                Gi = b.a.wrap(function() {
                     return n.e(81).then(n.bind(null, "WHo0"))
                 }, "DashboardRedirect"),
-                Qi = b.a.wrap(function() {
+                qi = b.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(32), n.e(0), n.e(80)]).then(n.bind(null, "Pnqn"))
                 }, "TeamsDashboardRoot"),
-                Ki = b.a.wrap(function() {
+                Yi = b.a.wrap(function() {
                     return n.e(79).then(n.bind(null, "hy6r"))
                 }, "TeamsLandingPage"),
-                Xi = b.a.wrap(function() {
+                Qi = b.a.wrap(function() {
                     return n.e(78).then(n.bind(null, "8n14"))
                 }, "OnboardingRoot"),
-                Zi = b.a.wrap(function() {
+                Ki = b.a.wrap(function() {
                     return n.e(77).then(n.bind(null, "q1NB"))
                 }, "DesktopLoginPage"),
-                Ji = b.a.wrap(function() {
+                Xi = b.a.wrap(function() {
                     return n.e(76).then(n.bind(null, "uHYy"))
                 }, "PartnerSignupRoot"),
-                $i = b.a.wrap(function() {
+                Zi = b.a.wrap(function() {
                     return n.e(30).then(n.bind(null, "Msj/"))
                 }, "DesktopBenchmarkingManager"),
-                er = function(e) {
+                Ji = function(e) {
                     return i.createElement(f.a, {
                         to: "/teams/" + e.match.params.teamName + "/dashboard"
                     })
                 },
-                tr = function(e) {
+                $i = function(e) {
                     return i.createElement(f.a, {
                         to: "/team/" + e.match.params.teamName
                     })
                 },
-                nr = function(e) {
+                er = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onHistoryChange = function(e, n) {
@@ -41857,62 +41785,62 @@
                             attachLeft: !0
                         }, a.o.benchmarking.toolsEnabled && i.createElement(q, null), i.createElement(I.a, null), i.createElement(F, null), i.createElement(V.a, null), i.createElement(H.b, null), this.renderContent(), i.createElement(v.a, null), i.createElement(ie.b, null), i.createElement(y.a, null), i.createElement(K, null), this.props.firstPageLoaded && i.createElement(ne.a, null), this.props.firstPageLoaded && i.createElement(re.a, {
                             history: this.props.history
-                        }), this.props.isLoggedIn && i.createElement(ue.a, null), i.createElement(te, null), this.props.firstPageLoaded && i.createElement(ce, null), this.props.firstPageLoaded && i.createElement(B, null), this.props.firstPageLoaded && a.o.integrations.session && i.createElement(z, null), a.o.integrations.performance && i.createElement($i, null))
+                        }), this.props.isLoggedIn && i.createElement(ue.a, null), i.createElement(te, null), this.props.firstPageLoaded && i.createElement(ce, null), this.props.firstPageLoaded && i.createElement(B, null), this.props.firstPageLoaded && a.o.integrations.session && i.createElement(z, null), a.o.integrations.performance && i.createElement(Zi, null))
                     }, t.prototype.renderContent = function() {
-                        return a.o.integrations.app && !this.props.isLoggedIn ? i.createElement(Zi, null) : i.createElement(g.a, null, i.createElement(h.a, {
+                        return a.o.integrations.app && !this.props.isLoggedIn ? i.createElement(Ki, null) : i.createElement(g.a, null, i.createElement(h.a, {
                             path: "/hi",
-                            component: Xi
+                            component: Qi
                         }), i.createElement(h.a, {
                             path: "/event/:teamName",
-                            component: tr
+                            component: $i
                         }), i.createElement(h.a, {
                             exact: !0,
                             path: "/partner/signup",
-                            component: Ji
+                            component: Xi
                         }), i.createElement(h.a, {
                             exact: !0,
                             path: "/team/:teamName/edit",
-                            render: er
+                            render: Ji
                         }), i.createElement(h.a, {
                             path: "/team/:teamName",
-                            component: Ki
-                        }), i.createElement(h.a, {
-                            path: "/teams/:teamName/dashboard/:pageName?",
-                            component: Qi
-                        }), i.createElement(h.a, {
-                            path: "/(dashboard|manager|broadcast/.+)",
                             component: Yi
                         }), i.createElement(h.a, {
-                            path: "/:channelLogin/(dashboard|manager)",
+                            path: "/teams/:teamName/dashboard/:pageName?",
                             component: qi
                         }), i.createElement(h.a, {
-                            path: "/",
+                            path: "/(dashboard|manager|broadcast/.+)",
                             component: Gi
+                        }), i.createElement(h.a, {
+                            path: "/:channelLogin/(dashboard|manager)",
+                            component: Wi
+                        }), i.createElement(h.a, {
+                            path: "/",
+                            component: Hi
                         }))
                     }, t
                 }(i.Component),
-                ir = Object(W.c)("Root", {
+                tr = Object(W.c)("Root", {
                     isRoot: !0
-                })(nr);
-            var rr, ar = Object(u.connect)(function(e) {
+                })(er);
+            var nr, ir = Object(u.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded,
                         isLoggedIn: Object(l.f)(e),
                         theme: Object(p.a)(e)
                     }
-                })(ir),
-                or = Object(d.a)(ar);
+                })(tr),
+                rr = Object(d.a)(ir);
 
-            function sr() {
+            function ar() {
                 a.o.mount(i.createElement(r.a, {
                     history: a.o.history
-                }, i.createElement(or, null)), document.getElementById("root"))
+                }, i.createElement(rr, null)), document.getElementById("root"))
             }
             a.o.integrations.app && Object(c.a)(a.o.integrations.app.id);
-            var lr = !1;
-            rr = a.o.store.getReduxStore().subscribe(function() {
+            var or = !1;
+            nr = a.o.store.getReduxStore().subscribe(function() {
                 var e = a.o.store.getState();
-                !lr && Object(l.h)(e) && (lr = !0, rr(), a.a.optimizedBuild ? sr() : setTimeout(sr, 500))
+                !or && Object(l.h)(e) && (or = !0, nr(), a.a.optimizedBuild ? ar() : setTimeout(ar, 500))
             }), Object(s.a)(), a.o.store.dispatch(Object(o.d)())
         },
         sSlw: function(e, t, n) {
