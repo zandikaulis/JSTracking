@@ -407,13 +407,13 @@ window.__twilightSettings = {
         },
         "20be9241-4fa5-4903-9ada-e1e7762eda23": {
             "name": "vod_colors_of_the_wind",
-            "v": 4762,
+            "v": 4842,
             "t": 2,
             "groups": [{
-                "weight": 50,
+                "weight": 0,
                 "value": "control"
             }, {
-                "weight": 50,
+                "weight": 100,
                 "value": "variant1"
             }]
         },
@@ -582,11 +582,11 @@ window.__twilightSettings = {
         },
         "3c3a5d48-117f-43ac-8b35-091f13b2d479": {
             "name": "MediaPlayer Staff Version",
-            "v": 4803,
+            "v": 4841,
             "t": 1,
             "groups": [{
                 "weight": 100,
-                "value": "2.6.26+2buf"
+                "value": "2.6.27"
             }]
         },
         "3f03eebb-3cbb-4f7c-b64b-e1ed0115a773": {
