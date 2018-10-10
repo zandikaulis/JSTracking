@@ -93,7 +93,7 @@ window.__twilightSettings = {
     "payments_recurly_countries": ["US", "FI", "ES", "IE", "SK", "RO", "CA"],
     "payments_spm_enabled_countries": ["US", "CA", "AT", "BE", "BG", "CH", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"],
     "persisted_queries_enabled": true,
-    "player_routes_exact": ["", "activate", "bits", "bits-checkout", "directory", "following", "popout", "prime", "store", "subs"],
+    "player_routes_exact": ["activate", "bits", "bits-checkout", "directory", "following", "popout", "prime", "store", "subs"],
     "player_routes_startswith": ["bits-checkout/", "checkout/", "collections/", "communities/", "directory/", "event/", "prime/", "products/", "settings/", "store/", "subs/"],
     "premiere_video_manager_public": true,
     "premiere_video_manager_staff": true,
