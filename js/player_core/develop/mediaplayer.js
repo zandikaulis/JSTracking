@@ -974,44 +974,42 @@ var NOT_SUPPORTED_ERROR_VALUE = 4;
 
 var NO_CDM_SUPPORT_ERROR = {
     value: NOT_SUPPORTED_ERROR_VALUE,
-    code: 11,
     message: 'Your browser does not support any DRM Content Decryption Modules',
 };
 
 var SESSION_UPDATE_ERROR = {
     value: NOT_SUPPORTED_ERROR_VALUE,
-    code: 12,
     message: 'There was an issue while updating DRM License',
 };
 
 var LICENSE_REQUEST_ERROR = {
     value: NETWORK_ERROR_VALUE,
-    code: 13,
     message: 'Error while requesting DRM license',
 };
 
 var KEY_SESSION_CREATION_ERROR = {
     value: NOT_SUPPORTED_ERROR_VALUE,
-    code: 14,
     message: 'Error creating key session',
 };
 
 var KEY_SESSION_INTERNAL_ERROR = {
     value: NOT_SUPPORTED_ERROR_VALUE,
-    code: 15,
     message: 'Encryption key not usable because of internal error in CDM',
 };
 
 var NO_PSSH_FOUND_ERROR = {
     value: NOT_SUPPORTED_ERROR_VALUE,
-    code: 16,
     message: "Unable to find valid CDM support on media",
 };
 
 var AUTH_XML_REQUEST_ERROR = {
     value: NETWORK_ERROR_VALUE,
-    code: 17,
-    message: "Request for auth xml failed",
+    message: "Request for AuthXML failed",
+};
+
+var CERT_REQUEST_ERROR = {
+    value: NETWORK_ERROR_VALUE,
+    message: "Request for DRM certificate failed",
 };
 
 var ERRORS = {
@@ -1022,6 +1020,7 @@ var ERRORS = {
     KEY_SESSION_INTERNAL: KEY_SESSION_INTERNAL_ERROR,
     NO_PSSH_FOUND: NO_PSSH_FOUND_ERROR,
     AUTH_XML_REQUEST: AUTH_XML_REQUEST_ERROR,
+    CERT_REQUEST: CERT_REQUEST_ERROR,
 };
 
 module.exports = {
@@ -1208,17 +1207,16 @@ var httpRequest = function (url, options) {
         }
         xhr.responseType = options.responseType;
 
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200){
-                    resolve(xhr.response);
-                } else {
-                    var simpleErrorResponse = 'Request Error: Status ' + xhr.status;
-                    console.warn(simpleErrorResponse)
-                    reject(simpleErrorResponse);
-                }
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                resolve(xhr.response);
             }
-        }
+        };
+
+        xhr.onloadend = function () {
+            reject(xhr.status);
+        };
+
         xhr.send(options.body);
     });
 };
@@ -1414,8 +1412,8 @@ DRMManager.prototype.configure = function (path) {
         this._authXml = httpRequest(authUrl, {
             method: 'GET',
             responseType: 'text',
-        }).catch(function () {
-            return Promise.reject(ERRORS.AUTH_XML_REQUEST);
+        }).catch(function (status) {
+            return Promise.reject(Object.assign({code: status}, ERRORS.AUTH_XML_REQUEST));
         });
     }
 };
@@ -1440,7 +1438,7 @@ DRMManager.prototype._handleError = function (err) {
     if (this._authXml) {
         this._onerror({
             value: err.value || 4, /*NOT_SUPPORTED*/
-            code: err.code || 10, /*UNKNOWN DRM ERROR*/
+            code: err.code || 0,
             message: err.message || '',
         });
     }
@@ -1655,9 +1653,7 @@ DRMManager.prototype._generateLicense = function (message) {
         return Promise.resolve(result);
     } else if (this._authXml) {
         return this._authXml.then(function (authXml) {
-            return this._requestLicense(message, authXml).catch(function () {
-                return Promise.reject(ERRORS.LICENSE_REQUEST);
-            });
+            return this._requestLicense(message, authXml);
         }.bind(this));
     } else {
         return Promise.reject(ERRORS.AUTH_XML_REQUEST);
@@ -1682,7 +1678,9 @@ DRMManager.prototype._requestLicense = function (message, authXml) {
         options.headers = Object.assign(options.headers, additionalData.headers);
     }
 
-    return httpRequest(this._selectedCDM.licenseUrl, options);
+    return httpRequest(this._selectedCDM.licenseUrl, options).catch(function (status) {
+        return Promise.reject(Object.assign({code: status}, ERRORS.LICENSE_REQUEST));
+    });;
 }
 
 
@@ -1696,7 +1694,9 @@ DRMManager.prototype._handleSafariEncrypted = function (event) {
             'Pragma': 'Cache-Control: no-cache',
             'Cache-Control': 'max-age=0',
         }
-    }).then(function (certificate) {
+    }).catch(function (status) {
+        return Promise.reject(Object.assign({code: status}, ERRORS.CERT_REQUEST));
+    }.bind(this)).then(function (certificate) {
         return this._setupSafariMediaKeys(event, certificate);
     }.bind(this)).catch(function (err) {
         this._handleError(err);
@@ -1770,8 +1770,8 @@ DRMManager.prototype._getWebkitLicense = function (message, contentId) {
                 'customdata': authXml,
             }
         };
-        return httpRequest(licenseUrl, options).catch(function () {
-            return Promise.reject(ERRORS.LICENSE_REQUEST);
+        return httpRequest(licenseUrl, options).catch(function (status) {
+            return Promise.reject(Object.assign({code: status}, ERRORS.LICENSE_REQUEST));
         });
     });
 };
@@ -2305,7 +2305,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-ab55c2f7";
+    return "2.3.0-5a07261e";
 }
 
 MediaPlayer.prototype.isLooping = function () {
