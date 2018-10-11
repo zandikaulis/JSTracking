@@ -74,7 +74,6 @@ window.__twilightSettings = {
     "ivw_url": "https://script.ioam.de/iam.js",
     "krux_countries": ["US"],
     "krux_url": "https://cdn.krxd.net/controltag?confid=JYk8LCsC",
-    "legacy_routes_enabled": true,
     "longtask_tracking_sample_rate": 0.1,
     "mass_mystery_gifting": "on",
     "messages_disclosure_enabled": true,
@@ -87,7 +86,6 @@ window.__twilightSettings = {
     "nfl_channels": ["cctester33", "stevemz"],
     "nfl_game_id": "14017",
     "notification_app_server_public_key": "BGzteaQYOqrTAPN8EuuowBVG67pHwyZo879XZkC7cUV2QP4qQf-92Pmm9tyOuriJdiKnMDDRi28F5HQK6uSk0vM",
-    "onsite_notifications_launch": true,
     "partner_signup_app_v2": true,
     "passport_hosts": ["https://api.twitch.tv", "https://passport.twitch.tv", "https://passport-staging.internal.twitch.tv", "https://passport-dev1.internal.twitch.tv", "https://passport-dev2.internal.twitch.tv", "https://passport-dev3.internal.twitch.tv", "https://id.twitch.tv", "https://id-dev.twitch.tv"],
     "payments_recurly_countries": ["US", "FI", "ES", "IE", "SK", "RO", "CA"],
@@ -185,13 +183,13 @@ window.__twilightSettings = {
         },
         "05dc2471-5696-4e15-9ff6-57d2fd4837c2": {
             "name": "pushy_onsite_email_verification",
-            "v": 4852,
+            "v": 4855,
             "t": 2,
             "groups": [{
-                "weight": 75,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 25,
+                "weight": 50,
                 "value": "treatment"
             }]
         },
@@ -1085,13 +1083,13 @@ window.__twilightSettings = {
         },
         "7aa589f3-34d8-425f-8227-29007d50757e": {
             "name": "twilight_growth_email_verify_bar",
-            "v": 4851,
+            "v": 4854,
             "t": 2,
             "groups": [{
-                "weight": 25,
+                "weight": 50,
                 "value": "control"
             }, {
-                "weight": 75,
+                "weight": 50,
                 "value": "enabled"
             }]
         },
