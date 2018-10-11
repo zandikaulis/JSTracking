@@ -1485,18 +1485,6 @@ window.__twilightSettings = {
                 "value": "off"
             }]
         },
-        "db6dc127-b372-48fe-9d8b-493ea6c51c57": {
-            "name": "twilight_preview_card_iconic_images",
-            "v": 4682,
-            "t": 1,
-            "groups": [{
-                "weight": 100,
-                "value": "control"
-            }, {
-                "weight": 0,
-                "value": "boxart"
-            }]
-        },
         "de013c6f-a800-45ee-9ab4-7965c405e3eb": {
             "name": "TWILIGHT_ARCHER",
             "v": 4588,
