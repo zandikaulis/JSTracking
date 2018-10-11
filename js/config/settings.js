@@ -1593,13 +1593,13 @@ window.__twilightSettings = {
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
             "name": "CVP Player Core 2.0 Mediaplayer Experiment Aug 2017",
-            "v": 4843,
+            "v": 4857,
             "t": 1,
             "groups": [{
-                "weight": 10,
+                "weight": 20,
                 "value": "2.6.27"
             }, {
-                "weight": 80,
+                "weight": 70,
                 "value": "2.6.26"
             }, {
                 "weight": 5,
