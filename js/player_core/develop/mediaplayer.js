@@ -2305,7 +2305,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-d245610e";
+    return "2.3.0-6076bb7e";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -4045,7 +4045,9 @@ Queue.prototype.empty = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./2buf.json": "./settings/2buf.json"
+	"./2buf.json": "./settings/2buf.json",
+	"./abrdelay.json": "./settings/abrdelay.json",
+	"./abrreset.json": "./settings/abrreset.json"
 };
 
 
@@ -4080,6 +4082,28 @@ webpackContext.id = "./settings sync recursive ^\\.\\/.*\\.json$";
 /***/ (function(module) {
 
 module.exports = {"buffercontrol":{"minBufferDuration":2}};
+
+/***/ }),
+
+/***/ "./settings/abrdelay.json":
+/*!********************************!*\
+  !*** ./settings/abrdelay.json ***!
+  \********************************/
+/*! exports provided: abr, default */
+/***/ (function(module) {
+
+module.exports = {"abr":{"lowLatencyDelayMode":true}};
+
+/***/ }),
+
+/***/ "./settings/abrreset.json":
+/*!********************************!*\
+  !*** ./settings/abrreset.json ***!
+  \********************************/
+/*! exports provided: abr, default */
+/***/ (function(module) {
+
+module.exports = {"abr":{"resetEstimate":true}};
 
 /***/ })
 
