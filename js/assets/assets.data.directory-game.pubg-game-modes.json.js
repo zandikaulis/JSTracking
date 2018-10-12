@@ -1,1 +1,24 @@
-< !DOCTYPE html > < html > < head > < title > 404 Not Found < /title></head > < body > < h1 > 404 Not Found < /h1><p>You've found yourself in an unprecedented situation. To the east is a long and dark corridor, to the west is a field of marigolds. Which way do you wish to go?</p > < /body></html >
+(window.webpackJsonp = window.webpackJsonp || []).push([
+    [168], {
+        "Dpq/": function(o) {
+            o.exports = {
+                items: [{
+                    Solo: [{
+                        display_name: "Solo",
+                        name: "Solo"
+                    }]
+                }, {
+                    Duo: [{
+                        display_name: "Duo",
+                        name: "Duo"
+                    }]
+                }, {
+                    Squad: [{
+                        display_name: "Squad",
+                        name: "Squad"
+                    }]
+                }]
+            }
+        }
+    }
+]);
