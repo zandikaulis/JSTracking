@@ -14,7 +14,7 @@ window.__twilightSettings = {
     "bits_sponsored_cheermotes_announcement": "off",
     "bits_truex_api_url": "https://get.truex.com/v2",
     "bits_truex_partner_hash": "af4f4f3a5b1e302e3e17383b8dd300cb6867ec84",
-    "bits_truex_script_url": "https://static.truex.com/js/client.js",
+    "bits_truex_script_url": "https://static.truex.com/js/client-twitch.js",
     "bits_world_cup_event": false,
     "bits_world_cup_event_phase_2": false,
     "bounty_board_available_bounties_date": "Wed June 27 2018 00:00:00 GMT-0700 (PDT)",
