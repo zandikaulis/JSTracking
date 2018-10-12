@@ -1,1 +1,274 @@
-< !DOCTYPE html > < html > < head > < title > 404 Not Found < /title></head > < body > < h1 > 404 Not Found < /h1><p>You've found yourself in an unprecedented situation. To the east is a long and dark corridor, to the west is a field of marigolds. Which way do you wish to go?</p > < /body></html >
+(window.webpackJsonp = window.webpackJsonp || []).push([
+    [182], {
+        IhlH: function(e, t, n) {},
+        T3fw: function(e, t, n) {
+            "use strict";
+            n.r(t);
+            var i = n("/MKj"),
+                a = n("kRBY"),
+                r = n("mrSG"),
+                o = n("q1tI"),
+                s = n("/7QA"),
+                l = n("eJ65"),
+                d = n("yR8l"),
+                c = n("Ue10"),
+                m = n("gRl6"),
+                u = (n("IhlH"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.onClickInteraction = function(e) {
+                            t.props.sendMessage(":act " + e.currentTarget.getAttribute("data-action")), t.toggleBalloonRef.toggleBalloon()
+                        }, t.setToggleBalloonRef = function(e) {
+                            return t.toggleBalloonRef = e
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        var e = this.getPresetText();
+                        return this.props.isLoggedIn && 0 !== e.length ? o.createElement(c.xb, {
+                            className: "orbis",
+                            display: c.W.Flex,
+                            flexDirection: c.Y.Column,
+                            alignItems: c.f.Stretch,
+                            background: c.r.Base,
+                            flexShrink: 0,
+                            borderBottom: !0
+                        }, o.createElement(l.a, {
+                            ref: this.setToggleBalloonRef
+                        }, o.createElement("div", {
+                            className: "orbis__dropdown-container",
+                            "data-test-selector": "orbis-dropdown-container"
+                        }, o.createElement(c.Va, {
+                            padding: {
+                                y: 1,
+                                x: 2
+                            },
+                            display: c.W.Flex,
+                            justifyContent: c.Ua.Between,
+                            flexWrap: c.Z.NoWrap
+                        }, o.createElement(c.Va, {
+                            ellipsis: !0,
+                            padding: {
+                                right: 1
+                            }
+                        }, o.createElement(c.V, {
+                            type: c.Nb.Span
+                        }, Object(s.d)("Interactions Available", "Orbis"))), o.createElement(c.Va, {
+                            display: c.W.Flex,
+                            justifyContent: c.Ua.Between,
+                            alignItems: c.f.Center,
+                            flexShrink: 0
+                        }, o.createElement(c.Va, {
+                            className: "orbis__dropdown-icon",
+                            display: c.W.Flex,
+                            justifyContent: c.Ua.Between,
+                            alignItems: c.f.Center
+                        }, o.createElement(c.mb, {
+                            asset: c.nb.AngleRight
+                        }))))), o.createElement(c.u, {
+                            offsetY: "1px",
+                            noTail: !0
+                        }, o.createElement(c.Va, {
+                            className: "orbis__dropdown-content",
+                            padding: 1
+                        }, this.renderInteractions(e))))) : null
+                    }, t.prototype.renderInteractions = function(e) {
+                        for (var t = [], n = 0, i = e; n < i.length; n++) {
+                            var a = i[n];
+                            t.push(this.renderInteraction(a))
+                        }
+                        return t
+                    }, t.prototype.renderInteraction = function(e) {
+                        return e ? o.createElement(c.Sa, {
+                            onClick: this.onClickInteraction,
+                            key: e,
+                            "data-action": e,
+                            "data-test-selector": "orbis-interaction"
+                        }, o.createElement(c.Na, {
+                            padding: {
+                                y: .5,
+                                x: 1
+                            }
+                        }, o.createElement(c.V, {
+                            ellipsis: !0
+                        }, e))) : null
+                    }, t.prototype.getPresetText = function() {
+                        if (!(this.props.data && this.props.data.user && this.props.data.user.stream && this.props.data.user.stream.platform && "PlayStation" === this.props.data.user.stream.platform.__typename && this.props.data.user.stream.platform.title && this.props.data.user.stream.platform.title.presetText)) return [];
+                        var e = this.props.data.user.stream.platform.title.presetText;
+                        return e.some(function(e) {
+                            return !!e
+                        }) ? e : []
+                    }, t
+                }(o.Component)),
+                p = Object(d.a)(m, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                login: e.channelLogin
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !e.isLoggedIn || !e.channelLogin
+                    }
+                })(u);
+            var g = Object(i.connect)(function(e) {
+                return {
+                    isLoggedIn: Object(a.f)(e)
+                }
+            })(p);
+            n.d(t, "Orbis", function() {
+                return g
+            }), n.d(t, "PublicProps", function() {})
+        },
+        gRl6: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "Chat_OrbisPresetText"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "login"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "login"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "stream"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "platform"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "InlineFragment",
+                                                    typeCondition: {
+                                                        kind: "NamedType",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "PlayStation"
+                                                        }
+                                                    },
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "title"
+                                                            },
+                                                            arguments: [],
+                                                            directives: [],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "presetText"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }]
+                                                            }
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 146
+                }
+            };
+            n.loc.source = {
+                body: "query Chat_OrbisPresetText ($login: String!) {\nuser(login: $login) {\nid\nstream {\nid\nplatform {\n... on PlayStation {\ntitle {\npresetText\n}\n}\n}\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        }
+    }
+]);

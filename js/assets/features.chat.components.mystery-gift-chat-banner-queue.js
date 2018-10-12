@@ -1,1 +1,309 @@
-< !DOCTYPE html > < html > < head > < title > 404 Not Found < /title></head > < body > < h1 > 404 Not Found < /h1><p>You've found yourself in an unprecedented situation. To the east is a long and dark corridor, to the west is a field of marigolds. Which way do you wish to go?</p > < /body></html >
+(window.webpackJsonp = window.webpackJsonp || []).push([
+    [184], {
+        "/2Fp": function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "MysteryGiftGiver"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "displayName"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "login"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 75
+                }
+            };
+            n.loc.source = {
+                body: "query MysteryGiftGiver($id: ID!) {\nuser(id: $id) {\nid\ndisplayName\nlogin\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
+        Gnts: function(e, t, n) {
+            "use strict";
+            n.r(t);
+            var i = n("mrSG"),
+                r = n("q1tI"),
+                o = n("fvjX"),
+                a = n("x7UT"),
+                s = n("0Log"),
+                u = n("/aPz"),
+                p = n("/7QA"),
+                c = n("V6PS"),
+                d = n.n(c),
+                l = n("yR8l"),
+                m = n("QVaV"),
+                y = [5, 10, 20, 30, 40, 50, 60];
+
+            function f(e) {
+                var t = p.b.get("community_sub_gifting_banner_timeouts", y);
+                return t.length !== y.length && (t = y), e < 5 ? t[0] : e <= 10 ? t[1] : e <= 30 ? t[2] : e <= 50 ? t[3] : e <= 70 ? t[4] : e <= 90 ? t[5] : t[6]
+            }
+            var h, g = n("zyCo"),
+                b = n("GnwI"),
+                v = n("0WFu"),
+                C = n("Ue10"),
+                G = n("/2Fp"),
+                k = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.bannerDuration = 1e3 * f(t.props.mysteryGiftCount), t.start = Date.now(), t.getBannerText = function() {
+                            var e = null,
+                                n = null;
+                            t.props.data && t.props.data.user && (t.props.data.user.displayName && (e = t.props.data.user.displayName), t.props.data.user.login && (n = t.props.data.user.login));
+                            var i = Object(v.a)(t.props.tier) || "";
+                            return n || e ? Object(p.d)("{mysteryGiftCount, plural, one {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!} other {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
+                                displayName: r.createElement(C.V, {
+                                    bold: !0,
+                                    color: C.O.Link,
+                                    type: C.Nb.Span
+                                }, Object(m.a)(n, e)),
+                                mysteryGiftCount: t.props.mysteryGiftCount,
+                                tier: i
+                            }, "MysteryGiftChatBanner") : Object(p.d)("{mysteryGiftCount, plural, one {Someone is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!} other {Someone is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
+                                mysteryGiftCount: t.props.mysteryGiftCount,
+                                tier: i
+                            }, "MysteryGiftChatBanner")
+                        }, t.getRemainingTime = function() {
+                            return t.start + t.bannerDuration - Date.now()
+                        }, t.handleCountdownEnd = function() {
+                            t.props.onCountdownEnd(t.props.uuid)
+                        }, t
+                    }
+                    return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                        !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.componentWillReceiveProps = function(e) {
+                        this.props.mysteryGiftCount !== e.mysteryGiftCount && (this.bannerDuration = 1e3 * f(this.props.mysteryGiftCount), this.start = Date.now())
+                    }, t.prototype.render = function() {
+                        return r.createElement(r.Fragment, null, r.createElement(C.Va, {
+                            alignItems: C.f.Center,
+                            display: C.W.Flex,
+                            padding: {
+                                x: 2,
+                                y: 1
+                            }
+                        }, r.createElement(C.Va, {
+                            padding: {
+                                right: 1
+                            }
+                        }, r.createElement(C.S, {
+                            src: d.a,
+                            alt: Object(p.d)("Mystery gifts being given out!", "MysteryGiftChatBanner")
+                        })), r.createElement(C.V, null, this.getBannerText())), r.createElement(g.a, {
+                            getRemainingTime: this.getRemainingTime,
+                            onCountdownEnd: this.handleCountdownEnd,
+                            totalCountdownTime: this.bannerDuration
+                        }))
+                    }, t
+                }(r.Component),
+                w = Object(o.compose)(Object(l.a)(G, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                id: e.userID
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !e.userID
+                    }
+                }), Object(b.c)("MysteryGiftChatBanner"))(k),
+                D = function(e) {
+                    return 0 === e.purchases.length ? null : r.createElement(C.xb, {
+                        background: C.r.Base,
+                        fullWidth: !0
+                    }, e.purchases.slice(0, 2).map(function(t) {
+                        return r.createElement(w, {
+                            key: "MysteryGiftChatBanner-" + t.uuid,
+                            mysteryGiftCount: t.count,
+                            onCountdownEnd: e.handleCountdownEnd,
+                            tier: t.tier,
+                            userID: t.user_id,
+                            uuid: t.uuid
+                        })
+                    }))
+                },
+                T = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            lastMessageUUID: null,
+                            purchases: []
+                        }, t.handleCountdownEnd = function(e) {
+                            t.setState(function(t) {
+                                return {
+                                    purchases: t.purchases.filter(function(t) {
+                                        return t.uuid !== e
+                                    })
+                                }
+                            })
+                        }, t
+                    }
+                    return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                        var e = this.props.pubsub.status[Object(u.p)(this.props.channelID)];
+                        !e || e.isSubscribing || e.error || this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.componentWillReceiveProps = function(e) {
+                        var t = e.pubsub.messages.purchase || null;
+                        t && this.setState(function(e) {
+                            if (!(t.uuid !== e.lastMessageUUID)) return e;
+                            var n = i.__assign({}, t, {
+                                humanizedTier: Object(v.a)(t.tier) || 0
+                            });
+                            return {
+                                lastMessageUUID: n.uuid,
+                                purchases: e.purchases.concat([n]).sort(function(e, t) {
+                                    return t.humanizedTier === e.humanizedTier ? t.count - e.count : t.humanizedTier - e.humanizedTier
+                                })
+                            }
+                        })
+                    }, t.prototype.render = function() {
+                        return r.createElement(D, {
+                            handleCountdownEnd: this.handleCountdownEnd,
+                            purchases: this.state.purchases
+                        })
+                    }, t
+                }(r.Component),
+                E = Object(o.compose)(Object(a.a)([{
+                    mapMessageTypesToProps: (h = {}, h[s.PubsubMessageType.MysteryGiftPurchase] = "purchase", h),
+                    topic: function(e) {
+                        return Object(u.p)(e.channelID)
+                    }
+                }]), Object(b.c)("MysteryGiftChatBannerQueue"))(T);
+            n.d(t, "MysteryGiftChatBannersQueueContainer", function() {
+                return T
+            }), n.d(t, "MysteryGiftChatBannerQueue", function() {
+                return E
+            })
+        },
+        Leb6: function(e, t, n) {},
+        V6PS: function(e, t, n) {
+            e.exports = n.p + "assets/community-gift-cf438a1a78c449fd2d4a.svg"
+        },
+        zyCo: function(e, t, n) {
+            "use strict";
+            var i = n("mrSG"),
+                r = n("q1tI"),
+                o = (n("Leb6"), {
+                    "data-test-selector": "countdown-fill-width"
+                }),
+                a = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this,
+                            t = this.props.startPolling || setInterval;
+                        this.intervalID = t(function() {
+                            return e.forceUpdate()
+                        }, 1e3)
+                    }, t.prototype.componentWillUnmount = function() {
+                        clearInterval(this.intervalID)
+                    }, t.prototype.componentDidUpdate = function() {
+                        this.props.getRemainingTime() <= 0 && this.props.onCountdownEnd()
+                    }, t.prototype.render = function() {
+                        var e = this.countdownPercentage + "%";
+                        return r.createElement("div", {
+                            className: "raid-countdown-bar"
+                        }, r.createElement("div", i.__assign({
+                            className: "raid-countdown-bar__fill",
+                            style: {
+                                width: e
+                            }
+                        }, o)))
+                    }, Object.defineProperty(t.prototype, "countdownPercentage", {
+                        get: function() {
+                            return this.props.getRemainingTime() / this.props.totalCountdownTime * 100
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(r.PureComponent);
+            n.d(t, !1, function() {
+                return o
+            }), n.d(t, "a", function() {
+                return a
+            })
+        }
+    }
+]);

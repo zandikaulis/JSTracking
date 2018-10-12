@@ -1,1 +1,1314 @@
-< !DOCTYPE html > < html > < head > < title > 404 Not Found < /title></head > < body > < h1 > 404 Not Found < /h1><p>You've found yourself in an unprecedented situation. To the east is a long and dark corridor, to the west is a field of marigolds. Which way do you wish to go?</p > < /body></html >
+(window.webpackJsonp = window.webpackJsonp || []).push([
+    [57], {
+        "9fCB": function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "crate"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "Crate"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "title"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "iconURL"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "openURL"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "iconType"
+                            },
+                            arguments: [],
+                            directives: []
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 61
+                }
+            };
+            n.loc.source = {
+                body: "fragment crate on Crate {\nid\ntitle\niconURL\nopenURL\niconType\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
+        CgqK: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "Inventory_DropsList_CurrentUser"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "itemNamesEnabled"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "Boolean"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "currentUser"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "inventory"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "drops"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "nodes"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "node"
+                                                            },
+                                                            arguments: [],
+                                                            directives: [],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "game"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet: {
+                                                                        kind: "SelectionSet",
+                                                                        selections: [{
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "name"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }]
+                                                                    }
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "imageURL"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "id"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [{
+                                                                        kind: "Directive",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "include"
+                                                                        },
+                                                                        arguments: [{
+                                                                            kind: "Argument",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "if"
+                                                                            },
+                                                                            value: {
+                                                                                kind: "Variable",
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "itemNamesEnabled"
+                                                                                }
+                                                                            }
+                                                                        }]
+                                                                    }]
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "name"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [{
+                                                                        kind: "Directive",
+                                                                        name: {
+                                                                            kind: "Name",
+                                                                            value: "include"
+                                                                        },
+                                                                        arguments: [{
+                                                                            kind: "Argument",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "if"
+                                                                            },
+                                                                            value: {
+                                                                                kind: "Variable",
+                                                                                name: {
+                                                                                    kind: "Name",
+                                                                                    value: "itemNamesEnabled"
+                                                                                }
+                                                                            }
+                                                                        }]
+                                                                    }]
+                                                                }]
+                                                            }
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 229
+                }
+            };
+            n.loc.source = {
+                body: "query Inventory_DropsList_CurrentUser($itemNamesEnabled: Boolean!) {\ncurrentUser {\nid\ninventory {\ndrops {\nnodes {\nnode {\ngame {\nname\n}\nimageURL\nid @include (if: $itemNamesEnabled)\nname @include (if: $itemNamesEnabled)\n}\n}\n}\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
+        HWNB: function(e, t, n) {},
+        JCeY: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "amazonMarketplace"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "AmazonMarketplace"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "id"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "displayText"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "orderHistoryRedirectURL"
+                            },
+                            arguments: [],
+                            directives: []
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 90
+                }
+            };
+            n.loc.source = {
+                body: "fragment amazonMarketplace on AmazonMarketplace {\nid\ndisplayText\norderHistoryRedirectURL\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
+        OpME: function(e, t, n) {
+            "use strict";
+            n.d(t, "b", function() {
+                return s
+            }), n.d(t, "d", function() {
+                return d
+            }), n.d(t, "c", function() {
+                return u
+            }), n.d(t, "a", function() {
+                return p
+            }), n.d(t, "f", function() {
+                return g
+            }), n.d(t, "e", function() {
+                return v
+            });
+            var a = n("mrSG"),
+                i = n("lZdE"),
+                r = n("cpJf"),
+                o = {
+                    "^B-?\\)$": "B)",
+                    "^:-?[z|Z|\\|]$": ":|",
+                    "^:-?\\)$": ":)",
+                    "^:-?\\($": ":(",
+                    "^:-?(p|P)$": ":P",
+                    "^;-?(p|P)$": ";P",
+                    "^:-?[\\\\/]$": ":/",
+                    "^;-?\\)$": ";)",
+                    "^R-?\\)$": "R)",
+                    "^:>$": ":>",
+                    "^[oO](_|\\.)[oO]$": "O_o",
+                    "^:-?D$": ":D",
+                    "^:-?(o|O)$": ":O",
+                    "^>\\($": ">(",
+                    "^:-?(?:7|L)$": ":7",
+                    "^:-?(S|s)$": ":S",
+                    "^#-?[\\\\/]$": "#/",
+                    "^<\\]$": "<]",
+                    "^<3$": "<3",
+                    "^&lt;3$": "<3",
+                    "^&lt;\\]$": "<]",
+                    "^&gt;\\($": ">("
+                },
+                c = ["1.0", "2.0", "3.0"],
+                l = new Set([457, 33, 42, 0]);
+
+            function s(e) {
+                for (var t = [], n = function(e) {
+                        if (!e || !e.id || !e.token) return "continue";
+                        var n = f(e.token),
+                            i = o[n] || n,
+                            r = c.reduce(function(t, n) {
+                                var a = t;
+                                return a && (a = a.concat(", ")), a.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + n + " " + n + "x")
+                            }, "");
+                        t.push(a.__assign({
+                            displayName: i,
+                            srcSet: r
+                        }, e))
+                    }, i = 0, r = e; i < r.length; i++) {
+                    n(r[i])
+                }
+                return t
+            }
+            var d = function(e) {
+                var t = f(e);
+                return o[t] || t
+            };
+
+            function m(e) {
+                return e.filter(function(e) {
+                    return !!e && !!e.id && !!e.token
+                }).sort(function(e, t) {
+                    return parseInt(e.id, 10) - parseInt(t.id, 10)
+                })
+            }
+
+            function u(e) {
+                for (var t = [], n = 0, a = e; n < a.length; n++) {
+                    var i = a[n];
+                    if (i && i.id && i.emotes) {
+                        for (var r = {
+                                id: i.id,
+                                emotes: []
+                            }, o = 0, c = i.emotes; o < c.length; o++) {
+                            var l = c[o];
+                            l && l.id && l.token && r.emotes.push(l)
+                        }
+                        t.push(r)
+                    }
+                }
+                return t
+            }
+
+            function p(e) {
+                for (var t = [], n = [], a = 0, i = e; a < i.length; a++) {
+                    var r = i[a];
+                    if (r && r.id && r.emotes) {
+                        var o = {
+                            id: r.id,
+                            emotes: s(m(r.emotes))
+                        };
+                        l.has(parseInt(r.id, 10)) ? t.push(o) : n.push(o)
+                    }
+                }
+                return n.concat(t)
+            }
+            var f = function(e) {
+                    return function(e) {
+                        return /[\|\\\^\$\*\+\?\:\#]/.test(e)
+                    }(e) ? "^" + e.replace(/\\(?=[&;:])/g, "") + "$" : e
+                },
+                g = function(e, t, n) {
+                    var a = n || r.d,
+                        o = [],
+                        c = [],
+                        l = [],
+                        s = new RegExp("^" + Object(i.a)(t), "i");
+                    return e.forEach(function(e) {
+                        a[e.token] ? l.push(e) : e.token.match(s) ? o.push(e) : c.push(e)
+                    }), o.sort(function(e, t) {
+                        return e.token < t.token ? -1 : e.token > t.token ? 1 : 0
+                    }), c.sort(function(e, t) {
+                        return e.token < t.token ? -1 : e.token > t.token ? 1 : 0
+                    }), l.sort(function(e, t) {
+                        return a[t.token].count - a[e.token].count
+                    }), l.concat(o).concat(c)
+                },
+                v = function(e) {
+                    var t = {};
+                    return e.filter(function(e) {
+                        return !t.hasOwnProperty(e.token) && (t[e.token] = !0)
+                    })
+                }
+        },
+        UqZg: function(e, t, n) {
+            "use strict";
+            n.r(t);
+            var a = n("/MKj"),
+                i = n("fvjX"),
+                r = n("1/iK"),
+                o = n("y5D0"),
+                c = n("kRBY"),
+                l = n("mrSG"),
+                s = n("q1tI"),
+                d = n("/7QA"),
+                m = n("ZDlU"),
+                u = n("yR8l"),
+                p = n("V+GM"),
+                f = n("NvVO"),
+                g = n("2xye"),
+                v = n("GnwI"),
+                k = n("Ue10"),
+                h = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.renderBadge = function(e) {
+                            return s.createElement(k.Va, {
+                                key: e.id,
+                                margin: {
+                                    bottom: 2
+                                }
+                            }, s.createElement(k.o, {
+                                ratio: k.p.Aspect1x1
+                            }, s.createElement(k.xb, {
+                                fullHeight: !0,
+                                fullWidth: !0,
+                                display: k.W.Flex,
+                                padding: 2,
+                                border: !0
+                            }, s.createElement(k.Na, {
+                                fullHeight: !0,
+                                fullWidth: !0
+                            }, s.createElement("img", {
+                                src: e.imageURL,
+                                title: e.title,
+                                alt: e.title
+                            })))), s.createElement(k.V, {
+                                type: k.Nb.Strong
+                            }, e.title))
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.loading) return s.createElement(k.Xa, {
+                            fillContent: !0
+                        });
+                        if (!this.props.badges) return null;
+                        var e = this.props.badges,
+                            t = e.map(this.renderBadge);
+                        return s.createElement(k.Va, {
+                            margin: {
+                                y: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            display: k.W.Flex,
+                            margin: {
+                                bottom: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            margin: {
+                                right: 1
+                            }
+                        }, s.createElement(k.V, {
+                            type: k.Nb.H3
+                        }, Object(d.d)("Badges from Crates", "BadgesList"))), s.createElement(k.V, {
+                            type: k.Nb.H3,
+                            color: k.O.Alt2
+                        }, Object(d.e)(e.length))), s.createElement(k.Va, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, s.createElement(k.V, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), s.createElement(k.Tb, {
+                            childWidth: k.Ub.Small,
+                            placeholderItems: 8
+                        }, t))
+                    }, t
+                }(s.Component),
+                b = Object(i.compose)(Object(v.c)("BadgesList", {
+                    autoReportInteractive: !0
+                }))(h),
+                y = n("SDEh"),
+                E = n("edgk");
+            var N, S = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.renderCrate = function(e) {
+                            return s.createElement(k.Va, {
+                                key: e.id
+                            }, s.createElement(k.Sa, {
+                                onClick: t.handleOpenClick,
+                                "data-open-url": e.openURL
+                            }, s.createElement(k.o, {
+                                ratio: k.p.Aspect1x1
+                            }, s.createElement(k.xb, {
+                                fullHeight: !0,
+                                fullWidth: !0,
+                                display: k.W.Flex,
+                                padding: 2,
+                                border: !0
+                            }, s.createElement(k.Na, {
+                                fullHeight: !0,
+                                fullWidth: !0
+                            }, s.createElement("img", {
+                                alt: Object(d.d)("Crate", "CratesList"),
+                                src: e.iconURL
+                            })))), s.createElement(k.V, null, Object(d.d)("Open Now", "CratesList"))))
+                        }, t.handleOpenClick = function(e) {
+                            ! function(e, t) {
+                                var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
+                                n && !Object(y.a)() && (n.focus(), Object(E.a)(n, function(e) {
+                                    t(e)
+                                }))
+                            }(e.currentTarget.dataset.openUrl || "", t.reload)
+                        }, t.reload = function() {
+                            t.props.refetchData && t.props.refetchData()
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.loading) return s.createElement(k.Xa, {
+                            fillContent: !0
+                        });
+                        if (!this.props.crates) return null;
+                        var e = this.props.crates,
+                            t = e.map(this.renderCrate);
+                        return s.createElement(k.Va, {
+                            "data-test-selector": "crates-list__wrapper",
+                            margin: {
+                                y: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            display: k.W.Flex,
+                            margin: {
+                                bottom: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            margin: {
+                                right: 1
+                            }
+                        }, s.createElement(k.V, {
+                            type: k.Nb.H3
+                        }, Object(d.d)("Twitch Crates", "CratesList"))), s.createElement(k.V, {
+                            type: k.Nb.H3,
+                            color: k.O.Alt2
+                        }, Object(d.e)(e.length))), s.createElement(k.Tb, {
+                            childWidth: k.Ub.Small,
+                            placeholderItems: 8
+                        }, t))
+                    }, t
+                }(s.Component),
+                O = Object(i.compose)(Object(v.c)("CratesList", {
+                    autoReportInteractive: !0
+                }))(S),
+                V = n("CgqK");
+            n("HWNB");
+            ! function(e) {
+                e.Drop = "drops-list__drop", e.DropName = "drops-list__drop-name", e.Wrapper = "drops-list__wrapper"
+            }(N || (N = {}));
+            var F = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.itemNamesEnabled = d.b.get("drops_itemnames_enabled", !1), t.getDropsDescription = function(e) {
+                            return e.length < 1 ? Object(d.d)("Drops are a fun new way to get in-game loot just for watching your favorite channels on Twitch! <x:link>Learn more</x:link>", {
+                                "x:link": function(e) {
+                                    return s.createElement("a", {
+                                        href: "https://help.twitch.tv/customer/en/portal/topics/301257-getting-started/articles",
+                                        target: "_blank"
+                                    }, e)
+                                }
+                            }, "DropsList") : Object(d.d)("Drops you have received are accessed within their corresponding games. Log into the game to experience your new content.", "DropsList")
+                        }, t.renderDrop = function(e) {
+                            var n = e.drop.node,
+                                a = t.itemNamesEnabled ? n.name : n.game.name;
+                            return s.createElement(k.Va, {
+                                key: a,
+                                margin: {
+                                    bottom: 2
+                                },
+                                "data-test-selector": N.Drop
+                            }, s.createElement(k.xb, {
+                                display: k.W.Flex,
+                                alignItems: k.f.Center,
+                                justifyContent: k.Ua.Center,
+                                padding: 1,
+                                border: !0,
+                                position: k.db.Relative
+                            }, s.createElement("img", {
+                                src: n.imageURL,
+                                alt: Object(d.d)("Drop image for {gameName}", {
+                                    gameName: a
+                                }, "DropsListPresentation")
+                            }), s.createElement(k.xb, {
+                                position: k.db.Absolute,
+                                attachBottom: !0,
+                                attachRight: !0,
+                                className: "drops-list__count",
+                                color: k.O.Overlay,
+                                borderRadius: k.x.Small,
+                                padding: .5
+                            }, s.createElement(k.V, {
+                                fontSize: k.Aa.Size4,
+                                ariaLabel: Object(d.d)("Count of Drops awarded for {gameName}", {
+                                    gameName: a
+                                }, "DropsListPresentation")
+                            }, e.count))), s.createElement(k.V, {
+                                type: k.Nb.Strong,
+                                "data-test-selector": N.DropName
+                            }, a))
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.postRender()
+                    }, t.prototype.componentDidUpdate = function() {
+                        this.postRender()
+                    }, t.prototype.render = function() {
+                        var e = this;
+                        if (this.props.data.loading) return s.createElement(k.Xa, {
+                            fillContent: !0
+                        });
+                        if (!this.props.data || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.inventory.drops.nodes) return null;
+                        var t = this.props.data.currentUser.inventory.drops.nodes,
+                            n = t.reduce(function(t, n) {
+                                if (e.itemNamesEnabled) {
+                                    var a = n.node.id;
+                                    return t.hasOwnProperty(a) ? t[a].count++ : t[n.node.id] = {
+                                        count: 1,
+                                        drop: n
+                                    }, t
+                                }
+                                var i = n.node.game.name;
+                                return t.hasOwnProperty(i) ? t[i].count++ : t[n.node.game.name] = {
+                                    count: 1,
+                                    drop: n
+                                }, t
+                            }, {}),
+                            a = Object.keys(n).map(function(t) {
+                                return e.renderDrop(n[t])
+                            });
+                        return s.createElement(k.Va, {
+                            "data-test-selector": N.Wrapper,
+                            margin: {
+                                y: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            display: k.W.Flex
+                        }, s.createElement(k.Va, {
+                            margin: {
+                                right: 1
+                            }
+                        }, s.createElement(k.V, {
+                            type: k.Nb.H3
+                        }, Object(d.d)("Drops", "DropsList"))), s.createElement(k.V, {
+                            type: k.Nb.H3,
+                            color: k.O.Alt2
+                        }, Object(d.e)(t.length))), s.createElement(k.Va, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, s.createElement(k.V, null, this.getDropsDescription(t))), s.createElement(k.Tb, {
+                            childWidth: k.Ub.Small,
+                            noGrow: !0
+                        }, a))
+                    }, t.prototype.postRender = function() {
+                        this.props.data.loading || this.props.latencyTracking.reportInteractive()
+                    }, t
+                }(s.Component),
+                C = Object(i.compose)(Object(u.a)(V, {
+                    name: "data",
+                    options: function() {
+                        return {
+                            variables: {
+                                itemNamesEnabled: d.b.get("drops_itemnames_enabled", !1)
+                            }
+                        }
+                    }
+                }), Object(v.c)("DropsList"))(F),
+                D = n("OpME"),
+                j = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.renderEmote = function(e) {
+                            var t = Object(D.b)([e])[0],
+                                n = t.srcSet.split(", ").pop().split(" ").shift();
+                            return s.createElement(k.Va, {
+                                key: t.id,
+                                margin: {
+                                    bottom: 2
+                                }
+                            }, s.createElement(k.o, {
+                                ratio: k.p.Aspect1x1
+                            }, s.createElement(k.xb, {
+                                fullHeight: !0,
+                                fullWidth: !0,
+                                display: k.W.Flex,
+                                padding: 2,
+                                border: !0
+                            }, s.createElement(k.Na, {
+                                fullHeight: !0,
+                                fullWidth: !0
+                            }, s.createElement("img", {
+                                src: n,
+                                title: t.displayName,
+                                alt: t.displayName
+                            })))), s.createElement(k.V, {
+                                type: k.Nb.Strong
+                            }, t.displayName))
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.loading) return s.createElement(k.Xa, {
+                            fillContent: !0
+                        });
+                        if (!this.props.emoteSets) return null;
+                        var e = new Map;
+                        this.props.emoteSets.forEach(function(t) {
+                            t.emotes.forEach(function(t) {
+                                e.set(t.id, t)
+                            })
+                        });
+                        var t = Array.from(e).sort(function(e, t) {
+                            var n = e[0],
+                                a = t[0];
+                            return n.localeCompare(a)
+                        }).map(function(e) {
+                            e[0];
+                            return e[1]
+                        }).map(this.renderEmote);
+                        return s.createElement(k.Va, {
+                            margin: {
+                                y: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            display: k.W.Flex,
+                            margin: {
+                                bottom: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            margin: {
+                                right: 1
+                            }
+                        }, s.createElement(k.V, {
+                            type: k.Nb.H3
+                        }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), s.createElement(k.V, {
+                            type: k.Nb.H3,
+                            color: k.O.Alt2
+                        }, Object(d.e)(t.length))), s.createElement(k.Va, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, s.createElement(k.V, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), s.createElement(k.Tb, {
+                            childWidth: k.Ub.Small,
+                            placeholderItems: 8
+                        }, t))
+                    }, t
+                }(s.Component),
+                w = Object(i.compose)(Object(v.c)("EmoticonsList", {
+                    autoReportInteractive: !0
+                }))(j),
+                L = n("eJ65"),
+                x = n("KtNF"),
+                R = n("4h+t"),
+                U = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.bitsConfig = Object(R.a)(), t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        var e = Object(d.d)("Inventory", "InventoryTitleBar");
+                        if (this.props.loading) return s.createElement(k.xb, {
+                            className: "title-bar",
+                            display: k.W.Flex,
+                            borderBottom: !0,
+                            padding: {
+                                bottom: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            flexGrow: 1
+                        }, s.createElement(k.V, {
+                            type: k.Nb.H2
+                        }, e)), s.createElement(k.Va, {
+                            display: k.W.Flex,
+                            margin: {
+                                right: 3
+                            },
+                            alignItems: k.f.Center
+                        }, s.createElement(k.cb, {
+                            width: 135,
+                            height: 30
+                        })), s.createElement(k.Va, {
+                            alignSelf: k.g.Baseline
+                        }, s.createElement(k.cb, {
+                            width: 180,
+                            height: 30
+                        })));
+                        var t = this.props.amazonMarketplaces.map(function(e) {
+                                return s.createElement(k.Sa, {
+                                    key: e.id,
+                                    linkTo: "https://" + e.orderHistoryRedirectURL,
+                                    targetBlank: !0
+                                }, e.displayText)
+                            }),
+                            n = Object(d.d)("You have {bitsComponent}", {
+                                bitsComponent: s.createElement(x.a, {
+                                    count: this.props.bitsBalance,
+                                    bitsConfig: this.bitsConfig,
+                                    withImage: !0,
+                                    withText: !0
+                                })
+                            }, "InventoryTitleBar");
+                        return s.createElement(k.xb, {
+                            className: "title-bar",
+                            display: k.W.Flex,
+                            borderBottom: !0,
+                            padding: {
+                                bottom: 1
+                            }
+                        }, s.createElement(k.Va, {
+                            flexGrow: 1
+                        }, s.createElement(k.V, {
+                            type: k.Nb.H2
+                        }, e)), s.createElement(k.Va, {
+                            display: k.W.Flex,
+                            margin: {
+                                right: 3
+                            },
+                            alignItems: k.f.Center
+                        }, s.createElement(k.V, null, n)), s.createElement(k.Va, {
+                            alignSelf: k.g.Baseline
+                        }, s.createElement(L.a, null, s.createElement(k.z, {
+                            type: k.F.Hollow
+                        }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), s.createElement(k.u, null, s.createElement(k.Va, {
+                            padding: 1
+                        }, t)))))
+                    }, t
+                }(s.Component),
+                I = Object(i.compose)(Object(v.c)("TitleBar", {
+                    autoReportInteractive: !0
+                }))(U),
+                _ = n("wdoW"),
+                B = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.refetchData = function() {
+                            t.props.data && t.props.data.refetch && t.props.data.refetch()
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                        d.o.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
+                    }, t.prototype.render = function() {
+                        if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), s.createElement(m.a, {
+                            message: Object(d.d)("You must be logged in to view this page", "InventoryPage")
+                        });
+                        var e = !0,
+                            t = [],
+                            n = 0,
+                            a = [],
+                            i = [],
+                            r = [];
+                        return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, a = this.props.data.currentUser.availableBadges, i = this.props.data.currentUser.crates, r = this.props.data.currentUser.emoteSets), s.createElement(k.Va, {
+                            className: "inventory",
+                            padding: 3
+                        }, s.createElement(I, {
+                            bitsBalance: n,
+                            loading: e,
+                            amazonMarketplaces: t
+                        }), s.createElement(O, {
+                            refetchData: this.refetchData,
+                            crates: i,
+                            loading: e
+                        }), s.createElement(w, {
+                            emoteSets: r,
+                            loading: e
+                        }), s.createElement(b, {
+                            badges: a,
+                            loading: e
+                        }), s.createElement(C, null))
+                    }, t = l.__decorate([Object(u.a)(_)], t)
+                }(s.Component),
+                T = Object(i.compose)(Object(v.c)("InventoryPage", {
+                    autoReportInteractive: !0,
+                    destination: f.a.Inventory
+                }), Object(p.a)({
+                    location: g.PageviewLocation.Inventory
+                }))(B);
+            var W = Object(a.connect)(function(e) {
+                return {
+                    isLoggedIn: Object(c.f)(e)
+                }
+            }, function(e) {
+                return Object(i.bindActionCreators)({
+                    onAnonymousVisit: function() {
+                        return Object(o.e)(r.a.InventoryPage)
+                    }
+                }, e)
+            })(T);
+            n.d(t, "InventoryPage", function() {
+                return W
+            })
+        },
+        cpJf: function(e, t, n) {
+            "use strict";
+            var a;
+            n.d(t, "a", function() {
+                    return a
+                }), n.d(t, "d", function() {
+                    return r
+                }), n.d(t, "c", function() {
+                    return o
+                }), n.d(t, "b", function() {
+                    return i
+                }),
+                function(e) {
+                    e.Chat = "stream_chat", e.Feeds = "feeds", e.Room = "chatroom", e.Whisper = "whisper", e.VodChat = "vod-chat"
+                }(a || (a = {}));
+            var i, r = {
+                    TriHard: {
+                        count: 196568036
+                    },
+                    Kappa: {
+                        count: 192158118
+                    },
+                    "4Head": {
+                        count: 155758710
+                    },
+                    PogChamp: {
+                        count: 151485090
+                    },
+                    cmonBruh: {
+                        count: 146352878
+                    },
+                    BibleThump: {
+                        count: 56472964
+                    },
+                    WutFace: {
+                        count: 45069031
+                    },
+                    Kreygasm: {
+                        count: 41387580
+                    },
+                    DansGame: {
+                        count: 38097659
+                    },
+                    hi5F: {
+                        count: 34986404
+                    },
+                    SMOrc: {
+                        count: 34734484
+                    },
+                    KappaPride: {
+                        count: 34262839
+                    },
+                    VoHiYo: {
+                        count: 27886434
+                    },
+                    SwiftRage: {
+                        count: 24561900
+                    },
+                    ResidentSleeper: {
+                        count: 24438298
+                    },
+                    EleGiggle: {
+                        count: 19891526
+                    },
+                    FailFish: {
+                        count: 19118343
+                    },
+                    NotLikeThis: {
+                        count: 18802905
+                    },
+                    Keepo: {
+                        count: 18351415
+                    },
+                    BabyRage: {
+                        count: 18220906
+                    },
+                    MingLee: {
+                        count: 18026207
+                    },
+                    pbfSSH: {
+                        count: 16911241
+                    },
+                    forsenE: {
+                        count: 14960299
+                    },
+                    HeyGuys: {
+                        count: 14851569
+                    },
+                    ANELE: {
+                        count: 14648986
+                    },
+                    PJSalt: {
+                        count: 14438861
+                    }
+                },
+                o = ["354", "49106", "4339", "48", "25", "55338", "70433", "1902", "68856", "81103", "76171", "27509"];
+            ! function(e) {
+                e.Web = "WEB", e.IOS = "IOS", e.Android = "ANDROID"
+            }(i || (i = {}))
+        },
+        lZdE: function(e, t, n) {
+            "use strict";
+
+            function a(e) {
+                return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+            }
+            n.d(t, "a", function() {
+                return a
+            })
+        },
+        wdoW: function(e, t, n) {
+            var a = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "Inventory"
+                    },
+                    variableDefinitions: [],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "currentUser"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "amazonMarketplaces"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "amazonMarketplace"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "bitsBalance"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "crates"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "crate"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "availableBadges"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "domains"
+                                        },
+                                        value: {
+                                            kind: "EnumValue",
+                                            value: "CRATE"
+                                        }
+                                    }],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "imageURL"
+                                            },
+                                            arguments: [{
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "size"
+                                                },
+                                                value: {
+                                                    kind: "EnumValue",
+                                                    value: "QUADRUPLE"
+                                                }
+                                            }],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "title"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "emoteSets"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "domains"
+                                        },
+                                        value: {
+                                            kind: "EnumValue",
+                                            value: "CRATE"
+                                        }
+                                    }],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "emotes"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "token"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 344
+                }
+            };
+            a.loc.source = {
+                body: '#import "twilight/features/fuel/models/amazon-marketplace.gql"\n#import "twilight/features/fuel/models/crate.gql"\nquery Inventory {\ncurrentUser{\nid\namazonMarketplaces {\n...amazonMarketplace\n}\nbitsBalance\ncrates {\n...crate\n}\navailableBadges(domains:CRATE){\nid\nimageURL(size:QUADRUPLE)\ntitle\n}\nemoteSets(domains:CRATE){\nid\nemotes{\nid\ntoken\n}\n}\n}\n}',
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            var i = {};
+
+            function r(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !i[t] && (i[t] = !0, !0)
+                })
+            }
+            a.definitions = a.definitions.concat(r(n("JCeY").definitions)), a.definitions = a.definitions.concat(r(n("9fCB").definitions)), e.exports = a
+        }
+    }
+]);
