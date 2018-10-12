@@ -510,7 +510,7 @@
                                 xs: w.Q.First
                             }
                         }, i.createElement("img", {
-                            src: k.c + "/code-redemption/CodeRedemption-Image.png",
+                            src: k.c + "/code-redemption/CodeRedemption-Image.jpg",
                             alt: ""
                         })), i.createElement(w.P, {
                             cols: {

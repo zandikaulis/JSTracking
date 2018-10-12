@@ -1,139 +1,115 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [138], {
+    [137], {
         "+HZ4": function(e, t, n) {},
         "+TUL": function(e, t, n) {},
         "+oVX": function(e, t, n) {
             "use strict";
             n.r(t);
-            var i = n("mrSG"),
-                r = n("cr+I"),
-                a = n("q1tI"),
-                o = n("fvjX"),
-                s = n("/7QA"),
-                c = n("V+GM"),
-                l = n("kRBY"),
-                d = {
-                    en: "en",
-                    da: "da",
-                    de: "de",
-                    es: "es_es",
-                    "es-mx": "es",
-                    fr: "fr",
-                    it: "it",
-                    nl: "nl",
-                    no: "no",
-                    pl: "pl",
-                    pt: "pt_br",
-                    "pt-br": "pt_br",
-                    fi: "fi",
-                    sv: "sv",
-                    vi: "en",
-                    tr: "tr",
-                    ru: "ru",
-                    th: "th",
-                    "zh-cn": "zh_cn",
-                    "zh-tw": "zh_tw",
-                    ja: "ja",
-                    ko: "ko"
-                };
-            var u, p = n("NvVO"),
-                m = n("2xye"),
-                g = n("d2C5"),
-                h = n("jSzL"),
-                f = n("GnwI"),
-                v = n("c0Zc"),
-                b = n("ZDlU"),
-                k = n("8/mp"),
-                S = n("yR8l"),
-                y = n("geRD"),
-                C = n("2iEm"),
-                E = n("Ue10");
+            var i, r = n("mrSG"),
+                a = n("cr+I"),
+                o = n("q1tI"),
+                s = n("fvjX"),
+                c = n("/7QA"),
+                l = n("V+GM"),
+                d = n("7M8a"),
+                u = n("NvVO"),
+                p = n("2xye"),
+                m = n("d2C5"),
+                g = n("jSzL"),
+                h = n("GnwI"),
+                f = n("c0Zc"),
+                v = n("ZDlU"),
+                b = n("8/mp"),
+                k = n("yR8l"),
+                S = n("geRD"),
+                y = n("2iEm"),
+                C = n("Ue10");
             n("LZ/t");
             ! function(e) {
                 e.Toggle = "advanced-notification-settings-toggle__toggle"
-            }(u || (u = {}));
-            var w, N = function(e) {
+            }(i || (i = {}));
+            var E, w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.changeHandler = function() {
                             t.props.onChange(t.props.userId, t.props.isEnabled)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(E.xb, {
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return o.createElement(C.xb, {
                             className: "advanced-notification-settings-toggle",
-                            display: E.W.Flex,
-                            justifyContent: E.Ua.Between,
-                            background: E.r.Base,
+                            display: C.W.Flex,
+                            justifyContent: C.Ua.Between,
+                            background: C.r.Base,
                             padding: {
                                 x: 5,
                                 y: 1
                             },
                             borderBottom: !0
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             margin: {
                                 left: 5
                             },
-                            display: E.W.Flex,
+                            display: C.W.Flex,
                             flexGrow: 1,
-                            alignItems: E.f.Center,
-                            flexWrap: E.Z.NoWrap
-                        }, a.createElement(E.Va, {
-                            display: E.W.Flex,
+                            alignItems: C.f.Center,
+                            flexWrap: C.Z.NoWrap
+                        }, o.createElement(C.Va, {
+                            display: C.W.Flex,
                             flexGrow: 1,
-                            flexWrap: E.Z.NoWrap
-                        }, a.createElement(E.Va, {
+                            flexWrap: C.Z.NoWrap
+                        }, o.createElement(C.Va, {
                             flexShrink: 0,
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(E.Sa, {
+                        }, o.createElement(C.Sa, {
                             linkTo: "/" + this.props.login
-                        }, a.createElement(E.q, {
+                        }, o.createElement(C.q, {
                             src: this.props.thumbnail,
                             alt: this.props.text,
                             size: 40
-                        }))), a.createElement(E.Va, {
+                        }))), o.createElement(C.Va, {
                             flexGrow: 1,
-                            display: E.W.Flex,
-                            flexDirection: E.Y.Column
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size5
-                        }, a.createElement(C.a, {
+                            display: C.W.Flex,
+                            flexDirection: C.Y.Column
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size5
+                        }, o.createElement(y.a, {
                             to: "/" + this.props.login
-                        }, this.props.text)), a.createElement(E.V, {
-                            type: E.Nb.Span,
-                            color: E.O.Alt2
-                        }, this.props.description))), a.createElement(E.Va, {
-                            display: E.W.Flex,
+                        }, this.props.text)), o.createElement(C.V, {
+                            type: C.Nb.Span,
+                            color: C.O.Alt2
+                        }, this.props.description))), o.createElement(C.Va, {
+                            display: C.W.Flex,
                             flexGrow: 0,
                             flexShrink: 0
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(E.Pb, {
+                        }, o.createElement(C.Pb, {
                             checked: this.props.isEnabled,
                             onChange: this.changeHandler,
-                            "data-test-selector": u.Toggle,
+                            "data-test-selector": i.Toggle,
                             id: this.props.userId
-                        })), a.createElement(E.Va, {
+                        })), o.createElement(C.Va, {
                             className: this.props.saved ? "advanced-notification-settings-toggle__saved" : "advanced-notification-settings-toggle__saved--hide",
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Link
-                        }, Object(s.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Link
+                        }, Object(c.d)("Saved", "AdvancedNotificationSettingsToggle"))))))
                     }, t
-                }(a.Component),
-                O = n("55wC"),
-                _ = (n("HoeP"), n("9+K3"));
+                }(o.Component),
+                N = n("55wC"),
+                O = (n("HoeP"), n("9+K3"));
             ! function(e) {
                 e.Description = "advanced-notificatino-settings__description", e.Header = "advanced-notificatino-settings__header"
-            }(w || (w = {}));
-            var U, j = function(e) {
+            }(E || (E = {}));
+            var _, U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -146,15 +122,15 @@
                                 }
                             })
                         }, t.toggleChannelNotification = function(e, n) {
-                            return i.__awaiter(t, void 0, void 0, function() {
-                                var t, r, a, o, s;
-                                return i.__generator(this, function(i) {
-                                    switch (i.label) {
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                var t, i, a, o, s;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
                                             return this.props.data && this.props.data.currentUser && this.props.setAdvancedNotificationSetting ? (t = {
                                                 disableNotifications: n,
                                                 targetID: e
-                                            }, r = {
+                                            }, i = {
                                                 followUser: {
                                                     __typename: "FollowUserPayload",
                                                     follow: {
@@ -162,16 +138,16 @@
                                                         __typename: "Follow"
                                                     }
                                                 }
-                                            }, a = Object(y.b)(t, r), [4, this.props.setAdvancedNotificationSetting(a)]) : [2];
+                                            }, a = Object(S.b)(t, i), [4, this.props.setAdvancedNotificationSetting(a)]) : [2];
                                         case 1:
-                                            return o = i.sent(), s = function(t) {
+                                            return o = r.sent(), s = function(t) {
                                                 if (!t.currentUser || !o.data.followUser || !o.data.followUser.follow) return t;
                                                 for (var n = 0, i = t.currentUser.follows.edges; n < i.length; n++) {
                                                     var r = i[n];
                                                     r.node.id === e && (r.notificationSettings.isEnabled = !o.data.followUser.follow.disableNotifications)
                                                 }
                                                 return t
-                                            }, Object(y.e)(_, {
+                                            }, Object(S.e)(O, {
                                                 limit: 50
                                             }, s), this.markSaved(e), [2]
                                     }
@@ -179,85 +155,85 @@
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.data,
                             t = e.currentUser,
                             n = e.loading,
                             i = e.error;
-                        if (n && !t) return a.createElement(E.xb, {
+                        if (n && !t) return o.createElement(C.xb, {
                             padding: {
                                 y: 1
                             },
                             borderBottom: !0
-                        }, a.createElement(E.Xa, {
+                        }, o.createElement(C.Xa, {
                             fillContent: !0
                         }));
-                        if (i || !t || !t.follows || null === t.follows.totalCount) return a.createElement(b.a, {
-                            message: Object(s.d)("Error loading data.", "AdvancedNotificationSettings")
+                        if (i || !t || !t.follows || null === t.follows.totalCount) return o.createElement(v.a, {
+                            message: Object(c.d)("Error loading data.", "AdvancedNotificationSettings")
                         });
-                        var r = Object(s.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
+                        var r = Object(c.d)("{followCount, plural, one {You follow # channel} other {You follow # channels}}", {
                                 followCount: t.follows.totalCount
                             }, "AdvancedNotificationSettings"),
-                            o = a.createElement(E.xb, {
-                                background: E.r.Alt2,
+                            a = o.createElement(C.xb, {
+                                background: C.r.Alt2,
                                 borderBottom: !0
-                            }, a.createElement(E.Sa, {
+                            }, o.createElement(C.Sa, {
                                 onClick: this.toggleCollapse,
-                                type: E.Ta.Alpha,
-                                "data-test-selector": w.Header
-                            }, a.createElement(E.Va, {
-                                display: E.W.Flex,
+                                type: C.Ta.Alpha,
+                                "data-test-selector": E.Header
+                            }, o.createElement(C.Va, {
+                                display: C.W.Flex,
                                 padding: {
                                     x: 2,
                                     y: 1
                                 }
-                            }, a.createElement(E.Va, {
+                            }, o.createElement(C.Va, {
                                 className: "advanced-notification-settings__header",
                                 flexGrow: 0
-                            }, a.createElement(E.V, {
-                                fontSize: E.Aa.Size5,
-                                color: E.O.Alt2,
+                            }, o.createElement(C.V, {
+                                fontSize: C.Aa.Size5,
+                                color: C.O.Alt2,
                                 bold: !0
-                            }, Object(s.d)("Advanced", "AdvancedNotificationSettings"))), a.createElement(E.Va, {
+                            }, Object(c.d)("Advanced", "AdvancedNotificationSettings"))), o.createElement(C.Va, {
                                 padding: {
                                     x: 1
                                 },
                                 flexGrow: 1
-                            }, a.createElement(E.V, {
-                                "data-test-selector": w.Description,
-                                fontSize: E.Aa.Size5,
-                                color: E.O.Alt2
-                            }, r)), a.createElement(E.Va, {
+                            }, o.createElement(C.V, {
+                                "data-test-selector": E.Description,
+                                fontSize: C.Aa.Size5,
+                                color: C.O.Alt2
+                            }, r)), o.createElement(C.Va, {
                                 className: this.state.collapsed ? "advanced-notification-settings--collapse" : "advanced-notification-settings--expand",
                                 flexGrow: 0,
                                 flexShrink: 1,
-                                display: E.W.Flex,
-                                justifyContent: E.Ua.Center
-                            }, a.createElement(E.mb, {
-                                asset: E.nb.AngleRight,
-                                type: E.ob.Alt2
+                                display: C.W.Flex,
+                                justifyContent: C.Ua.Center
+                            }, o.createElement(C.mb, {
+                                asset: C.nb.AngleRight,
+                                type: C.ob.Alt2
                             }))))),
-                            c = !(n || i || !t.follows.pageInfo || !t.follows.pageInfo.hasNextPage);
-                        return t.follows.totalCount > 0 ? this.state.collapsed ? a.createElement(E.xb, null, o) : a.createElement(E.xb, null, o, a.createElement(E.xb, {
+                            s = !(n || i || !t.follows.pageInfo || !t.follows.pageInfo.hasNextPage);
+                        return t.follows.totalCount > 0 ? this.state.collapsed ? o.createElement(C.xb, null, a) : o.createElement(C.xb, null, a, o.createElement(C.xb, {
                             borderBottom: !0,
                             padding: 2
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             padding: {
                                 bottom: 1
                             }
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Alt2
-                        }, Object(s.d)("Manage which channels you receive notifications for.", "AdvancedNotificationSettings"))), a.createElement(E.Va, {
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Alt2
+                        }, Object(c.d)("Manage which channels you receive notifications for.", "AdvancedNotificationSettings"))), o.createElement(C.Va, {
                             padding: {
                                 bottom: 1
                             }
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size4,
-                            color: E.O.Alt
-                        }, r)), a.createElement(E.xb, {
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size4,
+                            color: C.O.Alt
+                        }, r)), o.createElement(C.xb, {
                             className: "advanced-notification-settings__toggle-container",
                             borderTop: !0,
                             borderLeft: !0,
@@ -265,9 +241,9 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, this.renderToggles(), a.createElement(k.a, {
+                        }, this.renderToggles(), o.createElement(b.a, {
                             loadMore: this.props.loadMore,
-                            enabled: c,
+                            enabled: s,
                             pixelThreshold: 200
                         })))) : null
                     }, t.prototype.renderToggles = function() {
@@ -276,14 +252,14 @@
                             for (var t = [], n = 0, i = e.follows.edges; n < i.length; n++) {
                                 var r = i[n];
                                 if (r && r.node && r.node.id && r.node.followers && r.node.displayName && r.node.login && r.notificationSettings) {
-                                    var o = r.node.followers && null !== r.node.followers.totalCount ? Object(s.d)("{followerCount,number} followers", {
+                                    var a = r.node.followers && null !== r.node.followers.totalCount ? Object(c.d)("{followerCount,number} followers", {
                                         followerCount: r.node.followers.totalCount
                                     }, "AdvancedNotificationSettings") : null;
-                                    t.push(a.createElement(N, {
+                                    t.push(o.createElement(w, {
                                         userId: r.node.id,
                                         text: r.node.displayName,
                                         login: r.node.login,
-                                        description: o,
+                                        description: a,
                                         thumbnail: r.node.profileImageURL,
                                         isEnabled: r.notificationSettings.isEnabled,
                                         onChange: this.toggleChannelNotification,
@@ -312,8 +288,8 @@
                             })
                         }
                     }, t
-                }(a.Component),
-                x = Object(o.compose)(Object(S.a)(_, {
+                }(o.Component),
+                j = Object(s.compose)(Object(k.a)(O, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
@@ -323,19 +299,19 @@
                         }
                     },
                     props: function(e) {
-                        return i.__assign({}, e, {
+                        return r.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: _,
-                                    variables: i.__assign({}, e.data.variables, {
+                                    query: O,
+                                    variables: r.__assign({}, e.data.variables, {
                                         cursor: e.data.currentUser && e.data.currentUser.follows.edges[e.data.currentUser.follows.edges.length - 1].cursor
                                     }),
                                     updateQuery: function(e, t) {
                                         var n = t.fetchMoreResult;
                                         return e.currentUser && n.currentUser ? {
-                                            currentUser: i.__assign({}, n.currentUser, {
-                                                follows: i.__assign({}, n.currentUser.follows, {
-                                                    edges: Object(y.c)(e.currentUser.follows.edges, n.currentUser.follows.edges)
+                                            currentUser: r.__assign({}, n.currentUser, {
+                                                follows: r.__assign({}, n.currentUser.follows, {
+                                                    edges: Object(S.c)(e.currentUser.follows.edges, n.currentUser.follows.edges)
                                                 })
                                             })
                                         } : n
@@ -344,18 +320,18 @@
                             }
                         })
                     }
-                }), Object(S.a)(O, {
+                }), Object(k.a)(N, {
                     name: "setAdvancedNotificationSetting"
-                }), Object(f.c)("AdvancedNotificationSettings"))(j),
-                F = n("oJmH"),
-                D = n("gOYK"),
-                T = n("Ahlu");
+                }), Object(h.c)("AdvancedNotificationSettings"))(U),
+                x = n("oJmH"),
+                F = n("gOYK"),
+                D = n("Ahlu");
             n("+TUL");
             ! function(e) {
                 e.Container = "browser-push-notifications-settings__container", e.Toggle = "browser-push-notifications-settings__toggle"
-            }(U || (U = {}));
-            var P, A = s.o.logger.withCategory("browser-push-notifications-settings"),
-                L = function(e) {
+            }(_ || (_ = {}));
+            var T, P = c.o.logger.withCategory("browser-push-notifications-settings"),
+                A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -364,29 +340,29 @@
                             deciding: !0,
                             hasSubscription: !1
                         }, t.toggle = function() {
-                            return i.__awaiter(t, void 0, void 0, function() {
+                            return r.__awaiter(t, void 0, void 0, function() {
                                 var e;
-                                return i.__generator(this, function(t) {
+                                return r.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             return this.setState({
                                                 deciding: !0
-                                            }), [4, D.a.hasPushSubscription()];
+                                            }), [4, F.a.hasPushSubscription()];
                                         case 1:
                                             if (!t.sent()) return [3, 6];
                                             t.label = 2;
                                         case 2:
-                                            return t.trys.push([2, 4, , 5]), [4, D.a.userUnsubscribe(T.a.Settings)];
+                                            return t.trys.push([2, 4, , 5]), [4, F.a.userUnsubscribe(D.a.Settings)];
                                         case 3:
                                             return t.sent(), [3, 5];
                                         case 4:
-                                            return e = t.sent(), A.error(e, "user unsubscribe failed"), [3, 5];
+                                            return e = t.sent(), P.error(e, "user unsubscribe failed"), [3, 5];
                                         case 5:
                                             return [3, 8];
                                         case 6:
-                                            return [4, D.a.userSubscribe(T.a.Settings)];
+                                            return [4, F.a.userSubscribe(D.a.Settings)];
                                         case 7:
-                                            if (t.sent(), Object(h.a)()) return this.setState({
+                                            if (t.sent(), Object(g.a)()) return this.setState({
                                                 hide: !0
                                             }), [2];
                                             t.label = 8;
@@ -401,19 +377,19 @@
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        return i.__awaiter(this, void 0, void 0, function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        return r.__awaiter(this, void 0, void 0, function() {
                             var e;
-                            return i.__generator(this, function(t) {
+                            return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return t.trys.push([0, 3, , 4]), [4, D.a.initialize()];
+                                        return t.trys.push([0, 3, , 4]), [4, F.a.initialize()];
                                     case 1:
                                         return t.sent(), [4, this.updateSubscriptionState()];
                                     case 2:
                                         return t.sent(), [3, 4];
                                     case 3:
-                                        return e = t.sent(), A.error(e, "unexpected error initializing push manager"), this.setState({
+                                        return e = t.sent(), P.error(e, "unexpected error initializing push manager"), this.setState({
                                             hide: !0
                                         }), [2];
                                     case 4:
@@ -428,8 +404,8 @@
                         t.loading && !this.state.loading && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         if (this.state.hide || this.state.loading) return null;
-                        var e = this.state.hasSubscription ? Object(s.d)("Turn Off", "BrowserPushNotificationsSettings") : Object(s.d)("Turn On", "BrowserPushNotificationsSettings");
-                        return a.createElement(E.xb, {
+                        var e = this.state.hasSubscription ? Object(c.d)("Turn Off", "BrowserPushNotificationsSettings") : Object(c.d)("Turn On", "BrowserPushNotificationsSettings");
+                        return o.createElement(C.xb, {
                             borderTop: !0,
                             padding: {
                                 right: 2,
@@ -438,52 +414,52 @@
                             margin: {
                                 top: 1
                             },
-                            "data-test-selector": U.Container,
+                            "data-test-selector": _.Container,
                             "data-a-target": "browser-push-notifications-settings"
-                        }, a.createElement(E.xb, {
+                        }, o.createElement(C.xb, {
                             className: "browser-push-notification-settings",
                             padding: {
                                 left: 5,
                                 right: 4
                             },
-                            display: E.W.Flex,
+                            display: C.W.Flex,
                             margin: {
                                 x: 5
                             }
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             className: "browser-push-notification-settings__body",
-                            display: E.W.Flex,
-                            flexWrap: E.Z.NoWrap,
+                            display: C.W.Flex,
+                            flexWrap: C.Z.NoWrap,
                             flexGrow: 1
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             margin: {
                                 right: 1
                             },
                             flexGrow: 1
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size4,
-                            color: E.O.Alt
-                        }, Object(s.d)("Receive Browser Notifications for this Device", "BrowserPushNotificationsSettings")), a.createElement(E.Va, {
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size4,
+                            color: C.O.Alt
+                        }, Object(c.d)("Receive Browser Notifications for this Device", "BrowserPushNotificationsSettings")), o.createElement(C.Va, {
                             padding: {
                                 top: .5
                             }
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Alt2
-                        }, Object(s.d)("See notifications at the corner of your screen, even when you’re not on Twitch", "BrowserPushNotificationsSettings")))), a.createElement(E.Va, {
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Alt2
+                        }, Object(c.d)("See notifications at the corner of your screen, even when you’re not on Twitch", "BrowserPushNotificationsSettings")))), o.createElement(C.Va, {
                             flexShrink: 0
-                        }, a.createElement(E.z, {
-                            "data-test-selector": U.Toggle,
+                        }, o.createElement(C.z, {
+                            "data-test-selector": _.Toggle,
                             disabled: this.state.deciding,
                             onClick: this.toggle
                         }, e)))))
                     }, t.prototype.updateSubscriptionState = function() {
-                        return i.__awaiter(this, void 0, void 0, function() {
+                        return r.__awaiter(this, void 0, void 0, function() {
                             var e;
-                            return i.__generator(this, function(t) {
+                            return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return [4, D.a.hasPushSubscription()];
+                                        return [4, F.a.hasPushSubscription()];
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             hasSubscription: e
@@ -492,26 +468,26 @@
                             })
                         })
                     }, t
-                }(a.Component),
-                I = Object(F.compose)(Object(f.c)("BrowserPushNotificationsSettings"))(L);
+                }(o.Component),
+                L = Object(x.compose)(Object(h.c)("BrowserPushNotificationsSettings"))(A);
             n("BpmJ");
             ! function(e) {
                 e.Toggle = "platform-notification-settings-toggle__toggle"
-            }(P || (P = {}));
-            var V, R = function(e) {
+            }(T || (T = {}));
+            var I, V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.changeHandler = function() {
                             t.props.onChange(t.props.category, t.props.isEnabled)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(E.xb, {
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return o.createElement(C.xb, {
                             className: "platform-notification-settings-toggle",
-                            display: E.W.Flex,
-                            flexWrap: E.Z.NoWrap,
-                            alignItems: E.f.Start,
-                            background: E.r.Alt,
+                            display: C.W.Flex,
+                            flexWrap: C.Z.NoWrap,
+                            alignItems: C.f.Start,
+                            background: C.r.Alt,
                             margin: {
                                 top: 1,
                                 bottom: .5
@@ -519,124 +495,124 @@
                             padding: {
                                 right: 5
                             }
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             className: "platform-notification-settings-toggle__body",
-                            display: E.W.Flex,
-                            flexDirection: E.Y.Column,
+                            display: C.W.Flex,
+                            flexDirection: C.Y.Column,
                             flexGrow: 1,
                             padding: {
                                 right: 1
                             }
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             margin: {
                                 bottom: .5
                             },
                             flexGrow: 1,
-                            display: E.W.InlineFlex
-                        }, a.createElement(E.Va, {
+                            display: C.W.InlineFlex
+                        }, o.createElement(C.Va, {
                             flexGrow: 0,
                             flexShrink: 0,
                             padding: {
                                 right: 1
                             }
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size4
-                        }, this.props.text)), this.renderSmartNotificationsBanner()), a.createElement(E.V, {
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Alt2
-                        }, this.props.description)), a.createElement(E.Va, {
-                            display: E.W.Flex,
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size4
+                        }, this.props.text)), this.renderSmartNotificationsBanner()), o.createElement(C.V, {
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Alt2
+                        }, this.props.description)), o.createElement(C.Va, {
+                            display: C.W.Flex,
                             margin: {
                                 top: .5
                             },
                             flexGrow: 0,
                             flexShrink: 0
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(E.Pb, {
+                        }, o.createElement(C.Pb, {
                             checked: this.props.isEnabled,
                             disabled: this.props.disabled,
                             onChange: this.changeHandler,
-                            "data-test-selector": P.Toggle
-                        })), a.createElement(E.Va, {
+                            "data-test-selector": T.Toggle
+                        })), o.createElement(C.Va, {
                             className: this.props.saved ? "platform-notification-settings-toggle__saved" : "platform-notification-settings-toggle__saved--hide",
                             padding: {
                                 x: 1
                             }
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Link
-                        }, Object(s.d)("Saved", "PlatformNotificationSettingsToggle")))))
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Link
+                        }, Object(c.d)("Saved", "PlatformNotificationSettingsToggle")))))
                     }, t.prototype.renderSmartNotificationsBanner = function() {
                         if ("LIVE" !== this.props.category || !this.props.smartEnabled) return null;
-                        var e = Object(s.d)("Smart Notifications", "PlatformNotificationSettingsToggle");
-                        return a.createElement(E.Va, {
+                        var e = Object(c.d)("Smart Notifications", "PlatformNotificationSettingsToggle");
+                        return o.createElement(C.Va, {
                             margin: {
                                 top: .5
                             },
                             flexGrow: 1,
                             flexShrink: 0
-                        }, a.createElement(E.ab, {
+                        }, o.createElement(C.ab, {
                             label: e,
-                            type: E.bb.Success
+                            type: C.bb.Success
                         }))
                     }, t
-                }(a.Component),
-                B = n("7PeK"),
-                z = n("fWal"),
-                q = n("pxuV"),
-                M = (n("yqqX"), n("t7x/")),
-                G = "ALL",
-                W = "smart";
+                }(o.Component),
+                R = n("7PeK"),
+                B = n("fWal"),
+                z = n("pxuV"),
+                q = (n("yqqX"), n("t7x/")),
+                M = "ALL",
+                G = "smart";
             ! function(e) {
                 e.Explanation = "explanation", e.Description = "description", e.AllToggle = "all-toggle"
-            }(V || (V = {}));
-            var H, Q, Y = function(e) {
+            }(I || (I = {}));
+            var W, H, Q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.toggleAll = function() {
                             t.toggleSetting(t.stateForSmart)
                         }, t.toggleSetting = function(e) {
-                            return i.__awaiter(t, void 0, void 0, function() {
-                                var t, n, r, a, o, s;
-                                return i.__generator(this, function(i) {
-                                    switch (i.label) {
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                var t, n, i, a, o, s;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
                                             return this.props.data.currentUser && this.props.setNotificationSetting ? (n = {
-                                                category: G,
-                                                platform: W,
+                                                category: M,
+                                                platform: G,
                                                 settingState: t = e ? "off" : "on"
-                                            }, r = {
+                                            }, i = {
                                                 setNotificationSetting: {
                                                     settingState: t,
                                                     __typename: "SetNotificationSettingPayload"
                                                 }
-                                            }, a = Object(y.b)(n, r), [4, this.props.setNotificationSetting(a)]) : [2];
+                                            }, a = Object(S.b)(n, i), [4, this.props.setNotificationSetting(a)]) : [2];
                                         case 1:
-                                            return o = i.sent(), s = function(e) {
+                                            return o = r.sent(), s = function(e) {
                                                 if (!e.currentUser || !e.currentUser.notificationSettings || !o.data.setNotificationSetting) return e;
                                                 var t = o.data.setNotificationSetting.settingState;
                                                 return e.currentUser.notificationSettings = e.currentUser.notificationSettings.map(function(e) {
-                                                    return e.category === G && (e.platforms = e.platforms.map(function(e) {
-                                                        return e.platformName === W && (e.isEnabled = "on" === t, e.settingState = t), e
+                                                    return e.category === M && (e.platforms = e.platforms.map(function(e) {
+                                                        return e.platformName === G && (e.isEnabled = "on" === t, e.settingState = t), e
                                                     })), e
                                                 }), e
-                                            }, Object(y.e)(M, {}, s), [2]
+                                            }, Object(S.e)(q, {}, s), [2]
                                     }
                                 })
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentDidUpdate = function(e) {
                         e.data && !e.data.loading || this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.data.error ? a.createElement(b.a, {
-                            message: Object(s.d)("Error loading data.", "SmartNotificationSettings")
-                        }) : a.createElement(B.a, null, a.createElement(z.a, {
+                        return this.props.data.error ? o.createElement(v.a, {
+                            message: Object(c.d)("Error loading data.", "SmartNotificationSettings")
+                        }) : o.createElement(R.a, null, o.createElement(B.a, {
                             label: this.props.explanation,
                             checked: this.stateForSmart,
                             description: this.props.description,
@@ -649,12 +625,12 @@
                         if (!this.props.data.currentUser || !this.props.data.currentUser.notificationSettings) return null;
                         for (var t = 0, n = this.props.data.currentUser.notificationSettings; t < n.length; t++) {
                             var i = n[t];
-                            i.category === G && (e = i.platforms)
+                            i.category === M && (e = i.platforms)
                         }
                         if (!e) return null;
                         for (var r = 0, a = e; r < a.length; r++) {
                             var o = a[r];
-                            if (o.platformName === W) return o
+                            if (o.platformName === G) return o
                         }
                         return null
                     }, Object.defineProperty(t.prototype, "stateForSmart", {
@@ -665,25 +641,25 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(a.Component),
-                X = Object(o.compose)(Object(f.c)("SmartNotificationSettings"), Object(S.a)(M, {
+                }(o.Component),
+                Y = Object(s.compose)(Object(h.c)("SmartNotificationSettings"), Object(k.a)(q, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }), Object(S.a)(q, {
+                }), Object(k.a)(z, {
                     name: "setNotificationSetting"
-                }))(Y),
-                K = n("F1Gg"),
-                Z = (n("P6LE"), n("1glA"));
+                }))(Q),
+                X = n("F1Gg"),
+                K = (n("P6LE"), n("1glA"));
             ! function(e) {
                 e.onsite = "onsite", e.email = "email", e.push = "push"
-            }(H || (H = {})),
+            }(W || (W = {})),
             function(e) {
                 e.DisplayName = "platform-notification-settings__display-name", e.Explanation = "platform-notification-settings__explanation", e.Description = "platform-notification-settings__description", e.ToggleAll = "platform-notification-settings__all-toggle", e.SavedIndicator = "platform-notification-settings__saved-indicator", e.Header = "platform-notification-settings__collapsible-header"
-            }(Q || (Q = {}));
-            var $ = function(e) {
+            }(H || (H = {}));
+            var Z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -691,48 +667,48 @@
                             saved: new Set
                         }, t.VisibleSettings = [{
                             category: "LIVE",
-                            name: Object(s.d)("Live", "PlatformNotificationSettings"),
-                            description: Object(s.d)("When a streamer I follow goes Live", "PlatformNotificationSettings")
+                            name: Object(c.d)("Live", "PlatformNotificationSettings"),
+                            description: Object(c.d)("When a streamer I follow goes Live", "PlatformNotificationSettings")
                         }, {
                             category: "VIDEOS",
-                            name: Object(s.d)("Video Broadcast", "PlatformNotificationSettings"),
-                            description: Object(s.d)("When a channel I follow starts a Vodcast. This also includes Video Comment notifications", "PlatformNotificationSettings")
+                            name: Object(c.d)("Video Broadcast", "PlatformNotificationSettings"),
+                            description: Object(c.d)("When a channel I follow starts a Vodcast. This also includes Video Comment notifications", "PlatformNotificationSettings")
                         }, {
                             category: "CLIPS",
-                            name: Object(s.d)("Clips", "PlatformNotificationSettings"),
-                            description: Object(s.d)("Receive notifications for clips you made and clips made by your viewers", "PlatformNotificationSettings")
+                            name: Object(c.d)("Clips", "PlatformNotificationSettings"),
+                            description: Object(c.d)("Receive notifications for clips you made and clips made by your viewers", "PlatformNotificationSettings")
                         }, {
                             category: "EVENTS",
-                            name: Object(s.d)("Events", "PlatformNotificationSettings"),
-                            description: Object(s.d)("Any time an event I follow starts", "PlatformNotificationSettings")
+                            name: Object(c.d)("Events", "PlatformNotificationSettings"),
+                            description: Object(c.d)("Any time an event I follow starts", "PlatformNotificationSettings")
                         }, {
                             category: "CHAT",
-                            name: Object(s.d)("Chat", "PlatformNotificationSettings"),
-                            description: Object(s.d)("Any time there’s Rooms activity related to me.", "PlatformNotificationSettings")
+                            name: Object(c.d)("Chat", "PlatformNotificationSettings"),
+                            description: Object(c.d)("Any time there’s Rooms activity related to me.", "PlatformNotificationSettings")
                         }, {
                             category: "FRIENDS",
-                            name: Object(s.d)("Friends", "PlatformNotificationSettings"),
-                            description: Object(s.d)("When a friend sends me a message", "PlatformNotificationSettings")
+                            name: Object(c.d)("Friends", "PlatformNotificationSettings"),
+                            description: Object(c.d)("When a friend sends me a message", "PlatformNotificationSettings")
                         }, {
                             category: "STREAMER",
-                            name: Object(s.d)("Your Channel", "PlatformNotificationSettings"),
-                            description: Object(s.d)("Receive notifications when viewers follow your channel or auto host you", "PlatformNotificationSettings")
+                            name: Object(c.d)("Your Channel", "PlatformNotificationSettings"),
+                            description: Object(c.d)("Receive notifications when viewers follow your channel or auto host you", "PlatformNotificationSettings")
                         }, {
                             category: "MODERATOR",
-                            name: Object(s.d)("Moderator", "PlatformNotificationSettings"),
-                            description: Object(s.d)("Any time I get a notification as a moderator", "PlatformNotificationSettings")
+                            name: Object(c.d)("Moderator", "PlatformNotificationSettings"),
+                            description: Object(c.d)("Any time I get a notification as a moderator", "PlatformNotificationSettings")
                         }, {
                             category: "COMMERCE",
-                            name: Object(s.d)("Gifts and Rewards", "PlatformNotificationSettings"),
-                            description: Object(s.d)("Receive notifications for drops, crates, and subscription gifts", "PlatformNotificationSettings")
+                            name: Object(c.d)("Gifts and Rewards", "PlatformNotificationSettings"),
+                            description: Object(c.d)("Receive notifications for drops, crates, and subscription gifts", "PlatformNotificationSettings")
                         }, {
                             category: "SUB_MESSAGES",
-                            name: Object(s.d)("Channels you Subscribe to", "PlatformNotificationSettings"),
-                            description: Object(s.d)("Receive subscriber emails from channels you subscribe to", "PlatformNotificationSettings")
+                            name: Object(c.d)("Channels you Subscribe to", "PlatformNotificationSettings"),
+                            description: Object(c.d)("Receive subscriber emails from channels you subscribe to", "PlatformNotificationSettings")
                         }, {
                             category: "3PDEVELOPERS",
-                            name: Object(s.d)("Developer Updates", "PlatformNotificationSettings"),
-                            description: Object(s.d)("Activities related to company management, game approvals, and other console related communications.", "PlatformNotificationSettings")
+                            name: Object(c.d)("Developer Updates", "PlatformNotificationSettings"),
+                            description: Object(c.d)("Activities related to company management, game approvals, and other console related communications.", "PlatformNotificationSettings")
                         }], t.toggleAll = function() {
                             t.toggleSettingCategory("ALL", t.getGlobalStateForPlatform())
                         }, t.toggleCollapse = function() {
@@ -742,12 +718,12 @@
                                 }
                             })
                         }, t.toggleSettingCategory = function(e, n) {
-                            return i.__awaiter(t, void 0, void 0, function() {
-                                var t, r, a, o, s, c, l = this;
-                                return i.__generator(this, function(i) {
-                                    switch (i.label) {
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                var t, i, a, o, s, c, l = this;
+                                return r.__generator(this, function(r) {
+                                    switch (r.label) {
                                         case 0:
-                                            return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", r = {
+                                            return this.props.data && this.props.data.currentUser && this.props.setNotificationSetting ? (t = n ? "off" : "on", i = {
                                                 category: e,
                                                 platform: this.props.platformName,
                                                 settingState: t
@@ -756,9 +732,9 @@
                                                     settingState: t,
                                                     __typename: "SetNotificationSettingPayload"
                                                 }
-                                            }, o = Object(y.b)(r, a), [4, this.props.setNotificationSetting(o)]) : [2];
+                                            }, o = Object(S.b)(i, a), [4, this.props.setNotificationSetting(o)]) : [2];
                                         case 1:
-                                            return s = i.sent(), c = function(t) {
+                                            return s = r.sent(), c = function(t) {
                                                 if (!t.currentUser || !t.currentUser.notificationSettings || !s.data.setNotificationSetting) return t;
                                                 var n = s.data.setNotificationSetting.settingState;
                                                 return t.currentUser.notificationSettings = t.currentUser.notificationSettings.map(function(t) {
@@ -766,131 +742,131 @@
                                                         return e.platformName === l.props.platformName && (e.isEnabled = "on" === n, e.settingState = n), e
                                                     })), t
                                                 }), t
-                                            }, Object(y.e)(Z, {}, c), this.markSaved(e), [2]
+                                            }, Object(S.e)(K, {}, c), this.markSaved(e), [2]
                                     }
                                 })
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return a.createElement(E.Va, {
+                        if (!this.props.data || this.props.data.loading && !this.props.data.currentUser) return o.createElement(C.Va, {
                             padding: 1
-                        }, a.createElement(E.Xa, {
+                        }, o.createElement(C.Xa, {
                             fillContent: !0
                         }));
-                        if (this.props.data.error) return a.createElement(b.a, {
-                            message: Object(s.d)("Error loading data.", "PlatformNotificationSettings")
+                        if (this.props.data.error) return o.createElement(v.a, {
+                            message: Object(c.d)("Error loading data.", "PlatformNotificationSettings")
                         });
-                        if (!this.props.data.currentUser) return a.createElement(E.xb, {
+                        if (!this.props.data.currentUser) return o.createElement(C.xb, {
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(b.a, {
-                            message: Object(s.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
+                        }, o.createElement(v.a, {
+                            message: Object(c.d)("You must be logged in to update your settings.", "PlatformNotificationSettings")
                         }));
-                        var e = a.createElement(E.xb, {
-                            background: E.r.Alt2,
+                        var e = o.createElement(C.xb, {
+                            background: C.r.Alt2,
                             borderBottom: !0,
-                            "data-test-selector": Q.Header
-                        }, a.createElement(E.Sa, {
+                            "data-test-selector": H.Header
+                        }, o.createElement(C.Sa, {
                             onClick: this.toggleCollapse,
-                            type: E.Ta.Alpha
-                        }, a.createElement(E.Va, {
-                            display: E.W.Flex,
+                            type: C.Ta.Alpha
+                        }, o.createElement(C.Va, {
+                            display: C.W.Flex,
                             padding: {
                                 x: 2,
                                 y: 1
                             }
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             className: "platform-notification-settings__header",
                             flexGrow: 0
-                        }, a.createElement(E.V, {
-                            "data-test-selector": Q.DisplayName,
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Alt2,
+                        }, o.createElement(C.V, {
+                            "data-test-selector": H.DisplayName,
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Alt2,
                             bold: !0
-                        }, this.props.displayName)), a.createElement(E.Va, {
+                        }, this.props.displayName)), o.createElement(C.Va, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Alt2
-                        }, this.getSettingTurnedOnMessage())), a.createElement(E.Va, {
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Alt2
+                        }, this.getSettingTurnedOnMessage())), o.createElement(C.Va, {
                             className: this.state.collapsed ? "platform-notification-settings--collapse" : "platform-notification-settings--expand",
                             flexGrow: 0,
                             flexShrink: 1,
-                            display: E.W.Flex,
-                            justifyContent: E.Ua.Center
-                        }, a.createElement(E.mb, {
-                            asset: E.nb.AngleRight,
-                            type: E.ob.Alt2
+                            display: C.W.Flex,
+                            justifyContent: C.Ua.Center
+                        }, o.createElement(C.mb, {
+                            asset: C.nb.AngleRight,
+                            type: C.ob.Alt2
                         })))));
-                        return this.state.collapsed ? a.createElement(E.xb, null, e) : a.createElement(E.xb, null, e, a.createElement(E.xb, {
+                        return this.state.collapsed ? o.createElement(C.xb, null, e) : o.createElement(C.xb, null, e, o.createElement(C.xb, {
                             padding: 2,
                             borderBottom: !0
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             padding: {
                                 bottom: 1
                             }
-                        }, a.createElement(E.V, {
-                            "data-test-selector": Q.Description,
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Alt2
-                        }, this.props.description)), a.createElement(E.xb, {
-                            display: E.W.Flex,
+                        }, o.createElement(C.V, {
+                            "data-test-selector": H.Description,
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Alt2
+                        }, this.props.description)), o.createElement(C.xb, {
+                            display: C.W.Flex,
                             margin: {
                                 y: .5
                             },
                             borderBottom: !0
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             className: "platform-notification-settings__all",
-                            display: E.W.Flex,
+                            display: C.W.Flex,
                             padding: {
                                 bottom: 1,
                                 right: 5
                             },
-                            justifyContent: E.Ua.Center,
+                            justifyContent: C.Ua.Center,
                             flexGrow: 1,
-                            flexWrap: E.Z.NoWrap
-                        }, a.createElement(E.Va, {
+                            flexWrap: C.Z.NoWrap
+                        }, o.createElement(C.Va, {
                             className: "platform-notification-settings__all-body",
                             flexGrow: 1,
                             padding: {
                                 right: 1
                             }
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size4,
-                            color: E.O.Alt,
-                            "data-test-selector": Q.Explanation
-                        }, this.props.explanation)), a.createElement(E.Va, {
-                            display: E.W.Flex,
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size4,
+                            color: C.O.Alt,
+                            "data-test-selector": H.Explanation
+                        }, this.props.explanation)), o.createElement(C.Va, {
+                            display: C.W.Flex,
                             flexGrow: 0,
                             flexShrink: 0
-                        }, a.createElement(E.Va, {
+                        }, o.createElement(C.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, a.createElement(E.Pb, {
-                            "data-test-selector": Q.ToggleAll,
+                        }, o.createElement(C.Pb, {
+                            "data-test-selector": H.ToggleAll,
                             checked: this.getGlobalStateForPlatform(),
                             onChange: this.toggleAll
-                        })), a.createElement(E.Va, {
+                        })), o.createElement(C.Va, {
                             padding: {
                                 x: 1
                             },
-                            "data-test-selector": Q.SavedIndicator,
+                            "data-test-selector": H.SavedIndicator,
                             className: this.getDisplaySaved("ALL") ? "platform-notification-settings__saved" : "platform-notification-settings__saved--hide"
-                        }, a.createElement(E.V, {
-                            fontSize: E.Aa.Size5,
-                            color: E.O.Link
-                        }, Object(s.d)("Saved", "PlatformNotificationSettings")))))), a.createElement(E.Va, {
+                        }, o.createElement(C.V, {
+                            fontSize: C.Aa.Size5,
+                            color: C.O.Link
+                        }, Object(c.d)("Saved", "PlatformNotificationSettings")))))), o.createElement(C.Va, {
                             className: "platform-notification-settings__toggle-container",
-                            display: E.W.Flex,
-                            flexDirection: E.Y.Column,
+                            display: C.W.Flex,
+                            flexDirection: C.Y.Column,
                             margin: {
                                 left: 5
                             },
@@ -918,7 +894,7 @@
                                 a = this.getSettingByCategory(r.category);
                             a && (e++, a.isEnabled && t++)
                         }
-                        return 0 !== t && this.getGlobalStateForPlatform() ? t < e ? Object(s.d)("Some notifications turned on", "PlatformNotificationSettings") : Object(s.d)("All notifications turned on", "PlatformNotificationSettings") : Object(s.d)("All notifications turned off", "PlatformNotificationSettings")
+                        return 0 !== t && this.getGlobalStateForPlatform() ? t < e ? Object(c.d)("Some notifications turned on", "PlatformNotificationSettings") : Object(c.d)("All notifications turned on", "PlatformNotificationSettings") : Object(c.d)("All notifications turned off", "PlatformNotificationSettings")
                     }, t.prototype.getGlobalStateForPlatform = function() {
                         var e = this.getSettingByCategory("ALL");
                         return !!e && e.isEnabled
@@ -928,7 +904,7 @@
                         if (!t || !t.currentUser || !t.currentUser.notificationSettings) return !1;
                         for (var n = 0, i = t.currentUser.notificationSettings; n < i.length; n++) {
                             var r = i[n];
-                            if (r.category === G) {
+                            if (r.category === M) {
                                 e = r.platforms;
                                 break
                             }
@@ -936,14 +912,14 @@
                         if (!e) return !1;
                         for (var a = 0, o = e; a < o.length; a++) {
                             var s = o[a];
-                            if (s.platformName === W) return "on" === s.settingState
+                            if (s.platformName === G) return "on" === s.settingState
                         }
                         return !1
                     }, t.prototype.renderToggles = function() {
                         for (var e = [], t = 0, n = this.VisibleSettings; t < n.length; t++) {
                             var i = n[t],
                                 r = this.getSettingByCategory(i.category);
-                            r && e.push(a.createElement(R, {
+                            r && e.push(o.createElement(V, {
                                 category: i.category,
                                 text: i.name,
                                 description: i.description,
@@ -974,88 +950,85 @@
                             })
                         }
                     }, t
-                }(a.Component),
-                J = Object(o.compose)(Object(f.c)("PlatformNotificationSettings"), Object(S.a)(Z, {
+                }(o.Component),
+                $ = Object(s.compose)(Object(h.c)("PlatformNotificationSettings"), Object(k.a)(K, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network"
                         }
                     }
-                }), Object(S.a)(K, {
+                }), Object(k.a)(X, {
                     name: "setNotificationSetting"
-                }))($),
-                ee = (n("NkC9"), function(e) {
+                }))(Z),
+                J = (n("NkC9"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.onRender()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
                     }, t.prototype.render = function() {
-                        var e = "" !== location.search ? r.parse(location.search) : {},
+                        var e = "" !== location.search ? a.parse(location.search) : {},
                             t = !!e["open-advanced"] && "true" === e["open-advanced"];
-                        return a.createElement(a.Fragment, null, a.createElement(v.a, {
-                            title: Object(s.d)("Notifications", "SettingsNotificationsPage"),
-                            description: Object(s.d)("Get the notifications you care about, where you want to see them.", "SettingsNotificationsPage")
-                        }), a.createElement(X, {
-                            description: Object(s.d)("When turned on, your notifications are sent to where you are. When you’re active on Twitch, you’ll get an on-site notification when a channel you follow goes live. When you’re not using Twitch, you'll get either a mobile notification or an email, not both. You can learn more  <x:link>in this article</x:link>.", {
+                        return o.createElement(o.Fragment, null, o.createElement(f.a, {
+                            title: Object(c.d)("Notifications", "SettingsNotificationsPage"),
+                            description: Object(c.d)("Get the notifications you care about, where you want to see them.", "SettingsNotificationsPage")
+                        }), o.createElement(Y, {
+                            description: Object(c.d)("When turned on, your notifications are sent to where you are. When you’re active on Twitch, you’ll get an on-site notification when a channel you follow goes live. When you’re not using Twitch, you'll get either a mobile notification or an email, not both. You can learn more  <x:link>in this article</x:link>.", {
                                 "x:link": function(e) {
-                                    return a.createElement(E.T, {
-                                        to: function(e) {
-                                            var t = Object(l.b)(s.o.store.getState()) || "en";
-                                            return "https://help.twitch.tv/customer/" + (d[t] || "en") + "/portal/articles/" + e
-                                        }("2944759")
+                                    return o.createElement(C.T, {
+                                        to: Object(d.b)(d.a.SmartNotifications)
                                     }, e)
                                 }
                             }, "SettingsNotificationsPage"),
-                            explanation: Object(s.d)("Enable smart notifications", "SettingsNotificationsPage"),
+                            explanation: Object(c.d)("Enable smart notifications", "SettingsNotificationsPage"),
                             key: "smart"
-                        }), a.createElement(E.xb, {
+                        }), o.createElement(C.xb, {
                             className: "notification-settings__body",
                             borderRight: !0,
                             borderLeft: !0,
                             borderTop: !0
-                        }, a.createElement(J, {
+                        }, o.createElement($, {
                             startCollapsed: t,
-                            platformName: H.onsite,
-                            displayName: Object(s.d)("On Twitch", "SettingsNotificationsPage"),
-                            description: Object(s.d)("We'll always keep you informed on important updates to Twitch and your account.", "SettingsNotificationsPage"),
-                            explanation: Object(s.d)("Send me notifications on Twitch about", "SettingsNotificationsPage"),
+                            platformName: W.onsite,
+                            displayName: Object(c.d)("On Twitch", "SettingsNotificationsPage"),
+                            description: Object(c.d)("We'll always keep you informed on important updates to Twitch and your account.", "SettingsNotificationsPage"),
+                            explanation: Object(c.d)("Send me notifications on Twitch about", "SettingsNotificationsPage"),
                             key: "onsite",
                             extraSettings: this.renderBrowserPushNotifications()
-                        }), a.createElement(J, {
+                        }), o.createElement($, {
                             startCollapsed: !0,
-                            platformName: H.email,
-                            displayName: Object(s.d)("By Email", "SettingsNotificationsPage"),
-                            description: Object(s.d)("Receive important notifications through email. You may receive additional emails about features and content on Twitch. You can turn off specific emails using the unsubscribe link included in each message.", "SettingsNotificationsPage"),
-                            explanation: Object(s.d)("Send me emails about", "SettingsNotificationsPage"),
+                            platformName: W.email,
+                            displayName: Object(c.d)("By Email", "SettingsNotificationsPage"),
+                            description: Object(c.d)("Receive important notifications through email. You may receive additional emails about features and content on Twitch. You can turn off specific emails using the unsubscribe link included in each message.", "SettingsNotificationsPage"),
+                            explanation: Object(c.d)("Send me emails about", "SettingsNotificationsPage"),
                             key: "email"
-                        }), a.createElement(J, {
-                            platformName: H.push,
+                        }), o.createElement($, {
+                            platformName: W.push,
                             startCollapsed: !0,
-                            displayName: Object(s.d)("On Mobile", "SettingsNotificationsPage"),
-                            description: Object(s.d)("Get Twitch updates on the go. Receive notifications right on your phone's home screen.", "SettingsNotificationsPage"),
-                            explanation: Object(s.d)("Send me push notifications", "SettingsNotificationsPage"),
+                            displayName: Object(c.d)("On Mobile", "SettingsNotificationsPage"),
+                            description: Object(c.d)("Get Twitch updates on the go. Receive notifications right on your phone's home screen.", "SettingsNotificationsPage"),
+                            explanation: Object(c.d)("Send me push notifications", "SettingsNotificationsPage"),
                             key: "push"
-                        }), a.createElement(x, {
+                        }), o.createElement(j, {
                             startCollapsed: !t
                         })))
                     }, t.prototype.renderBrowserPushNotifications = function() {
-                        return Object(g.a)() && !Object(h.a)() ? a.createElement(I, null) : null
+                        return Object(m.a)() && !Object(g.a)() ? o.createElement(L, null) : null
                     }, t.prototype.onRender = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t
-                }(a.Component)),
-                te = Object(o.compose)(Object(f.c)("SettingsNotificationsPage", {
-                    destination: p.a.NotificationSettingsPage
-                }), Object(c.a)({
-                    location: m.PageviewLocation.SettingsPage
-                }))(ee);
+                }(o.Component)),
+                ee = Object(s.compose)(Object(h.c)("SettingsNotificationsPage", {
+                    destination: u.a.NotificationSettingsPage
+                }), Object(l.a)({
+                    location: p.PageviewLocation.SettingsPage
+                }))(J);
             n.d(t, "SettingsNotificationsPageComponent", function() {
-                return ee
+                return J
             }), n.d(t, "SettingsNotificationsPage", function() {
-                return te
+                return ee
             })
         },
         "/THz": function(e, t, n) {},
@@ -2269,6 +2242,52 @@
                 }
             };
             e.exports = n
+        },
+        "7M8a": function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return r
+            }), n.d(t, "b", function() {
+                return d
+            });
+            var i, r, a = n("/7QA"),
+                o = n("kRBY"),
+                s = {
+                    da: "da",
+                    de: "de",
+                    en: "en",
+                    "es-mx": "es",
+                    es: "es_es",
+                    fi: "fi",
+                    fr: "fr",
+                    it: "it",
+                    ja: "ja",
+                    ko: "ko",
+                    nl: "nl",
+                    no: "no",
+                    pl: "pl",
+                    "pt-br": "pt_br",
+                    pt: "pt_br",
+                    ru: "ru",
+                    sv: "sv",
+                    th: "th",
+                    tr: "tr",
+                    vi: "en",
+                    "zh-cn": "zh_cn",
+                    "zh-tw": "zh_tw"
+                },
+                c = Object.keys(s);
+            ! function(e) {
+                e.CreatingAccounts = "658863-creating-an-account", e.SmartNotifications = "2944759"
+            }(r || (r = {}));
+            var l = ((i = {})[r.CreatingAccounts] = ["en", "de"], i[r.SmartNotifications] = c, i);
+
+            function d(e) {
+                var t = Object(o.b)(a.o.store.getState()) || "en",
+                    n = "en",
+                    i = l[e];
+                return i && i.includes(t) && (n = s[t]), "https://help.twitch.tv/customer/" + n + "/portal/articles/" + e
+            }
         },
         "7aL7": function(e, t) {
             var n = {

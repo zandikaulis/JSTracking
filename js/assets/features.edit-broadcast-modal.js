@@ -428,7 +428,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.J.TOP,
+                                tagType: h.M.TOP,
                                 limit: 50
                             }
                         }

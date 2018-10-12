@@ -105,7 +105,7 @@
                 return {
                     isLoggedIn: Object(c.f)(e)
                 }
-            }), Object(s.c)("DevLogin", {
+            }), Object(s.c)("DevLoginPage", {
                 autoReportInteractive: !0,
                 destination: r.a.DevSiteLogin
             }), Object(a.a)({

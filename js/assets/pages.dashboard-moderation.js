@@ -4581,7 +4581,7 @@
                                 }, e
                             }, {})
                         }(e.emoticons),
-                        i = Object(s.f)(r, o, e.bits_spent || 0, n, !1, t);
+                        i = Object(s.e)(r, o, e.bits_spent || 0, n, !1, t);
                     return {
                         id: "1",
                         isAction: e.is_action,

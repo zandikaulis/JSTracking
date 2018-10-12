@@ -1536,24 +1536,26 @@
                 l = n("wIs1"),
                 c = n("ZS2+"),
                 d = n("4VQm"),
-                u = n("GnwI"),
-                p = n("2iEm"),
-                m = n("/7QA"),
-                f = n("J4y2"),
-                g = n("eJ65"),
-                h = n("2xye"),
-                v = n("/MKj"),
-                k = n("fvjX"),
-                b = n("1/iK"),
-                O = n("y5D0"),
-                y = n("kRBY"),
-                E = n("TSYQ"),
-                N = n("u5aL"),
-                S = n("yR8l"),
-                _ = n("9pSj"),
-                D = n("Ue10"),
-                I = n("Oowd"),
-                C = (n("+6S+"), function(e) {
+                u = n("/0dD"),
+                p = n("76Lv"),
+                m = n("GnwI"),
+                f = n("2iEm"),
+                g = n("/7QA"),
+                h = n("J4y2"),
+                v = n("eJ65"),
+                k = n("2xye"),
+                b = n("/MKj"),
+                O = n("fvjX"),
+                y = n("1/iK"),
+                E = n("y5D0"),
+                N = n("kRBY"),
+                S = n("TSYQ"),
+                _ = n("u5aL"),
+                D = n("yR8l"),
+                I = n("9pSj"),
+                C = n("Ue10"),
+                x = n("Oowd"),
+                P = (n("+6S+"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1577,126 +1579,126 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.data.error) return i.createElement(_.c, null);
+                        if (this.props.data.error) return i.createElement(I.c, null);
                         if (this.props.data.loading) return this.renderPlaceholders();
                         if (this.props.isLoggedIn) {
-                            var e = E({
+                            var e = S({
                                 "twitch-prime-top-nav-user__dropdown--open": this.state.dropdownOpen
                             });
-                            return i.createElement(D.Na, {
+                            return i.createElement(C.Na, {
                                 className: "twitch-prime-top-nav-user__wrapper",
                                 margin: {
                                     right: 2
                                 },
                                 fullHeight: !0
-                            }, i.createElement(N.a, {
+                            }, i.createElement(_.a, {
                                 onClickOut: this.onClickOut,
                                 className: e
-                            }, i.createElement(D.Va, {
-                                display: D.W.Flex,
+                            }, i.createElement(C.Va, {
+                                display: C.W.Flex,
                                 className: "twitch-prime-top-nav-user twitch-prime-top-nav-user--signed-in",
                                 fullHeight: !0,
-                                zIndex: D.ac.Above
-                            }, i.createElement(D.Sa, {
+                                zIndex: C.ac.Above
+                            }, i.createElement(C.Sa, {
                                 onClick: this.toggleDropdown,
                                 "data-test-selector": "user-menu-toggle",
                                 blurAfterClick: !0,
-                                type: D.Ta.Alpha
-                            }, i.createElement(D.Va, {
-                                display: D.W.Flex,
-                                flexWrap: D.Z.NoWrap,
-                                alignItems: D.f.Center,
+                                type: C.Ta.Alpha
+                            }, i.createElement(C.Va, {
+                                display: C.W.Flex,
+                                flexWrap: C.Z.NoWrap,
+                                alignItems: C.f.Center,
                                 flexGrow: 1,
                                 padding: {
                                     right: 1
                                 },
                                 fullHeight: !0
-                            }, i.createElement(D.Va, {
+                            }, i.createElement(C.Va, {
                                 margin: {
                                     x: 1
                                 },
                                 flexShrink: 0
-                            }, i.createElement(D.i, {
-                                type: D.n.FadeIn,
-                                duration: D.k.Long,
+                            }, i.createElement(C.i, {
+                                type: C.n.FadeIn,
+                                duration: C.k.Long,
                                 enabled: !0
-                            }, i.createElement(D.q, {
+                            }, i.createElement(C.q, {
                                 size: 30,
                                 src: this.props.data.currentUser.profileImageURL,
-                                alt: Object(m.d)("Your Avatar", "PrimeUser")
-                            }))), i.createElement(D.Va, {
+                                alt: Object(g.d)("Your Avatar", "PrimeUser")
+                            }))), i.createElement(C.Va, {
                                 flexGrow: 1,
                                 flexShrink: 1,
-                                flexDirection: D.Y.Column,
+                                flexDirection: C.Y.Column,
                                 ellipsis: !0
-                            }, i.createElement(D.xb, {
+                            }, i.createElement(C.xb, {
                                 className: "twitch-prime-top-nav-user__username"
-                            }, this.props.data.currentUser.displayName)), i.createElement(D.xb, {
-                                display: D.W.Flex,
+                            }, this.props.data.currentUser.displayName)), i.createElement(C.xb, {
+                                display: C.W.Flex,
                                 flexShrink: 0,
                                 className: "twitch-prime-top-nav-user__expand"
-                            }, i.createElement(D.mb, {
-                                asset: D.nb.GlyphArrDown
+                            }, i.createElement(C.mb, {
+                                asset: C.nb.GlyphArrDown
                             }))))), this.renderDropdown()))
                         }
-                        return i.createElement(D.xb, {
-                            display: D.W.Flex,
+                        return i.createElement(C.xb, {
+                            display: C.W.Flex,
                             fullHeight: !0,
                             padding: {
                                 right: 1
                             },
                             className: "twitch-prime-top-nav-user"
-                        }, i.createElement(D.Va, {
-                            display: D.W.Flex,
-                            flexWrap: D.Z.NoWrap,
+                        }, i.createElement(C.Va, {
+                            display: C.W.Flex,
+                            flexWrap: C.Z.NoWrap,
                             margin: {
                                 x: .5
                             },
-                            alignItems: D.f.Center,
+                            alignItems: C.f.Center,
                             flexGrow: 1
-                        }, i.createElement(D.z, {
+                        }, i.createElement(C.z, {
                             onClick: this.onLoginClick
-                        }, Object(m.d)("Log in", "PrimeUser"))))
+                        }, Object(g.d)("Log in", "PrimeUser"))))
                     }, t.prototype.renderDropdown = function() {
-                        var e = E({
+                        var e = S({
                                 "twitch-prime-top-nav-user__dropdown": !0,
                                 "twitch-prime-top-nav-user__dropdown--open": this.state.dropdownOpen
                             }),
-                            t = i.createElement(D.Sa, {
+                            t = i.createElement(C.Sa, {
                                 onClick: this.onLogoutClick,
-                                type: D.Ta.Alpha
-                            }, i.createElement(D.xb, {
-                                color: D.O.Alt,
-                                display: D.W.Flex,
-                                alignItems: D.f.Center,
+                                type: C.Ta.Alpha
+                            }, i.createElement(C.xb, {
+                                color: C.O.Alt,
+                                display: C.W.Flex,
+                                alignItems: C.f.Center,
                                 padding: {
                                     x: 2,
                                     y: .5
                                 }
-                            }, i.createElement(D.Va, {
-                                display: D.W.Flex,
-                                alignItems: D.f.Center,
+                            }, i.createElement(C.Va, {
+                                display: C.W.Flex,
+                                alignItems: C.f.Center,
                                 margin: {
                                     right: 1
                                 }
-                            }, i.createElement(D.mb, {
-                                asset: D.nb.NavLogout,
+                            }, i.createElement(C.mb, {
+                                asset: C.nb.NavLogout,
                                 height: 18,
                                 width: 18
-                            })), i.createElement(D.V, null, Object(m.d)("Log Out", "PrimeUser"))));
-                        return i.createElement(D.xb, {
+                            })), i.createElement(C.V, null, Object(g.d)("Log Out", "PrimeUser"))));
+                        return i.createElement(C.xb, {
                             className: e,
-                            background: D.r.Base,
-                            zIndex: D.ac.Below,
+                            background: C.r.Base,
+                            zIndex: C.ac.Below,
                             fullWidth: !0,
-                            overflow: D.Ya.Hidden,
-                            position: D.db.Absolute,
+                            overflow: C.Ya.Hidden,
+                            position: C.db.Absolute,
                             "data-test-selector": "dropdown-down",
                             borderLeft: this.state.dropdownOpen,
                             borderTop: this.state.dropdownOpen,
                             borderBottom: this.state.dropdownOpen,
                             borderRight: this.state.dropdownOpen
-                        }, i.createElement(D.Va, {
+                        }, i.createElement(C.Va, {
                             padding: {
                                 y: 1
                             }
@@ -1704,181 +1706,181 @@
                     }, t.prototype.reportInteractive = function() {
                         this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.renderPlaceholders = function() {
-                        return i.createElement(D.Va, null, i.createElement(D.Va, {
+                        return i.createElement(C.Va, null, i.createElement(C.Va, {
                             className: "twitch-prime-top-nav-user",
-                            display: D.W.Flex,
-                            alignItems: D.f.Center,
-                            justifyContent: D.Ua.Between,
+                            display: C.W.Flex,
+                            alignItems: C.f.Center,
+                            justifyContent: C.Ua.Between,
                             fullHeight: !0,
                             padding: {
                                 x: 1
                             }
-                        }, i.createElement(D.Va, null, i.createElement(D.cb, {
+                        }, i.createElement(C.Va, null, i.createElement(C.cb, {
                             width: 30,
                             height: 30
-                        })), i.createElement(D.xb, {
-                            display: D.W.Flex,
+                        })), i.createElement(C.xb, {
+                            display: C.W.Flex,
                             flexShrink: 0,
                             className: "twitch-prime-top-nav-user__expand"
-                        }, i.createElement(D.mb, {
-                            asset: D.nb.GlyphArrDown,
-                            type: D.ob.Placeholder
+                        }, i.createElement(C.mb, {
+                            asset: C.nb.GlyphArrDown,
+                            type: C.ob.Placeholder
                         }))))
                     }, t
                 }(i.Component)),
-                x = Object(a.compose)(Object(S.a)(I), Object(u.c)("PrimeUser"))(C);
-            var P = Object(v.connect)(function(e) {
+                w = Object(a.compose)(Object(D.a)(x), Object(m.c)("PrimeUser"))(P);
+            var L = Object(b.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(y.f)(e)
+                        isLoggedIn: Object(N.f)(e)
                     }
                 }, function(e) {
-                    return Object(k.bindActionCreators)({
-                        logout: O.f,
+                    return Object(O.bindActionCreators)({
+                        logout: E.f,
                         login: function() {
-                            return Object(O.e)(b.a.TopNavLoginButton)
+                            return Object(E.e)(y.a.TopNavLoginButton)
                         },
                         signup: function() {
-                            return Object(O.g)(b.a.TopNavSignupButton)
+                            return Object(E.g)(y.a.TopNavSignupButton)
                         }
                     }, e)
-                })(x),
-                w = (n("A1Hl"), function(e) {
+                })(w),
+                T = (n("A1Hl"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(D.Na, {
-                            position: D.db.Fixed,
+                        return i.createElement(C.Na, {
+                            position: C.db.Fixed,
                             attachTop: !0,
                             fullWidth: !0
                         }, i.createElement("nav", {
                             className: "twitch-prime-top-nav"
-                        }, i.createElement(D.Va, {
+                        }, i.createElement(C.Va, {
                             className: "twitch-prime-top-nav__menu",
-                            display: D.W.Flex,
-                            alignItems: D.f.Center,
-                            flexWrap: D.Z.NoWrap,
+                            display: C.W.Flex,
+                            alignItems: C.f.Center,
+                            flexWrap: C.Z.NoWrap,
                             fullHeight: !0,
-                            justifyContent: D.Ua.Between
-                        }, i.createElement(D.Va, {
+                            justifyContent: C.Ua.Between
+                        }, i.createElement(C.Va, {
                             className: "twitch-prime-top-nav__menu__left",
-                            display: D.W.Flex
-                        }, i.createElement(D.Na, {
-                            display: D.W.InlineFlex,
-                            alignItems: D.f.Center,
+                            display: C.W.Flex
+                        }, i.createElement(C.Na, {
+                            display: C.W.InlineFlex,
+                            alignItems: C.f.Center,
                             flexShrink: 0,
                             padding: {
                                 left: .5,
                                 y: 1
                             }
-                        }, i.createElement(p.a, {
+                        }, i.createElement(f.a, {
                             to: {
                                 pathname: "/prime",
                                 state: {
-                                    medium: h.PageviewMedium.TopNav,
-                                    content: h.PageviewContent.Logo
+                                    medium: k.PageviewMedium.TopNav,
+                                    content: k.PageviewContent.Logo
                                 }
                             },
                             className: "twitch-prime-top-nav__home-link"
-                        }, i.createElement(D.mb, {
-                            asset: D.nb.LogoTwitchPrime,
+                        }, i.createElement(C.mb, {
+                            asset: C.nb.LogoTwitchPrime,
                             width: 90,
                             height: 40
-                        }))), i.createElement(D.Va, {
+                        }))), i.createElement(C.Va, {
                             className: "twitch-prime-top-nav__ellipsis-button",
-                            display: D.W.Flex,
-                            alignItems: D.f.Center,
+                            display: C.W.Flex,
+                            alignItems: C.f.Center,
                             margin: {
                                 left: 1
                             }
-                        }, i.createElement(g.a, null, i.createElement(D.A, {
-                            icon: D.nb.NavMore,
-                            type: D.C.Default,
-                            ariaLabel: Object(m.d)("More nav items", "PrimeTopNav"),
+                        }, i.createElement(v.a, null, i.createElement(C.A, {
+                            icon: C.nb.NavMore,
+                            type: C.C.Default,
+                            ariaLabel: Object(g.d)("More nav items", "PrimeTopNav"),
                             "data-a-target": "twitch-prime-top-nav__ellipsis-icon"
-                        }), i.createElement(D.u, {
-                            direction: D.v.Bottom,
+                        }), i.createElement(C.u, {
+                            direction: C.v.Bottom,
                             tailOffset: 7,
-                            size: D.w.Small,
+                            size: C.w.Small,
                             "data-a-target": "overflow-menu"
-                        }, i.createElement(D.Va, {
+                        }, i.createElement(C.Va, {
                             padding: 1
-                        }, i.createElement(g.a, {
-                            display: D.W.Block
-                        }, i.createElement(D.Sa, {
+                        }, i.createElement(v.a, {
+                            display: C.W.Block
+                        }, i.createElement(C.Sa, {
                             "data-target": "twitch-prime-top-nav-language-selector-click",
                             "data-a-target": "twitch-prime-top-nav-language-selector"
-                        }, i.createElement(D.Va, {
+                        }, i.createElement(C.Va, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(m.d)("Language", "PrimeTopNav"))), i.createElement(D.u, {
-                            size: D.w.Small,
-                            direction: D.v.BottomCenter,
+                        }, Object(g.d)("Language", "PrimeTopNav"))), i.createElement(C.u, {
+                            size: C.w.Small,
+                            direction: C.v.BottomCenter,
                             offsetY: "15px",
                             "data-target": "language-selector",
                             "data-a-target": "language-selector-menu"
-                        }, i.createElement(f.a, null)))))))), i.createElement(P, null))))
+                        }, i.createElement(h.a, null)))))))), i.createElement(L, null))))
                     }, t
                 }(i.Component)),
-                L = Object(u.c)("PrimeTopNav", {
+                U = Object(m.c)("PrimeTopNav", {
                     autoReportInteractive: !0
-                })(w),
-                T = c.a.wrap(function() {
+                })(T),
+                F = c.a.wrap(function() {
                     return n.e(176).then(n.bind(null, "eAh4"))
                 }, "TwitchPrimeOffersPage"),
-                U = c.a.wrap(function() {
+                R = c.a.wrap(function() {
                     return n.e(175).then(n.bind(null, "EU9V"))
                 }, "TwitchPrimeSuccessPage"),
-                F = c.a.wrap(function() {
+                j = c.a.wrap(function() {
                     return n.e(174).then(n.bind(null, "crDv"))
                 }, "TwitchPrimeLinkingPage"),
-                R = c.a.wrap(function() {
+                V = c.a.wrap(function() {
                     return n.e(173).then(n.bind(null, "CinY"))
                 }, "TwitchPrimeFortnitePage"),
-                j = function(e) {
+                B = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(D.Va, {
-                            className: "prime-root",
+                        return i.createElement(C.Va, {
+                            className: "prime-root " + Object(p.b)(u.a.Light),
                             fullHeight: !0,
-                            display: D.W.Flex,
-                            flexDirection: D.Y.Column,
-                            position: D.db.Relative
-                        }, i.createElement(L, null), i.createElement(D.Na, {
-                            position: D.db.Relative,
+                            display: C.W.Flex,
+                            flexDirection: C.Y.Column,
+                            position: C.db.Relative
+                        }, i.createElement(U, null), i.createElement(C.Na, {
+                            position: C.db.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0,
                             margin: {
                                 top: 5
                             }
-                        }, i.createElement("main", null, i.createElement(d.b, null, i.createElement(D.Va, {
+                        }, i.createElement("main", null, i.createElement(d.b, null, i.createElement(C.Va, {
                             className: "prime-main",
                             fullHeight: !0
                         }, i.createElement(o.a, null, i.createElement(s.a, {
                             path: "/prime/fortnite/link",
-                            component: F
+                            component: j
                         }), i.createElement(s.a, {
                             path: "/prime/fortnite/success",
-                            component: U
-                        }), i.createElement(s.a, {
-                            path: "/prime/fortnite",
                             component: R
                         }), i.createElement(s.a, {
+                            path: "/prime/fortnite",
+                            component: V
+                        }), i.createElement(s.a, {
                             path: "/prime",
-                            component: T
+                            component: F
                         })))))))
                     }, t
                 }(i.Component),
-                V = Object(a.compose)(l.a, Object(u.c)("PrimeRoot", {
+                W = Object(a.compose)(l.a, Object(m.c)("PrimeRoot", {
                     autoReportInteractive: !0
-                }))(j);
+                }))(B);
             n.d(t, "PrimeRoot", function() {
-                return V
+                return W
             })
         },
         "9k8c": function(e, t) {

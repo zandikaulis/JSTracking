@@ -8,8 +8,8 @@
                 a = n("9C/b"),
                 c = n("fvjX"),
                 s = n("/7QA"),
-                u = n("ZDlU"),
-                l = n("y5D0"),
+                l = n("ZDlU"),
+                u = n("y5D0"),
                 d = n("kRBY"),
                 p = n("Ue10"),
                 m = function(e) {
@@ -29,11 +29,11 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.userID && this.checkSudoToken()
                     }, t.prototype.render = function() {
-                        return this.state.error ? o.createElement(u.a, {
+                        return this.state.error ? o.createElement(l.a, {
                             message: Object(s.d)("Something has gone wrong.  Please try again later.", "RequireSudoToken")
                         }) : this.state.sudoTokenInvalid ? this.renderTokenInvalidMessage() : this.props.isLoggedIn ? this.state.checkingSudoToken ? o.createElement(p.Xa, {
                             fillContent: !0
-                        }) : "function" == typeof this.props.children ? this.props.children(this.onSudoTokenInvalid) : this.props.children : (this.props.login(this.props.loginTrackingSource), o.createElement(u.a, {
+                        }) : "function" == typeof this.props.children ? this.props.children(this.onSudoTokenInvalid) : this.props.children : (this.props.login(this.props.loginTrackingSource), o.createElement(l.a, {
                             message: Object(s.d)("You must be logged in to view this page", "RequireSudoToken")
                         }))
                     }, t.prototype.renderTokenInvalidMessage = function() {
@@ -101,10 +101,10 @@
             }, function(e) {
                 return Object(c.bindActionCreators)({
                     logout: function() {
-                        return Object(l.f)()
+                        return Object(u.f)()
                     },
                     login: function(e) {
-                        return Object(l.e)(e)
+                        return Object(u.e)(e)
                     }
                 }, e)
             }))(m);
@@ -337,13 +337,13 @@
                                     var i = o.referenceTracking,
                                         a = i.content,
                                         s = i.medium,
-                                        u = i.content_index,
-                                        l = i.email_id;
+                                        l = i.content_index,
+                                        u = i.email_id;
                                     c.o.tracking.trackPageview(r.__assign({
                                         content: a,
                                         medium: s,
-                                        content_index: u,
-                                        email_id: l,
+                                        content_index: l,
+                                        email_id: u,
                                         location: e.location
                                     }, t))
                                 }
@@ -508,7 +508,7 @@
             }), n.d(t, "b", function() {
                 return c
             }), n.d(t, "c", function() {
-                return u
+                return l
             });
             var r, o, i = n("/7QA"),
                 a = n("kRBY");
@@ -525,13 +525,13 @@
             }(o || (o = {}));
             var s = Math.pow(2, 32);
 
-            function u(e) {
+            function l(e) {
                 var t = i.b.get(e, [0, o.Disabled]),
                     n = t[0],
                     r = t[1],
                     c = i.o.session.deviceID,
-                    u = i.o.store.getState();
-                return !(r !== o.Enabled || !Object(a.g)(u)) || function(e, t) {
+                    l = i.o.store.getState();
+                return !(r !== o.Enabled || !Object(a.g)(l)) || function(e, t) {
                     for (var n = void 0 === t ? 2166136261 : t, r = 0, o = e.length; r < o; r++) n ^= e.charCodeAt(r), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
                     return n >>> 0
                 }(c + "-" + e) / s < n
@@ -544,39 +544,40 @@
                 i = n("q1tI"),
                 a = n("4p7I"),
                 c = n("yoKv"),
-                s = n("/7QA"),
+                s = n("mLw1"),
+                l = n("/7QA"),
                 u = n("LA8z"),
-                l = n("/MKj"),
-                d = n("kRBY"),
-                p = n("cr+I"),
-                m = n("fvjX"),
-                f = n("V+GM"),
-                h = n("1/iK"),
-                b = n("NvVO"),
-                g = n("2xye"),
-                v = n("GnwI"),
-                k = n("5X7D"),
-                y = n("y5D0"),
-                D = n("yR8l"),
-                O = n("geRD"),
-                A = n("EpBn"),
-                S = n("BK8n"),
-                w = n("7PeK"),
+                d = n("/MKj"),
+                p = n("kRBY"),
+                m = n("cr+I"),
+                f = n("fvjX"),
+                h = n("V+GM"),
+                b = n("1/iK"),
+                g = n("NvVO"),
+                v = n("2xye"),
+                k = n("GnwI"),
+                y = n("5X7D"),
+                D = n("y5D0"),
+                O = n("yR8l"),
+                A = n("geRD"),
+                S = n("EpBn"),
+                w = n("BK8n"),
+                E = n("7PeK"),
                 _ = n("c0Zc"),
-                E = n("Ue10"),
-                j = n("K6Vg"),
-                T = n("kOk9");
+                j = n("Ue10"),
+                T = n("K6Vg"),
+                x = n("kOk9");
             ! function(e) {
                 e.PADMessage = "PAD_MESSAGE_SELECTOR"
             }(r || (r = {}));
-            var x = function(e) {
+            var P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             working: !1,
                             error: !1,
                             disableReason: ""
-                        }, t.logger = s.j.withCategory("DisableAccountForm"), t.disable = function() {
+                        }, t.logger = l.j.withCategory("DisableAccountForm"), t.disable = function() {
                             return o.__awaiter(t, void 0, void 0, function() {
                                 var e, t, n;
                                 return o.__generator(this, function(r) {
@@ -585,7 +586,7 @@
                                             if (!this.props.user) return [2];
                                             this.setState({
                                                 working: !0
-                                            }), e = Object(O.a)({
+                                            }), e = Object(A.a)({
                                                 userID: this.props.user.id,
                                                 isDelete: !!this.props.isDelete,
                                                 description: this.state.disableReason
@@ -619,205 +620,227 @@
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
                         if (this.state.error) {
-                            var e = this.props.isDelete ? Object(s.d)("Something went wrong when attempting to delete your account.", "DisableAccountForm") : Object(s.d)("Something went wrong when attempting to disable your account.", "DisableAccountForm");
-                            return i.createElement(w.a, null, i.createElement(S.a, null, i.createElement(E.V, {
-                                color: E.O.Error
+                            var e = this.props.isDelete ? Object(l.d)("Something went wrong when attempting to delete your account.", "DisableAccountForm") : Object(l.d)("Something went wrong when attempting to disable your account.", "DisableAccountForm");
+                            return i.createElement(E.a, null, i.createElement(w.a, null, i.createElement(j.V, {
+                                color: j.O.Error
                             }, e)))
                         }
-                        if (this.props.data.loading) return i.createElement(E.Xa, {
+                        if (this.props.data.loading) return i.createElement(j.Xa, {
                             fillContent: !0
                         });
                         if (!this.props.user) return null;
                         var t = this.props.data.currentUser && this.props.data.currentUser.roles,
                             n = !!t && !!(t.isAffiliate || t.isExtensionsDeveloper || t.isPartner),
                             r = null,
-                            o = this.props.isDelete ? Object(s.d)("Delete Account", "DisableAccountForm") : Object(s.d)("Disable Account", "DisableAccountForm"),
-                            a = this.props.isDelete ? Object(s.d)("Are you sure you'd like to delete your Twitch account? This will permanently erase all your content and personal information, and you will no longer be able to claim {login} as your user ID.", {
+                            o = this.props.isDelete ? Object(l.d)("Delete Account", "DisableAccountForm") : Object(l.d)("Disable Account", "DisableAccountForm"),
+                            a = this.props.isDelete ? Object(l.d)("Are you sure you'd like to delete your Twitch account? This will permanently erase all your content and personal information, and you will no longer be able to claim {login} as your user ID.", {
                                 login: this.props.user.login
-                            }, "DisableAccountForm") : Object(s.d)("We're sorry to see you go. Disabling your account does not delete your user information. Contact us at support@twitch.tv if there's anything we can do to change your mind.", "DisableAccountForm");
+                            }, "DisableAccountForm") : Object(l.d)("We're sorry to see you go. Disabling your account does not delete your user information. Contact us at support@twitch.tv if there's anything we can do to change your mind.", "DisableAccountForm");
                         return r = n ? this.renderPADSection() : this.renderDisableSection(n, o), i.createElement(i.Fragment, null, i.createElement(_.a, {
                             title: o,
                             description: a
                         }), r)
                     }, t.prototype.renderPADSection = function() {
-                        var e = Object(s.d)("We cannot delete your account as you are currently an active Partner, Affiliate, and/or Developer and must offboard from those programs first. Please contact <x:link>Customer Support</x:link> for assistance with offboarding.", {
+                        var e = Object(l.d)("We cannot delete your account as you are currently an active Partner, Affiliate, and/or Developer and must offboard from those programs first. Please contact <x:link>Customer Support</x:link> for assistance with offboarding.", {
                                 "x:link": function(e) {
-                                    return i.createElement(E.T, {
+                                    return i.createElement(j.T, {
                                         to: "https://help.twitch.tv"
                                     }, e)
                                 }
                             }, "DisableAccountForm"),
-                            t = Object(s.d)("We cannot disable your account as you are currently an active Partner, Affiliate, and/or Developer and must offboard from those programs first. Please contact <x:link>Customer Support</x:link> for assistance with offboarding.", {
+                            t = Object(l.d)("We cannot disable your account as you are currently an active Partner, Affiliate, and/or Developer and must offboard from those programs first. Please contact <x:link>Customer Support</x:link> for assistance with offboarding.", {
                                 "x:link": function(e) {
-                                    return i.createElement(E.T, {
+                                    return i.createElement(j.T, {
                                         to: "https://help.twitch.tv"
                                     }, e)
                                 }
                             }, "DisableAccountForm"),
                             n = this.props.isDelete ? e : t,
-                            o = this.props.isDelete ? Object(s.d)("Delete Your Twitch Account", "DisableAccountForm") : Object(s.d)("Disable Your Twitch Account", "DisableAccountForm");
-                        return i.createElement(w.a, null, i.createElement(A.a, {
+                            o = this.props.isDelete ? Object(l.d)("Delete Your Twitch Account", "DisableAccountForm") : Object(l.d)("Disable Your Twitch Account", "DisableAccountForm");
+                        return i.createElement(E.a, null, i.createElement(S.a, {
                             "data-test-selector": r.PADMessage,
                             label: o,
-                            orientation: E.Da.Horizontal
+                            orientation: j.Da.Horizontal
                         }, n))
                     }, t.prototype.renderDisableSection = function(e, t) {
                         if (!this.props.user) return null;
-                        var n = this.props.isDelete ? Object(s.d)("Account to delete", "DisableAccountForm") : Object(s.d)("Account to disable", "DisableAccountForm"),
-                            r = this.props.isDelete ? Object(s.d)("Tell us why you're deleting your account (optional)", "DisableAccountForm") : Object(s.d)("Tell us why you're disabling your account (optional)", "DisableAccountForm"),
-                            o = i.createElement(E.Va, null, i.createElement(E.z, {
+                        var n = this.props.isDelete ? Object(l.d)("Account to delete", "DisableAccountForm") : Object(l.d)("Account to disable", "DisableAccountForm"),
+                            r = this.props.isDelete ? Object(l.d)("Tell us why you're deleting your account (optional)", "DisableAccountForm") : Object(l.d)("Tell us why you're disabling your account (optional)", "DisableAccountForm"),
+                            o = i.createElement(j.Va, null, i.createElement(j.z, {
                                 onClick: this.disable,
-                                state: this.state.working ? E.E.Loading : E.E.Default,
+                                state: this.state.working ? j.E.Loading : j.E.Default,
                                 disabled: this.state.working || e
                             }, t));
-                        return i.createElement(w.a, {
+                        return i.createElement(E.a, {
                             footer: o
-                        }, i.createElement(A.a, {
+                        }, i.createElement(S.a, {
                             label: n
-                        }, i.createElement(E.Pa, {
-                            type: E.Ra.Text,
+                        }, i.createElement(j.Pa, {
+                            type: j.Ra.Text,
                             disabled: !0,
                             value: this.props.user.login || ""
-                        })), i.createElement(A.a, {
+                        })), i.createElement(S.a, {
                             label: r
-                        }, i.createElement(E.Kb, {
+                        }, i.createElement(j.Kb, {
                             onChange: this.handleReasonChange
                         })))
                     }, t
                 }(i.Component),
-                P = Object(m.compose)(Object(D.a)(T), Object(D.a)(j, {
+                I = Object(f.compose)(Object(O.a)(x), Object(O.a)(T, {
                     name: "disableUserAccount"
-                }))(x);
-            var I = Object(l.connect)(function(e) {
+                }))(P);
+            var F = Object(d.connect)(function(e) {
                     return {
-                        user: Object(d.e)(e)
+                        user: Object(p.e)(e)
                     }
                 }, function(e) {
-                    return Object(m.bindActionCreators)({
-                        logout: y.f
+                    return Object(f.bindActionCreators)({
+                        logout: D.f
                     }, e)
-                })(P),
-                F = function(e) {
+                })(I),
+                C = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.deleted && this.props.isLoggedIn ? window.location.replace("/user/delete_account") : this.props.latencyTracking.reportInteractive()
+                        this.deleted && this.props.isLoggedIn ? window.location.replace("/user/delete-account") : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.deleted ? i.createElement(i.Fragment, null, i.createElement(E.xb, {
+                        return this.deleted ? i.createElement(i.Fragment, null, i.createElement(j.xb, {
                             borderBottom: !0
-                        }, i.createElement(E.V, {
-                            fontSize: E.Aa.Size1
-                        }, Object(s.d)("Your account has been deleted", "DeleteAccountPage"))), i.createElement(E.Va, null, i.createElement(E.T, {
+                        }, i.createElement(j.V, {
+                            fontSize: j.Aa.Size1
+                        }, Object(l.d)("Your account has been deleted", "DeleteAccountPage"))), i.createElement(j.Va, null, i.createElement(j.T, {
                             to: "/"
-                        }, Object(s.d)("Back to the front page", "DeleteAccountPage")))) : i.createElement(k.a, {
-                            loginTrackingSource: h.a.DeleteAccountPage
-                        }, i.createElement(I, {
-                            redirect: "/user/delete_account?account_deleted=true",
+                        }, Object(l.d)("Back to the front page", "DeleteAccountPage")))) : i.createElement(y.a, {
+                            loginTrackingSource: b.a.DeleteAccountPage
+                        }, i.createElement(F, {
+                            redirect: "/user/delete-account?account_deleted=true",
                             isDelete: !0
                         }))
                     }, Object.defineProperty(t.prototype, "deleted", {
                         get: function() {
-                            return p.parse(this.props.location.search).account_deleted
+                            return m.parse(this.props.location.search).account_deleted
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(i.Component),
-                C = Object(m.compose)(Object(v.c)("DeleteAccountPage", {
-                    destination: b.a.DeleteAccount
-                }), Object(f.a)({
-                    location: g.PageviewLocation.DeleteAccount
-                }))(F);
-            var R = Object(l.connect)(function(e) {
+                R = Object(f.compose)(Object(k.c)("DeleteAccountPage", {
+                    destination: g.a.DeleteAccount
+                }), Object(h.a)({
+                    location: v.PageviewLocation.DeleteAccount
+                }))(C);
+            var U = Object(d.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(d.f)(e)
+                        isLoggedIn: Object(p.f)(e)
                     }
-                })(C),
-                U = function(e) {
+                })(R),
+                L = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.disabled && this.props.isLoggedIn ? window.location.replace("/user/disable_account") : this.props.latencyTracking.reportInteractive()
+                        this.disabled && this.props.isLoggedIn ? window.location.replace("/user/disable-account") : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.disabled ? i.createElement(i.Fragment, null, i.createElement(E.xb, {
+                        return this.disabled ? i.createElement(i.Fragment, null, i.createElement(j.xb, {
                             borderBottom: !0
-                        }, i.createElement(E.V, {
-                            fontSize: E.Aa.Size1
-                        }, Object(s.d)("Your account has been disabled", "DisableAccountPage"))), i.createElement(E.Va, null, i.createElement(E.T, {
+                        }, i.createElement(j.V, {
+                            fontSize: j.Aa.Size1
+                        }, Object(l.d)("Your account has been disabled", "DisableAccountPage"))), i.createElement(j.Va, null, i.createElement(j.T, {
                             to: "/"
-                        }, Object(s.d)("Back to the front page", "DisableAccountPage")))) : i.createElement(k.a, {
-                            loginTrackingSource: h.a.DisableAccountPage
-                        }, i.createElement(I, {
-                            redirect: "/user/disable_account?account_disabled=true"
+                        }, Object(l.d)("Back to the front page", "DisableAccountPage")))) : i.createElement(y.a, {
+                            loginTrackingSource: b.a.DisableAccountPage
+                        }, i.createElement(F, {
+                            redirect: "/user/disable-account?account_disabled=true"
                         }))
                     }, Object.defineProperty(t.prototype, "disabled", {
                         get: function() {
-                            return p.parse(this.props.location.search).account_disabled
+                            return m.parse(this.props.location.search).account_disabled
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(i.Component),
-                M = Object(m.compose)(Object(v.c)("DisableAccountPage", {
-                    destination: b.a.DisableAccount
-                }), Object(f.a)({
-                    location: g.PageviewLocation.DisableAccount
-                }))(U);
-            var L = Object(l.connect)(function(e) {
+                M = Object(f.compose)(Object(k.c)("DisableAccountPage", {
+                    destination: g.a.DisableAccount
+                }), Object(h.a)({
+                    location: v.PageviewLocation.DisableAccount
+                }))(L);
+            var N = Object(d.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(d.f)(e)
+                        isLoggedIn: Object(p.f)(e)
                     }
                 })(M),
-                N = function(e) {
+                V = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        s.o.setPageTitle()
+                        l.o.setPageTitle()
                     }, t.prototype.render = function() {
-                        return i.createElement(E.Va, {
+                        return i.createElement(j.Va, {
                             padding: 3,
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: E.W.Flex,
-                            flexDirection: E.Y.Column,
-                            flexWrap: E.Z.NoWrap
+                            display: j.W.Flex,
+                            flexDirection: j.Y.Column,
+                            flexWrap: j.Z.NoWrap
                         }, i.createElement(c.a, null, i.createElement(a.a, {
-                            path: "/user/disable_account",
-                            component: L
+                            path: "/user/disable-account",
+                            component: N
                         }), i.createElement(a.a, {
-                            path: "/user/delete_account",
-                            component: R
+                            path: "/user/delete-account",
+                            component: U
+                        }), i.createElement(s.a, {
+                            from: "/user/disable_account",
+                            exact: !0,
+                            to: "/user/disable-account"
+                        }), i.createElement(s.a, {
+                            from: "/user/delete_account",
+                            exact: !0,
+                            to: "/user/delete-account"
                         }), i.createElement(a.a, {
                             component: u.a
                         })))
                     }, t
                 }(i.Component),
-                V = n("wUQP"),
-                q = n("GxR5"),
-                B = function(e) {
+                q = n("wUQP"),
+                B = n("GxR5"),
+                z = (n("y6xW"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
-                        Object(V.b)("native_account_recovery") || window.location.replace(Object(q.e)())
+                        Object(q.b)("native_account_recovery") || window.location.replace(Object(B.e)())
                     }, t.prototype.render = function() {
-                        return null
+                        return i.createElement(j.xb, {
+                            className: "account-recovery__header",
+                            alignItems: j.f.Center,
+                            color: j.O.Overlay,
+                            display: j.W.Flex,
+                            padding: {
+                                x: 1,
+                                y: .5
+                            }
+                        }, i.createElement(j.mb, {
+                            asset: j.nb.LogoGlitch,
+                            width: 30,
+                            height: 30
+                        }))
                     }, t
-                }(i.Component),
-                z = Object(m.compose)(Object(v.c)("AccountRecoveryPage", {
-                    destination: b.a.RecoverAccount,
+                }(i.Component)),
+                G = Object(f.compose)(Object(k.c)("AccountRecoveryPage", {
+                    destination: g.a.RecoverAccount,
                     autoReportInteractive: !0
-                }), Object(f.a)({
-                    location: g.PageviewLocation.RecoverAccount
-                }))(B);
+                }), Object(h.a)({
+                    location: v.PageviewLocation.RecoverAccount
+                }))(z);
             n.d(t, "UserRoot", function() {
-                return N
+                return V
             }), n.d(t, "AccountRecoveryPage", function() {
-                return z
+                return G
             })
-        }
+        },
+        y6xW: function(e, t, n) {}
     }
 ]);

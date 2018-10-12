@@ -346,7 +346,7 @@
             "use strict";
             n.d(t, "b", function() {
                 return s
-            }), n.d(t, "d", function() {
+            }), n.d(t, "e", function() {
                 return d
             }), n.d(t, "c", function() {
                 return u
@@ -354,7 +354,7 @@
                 return p
             }), n.d(t, "f", function() {
                 return g
-            }), n.d(t, "e", function() {
+            }), n.d(t, "d", function() {
                 return v
             });
             var a = n("mrSG"),
@@ -371,6 +371,7 @@
                     "^;-?\\)$": ";)",
                     "^R-?\\)$": "R)",
                     "^:>$": ":>",
+                    "^:&gt;$": ":>",
                     "^[oO](_|\\.)[oO]$": "O_o",
                     "^:-?D$": ":D",
                     "^:-?(o|O)$": ":O",
@@ -405,10 +406,17 @@
                 }
                 return t
             }
-            var d = function(e) {
-                var t = f(e);
-                return o[t] || t
-            };
+
+            function d(e, t) {
+                var n = s(e);
+                return t && (n = function(e, t) {
+                    return e.map(function(e) {
+                        return a.__assign({}, e, {
+                            setID: t
+                        })
+                    })
+                }(n, t)), n
+            }
 
             function m(e) {
                 return e.filter(function(e) {
@@ -441,7 +449,7 @@
                     if (r && r.id && r.emotes) {
                         var o = {
                             id: r.id,
-                            emotes: s(m(r.emotes))
+                            emotes: d(m(r.emotes), r.id)
                         };
                         l.has(parseInt(r.id, 10)) ? t.push(o) : n.push(o)
                     }

@@ -324,13 +324,6 @@
                                                     kind: "FragmentSpread",
                                                     name: {
                                                         kind: "Name",
-                                                        value: "teamsPlayerCommunity"
-                                                    },
-                                                    directives: []
-                                                }, {
-                                                    kind: "FragmentSpread",
-                                                    name: {
-                                                        kind: "Name",
                                                         value: "teamsPlayerDirectory"
                                                     },
                                                     directives: []
@@ -400,32 +393,6 @@
                     kind: "FragmentDefinition",
                     name: {
                         kind: "Name",
-                        value: "teamsPlayerCommunity"
-                    },
-                    typeCondition: {
-                        kind: "NamedType",
-                        name: {
-                            kind: "Name",
-                            value: "Community"
-                        }
-                    },
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "communityType"
-                            },
-                            arguments: [],
-                            directives: []
-                        }]
-                    }
-                }, {
-                    kind: "FragmentDefinition",
-                    name: {
-                        kind: "Name",
                         value: "teamsPlayerDirectory"
                     },
                     typeCondition: {
@@ -475,11 +442,11 @@
                 }],
                 loc: {
                     start: 0,
-                    end: 587
+                    end: 502
                 }
             };
             t.loc.source = {
-                body: "query ChannelPage_ChannelInfoBar_User($login: String!) {\nuser(login: $login) {\nid\nlogin\ndescription\ndisplayName\nprofileImageURL(width: 70)\nbroadcastSettings {\nid\ntitle\n}\nfollowers {\ntotalCount\n}\nprimaryTeam {\nid\ndisplayName\nname\n}\nprofileViewCount\nstream {\nid\nviewersCount\n}\ndirectories {\nnodes {\n...teamsPlayerGame\n...teamsPlayerCommunity\n...teamsPlayerDirectory\n}\n}\n}\n}\nfragment teamsPlayerGame on Game {\nname\nboxArtURL(width: 40 height: 55)\n}\nfragment teamsPlayerCommunity on Community {\ncommunityType\n}\nfragment teamsPlayerDirectory on Directory {\nid\ndirectoryType\ndisplayName\nname\n}",
+                body: "query ChannelPage_ChannelInfoBar_User($login: String!) {\nuser(login: $login) {\nid\nlogin\ndescription\ndisplayName\nprofileImageURL(width: 70)\nbroadcastSettings {\nid\ntitle\n}\nfollowers {\ntotalCount\n}\nprimaryTeam {\nid\ndisplayName\nname\n}\nprofileViewCount\nstream {\nid\nviewersCount\n}\ndirectories {\nnodes {\n...teamsPlayerGame\n...teamsPlayerDirectory\n}\n}\n}\n}\nfragment teamsPlayerGame on Game {\nname\nboxArtURL(width: 40 height: 55)\n}\nfragment teamsPlayerDirectory on Directory {\nid\ndirectoryType\ndisplayName\nname\n}",
                 name: "GraphQL request",
                 locationOffset: {
                     line: 1,
@@ -592,26 +559,25 @@
                 _ = t("ht6z"),
                 C = t("/aPz"),
                 w = t("D7An"),
-                E = t("W8Fi"),
-                F = t("br9A"),
-                T = t("Ue10"),
-                I = (t("a7aT"), t("z+dA"));
+                F = t("W8Fi"),
+                E = t("br9A"),
+                I = t("Ue10"),
+                T = (t("a7aT"), t("z+dA"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
             var L = l.a.wrap(function() {
                     return Promise.all([t.e(0), t.e(186)]).then(t.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
-                M = function(e) {
+                B = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
-                            activeTierPrice: null,
                             inPrimeRegion: !1
                         }, n.modalLevel = "top_page", n.renderBalloonContentForBalloonLayer = function() {
                             return r.createElement(k.a, {
                                 onClickOut: n.handleBalloonClickOut
-                            }, r.createElement(T.Va, {
+                            }, r.createElement(I.Va, {
                                 "data-a-target": "sub-balloon",
                                 refDelegate: n.setBalloonContentRefDelegate
                             }, n.balloonWrapperContent))
@@ -630,38 +596,32 @@
                         }, n.setBalloonWrapperContent = function(e) {
                             n.balloonWrapperContent = e
                         }, n.handleSubMenuAction = function(e) {
-                            new Set([F.a.ClickCheckout, F.a.BuyGiftSub, F.a.BuyMysteryGift, F.a.BuyCustomMysteryGift, F.a.BuyGiftToPaidUpgrade, F.a.BuyPaidUpgrade]).has(e.action) && n.checkAndDisplaySubscriptionCheckout();
+                            new Set([E.a.ClickCheckout, E.a.BuyGiftSub, E.a.BuyMysteryGift, E.a.BuyCustomMysteryGift, E.a.BuyGiftToPaidUpgrade, E.a.BuyPaidUpgrade]).has(e.action) && n.checkAndDisplaySubscriptionCheckout();
                             var t = !!(n.props.data.user && n.props.data.user.self && n.props.data.user.self.subscriptionBenefit),
                                 i = n.props.data.requestInfo && Object(_.a)(n.props.data.requestInfo.countryCode);
-                            Object(F.b)({
+                            Object(E.b)({
                                 action: e.action || "",
                                 channelLogin: n.props.channelLogin || "",
                                 channelID: n.props.data && n.props.data.user.id,
-                                checkoutButtonTier: e.checkoutButtonTier || (n.state.activeTierPrice || S.b.Prime).slice(),
+                                checkoutButtonTier: e.checkoutButtonTier,
                                 hasSubCredit: !!n.props.data.user.self && n.props.data.user.self.canPrimeSubscribe,
                                 hostChannelID: n.props.hostChannelID,
                                 hostChannelLogin: n.props.hostChannelLogin,
-                                isMenuOpen: !(e.action === F.a.OpenSubMenu),
+                                isMenuOpen: e.action !== E.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
                                 modal: !t,
                                 modalLevel: t ? "" : n.modalLevel.slice(),
                                 showPrimeContent: i,
                                 giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== F.a.ClickMoreSubOptions && e.action !== F.a.ClickBack || (n.modalLevel = e.modalLevel, n.setState({
-                                activeTierPrice: S.b.Prime
-                            }))
+                            }), !e.modalLevel || e.action !== E.a.ClickMoreSubOptions && e.action !== E.a.ClickBack || (n.modalLevel = e.modalLevel)
                         }, n.handleMenuToggle = function(e) {
                             n.handleSubMenuAction({
-                                action: e ? F.a.CloseSubMenu : F.a.OpenSubMenu
-                            })
-                        }, n.onSelectTierTab = function(e) {
-                            n.state.activeTierPrice !== e && n.setState({
-                                activeTierPrice: e
+                                action: e ? E.a.CloseSubMenu : E.a.OpenSubMenu
                             })
                         }, n.getBalloonDirection = function() {
-                            var e = n.props.balloonDirection || T.v.BottomRight;
-                            return n.props.hostChannelID && (e = T.v.TopLeft), e
+                            var e = n.props.balloonDirection || I.v.BottomRight;
+                            return n.props.hostChannelID && (e = I.v.TopLeft), e
                         }, n.setContainerRefDelegate = function(e) {
                             n.containerRef = e
                         }, n.setBalloonContentRefDelegate = function(e) {
@@ -686,30 +646,30 @@
                             o = null;
                         this.props.data.user.self && this.props.data.user.self.subscriptionBenefit && (o = this.props.data.user.self.subscriptionBenefit.purchasedWithPrime ? S.b.Prime : this.props.data.user.self.subscriptionBenefit.tier, this.modalLevel = ""), this.props.data.user.subscriptionProducts.some(this.isSubscriptionProductInvalid) && (a = !0);
                         var s, l = n ? Object(g.d)("All-Access Pass", "SubscribeButton") : Object(g.d)("Get the All-Access Pass", "SubscribeButton"),
-                            d = this.props.data.user.self && Object(E.h)(this.props.data.user.subscriptionProducts, this.props.data.user.self.subscriptionBenefit);
+                            d = this.props.data.user.self && Object(F.h)(this.props.data.user.subscriptionProducts, this.props.data.user.self.subscriptionBenefit);
                         if (n) {
                             var u = "";
                             if (u = a ? Object(g.d)("Subscribed", "SubscribeButton") : d ? Object(g.d)("Continue Sub for $1", "SubscribeButton") : Object(g.d)("Gift A Sub", "SubscribeButton"), s = this.props.hostChannelID ? Object(g.d)("Subscribed to {username}", {
                                     username: this.props.data.user.displayName
-                                }, "SubscribeButton") : u, a && !t) return r.createElement(T.z, {
+                                }, "SubscribeButton") : u, a && !t) return r.createElement(I.z, {
                                 disabled: !0,
                                 ariaLabel: s,
-                                icon: T.nb.Star
+                                icon: I.nb.Star
                             }, s);
                             t && (s = l)
                         } else s = t ? l : this.props.hostChannelID ? Object(g.d)("Subscribe to {username}", {
                             username: this.props.data.user.displayName
                         }, "SubscribeButton") : Object(g.d)("Subscribe", "SubscribeButton");
                         var c = n ? "subscribed-button" : "subscribe-button",
-                            m = r.createElement(T.z, {
+                            m = r.createElement(I.z, {
+                                ariaLabel: s,
                                 "data-a-target": c,
                                 "data-test-selector": i.SubButton,
-                                ariaLabel: s,
-                                type: this.getButtonType(n),
                                 dropdown: !this.props.hideDropdownArrow,
                                 fullWidth: !0,
                                 icon: this.getButtonIcon(n, o),
-                                onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0
+                                onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0,
+                                type: this.getButtonType(n)
                             }, s);
                         return this.setBalloonWrapperContent(r.createElement(L, {
                             authToken: this.props.authToken,
@@ -721,29 +681,28 @@
                             isNonStandardSub: a,
                             isStaff: !!(this.props.sessionUser && this.props.sessionUser.roles && this.props.sessionUser.roles.isStaff),
                             isSubscribed: n,
-                            onSelectTierTab: this.onSelectTierTab,
                             productId: this.props.data.user.subscriptionProducts[0].id,
                             subbedTier: o || S.b.Prime,
                             userHasPrime: !1
-                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(T.Va, {
+                        })), this.props.renderBalloonInBalloonLayer ? r.createElement(I.Va, {
                             "data-test-selector": i.BalloonLayerButton,
                             refDelegate: this.setContainerRefDelegate
-                        }, m) : r.createElement(T.Va, {
+                        }, m) : r.createElement(I.Va, {
                             className: d ? "subscribe-button--promo" : ""
                         }, r.createElement(f.a, {
                             "data-test-selector": i.DefaultButton,
                             onToggle: this.handleMenuToggle
-                        }, m, r.createElement(T.u, {
+                        }, m, r.createElement(I.u, {
                             "data-a-target": "sub-balloon",
                             direction: this.getBalloonDirection(),
-                            size: T.w.Large
+                            size: I.w.Large
                         }, this.balloonWrapperContent)))
                     }, n.prototype.getButtonType = function(e) {
-                        T.F.Default;
-                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? T.F.Success : this.props.unsubscribedButtonType || T.F.Default
+                        I.F.Default;
+                        return e && void 0 !== this.props.subscribedButtonType ? this.props.subscribedButtonType : e ? I.F.Success : this.props.unsubscribedButtonType || I.F.Default
                     }, n.prototype.getButtonIcon = function(e, n) {
                         var t = void 0;
-                        return e ? t = n === S.b.Prime ? T.nb.Crown : T.nb.Star : this.props.forceIcon && (t = T.nb.StarHollow), t
+                        return e ? t = n === S.b.Prime ? I.nb.Crown : I.nb.Star : this.props.forceIcon && (t = I.nb.StarHollow), t
                     }, n.prototype.hasSubscriptionProducts = function(e) {
                         return e.data.user.subscriptionProducts && e.data.user.subscriptionProducts.length > 0
                     }, n.prototype.isUserDataReady = function(e) {
@@ -766,7 +725,7 @@
                         }
                     }, n
                 }(r.Component),
-                B = Object(v.compose)(Object(h.a)(I, {
+                M = Object(v.compose)(Object(h.a)(T, {
                     options: function(e) {
                         return {
                             variables: {
@@ -787,7 +746,7 @@
                     skip: function(e) {
                         return !(e.data && !e.data.loading && !e.data.error && e.data.currentUser)
                     }
-                }]), Object(b.e)())(M),
+                }]), Object(b.e)())(B),
                 D = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
@@ -796,7 +755,7 @@
                         }, n
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
-                        return r.createElement(B, {
+                        return r.createElement(M, {
                             authToken: this.props.authToken,
                             balloonDirection: this.props.balloonDirection,
                             channelLogin: this.props.channelLogin,
@@ -843,9 +802,9 @@
             }), t.d(n, !1, function() {
                 return i
             }), t.d(n, !1, function() {
-                return M
-            }), t.d(n, !1, function() {
                 return B
+            }), t.d(n, !1, function() {
+                return M
             })
         },
         RuiO: function(e, n) {
@@ -1083,32 +1042,6 @@
                 }
             };
             e.exports = t
-        },
-        Rx4i: function(e, n, t) {
-            "use strict";
-            var i = t("q1tI"),
-                a = t("2iEm"),
-                r = t("Ue10"),
-                o = function(e) {
-                    return i.createElement(r.Va, {
-                        padding: {
-                            left: .5
-                        },
-                        display: r.W.InlineFlex
-                    }, i.createElement(a.a, {
-                        to: {
-                            pathname: "/communities/" + e.name,
-                            state: {
-                                content: "current_community",
-                                medium: "twitch_channel"
-                            }
-                        },
-                        title: e.displayName
-                    }, e.displayName))
-                };
-            t.d(n, "a", function() {
-                return o
-            })
         },
         ST9J: function(e, n) {
             var t = {
@@ -1722,37 +1655,6 @@
                 return i.b
             })
         },
-        Xprd: function(e, n, t) {
-            "use strict";
-            var i = t("q1tI"),
-                a = t("/7QA"),
-                r = t("Rx4i"),
-                o = t("Ue10"),
-                s = function(e) {
-                    return i.createElement(o.Qb, {
-                        align: o.Rb.Left,
-                        direction: o.Sb.Bottom,
-                        label: Object(a.d)("Communities", "Communities")
-                    }, i.createElement(o.xb, {
-                        color: o.O.Alt2,
-                        display: o.W.InlineFlex,
-                        margin: {
-                            right: 1
-                        }
-                    }, i.createElement(o.mb, {
-                        asset: o.nb.Communities
-                    }), i.createElement(o.V, {
-                        type: o.Nb.Span,
-                        fontSize: o.Aa.Size5
-                    }, i.Children.map(e.children, function(n, t) {
-                        if (n.type !== r.a) throw new Error("Communities only accepts CommunityLink components as children");
-                        return i.createElement(i.Fragment, null, n, t !== i.Children.count(e.children) - 1 && ",")
-                    }))))
-                };
-            t.d(n, "a", function() {
-                return s
-            })
-        },
         ZLqn: function(e, n, t) {
             "use strict";
             var i = t("q1tI"),
@@ -1859,6 +1761,7 @@
                     BuyGiftToPaidUpgrade: "buy_gift_to_paid_upgrade",
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
+                    ChangeTier: "change_tier",
                     ClickCheckout: "click_checkout_button",
                     ClickMoreSubOptions: "more_options_click",
                     ClickGiftSubOptions: "gift_options_click",
@@ -2109,29 +2012,29 @@
             function y(e, n) {
                 return e.concat(n)
             }
-            var S, N, _ = function(e) {
+            var S, N = function(e) {
                     for (var n = e.length - 1; n >= 0; n--) {
                         var t = e[n] && e[n].cursor;
                         if (t) return t
                     }
                     return null
                 },
-                C = function(e, n) {
+                _ = function(e, n) {
                     return n || e || {
                         __typename: "PageInfo",
                         hasNextPage: !1
                     }
                 },
-                w = function(e) {
+                C = function(e) {
                     var n = new h(e),
-                        t = _(n.getLiveMemberEdges());
+                        t = N(n.getLiveMemberEdges());
                     if (n.hasNextLiveMembersPage() && t) return {
                         liveMembersCursor: t,
                         withLiveMembers: !0,
                         membersCursor: null,
                         withMembers: !1
                     };
-                    var i = _(n.getMemberEdges());
+                    var i = N(n.getMemberEdges());
                     return n.hasNextMembersPage() && i ? {
                         liveMembersCursor: null,
                         withLiveMembers: !1,
@@ -2144,9 +2047,9 @@
                         withMembers: !1
                     }
                 },
-                E = t("xU3t"),
+                w = t("xU3t"),
                 F = (t("J/U3"), ["scroll", "wheel", "mousewheel", "DOMMouseScroll", "keyup", "mousedown"]),
-                T = 10,
+                E = 10,
                 I = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
@@ -2162,7 +2065,7 @@
                                 showBackToTop: !1
                             }))
                         }, n.handleScrollEvent = function(e) {
-                            n.scroll && n.scroll.scrollContent && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type) && (n.scroll.scrollContent.scrollHeight - n.scroll.scrollContent.scrollTop <= n.scroll.scrollContent.scrollHeight - T ? n.setState({
+                            n.scroll && n.scroll.scrollContent && (e.which > 0 || "mousedown" === e.type || "mousewheel" === e.type || "wheel" === e.type) && (n.scroll.scrollContent.scrollHeight - n.scroll.scrollContent.scrollTop <= n.scroll.scrollContent.scrollHeight - E ? n.setState({
                                 showBackToTop: !0
                             }) : n.setState({
                                 showBackToTop: !1
@@ -2269,7 +2172,7 @@
                         }, Object(c.d)("Back to Top", "TeamLandingPage_MemberList")))) : null
                     }, n
                 }(i.Component),
-                L = Object(a.compose)(Object(l.c)("MemberList"), Object(g.a)(E, {
+                T = Object(a.compose)(Object(l.c)("MemberList"), Object(g.a)(w, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2287,15 +2190,15 @@
                                 total: n.getTotalMemberCount(),
                                 numLoaded: n.getTotalEdgeCount(),
                                 infiniteScrollEnabled: !e.data.loading && function(e) {
-                                    var n = w(e);
+                                    var n = C(e);
                                     return n.withLiveMembers || n.withMembers
                                 }(e.data),
                                 loading: e.data.loading
                             },
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: E,
-                                    variables: d.__assign({}, e.data.variables, w(e.data)),
+                                    query: w,
+                                    variables: d.__assign({}, e.data.variables, C(e.data)),
                                     updateQuery: function(e, n) {
                                         return function(e, n) {
                                             if (!e.team && !n.team) return {
@@ -2304,9 +2207,9 @@
                                             var t = new h(e),
                                                 i = new h(n),
                                                 a = y(t.getLiveMemberEdges(), i.getLiveMemberEdges()),
-                                                r = C(t.getLiveMemberPageInfo(), i.getLiveMemberPageInfo()),
+                                                r = _(t.getLiveMemberPageInfo(), i.getLiveMemberPageInfo()),
                                                 o = y(t.getMemberEdges(), i.getMemberEdges()),
-                                                s = C(t.getMemberPageInfo(), i.getMemberPageInfo());
+                                                s = _(t.getMemberPageInfo(), i.getMemberPageInfo());
                                             return {
                                                 team: {
                                                     __typename: "Team",
@@ -2334,7 +2237,7 @@
                         }
                     }
                 }))(I),
-                M = t("6x+I"),
+                L = t("6x+I"),
                 B = Object(a.compose)(Object(l.c)("TeamsDescription", {
                     autoReportInteractive: !0
                 }))(function(e) {
@@ -2350,76 +2253,50 @@
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(k.Wb, null, i.createElement(M, {
+                    }, i.createElement(k.Wb, null, i.createElement(L, {
                         source: e.description
                     })))) : null
                 }),
-                D = t("eJ65"),
-                O = t("eDVu"),
-                P = t("0Log"),
-                x = t("/aPz"),
+                M = t("eJ65"),
+                D = t("eDVu"),
+                O = t("0Log"),
+                P = t("/aPz"),
+                x = t("DMoW"),
                 U = t("ZLqn"),
-                V = t("Xprd"),
-                A = t("Rx4i"),
-                j = t("eAAt"),
-                R = t("0EKw"),
-                G = t("5goO"),
-                W = t("QjI3"),
-                z = t("eFQ3");
-            ! function(e) {
-                e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
-            }(S || (S = {})),
-            function(e) {
-                e.COMMUNITY = "COMMUNITY", e.GAME = "GAME"
-            }(N || (N = {}));
-            var q, H = t("6J1Z"),
-                Q = function(e) {
+                V = t("eAAt"),
+                j = t("0EKw"),
+                A = t("5goO"),
+                R = t("QjI3"),
+                G = t("eFQ3"),
+                W = t("6J1Z"),
+                q = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
-                        return n.state = {}, n.getGame = function() {
+                        return n.getGame = function() {
                             var e = n.props.data.user;
                             return e && e.directories ? e.directories.nodes.find(function(e) {
-                                return !(!e || e.directoryType !== N.GAME)
+                                return !(!e || e.directoryType !== x.q.GAME)
                             }) : null
                         }, n.getTitle = function() {
                             var e = n.props.data.user;
                             if (e && e.broadcastSettings && e.broadcastSettings.title) return e.broadcastSettings.title
-                        }, n.renderCommunities = function() {
-                            var e = n.props.data.user;
-                            if (e) {
-                                var t = e.directories ? e.directories.nodes.filter(function(e) {
-                                        return e && e.communityType === S.CREATIVE || e.communityType === S.OTHER
-                                    }) : null,
-                                    a = null;
-                                if (t && t.length > 0) {
-                                    var r = t.map(function(e, n) {
-                                        return i.createElement(A.a, {
-                                            name: e.name,
-                                            displayName: e.displayName,
-                                            key: e.name + "_" + n
-                                        })
-                                    });
-                                    a = i.createElement(V.a, null, r)
-                                }
-                                return a
-                            }
                         }, n.renderGame = function() {
                             var e = n.getGame();
-                            return e && e.name ? i.createElement(R.a, {
+                            return e && e.name ? i.createElement(j.a, {
                                 name: e.name
                             }) : null
                         }, n.renderGameBoxArt = function() {
                             var e = n.getGame(),
                                 t = e && e.name ? e.name : "",
                                 a = e && e.boxArtURL ? e.boxArtURL : "";
-                            return e && t && a ? i.createElement(j.a, {
+                            return e && t && a ? i.createElement(V.a, {
                                 name: t,
                                 boxArtURL: a,
                                 size: k.J.Size4
                             }) : null
                         }, n.renderTeam = function() {
                             var e = n.props.data.user;
-                            return e && e.primaryTeam ? i.createElement(G.a, {
+                            return e && e.primaryTeam ? i.createElement(A.a, {
                                 name: e.primaryTeam.name,
                                 displayName: e.primaryTeam.displayName
                             }) : null
@@ -2449,11 +2326,11 @@
                             fullWidth: !0
                         }, this.renderTopBar(), i.createElement(k.o, {
                             ratio: k.p.Aspect16x9
-                        }, i.createElement(z.b, {
+                        }, i.createElement(G.b, {
                             channelLogin: this.props.channelLogin,
                             vodID: "",
                             disableTheatreButton: !0,
-                            playerTypeOverride: z.a.Site
+                            playerTypeOverride: G.a.Site
                         })), this.renderBottomBar())
                     }, n.prototype.renderTopBar = function() {
                         var e = this.props.data.user;
@@ -2516,7 +2393,7 @@
                         }))))), i.createElement(k.Va, {
                             display: k.W.Flex,
                             alignItems: k.f.Center
-                        }, e.description && i.createElement(D.a, null, i.createElement(k.z, {
+                        }, e.description && i.createElement(M.a, null, i.createElement(k.z, {
                             type: k.F.Hollow
                         }, Object(c.d)("Info", "Team Player")), i.createElement(k.u, {
                             size: k.w.Medium,
@@ -2532,7 +2409,7 @@
                             padding: {
                                 left: 1
                             }
-                        }, i.createElement(W.a, {
+                        }, i.createElement(R.a, {
                             channelLogin: this.props.channelLogin
                         }))))
                     }, n.prototype.renderBottomBar = function() {
@@ -2561,7 +2438,7 @@
                         }, e)), i.createElement(k.Va, {
                             display: k.W.Flex,
                             flexWrap: k.Z.Wrap
-                        }, this.renderGame(), this.renderCommunities(), this.renderTeam())))), i.createElement(k.Va, {
+                        }, this.renderGame(), this.renderTeam())))), i.createElement(k.Va, {
                             className: "teams-player__action-container",
                             display: k.W.Flex,
                             alignItems: k.f.Center,
@@ -2578,7 +2455,7 @@
                         }))))
                     }, n
                 }(i.Component),
-                $ = Object(a.compose)(Object(l.c)("TeamsPlayer"), Object(g.a)(H, {
+                z = Object(a.compose)(Object(l.c)("TeamsPlayer"), Object(g.a)(W, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2586,26 +2463,26 @@
                             }
                         }
                     }
-                }), Object(O.a)(function(e) {
+                }), Object(D.a)(function(e) {
                     return {
-                        query: H,
-                        topic: e.data.user && e.data.user.id ? Object(x.e)(e.data.user.id) : "",
+                        query: W,
+                        topic: e.data.user && e.data.user.id ? Object(P.e)(e.data.user.id) : "",
                         skip: !(!e.data.loading && !e.data.error && e.data.user),
                         variables: {
                             login: e.channelLogin
                         },
-                        type: P.PubsubMessageType.BroadcastSettingsUpdate,
+                        type: O.PubsubMessageType.BroadcastSettingsUpdate,
                         mutator: function(e, n) {
                             return n.user && n.user.broadcastSettings && n.user.broadcastSettings.id && (n.user.broadcastSettings.title = e.status || e.old_status), n
                         }
                     }
-                }))(Q),
-                K = t("ST9J");
+                }))(q),
+                H = t("ST9J");
             t("GTf2");
             ! function(e) {
                 e.LogoImage = "teamspagebody-logo", e.BannerImage = "teamspagebody-banner", e.BackgroundImage = "teamspagebody-background"
-            }(q || (q = {}));
-            var Y = function(e) {
+            }(S || (S = {}));
+            var Q = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {}, n.changeSelectedMember = function(e) {
@@ -2628,7 +2505,7 @@
                         return i.createElement("div", {
                             className: "teams-page-body__outer-container teams-page-body__team-asset",
                             style: this.getBackgroundStyle(),
-                            "data-test-selector": q.BackgroundImage
+                            "data-test-selector": S.BackgroundImage
                         }, i.createElement(v.b, null, i.createElement(k.Va, {
                             display: k.W.Flex,
                             justifyContent: k.Ua.Center,
@@ -2650,7 +2527,7 @@
                             margin: {
                                 right: 2
                             }
-                        }, this.renderLogo(), i.createElement(L, {
+                        }, this.renderLogo(), i.createElement(T, {
                             teamName: this.props.teamName,
                             onMemberItemClick: this.changeSelectedMember
                         })), i.createElement(k.Va, {
@@ -2666,7 +2543,7 @@
                         return e ? i.createElement("div", {
                             className: "teams-page-body__team-asset teams-page-body__foreground-image teams-page-body__logo",
                             style: this.getLogoStyle(e),
-                            "data-test-selector": q.LogoImage
+                            "data-test-selector": S.LogoImage
                         }) : null
                     }, n.prototype.getLogoStyle = function(e) {
                         return {
@@ -2677,7 +2554,7 @@
                         return e ? i.createElement("div", {
                             className: "teams-page-body__team-asset teams-page-body__foreground-image teams-page-body__banner",
                             style: this.getBannerStyle(e),
-                            "data-test-selector": q.BannerImage
+                            "data-test-selector": S.BannerImage
                         }) : null
                     }, n.prototype.getBannerStyle = function(e) {
                         return {
@@ -2692,7 +2569,7 @@
                         })
                     }, n.prototype.renderPlayer = function() {
                         var e = this.getPlayerLogin();
-                        return e ? i.createElement($, {
+                        return e ? i.createElement(z, {
                             channelLogin: e
                         }) : null
                     }, n.prototype.getPlayerLogin = function() {
@@ -2711,7 +2588,7 @@
                         }(e) : ""
                     }, n
                 }(i.Component),
-                J = Object(a.compose)(u.a, Object(l.c)("TeamsPageBody"), Object(g.a)(K, {
+                $ = Object(a.compose)(u.a, Object(l.c)("TeamsPageBody"), Object(g.a)(H, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2719,32 +2596,32 @@
                             }
                         }
                     }
-                }))(Y),
-                Z = t("Gw3k"),
-                X = function(e) {
+                }))(Q),
+                K = t("Gw3k"),
+                J = function(e) {
                     return i.createElement(k.Va, {
                         display: k.W.Flex,
                         flexDirection: k.Y.Column,
                         flexWrap: k.Z.NoWrap,
                         fullHeight: !0
-                    }, i.createElement(Z.a, null), i.createElement(k.Va, {
+                    }, i.createElement(K.a, null), i.createElement(k.Va, {
                         flexGrow: 1,
                         display: k.W.Flex,
                         fullHeight: !0
                     }, e.children))
                 },
-                ee = Object(a.compose)(Object(l.c)("TeamsLandingPage", {
+                Y = Object(a.compose)(Object(l.c)("TeamsLandingPage", {
                     destination: o.a.TeamsLandingPage,
                     autoReportInteractive: !0
                 }), Object(r.a)({
                     location: s.PageviewLocation.TeamsLandingPage
                 }))(function(e) {
-                    return i.createElement(X, null, i.createElement(J, {
+                    return i.createElement(J, null, i.createElement($, {
                         teamName: e.match.params.teamName
                     }))
                 });
             t.d(n, "TeamsLandingPage", function() {
-                return ee
+                return Y
             })
         },
         jeZI: function(e, n, t) {},

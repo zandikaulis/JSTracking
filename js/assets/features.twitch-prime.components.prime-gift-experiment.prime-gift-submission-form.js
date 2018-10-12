@@ -1229,7 +1229,8 @@
                             };
                         return this.apolloClient.query({
                             query: c,
-                            variables: i
+                            variables: i,
+                            fetchPolicy: "network-only"
                         }).then(function(e) {
                             if (e.data.search) return {
                                 results: JSON.parse(e.data.search.result)

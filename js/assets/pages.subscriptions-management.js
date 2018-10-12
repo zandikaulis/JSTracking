@@ -528,87 +528,99 @@
         "7SjK": function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
-                i = n("TSYQ"),
-                a = n("q1tI"),
+                i = n("q1tI"),
+                a = n("TSYQ"),
                 s = n("/7QA"),
                 o = n("GnwI"),
                 u = n("Ue10"),
-                c = (n("VrOd"), function(e) {
+                c = (n("GOKC"), i.createElement(u.xb, {
+                    alignItems: u.f.Center,
+                    background: u.r.Overlay,
+                    borderRadius: u.x.Small,
+                    className: "emote-button__lock",
+                    color: u.O.Overlay,
+                    "data-test-selector": "emote-button-lock",
+                    display: u.W.InlineFlex,
+                    justifyContent: u.Ua.Center,
+                    position: u.db.Absolute,
+                    zIndex: u.ac.Above
+                }, i.createElement(u.mb, {
+                    asset: u.nb.Lock,
+                    height: 10,
+                    width: 10
+                }))),
+                d = function(e) {
+                    var t = a("emote-button__link", {
+                            "emote-button__link--locked": !e.onClick
+                        }),
+                        n = e.emote,
+                        r = n.displayName,
+                        d = n.srcSet;
+                    if (!d) return null;
+                    var l = i.createElement("img", {
+                        className: "emote-picker__image",
+                        srcSet: d,
+                        alt: r
+                    });
+                    if (e.isCriticalImage) {
+                        for (var p = d.split(" ")[0], m = {}, b = 0, f = d.split(","); b < f.length; b++) {
+                            var g = f[b].trim().split(" "),
+                                h = g[1],
+                                v = g[0];
+                            m[h] = v
+                        }
+                        l = i.createElement(o.b, {
+                            className: "emote-picker__emote-image",
+                            src: p,
+                            srcSet: m,
+                            alt: r || ""
+                        })
+                    }
+                    return i.createElement("div", {
+                        className: "emote-button"
+                    }, i.createElement(u.Qb, {
+                        label: r || Object(s.d)("Emote", "EmoteButton"),
+                        direction: u.Sb.Bottom
+                    }, i.createElement(u.Na, {
+                        display: u.W.Flex,
+                        alignItems: u.f.Center,
+                        justifyContent: u.Ua.Center
+                    }, i.createElement("button", {
+                        "data-test-selector": "emote-button-clickable",
+                        className: t,
+                        "aria-label": r,
+                        name: r,
+                        onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
+                        "data-a-target": r
+                    }, i.createElement("figure", null, e.locked ? c : null, l)))))
+                },
+                l = (n("VrOd"), function(e) {
                     function t() {
-                        return null !== e && e.apply(this, arguments) || this
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleClickEmote = function(e) {
+                            t.props.onClickEmote && t.props.onClickEmote(e)
+                        }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this,
-                            t = i("emote-picker__emote-link", {
-                                "emote-picker__emote-link--locked": this.props.locked
-                            }),
-                            n = a.createElement(u.xb, {
-                                alignItems: u.f.Center,
-                                background: u.r.Overlay,
-                                borderRadius: u.x.Small,
-                                className: "emote-picker__emote-lock",
-                                color: u.O.Overlay,
-                                display: u.W.InlineFlex,
-                                justifyContent: u.Ua.Center,
-                                position: u.db.Absolute,
-                                zIndex: u.ac.Above
-                            }, a.createElement(u.mb, {
-                                asset: u.nb.Lock,
-                                height: 10,
-                                width: 10
-                            })),
-                            r = this.props.emotes.map(function(r, i) {
-                                if (!r.srcSet) return null;
-                                var c = a.createElement("img", {
-                                    className: "emote-picker__emote-image",
-                                    srcSet: r.srcSet,
-                                    alt: r.displayName
-                                });
-                                if (0 === i) {
-                                    for (var d = r.srcSet.split(" ")[0], l = {}, p = 0, m = r.srcSet.split(","); p < m.length; p++) {
-                                        var b = m[p].trim().split(" "),
-                                            f = b[1],
-                                            g = b[0];
-                                        l[f] = g
-                                    }
-                                    c = a.createElement(o.b, {
-                                        className: "emote-picker__emote-image",
-                                        src: d,
-                                        srcSet: l,
-                                        alt: r.displayName || ""
-                                    })
-                                }
-                                return a.createElement("div", {
-                                    key: r.id,
-                                    className: "emote-picker__emote"
-                                }, a.createElement(u.Qb, {
-                                    label: r.displayName || Object(s.d)("Emote", "EmoteGrid"),
-                                    direction: u.Sb.Bottom
-                                }, a.createElement(u.Na, {
-                                    display: u.W.Flex,
-                                    alignItems: u.f.Center,
-                                    justifyContent: u.Ua.Center
-                                }, a.createElement("button", {
-                                    className: t,
-                                    "aria-label": r.displayName,
-                                    name: r.displayName,
-                                    onClick: e.props.locked ? void 0 : e.handleClickEmote.bind(e, r),
-                                    "data-a-target": r.displayName
-                                }, a.createElement("figure", {
-                                    className: "emote-picker__emote-figure"
-                                }, e.props.locked ? n : null, c)))))
+                            t = this.props.emotes.map(function(t, n) {
+                                return i.createElement(d, {
+                                    key: "emote-button-" + t.id + "--" + t.setID,
+                                    emote: t,
+                                    isCriticalImage: 0 === n,
+                                    locked: e.props.locked || t.isLocked,
+                                    onClick: e.props.locked ? void 0 : e.handleClickEmote
+                                })
                             });
-                        return a.createElement(u.Va, {
+                        return i.createElement(u.Va, {
                             display: u.W.Flex,
                             flexWrap: u.Z.Wrap,
                             justifyContent: u.Ua.Center
-                        }, r)
-                    }, t.prototype.handleClickEmote = function(e, t) {
-                        this.props.onClickEmote && this.props.onClickEmote(t.currentTarget.name, e.id, e.setID)
+                        }, t)
                     }, t
-                }(a.Component));
+                }(i.Component));
             n.d(t, "a", function() {
-                return c
+                return l
             })
         },
         BLKr: function(e, t, n) {},
@@ -723,6 +735,7 @@
         },
         E78O: function(e, t, n) {},
         FWo1: function(e, t, n) {},
+        GOKC: function(e, t, n) {},
         "I/Sa": function(e, t, n) {},
         IKE4: function(e, t) {
             var n = {
@@ -1308,7 +1321,7 @@
             "use strict";
             n.d(t, "b", function() {
                 return c
-            }), n.d(t, "d", function() {
+            }), n.d(t, "e", function() {
                 return d
             }), n.d(t, "c", function() {
                 return p
@@ -1316,7 +1329,7 @@
                 return m
             }), n.d(t, "f", function() {
                 return f
-            }), n.d(t, "e", function() {
+            }), n.d(t, "d", function() {
                 return g
             });
             var r = n("mrSG"),
@@ -1333,6 +1346,7 @@
                     "^;-?\\)$": ";)",
                     "^R-?\\)$": "R)",
                     "^:>$": ":>",
+                    "^:&gt;$": ":>",
                     "^[oO](_|\\.)[oO]$": "O_o",
                     "^:-?D$": ":D",
                     "^:-?(o|O)$": ":O",
@@ -1367,10 +1381,17 @@
                 }
                 return t
             }
-            var d = function(e) {
-                var t = b(e);
-                return s[t] || t
-            };
+
+            function d(e, t) {
+                var n = c(e);
+                return t && (n = function(e, t) {
+                    return e.map(function(e) {
+                        return r.__assign({}, e, {
+                            setID: t
+                        })
+                    })
+                }(n, t)), n
+            }
 
             function l(e) {
                 return e.filter(function(e) {
@@ -1403,7 +1424,7 @@
                     if (a && a.id && a.emotes) {
                         var s = {
                             id: a.id,
-                            emotes: c(l(a.emotes))
+                            emotes: d(l(a.emotes), a.id)
                         };
                         u.has(parseInt(a.id, 10)) ? t.push(s) : n.push(s)
                     }
@@ -1462,7 +1483,7 @@
                 y = n("oJmH"),
                 E = n("CDqf"),
                 B = n("Ue10"),
-                N = (n("BLKr"), function() {
+                O = (n("BLKr"), function() {
                     return d.createElement(B.xb, {
                         className: "available-prime-sub-card",
                         "data-a-target": "available-prime-sub-card",
@@ -1500,8 +1521,8 @@
                         }
                     }, d.createElement(B.V, null, Object(l.d)('To use your free subscription, go to a channel of your choice and select "Subscribe Free"', "AvailablePrimeSubCard"))))
                 }),
-                O = n("/jfp"),
-                _ = n.n(O),
+                N = n("/jfp"),
+                _ = n.n(N),
                 C = n("yLwq"),
                 T = n("QVaV"),
                 P = n("cMjZ"),
@@ -1517,7 +1538,7 @@
             function(e) {
                 e[e.Success = 0] = "Success", e[e.Error = 1] = "Error", e[e.InProgress = 2] = "InProgress", e[e.Unconfirmed = 3] = "Unconfirmed"
             }(R || (R = {}));
-            var x, j, A, L = function(e) {
+            var x, j, L, A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1645,7 +1666,7 @@
             }(j || (j = {})),
             function(e) {
                 e.GET_BITS = "GET_BITS", e.GET_TURBO = "GET_TURBO", e.SUBSCRIBE = "SUBSCRIBE", e.VISIT_URL = "VISIT_URL"
-            }(A || (A = {}));
+            }(L || (L = {}));
             var G, W = n("0VVg");
             ! function(e) {
                 e.ChangeTierButton = "ChangeTierButton", e.ChangePaymentMethodButton = "ChangePaymentMethodButton", e.DoNotRenewButton = "DoNotRenewButton", e.CancelGiftButton = "CancelGiftButton", e.CancelPaidUpgrade = "CancelPaidUpgrade", e.CancelAndRefundButton = "CancelAndRefundButton"
@@ -1803,16 +1824,16 @@
                     return Object(i.bindActionCreators)({
                         showDisableGiftModal: function(e) {
                             var t = u.__rest(e, []);
-                            return Object(U.d)(L, t)
+                            return Object(U.d)(A, t)
                         },
                         closeModal: U.c
                     }, e)
                 })($),
                 Q = n("7SjK"),
                 H = n("OpME"),
-                Y = n("ZEQw");
+                K = n("ZEQw");
 
-            function K(e) {
+            function Y(e) {
                 return {
                     id: e.id,
                     setID: e.setID,
@@ -1821,7 +1842,7 @@
                     image1x: e.image1x,
                     image2x: e.image2x,
                     image4x: e.image4x,
-                    clickAction: Y.c,
+                    clickAction: K.c,
                     clickURL: e.clickURL || ""
                 }
             }
@@ -1900,7 +1921,7 @@
                             return e && "subscriber" === e.setID
                         }).sort(this.compareBadgeVersion).forEach(function(t) {
                             if (t) {
-                                var n = K(t);
+                                var n = Y(t);
                                 e.push(d.createElement(w.a, {
                                     key: "subscription-benefit-badge-" + t.id,
                                     badge: n
@@ -2214,7 +2235,7 @@
                         }, d.createElement(B.Va, {
                             className: "subscription-card__badge"
                         }, d.createElement(w.a, {
-                            badge: K(t)
+                            badge: Y(t)
                         })), d.createElement(B.Na, {
                             margin: {
                                 left: .5
@@ -2365,7 +2386,7 @@
                                 i.purchasedWithPrime ? (t = !0, e.unshift(a)) : e.push(a)
                             }
                         }
-                        return this.props.type === ue.Paid && this.props.hasPrime && !t && e.unshift(d.createElement(N, {
+                        return this.props.type === ue.Paid && this.props.hasPrime && !t && e.unshift(d.createElement(O, {
                             key: "prime-subscription-available"
                         })), e
                     }, t.prototype.filterSubType = function(e) {

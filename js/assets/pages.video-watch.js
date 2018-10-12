@@ -146,9 +146,9 @@
             }), n.d(t, "a", function() {
                 return S
             }), n.d(t, "o", function() {
-                return _
-            }), n.d(t, "p", function() {
                 return E
+            }), n.d(t, "p", function() {
+                return _
             }), n.d(t, "u", function() {
                 return w
             }), n.d(t, "J", function() {
@@ -186,9 +186,9 @@
             }), n.d(t, "P", function() {
                 return B
             }), n.d(t, "S", function() {
-                return H
-            }), n.d(t, "x", function() {
                 return G
+            }), n.d(t, "x", function() {
+                return H
             }), n.d(t, "N", function() {
                 return z
             }), n.d(t, "R", function() {
@@ -216,8 +216,8 @@
                 y = "chat.USERNAME_CONTRAST_ENABLED",
                 C = "chat.USERNAME_CONTRAST_DISABLED",
                 S = "chat.ADD_COMMAND",
-                _ = "chat.REMOVE_COMMAND",
-                E = "chat.RENDER_SENT_CHAT_MESSAGE",
+                E = "chat.REMOVE_COMMAND",
+                _ = "chat.RENDER_SENT_CHAT_MESSAGE",
                 w = "chat.UNHIDE_IGNORED_COMMAND";
 
             function O() {
@@ -324,14 +324,14 @@
                 }
             }
 
-            function H(e) {
+            function G(e) {
                 return {
                     type: s,
                     roomState: e
                 }
             }
 
-            function G(e, t) {
+            function H(e, t) {
                 return {
                     type: S,
                     command: e.toLowerCase(),
@@ -341,7 +341,7 @@
 
             function z(e, t) {
                 return {
-                    type: _,
+                    type: E,
                     command: e.toLowerCase(),
                     handler: t
                 }
@@ -349,7 +349,7 @@
 
             function q(e) {
                 return {
-                    type: E,
+                    type: _,
                     customEvent: e
                 }
             }
@@ -414,707 +414,6 @@
         },
         "/Kya": function(e, t, n) {},
         "/nm5": function(e, t, n) {},
-        "0D4T": function(e, t, n) {
-            "use strict";
-            var i = n("mrSG"),
-                r = n("q1tI"),
-                o = n("oJmH"),
-                a = n("/MKj"),
-                s = n("fvjX"),
-                l = n("/7QA"),
-                c = n("lZCe"),
-                d = n("ZS2+"),
-                u = n("yR8l"),
-                p = n("x7UT"),
-                m = n("Mj6i"),
-                h = n("UUve"),
-                f = n("1/iK"),
-                g = n("aCAx"),
-                v = n("D7An"),
-                b = n("kRBY"),
-                k = n("+pBb"),
-                y = n("OpME"),
-                C = n("cpJf"),
-                S = n("W8Fi"),
-                _ = n("0WFu"),
-                E = n("GnwI"),
-                w = n("br9A"),
-                O = n("TSYQ"),
-                T = n("8/mp"),
-                D = n("8Ad5");
-
-            function N(e) {
-                return e.charCode === D.a.Enter || e.charCode === D.a.Space
-            }
-            var I = n("2xye"),
-                x = n("7SjK"),
-                V = n("4rCz"),
-                R = n("Ue10"),
-                j = (n("/Kya"), function(e) {
-                    var t = {
-                            "emote-picker__tab": !0
-                        },
-                        n = null,
-                        o = null;
-                    if (e.channelTabVisible) {
-                        var a = O(i.__assign({}, t, {
-                            "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
-                            "emote-picker__tab--disabled": !e.channelTabEnabled
-                        }));
-                        n = r.createElement(R.Na, {
-                            padding: {
-                                x: 1
-                            }
-                        }, r.createElement("div", {
-                            key: "ChannelTabLink",
-                            id: "emote-picker__channel",
-                            className: a,
-                            onClick: e.channelTabEnabled ? e.selectChannelTab : void 0,
-                            onKeyPress: e.channelTabEnabled ? e.selectChannelTabKeypress : void 0,
-                            "data-a-target": "emote-channel-tab",
-                            tabIndex: 0
-                        }, r.createElement("span", null, Object(V.d)("Channel", "EmotePicker"))))
-                    }
-                    if (e.allTabVisible) {
-                        var s = O(i.__assign({}, t, {
-                            "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
-                        }));
-                        o = r.createElement(R.Na, {
-                            padding: {
-                                x: 1
-                            }
-                        }, r.createElement("div", {
-                            key: "allTabLink",
-                            id: "emote-picker__all",
-                            className: s,
-                            onClick: e.selectAllTab,
-                            onKeyPress: e.selectAllTabKeypress,
-                            "data-a-target": "emote-all-tab",
-                            tabIndex: 0
-                        }, r.createElement("span", null, Object(V.d)("All", "EmotePicker"))))
-                    }
-                    return r.createElement(R.xb, {
-                        background: R.r.Base,
-                        borderTop: !0,
-                        className: "emote-picker__tabs-container"
-                    }, n, o)
-                }),
-                M = n("DnOo"),
-                L = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        var e = [];
-                        if (this.props.subscribeTexts)
-                            for (var t = 0; t <= this.props.plan.level; t++) {
-                                var n = this.props.subscribeTexts[t];
-                                n && (t < this.props.plan.level ? (e.push(r.createElement("span", {
-                                    key: "upsell-predicate:" + t
-                                }, n)), e.push(r.createElement("span", {
-                                    key: "upsell-plus:" + t
-                                }, " + "))) : this.props.plan.level > 0 ? e.push(r.createElement("strong", {
-                                    key: "upsell-strong-end:" + this.props.plan.level
-                                }, n)) : e.push(r.createElement("span", {
-                                    key: "upsell-end:" + t
-                                }, n)))
-                            }
-                        if (!this.props.plan.emoteSetID) return null;
-                        var i = {
-                                id: this.props.plan.emoteSetID,
-                                emotes: this.props.plan.emotes || []
-                            },
-                            o = {};
-                        if (this.props.plan.tier) {
-                            var a = Object(_.a)(this.props.plan.tier);
-                            null === a && (a = 1), o.purchase = Object(l.d)("Tier { tierNum }", {
-                                tierNum: a
-                            }, "assembleSubscribeTexts")
-                        }
-                        return r.createElement(R.Va, {
-                            className: "emote-picker-plan-upsell",
-                            display: R.W.Flex,
-                            flexDirection: R.Y.Column,
-                            alignItems: R.f.Center,
-                            margin: {
-                                bottom: 1
-                            }
-                        }, r.createElement(x.a, {
-                            emotes: i.emotes,
-                            locked: !0
-                        }), r.createElement(R.Va, {
-                            margin: 1,
-                            alignItems: R.f.Center
-                        }, e), r.createElement(M.a, {
-                            isSubbedToTier: !1,
-                            tierPrice: o.purchase || "",
-                            handleSubAction: this.props.handleSubAction,
-                            productName: this.props.plan.name,
-                            url: this.props.plan.url,
-                            isEsportChannel: this.props.isEsportChannel
-                        }))
-                    }, t
-                }(r.Component),
-                F = (n("JGCS"), function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.channelTabSelectionKeypress = function(e) {
-                            N(e) && n.selectChannelTab(e)
-                        }, n.allTabSelectionKeypress = function(e) {
-                            N(e) && n.selectAllTab(e)
-                        }, n.onClickEmote = function(e, t, i) {
-                            if (n.props.onClickEmote) {
-                                n.props.onClickEmote(e, t);
-                                var r = {
-                                    channel_id: n.props.channelID,
-                                    chatroom_id: n.props.roomID,
-                                    emote_picker_sid: n.props.emotePickerSessionID,
-                                    emote_id: t,
-                                    emoticon_set_id: i,
-                                    generated_by: n.props.emotePickerSource
-                                };
-                                l.n.track(I.SpadeEventType.EmotePickerClickthrough, r)
-                            }
-                        }, n.closeOnEsc = function(e) {
-                            e.keyCode === D.a.Esc && n.props.toggleVisibility()
-                        }, n.handleFilterChange = function(e) {
-                            var t = e.target.value,
-                                i = t.toLowerCase(),
-                                r = n.filterAvailableUpsells(n.props.availableUpsells, i),
-                                o = n.filterEmoteSets(n.props.ownedChannelEmoteSets, i);
-                            n.setState({
-                                filter: i,
-                                filteredAllEmoteSets: n.filterEmoteSets(n.props.allEmoteSets, i),
-                                filteredAvailableUpsells: r,
-                                filteredOwnedChannelEmoteSets: o,
-                                inputValue: t,
-                                channelTabEnabled: o.length > 0 || r.length > 0
-                            })
-                        }, n.state = {
-                            filter: "",
-                            filteredOwnedChannelEmoteSets: t.ownedChannelEmoteSets,
-                            filteredAvailableUpsells: t.availableUpsells,
-                            filteredAllEmoteSets: t.allEmoteSets,
-                            inputValue: "",
-                            channelTabSelected: !0,
-                            channelTabEnabled: t.ownedChannelEmoteSets.length > 0 || t.availableUpsells.length > 0
-                        }, n.selectAllTab = function() {
-                            return n.setChannelTabSelected(!1)
-                        }, n.selectChannelTab = function() {
-                            return n.setChannelTabSelected(!0)
-                        }, n
-                    }
-                    return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                        if (e.channelID && e.emotePickerSessionID && !this.props.emotePickerSessionID) {
-                            var t = {
-                                channel_id: e.channelID,
-                                emote_picker_sid: e.emotePickerSessionID,
-                                generated_by: e.emotePickerSource,
-                                chatroom_id: e.roomID
-                            };
-                            l.n.track(I.SpadeEventType.ViewedEmotePicker, t)
-                        }
-                        if (!e.gqlError)
-                            if (this.state.filter.length > 0) {
-                                var n = this.filterAvailableUpsells(this.props.availableUpsells, this.state.filter),
-                                    i = this.filterEmoteSets(this.props.ownedChannelEmoteSets, this.state.filter);
-                                this.setState({
-                                    filteredAllEmoteSets: this.filterEmoteSets(this.props.allEmoteSets, this.state.filter),
-                                    filteredAvailableUpsells: n,
-                                    filteredOwnedChannelEmoteSets: i,
-                                    channelTabEnabled: i.length > 0 || n.length > 0
-                                })
-                            } else this.setState({
-                                filteredOwnedChannelEmoteSets: e.ownedChannelEmoteSets,
-                                filteredAvailableUpsells: e.availableUpsells,
-                                filteredAllEmoteSets: e.allEmoteSets,
-                                channelTabEnabled: e.ownedChannelEmoteSets.length > 0 || e.availableUpsells.length > 0
-                            })
-                    }, t.prototype.render = function() {
-                        return r.createElement(R.u, {
-                            "data-a-target": "emote-picker",
-                            direction: this.props.direction ? this.props.direction : R.v.TopRight,
-                            size: this.props.size ? this.props.size : R.w.Medium,
-                            noTail: !0,
-                            show: !0
-                        }, r.createElement(R.Va, {
-                            className: O("emote-picker")
-                        }, this.renderTabContent(), r.createElement(R.Va, {
-                            className: "emote-picker__controls-container",
-                            position: R.db.Relative
-                        }, r.createElement(R.xb, {
-                            padding: 1,
-                            borderTop: !0
-                        }, r.createElement(R.Pa, {
-                            autoFocus: !0,
-                            onChange: this.handleFilterChange,
-                            onKeyDown: this.closeOnEsc,
-                            placeholder: Object(l.d)("Search for Emotes", "EmotePicker"),
-                            type: R.Ra.Text,
-                            value: this.state.inputValue
-                        })), r.createElement(j, {
-                            allTabVisible: this.props.allEmoteSets.length > 0,
-                            channelTabEnabled: this.state.channelTabEnabled,
-                            channelTabSelected: this.state.channelTabSelected,
-                            channelTabVisible: !!this.props.channelTabVisible,
-                            selectAllTab: this.selectAllTab,
-                            selectAllTabKeypress: this.allTabSelectionKeypress,
-                            selectChannelTab: this.selectChannelTab,
-                            selectChannelTabKeypress: this.channelTabSelectionKeypress
-                        }))))
-                    }, t.prototype.renderTabContent = function() {
-                        var e = this,
-                            t = [];
-                        if (this.props.gqlError) t.push(r.createElement(R.Va, {
-                            key: "emotePicker-error"
-                        }, r.createElement(R.V, {
-                            color: R.O.Error
-                        }, Object(l.d)("Unable to load available emotes.", "EmotePicker"))));
-                        else if (this.props.loading) t.push(r.createElement(R.Va, {
-                            alignItems: R.f.Center,
-                            display: R.W.Flex,
-                            key: "loading",
-                            fullHeight: !0,
-                            fullWidth: !0,
-                            justifyContent: R.Ua.Center
-                        }, r.createElement(R.Xa, {
-                            key: "LoadingSpinner"
-                        })));
-                        else if (this.state.channelTabEnabled && this.state.channelTabSelected) {
-                            if (this.state.filteredOwnedChannelEmoteSets.length > 0) {
-                                var n = this.state.filteredOwnedChannelEmoteSets[0].emotes.map(function(t) {
-                                    return t.setID = e.state.filteredOwnedChannelEmoteSets[0].id, t
-                                });
-                                t.push(r.createElement(R.Va, {
-                                    className: "emote-picker__content-block",
-                                    key: "ownedChannelEmoteSets",
-                                    padding: 1,
-                                    position: R.db.Relative
-                                }, r.createElement(x.a, {
-                                    emotes: n,
-                                    onClickEmote: this.onClickEmote,
-                                    locked: !1
-                                })))
-                            }
-                            t = t.concat(this.state.filteredAvailableUpsells.map(function(t) {
-                                return r.createElement(R.Va, {
-                                    className: "emote-picker__content-block",
-                                    key: "planUpsell:" + t.level,
-                                    padding: 1,
-                                    position: R.db.Relative
-                                }, r.createElement(L, {
-                                    plan: t,
-                                    isEsportChannel: e.props.isEsportChannel,
-                                    subscribeTexts: e.props.subscribeTexts,
-                                    handleSubAction: e.props.handleSubAction
-                                }))
-                            }))
-                        } else t = this.state.filteredAllEmoteSets.map(function(t) {
-                            var n = [];
-                            return t.emotes.forEach(function(e) {
-                                e.setID = t.id, n.push(e)
-                            }), r.createElement(R.Va, {
-                                key: "emoteGrid" + t.id,
-                                position: R.db.Relative,
-                                padding: {
-                                    top: 1,
-                                    bottom: 2
-                                },
-                                className: "emote-picker__content-block"
-                            }, r.createElement(x.a, {
-                                emotes: n,
-                                onClickEmote: e.onClickEmote,
-                                locked: !1
-                            }))
-                        });
-                        return t.length > 0 ? r.createElement(T.b, {
-                            className: "emote-picker__tab-content"
-                        }, r.createElement(R.Va, {
-                            padding: 1
-                        }, t)) : null
-                    }, t.prototype.filterEmoteSet = function(e, t) {
-                        return e.filter(function(e) {
-                            return e.token.toLowerCase().includes(t)
-                        })
-                    }, t.prototype.setChannelTabSelected = function(e) {
-                        this.setState({
-                            channelTabSelected: e
-                        })
-                    }, t.prototype.filterEmoteSets = function(e, t) {
-                        for (var n = [], i = 0, r = e; i < r.length; i++) {
-                            var o = r[i],
-                                a = this.filterEmoteSet(o.emotes, t);
-                            a.length > 0 && n.push({
-                                id: o.id,
-                                emotes: a
-                            })
-                        }
-                        return n
-                    }, t.prototype.filterAvailableUpsells = function(e, t) {
-                        for (var n = [], r = 0, o = e; r < o.length; r++) {
-                            var a = o[r];
-                            if (a.emotes) {
-                                var s = this.filterEmoteSet(a.emotes, t);
-                                s.length > 0 && n.push(i.__assign({}, a, {
-                                    emotes: s
-                                }))
-                            }
-                        }
-                        return n
-                    }, t = i.__decorate([Object(E.c)("EmotePickerMenu", {
-                        autoReportInteractive: !0
-                    })], t)
-                }(r.Component)),
-                U = n("GzyO"),
-                A = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.renderSearchContent = function() {
-                            var e;
-                            return e = n.state.filteredEmotes.length > 0 ? r.createElement(R.V, null, Object(l.d)('Search Results for "{inputValue}"', {
-                                inputValue: n.state.inputValue
-                            }, "EmotePickerCard")) : r.createElement(R.V, null, Object(l.d)('No Search Results for "{inputValue}"', {
-                                inputValue: n.state.inputValue
-                            }, "EmotePickerCard")), r.createElement(T.b, {
-                                className: "emote-picker__tab-content"
-                            }, r.createElement(R.Va, {
-                                padding: 1
-                            }, r.createElement(R.Va, {
-                                position: R.db.Relative,
-                                padding: {
-                                    top: 1,
-                                    bottom: 2
-                                },
-                                className: "emote-picker__content-block"
-                            }, e, r.createElement(x.a, {
-                                emotes: n.state.filteredEmotes,
-                                onClickEmote: n.onClickEmote,
-                                locked: !1
-                            }))))
-                        }, n.onClickEmote = function(e, t, i) {
-                            if (n.props.onClickEmote) {
-                                n.props.onClickEmote(e, t);
-                                var r = {
-                                    channel_id: n.props.channelID,
-                                    chatroom_id: n.props.roomID,
-                                    emote_picker_sid: n.props.emotePickerSessionID,
-                                    emote_id: t,
-                                    emoticon_set_id: i,
-                                    generated_by: n.props.emotePickerSource
-                                };
-                                l.n.track(I.SpadeEventType.EmotePickerClickthrough, r)
-                            }
-                        }, n.handleFilterChange = function(e) {
-                            var t = e.target.value,
-                                i = t.toLowerCase();
-                            n.setState({
-                                filter: i,
-                                inputValue: t,
-                                filteredEmotes: n.filterEmoteSets(n.props.allEmoteSets, i)
-                            })
-                        }, n.filterEmoteSets = function(e, t) {
-                            var n = [];
-                            e.forEach(function(e) {
-                                e.emotes.filter(function(e) {
-                                    return e.token.toLowerCase().includes(t)
-                                }).forEach(function(t) {
-                                    t.setID = e.id, n.push(t)
-                                })
-                            });
-                            var i = Object(U.b)(),
-                                r = 0 === Object.keys(i).length ? void 0 : i;
-                            return Object(y.f)(n, t, r)
-                        }, n.state = {
-                            filter: "",
-                            filteredEmotes: [],
-                            inputValue: ""
-                        }, n
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        if (this.props.channelID) {
-                            var e = {
-                                channel_id: this.props.channelID,
-                                emote_picker_sid: this.props.emotePickerSessionID,
-                                generated_by: this.props.emotePickerSource,
-                                chatroom_id: this.props.roomID
-                            };
-                            l.n.track(I.SpadeEventType.ViewedEmotePicker, e)
-                        }
-                    }, t.prototype.render = function() {
-                        return r.createElement(R.u, {
-                            "data-a-target": "emote-picker",
-                            direction: this.props.direction ? this.props.direction : R.v.TopRight,
-                            size: this.props.size ? this.props.size : R.w.Medium,
-                            noTail: !0,
-                            show: !0
-                        }, r.createElement(R.Va, {
-                            className: O("emote-picker")
-                        }, r.createElement(R.xb, {
-                            padding: 1,
-                            borderTop: !0
-                        }, r.createElement(R.Pa, {
-                            autoFocus: !0,
-                            onChange: this.handleFilterChange,
-                            placeholder: Object(l.d)("Search for Emotes", "EmotePickerCard"),
-                            type: R.Ra.Text,
-                            value: this.state.inputValue
-                        })), this.renderTabContent()))
-                    }, t.prototype.renderTabContent = function() {
-                        if (this.props.gqlError) return r.createElement(R.Va, null, r.createElement(R.V, {
-                            "data-test-selector": "emote-picker-menu-error-text",
-                            color: R.O.Error
-                        }, Object(l.d)("Unable to load available emotes.", "EmotePickerCard")));
-                        if (this.props.loading) return r.createElement(R.Va, {
-                            alignItems: R.f.Center,
-                            display: R.W.Flex,
-                            fullHeight: !0,
-                            fullWidth: !0,
-                            justifyContent: R.Ua.Center
-                        }, r.createElement(R.Xa, null));
-                        if ("" !== this.state.filter) return this.renderSearchContent();
-                        var e = [];
-                        this.props.allEmoteSets.forEach(function(t) {
-                            t.emotes.forEach(function(n) {
-                                n.setID = t.id, e.push(n)
-                            })
-                        });
-                        var t = r.createElement(R.Va, {
-                            position: R.db.Relative,
-                            padding: {
-                                top: 1,
-                                bottom: 2
-                            },
-                            className: "emote-picker__content-block"
-                        }, r.createElement(x.a, {
-                            emotes: e,
-                            onClickEmote: this.onClickEmote,
-                            locked: !1
-                        }));
-                        return r.createElement(T.b, {
-                            className: "emote-picker__tab-content"
-                        }, r.createElement(R.Va, {
-                            padding: 1
-                        }, t))
-                    }, t
-                }(r.Component),
-                P = n("DB+C"),
-                W = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        n.handleSubEvent = function(e) {
-                            e.action === w.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(w.b)(i.__assign({}, e, {
-                                action: w.a.ClickCheckout,
-                                channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
-                                channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
-                                isMenuOpen: null,
-                                hasSubCredit: null,
-                                sub_location: "emote_picker",
-                                modal: !1,
-                                showPrimeContent: !0,
-                                giftRecipient: null
-                            }))
-                        };
-                        var r = {
-                            allEmoteSets: [],
-                            availableUpsells: [],
-                            channelTabVisible: !1,
-                            gqlError: t.emoteSetsData && !!t.emoteSetsData.error || t.channelData && !!t.channelData.error || !1,
-                            gqlLoading: t.emoteSetsData && !!t.emoteSetsData.loading || t.channelData && !!t.channelData.loading || !1,
-                            subscribeTexts: [],
-                            ownedChannelEmoteSets: [],
-                            ownedSetIDs: new Set([])
-                        };
-                        return r = n.applyDataPropsToState(t, r), n.state = i.__assign({}, r), n
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.checkDataLoaded(this.props) && (this.props.onLoad && this.props.onLoad(this.checkForContent(this.props)), this.props.latencyTracking.reportInteractive())
-                    }, t.prototype.componentWillReceiveProps = function(e) {
-                        if (e.emoteSetsData && e.emoteSetsData.error || e.channelData && e.channelData.error) this.setState({
-                            gqlError: !0
-                        });
-                        else {
-                            var t = this.applyDataPropsToState(e, this.state);
-                            this.props.pubsub.messages.subscriptionInfo !== e.pubsub.messages.subscriptionInfo && (this.props.channelData && this.props.channelData.refetch(), this.props.emoteSetsData && this.props.emoteSetsData.refetch()), this.checkDataLoaded(e) && (e.latencyTracking.reportInteractive(), e.onLoad && e.onLoad(this.checkForContent(e)), t.gqlLoading = !1), this.setState(i.__assign({}, t, {
-                                gqlError: !1
-                            }))
-                        }
-                        e.visible && !this.props.visible ? this.props.openEmotePicker() : this.props.visible && !e.visible && this.props.closeEmotePicker()
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.props.closeEmotePicker()
-                    }, t.prototype.render = function() {
-                        if (!this.props.visible) return null;
-                        var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.campaignProperties && this.props.channelData.user.campaignProperties.domains && this.props.channelData.user.campaignProperties.domains.length > 0 || !1,
-                            t = r.createElement(F, {
-                                allEmoteSets: this.state.allEmoteSets,
-                                availableUpsells: this.state.availableUpsells,
-                                channelTabVisible: this.state.channelTabVisible,
-                                channelID: this.props.channelOwnerID,
-                                direction: this.props.direction,
-                                emotePickerSessionID: this.props.emotePickerSessionID,
-                                emotePickerSource: this.props.emotePickerSource,
-                                gqlError: this.state.gqlError,
-                                handleSubAction: this.handleSubEvent,
-                                isEsportChannel: e,
-                                loading: this.state.gqlLoading,
-                                onClickEmote: this.props.onClickEmote,
-                                ownedChannelEmoteSets: this.state.ownedChannelEmoteSets,
-                                roomID: this.props.roomID,
-                                size: this.props.size,
-                                subscribeTexts: this.state.subscribeTexts,
-                                toggleVisibility: this.props.toggleVisibility
-                            }),
-                            n = r.createElement(A, {
-                                allEmoteSets: this.state.allEmoteSets,
-                                availableUpsells: this.state.availableUpsells,
-                                channelID: this.props.channelOwnerID,
-                                direction: this.props.direction,
-                                emotePickerSessionID: this.props.emotePickerSessionID,
-                                emotePickerSource: this.props.emotePickerSource,
-                                gqlError: this.state.gqlError,
-                                loading: this.state.gqlLoading,
-                                onClickEmote: this.props.onClickEmote,
-                                roomID: this.props.roomID,
-                                size: this.props.size,
-                                toggleVisibility: this.props.toggleVisibility
-                            });
-                        return r.createElement(c.a, {
-                            assignments: {
-                                fallback: function() {
-                                    return t
-                                },
-                                off: function() {
-                                    return t
-                                },
-                                on: function() {
-                                    return n
-                                }
-                            },
-                            name: v.b.EmotePickerV2
-                        })
-                    }, t.prototype.checkDataLoaded = function(e) {
-                        var t = !e.channelOwnerID || e.channelData && !e.channelData.loading,
-                            n = !e.isLoggedIn || e.emoteSetsData && !e.emoteSetsData.loading;
-                        return t && n
-                    }, t.prototype.checkForContent = function(e) {
-                        var t = e.emoteSetsData && e.emoteSetsData.emoteSets && e.emoteSetsData.emoteSets.length > 0 || !1,
-                            n = e.channelData && e.channelData.user && e.channelData.user.subscriptionProducts.filter(this.subscriptionProductHasEmotes).length > 0 || !1;
-                        return t || n
-                    }, t.prototype.applyDataPropsToState = function(e, t) {
-                        var n = i.__assign({}, t);
-                        if (e.emoteSetsData && e.emoteSetsData.emoteSets) {
-                            n.ownedSetIDs = new Set;
-                            for (var r = 0, o = e.emoteSetsData.emoteSets; r < o.length; r++) {
-                                var a = o[r];
-                                a && a.id && n.ownedSetIDs.add(parseInt(a.id, 10))
-                            }
-                            n.allEmoteSets = Object(y.a)(e.emoteSetsData.emoteSets)
-                        }
-                        if (e.channelData && e.channelData.user) {
-                            var s = void 0;
-                            e.channelData.user.self && e.channelData.user.self.subscriptionBenefit && (s = e.channelData.user.self.subscriptionBenefit.platform), n.availableUpsells = function(e, t, n) {
-                                var r = [];
-                                return !n || n !== C.b.IOS && n !== C.b.Android ? (t.forEach(function(n, o) {
-                                    var a = n.price;
-                                    0 === o && Object(S.g)(t) && (a = Object(S.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(i.__assign({}, n, {
-                                        emotes: Object(y.b)(n.emotes),
-                                        level: o,
-                                        price: a
-                                    }))
-                                }), r) : r
-                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts, s), n.subscribeTexts = function(e) {
-                                for (var t = [], n = 0; n < e.length; n++) {
-                                    var i = e[n],
-                                        r = Object(_.a)(i.tier);
-                                    null === r && (r = 1), 0 === n && i.emotes && i.emotes.length > 1 ? t[n] = Object(l.d)("Unlock {numEmotes, number} Sub Emotes", {
-                                        numEmotes: i.emotes.length
-                                    }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(l.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : i.emotes && i.emotes.length > 1 ? t[n] = Object(l.d)("{numEmotes, number} Extra Tier {tier} Sub Emotes", {
-                                        numEmotes: i.emotes.length,
-                                        tier: r
-                                    }, "assembleSubscribeTexts") : i.emotes && i.emotes.length && (t[n] = Object(l.d)("1 Extra Tier {tier} Sub Emote", {
-                                        tier: r
-                                    }, "assembleSubscribeTexts"))
-                                }
-                                return t
-                            }(e.channelData.user.subscriptionProducts), n.ownedChannelEmoteSets = function(e, t) {
-                                for (var n = [{
-                                        id: "0",
-                                        emotes: []
-                                    }], i = 0, r = t; i < r.length; i++) {
-                                    var o = r[i];
-                                    o.emotes && o.emoteSetID && e.has(parseInt(o.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(y.b)(o.emotes)))
-                                }
-                                return n[0].emotes.length ? n : []
-                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts)
-                        }
-                        return n.channelTabVisible = e.channelData && e.channelData.user && e.channelData.user.subscriptionProducts.filter(this.subscriptionProductHasEmotes).length > 0 || !1, n
-                    }, t.prototype.subscriptionProductHasEmotes = function(e) {
-                        return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
-                    }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        if ("yes" === l.o.experiments.getAssignment(v.b.InstreamCheckout)) {
-                            var e = l.m.get(h.b, ""),
-                                t = l.m.get(h.c, ""),
-                                n = l.m.get(h.a, ""),
-                                i = Number(n);
-                            e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
-                                return e.name
-                            }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
-                                recipientLogin: t,
-                                productName: e,
-                                mysteryGiftCount: i
-                            }) : this.props.showLoginModal() : Object(h.d)())
-                        }
-                    }, t
-                }(r.Component);
-            var B = Object(o.compose)(Object(a.connect)(function(e) {
-                return {
-                    currentUserID: e.session.user && e.session.user.id,
-                    emotePickerSessionID: e.chat && e.chat.emotePickerSessionID || null,
-                    sessionUser: e.session.user,
-                    isLoggedIn: Object(b.f)(e)
-                }
-            }, function(e) {
-                return Object(s.bindActionCreators)({
-                    closeEmotePicker: k.A,
-                    openEmotePicker: k.M,
-                    showLoginModal: Object(h.e)(f.a.EmotePickerSubscriptionButton),
-                    showSubscriptionCheckoutModal: function(e) {
-                        var t = i.__rest(e, []);
-                        return Object(g.d)(d.a, {
-                            component: "CheckoutModal",
-                            loader: function() {
-                                return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "KJv/"))
-                            },
-                            componentProps: t
-                        })
-                    }
-                }, e)
-            }), Object(u.a)(P, {
-                name: "channelData",
-                skip: function(e) {
-                    return !e.channelOwnerID
-                },
-                options: function(e) {
-                    return {
-                        variables: {
-                            channelOwnerID: e.channelOwnerID
-                        }
-                    }
-                }
-            }), Object(p.a)([{
-                topic: function(e) {
-                    return "user-subscribe-events-v1." + e.currentUserID
-                },
-                mapMessageTypesToProps: {
-                    "*": "subscriptionInfo"
-                },
-                skip: function(e) {
-                    return !e.currentUserID
-                }
-            }]), Object(E.c)("EmotePicker"), Object(m.a)())(W);
-            n.d(t, "a", function() {
-                return B
-            })
-        },
         "0FG4": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -1139,9 +438,9 @@
                         return {
                             images: {
                                 sources: {
-                                    "1x": Object(o.e)(t, 1),
-                                    "2x": Object(o.e)(t, 2),
-                                    "4x": Object(o.e)(t, 4)
+                                    "1x": Object(o.d)(t, 1),
+                                    "2x": Object(o.d)(t, 2),
+                                    "4x": Object(o.d)(t, 4)
                                 },
                                 themed: !1
                             },
@@ -2230,8 +1529,8 @@
             n("WK0g"), n("ahza");
             var C = n("nxZp"),
                 S = (function() {}(), n("pU2t"), n("l41m")),
-                _ = n("HjbF"),
-                E = n("kVrx"),
+                E = n("HjbF"),
+                _ = n("kVrx"),
                 w = n("ZUUl"),
                 O = n("82xK"),
                 T = n("zClW"),
@@ -2252,17 +1551,17 @@
             }), n.d(t, "q", function() {
                 return c.d
             }), n.d(t, "u", function() {
-                return _.c
-            }), n.d(t, "v", function() {
-                return _.d
-            }), n.d(t, "n", function() {
-                return _.a
-            }), n.d(t, "m", function() {
-                return E.a
-            }), n.d(t, "x", function() {
-                return E.b
-            }), n.d(t, "z", function() {
                 return E.c
+            }), n.d(t, "v", function() {
+                return E.d
+            }), n.d(t, "n", function() {
+                return E.a
+            }), n.d(t, "m", function() {
+                return _.a
+            }), n.d(t, "x", function() {
+                return _.b
+            }), n.d(t, "z", function() {
+                return _.c
             }), n.d(t, "B", function() {
                 return w.a
             }), n.d(t, "C", function() {
@@ -2470,8 +1769,8 @@
                 y = n("yI+y"),
                 C = n("76Lv"),
                 S = n("UWbL"),
-                _ = n("+GjP"),
-                E = n("vRsq"),
+                E = n("+GjP"),
+                _ = n("vRsq"),
                 w = n("NvVO"),
                 O = n("2xye"),
                 T = n("llur"),
@@ -2538,12 +1837,12 @@
                     }, t
                 }(u.Component),
                 W = Object(p.compose)(Object(F.a)("BelowFoldRecommendations"))(P);
-            var B, H = Object(i.connect)(function(e) {
+            var B, G = Object(i.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
                     }
                 })(W),
-                G = n("CCjQ"),
+                H = n("CCjQ"),
                 z = n("5Ijs"),
                 q = n("6x+I"),
                 Q = n("QzU5"),
@@ -2804,12 +2103,12 @@
                             n.props.onLogin()
                         }, n.getVideoOffsetFromQuery = function(e) {
                             void 0 === e && (e = n.props);
-                            var t = Object(_.a)(e.location.search, "t");
+                            var t = Object(E.a)(e.location.search, "t");
                             return t ? Object(S.a)(t) : se
                         }, n.onPlayerNavigationEvent = function(e) {
                             var t = n.getVideo(),
                                 i = t ? t.id : void 0,
-                                r = Object(E.m)(n.props) || void 0;
+                                r = Object(_.m)(n.props) || void 0;
                             Object(V.c)(e, n.props.history, {
                                 currentVideoID: i,
                                 currentCollectionID: r
@@ -2873,7 +2172,7 @@
                         e.data.loading && !this.props.data.loading && Object(f.b)() !== f.a.None && this.props.data.video && (e.data.video && e.data.video.id) !== this.props.data.video.id && this.maybeFetchVideoMarkers(this.props.data.video), this.reportInteractive()
                     }, t.prototype.render = function() {
                         var e, t = this.getVideo(),
-                            n = Object(E.m)(this.props),
+                            n = Object(_.m)(this.props),
                             i = !this.props.data.loading && n && this.props.data.collection && 0 === this.props.data.collection.items.totalCount,
                             r = this.getOwner();
                         if (this.props.data.error || t && t.id && !t.owner) return u.createElement(h.a, {
@@ -2884,7 +2183,7 @@
                             a = {};
                         this.state.requestedVideoOffset !== se && (a.nextVideoOffset = this.state.requestedVideoOffset), n && (a.collectionID = n), this.props.match.params.videoID && (a.vodID = this.props.match.params.videoID);
                         var d = null;
-                        t && t.scope === L.VideoScope.Private && r && (d = u.createElement(G.a, {
+                        t && t.scope === L.VideoScope.Private && r && (d = u.createElement(H.a, {
                             ownerLogin: r.login
                         }));
                         var p = this.props.match.params.videoID || t && t.id || null;
@@ -2912,7 +2211,7 @@
                             currentUser: this.props.data.currentUser || null,
                             video: t || null,
                             lastVideoOffset: this.state.lastVideoOffset
-                        }), u.createElement(H, {
+                        }), u.createElement(G, {
                             creator: r ? {
                                 id: r.id,
                                 displayName: r.displayName
@@ -2974,8 +2273,8 @@
                         return {
                             variables: {
                                 videoID: e.match.params.videoID,
-                                collectionID: Object(E.m)(e) || void 0,
-                                useCollectionID: !!Object(E.m)(e) && !e.match.params.videoID
+                                collectionID: Object(_.m)(e) || void 0,
+                                useCollectionID: !!Object(_.m)(e) && !e.match.params.videoID
                             }
                         }
                     }
@@ -2991,7 +2290,7 @@
                             o = null,
                             a = null;
                         if (e.match.params.videoID) t = e.match.params.videoID, e.data.video && e.data.video.owner && (n = e.data.video.broadcastType, i = e.data.video.game ? e.data.video.game.name : null, r = e.data.video.language, o = e.data.video.owner.login, a = Number(e.data.video.owner.id));
-                        else if (Object(E.m)(e) && e.data.collection && e.data.collection.items.edges.length > 0) {
+                        else if (Object(_.m)(e) && e.data.collection && e.data.collection.items.edges.length > 0) {
                             var s = e.data.collection.items.edges[0].node;
                             t = s.id, n = s.broadcastType, i = s.game ? s.game.name : null, r = s.language, o = s.owner ? s.owner.login : null, a = s.owner ? Number(s.owner.id) : null
                         }
@@ -3291,7 +2590,7 @@
                     type: C.b.Copy,
                     selector: "copy-link-button"
                 }],
-                _ = function(e) {
+                E = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3337,7 +2636,7 @@
                         }
                     }, t
                 }(s.Component),
-                E = function(e) {
+                _ = function(e) {
                     switch (e) {
                         case C.b.Twitter:
                             return m.a.Twitter;
@@ -3375,13 +2674,13 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(_, r.__assign({}, this.props, {
+                        return s.createElement(E, r.__assign({}, this.props, {
                             onClick: this.onClickHandler
                         }))
                     }, t.prototype.trackCollectionShare = function(e, t, n) {
                         var i = {
                             location: this.props.tracking.location,
-                            platform: E(n),
+                            platform: _(n),
                             shareURL: e
                         };
                         Object(m.b)(t, i, a.o.apollo.client)
@@ -3389,7 +2688,7 @@
                         var r = {
                             collectionID: i,
                             location: this.props.tracking.location,
-                            platform: E(n),
+                            platform: _(n),
                             shareURL: e
                         };
                         Object(m.c)(t, r, a.o.apollo.client)
@@ -3843,87 +3142,99 @@
         "7SjK": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("TSYQ"),
-                o = n("q1tI"),
+                r = n("q1tI"),
+                o = n("TSYQ"),
                 a = n("/7QA"),
                 s = n("GnwI"),
                 l = n("Ue10"),
-                c = (n("VrOd"), function(e) {
+                c = (n("GOKC"), r.createElement(l.xb, {
+                    alignItems: l.f.Center,
+                    background: l.r.Overlay,
+                    borderRadius: l.x.Small,
+                    className: "emote-button__lock",
+                    color: l.O.Overlay,
+                    "data-test-selector": "emote-button-lock",
+                    display: l.W.InlineFlex,
+                    justifyContent: l.Ua.Center,
+                    position: l.db.Absolute,
+                    zIndex: l.ac.Above
+                }, r.createElement(l.mb, {
+                    asset: l.nb.Lock,
+                    height: 10,
+                    width: 10
+                }))),
+                d = function(e) {
+                    var t = o("emote-button__link", {
+                            "emote-button__link--locked": !e.onClick
+                        }),
+                        n = e.emote,
+                        i = n.displayName,
+                        d = n.srcSet;
+                    if (!d) return null;
+                    var u = r.createElement("img", {
+                        className: "emote-picker__image",
+                        srcSet: d,
+                        alt: i
+                    });
+                    if (e.isCriticalImage) {
+                        for (var p = d.split(" ")[0], m = {}, h = 0, f = d.split(","); h < f.length; h++) {
+                            var g = f[h].trim().split(" "),
+                                v = g[1],
+                                b = g[0];
+                            m[v] = b
+                        }
+                        u = r.createElement(s.b, {
+                            className: "emote-picker__emote-image",
+                            src: p,
+                            srcSet: m,
+                            alt: i || ""
+                        })
+                    }
+                    return r.createElement("div", {
+                        className: "emote-button"
+                    }, r.createElement(l.Qb, {
+                        label: i || Object(a.d)("Emote", "EmoteButton"),
+                        direction: l.Sb.Bottom
+                    }, r.createElement(l.Na, {
+                        display: l.W.Flex,
+                        alignItems: l.f.Center,
+                        justifyContent: l.Ua.Center
+                    }, r.createElement("button", {
+                        "data-test-selector": "emote-button-clickable",
+                        className: t,
+                        "aria-label": i,
+                        name: i,
+                        onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
+                        "data-a-target": i
+                    }, r.createElement("figure", null, e.locked ? c : null, u)))))
+                },
+                u = (n("VrOd"), function(e) {
                     function t() {
-                        return null !== e && e.apply(this, arguments) || this
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleClickEmote = function(e) {
+                            t.props.onClickEmote && t.props.onClickEmote(e)
+                        }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this,
-                            t = r("emote-picker__emote-link", {
-                                "emote-picker__emote-link--locked": this.props.locked
-                            }),
-                            n = o.createElement(l.xb, {
-                                alignItems: l.f.Center,
-                                background: l.r.Overlay,
-                                borderRadius: l.x.Small,
-                                className: "emote-picker__emote-lock",
-                                color: l.O.Overlay,
-                                display: l.W.InlineFlex,
-                                justifyContent: l.Ua.Center,
-                                position: l.db.Absolute,
-                                zIndex: l.ac.Above
-                            }, o.createElement(l.mb, {
-                                asset: l.nb.Lock,
-                                height: 10,
-                                width: 10
-                            })),
-                            i = this.props.emotes.map(function(i, r) {
-                                if (!i.srcSet) return null;
-                                var c = o.createElement("img", {
-                                    className: "emote-picker__emote-image",
-                                    srcSet: i.srcSet,
-                                    alt: i.displayName
-                                });
-                                if (0 === r) {
-                                    for (var d = i.srcSet.split(" ")[0], u = {}, p = 0, m = i.srcSet.split(","); p < m.length; p++) {
-                                        var h = m[p].trim().split(" "),
-                                            f = h[1],
-                                            g = h[0];
-                                        u[f] = g
-                                    }
-                                    c = o.createElement(s.b, {
-                                        className: "emote-picker__emote-image",
-                                        src: d,
-                                        srcSet: u,
-                                        alt: i.displayName || ""
-                                    })
-                                }
-                                return o.createElement("div", {
-                                    key: i.id,
-                                    className: "emote-picker__emote"
-                                }, o.createElement(l.Qb, {
-                                    label: i.displayName || Object(a.d)("Emote", "EmoteGrid"),
-                                    direction: l.Sb.Bottom
-                                }, o.createElement(l.Na, {
-                                    display: l.W.Flex,
-                                    alignItems: l.f.Center,
-                                    justifyContent: l.Ua.Center
-                                }, o.createElement("button", {
-                                    className: t,
-                                    "aria-label": i.displayName,
-                                    name: i.displayName,
-                                    onClick: e.props.locked ? void 0 : e.handleClickEmote.bind(e, i),
-                                    "data-a-target": i.displayName
-                                }, o.createElement("figure", {
-                                    className: "emote-picker__emote-figure"
-                                }, e.props.locked ? n : null, c)))))
+                            t = this.props.emotes.map(function(t, n) {
+                                return r.createElement(d, {
+                                    key: "emote-button-" + t.id + "--" + t.setID,
+                                    emote: t,
+                                    isCriticalImage: 0 === n,
+                                    locked: e.props.locked || t.isLocked,
+                                    onClick: e.props.locked ? void 0 : e.handleClickEmote
+                                })
                             });
-                        return o.createElement(l.Va, {
+                        return r.createElement(l.Va, {
                             display: l.W.Flex,
                             flexWrap: l.Z.Wrap,
                             justifyContent: l.Ua.Center
-                        }, i)
-                    }, t.prototype.handleClickEmote = function(e, t) {
-                        this.props.onClickEmote && this.props.onClickEmote(t.currentTarget.name, e.id, e.setID)
+                        }, t)
                     }, t
-                }(o.Component));
+                }(r.Component));
             n.d(t, "a", function() {
-                return c
+                return u
             })
         },
         "7g+E": function(e, t, n) {
@@ -5440,11 +4751,11 @@
                 var C = t === c.a.Light ? p : m,
                     S = Object(l.a)(n, C);
                 if (S > u) return k;
-                for (var _ = [n[0], n[1], n[2]], E = f; E >= 0 && S < u; E--) {
-                    var w = o(_);
-                    t === c.a.Light ? w[0] -= w[0] * h : w[0] += w[0] * h, _ = a(i(w)), S = Object(l.a)(_, C)
+                for (var E = [n[0], n[1], n[2]], _ = f; _ >= 0 && S < u; _--) {
+                    var w = o(E);
+                    t === c.a.Light ? w[0] -= w[0] * h : w[0] += w[0] * h, E = a(i(w)), S = Object(l.a)(E, C)
                 }
-                var O = y(r(_));
+                var O = y(r(E));
                 return b[t][k] = O, O
             }
 
@@ -5957,13 +5268,13 @@
                                 }
                             },
                             type: c.U.Inherit
-                        }, t.label, _(n, i.length - 1) ? null : ", "))
+                        }, t.label, E(n, i.length - 1) ? null : ", "))
                     })))
                 },
-                _ = function(e, t) {
+                E = function(e, t) {
                     return e === t
                 },
-                E = n("N0BP"),
+                _ = n("N0BP"),
                 w = (n("XA5B"), function(e) {
                     var t = r.createElement(c.xb, {
                         className: "preview-card-iconic-image__wrapper",
@@ -5973,7 +5284,7 @@
                         ratio: e.aspect || c.p.BoxArt,
                         align: c.d.Center
                     }, r.createElement(c.S, i.__assign({}, e.imageProps))));
-                    return e.linkTo && (t = r.createElement(c.T, i.__assign({}, Object(E.a)(e), {
+                    return e.linkTo && (t = r.createElement(c.T, i.__assign({}, Object(_.a)(e), {
                         to: e.linkTo,
                         onClick: e.onClick
                     }), t)), t
@@ -6182,7 +5493,7 @@
                             onClick: e.onClick,
                             type: c.U.Inherit
                         }, e.text)))
-                    })), r.createElement("div", null, r.createElement(c.T, i.__assign({}, Object(E.a)(e), {
+                    })), r.createElement("div", null, r.createElement(c.T, i.__assign({}, Object(_.a)(e), {
                         to: e.linkTo,
                         onClick: e.onClick,
                         type: c.U.Inherit,
@@ -6207,7 +5518,7 @@
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
             }(O || (O = {}));
-            var W, B, H = function(e) {
+            var W, B, G = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -6280,7 +5591,7 @@
             }(r.PureComponent);
             n("5NSO");
 
-            function G(e) {
+            function H(e) {
                 return void 0 !== e.watchedProgressPercent
             }
 
@@ -6306,7 +5617,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return r.createElement("div", i.__assign({
                             className: "preview-card"
-                        }, Object(E.a)(this.props)), r.createElement(c.xb, {
+                        }, Object(_.a)(this.props)), r.createElement(c.xb, {
                             position: c.db.Relative,
                             borderRadius: c.x.Medium,
                             overflow: c.Ya.Hidden
@@ -6316,7 +5627,7 @@
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && r.createElement(V, {
                             staticImageProps: this.props.thumbnailImageProps,
-                            animatedImageProps: G(this.props) && this.props.animatedImageProps || void 0,
+                            animatedImageProps: H(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
                         }), this.renderOverlay())), r.createElement(c.Va, {
                             display: c.W.Flex,
@@ -6350,7 +5661,7 @@
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : G(this.props) ? r.createElement(D, {
+                        }) : H(this.props) ? r.createElement(D, {
                             topLeft: void 0 !== this.props.durationInSeconds && r.createElement(N, {
                                 value: Object(F.b)(this.props.durationInSeconds),
                                 icon: c.nb.Play,
@@ -6383,12 +5694,12 @@
                             })
                         }) : void 0
                     }, t.prototype.getListPositionLabel = function() {
-                        return G(this.props) && this.props.listPosition ? Object(o.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
+                        return H(this.props) && this.props.listPosition ? Object(o.d)("{totalVideos, plural, one {{position} / # video} other {{position} / # videos}}", {
                             position: this.props.listPosition.position,
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return G(this.props) || z(this.props) ? Object(o.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return H(this.props) || z(this.props) ? Object(o.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
@@ -6429,7 +5740,7 @@
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : G(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== B.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : H(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== B.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
                             linkTo: Object(U.a)(this.getTrackingContext(C.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
@@ -6459,12 +5770,12 @@
                             game: this.props.playerMetadataGame
                         }))
                     }, t.prototype.renderVODRestrictionOverlay = function() {
-                        return G(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? r.createElement(H, {
+                        return H(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? r.createElement(G, {
                             restriction: this.props.restriction,
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!G(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === j.a.Balloon)
+                        return !!H(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === j.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, n, i) {
                         switch (e) {
                             case j.a.Balloon:
@@ -6653,6 +5964,7 @@
                 })
             }(n("he03").definitions)), e.exports = i
         },
+        GOKC: function(e, t, n) {},
         GxR5: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -6679,25 +5991,98 @@
         GzyO: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return o
+                return c
             }), n.d(t, "b", function() {
-                return a
+                return d
+            }), n.d(t, "c", function() {
+                return u
+            }), n.d(t, "d", function() {
+                return p
             });
-            var i = n("/7QA"),
-                r = "twilight.emote_picker_history";
+            var i = n("mrSG"),
+                r = n("/7QA"),
+                o = n("OpME"),
+                a = "twilight.emote_picker_history",
+                s = 24,
+                l = [{
+                    id: "64138",
+                    token: "SeemsGood"
+                }, {
+                    id: "41",
+                    token: "Kreygasm"
+                }, {
+                    id: "245",
+                    token: "ResidentSleeper"
+                }, {
+                    id: "28087",
+                    token: "WutFace"
+                }, {
+                    id: "86",
+                    token: "BibleThump"
+                }, {
+                    id: "9",
+                    token: "<3"
+                }, {
+                    id: "58765",
+                    token: "NotLikeThis"
+                }, {
+                    id: "81274",
+                    token: "VoHiYo"
+                }, {
+                    id: "88",
+                    token: "PogChamp"
+                }, {
+                    id: "425618",
+                    token: "LUL"
+                }, {
+                    id: "25",
+                    token: "Kappa"
+                }, {
+                    id: "30259",
+                    token: "HeyGuys"
+                }];
 
-            function o(e) {
-                var t = i.l.get(r, {}),
+            function c(e) {
+                var t = r.l.get(a, {}),
                     n = t[e.id];
                 n ? (n.uses++, n.lastUpdatedAt = Date.now()) : t[e.id] = {
                     emote: e,
                     lastUpdatedAt: Date.now(),
                     uses: 1
-                }, i.l.set(r, t)
+                }, r.l.set(a, t)
             }
 
-            function a() {
-                var e = i.l.get(r, {}) || {},
+            function d() {
+                var e = r.l.get(a, {});
+                if (!(Object.keys(e).length >= s)) {
+                    for (var t = {}, n = 0; n < l.length; n++) {
+                        var o = l[n];
+                        e[o.id] || (t[o.id] = {
+                            emote: o,
+                            lastUpdatedAt: n,
+                            uses: 0
+                        })
+                    }
+                    var c = i.__assign({}, t, e);
+                    r.l.set(a, c)
+                }
+            }
+
+            function u() {
+                var e = r.l.get(a, {}) || {},
+                    t = [];
+                return Object.keys(e).forEach(function(n) {
+                    var i = e[n];
+                    void 0 !== i && t.push(i)
+                }), t.sort(function(e, t) {
+                    return e.uses > t.uses ? -1 : t.uses > e.uses ? 1 : e.lastUpdatedAt > t.lastUpdatedAt ? -1 : t.lastUpdatedAt > e.lastUpdatedAt ? 1 : 0
+                }), Object(o.b)(t.slice(0, 24).map(function(e) {
+                    return e.emote
+                }))
+            }
+
+            function p() {
+                var e = r.l.get(a, {}) || {},
                     t = {};
                 return Object.keys(e).forEach(function(n) {
                     void 0 !== e[n] && (t[e[n].emote.token] = {
@@ -7934,7 +7319,7 @@
             "use strict";
             n.d(t, "b", function() {
                 return c
-            }), n.d(t, "d", function() {
+            }), n.d(t, "e", function() {
                 return d
             }), n.d(t, "c", function() {
                 return p
@@ -7942,7 +7327,7 @@
                 return m
             }), n.d(t, "f", function() {
                 return f
-            }), n.d(t, "e", function() {
+            }), n.d(t, "d", function() {
                 return g
             });
             var i = n("mrSG"),
@@ -7959,6 +7344,7 @@
                     "^;-?\\)$": ";)",
                     "^R-?\\)$": "R)",
                     "^:>$": ":>",
+                    "^:&gt;$": ":>",
                     "^[oO](_|\\.)[oO]$": "O_o",
                     "^:-?D$": ":D",
                     "^:-?(o|O)$": ":O",
@@ -7993,10 +7379,17 @@
                 }
                 return t
             }
-            var d = function(e) {
-                var t = h(e);
-                return a[t] || t
-            };
+
+            function d(e, t) {
+                var n = c(e);
+                return t && (n = function(e, t) {
+                    return e.map(function(e) {
+                        return i.__assign({}, e, {
+                            setID: t
+                        })
+                    })
+                }(n, t)), n
+            }
 
             function u(e) {
                 return e.filter(function(e) {
@@ -8029,7 +7422,7 @@
                     if (o && o.id && o.emotes) {
                         var a = {
                             id: o.id,
-                            emotes: c(u(o.emotes))
+                            emotes: d(u(o.emotes), o.id)
                         };
                         l.has(parseInt(o.id, 10)) ? t.push(a) : n.push(a)
                     }
@@ -8213,8 +7606,8 @@
                 y = n("x7UT"),
                 C = n("3Bft"),
                 S = n("tIid"),
-                _ = n("ht6z"),
-                E = n("/aPz"),
+                E = n("ht6z"),
+                _ = n("/aPz"),
                 w = n("D7An"),
                 O = n("W8Fi"),
                 T = n("br9A"),
@@ -8230,7 +7623,6 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            activeTierPrice: null,
                             inPrimeRegion: !1
                         }, t.modalLevel = "top_page", t.renderBalloonContentForBalloonLayer = function() {
                             return o.createElement(v.a, {
@@ -8256,32 +7648,26 @@
                         }, t.handleSubMenuAction = function(e) {
                             new Set([T.a.ClickCheckout, T.a.BuyGiftSub, T.a.BuyMysteryGift, T.a.BuyCustomMysteryGift, T.a.BuyGiftToPaidUpgrade, T.a.BuyPaidUpgrade]).has(e.action) && t.checkAndDisplaySubscriptionCheckout();
                             var n = !!(t.props.data.user && t.props.data.user.self && t.props.data.user.self.subscriptionBenefit),
-                                i = t.props.data.requestInfo && Object(_.a)(t.props.data.requestInfo.countryCode);
+                                i = t.props.data.requestInfo && Object(E.a)(t.props.data.requestInfo.countryCode);
                             Object(T.b)({
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
                                 channelID: t.props.data && t.props.data.user.id,
-                                checkoutButtonTier: e.checkoutButtonTier || (t.state.activeTierPrice || C.b.Prime).slice(),
+                                checkoutButtonTier: e.checkoutButtonTier,
                                 hasSubCredit: !!t.props.data.user.self && t.props.data.user.self.canPrimeSubscribe,
                                 hostChannelID: t.props.hostChannelID,
                                 hostChannelLogin: t.props.hostChannelLogin,
-                                isMenuOpen: !(e.action === T.a.OpenSubMenu),
+                                isMenuOpen: e.action !== T.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
                                 modal: !n,
                                 modalLevel: n ? "" : t.modalLevel.slice(),
                                 showPrimeContent: i,
                                 giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== T.a.ClickMoreSubOptions && e.action !== T.a.ClickBack || (t.modalLevel = e.modalLevel, t.setState({
-                                activeTierPrice: C.b.Prime
-                            }))
+                            }), !e.modalLevel || e.action !== T.a.ClickMoreSubOptions && e.action !== T.a.ClickBack || (t.modalLevel = e.modalLevel)
                         }, t.handleMenuToggle = function(e) {
                             t.handleSubMenuAction({
                                 action: e ? T.a.CloseSubMenu : T.a.OpenSubMenu
-                            })
-                        }, t.onSelectTierTab = function(e) {
-                            t.state.activeTierPrice !== e && t.setState({
-                                activeTierPrice: e
                             })
                         }, t.getBalloonDirection = function() {
                             var e = t.props.balloonDirection || D.v.BottomRight;
@@ -8303,7 +7689,7 @@
                     }, t.prototype.render = function() {
                         if (!this.isUserDataReady(this.props) || !this.hasSubscriptionProducts(this.props)) return null;
                         if (this.props.hideEsportsSubscription && Object(S.a)(this.props.data.user.id, this.props.sessionUser)) return null;
-                        var e = this.props.data.requestInfo && Object(_.a)(this.props.data.requestInfo.countryCode),
+                        var e = this.props.data.requestInfo && Object(E.a)(this.props.data.requestInfo.countryCode),
                             t = !!(this.props.data.user && this.props.data.user.self && this.props.data.user.self.subscriptionBenefit),
                             n = Object(S.a)(this.props.data.user.id, this.props.sessionUser),
                             r = 1 === this.props.data.user.subscriptionProducts.length,
@@ -8326,14 +7712,14 @@
                         }, "SubscribeButton") : Object(f.d)("Subscribe", "SubscribeButton");
                         var u = t ? "subscribed-button" : "subscribe-button",
                             p = o.createElement(D.z, {
+                                ariaLabel: s,
                                 "data-a-target": u,
                                 "data-test-selector": i.SubButton,
-                                ariaLabel: s,
-                                type: this.getButtonType(t),
                                 dropdown: !this.props.hideDropdownArrow,
                                 fullWidth: !0,
                                 icon: this.getButtonIcon(t, a),
-                                onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0
+                                onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0,
+                                type: this.getButtonType(t)
                             }, s);
                         return this.setBalloonWrapperContent(o.createElement(I, {
                             authToken: this.props.authToken,
@@ -8345,7 +7731,6 @@
                             isNonStandardSub: r,
                             isStaff: !!(this.props.sessionUser && this.props.sessionUser.roles && this.props.sessionUser.roles.isStaff),
                             isSubscribed: t,
-                            onSelectTierTab: this.onSelectTierTab,
                             productId: this.props.data.user.subscriptionProducts[0].id,
                             subbedTier: a || C.b.Prime,
                             userHasPrime: !1
@@ -8403,7 +7788,7 @@
                     }
                 }), Object(y.a)([{
                     topic: function(e) {
-                        return Object(E.E)(e.data.currentUser && e.data.currentUser.id || "")
+                        return Object(_.E)(e.data.currentUser && e.data.currentUser.id || "")
                     },
                     mapMessageTypesToProps: {
                         "*": "subscriptionInfo"
@@ -10186,7 +9571,7 @@
             }), n.d(t, "k", function() {
                 return C
             }), n.d(t, "n", function() {
-                return _
+                return E
             }), n.d(t, "l", function() {
                 return O
             }), n.d(t, "i", function() {
@@ -10270,20 +9655,20 @@
             }
             var S = /^\/slow(?:\s+(\d+)?)?$/;
 
-            function _(e) {
+            function E(e) {
                 var t = e.trim().match(S);
                 return t ? {
                     duration: t[1] && Number(t[1]) || null
                 } : null
             }
-            var E = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
+            var _ = ["blue", "blueviolet", "cadetblue", "chocolate", "coral", "dodgerblue", "firebrick", "goldenrod", "green", "hotpink", "orangered", "red", "seagreen", "springgreen", "yellowgreen"],
                 w = /^\/color\s+(#[A-Fa-f0-9]{6}|[A-Za-z]+)$/;
 
             function O(e) {
                 var t = e.trim().match(w);
                 if (!t) return null;
                 var n = t[1];
-                return n.startsWith("#") || -1 !== E.indexOf(n.toLowerCase()) ? {
+                return n.startsWith("#") || -1 !== _.indexOf(n.toLowerCase()) ? {
                     color: n
                 } : null
             }
@@ -10953,9 +10338,9 @@
             }), n.d(t, "y", function() {
                 return S
             }), n.d(t, "k", function() {
-                return _
-            }), n.d(t, "q", function() {
                 return E
+            }), n.d(t, "q", function() {
+                return _
             }), n.d(t, "i", function() {
                 return w
             }), n.d(t, "E", function() {
@@ -11039,10 +10424,10 @@
                         type: C
                     }
                 },
-                _ = "vodChat.comments.COOLDOWN_ENDED",
-                E = function() {
+                E = "vodChat.comments.COOLDOWN_ENDED",
+                _ = function() {
                     return {
-                        type: _
+                        type: E
                     }
                 },
                 w = "vodChat.comments.SYNC_ENABLED",
@@ -11092,14 +10477,12 @@
                 return u
             }), n.d(t, "b", function() {
                 return p
-            }), n.d(t, "f", function() {
+            }), n.d(t, "e", function() {
                 return m
             }), n.d(t, "c", function() {
                 return h
-            }), n.d(t, "e", function() {
-                return f
             }), n.d(t, "d", function() {
-                return g
+                return f
             });
             var i = n("mrSG"),
                 r = n("/7QA"),
@@ -11160,13 +10543,6 @@
 
             function f(e, t) {
                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
-            }
-
-            function g(e) {
-                return {
-                    src: f(e, 1),
-                    srcSet: f(e, 1) + " 1x, " + f(e, 2) + " 2x, " + f(e, 3) + " 4x"
-                }
             }
         },
         a7aT: function(e, t, n) {},
@@ -11791,6 +11167,7 @@
                     BuyGiftToPaidUpgrade: "buy_gift_to_paid_upgrade",
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
+                    ChangeTier: "change_tier",
                     ClickCheckout: "click_checkout_button",
                     ClickMoreSubOptions: "more_options_click",
                     ClickGiftSubOptions: "gift_options_click",
@@ -12063,7 +11440,7 @@
                         }(), this.impressionEventFired = !0)
                     }, t
                 }(o.PureComponent));
-            var _ = Object(s.compose)(Object(u.a)(C, {
+            var E = Object(s.compose)(Object(u.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -12081,19 +11458,19 @@
                         }
                     }, e)
                 }))(S),
-                E = n("kRBY"),
+                _ = n("kRBY"),
                 w = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn || this.props.collapsed ? null : o.createElement(_, r.__assign({}, this.props))
+                        return this.props.isLoggedIn || this.props.collapsed ? null : o.createElement(E, r.__assign({}, this.props))
                     }, t
                 }(o.PureComponent);
             var O = Object(a.connect)(function(e) {
                 return {
                     collapsed: !e.ui.sideNavExpanded,
-                    isLoggedIn: Object(E.f)(e)
+                    isLoggedIn: Object(_.f)(e)
                 }
             })(w);
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, !1, function() {
@@ -12286,7 +11663,7 @@
                     TITLE: "chat-card-title",
                     DESCRIPTION: "chat-card-description"
                 },
-                _ = function(e) {
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderErrorCard = function() {
@@ -12372,7 +11749,7 @@
                         }, e)
                     }, t
                 }(i.Component),
-                E = n("SceP"),
+                _ = n("SceP"),
                 w = {
                     isTimedOut: !1
                 },
@@ -12397,12 +11774,12 @@
                             t = e.clip,
                             n = e.error,
                             o = e.loading;
-                        return n || this.state.isTimedOut ? i.createElement(_, {
+                        return n || this.state.isTimedOut ? i.createElement(E, {
                             error: {
                                 title: Object(r.d)("Something went wrong", "ClipsChatCard"),
                                 description: Object(r.d)("We couldn't find that Clip", "ClipsChatCard")
                             }
-                        }) : o || !t ? i.createElement(_, null) : i.createElement(_, {
+                        }) : o || !t ? i.createElement(E, null) : i.createElement(E, {
                             data: {
                                 title: t.title || (t.broadcaster ? Object(r.d)("Clip of {broadcaster}", {
                                     broadcaster: t.broadcaster.displayName
@@ -12416,7 +11793,7 @@
                         })
                     }, t
                 }(i.Component),
-                T = Object(g.a)(E, {
+                T = Object(g.a)(_, {
                     options: function(e) {
                         return {
                             variables: {
@@ -12449,15 +11826,15 @@
                             t = e.video,
                             n = e.error,
                             o = e.loading;
-                        if (n || t && !t.owner) return i.createElement(_, {
+                        if (n || t && !t.owner) return i.createElement(E, {
                             error: {
                                 title: Object(r.d)("Something went wrong", "VideoChatCard"),
                                 description: Object(r.d)("We couldn't find that video", "VideoChatCard")
                             }
                         });
-                        if (o || !t) return i.createElement(_, null);
+                        if (o || !t) return i.createElement(E, null);
                         var a = i.createElement(k.V, null, Object(r.c)(new Date(t.publishedAt), "medium"), i.createElement("span", null, " · "), Object(x.a)(t.owner.login, t.owner.displayName));
-                        return i.createElement(_, {
+                        return i.createElement(E, {
                             data: {
                                 title: t.title,
                                 description: a,
@@ -12648,11 +12025,11 @@
                 return i.createElement("span", null, Object(r.d)("This room is no longer in followers-only mode.", "ChatLine"))
             }
 
-            function H(e) {
+            function G(e) {
                 return e.enabled ? i.createElement("span", null, Object(r.d)("This room is now in emote-only mode.", "ChatLine")) : i.createElement("span", null, Object(r.d)("This room is no longer in emote-only mode.", "ChatLine"))
             }
 
-            function G(e) {
+            function H(e) {
                 var t = e.enabled ? Object(r.d)("This room is now in subscriber-only mode.", "ChatLine") : Object(r.d)("This room is no longer in subscriber-only mode.", "ChatLine");
                 return i.createElement("span", null, t)
             }
@@ -12718,9 +12095,9 @@
             }), n.d(t, "d", function() {
                 return B
             }), n.d(t, "c", function() {
-                return H
-            }), n.d(t, "k", function() {
                 return G
+            }), n.d(t, "k", function() {
+                return H
             }), n.d(t, "h", function() {
                 return z
             }), n.d(t, "e", function() {
@@ -12848,7 +12225,7 @@
             ! function(e) {
                 e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
             }(i || (i = {}));
-            var _, E = {
+            var E, _ = {
                     generalFilter: function() {
                         return Object(l.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                     },
@@ -12969,12 +12346,12 @@
                         type: i.Link
                     },
                     messaging_general: {
-                        getTitle: E.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_messaging",
                         omitFromDescription: !0
                     },
                     profile_general: {
-                        getTitle: E.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_profile",
                         omitFromDescription: !0
                     },
@@ -13114,7 +12491,7 @@
                         reportReason: S.b.Miscategorized
                     },
                     video_general: {
-                        getTitle: E.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_video",
                         omitFromDescription: !0
                     },
@@ -13133,12 +12510,12 @@
                         reportReason: S.b.Harassment
                     },
                     abusiveViolence: {
-                        getTitle: E.abusiveViolence,
+                        getTitle: _.abusiveViolence,
                         value: "threatening violence",
                         reportReason: S.b.Harm
                     },
                     commitingViolence: {
-                        getTitle: E.commitingViolence,
+                        getTitle: _.commitingViolence,
                         value: "committing violence",
                         reportReason: S.b.Harm
                     },
@@ -13267,7 +12644,7 @@
                         reportReason: S.b.ChatBanEvasion
                     },
                     impersonation_me: {
-                        getTitle: E.me,
+                        getTitle: _.me,
                         value: "impersonating me",
                         reportReason: S.b.Impersonation
                     },
@@ -13279,7 +12656,7 @@
                         reportReason: S.b.Impersonation
                     },
                     impersonation_other: {
-                        getTitle: E.someoneElse,
+                        getTitle: _.someoneElse,
                         value: "impersonating someone else",
                         reportReason: S.b.Impersonation
                     },
@@ -13395,20 +12772,20 @@
                         value: "brigading/raids"
                     },
                     external_threatening: {
-                        getTitle: E.threatening,
+                        getTitle: _.threatening,
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: E.abusive,
+                        getTitle: _.abusive,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
-                        getTitle: E.abusiveViolence,
+                        getTitle: _.abusiveViolence,
                         value: "external site; threatening violence",
                         reportReason: S.b.Harm
                     },
                     external_commitingViolence: {
-                        getTitle: E.commitingViolence,
+                        getTitle: _.commitingViolence,
                         value: "external site; committing violence",
                         reportReason: S.b.Harm
                     },
@@ -13547,7 +12924,7 @@
                 T = n("RQ6e");
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
-            }(_ || (_ = {}));
+            }(E || (E = {}));
             var D, N, I, x = {
                     contentGeneral: function() {
                         return Object(l.d)("What would you like to report?", "ReportModalWizard")
@@ -13607,7 +12984,7 @@
                     },
                     blockPrompt: !0,
                     getTitle: V.thanks,
-                    type: _.Info,
+                    type: E.Info,
                     value: "end card"
                 },
                 j = {
@@ -13623,7 +13000,7 @@
                             return Object(l.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
                         items: [w.endLink_DMCA, w.endLink_trademark, w.endLink_devAgreement],
-                        type: _.Info,
+                        type: E.Info,
                         value: "ip end"
                     },
                     selfharm: {
@@ -13632,7 +13009,7 @@
                             return Object(l.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
                         items: [w.endLink_selfharm],
-                        type: _.Info,
+                        type: E.Info,
                         value: "selfharm end"
                     },
                     twitchEvent: {
@@ -13642,7 +13019,7 @@
                         },
                         items: [w.endLink_eventCoC],
                         value: "twitch event end",
-                        type: _.Info
+                        type: E.Info
                     }
                 },
                 M = {
@@ -13651,7 +13028,7 @@
                         return Object(l.d)("Where is the problem?", "ReportModalWizard")
                     },
                     items: [w.video, w.whisper, w.chat, w.room, w.profile, w.username, w.report_other],
-                    type: _.MultipleChoice,
+                    type: E.MultipleChoice,
                     value: "content type"
                 },
                 L = {
@@ -13659,21 +13036,21 @@
                         getTitle: V.reportVideo,
                         getLabel: x.identifyUser,
                         items: [w.video_streamer, w.video_someoneElse, w.video_chatSomeone],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: V.reportVideo,
                         getLabel: x.contentGeneral,
                         items: [w.revealPersonalInfo, w.video_labeling, w.video_inactive, w.video_general, w.report_ip, w.violateDevAgreement, w.selfharm],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
                         getTitle: V.reportVideo,
                         getLabel: x.content,
                         items: [w.report_username, w.violence, w.abusive, w.cheating, w.scam, w.inappropriateContent, w.evasion, w.impersonation, w.underage, w.bitsViolation],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
@@ -13682,14 +13059,14 @@
                         getTitle: V.reportMessage,
                         getLabel: x.contentGeneral,
                         items: [w.revealPersonalInfo, w.evasion, w.spam, w.maliciousRaid, w.report_username, w.messaging_general, w.selfharm],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
                         getTitle: V.reportMessage,
                         getLabel: x.content,
                         items: [w.report_emotes, w.violence, w.abusive, w.inappropriateContent, w.impersonation, w.underage, w.bitsViolation],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
@@ -13703,14 +13080,14 @@
                         getTitle: V.reportProfile,
                         getLabel: x.contentGeneral,
                         items: [w.revealPersonalInfo, w.inappropriateBadge, w.inappropriateExtension, w.noModeration, w.profile_general, w.report_ip, w.violateDevAgreement, w.selfharm],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
                         getTitle: V.reportProfile,
                         getLabel: x.content,
                         items: [w.report_username, w.violence, w.abusive, w.scam, w.inappropriateContent, w.evasion, w.impersonation, w.underage, w.bitsViolation],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "profile general report reason"
                     }
                 },
@@ -13723,12 +13100,12 @@
                     getLabel: x.identifyUser,
                     items: [w.report_channelOwner, w.report_member],
                     value: "room report user",
-                    type: _.MultipleChoice
+                    type: E.MultipleChoice
                 },
                 W = {
                     getTitle: V.tellUsMore,
                     items: [w.input_description],
-                    type: _.Confirm,
+                    type: E.Confirm,
                     value: "tell us more"
                 },
                 B = {
@@ -13742,12 +13119,12 @@
                         value: "social media tell us more"
                     })
                 },
-                H = {
+                G = {
                     content: {
                         getTitle: V.reportAbusive,
                         getLabel: x.relevantStatements,
                         items: [w.hateSpeech, w.harassment, w.abusiveViolence, w.commitingViolence, w.swatting, w.personalInfo],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "abuse type"
                     },
                     violence: {
@@ -13760,11 +13137,11 @@
                             return Object(l.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
                         },
                         items: [w.threat_me, w.threat_person, w.threat_group, w.threat_selfharm],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "violence type"
                     }
                 },
-                G = {
+                H = {
                     identifyLocation: {
                         getTitle: function(e) {
                             return Object(l.d)("Report {username} for something else...", {
@@ -13775,7 +13152,7 @@
                             return Object(l.d)("Where did the problem happen?", "ReportModalWizard")
                         },
                         items: [w.location_onTwitch, w.location_anotherSite, w.location_TwitchEvent],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         value: "off-site conduct location"
                     },
                     externalSite: {
@@ -13789,15 +13166,15 @@
                             return Object(l.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
                         items: [w.external_incitingRaids, w.external_threatening, w.external_harassment],
-                        type: _.MultipleChoice,
+                        type: E.MultipleChoice,
                         nextCard: B.socialMedia,
                         value: "external site conduct"
                     },
-                    external_violence: r.__assign({}, H.violence, {
+                    external_violence: r.__assign({}, G.violence, {
                         items: [w.threat_me, w.threat_person, w.threat_group],
                         nextCard: B.socialMedia
                     }),
-                    external_abusive: r.__assign({}, H.content, {
+                    external_abusive: r.__assign({}, G.content, {
                         items: [w.hateSpeech, w.harassment, w.external_abusiveViolence, w.external_commitingViolence, w.swatting, w.personalInfo],
                         nextCard: B.socialMedia
                     })
@@ -13810,7 +13187,7 @@
                     },
                     getLabel: x.contentGeneral,
                     items: [w.spam_bot, w.spam_scam, w.spam_repeated],
-                    type: _.MultipleChoice,
+                    type: E.MultipleChoice,
                     value: "spam type"
                 },
                 q = {
@@ -13821,7 +13198,7 @@
                     },
                     getLabel: x.relevantStatements,
                     items: [w.inappropriate_game, w.gory, w.sexuallyViolent, w.childAnimal, w.pornographic, w.suggestive, w.nudity, w.other],
-                    type: _.MultipleChoice,
+                    type: E.MultipleChoice,
                     value: "inappropriate content type"
                 },
                 Q = {
@@ -13835,7 +13212,7 @@
                     },
                     value: "ban type",
                     items: [w.evasion_chat, w.evasion_sitewide, w.evasion_messaging],
-                    type: _.MultipleChoice,
+                    type: E.MultipleChoice,
                     nextCard: B.banEvasion
                 },
                 K = {
@@ -13851,7 +13228,7 @@
                         return Object(l.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
                     items: [w.impersonation_me, w.impersonation_brand, w.impersonation_other],
-                    type: _.MultipleChoice,
+                    type: E.MultipleChoice,
                     value: "impersonation type"
                 },
                 Y = M,
@@ -13863,7 +13240,7 @@
                     chat: F.content,
                     profile: A.content,
                     room: P,
-                    "somewhere else": G.identifyLocation,
+                    "somewhere else": H.identifyLocation,
                     streamer: L.content,
                     "someone else in video": L.content,
                     "someone in chat": F.content,
@@ -13873,22 +13250,22 @@
                     "channel owner": A.content,
                     "community member": F.content,
                     "on twitch": A.content,
-                    "another site": G.externalSite,
+                    "another site": H.externalSite,
                     "twitch event": j.twitchEvent,
                     "brigading/raids": B.socialMedia,
-                    threatening: G.external_violence,
-                    "hateful/harassing": G.external_abusive,
-                    "external site; threatening violence": G.external_violence,
-                    "external site; committing violence": G.external_violence,
+                    threatening: H.external_violence,
+                    "hateful/harassing": H.external_abusive,
+                    "external site; threatening violence": H.external_violence,
+                    "external site; committing violence": H.external_violence,
                     "external site; scam": B.socialMedia,
                     "ban evasion": Q,
                     spam: z,
-                    hateful: H.content,
+                    hateful: G.content,
                     impersonation: K,
-                    "violence/threats": H.violence,
-                    "threatening violence": H.violence,
-                    "committing violence": H.violence,
-                    abusive: H.content,
+                    "violence/threats": G.violence,
+                    "threatening violence": G.violence,
+                    "committing violence": G.violence,
+                    abusive: G.content,
                     "inappropriate content": q,
                     "intellectual property": j.legal,
                     "violating developer agreement": j.legal
@@ -13942,10 +13319,10 @@
                                 r = !1,
                                 a = t.state.prevCards.length ? t.renderBack() : null;
                             switch (t.state.currentCard.type) {
-                                case _.MultipleChoice:
+                                case E.MultipleChoice:
                                     e = Object(l.d)("Next", "ReportModalWizard"), n = t.handleNext, i = ie, r = !t.state.currentSelection;
                                     break;
-                                case _.Confirm:
+                                case E.Confirm:
                                     e = Object(l.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, r = !t.state.userTextInput, i = re
                             }
                             return o.createElement(b.Va, null, a, o.createElement(b.z, {
@@ -13991,7 +13368,7 @@
                                     s = e.nextCard || $;
                                 X[t.state.currentSelection.value] && (s = X[t.state.currentSelection.value]);
                                 var l = t.state.currentSelection.reportReason || t.state.reportReason,
-                                    c = s.type === _.Info;
+                                    c = s.type === E.Info;
                                 t.setState({
                                     currentCard: s,
                                     reportReason: l,
@@ -14114,7 +13491,7 @@
                     return r.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         this.state.modalCloseTracked || this.props.trackClose(I.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
-                        var e = this.state.currentCard.type === _.Info && this.state.currentCard.blockPrompt ? o.createElement(C, {
+                        var e = this.state.currentCard.type === E.Info && this.state.currentCard.blockPrompt ? o.createElement(C, {
                                 targetUser: this.props.targetUser,
                                 onBlock: this.props.onBlock,
                                 onUnblock: this.props.onUnblock,
@@ -14128,7 +13505,7 @@
                                 padding: 1,
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
-                            n = this.state.prevCards.length || this.state.currentCard.type === _.Info ? null : this.renderPrimer();
+                            n = this.state.prevCards.length || this.state.currentCard.type === E.Info ? null : this.renderPrimer();
                         return o.createElement(b.xb, {
                             className: "reporting-wizard",
                             display: b.W.Flex,
@@ -14470,7 +13847,7 @@
                     }
                 }))(y),
                 S = n("N+yD"),
-                _ = function(e) {
+                E = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -14495,7 +13872,7 @@
                         autoReportInteractive: !0
                     }), Object(s.a)(S)], t)
                 }(r.Component),
-                E = n("TQ+e"),
+                _ = n("TQ+e"),
                 w = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -14527,7 +13904,7 @@
                 }(r.Component),
                 O = Object(o.compose)(Object(c.c)("RecentCreatorVideosCarousel", {
                     autoReportInteractive: !0
-                }), Object(s.a)(E, {
+                }), Object(s.a)(_, {
                     skip: function(e) {
                         return !e.creatorID
                     }
@@ -14638,7 +14015,7 @@
             }), n.d(t, "b", function() {
                 return C
             }), n.d(t, "c", function() {
-                return _
+                return E
             }), n.d(t, "d", function() {
                 return O
             }), n.d(t, "e", function() {
@@ -14851,7 +14228,7 @@
                 y = n("XEwr"),
                 C = n("RXle"),
                 S = 10,
-                _ = function(e) {
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -15040,9 +14417,9 @@
                         }, this.getVideoCards())
                     }, t
                 }(s.Component),
-                E = Object(c.c)("VideoCarousel", {
+                _ = Object(c.c)("VideoCarousel", {
                     autoReportInteractive: !0
-                })(_);
+                })(E);
             n.d(t, "a", function() {
                 return w
             });
@@ -15050,7 +14427,7 @@
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(E)
+            })(_)
         },
         f3GI: function(e, t, n) {
             "use strict";
@@ -15155,9 +14532,9 @@
             }), n.d(t, "i", function() {
                 return S
             }), n.d(t, "h", function() {
-                return _
-            }), n.d(t, "j", function() {
                 return E
+            }), n.d(t, "j", function() {
+                return _
             }), n.d(t, "k", function() {
                 return w
             });
@@ -15286,7 +14663,7 @@
                         vod_ts: e.contentOffset
                     }
                 },
-                _ = function(e, t, n) {
+                E = function(e, t, n) {
                     var i = null,
                         r = Object.keys(t.vodChat.comments.comments.parentComments);
                     if (r.length > 0) {
@@ -15308,7 +14685,7 @@
                         vod_type: Object(l.a)(n.video.broadcastType)
                     }
                 },
-                E = function(e, t, n) {
+                _ = function(e, t, n) {
                     var i = e.comment.id,
                         r = e.comment.channelId;
                     return {
@@ -17379,8 +16756,8 @@
                 y = n("Ahlu"),
                 C = n("/MKj"),
                 S = n("fvjX"),
-                _ = n("aCAx"),
-                E = n("7CzK"),
+                E = n("aCAx"),
+                _ = n("7CzK"),
                 w = n("94Uw"),
                 O = n("Ue10"),
                 T = (n("/nm5"), n("41XU")),
@@ -17421,7 +16798,7 @@
                         d && !d.loading && this.props.firstPageLoaded && d.user && d.user.bannerImageURL ? (n = "channel-banner__image-loaded", t = {
                             backgroundImage: "url(" + d.user.bannerImageURL + ")"
                         }) : (s["channel-banner__image--default"] = !0, t = {
-                            backgroundImage: "url(" + E + ")"
+                            backgroundImage: "url(" + _ + ")"
                         }), this.props.isSideNavBanner && (i = "channel-banner__side-nav-type");
                         var u = null;
                         if (this.props.canEdit) {
@@ -17489,8 +16866,8 @@
                     }
                 }, function(e) {
                     return Object(S.bindActionCreators)({
-                        closeModal: _.c,
-                        showModal: _.d
+                        closeModal: E.c,
+                        showModal: E.d
                     }, e)
                 })(I),
                 R = n("tuvy"),
@@ -17515,8 +16892,8 @@
             ! function(e) {
                 e.SocialButtonsDefault = "channel-header__social-buttons-default", e.SocialButtonsVariantB = "channel-header__social-buttons-variant-b"
             }(P || (P = {}));
-            var B, H = "channel-header__edit-profile-overlay",
-                G = "channel-header__verified-badge",
+            var B, G = "channel-header__edit-profile-overlay",
+                H = "channel-header__verified-badge",
                 z = "channel-header__live-indicator",
                 q = "yes",
                 Q = "browser-notifications-upsell-seen";
@@ -17531,7 +16908,7 @@
                             direction: O.Sb.Right
                         }, o.createElement(O.Va, {
                             className: "channel-header__verified",
-                            "data-target": G,
+                            "data-target": H,
                             display: O.W.Flex,
                             alignItems: O.f.Center,
                             margin: {
@@ -17556,7 +16933,7 @@
                             })
                         }, n.renderAvatarEditButton = function() {
                             return n.props.data && n.props.data.user && n.props.data.user.id && n.props.data.user.login && n.isChannelEditor() ? o.createElement(O.xb, {
-                                className: H,
+                                className: G,
                                 background: O.r.Overlay,
                                 position: O.db.Absolute,
                                 attachTop: !0,
@@ -18220,9 +17597,797 @@
                         "data-a-target": "emote-picker-button"
                     })
                 },
-                d = n("0D4T"),
-                u = n("GnwI"),
-                p = function(e) {
+                d = n("oJmH"),
+                u = n("fvjX"),
+                p = n("lZCe"),
+                m = n("ZS2+"),
+                h = n("yR8l"),
+                f = n("x7UT"),
+                g = n("Mj6i"),
+                v = n("UUve"),
+                b = n("1/iK"),
+                k = n("aCAx"),
+                y = n("D7An"),
+                C = n("kRBY"),
+                S = n("+pBb"),
+                E = n("GzyO"),
+                _ = n("OpME"),
+                w = n("cpJf"),
+                O = n("W8Fi"),
+                T = n("0WFu"),
+                D = n("GnwI"),
+                N = n("br9A"),
+                I = n("TSYQ"),
+                x = n("8/mp"),
+                V = n("8Ad5");
+
+            function R(e) {
+                return e.charCode === V.a.Enter || e.charCode === V.a.Space
+            }
+            var j = n("2xye"),
+                M = n("7SjK"),
+                L = n("4rCz"),
+                F = (n("/Kya"), function(e) {
+                    var t = {
+                            "emote-picker__tab": !0
+                        },
+                        n = null,
+                        i = null;
+                    if (e.channelTabVisible) {
+                        var a = I(r.__assign({}, t, {
+                            "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
+                            "emote-picker__tab--disabled": !e.channelTabEnabled
+                        }));
+                        n = o.createElement(l.Na, {
+                            padding: {
+                                x: 1
+                            }
+                        }, o.createElement("div", {
+                            key: "ChannelTabLink",
+                            id: "emote-picker__channel",
+                            className: a,
+                            onClick: e.channelTabEnabled ? e.selectChannelTab : void 0,
+                            onKeyPress: e.channelTabEnabled ? e.selectChannelTabKeypress : void 0,
+                            "data-a-target": "emote-channel-tab",
+                            tabIndex: 0
+                        }, o.createElement("span", null, Object(L.d)("Channel", "EmotePicker"))))
+                    }
+                    if (e.allTabVisible) {
+                        var s = I(r.__assign({}, t, {
+                            "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
+                        }));
+                        i = o.createElement(l.Na, {
+                            padding: {
+                                x: 1
+                            }
+                        }, o.createElement("div", {
+                            key: "allTabLink",
+                            id: "emote-picker__all",
+                            className: s,
+                            onClick: e.selectAllTab,
+                            onKeyPress: e.selectAllTabKeypress,
+                            "data-a-target": "emote-all-tab",
+                            tabIndex: 0
+                        }, o.createElement("span", null, Object(L.d)("All", "EmotePicker"))))
+                    }
+                    return o.createElement(l.xb, {
+                        background: l.r.Base,
+                        borderTop: !0,
+                        className: "emote-picker__tabs-container"
+                    }, n, i)
+                }),
+                U = n("DnOo"),
+                A = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        var e = [];
+                        if (this.props.subscribeTexts)
+                            for (var t = 0; t <= this.props.plan.level; t++) {
+                                var n = this.props.subscribeTexts[t];
+                                n && (t < this.props.plan.level ? (e.push(o.createElement("span", {
+                                    key: "upsell-predicate:" + t
+                                }, n)), e.push(o.createElement("span", {
+                                    key: "upsell-plus:" + t
+                                }, " + "))) : this.props.plan.level > 0 ? e.push(o.createElement("strong", {
+                                    key: "upsell-strong-end:" + this.props.plan.level
+                                }, n)) : e.push(o.createElement("span", {
+                                    key: "upsell-end:" + t
+                                }, n)))
+                            }
+                        if (!this.props.plan.emoteSetID) return null;
+                        var i = {
+                                id: this.props.plan.emoteSetID,
+                                emotes: this.props.plan.emotes || []
+                            },
+                            r = {};
+                        if (this.props.plan.tier) {
+                            var a = Object(T.a)(this.props.plan.tier);
+                            null === a && (a = 1), r.purchase = Object(s.d)("Tier { tierNum }", {
+                                tierNum: a
+                            }, "assembleSubscribeTexts")
+                        }
+                        return o.createElement(l.Va, {
+                            className: "emote-picker-plan-upsell",
+                            display: l.W.Flex,
+                            flexDirection: l.Y.Column,
+                            alignItems: l.f.Center,
+                            margin: {
+                                bottom: 1
+                            }
+                        }, o.createElement(M.a, {
+                            emotes: i.emotes,
+                            locked: !0
+                        }), o.createElement(l.Va, {
+                            margin: 1,
+                            alignItems: l.f.Center
+                        }, e), o.createElement(U.a, {
+                            isSubbedToTier: !1,
+                            tierPrice: r.purchase || "",
+                            handleSubAction: this.props.handleSubAction,
+                            productName: this.props.plan.name,
+                            url: this.props.plan.url,
+                            isEsportChannel: this.props.isEsportChannel
+                        }))
+                    }, t
+                }(o.Component),
+                P = (n("JGCS"), function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.channelTabSelectionKeypress = function(e) {
+                            R(e) && n.selectChannelTab(e)
+                        }, n.allTabSelectionKeypress = function(e) {
+                            R(e) && n.selectAllTab(e)
+                        }, n.onClickEmote = function(e) {
+                            if (n.props.onClickEmote) {
+                                n.props.onClickEmote(e.displayName || e.token, e.id);
+                                var t = {
+                                    channel_id: n.props.channelID,
+                                    chatroom_id: n.props.roomID,
+                                    emote_picker_sid: n.props.emotePickerSessionID,
+                                    emote_id: e.id,
+                                    emoticon_set_id: e.setID,
+                                    generated_by: n.props.emotePickerSource
+                                };
+                                s.n.track(j.SpadeEventType.EmotePickerClickthrough, t)
+                            }
+                        }, n.closeOnEsc = function(e) {
+                            e.keyCode === V.a.Esc && n.props.toggleVisibility()
+                        }, n.handleFilterChange = function(e) {
+                            var t = e.target.value,
+                                i = t.toLowerCase(),
+                                r = n.filterAvailableUpsells(n.props.availableUpsells, i),
+                                o = n.filterEmoteSets(n.props.ownedChannelEmoteSets, i);
+                            n.setState({
+                                filter: i,
+                                filteredAllEmoteSets: n.filterEmoteSets(n.props.allEmoteSets, i),
+                                filteredAvailableUpsells: r,
+                                filteredOwnedChannelEmoteSets: o,
+                                inputValue: t,
+                                channelTabEnabled: o.length > 0 || r.length > 0
+                            })
+                        }, n.state = {
+                            filter: "",
+                            filteredOwnedChannelEmoteSets: t.ownedChannelEmoteSets,
+                            filteredAvailableUpsells: t.availableUpsells,
+                            filteredAllEmoteSets: t.allEmoteSets,
+                            inputValue: "",
+                            channelTabSelected: !0,
+                            channelTabEnabled: t.ownedChannelEmoteSets.length > 0 || t.availableUpsells.length > 0
+                        }, n.selectAllTab = function() {
+                            return n.setChannelTabSelected(!1)
+                        }, n.selectChannelTab = function() {
+                            return n.setChannelTabSelected(!0)
+                        }, n
+                    }
+                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                        if (e.channelID && e.emotePickerSessionID && !this.props.emotePickerSessionID) {
+                            var t = {
+                                channel_id: e.channelID,
+                                emote_picker_sid: e.emotePickerSessionID,
+                                generated_by: e.emotePickerSource,
+                                chatroom_id: e.roomID
+                            };
+                            s.n.track(j.SpadeEventType.ViewedEmotePicker, t)
+                        }
+                        if (!e.gqlError)
+                            if (this.state.filter.length > 0) {
+                                var n = this.filterAvailableUpsells(this.props.availableUpsells, this.state.filter),
+                                    i = this.filterEmoteSets(this.props.ownedChannelEmoteSets, this.state.filter);
+                                this.setState({
+                                    filteredAllEmoteSets: this.filterEmoteSets(this.props.allEmoteSets, this.state.filter),
+                                    filteredAvailableUpsells: n,
+                                    filteredOwnedChannelEmoteSets: i,
+                                    channelTabEnabled: i.length > 0 || n.length > 0
+                                })
+                            } else this.setState({
+                                filteredOwnedChannelEmoteSets: e.ownedChannelEmoteSets,
+                                filteredAvailableUpsells: e.availableUpsells,
+                                filteredAllEmoteSets: e.allEmoteSets,
+                                channelTabEnabled: e.ownedChannelEmoteSets.length > 0 || e.availableUpsells.length > 0
+                            })
+                    }, t.prototype.render = function() {
+                        return o.createElement(l.u, {
+                            "data-a-target": "emote-picker",
+                            direction: this.props.direction ? this.props.direction : l.v.TopRight,
+                            size: this.props.size ? this.props.size : l.w.Medium,
+                            noTail: !0,
+                            show: !0
+                        }, o.createElement(l.Va, {
+                            className: I("emote-picker")
+                        }, this.renderTabContent(), o.createElement(l.Va, {
+                            className: "emote-picker__controls-container",
+                            position: l.db.Relative
+                        }, o.createElement(l.xb, {
+                            padding: 1,
+                            borderTop: !0
+                        }, o.createElement(l.Pa, {
+                            autoFocus: !0,
+                            onChange: this.handleFilterChange,
+                            onKeyDown: this.closeOnEsc,
+                            placeholder: Object(s.d)("Search for Emotes", "EmotePicker"),
+                            type: l.Ra.Text,
+                            value: this.state.inputValue
+                        })), o.createElement(F, {
+                            allTabVisible: this.props.allEmoteSets.length > 0,
+                            channelTabEnabled: this.state.channelTabEnabled,
+                            channelTabSelected: this.state.channelTabSelected,
+                            channelTabVisible: !!this.props.channelTabVisible,
+                            selectAllTab: this.selectAllTab,
+                            selectAllTabKeypress: this.allTabSelectionKeypress,
+                            selectChannelTab: this.selectChannelTab,
+                            selectChannelTabKeypress: this.channelTabSelectionKeypress
+                        }))))
+                    }, t.prototype.renderTabContent = function() {
+                        var e = this,
+                            t = [];
+                        if (this.props.gqlError) t.push(o.createElement(l.Va, {
+                            key: "emotePicker-error"
+                        }, o.createElement(l.V, {
+                            color: l.O.Error
+                        }, Object(s.d)("Unable to load available emotes.", "EmotePicker"))));
+                        else if (this.props.loading) t.push(o.createElement(l.Va, {
+                            alignItems: l.f.Center,
+                            display: l.W.Flex,
+                            key: "loading",
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            justifyContent: l.Ua.Center
+                        }, o.createElement(l.Xa, {
+                            key: "LoadingSpinner"
+                        })));
+                        else if (this.state.channelTabEnabled && this.state.channelTabSelected) {
+                            if (this.state.filteredOwnedChannelEmoteSets.length > 0) {
+                                var n = this.state.filteredOwnedChannelEmoteSets[0].emotes.map(function(t) {
+                                    return t.setID = e.state.filteredOwnedChannelEmoteSets[0].id, t
+                                });
+                                t.push(o.createElement(l.Va, {
+                                    className: "emote-picker__content-block",
+                                    key: "ownedChannelEmoteSets",
+                                    padding: 1,
+                                    position: l.db.Relative
+                                }, o.createElement(M.a, {
+                                    emotes: n,
+                                    onClickEmote: this.onClickEmote,
+                                    locked: !1
+                                })))
+                            }
+                            t = t.concat(this.state.filteredAvailableUpsells.map(function(t) {
+                                return o.createElement(l.Va, {
+                                    className: "emote-picker__content-block",
+                                    key: "planUpsell:" + t.level,
+                                    padding: 1,
+                                    position: l.db.Relative
+                                }, o.createElement(A, {
+                                    plan: t,
+                                    isEsportChannel: e.props.isEsportChannel,
+                                    subscribeTexts: e.props.subscribeTexts,
+                                    handleSubAction: e.props.handleSubAction
+                                }))
+                            }))
+                        } else t = this.state.filteredAllEmoteSets.map(function(t) {
+                            var n = [];
+                            return t.emotes.forEach(function(e) {
+                                e.setID = t.id, n.push(e)
+                            }), o.createElement(l.Va, {
+                                key: "emoteGrid" + t.id,
+                                position: l.db.Relative,
+                                padding: {
+                                    top: 1,
+                                    bottom: 2
+                                },
+                                className: "emote-picker__content-block"
+                            }, o.createElement(M.a, {
+                                emotes: n,
+                                onClickEmote: e.onClickEmote,
+                                locked: !1
+                            }))
+                        });
+                        return t.length > 0 ? o.createElement(x.b, {
+                            className: "emote-picker__tab-content"
+                        }, o.createElement(l.Va, {
+                            padding: 1
+                        }, t)) : null
+                    }, t.prototype.filterEmoteSet = function(e, t) {
+                        return e.filter(function(e) {
+                            return e.token.toLowerCase().includes(t)
+                        })
+                    }, t.prototype.setChannelTabSelected = function(e) {
+                        this.setState({
+                            channelTabSelected: e
+                        })
+                    }, t.prototype.filterEmoteSets = function(e, t) {
+                        for (var n = [], i = 0, r = e; i < r.length; i++) {
+                            var o = r[i],
+                                a = this.filterEmoteSet(o.emotes, t);
+                            a.length > 0 && n.push({
+                                id: o.id,
+                                emotes: a
+                            })
+                        }
+                        return n
+                    }, t.prototype.filterAvailableUpsells = function(e, t) {
+                        for (var n = [], i = 0, o = e; i < o.length; i++) {
+                            var a = o[i];
+                            if (a.emotes) {
+                                var s = this.filterEmoteSet(a.emotes, t);
+                                s.length > 0 && n.push(r.__assign({}, a, {
+                                    emotes: s
+                                }))
+                            }
+                        }
+                        return n
+                    }, t = r.__decorate([Object(D.c)("EmotePickerMenu", {
+                        autoReportInteractive: !0
+                    })], t)
+                }(o.Component)),
+                W = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        return n.onClickEmote = function(e) {
+                            if (n.props.onClickEmote) {
+                                n.props.onClickEmote(e.displayName || e.token, e.id);
+                                var t = {
+                                    channel_id: n.props.channelID,
+                                    chatroom_id: n.props.roomID,
+                                    emote_picker_sid: n.props.emotePickerSessionID,
+                                    emote_id: e.id,
+                                    emoticon_set_id: e.setID,
+                                    generated_by: n.props.emotePickerSource
+                                };
+                                s.n.track(j.SpadeEventType.EmotePickerClickthrough, t)
+                            }
+                        }, n.handleFilterChange = function(e) {
+                            var t = e.target.value,
+                                i = t.toLowerCase();
+                            n.setState({
+                                filter: i,
+                                inputValue: t,
+                                filteredEmotes: n.filterEmoteSets(n.props.allEmoteSets, i)
+                            })
+                        }, n.filterEmoteSets = function(e, t) {
+                            var n = [];
+                            e.forEach(function(e) {
+                                e.emotes.filter(function(e) {
+                                    return e.token.toLowerCase().includes(t)
+                                }).forEach(function(t) {
+                                    t.setID = e.id, n.push(t)
+                                })
+                            });
+                            var i = Object(E.d)(),
+                                r = 0 === Object.keys(i).length ? void 0 : i;
+                            return Object(_.f)(n, t, r)
+                        }, n.state = {
+                            filter: "",
+                            filteredEmotes: [],
+                            inputValue: ""
+                        }, n
+                    }
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        if (this.props.channelID) {
+                            var e = {
+                                channel_id: this.props.channelID,
+                                emote_picker_sid: this.props.emotePickerSessionID,
+                                generated_by: this.props.emotePickerSource,
+                                chatroom_id: this.props.roomID
+                            };
+                            s.n.track(j.SpadeEventType.ViewedEmotePicker, e)
+                        }
+                    }, t.prototype.render = function() {
+                        return o.createElement(a.a, {
+                            onClickOut: this.props.toggleVisibility
+                        }, o.createElement(l.u, {
+                            "data-a-target": "emote-picker",
+                            direction: this.props.direction ? this.props.direction : l.v.TopRight,
+                            size: this.props.size ? this.props.size : l.w.Medium,
+                            noTail: !0,
+                            show: !0
+                        }, o.createElement(l.Va, {
+                            className: "emote-picker"
+                        }, o.createElement(l.xb, {
+                            padding: {
+                                x: 1,
+                                top: 1
+                            },
+                            borderTop: !0
+                        }, o.createElement(l.Pa, {
+                            autoFocus: !0,
+                            onChange: this.handleFilterChange,
+                            placeholder: Object(s.d)("Search for Emotes", "EmotePickerCard"),
+                            type: l.Ra.Text,
+                            value: this.state.inputValue
+                        })), this.renderTabContent())))
+                    }, t.prototype.renderTabContent = function() {
+                        return this.props.gqlError ? o.createElement(l.Va, null, o.createElement(l.V, {
+                            "data-test-selector": "emote-picker-menu-error-text",
+                            color: l.O.Error
+                        }, Object(s.d)("Unable to load available emotes.", "EmotePickerCard"))) : this.props.loading ? o.createElement(l.Va, {
+                            alignItems: l.f.Center,
+                            display: l.W.Flex,
+                            fullHeight: !0,
+                            fullWidth: !0,
+                            justifyContent: l.Ua.Center
+                        }, o.createElement(l.Xa, null)) : "" !== this.state.filter ? this.renderSearchContent() : o.createElement(x.b, {
+                            className: "emote-picker__tab-content"
+                        }, o.createElement(l.Va, {
+                            padding: {
+                                x: 1
+                            }
+                        }, this.getFrequentEmotesGrid(), this.getChannelEmoteGrid(), this.getResidualEmoteGrids()))
+                    }, t.prototype.getFrequentEmotesGrid = function() {
+                        return this.props.frequentlyUsedEmotes.length > 0 ? o.createElement(l.Va, {
+                            key: "emote-grid--frequent-emotes",
+                            position: l.db.Relative,
+                            padding: {
+                                y: 1
+                            },
+                            className: "emote-picker__content-block"
+                        }, o.createElement(l.Va, {
+                            padding: {
+                                x: 2
+                            }
+                        }, o.createElement(l.V, {
+                            bold: !0,
+                            color: l.O.Alt
+                        }, Object(s.d)("Frequently Used Emotes", "EmotePickerCard"))), o.createElement(M.a, {
+                            emotes: this.props.frequentlyUsedEmotes,
+                            onClickEmote: this.onClickEmote,
+                            locked: !1
+                        })) : null
+                    }, t.prototype.getChannelEmoteGrid = function() {
+                        var e = this.props.channelSubscriptionProducts.reduce(function(e, t) {
+                            return e.concat(t.emotes)
+                        }, []);
+                        return e.length > 0 ? o.createElement(l.Va, {
+                            key: "emote-grid--channel-emotes",
+                            position: l.db.Relative,
+                            padding: {
+                                y: 1
+                            },
+                            className: "emote-picker__content-block"
+                        }, o.createElement(l.Va, {
+                            padding: {
+                                x: 2
+                            }
+                        }, o.createElement(l.V, {
+                            bold: !0,
+                            color: l.O.Alt
+                        }, Object(s.d)("ThisChannel Placeholder", "EmotePickerCard"))), o.createElement(M.a, {
+                            emotes: e,
+                            onClickEmote: this.onClickEmote,
+                            locked: !1
+                        })) : null
+                    }, t.prototype.getResidualEmoteGrids = function() {
+                        var e = new Set;
+                        this.props.channelSubscriptionProducts.forEach(function(t) {
+                            t.emoteSetID && e.add(t.emoteSetID)
+                        });
+                        var t = [],
+                            n = [];
+                        this.props.allEmoteSets.filter(function(t) {
+                            return !e.has(t.id)
+                        }).reduce(function(e, t) {
+                            return e.concat(t.emotes)
+                        }, []).forEach(function(e) {
+                            "0" === e.setID ? t.push(e) : n.push(e)
+                        });
+                        var i = [];
+                        return n.length > 0 && i.push(o.createElement(l.Va, {
+                            key: "emote-grid--non-global-emotes",
+                            position: l.db.Relative,
+                            padding: {
+                                y: 1
+                            },
+                            className: "emote-picker__content-block"
+                        }, o.createElement(l.Va, {
+                            padding: {
+                                x: 2
+                            }
+                        }, o.createElement(l.V, {
+                            bold: !0,
+                            color: l.O.Alt
+                        }, Object(s.d)("Placeholder for Residual Emotes", "EmotePickerCard"))), o.createElement(M.a, {
+                            emotes: n,
+                            onClickEmote: this.onClickEmote,
+                            locked: !1
+                        }))), t.length > 0 && i.push(o.createElement(l.Va, {
+                            key: "emote-grid--global-emotes",
+                            position: l.db.Relative,
+                            padding: {
+                                y: 1
+                            },
+                            className: "emote-picker__content-block"
+                        }, o.createElement(l.Va, {
+                            padding: {
+                                x: 2
+                            }
+                        }, o.createElement(l.V, {
+                            bold: !0,
+                            color: l.O.Alt
+                        }, Object(s.d)("Global Twitch Emotes", "EmotePickerCard"))), o.createElement(M.a, {
+                            emotes: t,
+                            onClickEmote: this.onClickEmote,
+                            locked: !1
+                        }))), o.createElement(o.Fragment, null, i)
+                    }, t.prototype.renderSearchContent = function() {
+                        var e;
+                        return e = this.state.filteredEmotes.length > 0 ? o.createElement(l.V, null, Object(s.d)('Search Results for "{inputValue}"', {
+                            inputValue: this.state.inputValue
+                        }, "EmotePickerCard")) : o.createElement(l.V, null, Object(s.d)('No Search Results for "{inputValue}"', {
+                            inputValue: this.state.inputValue
+                        }, "EmotePickerCard")), o.createElement(x.b, {
+                            className: "emote-picker__tab-content"
+                        }, o.createElement(l.Va, {
+                            padding: 1
+                        }, o.createElement(l.Va, {
+                            position: l.db.Relative,
+                            padding: {
+                                top: 1,
+                                bottom: 2
+                            },
+                            className: "emote-picker__content-block"
+                        }, e, o.createElement(M.a, {
+                            emotes: this.state.filteredEmotes,
+                            onClickEmote: this.onClickEmote,
+                            locked: !1
+                        }))))
+                    }, t
+                }(o.Component),
+                B = n("DB+C"),
+                G = function(e) {
+                    function t(t) {
+                        var n = e.call(this, t) || this;
+                        n.handleSubEvent = function(e) {
+                            e.action === N.a.ClickCheckout && n.checkAndDisplaySubscriptionCheckout(), Object(N.b)(r.__assign({}, e, {
+                                action: N.a.ClickCheckout,
+                                channelID: n.props.channelData && n.props.channelData.user && n.props.channelData.user.id || "",
+                                channelLogin: n.props.channelData && n.props.channelData.user && n.props.channelData.user.displayName || "",
+                                isMenuOpen: null,
+                                hasSubCredit: null,
+                                sub_location: "emote_picker",
+                                modal: !1,
+                                showPrimeContent: !0,
+                                giftRecipient: null
+                            }))
+                        };
+                        var i = {
+                            allEmoteSets: [],
+                            availableUpsells: [],
+                            channelSubscriptionProducts: [],
+                            channelTabVisible: !1,
+                            frequentlyUsedEmotes: [],
+                            gqlError: t.emoteSetsData && !!t.emoteSetsData.error || t.channelData && !!t.channelData.error || !1,
+                            gqlLoading: t.emoteSetsData && !!t.emoteSetsData.loading || t.channelData && !!t.channelData.loading || !1,
+                            subscribeTexts: [],
+                            ownedChannelEmoteSets: [],
+                            ownedSetIDs: new Set([])
+                        };
+                        return i = n.applyDataPropsToState(t, i), n.state = r.__assign({}, i), n
+                    }
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        Object(E.b)(), this.checkDataLoaded(this.props) && (this.props.onLoad && this.props.onLoad(this.checkForContent(this.props)), this.props.latencyTracking.reportInteractive())
+                    }, t.prototype.componentWillReceiveProps = function(e) {
+                        if (e.emoteSetsData && e.emoteSetsData.error || e.channelData && e.channelData.error) this.setState({
+                            gqlError: !0
+                        });
+                        else {
+                            var t = this.applyDataPropsToState(e, this.state);
+                            this.props.pubsub.messages.subscriptionInfo !== e.pubsub.messages.subscriptionInfo && (this.props.channelData && this.props.channelData.refetch(), this.props.emoteSetsData && this.props.emoteSetsData.refetch()), this.checkDataLoaded(e) && (e.latencyTracking.reportInteractive(), e.onLoad && e.onLoad(this.checkForContent(e)), t.gqlLoading = !1), this.setState(r.__assign({}, t, {
+                                gqlError: !1
+                            }))
+                        }
+                        e.visible && !this.props.visible ? (this.props.openEmotePicker(), this.setState({
+                            frequentlyUsedEmotes: Object(E.c)()
+                        })) : this.props.visible && !e.visible && this.props.closeEmotePicker()
+                    }, t.prototype.componentWillUnmount = function() {
+                        this.props.closeEmotePicker()
+                    }, t.prototype.render = function() {
+                        if (!this.props.visible) return null;
+                        var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.campaignProperties && this.props.channelData.user.campaignProperties.domains && this.props.channelData.user.campaignProperties.domains.length > 0 || !1,
+                            t = o.createElement(P, {
+                                allEmoteSets: this.state.allEmoteSets,
+                                availableUpsells: this.state.availableUpsells,
+                                channelTabVisible: this.state.channelTabVisible,
+                                channelID: this.props.channelOwnerID,
+                                direction: this.props.direction,
+                                emotePickerSessionID: this.props.emotePickerSessionID,
+                                emotePickerSource: this.props.emotePickerSource,
+                                gqlError: this.state.gqlError,
+                                handleSubAction: this.handleSubEvent,
+                                isEsportChannel: e,
+                                loading: this.state.gqlLoading,
+                                onClickEmote: this.props.onClickEmote,
+                                ownedChannelEmoteSets: this.state.ownedChannelEmoteSets,
+                                roomID: this.props.roomID,
+                                size: this.props.size,
+                                subscribeTexts: this.state.subscribeTexts,
+                                toggleVisibility: this.props.toggleVisibility
+                            }),
+                            n = o.createElement(W, {
+                                allEmoteSets: this.state.allEmoteSets,
+                                channelID: this.props.channelOwnerID,
+                                channelSubscriptionProducts: this.state.channelSubscriptionProducts,
+                                direction: this.props.direction,
+                                emotePickerSessionID: this.props.emotePickerSessionID,
+                                emotePickerSource: this.props.emotePickerSource,
+                                frequentlyUsedEmotes: this.state.frequentlyUsedEmotes,
+                                gqlError: this.state.gqlError,
+                                loading: this.state.gqlLoading,
+                                onClickEmote: this.props.onClickEmote,
+                                roomID: this.props.roomID,
+                                size: this.props.size,
+                                toggleVisibility: this.props.toggleVisibility
+                            });
+                        return o.createElement(p.a, {
+                            assignments: {
+                                fallback: function() {
+                                    return t
+                                },
+                                off: function() {
+                                    return t
+                                },
+                                on: function() {
+                                    return n
+                                }
+                            },
+                            name: y.b.EmotePickerV2
+                        })
+                    }, t.prototype.checkDataLoaded = function(e) {
+                        var t = !e.channelOwnerID || e.channelData && !e.channelData.loading,
+                            n = !e.isLoggedIn || e.emoteSetsData && !e.emoteSetsData.loading;
+                        return t && n
+                    }, t.prototype.checkForContent = function(e) {
+                        var t = e.emoteSetsData && e.emoteSetsData.emoteSets && e.emoteSetsData.emoteSets.length > 0 || !1,
+                            n = e.channelData && e.channelData.user && e.channelData.user.subscriptionProducts.filter(this.subscriptionProductHasEmotes).length > 0 || !1;
+                        return t || n
+                    }, t.prototype.applyDataPropsToState = function(e, t) {
+                        var n = r.__assign({}, t);
+                        if (e.emoteSetsData && e.emoteSetsData.emoteSets) {
+                            n.ownedSetIDs = new Set;
+                            for (var i = 0, o = e.emoteSetsData.emoteSets; i < o.length; i++) {
+                                var a = o[i];
+                                a && a.id && n.ownedSetIDs.add(parseInt(a.id, 10))
+                            }
+                            n.allEmoteSets = Object(_.a)(e.emoteSetsData.emoteSets)
+                        }
+                        if (e.channelData && e.channelData.user) {
+                            var l = void 0;
+                            e.channelData.user.self && e.channelData.user.self.subscriptionBenefit && (l = e.channelData.user.self.subscriptionBenefit.platform), n.availableUpsells = function(e, t, n) {
+                                var i = [];
+                                return !n || n !== w.b.IOS && n !== w.b.Android ? (t.forEach(function(n, o) {
+                                    var a = n.price;
+                                    0 === o && Object(O.g)(t) && (a = Object(O.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && i.push(r.__assign({}, n, {
+                                        emotes: Object(_.e)(n.emotes, n.emoteSetID),
+                                        level: o,
+                                        price: a
+                                    }))
+                                }), i) : i
+                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts, l), n.channelSubscriptionProducts = function(e, t) {
+                                return t.map(function(t) {
+                                    return t.emotes && t.emoteSetID && !e.has(parseInt(t.emoteSetID, 10)) ? r.__assign({}, t, {
+                                        emotes: t.emotes.map(function(e) {
+                                            return r.__assign({}, e, {
+                                                isLocked: !0
+                                            })
+                                        })
+                                    }) : t
+                                }).map(function(e) {
+                                    return r.__assign({}, e, {
+                                        emotes: Object(_.e)(e.emotes, e.emoteSetID)
+                                    })
+                                })
+                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.subscribeTexts = function(e) {
+                                for (var t = [], n = 0; n < e.length; n++) {
+                                    var i = e[n],
+                                        r = Object(T.a)(i.tier);
+                                    null === r && (r = 1), 0 === n && i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("Unlock {numEmotes, number} Sub Emotes", {
+                                        numEmotes: i.emotes.length
+                                    }, "assembleSubscribeTexts") : 0 === n ? t[n] = Object(s.d)("Unlock 1 Sub Emote", "assembleSubscribeTexts") : i.emotes && i.emotes.length > 1 ? t[n] = Object(s.d)("{numEmotes, number} Extra Tier {tier} Sub Emotes", {
+                                        numEmotes: i.emotes.length,
+                                        tier: r
+                                    }, "assembleSubscribeTexts") : i.emotes && i.emotes.length && (t[n] = Object(s.d)("1 Extra Tier {tier} Sub Emote", {
+                                        tier: r
+                                    }, "assembleSubscribeTexts"))
+                                }
+                                return t
+                            }(e.channelData.user.subscriptionProducts), n.ownedChannelEmoteSets = function(e, t) {
+                                for (var n = [{
+                                        id: "0",
+                                        emotes: []
+                                    }], i = 0, r = t; i < r.length; i++) {
+                                    var o = r[i];
+                                    o.emotes && o.emoteSetID && e.has(parseInt(o.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(_.e)(o.emotes, o.emoteSetID)))
+                                }
+                                return n[0].emotes.length ? n : []
+                            }(n.ownedSetIDs, e.channelData.user.subscriptionProducts)
+                        }
+                        return n.channelTabVisible = e.channelData && e.channelData.user && e.channelData.user.subscriptionProducts.filter(this.subscriptionProductHasEmotes).length > 0 || !1, n
+                    }, t.prototype.subscriptionProductHasEmotes = function(e) {
+                        return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
+                    }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
+                        if ("yes" === s.o.experiments.getAssignment(y.b.InstreamCheckout)) {
+                            var e = s.m.get(v.b, ""),
+                                t = s.m.get(v.c, ""),
+                                n = s.m.get(v.a, ""),
+                                i = Number(n);
+                            e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
+                                return e.name
+                            }).includes(e) ? this.props.sessionUser ? this.props.showSubscriptionCheckoutModal({
+                                recipientLogin: t,
+                                productName: e,
+                                mysteryGiftCount: i
+                            }) : this.props.showLoginModal() : Object(v.d)())
+                        }
+                    }, t
+                }(o.Component);
+            var H = Object(d.compose)(Object(i.connect)(function(e) {
+                    return {
+                        currentUserID: e.session.user && e.session.user.id,
+                        emotePickerSessionID: e.chat && e.chat.emotePickerSessionID || null,
+                        sessionUser: e.session.user,
+                        isLoggedIn: Object(C.f)(e)
+                    }
+                }, function(e) {
+                    return Object(u.bindActionCreators)({
+                        closeEmotePicker: S.A,
+                        openEmotePicker: S.M,
+                        showLoginModal: Object(v.e)(b.a.EmotePickerSubscriptionButton),
+                        showSubscriptionCheckoutModal: function(e) {
+                            var t = r.__rest(e, []);
+                            return Object(k.d)(m.a, {
+                                component: "CheckoutModal",
+                                loader: function() {
+                                    return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "KJv/"))
+                                },
+                                componentProps: t
+                            })
+                        }
+                    }, e)
+                }), Object(h.a)(B, {
+                    name: "channelData",
+                    skip: function(e) {
+                        return !e.channelOwnerID
+                    },
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelOwnerID: e.channelOwnerID
+                            }
+                        }
+                    }
+                }), Object(f.a)([{
+                    topic: function(e) {
+                        return "user-subscribe-events-v1." + e.currentUserID
+                    },
+                    mapMessageTypesToProps: {
+                        "*": "subscriptionInfo"
+                    },
+                    skip: function(e) {
+                        return !e.currentUserID
+                    }
+                }]), Object(D.c)("EmotePicker"), Object(g.a)())(G),
+                z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -18261,7 +18426,7 @@
                             onClick: this.toggleEmotePicker
                         }));
                         var t = null;
-                        this.hasInteractedOrPageload && (t = o.createElement(d.a, {
+                        this.hasInteractedOrPageload && (t = o.createElement(H, {
                             channelOwnerID: this.props.channelOwnerID,
                             emotePickerSource: this.props.emotePickerSource,
                             onClickEmote: this.onClickEmote,
@@ -18297,25 +18462,24 @@
                         configurable: !0
                     }), t
                 }(o.Component),
-                m = Object(u.c)("EmotePicker")(p);
-            var h = Object(i.connect)(function(e) {
-                    return {
-                        firstPageLoaded: e.session.firstPageLoaded
-                    }
-                })(m),
-                f = n("cpJf");
+                q = Object(D.c)("EmotePicker")(z);
+            var Q = Object(i.connect)(function(e) {
+                return {
+                    firstPageLoaded: e.session.firstPageLoaded
+                }
+            })(q);
             n.d(t, "a", function() {
-                return h
+                return Q
             }), n.d(t, "c", function() {
-                return d.a
+                return H
             }), n.d(t, !1, function() {
-                return f.a
+                return w.a
             }), n.d(t, !1, function() {
-                return f.d
+                return w.d
             }), n.d(t, !1, function() {
-                return f.c
+                return w.c
             }), n.d(t, !1, function() {
-                return f.b
+                return w.b
             }), n.d(t, "b", function() {
                 return c
             })
@@ -18781,8 +18945,8 @@
                 })(k),
                 C = n("oJmH"),
                 S = n("eJ65"),
-                _ = n("yR8l"),
-                E = n("QzU5"),
+                E = n("yR8l"),
+                _ = n("QzU5"),
                 w = n("vRsq"),
                 O = n("GnwI"),
                 T = n("RQ6e"),
@@ -18860,7 +19024,7 @@
                             }, Object(m.d)("Report", "VideoOptions"))
                         }
                     }, t.prototype.renderHighlightOption = function(e, t) {
-                        if (e.broadcastType === E.a.Archive && (this.isVODOwner(e, t) || this.isEditor()) && e.owner) return f.createElement(I.a, {
+                        if (e.broadcastType === _.a.Archive && (this.isVODOwner(e, t) || this.isEditor()) && e.owner) return f.createElement(I.a, {
                             key: "highlight-option",
                             interactableProps: {
                                 linkTo: Object(N.c)(e.owner.login, e.id)
@@ -18883,7 +19047,7 @@
                         return e && (n.collection = e), JSON.stringify(n)
                     }, t
                 }(f.Component),
-                R = Object(C.compose)(Object(_.a)(x, {
+                R = Object(C.compose)(Object(E.a)(x, {
                     options: function(e) {
                         return {
                             variables: {
@@ -19237,7 +19401,7 @@
             ! function(e) {
                 e.Input = "input", e.TextArea = "textarea"
             }(i || (i = {}));
-            var _ = function(e) {
+            var E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -19378,7 +19542,7 @@
                         registerAutocompleteProvider: o.func
                     }, t
                 }(a.Component),
-                E = n("lZdE"),
+                _ = n("lZdE"),
                 w = n("OpME"),
                 O = (n("gDzh"), function(e) {
                     function t() {
@@ -19399,7 +19563,7 @@
                                 }).reduce(function(e, t) {
                                     return e.concat(t)
                                 }, []);
-                            return r = Object(w.e)(r), (r = Object(w.f)(r, i)).map(function(e) {
+                            return r = Object(w.d)(r), (r = Object(w.f)(r, i)).map(function(e) {
                                 return {
                                     current: ":" + i,
                                     replacement: e.token,
@@ -19407,10 +19571,10 @@
                                 }
                             })
                         }, t.doesEmoteMatchTerm = function(e, t) {
-                            var n = new RegExp("^" + Object(E.a)(t), "i");
+                            var n = new RegExp("^" + Object(_.a)(t), "i");
                             if (e.token.match(n)) return !0;
-                            var i = new RegExp("" + Object(E.a)(t.charAt(0)).toUpperCase()),
-                                r = new RegExp("^" + Object(E.a)(t.slice(1)), "i"),
+                            var i = new RegExp("" + Object(_.a)(t.charAt(0)).toUpperCase()),
+                                r = new RegExp("^" + Object(_.a)(t.slice(1)), "i"),
                                 o = e.token.match(i);
                             return !!(o && o.index && e.token.slice(o.index + 1).match(r))
                         }, t.renderEmoteSuggestion = function(e) {
@@ -19456,7 +19620,7 @@
                     }, t
                 }(a.Component));
             n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "b", function() {
-                return _
+                return E
             }), n.d(t, "a", function() {
                 return i
             }), n.d(t, !1, function() {}), n.d(t, "d", function() {
@@ -19493,7 +19657,7 @@
                                 }, e
                             }, {})
                         }(e.emoticons),
-                        o = Object(s.f)(i, r, e.bits_spent || 0, n, !1, t);
+                        o = Object(s.e)(i, r, e.bits_spent || 0, n, !1, t);
                     return {
                         id: "1",
                         isAction: e.is_action,
@@ -20080,8 +20244,8 @@
                 y = n("mmRu"),
                 C = n("cpJf"),
                 S = n("OpME"),
-                _ = n("/MKj"),
-                E = n("ZuiC"),
+                E = n("/MKj"),
+                _ = n("ZuiC"),
                 w = n("fI4C"),
                 O = (n("UZgS"), function(e) {
                     function t() {
@@ -20153,7 +20317,7 @@
                     }, t
                 }(o.Component)),
                 T = Object(d.c)("ChatSettings")(O);
-            var D, N = Object(_.connect)(function(e) {
+            var D, N = Object(E.connect)(function(e) {
                     return {
                         isReplayFilterOn: e.vodChat.comments.isReplayFilterOn,
                         hideTimestamps: e.vodChat.comments.hideTimestamps
@@ -20164,13 +20328,13 @@
                             Object(w.m)({
                                 setting: w.c,
                                 value: t ? w.b : w.a
-                            }), e(Object(E.C)(t))
+                            }), e(Object(_.C)(t))
                         },
                         onTimestampModeChange: function(t) {
                             Object(w.m)({
                                 setting: w.d,
                                 value: t ? w.b : w.a
-                            }), e(Object(E.F)(t))
+                            }), e(Object(_.F)(t))
                         }
                     }
                 })(T),
@@ -20332,7 +20496,7 @@
                 P = n("GCGb"),
                 W = n("fCiU"),
                 B = n("cr+I"),
-                H = function(e, t) {
+                G = function(e, t) {
                     var n = new URL("https://www.twitch.tv/videos/" + e);
                     if (t) {
                         var i = B.stringify(t);
@@ -20340,7 +20504,7 @@
                     }
                     return n
                 },
-                G = n("Addw"),
+                H = n("Addw"),
                 z = "ban-user",
                 q = "delete-comment-button",
                 Q = "reply-button",
@@ -20492,10 +20656,10 @@
                         }, t.onShareClick = function() {
                             var e = t.props.context.comment,
                                 n = e.contentId,
-                                i = H(n, {
+                                i = G(n, {
                                     tt_medium: "video_chat",
                                     tt_content: "message_share_link",
-                                    t: Object(G.a)(e.contentOffset),
+                                    t: Object(H.a)(e.contentOffset),
                                     comment: e.id
                                 });
                             return Object(A.a)(i.toString()), t.setState({
@@ -21537,10 +21701,10 @@
                 y = n("WytW"),
                 C = n("F6GT"),
                 S = n("x0gr"),
-                _ = l.a.wrap(function() {
+                E = l.a.wrap(function() {
                     return n.e(185).then(n.bind(null, "8MX0"))
                 }, "ChatSettingsComponent"),
-                E = function(e) {
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -21600,9 +21764,9 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(_.Preload, null), r.createElement(x, {
+                        return r.createElement(r.Fragment, null, r.createElement(E.Preload, null), r.createElement(x, {
                             onToggle: this.handleSettingsToggle
-                        }, this.state.shouldMountChild && r.createElement(_, {
+                        }, this.state.shouldMountChild && r.createElement(E, {
                             authToken: this.props.authToken,
                             darkModeEnabled: this.props.darkModeEnabled,
                             editAppearance: this.state.editAppearance,
@@ -21669,7 +21833,7 @@
                         },
                         onShowViewerCard: b.e
                     }, e)
-                })(E),
+                })(_),
                 O = Object(a.a)(w),
                 T = n("/7QA"),
                 D = n("eJ65"),
@@ -23716,7 +23880,7 @@
             }), n.d(t, "i", function() {
                 return C
             }), n.d(t, "d", function() {
-                return E
+                return _
             }), n.d(t, "f", function() {
                 return w
             }), n.d(t, "e", function() {
@@ -23821,7 +23985,7 @@
                                 case 1:
                                     return i.sent(), e.dispatch(Object(a.t)({
                                         comment: t
-                                    })), e.dispatch(Object(c.b)(_, {
+                                    })), e.dispatch(Object(c.b)(E, {
                                         comment: t
                                     })), [3, 3];
                                 case 2:
@@ -23872,7 +24036,7 @@
                         })
                     })
                 },
-                _ = function(e, t, n, a) {
+                E = function(e, t, n, a) {
                     return i.__awaiter(void 0, void 0, void 0, function() {
                         var s, l;
                         return i.__generator(this, function(i) {
@@ -23889,14 +24053,14 @@
                                 case 1:
                                     return s = i.sent().data, a.track(o.SpadeEventType.ChommentDeleted, Object(d.g)(t, e.getState(), s)), [3, 3];
                                 case 2:
-                                    return l = i.sent(), r.j.error(l, _.name), [3, 3];
+                                    return l = i.sent(), r.j.error(l, E.name), [3, 3];
                                 case 3:
                                     return [2]
                             }
                         })
                     })
                 },
-                E = function(e, t, n, a) {
+                _ = function(e, t, n, a) {
                     return i.__awaiter(void 0, void 0, void 0, function() {
                         var s, l;
                         return i.__generator(this, function(i) {
@@ -23911,7 +24075,7 @@
                                 case 1:
                                     return s = i.sent().data, a.track(o.SpadeEventType.ChommentUIAction, Object(d.e)(t, e.getState(), s)), [3, 3];
                                 case 2:
-                                    return l = i.sent(), r.j.error(l, E.name), [3, 3];
+                                    return l = i.sent(), r.j.error(l, _.name), [3, 3];
                                 case 3:
                                     return [2]
                             }
@@ -24130,10 +24294,10 @@
                 y = n("pwkZ"),
                 C = n("pq/L");
             n.d(t, "a", function() {
-                return E
+                return _
             });
             var S = 2;
-            var _ = Object(r.connect)(function(e, t) {
+            var E = Object(r.connect)(function(e, t) {
                     var n = {
                         comments: [],
                         currentVideoTime: e.vodChat.comments.currentVideoTime,
@@ -24246,7 +24410,7 @@
                         data: n.data
                     })
                 })(y.a),
-                E = Object(o.a)(C, {
+                _ = Object(o.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -24269,7 +24433,7 @@
                             blockedUsers: a
                         })
                     }
-                })(_)
+                })(E)
         },
         zxEZ: function(e, t, n) {
             "use strict";

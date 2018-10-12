@@ -1,79 +1,79 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [102], {
-        "5g1g": function(e, t, n) {
+        "5g1g": function(e, n, t) {
             "use strict";
-            var a = n("mrSG"),
-                o = n("q1tI"),
-                r = n("wUQP"),
+            var a = t("mrSG"),
+                r = t("q1tI"),
+                o = t("wUQP"),
                 i = function(e) {
-                    function t() {
+                    function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.incremental && Object(r.c)(this.props.name) || Object(r.b)(this.props.name) ? this.props.children : null
-                    }, t
-                }(o.Component),
+                    return a.__extends(n, e), n.prototype.render = function() {
+                        return this.props.incremental && Object(o.c)(this.props.name) || Object(o.b)(this.props.name) ? this.props.children : null
+                    }, n
+                }(r.Component),
                 c = i;
-            n.d(t, "b", function() {
+            t.d(n, "b", function() {
                 return i
-            }), n.d(t, "a", function() {
+            }), t.d(n, "a", function() {
                 return c
             })
         },
-        Ints: function(e, t, n) {
+        Ints: function(e, n, t) {
             "use strict";
-            var a = n("oJmH"),
-                o = n("yR8l"),
-                r = n("GnwI"),
-                i = n("cUgj"),
+            var a = t("oJmH"),
+                r = t("yR8l"),
+                o = t("GnwI"),
+                i = t("cUgj"),
                 c = function(e) {
-                    var t = e.data.currentUser && e.data.currentUser.company;
-                    return t && t.brandPortalSettings && t.brandPortalSettings.isEnabled ? e.children : null
+                    var n = e.data.currentUser && e.data.currentUser.company;
+                    return n && n.brandPortalSettings && n.brandPortalSettings.isEnabled ? e.children : null
                 },
-                d = Object(a.compose)(Object(r.c)("DevBountyDashboardFeatureGate", {
+                d = Object(a.compose)(Object(o.c)("DevBountyDashboardFeatureGate", {
                     autoReportInteractive: !0
-                }), Object(o.a)(i))(c);
-            n.d(t, !1, function() {
+                }), Object(r.a)(i))(c);
+            t.d(n, !1, function() {
                 return c
-            }), n.d(t, "a", function() {
+            }), t.d(n, "a", function() {
                 return d
             })
         },
-        PzZ8: function(e, t, n) {
+        PzZ8: function(e, n, t) {
             "use strict";
-            n.r(t);
-            var a = n("/MKj"),
-                o = n("kRBY"),
-                r = n("mrSG"),
-                i = n("q1tI"),
-                c = n("oJmH"),
-                d = n("2INN"),
-                s = n("jKe7"),
-                l = n("/7QA"),
-                u = n("ZS2+"),
-                b = n("5g1g"),
-                m = n("GnwI"),
-                p = n("Ints"),
-                v = n("Ue10"),
-                f = (n("QSSE"), u.a.wrap(function() {
-                    return n.e(106).then(n.bind(null, "Pi1p"))
+            t.r(n);
+            var a = t("/MKj"),
+                r = t("kRBY"),
+                o = t("mrSG"),
+                i = t("q1tI"),
+                c = t("oJmH"),
+                d = t("2INN"),
+                s = t("jKe7"),
+                u = t("/7QA"),
+                l = t("ZS2+"),
+                b = t("5g1g"),
+                m = t("GnwI"),
+                p = t("Ints"),
+                v = t("Ue10"),
+                f = (t("QSSE"), l.a.wrap(function() {
+                    return t.e(106).then(t.bind(null, "Pi1p"))
                 }, "DevLoginPage")),
-                y = u.a.wrap(function() {
-                    return n.e(213).then(n.bind(null, "epaB"))
+                g = l.a.wrap(function() {
+                    return t.e(214).then(t.bind(null, "epaB"))
                 }, "DevBountyBoardCampaignManagerPage"),
-                g = u.a.wrap(function() {
-                    return n.e(212).then(n.bind(null, "aztO"))
+                y = l.a.wrap(function() {
+                    return t.e(213).then(t.bind(null, "aztO"))
                 }, "DevBountyBoardAnalyticsPage"),
                 h = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.isActive = function(e, n) {
-                            void 0 === n && (n = !1);
-                            var a = t.props.match.params.bountyPage || "";
-                            return n ? a === e : a.indexOf(e) > -1
-                        }, t
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.isActive = function(e, t) {
+                            void 0 === t && (t = !1);
+                            var a = n.props.match.params.bountyPage || "";
+                            return t ? a === e : a.indexOf(e) > -1
+                        }, n
                     }
-                    return r.__extends(t, e), t.prototype.render = function() {
+                    return o.__extends(n, e), n.prototype.render = function() {
                         return this.props.isLoggedIn ? i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
                         }, i.createElement(p.a, null, i.createElement(v.Va, {
@@ -101,9 +101,9 @@
                             icon: v.nb.GlyphArrLeft,
                             type: v.F.Text,
                             linkTo: "/console"
-                        }, Object(l.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.V, {
+                        }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.V, {
                             type: v.Nb.H3
-                        }, Object(l.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.xb, {
+                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.xb, {
                             borderTop: !0,
                             margin: {
                                 top: 1
@@ -116,11 +116,7 @@
                             "data-test-selector": "dev-bounty-board-dashboard-campaign-tab-selector",
                             linkTo: "/console/bounty-board",
                             active: this.isActive("", !0)
-                        }, Object(l.d)("Campaign Manager", "DevBountyBoardDashboardRoot")), i.createElement(v.yb, {
-                            "data-test-selector": "dev-bounty-board-dashboard-analytics-tab-selector",
-                            linkTo: "/console/bounty-board/analytics",
-                            active: this.isActive("analytics", !0)
-                        }, Object(l.d)("Analytics", "DevBountyBoardDashboardRoot")))))), i.createElement(v.Va, {
+                        }, Object(u.d)("Campaign Manager", "DevBountyBoardDashboardRoot")))))), i.createElement(v.Va, {
                             "data-test-selector": "dev-bounty-board-dashboard-route-container-selector",
                             className: "dev-dashboard__container",
                             margin: {
@@ -130,30 +126,30 @@
                         }, i.createElement(s.a, null, i.createElement(d.a, {
                             exact: !0,
                             path: "/console/bounty-board",
-                            component: y
+                            component: g
                         }), i.createElement(d.a, {
                             exact: !0,
                             path: "/console/bounty-board/analytics",
-                            component: g
+                            component: y
                         })))))) : i.createElement(f, null)
-                    }, t
+                    }, n
                 }(i.Component),
-                D = Object(c.compose)(Object(m.c)("DevBountyBoardDashboardRootPresentation", {
+                S = Object(c.compose)(Object(m.c)("DevBountyBoardDashboardRootPresentation", {
                     autoReportInteractive: !0
                 }))(h);
-            var B = Object(a.connect)(function(e) {
+            var D = Object(a.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(o.f)(e),
-                    user: Object(o.e)(e)
+                    isLoggedIn: Object(r.f)(e),
+                    user: Object(r.e)(e)
                 }
-            })(D);
-            n.d(t, "DevBountyBoardDashboardRoot", function() {
-                return B
+            })(S);
+            t.d(n, "DevBountyBoardDashboardRoot", function() {
+                return D
             })
         },
-        QSSE: function(e, t, n) {},
-        cUgj: function(e, t) {
-            var n = {
+        QSSE: function(e, n, t) {},
+        cUgj: function(e, n) {
+            var t = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -234,7 +230,7 @@
                     end: 121
                 }
             };
-            n.loc.source = {
+            t.loc.source = {
                 body: "query DevBountyBoardDashboard_UserCompanySettings {\ncurrentUser {\nid\ncompany {\nid\nbrandPortalSettings {\nisEnabled\n}\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -242,42 +238,42 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = t
         },
-        wUQP: function(e, t, n) {
+        wUQP: function(e, n, t) {
             "use strict";
-            n.d(t, "a", function() {
+            t.d(n, "a", function() {
                 return a
-            }), n.d(t, "b", function() {
+            }), t.d(n, "b", function() {
                 return c
-            }), n.d(t, "c", function() {
+            }), t.d(n, "c", function() {
                 return s
             });
-            var a, o, r = n("/7QA"),
-                i = n("kRBY");
+            var a, r, o = t("/7QA"),
+                i = t("kRBY");
 
             function c(e) {
-                var t = r.o.store.getState(),
-                    n = r.b.get(e, a.Off);
-                return !!(n === a.On || n === a.StaffOnly && Object(i.g)(t))
+                var n = o.o.store.getState(),
+                    t = o.b.get(e, a.Off);
+                return !!(t === a.On || t === a.StaffOnly && Object(i.g)(n))
             }! function(e) {
                 e.On = "on", e.Off = "off", e.StaffOnly = "staff"
             }(a || (a = {})),
             function(e) {
                 e[e.Enabled = 1] = "Enabled", e[e.Disabled = 0] = "Disabled"
-            }(o || (o = {}));
+            }(r || (r = {}));
             var d = Math.pow(2, 32);
 
             function s(e) {
-                var t = r.b.get(e, [0, o.Disabled]),
-                    n = t[0],
-                    a = t[1],
-                    c = r.o.session.deviceID,
-                    s = r.o.store.getState();
-                return !(a !== o.Enabled || !Object(i.g)(s)) || function(e, t) {
-                    for (var n = void 0 === t ? 2166136261 : t, a = 0, o = e.length; a < o; a++) n ^= e.charCodeAt(a), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
-                    return n >>> 0
-                }(c + "-" + e) / d < n
+                var n = o.b.get(e, [0, r.Disabled]),
+                    t = n[0],
+                    a = n[1],
+                    c = o.o.session.deviceID,
+                    s = o.o.store.getState();
+                return !(a !== r.Enabled || !Object(i.g)(s)) || function(e, n) {
+                    for (var t = void 0 === n ? 2166136261 : n, a = 0, r = e.length; a < r; a++) t ^= e.charCodeAt(a), t += (t << 1) + (t << 4) + (t << 7) + (t << 8) + (t << 24);
+                    return t >>> 0
+                }(c + "-" + e) / d < t
             }
         }
     }

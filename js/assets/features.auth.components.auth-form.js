@@ -285,7 +285,7 @@
                 T = r("kRBY"),
                 O = r("TSYQ"),
                 M = r("tKDy"),
-                I = function(e) {
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -342,11 +342,11 @@
                         }
                     }, t
                 }(a.PureComponent);
-            var j = Object(C.connect)(function(e) {
+            var I = Object(C.connect)(function(e) {
                     return {
                         languageCode: Object(T.b)(e)
                     }
-                })(I),
+                })(j),
                 P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -364,7 +364,7 @@
                         }))
                     }, t
                 }(a.Component),
-                L = (r("pKR5"), function(e) {
+                _ = (r("pKR5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onEnter = function() {
@@ -405,7 +405,7 @@
                             display: F.W.Flex,
                             justifyContent: F.Ua.Center,
                             className: "captcha-form__captcha"
-                        }, a.createElement(j, {
+                        }, a.createElement(I, {
                             screen: M.c.Captcha,
                             refDelegate: this.onCaptchaRefDelegate,
                             onChange: this.props.onCaptchaChanged
@@ -419,8 +419,8 @@
                         }, Object(s.d)("Continue", "CaptchaForm")))
                     }, t
                 }(a.PureComponent)),
-                V = r("CojT"),
-                _ = r.n(V),
+                L = r("CojT"),
+                V = r.n(L),
                 x = (r("sC5l"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -468,7 +468,7 @@
                             color: F.O.Overlay,
                             fontSize: F.Aa.Size6,
                             "data-a-target": "facebook-button-div"
-                        }, a.createElement(_.a, {
+                        }, a.createElement(V.a, {
                             containerStyle: {
                                 display: "block"
                             },
@@ -1511,9 +1511,9 @@
                         color: F.O.Alt2
                     }, t))))
                 }),
-                Ie = r("YVDj"),
-                je = Object.assign({}, Ie, {
-                    default: Ie
+                je = r("YVDj"),
+                Ie = Object.assign({}, je, {
+                    default: je
                 });
             ! function(e) {
                 e.Day = "D", e.Month = "M", e.Year = "Y"
@@ -1566,7 +1566,7 @@
                 }
                 return o.__extends(t, e), t.prototype.render = function() {
                     var e = function(e) {
-                        var t = je[e.toLowerCase()];
+                        var t = Ie[e.toLowerCase()];
                         return e && t ? [t.substring(0, 1), t.substring(1, 2), t.substring(2, 3)] : [Ce.Month, Ce.Day, Ce.Year]
                     }(this.props.locale);
                     return a.createElement(F.Va, {
@@ -1664,12 +1664,12 @@
                     }, Object(s.d)("December", "BirthdayPicker"))))
                 }, t
             }(a.Component);
-            var Le = Object(C.connect)(function(e) {
+            var _e = Object(C.connect)(function(e) {
                     return {
                         locale: Object(T.d)(e)
                     }
                 })(Pe),
-                Ve = {
+                Le = {
                     1: 31,
                     2: 28,
                     3: 31,
@@ -1683,7 +1683,7 @@
                     11: 30,
                     12: 31
                 },
-                _e = 864e5;
+                Ve = 864e5;
 
             function xe(e) {
                 return !!e && (e.monthInvalid || e.dayInvalid || e.yearInvalid)
@@ -1727,7 +1727,7 @@
                         errorMessage: Object(s.d)("Please enter a valid date.", "BirthdayFormGroup"),
                         validationComponent: this.renderValidIndicator(),
                         hint: !1
-                    }, a.createElement(Le, {
+                    }, a.createElement(_e, {
                         date: this.props.date,
                         onChanged: this.onBirthdayPickerDateChanged,
                         onFocusChanged: this.onBirthdayPickerFocusChanged,
@@ -1849,13 +1849,13 @@
                                             monthInvalid: !1,
                                             yearInvalid: !1
                                         },
-                                        o = Ve[e.toString()];
+                                        o = Le[e.toString()];
                                     2 === e && function(e) {
                                         return e % 4 == 0 && e % 100 != 0 || e % 400 == 0
                                     }(r) && (o = 29);
                                     var a = new Date,
                                         s = new Date(r, e - 1, t);
-                                    return (!o || t > o) && (n.monthInvalid = t <= 31, n.dayInvalid = !0), r < a.getFullYear() - 150 && (n.yearInvalid = !0), s.getTime() - a.getTime() >= -_e && (n.yearInvalid = !0), n
+                                    return (!o || t > o) && (n.monthInvalid = t <= 31, n.dayInvalid = !0), r < a.getFullYear() - 150 && (n.yearInvalid = !0), s.getTime() - a.getTime() >= -Ve && (n.yearInvalid = !0), n
                                 }(e.month, e.day, e.year)
                             })
                         }, t.onUsernameInputChanged = function(e) {
@@ -1972,7 +1972,7 @@
                             errorMessage: this.props.values.emailErrorMessage
                         }))
                     }, t.prototype.renderCaptcha = function() {
-                        return a.createElement(j, {
+                        return a.createElement(I, {
                             screen: M.c.Signup,
                             refDelegate: this.onCaptchaRefDelegate,
                             onChange: this.onCaptchaInputChanged,
@@ -2712,10 +2712,11 @@
                 })
             }
             var tt = r("p46w"),
-                rt = new RegExp(/@(((([^.]+)\.)+)([a-zA-Z]{3,}|[a-zA-Z.]{5,}))/);
-            var nt = "under13";
+                rt = r("7M8a"),
+                nt = new RegExp(/@(((([^.]+)\.)+)([a-zA-Z]{3,}|[a-zA-Z.]{5,}))/);
+            var ot = "under13";
 
-            function ot(e, t) {
+            function at(e, t) {
                 return o.__assign({}, function(e, t) {
                     switch (t) {
                         case p.UserNameMissing:
@@ -2756,7 +2757,7 @@
                                     message: Object(s.d)('Emails using the domain "{domain}" are not allowed.', {
                                         domain: function(e) {
                                             if (!e) return "";
-                                            var t = rt.exec(e);
+                                            var t = nt.exec(e);
                                             return null === t ? "" : t[1]
                                         }(e)
                                     }, "SignupError"),
@@ -2811,7 +2812,7 @@
                                 }
                             };
                         case p.UserUnder13:
-                            return tt.set(nt, "true"), {
+                            return tt.set(ot, "true"), {
                                 serverMessage: {
                                     message: Object(s.d)("Sorry, you must be at least 13 years old to create an account.", "SignupError"),
                                     subMessage: Object(s.d)("Please read our <x:link>terms of service</x:link>.", {
@@ -2844,7 +2845,7 @@
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("This email is associated with too many accounts.", "SignupError"),
-                                    subMessage: at()
+                                    subMessage: st()
                                 },
                                 signupFormServerErrors: {
                                     emailError: !0
@@ -2854,7 +2855,7 @@
                             return {
                                 serverMessage: {
                                     message: Object(s.d)("Unable to create account.", "SignupError"),
-                                    subMessage: at()
+                                    subMessage: st()
                                 },
                                 signupFormServerErrors: {
                                     emailError: !0
@@ -2875,15 +2876,19 @@
                 })
             }
 
-            function at() {
-                return Object(s.d)("Please use a different email to continue.", "SignupError")
+            function st() {
+                return Object(s.d)("Please use a different email to continue. <x:link>Click here</x:link> for more details.", {
+                    "x:link": function(e) {
+                        return Object(Je.k)(e, Object(rt.b)(rt.a.CreatingAccounts))
+                    }
+                }, "SignupError")
             }
-            var st, it = "https://passport.twitch.tv/twofactor/sms/new";
+            var it, ct = "https://passport.twitch.tv/twofactor/sms/new";
             ! function(e) {
                 e[e.UnexpectedError = 3014] = "UnexpectedError", e[e.SMSThrottled = 3015] = "SMSThrottled"
-            }(st || (st = {}));
+            }(it || (it = {}));
             r("IisL");
-            var ct = function(e) {
+            var ut = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3002,7 +3007,7 @@
                                                     return o.__generator(this, function(o) {
                                                         switch (o.label) {
                                                             case 0:
-                                                                return o.trys.push([0, 3, , 4]), (t = new FormData).append("code", e), [4, fetch(it, {
+                                                                return o.trys.push([0, 3, , 4]), (t = new FormData).append("code", e), [4, fetch(ct, {
                                                                     method: "POST",
                                                                     credentials: "include",
                                                                     body: t
@@ -3016,7 +3021,7 @@
                                                                 }];
                                                             case 3:
                                                                 return o.sent(), [2, {
-                                                                    errorCode: st.UnexpectedError,
+                                                                    errorCode: it.UnexpectedError,
                                                                     success: !1
                                                                 }];
                                                             case 4:
@@ -3030,14 +3035,14 @@
                                                 smsRequestState: qe.Success
                                             }) : this.setState(o.__assign({}, function(e) {
                                                 switch (e) {
-                                                    case st.SMSThrottled:
+                                                    case it.SMSThrottled:
                                                         return {
                                                             serverMessage: {
                                                                 message: Object(s.d)("You have requested too many SMS messages.", "SMSError"),
                                                                 subMessage: Object(s.d)("Try again later.", "SMSError")
                                                             }
                                                         };
-                                                    case st.UnexpectedError:
+                                                    case it.UnexpectedError:
                                                     default:
                                                         return {
                                                             serverMessage: {
@@ -3329,7 +3334,7 @@
                                                     signupFormValues: o.__assign({}, r.signupFormValues, {
                                                         captchaValue: void 0
                                                     })
-                                                }, ot(t.state.signupFormValues.email, e.errorCode))
+                                                }, at(t.state.signupFormValues.email, e.errorCode))
                                             }), r.label = 4;
                                         case 4:
                                             return [2, e.errorCode];
@@ -3487,7 +3492,7 @@
                                     margin: {
                                         top: 2
                                     }
-                                }, a.createElement(L, {
+                                }, a.createElement(_, {
                                     onCaptchaChanged: this.onCaptchaChanged,
                                     disableContinueButton: this.state.captchaState.type !== J.Passed,
                                     onContinueClicked: this.onAuthSubmit,
@@ -3510,16 +3515,62 @@
                         return !(!Ne(e, t) || !Object(i.i)() && !this.state.signupFormValues.captchaValue)
                     }, t
                 }(a.Component),
-                ut = Object(pe.c)("AuthForm", {
+                lt = Object(pe.c)("AuthForm", {
                     autoReportInteractive: !0
-                })(ct);
+                })(ut);
             r.d(t, "AUTH_FORM_BACK_SELECTOR", function() {
                 return "auth-form-back"
             }), r.d(t, "AuthFormPresentation", function() {
-                return ct
-            }), r.d(t, "AuthForm", function() {
                 return ut
+            }), r.d(t, "AuthForm", function() {
+                return lt
             })
+        },
+        "7M8a": function(e, t, r) {
+            "use strict";
+            r.d(t, "a", function() {
+                return o
+            }), r.d(t, "b", function() {
+                return l
+            });
+            var n, o, a = r("/7QA"),
+                s = r("kRBY"),
+                i = {
+                    da: "da",
+                    de: "de",
+                    en: "en",
+                    "es-mx": "es",
+                    es: "es_es",
+                    fi: "fi",
+                    fr: "fr",
+                    it: "it",
+                    ja: "ja",
+                    ko: "ko",
+                    nl: "nl",
+                    no: "no",
+                    pl: "pl",
+                    "pt-br": "pt_br",
+                    pt: "pt_br",
+                    ru: "ru",
+                    sv: "sv",
+                    th: "th",
+                    tr: "tr",
+                    vi: "en",
+                    "zh-cn": "zh_cn",
+                    "zh-tw": "zh_tw"
+                },
+                c = Object.keys(i);
+            ! function(e) {
+                e.CreatingAccounts = "658863-creating-an-account", e.SmartNotifications = "2944759"
+            }(o || (o = {}));
+            var u = ((n = {})[o.CreatingAccounts] = ["en", "de"], n[o.SmartNotifications] = c, n);
+
+            function l(e) {
+                var t = Object(s.b)(a.o.store.getState()) || "en",
+                    r = "en",
+                    n = u[e];
+                return n && n.includes(t) && (r = i[t]), "https://help.twitch.tv/customer/" + r + "/portal/articles/" + e
+            }
         },
         CojT: function(e, t, r) {
             e.exports = function(e) {

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [141], {
+    [140], {
         "0eTn": function(e, t, n) {},
         "16Gl": function(e, t, n) {
             "use strict";
@@ -879,7 +879,7 @@
                 },
                 R = "https://help.twitch.tv/customer/portal/articles/2877822";
 
-            function P(e) {
+            function N(e) {
                 var t = e.query,
                     n = e.currentStreamSummary;
                 if (!t.isLoading && !t.streamSummaries.length && t.channel && !n) {
@@ -944,7 +944,7 @@
                 return a.createElement("div", null)
             }
             var I = n("5NYc"),
-                N = (n("wQAB"), n("y/W1")),
+                P = (n("wQAB"), n("y/W1")),
                 L = n("qe41"),
                 M = n("9+Lo"),
                 q = (n("Dm0L"), function(e, t) {
@@ -985,7 +985,7 @@
                         n = e.quest,
                         i = !1;
                     if (n && !n.isFinished) {
-                        var s = Object(N.c)(n.requirements),
+                        var s = Object(P.c)(n.requirements),
                             l = n.getQuestReqStrings(),
                             c = t && {
                                 alignItems: O.f.Center,
@@ -1049,7 +1049,7 @@
                                 requirement: t,
                                 requirementInstructionString: l,
                                 isComplete: n.isComplete,
-                                subtext: t.metric === I.a.AVERAGE_CCU ? Object(N.a)(n.requirements) : void 0,
+                                subtext: t.metric === I.a.AVERAGE_CCU ? Object(P.a)(n.requirements) : void 0,
                                 ccuTooltipLabel: n.ccuTooltipLabel
                             }))
                         }))
@@ -1621,9 +1621,9 @@
                         }
                     }
                 })(Ve),
-                Pe = n("/0dD"),
+                Ne = n("/0dD"),
                 Ie = n("76Lv"),
-                Ne = n("KYAw"),
+                Pe = n("KYAw"),
                 Le = n("WyAD"),
                 Me = n("OGSR"),
                 qe = O.R.Purple12,
@@ -2097,7 +2097,7 @@
                                 var n = t.props.streamSummary.videoRecordedAt,
                                     r = t.props.streamSummary.videoId,
                                     a = (t.state.statData.dates[e].getTime() - n.getTime()) / 1e3,
-                                    i = Object(Ne.b)(r.substring(1), {
+                                    i = Object(Pe.b)(r.substring(1), {
                                         t: a
                                     });
                                 window.open(i)
@@ -2136,7 +2136,7 @@
                             justifyContent: O.Ua.Between,
                             alignItems: O.f.Center
                         }, a.createElement("div", {
-                            className: Object(Ie.b)(Pe.a.Dark)
+                            className: Object(Ie.b)(Ne.a.Dark)
                         }, a.createElement("div", {
                             className: "timeseries-panel__select-wrap"
                         }, a.createElement(O.sb, {
@@ -2158,7 +2158,7 @@
                         }))
                     }, t.prototype.chartContent = function() {
                         return this.state.inFlightStatRequest ? a.createElement(O.xb, {
-                            className: Object(Ie.b)(Pe.a.Dark),
+                            className: Object(Ie.b)(Ne.a.Dark),
                             fullHeight: !0
                         }, a.createElement(O.Xa, {
                             fillContent: !0
@@ -2623,9 +2623,59 @@
                     }))
                 },
                 Et = n("2rRr"),
-                wt = n("vP7P"),
-                _t = n("16Gl"),
-                jt = function(e) {
+                wt = n("eFQ3"),
+                _t = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.onChannelStatus = function() {}, t.onWheelPostMessage = function(e) {
+                            if (t.postMessageIsWheelEvent(e) && t.componentEl) {
+                                var n = e.data.args[0].data,
+                                    a = new WheelEvent("wheel", r.__assign({
+                                        bubbles: !0
+                                    }, n));
+                                t.componentEl.dispatchEvent(a)
+                            }
+                        }, t.setComponentRef = function(e) {
+                            t.componentEl = e
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.latencyTracking.reportInteractive(), window.addEventListener("message", this.onWheelPostMessage)
+                    }, t.prototype.componentWillUnmount = function() {
+                        window.removeEventListener("message", this.onWheelPostMessage)
+                    }, t.prototype.render = function() {
+                        return a.createElement("div", {
+                            ref: this.setComponentRef
+                        }, a.createElement(O.o, {
+                            ratio: O.p.Aspect16x9
+                        }, this.getVideoEmbedComponent()))
+                    }, t.prototype.getVideoEmbedComponent = function() {
+                        var e = this.props,
+                            t = e.channelLogin,
+                            n = e.vodID,
+                            i = e.embedURL,
+                            s = e.playerTypeOverride,
+                            o = {
+                                disableTheatreButton: !0,
+                                onChannelStatus: this.onChannelStatus,
+                                playerTypeOverride: s || wt.a.Frontpage
+                            };
+                        return i ? a.createElement("iframe", {
+                            src: i,
+                            width: "100%",
+                            height: "100%",
+                            allowFullScreen: !0
+                        }) : t ? a.createElement(wt.b, r.__assign({
+                            channelLogin: t
+                        }, o)) : n ? a.createElement(wt.b, r.__assign({
+                            vodID: n
+                        }, o)) : a.createElement(O.Va, null)
+                    }, t.prototype.postMessageIsWheelEvent = function(e) {
+                        return "player.embed.client" === e.data.namespace && "bridgeplayereventwithpayload" === e.data.method && e.data.args.length > 0 && "wheel" === e.data.args[0].event
+                    }, t = r.__decorate([Object(p.c)("EmbedVideoPlayer")], t)
+                }(a.Component),
+                jt = n("16Gl"),
+                Ot = function(e) {
                     var t = e.streamSummary;
                     return t ? t.videoId ? a.createElement(E.a, {
                         title: Object(o.d)("What is the video for this stream?", "StreamSummaryVodPanel")
@@ -2635,12 +2685,12 @@
                         type: Et.b.Video,
                         viewCount: t.videoViews,
                         thumbnailURL: t.videoMediumThumbnail
-                    }, a.createElement(wt.a, {
+                    }, a.createElement(_t, {
                         vodID: t.videoId
                     })), a.createElement(w.a, {
                         message: Object(o.d)("Highlight video", "StreamSummaryVodPanelCTA"),
                         onClick: _.h,
-                        linkTo: Object(_t.c)(t.channel.name, t.videoId.substring(1)),
+                        linkTo: Object(jt.c)(t.channel.name, t.videoId.substring(1)),
                         targetBlank: !0
                     })) : null : a.createElement(O.Va, {
                         margin: {
@@ -2650,8 +2700,8 @@
                         height: 448
                     }))
                 },
-                Ot = n("3lt/"),
-                Ct = function(e) {
+                Ct = n("3lt/"),
+                kt = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2662,7 +2712,7 @@
                             query: this.props.achievementProgressions,
                             streamSummary: this.props.sessionCursor.current,
                             topClips: this.props.topClips
-                        }), a.createElement(P, {
+                        }), a.createElement(N, {
                             query: this.props.streamSessions,
                             currentStreamSummary: this.props.sessionCursor.current
                         }), a.createElement(Re, {
@@ -2675,7 +2725,7 @@
                         }), a.createElement(gt, {
                             streamSummary: this.props.sessionCursor.current,
                             topClips: this.props.topClips
-                        }), a.createElement(jt, {
+                        }), a.createElement(Ot, {
                             streamSummary: this.props.sessionCursor.current
                         }), !e && a.createElement(bt, {
                             isLoading: !this.props.sessionCursor.current
@@ -2694,16 +2744,16 @@
                             linkToDetails: t.length > 0 ? {
                                 pathname: "/" + this.props.channel.name + "/dashboard/stream-summary/" + this.props.sessionCursor.current.id + "/referrals",
                                 state: {
-                                    content: Ot.PageviewContent.ReferralsDetails,
-                                    medium: Ot.PageviewMedium.StreamSummary
+                                    content: Ct.PageviewContent.ReferralsDetails,
+                                    medium: Ct.PageviewMedium.StreamSummary
                                 }
                             } : ""
                         }))))
                     }, t
                 }(a.Component),
-                kt = n("4eyL"),
-                xt = n("Dg4+"),
-                At = function(e) {
+                xt = n("4eyL"),
+                At = n("Dg4+"),
+                Tt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -2719,7 +2769,7 @@
                         var e = this,
                             t = this.props.streamSummary && this.props.streamSummary.id,
                             n = t && this.state.topClipsByStreamSummary.get(t) || [];
-                        return a.createElement(kt.a, {
+                        return a.createElement(xt.a, {
                             channel: this.props.channel
                         }, function(t) {
                             return e.props.children({
@@ -2738,7 +2788,7 @@
                                     case 0:
                                         return !(e = this.props.streamSummary) || this.state.topClipsByStreamSummary.get(e.id) ? [2] : (this.setState({
                                             isLoading: !0
-                                        }), [4, Object(xt.a)(e.channel.name, e.interval)]);
+                                        }), [4, Object(At.a)(e.channel.name, e.interval)]);
                                     case 1:
                                         return (t = n.sent()).isError ? [2] : (this.setState(function(n) {
                                             return {
@@ -2751,9 +2801,9 @@
                         })
                     }, t
                 }(a.Component),
-                Tt = n("Map9"),
-                Dt = n("YNx3"),
-                Vt = function(e) {
+                Dt = n("Map9"),
+                Vt = n("YNx3"),
+                Rt = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2768,17 +2818,17 @@
                                 r = this.props.data.channel.self && this.props.data.channel.self.isEditor;
                             if (!this.props.isStaff && !n && !r) return a.createElement(h.a, null)
                         }
-                        return a.createElement(a.Fragment, null, a.createElement(f.a, null, a.createElement(Tt.a, {
+                        return a.createElement(a.Fragment, null, a.createElement(f.a, null, a.createElement(Dt.a, {
                             query: this.props.streamSummaryQuery,
                             summaryID: this.props.streamSummaryID,
                             getURLForStreamSummary: B.d
                         }, function(n) {
-                            return a.createElement(At, {
+                            return a.createElement(Tt, {
                                 previousStreamSummary: n.previous,
                                 streamSummary: n.current,
                                 channel: t
                             }, function(r) {
-                                return a.createElement(Ct, {
+                                return a.createElement(kt, {
                                     channel: t,
                                     sessionCursor: n,
                                     achievementProgressions: r.achievementProgressionsQuery,
@@ -2789,12 +2839,12 @@
                         })), a.createElement(b.a, null))
                     }, t
                 }(a.Component);
-            var Rt = Object(i.compose)(Object(p.c)("StreamSummaryPage", {
+            var Nt = Object(i.compose)(Object(p.c)("StreamSummaryPage", {
                 destination: u.a.ChannelDashboardStreamSummary,
                 autoReportInteractive: !0
             }), Object(c.a)({
                 location: m.PageviewLocation.DashboardStreamSummary
-            }), Object(l.a)(Dt, {
+            }), Object(l.a)(Vt, {
                 options: function(e) {
                     return {
                         variables: {
@@ -2808,9 +2858,9 @@
                     userID: t && t.id,
                     isStaff: !!(t && t.roles && t.roles.isStaff)
                 }
-            }))(Vt);
+            }))(Rt);
             n.d(t, "StreamSummaryPage", function() {
-                return Rt
+                return Nt
             }), n.d(t, "PublicProps", function() {})
         },
         "Dg4+": function(e, t, n) {
@@ -4231,71 +4281,6 @@
                 };
             n.d(t, "a", function() {
                 return s
-            })
-        },
-        vP7P: function(e, t, n) {
-            "use strict";
-            var r = n("mrSG"),
-                a = n("q1tI"),
-                i = n("GnwI"),
-                s = n("eFQ3"),
-                o = n("Ue10"),
-                l = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.onChannelStatus = function() {}, t.onWheelPostMessage = function(e) {
-                            if (t.postMessageIsWheelEvent(e) && t.componentEl) {
-                                var n = e.data.args[0].data,
-                                    a = new WheelEvent("wheel", r.__assign({
-                                        bubbles: !0
-                                    }, n));
-                                t.componentEl.dispatchEvent(a)
-                            }
-                        }, t.setComponentRef = function(e) {
-                            t.componentEl = e
-                        }, t
-                    }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive(), window.addEventListener("message", this.onWheelPostMessage)
-                    }, t.prototype.componentWillUnmount = function() {
-                        window.removeEventListener("message", this.onWheelPostMessage)
-                    }, t.prototype.render = function() {
-                        return a.createElement("div", {
-                            ref: this.setComponentRef
-                        }, a.createElement(o.o, {
-                            ratio: o.p.Aspect16x9
-                        }, this.getVideoEmbedComponent()))
-                    }, t.prototype.getVideoEmbedComponent = function() {
-                        var e = this.props,
-                            t = e.channelLogin,
-                            n = e.vodID,
-                            i = e.embedURL,
-                            l = e.playerTypeOverride,
-                            c = {
-                                disableTheatreButton: !0,
-                                onChannelStatus: this.onChannelStatus,
-                                playerTypeOverride: l || s.a.Frontpage
-                            };
-                        return i ? a.createElement("iframe", {
-                            src: i,
-                            width: "100%",
-                            height: "100%",
-                            allowFullScreen: !0
-                        }) : t ? a.createElement(s.b, r.__assign({
-                            channelLogin: t
-                        }, c)) : n ? a.createElement(s.b, r.__assign({
-                            vodID: n
-                        }, c)) : a.createElement(o.Va, null)
-                    }, t.prototype.postMessageIsWheelEvent = function(e) {
-                        return "player.embed.client" === e.data.namespace && "bridgeplayereventwithpayload" === e.data.method && e.data.args.length > 0 && "wheel" === e.data.args[0].event
-                    }, t = r.__decorate([Object(i.c)("EmbedVideoPlayer")], t)
-                }(a.Component);
-            n.d(t, !1, function() {
-                return "player.embed.client"
-            }), n.d(t, !1, function() {
-                return "bridgeplayereventwithpayload"
-            }), n.d(t, "a", function() {
-                return l
             })
         },
         vYsf: function(e, t, n) {

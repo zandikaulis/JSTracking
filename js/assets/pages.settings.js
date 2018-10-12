@@ -619,7 +619,7 @@
                     }, Object(f.d)("If you want to disable your Twitch account, you can do so from the <x:link>Disable Account</x:link> page.", {
                         "x:link": function(e) {
                             return c.createElement(D.T, {
-                                to: "/user/disable_account",
+                                to: "/user/disable-account",
                                 "data-a-target": "disable-account-link"
                             }, e)
                         }
@@ -1350,31 +1350,31 @@
                 Ue = Object(S.compose)(Object(w.c)("SettingsTabs"), Object(T.a)(we))(Ne),
                 Pe = (n("EPme"), Object(E.a)()),
                 De = b.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(138)]).then(n.bind(null, "1qL7"))
+                    return Promise.all([n.e(0), n.e(137)]).then(n.bind(null, "1qL7"))
                 }, "ChangeEmailPage"),
                 je = b.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(138)]).then(n.bind(null, "kLO1"))
+                    return Promise.all([n.e(0), n.e(137)]).then(n.bind(null, "kLO1"))
                 }, "SettingsTurboPage"),
                 Te = b.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(138)]).then(n.bind(null, "lRpU"))
+                    return Promise.all([n.e(0), n.e(137)]).then(n.bind(null, "lRpU"))
                 }, "SettingsPrimePage"),
                 Ce = b.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(138)]).then(n.bind(null, "LJ0+"))
+                    return Promise.all([n.e(0), n.e(137)]).then(n.bind(null, "LJ0+"))
                 }, "SettingsChannelPage"),
                 xe = b.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(138)]).then(n.bind(null, "KXpU"))
+                    return Promise.all([n.e(0), n.e(137)]).then(n.bind(null, "KXpU"))
                 }, "SettingsSecurityPage"),
                 Ae = b.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(138)]).then(n.bind(null, "+oVX"))
+                    return Promise.all([n.e(0), n.e(137)]).then(n.bind(null, "+oVX"))
                 }, "SettingsNotificationsPage"),
                 Re = b.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(138)]).then(n.bind(null, "t1je"))
+                    return Promise.all([n.e(0), n.e(137)]).then(n.bind(null, "t1je"))
                 }, "SettingsConnectionsPage"),
                 Me = b.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(138)]).then(n.bind(null, "bm35"))
+                    return Promise.all([n.e(0), n.e(137)]).then(n.bind(null, "bm35"))
                 }, "SettingsRecommendationsPage"),
                 Fe = b.a.wrap(function() {
-                    return n.e(137).then(n.bind(null, "Rpd6"))
+                    return n.e(136).then(n.bind(null, "Rpd6"))
                 }, "SettingsDesktopPage"),
                 Ve = 3,
                 Le = function(e) {

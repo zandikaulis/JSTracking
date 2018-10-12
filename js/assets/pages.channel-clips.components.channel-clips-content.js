@@ -1672,7 +1672,7 @@
                     }, t.prototype.updateClipIndex = function(e) {
                         var t = Math.max(0, e),
                             n = this.props.getClips();
-                        n.length - t < 4 && this.props.loadMoreClips && this.props.loadMoreClips(), t < n.length && this.props.showModal(U, {
+                        n.length - t < 4 && this.props.loadMoreClips && this.props.loadMoreClips(), t < n.length && this.props.showModal(W, {
                             getClips: this.props.getClips,
                             clip: n[t],
                             clipIndex: t,
@@ -1760,15 +1760,16 @@
                             closeOnBackdropClick: !0,
                             closeOnPageNavigation: !0
                         }))
-                    }, t = s.__decorate([Object(m.c)("ClipsViewModal")], t)
-                }(c.Component));
-            var U = Object(i.connect)(null, function(e) {
+                    }, t
+                }(c.Component)),
+                U = Object(m.c)("ClipsViewModal")(B);
+            var W = Object(i.connect)(null, function(e) {
                 return Object(r.bindActionCreators)({
                     showModal: o.d
                 }, e)
-            })(B);
+            })(U);
             n.d(t, "a", function() {
-                return U
+                return W
             }), n.d(t, !1, function() {})
         },
         On2s: function(e, t, n) {

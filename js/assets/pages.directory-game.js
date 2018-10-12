@@ -1412,7 +1412,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.J.TOP,
+                                tagType: h.M.TOP,
                                 limit: 50
                             }
                         }
@@ -6157,206 +6157,6 @@
             };
             e.exports = n
         },
-        WCyn: function(e, t, n) {
-            "use strict";
-            var a = n("/MKj"),
-                r = n("fvjX"),
-                i = n("1/iK"),
-                o = n("y5D0"),
-                s = n("kRBY"),
-                l = n("mrSG"),
-                c = n("q1tI"),
-                d = n("oJmH"),
-                u = n("/7QA"),
-                m = n("yR8l"),
-                p = n("geRD"),
-                g = n("2xye"),
-                h = n("JcRA"),
-                f = n("Ue10"),
-                v = n("Jl34"),
-                k = n("y5Wm"),
-                y = n("k5cX"),
-                b = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.followClicked = function() {
-                            t.props.isLoggedIn ? t.isFollowing ? t.unfollow() : t.follow() : t.props.showLoginModal()
-                        }, t.showUnfollowButton = function() {
-                            return t.props.isLoggedIn && t.isFollowing
-                        }, t.follow = function() {
-                            return l.__awaiter(t, void 0, void 0, function() {
-                                var e, t = this;
-                                return l.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            return this.props.followGame && this.props.data && this.props.data.game ? (e = l.__assign({}, Object(p.a)({
-                                                gameID: this.props.data.game.id
-                                            }), {
-                                                optimisticResponse: {
-                                                    followGame: {
-                                                        __typename: "FollowGamePayload",
-                                                        game: {
-                                                            self: {
-                                                                follow: {
-                                                                    followedAt: (new Date).toISOString(),
-                                                                    __typename: "GameFollow"
-                                                                },
-                                                                __typename: "GameSelfConnection"
-                                                            },
-                                                            __typename: "Game"
-                                                        }
-                                                    }
-                                                },
-                                                update: function(e, n) {
-                                                    var a = n.data.followGame,
-                                                        r = e.readQuery({
-                                                            query: k,
-                                                            variables: {
-                                                                name: t.props.gameName
-                                                            }
-                                                        });
-                                                    r && r.game && (r.game.self.follow = a.game.self.follow, e.writeQuery({
-                                                        query: k,
-                                                        variables: {
-                                                            name: t.props.gameName
-                                                        },
-                                                        data: r
-                                                    }))
-                                                }
-                                            }), [4, this.props.followGame(e)]) : [2];
-                                        case 1:
-                                            return n.sent(), this.track(g.SpadeEventType.GameFollow), [2]
-                                    }
-                                })
-                            })
-                        }, t.unfollow = function() {
-                            return l.__awaiter(t, void 0, void 0, function() {
-                                var e, t = this;
-                                return l.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = l.__assign({}, Object(p.a)({
-                                                gameID: this.props.data.game.id
-                                            }), {
-                                                optimisticResponse: {
-                                                    unfollowGame: {
-                                                        __typename: "UnfollowGamePayload",
-                                                        follow: null
-                                                    }
-                                                },
-                                                update: function(e) {
-                                                    var n = e.readQuery({
-                                                        query: k,
-                                                        variables: {
-                                                            name: t.props.gameName
-                                                        }
-                                                    });
-                                                    n && n.game && (n.game.self.follow = null, e.writeQuery({
-                                                        query: k,
-                                                        variables: {
-                                                            name: t.props.gameName
-                                                        },
-                                                        data: n
-                                                    }))
-                                                }
-                                            }), [4, this.props.unfollowGame(e)]) : [2];
-                                        case 1:
-                                            return n.sent(), this.track(g.SpadeEventType.GameUnfollow), [2]
-                                    }
-                                })
-                            })
-                        }, t
-                    }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(u.d)("Follow", "FollowGameButton"),
-                            t = this.props.buttonType,
-                            n = t && t === f.F.Hollow ? f.nb.FollowHollow : f.nb.Heart,
-                            a = void 0 === this.props.fullWidthButton || this.props.fullWidthButton,
-                            r = {};
-                        if (a && (r.justifyContent = f.Ua.Center), this.props.isLoggedIn && this.isLoading) return c.createElement(f.Va, l.__assign({
-                            display: f.W.Flex
-                        }, r), c.createElement(f.Va, {
-                            alignItems: f.f.Center
-                        }, c.createElement(f.cb, {
-                            width: 70,
-                            height: 30
-                        })));
-                        var i = this.showUnfollowButton() ? Object(u.d)("Unfollow", "FollowGameButton") : e,
-                            o = this.showUnfollowButton() ? "game-directory-unfollow-button" : "game-directory-follow-button",
-                            s = this.showUnfollowButton() ? f.nb.Heart : n,
-                            d = !this.showUnfollowButton() && t && t === f.F.Hollow ? f.nb.Heart : f.nb.Unheart,
-                            m = this.showUnfollowButton() ? Object(u.d)("Following", "FollowGameButton") : e;
-                        return this.props.animatedButton ? c.createElement(h.a, {
-                            ariaLabel: i,
-                            "data-a-target": o,
-                            "data-test-selector": "follow-game-button-component",
-                            icon: s,
-                            iconOnHover: d,
-                            onClick: this.followClicked,
-                            text: m,
-                            type: t || f.F.Default,
-                            fullWidthButton: a
-                        }) : c.createElement(f.z, {
-                            ariaLabel: i,
-                            "data-a-target": o,
-                            "data-test-selector": "follow-game-button-component",
-                            icon: s,
-                            onClick: this.followClicked,
-                            statusAlertIcon: this.props.isLoggedIn ? d : void 0,
-                            type: t || f.F.Default,
-                            fullWidth: a
-                        }, m)
-                    }, Object.defineProperty(t.prototype, "isFollowing", {
-                        get: function() {
-                            return !!(this.props.data && this.props.data.game && this.props.data.game.self && null !== this.props.data.game.self.follow)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "isLoading", {
-                        get: function() {
-                            return !this.props.data || this.props.data.loading
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t.prototype.track = function(e) {
-                        u.o.tracking.track(e, {
-                            src: this.props.src,
-                            kind: e === g.SpadeEventType.GameFollow ? "follow" : "unfollow",
-                            name: this.props.gameName
-                        })
-                    }, t
-                }(c.Component),
-                S = Object(d.compose)(Object(m.a)(k, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                name: e.gameName
-                            }
-                        }
-                    },
-                    skip: function(e) {
-                        return !e.isLoggedIn || !e.gameName
-                    }
-                }), Object(m.a)(v, {
-                    name: "followGame"
-                }), Object(m.a)(y, {
-                    name: "unfollowGame"
-                }))(b);
-            var C = Object(a.connect)(function(e) {
-                return {
-                    isLoggedIn: Object(s.f)(e)
-                }
-            }, function(e) {
-                return Object(r.bindActionCreators)({
-                    showLoginModal: function() {
-                        return Object(o.e)(i.a.FollowGameButton)
-                    }
-                }, e)
-            })(S);
-            n.d(t, "a", function() {
-                return C
-            })
-        },
         WRGI: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
@@ -10909,11 +10709,193 @@
                 })(Jt),
                 Zt = n("TSYQ"),
                 en = n("3W+h"),
-                tn = n("WCyn"),
-                nn = n("0LAi"),
-                an = n("7ALk");
+                tn = n("1/iK"),
+                nn = n("y5D0"),
+                an = n("JcRA"),
+                rn = n("Jl34"),
+                on = n("y5Wm"),
+                sn = n("k5cX"),
+                ln = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.followClicked = function() {
+                            t.props.isLoggedIn ? t.isFollowing ? t.unfollow() : t.follow() : t.props.showLoginModal()
+                        }, t.showUnfollowButton = function() {
+                            return t.props.isLoggedIn && t.isFollowing
+                        }, t.follow = function() {
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                var e, t = this;
+                                return r.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            return this.props.followGame && this.props.data && this.props.data.game ? (e = r.__assign({}, Object(oe.a)({
+                                                gameID: this.props.data.game.id
+                                            }), {
+                                                optimisticResponse: {
+                                                    followGame: {
+                                                        __typename: "FollowGamePayload",
+                                                        game: {
+                                                            self: {
+                                                                follow: {
+                                                                    followedAt: (new Date).toISOString(),
+                                                                    __typename: "GameFollow"
+                                                                },
+                                                                __typename: "GameSelfConnection"
+                                                            },
+                                                            __typename: "Game"
+                                                        }
+                                                    }
+                                                },
+                                                update: function(e, n) {
+                                                    var a = n.data.followGame,
+                                                        r = e.readQuery({
+                                                            query: on,
+                                                            variables: {
+                                                                name: t.props.gameName
+                                                            }
+                                                        });
+                                                    r && r.game && (r.game.self.follow = a.game.self.follow, e.writeQuery({
+                                                        query: on,
+                                                        variables: {
+                                                            name: t.props.gameName
+                                                        },
+                                                        data: r
+                                                    }))
+                                                }
+                                            }), [4, this.props.followGame(e)]) : [2];
+                                        case 1:
+                                            return n.sent(), this.track(ce.SpadeEventType.GameFollow), [2]
+                                    }
+                                })
+                            })
+                        }, t.unfollow = function() {
+                            return r.__awaiter(t, void 0, void 0, function() {
+                                var e, t = this;
+                                return r.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = r.__assign({}, Object(oe.a)({
+                                                gameID: this.props.data.game.id
+                                            }), {
+                                                optimisticResponse: {
+                                                    unfollowGame: {
+                                                        __typename: "UnfollowGamePayload",
+                                                        follow: null
+                                                    }
+                                                },
+                                                update: function(e) {
+                                                    var n = e.readQuery({
+                                                        query: on,
+                                                        variables: {
+                                                            name: t.props.gameName
+                                                        }
+                                                    });
+                                                    n && n.game && (n.game.self.follow = null, e.writeQuery({
+                                                        query: on,
+                                                        variables: {
+                                                            name: t.props.gameName
+                                                        },
+                                                        data: n
+                                                    }))
+                                                }
+                                            }), [4, this.props.unfollowGame(e)]) : [2];
+                                        case 1:
+                                            return n.sent(), this.track(ce.SpadeEventType.GameUnfollow), [2]
+                                    }
+                                })
+                            })
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        var e = Object(i.d)("Follow", "FollowGameButton"),
+                            t = this.props.buttonType,
+                            n = t && t === Ce.F.Hollow ? Ce.nb.FollowHollow : Ce.nb.Heart,
+                            a = void 0 === this.props.fullWidthButton || this.props.fullWidthButton,
+                            o = {};
+                        if (a && (o.justifyContent = Ce.Ua.Center), this.props.isLoggedIn && this.isLoading) return Y.createElement(Ce.Va, r.__assign({
+                            display: Ce.W.Flex
+                        }, o), Y.createElement(Ce.Va, {
+                            alignItems: Ce.f.Center
+                        }, Y.createElement(Ce.cb, {
+                            width: 70,
+                            height: 30
+                        })));
+                        var s = this.showUnfollowButton() ? Object(i.d)("Unfollow", "FollowGameButton") : e,
+                            l = this.showUnfollowButton() ? "game-directory-unfollow-button" : "game-directory-follow-button",
+                            c = this.showUnfollowButton() ? Ce.nb.Heart : n,
+                            d = !this.showUnfollowButton() && t && t === Ce.F.Hollow ? Ce.nb.Heart : Ce.nb.Unheart,
+                            u = this.showUnfollowButton() ? Object(i.d)("Following", "FollowGameButton") : e;
+                        return this.props.animatedButton ? Y.createElement(an.a, {
+                            ariaLabel: s,
+                            "data-a-target": l,
+                            "data-test-selector": "follow-game-button-component",
+                            icon: c,
+                            iconOnHover: d,
+                            onClick: this.followClicked,
+                            text: u,
+                            type: t || Ce.F.Default,
+                            fullWidthButton: a
+                        }) : Y.createElement(Ce.z, {
+                            ariaLabel: s,
+                            "data-a-target": l,
+                            "data-test-selector": "follow-game-button-component",
+                            icon: c,
+                            onClick: this.followClicked,
+                            statusAlertIcon: this.props.isLoggedIn ? d : void 0,
+                            type: t || Ce.F.Default,
+                            fullWidth: a
+                        }, u)
+                    }, Object.defineProperty(t.prototype, "isFollowing", {
+                        get: function() {
+                            return !!(this.props.data && this.props.data.game && this.props.data.game.self && null !== this.props.data.game.self.follow)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isLoading", {
+                        get: function() {
+                            return !this.props.data || this.props.data.loading
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t.prototype.track = function(e) {
+                        i.o.tracking.track(e, {
+                            src: this.props.src,
+                            kind: e === ce.SpadeEventType.GameFollow ? "follow" : "unfollow",
+                            name: this.props.gameName
+                        })
+                    }, t
+                }(Y.Component),
+                cn = Object(Ae.compose)(Object(re.a)(on, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                name: e.gameName
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !e.isLoggedIn || !e.gameName
+                    }
+                }), Object(re.a)(rn, {
+                    name: "followGame"
+                }), Object(re.a)(sn, {
+                    name: "unfollowGame"
+                }))(ln);
+            var dn = Object(Q.connect)(function(e) {
+                    return {
+                        isLoggedIn: Object(J.f)(e)
+                    }
+                }, function(e) {
+                    return Object($.bindActionCreators)({
+                        showLoginModal: function() {
+                            return Object(nn.e)(tn.a.FollowGameButton)
+                        }
+                    }, e)
+                })(cn),
+                un = n("0LAi"),
+                mn = n("7ALk");
             n("Z8yi");
-            var rn, on = function(e) {
+            var pn, gn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderDropsAvailable = function() {
@@ -11019,7 +11001,7 @@
                             }
                         }, e), this.renderTags()) : this.renderPlaceholders(), Y.createElement(Ce.Va, {
                             display: Ce.W.InlineFlex
-                        }, Y.createElement(tn.a, {
+                        }, Y.createElement(dn, {
                             animatedButton: !0,
                             gameName: this.props.directoryName,
                             src: "directory",
@@ -11065,14 +11047,14 @@
                             margin: {
                                 bottom: 1
                             }
-                        }, Y.createElement(nn.a, {
+                        }, Y.createElement(un.a, {
                             tags: e.tags,
                             linkPath: en.a.DirectoryTag,
                             style: Ce.Ib.Default
                         }))
                     }, t
                 }(Y.Component),
-                sn = Object(Ae.compose)(Object(re.a)(an, {
+                hn = Object(Ae.compose)(Object(re.a)(mn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11083,32 +11065,32 @@
                     }
                 }), Object(me.c)("TagsDirectoryBanner", {
                     autoReportInteractive: !0
-                }))(on),
-                ln = n("Bh3T"),
-                cn = n("JoTo"),
-                dn = n("cnlr"),
-                un = n("mHR/"),
-                mn = n("kJyr"),
-                pn = Wt.a.wrap(function() {
+                }))(gn),
+                fn = n("Bh3T"),
+                vn = n("JoTo"),
+                kn = n("cnlr"),
+                yn = n("mHR/"),
+                bn = n("kJyr"),
+                Sn = Wt.a.wrap(function() {
                     return n.e(131).then(n.bind(null, "3f6U"))
                 }, "DirectoryGameClipsPage"),
-                gn = Wt.a.wrap(function() {
+                Cn = Wt.a.wrap(function() {
                     return n.e(130).then(n.bind(null, "N7a1"))
                 }, "DirectoryGameDetailsPage"),
-                hn = Wt.a.wrap(function() {
+                Tn = Wt.a.wrap(function() {
                     return n.e(129).then(n.bind(null, "TH8Y"))
                 }, "DirectoryGameVideosPage"),
-                fn = Wt.a.wrap(function() {
+                wn = Wt.a.wrap(function() {
                     return Promise.resolve().then(n.bind(null, "mpcK"))
                 }, "DirectoryGamePage");
             ! function(e) {
                 e.CLIPS = "clips-scroller", e.DEFAULT = "directory-root-scroller", e.GAME = "game-scroller"
-            }(rn || (rn = {}));
-            var vn = function(e) {
+            }(pn || (pn = {}));
+            var Nn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderAdBanner = function() {
-                            return Object(un.c)(t.props.match.path) && t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.game ? Y.createElement(de.a, {
+                            return Object(yn.c)(t.props.match.path) && t.props.data && !t.props.data.loading && !t.props.data.error && t.props.data.game ? Y.createElement(de.a, {
                                 injectStyles: {
                                     textAlign: "center",
                                     marginBottom: 20,
@@ -11125,22 +11107,22 @@
                                 autoEnable: !1
                             }) : null
                         }, t.getContentType = function() {
-                            return Object(un.a)(t.props.match.path) ? Qt.a.Clips : Object(un.b)(t.props.match.path) ? Qt.a.GameDetails : Object(un.d)(t.props.match.path) ? Qt.a.Videos : Qt.a.Live
+                            return Object(yn.a)(t.props.match.path) ? Qt.a.Clips : Object(yn.b)(t.props.match.path) ? Qt.a.GameDetails : Object(yn.d)(t.props.match.path) ? Qt.a.Videos : Qt.a.Live
                         }, t.getScrollerName = function() {
-                            var e = rn.DEFAULT;
-                            return Object(un.a)(t.props.match.path) ? e = rn.CLIPS : Object(un.c)(t.props.match.path) && (e = rn.GAME), e
+                            var e = pn.DEFAULT;
+                            return Object(yn.a)(t.props.match.path) ? e = pn.CLIPS : Object(yn.c)(t.props.match.path) && (e = pn.GAME), e
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = decodeURIComponent(this.props.match.params.encodedCommunityName);
                         return Y.createElement(Ce.Va, {
                             "data-a-target": this.getScrollerName()
-                        }, Y.createElement(cn.a, null, Y.createElement(dn.a, null)), Y.createElement(ln.b, {
+                        }, Y.createElement(vn.a, null, Y.createElement(kn.a, null)), Y.createElement(fn.b, {
                             suppressScrollX: !0,
                             addPaddingWhenPlayerIsPersisting: !0
-                        }), Y.createElement(sn, {
+                        }), Y.createElement(hn, {
                             directoryName: e
-                        }), this.renderAdBanner(), Object(un.c)(this.props.match.path) && Y.createElement(Kt, {
+                        }), this.renderAdBanner(), Object(yn.c)(this.props.match.path) && Y.createElement(Kt, {
                             directoryName: e,
                             selectedContentType: this.getContentType()
                         }), Y.createElement(Bt.a, null, Y.createElement(Ut.a, {
@@ -11154,19 +11136,19 @@
                             render: this.redirectToMainDirectory
                         }), Y.createElement(Ut.a, {
                             path: "/directory/game/:encodedCommunityName/clips",
-                            component: pn
+                            component: Sn
                         }), Y.createElement(Ut.a, {
                             path: "/directory/game/:encodedCommunityName/details",
-                            component: gn
+                            component: Cn
                         }), Y.createElement(Ut.a, {
                             path: "/directory/game/:encodedCommunityName/videos/:filter",
-                            component: hn
+                            component: Tn
                         }), Y.createElement(Ut.a, {
                             path: "/directory/game/:encodedCommunityName/:encodedLanguage",
-                            component: fn
+                            component: wn
                         }), Y.createElement(Ut.a, {
                             path: "/directory/game/:encodedCommunityName",
-                            component: fn
+                            component: wn
                         })))
                     }, t.prototype.redirectToMainDirectory = function() {
                         return Y.createElement(Ht.a, {
@@ -11175,7 +11157,7 @@
                         })
                     }, t
                 }(Y.Component),
-                kn = Object($.compose)(Object(re.a)(mn, {
+                _n = Object($.compose)(Object(re.a)(bn, {
                     options: function(e) {
                         return {
                             variables: {
@@ -11186,11 +11168,11 @@
                     skip: function() {
                         return !Object(he.b)()
                     }
-                }))(vn);
+                }))(Nn);
             n.d(t, "DirectoryGamePage", function() {
                 return Mt
             }), n.d(t, "DirectoryRootPage", function() {
-                return kn
+                return _n
             })
         },
         mz1O: function(e, t, n) {

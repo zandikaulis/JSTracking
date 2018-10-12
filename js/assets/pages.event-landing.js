@@ -96,9 +96,9 @@
                         return {
                             images: {
                                 sources: {
-                                    "1x": Object(r.e)(t, 1),
-                                    "2x": Object(r.e)(t, 2),
-                                    "4x": Object(r.e)(t, 4)
+                                    "1x": Object(r.d)(t, 1),
+                                    "2x": Object(r.d)(t, 2),
+                                    "4x": Object(r.d)(t, 4)
                                 },
                                 themed: !1
                             },
@@ -629,55 +629,141 @@
         "4c/Z": function(e, t, n) {
             "use strict";
             n.r(t);
-            var i, a, r, o, s = n("mrSG"),
-                l = n("q1tI"),
-                c = n("/7QA"),
-                d = n("ZDlU"),
-                u = n("yR8l"),
-                p = n("V+GM"),
-                m = n("NvVO"),
-                h = n("2xye"),
-                v = n("GnwI"),
-                g = n("8/mp"),
-                f = n("Bh3T"),
-                b = n("irYM"),
-                k = n("LfZz"),
-                y = n("Jhye"),
-                S = n("ug+5"),
-                w = n("ykET"),
-                C = n("Ue10"),
-                E = (n("z8L7"), function(e) {
+            var i = n("mrSG"),
+                a = n("q1tI"),
+                r = n("/7QA"),
+                o = n("ZDlU"),
+                s = n("yR8l"),
+                l = n("V+GM"),
+                c = n("NvVO"),
+                d = n("2xye"),
+                u = n("GnwI"),
+                p = n("8/mp"),
+                m = n("Bh3T"),
+                h = n("irYM"),
+                v = n("LfZz"),
+                g = n("Jhye"),
+                f = n("ug+5"),
+                b = n("2iEm"),
+                k = n("RcPG"),
+                y = n("a1OF");
+            n("p52R"), n("ZtEv"), n("60o1");
+
+            function S(e) {
+                var t = {};
+                return e.forEach(function(e) {
+                    t[e.from] = {
+                        startIndex: e.from,
+                        id: e.emoteID
+                    }
+                }), t
+            }
+            var w = n("Ue10"),
+                C = /^(https?:\/\/)?(www.)?twitch\.tv/;
+
+            function E(e, t, n, i) {
+                void 0 === t && (t = []);
+                for (var r, o = [], s = e.split(/\n/), l = function(e, l) {
+                        if (e > 0 && (l += s[e - 1].length + 1), i && "" === s[e]) return o.push(a.createElement(w.V, {
+                            key: e
+                        }, "\n")), r = l, "continue";
+                        var c = t.map(function(e) {
+                                return function(e, t) {
+                                    return {
+                                        emoteID: e.emoteID,
+                                        from: e.from - t,
+                                        to: e.to - t,
+                                        setID: e.setID
+                                    }
+                                }(e, l)
+                            }).filter(function(t) {
+                                return ! function(e, t) {
+                                    return e.from < 0 || e.from >= t || e.to < 0 || e.to >= t
+                                }(t, s[e].length)
+                            }),
+                            d = Object(y.e)(s[e], S(c), 0, {}, !1, n);
+                        o.push(a.createElement(w.V, {
+                            key: e
+                        }, function(e) {
+                            for (var t = [], n = 0; n < e.length; n++) {
+                                var i = e[n];
+                                switch (i.type) {
+                                    case k.a.ClipLink:
+                                        t.push(a.createElement("a", {
+                                            key: n,
+                                            href: i.content.url,
+                                            target: "_blank"
+                                        }, i.content.url));
+                                        break;
+                                    case k.a.VideoLink:
+                                    case k.a.Link:
+                                        i.content.url.match(C) ? t.push(a.createElement(b.a, {
+                                            key: n,
+                                            to: i.content.url.replace(C, "")
+                                        }, i.content.displayText)) : t.push(a.createElement("a", {
+                                            key: n,
+                                            href: i.content.url,
+                                            target: "_blank",
+                                            rel: "noopener noreferrer"
+                                        }, i.content.displayText));
+                                        break;
+                                    case k.a.Mention:
+                                        t.push(a.createElement(b.a, {
+                                            key: n,
+                                            to: "/" + i.content.recipient
+                                        }, i.content.recipient));
+                                        break;
+                                    case k.a.Emote:
+                                        i.content.images.themed || t.push(a.createElement("img", {
+                                            key: n,
+                                            src: i.content.images.sources["1x"],
+                                            alt: i.content.alt
+                                        }));
+                                        break;
+                                    case k.a.Text:
+                                        t.push(a.createElement("span", {
+                                            key: n
+                                        }, i.content))
+                                }
+                            }
+                            return t
+                        }(d))), r = l
+                    }, c = 0, d = 0; c < s.length; c++) l(c, d), d = r;
+                return o
+            }
+            n("z8L7");
+            var _, N, O, T, R = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = Object(c.d)("No description listed", "EventLandingDescription");
-                        return "" !== this.props.description && (e = this.props.description), l.createElement(C.Va, null, l.createElement(C.V, {
-                            transform: C.Mb.Uppercase,
-                            type: C.Nb.H5,
-                            color: C.O.Alt2
-                        }, Object(c.d)("Description", "EventLandingDescription")), l.createElement(C.Va, {
+                        var e = Object(r.d)("No description listed", "EventLandingDescription");
+                        return "" !== this.props.description && (e = this.props.description), a.createElement(w.Va, null, a.createElement(w.V, {
+                            transform: w.Mb.Uppercase,
+                            type: w.Nb.H5,
+                            color: w.O.Alt2
+                        }, Object(r.d)("Description", "EventLandingDescription")), a.createElement(w.Va, {
                             margin: {
                                 top: 1
                             },
                             className: "event-landing-description__text"
-                        }, Object(w.a)(e, [], "", !0)))
-                    }, t = s.__decorate([Object(v.c)("EventLandingDescription")], t)
-                }(l.Component)),
-                _ = Object(v.c)("TimetableHeader", {
+                        }, E(e, [], "", !0)))
+                    }, t = i.__decorate([Object(u.c)("EventLandingDescription")], t)
+                }(a.Component),
+                x = Object(u.c)("TimetableHeader", {
                     autoReportInteractive: !0
                 })(function(e) {
-                    var t = l.createElement(b.a, {
+                    var t = a.createElement(h.a, {
                         eventID: e.event.id,
                         eventTypename: "EventCollection",
                         areNotificationsEnabled: e.event.self.isFollowing,
                         channelID: e.event.owner && e.event.owner.id || void 0,
                         channelLogin: e.event.owner && e.event.owner.login || void 0,
-                        eventLocation: S.a.EventDetails
+                        eventLocation: f.a.EventDetails
                     });
-                    e.event.isLive && (t = l.createElement(C.z, {
+                    e.event.isLive && (t = a.createElement(w.z, {
                         linkTo: {
                             pathname: "/" + e.event.liveChannelLogin,
                             state: {
@@ -685,72 +771,72 @@
                                 medium: "event_page"
                             }
                         }
-                    }, Object(c.d)("Watch Now", "TimetableHeader")));
-                    var n = l.createElement(C.Va, {
-                            display: C.W.Flex
-                        }, l.createElement(C.Va, {
+                    }, Object(r.d)("Watch Now", "TimetableHeader")));
+                    var n = a.createElement(w.Va, {
+                            display: w.W.Flex
+                        }, a.createElement(w.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, t), l.createElement(C.Va, {
+                        }, t), a.createElement(w.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, l.createElement(y.a, {
+                        }, a.createElement(g.a, {
                             id: e.event.id,
                             title: e.event.title,
-                            eventLocation: S.a.EventDetails
-                        })), e.event.owner && l.createElement(k.a, {
+                            eventLocation: f.a.EventDetails
+                        })), e.event.owner && a.createElement(v.a, {
                             targetUser: {
                                 id: e.event.owner.id,
                                 displayName: e.event.owner.displayName
                             },
                             eventID: e.event.id,
-                            balloonDirection: C.v.Bottom
+                            balloonDirection: w.v.Bottom
                         })),
-                        i = l.createElement(C.Va, null, Object(c.d)("To Be Announced", "TimetableHeader"));
-                    e.event.startAt && (i = e.event.isLive ? l.createElement(C.Va, {
-                        display: C.W.Flex
-                    }, l.createElement(C.Va, null, l.createElement(C.K, {
-                        status: C.M.Live
-                    })), l.createElement(C.xb, {
+                        i = a.createElement(w.Va, null, Object(r.d)("To Be Announced", "TimetableHeader"));
+                    e.event.startAt && (i = e.event.isLive ? a.createElement(w.Va, {
+                        display: w.W.Flex
+                    }, a.createElement(w.Va, null, a.createElement(w.K, {
+                        status: w.M.Live
+                    })), a.createElement(w.xb, {
                         margin: {
                             left: .5
                         }
-                    }, l.createElement(C.V, null, Object(c.d)("Happening Now", "TimetableHeader")))) : l.createElement(C.Va, null, l.createElement(C.V, null, Object(c.i)(e.event.startAt, {
+                    }, a.createElement(w.V, null, Object(r.d)("Happening Now", "TimetableHeader")))) : a.createElement(w.Va, null, a.createElement(w.V, null, Object(r.i)(e.event.startAt, {
                         weekday: "long",
                         month: "short",
                         day: "numeric"
                     }))));
-                    var a = null;
+                    var o = null;
                     if (e.event.startAt && e.event.endAt) {
-                        var r = Object(c.i)(e.event.endAt, {
+                        var s = Object(r.i)(e.event.endAt, {
                             weekday: "long",
                             month: "short",
                             day: "numeric",
                             timeZoneName: "short"
                         });
-                        a = l.createElement(C.Va, null, l.createElement(C.V, null, Object(c.d)("to {endDate}", {
-                            endDate: r
+                        o = a.createElement(w.Va, null, a.createElement(w.V, null, Object(r.d)("to {endDate}", {
+                            endDate: s
                         }, "TimetableHeader")))
                     }
-                    return l.createElement(C.Va, {
+                    return a.createElement(w.Va, {
                         margin: .5
-                    }, l.createElement(C.xb, {
+                    }, a.createElement(w.xb, {
                         border: !0,
-                        background: C.r.Base
-                    }, l.createElement(C.Va, null, l.createElement("img", {
+                        background: w.r.Base
+                    }, a.createElement(w.Va, null, a.createElement("img", {
                         src: e.event.imageURL
-                    })), l.createElement(C.Va, {
+                    })), a.createElement(w.Va, {
                         margin: 1
-                    }, l.createElement(C.xb, {
+                    }, a.createElement(w.xb, {
                         borderBottom: !0,
                         padding: {
                             y: 1
                         }
-                    }, l.createElement(C.V, {
-                        type: C.Nb.H3
-                    }, e.event.title)), l.createElement(C.xb, {
+                    }, a.createElement(w.V, {
+                        type: w.Nb.H3
+                    }, e.event.title)), a.createElement(w.xb, {
                         borderBottom: !0,
                         padding: {
                             y: 1
@@ -758,29 +844,28 @@
                         margin: {
                             y: .5
                         }
-                    }, i, a), l.createElement(C.Va, {
+                    }, i, o), a.createElement(w.Va, {
                         margin: {
                             y: 1
                         }
-                    }, n))), l.createElement(C.xb, {
+                    }, n))), a.createElement(w.xb, {
                         border: !0,
-                        background: C.r.Base,
+                        background: w.r.Base,
                         margin: {
                             top: 1
                         }
-                    }, l.createElement(C.Va, {
+                    }, a.createElement(w.Va, {
                         margin: 1
-                    }, l.createElement(E, {
+                    }, a.createElement(R, {
                         description: e.event.description
                     }))))
                 }),
-                N = n("2iEm"),
-                O = n("ZbA5"),
-                T = n("oB8h"),
-                x = n("yWUM"),
-                R = n("TSYQ"),
-                L = n("hyVY"),
-                I = (n("Ljgq"), function(e) {
+                L = n("ZbA5"),
+                I = n("oB8h"),
+                F = n("yWUM"),
+                D = n("TSYQ"),
+                A = n("hyVY"),
+                V = (n("Ljgq"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -805,12 +890,12 @@
                             })
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         var e = "?t=";
-                        return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(x.a)(this.props.offsetSeconds)), l.createElement("div", s.__assign({
+                        return this.props.offsetSeconds && this.props.offsetSeconds > 0 && (e += Object(F.a)(this.props.offsetSeconds)), a.createElement("div", i.__assign({
                             onMouseEnter: this.onMouseEnterHandler,
                             onMouseLeave: this.onMouseLeaveHandler
-                        }, Object(C.bc)(this.props)), l.createElement(C.G, null, l.createElement(N.a, {
+                        }, Object(w.bc)(this.props)), a.createElement(w.G, null, a.createElement(b.a, {
                             to: {
                                 pathname: "/videos/" + this.props.video.id,
                                 search: e,
@@ -818,58 +903,58 @@
                             },
                             title: this.props.video.title,
                             "data-test-selector": "preview-image-link"
-                        }, l.createElement(C.Va, {
+                        }, a.createElement(w.Va, {
                             fullWidth: !0
-                        }, l.createElement(C.o, {
+                        }, a.createElement(w.o, {
                             overflow: !0
-                        }, l.createElement("div", null, l.createElement(C.xb, {
-                            display: C.W.InlineFlex,
-                            position: C.db.Absolute,
+                        }, a.createElement("div", null, a.createElement(w.xb, {
+                            display: w.W.InlineFlex,
+                            position: w.db.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             margin: .5,
-                            zIndex: C.ac.Default,
-                            fontSize: C.Aa.Size6,
-                            background: C.r.Overlay,
-                            color: C.O.Overlay,
+                            zIndex: w.ac.Default,
+                            fontSize: w.Aa.Size6,
+                            background: w.r.Overlay,
+                            color: w.O.Overlay,
                             className: "event-video-card__preview-overlay-stat"
-                        }, l.createElement(C.wb, {
+                        }, a.createElement(w.wb, {
                             "data-test-selector": "video-view-count",
-                            icon: C.nb.GlyphViews,
-                            label: Object(c.d)("views", "EventVideoCard"),
-                            value: Object(c.f)(this.props.video.viewCount)
-                        })), l.createElement(C.xb, {
-                            display: C.W.InlineFlex,
-                            position: C.db.Absolute,
+                            icon: w.nb.GlyphViews,
+                            label: Object(r.d)("views", "EventVideoCard"),
+                            value: Object(r.f)(this.props.video.viewCount)
+                        })), a.createElement(w.xb, {
+                            display: w.W.InlineFlex,
+                            position: w.db.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             margin: .5,
-                            zIndex: C.ac.Default,
-                            fontSize: C.Aa.Size6,
-                            background: C.r.Overlay,
-                            color: C.O.Overlay,
+                            zIndex: w.ac.Default,
+                            fontSize: w.Aa.Size6,
+                            background: w.r.Overlay,
+                            color: w.O.Overlay,
                             className: "event-video-card__preview-overlay-stat"
-                        }, l.createElement(C.wb, {
+                        }, a.createElement(w.wb, {
                             "data-test-selector": "video-length",
-                            icon: C.nb.GlyphLength,
-                            label: Object(c.d)("length", "EventVideoCard"),
-                            value: Object(L.b)(this.props.video.lengthSeconds)
+                            icon: w.nb.GlyphLength,
+                            label: Object(r.d)("length", "EventVideoCard"),
+                            value: Object(A.b)(this.props.video.lengthSeconds)
                         })), this.videoPreviewImage()))))))
                     }, t.prototype.videoPreviewImage = function() {
                         var e = this.state.hovered && !this.state.didAnimatedPreviewFailToLoad ? this.props.video.animatedPreviewURL : this.props.video.previewThumbnailURL,
-                            t = R("event-video-card__image-wrapper"),
-                            n = R("event-video-card__preview-image", {
+                            t = D("event-video-card__image-wrapper"),
+                            n = D("event-video-card__preview-image", {
                                 "event-video-card__preview-image--animated": this.state.hovered && this.state.didAnimatedPreviewLoad
                             });
-                        return l.createElement(C.o, {
+                        return a.createElement(w.o, {
                             overflow: !0
-                        }, l.createElement("div", {
+                        }, a.createElement("div", {
                             className: t
-                        }, l.createElement(C.Na, {
+                        }, a.createElement(w.Na, {
                             flexShrink: 0
-                        }, l.createElement("figure", null, l.createElement(C.o, {
-                            ratio: C.p.Aspect16x9
-                        }, l.createElement("img", {
+                        }, a.createElement("figure", null, a.createElement(w.o, {
+                            ratio: w.p.Aspect16x9
+                        }, a.createElement("img", {
                             alt: this.props.video.title,
                             className: n,
                             "data-test-selector": "preview-image",
@@ -878,10 +963,10 @@
                             src: e || ""
                         }))))))
                     }, t
-                }(l.Component)),
-                F = Object(v.c)("EventVideoCard")(I);
+                }(a.Component)),
+                U = Object(u.c)("EventVideoCard")(V);
 
-            function D(e) {
+            function j(e) {
                 var t = null;
                 e.videos && e.videos.edges && e.videos.edges.length > 0 && (t = function(e) {
                     var t = e.offsetSeconds,
@@ -926,17 +1011,17 @@
                     login: e.owner.login || "",
                     displayName: e.owner.displayName || ""
                 });
-                var r = null;
-                null !== e.game && (r = {
+                var a = null;
+                null !== e.game && (a = {
                     id: e.game.id,
                     name: e.game.name,
                     displayName: e.game.displayName || e.game.name,
                     boxArtURL: e.game.boxArtURL || ""
                 });
-                var o = a.SINGLE;
-                return "PREMIERE" === e.type && (o = a.PREMIERE), {
+                var r = N.SINGLE;
+                return "PREMIERE" === e.type && (r = N.PREMIERE), {
                     id: e.id,
-                    type: o,
+                    type: r,
                     owner: i,
                     title: e.title,
                     description: e.description,
@@ -944,7 +1029,7 @@
                     startAt: e.startAt,
                     endAt: e.endAt,
                     channel: n,
-                    game: r,
+                    game: a,
                     self: {
                         isFollowing: e.self && e.self.isFollowing || !1
                     },
@@ -995,209 +1080,209 @@
                 }
             }
 
-            function A(e, t) {
+            function P(e, t) {
                 var n = new Date;
                 return t && (n = t),
                     function(e, t) {
-                        if (t < e.endAt) return e.premiere ? e.premiere.status === r.STARTED : t > e.startAt;
+                        if (t < e.endAt) return e.premiere ? e.premiere.status === O.STARTED : t > e.startAt;
                         return !1
-                    }(e, n) ? o.LIVE : function(e, t) {
+                    }(e, n) ? T.LIVE : function(e, t) {
                         if (e.premiere) return t < e.endAt;
                         return t < e.startAt
-                    }(e, n) ? o.FUTURE : o.PAST
+                    }(e, n) ? T.FUTURE : T.PAST
             }! function(e) {
                 e.EVENT_LEAF = "EventLeaf", e.EVENT_COLLECTION = "EventCollection"
-            }(i || (i = {})),
+            }(_ || (_ = {})),
             function(e) {
                 e.PREMIERE = "Premiere", e.SINGLE = "Live Stream"
-            }(a || (a = {})),
+            }(N || (N = {})),
             function(e) {
                 e.UNSCHEDULED = "UNSCHEDULED", e.SCHEDULED = "SCHEDULED", e.CANCELLED = "CANCELLED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.FAILED = "FAILED", e.UNKNOWN = "UNKNOWN"
-            }(r || (r = {})),
+            }(O || (O = {})),
             function(e) {
                 e.LIVE = "LIVE", e.FUTURE = "FUTURE", e.PAST = "PAST"
-            }(o || (o = {}));
+            }(T || (T = {}));
             n("9Gue");
-            var V = function(e) {
+            var M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onExpandClick = function() {
                             return t.props.onExpand(t.props.event.id)
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         return this.props.expanded ? this.expandedSegment() : this.collapsedSegment()
                     }, t.prototype.collapsedSegment = function() {
-                        var e = Object(c.c)(this.props.event.startAt, {
+                        var e = Object(r.c)(this.props.event.startAt, {
                                 month: "short"
                             }),
-                            t = Object(c.c)(this.props.event.startAt, {
+                            t = Object(r.c)(this.props.event.startAt, {
                                 day: "numeric"
                             }),
-                            n = A({
+                            n = P({
                                 startAt: this.props.event.startAt,
                                 endAt: this.props.event.endAt
                             }),
                             i = null;
-                        n === o.LIVE && (i = l.createElement(C.Va, {
+                        n === T.LIVE && (i = a.createElement(w.Va, {
                             flexShrink: 0
-                        }, l.createElement(C.ab, {
-                            label: Object(c.d)("Live", "EventLandingPage"),
-                            type: C.bb.Live
+                        }, a.createElement(w.ab, {
+                            label: Object(r.d)("Live", "EventLandingPage"),
+                            type: w.bb.Live
                         })));
-                        var a, r, s = l.createElement(C.xb, {
-                            display: C.W.Flex,
+                        var o, s, l = a.createElement(w.xb, {
+                            display: w.W.Flex,
                             borderBottom: !0,
                             padding: {
                                 y: 1
                             }
-                        }, l.createElement("button", {
+                        }, a.createElement("button", {
                             "data-test-selector": "collapsed-segment-title",
                             onClick: this.onExpandClick
-                        }, l.createElement(C.V, {
+                        }, a.createElement(w.V, {
                             className: "timetable-segment__title-link",
                             bold: !0,
-                            color: C.O.Link,
-                            type: C.Nb.H5,
+                            color: w.O.Link,
+                            type: w.Nb.H5,
                             ellipsis: !0
                         }, this.props.event.title)));
-                        i && (s = l.createElement(C.xb, {
+                        i && (l = a.createElement(w.xb, {
                             borderBottom: !0,
                             padding: {
                                 y: 1
                             },
-                            display: C.W.Flex,
-                            flexWrap: C.Z.NoWrap,
-                            alignItems: C.f.Center
-                        }, i, l.createElement(C.Va, {
-                            display: C.W.Flex,
+                            display: w.W.Flex,
+                            flexWrap: w.Z.NoWrap,
+                            alignItems: w.f.Center
+                        }, i, a.createElement(w.Va, {
+                            display: w.W.Flex,
                             margin: {
                                 left: .5
                             }
-                        }, l.createElement("button", {
+                        }, a.createElement("button", {
                             onClick: this.onExpandClick
-                        }, l.createElement(C.V, {
+                        }, a.createElement(w.V, {
                             className: "timetable-segment__title-link",
                             bold: !0,
-                            color: C.O.Link,
-                            type: C.Nb.H5,
+                            color: w.O.Link,
+                            type: w.Nb.H5,
                             ellipsis: !0
-                        }, this.props.event.title))))), this.props.event.channel && (a = this.props.event.channel.id, r = this.props.event.channel.login);
-                        var d = l.createElement(b.a, {
+                        }, this.props.event.title))))), this.props.event.channel && (o = this.props.event.channel.id, s = this.props.event.channel.login);
+                        var c = a.createElement(h.a, {
                             eventID: this.props.event.id,
                             eventTypename: "EventLeaf",
                             areNotificationsEnabled: this.props.event.self.isFollowing,
-                            eventLocation: S.a.EventDetails,
-                            channelID: a,
-                            channelLogin: r,
+                            eventLocation: f.a.EventDetails,
+                            channelID: o,
+                            channelLogin: s,
                             small: !0
                         });
-                        n === o.LIVE ? d = l.createElement(C.Va, null, l.createElement(C.z, {
+                        n === T.LIVE ? c = a.createElement(w.Va, null, a.createElement(w.z, {
                             linkTo: {
-                                pathname: "/" + r,
+                                pathname: "/" + s,
                                 state: {
                                     content: "call_to_action",
                                     medium: "event_page"
                                 }
                             },
-                            size: C.D.Small
-                        }, this.getWatchNowText())) : n === o.PAST && (d = null);
-                        var u = null;
-                        return this.props.event.game && (u = l.createElement(l.Fragment, null, l.createElement(C.Va, {
+                            size: w.D.Small
+                        }, this.getWatchNowText())) : n === T.PAST && (c = null);
+                        var d = null;
+                        return this.props.event.game && (d = a.createElement(a.Fragment, null, a.createElement(w.Va, {
                             margin: {
                                 x: 1
                             }
-                        }, "•"), l.createElement(C.Va, {
+                        }, "•"), a.createElement(w.Va, {
                             margin: {
                                 right: 1
                             },
-                            display: C.W.Flex,
-                            alignItems: C.f.Center,
-                            overflow: C.Ya.Hidden
-                        }, l.createElement(C.Va, {
+                            display: w.W.Flex,
+                            alignItems: w.f.Center,
+                            overflow: w.Ya.Hidden
+                        }, a.createElement(w.Va, {
                             margin: {
                                 right: .5
                             }
-                        }, l.createElement(C.xb, {
-                            display: C.W.Flex,
-                            alignItems: C.f.Center,
-                            color: C.O.Alt2
-                        }, l.createElement(C.mb, {
-                            asset: C.nb.NavGames,
+                        }, a.createElement(w.xb, {
+                            display: w.W.Flex,
+                            alignItems: w.f.Center,
+                            color: w.O.Alt2
+                        }, a.createElement(w.mb, {
+                            asset: w.nb.NavGames,
                             width: 18,
                             height: 18
-                        }))), l.createElement(C.V, {
-                            fontSize: C.Aa.Size5,
+                        }))), a.createElement(w.V, {
+                            fontSize: w.Aa.Size5,
                             ellipsis: !0
-                        }, l.createElement(N.a, {
+                        }, a.createElement(b.a, {
                             to: "/directory/game/" + encodeURIComponent(this.props.event.game.name)
-                        }, this.props.event.game.displayName))))), l.createElement("div", null, l.createElement(C.xb, {
+                        }, this.props.event.game.displayName))))), a.createElement("div", null, a.createElement(w.xb, {
                             className: "timetable-segment__row",
                             border: !0,
                             fullWidth: !0,
                             margin: {
                                 y: 1
                             },
-                            display: C.W.Flex,
-                            flexWrap: C.Z.NoWrap,
-                            alignItems: C.f.Center,
-                            background: C.r.Base
-                        }, l.createElement(C.Va, {
+                            display: w.W.Flex,
+                            flexWrap: w.Z.NoWrap,
+                            alignItems: w.f.Center,
+                            background: w.r.Base
+                        }, a.createElement(w.Va, {
                             className: "timetable-segment__calendar-date",
-                            display: C.W.Flex,
+                            display: w.W.Flex,
                             flexShrink: 0,
-                            flexDirection: C.Y.Column,
-                            justifyContent: C.Ua.Center,
-                            alignItems: C.f.Center
-                        }, l.createElement(C.V, {
-                            fontSize: C.Aa.Size6,
-                            transform: C.Mb.Uppercase
-                        }, e), l.createElement(C.V, {
-                            fontSize: C.Aa.Size3
-                        }, t)), l.createElement(C.Va, {
-                            overflow: C.Ya.Hidden,
+                            flexDirection: w.Y.Column,
+                            justifyContent: w.Ua.Center,
+                            alignItems: w.f.Center
+                        }, a.createElement(w.V, {
+                            fontSize: w.Aa.Size6,
+                            transform: w.Mb.Uppercase
+                        }, e), a.createElement(w.V, {
+                            fontSize: w.Aa.Size3
+                        }, t)), a.createElement(w.Va, {
+                            overflow: w.Ya.Hidden,
                             flexGrow: 1,
                             margin: {
                                 right: 1
                             }
-                        }, s, l.createElement(C.Va, {
-                            display: C.W.Flex,
-                            justifyContent: C.Ua.Between,
-                            alignItems: C.f.Center,
-                            flexWrap: C.Z.NoWrap,
-                            overflow: C.Ya.Hidden
-                        }, l.createElement(C.Va, {
+                        }, l, a.createElement(w.Va, {
+                            display: w.W.Flex,
+                            justifyContent: w.Ua.Between,
+                            alignItems: w.f.Center,
+                            flexWrap: w.Z.NoWrap,
+                            overflow: w.Ya.Hidden
+                        }, a.createElement(w.Va, {
                             padding: {
                                 y: 1
                             },
-                            display: C.W.Flex,
-                            overflow: C.Ya.Hidden
-                        }, l.createElement(C.Va, {
+                            display: w.W.Flex,
+                            overflow: w.Ya.Hidden
+                        }, a.createElement(w.Va, {
                             flexShrink: 0
-                        }, l.createElement(C.V, {
-                            type: C.Nb.H5
-                        }, Object(c.i)(this.props.event.startAt, {
+                        }, a.createElement(w.V, {
+                            type: w.Nb.H5
+                        }, Object(r.i)(this.props.event.startAt, {
                             weekday: "long",
                             timezoneName: "short"
-                        }))), u), d))))
+                        }))), d), c))))
                     }, t.prototype.expandedSegment = function() {
                         var e, t, n = {
                                 backgroundImage: "url(" + this.props.event.imageURL + ")"
                             },
-                            i = A({
+                            i = P({
                                 startAt: this.props.event.startAt,
                                 endAt: this.props.event.endAt
                             });
                         this.props.event.channel && (e = this.props.event.channel.id, t = this.props.event.channel.login);
-                        var a = l.createElement(b.a, {
+                        var o = a.createElement(h.a, {
                             eventID: this.props.event.id,
                             eventTypename: "EventSegment",
                             areNotificationsEnabled: this.props.event.self.isFollowing,
                             channelID: e,
                             channelLogin: t,
-                            eventLocation: S.a.EventDetails
+                            eventLocation: f.a.EventDetails
                         });
-                        if (i === o.LIVE) a = l.createElement(C.z, {
+                        if (i === T.LIVE) o = a.createElement(w.z, {
                             linkTo: {
                                 pathname: "/" + t,
                                 state: {
@@ -1206,205 +1291,205 @@
                                 }
                             }
                         }, this.getWatchNowText());
-                        else if (i === o.PAST && this.props.event.video && this.props.event.video.video) {
-                            var r = "";
-                            this.props.event.video.offsetSeconds && (r = "t=" + Object(x.a)(this.props.event.video.offsetSeconds)), a = l.createElement(C.z, {
+                        else if (i === T.PAST && this.props.event.video && this.props.event.video.video) {
+                            var s = "";
+                            this.props.event.video.offsetSeconds && (s = "t=" + Object(F.a)(this.props.event.video.offsetSeconds)), o = a.createElement(w.z, {
                                 linkTo: {
                                     pathname: "/videos/" + this.props.event.video.video.id,
-                                    search: r,
+                                    search: s,
                                     state: {
-                                        content: h.PageviewContent.EventPast,
-                                        medium: h.PageviewMedium.EventDetails
+                                        content: d.PageviewContent.EventPast,
+                                        medium: d.PageviewMedium.EventDetails
                                     }
                                 }
-                            }, Object(c.d)("Watch Video", "TimetableSegment"))
-                        } else i === o.PAST && (a = l.createElement(C.z, {
+                            }, Object(r.d)("Watch Video", "TimetableSegment"))
+                        } else i === T.PAST && (o = a.createElement(w.z, {
                             disabled: !0
-                        }, Object(c.d)("Past Event", "TimetableSegment")));
-                        var s = null;
-                        if (this.props.event.game && this.props.event.game.boxArtURL && (s = l.createElement(C.Va, {
+                        }, Object(r.d)("Past Event", "TimetableSegment")));
+                        var l = null;
+                        if (this.props.event.game && this.props.event.game.boxArtURL && (l = a.createElement(w.Va, {
                                 className: "timetable-segment__expanded-image",
                                 flexShrink: 0,
                                 margin: {
                                     right: 2
                                 }
-                            }, l.createElement("img", {
+                            }, a.createElement("img", {
                                 src: this.props.event.game.boxArtURL,
                                 height: 130,
                                 width: 93
-                            }))), i === o.LIVE && this.props.event.channel && this.props.event.channel.stream && this.props.event.channel.stream.previewImageURL && (s = l.createElement(C.Va, {
-                                position: C.db.Relative
-                            }, l.createElement(C.Va, {
-                                position: C.db.Absolute,
+                            }))), i === T.LIVE && this.props.event.channel && this.props.event.channel.stream && this.props.event.channel.stream.previewImageURL && (l = a.createElement(w.Va, {
+                                position: w.db.Relative
+                            }, a.createElement(w.Va, {
+                                position: w.db.Absolute,
                                 attachLeft: !0,
                                 attachTop: !0,
                                 padding: .5
-                            }, l.createElement(O.a, {
-                                type: T.a.Live
-                            })), l.createElement("img", {
+                            }, a.createElement(L.a, {
+                                type: I.a.Live
+                            })), a.createElement("img", {
                                 src: this.props.event.channel.stream.previewImageURL,
                                 height: 120,
                                 width: 190
-                            }))), i === o.PAST && this.props.event.video && this.props.event.video.video) {
-                            var d = {
-                                content: h.PageviewContent.EventPast,
-                                medium: h.PageviewMedium.EventDetails
+                            }))), i === T.PAST && this.props.event.video && this.props.event.video.video) {
+                            var c = {
+                                content: d.PageviewContent.EventPast,
+                                medium: d.PageviewMedium.EventDetails
                             };
-                            s = l.createElement("div", {
+                            l = a.createElement("div", {
                                 className: "timetable-segment__video-embed"
-                            }, l.createElement(F, {
+                            }, a.createElement(U, {
                                 video: this.props.event.video.video,
                                 offsetSeconds: this.props.event.video.offsetSeconds,
-                                tracking: d
+                                tracking: c
                             }))
                         }
-                        var u = l.createElement(C.V, {
-                            color: C.O.Overlay
-                        }, Object(c.i)(this.props.event.startAt, {
+                        var u = a.createElement(w.V, {
+                            color: w.O.Overlay
+                        }, Object(r.i)(this.props.event.startAt, {
                             weekday: "long",
                             month: "long",
                             day: "numeric",
                             timeZoneName: "short"
                         }));
-                        i === o.LIVE && (u = l.createElement(C.Va, {
-                            position: C.db.Relative
-                        }, l.createElement(C.V, {
-                            color: C.O.Overlay
-                        }, "" + Object(c.c)(this.props.event.startAt, {
+                        i === T.LIVE && (u = a.createElement(w.Va, {
+                            position: w.db.Relative
+                        }, a.createElement(w.V, {
+                            color: w.O.Overlay
+                        }, "" + Object(r.c)(this.props.event.startAt, {
                             weekday: "long",
                             month: "long",
                             day: "numeric"
-                        })), l.createElement(C.V, {
-                            color: C.O.Overlay
-                        }, Object(c.d)("Happening Now until", "TimeTableSegment") + " " + Object(c.i)(this.props.event.endAt, {
+                        })), a.createElement(w.V, {
+                            color: w.O.Overlay
+                        }, Object(r.d)("Happening Now until", "TimeTableSegment") + " " + Object(r.i)(this.props.event.endAt, {
                             timeZoneName: "short"
                         }))));
                         var p = null;
-                        return this.props.event.game && (p = l.createElement(C.Va, {
+                        return this.props.event.game && (p = a.createElement(w.Va, {
                             className: "events-landing-collection__game-link",
                             margin: {
                                 right: 1
                             },
-                            display: C.W.Flex,
-                            alignItems: C.f.Center
-                        }, l.createElement(C.Va, {
+                            display: w.W.Flex,
+                            alignItems: w.f.Center
+                        }, a.createElement(w.Va, {
                             margin: {
                                 right: .5
                             }
-                        }, l.createElement(C.xb, {
-                            display: C.W.Flex,
-                            alignItems: C.f.Center,
-                            color: C.O.Alt2,
-                            overflow: C.Ya.Hidden
-                        }, l.createElement(C.mb, {
-                            asset: C.nb.NavGames,
+                        }, a.createElement(w.xb, {
+                            display: w.W.Flex,
+                            alignItems: w.f.Center,
+                            color: w.O.Alt2,
+                            overflow: w.Ya.Hidden
+                        }, a.createElement(w.mb, {
+                            asset: w.nb.NavGames,
                             width: 18,
                             height: 18
-                        }))), l.createElement(C.V, {
-                            fontSize: C.Aa.Size5,
+                        }))), a.createElement(w.V, {
+                            fontSize: w.Aa.Size5,
                             ellipsis: !0
-                        }, l.createElement(N.a, {
+                        }, a.createElement(b.a, {
                             to: "/directory/game/" + encodeURIComponent(this.props.event.game.name)
-                        }, this.props.event.game.displayName)))), l.createElement(C.xb, {
+                        }, this.props.event.game.displayName)))), a.createElement(w.xb, {
                             border: !0,
                             elevation: 2,
                             fullWidth: !0,
                             margin: {
                                 y: 1
                             },
-                            background: C.r.Base,
-                            position: C.db.Relative
-                        }, l.createElement(C.Va, {
-                            position: C.db.Absolute,
+                            background: w.r.Base,
+                            position: w.db.Relative
+                        }, a.createElement(w.Va, {
+                            position: w.db.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             padding: {
                                 top: .5,
                                 right: .5
                             }
-                        }, l.createElement(C.z, {
+                        }, a.createElement(w.z, {
                             overlay: !0,
-                            type: C.F.Text,
-                            icon: C.nb.Close,
+                            type: w.F.Text,
+                            icon: w.nb.Close,
                             onClick: this.props.onDismissExpand
-                        })), l.createElement(C.xb, {
+                        })), a.createElement(w.xb, {
                             borderBottom: !0
-                        }, l.createElement("div", {
+                        }, a.createElement("div", {
                             style: n
-                        }, l.createElement("div", {
+                        }, a.createElement("div", {
                             className: "events-landing-collection__expanded-segment-header"
-                        }, l.createElement(C.Va, {
-                            display: C.W.Flex,
-                            alignItems: C.f.End,
-                            flexWrap: C.Z.NoWrap,
+                        }, a.createElement(w.Va, {
+                            display: w.W.Flex,
+                            alignItems: w.f.End,
+                            flexWrap: w.Z.NoWrap,
                             padding: {
                                 top: 3,
                                 x: 2,
                                 bottom: 1
                             }
-                        }, s, l.createElement(C.Va, {
+                        }, l, a.createElement(w.Va, {
                             className: "events-landing-collection__meta",
                             flexGrow: 1
-                        }, l.createElement(C.Va, {
+                        }, a.createElement(w.Va, {
                             margin: {
                                 bottom: 2
                             }
-                        }, l.createElement(C.Va, {
+                        }, a.createElement(w.Va, {
                             margin: {
                                 bottom: .5
                             }
-                        }, l.createElement(C.V, {
-                            color: C.O.Overlay,
-                            type: C.Nb.H3
-                        }, this.props.event.title)), u), l.createElement(C.Va, {
-                            display: C.W.Flex,
-                            alignItems: C.f.Center,
-                            flexWrap: C.Z.NoWrap,
-                            justifyContent: C.Ua.Between
-                        }, p, l.createElement(C.Va, {
-                            display: C.W.Flex,
-                            flexWrap: C.Z.NoWrap,
+                        }, a.createElement(w.V, {
+                            color: w.O.Overlay,
+                            type: w.Nb.H3
+                        }, this.props.event.title)), u), a.createElement(w.Va, {
+                            display: w.W.Flex,
+                            alignItems: w.f.Center,
+                            flexWrap: w.Z.NoWrap,
+                            justifyContent: w.Ua.Between
+                        }, p, a.createElement(w.Va, {
+                            display: w.W.Flex,
+                            flexWrap: w.Z.NoWrap,
                             flexShrink: 0
-                        }, l.createElement(C.Va, {
+                        }, a.createElement(w.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, a), l.createElement(C.Va, {
+                        }, o), a.createElement(w.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, l.createElement(y.a, {
+                        }, a.createElement(g.a, {
                             id: this.props.event.id,
                             title: this.props.event.title,
                             channelID: e,
                             channelLogin: t,
-                            eventLocation: S.a.EventDetails
-                        })), l.createElement(k.a, {
+                            eventLocation: f.a.EventDetails
+                        })), a.createElement(v.a, {
                             targetUser: {
                                 id: t || "",
                                 displayName: this.props.event.channel && this.props.event.channel.displayName || "User"
                             },
                             eventID: this.props.event.id,
-                            balloonDirection: C.v.BottomRight,
+                            balloonDirection: w.v.BottomRight,
                             tailOffset: 10
-                        })))))))), l.createElement(C.Va, {
+                        })))))))), a.createElement(w.Va, {
                             margin: 2
-                        }, l.createElement(E, {
+                        }, a.createElement(R, {
                             description: this.props.event.description
                         })))
                     }, t.prototype.getWatchNowText = function() {
-                        return Object(c.d)("Watch Now", "TimetableSegment")
+                        return Object(r.d)("Watch Now", "TimetableSegment")
                     }, t
-                }(l.PureComponent),
-                U = Object(v.c)("EventCollectionSegment", {
+                }(a.PureComponent),
+                W = Object(u.c)("EventCollectionSegment", {
                     autoReportInteractive: !0
-                })(V);
+                })(M);
 
-            function P(e) {
+            function B(e) {
                 return null !== e
             }
-            var j = n("IxV+"),
-                M = function(e) {
+            var z = n("IxV+"),
+                G = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.loadNextPage = function() {
@@ -1420,21 +1505,21 @@
                                 expandedEvent: null
                             })
                         }, n.setExpanded = function(e) {
-                            c.o.history.replace(s.__assign({}, c.o.history.location, {
-                                state: s.__assign({}, c.o.history.location.state, {
+                            r.o.history.replace(i.__assign({}, r.o.history.location, {
+                                state: i.__assign({}, r.o.history.location.state, {
                                     expandedSegmentID: e
                                 })
                             })), n.setState({
                                 expandedEvent: e
                             })
                         };
-                        var i = null;
-                        return n.props.defaultLeaves && n.props.defaultLeaves.length && (i = n.props.defaultLeaves[0].id), n.state = {
-                            expandedEvent: i,
+                        var a = null;
+                        return n.props.defaultLeaves && n.props.defaultLeaves.length && (a = n.props.defaultLeaves[0].id), n.state = {
+                            expandedEvent: a,
                             loadingForward: !0
                         }, n
                     }
-                    return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         this.props.eventLeaves && this.props.eventLeaves.length || null === this.state.expandedEvent && e.eventLeaves && e.eventLeaves.length && this.setState({
                             expandedEvent: e.eventLeaves[0].id
                         })
@@ -1445,7 +1530,7 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.eventLeaves.map(function(t) {
-                                return l.createElement(U, {
+                                return a.createElement(W, {
                                     key: t.id,
                                     expanded: t.id === e.state.expandedEvent,
                                     event: t,
@@ -1454,25 +1539,25 @@
                                 })
                             }),
                             n = null;
-                        this.props.hasPreviousPage && (n = l.createElement(C.Va, {
+                        this.props.hasPreviousPage && (n = a.createElement(w.Va, {
                             fullWidth: !0,
-                            display: C.W.Flex,
-                            justifyContent: C.Ua.Center
-                        }, l.createElement(C.z, {
-                            type: C.F.Text,
-                            icon: C.nb.GlyphArrUp,
+                            display: w.W.Flex,
+                            justifyContent: w.Ua.Center
+                        }, a.createElement(w.z, {
+                            type: w.F.Text,
+                            icon: w.nb.GlyphArrUp,
                             onClick: this.loadPreviousPage
-                        }, Object(c.d)("Load Earlier Events", "TimetableSchedule"))));
+                        }, Object(r.d)("Load Earlier Events", "TimetableSchedule"))));
                         var i = null;
-                        return this.props.loading && (i = l.createElement(C.Xa, null)), l.createElement(C.Va, {
+                        return this.props.loading && (i = a.createElement(w.Xa, null)), a.createElement(w.Va, {
                             className: "events-landing-collection__main-col",
-                            position: C.db.Relative,
+                            position: w.db.Relative,
                             margin: {
                                 left: 3
                             }
-                        }, l.createElement(C.xb, {
-                            display: C.W.Flex,
-                            justifyContent: C.Ua.Between,
+                        }, a.createElement(w.xb, {
+                            display: w.W.Flex,
+                            justifyContent: w.Ua.Between,
                             margin: {
                                 y: 1
                             },
@@ -1480,17 +1565,17 @@
                                 bottom: 1
                             },
                             borderBottom: !0
-                        }, l.createElement(C.V, {
-                            transform: C.Mb.Uppercase,
-                            color: C.O.Alt2,
-                            type: C.Nb.H5
-                        }, Object(c.d)("Schedule", "TimetableSchedule"))), l.createElement(C.Va, null, n, !this.state.loadingForward && i, t, this.state.loadingForward && i, l.createElement(g.a, {
+                        }, a.createElement(w.V, {
+                            transform: w.Mb.Uppercase,
+                            color: w.O.Alt2,
+                            type: w.Nb.H5
+                        }, Object(r.d)("Schedule", "TimetableSchedule"))), a.createElement(w.Va, null, n, !this.state.loadingForward && i, t, this.state.loadingForward && i, a.createElement(p.a, {
                             enabled: this.props.hasNextPage,
                             loadMore: this.loadNextPage
                         })))
                     }, t.prototype.onRender = function() {
                         this.props.eventLeaves.length && this.props.latencyTracking.reportInteractive()
-                    }, t = s.__decorate([Object(u.a)(j, {
+                    }, t = i.__decorate([Object(s.a)(z, {
                         options: function(e) {
                             var t = null;
                             return e.defaultLeaves && e.defaultLeaves.length && (t = e.defaultLeaves[e.defaultLeaves.length - 1].id), {
@@ -1559,7 +1644,7 @@
                                                 isFollowing: e.node.self && e.node.self.isFollowing || !1
                                             }
                                         }
-                                    }).filter(P)
+                                    }).filter(B)
                                 }(e.data), t),
                                 hasNextPage: e.data.event && e.data.event.leaves && e.data.event.leaves.pageInfo.hasNextPage,
                                 hasPreviousPage: e.data.event && e.data.event.leaves && e.data.event.leaves.pageInfo.hasPreviousPage,
@@ -1578,13 +1663,13 @@
                                         updateQuery: function(e, t) {
                                             var n = t.fetchMoreResult;
                                             if (!(n && n.event && e.event && e.event.leaves && n.event.leaves)) return e;
-                                            var i = e.event.leaves.edges || [],
-                                                a = n.event.leaves.edges || [];
-                                            return s.__assign({}, e, {
-                                                event: s.__assign({}, e.event, {
-                                                    leaves: s.__assign({}, e.event.leaves, {
-                                                        edges: i.concat(a),
-                                                        pageInfo: s.__assign({}, e.event.leaves.pageInfo, {
+                                            var a = e.event.leaves.edges || [],
+                                                r = n.event.leaves.edges || [];
+                                            return i.__assign({}, e, {
+                                                event: i.__assign({}, e.event, {
+                                                    leaves: i.__assign({}, e.event.leaves, {
+                                                        edges: a.concat(r),
+                                                        pageInfo: i.__assign({}, e.event.leaves.pageInfo, {
                                                             hasNextPage: n.event.leaves.pageInfo.hasNextPage,
                                                             hasPreviousPage: e.event.leaves.pageInfo.hasPreviousPage
                                                         })
@@ -1608,13 +1693,13 @@
                                         updateQuery: function(e, t) {
                                             var n = t.fetchMoreResult;
                                             if (!(n && n.event && e.event && e.event.leaves && n.event.leaves)) return e;
-                                            var i = e.event.leaves.edges || [],
-                                                a = n.event.leaves.edges || [];
-                                            return s.__assign({}, e, {
-                                                event: s.__assign({}, e.event, {
-                                                    leaves: s.__assign({}, e.event.leaves, {
-                                                        edges: a.concat(i),
-                                                        pageInfo: s.__assign({}, e.event.leaves.pageInfo, {
+                                            var a = e.event.leaves.edges || [],
+                                                r = n.event.leaves.edges || [];
+                                            return i.__assign({}, e, {
+                                                event: i.__assign({}, e.event, {
+                                                    leaves: i.__assign({}, e.event.leaves, {
+                                                        edges: r.concat(a),
+                                                        pageInfo: i.__assign({}, e.event.leaves.pageInfo, {
                                                             hasNextPage: e.event.leaves.pageInfo.hasNextPage,
                                                             hasPreviousPage: n.event.leaves.pageInfo.hasPreviousPage
                                                         })
@@ -1627,44 +1712,44 @@
                             }
                         }
                     })], t)
-                }(l.Component),
-                W = Object(v.c)("EventCollectionSchedule")(M),
-                B = function(e) {
+                }(a.Component),
+                H = Object(u.c)("EventCollectionSchedule")(G),
+                q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             now: new Date
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(W, s.__assign({}, this.props, {
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(H, i.__assign({}, this.props, {
                             now: this.state.now
                         }))
                     }, t
-                }(l.Component),
-                z = (n("gl36"), Object(v.c)("EventCollectionPageComponent", {
+                }(a.Component),
+                Q = (n("gl36"), Object(u.c)("EventCollectionPageComponent", {
                     autoReportInteractive: !0
                 })(function(e) {
-                    return l.createElement(C.Va, {
+                    return a.createElement(w.Va, {
                         className: "events-landing-collection",
                         margin: {
                             top: 3
                         }
-                    }, l.createElement(f.b, {
+                    }, a.createElement(m.b, {
                         suppressScrollX: !0,
                         disableDebounce: !0
-                    }), l.createElement(C.Va, {
+                    }), a.createElement(w.Va, {
                         className: "events-landing-collection__info-col"
-                    }, l.createElement(g.c, null, l.createElement(_, {
+                    }, a.createElement(p.c, null, a.createElement(x, {
                         event: e.event
-                    }))), l.createElement(B, {
+                    }))), a.createElement(q, {
                         event: e.event,
                         defaultLeaves: e.defaultLeaves
                     }))
                 })),
-                G = n("zxEZ"),
-                H = n("sSlw"),
-                q = (n("jKKg"), function(e) {
+                Y = n("zxEZ"),
+                Z = n("sSlw"),
+                K = (n("jKKg"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1675,19 +1760,19 @@
                             })
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = R({
+                        var e = D({
                                 "event-landing-action__progress": this.state.countdownActive
                             }),
                             t = "";
-                        "function" == typeof c.d && (t = Object(c.d)("This event is Live! Head to the channel page to watch and chat.", "EventLandingAction"), this.state.countdownActive && (t = Object(c.d)("This event is Live! Redirecting to the channel page in 5 seconds.", "EventLandingAction")));
-                        var n = l.createElement(C.Va, {
+                        "function" == typeof r.d && (t = Object(r.d)("This event is Live! Head to the channel page to watch and chat.", "EventLandingAction"), this.state.countdownActive && (t = Object(r.d)("This event is Live! Redirecting to the channel page in 5 seconds.", "EventLandingAction")));
+                        var n = a.createElement(w.Va, {
                                 margin: {
                                     left: 1
                                 }
-                            }, l.createElement(C.z, {
+                            }, a.createElement(w.z, {
                                 linkTo: {
                                     pathname: "/" + this.props.login,
                                     state: {
@@ -1695,75 +1780,75 @@
                                         medium: "event_page"
                                     }
                                 }
-                            }, Object(c.d)("Go to Channel", "EventLandingAction"))),
+                            }, Object(r.d)("Go to Channel", "EventLandingAction"))),
                             i = null;
-                        this.state.countdownActive && (n = l.createElement(C.Va, {
+                        this.state.countdownActive && (n = a.createElement(w.Va, {
                             margin: {
                                 left: 1
                             }
-                        }, l.createElement(C.z, {
+                        }, a.createElement(w.z, {
                             onClick: this.cancelCountdown
-                        }, Object(c.d)("Cancel", "EventLandingAction"))), i = l.createElement(C.gb, {
-                            animationDirection: C.hb.Down,
+                        }, Object(r.d)("Cancel", "EventLandingAction"))), i = a.createElement(w.gb, {
+                            animationDirection: w.hb.Down,
                             animationDuration: 5,
                             onAnimationEnd: this.props.onCountdownSuccess,
-                            size: C.ib.Small
+                            size: w.ib.Small
                         }));
-                        var a = l.createElement(C.K, {
-                            status: C.M.Live
+                        var o = a.createElement(w.K, {
+                            status: w.M.Live
                         });
-                        return this.props.premiere && (a = l.createElement(C.mb, {
-                            asset: C.nb.VideoPremiere,
-                            type: C.ob.Live,
+                        return this.props.premiere && (o = a.createElement(w.mb, {
+                            asset: w.nb.VideoPremiere,
+                            type: w.ob.Live,
                             width: 10
-                        })), l.createElement(C.Va, null, l.createElement(C.xb, {
-                            display: C.W.Flex,
-                            flexWrap: C.Z.NoWrap,
+                        })), a.createElement(w.Va, null, a.createElement(w.xb, {
+                            display: w.W.Flex,
+                            flexWrap: w.Z.NoWrap,
                             border: !0,
                             margin: {
                                 top: 2
                             },
-                            alignItems: C.f.Center,
+                            alignItems: w.f.Center,
                             className: "event-landing-action__strip",
-                            background: C.r.Base
-                        }, l.createElement(C.Va, {
-                            display: C.W.InlineFlex,
+                            background: w.r.Base
+                        }, a.createElement(w.Va, {
+                            display: w.W.InlineFlex,
                             flexShrink: 0,
                             margin: {
                                 right: 1
                             }
-                        }, a), l.createElement(C.Va, {
+                        }, o), a.createElement(w.Va, {
                             className: "event-landing-action__message",
-                            display: C.W.InlineFlex,
-                            flexWrap: C.Z.Wrap,
+                            display: w.W.InlineFlex,
+                            flexWrap: w.Z.Wrap,
                             flexGrow: 1
-                        }, t), l.createElement(C.Va, {
-                            display: C.W.InlineFlex,
+                        }, t), a.createElement(w.Va, {
+                            display: w.W.InlineFlex,
                             flexShrink: 0
-                        }, n)), l.createElement(C.Va, {
+                        }, n)), a.createElement(w.Va, {
                             className: e
                         }, i))
                     }, t
-                }(l.Component)),
-                Q = Object(v.c)("EventLandingAction")(q),
-                Y = (n("2hLa"), function(e) {
+                }(a.Component)),
+                $ = Object(u.c)("EventLandingAction")(K),
+                X = (n("2hLa"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = A({
+                        var e = P({
                                 startAt: new Date(this.props.startAt),
                                 endAt: new Date(this.props.endAt),
                                 premiere: this.props.premiere ? {
                                     status: this.props.premiere.status
                                 } : void 0
                             }),
-                            t = l.createElement(C.z, {
+                            t = a.createElement(w.z, {
                                 disabled: !0
-                            }, Object(c.d)("Past Event", "EventLandingTitle"));
-                        return e === o.LIVE ? t = l.createElement(C.z, {
+                            }, Object(r.d)("Past Event", "EventLandingTitle"));
+                        return e === T.LIVE ? t = a.createElement(w.z, {
                             linkTo: {
                                 pathname: "/" + this.props.channel.login,
                                 state: {
@@ -1771,104 +1856,104 @@
                                     medium: "event_page"
                                 }
                             }
-                        }, Object(c.d)("Watch Now", "EventLandingTitle")) : e === o.FUTURE && (t = l.createElement(b.a, {
+                        }, Object(r.d)("Watch Now", "EventLandingTitle")) : e === T.FUTURE && (t = a.createElement(h.a, {
                             eventID: this.props.id,
                             eventTypename: "EventLeaf",
                             areNotificationsEnabled: !(!this.props.self || !this.props.self.isFollowing),
                             channelID: this.props.channel.id,
                             channelLogin: this.props.channel.login,
-                            eventLocation: S.a.EventDetails
-                        })), l.createElement(C.xb, {
+                            eventLocation: f.a.EventDetails
+                        })), a.createElement(w.xb, {
                             borderBottom: !0
-                        }, l.createElement(C.V, {
-                            type: C.Nb.H2,
+                        }, a.createElement(w.V, {
+                            type: w.Nb.H2,
                             className: "event-landing-title__heading"
-                        }, this.props.title), l.createElement(C.Va, {
-                            display: C.W.Flex,
+                        }, this.props.title), a.createElement(w.Va, {
+                            display: w.W.Flex,
                             margin: {
                                 top: 2,
                                 bottom: 3
                             }
-                        }, l.createElement(C.Va, {
+                        }, a.createElement(w.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, t), l.createElement(C.Va, {
+                        }, t), a.createElement(w.Va, {
                             margin: {
                                 right: 1
                             }
-                        }, l.createElement(y.a, {
+                        }, a.createElement(g.a, {
                             id: this.props.id,
                             title: this.props.title,
                             channelID: this.props.channel.id,
                             channelLogin: this.props.channel.login,
-                            eventLocation: S.a.EventDetails
-                        })), l.createElement(k.a, {
+                            eventLocation: f.a.EventDetails
+                        })), a.createElement(v.a, {
                             targetUser: {
                                 id: this.props.channel.id,
                                 displayName: this.props.channel.displayName || this.props.channel.login
                             },
                             eventID: this.props.id,
-                            balloonDirection: C.v.Bottom
+                            balloonDirection: w.v.Bottom
                         })))
                     }, t
-                }(l.Component)),
-                Z = Object(v.c)("EventLandingTitle")(Y),
-                K = n("GFmA"),
-                $ = n("daWW"),
-                X = function(e) {
+                }(a.Component)),
+                J = Object(u.c)("EventLandingTitle")(X),
+                ee = n("GFmA"),
+                te = n("daWW"),
+                ne = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = null;
-                        return this.props.pastPremiere && (e = l.createElement($.a, {
-                            listContext: K.b.MixedGameAndChannelList,
-                            trackingContent: h.PageviewContent.EventPast,
-                            trackingMedium: h.PageviewMedium.EventDetails,
+                        return this.props.pastPremiere && (e = a.createElement(te.a, {
+                            listContext: ee.b.MixedGameAndChannelList,
+                            trackingContent: d.PageviewContent.EventPast,
+                            trackingMedium: d.PageviewMedium.EventDetails,
                             videos: [this.props.pastPremiere]
-                        })), l.createElement(C.xb, {
+                        })), a.createElement(w.xb, {
                             padding: {
                                 top: 2
                             }
-                        }, l.createElement(C.V, {
-                            transform: C.Mb.Uppercase,
-                            type: C.Nb.H5,
-                            color: C.O.Alt2
-                        }, Object(c.d)("Videos", "EventLandingVideos")), l.createElement(C.Va, {
+                        }, a.createElement(w.V, {
+                            transform: w.Mb.Uppercase,
+                            type: w.Nb.H5,
+                            color: w.O.Alt2
+                        }, Object(r.d)("Videos", "EventLandingVideos")), a.createElement(w.Va, {
                             margin: {
                                 top: 1
                             }
-                        }, l.createElement(C.Va, null, e)))
-                    }, t = s.__decorate([Object(v.c)("EventLandingVideos")], t)
-                }(l.Component),
-                J = function(e) {
+                        }, a.createElement(w.Va, null, e)))
+                    }, t = i.__decorate([Object(u.c)("EventLandingVideos")], t)
+                }(a.Component),
+                ie = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onCountdownSuccess = function() {
                             t.props.goToVideo(t.props.channel.login)
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        A({
+                        P({
                             startAt: new Date(this.props.startAt),
                             endAt: new Date(this.props.endAt),
                             premiere: this.props.premiere ? {
                                 status: this.props.premiere.status
                             } : void 0
-                        }) !== o.LIVE || this.props.noRedirect || (e = l.createElement(Q, {
+                        }) !== T.LIVE || this.props.noRedirect || (e = a.createElement($, {
                             id: this.props.id,
                             login: this.props.channel.login,
                             premiere: this.props.premiere || null,
                             onCountdownSuccess: this.onCountdownSuccess
                         }));
                         var t = null;
-                        return this.props.premiere && this.props.premiere.pastPremiere && this.props.premiere.pastPremiere.id && (t = l.createElement(X, {
+                        return this.props.premiere && this.props.premiere.pastPremiere && this.props.premiere.pastPremiere.id && (t = a.createElement(ne, {
                             pastPremiere: this.props.premiere.pastPremiere
-                        })), l.createElement(C.Va, null, l.createElement(Z, {
+                        })), a.createElement(w.Va, null, a.createElement(J, {
                             id: this.props.id,
                             title: this.props.title,
                             startAt: this.props.startAt,
@@ -1876,168 +1961,168 @@
                             channel: this.props.channel,
                             self: this.props.self,
                             premiere: this.props.premiere
-                        }), e, t, l.createElement(E, {
+                        }), e, t, a.createElement(R, {
                             description: this.props.description
                         }))
-                    }, t = s.__decorate([Object(v.c)("EventLandingBody", {
+                    }, t = i.__decorate([Object(u.c)("EventLandingBody", {
                         autoReportInteractive: !0
                     })], t)
-                }(l.Component),
-                ee = n("rO6o"),
-                te = function(e) {
+                }(a.Component),
+                ae = n("rO6o"),
+                re = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return s.__extends(t, e), t.prototype.render = function() {
+                    return i.__extends(t, e), t.prototype.render = function() {
                         var e = new Date(this.props.startAt);
-                        return l.createElement(C.G, {
+                        return a.createElement(w.G, {
                             row: !0
-                        }, l.createElement(C.Na, {
+                        }, a.createElement(w.Na, {
                             flexShrink: 0
-                        }, l.createElement(C.I, {
-                            size: C.J.Size32,
-                            aspect: C.p.Aspect16x9,
+                        }, a.createElement(w.I, {
+                            size: w.J.Size32,
+                            aspect: w.p.Aspect16x9,
                             src: this.props.imageURL,
                             alt: "" !== this.props.imageURL ? this.props.title : ""
-                        }, l.createElement(ee.a, {
+                        }, a.createElement(ae.a, {
                             date: e
                         }))))
-                    }, t = s.__decorate([Object(v.c)("EventLandingImage", {
+                    }, t = i.__decorate([Object(u.c)("EventLandingImage", {
                         autoReportInteractive: !0
                     })], t)
-                }(l.Component),
-                ne = n("kduP"),
-                ie = n("5zf8");
-            var ae = function(e) {
+                }(a.Component),
+                oe = n("kduP"),
+                se = n("5zf8");
+            var le = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderGameBoxArt = function(e, t) {
-                            return l.createElement(C.I, {
+                            return a.createElement(w.I, {
                                 src: e,
                                 alt: t,
-                                aspect: C.p.Aspect3x4,
-                                size: C.J.Size4
+                                aspect: w.p.Aspect3x4,
+                                size: w.J.Size4
                             })
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e, t, n = new Date(this.props.startAt),
-                            i = new Date(this.props.endAt),
-                            r = null,
-                            o = null,
-                            d = null;
-                        return t = this.props.eventType === a.PREMIERE ? Object(c.d)("Premiere", "EventLandingInfo") : Object(c.d)("Live Stream", "EventLandingInfo"), e = l.createElement(C.Va, {
+                            o = new Date(this.props.endAt),
+                            s = null,
+                            l = null,
+                            c = null;
+                        return t = this.props.eventType === N.PREMIERE ? Object(r.d)("Premiere", "EventLandingInfo") : Object(r.d)("Live Stream", "EventLandingInfo"), e = a.createElement(w.Va, {
                             margin: {
                                 top: 3
                             }
-                        }, l.createElement(C.V, {
-                            transform: C.Mb.Uppercase,
-                            type: C.Nb.H5,
-                            color: C.O.Alt2
-                        }, Object(c.d)("Event Type", "EventLandingInfo")), l.createElement(C.Va, {
+                        }, a.createElement(w.V, {
+                            transform: w.Mb.Uppercase,
+                            type: w.Nb.H5,
+                            color: w.O.Alt2
+                        }, Object(r.d)("Event Type", "EventLandingInfo")), a.createElement(w.Va, {
                             margin: {
                                 top: 1
                             }
-                        }, l.createElement(C.V, {
-                            fontSize: C.Aa.Size5
-                        }, t))), this.props.game && (this.props.game.boxArtURL && this.props.game.displayName && (o = l.createElement(C.Va, {
-                            display: C.W.InlineFlex
-                        }, this.renderGameBoxArt(this.props.game.boxArtURL, this.props.game.displayName))), r = l.createElement(C.Va, {
+                        }, a.createElement(w.V, {
+                            fontSize: w.Aa.Size5
+                        }, t))), this.props.game && (this.props.game.boxArtURL && this.props.game.displayName && (l = a.createElement(w.Va, {
+                            display: w.W.InlineFlex
+                        }, this.renderGameBoxArt(this.props.game.boxArtURL, this.props.game.displayName))), s = a.createElement(w.Va, {
                             margin: {
                                 top: 3
                             }
-                        }, l.createElement(C.V, {
-                            transform: C.Mb.Uppercase,
-                            type: C.Nb.H5,
-                            color: C.O.Alt2
-                        }, Object(c.d)("Streaming", "EventLandingInfo")), l.createElement(N.a, {
+                        }, a.createElement(w.V, {
+                            transform: w.Mb.Uppercase,
+                            type: w.Nb.H5,
+                            color: w.O.Alt2
+                        }, Object(r.d)("Streaming", "EventLandingInfo")), a.createElement(b.a, {
                             to: {
-                                pathname: Object(ne.c)(this.props.game.displayName),
+                                pathname: Object(oe.c)(this.props.game.displayName),
                                 state: {
                                     content: "event_game",
                                     medium: "event_page"
                                 }
                             }
-                        }, l.createElement(C.Va, {
-                            display: C.W.Flex,
-                            flexWrap: C.Z.Wrap,
-                            alignItems: C.f.Center,
+                        }, a.createElement(w.Va, {
+                            display: w.W.Flex,
+                            flexWrap: w.Z.Wrap,
+                            alignItems: w.f.Center,
                             margin: {
                                 top: 1
                             }
-                        }, o, l.createElement(C.Va, {
-                            display: C.W.InlineFlex,
+                        }, l, a.createElement(w.Va, {
+                            display: w.W.InlineFlex,
                             margin: {
                                 left: 1
                             }
-                        }, l.createElement(C.V, {
-                            fontSize: C.Aa.Size5
-                        }, this.props.game.displayName)))))), this.props.channel.profileImageURL && (d = l.createElement(C.Va, {
-                            display: C.W.InlineFlex
-                        }, l.createElement(C.q, {
+                        }, a.createElement(w.V, {
+                            fontSize: w.Aa.Size5
+                        }, this.props.game.displayName)))))), this.props.channel.profileImageURL && (c = a.createElement(w.Va, {
+                            display: w.W.InlineFlex
+                        }, a.createElement(w.q, {
                             size: 40,
                             src: this.props.channel.profileImageURL,
-                            alt: Object(c.d)("{channelDisplayName}'s profile picture", {
+                            alt: Object(r.d)("{channelDisplayName}'s profile picture", {
                                 channelDisplayName: this.props.channel.displayName
                             }, "EventLandingInfo")
-                        }))), l.createElement(C.Va, {
+                        }))), a.createElement(w.Va, {
                             margin: {
                                 x: 3
                             },
                             padding: {
                                 y: 2
                             }
-                        }, l.createElement(C.Va, null, l.createElement(C.V, {
-                            transform: C.Mb.Uppercase,
-                            type: C.Nb.H5,
-                            color: C.O.Alt2
-                        }, Object(c.d)("Date & Time", "EventLandingInfo")), l.createElement(C.Va, {
+                        }, a.createElement(w.Va, null, a.createElement(w.V, {
+                            transform: w.Mb.Uppercase,
+                            type: w.Nb.H5,
+                            color: w.O.Alt2
+                        }, Object(r.d)("Date & Time", "EventLandingInfo")), a.createElement(w.Va, {
                             margin: {
                                 top: 1
                             }
-                        }, l.createElement(C.V, {
-                            fontSize: C.Aa.Size5
+                        }, a.createElement(w.V, {
+                            fontSize: w.Aa.Size5
                         }, function(e, t) {
                             var n = new Date;
                             t && (n = t);
-                            var i = {
+                            var a = {
                                 weekday: "long",
                                 month: "short",
                                 day: "numeric"
                             };
-                            return n.getFullYear() !== e.getFullYear() && (i = s.__assign({}, i, {
+                            return n.getFullYear() !== e.getFullYear() && (a = i.__assign({}, a, {
                                 year: "numeric"
-                            })), Object(c.c)(e, i)
-                        }(n))), l.createElement(C.Va, {
+                            })), Object(r.c)(e, a)
+                        }(n))), a.createElement(w.Va, {
                             margin: {
                                 top: 1
                             }
-                        }, l.createElement(C.V, {
-                            fontSize: C.Aa.Size5
+                        }, a.createElement(w.V, {
+                            fontSize: w.Aa.Size5
                         }, function(e) {
-                            return Object(c.i)(e, {
+                            return Object(r.i)(e, {
                                 timeZoneName: "short"
                             })
-                        }(n))), l.createElement(C.Va, {
+                        }(n))), a.createElement(w.Va, {
                             margin: {
                                 top: 1
                             }
-                        }, l.createElement(C.V, {
-                            fontSize: C.Aa.Size5
+                        }, a.createElement(w.V, {
+                            fontSize: w.Aa.Size5
                         }, function(e, t) {
                             var n = Math.abs(e.getTime() / 1e3 - t.getTime() / 1e3);
-                            return Object(ie.b)(n)
-                        }(n, i)))), e, l.createElement(C.Va, {
+                            return Object(se.b)(n)
+                        }(n, o)))), e, a.createElement(w.Va, {
                             margin: {
                                 top: 3
                             }
-                        }, l.createElement(C.V, {
-                            transform: C.Mb.Uppercase,
-                            type: C.Nb.H5,
-                            color: C.O.Alt2
-                        }, Object(c.d)("Starring", "EventLandingInfo")), l.createElement(N.a, {
+                        }, a.createElement(w.V, {
+                            transform: w.Mb.Uppercase,
+                            type: w.Nb.H5,
+                            color: w.O.Alt2
+                        }, Object(r.d)("Starring", "EventLandingInfo")), a.createElement(b.a, {
                             to: {
                                 pathname: "/" + this.props.channel.login,
                                 state: {
@@ -2045,73 +2130,73 @@
                                     medium: "event_page"
                                 }
                             }
-                        }, l.createElement(C.Va, {
-                            display: C.W.Flex,
-                            flexWrap: C.Z.Wrap,
-                            alignItems: C.f.Center,
+                        }, a.createElement(w.Va, {
+                            display: w.W.Flex,
+                            flexWrap: w.Z.Wrap,
+                            alignItems: w.f.Center,
                             margin: {
                                 top: 1
                             }
-                        }, d, l.createElement(C.Va, {
-                            display: C.W.InlineFlex,
+                        }, c, a.createElement(w.Va, {
+                            display: w.W.InlineFlex,
                             margin: {
                                 left: 1
                             }
-                        }, l.createElement(C.V, {
-                            fontSize: C.Aa.Size5
-                        }, "" !== this.props.channel.displayName ? this.props.channel.displayName : this.props.channel.login))))), r)
-                    }, t = s.__decorate([Object(v.c)("EventLandingInfo")], t)
-                }(l.Component),
-                re = function(e) {
+                        }, a.createElement(w.V, {
+                            fontSize: w.Aa.Size5
+                        }, "" !== this.props.channel.displayName ? this.props.channel.displayName : this.props.channel.login))))), s)
+                    }, t = i.__decorate([Object(u.c)("EventLandingInfo")], t)
+                }(a.Component),
+                ce = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return l.createElement(C.xb, {
-                            background: C.r.Base
-                        }, l.createElement(C.xb, {
+                        return a.createElement(w.xb, {
+                            background: w.r.Base
+                        }, a.createElement(w.xb, {
                             border: !0
-                        }, l.createElement(te, {
+                        }, a.createElement(re, {
                             title: this.props.title,
                             imageURL: this.props.imageURL,
                             startAt: this.props.startAt
-                        })), l.createElement(C.xb, {
+                        })), a.createElement(w.xb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0
-                        }, l.createElement(ae, {
+                        }, a.createElement(le, {
                             startAt: this.props.startAt,
                             endAt: this.props.endAt,
                             channel: this.props.channel,
                             game: this.props.game,
                             eventType: this.props.eventType
                         })))
-                    }, t = s.__decorate([Object(v.c)("EventLandingSidePanel")], t)
-                }(l.Component),
-                oe = function(e) {
+                    }, t = i.__decorate([Object(u.c)("EventLandingSidePanel")], t)
+                }(a.Component),
+                de = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return s.__extends(t, e), t.prototype.render = function() {
-                        return this.props.eventLeaf.channel ? l.createElement(C.Va, {
-                            position: C.db.Relative
-                        }, this.renderChannelInfo(this.props.eventLeaf.channel), l.createElement(C.Va, {
-                            display: C.W.Flex,
-                            flexWrap: C.Z.NoWrap,
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        return this.props.eventLeaf.channel ? a.createElement(w.Va, {
+                            position: w.db.Relative
+                        }, this.renderChannelInfo(this.props.eventLeaf.channel), a.createElement(w.Va, {
+                            display: w.W.Flex,
+                            flexWrap: w.Z.NoWrap,
                             margin: {
                                 left: 3,
                                 top: 3,
                                 right: 3
                             }
-                        }, l.createElement(C.Va, {
+                        }, a.createElement(w.Va, {
                             flexShrink: 0,
                             flexGrow: 0,
                             margin: {
                                 right: 3
                             }
-                        }, l.createElement(re, {
+                        }, a.createElement(ce, {
                             title: this.props.eventLeaf.title,
                             imageURL: this.props.eventLeaf.imageURL,
                             startAt: this.props.eventLeaf.startAt,
@@ -2119,9 +2204,9 @@
                             channel: this.props.eventLeaf.channel,
                             game: this.props.eventLeaf.game,
                             eventType: this.props.eventLeaf.type
-                        })), l.createElement(C.Va, {
+                        })), a.createElement(w.Va, {
                             flexGrow: 1
-                        }, l.createElement(J, {
+                        }, a.createElement(ie, {
                             id: this.props.eventLeaf.id,
                             title: this.props.eventLeaf.title,
                             description: this.props.eventLeaf.description,
@@ -2134,43 +2219,43 @@
                             goToVideo: this.props.goToVideo
                         })))) : null
                     }, t.prototype.renderChannelInfo = function(e) {
-                        return l.createElement(H.a, null, l.createElement(G.a, {
-                            currentPage: G.b.Events,
+                        return a.createElement(Z.a, null, a.createElement(Y.a, {
+                            currentPage: Y.b.Events,
                             channelLogin: e.login
                         }))
                     }, t
-                }(l.Component),
-                se = Object(v.c)("EventLeafPageComponent", {
+                }(a.Component),
+                ue = Object(u.c)("EventLeafPageComponent", {
                     autoReportInteractive: !0
-                })(oe);
+                })(de);
 
-            function le(e) {
+            function pe(e) {
                 var t = null;
                 null !== e.owner && (t = {
                     id: e.owner.id || "",
                     login: e.owner.login || "",
                     displayName: e.owner.displayName || ""
                 });
-                var n = o.FUTURE,
+                var n = T.FUTURE,
                     i = null;
                 if (e.nextLeaf && e.nextLeaf.edges && e.nextLeaf.edges.length) {
                     var a = e.nextLeaf.edges[0];
-                    a.node && (n = A({
+                    a.node && (n = P({
                         startAt: new Date(a.node.startAt),
                         endAt: new Date(a.node.endAt)
                     }), i = a.node.channel && a.node.channel.login || null)
                 }
                 var r = null;
                 e.collectionStart && (r = new Date(e.collectionStart));
-                var s = null;
-                return e.collectionEnd && (s = new Date(e.collectionEnd)), {
+                var o = null;
+                return e.collectionEnd && (o = new Date(e.collectionEnd)), {
                     id: e.id,
                     title: e.title,
                     description: e.description,
                     imageURL: e.collectionImageURL,
                     startAt: r,
-                    endAt: s,
-                    isLive: n === o.LIVE,
+                    endAt: o,
+                    isLive: n === T.LIVE,
                     liveChannelLogin: i,
                     owner: t,
                     self: {
@@ -2178,13 +2263,13 @@
                     }
                 }
             }
-            var ce = n("8n2l"),
-                de = (n("axFM"), function(e) {
+            var me = n("8n2l"),
+                he = (n("axFM"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.clearExpandedSegmentHistory = function() {
-                            t.props.location.state && c.o.history.replace(s.__assign({}, c.o.history.location, {
-                                state: s.__assign({}, c.o.history.location.state, {
+                            t.props.location.state && r.o.history.replace(i.__assign({}, r.o.history.location, {
+                                state: i.__assign({}, r.o.history.location.state, {
                                     expandedSegmentID: void 0
                                 })
                             }))
@@ -2192,7 +2277,7 @@
                             t.props.history.push("/" + e)
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.onRender()
                     }, t.prototype.componentDidUpdate = function() {
                         this.onRender()
@@ -2200,12 +2285,12 @@
                         if (this.props.data.loading) return this.loadingSpinner();
                         if (this.props.data.error || !this.props.data.event) return this.errorPage();
                         if (function(e) {
-                                return e.__typename === i.EVENT_LEAF
+                                return e.__typename === _.EVENT_LEAF
                             }(this.props.data.event)) {
                             if (this.props.data.event.parent) {
                                 var e = function(e) {
                                     var t = null;
-                                    return e.channel && (t = s.__assign({}, e.channel, {
+                                    return e.channel && (t = i.__assign({}, e.channel, {
                                         stream: null
                                     })), {
                                         id: e.id,
@@ -2221,18 +2306,18 @@
                                             isFollowing: e.self.isFollowing
                                         }
                                     }
-                                }(D(this.props.data.event));
-                                return this.eventCollection(le(this.props.data.event.parent), [e])
+                                }(j(this.props.data.event));
+                                return this.eventCollection(pe(this.props.data.event.parent), [e])
                             }
-                            return this.eventLeaf(D(this.props.data.event))
+                            return this.eventLeaf(j(this.props.data.event))
                         }
                         return function(e) {
-                            return e.__typename === i.EVENT_COLLECTION
-                        }(this.props.data.event) ? this.eventCollection(le(this.props.data.event)) : this.errorPage()
+                            return e.__typename === _.EVENT_COLLECTION
+                        }(this.props.data.event) ? this.eventCollection(pe(this.props.data.event)) : this.errorPage()
                     }, t.prototype.eventLeaf = function(e) {
-                        return this.canRenderLeaf(e) ? l.createElement(C.Va, {
-                            position: C.db.Relative
-                        }, l.createElement(se, {
+                        return this.canRenderLeaf(e) ? a.createElement(w.Va, {
+                            position: w.db.Relative
+                        }, a.createElement(ue, {
                             eventLeaf: e,
                             noRedirect: this.props.location.state && this.props.location.state.noRedirect,
                             goToVideo: this.goToVideo
@@ -2240,25 +2325,25 @@
                     }, t.prototype.canRenderLeaf = function(e) {
                         return e.channel && e.channel.id && e.channel.login
                     }, t.prototype.eventCollection = function(e, t) {
-                        return l.createElement(z, {
+                        return a.createElement(Q, {
                             event: e,
                             defaultLeaves: t
                         })
                     }, t.prototype.errorPage = function() {
-                        return l.createElement(d.a, {
-                            message: Object(c.d)("Error loading data.", "EventLandingPage")
+                        return a.createElement(o.a, {
+                            message: Object(r.d)("Error loading data.", "EventLandingPage")
                         })
                     }, t.prototype.loadingSpinner = function() {
-                        return l.createElement(C.Va, {
+                        return a.createElement(w.Va, {
                             margin: {
                                 top: 3
                             }
-                        }, l.createElement(C.Xa, {
+                        }, a.createElement(w.Xa, {
                             fillContent: !0
                         }))
                     }, t.prototype.onRender = function() {
-                        this.props.data.event && (this.props.latencyTracking.reportInteractive(), this.props.data.event.title && c.o.setPageTitle(this.props.data.event.title)), this.clearExpandedSegmentHistory()
-                    }, t = s.__decorate([Object(u.a)(ce, {
+                        this.props.data.event && (this.props.latencyTracking.reportInteractive(), this.props.data.event.title && r.o.setPageTitle(this.props.data.event.title)), this.clearExpandedSegmentHistory()
+                    }, t = i.__decorate([Object(s.a)(me, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -2266,27 +2351,27 @@
                                 }
                             }
                         }
-                    }), Object(v.c)("EventLandingPage", {
-                        destination: m.a.EventDetails
-                    }), Object(p.a)({
-                        location: h.PageviewLocation.EventDetails,
+                    }), Object(u.c)("EventLandingPage", {
+                        destination: c.a.EventDetails
+                    }), Object(l.a)({
+                        location: d.PageviewLocation.EventDetails,
                         skip: function(e) {
                             return e.data.loading || !!e.data.error
                         }
                     })], t)
-                }(l.Component)),
-                ue = function(e) {
+                }(a.Component)),
+                ve = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return s.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
+                    return i.__extends(t, e), t.prototype.shouldComponentUpdate = function(e) {
                         return e.match.params.eventName !== this.props.match.params.eventName
                     }, t.prototype.render = function() {
-                        return l.createElement(de, s.__assign({}, this.props))
+                        return a.createElement(he, i.__assign({}, this.props))
                     }, t
-                }(l.Component);
+                }(a.Component);
             n.d(t, "EventLandingPage", function() {
-                return ue
+                return ve
             })
         },
         "4qQ0": function(e, t, n) {
@@ -4205,7 +4290,7 @@
                         "data-test-selector": "bottom-right-selector"
                     }, e.bottomRight))
                 }),
-                x = (n("kF1+"), function(e) {
+                R = (n("kF1+"), function(e) {
                     var t = e.icon && a.createElement(c.Va, {
                         display: c.W.Flex,
                         margin: {
@@ -4234,7 +4319,7 @@
                         }
                     }, t, a.createElement(c.V, null, e.value))
                 }),
-                R = n("GnwI"),
+                x = n("GnwI"),
                 L = (n("B3R5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -4299,7 +4384,7 @@
                         })))
                     }, t
                 }(a.Component)),
-                I = Object(R.c)("PreviewCardThumbnail")(L),
+                I = Object(x.c)("PreviewCardThumbnail")(L),
                 F = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
@@ -4334,8 +4419,8 @@
                 A = n("ZbA5"),
                 V = n("QVaV"),
                 U = n("hyVY"),
-                P = n("MXoD"),
-                j = n("0LAi"),
+                j = n("MXoD"),
+                P = n("0LAi"),
                 M = n("fVj5");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
@@ -4444,7 +4529,7 @@
                             borderRadius: c.x.Medium,
                             overflow: c.Ya.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(c.T, {
-                            to: Object(P.a)(this.getTrackingContext(S.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(j.a)(this.getTrackingContext(S.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
                         }, this.props.thumbnailImageProps && a.createElement(I, {
@@ -4477,41 +4562,41 @@
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
                             topRight: void 0,
-                            bottomLeft: a.createElement(x, {
+                            bottomLeft: a.createElement(R, {
                                 value: Object(r.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
                                     viewerCount: this.props.currentViewerCount
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
                         }) : G(this.props) ? a.createElement(T, {
-                            topLeft: void 0 !== this.props.durationInSeconds && a.createElement(x, {
+                            topLeft: void 0 !== this.props.durationInSeconds && a.createElement(R, {
                                 value: Object(U.b)(this.props.durationInSeconds),
                                 icon: c.nb.Play,
                                 withBackground: !0
                             }),
-                            topRight: this.props.listPosition && a.createElement(x, {
+                            topRight: this.props.listPosition && a.createElement(R, {
                                 withBackground: !0,
                                 value: this.getListPositionLabel()
                             }),
-                            bottomLeft: a.createElement(x, {
+                            bottomLeft: a.createElement(R, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: a.createElement(x, {
+                            bottomRight: a.createElement(R, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
                             }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
                         }) : H(this.props) ? a.createElement(T, {
-                            topLeft: a.createElement(x, {
+                            topLeft: a.createElement(R, {
                                 value: Object(U.b)(this.props.durationInSeconds),
                                 icon: c.nb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
-                            bottomLeft: a.createElement(x, {
+                            bottomLeft: a.createElement(R, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: a.createElement(x, {
+                            bottomRight: a.createElement(R, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
                             })
                         }) : void 0
@@ -4531,7 +4616,7 @@
                             }
                         }, a.createElement(_, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(P.a)(this.getTrackingContext(S.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(S.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: c.p.BoxArt,
                             "data-test-selector": W.BoxArt,
@@ -4542,7 +4627,7 @@
                             }
                         }, a.createElement(_, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(P.a)(this.getTrackingContext(S.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(S.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: c.p.Aspect1x1,
                             "data-test-selector": W.Avatar
@@ -4552,7 +4637,7 @@
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
                             text: Object(V.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(P.a)(this.getTrackingContext(S.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(S.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
                         }), H(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
@@ -4564,13 +4649,13 @@
                             automationSelector: "preview-card-clip-curator-link"
                         }) : G(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== B.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(P.a)(this.getTrackingContext(S.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(S.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
                         }), a.createElement(a.Fragment, null, a.createElement(F, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(P.a)(this.getTrackingContext(S.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(S.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -4579,7 +4664,7 @@
                             margin: {
                                 top: .5
                             }
-                        }, a.createElement(j.a, i.__assign({}, this.props.tagListProps, {
+                        }, a.createElement(P.a, i.__assign({}, this.props.tagListProps, {
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderAppendages = function() {
@@ -4619,7 +4704,7 @@
                         }
                     }, t
                 }(a.Component),
-                Q = Object(R.c)("PreviewCard", {
+                Q = Object(x.c)("PreviewCard", {
                     autoReportInteractive: !0
                 })(q);
             n.d(t, !1, function() {
@@ -6305,18 +6390,17 @@
                 N = n("W8Fi"),
                 O = n("br9A"),
                 T = n("Ue10"),
-                x = (n("a7aT"), n("z+dA"));
+                R = (n("a7aT"), n("z+dA"));
             ! function(e) {
                 e.SubButton = "subscribe-button__dropdown", e.BalloonLayerButton = "subscribe-button__balloon-layer-btn", e.DefaultButton = "subscribe-button__default-btn", e.SubscribeBalloon = "subscribe-button__subscribe-balloon"
             }(i || (i = {}));
-            var R = l.a.wrap(function() {
+            var x = l.a.wrap(function() {
                     return Promise.all([n.e(0), n.e(186)]).then(n.bind(null, "f+qK"))
                 }, "SubscribeBalloon"),
                 L = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            activeTierPrice: null,
                             inPrimeRegion: !1
                         }, t.modalLevel = "top_page", t.renderBalloonContentForBalloonLayer = function() {
                             return r.createElement(f.a, {
@@ -6347,27 +6431,21 @@
                                 action: e.action || "",
                                 channelLogin: t.props.channelLogin || "",
                                 channelID: t.props.data && t.props.data.user.id,
-                                checkoutButtonTier: e.checkoutButtonTier || (t.state.activeTierPrice || S.b.Prime).slice(),
+                                checkoutButtonTier: e.checkoutButtonTier,
                                 hasSubCredit: !!t.props.data.user.self && t.props.data.user.self.canPrimeSubscribe,
                                 hostChannelID: t.props.hostChannelID,
                                 hostChannelLogin: t.props.hostChannelLogin,
-                                isMenuOpen: !(e.action === O.a.OpenSubMenu),
+                                isMenuOpen: e.action !== O.a.OpenSubMenu,
                                 mysteryGiftCount: e.mysteryGiftCount,
                                 sub_location: "channel_page",
                                 modal: !n,
                                 modalLevel: n ? "" : t.modalLevel.slice(),
                                 showPrimeContent: i,
                                 giftRecipient: e.giftRecipient || null
-                            }), !e.modalLevel || e.action !== O.a.ClickMoreSubOptions && e.action !== O.a.ClickBack || (t.modalLevel = e.modalLevel, t.setState({
-                                activeTierPrice: S.b.Prime
-                            }))
+                            }), !e.modalLevel || e.action !== O.a.ClickMoreSubOptions && e.action !== O.a.ClickBack || (t.modalLevel = e.modalLevel)
                         }, t.handleMenuToggle = function(e) {
                             t.handleSubMenuAction({
                                 action: e ? O.a.CloseSubMenu : O.a.OpenSubMenu
-                            })
-                        }, t.onSelectTierTab = function(e) {
-                            t.state.activeTierPrice !== e && t.setState({
-                                activeTierPrice: e
                             })
                         }, t.getBalloonDirection = function() {
                             var e = t.props.balloonDirection || T.v.BottomRight;
@@ -6412,16 +6490,16 @@
                         }, "SubscribeButton") : Object(v.d)("Subscribe", "SubscribeButton");
                         var u = t ? "subscribed-button" : "subscribe-button",
                             p = r.createElement(T.z, {
+                                ariaLabel: s,
                                 "data-a-target": u,
                                 "data-test-selector": i.SubButton,
-                                ariaLabel: s,
-                                type: this.getButtonType(t),
                                 dropdown: !this.props.hideDropdownArrow,
                                 fullWidth: !0,
                                 icon: this.getButtonIcon(t, o),
-                                onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0
+                                onClick: this.props.renderBalloonInBalloonLayer ? this.handleButtonClick : void 0,
+                                type: this.getButtonType(t)
                             }, s);
-                        return this.setBalloonWrapperContent(r.createElement(R, {
+                        return this.setBalloonWrapperContent(r.createElement(x, {
                             authToken: this.props.authToken,
                             channelLogin: this.props.channelLogin || "",
                             "data-test-selector": i.SubscribeBalloon,
@@ -6431,7 +6509,6 @@
                             isNonStandardSub: a,
                             isStaff: !!(this.props.sessionUser && this.props.sessionUser.roles && this.props.sessionUser.roles.isStaff),
                             isSubscribed: t,
-                            onSelectTierTab: this.onSelectTierTab,
                             productId: this.props.data.user.subscriptionProducts[0].id,
                             subbedTier: o || S.b.Prime,
                             userHasPrime: !1
@@ -6476,7 +6553,7 @@
                         }
                     }, t
                 }(r.Component),
-                I = Object(h.compose)(Object(k.a)(x, {
+                I = Object(h.compose)(Object(k.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -7386,14 +7463,12 @@
                 return u
             }), n.d(t, "b", function() {
                 return p
-            }), n.d(t, "f", function() {
+            }), n.d(t, "e", function() {
                 return m
             }), n.d(t, "c", function() {
                 return h
-            }), n.d(t, "e", function() {
-                return v
             }), n.d(t, "d", function() {
-                return g
+                return v
             });
             var i = n("mrSG"),
                 a = n("/7QA"),
@@ -7454,13 +7529,6 @@
 
             function v(e, t) {
                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
-            }
-
-            function g(e) {
-                return {
-                    src: v(e, 1),
-                    srcSet: v(e, 1) + " 1x, " + v(e, 2) + " 2x, " + v(e, 3) + " 4x"
-                }
             }
         },
         a7aT: function(e, t, n) {},
@@ -7690,6 +7758,7 @@
                     BuyGiftToPaidUpgrade: "buy_gift_to_paid_upgrade",
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
+                    ChangeTier: "change_tier",
                     ClickCheckout: "click_checkout_button",
                     ClickMoreSubOptions: "more_options_click",
                     ClickGiftSubOptions: "gift_options_click",
@@ -8884,7 +8953,7 @@
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(C || (C = {}));
-            var T, x, R, L = {
+            var T, R, x, L = {
                     contentGeneral: function() {
                         return Object(l.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -9029,12 +9098,12 @@
                         value: "message general report reason"
                     }
                 },
-                P = a.__assign({}, U.content, {
+                j = a.__assign({}, U.content, {
                     getDescription: function() {
                         return Object(l.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
                     }
                 }),
-                j = {
+                P = {
                     content: {
                         getTitle: I.reportProfile,
                         getLabel: L.contentGeneral,
@@ -9195,9 +9264,9 @@
                 $ = F,
                 X = {
                     video: V.identifyUser,
-                    whisper: P,
+                    whisper: j,
                     chat: U.content,
-                    profile: j.content,
+                    profile: P.content,
                     room: M,
                     "somewhere else": G.identifyLocation,
                     streamer: V.content,
@@ -9205,10 +9274,10 @@
                     "someone in chat": U.content,
                     general_video: V.general,
                     general_messaging: U.general,
-                    general_profile: j.general,
-                    "channel owner": j.content,
+                    general_profile: P.general,
+                    "channel owner": P.content,
                     "community member": U.content,
-                    "on twitch": j.content,
+                    "on twitch": P.content,
                     "another site": G.externalSite,
                     "twitch event": D.twitchEvent,
                     "brigading/raids": B.socialMedia,
@@ -9235,15 +9304,15 @@
                     other: $
                 },
                 ee = {
-                    CHANNEL_FEED_POST_REPORT: j.content,
-                    COMMUNITY_REPORT: j.content,
+                    CHANNEL_FEED_POST_REPORT: P.content,
+                    COMMUNITY_REPORT: P.content,
                     CHAT_REPORT: U.content,
                     CLIP_REPORT: V.content,
-                    EVENT_REPORT: j.content,
-                    EXTENSION_REPORT: j.content,
-                    LIVE_UP_REPORT: j.content,
+                    EVENT_REPORT: P.content,
+                    EXTENSION_REPORT: P.content,
+                    LIVE_UP_REPORT: P.content,
                     ROOM_REPORT: M,
-                    WHISPER_REPORT: P,
+                    WHISPER_REPORT: j,
                     VOD_COMMENT_REPORT: U.content
                 },
                 te = "report-wizard-back",
@@ -9314,7 +9383,7 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(R.Finish, t.state.currentCard.value)
+                                return t.props.trackClose(x.Finish, t.state.currentCard.value)
                             }), t.props.onClose()
                         }, t.handleNext = function() {
                             if (t.state.currentSelection && t.state.currentSelection.value) {
@@ -9338,7 +9407,7 @@
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: o
                                 }, function() {
-                                    return t.trackNavigation(x.Next, e.value)
+                                    return t.trackNavigation(R.Next, e.value)
                                 })
                             }
                         }, t.createReportDescription = function() {
@@ -9380,7 +9449,7 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return r.trackNavigation(x.Submit)
+                                                        return r.trackNavigation(R.Submit)
                                                     });
                                                     break;
                                                 case O.b.UserError:
@@ -9417,7 +9486,7 @@
                                         error: "",
                                         targetUnknown: i
                                     }, function() {
-                                        return o.trackNavigation(x.Back, e.value)
+                                        return o.trackNavigation(R.Back, e.value)
                                     }), [2]
                                 })
                             })
@@ -9448,7 +9517,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(R.Close, this.state.currentCard.value)
+                        this.state.modalCloseTracked || this.props.trackClose(x.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
                         var e = this.state.currentCard.type === C.Info && this.state.currentCard.blockPrompt ? r.createElement(S, {
                                 targetUser: this.props.targetUser,
@@ -9498,9 +9567,9 @@
                 le = n("s8Ou"),
                 ce = n("0hI/");
             n.d(t, "c", function() {
-                    return x
-                }), n.d(t, "a", function() {
                     return R
+                }), n.d(t, "a", function() {
+                    return x
                 }), n.d(t, "b", function() {
                     return ue
                 }),
@@ -9509,10 +9578,10 @@
                 }(T || (T = {})),
                 function(e) {
                     e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-                }(x || (x = {})),
+                }(R || (R = {})),
                 function(e) {
                     e.Close = "close", e.Finish = "finish"
-                }(R || (R = {}));
+                }(x || (x = {}));
             var de = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -9604,11 +9673,11 @@
                             userBlocked: !1
                         })
                     }, n.trackOpen = function(e) {
-                        n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(x.Open, void 0, e) : n.trackAction(T.Open), n.setState({
+                        n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(R.Open, void 0, e) : n.trackAction(T.Open), n.setState({
                             openEventSent: !0
                         }))
                     }, n.trackClose = function(e, t) {
-                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(x.Close, t, void 0, e) : n.trackAction(T.Close), n.setState({
+                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(R.Close, t, void 0, e) : n.trackAction(T.Close), n.setState({
                             closeEventSent: !0
                         }))
                     }, n.trackWizardAction = function(e, t, i, a) {
@@ -10690,7 +10759,7 @@
                 T = c.a.wrap(function() {
                     return n.e(132).then(n.bind(null, "7lJP"))
                 }, "UserImageUploader"),
-                x = function(e) {
+                R = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.openModal = function() {
@@ -10774,7 +10843,7 @@
                         this.props.closeModal()
                     }, t
                 }(r.Component),
-                R = Object(p.a)(O, {
+                x = Object(p.a)(O, {
                     options: function(e) {
                         return {
                             variables: {
@@ -10785,7 +10854,7 @@
                     skip: function(e) {
                         return !e.channelLogin || !e.firstPageLoaded
                     }
-                })(x);
+                })(R);
             var L, I = Object(S.connect)(function(e) {
                     return {
                         firstPageLoaded: e.session.firstPageLoaded
@@ -10795,14 +10864,14 @@
                         closeModal: C.c,
                         showModal: C.d
                     }, e)
-                })(R),
+                })(x),
                 F = n("tuvy"),
                 D = n("i4un"),
                 A = n("dIU+"),
                 V = n("GnwI"),
                 U = n("Ba7Q"),
-                P = n("QjI3"),
-                j = (n("BOil"), n("HXcb"));
+                j = n("QjI3"),
+                P = (n("BOil"), n("HXcb"));
             n.d(t, "a", function() {
                 return q
             }), n.d(t, "b", function() {
@@ -11260,7 +11329,7 @@
                                 tabIndex: this.state.showLiveNotificationsButton ? 0 : -1,
                                 followData: this.getFollowData(),
                                 showTooltips: !0
-                            }))), r.createElement(N.Va, null, r.createElement(P.a, {
+                            }))), r.createElement(N.Va, null, r.createElement(j.a, {
                                 updateContainerWidth: this.onUpdateDebounce,
                                 channelLogin: this.props.channelLogin,
                                 hideEsportsSubscription: this.props.hideEsportsSubscription,
@@ -11284,7 +11353,7 @@
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(P.a, {
+                        }, r.createElement(j.a, {
                             updateContainerWidth: this.onUpdateDebounce,
                             channelLogin: this.props.channelLogin,
                             hideEsportsSubscription: this.props.hideEsportsSubscription
@@ -11304,7 +11373,7 @@
                         if (this.props.data && this.props.data.user && this.props.data.user.id) return this.props.data.user
                     }, t
                 }(r.Component),
-                Z = Object(o.compose)(Object(p.a)(j, {
+                Z = Object(o.compose)(Object(p.a)(P, {
                     options: function(e) {
                         return {
                             variables: {
@@ -12225,100 +12294,6 @@
                 var t = e,
                     n = Math.floor(t / 3600);
                 return t %= 3600, n + "h" + Math.floor(t / 60) + "m" + (t %= 60) + "s"
-            }
-        },
-        ykET: function(e, t, n) {
-            "use strict";
-            var i = n("q1tI"),
-                a = n("2iEm"),
-                r = n("RcPG"),
-                o = n("a1OF");
-            n("mrSG"), n("p52R"), n("ZtEv"), n("60o1");
-
-            function s(e) {
-                var t = {};
-                return e.forEach(function(e) {
-                    t[e.from] = {
-                        startIndex: e.from,
-                        id: e.emoteID
-                    }
-                }), t
-            }
-            var l = n("Ue10");
-            n.d(t, "a", function() {
-                return d
-            });
-            var c = /^(https?:\/\/)?(www.)?twitch\.tv/;
-
-            function d(e, t, n, d) {
-                void 0 === t && (t = []);
-                for (var u, p = [], m = e.split(/\n/), h = function(e, h) {
-                        if (e > 0 && (h += m[e - 1].length + 1), d && "" === m[e]) return p.push(i.createElement(l.V, {
-                            key: e
-                        }, "\n")), u = h, "continue";
-                        var v = t.map(function(e) {
-                                return function(e, t) {
-                                    return {
-                                        emoteID: e.emoteID,
-                                        from: e.from - t,
-                                        to: e.to - t,
-                                        setID: e.setID
-                                    }
-                                }(e, h)
-                            }).filter(function(t) {
-                                return ! function(e, t) {
-                                    return e.from < 0 || e.from >= t || e.to < 0 || e.to >= t
-                                }(t, m[e].length)
-                            }),
-                            g = Object(o.f)(m[e], s(v), 0, {}, !1, n);
-                        p.push(i.createElement(l.V, {
-                            key: e
-                        }, function(e) {
-                            for (var t = [], n = 0; n < e.length; n++) {
-                                var o = e[n];
-                                switch (o.type) {
-                                    case r.a.ClipLink:
-                                        t.push(i.createElement("a", {
-                                            key: n,
-                                            href: o.content.url,
-                                            target: "_blank"
-                                        }, o.content.url));
-                                        break;
-                                    case r.a.VideoLink:
-                                    case r.a.Link:
-                                        o.content.url.match(c) ? t.push(i.createElement(a.a, {
-                                            key: n,
-                                            to: o.content.url.replace(c, "")
-                                        }, o.content.displayText)) : t.push(i.createElement("a", {
-                                            key: n,
-                                            href: o.content.url,
-                                            target: "_blank",
-                                            rel: "noopener noreferrer"
-                                        }, o.content.displayText));
-                                        break;
-                                    case r.a.Mention:
-                                        t.push(i.createElement(a.a, {
-                                            key: n,
-                                            to: "/" + o.content.recipient
-                                        }, o.content.recipient));
-                                        break;
-                                    case r.a.Emote:
-                                        o.content.images.themed || t.push(i.createElement("img", {
-                                            key: n,
-                                            src: o.content.images.sources["1x"],
-                                            alt: o.content.alt
-                                        }));
-                                        break;
-                                    case r.a.Text:
-                                        t.push(i.createElement("span", {
-                                            key: n
-                                        }, o.content))
-                                }
-                            }
-                            return t
-                        }(g))), u = h
-                    }, v = 0, g = 0; v < m.length; v++) h(v, g), g = u;
-                return p
             }
         },
         "z+dA": function(e, t) {

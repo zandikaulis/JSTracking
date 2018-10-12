@@ -35,19 +35,19 @@
                 I = r("KL9a"),
                 C = r.n(I),
                 R = r("iSjI"),
-                S = r.n(R),
-                A = r("bQeB"),
-                v = r.n(A),
-                P = r("HvcU"),
-                D = r.n(P),
+                A = r.n(R),
+                S = r("bQeB"),
+                P = r.n(S),
+                v = r("HvcU"),
+                D = r.n(v),
                 k = r("GA+j"),
                 M = r.n(k),
                 L = r("FBRg"),
                 U = r.n(L),
                 F = r("2xEe"),
                 w = r.n(F),
-                j = r("q8H6"),
-                G = r.n(j),
+                G = r("q8H6"),
+                j = r.n(G),
                 V = r("oQBz"),
                 B = r.n(V),
                 x = r("PwAB"),
@@ -120,14 +120,14 @@
                                             };
                                         case n.Visa:
                                             return {
-                                                src: S.a,
+                                                src: A.a,
                                                 alt: Object(s.d)("Visa", "PaymentMethodImage")
                                             };
                                         default:
                                             return {
-                                                src: v.a,
+                                                src: P.a,
                                                 srcSet: {
-                                                    "1x": v.a,
+                                                    "1x": P.a,
                                                     "2x": D.a
                                                 },
                                                 alt: e
@@ -150,7 +150,7 @@
                                         src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? w.a : M.a,
                                         srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
                                             "1x": w.a,
-                                            "2x": G.a
+                                            "2x": j.a
                                         } : {
                                             "1x": M.a,
                                             "2x": U.a
@@ -159,9 +159,9 @@
                                     };
                                 default:
                                     return {
-                                        src: v.a,
+                                        src: P.a,
                                         srcSet: {
-                                            "1x": v.a,
+                                            "1x": P.a,
                                             "2x": D.a
                                         },
                                         alt: e
@@ -196,87 +196,99 @@
         "7SjK": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("TSYQ"),
-                a = r("q1tI"),
+                i = r("q1tI"),
+                a = r("TSYQ"),
                 o = r("/7QA"),
                 s = r("GnwI"),
                 c = r("Ue10"),
-                u = (r("VrOd"), function(e) {
+                u = (r("GOKC"), i.createElement(c.xb, {
+                    alignItems: c.f.Center,
+                    background: c.r.Overlay,
+                    borderRadius: c.x.Small,
+                    className: "emote-button__lock",
+                    color: c.O.Overlay,
+                    "data-test-selector": "emote-button-lock",
+                    display: c.W.InlineFlex,
+                    justifyContent: c.Ua.Center,
+                    position: c.db.Absolute,
+                    zIndex: c.ac.Above
+                }, i.createElement(c.mb, {
+                    asset: c.nb.Lock,
+                    height: 10,
+                    width: 10
+                }))),
+                d = function(e) {
+                    var t = a("emote-button__link", {
+                            "emote-button__link--locked": !e.onClick
+                        }),
+                        r = e.emote,
+                        n = r.displayName,
+                        d = r.srcSet;
+                    if (!d) return null;
+                    var l = i.createElement("img", {
+                        className: "emote-picker__image",
+                        srcSet: d,
+                        alt: n
+                    });
+                    if (e.isCriticalImage) {
+                        for (var p = d.split(" ")[0], m = {}, E = 0, h = d.split(","); E < h.length; E++) {
+                            var y = h[E].trim().split(" "),
+                                f = y[1],
+                                b = y[0];
+                            m[f] = b
+                        }
+                        l = i.createElement(s.b, {
+                            className: "emote-picker__emote-image",
+                            src: p,
+                            srcSet: m,
+                            alt: n || ""
+                        })
+                    }
+                    return i.createElement("div", {
+                        className: "emote-button"
+                    }, i.createElement(c.Qb, {
+                        label: n || Object(o.d)("Emote", "EmoteButton"),
+                        direction: c.Sb.Bottom
+                    }, i.createElement(c.Na, {
+                        display: c.W.Flex,
+                        alignItems: c.f.Center,
+                        justifyContent: c.Ua.Center
+                    }, i.createElement("button", {
+                        "data-test-selector": "emote-button-clickable",
+                        className: t,
+                        "aria-label": n,
+                        name: n,
+                        onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
+                        "data-a-target": n
+                    }, i.createElement("figure", null, e.locked ? u : null, l)))))
+                },
+                l = (r("VrOd"), function(e) {
                     function t() {
-                        return null !== e && e.apply(this, arguments) || this
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleClickEmote = function(e) {
+                            t.props.onClickEmote && t.props.onClickEmote(e)
+                        }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = this,
-                            t = i("emote-picker__emote-link", {
-                                "emote-picker__emote-link--locked": this.props.locked
-                            }),
-                            r = a.createElement(c.xb, {
-                                alignItems: c.f.Center,
-                                background: c.r.Overlay,
-                                borderRadius: c.x.Small,
-                                className: "emote-picker__emote-lock",
-                                color: c.O.Overlay,
-                                display: c.W.InlineFlex,
-                                justifyContent: c.Ua.Center,
-                                position: c.db.Absolute,
-                                zIndex: c.ac.Above
-                            }, a.createElement(c.mb, {
-                                asset: c.nb.Lock,
-                                height: 10,
-                                width: 10
-                            })),
-                            n = this.props.emotes.map(function(n, i) {
-                                if (!n.srcSet) return null;
-                                var u = a.createElement("img", {
-                                    className: "emote-picker__emote-image",
-                                    srcSet: n.srcSet,
-                                    alt: n.displayName
-                                });
-                                if (0 === i) {
-                                    for (var d = n.srcSet.split(" ")[0], l = {}, p = 0, m = n.srcSet.split(","); p < m.length; p++) {
-                                        var E = m[p].trim().split(" "),
-                                            h = E[1],
-                                            y = E[0];
-                                        l[h] = y
-                                    }
-                                    u = a.createElement(s.b, {
-                                        className: "emote-picker__emote-image",
-                                        src: d,
-                                        srcSet: l,
-                                        alt: n.displayName || ""
-                                    })
-                                }
-                                return a.createElement("div", {
-                                    key: n.id,
-                                    className: "emote-picker__emote"
-                                }, a.createElement(c.Qb, {
-                                    label: n.displayName || Object(o.d)("Emote", "EmoteGrid"),
-                                    direction: c.Sb.Bottom
-                                }, a.createElement(c.Na, {
-                                    display: c.W.Flex,
-                                    alignItems: c.f.Center,
-                                    justifyContent: c.Ua.Center
-                                }, a.createElement("button", {
-                                    className: t,
-                                    "aria-label": n.displayName,
-                                    name: n.displayName,
-                                    onClick: e.props.locked ? void 0 : e.handleClickEmote.bind(e, n),
-                                    "data-a-target": n.displayName
-                                }, a.createElement("figure", {
-                                    className: "emote-picker__emote-figure"
-                                }, e.props.locked ? r : null, u)))))
+                            t = this.props.emotes.map(function(t, r) {
+                                return i.createElement(d, {
+                                    key: "emote-button-" + t.id + "--" + t.setID,
+                                    emote: t,
+                                    isCriticalImage: 0 === r,
+                                    locked: e.props.locked || t.isLocked,
+                                    onClick: e.props.locked ? void 0 : e.handleClickEmote
+                                })
                             });
-                        return a.createElement(c.Va, {
+                        return i.createElement(c.Va, {
                             display: c.W.Flex,
                             flexWrap: c.Z.Wrap,
                             justifyContent: c.Ua.Center
-                        }, n)
-                    }, t.prototype.handleClickEmote = function(e, t) {
-                        this.props.onClickEmote && this.props.onClickEmote(t.currentTarget.name, e.id, e.setID)
+                        }, t)
                     }, t
-                }(a.Component));
+                }(i.Component));
             r.d(t, "a", function() {
-                return u
+                return l
             })
         },
         "85n/": function(e, t, r) {
@@ -884,12 +896,12 @@
         },
         DMoW: function(e, t, r) {
             "use strict";
-            var n, i, a, o, s, c, u, d, l, p, m, E, h, y, f, b, O, N, g, _, T, I, C, R, S, A, v, P, D, k, M, L, U, F, w, j, G, V, B, x, H, W, Y, z, K, Z, X, q, Q, J, $, ee, te, re, ne, ie, ae, oe, se, ce, ue, de, le, pe, me, Ee, he, ye, fe, be, Oe, Ne, ge, _e, Te, Ie, Ce, Re, Se, Ae, ve, Pe, De, ke, Me, Le, Ue, Fe, we, je, Ge, Ve, Be, xe, He, We, Ye, ze, Ke, Ze, Xe, qe, Qe, Je, $e, et, tt, rt, nt, it, at, ot, st, ct;
+            var n, i, a, o, s, c, u, d, l, p, m, E, h, y, f, b, O, N, g, _, T, I, C, R, A, S, P, v, D, k, M, L, U, F, w, G, j, V, B, x, H, W, Y, z, K, Z, X, q, Q, J, $, ee, te, re, ne, ie, ae, oe, se, ce, ue, de, le, pe, me, Ee, he, ye, fe, be, Oe, Ne, ge, _e, Te, Ie, Ce, Re, Ae, Se, Pe, ve, De, ke, Me, Le, Ue, Fe, we, Ge, je, Ve, Be, xe, He, We, Ye, ze, Ke, Ze, Xe, qe, Qe, Je, $e, et, tt, rt, nt, it, at, ot, st, ct;
             r.d(t, "c", function() {
                     return i
-                }), r.d(t, "B", function() {
+                }), r.d(t, "E", function() {
                     return s
-                }), r.d(t, "w", function() {
+                }), r.d(t, "x", function() {
                     return c
                 }), r.d(t, "g", function() {
                     return h
@@ -899,63 +911,69 @@
                     return N
                 }), r.d(t, "j", function() {
                     return T
-                }), r.d(t, "K", function() {
+                }), r.d(t, "N", function() {
                     return I
-                }), r.d(t, "D", function() {
+                }), r.d(t, "G", function() {
                     return C
                 }), r.d(t, "o", function() {
                     return R
-                }), r.d(t, "C", function() {
-                    return v
+                }), r.d(t, "F", function() {
+                    return P
                 }), r.d(t, "b", function() {
                     return U
                 }), r.d(t, "p", function() {
                     return w
-                }), r.d(t, "F", function() {
-                    return j
-                }), r.d(t, "H", function() {
-                    return G
-                }), r.d(t, "y", function() {
-                    return V
                 }), r.d(t, "I", function() {
+                    return G
+                }), r.d(t, "K", function() {
+                    return j
+                }), r.d(t, "z", function() {
+                    return V
+                }), r.d(t, "L", function() {
                     return B
                 }), r.d(t, "q", function() {
                     return W
                 }), r.d(t, "n", function() {
                     return Y
-                }), r.d(t, "G", function() {
+                }), r.d(t, "J", function() {
                     return z
                 }), r.d(t, "a", function() {
                     return K
-                }), r.d(t, "s", function() {
+                }), r.d(t, "t", function() {
                     return Z
-                }), r.d(t, "u", function() {
+                }), r.d(t, "v", function() {
                     return X
-                }), r.d(t, "z", function() {
+                }), r.d(t, "B", function() {
                     return Q
-                }), r.d(t, "A", function() {
+                }), r.d(t, "C", function() {
                     return J
-                }), r.d(t, "J", function() {
+                }), r.d(t, "A", function() {
+                    return ee
+                }), r.d(t, "D", function() {
+                    return te
+                }), r.d(t, "M", function() {
                     return me
                 }), r.d(t, "l", function() {
                     return _e
                 }), r.d(t, "k", function() {
                     return Te
-                }), r.d(t, "L", function() {
-                    return Se
+                }), r.d(t, "O", function() {
+                    return Ae
                 }), r.d(t, "m", function() {
                     return Le
-                }), r.d(t, "x", function() {
+                }), r.d(t, "y", function() {
                     return Ue
+                }), r.d(t, "s", function() {
+                    return je
                 }), r.d(t, "i", function() {
                     return Be
                 }), r.d(t, "h", function() {
                     return xe
-                }), r.d(t, "t", function() {
+                }), r.d(t, "u", function() {
                     return He
-                }), r.d(t, "E", function() {
+                }), r.d(t, "H", function() {
                     return Ye
-                }), r.d(t, "v", function() {
+                }), r.d(t, "w", function() {
                     return Je
                 }), r.d(t, "d", function() {
                     return ot
@@ -1036,16 +1054,16 @@
                 }(R || (R = {})),
                 function(e) {
                     e.DARK = "DARK", e.LIGHT = "LIGHT"
-                }(S || (S = {})),
-                function(e) {
-                    e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
                 }(A || (A = {})),
                 function(e) {
+                    e.CUSTOM = "CUSTOM", e.DISPLAY_ONLY = "DISPLAY_ONLY", e.FIRST_PARTY = "FIRST_PARTY", e.RENDER_ONLY = "RENDER_ONLY", e.SPONSORED = "SPONSORED", e.THIRD_PARTY = "THIRD_PARTY", e.UNKNOWN = "UNKNOWN"
+                }(S || (S = {})),
+                function(e) {
                     e.AMOUNT_BELOW_MIN_BITS = "AMOUNT_BELOW_MIN_BITS", e.AUTO_MOD_MESSAGE = "AUTO_MOD_MESSAGE", e.AUTO_MOD_PENDING = "AUTO_MOD_PENDING", e.CHANNEL_BLOCKED_TERMS = "CHANNEL_BLOCKED_TERMS", e.CHANNEL_INELIGIBLE = "CHANNEL_INELIGIBLE", e.EMOTE_AMOUNT_BELOW_MIN_BITS = "EMOTE_AMOUNT_BELOW_MIN_BITS", e.INSUFFICIENT_BALANCE = "INSUFFICIENT_BALANCE", e.INVALID_BITS_AMOUNT = "INVALID_BITS_AMOUNT", e.INVALID_BITS_MESSAGE = "INVALID_BITS_MESSAGE", e.INVALID_EVENT_ID = "INVALID_EVENT_ID", e.MESSAGE_LENGTH_EXCEEDED = "MESSAGE_LENGTH_EXCEEDED", e.REQUEST_THROTTLED = "REQUEST_THROTTLED", e.TOO_LARGE_BITS_EMOTE = "TOO_LARGE_BITS_EMOTE", e.TOO_LARGE_CHEER = "TOO_LARGE_CHEER", e.UNKNOWN = "UNKNOWN", e.USER_BANNED = "USER_BANNED", e.USER_INELIGIBLE = "USER_INELIGIBLE", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_MESSAGE = "ZALGO_MESSAGE"
-                }(v || (v = {})),
+                }(P || (P = {})),
                 function(e) {
                     e.NEW_CHATTER = "NEW_CHATTER"
-                }(P || (P = {})),
+                }(v || (v = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
                 }(D || (D = {})),
@@ -1069,10 +1087,10 @@
                 }(w || (w = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
-                }(j || (j = {})),
+                }(G || (G = {})),
                 function(e) {
                     e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
-                }(G || (G = {})),
+                }(j || (j = {})),
                 function(e) {
                     e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(V || (V = {})),
@@ -1198,16 +1216,16 @@
                 }(Re || (Re = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
-                }(Se || (Se = {})),
-                function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(Ae || (Ae = {})),
                 function(e) {
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                }(Se || (Se = {})),
+                function(e) {
                     e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
-                }(ve || (ve = {})),
+                }(Pe || (Pe = {})),
                 function(e) {
                     e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
-                }(Pe || (Pe = {})),
+                }(ve || (ve = {})),
                 function(e) {
                     e.COMMUNITIES = "COMMUNITIES", e.CREATIVE = "CREATIVE", e.GAMES = "GAMES"
                 }(De || (De = {})),
@@ -1231,10 +1249,10 @@
                 }(we || (we = {})),
                 function(e) {
                     e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
-                }(je || (je = {})),
+                }(Ge || (Ge = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
-                }(Ge || (Ge = {})),
+                }(je || (je = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(Ve || (Ve = {})),
@@ -1315,6 +1333,7 @@
         "GA+j": function(e, t, r) {
             e.exports = r.p + "assets/paypal_1x-a2a2f7d96b4384f9f1d7.png"
         },
+        GOKC: function(e, t, r) {},
         H5OX: function(e, t, r) {},
         HGFl: function(e, t, r) {
             "use strict";
@@ -2234,7 +2253,7 @@
             "use strict";
             r.d(t, "b", function() {
                 return u
-            }), r.d(t, "d", function() {
+            }), r.d(t, "e", function() {
                 return d
             }), r.d(t, "c", function() {
                 return p
@@ -2242,7 +2261,7 @@
                 return m
             }), r.d(t, "f", function() {
                 return h
-            }), r.d(t, "e", function() {
+            }), r.d(t, "d", function() {
                 return y
             });
             var n = r("mrSG"),
@@ -2259,6 +2278,7 @@
                     "^;-?\\)$": ";)",
                     "^R-?\\)$": "R)",
                     "^:>$": ":>",
+                    "^:&gt;$": ":>",
                     "^[oO](_|\\.)[oO]$": "O_o",
                     "^:-?D$": ":D",
                     "^:-?(o|O)$": ":O",
@@ -2293,10 +2313,17 @@
                 }
                 return t
             }
-            var d = function(e) {
-                var t = E(e);
-                return o[t] || t
-            };
+
+            function d(e, t) {
+                var r = u(e);
+                return t && (r = function(e, t) {
+                    return e.map(function(e) {
+                        return n.__assign({}, e, {
+                            setID: t
+                        })
+                    })
+                }(r, t)), r
+            }
 
             function l(e) {
                 return e.filter(function(e) {
@@ -2329,7 +2356,7 @@
                     if (a && a.id && a.emotes) {
                         var o = {
                             id: a.id,
-                            emotes: u(l(a.emotes))
+                            emotes: d(l(a.emotes), a.id)
                         };
                         c.has(parseInt(a.id, 10)) ? t.push(o) : r.push(o)
                     }
@@ -2514,7 +2541,7 @@
                                         }, e)
                                     }
                                 }, "CheckoutDescription");
-                            return l.createElement(l.Fragment, null, l.createElement(g.V, null, e), this.props.product.product.interval.unit === y.F.MONTH && l.createElement(g.V, null, t))
+                            return l.createElement(l.Fragment, null, l.createElement(g.V, null, e), this.props.product.product.interval.unit === y.I.MONTH && l.createElement(g.V, null, t))
                         },
                         enumerable: !0,
                         configurable: !0
@@ -2635,12 +2662,12 @@
                     configurable: !0
                 }), t
             }(l.Component);
-            var S, A = Object(i.connect)(function(e) {
+            var A, S = Object(i.connect)(function(e) {
                     return {
                         sessionUser: Object(c.e)(e)
                     }
                 })(R),
-                v = (r("u/1r"), function(e) {
+                P = (r("u/1r"), function(e) {
                     return l.createElement(g.Va, {
                         fullWidth: !0,
                         padding: 3,
@@ -2673,7 +2700,7 @@
                         }
                     }, e.children))))
                 }),
-                P = function() {
+                v = function() {
                     var e = Object(p.d)('By clicking "Complete Purchase", you hereby agree to Twitch\'s <x:tos>Terms of Sale</x:tos> and <x:privacy>Privacy Policy</x:privacy>. Your payment method will be saved for future purchases, and, if applicable, recurring subscription payments.', {
                         "x:tos": function(e) {
                             return l.createElement(g.T, {
@@ -2697,24 +2724,24 @@
 
             function D(e) {
                 switch (e) {
-                    case S.GIFTABLE_RECIPIENT:
-                    case S.NEW_PURCHASE:
-                    case S.TIER_UPGRADE:
-                    case S.PRIME_UPGRADE:
-                    case S.UNKNOWN:
+                    case A.GIFTABLE_RECIPIENT:
+                    case A.NEW_PURCHASE:
+                    case A.TIER_UPGRADE:
+                    case A.PRIME_UPGRADE:
+                    case A.UNKNOWN:
                         return !0;
-                    case S.NO_ITEM:
-                    case S.NON_GIFTABLE_RECIPIENT:
-                    case S.NO_MASS_GIFTING:
-                    case S.TIER_DOWNGRADE:
-                    case S.MOBILE_UPGRADE:
-                    case S.API_INELIGIBLE:
+                    case A.NO_ITEM:
+                    case A.NON_GIFTABLE_RECIPIENT:
+                    case A.NO_MASS_GIFTING:
+                    case A.TIER_DOWNGRADE:
+                    case A.MOBILE_UPGRADE:
+                    case A.API_INELIGIBLE:
                     default:
                         return !1
                 }
             }! function(e) {
                 e[e.GIFTABLE_RECIPIENT = 0] = "GIFTABLE_RECIPIENT", e[e.NEW_PURCHASE = 1] = "NEW_PURCHASE", e[e.TIER_UPGRADE = 2] = "TIER_UPGRADE", e[e.PRIME_UPGRADE = 3] = "PRIME_UPGRADE", e[e.UNKNOWN = 4] = "UNKNOWN", e[e.NO_ITEM = 5] = "NO_ITEM", e[e.NON_GIFTABLE_RECIPIENT = 6] = "NON_GIFTABLE_RECIPIENT", e[e.NO_MASS_GIFTING = 7] = "NO_MASS_GIFTING", e[e.TIER_DOWNGRADE = 8] = "TIER_DOWNGRADE", e[e.MOBILE_UPGRADE = 9] = "MOBILE_UPGRADE", e[e.API_INELIGIBLE = 10] = "API_INELIGIBLE"
-            }(S || (S = {}));
+            }(A || (A = {}));
             var k, M = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -2722,7 +2749,7 @@
                     return u.__extends(t, e), t.prototype.render = function() {
                         var e;
                         switch (this.props.productEligibility) {
-                            case S.NON_GIFTABLE_RECIPIENT:
+                            case A.NON_GIFTABLE_RECIPIENT:
                                 e = this.isEsportPurchase ? Object(p.d)("Sorry, an All-Access Pass to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
                                     "x:bold": function(e) {
                                         return l.createElement(g.V, {
@@ -2741,10 +2768,10 @@
                                     recipientName: this.props.product.recipient && this.props.product.recipient.displayName || ""
                                 }, "IneligiblePurchaseNotice");
                                 break;
-                            case S.NO_MASS_GIFTING:
+                            case A.NO_MASS_GIFTING:
                                 e = Object(p.d)("Community gifts are not eligible for this product.", "IneligiblePurchaseNotice");
                                 break;
-                            case S.TIER_DOWNGRADE:
+                            case A.TIER_DOWNGRADE:
                                 var t = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.login;
                                 e = Object(p.d)("You are currently subscribed to a higher-tier subscription that offers more benefits. <x:subsLink>Click here to compare subscription benefits</x:subsLink>. If you would still like to purchase this, please <x:subsMgmtLink>cancel your existing subscription</x:subsMgmtLink> or wait for your existing subscription to end.", {
                                     "x:subsLink": function(e) {
@@ -2763,7 +2790,7 @@
                                     }
                                 }, "IneligiblePurchaseNotice");
                                 break;
-                            case S.MOBILE_UPGRADE:
+                            case A.MOBILE_UPGRADE:
                                 var r = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.displayName;
                                 return l.createElement(m.a, null, l.createElement(g.V, {
                                     bold: !0
@@ -2852,13 +2879,13 @@
                         if (this.props.purchaseFlow === n.GIFT_SUB) t = this.renderGiftSubPurchase();
                         else if (this.props.purchaseFlow === n.MYSTERY_GIFT) t = this.renderMysteryGiftSubPurchase();
                         else if (this.props.purchaseFlow === n.PERSONAL_SUB)
-                            if (this.props.eligiblePromotions && this.props.eligiblePromotions.isOneMonthFreeEligible && (e = this.renderOneFreeMonth()), this.props.productEligibility === S.TIER_UPGRADE) t = this.renderTierUpgrade();
-                            else if (this.props.productEligibility === S.PRIME_UPGRADE) {
+                            if (this.props.eligiblePromotions && this.props.eligiblePromotions.isOneMonthFreeEligible && (e = this.renderOneFreeMonth()), this.props.productEligibility === A.TIER_UPGRADE) t = this.renderTierUpgrade();
+                            else if (this.props.productEligibility === A.PRIME_UPGRADE) {
                             var r = this.formattedPrice;
                             r && (t = l.createElement(L, {
                                 newPrice: r
                             }))
-                        } else this.props.productEligibility === S.NEW_PURCHASE && this.hasActiveGiftSubscription && (this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion && (e = this.renderSubtemberDiscount()), t = this.renderGiftSubUpgrade());
+                        } else this.props.productEligibility === A.NEW_PURCHASE && this.hasActiveGiftSubscription && (this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion && (e = this.renderSubtemberDiscount()), t = this.renderGiftSubUpgrade());
                         return l.createElement(l.Fragment, null, e, (!this.hasActiveGiftSubscription || this.props.purchaseFlow !== n.PERSONAL_SUB) && l.createElement(g.Va, {
                             margin: {
                                 top: 1
@@ -3030,7 +3057,7 @@
                     }), t
                 }(l.Component)),
                 w = r("9C/b"),
-                j = (r("NwMv"), function(e) {
+                G = (r("NwMv"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.goBackToChannel = function() {
@@ -3116,7 +3143,7 @@
                         }, "GiftSubReceipt"))
                     }, t
                 }(l.PureComponent)),
-                G = Object(w.a)(j),
+                j = Object(w.a)(G),
                 V = (r("XE3n"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3261,7 +3288,7 @@
                             tier: this.props.purchaseInvoice.tier || "",
                             mysteryGiftCount: this.props.product.quantity || 1,
                             isEsportChannel: t
-                        }) : this.props.purchaseFlow === n.GIFT_SUB ? this.props.product.recipient ? l.createElement(G, {
+                        }) : this.props.purchaseFlow === n.GIFT_SUB ? this.props.product.recipient ? l.createElement(j, {
                             recipientDisplayName: this.props.product.recipient.displayName,
                             productOwnerDisplayName: i && i.displayName || "",
                             productOwnerLogin: i && i.login || "",
@@ -4387,10 +4414,10 @@
                 Ie = r.n(Te),
                 Ce = r("AVF4"),
                 Re = r.n(Ce),
-                Se = r("BIez"),
-                Ae = r.n(Se),
-                ve = r("EF6p"),
-                Pe = r.n(ve),
+                Ae = r("BIez"),
+                Se = r.n(Ae),
+                Pe = r("EF6p"),
+                ve = r.n(Pe),
                 De = r("xgE2"),
                 ke = r.n(De),
                 Me = r("ZiR0"),
@@ -4411,7 +4438,7 @@
                         return Object(p.d)("More Methods", "TicketDescription")
                     }
                 },
-                je = function(e) {
+                Ge = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.paymentProviders = [{
@@ -4423,7 +4450,7 @@
                                 alt: we.CreditCard(),
                                 srcSet: {
                                     "1x": Re.a,
-                                    "2x": Ae.a
+                                    "2x": Se.a
                                 }
                             }
                         }, {
@@ -4435,7 +4462,7 @@
                                 alt: we.CreditCard(),
                                 srcSet: {
                                     "1x": Re.a,
-                                    "2x": Ae.a
+                                    "2x": Se.a
                                 }
                             }
                         }, {
@@ -4467,10 +4494,10 @@
                             paymentFlow: $.Xsolla,
                             button: {
                                 label: we.MoreMethods(),
-                                src: Pe.a,
+                                src: ve.a,
                                 alt: we.MoreMethods(),
                                 srcSet: {
-                                    "1x": Pe.a,
+                                    "1x": ve.a,
                                     "2x": ke.a
                                 }
                             }
@@ -4513,7 +4540,7 @@
                         }, t))
                     }, t
                 }(l.PureComponent),
-                Ge = function(e) {
+                je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4570,7 +4597,7 @@
                             }
                         }
                     }, t.prototype.render = function() {
-                        return l.createElement(g.Va, null, l.createElement(je, {
+                        return l.createElement(g.Va, null, l.createElement(Ge, {
                             eligiblePaymentMethods: this.props.eligiblePaymentMethods,
                             selectedProvider: this.state.selectedProvider,
                             handleClick: this.handlePaymentMethodSelectorToggleChange,
@@ -4696,13 +4723,13 @@
                     }, t
                 }(l.Component),
                 He = function() {
-                    function e(e, t, r, n, i, a) {
-                        var o = this;
+                    function e(e) {
+                        var t = this;
                         this.recurlyCountries = p.b.get("payments_recurly_countries", ["US"]), this.getDeterminedTaxCountry = function() {
-                            if (o.userBestGuessCountry) return o.userBestGuessCountry;
-                            var e = o.savedPaymentMethod && o.savedPaymentMethod.billingCountry;
-                            return o.ipCountryCode && e && o.userCountryOfResidence ? o.ipCountryCode === e ? o.ipCountryCode : o.userCountryOfResidence : o.userCountryOfResidence ? o.userCountryOfResidence : o.ipCountryCode
-                        }, this.productName = e, this.userCountryOfResidence = t, this.ipCountryCode = r, this.userBestGuessCountry = n, this.savedPaymentMethod = i, this.showEuSubs = a
+                            if (t.userBestGuessCountry) return t.userBestGuessCountry;
+                            var e = t.savedPaymentMethod && t.savedPaymentMethod.billingCountry;
+                            return t.ipCountryCode && e && t.userCountryOfResidence ? t.ipCountryCode === e ? t.ipCountryCode : t.userCountryOfResidence : t.userCountryOfResidence ? t.userCountryOfResidence : t.ipCountryCode
+                        }, this.productName = e.productName, this.userCountryOfResidence = e.userCountryOfResidence, this.ipCountryCode = e.ipCountryCode, this.userBestGuessCountry = e.userBestGuessCountry, this.savedPaymentMethod = e.savedPaymentMethod, this.showEuSubs = e.showEuSubs, this.disablePayPal = e.disablePayPal, this.disableAmazonPay = e.disableAmazonPay
                     }
                     return e.prototype.getAvailableMethods = function() {
                         if (!this.showEuSubs) return "owlallaccess2018" === this.productName ? [be.ZuoraCreditCard, be.Xsolla] : "US" !== this.ipCountryCode ? [be.Xsolla] : [be.RecurlyCreditCard, be.RecurlyPaypal, be.RecurlyAmazonPay, be.RecurlySavedPayment, be.Xsolla];
@@ -4726,7 +4753,7 @@
                         configurable: !0
                     }), Object.defineProperty(e.prototype, "recurlyAmazonPayEligible", {
                         get: function() {
-                            return "US" === this.getDeterminedTaxCountry()
+                            return !this.disableAmazonPay && "US" === this.getDeterminedTaxCountry()
                         },
                         enumerable: !0,
                         configurable: !0
@@ -4738,7 +4765,7 @@
                         configurable: !0
                     }), Object.defineProperty(e.prototype, "recurlyPaypalEligible", {
                         get: function() {
-                            return !0
+                            return !this.disablePayPal && "US" === this.getDeterminedTaxCountry()
                         },
                         enumerable: !0,
                         configurable: !0
@@ -4765,7 +4792,16 @@
                             eligiblePaymentMethods: []
                         }, t.tracker = new te({
                             allowDuplicateEvents: !1
-                        }), t.eligibilityComputer = new He(t.props.productName, t.props.countryOfResidence, t.props.ipCountryCode, t.props.userBestGuessCountry, void 0, t.props.showEuSubs), t.toggleChangePaymentMethods = function() {
+                        }), t.eligibilityComputer = new He({
+                            productName: t.props.productName,
+                            userCountryOfResidence: t.props.countryOfResidence,
+                            ipCountryCode: t.props.ipCountryCode,
+                            userBestGuessCountry: t.props.userBestGuessCountry,
+                            savedPaymentMethod: void 0,
+                            showEuSubs: t.props.showEuSubs,
+                            disablePayPal: !1,
+                            disableAmazonPay: !1
+                        }), t.toggleChangePaymentMethods = function() {
                             t.setState(function(e) {
                                 return {
                                     useSavedPaymentMethod: !e.useSavedPaymentMethod
@@ -4774,7 +4810,16 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.data && (this.props.data.currentUser || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent()), this.eligibilityComputer = new He(this.props.productName, this.props.countryOfResidence, this.props.ipCountryCode, this.props.userBestGuessCountry, this.savedPaymentMethod, this.props.showEuSubs);
+                        this.props.data && (this.props.data.currentUser || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent()), this.eligibilityComputer = new He({
+                            productName: this.props.productName,
+                            userCountryOfResidence: this.props.countryOfResidence,
+                            ipCountryCode: this.props.ipCountryCode,
+                            userBestGuessCountry: this.props.userBestGuessCountry,
+                            savedPaymentMethod: this.savedPaymentMethod,
+                            showEuSubs: this.props.showEuSubs,
+                            disablePayPal: this.disablePayPal,
+                            disableAmazonPay: this.disableAmazonPay
+                        });
                         var e = this.eligibilityComputer.getAvailableMethods();
                         if (this.props.showEuSubs) {
                             var t = Object.values(be).map(function(t) {
@@ -4799,7 +4844,16 @@
                         }
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         if (this.props.data && (this.props.data.currentUser || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent()), e.userBestGuessCountry !== this.props.userBestGuessCountry || e.data && this.props.data && e.data.currentUser !== this.props.data.currentUser) {
-                            this.eligibilityComputer = new He(this.props.productName, this.props.countryOfResidence, this.props.ipCountryCode, this.props.userBestGuessCountry, this.savedPaymentMethod, this.props.showEuSubs);
+                            this.eligibilityComputer = new He({
+                                productName: this.props.productName,
+                                userCountryOfResidence: this.props.countryOfResidence,
+                                ipCountryCode: this.props.ipCountryCode,
+                                userBestGuessCountry: this.props.userBestGuessCountry,
+                                savedPaymentMethod: this.savedPaymentMethod,
+                                showEuSubs: this.props.showEuSubs,
+                                disablePayPal: this.disablePayPal,
+                                disableAmazonPay: this.disableAmazonPay
+                            });
                             var r = this.eligibilityComputer.getAvailableMethods();
                             if (this.props.showEuSubs) {
                                 var n = Object.values(be).map(function(e) {
@@ -4851,7 +4905,7 @@
                             showEuSubs: this.props.showEuSubs
                         }), this.props.configs && t.length > 0 && !(this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature) && l.createElement(g.Va, {
                             "data-a-target": "PAYMENT_METHOD_SELECTOR"
-                        }, l.createElement(Ge, {
+                        }, l.createElement(je, {
                             handleCompletePurchase: this.props.handleCompletePurchase,
                             handleCountryChange: this.props.handleCountryChange,
                             trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
@@ -4937,9 +4991,22 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "savedPaymentMethod", {
                         get: function() {
-                            return (this.props.data && this.props.data.currentUser && this.props.data.currentUser.paymentMethods || []).filter(function(e) {
+                            var e = (this.props.data && this.props.data.currentUser && this.props.data.currentUser.paymentMethods || []).filter(function(e) {
                                 return "recurly" === e.provider
-                            })[0]
+                            })[0];
+                            return e ? e.paymentType === Be.a.Paypal && this.disablePayPal ? null : e.paymentType === Be.a.AmazonPay && this.disableAmazonPay ? null : e : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disablePayPal", {
+                        get: function() {
+                            return !this.props.configs || !this.props.configs.recurly.braintreeClientAuthorization
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disableAmazonPay", {
+                        get: function() {
+                            return !this.props.configs || !this.props.configs.recurly.payWithAmazonConfigs.clientID
                         },
                         enumerable: !0,
                         configurable: !0
@@ -4976,8 +5043,7 @@
                                             product_id: e.productId,
                                             ticket_price: e.ticketPrice,
                                             currency: e.currency,
-                                            saved_payment: e.savedPayment,
-                                            ip_country: e.ipCountry
+                                            saved_payment: e.savedPayment
                                         };
                                         p.n.track(q.SpadeEventType.PaymentFormInteraction, t)
                                     }({
@@ -4988,7 +5054,6 @@
                                         quantity: t.props.mysteryGiftCount || 1,
                                         ticketPrice: t.props.data.subscriptionProduct.priceInfo.total,
                                         currency: t.props.data.subscriptionProduct.priceInfo.currency,
-                                        ipCountry: t.props.data.requestInfo.countryCode,
                                         paymentFlow: e.paymentFlow,
                                         action: e.action,
                                         actionDetail: e.actionDetail || "",
@@ -5110,11 +5175,11 @@
                             progress: I.CONFIRMATION
                         }))
                     }, t.prototype.render = function() {
-                        if (!this.props.data.subscriptionProduct && this.props.data.loading) return l.createElement(v, null, l.createElement(g.Xa, {
+                        if (!this.props.data.subscriptionProduct && this.props.data.loading) return l.createElement(P, null, l.createElement(g.Xa, {
                             fillContent: !0
                         }));
                         if (this.props.data.error) return l.createElement(m.a, null);
-                        if (this.productEligibility === S.MOBILE_UPGRADE) {
+                        if (this.productEligibility === A.MOBILE_UPGRADE) {
                             var e = this.shoppingCartItem,
                                 t = e && e.product && e.product.owner && e.product.owner.displayName;
                             return l.createElement(m.a, null, l.createElement(g.V, {
@@ -5128,12 +5193,12 @@
                             }, l.createElement(g.V, null, Object(p.d)("Upgrading your mobile subscription is currently not supported.", "CheckoutPayments"))))
                         }
                         if (this.state.progress === I.CONFIRMATION) {
-                            var r = l.createElement(A, {
+                            var r = l.createElement(S, {
                                 product: this.shoppingCartItem,
                                 purchaseFlow: this.purchaseFlow,
                                 progress: this.state.progress
                             });
-                            return l.createElement(v, {
+                            return l.createElement(P, {
                                 productDescription: this.renderTicketDescription(),
                                 header: r
                             }, this.purchaseInvoice && l.createElement(W, {
@@ -5145,14 +5210,14 @@
                                 benefit: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.benefit
                             }))
                         }
-                        var n = l.createElement(A, {
+                        var n = l.createElement(S, {
                                 product: this.shoppingCartItem,
                                 purchaseFlow: this.purchaseFlow,
                                 progress: this.state.progress
                             }),
                             i = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
                             a = "/" + (i || "");
-                        return l.createElement(v, {
+                        return l.createElement(P, {
                             productDescription: this.renderTicketDescription(),
                             header: n
                         }, !D(this.productEligibility) && l.createElement(l.Fragment, null, l.createElement(M, {
@@ -5202,9 +5267,9 @@
                             userZipCode: this.props.data.currentUser && this.props.data.currentUser.residence && this.props.data.currentUser.residence.postalCode,
                             product: this.shoppingCartItem,
                             showEuSubs: this.showEuSubs
-                        }), l.createElement(P, null)))
+                        }), l.createElement(v, null)))
                     }, t.prototype.renderTicketDescription = function() {
-                        return this.productEligibility === S.MOBILE_UPGRADE || this.DEPRECRATE_hasActiveMobileSub ? null : l.createElement(Y.a, {
+                        return this.productEligibility === A.MOBILE_UPGRADE || this.DEPRECRATE_hasActiveMobileSub ? null : l.createElement(Y.a, {
                             productName: this.props.productName,
                             isGift: this.props.isGift && this.canGift,
                             showPaidUpgrade: this.enablePaidUpgrade,
@@ -5226,29 +5291,29 @@
                     }), Object.defineProperty(t.prototype, "productEligibility", {
                         get: function() {
                             var e = this;
-                            if (!this.canPurchase) return S.API_INELIGIBLE;
-                            if (!this.shoppingCartItem) return S.NO_ITEM;
-                            if (this.purchaseFlow === n.GIFT_SUB) return this.canGift ? S.GIFTABLE_RECIPIENT : S.NON_GIFTABLE_RECIPIENT;
-                            if (this.purchaseFlow === n.MYSTERY_GIFT) return this.canGift ? S.GIFTABLE_RECIPIENT : S.NO_MASS_GIFTING;
+                            if (!this.canPurchase) return A.API_INELIGIBLE;
+                            if (!this.shoppingCartItem) return A.NO_ITEM;
+                            if (this.purchaseFlow === n.GIFT_SUB) return this.canGift ? A.GIFTABLE_RECIPIENT : A.NON_GIFTABLE_RECIPIENT;
+                            if (this.purchaseFlow === n.MYSTERY_GIFT) return this.canGift ? A.GIFTABLE_RECIPIENT : A.NO_MASS_GIFTING;
                             var t = this.existingPurchases && this.existingPurchases.compatiblePurchases;
                             if (t) {
                                 var r = t.find(function(e) {
-                                        return e.paymentProvider.toUpperCase() === y.y.PRIME
+                                        return e.paymentProvider.toUpperCase() === y.z.PRIME
                                     }),
                                     i = t.find(function(t) {
-                                        return t.productType.toUpperCase() === y.H.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
+                                        return t.productType.toUpperCase() === y.K.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
                                     }),
                                     a = t.find(function(t) {
-                                        return t.productType.toUpperCase() === y.H.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
+                                        return t.productType.toUpperCase() === y.K.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
                                     }),
                                     o = t.find(function(e) {
-                                        return e.paymentProvider.toUpperCase() === y.y.GOOGLE_IAB
+                                        return e.paymentProvider.toUpperCase() === y.z.GOOGLE_IAB
                                     });
-                                if (r) return S.PRIME_UPGRADE;
-                                if (i) return S.TIER_DOWNGRADE;
-                                if (a) return o ? S.MOBILE_UPGRADE : S.TIER_UPGRADE
+                                if (r) return A.PRIME_UPGRADE;
+                                if (i) return A.TIER_DOWNGRADE;
+                                if (a) return o ? A.MOBILE_UPGRADE : A.TIER_UPGRADE
                             }
-                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === y.I.INACTIVE ? S.NEW_PURCHASE : S.UNKNOWN
+                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === y.L.INACTIVE ? A.NEW_PURCHASE : A.UNKNOWN
                         },
                         enumerable: !0,
                         configurable: !0
@@ -5306,7 +5371,7 @@
                     }), Object.defineProperty(t.prototype, "DEPRECRATE_hasActiveMobileSub", {
                         get: function() {
                             var e = this.existingPurchases;
-                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== y.y.GOOGLE_IAB)
+                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== y.z.GOOGLE_IAB)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -5316,7 +5381,7 @@
                             if (!this.props.data.subscriptionProduct || !this.props.data.subscriptionProduct.self) return !1;
                             var e = this.props.data.subscriptionProduct.self.benefit && this.props.data.subscriptionProduct.self.benefit.paidUpgrade && this.props.data.subscriptionProduct.self.benefit.paidUpgrade.startsAt,
                                 t = !!(this.props.data.subscriptionProduct.self.benefit && this.props.data.subscriptionProduct.self.benefit.gift && this.props.data.subscriptionProduct.self.benefit.gift.isGift);
-                            return !!(e && Object(d.isWithinRange)(Object(h.c)(e), Object(h.c)(this.paidUpgradePromotionStartDate), Object(h.c)(this.paidUpgradePromotionEndDate)) || this.productEligibility === S.NEW_PURCHASE && t && this.eligiblePromotions.paidUpgradePromotion)
+                            return !!(e && Object(d.isWithinRange)(Object(h.c)(e), Object(h.c)(this.paidUpgradePromotionStartDate), Object(h.c)(this.paidUpgradePromotionEndDate)) || this.productEligibility === A.NEW_PURCHASE && t && this.eligiblePromotions.paidUpgradePromotion)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -6695,8 +6760,8 @@
                     }))))
                 }),
                 R = r("KYZ7"),
-                S = r.n(R),
-                A = (r("R9u/"), function(e) {
+                A = r.n(R),
+                S = (r("R9u/"), function(e) {
                     return o.createElement(T.a, null, o.createElement(f.xb, {
                         background: f.r.Base
                     }, o.createElement(f.Va, {
@@ -6707,7 +6772,7 @@
                         justifyContent: f.Ua.Center
                     }, o.createElement(f.S, {
                         className: "turbo-ticket-description__banner-logo",
-                        src: S.a,
+                        src: A.a,
                         alt: Object(c.d)("Twitch Turbo Logo", "TurboTicketDescription")
                     })), o.createElement(f.xb, {
                         borderBottom: !0,
@@ -6752,8 +6817,8 @@
                         }
                     }, o.createElement(f.V, null, Object(c.d)("Extended Broadcast Storage", "TurboTicketDescription")))))))
                 }),
-                v = r("GnwI"),
-                P = r("9fjZ"),
+                P = r("GnwI"),
+                v = r("9fjZ"),
                 D = u.a.wrap(function() {
                     return r.e(197).then(r.bind(null, "skV9"))
                 }, "CampaignsTicketDescription"),
@@ -6775,7 +6840,7 @@
                             t = e.product,
                             r = e.loading,
                             n = e.error;
-                        return !t && r ? o.createElement(C, null) : !t || n ? o.createElement(I, null) : this.isTurboProduct ? o.createElement(A, {
+                        return !t && r ? o.createElement(C, null) : !t || n ? o.createElement(I, null) : this.isTurboProduct ? o.createElement(S, {
                             productPrice: this.price,
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
@@ -6900,7 +6965,7 @@
                         configurable: !0
                     }), t
                 }(o.Component),
-                M = Object(s.compose)(Object(v.c)("TicketDescription"), Object(d.a)(P, {
+                M = Object(s.compose)(Object(P.c)("TicketDescription"), Object(d.a)(v, {
                     options: function(e) {
                         return {
                             variables: {

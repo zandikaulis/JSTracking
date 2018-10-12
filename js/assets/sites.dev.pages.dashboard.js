@@ -3,16 +3,16 @@
         "5g1g": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
-                r = n("q1tI"),
-                o = n("wUQP"),
+                o = n("q1tI"),
+                r = n("wUQP"),
                 i = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.incremental && Object(o.c)(this.props.name) || Object(o.b)(this.props.name) ? this.props.children : null
+                        return this.props.incremental && Object(r.c)(this.props.name) || Object(r.b)(this.props.name) ? this.props.children : null
                     }, t
-                }(r.Component),
+                }(o.Component),
                 c = i;
             n.d(t, "b", function() {
                 return i
@@ -24,13 +24,13 @@
             "use strict";
             n.r(t);
             var a = n("/MKj"),
-                r = n("kRBY"),
-                o = n("mrSG"),
+                o = n("kRBY"),
+                r = n("mrSG"),
                 i = n("q1tI"),
                 c = n("9C/b"),
                 s = n("2INN"),
-                d = n("mf+E"),
-                l = n("jKe7"),
+                l = n("mf+E"),
+                d = n("jKe7"),
                 u = n("/7QA"),
                 p = n("ZS2+"),
                 b = n("5g1g"),
@@ -38,25 +38,28 @@
                 v = n("coZW"),
                 h = n("Ints"),
                 f = n("Ue10"),
-                g = p.a.wrap(function() {
-                    return n.e(211).then(n.bind(null, "RkBb"))
-                }, "DevOverviewPage"),
                 D = p.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(210)]).then(n.bind(null, "dE6c"))
+                    return n.e(212).then(n.bind(null, "RkBb"))
+                }, "DevOverviewPage"),
+                g = p.a.wrap(function() {
+                    return Promise.all([n.e(0), n.e(211)]).then(n.bind(null, "dE6c"))
                 }, "DevAppsPage"),
-                k = p.a.wrap(function() {
-                    return n.e(209).then(n.bind(null, "OfRZ"))
-                }, "DevAppCreatePage"),
                 E = p.a.wrap(function() {
-                    return n.e(208).then(n.bind(null, "AhYx"))
+                    return n.e(210).then(n.bind(null, "OfRZ"))
+                }, "DevAppCreatePage"),
+                k = p.a.wrap(function() {
+                    return n.e(209).then(n.bind(null, "AhYx"))
                 }, "DevAppEditPage"),
                 O = p.a.wrap(function() {
-                    return n.e(207).then(n.bind(null, "635G"))
+                    return n.e(208).then(n.bind(null, "635G"))
                 }, "DevGamesPage"),
                 y = p.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(206)]).then(n.bind(null, "QH5d"))
+                    return Promise.all([n.e(31), n.e(0), n.e(207)]).then(n.bind(null, "QH5d"))
                 }, "DevDropsDashboardRoot"),
-                j = function(e) {
+                j = p.a.wrap(function() {
+                    return n.e(206).then(n.bind(null, "DrWK"))
+                }, "DevExtensionsEnableMonetizationPage"),
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.isActive = function(e, n) {
@@ -65,7 +68,7 @@
                             return !!a && (n ? a === e : a.indexOf(e) > -1)
                         }, t
                     }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         return this.props.isLoggedIn ? i.createElement(f.Va, {
@@ -118,58 +121,62 @@
                             active: this.isActive("bounty-board")
                         }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Va, {
                             display: f.W.Block
-                        }, i.createElement(l.a, null, i.createElement(s.a, {
+                        }, i.createElement(d.a, null, i.createElement(s.a, {
                             exact: !0,
                             path: "/console",
-                            component: g
-                        }), i.createElement(s.a, {
-                            exact: !0,
-                            path: "/console/apps",
                             component: D
                         }), i.createElement(s.a, {
                             exact: !0,
+                            path: "/console/apps",
+                            component: g
+                        }), i.createElement(s.a, {
+                            exact: !0,
                             path: "/console/apps/create",
-                            component: k
+                            component: E
                         }), i.createElement(s.a, {
                             exact: !0,
                             path: "/console/apps/:id",
-                            component: E
+                            component: k
                         }), i.createElement(s.a, {
                             exact: !0,
                             path: "/console/games",
                             component: O
                         }), i.createElement(s.a, {
+                            exact: !0,
+                            path: "/console/extensions/enable-monetization",
+                            component: j
+                        }), i.createElement(s.a, {
                             path: "/console/drops",
                             component: y
-                        }))))) : i.createElement(d.a, {
+                        }))))) : i.createElement(l.a, {
                             to: "/login"
                         })
-                    }, t = o.__decorate([Object(m.c)("DevDashboard")], t)
+                    }, t = r.__decorate([Object(m.c)("DevDashboard")], t)
                 }(i.Component),
-                w = Object(c.a)(j);
-            var S = Object(a.connect)(function(e) {
+                S = Object(c.a)(w);
+            var x = Object(a.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(r.f)(e),
-                    user: Object(r.e)(e)
+                    isLoggedIn: Object(o.f)(e),
+                    user: Object(o.e)(e)
                 }
-            })(w);
+            })(S);
             n.d(t, "DevDashboardRoot", function() {
-                return S
+                return x
             })
         },
         Ints: function(e, t, n) {
             "use strict";
             var a = n("oJmH"),
-                r = n("yR8l"),
-                o = n("GnwI"),
+                o = n("yR8l"),
+                r = n("GnwI"),
                 i = n("cUgj"),
                 c = function(e) {
                     var t = e.data.currentUser && e.data.currentUser.company;
                     return t && t.brandPortalSettings && t.brandPortalSettings.isEnabled ? e.children : null
                 },
-                s = Object(a.compose)(Object(o.c)("DevBountyDashboardFeatureGate", {
+                s = Object(a.compose)(Object(r.c)("DevBountyDashboardFeatureGate", {
                     autoReportInteractive: !0
-                }), Object(r.a)(i))(c);
+                }), Object(o.a)(i))(c);
             n.d(t, !1, function() {
                 return c
             }), n.d(t, "a", function() {
@@ -275,31 +282,31 @@
             }), n.d(t, "b", function() {
                 return c
             }), n.d(t, "c", function() {
-                return d
+                return l
             });
-            var a, r, o = n("/7QA"),
+            var a, o, r = n("/7QA"),
                 i = n("kRBY");
 
             function c(e) {
-                var t = o.o.store.getState(),
-                    n = o.b.get(e, a.Off);
+                var t = r.o.store.getState(),
+                    n = r.b.get(e, a.Off);
                 return !!(n === a.On || n === a.StaffOnly && Object(i.g)(t))
             }! function(e) {
                 e.On = "on", e.Off = "off", e.StaffOnly = "staff"
             }(a || (a = {})),
             function(e) {
                 e[e.Enabled = 1] = "Enabled", e[e.Disabled = 0] = "Disabled"
-            }(r || (r = {}));
+            }(o || (o = {}));
             var s = Math.pow(2, 32);
 
-            function d(e) {
-                var t = o.b.get(e, [0, r.Disabled]),
+            function l(e) {
+                var t = r.b.get(e, [0, o.Disabled]),
                     n = t[0],
                     a = t[1],
-                    c = o.o.session.deviceID,
-                    d = o.o.store.getState();
-                return !(a !== r.Enabled || !Object(i.g)(d)) || function(e, t) {
-                    for (var n = void 0 === t ? 2166136261 : t, a = 0, r = e.length; a < r; a++) n ^= e.charCodeAt(a), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
+                    c = r.o.session.deviceID,
+                    l = r.o.store.getState();
+                return !(a !== o.Enabled || !Object(i.g)(l)) || function(e, t) {
+                    for (var n = void 0 === t ? 2166136261 : t, a = 0, o = e.length; a < o; a++) n ^= e.charCodeAt(a), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
                     return n >>> 0
                 }(c + "-" + e) / s < n
             }

@@ -877,7 +877,7 @@
                                 xs: E.Q.First
                             }
                         }, c.createElement("img", {
-                            src: h.c + "/code-redemption/CodeRedemption-Image.png",
+                            src: h.c + "/code-redemption/CodeRedemption-Image.jpg",
                             alt: ""
                         })), c.createElement(E.P, {
                             cols: {

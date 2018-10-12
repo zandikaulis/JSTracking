@@ -456,7 +456,7 @@
                                 padding: .5
                             }, a.createElement("img", {
                                 className: "new-chatter-ritual__emote",
-                                src: Object(s.e)(n.id, 3)
+                                src: Object(s.d)(n.id, 3)
                             })))))
                         });
                         return a.createElement(o.xb, {

@@ -292,16 +292,6 @@
             }(n("he03").definitions)), e.exports = i
         },
         "1mcJ": function(e, t, n) {},
-        "3sMy": function(e, t, n) {
-            "use strict";
-            var i;
-            n.d(t, "a", function() {
-                    return i
-                }),
-                function(e) {
-                    e.GreatNewClipsYouMayHaveMissed = "GreatNewClipsYouMayHaveMissed", e.PopularClips = "PopularClips", e.PopularVideos = "PopularVideos", e.RecommendedBecauseYouWatchX = "RecommendedBecauseYouWatchX", e.RecommendedBecauseYouFollowX = "RecommendedBecauseYouFollowX", e.TopChannelsPlayingGame = "TopChannelsPlayingGame", e.TopGames = "TopGames", e.TopGamesForYou = "TopGamesForYou", e.TopLiveChannels = "TopLiveChannels", e.TopLiveChannelsYouMayLike = "TopLiveChannelsYouMayLike", e.TopNewVideosYouMayHaveMissed = "TopNewVideosYouMayHaveMissed"
-                }(i || (i = {}))
-        },
         "45mq": function(e, t, n) {
             var i = {
                 kind: "Document",
@@ -1521,16 +1511,6 @@
             e.exports = n.p + "assets/overwatch-chars-fe0fc1dca7ed645de58c.png"
         },
         "7I5b": function(e, t, n) {},
-        "7sjZ": function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return a
-            });
-            var i = n("rShu"),
-                a = function(e) {
-                    return e === i.a.Communities ? "COMMUNITY" : "GAME"
-                }
-        },
         "80G/": function(e, t, n) {},
         "86FS": function(e, t, n) {
             "use strict";
@@ -1705,117 +1685,6 @@
         },
         "8rUg": function(e, t, n) {
             e.exports = n.p + "assets/counterstrike-skill-groups-24ec0fc40a78435bc373.png"
-        },
-        "9x/k": function(e, t, n) {
-            "use strict";
-            var i;
-            n.d(t, "a", function() {
-                    return i
-                }),
-                function(e) {
-                    e.Channels = "channels", e.ChannelsPlaystation = "channels-playstation", e.ChannelsXbox = "channels-xbox", e.Communities = "communities", e.CreativeCommunities = "creative-communities", e.Games = "games"
-                }(i || (i = {}))
-        },
-        A65o: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return s
-            });
-            var i = n("mrSG"),
-                a = n("q1tI"),
-                r = n("yI6f"),
-                o = n("x75U");
-
-            function s() {
-                return function(e) {
-                    return function(t) {
-                        function n() {
-                            var e = null !== t && t.apply(this, arguments) || this;
-                            return e.trackImpression = function(t) {
-                                e.context.trackImpression(e.props.shelf, e.props.contentEdge, e.props.itemPosition, t)
-                            }, e.trackClick = function(t, n, i) {
-                                "string" != typeof i && (i = void 0), e.context.trackClick(e.props.shelf, e.props.contentEdge, e.props.itemPosition, t, n, i)
-                            }, e
-                        }
-                        return i.__extends(n, t), n.prototype.render = function() {
-                            var t = this.context.cardIDtoItemTrackingIDMap && this.props.contentEdge.node && this.context.cardIDtoItemTrackingIDMap[this.props.contentEdge.node.id],
-                                n = this.props,
-                                o = n.itemPosition,
-                                s = n.rowPosition,
-                                l = n.shelf,
-                                d = Object(r.f)(l.title).rowName,
-                                c = {
-                                    trackImpression: this.trackImpression,
-                                    trackClick: this.trackClick,
-                                    shelfCardTrackingProps: {
-                                        item_tracking_id: t || null,
-                                        item_position: o,
-                                        row_name: d,
-                                        row_position: s
-                                    }
-                                };
-                            return a.createElement(e, i.__assign({}, this.props, c))
-                        }, n.contextTypes = o.a, n
-                    }(a.Component)
-                }
-            }
-        },
-        AO3T: function(e, t, n) {
-            "use strict";
-            n.d(t, "b", function() {
-                return i
-            }), n.d(t, "a", function() {
-                return a
-            }), n.d(t, "g", function() {
-                return s
-            }), n.d(t, "f", function() {
-                return l
-            }), n.d(t, "d", function() {
-                return d
-            }), n.d(t, "e", function() {
-                return c
-            }), n.d(t, "c", function() {
-                return u
-            });
-            var i, a, r = n("/7QA"),
-                o = n("2xye");
-            ! function(e) {
-                e.HomepageCTA = "homepage_cta", e.NewSignup = "new_signup"
-            }(i || (i = {})),
-            function(e) {
-                e.Click = "click", e.Impression = "impression", e.Start = "start", e.Dismissed = "dismissed", e.Completed = "completed"
-            }(a || (a = {}));
-            var s = function(e) {
-                    var t = {
-                        source: e.source,
-                        action: a.Start
-                    };
-                    r.n.track(o.SpadeEventType.OnboardingEvent, t)
-                },
-                l = function() {
-                    var e = {
-                        source: i.HomepageCTA,
-                        action: a.Dismissed
-                    };
-                    r.n.track(o.SpadeEventType.OnboardingEvent, e)
-                },
-                d = function() {
-                    var e = {
-                        source: i.HomepageCTA,
-                        action: a.Completed
-                    };
-                    r.n.track(o.SpadeEventType.OnboardingEvent, e)
-                },
-                c = function(e, t) {
-                    var n = {
-                        src: o.SpadeEventType.OnboardingEvent,
-                        game: t
-                    };
-                    r.n.track(e, n)
-                },
-                u = function(e) {
-                    r.n.track(o.SpadeEventType.BrowseForYou, e)
-                }
         },
         AXwV: function(e, t, n) {},
         AZIu: function(e, t, n) {
@@ -2295,7 +2164,7 @@
                 v = n("0INk"),
                 f = n("8/mp"),
                 k = n("eJ65"),
-                y = (n("vDRX"), function(e) {
+                b = (n("vDRX"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onBalloonToggle = function(e) {
@@ -2373,9 +2242,9 @@
                         })
                     }, t
                 }(a.Component)),
-                b = n("kduP"),
-                w = n("2xye"),
-                S = function(e) {
+                w = n("kduP"),
+                y = n("2xye"),
+                C = function(e) {
                     return a.createElement(d.Va, null, a.createElement(d.V, {
                         color: d.O.Alt,
                         ellipsis: !0
@@ -2384,17 +2253,17 @@
                             key: n
                         }, a.createElement(d.T, {
                             to: {
-                                pathname: Object(b.c)(t.label),
+                                pathname: Object(w.c)(t.label),
                                 state: {
-                                    content: w.PageviewContent.TextLink,
+                                    content: y.PageviewContent.TextLink,
                                     medium: e.trackingContext && e.trackingContext.medium
                                 }
                             },
                             type: d.U.Inherit
-                        }, t.label, C(n, i.length - 1) ? null : ", "))
+                        }, t.label, S(n, i.length - 1) ? null : ", "))
                     })))
                 },
-                C = function(e, t) {
+                S = function(e, t) {
                     return e === t
                 },
                 N = n("N0BP"),
@@ -2414,7 +2283,7 @@
                 });
             _.displayName = "PreviewCardIconicImage";
             n("cRsL");
-            var T, E = function(e) {
+            var E, F = function(e) {
                     var t = s("preview-card-top-bar", {
                         "preview-card-top-bar--gray": !e.selected,
                         "preview-card-top-bar--green": e.selected
@@ -2442,7 +2311,7 @@
                         color: d.O.Overlay
                     }, e.subTitle)))
                 },
-                F = (n("m493"), function(e) {
+                L = (n("m493"), function(e) {
                     var t = .5,
                         n = null;
                     "number" == typeof e.progressBarPercent && e.progressBarPercent > 0 && (n = a.createElement(d.Va, {
@@ -2461,7 +2330,7 @@
                         position: d.db.Absolute,
                         attachTop: !0,
                         fullWidth: !0
-                    }, a.createElement(E, i.__assign({}, e.topBar))), r = 3), a.createElement(d.Va, {
+                    }, a.createElement(F, i.__assign({}, e.topBar))), r = 3), a.createElement(d.Va, {
                         position: d.db.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
@@ -2506,7 +2375,7 @@
                         "data-test-selector": "bottom-right-selector"
                     }, e.bottomRight))
                 }),
-                I = (n("kF1+"), function(e) {
+                O = (n("kF1+"), function(e) {
                     var t = e.icon && a.createElement(d.Va, {
                         display: d.W.Flex,
                         margin: {
@@ -2535,8 +2404,8 @@
                         }
                     }, t, a.createElement(d.V, null, e.value))
                 }),
-                L = n("GnwI"),
-                O = (n("B3R5"), function(e) {
+                T = n("GnwI"),
+                x = (n("B3R5"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2600,8 +2469,8 @@
                         })))
                     }, t
                 }(a.Component)),
-                D = Object(L.c)("PreviewCardThumbnail")(O),
-                x = (n("80G/"), function(e) {
+                V = Object(T.c)("PreviewCardThumbnail")(x),
+                I = (n("80G/"), function(e) {
                     var t = null;
                     return e.subtitles && e.subtitles.length > 0 && (t = e.subtitles.map(function(e, t) {
                         return a.createElement(d.Va, {
@@ -2631,17 +2500,17 @@
                         className: "preview-card-titles__subtitle-wrapper"
                     }, t))
                 }),
-                V = n("H1ft"),
+                A = n("H1ft"),
                 P = n("ZbA5"),
-                A = n("QVaV"),
+                D = n("QVaV"),
                 G = n("hyVY"),
                 j = n("MXoD"),
-                R = n("0LAi"),
-                U = n("fVj5");
+                U = n("0LAi"),
+                R = n("fVj5");
             ! function(e) {
                 e.LockSelector = "video-lock", e.UpsellSelector = "upsell"
-            }(T || (T = {}));
-            var M, B, H = function(e) {
+            }(E || (E = {}));
+            var H, M, B = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -2671,7 +2540,7 @@
                         flexDirection: d.Y.Column,
                         flexWrap: d.Z.Wrap,
                         justifyContent: d.Ua.Center,
-                        "data-test-selector": T.LockSelector
+                        "data-test-selector": E.LockSelector
                     }, a.createElement(d.Na, {
                         margin: {
                             bottom: 1
@@ -2679,7 +2548,7 @@
                     }, a.createElement(d.V, {
                         color: d.O.Overlay,
                         fontSize: d.Aa.Size5,
-                        "data-test-selector": T.UpsellSelector
+                        "data-test-selector": E.UpsellSelector
                     }, Object(r.d)("View with {title}", {
                         title: this.props.restriction.title
                     }, "VideoPreviewCardRestriction"))), a.createElement(d.Va, null, a.createElement(d.z, {
@@ -2718,18 +2587,18 @@
                 return void 0 !== e.watchedProgressPercent
             }
 
-            function q(e) {
+            function z(e) {
                 return void 0 !== e.clipCreatedByChannelLogin
             }! function(e) {
                 e.Avatar = "preview-card-avatar", e.BoxArt = "preview-card-box-art"
-            }(M || (M = {})),
+            }(H || (H = {})),
             function(e) {
                 e[e.SingleGameList = 1] = "SingleGameList", e[e.SingleChannelList = 2] = "SingleChannelList", e[e.MixedGameAndChannelList = 3] = "MixedGameAndChannelList"
-            }(B || (B = {}));
-            var z = function(e) {
+            }(M || (M = {}));
+            var q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.isTagsExperiment = Object(U.b)(), t.getTrackingContext = function(e) {
+                        return t.isTagsExperiment = Object(R.b)(), t.getTrackingContext = function(e) {
                             var n = t.props.trackingContext;
                             return {
                                 content: n && n.content ? n.content : e,
@@ -2745,10 +2614,10 @@
                             borderRadius: d.x.Medium,
                             overflow: d.Ya.Hidden
                         }, this.renderVODRestrictionOverlay(), a.createElement(d.T, {
-                            to: Object(j.a)(this.getTrackingContext(w.PageviewContent.VideoThumbnail), this.props.linkTo),
+                            to: Object(j.a)(this.getTrackingContext(y.PageviewContent.VideoThumbnail), this.props.linkTo),
                             onClick: this.props.onThumbnailClick || this.props.onClick,
                             "data-a-target": "preview-card-image-link"
-                        }, this.props.thumbnailImageProps && a.createElement(D, {
+                        }, this.props.thumbnailImageProps && a.createElement(V, {
                             staticImageProps: this.props.thumbnailImageProps,
                             animatedImageProps: W(this.props) && this.props.animatedImageProps || void 0,
                             trackImageLatency: this.props.trackImageLatency
@@ -2772,47 +2641,47 @@
                     }, t.prototype.renderOverlay = function() {
                         return function(e) {
                             return void 0 !== e.streamType
-                        }(this.props) ? a.createElement(F, {
+                        }(this.props) ? a.createElement(L, {
                             topLeft: a.createElement(P.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
                             topRight: void 0,
-                            bottomLeft: a.createElement(I, {
+                            bottomLeft: a.createElement(O, {
                                 value: Object(r.d)("{viewerCount, plural, one {# viewer} other {# viewers}}", {
                                     viewerCount: this.props.currentViewerCount
                                 }, "VideoPreviewCard")
                             }),
                             bottomRight: void 0
-                        }) : W(this.props) ? a.createElement(F, {
-                            topLeft: void 0 !== this.props.durationInSeconds && a.createElement(I, {
+                        }) : W(this.props) ? a.createElement(L, {
+                            topLeft: void 0 !== this.props.durationInSeconds && a.createElement(O, {
                                 value: Object(G.b)(this.props.durationInSeconds),
                                 icon: d.nb.Play,
                                 withBackground: !0
                             }),
-                            topRight: this.props.listPosition && a.createElement(I, {
+                            topRight: this.props.listPosition && a.createElement(O, {
                                 withBackground: !0,
                                 value: this.getListPositionLabel()
                             }),
-                            bottomLeft: a.createElement(I, {
+                            bottomLeft: a.createElement(O, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: a.createElement(I, {
+                            bottomRight: a.createElement(O, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
                             }),
                             progressBarPercent: this.props.watchedProgressPercent,
                             topBar: this.props.topBar
-                        }) : q(this.props) ? a.createElement(F, {
-                            topLeft: a.createElement(I, {
+                        }) : z(this.props) ? a.createElement(L, {
+                            topLeft: a.createElement(O, {
                                 value: Object(G.b)(this.props.durationInSeconds),
                                 icon: d.nb.Clip,
                                 withBackground: !0
                             }),
                             topRight: void 0,
-                            bottomLeft: a.createElement(I, {
+                            bottomLeft: a.createElement(O, {
                                 value: this.getViewCountLabel()
                             }),
-                            bottomRight: a.createElement(I, {
+                            bottomRight: a.createElement(O, {
                                 value: Object(r.c)(new Date(this.props.datePublished), "medium")
                             })
                         }) : void 0
@@ -2822,56 +2691,56 @@
                             totalVideos: this.props.listPosition.totalVideos
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.getViewCountLabel = function() {
-                        return W(this.props) || q(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
+                        return W(this.props) || z(this.props) ? Object(r.d)("{viewerCount, plural, one {# view} other {# views}}", {
                             viewerCount: this.props.viewCount
                         }, "VideoPreviewCard") : ""
                     }, t.prototype.renderIconicImage = function() {
-                        return this.props.context === B.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(d.Va, {
+                        return this.props.context === M.SingleChannelList && this.props.gameBoxArtImageProps && this.props.gameBoxArtImageProps.src && this.props.gameTitleLinkTo ? a.createElement(d.Va, {
                             margin: {
                                 right: 1
                             }
                         }, a.createElement(_, {
                             imageProps: this.props.gameBoxArtImageProps,
-                            linkTo: Object(j.a)(this.getTrackingContext(w.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(y.PageviewContent.GameBoxart), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             aspect: d.p.BoxArt,
-                            "data-test-selector": M.BoxArt,
+                            "data-test-selector": H.BoxArt,
                             "data-a-target": "preview-card-boxart-link"
-                        })) : (this.props.context === B.SingleGameList || this.props.context === B.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(d.Va, {
+                        })) : (this.props.context === M.SingleGameList || this.props.context === M.MixedGameAndChannelList) && this.props.channelImageProps && this.props.channelImageProps.src ? a.createElement(d.Va, {
                             margin: {
                                 right: 1
                             }
                         }, a.createElement(_, {
                             imageProps: this.props.channelImageProps,
-                            linkTo: Object(j.a)(this.getTrackingContext(w.PageviewContent.UserThumbnail), this.props.channelLinkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(y.PageviewContent.UserThumbnail), this.props.channelLinkTo),
                             onClick: this.props.onChannelImageClick || this.props.onChannelLoginClick,
                             aspect: d.p.Aspect1x1,
-                            "data-test-selector": M.Avatar
+                            "data-test-selector": H.Avatar
                         })) : void 0
                     }, t.prototype.renderTitles = function() {
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(A.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
-                            linkTo: Object(j.a)(this.getTrackingContext(w.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
+                            text: Object(D.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            linkTo: Object(j.a)(this.getTrackingContext(y.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
-                        }), q(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
+                        }), z(this.props) && this.props.clipCreatedByChannelLoginLinkTo ? t.push({
                             text: Object(r.d)("Clipped by {userName}", {
                                 userName: this.props.clipCreatedByChannelLogin || ""
                             }, "VideoPreviewCard"),
                             linkTo: this.props.clipCreatedByChannelLoginLinkTo,
                             onClick: this.props.onClipCreatedByChannelLoginClick,
                             automationSelector: "preview-card-clip-curator-link"
-                        }) : W(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== B.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
+                        }) : W(this.props) && this.props.multipleVideoGameMarkersType && this.props.videoGameChanges && this.props.videoGameChanges.length > 0 ? e = this.renderPreviewCardGameInfo(this.props.multipleVideoGameMarkersType, this.props.videoGameChanges, this.props.onVideoGameBalloonClick, this.props.onVideoGameBalloonItemClick) : this.props.context !== M.SingleGameList && this.props.gameTitle && this.props.gameTitleLinkTo && t.push({
                             text: this.props.gameTitle,
-                            linkTo: Object(j.a)(this.getTrackingContext(w.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(y.PageviewContent.GameMetadata), this.props.gameTitleLinkTo),
                             onClick: this.props.onGameTitleClick,
                             automationSelector: "preview-card-game-link"
-                        }), a.createElement(a.Fragment, null, a.createElement(x, {
+                        }), a.createElement(a.Fragment, null, a.createElement(I, {
                             title: this.props.title,
                             onClick: this.props.onVideoTitleClick || this.props.onClick,
-                            linkTo: Object(j.a)(this.getTrackingContext(w.PageviewContent.VideoTitle), this.props.linkTo),
+                            linkTo: Object(j.a)(this.getTrackingContext(y.PageviewContent.VideoTitle), this.props.linkTo),
                             subtitles: t,
                             "data-a-target": "preview-card-title-link"
                         }), e)
@@ -2880,7 +2749,7 @@
                             margin: {
                                 top: .5
                             }
-                        }, a.createElement(R.a, i.__assign({}, this.props.tagListProps, {
+                        }, a.createElement(U.a, i.__assign({}, this.props.tagListProps, {
                             tagNumberLimit: 3
                         }))) : null
                     }, t.prototype.renderAppendages = function() {
@@ -2893,44 +2762,44 @@
                             game: this.props.playerMetadataGame
                         }))
                     }, t.prototype.renderVODRestrictionOverlay = function() {
-                        return W(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(H, {
+                        return W(this.props) && this.props.restriction && this.props.restriction.productName && this.props.restriction.title ? a.createElement(B, {
                             restriction: this.props.restriction,
                             attachTop: !0
                         }) : null
                     }, t.prototype.shouldShowGameBalloon = function(e) {
-                        return !!W(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === V.a.Balloon)
+                        return !!W(e) && (!!(e.videoGameChanges && e.videoGameChanges.length > 0) && e.multipleVideoGameMarkersType === A.a.Balloon)
                     }, t.prototype.renderPreviewCardGameInfo = function(e, t, n, i) {
                         switch (e) {
-                            case V.a.Balloon:
-                                return a.createElement(y, {
+                            case A.a.Balloon:
+                                return a.createElement(b, {
                                     videoGameChanges: t,
                                     videoID: t[0].videoID,
                                     onBalloonClick: n,
                                     onBalloonItemClick: i
                                 });
-                            case V.a.Inline:
-                                return a.createElement(S, {
+                            case A.a.Inline:
+                                return a.createElement(C, {
                                     videoGameChanges: t,
                                     trackingContext: this.props.trackingContext
                                 });
-                            case V.a.None:
+                            case A.a.None:
                                 return null;
                             default:
                                 return e
                         }
                     }, t
                 }(a.Component),
-                Y = Object(L.c)("PreviewCard", {
+                Q = Object(T.c)("PreviewCard", {
                     autoReportInteractive: !0
-                })(z);
+                })(q);
             n.d(t, !1, function() {
-                return M
+                return H
             }), n.d(t, "b", function() {
-                return B
+                return M
             }), n.d(t, !1, function() {
-                return z
+                return q
             }), n.d(t, "a", function() {
-                return Y
+                return Q
             })
         },
         H1ft: function(e, t, n) {
@@ -3119,265 +2988,6 @@
                 }, t))))
             }
         },
-        "Hz/u": function(e, t, n) {
-            "use strict";
-            var i = n("mrSG"),
-                a = n("q1tI"),
-                r = n("Uive"),
-                o = n("cTNz"),
-                s = n("GnwI"),
-                l = n("yR8l"),
-                d = n("7sjZ"),
-                c = n("0OKo"),
-                u = n("ZbA5"),
-                m = n("oB8h"),
-                p = n("17x9"),
-                g = n("/7QA"),
-                h = n("AO3T"),
-                v = n("hX9f"),
-                f = n("Ue10"),
-                k = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.impressionEventFired = !1, t.setRef = function(e) {
-                            return t.element = e
-                        }, t.isVisible = function(e) {
-                            if (null !== t.element) {
-                                var n = t.element.getBoundingClientRect();
-                                return n.left < e.right && n.right > e.left
-                            }
-                            return !1
-                        }, t.trackImpression = function() {
-                            var e = {
-                                channel_id: t.props.streamNode.id,
-                                action: h.a.Impression,
-                                parent_game: t.props.streamNode.game ? t.props.streamNode.game.name : "",
-                                content_index: t.props.streamIndex
-                            };
-                            Object(h.c)(e)
-                        }, t.trackClickEvent = function() {
-                            var e = {
-                                channel_id: t.props.streamNode.id,
-                                action: h.a.Click,
-                                parent_game: t.props.streamNode.game ? t.props.streamNode.game.name : "",
-                                content_index: t.props.streamIndex
-                            };
-                            Object(h.c)(e)
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = this.context.registerReceiver;
-                        e ? this.unregister = e(this) : g.j.warn("<StreamThumbnailWithTrackingComponent /> initialized missing a <ScrollableArea /> provider")
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.unregister && this.unregister()
-                    }, t.prototype.render = function() {
-                        return a.createElement("div", {
-                            onClick: this.trackClickEvent
-                        }, a.createElement(f.Va, {
-                            refDelegate: this.setRef
-                        }, a.createElement(v.b, {
-                            key: this.props.streamIndex,
-                            directoryName: this.props.directoryName,
-                            directoryType: this.props.directoryType,
-                            streamIndex: this.props.streamIndex,
-                            streamNode: this.props.streamNode,
-                            trackingMedium: this.props.trackingMedium
-                        })))
-                    }, t.prototype.checkVisible = function(e) {
-                        return i.__awaiter(this, void 0, void 0, function() {
-                            return i.__generator(this, function(t) {
-                                return !this.impressionEventFired && this.isVisible(e) && (this.trackImpression(), this.impressionEventFired = !0), [2]
-                            })
-                        })
-                    }, t.contextTypes = {
-                        registerReceiver: p.func
-                    }, t
-                }(a.Component),
-                y = "community-stream__placeholder",
-                b = "community-stream",
-                w = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.renderStream = function() {
-                            return t.props.data ? a.createElement(f.Va, {
-                                "data-test-selector": b,
-                                position: f.db.Relative
-                            }, a.createElement(f.Va, {
-                                padding: .5,
-                                position: f.db.Absolute,
-                                zIndex: f.ac.Above
-                            }, a.createElement(u.a, {
-                                type: m.a.Live
-                            })), a.createElement(k, {
-                                key: t.props.data.id,
-                                trackingMedium: t.props.trackingMedium,
-                                directoryName: t.props.directoryName,
-                                directoryType: t.props.directoryType,
-                                streamIndex: t.props.index,
-                                streamNode: t.props.data
-                            })) : a.createElement(f.Va, {
-                                "data-test-selector": y,
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, a.createElement(f.Va, {
-                                margin: {
-                                    bottom: .5
-                                }
-                            }, a.createElement(f.o, {
-                                ratio: f.p.Aspect16x9
-                            }, a.createElement(f.cb, null))), a.createElement(f.V, null, a.createElement(f.cb, {
-                                width: 150
-                            })), a.createElement(f.V, {
-                                fontSize: f.Aa.Size7
-                            }, a.createElement(f.cb, {
-                                width: 100
-                            })))
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(f.Va, null, this.renderStream())
-                    }, t
-                }(a.Component),
-                S = n("chV5"),
-                C = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                        this.props.data && !this.props.data.loading && this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        var e = null,
-                            t = "/directory";
-                        if (this.props.data && !this.props.data.loading && !this.props.data.error && this.props.data.directory && this.props.data.directory.streams && this.props.data.directory.streams.edges) {
-                            t = this.props.data.directory.name;
-                            var n = this.props.data.directory.streams.edges.filter(function(e) {
-                                var t = e.node;
-                                return t && t.broadcaster && t.broadcaster.login
-                            }).slice(0, 1).map(function(e) {
-                                return e.node
-                            });
-                            n.length && (e = n[0])
-                        }
-                        return a.createElement(w, {
-                            data: e,
-                            index: this.props.index,
-                            directoryName: t,
-                            directoryType: this.props.directoryType,
-                            trackingMedium: this.props.trackingMedium
-                        })
-                    }, t = i.__decorate([Object(l.a)(S, {
-                        options: function(e) {
-                            return {
-                                fetchPolicy: "network-only",
-                                variables: {
-                                    name: e.name,
-                                    limit: e.limit ? e.limit : 3,
-                                    type: Object(d.a)(e.directoryType)
-                                }
-                            }
-                        }
-                    }), Object(c.a)("CommunityStream")], t)
-                }(a.Component),
-                N = "community-streams-row__ad",
-                _ = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            adDisplayed: !1
-                        }, t.renderStreamGridWithAdSlot = function() {
-                            var e = a.createElement(f.Va, {
-                                    key: "ad",
-                                    "data-test-selector": N,
-                                    display: f.W.Flex,
-                                    flexGrow: 1,
-                                    justifyContent: f.Ua.Center,
-                                    padding: {
-                                        bottom: t.state.adDisplayed ? 2 : 0,
-                                        left: t.state.adDisplayed ? .5 : 0
-                                    }
-                                }, a.createElement(r.a, {
-                                    adSize: o.c.anonFront.rect,
-                                    adUnit: o.d.frontpage,
-                                    slotID: o.b.anonFront.rect,
-                                    targeting: {
-                                        pagetype: o.a.frontpage
-                                    },
-                                    slotRendered: t.onSlotRendered,
-                                    autoEnable: !1
-                                })),
-                                n = t.renderStreams().map(function(e, t) {
-                                    return a.createElement(f.P, {
-                                        key: "stream-" + t.toString(),
-                                        cols: 4
-                                    }, e)
-                                });
-                            return n.splice(2, 0, e), a.createElement(f.Va, {
-                                padding: {
-                                    x: 1
-                                }
-                            }, a.createElement(f.Ha, {
-                                gutterSize: f.Ia.Medium
-                            }, n))
-                        }, t.renderStreams = function() {
-                            if (t.props.data) {
-                                var e = t.props.data;
-                                return t.props.withAd && t.state.adDisplayed && (e = e.slice(0, 2)), e.map(function(e, n) {
-                                    return a.createElement(w, {
-                                        key: e.id,
-                                        data: e,
-                                        index: n,
-                                        directoryName: e.title,
-                                        directoryType: t.props.directoryType,
-                                        trackingMedium: t.props.trackingMedium
-                                    })
-                                })
-                            }
-                            if (t.props.names) {
-                                var n = t.props.names;
-                                return t.props.withAd && t.state.adDisplayed && (n = n.slice(0, 2)), n.map(function(e, n) {
-                                    return a.createElement(C, {
-                                        key: e,
-                                        name: e,
-                                        index: n,
-                                        directoryType: t.props.directoryType,
-                                        trackingMedium: t.props.trackingMedium
-                                    })
-                                })
-                            }
-                            throw new Error("Need to pass either data or names into CommunityStreamsRow")
-                        }, t.onSlotRendered = function() {
-                            t.state.adDisplayed || t.setState({
-                                adDisplayed: !0
-                            })
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        if (this.props.withAd) return this.renderStreamGridWithAdSlot();
-                        var e = this.props.data && 1 === this.props.data.length || this.props.names && 1 === this.props.names.length ? 1 : 0;
-                        return a.createElement(f.Va, {
-                            margin: {
-                                x: 1
-                            }
-                        }, a.createElement(f.Tb, {
-                            gutterSize: f.Vb.Small,
-                            childWidth: f.Ub.Large,
-                            placeholderItems: e,
-                            noWrap: !0
-                        }, this.renderStreams()))
-                    }, t
-                }(a.Component),
-                T = Object(s.c)("CommunityStreamsRow")(_);
-            n.d(t, !1, function() {
-                return N
-            }), n.d(t, !1, function() {
-                return _
-            }), n.d(t, "a", function() {
-                return T
-            })
-        },
         Igt5: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -3541,127 +3151,6 @@
             };
             e.exports = n
         },
-        JRXu: function(e, t, n) {},
-        Jl34: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "FollowGameButton_FollowGame"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "FollowGameInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "followGame"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "game"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "self"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "follow"
-                                                    },
-                                                    arguments: [],
-                                                    directives: [],
-                                                    selectionSet: {
-                                                        kind: "SelectionSet",
-                                                        selections: [{
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "followedAt"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }]
-                                                    }
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 136
-                }
-            };
-            n.loc.source = {
-                body: "mutation FollowGameButton_FollowGame($input: FollowGameInput!) {\nfollowGame(input: $input) {\ngame {\nself {\nfollow {\nfollowedAt\n}\n}\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
         L5dg: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -3796,17 +3285,17 @@
                                 case 1:
                                     return [2, a.sent()];
                                 case 2:
-                                    return o && n === p.a.Hearthstone ? [4, y(o)] : [3, 4];
+                                    return o && n === p.a.Hearthstone ? [4, b(o)] : [3, 4];
                                 case 3:
                                     return [2, a.sent()];
                                 case 4:
-                                    return l && n === p.a.Overwatch ? [4, b(l)] : [3, 6];
+                                    return l && n === p.a.Overwatch ? [4, w(l)] : [3, 6];
                                 case 5:
                                     return [2, a.sent()];
                                 case 6:
                                     if (s && n === p.a.LeagueOfLegends && (d = r.o.store.getState()).directory)
                                         if (d.directory.leagueOfLegends.championsMap) {
-                                            if (d.directory.leagueOfLegends.championsMap) return [2, w(s, d.directory.leagueOfLegends.championsMap, d.directory.leagueOfLegends.version)]
+                                            if (d.directory.leagueOfLegends.championsMap) return [2, y(s, d.directory.leagueOfLegends.championsMap, d.directory.leagueOfLegends.version)]
                                         } else r.o.store.dispatch(Object(m.b)());
                                     a.label = 7;
                                 case 7:
@@ -3842,7 +3331,7 @@
                         })
                     })
                 },
-                y = function(e) {
+                b = function(e) {
                     return a.__awaiter(void 0, void 0, void 0, function() {
                         var t, n, i;
                         return a.__generator(this, function(a) {
@@ -3871,7 +3360,7 @@
                         })
                     })
                 },
-                b = function(e) {
+                w = function(e) {
                     return a.__awaiter(void 0, void 0, void 0, function() {
                         var t, n, i, r, o, s, l, d, c, m, p, f;
                         return a.__generator(this, function(a) {
@@ -3903,7 +3392,7 @@
                         })
                     })
                 },
-                w = function(e, t, n) {
+                y = function(e, t, n) {
                     if (!t || !e) return null;
                     var i = t[e],
                         a = "https://ddragon.leagueoflegends.com/cdn/" + n + "/img/sprite/" + i.image.sprite;
@@ -4014,168 +3503,6 @@
                         })
                     })
                 }
-        },
-        T2RZ: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return k
-            });
-            var i = n("mrSG"),
-                a = n("q1tI"),
-                r = n("/MKj"),
-                o = n("fvjX"),
-                s = n("/7QA"),
-                l = n("2Ygb"),
-                d = n("2xye"),
-                c = n("oJov"),
-                u = n("JVUd"),
-                m = n("WRGI"),
-                p = n("moLQ"),
-                g = n("yI6f");
-
-            function h(e, t) {
-                if (t) {
-                    var n = {};
-                    return n = "string" == typeof t ? {
-                        pathname: t
-                    } : t, i.__assign({}, n, {
-                        state: i.__assign({}, n.state, e)
-                    })
-                }
-            }
-
-            function v(e, t, n) {
-                return n || (n = function() {}),
-                    function(a) {
-                        n && n(a), s.n.track(d.SpadeEventType.ItemClick, i.__assign({}, e, {
-                            item_subsection: t
-                        }))
-                    }
-            }
-
-            function f(e, t) {
-                return i.__assign({}, t, {
-                    callback: function(n) {
-                        t.callback && t.callback(n), s.n.track(d.SpadeEventType.ItemClick, i.__assign({}, e, {
-                            item_subsection: d.PageviewContent.Tag,
-                            tag_id: n.id
-                        }))
-                    }
-                })
-            }
-
-            function k(e, t, n) {
-                return function(k) {
-                    var y = function(r) {
-                        function o() {
-                            var e = null !== r && r.apply(this, arguments) || this;
-                            return e.itemTrackingID = Object(g.e)(), e.trackImpression = function() {
-                                s.n.track(d.SpadeEventType.ItemDisplay, e.getCommonTrackingParams())
-                            }, e
-                        }
-                        return i.__extends(o, r), o.prototype.componentDidMount = function() {
-                            this.props.impressionListener.registerImpressionCallback(this.trackImpression)
-                        }, o.prototype.render = function() {
-                            if (k === c.a) {
-                                var e = this.props;
-                                return a.createElement(k, i.__assign({}, e, this.wrapGameCardPropsWithTracking(e)))
-                            }
-                            e = this.props;
-                            return a.createElement(k, i.__assign({}, e, this.wrapPreviewCardPropsWithTracking(e)))
-                        }, o.prototype.getTrackingLocationState = function() {
-                            var t = this.props.tagListProps ? this.props.tagListProps.tags.map(function(e) {
-                                    return e.id
-                                }) : [],
-                                n = this.props.tagFilters.map(function(e) {
-                                    return e.id
-                                }),
-                                i = e;
-                            this.props.tagFilters.length > 0 && (i === d.PageviewMedium.Browse ? i = d.PageviewMedium.BrowseDirectoryTags : i === d.PageviewMedium.Game && (i = d.PageviewMedium.GameDirectoryTags));
-                            var a = {
-                                tag_set: JSON.stringify(t),
-                                tag_filter_set: JSON.stringify(n),
-                                tag_streamer_set: "[]",
-                                medium: i
-                            };
-                            return "POP" === s.o.history.action ? a : (s.o.history.location.state && s.o.history.location.state.medium === d.PageviewMedium.TwitchHome && (a.item_tracking_id = s.o.history.location.state.item_tracking_id, a.medium = s.o.history.location.state.medium, a.content = s.o.history.location.state.content), a)
-                        }, o.prototype.getCommonTrackingParams = function() {
-                            var i = this.props.trackingProps || {},
-                                a = i.itemID,
-                                r = i.category,
-                                o = i.channelID,
-                                s = i.itemPosition,
-                                l = i.rowPosition,
-                                d = this.props.tagListProps ? this.props.tagListProps.tags.map(function(e) {
-                                    return e.id
-                                }) : [];
-                            return {
-                                channel_id: void 0 !== o ? Number(o) : null,
-                                component: null,
-                                content_type: t,
-                                item_tracking_id: this.itemTrackingID,
-                                item_id: void 0 !== a ? a : null,
-                                item_position: void 0 !== s ? s : null,
-                                item_subsection: null,
-                                item_page: e,
-                                reason_target: null,
-                                reason_target_type: null,
-                                reason_type: null,
-                                request_id: null,
-                                row_name: null,
-                                row_position: void 0 !== l ? l : null,
-                                section: void 0 !== n ? n : null,
-                                model_tracking_id: null,
-                                tag_set: JSON.stringify(d),
-                                tag_streamer_set: "[]",
-                                filtered: this.props.tagFilters.length > 0,
-                                category: void 0 !== r ? r : null,
-                                tag_id: null
-                            }
-                        }, o.prototype.wrapPreviewCardPropsWithTracking = function(e) {
-                            var t = this.getCommonTrackingParams(),
-                                n = this.getTrackingLocationState();
-                            return i.__assign({
-                                onVideoTitleClick: v(t, d.PageviewContent.VideoTitle, e.onVideoTitleClick),
-                                linkTo: h(n, this.props.linkTo),
-                                onThumbnailClick: v(t, d.PageviewContent.VideoThumbnail, e.onThumbnailClick),
-                                channelLinkTo: h(n, e.channelLinkTo),
-                                onChannelLoginClick: v(t, d.PageviewContent.ChannelMetadata, e.onChannelLoginClick),
-                                onChannelImageClick: v(t, d.PageviewContent.UserThumbnail, e.onChannelImageClick),
-                                gameTitleLinkTo: h(n, e.gameTitleLinkTo),
-                                onGameTitleClick: v(t, d.PageviewContent.GameName, e.onGameTitleClick)
-                            }, e.tagListProps && {
-                                tagListProps: f(t, e.tagListProps)
-                            }, n.medium && {
-                                trackingContext: {
-                                    medium: n.medium,
-                                    content: n.content
-                                }
-                            })
-                        }, o.prototype.wrapGameCardPropsWithTracking = function(e) {
-                            var t = this.getCommonTrackingParams(),
-                                n = this.getTrackingLocationState();
-                            return i.__assign({
-                                linkTo: h(n, e.linkTo),
-                                onClick: v(t, d.PageviewContent.GameBoxart, this.props.onClick)
-                            }, e.tagListProps && {
-                                tagListProps: f(t, e.tagListProps)
-                            })
-                        }, o.displayName = Object(l.a)(o.name, k), o
-                    }(a.Component);
-                    return Object(o.compose)(Object(u.a)("PreviewCard-" + e + "-" + t, {
-                        percentage: 75
-                    }), Object(r.connect)(function(t, n) {
-                        var i = [];
-                        if (e === d.PageviewMedium.Game) {
-                            var a = n.trackingProps && n.trackingProps.categoryName;
-                            i = a ? Object(p.a)(t, a) : []
-                        } else i = Object(m.a)(t);
-                        return {
-                            tagFilters: i
-                        }
-                    }))(y)
-                }
-            }
         },
         Uc21: function(e, t, n) {
             var i = {
@@ -4606,123 +3933,6 @@
                 })
             }(n("Iqxx").definitions)), e.exports = i
         },
-        Uive: function(e, t, n) {
-            "use strict";
-            var i = n("/MKj"),
-                a = n("mrSG"),
-                r = n("q1tI"),
-                o = n("/7QA"),
-                s = n("N0BP"),
-                l = n("MPw5"),
-                d = n("cTNz"),
-                c = n("KxT4"),
-                u = n("YUvD"),
-                m = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_0",
-                p = "#google_ads_iframe_\\/3576121\\/twitch\\/directory_1",
-                g = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.logger = o.j.withCategory("ad-slot"), n.createSlot = function(e) {
-                            return a.__awaiter(n, void 0, void 0, function() {
-                                var t;
-                                return a.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            if (this.state.slotCreated) return [2];
-                                            this.setState({
-                                                slotCreated: !0
-                                            }), n.label = 1;
-                                        case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, l.a.createSlot(e.slotID, e.adUnit, e.adSize, e.targeting, e.autoEnable, e.gdpr.blockConsentRequiredContent)];
-                                        case 2:
-                                            return t = n.sent(), Object(d.h)(t.getSlotElementId()), this.setState({
-                                                slot: t
-                                            }), [3, 4];
-                                        case 3:
-                                            return n.sent(), this.logger.warn("Unable to create ad slot", {
-                                                slotID: e.slotID,
-                                                adUnit: e.adUnit,
-                                                adSize: e.adSize,
-                                                targeting: e.targeting,
-                                                autoEnable: e.autoEnable,
-                                                blockConsentRequiredContent: e.gdpr.blockConsentRequiredContent
-                                            }), [3, 4];
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, n.setRef = function(e) {
-                            return n.slotRef = e
-                        }, n.onSlotRenderEnd = function(e) {
-                            var t = e.slot.getSlotElementId();
-                            if (n.state.slot && t === n.props.slotID) {
-                                if (n.logger.debug("Ad slot render ended", {
-                                        elementID: t,
-                                        lineItemID: e.lineItemId,
-                                        createdID: e.creativeId,
-                                        isEmpty: e.isEmpty,
-                                        serviceName: e.serviceName,
-                                        size: e.size
-                                    }), e.isEmpty) return;
-                                if (!n.slotRef) return;
-                                if (n.props.slotID === d.b.anonFront.takeover) return void(document.body.classList.contains("takeover") && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }));
-                                var i;
-                                if (n.props.slotID === d.b.directory.banner) return void((i = n.slotRef.querySelector(m)) && 1 !== i.clientWidth && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }));
-                                if (n.props.slotID === d.b.directory.rectangle) return void((i = n.slotRef.querySelector(p)) && 1 !== i.clientWidth && n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                }));
-                                n.setState({
-                                    shouldDisplay: !0
-                                }, function() {
-                                    return n.slotRendered(e.slot)
-                                })
-                            }
-                        }, n.slotRendered = function(e) {
-                            n.props.slotRendered && n.props.slotRendered(e)
-                        }, n.shouldCreateSlot = function(e) {
-                            return e.gdpr.status !== c.b.Loading && e.trackingSet
-                        }, n.state = {
-                            shouldDisplay: !1
-                        }, n
-                    }
-                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
-                        d.g.addListener(d.f, this.onSlotRenderEnd), this.shouldCreateSlot(this.props) ? (this.logger.debug("Consent ready. Tracking is set. Creating slot (componentDidMount)", this.props.slotID), this.createSlot(this.props)) : this.logger.debug("Consent not ready or Tracking is not set. Skipping slot creation (componentDidMount)", this.props.slotID)
-                    }, t.prototype.componentWillReceiveProps = function(e) {
-                        this.state.slotCreated || (!this.shouldCreateSlot(e) || e.gdpr.status === this.props.gdpr.status && e.trackingSet === this.props.trackingSet ? this.logger.debug("Tracking is not set. Skipping slot creation (componentWillReceiveProps)", this.props.slotID) : (this.logger.debug("Tracking is set. Creating slot (componentWillReceiveProps)", this.props.slotID), this.createSlot(e)))
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.logger.debug("Destroying Slot (componentWillUnmount)", this.props.slotID), d.g.removeListener(d.f, this.onSlotRenderEnd), this.state.slot && l.a.destroySlot(this.state.slot)
-                    }, t.prototype.shouldComponentUpdate = function(e, t) {
-                        return t.shouldDisplay !== this.state.shouldDisplay
-                    }, t.prototype.render = function() {
-                        var e = a.__assign({}, this.props.injectStyles);
-                        return this.state.shouldDisplay || (e.display = "none"), r.createElement("div", a.__assign({
-                            style: e,
-                            id: this.props.slotID,
-                            ref: this.setRef
-                        }, Object(s.a)(this.props)))
-                    }, t
-                }(r.Component),
-                h = Object(u.a)(c.c.Amazon)(g);
-            var v = Object(i.connect)(function(e) {
-                return {
-                    trackingSet: e.ads.trackingSet
-                }
-            })(h);
-            n.d(t, "a", function() {
-                return v
-            })
-        },
         Uyt6: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -4742,95 +3952,78 @@
                 v = n("yR8l"),
                 f = n("V+GM"),
                 k = n("NvVO"),
-                y = n("2xye"),
-                b = n("D7An"),
-                w = n("TDc0"),
-                S = n("fVj5"),
-                C = n("Ue10"),
-                N = n("bp79"),
-                _ = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        n.userDataLoaded = function() {
-                            return n.props.data && !n.props.data.loading
-                        };
-                        var i = m.o.experiments.getAssignment(b.b.WebOnboarding),
-                            a = m.o.experiments.getAssignment(b.b.DiscoveryFrontpageMVP);
-                        return n.state = {
-                            shouldSeeForYou: Object(w.g)(i) && !Object(w.f)(a)
-                        }, n
+                b = n("2xye"),
+                w = n("fVj5"),
+                y = n("Ue10"),
+                C = n("bp79"),
+                S = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.userDataLoaded = function() {
+                            return t.props.data && !t.props.data.loading
+                        }, t
                     }
                     return l.__extends(t, e), t.prototype.componentDidUpdate = function() {
                         this.userDataLoaded() && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         if (!this.userDataLoaded()) return null;
                         var e = this.props.activeCategory,
-                            t = [d.createElement(C.yb, {
+                            t = [d.createElement(y.yb, {
                                 key: "following-overview-tab",
                                 active: void 0 === e,
                                 linkTo: "/directory/following",
                                 "data-a-target": "following-overview-tab"
-                            }, Object(m.d)("Overview", "FollowingHeaderTabs")), d.createElement(C.yb, {
+                            }, Object(m.d)("Overview", "FollowingHeaderTabs")), d.createElement(y.yb, {
                                 key: "following-channels-tab",
-                                active: e === y.SpadeFollowingCategory.Live,
+                                active: e === b.SpadeFollowingCategory.Live,
                                 "data-a-target": "following-channels-tab",
                                 linkTo: "/directory/following/live"
-                            }, Object(m.d)("Channels", "FollowingHeaderTabs")), d.createElement(C.yb, {
+                            }, Object(m.d)("Channels", "FollowingHeaderTabs")), d.createElement(y.yb, {
                                 key: "following-hosts-tab",
-                                active: e === y.SpadeFollowingCategory.Hosts,
+                                active: e === b.SpadeFollowingCategory.Hosts,
                                 "data-a-target": "following-hosts-tab",
                                 linkTo: "/directory/following/hosts"
-                            }, Object(m.d)("Hosts", "FollowingHeaderTabs")), d.createElement(C.yb, {
+                            }, Object(m.d)("Hosts", "FollowingHeaderTabs")), d.createElement(y.yb, {
                                 key: "following-games-tab",
-                                active: e === y.SpadeFollowingCategory.Games,
+                                active: e === b.SpadeFollowingCategory.Games,
                                 "data-a-target": "following-games-tab",
                                 linkTo: "/directory/following/games"
-                            }, Object(m.d)("Games", "FollowingHeaderTabs")), !Object(S.b)() && d.createElement(C.yb, {
+                            }, Object(m.d)("Games", "FollowingHeaderTabs")), !Object(w.b)() && d.createElement(y.yb, {
                                 key: "following-communities-tab",
-                                active: e === y.SpadeFollowingCategory.Communities,
+                                active: e === b.SpadeFollowingCategory.Communities,
                                 linkTo: "/directory/following/communities",
                                 "data-a-target": "following-communities-tab"
                             }, Object(m.d)("Communities", "FollowingPage"))];
-                        if (this.state.shouldSeeForYou && !this.props.data.error && this.props.data.currentUser && Object(w.h)(new Date(this.props.data.currentUser.createdAt))) {
-                            var n = d.createElement(C.yb, {
-                                key: "following-foryou-tab",
-                                "data-test-selector": "for-you-tab",
-                                active: e === y.SpadeFollowingCategory.ForYou,
-                                linkTo: "/directory/following/foryou",
-                                "data-a-target": "following-foryou-tab"
-                            }, Object(m.d)("For You", "FollowingHeaderTabs"));
-                            t.unshift(n)
-                        }
-                        return d.createElement(C.Va, {
+                        return d.createElement(y.Va, {
                             className: "following__header-tabs",
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(C.zb, null, t))
-                    }, t = l.__decorate([Object(g.c)("FollowingHeaderTabs"), Object(v.a)(N)], t)
+                        }, d.createElement(y.zb, null, t))
+                    }, t = l.__decorate([Object(g.c)("FollowingHeaderTabs"), Object(v.a)(C)], t)
                 }(d.Component),
-                T = n("HrG3"),
-                E = n("5myU");
+                N = n("HrG3"),
+                _ = n("5myU");
             n("jE8A");
 
-            function F(e) {
+            function E(e) {
                 var t;
-                if (!e.communities || 0 === e.communities.length) return d.createElement(C.V, {
+                if (!e.communities || 0 === e.communities.length) return d.createElement(y.V, {
                     "data-a-target": "no-communities-text"
                 }, Object(m.d)("No communities", "LiveCommunities"));
                 var n, i = e.communities;
                 if (e.showSample) {
-                    var a = Object(E.a)(e.directoryWidth || 0, 180, 1); - 1 === a ? i = [] : a < i.length && (i = i.slice(0, a - 1), n = d.createElement(T.a, {
+                    var a = Object(_.a)(e.directoryWidth || 0, 180, 1); - 1 === a ? i = [] : a < i.length && (i = i.slice(0, a - 1), n = d.createElement(N.a, {
                         subHeader: Object(m.d)("Communities", "LiveCommunities--view-all"),
                         linkTo: "/directory/following/communities",
-                        aspectRatio: C.p.Aspect3x4
-                    })), t = d.createElement(C.Va, {
+                        aspectRatio: y.p.Aspect3x4
+                    })), t = d.createElement(y.Va, {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(C.V, {
-                        type: C.Nb.H4,
-                        color: C.O.Base,
+                    }, d.createElement(y.V, {
+                        type: y.Nb.H4,
+                        color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-communities-header"
                     }, Object(m.d)("Communities", "LiveCommunities")))
@@ -4844,12 +4037,12 @@
                             viewerCount: n.viewersCount,
                             streams: d.createElement("span", null, i)
                         }, "LiveCommunities");
-                    return d.createElement(C.Va, {
+                    return d.createElement(y.Va, {
                         key: n.id,
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(C.y, {
+                    }, d.createElement(y.y, {
                         linkTo: {
                             pathname: "/communities/" + encodeURIComponent(n.name),
                             state: {
@@ -4867,13 +4060,13 @@
                         "data-a-target": "live-community-card-" + t
                     }))
                 });
-                return d.createElement("div", null, t, d.createElement(C.Tb, {
-                    gutterSize: C.Vb.Small,
-                    childWidth: C.Ub.Small,
+                return d.createElement("div", null, t, d.createElement(y.Tb, {
+                    gutterSize: y.Vb.Small,
+                    childWidth: y.Ub.Small,
                     placeholderItems: 30
                 }, r, n))
             }
-            var I = n("gukg"),
+            var F = n("gukg"),
                 L = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -4884,25 +4077,25 @@
                         this.onRender()
                     }, t.prototype.render = function() {
                         var e;
-                        return e = this.props.data.loading ? d.createElement(C.Va, {
-                            display: C.W.Flex,
-                            position: C.db.Absolute,
+                        return e = this.props.data.loading ? d.createElement(y.Va, {
+                            display: y.W.Flex,
+                            position: y.db.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, d.createElement(C.Xa, {
+                        }, d.createElement(y.Xa, {
                             fillContent: !0
                         })) : this.props.data.error ? d.createElement(p.a, {
                             message: Object(m.d)("Error loading data.", "FollowingCommunitiesPage")
-                        }) : d.createElement(F, {
+                        }) : d.createElement(E, {
                             communities: this.props.data.currentUser && this.props.data.currentUser.followedCommunities ? this.props.data.currentUser.followedCommunities.edges : []
-                        }), d.createElement(C.Va, {
+                        }), d.createElement(y.Va, {
                             padding: 3
-                        }, d.createElement(_, {
-                            activeCategory: y.SpadeFollowingCategory.Communities
+                        }, d.createElement(S, {
+                            activeCategory: b.SpadeFollowingCategory.Communities
                         }), e)
                     }, t.prototype.onRender = function() {
                         this.props.latencyTracking.reportInteractive()
-                    }, t = l.__decorate([Object(v.a)(I, {
+                    }, t = l.__decorate([Object(v.a)(F, {
                         options: {
                             fetchPolicy: "cache-and-network",
                             variables: {
@@ -4912,31 +4105,31 @@
                     }), Object(g.c)("FollowingCommunitiesPage", {
                         destination: k.a.DirectoryFollowingCommunities
                     }), Object(f.a)({
-                        location: y.PageviewLocation.Directory,
+                        location: b.PageviewLocation.Directory,
                         properties: function() {
                             return {
-                                content_type: y.PageviewDirectoryContentType.Communities,
-                                tab: y.PageviewFollowingTab.Communities
+                                content_type: b.PageviewDirectoryContentType.Communities,
+                                tab: b.PageviewFollowingTab.Communities
                             }
                         }
                     })], t)
                 }(d.Component),
                 O = n("DMoW"),
-                D = n("aCAx"),
+                T = n("aCAx"),
                 x = n("cZKs"),
                 V = n("8/mp"),
-                P = n("qyxT"),
+                I = n("qyxT"),
                 A = n("yziQ"),
-                G = n("xugo"),
-                j = (n("nrVK"), function(e) {
+                P = n("xugo"),
+                D = (n("nrVK"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
                             followCount: 0
                         }, n.getAndStoreShuffledGameCards = function() {
-                            n.props.data && n.props.data.games && (n.shuffledGameCards = Object(P.a)(n.props.data.games.edges.map(function(e, t) {
+                            n.props.data && n.props.data.games && (n.shuffledGameCards = Object(I.a)(n.props.data.games.edges.map(function(e, t) {
                                 var i = e.node;
-                                return i && i.id ? d.createElement(C.Va, {
+                                return i && i.id ? d.createElement(y.Va, {
                                     key: i.id
                                 }, d.createElement(A.a, {
                                     info: "",
@@ -4949,7 +4142,7 @@
                                 })) : null
                             })))
                         }, n.onClickContinue = function() {
-                            n.props.onContinue && n.props.onContinue(), m.o.store.dispatch(Object(D.c)())
+                            n.props.onContinue && n.props.onContinue(), m.o.store.dispatch(Object(T.c)())
                         }, n.onFollow = function() {
                             n.setState(function(e) {
                                 return {
@@ -4965,16 +4158,16 @@
                         }, n
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), d.createElement(C.xb, {
+                        return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), d.createElement(y.xb, {
                             className: "following-games-modal",
-                            background: C.r.Base,
+                            background: y.r.Base,
                             padding: 2,
-                            overflow: C.Ya.Hidden,
+                            overflow: y.Ya.Hidden,
                             "data-a-target": "follow-games-modal",
-                            display: C.W.Flex,
-                            flexDirection: C.Y.Column,
-                            flexWrap: C.Z.NoWrap
-                        }, d.createElement(C.Va, {
+                            display: y.W.Flex,
+                            flexDirection: y.Y.Column,
+                            flexWrap: y.Z.NoWrap
+                        }, d.createElement(y.Va, {
                             flexGrow: 0,
                             flexShrink: 0,
                             padding: {
@@ -4983,22 +4176,22 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: C.Jb.Center,
-                            display: C.W.Flex,
-                            flexDirection: C.Y.Column,
-                            alignContent: C.e.Center
-                        }, d.createElement(C.Va, {
+                            textAlign: y.Jb.Center,
+                            display: y.W.Flex,
+                            flexDirection: y.Y.Column,
+                            alignContent: y.e.Center
+                        }, d.createElement(y.Va, {
                             margin: {
                                 bottom: .5
                             }
-                        }, d.createElement(C.V, {
-                            fontSize: C.Aa.Size4,
-                            color: C.O.Base,
+                        }, d.createElement(y.V, {
+                            fontSize: y.Aa.Size4,
+                            color: y.O.Base,
                             bold: !0
-                        }, Object(m.d)("Choose some games that you'd like to follow.", "FollowGamesModal"))), d.createElement(C.V, {
-                            fontSize: C.Aa.Size5,
-                            color: C.O.Alt
-                        }, Object(m.d)("This will let you pin your favorites for easy access.", "FollowGamesModal"))), d.createElement(C.Va, {
+                        }, Object(m.d)("Choose some games that you'd like to follow.", "FollowGamesModal"))), d.createElement(y.V, {
+                            fontSize: y.Aa.Size5,
+                            color: y.O.Alt
+                        }, Object(m.d)("This will let you pin your favorites for easy access.", "FollowGamesModal"))), d.createElement(y.Va, {
                             className: "following-games-modal__list",
                             margin: {
                                 bottom: 1
@@ -5006,26 +4199,26 @@
                             flexGrow: 1
                         }, d.createElement(V.b, {
                             suppressScrollX: !0
-                        }, d.createElement(C.Va, {
+                        }, d.createElement(y.Va, {
                             padding: 1
-                        }, d.createElement(C.Tb, {
-                            childWidth: C.Ub.Small,
-                            gutterSize: C.Vb.Small,
+                        }, d.createElement(y.Tb, {
+                            childWidth: y.Ub.Small,
+                            gutterSize: y.Vb.Small,
                             placeholderItems: 99
-                        }, this.shuffledGameCards)))), d.createElement(C.Va, {
-                            display: C.W.Flex,
-                            justifyContent: C.Ua.Center,
+                        }, this.shuffledGameCards)))), d.createElement(y.Va, {
+                            display: y.W.Flex,
+                            justifyContent: y.Ua.Center,
                             padding: {
                                 y: 1
                             },
                             flexGrow: 0,
                             flexShrink: 0
-                        }, d.createElement(C.z, {
-                            size: C.D.Large,
+                        }, d.createElement(y.z, {
+                            size: y.D.Large,
                             onClick: this.onClickContinue,
                             disabled: 0 === this.state.followCount
                         }, Object(m.d)("Continue", "FollowGamesModal"))), d.createElement(x.a, null)))
-                    }, t = l.__decorate([Object(v.a)(G, {
+                    }, t = l.__decorate([Object(v.a)(P, {
                         options: {
                             variables: {
                                 limit: 40
@@ -5033,24 +4226,24 @@
                         }
                     })], t)
                 }(d.Component)),
-                R = n("kduP"),
-                U = n("3W+h"),
-                M = n("PfQt"),
-                B = n("oJov"),
+                G = n("kduP"),
+                j = n("3W+h"),
+                U = n("PfQt"),
+                R = n("oJov"),
                 H = n("AZIu"),
-                W = n("x/sq"),
-                q = function(e) {
+                M = n("x/sq"),
+                B = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        var e = d.createElement(C.Va, {
+                        var e = d.createElement(y.Va, {
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(C.V, {
-                            type: C.Nb.H4,
-                            color: C.O.Base,
+                        }, d.createElement(y.V, {
+                            type: y.Nb.H4,
+                            color: y.O.Base,
                             bold: !0,
                             "data-a-target": "live-games-header"
                         }, Object(m.d)("Live games", "LiveGames")));
@@ -5064,12 +4257,12 @@
                                 var n = e.name.toLowerCase(),
                                     i = t.name.toLowerCase();
                                 return n < i ? -1 : n > i ? 1 : 0
-                            })) || 0 === n.length) return d.createElement(C.xb, {
+                            })) || 0 === n.length) return d.createElement(y.xb, {
                             fullWidth: !0,
-                            background: C.r.Alt2,
-                            display: C.W.Flex,
-                            flexDirection: C.Y.Column,
-                            alignItems: C.f.Center,
+                            background: y.r.Alt2,
+                            display: y.W.Flex,
+                            flexDirection: y.Y.Column,
+                            alignItems: y.f.Center,
                             padding: {
                                 y: 3
                             },
@@ -5077,48 +4270,48 @@
                                 y: 2
                             },
                             "data-target": "following__follow-games-cta"
-                        }, d.createElement(C.Va, {
+                        }, d.createElement(y.Va, {
                             margin: {
                                 bottom: 1
                             }
-                        }, d.createElement(C.V, {
-                            fontSize: C.Aa.Size4,
-                            color: C.O.Alt2
-                        }, Object(m.d)("You can now follow your favorite games!", "LiveGames"))), d.createElement(C.Va, {
+                        }, d.createElement(y.V, {
+                            fontSize: y.Aa.Size4,
+                            color: y.O.Alt2
+                        }, Object(m.d)("You can now follow your favorite games!", "LiveGames"))), d.createElement(y.Va, {
                             margin: {
                                 top: .5
                             }
-                        }, d.createElement(C.z, {
-                            size: C.D.Large,
+                        }, d.createElement(y.z, {
+                            size: y.D.Large,
                             onClick: this.props.showFollowGamesModal,
                             "data-a-target": "find-out-more-button"
                         }, Object(m.d)("Find Out More!", "LiveGames"))));
                         if (this.props.showSample && this.props.directoryWidth && this.props.directoryWidth > 0) {
-                            var i = Object(E.a)(this.props.directoryWidth, 180, 1);
-                            i < n.length && (n = n.slice(0, i - 1), t = d.createElement(C.Va, {
+                            var i = Object(_.a)(this.props.directoryWidth, 180, 1);
+                            i < n.length && (n = n.slice(0, i - 1), t = d.createElement(y.Va, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, d.createElement(M.a, {
+                            }, d.createElement(U.a, {
                                 subHeader: "Live Games",
                                 linkTo: "/directory/following/games",
-                                aspectRatio: C.p.Aspect3x4
+                                aspectRatio: y.p.Aspect3x4
                             })))
                         }
                         var a = n.map(function(e, t) {
                             if (!e) return null;
-                            var n = Object(W.a)({
+                            var n = Object(M.a)({
                                 tags: e.tags,
                                 section: H.a.Categories
                             });
-                            return d.createElement(C.Va, {
+                            return d.createElement(y.Va, {
                                 key: e.id,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, d.createElement(B.a, {
+                            }, d.createElement(R.a, {
                                 linkTo: {
-                                    pathname: Object(R.c)(e.name),
+                                    pathname: Object(G.c)(e.name),
                                     state: {
                                         content: "twitch_following",
                                         medium: "live_game",
@@ -5133,28 +4326,28 @@
                                 }, "LiveGames") : "",
                                 "data-a-target": "live-game-card-" + t,
                                 tagListProps: n && l.__assign({}, n, {
-                                    linkPath: U.a.DirectoryTag
+                                    linkPath: j.a.DirectoryTag
                                 })
                             }))
                         });
-                        return d.createElement("div", null, e, d.createElement(C.Tb, {
-                            gutterSize: C.Vb.Small,
-                            childWidth: C.Ub.Small,
+                        return d.createElement("div", null, e, d.createElement(y.Tb, {
+                            gutterSize: y.Vb.Small,
+                            childWidth: y.Ub.Small,
                             placeholderItems: 30
                         }, a, t))
                     }, t
                 }(d.Component);
-            var z = Object(i.connect)(null, function(e, t) {
+            var W = Object(i.connect)(null, function(e, t) {
                     return Object.assign(Object(a.bindActionCreators)({
                         showFollowGamesModal: function() {
-                            return Object(D.d)(j, {
+                            return Object(T.d)(D, {
                                 onFollowChange: t.onFollowChange
                             })
                         }
                     }, e), t)
-                })(q),
-                Y = n("XHSL"),
-                Q = function(e) {
+                })(B),
+                z = n("XHSL"),
+                q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5164,12 +4357,12 @@
                         this.onRender()
                     }, t.prototype.render = function() {
                         var e;
-                        if (this.props.data.loading) e = d.createElement(C.Va, {
-                            display: C.W.Flex,
-                            position: C.db.Absolute,
+                        if (this.props.data.loading) e = d.createElement(y.Va, {
+                            display: y.W.Flex,
+                            position: y.db.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, d.createElement(C.Xa, {
+                        }, d.createElement(y.Xa, {
                             fillContent: !0
                         }));
                         else if (this.props.data.error) e = d.createElement(p.a, {
@@ -5177,74 +4370,74 @@
                         });
                         else {
                             var t = this.props.data.currentUser;
-                            e = d.createElement(z, {
+                            e = d.createElement(W, {
                                 games: t && t.followedGames && t.followedGames.nodes ? t.followedGames.nodes : [],
                                 onFollowChange: this.props.data.refetch
                             })
                         }
-                        return d.createElement(C.Va, {
+                        return d.createElement(y.Va, {
                             padding: 3
-                        }, d.createElement(_, {
-                            activeCategory: y.SpadeFollowingCategory.Games
+                        }, d.createElement(S, {
+                            activeCategory: b.SpadeFollowingCategory.Games
                         }), e)
                     }, t.prototype.onRender = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                $ = Object(a.compose)(Object(v.a)(Y, {
+                Q = Object(a.compose)(Object(v.a)(z, {
                     options: {
                         fetchPolicy: "cache-and-network",
                         variables: {
-                            isTagsExperiment: Object(S.a)(),
+                            isTagsExperiment: Object(w.a)(),
                             limit: 100,
-                            type: O.v.LIVE
+                            type: O.w.LIVE
                         }
                     }
                 }), Object(g.c)("FollowingGamesPage", {
                     destination: k.a.DirectoryFollowingGames
                 }), Object(f.a)({
-                    location: y.PageviewLocation.Directory,
+                    location: b.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         var t = e.data.currentUser;
                         return {
-                            content_type: y.PageviewDirectoryContentType.Games,
-                            tab: y.PageviewFollowingTab.Games,
+                            content_type: b.PageviewDirectoryContentType.Games,
+                            tab: b.PageviewFollowingTab.Games,
                             num_live_games: t && t.followedGames && t.followedGames.nodes && t.followedGames.nodes.filter(function(e) {
                                 return e && e.viewersCount
                             }).length
                         }
                     }
-                }))(Q),
-                X = n("oJmH"),
-                J = n("sqxy"),
-                Z = n("QVaV");
+                }))(q),
+                Y = n("oJmH"),
+                $ = n("sqxy"),
+                X = n("QVaV");
             n("7I5b");
 
-            function K() {
-                return d.createElement(C.Va, {
+            function J() {
+                return d.createElement(y.Va, {
                     className: "following__empty",
                     margin: {
                         x: "auto"
                     }
-                }, d.createElement(C.Va, {
-                    textAlign: C.Jb.Center,
+                }, d.createElement(y.Va, {
+                    textAlign: y.Jb.Center,
                     margin: {
                         bottom: 2
                     }
-                }, d.createElement(C.V, {
-                    color: C.O.Alt2,
-                    fontSize: C.Aa.Size4,
-                    type: C.Nb.H4
-                }, Object(m.d)("Never miss the Channels you love.", "EmptyChannelList"))), d.createElement(C.Va, {
-                    display: C.W.Flex,
-                    justifyContent: C.Ua.Between
-                }, d.createElement(C.Va, {
+                }, d.createElement(y.V, {
+                    color: y.O.Alt2,
+                    fontSize: y.Aa.Size4,
+                    type: y.Nb.H4
+                }, Object(m.d)("Never miss the Channels you love.", "EmptyChannelList"))), d.createElement(y.Va, {
+                    display: y.W.Flex,
+                    justifyContent: y.Ua.Between
+                }, d.createElement(y.Va, {
                     className: "following__empty-information",
-                    position: C.db.Relative
-                }, d.createElement(C.Va, {
+                    position: y.db.Relative
+                }, d.createElement(y.Va, {
                     margin: {
                         bottom: 1
                     }
@@ -5252,19 +4445,19 @@
                     className: "following__empty-image"
                 }, d.createElement("img", {
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_1.png"
-                }))), d.createElement(C.V, {
-                    fontSize: C.Aa.Size5
-                }, Object(m.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), d.createElement(C.xb, {
+                }))), d.createElement(y.V, {
+                    fontSize: y.Aa.Size5
+                }, Object(m.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), d.createElement(y.xb, {
                     className: "following__empty-information-num",
-                    position: C.db.Absolute,
+                    position: y.db.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
-                    background: C.r.Alt,
-                    textAlign: C.Jb.Center
-                }, Object(m.e)(1))), d.createElement(C.Va, {
+                    background: y.r.Alt,
+                    textAlign: y.Jb.Center
+                }, Object(m.e)(1))), d.createElement(y.Va, {
                     className: "following__empty-information",
-                    position: C.db.Relative
-                }, d.createElement(C.Va, {
+                    position: y.db.Relative
+                }, d.createElement(y.Va, {
                     margin: {
                         bottom: 1
                     }
@@ -5272,19 +4465,19 @@
                     className: "following__empty-image"
                 }, d.createElement("img", {
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_2.png"
-                }))), d.createElement(C.V, {
-                    fontSize: C.Aa.Size5
-                }, Object(m.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), d.createElement(C.xb, {
+                }))), d.createElement(y.V, {
+                    fontSize: y.Aa.Size5
+                }, Object(m.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), d.createElement(y.xb, {
                     className: "following__empty-information-num",
-                    position: C.db.Absolute,
+                    position: y.db.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
-                    background: C.r.Alt,
-                    textAlign: C.Jb.Center
-                }, Object(m.e)(2))), d.createElement(C.Va, {
+                    background: y.r.Alt,
+                    textAlign: y.Jb.Center
+                }, Object(m.e)(2))), d.createElement(y.Va, {
                     className: "following__empty-information",
-                    position: C.db.Relative
-                }, d.createElement(C.Va, {
+                    position: y.db.Relative
+                }, d.createElement(y.Va, {
                     margin: {
                         bottom: 1
                     }
@@ -5292,80 +4485,80 @@
                     className: "following__empty-image"
                 }, d.createElement("img", {
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_3.png"
-                }))), d.createElement(C.V, {
-                    fontSize: C.Aa.Size5
-                }, Object(m.d)("Come back and watch your favorite channels.", "EmptyChannelList")), d.createElement(C.xb, {
+                }))), d.createElement(y.V, {
+                    fontSize: y.Aa.Size5
+                }, Object(m.d)("Come back and watch your favorite channels.", "EmptyChannelList")), d.createElement(y.xb, {
                     className: "following__empty-information-num",
-                    position: C.db.Absolute,
+                    position: y.db.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
-                    background: C.r.Alt,
-                    textAlign: C.Jb.Center
+                    background: y.r.Alt,
+                    textAlign: y.Jb.Center
                 }, Object(m.e)(3)))))
             }
 
-            function ee(e) {
+            function Z(e) {
                 var t = Object(m.d)("Live hosts", "LiveHosts"),
-                    n = d.createElement(C.Va, {
+                    n = d.createElement(y.Va, {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(C.V, {
-                        type: C.Nb.H4,
-                        color: C.O.Base,
+                    }, d.createElement(y.V, {
+                        type: y.Nb.H4,
+                        color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-hosts-header"
                     }, t));
-                if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(C.Va, {
-                    textAlign: C.Jb.Center,
+                if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Va, {
+                    textAlign: y.Jb.Center,
                     padding: {
                         y: 5
                     }
-                }, d.createElement(C.V, {
-                    color: C.O.Alt2,
-                    fontSize: C.Aa.Size4,
+                }, d.createElement(y.V, {
+                    color: y.O.Alt2,
+                    fontSize: y.Aa.Size4,
                     "data-a-target": "no-hosts-live-text",
                     italic: !0
-                }, Object(m.d)("No Hosts Live", "LiveHosts")))) : d.createElement("div", null, n, !e.showSample && d.createElement(K, null));
+                }, Object(m.d)("No Hosts Live", "LiveHosts")))) : d.createElement("div", null, n, !e.showSample && d.createElement(J, null));
                 var i, a = [];
                 if (e.hosts.forEach(function(e) {
                         e && e.hosting && e.hosting.stream && e.hosting.id && a.push(e)
-                    }), e.maxCount) e.maxCount < a.length && (a = a.slice(0, e.maxCount - 1), i = d.createElement(T.a, {
+                    }), e.maxCount) e.maxCount < a.length && (a = a.slice(0, e.maxCount - 1), i = d.createElement(N.a, {
                     subHeader: "Live Hosts",
                     onClickViewAll: e.onClickViewAll
                 }));
                 else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                    var r = Object(E.a)(e.directoryWidth, 240, 2);
-                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(T.a, {
+                    var r = Object(_.a)(e.directoryWidth, 240, 2);
+                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(N.a, {
                         subHeader: t,
                         linkTo: {
                             pathname: "/directory/following/hosts",
                             state: {
-                                medium: y.PageviewMedium.Following,
-                                content: y.PageviewContent.Following
+                                medium: b.PageviewMedium.Following,
+                                content: b.PageviewContent.Following
                             }
                         }
                     }))
                 }
                 var o = a.map(function(e, t) {
                     if (e.hosting && e.hosting.stream && e.hosting.id) {
-                        var n = Object(Z.a)(e.hosting.login, e.hosting.displayName, !0),
-                            i = Object(Z.a)(e.login, e.displayName, !0),
+                        var n = Object(X.a)(e.hosting.login, e.hosting.displayName, !0),
+                            i = Object(X.a)(e.login, e.displayName, !0),
                             a = Object(m.d)("{hostDisplayName} hosting {hostedDisplayName}", {
                                 hostDisplayName: i,
                                 hostedDisplayName: n
                             }, "LiveHosts"),
-                            r = e.hosting.stream && e.hosting.stream.game ? Object(R.c)(e.hosting.stream.game.name) : "",
-                            o = Object(W.a)({
+                            r = e.hosting.stream && e.hosting.stream.game ? Object(G.c)(e.hosting.stream.game.name) : "",
+                            o = Object(M.a)({
                                 tags: e.hosting.stream.tags,
                                 section: H.a.LiveChannels
                             });
-                        return o && (o.linkPath = U.a.PopularTag), d.createElement(C.Va, {
+                        return o && (o.linkPath = j.a.PopularTag), d.createElement(y.Va, {
                             key: e.id,
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(J.a, {
+                        }, d.createElement($.a, {
                             imageSrc: e.hosting.stream.previewImageURL || m.a.defaultStreamPreviewURL,
                             imageAlt: a,
                             viewerCount: e.hosting.stream && e.hosting.stream.viewersCount || 0,
@@ -5377,24 +4570,24 @@
                             gameLinkTo: {
                                 pathname: r,
                                 state: {
-                                    medium: y.PageviewMedium.Following,
-                                    content: y.PageviewContent.LiveHost,
+                                    medium: b.PageviewMedium.Following,
+                                    content: b.PageviewContent.LiveHost,
                                     content_index: t
                                 }
                             },
                             linkTo: {
                                 pathname: "/" + e.login,
                                 state: {
-                                    medium: y.PageviewMedium.Following,
-                                    content: y.PageviewContent.LiveHost,
+                                    medium: b.PageviewMedium.Following,
+                                    content: b.PageviewContent.LiveHost,
                                     content_index: t
                                 }
                             },
                             channelNameLinkTo: {
                                 pathname: "/" + e.hosting.login + "/videos",
                                 state: {
-                                    medium: y.PageviewMedium.Following,
-                                    content: y.PageviewContent.LiveHost,
+                                    medium: b.PageviewMedium.Following,
+                                    content: b.PageviewContent.LiveHost,
                                     content_index: t
                                 }
                             },
@@ -5407,19 +4600,19 @@
                         }))
                     }
                 });
-                return d.createElement("div", null, n, d.createElement(C.Tb, {
-                    gutterSize: C.Vb.Small,
-                    childWidth: C.Ub.Large,
+                return d.createElement("div", null, n, d.createElement(y.Tb, {
+                    gutterSize: y.Vb.Small,
+                    childWidth: y.Ub.Large,
                     placeholderItems: 20
                 }, o, i))
             }
-            var te = n("rJ4n"),
-                ne = 50,
-                ie = function(e) {
+            var K = n("rJ4n"),
+                ee = 50,
+                te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            maxCount: ne
+                            maxCount: ee
                         }, t.onClickViewAll = function() {
                             return l.__awaiter(t, void 0, void 0, function() {
                                 return l.__generator(this, function(e) {
@@ -5443,12 +4636,12 @@
                         this.onRender()
                     }, t.prototype.render = function() {
                         var e;
-                        if (this.props.data.loading) e = d.createElement(C.Va, {
-                            display: C.W.Flex,
-                            position: C.db.Absolute,
+                        if (this.props.data.loading) e = d.createElement(y.Va, {
+                            display: y.W.Flex,
+                            position: y.db.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, d.createElement(C.Xa, {
+                        }, d.createElement(y.Xa, {
                             fillContent: !0
                         }));
                         else if (this.props.data.error) e = d.createElement(p.a, {
@@ -5457,28 +4650,28 @@
                         else {
                             var t = this.props.data.currentUser ? this.props.data.currentUser.followedHosts.nodes : [],
                                 n = this.props.data.currentUser ? this.props.data.currentUser.follows.totalCount : 0;
-                            e = d.createElement(ee, {
+                            e = d.createElement(Z, {
                                 hosts: t,
                                 followsCount: n,
                                 maxCount: this.state.maxCount,
                                 onClickViewAll: this.onClickViewAll
                             })
                         }
-                        return d.createElement(C.Va, {
+                        return d.createElement(y.Va, {
                             padding: 3
-                        }, d.createElement(_, {
-                            activeCategory: y.SpadeFollowingCategory.Hosts
+                        }, d.createElement(S, {
+                            activeCategory: b.SpadeFollowingCategory.Hosts
                         }), e)
                     }, t.prototype.onRender = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(d.Component),
-                ae = Object(X.compose)(Object(v.a)(te, {
+                ne = Object(Y.compose)(Object(v.a)(K, {
                     options: function() {
                         return {
                             fetchPolicy: "cache-and-network",
                             variables: {
-                                isTagsExperiment: Object(S.a)(),
+                                isTagsExperiment: Object(w.a)(),
                                 limit: 51
                             }
                         }
@@ -5486,52 +4679,52 @@
                 }), Object(g.c)("FollowingHostsPage", {
                     destination: k.a.DirectoryFollowingHosts
                 }), Object(f.a)({
-                    location: y.PageviewLocation.Directory,
+                    location: b.PageviewLocation.Directory,
                     skip: function(e) {
                         return e.data.loading || !!e.data.error
                     },
                     properties: function(e) {
                         return {
-                            content_type: y.PageviewDirectoryContentType.Hosts,
-                            tab: y.PageviewFollowingTab.Hosts,
+                            content_type: b.PageviewDirectoryContentType.Hosts,
+                            tab: b.PageviewFollowingTab.Hosts,
                             num_host_channels: e.data.currentUser && e.data.currentUser.followedHosts.nodes.length || 0
                         }
                     }
-                }))(ie),
-                re = n("MJbm"),
-                oe = n("RXle");
+                }))(te),
+                ie = n("MJbm"),
+                ae = n("RXle");
 
-            function se(e) {
+            function re(e) {
                 var t = Object(m.d)("Live channels", "LiveChannels"),
-                    n = d.createElement(C.Va, {
+                    n = d.createElement(y.Va, {
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(C.V, {
-                        type: C.Nb.H4,
-                        color: C.O.Base,
+                    }, d.createElement(y.V, {
+                        type: y.Nb.H4,
+                        color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-channels-header"
                     }, t));
-                if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(C.Va, {
-                    textAlign: C.Jb.Center,
+                if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Va, {
+                    textAlign: y.Jb.Center,
                     padding: {
                         y: 5
                     }
-                }, d.createElement(C.V, {
-                    color: C.O.Alt2,
-                    fontSize: C.Aa.Size4,
+                }, d.createElement(y.V, {
+                    color: y.O.Alt2,
+                    fontSize: y.Aa.Size4,
                     "data-a-target": "no-channels-live-text",
                     italic: !0
-                }, Object(m.d)("No Channels Live", "LiveChannels")))) : d.createElement("div", null, n, d.createElement(K, null));
+                }, Object(m.d)("No Channels Live", "LiveChannels")))) : d.createElement("div", null, n, d.createElement(J, null));
                 var i, a = e.users || [];
-                if (e.maxDisplayCount && e.maxDisplayCount < a.length) a = a.slice(0, e.maxDisplayCount - 1), i = d.createElement(M.a, {
+                if (e.maxDisplayCount && e.maxDisplayCount < a.length) a = a.slice(0, e.maxDisplayCount - 1), i = d.createElement(U.a, {
                     subHeader: "Live Channels",
                     onClickViewAll: e.onClickViewAll
                 });
                 else if (e.showSample && e.directoryWidth && e.directoryWidth > 0) {
-                    var r = Object(E.a)(e.directoryWidth, 240, 2);
-                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(M.a, {
+                    var r = Object(_.a)(e.directoryWidth, 240, 2);
+                    r < a.length && (a = a.slice(0, r - 1), i = d.createElement(U.a, {
                         subHeader: t,
                         linkTo: "/directory/following/live"
                     }))
@@ -5539,21 +4732,21 @@
                 var o = a.map(function(e, t) {
                     if (!e.stream || !e.id) return null;
                     var n = {
-                            medium: y.PageviewMedium.Following,
-                            content: y.PageviewContent.Live,
+                            medium: b.PageviewMedium.Following,
+                            content: b.PageviewContent.Live,
                             content_index: t
                         },
-                        i = e.stream && e.stream.game ? Object(R.c)(e.stream.game.name) : "",
-                        a = Object(W.a)({
+                        i = e.stream && e.stream.game ? Object(G.c)(e.stream.game.name) : "",
+                        a = Object(M.a)({
                             tags: e.stream.tags,
                             section: H.a.LiveChannels
                         });
-                    return a && (a.linkPath = U.a.PopularTag), d.createElement(C.Va, {
+                    return a && (a.linkPath = j.a.PopularTag), d.createElement(y.Va, {
                         key: e.id,
                         margin: {
                             bottom: 2
                         }
-                    }, d.createElement(J.a, {
+                    }, d.createElement($.a, {
                         imageSrc: e.stream && e.stream.previewImageURL || m.a.defaultStreamPreviewURL,
                         imageAlt: e.stream && e.stream.title || "",
                         viewerCount: e.stream && e.stream.viewersCount || 0,
@@ -5582,19 +4775,19 @@
                     }))
                 });
                 if (0 === a.length)
-                    for (var s = 0; s < 5; s++) o.push(d.createElement(oe.VideoPreviewCardPlaceholder, {
+                    for (var s = 0; s < 5; s++) o.push(d.createElement(ae.VideoPreviewCardPlaceholder, {
                         key: "live-channels-placeholder-" + s
                     }));
-                return d.createElement("div", null, n, d.createElement(C.Tb, {
-                    gutterSize: C.Vb.Small,
-                    childWidth: C.Ub.Large,
+                return d.createElement("div", null, n, d.createElement(y.Tb, {
+                    gutterSize: y.Vb.Small,
+                    childWidth: y.Ub.Large,
                     placeholderItems: 20
                 }, o, i))
             }
-            var le = n("GFmA"),
-                de = n("EJax"),
-                ce = n("1ka0"),
-                ue = function(e) {
+            var oe = n("GFmA"),
+                se = n("EJax"),
+                le = n("1ka0"),
+                de = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5602,30 +4795,30 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         if (this.props.data.loading || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.recommendations || 0 === this.props.data.currentUser.recommendations.videos.edges.length) return null;
-                        var e = d.createElement(C.Va, {
+                        var e = d.createElement(y.Va, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, d.createElement(C.V, {
-                                type: C.Nb.H4,
-                                color: C.O.Base,
+                            }, d.createElement(y.V, {
+                                type: y.Nb.H4,
+                                color: y.O.Base,
                                 bold: !0
                             }, Object(m.d)("Based on your viewing history", "SuggestedVideos"))),
                             t = [];
                         if (this.props.data.currentUser.recommendations.videos && (t = this.props.data.currentUser.recommendations.videos.edges.map(function(e) {
                                 return e.node
                             })), this.props.directoryWidth > 0) {
-                            var n = Object(E.a)(this.props.directoryWidth, 240, 2);
+                            var n = Object(_.a)(this.props.directoryWidth, 240, 2);
                             t = t.slice(0, n)
                         }
-                        return d.createElement("div", null, e, d.createElement(de.b, {
-                            listContext: le.b.MixedGameAndChannelList,
-                            trackingMedium: y.PageviewMedium.Following,
-                            trackingContent: y.PageviewContent.SuggestedVideos,
-                            videoCardSize: C.Ub.Large,
+                        return d.createElement("div", null, e, d.createElement(se.b, {
+                            listContext: oe.b.MixedGameAndChannelList,
+                            trackingMedium: b.PageviewMedium.Following,
+                            trackingContent: b.PageviewContent.SuggestedVideos,
+                            videoCardSize: y.Ub.Large,
                             videos: t
                         }))
-                    }, t = l.__decorate([Object(v.a)(ce, {
+                    }, t = l.__decorate([Object(v.a)(le, {
                         options: {
                             fetchPolicy: "network-only",
                             variables: {
@@ -5634,8 +4827,10 @@
                         }
                     }), Object(g.c)("SuggestedVideos")], t)
                 }(d.Component),
-                me = n("lZCe"),
-                pe = n("ZS2+").a.wrap(function() {
+                ce = n("lZCe"),
+                ue = n("ZS2+"),
+                me = n("D7An"),
+                pe = ue.a.wrap(function() {
                     return n.e(134).then(n.bind(null, "YBPT"))
                 }, "LatestVideosFromFollowedCarousel"),
                 ge = function(e) {
@@ -5649,11 +4844,11 @@
                             }
                         },
                         loader: function() {
-                            return d.createElement(C.Xa, null)
+                            return d.createElement(y.Xa, null)
                         },
-                        name: b.b.FollowingIndexLatestVideosV2
+                        name: me.b.FollowingIndexLatestVideosV2
                     };
-                    return d.createElement(me.a, l.__assign({}, t))
+                    return d.createElement(ce.a, l.__assign({}, t))
                 },
                 he = n("45mq"),
                 ve = function(e) {
@@ -5675,9 +4870,9 @@
                         var e = this.props.data && this.props.data.currentUser;
                         return this.props.data.error || !this.props.data.loading && !e ? d.createElement(p.a, {
                             message: Object(m.d)("Error loading data.", "FollowingPage")
-                        }) : d.createElement(C.Va, {
+                        }) : d.createElement(y.Va, {
                             padding: 3
-                        }, d.createElement(_, null), d.createElement(se, {
+                        }, d.createElement(S, null), d.createElement(re, {
                             key: "live-channels",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
@@ -5685,30 +4880,30 @@
                             followsCount: e ? e.follows.totalCount : 0
                         }), d.createElement(ge, {
                             tracking: {
-                                content: y.PageviewContent.Following,
-                                location: y.PageviewLocation.Directory,
-                                medium: y.PageviewMedium.Following
+                                content: b.PageviewContent.Following,
+                                location: b.PageviewLocation.Directory,
+                                medium: b.PageviewMedium.Following
                             }
-                        }), this.props.firstPageLoaded && e && e.followedHosts.nodes.length > 0 && d.createElement(ee, {
+                        }), this.props.firstPageLoaded && e && e.followedHosts.nodes.length > 0 && d.createElement(Z, {
                             key: "live-hosts",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
                             hosts: e ? e.followedHosts.nodes : [],
                             followsCount: e ? e.follows.totalCount : 0
-                        }), this.props.firstPageLoaded && e && d.createElement(z, {
+                        }), this.props.firstPageLoaded && e && d.createElement(W, {
                             key: "live-games",
                             showSample: !0,
                             directoryWidth: this.state.directoryWidth,
                             games: e ? e.followedGames.nodes : [],
                             onFollowChange: this.props.data.refetch
-                        }), this.props.firstPageLoaded && d.createElement(ue, {
+                        }), this.props.firstPageLoaded && d.createElement(de, {
                             directoryWidth: this.state.directoryWidth
-                        }), this.props.firstPageLoaded && e && !Object(S.b)() && d.createElement(F, {
+                        }), this.props.firstPageLoaded && e && !Object(w.b)() && d.createElement(E, {
                             key: "live-communities",
                             showSample: !0,
                             communities: e ? e.followedCommunities.edges : [],
                             directoryWidth: this.state.directoryWidth
-                        }), d.createElement(re.a, {
+                        }), d.createElement(ie.a, {
                             onResize: this.onResize
                         }))
                     }, t.prototype.onRender = function() {
@@ -5717,18 +4912,18 @@
                         options: {
                             fetchPolicy: "cache-and-network",
                             variables: {
-                                isTagsExperiment: Object(S.a)(),
+                                isTagsExperiment: Object(w.a)(),
                                 limit: 30
                             }
                         }
                     }), Object(g.c)("FollowingIndexPage", {
                         destination: k.a.DirectoryFollowingIndex
                     }), Object(f.a)({
-                        location: y.PageviewLocation.Directory,
+                        location: b.PageviewLocation.Directory,
                         properties: function() {
                             return {
-                                content_type: y.PageviewDirectoryContentType.Mixed,
-                                tab: y.PageviewFollowingTab.Overview
+                                content_type: b.PageviewDirectoryContentType.Mixed,
+                                tab: b.PageviewFollowingTab.Overview
                             }
                         }
                     })], t)
@@ -5739,7 +4934,7 @@
                     }
                 })(ve),
                 ke = n("Uc21");
-            var ye = function(e) {
+            var be = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5749,12 +4944,12 @@
                         this.onRender()
                     }, t.prototype.render = function() {
                         var e, t = !1;
-                        if (this.props.data.loading && !this.props.data.currentUser) e = d.createElement(C.Va, {
-                            display: C.W.Flex,
-                            position: C.db.Absolute,
+                        if (this.props.data.loading && !this.props.data.currentUser) e = d.createElement(y.Va, {
+                            display: y.W.Flex,
+                            position: y.db.Absolute,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, d.createElement(C.Xa, {
+                        }, d.createElement(y.Xa, {
                             fillContent: !0
                         }));
                         else if (this.props.data.error) e = d.createElement(p.a, {
@@ -5767,15 +4962,15 @@
                                 return e.node
                             }));
                             var a = this.props.data.currentUser ? this.props.data.currentUser.follows.totalCount : 0;
-                            e = d.createElement(se, {
+                            e = d.createElement(re, {
                                 users: i,
                                 followsCount: a
                             }), t = !(!n || !n.followedLiveUsers.pageInfo.hasNextPage)
                         }
-                        return d.createElement(C.Va, {
+                        return d.createElement(y.Va, {
                             padding: 3
-                        }, d.createElement(_, {
-                            activeCategory: y.SpadeFollowingCategory.Live
+                        }, d.createElement(S, {
+                            activeCategory: b.SpadeFollowingCategory.Live
                         }), e, d.createElement(V.a, {
                             enabled: t,
                             loadMore: this.props.loadMore,
@@ -5789,7 +4984,7 @@
                                 fetchPolicy: "cache-and-network",
                                 variables: {
                                     limit: 50,
-                                    isTagsExperiment: Object(S.a)()
+                                    isTagsExperiment: Object(w.a)()
                                 }
                             }
                         },
@@ -5801,7 +4996,7 @@
                                             n = {
                                                 limit: 30,
                                                 cursor: t[t.length - 1].cursor,
-                                                isTagsExperiment: Object(S.a)()
+                                                isTagsExperiment: Object(w.a)()
                                             };
                                         return e.data.fetchMore({
                                             query: ke,
@@ -5831,383 +5026,35 @@
                     }), Object(g.c)("FollowingLivePage", {
                         destination: k.a.DirectoryFollowingLiveChannels
                     }), Object(f.a)({
-                        location: y.PageviewLocation.Directory,
+                        location: b.PageviewLocation.Directory,
                         skip: function(e) {
                             return e.data.loading || !!e.data.error
                         },
                         properties: function(e) {
                             return {
-                                content_type: y.PageviewDirectoryContentType.Channels,
-                                tab: y.PageviewFollowingTab.Channels,
+                                content_type: b.PageviewDirectoryContentType.Channels,
+                                tab: b.PageviewFollowingTab.Channels,
                                 num_live_channels: e.data.currentUser && e.data.currentUser.followedLiveUsers.edges.length || 0
                             }
                         }
                     })], t)
                 }(d.Component),
-                be = function() {
-                    return n.e(135).then(function() {
-                        var e = n("SufW");
-                        return Object.assign({}, e, {
-                            default: e
-                        })
-                    })
-                },
                 we = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.redirectToChannelSurfing = function() {
-                            var e = "tt_medium=" + t.props.trackingMedium,
-                                n = "" === location.search ? "?" + e : location.search + "&" + e;
-                            window.location.assign("/hi/surf" + n)
-                        }, t
-                    }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(C.xb, {
-                            "data-test-selector": "channel-surfing-upsell",
-                            background: C.r.Alt2,
-                            display: C.W.Flex,
-                            flexDirection: C.Y.Column,
-                            alignItems: C.f.Center,
-                            padding: {
-                                y: 3
-                            }
-                        }, d.createElement(C.Va, {
-                            textAlign: C.Jb.Center,
-                            margin: 1,
-                            breakpointMedium: {
-                                margin: {
-                                    x: 2,
-                                    y: 1
-                                }
-                            }
-                        }, d.createElement(C.xb, {
-                            color: C.O.Base,
-                            fontSize: C.Aa.Size4,
-                            breakpointMedium: {
-                                fontSize: C.Aa.Size3
-                            },
-                            breakpointExtraLarge: {
-                                fontSize: C.Aa.Size2
-                            }
-                        }, Object(m.d)("Need some more channels to follow?", "ChannelSurfingUpsell")), d.createElement(C.xb, {
-                            color: C.O.Alt2,
-                            margin: {
-                                y: 1
-                            },
-                            fontSize: C.Aa.Size6,
-                            display: C.W.Hide,
-                            breakpointMedium: {
-                                fontSize: C.Aa.Size5,
-                                display: C.W.Block
-                            },
-                            breakpointExtraLarge: {
-                                fontSize: C.Aa.Size4
-                            }
-                        }, Object(m.d)("We have crafted up a new way for you to seek and find new channels based on the games you follow.", "ChannelSurfingUpsell"))), d.createElement(C.Va, null, d.createElement(C.z, {
-                            "data-test-selector": "channel-surfing-upsell__button",
-                            size: C.D.Large,
-                            onClick: this.redirectToChannelSurfing
-                        }, Object(m.d)("Discover new channels", "ChannelSurfingUpsell"))))
-                    }, t
-                }(d.Component),
-                Se = n("ni0n"),
-                Ce = n("2iEm"),
-                Ne = n("WCyn"),
-                _e = n("Hz/u"),
-                Te = (n("JRXu"), "for-you-community-streams-row__title"),
-                Ee = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.renderTitle = function() {
-                            if (t.props.title) return d.createElement(C.Va, {
-                                className: "for-you-community-streams-row__title"
-                            }, d.createElement(C.V, {
-                                "data-test-selector": Te,
-                                color: C.O.Alt2,
-                                fontSize: C.Aa.Size5,
-                                transform: C.Mb.Uppercase
-                            }, d.createElement(Ce.a, {
-                                to: Object(R.c)(t.props.name)
-                            }, t.props.title)))
-                        }, t
-                    }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        return this.props.data.length ? d.createElement(C.Va, {
-                            "data-test-selector": "for-you-community-streams-row",
-                            flexShrink: 0
-                        }, d.createElement(C.Va, {
-                            alignItems: C.f.Center,
-                            display: C.W.Flex,
-                            flexWrap: C.Z.NoWrap,
-                            justifyContent: C.Ua.Between,
-                            margin: {
-                                bottom: .5
-                            }
-                        }, this.renderTitle(), d.createElement(Ne.a, {
-                            gameName: this.props.name,
-                            src: y.PageviewMedium.BrowseForYou
-                        })), d.createElement(V.b, null, d.createElement(C.Va, {
-                            display: C.W.Flex
-                        }, d.createElement(_e.a, {
-                            data: this.props.data,
-                            directoryType: this.props.type,
-                            trackingMedium: y.PageviewMedium.BrowseForYou
-                        })))) : null
-                    }, t = l.__decorate([Object(g.c)("ForYouCommunityStreamsRow")], t)
-                }(d.Component),
-                Fe = n("mIH5"),
-                Ie = 7,
-                Le = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.getData = function() {
-                            var e = t.rankedChannelStreamsInputPresent() && t.rankedChannelStreamsLoaded();
-                            if (e && t.communityStreamsLoaded() && t.props.communityStreamsData.directory.streams && t.props.communityStreamsData.directory.streams.edges) {
-                                var n = t.props.rankedChannelData.users.filter(function(e) {
-                                    return e && e.stream && e.stream.id && e.stream.broadcaster && e.stream.broadcaster.login
-                                }).slice(0, Ie).map(function(e) {
-                                    return e.stream
-                                });
-                                if (n.length === Ie) return n;
-                                var i = new Set(n.map(function(e) {
-                                        return e.id
-                                    })),
-                                    a = t.props.communityStreamsData.directory.streams.edges.filter(function(e) {
-                                        var t = e.node;
-                                        return t && !i.has(t.id) && t.broadcaster && t.broadcaster.login
-                                    }).map(function(e) {
-                                        return e.node
-                                    });
-                                return n.concat(a.slice(0, Ie - n.length))
-                            }
-                            return !e && t.communityStreamsLoaded() && t.props.communityStreamsData.directory.streams && t.props.communityStreamsData.directory.streams.edges ? t.props.communityStreamsData.directory.streams.edges.filter(function(e) {
-                                var t = e.node;
-                                return t && t.broadcaster && t.broadcaster.login
-                            }).map(function(e) {
-                                return e.node
-                            }) : []
-                        }, t.communityStreamsLoaded = function() {
-                            return t.props.communityStreamsData && !t.props.communityStreamsData.loading && !t.props.communityStreamsData.error && t.props.communityStreamsData.directory
-                        }, t.rankedChannelStreamsInputPresent = function() {
-                            return !!t.props.channelLogins && !!t.props.channelLogins.length
-                        }, t.rankedChannelStreamsLoaded = function() {
-                            return t.props.rankedChannelData && !t.props.rankedChannelData.loading && !t.props.rankedChannelData.error && t.props.rankedChannelData.users
-                        }, t
-                    }
-                    return l.__extends(t, e), t.prototype.componentDidUpdate = function() {
-                        (this.rankedChannelStreamsInputPresent() && this.rankedChannelStreamsLoaded() || !this.rankedChannelStreamsInputPresent() && !this.rankedChannelStreamsLoaded()) && this.communityStreamsLoaded() && this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        return d.createElement(Ee, {
-                            name: this.props.name,
-                            title: this.props.title,
-                            type: this.props.type,
-                            data: this.getData()
-                        })
-                    }, t = l.__decorate([Object(v.a)(Se, {
-                        name: "communityStreamsData",
-                        options: function(e) {
-                            return {
-                                fetchPolicy: "network-only",
-                                variables: {
-                                    name: e.name,
-                                    limit: Ie,
-                                    type: e.type
-                                }
-                            }
-                        }
-                    }), Object(v.a)(Fe, {
-                        name: "rankedChannelData",
-                        options: function(e) {
-                            return {
-                                fetchPolicy: "network-only",
-                                variables: {
-                                    logins: e.channelLogins
-                                }
-                            }
-                        },
-                        skip: function(e) {
-                            return !e.channelLogins || !e.channelLogins.length
-                        }
-                    }), Object(g.c)("ForYouCommunityStreamsRowContainer")], t)
-                }(d.Component),
-                Oe = (n("ns6o"), n("sabN")),
-                De = "for-you__empty",
-                xe = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            rankedChannelData: {},
-                            loadingRankedChannelData: !1
-                        }, t.logger = m.o.logger.withCategory("for-you"), t.loadedChannelRankingsData = !1, t.renderPage = function() {
-                            return t.userFollowedGamesDataLoaded(t.props) ? t.props.data.currentUser.followedGames && t.props.data.currentUser.followedGames.nodes && t.props.data.currentUser.followedGames.nodes.length ? d.createElement(C.Va, null, t.renderFollowedCommunityStreams(), d.createElement(C.Va, {
-                                margin: {
-                                    top: .5
-                                }
-                            }, t.renderFooterCTA())) : t.renderEmptyFollowedState() : d.createElement(C.Va, null, d.createElement(C.Xa, {
-                                fillContent: !0
-                            }))
-                        }, t.userFollowedGamesDataLoaded = function(e) {
-                            return e.data && !e.data.loading && !e.data.error && e.data.currentUser
-                        }, t.renderFollowedCommunityStreams = function() {
-                            if (t.props.data.currentUser.followedGames && t.props.data.currentUser.followedGames.nodes && t.props.data.currentUser.followedGames.nodes.length) return t.props.data.currentUser.followedGames.nodes.filter(function(e) {
-                                return null !== e
-                            }).map(function(e) {
-                                return d.createElement(C.Va, {
-                                    key: e.id
-                                }, d.createElement(Le, {
-                                    key: e.id,
-                                    title: Object(m.d)("BECAUSE YOU FOLLOW {name}", {
-                                        name: e.name.toUpperCase()
-                                    }, "ForYouPage"),
-                                    name: e.name,
-                                    type: e.directoryType,
-                                    channelLogins: t.state.rankedChannelData[e.id]
-                                }))
-                            })
-                        }, t.renderEmptyFollowedState = function() {
-                            return d.createElement(C.xb, {
-                                className: "for-you__empty",
-                                "data-test-selector": De,
-                                background: C.r.Base,
-                                display: C.W.Flex,
-                                flexDirection: C.Y.Column,
-                                margin: {
-                                    bottom: 1
-                                },
-                                alignItems: C.f.Center
-                            }, d.createElement(j, {
-                                onContinue: t.refetchFollowedData
-                            }))
-                        }, t.redirectToFollowing = function() {
-                            m.o.history.push("/directory/following" + location.search)
-                        }, t.redirectToCommunitySelectionPage = function() {
-                            window.location.assign("/hi" + location.search)
-                        }, t.refetchFollowedData = function() {
-                            return l.__awaiter(t, void 0, void 0, function() {
-                                return l.__generator(this, function(e) {
-                                    switch (e.label) {
-                                        case 0:
-                                            return [4, this.props.data.refetch()];
-                                        case 1:
-                                            return e.sent(), [2]
-                                    }
-                                })
-                            })
-                        }, t.loadChannelRankingsByGameData = function() {
-                            return l.__awaiter(t, void 0, void 0, function() {
-                                var e, t;
-                                return l.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            if (this.loadedChannelRankingsData) return [3, 4];
-                                            this.loadedChannelRankingsData = !0, this.setState({
-                                                loadingRankedChannelData: !0
-                                            }), n.label = 1;
-                                        case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, be()];
-                                        case 2:
-                                            return e = n.sent(), this.setState({
-                                                rankedChannelData: e,
-                                                loadingRankedChannelData: !1
-                                            }), [3, 4];
-                                        case 3:
-                                            return t = n.sent(), this.logger.error(t, "failed to load channel ranking data"), this.setState({
-                                                loadingRankedChannelData: !1
-                                            }), [3, 4];
-                                        case 4:
-                                            return [2]
-                                    }
-                                })
-                            })
-                        }, t
-                    }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                        m.o.setPageTitle(Object(m.d)("For You", "ForYouPage"));
-                        var e = m.o.experiments.getAssignment(b.b.WebOnboarding),
-                            t = m.o.experiments.getAssignment(b.b.DiscoveryFrontpageMVP);
-                        if (!Object(w.g)(e) || Object(w.f)(t)) this.redirectToFollowing();
-                        else {
-                            var n = m.o.experiments.getAssignment(b.b.WebOnboardingChannelRanking),
-                                i = m.o.experiments.getAssignment(b.b.WebOnboardingChannelSurfing);
-                            Object(w.d)(e, n) && this.loadChannelRankingsByGameData(), this.setState({
-                                inChannelSurfingExperiment: Object(w.e)(e, i)
-                            })
-                        }
-                    }, t.prototype.componentWillReceiveProps = function(e) {
-                        this.userFollowedGamesDataLoaded(e) && !Object(w.h)(new Date(e.data.currentUser.createdAt)) && this.redirectToFollowing()
-                    }, t.prototype.componentDidUpdate = function() {
-                        this.userFollowedGamesDataLoaded(this.props) && !this.state.loadingRankedChannelData && this.props.latencyTracking.reportInteractive()
-                    }, t.prototype.render = function() {
-                        return d.createElement(V.b, null, d.createElement(C.Va, {
-                            className: "for-you-page",
-                            padding: 3,
-                            fullWidth: !0
-                        }, d.createElement(_, {
-                            activeCategory: y.SpadeFollowingCategory.ForYou
-                        }), this.renderPage()))
-                    }, t.prototype.renderFooterCTA = function() {
-                        var e = this.props.data.currentUser.followedGames && this.props.data.currentUser.followedGames.nodes ? this.props.data.currentUser.followedGames.nodes.length : 0;
-                        return e >= 10 ? null : 0 !== e && this.state.inChannelSurfingExperiment ? e > 0 && this.state.inChannelSurfingExperiment ? d.createElement(we, {
-                            trackingMedium: y.PageviewMedium.BrowseForYou
-                        }) : void 0 : this.renderAddMoreGamesCTA()
-                    }, t.prototype.renderAddMoreGamesCTA = function() {
-                        if (!this.props.data.currentUser.followedGames || !this.props.data.currentUser.followedGames.nodes || this.props.data.currentUser.followedGames.nodes.length < 10) return d.createElement(C.Sa, {
-                            "data-test-selector": "for-you__add_more_games",
-                            onClick: this.redirectToCommunitySelectionPage,
-                            type: C.Ta.Alpha
-                        }, d.createElement(C.xb, {
-                            alignItems: C.f.Center,
-                            border: !0,
-                            display: C.W.Flex,
-                            justifyContent: C.Ua.Center,
-                            padding: 2
-                        }, d.createElement(C.Va, {
-                            alignItems: C.f.Center,
-                            display: C.W.Flex,
-                            margin: {
-                                right: 1
-                            }
-                        }, d.createElement(C.mb, {
-                            asset: C.nb.Plus,
-                            type: C.ob.Alt2
-                        })), d.createElement(C.V, {
-                            fontSize: C.Aa.Size5,
-                            color: C.O.Alt2
-                        }, Object(m.d)("Add More Games", "ForYouPage"))))
-                    }, t = l.__decorate([Object(g.c)("ForYouPage", {
-                        destination: k.a.ForYou
-                    }), Object(v.a)(Oe, {
-                        options: {
-                            fetchPolicy: "network-only",
-                            variables: {
-                                limit: 10
-                            }
-                        }
-                    }), Object(f.a)({
-                        location: y.PageviewLocation.BrowseForYou
-                    })], t)
-                }(d.Component),
-                Ve = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn ? d.createElement(C.Va, null, d.createElement(h.b, {
+                        return this.props.isLoggedIn ? d.createElement(y.Va, null, d.createElement(h.b, {
                             addPaddingWhenPlayerIsPersisting: !0
                         }), d.createElement(u.a, null, d.createElement(c.a, {
-                            path: "/directory/following/foryou",
-                            component: xe
-                        }), d.createElement(c.a, {
                             path: "/directory/following/live",
-                            component: ye
+                            component: be
                         }), d.createElement(c.a, {
                             path: "/directory/following/hosts",
-                            component: ae
+                            component: ne
                         }), d.createElement(c.a, {
                             path: "/directory/following/games",
-                            component: $
+                            component: Q
                         }), d.createElement(c.a, {
                             path: "/directory/following/communities",
                             component: L
@@ -6219,10 +5066,10 @@
                         }))
                     }, t
                 }(d.Component),
-                Pe = Object(g.c)("FollowingPageRoot", {
+                ye = Object(g.c)("FollowingPageRoot", {
                     autoReportInteractive: !0
-                })(Ve);
-            var Ae = Object(i.connect)(function(e) {
+                })(we);
+            var Ce = Object(i.connect)(function(e) {
                 return {
                     isLoggedIn: Object(s.f)(e)
                 }
@@ -6232,266 +5079,9 @@
                         return Object(o.e)(r.a.FollowingPage)
                     }
                 }, e)
-            })(Pe);
+            })(ye);
             n.d(t, "FollowingRootPage", function() {
-                return Ae
-            })
-        },
-        WCyn: function(e, t, n) {
-            "use strict";
-            var i = n("/MKj"),
-                a = n("fvjX"),
-                r = n("1/iK"),
-                o = n("y5D0"),
-                s = n("kRBY"),
-                l = n("mrSG"),
-                d = n("q1tI"),
-                c = n("oJmH"),
-                u = n("/7QA"),
-                m = n("yR8l"),
-                p = n("geRD"),
-                g = n("2xye"),
-                h = n("JcRA"),
-                v = n("Ue10"),
-                f = n("Jl34"),
-                k = n("y5Wm"),
-                y = n("k5cX"),
-                b = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.followClicked = function() {
-                            t.props.isLoggedIn ? t.isFollowing ? t.unfollow() : t.follow() : t.props.showLoginModal()
-                        }, t.showUnfollowButton = function() {
-                            return t.props.isLoggedIn && t.isFollowing
-                        }, t.follow = function() {
-                            return l.__awaiter(t, void 0, void 0, function() {
-                                var e, t = this;
-                                return l.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            return this.props.followGame && this.props.data && this.props.data.game ? (e = l.__assign({}, Object(p.a)({
-                                                gameID: this.props.data.game.id
-                                            }), {
-                                                optimisticResponse: {
-                                                    followGame: {
-                                                        __typename: "FollowGamePayload",
-                                                        game: {
-                                                            self: {
-                                                                follow: {
-                                                                    followedAt: (new Date).toISOString(),
-                                                                    __typename: "GameFollow"
-                                                                },
-                                                                __typename: "GameSelfConnection"
-                                                            },
-                                                            __typename: "Game"
-                                                        }
-                                                    }
-                                                },
-                                                update: function(e, n) {
-                                                    var i = n.data.followGame,
-                                                        a = e.readQuery({
-                                                            query: k,
-                                                            variables: {
-                                                                name: t.props.gameName
-                                                            }
-                                                        });
-                                                    a && a.game && (a.game.self.follow = i.game.self.follow, e.writeQuery({
-                                                        query: k,
-                                                        variables: {
-                                                            name: t.props.gameName
-                                                        },
-                                                        data: a
-                                                    }))
-                                                }
-                                            }), [4, this.props.followGame(e)]) : [2];
-                                        case 1:
-                                            return n.sent(), this.track(g.SpadeEventType.GameFollow), [2]
-                                    }
-                                })
-                            })
-                        }, t.unfollow = function() {
-                            return l.__awaiter(t, void 0, void 0, function() {
-                                var e, t = this;
-                                return l.__generator(this, function(n) {
-                                    switch (n.label) {
-                                        case 0:
-                                            return this.props.unfollowGame && this.props.data && this.props.data.game ? (e = l.__assign({}, Object(p.a)({
-                                                gameID: this.props.data.game.id
-                                            }), {
-                                                optimisticResponse: {
-                                                    unfollowGame: {
-                                                        __typename: "UnfollowGamePayload",
-                                                        follow: null
-                                                    }
-                                                },
-                                                update: function(e) {
-                                                    var n = e.readQuery({
-                                                        query: k,
-                                                        variables: {
-                                                            name: t.props.gameName
-                                                        }
-                                                    });
-                                                    n && n.game && (n.game.self.follow = null, e.writeQuery({
-                                                        query: k,
-                                                        variables: {
-                                                            name: t.props.gameName
-                                                        },
-                                                        data: n
-                                                    }))
-                                                }
-                                            }), [4, this.props.unfollowGame(e)]) : [2];
-                                        case 1:
-                                            return n.sent(), this.track(g.SpadeEventType.GameUnfollow), [2]
-                                    }
-                                })
-                            })
-                        }, t
-                    }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(u.d)("Follow", "FollowGameButton"),
-                            t = this.props.buttonType,
-                            n = t && t === v.F.Hollow ? v.nb.FollowHollow : v.nb.Heart,
-                            i = void 0 === this.props.fullWidthButton || this.props.fullWidthButton,
-                            a = {};
-                        if (i && (a.justifyContent = v.Ua.Center), this.props.isLoggedIn && this.isLoading) return d.createElement(v.Va, l.__assign({
-                            display: v.W.Flex
-                        }, a), d.createElement(v.Va, {
-                            alignItems: v.f.Center
-                        }, d.createElement(v.cb, {
-                            width: 70,
-                            height: 30
-                        })));
-                        var r = this.showUnfollowButton() ? Object(u.d)("Unfollow", "FollowGameButton") : e,
-                            o = this.showUnfollowButton() ? "game-directory-unfollow-button" : "game-directory-follow-button",
-                            s = this.showUnfollowButton() ? v.nb.Heart : n,
-                            c = !this.showUnfollowButton() && t && t === v.F.Hollow ? v.nb.Heart : v.nb.Unheart,
-                            m = this.showUnfollowButton() ? Object(u.d)("Following", "FollowGameButton") : e;
-                        return this.props.animatedButton ? d.createElement(h.a, {
-                            ariaLabel: r,
-                            "data-a-target": o,
-                            "data-test-selector": "follow-game-button-component",
-                            icon: s,
-                            iconOnHover: c,
-                            onClick: this.followClicked,
-                            text: m,
-                            type: t || v.F.Default,
-                            fullWidthButton: i
-                        }) : d.createElement(v.z, {
-                            ariaLabel: r,
-                            "data-a-target": o,
-                            "data-test-selector": "follow-game-button-component",
-                            icon: s,
-                            onClick: this.followClicked,
-                            statusAlertIcon: this.props.isLoggedIn ? c : void 0,
-                            type: t || v.F.Default,
-                            fullWidth: i
-                        }, m)
-                    }, Object.defineProperty(t.prototype, "isFollowing", {
-                        get: function() {
-                            return !!(this.props.data && this.props.data.game && this.props.data.game.self && null !== this.props.data.game.self.follow)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "isLoading", {
-                        get: function() {
-                            return !this.props.data || this.props.data.loading
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t.prototype.track = function(e) {
-                        u.o.tracking.track(e, {
-                            src: this.props.src,
-                            kind: e === g.SpadeEventType.GameFollow ? "follow" : "unfollow",
-                            name: this.props.gameName
-                        })
-                    }, t
-                }(d.Component),
-                w = Object(c.compose)(Object(m.a)(k, {
-                    options: function(e) {
-                        return {
-                            variables: {
-                                name: e.gameName
-                            }
-                        }
-                    },
-                    skip: function(e) {
-                        return !e.isLoggedIn || !e.gameName
-                    }
-                }), Object(m.a)(f, {
-                    name: "followGame"
-                }), Object(m.a)(y, {
-                    name: "unfollowGame"
-                }))(b);
-            var S = Object(i.connect)(function(e) {
-                return {
-                    isLoggedIn: Object(s.f)(e)
-                }
-            }, function(e) {
-                return Object(a.bindActionCreators)({
-                    showLoginModal: function() {
-                        return Object(o.e)(r.a.FollowGameButton)
-                    }
-                }, e)
-            })(w);
-            n.d(t, "a", function() {
-                return S
-            })
-        },
-        WRGI: function(e, t, n) {
-            "use strict";
-            n.d(t, "b", function() {
-                return s
-            }), n.d(t, "a", function() {
-                return l
-            });
-            var i = n("mrSG"),
-                a = n("/7QA"),
-                r = n("oA7Y"),
-                o = n("9x/k");
-
-            function s(e) {
-                return e.browse.browseType
-            }
-
-            function l(e) {
-                return e.browse.tagFilters
-            }
-            a.o.store.registerReducer("browse", function(e, t) {
-                switch (void 0 === e && (e = {
-                    browseType: o.a.Games,
-                    lastBrowsePath: "/directory",
-                    tagFilters: []
-                }), t.type) {
-                    case r.a:
-                        return i.__assign({}, e, {
-                            browseType: t.browseType
-                        });
-                    case r.c:
-                        var n = e.tagFilters.every(function(e) {
-                                return e.id !== t.addedTag.id
-                            }),
-                            a = e.tagFilters.slice();
-                        return n && a.push(t.addedTag), i.__assign({}, e, {
-                            tagFilters: a
-                        });
-                    case r.d:
-                        return i.__assign({}, e, {
-                            tagFilters: t.tagFilters
-                        });
-                    case r.e:
-                        var s = e.tagFilters.filter(function(e) {
-                            return e.id !== t.removedTag.id
-                        });
-                        return i.__assign({}, e, {
-                            tagFilters: s
-                        });
-                    case r.b:
-                        return i.__assign({}, e, {
-                            lastBrowsePath: t.lastBrowsePath
-                        });
-                    default:
-                        return e
-                }
+                return Ce
             })
         },
         X7a7: function(e, t, n) {
@@ -7333,375 +5923,6 @@
             e.exports = n
         },
         cRsL: function(e, t, n) {},
-        chV5: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "CommunityStreams_Streams_RENAME2"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "name"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "String"
-                                }
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "type"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "DirectoryType"
-                                }
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "limit"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Int"
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "directory"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "name"
-                                    }
-                                }
-                            }, {
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "type"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "type"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "name"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "streams"
-                                    },
-                                    arguments: [{
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "first"
-                                        },
-                                        value: {
-                                            kind: "Variable",
-                                            name: {
-                                                kind: "Name",
-                                                value: "limit"
-                                            }
-                                        }
-                                    }],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "edges"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "cursor"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "node"
-                                                    },
-                                                    arguments: [],
-                                                    directives: [],
-                                                    selectionSet: {
-                                                        kind: "SelectionSet",
-                                                        selections: [{
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "id"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "title"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "viewersCount"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "previewImageURL"
-                                                            },
-                                                            arguments: [{
-                                                                kind: "Argument",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "width"
-                                                                },
-                                                                value: {
-                                                                    kind: "IntValue",
-                                                                    value: "320"
-                                                                }
-                                                            }, {
-                                                                kind: "Argument",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "height"
-                                                                },
-                                                                value: {
-                                                                    kind: "IntValue",
-                                                                    value: "180"
-                                                                }
-                                                            }],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "broadcaster"
-                                                            },
-                                                            arguments: [],
-                                                            directives: [],
-                                                            selectionSet: {
-                                                                kind: "SelectionSet",
-                                                                selections: [{
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "id"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "login"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "displayName"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }]
-                                                            }
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "game"
-                                                            },
-                                                            arguments: [],
-                                                            directives: [],
-                                                            selectionSet: {
-                                                                kind: "SelectionSet",
-                                                                selections: [{
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "id"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "boxArtURL"
-                                                                    },
-                                                                    arguments: [{
-                                                                        kind: "Argument",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "width"
-                                                                        },
-                                                                        value: {
-                                                                            kind: "IntValue",
-                                                                            value: "285"
-                                                                        }
-                                                                    }, {
-                                                                        kind: "Argument",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "height"
-                                                                        },
-                                                                        value: {
-                                                                            kind: "IntValue",
-                                                                            value: "380"
-                                                                        }
-                                                                    }],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "name"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }]
-                                                            }
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "type"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }]
-                                                    }
-                                                }]
-                                            }
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "pageInfo"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "hasNextPage"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 372
-                }
-            };
-            n.loc.source = {
-                body: "query CommunityStreams_Streams_RENAME2($name: String! $type: DirectoryType! $limit: Int) {\ndirectory(name: $name type: $type) {\nid\nname\nstreams(first: $limit) {\nedges {\ncursor\nnode {\nid\ntitle\nviewersCount\npreviewImageURL(width: 320 height: 180)\nbroadcaster {\nid\nlogin\ndisplayName\n}\ngame {\nid\nboxArtURL(width: 285 height: 380)\nname\n}\ntype\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
         daWW: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -8148,116 +6369,6 @@
             };
             e.exports = n
         },
-        hX9f: function(e, t, n) {
-            "use strict";
-            var i = n("mrSG"),
-                a = n("q1tI"),
-                r = n("9C/b"),
-                o = n("fvjX"),
-                s = n("/7QA"),
-                l = n("GFmA"),
-                d = n("kduP"),
-                c = n("2xye"),
-                u = n("fVj5"),
-                m = n("rShu"),
-                p = n("yI6f"),
-                g = n("T2RZ"),
-                h = n("Ue10"),
-                v = (n("zrz1"), Object(g.a)(c.PageviewMedium.Game, p.b.Live, p.c.BrowseInCategoryChannels)(l.a)),
-                f = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.isTagsExperiment = Object(u.b)(), t.untitledBroadcastString = Object(s.d)("Untitled Broadcast", "StreamThumbnail"), t.getLinkTo = function(e, n) {
-                            var a = t.props.trackingContent ? t.props.trackingContent : c.PageviewContent.Live,
-                                r = c.PageviewMedium.Game;
-                            t.props.trackingMedium && (r = t.props.trackingMedium);
-                            var o = t.props.history.location && t.props.history.location.state || {};
-                            return {
-                                pathname: e,
-                                state: i.__assign({}, o, {
-                                    medium: r,
-                                    content: a,
-                                    content_index: n
-                                })
-                            }
-                        }, t.shouldShowGame = function(e) {
-                            return t.props.directoryType !== m.a.Games && t.props.streamNode.game ? t.props.streamNode.game[e] : ""
-                        }, t.onClick = function(e) {
-                            t.props.onClick && t.props.onClick(e, t.props.streamNode.broadcaster && t.props.streamNode.broadcaster.id)
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.streamNode,
-                            t = this.props.streamIndex;
-                        if (!e.broadcaster) return null;
-                        var n = {
-                            context: this.props.directoryType === m.a.Games ? l.b.SingleGameList : l.b.MixedGameAndChannelList,
-                            title: e.title || this.untitledBroadcastString,
-                            linkTo: this.getLinkTo("/" + e.broadcaster.login, t),
-                            onVideoTitleClick: this.onClick,
-                            thumbnailImageProps: {
-                                src: e.previewImageURL || s.a.defaultStreamPreviewURL,
-                                alt: "" + e.broadcaster.login
-                            },
-                            onThumbnailClick: this.onClick,
-                            channelDisplayName: e.broadcaster.displayName || "",
-                            channelLogin: e.broadcaster.login || "",
-                            channelLinkTo: this.getLinkTo("/" + e.broadcaster.login + "/videos", t),
-                            onChannelLoginClick: this.onClick,
-                            channelImageProps: {
-                                src: e.broadcaster.profileImageURL || "",
-                                alt: "" + e.broadcaster.login
-                            },
-                            gameTitle: this.shouldShowGame("name"),
-                            gameTitleLinkTo: this.getLinkTo(Object(d.c)(this.shouldShowGame("name")), t),
-                            gameBoxArtImageProps: {
-                                src: this.shouldShowGame("boxArtURL") || s.a.defaultBoxArtURL,
-                                alt: this.shouldShowGame("name")
-                            },
-                            playerMetadata: !this.isTagsExperiment && e.streamMetadata || void 0,
-                            playerMetadataGame: e.streamMetadata ? this.props.directoryName : void 0,
-                            streamType: e.type,
-                            currentViewerCount: e.viewersCount || 0,
-                            trackImageLatency: this.props.trackImageLatency,
-                            tagListProps: this.props.tagListProps
-                        };
-                        return a.createElement("div", {
-                            className: "stream-thumbnail",
-                            "data-target": t ? "" : "directory-first-item",
-                            style: {
-                                order: t
-                            }
-                        }, a.createElement(h.Va, {
-                            className: "stream-thumbnail__card",
-                            position: h.db.Relative,
-                            margin: {
-                                bottom: 2
-                            },
-                            "data-target": "directory-game__card_container"
-                        }, a.createElement(v, i.__assign({}, n, {
-                            "data-a-target": "card-" + t,
-                            "data-a-id": "card-" + (e.broadcaster.login || "").replace(/ /g, ""),
-                            trackingProps: {
-                                category: e.game ? e.game.id : void 0,
-                                categoryName: e.game ? e.game.name : void 0,
-                                itemPosition: t,
-                                rowPosition: 0,
-                                channelID: e.broadcaster.id || void 0
-                            }
-                        }))))
-                    }, t
-                }(a.Component),
-                k = Object(o.compose)(r.a)(f);
-            n.d(t, "a", function() {
-                return "directory-first-item"
-            }), n.d(t, !1, function() {
-                return "directory-game__card_container"
-            }), n.d(t, !1, function() {
-                return f
-            }), n.d(t, "b", function() {
-                return k
-            })
-        },
         he03: function(e, t, n) {
             var i = {
                 kind: "Document",
@@ -8592,437 +6703,10 @@
             }(n("iiOx").definitions)), e.exports = i
         },
         jE8A: function(e, t, n) {},
-        k5cX: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "mutation",
-                    name: {
-                        kind: "Name",
-                        value: "FollowGameButton_UnfollowGame"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "input"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "UnfollowGameInput"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "unfollowGame"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "input"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "input"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "follow"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "followedAt"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 124
-                }
-            };
-            n.loc.source = {
-                body: "mutation FollowGameButton_UnfollowGame($input: UnfollowGameInput!) {\nunfollowGame(input: $input) {\nfollow {\nfollowedAt\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
         "kF1+": function(e, t, n) {},
         kVMo: function(e, t, n) {},
         lRiI: function(e, t, n) {},
         m493: function(e, t, n) {},
-        mIH5: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "CommunityStreams_RankedChannelStreams"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "logins"
-                            }
-                        },
-                        type: {
-                            kind: "ListType",
-                            type: {
-                                kind: "NonNullType",
-                                type: {
-                                    kind: "NamedType",
-                                    name: {
-                                        kind: "Name",
-                                        value: "String"
-                                    }
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "users"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "logins"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "logins"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "login"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "stream"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "id"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "title"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "viewersCount"
-                                            },
-                                            arguments: [],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "previewImageURL"
-                                            },
-                                            arguments: [{
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "width"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "320"
-                                                }
-                                            }, {
-                                                kind: "Argument",
-                                                name: {
-                                                    kind: "Name",
-                                                    value: "height"
-                                                },
-                                                value: {
-                                                    kind: "IntValue",
-                                                    value: "180"
-                                                }
-                                            }],
-                                            directives: []
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "broadcaster"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "id"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "login"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "displayName"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "game"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "id"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "boxArtURL"
-                                                    },
-                                                    arguments: [{
-                                                        kind: "Argument",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "width"
-                                                        },
-                                                        value: {
-                                                            kind: "IntValue",
-                                                            value: "285"
-                                                        }
-                                                    }, {
-                                                        kind: "Argument",
-                                                        name: {
-                                                            kind: "Name",
-                                                            value: "height"
-                                                        },
-                                                        value: {
-                                                            kind: "IntValue",
-                                                            value: "380"
-                                                        }
-                                                    }],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "name"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 264
-                }
-            };
-            n.loc.source = {
-                body: "query CommunityStreams_RankedChannelStreams($logins: [String!]) {\nusers(logins: $logins) {\nid\nlogin\nstream {\nid\ntitle\nviewersCount\npreviewImageURL(width: 320 height: 180)\nbroadcaster {\nid\nlogin\ndisplayName\n}\ngame {\nid\nboxArtURL(width: 285 height: 380)\nname\n}\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
-        moLQ: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return s
-            }), n.d(t, "b", function() {
-                return l
-            });
-            var i = n("mrSG"),
-                a = n("/7QA"),
-                r = n("Igt5"),
-                o = n("X7a7");
-
-            function s(e, t) {
-                return e.directory.tagFilters[t] || []
-            }
-
-            function l(e) {
-                return e.directory.languageTags
-            }
-            a.o.store.registerReducer("directory", function(e, t) {
-                switch (void 0 === e && (e = {
-                    languageTags: Object(o.a)(),
-                    leagueOfLegends: {
-                        apiData: null,
-                        championsMap: null,
-                        isError: !1,
-                        isLoading: !1,
-                        version: ""
-                    },
-                    tagFilters: {}
-                }), t.type) {
-                    case r.a:
-                        return i.__assign({}, e, {
-                            languageTags: t.languageTags
-                        });
-                    case r.b:
-                        return i.__assign({}, e, {
-                            leagueOfLegends: {
-                                apiData: t.apiData,
-                                championsMap: t.championsMap,
-                                isError: !1,
-                                isLoading: !1,
-                                version: t.apiVersion
-                            }
-                        });
-                    case r.c:
-                        return i.__assign({}, e, {
-                            leagueOfLegends: i.__assign({}, e.leagueOfLegends, {
-                                isError: t.leagueOfLegendsChampionsErrored,
-                                isLoading: !1
-                            })
-                        });
-                    case r.d:
-                        return i.__assign({}, e, {
-                            leagueOfLegends: i.__assign({}, e.leagueOfLegends, {
-                                isError: !1,
-                                isLoading: t.leagueOfLegendsChampionsLoading
-                            })
-                        });
-                    case r.e:
-                        var n = i.__assign({}, e.tagFilters),
-                            a = n[t.categoryName];
-                        return (void 0 === a || a.every(function(e) {
-                            return e.id !== t.addedTag.id
-                        })) && (n[t.categoryName] = (n[t.categoryName] || []).concat([t.addedTag])), i.__assign({}, e, {
-                            tagFilters: n
-                        });
-                    case r.f:
-                        return e.tagFilters[t.categoryName] = t.tagFilters.slice(), i.__assign({}, e);
-                    case r.g:
-                        if (void 0 === e.tagFilters[t.categoryName]) return i.__assign({}, e);
-                        var s = e.tagFilters[t.categoryName].filter(function(e) {
-                            return e.id !== t.removedTag.id
-                        });
-                        return e.tagFilters[t.categoryName] = s, i.__assign({}, e);
-                    default:
-                        return e
-                }
-            })
-        },
         mz1O: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -9142,425 +6826,7 @@
                     })
                 }
         },
-        ni0n: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "CommunityStreams_Streams"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "name"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "String"
-                                }
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "type"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "DirectoryType"
-                                }
-                            }
-                        }
-                    }, {
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "limit"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Int"
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "directory"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "name"
-                                    }
-                                }
-                            }, {
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "type"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "type"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "streams"
-                                    },
-                                    arguments: [{
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "first"
-                                        },
-                                        value: {
-                                            kind: "Variable",
-                                            name: {
-                                                kind: "Name",
-                                                value: "limit"
-                                            }
-                                        }
-                                    }],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "edges"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "cursor"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "node"
-                                                    },
-                                                    arguments: [],
-                                                    directives: [],
-                                                    selectionSet: {
-                                                        kind: "SelectionSet",
-                                                        selections: [{
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "id"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "title"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "viewersCount"
-                                                            },
-                                                            arguments: [],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "previewImageURL"
-                                                            },
-                                                            arguments: [{
-                                                                kind: "Argument",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "width"
-                                                                },
-                                                                value: {
-                                                                    kind: "IntValue",
-                                                                    value: "320"
-                                                                }
-                                                            }, {
-                                                                kind: "Argument",
-                                                                name: {
-                                                                    kind: "Name",
-                                                                    value: "height"
-                                                                },
-                                                                value: {
-                                                                    kind: "IntValue",
-                                                                    value: "180"
-                                                                }
-                                                            }],
-                                                            directives: []
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "broadcaster"
-                                                            },
-                                                            arguments: [],
-                                                            directives: [],
-                                                            selectionSet: {
-                                                                kind: "SelectionSet",
-                                                                selections: [{
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "id"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "login"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "displayName"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }]
-                                                            }
-                                                        }, {
-                                                            kind: "Field",
-                                                            name: {
-                                                                kind: "Name",
-                                                                value: "game"
-                                                            },
-                                                            arguments: [],
-                                                            directives: [],
-                                                            selectionSet: {
-                                                                kind: "SelectionSet",
-                                                                selections: [{
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "id"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "boxArtURL"
-                                                                    },
-                                                                    arguments: [{
-                                                                        kind: "Argument",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "width"
-                                                                        },
-                                                                        value: {
-                                                                            kind: "IntValue",
-                                                                            value: "285"
-                                                                        }
-                                                                    }, {
-                                                                        kind: "Argument",
-                                                                        name: {
-                                                                            kind: "Name",
-                                                                            value: "height"
-                                                                        },
-                                                                        value: {
-                                                                            kind: "IntValue",
-                                                                            value: "380"
-                                                                        }
-                                                                    }],
-                                                                    directives: []
-                                                                }, {
-                                                                    kind: "Field",
-                                                                    name: {
-                                                                        kind: "Name",
-                                                                        value: "name"
-                                                                    },
-                                                                    arguments: [],
-                                                                    directives: []
-                                                                }]
-                                                            }
-                                                        }]
-                                                    }
-                                                }]
-                                            }
-                                        }, {
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "pageInfo"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "hasNextPage"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 354
-                }
-            };
-            n.loc.source = {
-                body: "query CommunityStreams_Streams($name: String! $type: DirectoryType! $limit: Int) {\ndirectory(name: $name type: $type) {\nid\nstreams(first: $limit) {\nedges {\ncursor\nnode {\nid\ntitle\nviewersCount\npreviewImageURL(width: 320 height: 180)\nbroadcaster {\nid\nlogin\ndisplayName\n}\ngame {\nid\nboxArtURL(width: 285 height: 380)\nname\n}\n}\n}\npageInfo {\nhasNextPage\n}\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
         nrVK: function(e, t, n) {},
-        ns6o: function(e, t, n) {},
-        oA7Y: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return i
-            }), n.d(t, "b", function() {
-                return a
-            }), n.d(t, "c", function() {
-                return r
-            }), n.d(t, "d", function() {
-                return o
-            }), n.d(t, "e", function() {
-                return s
-            }), n.d(t, "f", function() {
-                return l
-            }), n.d(t, "g", function() {
-                return d
-            }), n.d(t, "i", function() {
-                return c
-            }), n.d(t, "h", function() {
-                return u
-            }), n.d(t, "j", function() {
-                return m
-            });
-            var i = "browse.BROWSE_TYPE_CHANGED",
-                a = "browse.LAST_BROWSE_PATH",
-                r = "browse.TAG_FILTER_ADDED",
-                o = "browse.TAG_FILTER_CHANGED",
-                s = "browse.TAG_FILTER_REMOVED";
-
-            function l(e) {
-                return {
-                    type: r,
-                    addedTag: e
-                }
-            }
-
-            function d(e) {
-                return {
-                    type: i,
-                    browseType: e
-                }
-            }
-
-            function c(e) {
-                return {
-                    type: o,
-                    tagFilters: e
-                }
-            }
-
-            function u(e) {
-                return {
-                    type: a,
-                    lastBrowsePath: e
-                }
-            }
-
-            function m(e) {
-                return {
-                    type: s,
-                    removedTag: e
-                }
-            }
-        },
         oJov: function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
@@ -10076,16 +7342,6 @@
                 })
             }(n("Iqxx").definitions)), e.exports = i
         },
-        rShu: function(e, t, n) {
-            "use strict";
-            var i;
-            n.d(t, "a", function() {
-                    return i
-                }),
-                function(e) {
-                    e.Games = "GAMES", e.Communities = "COMMUNITIES", e.Creative = "CREATIVE"
-                }(i || (i = {}))
-        },
         sLlB: function(e, t, n) {
             "use strict";
             var i, a = n("/MKj"),
@@ -10177,8 +7433,8 @@
                         }, this.renderDropdownContent()))
                     }, t
                 }(d.Component),
-                y = Object(r.compose)(c.a, Object(v.c)("LanguageSelectMenu"))(k);
-            var b = Object(a.connect)(function(e) {
+                b = Object(r.compose)(c.a, Object(v.c)("LanguageSelectMenu"))(k);
+            var w = Object(a.connect)(function(e) {
                 return {
                     languagePreferences: Object(s.a)(e)
                 }
@@ -10187,147 +7443,10 @@
                     updateLanguagePreferences: o.c,
                     clearLanguagePreferences: o.a
                 }, e)
-            })(y);
+            })(b);
             n.d(t, "a", function() {
-                return b
+                return w
             })
-        },
-        sabN: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "ForYouPage_UserFollows"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "limit"
-                            }
-                        },
-                        type: {
-                            kind: "NamedType",
-                            name: {
-                                kind: "Name",
-                                value: "Int"
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "currentUser"
-                            },
-                            arguments: [],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "createdAt"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "followedGames"
-                                    },
-                                    arguments: [{
-                                        kind: "Argument",
-                                        name: {
-                                            kind: "Name",
-                                            value: "first"
-                                        },
-                                        value: {
-                                            kind: "Variable",
-                                            name: {
-                                                kind: "Name",
-                                                value: "limit"
-                                            }
-                                        }
-                                    }],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "nodes"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "id"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "name"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }, {
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "directoryType"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 139
-                }
-            };
-            n.loc.source = {
-                body: "query ForYouPage_UserFollows($limit: Int) {\ncurrentUser {\nid\ncreatedAt\nfollowedGames(first: $limit) {\nnodes {\nid\nname\ndirectoryType\n}\n}\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
         },
         sqxy: function(e, t, n) {
             "use strict";
@@ -10516,187 +7635,6 @@
                 }
             }
         },
-        x75U: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return l
-            }), n.d(t, "b", function() {
-                return d
-            });
-            var i = n("mrSG"),
-                a = n("17x9"),
-                r = n("q1tI"),
-                o = n("2xye"),
-                s = n("yI6f"),
-                l = {
-                    cardIDtoItemTrackingIDMap: a.object,
-                    trackTitleClick: a.func,
-                    trackTitleImpression: a.func,
-                    trackImpression: a.func,
-                    trackClick: a.func
-                };
-
-            function d() {
-                return function(e) {
-                    return function(t) {
-                        function n(e) {
-                            var n = t.call(this, e) || this;
-                            return n.getChildContext = function() {
-                                return {
-                                    trackTitleClick: n.trackTitleClick,
-                                    trackTitleImpression: n.trackTitleImpression,
-                                    trackImpression: n.trackImpression,
-                                    trackClick: n.trackClick,
-                                    cardIDtoItemTrackingIDMap: n.state.cardIDtoItemTrackingIDMap
-                                }
-                            }, n.mapShelfCardsToRequestIDs = function(e, t, n) {
-                                return void 0 === n && (n = {}), e.reduce(function(e, n) {
-                                    return n.node && !e[n.node.id] && (e[n.node.id] = t), e
-                                }, n)
-                            }, n.trackTitleImpression = function(e) {
-                                var t = Object(s.f)(e.title),
-                                    i = t.reasonType,
-                                    a = t.reasonTarget,
-                                    r = t.rowName,
-                                    l = Object(s.e)(),
-                                    d = {
-                                        component: s.a.Header,
-                                        contentEdge: null,
-                                        itemTrackingID: l,
-                                        itemPosition: null,
-                                        reasonType: i,
-                                        reasonTarget: a,
-                                        reasonTargetType: null,
-                                        requestID: n.props.requestID,
-                                        rowName: r,
-                                        rowPosition: n.props.position,
-                                        tagID: null,
-                                        filtered: !1,
-                                        tagSet: "[]",
-                                        tagStreamerSet: "[]"
-                                    };
-                                Object(s.h)(d, o.PageviewContent.HeaderGameName), n.setState({
-                                    headerImpressionID: l
-                                })
-                            }, n.trackTitleClick = function() {
-                                var e = n.props.shelf,
-                                    t = Object(s.f)(e.title),
-                                    i = t.reasonType,
-                                    a = t.reasonTarget,
-                                    r = t.reasonTargetType,
-                                    l = t.rowName,
-                                    d = {
-                                        component: s.a.Header,
-                                        contentEdge: null,
-                                        itemTrackingID: n.state.headerImpressionID,
-                                        requestID: n.state.headerRequestID,
-                                        itemPosition: null,
-                                        rowPosition: n.props.position,
-                                        reasonType: i,
-                                        reasonTarget: a,
-                                        reasonTargetType: r,
-                                        rowName: l,
-                                        tagID: null,
-                                        filtered: !1,
-                                        tagSet: "[]",
-                                        tagStreamerSet: "[]"
-                                    };
-                                Object(s.g)(d, o.PageviewContent.HeaderGameName)
-                            }, n.trackImpression = function(e, t, i, a) {
-                                if (t.node && !n.state.cardIDtoItemTrackingIDMap[t.node.id]) {
-                                    var r = Object(s.e)(),
-                                        o = Object(s.f)(e.title),
-                                        l = o.reasonType,
-                                        d = o.reasonTarget,
-                                        c = o.reasonTargetType,
-                                        u = o.rowName,
-                                        m = {
-                                            component: s.a.Card,
-                                            contentEdge: t,
-                                            itemTrackingID: r,
-                                            itemPosition: i,
-                                            reasonType: l,
-                                            reasonTarget: d,
-                                            reasonTargetType: c,
-                                            requestID: n.state.cardIDtoRequestIDMap[t.node.id],
-                                            rowName: u,
-                                            rowPosition: n.props.position,
-                                            tagID: null,
-                                            filtered: !1,
-                                            tagSet: JSON.stringify(a),
-                                            tagStreamerSet: "[]"
-                                        };
-                                    Object(s.h)(m), n.setState(function(e) {
-                                        var n = e.cardIDtoItemTrackingIDMap;
-                                        return n[t.node.id] = r, {
-                                            cardIDtoItemTrackingIDMap: n
-                                        }
-                                    })
-                                }
-                            }, n.trackClick = function(e, t, i, a, r, o) {
-                                if (t.node) {
-                                    var l = n.state,
-                                        d = l.cardIDtoRequestIDMap,
-                                        c = l.cardIDtoItemTrackingIDMap,
-                                        u = Object(s.f)(e.title),
-                                        m = u.reasonType,
-                                        p = u.reasonTarget,
-                                        g = u.reasonTargetType,
-                                        h = u.rowName,
-                                        v = {
-                                            component: s.a.Card,
-                                            contentEdge: t,
-                                            itemTrackingID: c[t.node.id] || null,
-                                            requestID: d[t.node.id],
-                                            itemPosition: i,
-                                            rowPosition: n.props.position,
-                                            reasonType: m,
-                                            reasonTarget: p,
-                                            reasonTargetType: g,
-                                            rowName: h,
-                                            tagID: void 0 !== o ? o : null,
-                                            filtered: !1,
-                                            tagSet: JSON.stringify(r),
-                                            tagStreamerSet: "[]"
-                                        };
-                                    Object(s.g)(v, a)
-                                }
-                            }, n.state = {
-                                cardIDtoItemTrackingIDMap: {},
-                                cardIDtoRequestIDMap: n.mapShelfCardsToRequestIDs(e.shelf.content.edges || [], e.requestID, {}),
-                                headerImpressionID: null,
-                                headerRequestID: e.requestID
-                            }, n
-                        }
-                        return i.__extends(n, t), n.prototype.componentWillReceiveProps = function(e) {
-                            var t = this,
-                                n = e.shelf,
-                                i = e.requestID;
-                            n.content.edges !== this.props.shelf.content.edges && this.setState(function(e) {
-                                return {
-                                    cardIDtoRequestIDMap: t.mapShelfCardsToRequestIDs(n.content.edges || [], i, e.cardIDtoRequestIDMap)
-                                }
-                            })
-                        }, n.prototype.render = function() {
-                            var t = Object(s.f)(this.props.shelf.title).rowName,
-                                n = {
-                                    trackTitleClick: this.getChildContext().trackTitleClick,
-                                    trackTitleImpression: this.getChildContext().trackTitleImpression,
-                                    trackImpression: this.getChildContext().trackImpression,
-                                    trackClick: this.getChildContext().trackClick,
-                                    shelfTrackingProps: {
-                                        item_tracking_id: this.state.headerImpressionID,
-                                        item_position: null,
-                                        row_name: t,
-                                        row_position: this.props.position
-                                    }
-                                };
-                            return r.createElement(e, i.__assign({}, this.props, n))
-                        }, n.childContextTypes = l, n
-                    }(r.Component)
-                }
-            }
-        },
         xugo: function(e, t) {
             var n = {
                 kind: "Document",
@@ -10837,345 +7775,6 @@
                 }
             };
             e.exports = n
-        },
-        y5Wm: function(e, t) {
-            var n = {
-                kind: "Document",
-                definitions: [{
-                    kind: "OperationDefinition",
-                    operation: "query",
-                    name: {
-                        kind: "Name",
-                        value: "FollowGameButton_Game"
-                    },
-                    variableDefinitions: [{
-                        kind: "VariableDefinition",
-                        variable: {
-                            kind: "Variable",
-                            name: {
-                                kind: "Name",
-                                value: "name"
-                            }
-                        },
-                        type: {
-                            kind: "NonNullType",
-                            type: {
-                                kind: "NamedType",
-                                name: {
-                                    kind: "Name",
-                                    value: "String"
-                                }
-                            }
-                        }
-                    }],
-                    directives: [],
-                    selectionSet: {
-                        kind: "SelectionSet",
-                        selections: [{
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "game"
-                            },
-                            arguments: [{
-                                kind: "Argument",
-                                name: {
-                                    kind: "Name",
-                                    value: "name"
-                                },
-                                value: {
-                                    kind: "Variable",
-                                    name: {
-                                        kind: "Name",
-                                        value: "name"
-                                    }
-                                }
-                            }],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "name"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }, {
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "self"
-                                    },
-                                    arguments: [],
-                                    directives: [],
-                                    selectionSet: {
-                                        kind: "SelectionSet",
-                                        selections: [{
-                                            kind: "Field",
-                                            name: {
-                                                kind: "Name",
-                                                value: "follow"
-                                            },
-                                            arguments: [],
-                                            directives: [],
-                                            selectionSet: {
-                                                kind: "SelectionSet",
-                                                selections: [{
-                                                    kind: "Field",
-                                                    name: {
-                                                        kind: "Name",
-                                                        value: "followedAt"
-                                                    },
-                                                    arguments: [],
-                                                    directives: []
-                                                }]
-                                            }
-                                        }]
-                                    }
-                                }]
-                            }
-                        }, {
-                            kind: "Field",
-                            name: {
-                                kind: "Name",
-                                value: "currentUser"
-                            },
-                            arguments: [],
-                            directives: [],
-                            selectionSet: {
-                                kind: "SelectionSet",
-                                selections: [{
-                                    kind: "Field",
-                                    name: {
-                                        kind: "Name",
-                                        value: "id"
-                                    },
-                                    arguments: [],
-                                    directives: []
-                                }]
-                            }
-                        }]
-                    }
-                }],
-                loc: {
-                    start: 0,
-                    end: 127
-                }
-            };
-            n.loc.source = {
-                body: "query FollowGameButton_Game($name: String!) {\ngame(name: $name) {\nid\nname\nself {\nfollow {\nfollowedAt\n}\n}\n}\ncurrentUser {\nid\n}\n}",
-                name: "GraphQL request",
-                locationOffset: {
-                    line: 1,
-                    column: 1
-                }
-            };
-            e.exports = n
-        },
-        yI6f: function(e, t, n) {
-            "use strict";
-            var i, a, r, o, s, l, d, c = n("/7QA"),
-                u = n("f00E"),
-                m = n("2xye"),
-                p = n("3sMy"),
-                g = function() {
-                    return Object(u.b)().substring(0, 16)
-                };
-            ! function(e) {
-                e.TwitchHome = "twitch_home", e.BrowseLiveChannels = "browse_livechannels", e.BrowseCategories = "browse_categories", e.BrowseInCategoryChannels = "browse_incategory_channels"
-            }(a || (a = {})),
-            function(e) {
-                e.Live = "live", e.Clip = "clip", e.Vod = "vod", e.Game = "game"
-            }(r || (r = {})),
-            function(e) {
-                e.Card = "card", e.Header = "header"
-            }(o || (o = {})),
-            function(e) {
-                e.Followed = "followed", e.Watched = "watched", e.Popularity = "popularity", e.Personalized = "personalized"
-            }(s || (s = {})),
-            function(e) {
-                e.Live = "live", e.Clip = "clip", e.Vod = "vod", e.Game = "game"
-            }(l || (l = {})),
-            function(e) {
-                e.Live = "recs_live", e.Vod = "recs_vod", e.Clip = "recs_clip"
-            }(d || (d = {}));
-            var h = ((i = {})[p.a.TopLiveChannels] = function(e) {
-                return {
-                    reasonType: s.Popularity,
-                    reasonTarget: null,
-                    reasonTargetType: l.Live,
-                    rowName: e
-                }
-            }, i[p.a.TopGames] = function(e) {
-                return {
-                    reasonType: s.Popularity,
-                    reasonTarget: null,
-                    reasonTargetType: l.Game,
-                    rowName: e
-                }
-            }, i[p.a.TopChannelsPlayingGame] = function(e, t) {
-                return {
-                    reasonType: s.Popularity,
-                    reasonTarget: t.context && t.context.id || null,
-                    reasonTargetType: l.Game,
-                    rowName: e
-                }
-            }, i[p.a.TopLiveChannelsYouMayLike] = function(e) {
-                return {
-                    reasonType: s.Personalized,
-                    reasonTarget: null,
-                    reasonTargetType: l.Live,
-                    rowName: e
-                }
-            }, i[p.a.TopGamesForYou] = function(e) {
-                return {
-                    reasonType: s.Personalized,
-                    reasonTarget: null,
-                    reasonTargetType: l.Game,
-                    rowName: e
-                }
-            }, i[p.a.RecommendedBecauseYouWatchX] = function(e, t) {
-                return {
-                    reasonType: s.Watched,
-                    reasonTarget: t.context && t.context.id || null,
-                    reasonTargetType: l.Game,
-                    rowName: e
-                }
-            }, i[p.a.RecommendedBecauseYouFollowX] = function(e, t) {
-                return {
-                    reasonType: s.Followed,
-                    reasonTarget: t.context && t.context.id || null,
-                    reasonTargetType: null,
-                    rowName: e
-                }
-            }, i[p.a.GreatNewClipsYouMayHaveMissed] = function(e) {
-                return {
-                    reasonType: s.Popularity,
-                    reasonTarget: null,
-                    reasonTargetType: l.Clip,
-                    rowName: e
-                }
-            }, i[p.a.TopNewVideosYouMayHaveMissed] = function(e) {
-                return {
-                    reasonType: s.Popularity,
-                    reasonTarget: null,
-                    reasonTargetType: l.Vod,
-                    rowName: e
-                }
-            }, i);
-
-            function v(e) {
-                var t = e.key;
-                return h[t] ? h[t](t, e) : {
-                    reasonType: null,
-                    reasonTarget: "",
-                    reasonTargetType: null,
-                    rowName: t
-                }
-            }
-
-            function f(e, t) {
-                var n, i = null,
-                    o = null,
-                    s = null,
-                    l = e.contentEdge && e.contentEdge.node && e.contentEdge.node.id || "";
-                if (e.contentEdge) switch (e.contentEdge.node && e.contentEdge.node.__typename) {
-                    case "Stream":
-                        i = (n = e.contentEdge.node).broadcaster && n.broadcaster.id, o = r.Live, l = String(n.broadcaster && n.broadcaster.id), s = n.game ? n.game.id : null;
-                        break;
-                    case "Clip":
-                        i = (n = e.contentEdge.node).broadcaster && n.broadcaster.id, o = r.Clip, s = n.game ? n.game.id : null;
-                        break;
-                    case "Video":
-                        i = (n = e.contentEdge.node).owner && n.owner.id, o = r.Vod, s = n.game ? n.game.id : null;
-                        break;
-                    case "Game":
-                        n = e.contentEdge.node, i = null, o = r.Game, s = n.id
-                }
-                return {
-                    component: e.component,
-                    request_id: e.requestID,
-                    section: a.TwitchHome,
-                    model_tracking_id: e.contentEdge && e.contentEdge.trackingID,
-                    item_tracking_id: e.itemTrackingID,
-                    item_id: l,
-                    channel_id: null === i ? null : Number(i),
-                    item_position: e.itemPosition,
-                    item_subsection: t || null,
-                    item_page: m.PageviewMedium.TwitchHome,
-                    row_position: e.rowPosition,
-                    content_type: o,
-                    reason_type: e.reasonType,
-                    reason_target: e.reasonTarget,
-                    reason_target_type: e.reasonTargetType,
-                    row_name: e.rowName,
-                    tag_set: e.tagSet,
-                    tag_streamer_set: e.tagStreamerSet,
-                    filtered: e.filtered,
-                    category: s,
-                    tag_id: e.tagID
-                }
-            }
-
-            function k(e, t) {
-                var n = f(e, t);
-                c.n.track(m.SpadeEventType.ItemClick, n)
-            }
-
-            function y(e, t) {
-                var n = f(e, t);
-                c.n.track(m.SpadeEventType.ItemDisplay, n)
-            }
-
-            function b(e) {
-                var t = {
-                    endpoint: e.endpoint,
-                    request_id: e.requestID,
-                    section: e.section
-                };
-                c.n.track(m.SpadeEventType.RecRequestClient, t)
-            }
-            var w = n("x75U"),
-                S = n("A65o");
-            n.d(t, "e", function() {
-                return g
-            }), n.d(t, "c", function() {
-                return a
-            }), n.d(t, "b", function() {
-                return r
-            }), n.d(t, "a", function() {
-                return o
-            }), n.d(t, !1, function() {
-                return s
-            }), n.d(t, !1, function() {
-                return l
-            }), n.d(t, "d", function() {
-                return d
-            }), n.d(t, "f", function() {
-                return v
-            }), n.d(t, "g", function() {
-                return k
-            }), n.d(t, "h", function() {
-                return y
-            }), n.d(t, "i", function() {
-                return b
-            }), n.d(t, !1, function() {
-                return w.a
-            }), n.d(t, "j", function() {
-                return w.b
-            }), n.d(t, !1, function() {
-                return S.a
-            })
         },
         yWUM: function(e, t, n) {
             "use strict";
@@ -11439,7 +8038,6 @@
                     name: "unfollowGame"
                 })], t)
             }(a.Component)
-        },
-        zrz1: function(e, t, n) {}
+        }
     }
 ]);

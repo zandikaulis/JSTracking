@@ -30,9 +30,9 @@
                         return {
                             images: {
                                 sources: {
-                                    "1x": Object(i.e)(t, 1),
-                                    "2x": Object(i.e)(t, 2),
-                                    "4x": Object(i.e)(t, 4)
+                                    "1x": Object(i.d)(t, 1),
+                                    "2x": Object(i.d)(t, 2),
+                                    "4x": Object(i.d)(t, 4)
                                 },
                                 themed: !1
                             },
@@ -121,9 +121,9 @@
                 _ = n("iSjI"),
                 T = n.n(_),
                 S = n("bQeB"),
-                x = n.n(S),
-                D = n("HvcU"),
-                O = n.n(D),
+                D = n.n(S),
+                O = n("HvcU"),
+                x = n.n(O),
                 M = n("GA+j"),
                 F = n.n(M),
                 N = n("FBRg"),
@@ -209,10 +209,10 @@
                                             };
                                         default:
                                             return {
-                                                src: x.a,
+                                                src: D.a,
                                                 srcSet: {
-                                                    "1x": x.a,
-                                                    "2x": O.a
+                                                    "1x": D.a,
+                                                    "2x": x.a
                                                 },
                                                 alt: e
                                             }
@@ -243,10 +243,10 @@
                                     };
                                 default:
                                     return {
-                                        src: x.a,
+                                        src: D.a,
                                         srcSet: {
-                                            "1x": x.a,
-                                            "2x": O.a
+                                            "1x": D.a,
+                                            "2x": x.a
                                         },
                                         alt: e
                                     }
@@ -850,14 +850,12 @@
                 return u
             }), n.d(t, "b", function() {
                 return p
-            }), n.d(t, "f", function() {
+            }), n.d(t, "e", function() {
                 return m
             }), n.d(t, "c", function() {
                 return h
-            }), n.d(t, "e", function() {
-                return y
             }), n.d(t, "d", function() {
-                return f
+                return y
             });
             var r = n("mrSG"),
                 a = n("/7QA"),
@@ -918,13 +916,6 @@
 
             function y(e, t) {
                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
-            }
-
-            function f(e) {
-                return {
-                    src: y(e, 1),
-                    srcSet: y(e, 1) + " 1x, " + y(e, 2) + " 2x, " + y(e, 3) + " 4x"
-                }
             }
         },
         b6Yk: function(e, t, n) {
@@ -1181,9 +1172,9 @@
                 _ = n("TSpM"),
                 T = n.n(_),
                 S = n("vE+g"),
-                x = n.n(S),
-                D = n("/Z6v"),
-                O = n.n(D),
+                D = n.n(S),
+                O = n("/Z6v"),
+                x = n.n(O),
                 M = n("D409"),
                 F = n.n(M),
                 N = n("QyYb"),
@@ -1725,7 +1716,7 @@
                                 "1x": F.a,
                                 "2x": I.a
                             }
-                        }))), d.createElement(k.Va, {
+                        }))), !this.disableAmazonPay && d.createElement(k.Va, {
                             margin: {
                                 right: 2
                             },
@@ -1753,11 +1744,11 @@
                                     "2x": T.a
                                 },
                                 dark: {
-                                    "1x": x.a,
-                                    "2x": O.a
+                                    "1x": D.a,
+                                    "2x": x.a
                                 }
                             }
-                        }))), d.createElement(k.Va, {
+                        }))), !this.disablePayPal && d.createElement(k.Va, {
                             margin: {
                                 right: 2
                             },
@@ -1808,7 +1799,19 @@
                             braintreeClientAuthorization: this.props.config.braintreeClientAuthorization,
                             updatePaymentMethod: this.props.updatePaymentMethod
                         })))))
-                    }, t
+                    }, Object.defineProperty(t.prototype, "disablePayPal", {
+                        get: function() {
+                            return !this.props.config.braintreeClientAuthorization
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disableAmazonPay", {
+                        get: function() {
+                            return !this.props.config.payWithAmazonConfigs.clientID
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
                 }(d.Component),
                 ie = n("/jfp"),
                 oe = n.n(ie),
@@ -2030,7 +2033,7 @@
                             y: 2
                         }
                     }, d.createElement(k.S, {
-                        src: Object(pe.e)(me, 2),
+                        src: Object(pe.d)(me, 2),
                         alt: he
                     })), d.createElement(k.Va, {
                         display: k.W.Flex,
@@ -2573,10 +2576,10 @@
                         configurable: !0
                     }), t
                 }(d.Component)),
-                xe = Object(u.compose)(Object(b.a)(Te, {
+                De = Object(u.compose)(Object(b.a)(Te, {
                     name: "deleteDefaultPaymentMethod"
                 }))(Se),
-                De = function(e) {
+                Oe = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2584,7 +2587,7 @@
                         return d.createElement(k.xb, {
                             background: k.r.Base,
                             padding: 2
-                        }, d.createElement(xe, {
+                        }, d.createElement(De, {
                             subscriptions: this.props.subscriptions,
                             paymentMethod: this.props.paymentMethod,
                             onDeleteSuccess: this.props.onDeleteSuccess,
@@ -2595,16 +2598,16 @@
                         }))
                     }, t
                 }(d.Component);
-            var Oe = Object(a.connect)(null, function(e) {
+            var xe = Object(a.connect)(null, function(e) {
                 return Object(i.bindActionCreators)({
                     closeModal: E.c
                 }, e)
-            })(De);
+            })(Oe);
             var Me, Fe = Object(a.connect)(null, function(e) {
                     return Object(i.bindActionCreators)({
                         showDeletePaymentMethodModal: function(e) {
                             var t = l.__rest(e, []);
-                            return Object(E.d)(Oe, t)
+                            return Object(E.d)(xe, t)
                         }
                     }, e)
                 })(Ce),

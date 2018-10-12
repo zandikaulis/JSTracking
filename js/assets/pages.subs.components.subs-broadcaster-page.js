@@ -604,11 +604,12 @@
                             emotes: e,
                             locked: !1
                         }))
-                    }, t = a.__decorate([Object(h.c)("SubPlanTabs")], t)
+                    }, t
                 }(s.Component),
-                V = n("a5fV"),
-                I = n("0WFu"),
-                x = (n("DQVP"), function(e) {
+                V = Object(h.c)("SubPlanTabs")(O),
+                I = n("a5fV"),
+                x = n("0WFu"),
+                j = (n("DQVP"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSubClick = function(e) {
@@ -701,9 +702,9 @@
                         }
                         return this.props.subscriptionProducts.map(function(t, n) {
                             var i = t.price;
-                            Object(y.g)([t]) && (i = Object(y.c)(t)), t.priceInfo && (i = Object(V.a)(Object(V.b)(t.priceInfo.total, t.priceInfo.exponent), t.priceInfo.currency));
+                            Object(y.g)([t]) && (i = Object(y.c)(t)), t.priceInfo && (i = Object(I.a)(Object(I.b)(t.priceInfo.total, t.priceInfo.exponent), t.priceInfo.currency));
                             var r = i;
-                            return t.tier && null === (r = String(Object(I.a)(t.tier))) && (r = "1"), s.createElement(f.xb, {
+                            return t.tier && null === (r = String(Object(x.a)(t.tier))) && (r = "1"), s.createElement(f.xb, {
                                 key: "subs-broadcaster-plan-" + n,
                                 className: "subs-plan-tiers__plan",
                                 margin: 1,
@@ -802,9 +803,10 @@
                             subscribed: Object(o.d)("Subscribed", "SubsPlanTiers"),
                             includes: Object(o.d)("Includes everything listed above.", "SubsPlanTiers")
                         }
-                    }, t = a.__decorate([Object(h.c)("SubsPlanTiers")], t)
+                    }, t
                 }(s.Component)),
-                j = function(e) {
+                w = Object(h.c)("SubsPlanTiers")(j),
+                D = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -820,7 +822,7 @@
                             breakpointMedium: {
                                 display: f.W.Hide
                             }
-                        }, s.createElement(O, {
+                        }, s.createElement(V, {
                             subbedPlatform: this.props.subbedPlatform,
                             channelDisplayName: this.props.channelDisplayName,
                             channelId: this.props.channelId,
@@ -836,7 +838,7 @@
                             breakpointMedium: {
                                 display: f.W.Flex
                             }
-                        }, s.createElement(x, {
+                        }, s.createElement(w, {
                             subbedPlatform: this.props.subbedPlatform,
                             subscriptionProducts: this.props.subscriptionProducts,
                             subTier: this.props.subTier,
@@ -845,8 +847,8 @@
                         })))
                     }, t
                 }(s.Component),
-                w = n("lEKk"),
-                D = function(e) {
+                F = n("lEKk"),
+                B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -896,7 +898,7 @@
                             alignItems: f.f.Center
                         }, s.createElement(f.Xa, null));
                         var e = this.props.data.user && this.props.data.user.campaignProperties && this.props.data.user.campaignProperties.domains && this.props.data.user.campaignProperties.domains.length > 0 || !1,
-                            t = s.createElement(j, {
+                            t = s.createElement(D, {
                                 subbedPlatform: this.state.subPlatform,
                                 channelDisplayName: this.props.data.user.displayName,
                                 channelId: this.props.data.user.id,
@@ -912,7 +914,7 @@
                             subscriptionProducts: this.state.subscriptionProducts,
                             subTier: this.state.subTier
                         })), s.createElement(u.b, null, t)
-                    }, t = a.__decorate([Object(l.a)(w, {
+                    }, t = a.__decorate([Object(l.a)(F, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -926,9 +928,9 @@
                         location: m.PageviewLocation.SubsBroadcasterPage
                     })], t)
                 }(s.Component),
-                F = Object(r.connect)()(D);
+                L = Object(r.connect)()(B);
             n.d(t, "SubsBroadcasterPage", function() {
-                return F
+                return L
             })
         },
         "3Bft": function(e, t, n) {
@@ -1211,87 +1213,99 @@
         "7SjK": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                r = n("TSYQ"),
-                a = n("q1tI"),
+                r = n("q1tI"),
+                a = n("TSYQ"),
                 s = n("/7QA"),
                 o = n("GnwI"),
                 c = n("Ue10"),
-                u = (n("VrOd"), function(e) {
+                u = (n("GOKC"), r.createElement(c.xb, {
+                    alignItems: c.f.Center,
+                    background: c.r.Overlay,
+                    borderRadius: c.x.Small,
+                    className: "emote-button__lock",
+                    color: c.O.Overlay,
+                    "data-test-selector": "emote-button-lock",
+                    display: c.W.InlineFlex,
+                    justifyContent: c.Ua.Center,
+                    position: c.db.Absolute,
+                    zIndex: c.ac.Above
+                }, r.createElement(c.mb, {
+                    asset: c.nb.Lock,
+                    height: 10,
+                    width: 10
+                }))),
+                l = function(e) {
+                    var t = a("emote-button__link", {
+                            "emote-button__link--locked": !e.onClick
+                        }),
+                        n = e.emote,
+                        i = n.displayName,
+                        l = n.srcSet;
+                    if (!l) return null;
+                    var d = r.createElement("img", {
+                        className: "emote-picker__image",
+                        srcSet: l,
+                        alt: i
+                    });
+                    if (e.isCriticalImage) {
+                        for (var p = l.split(" ")[0], m = {}, b = 0, h = l.split(","); b < h.length; b++) {
+                            var f = h[b].trim().split(" "),
+                                g = f[1],
+                                k = f[0];
+                            m[g] = k
+                        }
+                        d = r.createElement(o.b, {
+                            className: "emote-picker__emote-image",
+                            src: p,
+                            srcSet: m,
+                            alt: i || ""
+                        })
+                    }
+                    return r.createElement("div", {
+                        className: "emote-button"
+                    }, r.createElement(c.Qb, {
+                        label: i || Object(s.d)("Emote", "EmoteButton"),
+                        direction: c.Sb.Bottom
+                    }, r.createElement(c.Na, {
+                        display: c.W.Flex,
+                        alignItems: c.f.Center,
+                        justifyContent: c.Ua.Center
+                    }, r.createElement("button", {
+                        "data-test-selector": "emote-button-clickable",
+                        className: t,
+                        "aria-label": i,
+                        name: i,
+                        onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
+                        "data-a-target": i
+                    }, r.createElement("figure", null, e.locked ? u : null, d)))))
+                },
+                d = (n("VrOd"), function(e) {
                     function t() {
-                        return null !== e && e.apply(this, arguments) || this
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleClickEmote = function(e) {
+                            t.props.onClickEmote && t.props.onClickEmote(e)
+                        }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this,
-                            t = r("emote-picker__emote-link", {
-                                "emote-picker__emote-link--locked": this.props.locked
-                            }),
-                            n = a.createElement(c.xb, {
-                                alignItems: c.f.Center,
-                                background: c.r.Overlay,
-                                borderRadius: c.x.Small,
-                                className: "emote-picker__emote-lock",
-                                color: c.O.Overlay,
-                                display: c.W.InlineFlex,
-                                justifyContent: c.Ua.Center,
-                                position: c.db.Absolute,
-                                zIndex: c.ac.Above
-                            }, a.createElement(c.mb, {
-                                asset: c.nb.Lock,
-                                height: 10,
-                                width: 10
-                            })),
-                            i = this.props.emotes.map(function(i, r) {
-                                if (!i.srcSet) return null;
-                                var u = a.createElement("img", {
-                                    className: "emote-picker__emote-image",
-                                    srcSet: i.srcSet,
-                                    alt: i.displayName
-                                });
-                                if (0 === r) {
-                                    for (var l = i.srcSet.split(" ")[0], d = {}, p = 0, m = i.srcSet.split(","); p < m.length; p++) {
-                                        var b = m[p].trim().split(" "),
-                                            h = b[1],
-                                            f = b[0];
-                                        d[h] = f
-                                    }
-                                    u = a.createElement(o.b, {
-                                        className: "emote-picker__emote-image",
-                                        src: l,
-                                        srcSet: d,
-                                        alt: i.displayName || ""
-                                    })
-                                }
-                                return a.createElement("div", {
-                                    key: i.id,
-                                    className: "emote-picker__emote"
-                                }, a.createElement(c.Qb, {
-                                    label: i.displayName || Object(s.d)("Emote", "EmoteGrid"),
-                                    direction: c.Sb.Bottom
-                                }, a.createElement(c.Na, {
-                                    display: c.W.Flex,
-                                    alignItems: c.f.Center,
-                                    justifyContent: c.Ua.Center
-                                }, a.createElement("button", {
-                                    className: t,
-                                    "aria-label": i.displayName,
-                                    name: i.displayName,
-                                    onClick: e.props.locked ? void 0 : e.handleClickEmote.bind(e, i),
-                                    "data-a-target": i.displayName
-                                }, a.createElement("figure", {
-                                    className: "emote-picker__emote-figure"
-                                }, e.props.locked ? n : null, u)))))
+                            t = this.props.emotes.map(function(t, n) {
+                                return r.createElement(l, {
+                                    key: "emote-button-" + t.id + "--" + t.setID,
+                                    emote: t,
+                                    isCriticalImage: 0 === n,
+                                    locked: e.props.locked || t.isLocked,
+                                    onClick: e.props.locked ? void 0 : e.handleClickEmote
+                                })
                             });
-                        return a.createElement(c.Va, {
+                        return r.createElement(c.Va, {
                             display: c.W.Flex,
                             flexWrap: c.Z.Wrap,
                             justifyContent: c.Ua.Center
-                        }, i)
-                    }, t.prototype.handleClickEmote = function(e, t) {
-                        this.props.onClickEmote && this.props.onClickEmote(t.currentTarget.name, e.id, e.setID)
+                        }, t)
                     }, t
-                }(a.Component));
+                }(r.Component));
             n.d(t, "a", function() {
-                return u
+                return d
             })
         },
         DQVP: function(e, t, n) {},
@@ -1356,6 +1370,7 @@
                 return b
             })
         },
+        GOKC: function(e, t, n) {},
         "L+W6": function(e, t, n) {
             "use strict";
             var i = n("q1tI"),
@@ -1414,7 +1429,7 @@
             "use strict";
             n.d(t, "b", function() {
                 return u
-            }), n.d(t, "d", function() {
+            }), n.d(t, "e", function() {
                 return l
             }), n.d(t, "c", function() {
                 return p
@@ -1422,7 +1437,7 @@
                 return m
             }), n.d(t, "f", function() {
                 return h
-            }), n.d(t, "e", function() {
+            }), n.d(t, "d", function() {
                 return f
             });
             var i = n("mrSG"),
@@ -1439,6 +1454,7 @@
                     "^;-?\\)$": ";)",
                     "^R-?\\)$": "R)",
                     "^:>$": ":>",
+                    "^:&gt;$": ":>",
                     "^[oO](_|\\.)[oO]$": "O_o",
                     "^:-?D$": ":D",
                     "^:-?(o|O)$": ":O",
@@ -1473,10 +1489,17 @@
                 }
                 return t
             }
-            var l = function(e) {
-                var t = b(e);
-                return s[t] || t
-            };
+
+            function l(e, t) {
+                var n = u(e);
+                return t && (n = function(e, t) {
+                    return e.map(function(e) {
+                        return i.__assign({}, e, {
+                            setID: t
+                        })
+                    })
+                }(n, t)), n
+            }
 
             function d(e) {
                 return e.filter(function(e) {
@@ -1509,7 +1532,7 @@
                     if (a && a.id && a.emotes) {
                         var s = {
                             id: a.id,
-                            emotes: u(d(a.emotes))
+                            emotes: l(d(a.emotes), a.id)
                         };
                         c.has(parseInt(a.id, 10)) ? t.push(s) : n.push(s)
                     }
@@ -1988,6 +2011,7 @@
                     BuyGiftToPaidUpgrade: "buy_gift_to_paid_upgrade",
                     BuyMysteryGift: "buy_mystery_gift",
                     BuyPaidUpgrade: "buy_paid_upgrade",
+                    ChangeTier: "change_tier",
                     ClickCheckout: "click_checkout_button",
                     ClickMoreSubOptions: "more_options_click",
                     ClickGiftSubOptions: "gift_options_click",

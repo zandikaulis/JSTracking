@@ -24,9 +24,9 @@
                         return {
                             images: {
                                 sources: {
-                                    "1x": Object(o.e)(t, 1),
-                                    "2x": Object(o.e)(t, 2),
-                                    "4x": Object(o.e)(t, 4)
+                                    "1x": Object(o.d)(t, 1),
+                                    "2x": Object(o.d)(t, 2),
+                                    "4x": Object(o.d)(t, 4)
                                 },
                                 themed: !1
                             },
@@ -405,14 +405,12 @@
                 return d
             }), n.d(t, "b", function() {
                 return p
-            }), n.d(t, "f", function() {
+            }), n.d(t, "e", function() {
                 return f
             }), n.d(t, "c", function() {
                 return h
-            }), n.d(t, "e", function() {
-                return m
             }), n.d(t, "d", function() {
-                return g
+                return m
             });
             var r = n("mrSG"),
                 i = n("/7QA"),
@@ -473,13 +471,6 @@
 
             function m(e, t) {
                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
-            }
-
-            function g(e) {
-                return {
-                    src: m(e, 1),
-                    srcSet: m(e, 1) + " 1x, " + m(e, 2) + " 2x, " + m(e, 3) + " 4x"
-                }
             }
         },
         gTu3: function(e, t, n) {
@@ -659,7 +650,7 @@
                         flexDirection: p.Y.Column,
                         padding: 1
                     }, i.createElement(p.S, {
-                        src: Object(u.e)("58765", 2),
+                        src: Object(u.d)("58765", 2),
                         alt: Object(o.d)("Not like this... not like this", "ClipsError")
                     }), i.createElement(p.V, {
                         fontSize: p.Aa.Size4

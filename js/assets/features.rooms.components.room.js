@@ -4123,7 +4123,7 @@
                                         trackBitsCardInteraction: e.trackBitsCardInteraction,
                                         visible: e.state.showCard === sn.Bits,
                                         cheerMessageAutoModded: !1,
-                                        bitsSendErrorCode: Ae.C.UNKNOWN,
+                                        bitsSendErrorCode: Ae.F.UNKNOWN,
                                         bitsSendHasError: !1
                                     })
                                 }

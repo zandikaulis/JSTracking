@@ -45,9 +45,9 @@
                 L = r("FBRg"),
                 F = r.n(L),
                 U = r("2xEe"),
-                j = r.n(U),
-                w = r("q8H6"),
-                G = r.n(w),
+                w = r.n(U),
+                j = r("q8H6"),
+                G = r.n(j),
                 V = r("oQBz"),
                 B = r.n(V),
                 x = r("PwAB"),
@@ -147,9 +147,9 @@
                                     };
                                 case z.a.Paypal:
                                     return {
-                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? j.a : M.a,
+                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? w.a : M.a,
                                         srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
-                                            "1x": j.a,
+                                            "1x": w.a,
                                             "2x": G.a
                                         } : {
                                             "1x": M.a,
@@ -196,87 +196,99 @@
         "7SjK": function(e, t, r) {
             "use strict";
             var n = r("mrSG"),
-                i = r("TSYQ"),
-                a = r("q1tI"),
+                i = r("q1tI"),
+                a = r("TSYQ"),
                 o = r("/7QA"),
                 s = r("GnwI"),
                 c = r("Ue10"),
-                u = (r("VrOd"), function(e) {
+                u = (r("GOKC"), i.createElement(c.xb, {
+                    alignItems: c.f.Center,
+                    background: c.r.Overlay,
+                    borderRadius: c.x.Small,
+                    className: "emote-button__lock",
+                    color: c.O.Overlay,
+                    "data-test-selector": "emote-button-lock",
+                    display: c.W.InlineFlex,
+                    justifyContent: c.Ua.Center,
+                    position: c.db.Absolute,
+                    zIndex: c.ac.Above
+                }, i.createElement(c.mb, {
+                    asset: c.nb.Lock,
+                    height: 10,
+                    width: 10
+                }))),
+                d = function(e) {
+                    var t = a("emote-button__link", {
+                            "emote-button__link--locked": !e.onClick
+                        }),
+                        r = e.emote,
+                        n = r.displayName,
+                        d = r.srcSet;
+                    if (!d) return null;
+                    var l = i.createElement("img", {
+                        className: "emote-picker__image",
+                        srcSet: d,
+                        alt: n
+                    });
+                    if (e.isCriticalImage) {
+                        for (var p = d.split(" ")[0], m = {}, E = 0, h = d.split(","); E < h.length; E++) {
+                            var y = h[E].trim().split(" "),
+                                f = y[1],
+                                b = y[0];
+                            m[f] = b
+                        }
+                        l = i.createElement(s.b, {
+                            className: "emote-picker__emote-image",
+                            src: p,
+                            srcSet: m,
+                            alt: n || ""
+                        })
+                    }
+                    return i.createElement("div", {
+                        className: "emote-button"
+                    }, i.createElement(c.Qb, {
+                        label: n || Object(o.d)("Emote", "EmoteButton"),
+                        direction: c.Sb.Bottom
+                    }, i.createElement(c.Na, {
+                        display: c.W.Flex,
+                        alignItems: c.f.Center,
+                        justifyContent: c.Ua.Center
+                    }, i.createElement("button", {
+                        "data-test-selector": "emote-button-clickable",
+                        className: t,
+                        "aria-label": n,
+                        name: n,
+                        onClick: e.onClick ? e.onClick.bind(null, e.emote) : void 0,
+                        "data-a-target": n
+                    }, i.createElement("figure", null, e.locked ? u : null, l)))))
+                },
+                l = (r("VrOd"), function(e) {
                     function t() {
-                        return null !== e && e.apply(this, arguments) || this
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.handleClickEmote = function(e) {
+                            t.props.onClickEmote && t.props.onClickEmote(e)
+                        }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = this,
-                            t = i("emote-picker__emote-link", {
-                                "emote-picker__emote-link--locked": this.props.locked
-                            }),
-                            r = a.createElement(c.xb, {
-                                alignItems: c.f.Center,
-                                background: c.r.Overlay,
-                                borderRadius: c.x.Small,
-                                className: "emote-picker__emote-lock",
-                                color: c.O.Overlay,
-                                display: c.W.InlineFlex,
-                                justifyContent: c.Ua.Center,
-                                position: c.db.Absolute,
-                                zIndex: c.ac.Above
-                            }, a.createElement(c.mb, {
-                                asset: c.nb.Lock,
-                                height: 10,
-                                width: 10
-                            })),
-                            n = this.props.emotes.map(function(n, i) {
-                                if (!n.srcSet) return null;
-                                var u = a.createElement("img", {
-                                    className: "emote-picker__emote-image",
-                                    srcSet: n.srcSet,
-                                    alt: n.displayName
-                                });
-                                if (0 === i) {
-                                    for (var d = n.srcSet.split(" ")[0], l = {}, p = 0, m = n.srcSet.split(","); p < m.length; p++) {
-                                        var E = m[p].trim().split(" "),
-                                            h = E[1],
-                                            y = E[0];
-                                        l[h] = y
-                                    }
-                                    u = a.createElement(s.b, {
-                                        className: "emote-picker__emote-image",
-                                        src: d,
-                                        srcSet: l,
-                                        alt: n.displayName || ""
-                                    })
-                                }
-                                return a.createElement("div", {
-                                    key: n.id,
-                                    className: "emote-picker__emote"
-                                }, a.createElement(c.Qb, {
-                                    label: n.displayName || Object(o.d)("Emote", "EmoteGrid"),
-                                    direction: c.Sb.Bottom
-                                }, a.createElement(c.Na, {
-                                    display: c.W.Flex,
-                                    alignItems: c.f.Center,
-                                    justifyContent: c.Ua.Center
-                                }, a.createElement("button", {
-                                    className: t,
-                                    "aria-label": n.displayName,
-                                    name: n.displayName,
-                                    onClick: e.props.locked ? void 0 : e.handleClickEmote.bind(e, n),
-                                    "data-a-target": n.displayName
-                                }, a.createElement("figure", {
-                                    className: "emote-picker__emote-figure"
-                                }, e.props.locked ? r : null, u)))))
+                            t = this.props.emotes.map(function(t, r) {
+                                return i.createElement(d, {
+                                    key: "emote-button-" + t.id + "--" + t.setID,
+                                    emote: t,
+                                    isCriticalImage: 0 === r,
+                                    locked: e.props.locked || t.isLocked,
+                                    onClick: e.props.locked ? void 0 : e.handleClickEmote
+                                })
                             });
-                        return a.createElement(c.Va, {
+                        return i.createElement(c.Va, {
                             display: c.W.Flex,
                             flexWrap: c.Z.Wrap,
                             justifyContent: c.Ua.Center
-                        }, n)
-                    }, t.prototype.handleClickEmote = function(e, t) {
-                        this.props.onClickEmote && this.props.onClickEmote(t.currentTarget.name, e.id, e.setID)
+                        }, t)
                     }, t
-                }(a.Component));
+                }(i.Component));
             r.d(t, "a", function() {
-                return u
+                return l
             })
         },
         "85n/": function(e, t, r) {
@@ -884,12 +896,12 @@
         },
         DMoW: function(e, t, r) {
             "use strict";
-            var n, i, a, o, s, c, u, d, l, p, m, E, h, y, f, b, O, N, g, _, T, I, C, R, A, S, P, v, D, k, M, L, F, U, j, w, G, V, B, x, H, W, Y, z, K, Z, X, q, Q, J, $, ee, te, re, ne, ie, ae, oe, se, ce, ue, de, le, pe, me, Ee, he, ye, fe, be, Oe, Ne, ge, _e, Te, Ie, Ce, Re, Ae, Se, Pe, ve, De, ke, Me, Le, Fe, Ue, je, we, Ge, Ve, Be, xe, He, We, Ye, ze, Ke, Ze, Xe, qe, Qe, Je, $e, et, tt, rt, nt, it, at, ot, st, ct;
+            var n, i, a, o, s, c, u, d, l, p, m, E, h, y, f, b, O, N, g, _, T, I, C, R, A, S, P, v, D, k, M, L, F, U, w, j, G, V, B, x, H, W, Y, z, K, Z, X, q, Q, J, $, ee, te, re, ne, ie, ae, oe, se, ce, ue, de, le, pe, me, Ee, he, ye, fe, be, Oe, Ne, ge, _e, Te, Ie, Ce, Re, Ae, Se, Pe, ve, De, ke, Me, Le, Fe, Ue, we, je, Ge, Ve, Be, xe, He, We, Ye, ze, Ke, Ze, Xe, qe, Qe, Je, $e, et, tt, rt, nt, it, at, ot, st, ct;
             r.d(t, "c", function() {
                     return i
-                }), r.d(t, "B", function() {
+                }), r.d(t, "E", function() {
                     return s
-                }), r.d(t, "w", function() {
+                }), r.d(t, "x", function() {
                     return c
                 }), r.d(t, "g", function() {
                     return h
@@ -899,63 +911,69 @@
                     return N
                 }), r.d(t, "j", function() {
                     return T
-                }), r.d(t, "K", function() {
+                }), r.d(t, "N", function() {
                     return I
-                }), r.d(t, "D", function() {
+                }), r.d(t, "G", function() {
                     return C
                 }), r.d(t, "o", function() {
                     return R
-                }), r.d(t, "C", function() {
+                }), r.d(t, "F", function() {
                     return P
                 }), r.d(t, "b", function() {
                     return F
                 }), r.d(t, "p", function() {
-                    return j
-                }), r.d(t, "F", function() {
                     return w
-                }), r.d(t, "H", function() {
-                    return G
-                }), r.d(t, "y", function() {
-                    return V
                 }), r.d(t, "I", function() {
+                    return j
+                }), r.d(t, "K", function() {
+                    return G
+                }), r.d(t, "z", function() {
+                    return V
+                }), r.d(t, "L", function() {
                     return B
                 }), r.d(t, "q", function() {
                     return W
                 }), r.d(t, "n", function() {
                     return Y
-                }), r.d(t, "G", function() {
+                }), r.d(t, "J", function() {
                     return z
                 }), r.d(t, "a", function() {
                     return K
-                }), r.d(t, "s", function() {
+                }), r.d(t, "t", function() {
                     return Z
-                }), r.d(t, "u", function() {
+                }), r.d(t, "v", function() {
                     return X
-                }), r.d(t, "z", function() {
+                }), r.d(t, "B", function() {
                     return Q
-                }), r.d(t, "A", function() {
+                }), r.d(t, "C", function() {
                     return J
-                }), r.d(t, "J", function() {
+                }), r.d(t, "A", function() {
+                    return ee
+                }), r.d(t, "D", function() {
+                    return te
+                }), r.d(t, "M", function() {
                     return me
                 }), r.d(t, "l", function() {
                     return _e
                 }), r.d(t, "k", function() {
                     return Te
-                }), r.d(t, "L", function() {
+                }), r.d(t, "O", function() {
                     return Ae
                 }), r.d(t, "m", function() {
                     return Le
-                }), r.d(t, "x", function() {
+                }), r.d(t, "y", function() {
                     return Fe
+                }), r.d(t, "s", function() {
+                    return Ge
                 }), r.d(t, "i", function() {
                     return Be
                 }), r.d(t, "h", function() {
                     return xe
-                }), r.d(t, "t", function() {
+                }), r.d(t, "u", function() {
                     return He
-                }), r.d(t, "E", function() {
+                }), r.d(t, "H", function() {
                     return Ye
-                }), r.d(t, "v", function() {
+                }), r.d(t, "w", function() {
                     return Je
                 }), r.d(t, "d", function() {
                     return ot
@@ -1066,10 +1084,10 @@
                 }(U || (U = {})),
                 function(e) {
                     e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
-                }(j || (j = {})),
+                }(w || (w = {})),
                 function(e) {
                     e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
-                }(w || (w = {})),
+                }(j || (j = {})),
                 function(e) {
                     e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
                 }(G || (G = {})),
@@ -1228,10 +1246,10 @@
                 }(Ue || (Ue = {})),
                 function(e) {
                     e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
-                }(je || (je = {})),
+                }(we || (we = {})),
                 function(e) {
                     e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
-                }(we || (we = {})),
+                }(je || (je = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(Ge || (Ge = {})),
@@ -1315,6 +1333,7 @@
         "GA+j": function(e, t, r) {
             e.exports = r.p + "assets/paypal_1x-a2a2f7d96b4384f9f1d7.png"
         },
+        GOKC: function(e, t, r) {},
         HGFl: function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
@@ -2046,7 +2065,7 @@
             "use strict";
             r.d(t, "b", function() {
                 return u
-            }), r.d(t, "d", function() {
+            }), r.d(t, "e", function() {
                 return d
             }), r.d(t, "c", function() {
                 return p
@@ -2054,7 +2073,7 @@
                 return m
             }), r.d(t, "f", function() {
                 return h
-            }), r.d(t, "e", function() {
+            }), r.d(t, "d", function() {
                 return y
             });
             var n = r("mrSG"),
@@ -2071,6 +2090,7 @@
                     "^;-?\\)$": ";)",
                     "^R-?\\)$": "R)",
                     "^:>$": ":>",
+                    "^:&gt;$": ":>",
                     "^[oO](_|\\.)[oO]$": "O_o",
                     "^:-?D$": ":D",
                     "^:-?(o|O)$": ":O",
@@ -2105,10 +2125,17 @@
                 }
                 return t
             }
-            var d = function(e) {
-                var t = E(e);
-                return o[t] || t
-            };
+
+            function d(e, t) {
+                var r = u(e);
+                return t && (r = function(e, t) {
+                    return e.map(function(e) {
+                        return n.__assign({}, e, {
+                            setID: t
+                        })
+                    })
+                }(r, t)), r
+            }
 
             function l(e) {
                 return e.filter(function(e) {
@@ -2141,7 +2168,7 @@
                     if (a && a.id && a.emotes) {
                         var o = {
                             id: a.id,
-                            emotes: u(l(a.emotes))
+                            emotes: d(l(a.emotes), a.id)
                         };
                         c.has(parseInt(a.id, 10)) ? t.push(o) : r.push(o)
                     }
@@ -2326,7 +2353,7 @@
                                         }, e)
                                     }
                                 }, "CheckoutDescription");
-                            return l.createElement(l.Fragment, null, l.createElement(g.V, null, e), this.props.product.product.interval.unit === y.F.MONTH && l.createElement(g.V, null, t))
+                            return l.createElement(l.Fragment, null, l.createElement(g.V, null, e), this.props.product.product.interval.unit === y.I.MONTH && l.createElement(g.V, null, t))
                         },
                         enumerable: !0,
                         configurable: !0
@@ -2841,8 +2868,8 @@
                         configurable: !0
                     }), t
                 }(l.Component)),
-                j = r("9C/b"),
-                w = (r("NwMv"), function(e) {
+                w = r("9C/b"),
+                j = (r("NwMv"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.goBackToChannel = function() {
@@ -2928,7 +2955,7 @@
                         }, "GiftSubReceipt"))
                     }, t
                 }(l.PureComponent)),
-                G = Object(j.a)(w),
+                G = Object(w.a)(j),
                 V = (r("XE3n"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2998,7 +3025,7 @@
                         }
                     }, t
                 }(l.PureComponent)),
-                B = Object(j.a)(V),
+                B = Object(w.a)(V),
                 x = (r("ZHRK"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3053,7 +3080,7 @@
                         }, "PersonalSubReceipt"))))
                     }, t
                 }(l.Component)),
-                H = Object(j.a)(x),
+                H = Object(w.a)(x),
                 W = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -4209,7 +4236,7 @@
                 Le = r.n(Me),
                 Fe = r("KRuc"),
                 Ue = r.n(Fe),
-                je = {
+                we = {
                     CreditCard: function() {
                         return Object(p.d)("Credit Card", "TicketDescription")
                     },
@@ -4223,16 +4250,16 @@
                         return Object(p.d)("More Methods", "TicketDescription")
                     }
                 },
-                we = function(e) {
+                je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.paymentProviders = [{
                             paymentMethodType: be.RecurlyCreditCard,
                             paymentFlow: $.RecurlyCreditCard,
                             button: {
-                                label: je.CreditCard(),
+                                label: we.CreditCard(),
                                 src: Re.a,
-                                alt: je.CreditCard(),
+                                alt: we.CreditCard(),
                                 srcSet: {
                                     "1x": Re.a,
                                     "2x": Se.a
@@ -4242,9 +4269,9 @@
                             paymentMethodType: be.ZuoraCreditCard,
                             paymentFlow: $.ZuoraCreditCard,
                             button: {
-                                label: je.CreditCard(),
+                                label: we.CreditCard(),
                                 src: Re.a,
-                                alt: je.CreditCard(),
+                                alt: we.CreditCard(),
                                 srcSet: {
                                     "1x": Re.a,
                                     "2x": Se.a
@@ -4254,9 +4281,9 @@
                             paymentMethodType: be.RecurlyPaypal,
                             paymentFlow: $.RecurlyPaypal,
                             button: {
-                                label: je.Paypal(),
+                                label: we.Paypal(),
                                 src: Le.a,
-                                alt: je.Paypal(),
+                                alt: we.Paypal(),
                                 srcSet: {
                                     "1x": Le.a,
                                     "2x": Ue.a
@@ -4266,9 +4293,9 @@
                             paymentMethodType: be.RecurlyAmazonPay,
                             paymentFlow: $.RecurlyPayWithAmazon,
                             button: {
-                                label: je.AmazonPay(),
+                                label: we.AmazonPay(),
                                 src: _e.a,
-                                alt: je.AmazonPay(),
+                                alt: we.AmazonPay(),
                                 srcSet: {
                                     "1x": _e.a,
                                     "2x": Ie.a
@@ -4278,9 +4305,9 @@
                             paymentMethodType: be.Xsolla,
                             paymentFlow: $.Xsolla,
                             button: {
-                                label: je.MoreMethods(),
+                                label: we.MoreMethods(),
                                 src: ve.a,
-                                alt: je.MoreMethods(),
+                                alt: we.MoreMethods(),
                                 srcSet: {
                                     "1x": ve.a,
                                     "2x": ke.a
@@ -4382,7 +4409,7 @@
                             }
                         }
                     }, t.prototype.render = function() {
-                        return l.createElement(g.Va, null, l.createElement(we, {
+                        return l.createElement(g.Va, null, l.createElement(je, {
                             eligiblePaymentMethods: this.props.eligiblePaymentMethods,
                             selectedProvider: this.state.selectedProvider,
                             handleClick: this.handlePaymentMethodSelectorToggleChange,
@@ -4508,13 +4535,13 @@
                     }, t
                 }(l.Component),
                 He = function() {
-                    function e(e, t, r, n, i, a) {
-                        var o = this;
+                    function e(e) {
+                        var t = this;
                         this.recurlyCountries = p.b.get("payments_recurly_countries", ["US"]), this.getDeterminedTaxCountry = function() {
-                            if (o.userBestGuessCountry) return o.userBestGuessCountry;
-                            var e = o.savedPaymentMethod && o.savedPaymentMethod.billingCountry;
-                            return o.ipCountryCode && e && o.userCountryOfResidence ? o.ipCountryCode === e ? o.ipCountryCode : o.userCountryOfResidence : o.userCountryOfResidence ? o.userCountryOfResidence : o.ipCountryCode
-                        }, this.productName = e, this.userCountryOfResidence = t, this.ipCountryCode = r, this.userBestGuessCountry = n, this.savedPaymentMethod = i, this.showEuSubs = a
+                            if (t.userBestGuessCountry) return t.userBestGuessCountry;
+                            var e = t.savedPaymentMethod && t.savedPaymentMethod.billingCountry;
+                            return t.ipCountryCode && e && t.userCountryOfResidence ? t.ipCountryCode === e ? t.ipCountryCode : t.userCountryOfResidence : t.userCountryOfResidence ? t.userCountryOfResidence : t.ipCountryCode
+                        }, this.productName = e.productName, this.userCountryOfResidence = e.userCountryOfResidence, this.ipCountryCode = e.ipCountryCode, this.userBestGuessCountry = e.userBestGuessCountry, this.savedPaymentMethod = e.savedPaymentMethod, this.showEuSubs = e.showEuSubs, this.disablePayPal = e.disablePayPal, this.disableAmazonPay = e.disableAmazonPay
                     }
                     return e.prototype.getAvailableMethods = function() {
                         if (!this.showEuSubs) return "owlallaccess2018" === this.productName ? [be.ZuoraCreditCard, be.Xsolla] : "US" !== this.ipCountryCode ? [be.Xsolla] : [be.RecurlyCreditCard, be.RecurlyPaypal, be.RecurlyAmazonPay, be.RecurlySavedPayment, be.Xsolla];
@@ -4538,7 +4565,7 @@
                         configurable: !0
                     }), Object.defineProperty(e.prototype, "recurlyAmazonPayEligible", {
                         get: function() {
-                            return "US" === this.getDeterminedTaxCountry()
+                            return !this.disableAmazonPay && "US" === this.getDeterminedTaxCountry()
                         },
                         enumerable: !0,
                         configurable: !0
@@ -4550,7 +4577,7 @@
                         configurable: !0
                     }), Object.defineProperty(e.prototype, "recurlyPaypalEligible", {
                         get: function() {
-                            return !0
+                            return !this.disablePayPal && "US" === this.getDeterminedTaxCountry()
                         },
                         enumerable: !0,
                         configurable: !0
@@ -4577,7 +4604,16 @@
                             eligiblePaymentMethods: []
                         }, t.tracker = new te({
                             allowDuplicateEvents: !1
-                        }), t.eligibilityComputer = new He(t.props.productName, t.props.countryOfResidence, t.props.ipCountryCode, t.props.userBestGuessCountry, void 0, t.props.showEuSubs), t.toggleChangePaymentMethods = function() {
+                        }), t.eligibilityComputer = new He({
+                            productName: t.props.productName,
+                            userCountryOfResidence: t.props.countryOfResidence,
+                            ipCountryCode: t.props.ipCountryCode,
+                            userBestGuessCountry: t.props.userBestGuessCountry,
+                            savedPaymentMethod: void 0,
+                            showEuSubs: t.props.showEuSubs,
+                            disablePayPal: !1,
+                            disableAmazonPay: !1
+                        }), t.toggleChangePaymentMethods = function() {
                             t.setState(function(e) {
                                 return {
                                     useSavedPaymentMethod: !e.useSavedPaymentMethod
@@ -4586,7 +4622,16 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.data && (this.props.data.currentUser || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent()), this.eligibilityComputer = new He(this.props.productName, this.props.countryOfResidence, this.props.ipCountryCode, this.props.userBestGuessCountry, this.savedPaymentMethod, this.props.showEuSubs);
+                        this.props.data && (this.props.data.currentUser || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent()), this.eligibilityComputer = new He({
+                            productName: this.props.productName,
+                            userCountryOfResidence: this.props.countryOfResidence,
+                            ipCountryCode: this.props.ipCountryCode,
+                            userBestGuessCountry: this.props.userBestGuessCountry,
+                            savedPaymentMethod: this.savedPaymentMethod,
+                            showEuSubs: this.props.showEuSubs,
+                            disablePayPal: this.disablePayPal,
+                            disableAmazonPay: this.disableAmazonPay
+                        });
                         var e = this.eligibilityComputer.getAvailableMethods();
                         if (this.props.showEuSubs) {
                             var t = Object.values(be).map(function(t) {
@@ -4611,7 +4656,16 @@
                         }
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         if (this.props.data && (this.props.data.currentUser || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent()), e.userBestGuessCountry !== this.props.userBestGuessCountry || e.data && this.props.data && e.data.currentUser !== this.props.data.currentUser) {
-                            this.eligibilityComputer = new He(this.props.productName, this.props.countryOfResidence, this.props.ipCountryCode, this.props.userBestGuessCountry, this.savedPaymentMethod, this.props.showEuSubs);
+                            this.eligibilityComputer = new He({
+                                productName: this.props.productName,
+                                userCountryOfResidence: this.props.countryOfResidence,
+                                ipCountryCode: this.props.ipCountryCode,
+                                userBestGuessCountry: this.props.userBestGuessCountry,
+                                savedPaymentMethod: this.savedPaymentMethod,
+                                showEuSubs: this.props.showEuSubs,
+                                disablePayPal: this.disablePayPal,
+                                disableAmazonPay: this.disableAmazonPay
+                            });
                             var r = this.eligibilityComputer.getAvailableMethods();
                             if (this.props.showEuSubs) {
                                 var n = Object.values(be).map(function(e) {
@@ -4749,9 +4803,22 @@
                         configurable: !0
                     }), Object.defineProperty(t.prototype, "savedPaymentMethod", {
                         get: function() {
-                            return (this.props.data && this.props.data.currentUser && this.props.data.currentUser.paymentMethods || []).filter(function(e) {
+                            var e = (this.props.data && this.props.data.currentUser && this.props.data.currentUser.paymentMethods || []).filter(function(e) {
                                 return "recurly" === e.provider
-                            })[0]
+                            })[0];
+                            return e ? e.paymentType === Be.a.Paypal && this.disablePayPal ? null : e.paymentType === Be.a.AmazonPay && this.disableAmazonPay ? null : e : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disablePayPal", {
+                        get: function() {
+                            return !this.props.configs || !this.props.configs.recurly.braintreeClientAuthorization
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disableAmazonPay", {
+                        get: function() {
+                            return !this.props.configs || !this.props.configs.recurly.payWithAmazonConfigs.clientID
                         },
                         enumerable: !0,
                         configurable: !0
@@ -4788,8 +4855,7 @@
                                             product_id: e.productId,
                                             ticket_price: e.ticketPrice,
                                             currency: e.currency,
-                                            saved_payment: e.savedPayment,
-                                            ip_country: e.ipCountry
+                                            saved_payment: e.savedPayment
                                         };
                                         p.n.track(q.SpadeEventType.PaymentFormInteraction, t)
                                     }({
@@ -4800,7 +4866,6 @@
                                         quantity: t.props.mysteryGiftCount || 1,
                                         ticketPrice: t.props.data.subscriptionProduct.priceInfo.total,
                                         currency: t.props.data.subscriptionProduct.priceInfo.currency,
-                                        ipCountry: t.props.data.requestInfo.countryCode,
                                         paymentFlow: e.paymentFlow,
                                         action: e.action,
                                         actionDetail: e.actionDetail || "",
@@ -5045,22 +5110,22 @@
                             var t = this.existingPurchases && this.existingPurchases.compatiblePurchases;
                             if (t) {
                                 var r = t.find(function(e) {
-                                        return e.paymentProvider.toUpperCase() === y.y.PRIME
+                                        return e.paymentProvider.toUpperCase() === y.z.PRIME
                                     }),
                                     i = t.find(function(t) {
-                                        return t.productType.toUpperCase() === y.H.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
+                                        return t.productType.toUpperCase() === y.K.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
                                     }),
                                     a = t.find(function(t) {
-                                        return t.productType.toUpperCase() === y.H.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
+                                        return t.productType.toUpperCase() === y.K.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
                                     }),
                                     o = t.find(function(e) {
-                                        return e.paymentProvider.toUpperCase() === y.y.GOOGLE_IAB
+                                        return e.paymentProvider.toUpperCase() === y.z.GOOGLE_IAB
                                     });
                                 if (r) return A.PRIME_UPGRADE;
                                 if (i) return A.TIER_DOWNGRADE;
                                 if (a) return o ? A.MOBILE_UPGRADE : A.TIER_UPGRADE
                             }
-                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === y.I.INACTIVE ? A.NEW_PURCHASE : A.UNKNOWN
+                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === y.L.INACTIVE ? A.NEW_PURCHASE : A.UNKNOWN
                         },
                         enumerable: !0,
                         configurable: !0
@@ -5118,7 +5183,7 @@
                     }), Object.defineProperty(t.prototype, "DEPRECRATE_hasActiveMobileSub", {
                         get: function() {
                             var e = this.existingPurchases;
-                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== y.y.GOOGLE_IAB)
+                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== y.z.GOOGLE_IAB)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -7447,19 +7512,19 @@
                 c = r("mrSG"),
                 u = r("cr+I"),
                 d = r("q1tI"),
-                l = r("oJmH"),
-                p = r("/7QA"),
-                m = r("ZDlU"),
-                E = r("LA8z"),
-                h = r("yR8l"),
-                y = r("V+GM"),
-                f = r("NvVO"),
-                b = r("2xye"),
-                O = r("SNyx"),
-                N = r("GnwI"),
-                g = r("5ELF"),
-                _ = r("Ue10"),
-                T = r("wqBG"),
+                l = r("wqBG"),
+                p = r("oJmH"),
+                m = r("GnwI"),
+                E = r("Ue10"),
+                h = r("/7QA"),
+                y = r("ZDlU"),
+                f = r("LA8z"),
+                b = r("yR8l"),
+                O = r("V+GM"),
+                N = r("NvVO"),
+                g = r("2xye"),
+                _ = r("SNyx"),
+                T = r("5ELF"),
                 I = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -7469,27 +7534,27 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data && (this.props.data.loading || this.props.data.error) || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return d.createElement(_.Va, {
-                            position: _.db.Relative,
+                        return d.createElement(E.Va, {
+                            position: E.db.Relative,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, d.createElement(g.a, null), d.createElement(_.Va, {
+                        }, d.createElement(T.a, null), d.createElement(E.Va, {
                             padding: {
                                 top: 5
                             },
                             fullHeight: !0,
-                            overflow: _.Ya.Auto
+                            overflow: E.Ya.Auto
                         }, this.renderBody))
                     }, Object.defineProperty(t.prototype, "renderBody", {
                         get: function() {
                             if (this.props.match.params.productName) {
                                 if (this.props.isLoggedIn) {
-                                    if (this.props.data && this.props.data.loading) return d.createElement(_.Xa, {
+                                    if (this.props.data && this.props.data.loading) return d.createElement(E.Xa, {
                                         fillContent: !0
                                     });
                                     var e = !("turbo" === this.props.match.params.productName) && this.props.data && this.props.data.recipient || null,
                                         t = parseInt(u.parse(this.props.location.search).gift_count, 10) || null;
-                                    return d.createElement(O.a, {
+                                    return d.createElement(_.a, {
                                         productName: this.props.match.params.productName,
                                         isGift: !(!e || !e.id) || !!t,
                                         mysteryGiftCount: t,
@@ -7497,33 +7562,33 @@
                                         recipientDisplayName: e && e.displayName
                                     })
                                 }
-                                return this.props.onAnonymousVisit(), d.createElement(_.Va, {
+                                return this.props.onAnonymousVisit(), d.createElement(E.Va, {
                                     padding: 3,
-                                    display: _.W.Flex,
-                                    flexDirection: _.Y.Column,
-                                    justifyContent: _.Ua.Center,
+                                    display: E.W.Flex,
+                                    flexDirection: E.Y.Column,
+                                    justifyContent: E.Ua.Center,
                                     fullHeight: !0
-                                }, d.createElement(m.a, {
-                                    message: Object(p.d)("You must be logged in to view this page", "SubsCheckoutPage")
-                                }, d.createElement(_.Va, {
+                                }, d.createElement(y.a, {
+                                    message: Object(h.d)("You must be logged in to view this page", "SubsCheckoutPage")
+                                }, d.createElement(E.Va, {
                                     margin: {
                                         top: 1
                                     }
-                                }, d.createElement(_.z, {
+                                }, d.createElement(E.z, {
                                     onClick: this.props.onAnonymousVisit
-                                }, Object(p.d)("Log In", "SubsCheckoutPage")))))
+                                }, Object(h.d)("Log In", "SubsCheckoutPage")))))
                             }
-                            return d.createElement(E.a, null)
+                            return d.createElement(f.a, null)
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(d.Component),
-                C = Object(l.compose)(Object(N.c)("SubsCheckoutPage", {
-                    destination: f.a.SubsCheckoutPage
-                }), Object(y.a)({
-                    location: b.PageviewLocation.SubsCheckoutPage
-                }), Object(h.a)(T, {
+                C = Object(p.compose)(Object(m.c)("SubsCheckoutPage", {
+                    destination: N.a.SubsCheckoutPage
+                }), Object(O.a)({
+                    location: g.PageviewLocation.SubsCheckoutPage
+                }), Object(b.a)(l, {
                     options: function(e) {
                         return {
                             variables: {

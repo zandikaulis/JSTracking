@@ -189,10 +189,10 @@
                         }, e)))))
                     }, t
                 }(a.Component),
-                S = Object(p.compose)(Object(f.c)("DevUserSearchDropdown", {
+                k = Object(p.compose)(Object(f.c)("DevUserSearchDropdown", {
                     autoReportInteractive: !0
                 }))(_),
-                k = 100,
+                S = 100,
                 C = function(e) {
                     function t(t) {
                         var r = e.call(this, t) || this;
@@ -209,7 +209,7 @@
                                 waiting: !0
                             }), r.inputTimer = setTimeout(function() {
                                 return r.doUserSearch(e)
-                            }, k)) : r.setState({
+                            }, S)) : r.setState({
                                 userResult: [],
                                 waiting: !1,
                                 searchTerm: ""
@@ -280,7 +280,7 @@
                         }), r
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(S, {
+                        return a.createElement(k, {
                             userResults: this.state.userResult,
                             open: this.state.searchOpen,
                             waiting: this.state.waiting,
@@ -297,7 +297,7 @@
                 }
             })(C);
             r.d(t, !1, function() {
-                return k
+                return S
             }), r.d(t, !1, function() {
                 return C
             }), r.d(t, "a", function() {
@@ -622,8 +622,8 @@
                 b = r("mLw1"),
                 y = r("ZDlU"),
                 _ = r("V+GM"),
-                S = r("Svt6"),
-                k = r("NvVO"),
+                k = r("Svt6"),
+                S = r("NvVO"),
                 C = r("2xye"),
                 E = r("1mFg"),
                 w = r("uLRL"),
@@ -637,7 +637,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                r = Object(N.e)(S.a + "/v5/rbac/validate", {
+                                r = Object(N.e)(k.a + "/v5/rbac/validate", {
                                     domain_id: D.c,
                                     permission_name: t,
                                     resource: e
@@ -851,7 +851,7 @@
                         }
                     }
                 }))(j),
-                M = S.a + "/v5/rbac/users",
+                M = k.a + "/v5/rbac/users",
                 V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -871,7 +871,7 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 5, , 6]), [4, Object(E.a)(S.a + "/v5/rbac/companies/" + e.id + "/members")];
+                                            return n.trys.push([0, 5, , 6]), [4, Object(E.a)(k.a + "/v5/rbac/companies/" + e.id + "/members")];
                                         case 1:
                                             return 200 !== (t = n.sent()).status ? [3, 3] : [4, t.json()];
                                         case 2:
@@ -944,7 +944,7 @@
                                             if ("administrator" === r && this.state.members.administrator.length < 2) return [2];
                                             n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 5, , 6]), "administrator" === r && (r = "admin"), t = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(t, {
+                                            return n.trys.push([1, 5, , 6]), "administrator" === r && (r = "admin"), t = k.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(t, {
                                                 method: "DELETE"
                                             })];
                                         case 2:
@@ -985,7 +985,7 @@
                                                 body: JSON.stringify(t)
                                             })];
                                         case 2:
-                                            return n.sent(), "administrator" === r && (r = "admin"), l = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(l, {
+                                            return n.sent(), "administrator" === r && (r = "admin"), l = k.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(l, {
                                                 method: "POST"
                                             })];
                                         case 3:
@@ -1055,7 +1055,7 @@
                     }, t
                 }(o.Component),
                 q = Object(s.compose)(Object(l.c)("DevCompanyOverview", {
-                    destination: k.a.DevSiteCompanyOverview
+                    destination: S.a.DevSiteCompanyOverview
                 }), Object(_.a)({
                     location: C.PageviewLocation.DevSiteCompanyOverview
                 }), Object(w.a)())(V);
@@ -1219,8 +1219,8 @@
                             g = void 0 === f ? [] : f;
                         return n.__awaiter(this, void 0, void 0, function() {
                             var a, s, i, u, d, f, v, b, y, _ = this;
-                            return n.__generator(this, function(S) {
-                                switch (S.label) {
+                            return n.__generator(this, function(k) {
+                                switch (k.label) {
                                     case 0:
                                         switch (a = {
                                             id: r,
@@ -1274,31 +1274,31 @@
                                     case 1:
                                         return i = a, [4, s(p.games)];
                                     case 2:
-                                        return i.games = S.sent(), [3, 16];
+                                        return i.games = k.sent(), [3, 16];
                                     case 3:
                                         return u = a, [4, s(p.users)];
                                     case 4:
-                                        return u.users = S.sent(), [3, 16];
+                                        return u.users = k.sent(), [3, 16];
                                     case 5:
                                         return d = a, [4, s(p.channels)];
                                     case 6:
-                                        return d.channels = S.sent(), [3, 16];
+                                        return d.channels = k.sent(), [3, 16];
                                     case 7:
                                         return f = a, [4, s(p.videos)];
                                     case 8:
-                                        return f.videos = S.sent(), [3, 16];
+                                        return f.videos = k.sent(), [3, 16];
                                     case 9:
                                         return v = a, [4, s(p.communities)];
                                     case 10:
-                                        return v.communities = S.sent(), [3, 16];
+                                        return v.communities = k.sent(), [3, 16];
                                     case 11:
                                         return b = a, [4, s(p.streamTags)];
                                     case 12:
-                                        return b.streamTags = S.sent(), [3, 16];
+                                        return b.streamTags = k.sent(), [3, 16];
                                     case 13:
                                         return y = a, [4, s(p.tags)];
                                     case 14:
-                                        return y.tags = S.sent(), [3, 16];
+                                        return y.tags = k.sent(), [3, 16];
                                     case 15:
                                         return [2, null];
                                     case 16:
@@ -1370,7 +1370,8 @@
                             };
                         return this.apolloClient.query({
                             query: l,
-                            variables: r
+                            variables: r,
+                            fetchPolicy: "network-only"
                         }).then(function(e) {
                             if (e.data.search) return {
                                 results: JSON.parse(e.data.search.result)

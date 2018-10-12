@@ -17536,7 +17536,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            t.APP_VERSION = "8.2.0"
+            t.APP_VERSION = "8.3.0"
         },
         "NE/w": function(e, t, n) {
             var r;
@@ -20946,7 +20946,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            t.trustedSpadeURI = "//video-edge-9ac1d9.sjc02.hls.ttvnw.net/v1/segment/CrbxKzUKmzxl81w3ktzJA7XzJ_Znznb_MXTcJuy9ZivvjiTzdDVuWRcwbj7I9FiB-rFRX6rL3_djPpeIP73xxxSH94dkIHLRX_mXrjEb2Dp0eA53rZQiH3gvxZVw78bC4fKxYV_Nid5cc-AS7kAmgeBGAAtu8D9s55vCoFX2dFlWwhPIDA7HUFs3SZ0V7SYrZ6Vnm5xRCLfrlHFpBYz4mtR7_QCR2kv9c60IjFTJYOw_8ZrYbyfpKogz9xzy8uZCLSpMHM3bKPbHFq9mS5uyRDdnqFZ4KuD7bplkrobJowg7Oday843Dd-djGeiriZSOKYNNVX2nMNde1n6uAYRq3ZrXKZ8QmpC8AzARizXKTxFAlmzL9WG0DNSPYbdPowQDRLTmOkdBkHlbjmAVlAB3KCzoV7XeGQLyciW6Mr5gTPWQ3bviRqMHFP3W2iYcKCuLyBTKGLTt_eBeIoSAL_hIdS3mBM43_m1mYpjIveiipsGY-XbTnw4uedHJqPxCFlAA2c2A68emtIR7ILgb_rA91k9dvSeSOtpPxtdAhnhUf7LklZc7VeM6Mbvm4q9ypxq58qdPXHo1SICEgXUCEDfpWXVvfcB2tCdt3q_bhx7cUCsgr-4Ns3yF1mu9NnavwEYJCdTrMANPLbYiIVZeJqTm_ZVYzyWnZOvgca_MHQH0V3raLkg4eanzeur4DSuikFJlWDgqlqm9kMWgIqUtmtm4ENq6xwyYoNbLhF-KL8O0hN3GUUxGUU3D4t.ts"
+            t.trustedSpadeURI = "//video-edge-6c67c0.sjc02.hls.ttvnw.net/v1/segment/CnbebtTdKP87nG_nvhlFFaHfux_H2NOkd12MfHSn5oYSCPFIqurwyWThEFD9GfvldFlZL9CmjsFATbqzF58X0MVtpPw2Hx5gUofJn37DjixiGhKxVCi0_eaX8yyiVG4s8o1W9ZOUVouMYknplxRMRZ_5duyK3ObFs8MKBGvX7Skukw7bnSqwJmvP-FxQLz4aQSgNPAsAQOyablDzYpX7S_0n7IHnEqtcV8KdZZobDLW0r6uIGdnwj_tqyAny_E_2kKGoBfGu00i79qXdZYReQ8tMpvpD9aqtUngMI090WwZB1jyXYBzqVLSo3chavLMD9VbQX0054dyzNkSck50YgkL08502x7s3xXSDtIg5inv2ga54HPXVf3mcvCXmtjwfhRNUFEOJsOSY_ck6f3B0o7owVgLrLQeFzvyjrTljX7-xRgsF8TySdPUZAhSCPrhobI3m5FrmFXHFqkugXrIMvZmC4rx55_CFqwD4XUQ9ylpZCE1plKYt-wP9zpIQls32AdFPqDhdRbEsZVfnHvHHvjRwM_YRHfbPJhu8V3_tKhR3M7i9s9G1RH1C5lB7YldOWybRkMkzMgKp8xgWa_t0KFf_Xi_e_KvzbVI35N2oopMeDJYz5jMr0fC1Ag1CGgVO-B8QjyegitQzTHCwSJpo2XocRanzMfLsQR9dc8yX03XW6eIXeBARrkIOpj0UhkWA25z2dMS_jg8IrBeerEGRJNcToGKMAAo2DnoqoEDu7G_5m-Du1I1b2zgh.ts"
         },
         RhBK: function(e, t, n) {
             "use strict";
@@ -26104,7 +26104,7 @@
                 a = t.ACTION_PERFORMANCE_METRIC_RECORDED = "performance metric recorded",
                 i = t.ACTION_UPDATE_TIME_SPENT_HIDDEN = "update time spent hidden",
                 o = t.ACTION_SET_BASE_MILESTONE = "set base milestone";
-            t.MP_PLAYER_LOADED_IN_WORKER = "mp_player_loaded_in_worker", t.MP_MASTER_MANIFEST_READY = "mp_master_manifest_ready", t.MP_MASTER_MANIFEST_REQUEST = "mp_master_manifest_request", t.WEB_BACKEND_LOADED = "web_backend_loaded", t.WEB_NAUTH_REQUEST_RECEIVED = "web_nauth_request_received", t.WEB_NAUTH_REQUEST_SENT = "web_nauth_request_sent", t.WEB_PLAYBACK_STARTED = "web_playback_started", t.MP_VARIANT_MANIFEST_REQUEST = "mp_variant_request", t.MP_VARIANT_MANIFEST_REQUEST_1 = "mp_variant_request_1", t.MP_VARIANT_MANIFEST_REQUEST_2 = "mp_variant_request_2", t.MP_VARIANT_MANIFEST_REQUEST_COUNT = "time_to_mp_variant_request_count", t.MP_VARIANT_MANIFEST_READY = "mp_variant_ready", t.MP_VARIANT_MANIFEST_READY_1 = "mp_variant_ready_1", t.MP_VARIANT_MANIFEST_READY_2 = "mp_variant_ready_2", t.MP_VARIANT_MANIFEST_READY_COUNT = "time_to_mp_variant_ready_count", t.WEB_UI_INIT_STARTED = "web_ui_init_started", t.WEB_UI_INIT_DONE = "web_ui_init_done", t.WEB_VIDEO_API_INIT_STARTED = "web_video_api_init_started", t.WEB_VIDEO_API_INIT_DONE = "web_video_api_init_done"
+            t.MP_PLAYER_LOADED_IN_WORKER = "mp_player_loaded_in_worker", t.MP_MASTER_MANIFEST_READY = "mp_master_manifest_ready", t.MP_MASTER_MANIFEST_REQUEST = "mp_master_manifest_request", t.WEB_BACKEND_LOADED = "web_backend_loaded", t.WEB_NAUTH_REQUEST_RECEIVED = "web_nauth_request_received", t.WEB_NAUTH_REQUEST_SENT = "web_nauth_request_sent", t.WEB_PLAYBACK_STARTED = "web_playback_started", t.MP_VARIANT_MANIFEST_REQUEST = "mp_variant_request", t.MP_VARIANT_MANIFEST_REQUEST_COUNT = "time_to_mp_variant_request_count", t.MP_VARIANT_MANIFEST_READY = "mp_variant_ready", t.MP_VARIANT_MANIFEST_READY_COUNT = "time_to_mp_variant_ready_count", t.WEB_UI_INIT_STARTED = "web_ui_init_started", t.WEB_UI_INIT_DONE = "web_ui_init_done", t.WEB_VIDEO_API_INIT_STARTED = "web_video_api_init_started", t.WEB_VIDEO_API_INIT_DONE = "web_video_api_init_done"
         },
         YjqB: function(e, t, n) {
             e.exports = function(e) {
@@ -36871,8 +36871,8 @@
                             n = (0, d.default)(e.timedMilestones, function(e) {
                                 return e.name === S.MP_VARIANT_MANIFEST_REQUEST
                             }),
-                            r = t && t.value || 0;
-                        n || this.sendPerformanceEvent(S.MP_VARIANT_MANIFEST_REQUEST), 0 === r ? this.sendPerformanceEvent(S.MP_VARIANT_MANIFEST_REQUEST_1) : 1 === r && this.sendPerformanceEvent(S.MP_VARIANT_MANIFEST_REQUEST_2), this.store.dispatch((0, S.performanceMetricRecorded)(S.MP_VARIANT_MANIFEST_REQUEST_COUNT, r + 1))
+                            r = t && t.value ? t.value : 0;
+                        n || this.sendPerformanceEvent(S.MP_VARIANT_MANIFEST_REQUEST), this.store.dispatch((0, S.performanceMetricRecorded)(S.MP_VARIANT_MANIFEST_REQUEST_COUNT, r + 1))
                     }
                 }, {
                     key: "onVariantManifestReady",
@@ -36881,8 +36881,11 @@
                             t = (0, d.default)(e.otherMetrics, function(e) {
                                 return e.name === S.MP_VARIANT_MANIFEST_READY_COUNT
                             }),
-                            n = t && t.value || 0;
-                        this.sendPerformanceEvent(S.MP_VARIANT_MANIFEST_READY), 0 === n ? this.sendPerformanceEvent(S.MP_VARIANT_MANIFEST_READY_1) : 1 === n && this.sendPerformanceEvent(S.MP_VARIANT_MANIFEST_READY_2), this.store.dispatch((0, S.performanceMetricRecorded)(S.MP_VARIANT_MANIFEST_READY_COUNT, n + 1))
+                            n = (0, d.default)(e.timedMilestones, function(e) {
+                                return e.name === S.MP_VARIANT_MANIFEST_READY
+                            }),
+                            r = t && t.value ? t.value : 0;
+                        n || this.sendPerformanceEvent(S.MP_VARIANT_MANIFEST_READY), this.store.dispatch((0, S.performanceMetricRecorded)(S.MP_VARIANT_MANIFEST_READY_COUNT, r + 1))
                     }
                 }, {
                     key: "onTwitchInfo",

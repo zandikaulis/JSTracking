@@ -67,7 +67,7 @@
             ! function(e) {
                 e.Default = "default", e.Extension = "extension"
             }(o || (o = {}));
-            var s = ((i = {})[r.x.DEFAULT] = o.Default, i[r.x.EXTENSION] = o.Extension, i);
+            var s = ((i = {})[r.y.DEFAULT] = o.Default, i[r.y.EXTENSION] = o.Extension, i);
 
             function l(e, t) {
                 a.n.track(e, {
@@ -304,20 +304,20 @@
                     x = {};
                 x.callOnAdd = !!v(e, "callOnAdd", !0), x.debug = !!v(e, "debug", !1);
                 var k, C = a(t),
-                    S = o({
+                    w = o({
                         stateHandler: d
                     }),
-                    I = v(e, "strategy", "object"),
-                    w = {
+                    S = v(e, "strategy", "object"),
+                    I = {
                         reporter: b,
                         batchProcessor: E,
                         stateHandler: d,
                         idHandler: t
                     };
-                if ("scroll" === I && (c.isLegacyOpera() ? (b.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), I = "object") : c.isIE(9) && (b.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), I = "object")), "scroll" === I) k = h(w);
+                if ("scroll" === S && (c.isLegacyOpera() ? (b.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), S = "object") : c.isIE(9) && (b.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), S = "object")), "scroll" === S) k = h(I);
                 else {
-                    if ("object" !== I) throw new Error("Invalid strategy name: " + I);
-                    k = p(w)
+                    if ("object" !== S) throw new Error("Invalid strategy name: " + S);
+                    k = p(I)
                 }
                 var P = {};
                 return {
@@ -346,13 +346,13 @@
                         i(n, function(e) {
                             d.getState(e) || (d.initState(e), t.set(e));
                             var p = t.get(e);
-                            if (u && b.log("Attaching listener to element", p, e), !S.isDetectable(e)) return u && b.log(p, "Not detectable."), S.isBusy(e) ? (u && b.log(p, "System busy making it detectable"), r(l, e, o), P[p] = P[p] || [], void P[p].push(function() {
+                            if (u && b.log("Attaching listener to element", p, e), !w.isDetectable(e)) return u && b.log(p, "Not detectable."), w.isBusy(e) ? (u && b.log(p, "System busy making it detectable"), r(l, e, o), P[p] = P[p] || [], void P[p].push(function() {
                                 ++s === n.length && c()
-                            })) : (u && b.log(p, "Making detectable..."), S.markBusy(e, !0), k.makeDetectable({
+                            })) : (u && b.log(p, "Making detectable..."), w.markBusy(e, !0), k.makeDetectable({
                                 debug: u
                             }, e, function(e) {
                                 if (u && b.log(p, "onElementDetectable"), d.getState(e)) {
-                                    S.markAsDetectable(e), S.markBusy(e, !1), k.addListener(e, a), r(l, e, o);
+                                    w.markAsDetectable(e), w.markBusy(e, !1), k.addListener(e, a), r(l, e, o);
                                     var t = d.getState(e);
                                     if (t && t.startSize) {
                                         var h = e.offsetWidth,
@@ -700,13 +700,13 @@
                 x = n("2xye"),
                 k = n("JVUd"),
                 C = n("0HeA"),
-                S = n("Ue10");
+                w = n("Ue10");
             n("ZAO/");
             ! function(e) {
                 e.Description = "description_test_selector", e.Image = "image_test_selector", e.Link = "link_url_test_selector", e.Panel = "channel_panel_test_selector", e.Title = "title_test_selector"
             }(b || (b = {}));
-            var I = /^https?:\/\//,
-                w = function(e) {
+            var S = /^https?:\/\//,
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDescriptionClick = function(e) {
@@ -742,7 +742,7 @@
                             src: this.props.panel.imageURL,
                             alt: Object(d.d)("Panel Content", "ChannelPanels")
                         }) : "";
-                        e && this.props.panel.linkURL && I.test(this.props.panel.linkURL) && (e = r.createElement(S.T, {
+                        e && this.props.panel.linkURL && S.test(this.props.panel.linkURL) && (e = r.createElement(w.T, {
                             to: this.props.panel.linkURL,
                             onClick: this.onImageClick,
                             targetBlank: !0,
@@ -752,31 +752,31 @@
                         return this.props.panel.description && (t = r.createElement("div", {
                             onClick: this.onDescriptionClick,
                             "data-test-selector": b.Description
-                        }, r.createElement(S.Wb, null, r.createElement(y, o.__assign({
+                        }, r.createElement(w.Wb, null, r.createElement(y, o.__assign({
                             source: function(e) {
                                 return e.replace(/(^|\n)(#+)([^\s#]+)/g, function(e, t, n, i) {
                                     return "" + t + n + " " + i
                                 })
                             }(this.props.panel.description)
-                        }, E))))), r.createElement(S.Va, o.__assign({
+                        }, E))))), r.createElement(w.Va, o.__assign({
                             className: "default-panel",
                             margin: {
                                 bottom: 2,
                                 right: 2
                             },
                             "data-test-selector": b.Panel
-                        }, Object(S.bc)(this.props)), this.props.panel.title && r.createElement(S.V, {
-                            type: S.Nb.H3,
+                        }, Object(w.bc)(this.props)), this.props.panel.title && r.createElement(w.V, {
+                            type: w.Nb.H3,
                             "data-test-selector": b.Title
                         }, this.props.panel.title), e, t)
                     }, t
                 }(r.Component),
                 P = Object(s.compose)(Object(k.a)("DefaultPanel", {
                     pixels: 100
-                }))(w),
+                }))(I),
                 _ = n("TVJu"),
-                O = n("EZh/"),
-                D = n("DMoW"),
+                D = n("EZh/"),
+                O = n("DMoW"),
                 T = (n("8sUD"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -796,7 +796,7 @@
                                         case 1:
                                             return e.trys.push([1, 3, , 4]), [4, this.props.createPanel({
                                                 channelID: this.props.channelID,
-                                                type: D.x.DEFAULT
+                                                type: O.y.DEFAULT
                                             })];
                                         case 2:
                                             return e.sent(), this.setState({
@@ -825,7 +825,7 @@
                                         case 1:
                                             return e.trys.push([1, 3, , 4]), [4, this.props.createPanel({
                                                 channelID: this.props.channelID,
-                                                type: D.x.EXTENSION
+                                                type: O.y.EXTENSION
                                             })];
                                         case 2:
                                             return e.sent(), this.setState({
@@ -850,59 +850,59 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        var e = r.createElement(S.z, {
+                        var e = r.createElement(w.z, {
                             fullWidth: !0,
-                            icon: S.nb.NavSettings,
+                            icon: w.nb.NavSettings,
                             onClick: this.createExtensionPanel,
-                            state: this.state.isCreatingExtensionPanel ? S.E.Loading : S.E.Default,
-                            type: S.F.Hollow
+                            state: this.state.isCreatingExtensionPanel ? w.E.Loading : w.E.Default,
+                            type: w.F.Hollow
                         }, Object(d.d)("Extension Panel", "CreatePanel"));
-                        return this.state.isTypeSelectionMode ? r.createElement(S.xb, {
+                        return this.state.isTypeSelectionMode ? r.createElement(w.xb, {
                             border: !0,
-                            background: S.r.Alt2,
+                            background: w.r.Alt2,
                             className: "create-panel",
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(S.o, {
-                            ratio: S.p.Aspect3x4
-                        }, r.createElement(S.Va, {
+                        }, r.createElement(w.o, {
+                            ratio: w.p.Aspect3x4
+                        }, r.createElement(w.Va, {
                             padding: 1
-                        }, this.state.errorMessage && r.createElement(S.V, {
-                            color: S.O.Error
-                        }, this.state.errorMessage), r.createElement(S.Va, {
+                        }, this.state.errorMessage && r.createElement(w.V, {
+                            color: w.O.Error
+                        }, this.state.errorMessage), r.createElement(w.Va, {
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(S.z, {
+                        }, r.createElement(w.z, {
                             fullWidth: !0,
-                            icon: S.nb.GridLayout,
+                            icon: w.nb.GridLayout,
                             onClick: this.createDefaultPanel,
-                            state: this.state.isCreatingDefaultPanel ? S.E.Loading : S.E.Default,
-                            type: S.F.Hollow
-                        }, Object(d.d)("Add a Text or Image Panel", "CreatePanel"))), this.props.canCreateExtensionPanel && e))) : r.createElement(S.xb, {
+                            state: this.state.isCreatingDefaultPanel ? w.E.Loading : w.E.Default,
+                            type: w.F.Hollow
+                        }, Object(d.d)("Add a Text or Image Panel", "CreatePanel"))), this.props.canCreateExtensionPanel && e))) : r.createElement(w.xb, {
                             border: !0,
-                            background: S.r.Alt2,
+                            background: w.r.Alt2,
                             className: "create-panel",
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(S.Sa, {
-                            type: S.Ta.Alpha,
+                        }, r.createElement(w.Sa, {
+                            type: w.Ta.Alpha,
                             onClick: this.toggleSelectionMode
-                        }, r.createElement(S.o, {
-                            ratio: S.p.Aspect3x4
-                        }, r.createElement(S.Va, {
-                            display: S.W.Flex,
-                            alignItems: S.f.Center,
-                            justifyContent: S.Ua.Center,
+                        }, r.createElement(w.o, {
+                            ratio: w.p.Aspect3x4
+                        }, r.createElement(w.Va, {
+                            display: w.W.Flex,
+                            alignItems: w.f.Center,
+                            justifyContent: w.Ua.Center,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(S.mb, {
-                            asset: S.nb.Plus,
+                        }, r.createElement(w.mb, {
+                            asset: w.nb.Plus,
                             height: 100,
                             width: 100,
-                            type: S.ob.Placeholder
+                            type: w.ob.Placeholder
                         })))))
                     }, t
                 }(r.Component)),
@@ -910,8 +910,8 @@
                 R = n("kRBY"),
                 N = n("KJdW"),
                 F = n.n(N),
-                B = n("/ZC1"),
-                A = n("cZKs"),
+                A = n("/ZC1"),
+                B = n("cZKs"),
                 j = n("KGBd");
             n("xVpv");
             var z = ["image/*"],
@@ -1000,56 +1000,56 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(S.xb, {
-                            background: S.r.Base,
+                        return r.createElement(w.xb, {
+                            background: w.r.Base,
                             className: "default-panel-image-picker",
-                            textAlign: S.Jb.Center
-                        }, this.state.base64Image ? this.renderImageCropper() : this.renderFilePicker(), r.createElement(A.a, {
+                            textAlign: w.Jb.Center
+                        }, this.state.base64Image ? this.renderImageCropper() : this.renderFilePicker(), r.createElement(B.a, {
                             closeOnBackdropClick: !this.state.isCropping
                         }))
                     }, t.prototype.renderImageCropper = function() {
-                        return r.createElement(S.Va, {
+                        return r.createElement(w.Va, {
                             padding: 2
                         }, r.createElement(F.a, {
                             src: this.state.base64Image,
                             crop: this.state.crop,
                             onChange: this.updateCrop,
                             onComplete: this.updateCrop
-                        }), r.createElement(S.Va, {
-                            display: S.W.Flex,
-                            flexDirection: S.Y.Row,
+                        }), r.createElement(w.Va, {
+                            display: w.W.Flex,
+                            flexDirection: w.Y.Row,
                             margin: {
                                 top: 1
                             },
-                            justifyContent: S.Ua.Center
-                        }, r.createElement(S.z, {
+                            justifyContent: w.Ua.Center
+                        }, r.createElement(w.z, {
                             onClick: this.onImageSelectionComplete
-                        }, Object(d.d)("Done", "DefaultPanelImagePickerComponent")), r.createElement(S.Va, {
+                        }, Object(d.d)("Done", "DefaultPanelImagePickerComponent")), r.createElement(w.Va, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(S.z, {
+                        }, r.createElement(w.z, {
                             onClick: this.props.onClose
                         }, Object(d.d)("Cancel", "DefaultPanelImagePickerComponent")))))
                     }, t.prototype.renderFilePicker = function() {
-                        return r.createElement(S.o, {
-                            ratio: S.p.Aspect1x1
-                        }, r.createElement(B.a, {
+                        return r.createElement(w.o, {
+                            ratio: w.p.Aspect1x1
+                        }, r.createElement(A.a, {
                             allowedFileTypes: z,
                             multiFile: !1,
                             onFilesSubmitted: this.onFilesSubmitted
-                        }, r.createElement(S.Va, {
-                            display: S.W.Flex,
-                            flexDirection: S.Y.Column
-                        }, r.createElement(S.Va, null, r.createElement(S.mb, {
-                            asset: S.nb.Upload,
-                            type: S.ob.Alt2,
+                        }, r.createElement(w.Va, {
+                            display: w.W.Flex,
+                            flexDirection: w.Y.Column
+                        }, r.createElement(w.Va, null, r.createElement(w.mb, {
+                            asset: w.nb.Upload,
+                            type: w.ob.Alt2,
                             height: 50,
                             width: 50
-                        })), r.createElement(S.V, {
-                            type: S.Nb.H3,
-                            color: S.O.Alt2,
-                            fontSize: S.Aa.Size4
+                        })), r.createElement(w.V, {
+                            type: w.Nb.H3,
+                            color: w.O.Alt2,
+                            fontSize: w.Aa.Size4
                         }, Object(d.d)("Choose a file or drag it here.", "DefaultPanelImagePickerComponent")))))
                     }, t
                 }(r.Component),
@@ -1274,88 +1274,88 @@
                                 target: "_blank"
                             }, Object(d.d)("Markdown", "DefaultPanelEditComponent"))
                         }, "DefaultPanelEditComponent");
-                    return r.createElement(S.Va, {
+                    return r.createElement(w.Va, {
                         padding: 1
-                    }, r.createElement(S.Va, {
+                    }, r.createElement(w.Va, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(S.Ca, {
+                    }, r.createElement(w.Ca, {
                         id: "panel-title",
                         label: Object(d.d)("Panel Title", "DefaultPanelEdit")
-                    }, r.createElement(S.Pa, {
+                    }, r.createElement(w.Pa, {
                         defaultValue: e.title || "",
                         id: "panel-title",
                         name: "title",
                         onChange: this.handleInputChange,
-                        type: S.Ra.Text
-                    }))), r.createElement(S.Va, {
+                        type: w.Ra.Text
+                    }))), r.createElement(w.Va, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(S.Va, {
-                        display: S.W.Flex,
-                        flexDirection: S.Y.Row,
-                        justifyContent: S.Ua.Between,
+                    }, r.createElement(w.Va, {
+                        display: w.W.Flex,
+                        flexDirection: w.Y.Row,
+                        justifyContent: w.Ua.Between,
                         margin: {
                             bottom: .5
                         }
-                    }, r.createElement(S.z, {
+                    }, r.createElement(w.z, {
                         onClick: this.showDefaultPanelImagePicker,
                         "data-test-selector": Q.AddImage
                     }, Object(d.d)("Add Image", "DefaultPanelEdit")), r.createElement("img", {
                         className: "panel-preview-image",
                         src: this.state.imagePreviewSRC ? this.state.imagePreviewSRC : e.imageURL || ""
-                    })), r.createElement(S.V, {
-                        type: S.Nb.P
-                    }, Object(d.d)("Images will be scaled to 320px wide", "DefaultPanelEdit"))), r.createElement(S.Va, {
+                    })), r.createElement(w.V, {
+                        type: w.Nb.P
+                    }, Object(d.d)("Images will be scaled to 320px wide", "DefaultPanelEdit"))), r.createElement(w.Va, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(S.Ca, {
+                    }, r.createElement(w.Ca, {
                         id: "panel-link-url",
                         label: Object(d.d)("Image Links To:", "DefaultPanelEdit")
-                    }, r.createElement(S.Pa, {
+                    }, r.createElement(w.Pa, {
                         defaultValue: e.linkURL || "",
                         id: "panel-link-url",
                         name: "linkURL",
                         onChange: this.handleInputChange,
-                        type: S.Ra.Text
-                    }))), r.createElement(S.Va, {
+                        type: w.Ra.Text
+                    }))), r.createElement(w.Va, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(S.Va, {
-                        display: S.W.Flex,
-                        flexDirection: S.Y.Row,
-                        justifyContent: S.Ua.Between,
+                    }, r.createElement(w.Va, {
+                        display: w.W.Flex,
+                        flexDirection: w.Y.Row,
+                        justifyContent: w.Ua.Between,
                         margin: {
                             bottom: .5
                         }
-                    }, r.createElement(S.V, {
-                        type: S.Nb.Strong
-                    }, Object(d.d)("Description:", "DefaultPanelEdit")), r.createElement(S.Va, null, t)), r.createElement(S.Kb, {
+                    }, r.createElement(w.V, {
+                        type: w.Nb.Strong
+                    }, Object(d.d)("Description:", "DefaultPanelEdit")), r.createElement(w.Va, null, t)), r.createElement(w.Kb, {
                         defaultValue: e.description || "",
                         id: "description",
                         name: "description",
                         noResize: !0,
                         onChange: this.handleDescriptionChange,
                         rows: 6
-                    })), r.createElement(S.Va, {
-                        display: S.W.Flex,
-                        flexDirection: S.Y.Row
-                    }, r.createElement(S.z, {
+                    })), r.createElement(w.Va, {
+                        display: w.W.Flex,
+                        flexDirection: w.Y.Row
+                    }, r.createElement(w.z, {
                         "data-test-selector": Q.SavePanel,
                         disabled: !this.state.canSave,
                         onClick: this.savePanel,
-                        state: this.state.isSaving ? S.E.Loading : S.E.Default
-                    }, Object(d.d)("Submit", "DefaultPanelEdit")), r.createElement(S.z, {
-                        type: S.F.Text,
+                        state: this.state.isSaving ? w.E.Loading : w.E.Default
+                    }, Object(d.d)("Submit", "DefaultPanelEdit")), r.createElement(w.z, {
+                        type: w.F.Text,
                         onClick: this.props.removePanel
-                    }, Object(d.d)("Remove", "DefaultPanelEdit"))), r.createElement(S.Va, {
-                        textAlign: S.Jb.Center
-                    }, this.state.errorMessage && r.createElement(S.V, {
-                        color: S.O.Error
+                    }, Object(d.d)("Remove", "DefaultPanelEdit"))), r.createElement(w.Va, {
+                        textAlign: w.Jb.Center
+                    }, this.state.errorMessage && r.createElement(w.V, {
+                        color: w.O.Error
                     }, this.state.errorMessage)))
                 }, t
             }(r.Component);
@@ -1375,47 +1375,47 @@
                         n = e.panel,
                         i = e.removePanel,
                         o = Object(d.d)("This panel's name is: {panelName}", {
-                            panelName: r.createElement(S.V, {
+                            panelName: r.createElement(w.V, {
                                 bold: !0,
-                                type: S.Nb.Span,
-                                transform: S.Mb.Uppercase
+                                type: w.Nb.Span,
+                                transform: w.Mb.Uppercase
                             }, " ", n.slotID)
                         }, "ExtensionPanelEdit");
-                    return r.createElement(S.Va, {
-                        alignItems: S.f.Center,
-                        display: S.W.Flex,
-                        flexDirection: S.Y.Column,
-                        textAlign: S.Jb.Center
-                    }, r.createElement(S.Va, {
+                    return r.createElement(w.Va, {
+                        alignItems: w.f.Center,
+                        display: w.W.Flex,
+                        flexDirection: w.Y.Column,
+                        textAlign: w.Jb.Center
+                    }, r.createElement(w.Va, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(S.mb, {
-                        asset: S.nb.Extensions,
-                        type: S.ob.Brand,
+                    }, r.createElement(w.mb, {
+                        asset: w.nb.Extensions,
+                        type: w.ob.Brand,
                         height: 40,
                         width: 40
-                    })), r.createElement(S.Va, {
+                    })), r.createElement(w.Va, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(S.V, null, Object(d.d)("To add an Extension to this space, activate it in your Extension Manager.", "Edit Extension Panel"))), r.createElement(S.Va, {
+                    }, r.createElement(w.V, null, Object(d.d)("To add an Extension to this space, activate it in your Extension Manager.", "Edit Extension Panel"))), r.createElement(w.Va, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(S.z, {
+                    }, r.createElement(w.z, {
                         linkTo: "/" + t + "/dashboard/extensions"
-                    }, Object(d.d)("Extension Manager", "Edit Extension Panel"))), r.createElement(S.Va, {
+                    }, Object(d.d)("Extension Manager", "Edit Extension Panel"))), r.createElement(w.Va, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(S.V, null, o)), r.createElement(S.Va, {
+                    }, r.createElement(w.V, null, o)), r.createElement(w.Va, {
                         fullWidth: !0,
                         margin: {
                             top: "auto"
                         }
-                    }, r.createElement(S.z, {
-                        type: S.F.Text,
+                    }, r.createElement(w.z, {
+                        type: w.F.Text,
                         fullWidth: !0,
                         onClick: i
                     }, Object(d.d)("Remove", "Edit Extension Panel"))))
@@ -1460,36 +1460,36 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        var e = r.createElement(S.xb, {
+                        var e = r.createElement(w.xb, {
                                 border: !0,
                                 className: "edit-panel edit-panel--overlay " + (this.props.isSorting ? "edit-panel--sorting" : ""),
-                                position: S.db.Absolute,
-                                zIndex: S.ac.Default
-                            }, r.createElement(S.o, {
-                                ratio: S.p.Aspect3x4
-                            }, r.createElement(S.Va, {
-                                alignItems: S.f.Center,
-                                display: S.W.Flex,
-                                flexDirection: S.Y.Column,
-                                justifyContent: S.Ua.Center,
-                                textAlign: S.Jb.Center
-                            }, r.createElement(S.V, {
-                                color: S.O.Overlay
-                            }, Object(d.d)("Are you sure you want to delete this panel?", "EditPanel")), r.createElement(S.Va, {
+                                position: w.db.Absolute,
+                                zIndex: w.ac.Default
+                            }, r.createElement(w.o, {
+                                ratio: w.p.Aspect3x4
+                            }, r.createElement(w.Va, {
+                                alignItems: w.f.Center,
+                                display: w.W.Flex,
+                                flexDirection: w.Y.Column,
+                                justifyContent: w.Ua.Center,
+                                textAlign: w.Jb.Center
+                            }, r.createElement(w.V, {
+                                color: w.O.Overlay
+                            }, Object(d.d)("Are you sure you want to delete this panel?", "EditPanel")), r.createElement(w.Va, {
                                 margin: {
                                     top: 2
                                 }
-                            }, r.createElement(S.z, {
+                            }, r.createElement(w.z, {
                                 "data-test-selector": "confirm_delete_panel_selector",
-                                state: this.state.isRemoving ? S.E.Loading : S.E.Default,
+                                state: this.state.isRemoving ? w.E.Loading : w.E.Default,
                                 onClick: this.confirmRemovePanel
-                            }, Object(d.d)("Delete", "EditPanel")), r.createElement(S.Va, {
-                                display: S.W.InlineBlock,
+                            }, Object(d.d)("Delete", "EditPanel")), r.createElement(w.Va, {
+                                display: w.W.InlineBlock,
                                 margin: {
                                     left: 1
                                 }
-                            }, r.createElement(S.z, {
-                                type: S.F.Text,
+                            }, r.createElement(w.z, {
+                                type: w.F.Text,
                                 onClick: this.cancelRemovePanel,
                                 overlay: !0
                             }, Object(d.d)("Cancel", "EditPanel"))))))),
@@ -1503,22 +1503,22 @@
                             channelName: this.props.channelName,
                             panel: this.props.panel,
                             removePanel: this.removePanel
-                        })), r.createElement(S.Va, {
-                            position: S.db.Relative
-                        }, this.state.showRemoveConfirmation && e, r.createElement(S.xb, {
+                        })), r.createElement(w.Va, {
+                            position: w.db.Relative
+                        }, this.state.showRemoveConfirmation && e, r.createElement(w.xb, {
                             border: !0,
-                            background: S.r.Alt2,
+                            background: w.r.Alt2,
                             className: "edit-panel " + (this.props.isSorting ? "edit-panel--sorting" : ""),
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(S.o, {
-                            ratio: S.p.Aspect3x4
+                        }, r.createElement(w.o, {
+                            ratio: w.p.Aspect3x4
                         }, t)))
                     }, t
                 }(r.PureComponent)),
                 ne = Object(u.SortableElement)(function(e) {
-                    return r.createElement(S.Va, {
+                    return r.createElement(w.Va, {
                         margin: {
                             x: 1
                         }
@@ -1545,8 +1545,8 @@
                                 panel: n
                             })
                         }),
-                        i = t < O.a,
-                        o = r.createElement(S.Va, {
+                        i = t < D.a,
+                        o = r.createElement(w.Va, {
                             margin: {
                                 x: .5
                             }
@@ -1556,11 +1556,11 @@
                             createPanel: e.createPanel,
                             channelID: e.channelID
                         }));
-                    return r.createElement(S.Va, {
-                        display: S.W.Flex,
-                        flexDirection: S.Y.Row,
-                        flexWrap: S.Z.Wrap,
-                        justifyContent: S.Ua.Center
+                    return r.createElement(w.Va, {
+                        display: w.W.Flex,
+                        flexDirection: w.Y.Row,
+                        flexWrap: w.Z.Wrap,
+                        justifyContent: w.Ua.Center
                     }, n, o)
                 }),
                 oe = n("Oz8M"),
@@ -1697,37 +1697,37 @@
                             i = e.user,
                             o = null;
                         if (n) return r.createElement(v.a, null);
-                        o = this.state.isEditMode ? r.createElement(S.Va, null, this.renderEditPanels()) : t || !i || i && !i.panels.length ? r.createElement(S.xb, {
-                            color: S.O.Alt2,
+                        o = this.state.isEditMode ? r.createElement(w.Va, null, this.renderEditPanels()) : t || !i || i && !i.panels.length ? r.createElement(w.xb, {
+                            color: w.O.Alt2,
                             padding: {
                                 y: 5
                             },
-                            textAlign: S.Jb.Center,
+                            textAlign: w.Jb.Center,
                             "data-test-selector": Z.EmptyMessage
-                        }, r.createElement(S.V, {
+                        }, r.createElement(w.V, {
                             italic: !0,
-                            fontSize: S.Aa.Size4
+                            fontSize: w.Aa.Size4
                         }, Object(d.d)("It's empty in here", "ChannelPanels"))) : r.createElement(c.a, {
                             className: "channel-panels-container",
                             options: ce,
                             "data-test-selector": Z.Masonry,
                             ref: this.saveMasonryRef
                         }, this.renderPanels());
-                        var a = r.createElement(S.Va, {
-                            display: S.W.Flex,
+                        var a = r.createElement(w.Va, {
+                            display: w.W.Flex,
                             margin: {
                                 bottom: 2
                             },
                             "data-test-selector": Z.EditToggle
-                        }, r.createElement(S.Pb, {
+                        }, r.createElement(w.Pb, {
                             id: "edit-panels-toggle",
                             onChange: this.toggleEditMode
-                        }), r.createElement(S.Va, {
+                        }), r.createElement(w.Va, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(S.V, null, Object(d.d)("Edit Panels", "Channel Panels"))));
-                        return r.createElement(S.Va, {
+                        }, r.createElement(w.V, null, Object(d.d)("Edit Panels", "Channel Panels"))));
+                        return r.createElement(w.Va, {
                             className: "channel-panels",
                             "data-test-selector": Z.Container
                         }, this.canEditPanels() && a, o)
@@ -3035,7 +3035,7 @@
 
             function l(e) {
                 var t = [];
-                return e.component && e.component.viewerURL && t.push(r.s.COMPONENT), e.panel && e.panel.viewerURL && t.push(r.s.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && t.push(r.s.VIDEO_OVERLAY), t
+                return e.component && e.component.viewerURL && t.push(r.t.COMPONENT), e.panel && e.panel.viewerURL && t.push(r.t.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && t.push(r.t.VIDEO_OVERLAY), t
             }
 
             function c(e) {
@@ -3376,22 +3376,22 @@
                 k = n("/aPz"),
                 C = n("H31v");
 
-            function S(e, t, n) {
+            function w(e, t, n) {
                 Object(x.e)(e, void 0, function(e) {
                     return e ? (e.currentUser && e.currentUser.bitsBalance && (e.currentUser.bitsBalance = n), e) : e
                 }, function() {
                     return !t
                 })
             }
-            var I, w = n("4h+t"),
+            var S, I = n("4h+t"),
                 P = n("BaCc"),
                 _ = n("Ue10"),
-                O = "test_selector_legal_disclaimer",
-                D = "test_selector_confirm_button",
+                D = "test_selector_legal_disclaimer",
+                O = "test_selector_confirm_button",
                 T = "test_selector_buy_bits_button",
                 L = "test_selector_cancel_button",
                 R = function(e) {
-                    var t = Object(w.a)(),
+                    var t = Object(I.a)(),
                         n = Object(f.d)("Confirm", "BitsConfrimationDialogue"),
                         i = Object(f.d)("Settings", "BitsConfrimationDialogue"),
                         o = h.createElement(_.T, {
@@ -3462,11 +3462,11 @@
                             right: 1
                         }
                     }, h.createElement(_.z, {
-                        "data-test-selector": D,
+                        "data-test-selector": O,
                         onClick: function() {
                             e.onConfirm().then(function(t) {
-                                "number" == typeof t && Number.isInteger(t) && S(P, e.userID, t)
-                            }), S(P, e.userID, e.newBalance)
+                                "number" == typeof t && Number.isInteger(t) && w(P, e.userID, t)
+                            }), w(P, e.userID, e.newBalance)
                         }
                     }, n)), h.createElement(_.Va, {
                         display: _.W.InlineBlock,
@@ -3488,13 +3488,13 @@
                         borderTop: !0,
                         padding: 1
                     }, h.createElement(_.V, {
-                        "data-test-selector": O
+                        "data-test-selector": D
                     }, s)))
                 },
                 N = "test_selector_buy_bits_button",
                 F = "test_selector_cancel_button",
-                B = Object(w.a)(),
-                A = function(e) {
+                A = Object(I.a)(),
+                B = function(e) {
                     var t, n = e.bitsBalance - e.cost,
                         i = Math.abs(n),
                         o = h.createElement(_.Na, {
@@ -3507,7 +3507,7 @@
                             showImage: !0,
                             showAmount: !0,
                             prefix: "Cheer",
-                            bitsConfig: B,
+                            bitsConfig: A,
                             size: b.b.ExtremelySmall,
                             display: _.W.InlineFlex,
                             amount: i,
@@ -3535,7 +3535,7 @@
                         showImage: !0,
                         showAmount: !0,
                         prefix: "Cheer",
-                        bitsConfig: B,
+                        bitsConfig: A,
                         size: b.b.ExtraSmall,
                         display: _.W.InlineFlex,
                         amount: e.cost,
@@ -3585,7 +3585,7 @@
                                 onClose: e.onClose,
                                 userID: e.userID
                             })
-                        } else i = h.createElement(A, {
+                        } else i = h.createElement(B, {
                             cost: e.cost,
                             extensionName: e.extensionName,
                             extensionItemLabel: e.extensionItemLabel,
@@ -3644,7 +3644,7 @@
                                 withText: !0,
                                 animated: !1,
                                 count: this.props.data.currentUser.bitsBalance || 0,
-                                bitsConfig: Object(w.a)()
+                                bitsConfig: Object(I.a)()
                             });
                         return h.createElement(_.Va, {
                             margin: {
@@ -3675,7 +3675,7 @@
                 }), Object(Y.a)(P))(K);
             ! function(e) {
                 e.ExtensionName = "extension_name_selector", e.ShowExtensionButton = "show_extension_button_selector"
-            }(I || (I = {}));
+            }(S || (S = {}));
             var Z = function(e) {
                 var t = e.extension.views.panel ? e.extension.views.panel.height : 300;
                 return h.createElement(_.Oa, {
@@ -3703,12 +3703,12 @@
                     fontSize: _.Aa.Size5
                 }, Object(f.d)("{name} is popped out.", {
                     name: h.createElement(_.V, {
-                        "data-test-selector": I.ExtensionName,
+                        "data-test-selector": S.ExtensionName,
                         type: _.Nb.Span,
                         bold: !0
                     }, e.extension.name)
                 }, "ExtensionPopoutPlaceholder"))), h.createElement(_.z, {
-                    "data-test-selector": I.ShowExtensionButton,
+                    "data-test-selector": S.ShowExtensionButton,
                     onClick: e.onExtensionShowClicked
                 }, Object(f.d)("Show Extension", "ExtensionPopoutPlaceholder"))))
             };
@@ -4125,13 +4125,82 @@
                     }))))
                 }, t
             }(h.Component);
+            ! function(e) {
+                e.AcceptButton = "accept-button", e.DeclineButton = "decline-button", e.DeclinedMessage = "declined-message", e.WarningMessage = "warning-message"
+            }(le || (le = {}));
+            var ue, de = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        declined: !1
+                    }, t.onDeclined = function() {
+                        t.setState({
+                            declined: !0
+                        })
+                    }, t
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    var e = null;
+                    return e = this.state.declined ? h.createElement(h.Fragment, null, h.createElement(_.V, {
+                        type: _.Nb.P,
+                        "data-test-selector": le.DeclinedMessage
+                    }, Object(f.d)("You’ve declined to use this test extension. To use it, please refresh this page and select accept.", "TestExtensionDialog")), h.createElement(_.Va, {
+                        padding: {
+                            top: 2
+                        },
+                        display: _.W.Flex,
+                        justifyContent: _.Ua.Center
+                    }, h.createElement(_.z, {
+                        targetBlank: !0,
+                        linkTo: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions",
+                        type: _.F.Hollow
+                    }, Object(f.d)("Learn More", "TestExtensionDialog")))) : h.createElement(h.Fragment, null, h.createElement(_.V, {
+                        type: _.Nb.P,
+                        "data-test-selector": le.WarningMessage
+                    }, Object(f.d)("This is a Test Extension that Twitch has not evaluated; it may not be ready for primetime. Proceed only if you are familiar with the developer, the Extension, or Channel.", "TestExtensionDialog"), h.createElement(_.Na, {
+                        padding: {
+                            left: .5
+                        }
+                    }, h.createElement(_.T, {
+                        targetBlank: !0,
+                        linkTo: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions"
+                    }, Object(f.d)("Learn More.", "TestExtensionDialog")))), h.createElement(_.Va, {
+                        padding: {
+                            top: 2
+                        },
+                        display: _.W.Flex,
+                        justifyContent: _.Ua.Center
+                    }, h.createElement(_.z, {
+                        onClick: this.onDeclined,
+                        type: _.F.Hollow,
+                        "data-test-selector": le.DeclineButton
+                    }, Object(f.d)("Decline", "TestExtensionDialog")), h.createElement(_.Va, {
+                        padding: {
+                            left: 1
+                        }
+                    }, h.createElement(_.z, {
+                        onClick: this.props.onAccepted,
+                        "data-test-selector": le.AcceptButton
+                    }, Object(f.d)("Accept", "TestExtensionDialog"))))), h.createElement(_.o, {
+                        ratio: _.p.Aspect3x4
+                    }, h.createElement(_.xb, {
+                        alignItems: _.f.Center,
+                        border: !0,
+                        display: _.W.Flex,
+                        justifyContent: _.Ua.Center,
+                        padding: 2
+                    }, h.createElement(_.Va, null, h.createElement(_.V, {
+                        type: _.Nb.Strong
+                    }, this.props.extensionName), e)))
+                }, t
+            }(h.Component);
             n("bVvr");
             ! function(e) {
                 e.ExtensionDescriptionButton = "extension_description_button_selector", e.ExtensionReportButton = "extension_report_button_selector", e.ExtensionPanel = "extension_panel_selector", e.ExtensionDetailsLink = "extension_details_link_selector", e.ToggleFollowButton = "toggle_follow_button_selector", e.ConfirmationMessage = "confirmation_message_selector", e.PopoutButton = "popout_button_selector", e.UseBitsConfirmationToggleBalloonWrapper = "confirmation_message_selector"
-            }(le || (le = {}));
-            var ue = 3e3,
-                de = 32,
-                pe = function(e) {
+            }(ue || (ue = {}));
+            var pe = 3e3,
+                he = 32,
+                me = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4142,10 +4211,11 @@
                             isLinked: !1,
                             isLinkEnabled: !1,
                             popoutRestoreIntentTracked: !1,
-                            purchaseIntent: null
+                            purchaseIntent: null,
+                            testExtensionAccepted: !1
                         }, t.renderExtensionFrame = function() {
                             var e, n = d("extension-panel-extension-frame", ((e = {})["extension-panel-extension-frame__popout"] = t.props.isPopout, e));
-                            return h.createElement(_.Va, null, h.createElement(_.xb, {
+                            return t.extension.state === p.ExtensionState.Released || t.state.testExtensionAccepted ? h.createElement(_.Va, null, h.createElement(_.xb, {
                                 borderTop: !0,
                                 borderRight: !0,
                                 borderLeft: !0
@@ -4165,7 +4235,10 @@
                             })), h.createElement(_.Va, {
                                 position: _.db.Relative,
                                 fullWidth: !0
-                            }, t.purchaseUI()))
+                            }, t.purchaseUI())) : h.createElement(de, {
+                                extensionName: t.extension.name,
+                                onAccepted: t.onTestExtensionAccepted
+                            })
                         }, t.renderFollowConfirmation = function() {
                             return null === t.state.currentFollowRequest ? null : h.createElement(g.a, {
                                 ref: t.saveFollowConfirmationBalloonRef
@@ -4217,7 +4290,7 @@
                                 })
                             }
                             return h.createElement(g.a, {
-                                "data-test-selector": le.UseBitsConfirmationToggleBalloonWrapper,
+                                "data-test-selector": ue.UseBitsConfirmationToggleBalloonWrapper,
                                 ref: t.saveUseBitsConfirmationBalloonRef,
                                 onToggle: t.onToggleUseBitsConfirmationBalloon
                             }, h.createElement("span", null), h.createElement(_.u, {
@@ -4227,6 +4300,10 @@
                                 offsetY: "2rem",
                                 offsetX: "-2rem"
                             }, e))
+                        }, t.onTestExtensionAccepted = function() {
+                            t.setState({
+                                testExtensionAccepted: !0
+                            })
                         }, t.getCurrentMedium = function() {
                             if (t.props.isPopout) return y.PageviewMedium.ExtensionPage;
                             switch (t.props.mode) {
@@ -4243,7 +4320,7 @@
                             t.extensionFrameAPI && (t.extensionFrameAPI.off("showBitsBalance", t.onShowBitsBalance), t.extensionFrameAPI.off("showUseBitsSuccess", t.onShowUseBitsSuccess), t.extensionFrameAPI.off("identityLinked", t.onIdentityLinked), t.extensionFrameAPI.off("extensionFrameLoaded", t.onExtensionLoaded), t.extensionFrameAPI.off("requestModal", t.onModalRequested))
                         }, t.getPopoutHeight = function() {
                             var e = 300;
-                            return t.extension.views.panel && (e = t.extension.views.panel.height), e + de
+                            return t.extension.views.panel && (e = t.extension.views.panel.height), e + he
                         }, t.getExtensionPopoutUrl = function() {
                             var e = t.props.installation.activationConfig,
                                 n = t.extension.clientId + "-" + t.extension.version;
@@ -4385,7 +4462,7 @@
                                 })
                             }
                         }, t.startHideBitsBalanceTimer = function() {
-                            t.hideBitsBalanceTimeout || (t.hideBitsBalanceTimeout = setTimeout(t.hideBitsBalance, ue))
+                            t.hideBitsBalanceTimeout || (t.hideBitsBalanceTimeout = setTimeout(t.hideBitsBalance, pe))
                         }, t.hideBitsBalance = function() {
                             t.hideBitsBalanceTimeout = null, t.setState({
                                 bitsBalance: null
@@ -4491,7 +4568,7 @@
                                 bottom: 2,
                                 right: 2
                             },
-                            "data-test-selector": le.ExtensionPanel
+                            "data-test-selector": ue.ExtensionPanel
                         }, a, h.createElement(_.xb, {
                             borderRight: !0,
                             borderBottom: !0,
@@ -4509,9 +4586,9 @@
                         }, h.createElement("a", {
                             href: i,
                             target: "_blank",
-                            "data-test-selector": le.ExtensionDetailsLink
+                            "data-test-selector": ue.ExtensionDetailsLink
                         }, this.extension.name)), this.props.isFramePoppedOut || this.props.isPopout ? null : h.createElement(re, {
-                            "data-test-selector": le.PopoutButton,
+                            "data-test-selector": ue.PopoutButton,
                             onClick: this.onExtensionPopout
                         }), h.createElement(ce, {
                             isPopout: this.props.isPopout
@@ -4532,7 +4609,7 @@
                             display: _.W.Flex,
                             alignItems: _.f.Center
                         }, h.createElement(_.A, {
-                            "data-test-selector": le.ExtensionDescriptionButton,
+                            "data-test-selector": ue.ExtensionDescriptionButton,
                             icon: _.nb.More,
                             ariaLabel: t
                         })))), h.createElement(_.u, {
@@ -4550,7 +4627,7 @@
                             borderLeft: !0,
                             margin: 1
                         }, h.createElement(_.A, {
-                            "data-test-selector": le.ExtensionReportButton,
+                            "data-test-selector": ue.ExtensionReportButton,
                             ariaLabel: n,
                             icon: _.nb.ChatRiskFlag,
                             onClick: this.handleReportExtensionClick
@@ -4580,11 +4657,11 @@
                         }
                     }, t
                 }(h.Component),
-                he = Object(m.compose)(Object(H.a)("ExtensionPanel", {
+                fe = Object(m.compose)(Object(H.a)("ExtensionPanel", {
                     pixels: 100
-                }))(pe);
+                }))(me);
 
-            function me(e) {
+            function ge(e) {
                 return {
                     isLoggedIn: Object(c.f)(e),
                     languageCode: Object(c.b)(e),
@@ -4592,7 +4669,7 @@
                 }
             }
 
-            function fe(e) {
+            function ve(e) {
                 return Object(a.bindActionCreators)({
                     promptLogin: function() {
                         return Object(l.e)(r.a.ReportHoster)
@@ -4603,13 +4680,13 @@
                     }
                 }, e)
             }
-            var ge = Object(o.connect)(me, fe)(he);
+            var ye = Object(o.connect)(ge, ve)(fe);
             n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return me
-            }), n.d(t, !1, function() {
-                return fe
-            }), n.d(t, "a", function() {
                 return ge
+            }), n.d(t, !1, function() {
+                return ve
+            }), n.d(t, "a", function() {
+                return ye
             })
         },
         U0Fp: function(e, t, n) {},
@@ -6348,7 +6425,7 @@
                             return e
                         }
 
-                        function S() {
+                        function w() {
                             if (h("Injecting elements"), o(c)) {
                                 ! function() {
                                     var e = o(c).style;
@@ -6388,7 +6465,7 @@
                             }
                         }
 
-                        function I() {
+                        function S() {
                             function r(e, t, n) {
                                 var i = function(e) {
                                         return u(e).childNodes[0]
@@ -6454,7 +6531,7 @@
                             } else h("Aborting because element has been uninstalled")
                         }
 
-                        function w() {
+                        function I() {
                             if (h("finalizeDomMutation invoked."), o(c)) {
                                 var e = o(c).style;
                                 v(c, e.width, e.height), k(c, e.width, e.height)
@@ -6473,7 +6550,7 @@
                                         width: e.width,
                                         height: e.height
                                     }, h("Element start size", o(c).startSize)
-                                }(), n.add(0, g), n.add(1, S), n.add(2, I), n.add(3, w), n.add(4, P)
+                                }(), n.add(0, g), n.add(1, w), n.add(2, S), n.add(3, I), n.add(4, P)
                         }
                         p || (p = c, c = e, e = null), e = e || {}, h("Making detectable..."),
                             function(e) {

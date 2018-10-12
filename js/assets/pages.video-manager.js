@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [140], {
+    [139], {
         "+58i": function(e, t, n) {
             "use strict";
             var a, i = n("mrSG"),
@@ -9532,7 +9532,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: g.J.TOP,
+                                tagType: g.M.TOP,
                                 limit: 50
                             }
                         }
@@ -13843,7 +13843,7 @@
                                 right: 1
                             }
                         }, r.createElement("img", {
-                            src: Object(s.e)(this.props.emote, 3),
+                            src: Object(s.d)(this.props.emote, 3),
                             width: "20"
                         })), r.createElement(l.Va, null, r.createElement(l.Na, {
                             margin: {

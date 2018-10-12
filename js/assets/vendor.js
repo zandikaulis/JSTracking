@@ -2277,6 +2277,63 @@
                 return t.setFullYear(t.getFullYear(), n + 1, 0), t.setHours(23, 59, 59, 999), t
             }
         },
+        "24gY": function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.SubscribeToChannel = t.SubscriptionErrorCode = t.ActionRequestSubTier = void 0;
+            var r = n("UD7r"),
+                o = t.ActionRequestSubTier = void 0;
+            ! function(e) {
+                e.Upsell = "upsell"
+            }(o || (t.ActionRequestSubTier = o = {}));
+            var i = t.SubscriptionErrorCode = void 0;
+            ! function(e) {
+                e.InvalidTier = "INVALID_TIER"
+            }(i || (t.SubscriptionErrorCode = i = {}));
+            var a = function() {
+                function e() {
+                    var e = this;
+                    this.onOpen = function(t) {
+                        e.sendActionToClient = function(e) {
+                            t(e)
+                        }
+                    }, this.resultCallback = function(t) {
+                        e.sendResultToExtension(t)
+                    }, this.onModalResult = function(t) {
+                        e.sendResultToExtension = function(e) {
+                            t({
+                                action: r.FunctionAction.SubscribeToChannelResult,
+                                payload: e
+                            })
+                        }
+                    }
+                }
+                return Object.defineProperty(e.prototype, "defaultResult", {
+                    get: function() {
+                        return {
+                            didSubscribe: !1
+                        }
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), e.prototype.open = function(e) {
+                    var t = !1;
+                    for (var n in o)
+                        if (o[n] === e.payload.tier) {
+                            t = !0;
+                            break
+                        }
+                    t ? this.sendActionToClient(e.payload) : this.close(i.InvalidTier)
+                }, e.prototype.close = function(e) {
+                    this.sendResultToExtension({
+                        didSubscribe: !1,
+                        errorCode: e
+                    })
+                }, e
+            }();
+            t.SubscribeToChannel = a
+        },
         "2INN": function(e, t, n) {
             "use strict";
             var r = n("4p7I");
@@ -3445,6 +3502,16 @@
             e.exports = function(e) {
                 return r(new Date, e)
             }
+        },
+        "5oWj": function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            var r = t.ExtensionServiceEvents = void 0;
+            ! function(e) {
+                e.RequestModal = "requestModal"
+            }(r || (t.ExtensionServiceEvents = r = {}))
         },
         "5z3u": function(e, t, n) {
             var r = n("yNUO"),
@@ -9147,36 +9214,37 @@
                 value: !0
             }), t.FunctionManager = void 0;
             var r = n("UD7r"),
-                o = n("Tw9P"),
-                i = function() {
+                o = n("1hWM"),
+                i = n("Tw9P"),
+                a = function() {
                     return function(e, t, n) {
-                        var i = this;
-                        this.coordinator = e, this.loginId = t, this.emitConfirmationRequest = n, this.functionActionMap = (0, o.dict)(), this.functionModalMap = (0, o.dict)(), this.registerFunctionModal = function(e, t) {
+                        var a = this;
+                        this.coordinator = e, this.loginId = t, this.emitConfirmationRequest = n, this.functionActionMap = (0, i.dict)(), this.functionModalMap = (0, i.dict)(), this.registerFunctionModal = function(e, t) {
                             t.onOpen(function(n) {
                                 var o = {
-                                    action: i.loginId ? e : r.FunctionAction.LoginRequest,
+                                    action: a.loginId ? e : r.FunctionAction.LoginRequest,
                                     resultCallback: t.resultCallback,
                                     defaultResult: t.defaultResult
                                 };
-                                n && (o.options = n), i.requestConfirmation(o)
+                                n && (o.options = n), a.requestConfirmation(o)
                             }), t.onModalResult && t.onModalResult(function(e) {
-                                i.sendFunctionReply(e)
-                            }), i.functionModalMap[e] = t, i.functionActionMap[e] = i.functionActionHandler(e), i.coordinator.on(e, i.functionActionMap[e])
+                                a.sendFunctionReply(e)
+                            }), a.functionModalMap[e] = t, a.functionActionMap[e] = a.functionActionHandler(e), a.coordinator.on(e, a.functionActionMap[e])
                         }, this.unregisterFunctionModal = function(e) {
-                            i.coordinator.off(e, i.functionActionMap[e]), delete i.functionActionMap[e], delete i.functionModalMap[e]
+                            a.coordinator.off(e, a.functionActionMap[e]), delete a.functionActionMap[e], delete a.functionModalMap[e]
                         }, this.functionActionHandler = function(e) {
                             return function(t) {
-                                var n = i.functionModalMap[e];
+                                var n = a.functionModalMap[e];
                                 n && n.open(t)
                             }
                         }, this.requestConfirmation = function(e) {
-                            i.emitConfirmationRequest(e)
+                            e.action !== r.FunctionAction.SubscribeToChannel ? a.emitConfirmationRequest(e) : o.extensionService.emit(r.ExtensionServiceEvents.RequestModal, e)
                         }, this.sendFunctionReply = function(e) {
-                            i.coordinator.sendFunctionReply(e)
+                            a.coordinator.sendFunctionReply(e)
                         }
                     }
                 }();
-            t.FunctionManager = i
+            t.FunctionManager = a
         },
         DSRE: function(e, t, n) {
             (function(e) {
@@ -9214,7 +9282,7 @@
                     var e = this;
                     this.close = function() {}, this.onOpen = function(t) {
                         e.openCallback = t
-                    }, this.onModalResult = function(e) {}, this.resultCallback = function(e) {}
+                    }, this.onModalResult = function() {}, this.resultCallback = function(e) {}
                 }
                 return Object.defineProperty(e.prototype, "defaultResult", {
                     get: function() {
@@ -13300,30 +13368,31 @@
                 value: !0
             }), t.ExtensionFrame = void 0;
             var r, o = n("cjKa"),
-                i = n("egiL"),
-                a = n("2R+N"),
-                s = n("UD7r"),
-                u = n("PLcV"),
-                c = n("vLOo"),
-                l = n("DHnY"),
-                f = n("YoQN"),
-                p = n("vge2"),
-                d = n("Dol5"),
-                h = n("WjdK"),
-                m = n("Eo8/"),
-                v = n("DxB8"),
-                y = n("4hMy"),
-                g = n("2yCZ"),
-                b = n("9zYo"),
-                w = n("xzKg"),
-                _ = n("HZ5o"),
-                x = n("1gAB"),
-                k = n("rTxh"),
-                E = n("Koud"),
-                O = n("NeLZ"),
-                C = n("mcAA"),
-                T = n("EdYh"),
-                S = function() {
+                i = n("MU5F"),
+                a = n("egiL"),
+                s = n("2R+N"),
+                u = n("UD7r"),
+                c = n("PLcV"),
+                l = n("vLOo"),
+                f = n("DHnY"),
+                p = n("YoQN"),
+                d = n("vge2"),
+                h = n("Dol5"),
+                m = n("WjdK"),
+                v = n("Eo8/"),
+                y = n("DxB8"),
+                g = n("4hMy"),
+                b = n("2yCZ"),
+                w = n("9zYo"),
+                _ = n("xzKg"),
+                x = n("HZ5o"),
+                k = n("1gAB"),
+                E = n("rTxh"),
+                O = n("Koud"),
+                C = n("NeLZ"),
+                T = n("mcAA"),
+                S = n("EdYh"),
+                P = function() {
                     var e = function(t, n) {
                         return (e = Object.setPrototypeOf || {
                                 __proto__: []
@@ -13341,20 +13410,20 @@
                         e(t, n), t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r)
                     }
                 }(),
-                P = function() {
-                    return (P = Object.assign || function(e) {
+                A = function() {
+                    return (A = Object.assign || function(e) {
                         for (var t, n = 1, r = arguments.length; n < r; n++)
                             for (var o in t = arguments[n]) Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
                         return e
                     }).apply(this, arguments)
                 },
-                A = ["allow-forms", "allow-scripts", "allow-same-origin"],
-                M = 700,
-                j = 300;
+                M = ["allow-forms", "allow-scripts", "allow-same-origin"],
+                j = 700,
+                R = 300;
             ! function(e) {
                 e[e.Supervisor = 0] = "Supervisor", e[e.Extension = 1] = "Extension"
             }(r || (r = {}));
-            var R = function(e) {
+            var I = function(e) {
                 function t(t) {
                     var n = e.call(this) || this;
                     return n.lastSequenceInfoMap = {}, n.handleUserAction = {
@@ -13397,12 +13466,12 @@
                         },
                         focusin: function(e) {
                             e.payload;
-                            if (this.activationAnchor === s.ExtensionAnchor.Overlay) {
+                            if (this.activationAnchor === u.ExtensionAnchor.Overlay) {
                                 for (var t = this.iframe; t && !t.hasAttribute("tabindex");) t = t.parentElement;
                                 t && t.focus()
                             }
                         }
-                    }, n.hasSentViewEvent = !1, n.hasBootstrapped = !1, n.hasLoaded = !1, n.throttleDblClick = (0, O.throttle)(function(e, t) {
+                    }, n.hasSentViewEvent = !1, n.hasBootstrapped = !1, n.hasLoaded = !1, n.throttleDblClick = (0, C.throttle)(function(e, t) {
                         var n = t.payload,
                             r = e.getBoundingClientRect(),
                             o = r.left,
@@ -13418,27 +13487,27 @@
                         n.unsetupListeners(), n.contextManager.destroy(), n.coordinator.destroy(), n.iframe.remove()
                     }, n.linkIdentity = function() {
                         var e = n.extension.clientId,
-                            t = _.tokenManager.getToken(e);
-                        t.isLinked || (0, a.linkUser)(e, t.token, !0).then(function(t) {
+                            t = x.tokenManager.getToken(e);
+                        t.isLinked || (0, s.linkUser)(e, t.token, !0).then(function(t) {
                             var r = t.token;
-                            _.tokenManager.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
+                            x.tokenManager.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
                                 extension_interaction: "grant"
                             })
                         })
                     }, n.unlinkIdentity = function() {
                         var e = n.extension.clientId,
-                            t = _.tokenManager.getToken(e);
-                        t.isLinked && (0, a.linkUser)(e, t.token, !1).then(function(t) {
+                            t = x.tokenManager.getToken(e);
+                        t.isLinked && (0, s.linkUser)(e, t.token, !1).then(function(t) {
                             var r = t.token;
-                            _.tokenManager.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
+                            x.tokenManager.registerToken(e, r), n.tracker.trackEvent("extension_ui_interaction_client", {
                                 extension_interaction: "revoke"
                             })
                         })
                     }, n.visibilityChanged = function() {
-                        if (!n.hasSentViewEvent && n.activationAnchor === s.ExtensionAnchor.Panel && n.params.mode === s.ExtensionMode.Viewer) {
-                            var e = k.domUtils.getElementBoundingClientRect(n.iframe),
+                        if (!n.hasSentViewEvent && n.activationAnchor === u.ExtensionAnchor.Panel && n.params.mode === u.ExtensionMode.Viewer) {
+                            var e = E.domUtils.getElementBoundingClientRect(n.iframe),
                                 t = e.bottom - e.top,
-                                r = k.domUtils.getWindowInnerHeight();
+                                r = E.domUtils.getWindowInnerHeight();
                             100 * (Math.min(Math.max(r - e.top, 0), t) / t) >= 75 && (n.tracker.trackEvent("extension_view", {
                                 pct_view_visible: 75,
                                 px_view_visible: Math.floor(75 * t / 100)
@@ -13456,7 +13525,7 @@
                         n.coordinator.sendHighlightChange(e)
                     }, n.buildTracker = function() {
                         var e = n.params;
-                        return e.extensionTracker || new x.ExtensionTracker({
+                        return e.extensionTracker || new k.ExtensionTracker({
                             anchor: n.activationAnchor,
                             dobbin: e.dobbin,
                             extension: n.extension,
@@ -13464,46 +13533,47 @@
                             iframe: n.iframe,
                             requiredProps: {
                                 login: e.trackingProperties.login,
-                                login_id: e.loginId,
                                 channel: e.trackingProperties.channel,
                                 channel_id: e.channelId,
                                 device_id: e.trackingProperties.device_id,
+                                user_id: e.loginId,
                                 platform: e.trackingProperties.platform,
                                 player_type: e.trackingProperties.player_type,
-                                locale: n.locale
+                                locale: n.locale,
+                                login_id: e.loginId
                             }
                         })
                     }, n.buildContextManager = function() {
                         var e = n.params;
-                        return e.contextManager || new u.ContextManager(e.mode)
+                        return e.contextManager || new c.ContextManager(e.mode)
                     }, n.buildCoordinator = function() {
-                        return n.params.extensionCoordinator || new c.ExtensionCoordinator(n.iframe)
+                        return n.params.extensionCoordinator || new l.ExtensionCoordinator(n.iframe)
                     }, n.buildFunctionManager = function() {
-                        return n.params.functionManager || new l.FunctionManager(n.coordinator, n.params.loginId, n.emitConfirmationRequest)
+                        return n.params.functionManager || new f.FunctionManager(n.coordinator, n.params.loginId, n.emitConfirmationRequest)
                     }, n.buildPurchaseService = function() {
-                        return n.params.purchaseService || new g.PurchaseService
+                        return n.params.purchaseService || new b.PurchaseService
                     }, n.getExtensionHeight = function() {
                         var e = n.params.mode,
                             t = n.extension.panelHeight;
-                        return e === s.ExtensionMode.Config ? M : t ? Number(t) : j
+                        return e === u.ExtensionMode.Config ? j : t ? Number(t) : R
                     }, n.getDefaultAnchorAttributes = function() {
                         var e = {};
-                        return n.params.mode === s.ExtensionMode.Viewer && n.extensionOptions.platform !== s.ExtensionPlatform.Mobile && (e.scrolling = "no"), e
+                        return n.params.mode === u.ExtensionMode.Viewer && n.extensionOptions.platform !== u.ExtensionPlatform.Mobile && (e.scrolling = "no"), e
                     }, n.getAnchorAttributes = function(e) {
                         var t = {};
                         if (n.params.isPopout || !1) return e === r.Extension && (t.style = "height: 100%;"), t;
                         switch (n.activationAnchor) {
-                            case s.ExtensionAnchor.Panel:
-                                if (n.extensionOptions.platform === s.ExtensionPlatform.Mobile) {
+                            case u.ExtensionAnchor.Panel:
+                                if (n.extensionOptions.platform === u.ExtensionPlatform.Mobile) {
                                     t.style = "height: 100%;";
                                     break
                                 }
                                 var o = n.getExtensionHeight();
                                 t.style = "height: " + o + "px;";
                                 break;
-                            case s.ExtensionAnchor.Overlay:
-                            case s.ExtensionAnchor.Component:
-                            case s.ExtensionAnchor.Hidden:
+                            case u.ExtensionAnchor.Overlay:
+                            case u.ExtensionAnchor.Component:
+                            case u.ExtensionAnchor.Hidden:
                                 return n.getDefaultAnchorAttributes()
                         }
                         return t
@@ -13514,18 +13584,18 @@
                         var o = n.params.mode,
                             i = document.createElement("iframe"),
                             a = n.getViewWithPermissions();
-                        switch (i.setAttribute("class", e), i.setAttribute("frameBorder", "0"), i.setAttribute("scrolling", "no"), i.setAttribute("src", w.supervisor.supervisorURL), i.setAttribute("sandbox", n.getSandboxFlags(a)), o) {
-                            case s.ExtensionMode.Viewer:
+                        switch (i.setAttribute("class", e), i.setAttribute("frameBorder", "0"), i.setAttribute("scrolling", "no"), i.setAttribute("src", _.supervisor.supervisorURL), i.setAttribute("sandbox", n.getSandboxFlags(a)), o) {
+                            case u.ExtensionMode.Viewer:
                                 n.applyAnchorAttributesForSupervisor(i, t);
                                 break;
-                            case s.ExtensionMode.Dashboard:
+                            case u.ExtensionMode.Dashboard:
                                 if (!n.params.isPopout) {
-                                    var u = n.extension.panelHeight || j;
-                                    i.setAttribute("style", "height: " + u + "px;")
+                                    var s = n.extension.panelHeight || R;
+                                    i.setAttribute("style", "height: " + s + "px;")
                                 }
                                 break;
-                            case s.ExtensionMode.Config:
-                                i.setAttribute("style", "width: 100%; height: " + M + "px;")
+                            case u.ExtensionMode.Config:
+                                i.setAttribute("style", "width: 100%; height: " + j + "px;")
                         }
                         return i.style.display = "none", i
                     }, n.initSupervisedExtension = function() {
@@ -13535,17 +13605,17 @@
                             i = n.getViewWithPermissions(),
                             a = n.getAnchorAttributes(r.Extension);
                         a.sandbox = n.getSandboxFlags(i);
-                        var u = {
-                            extensionURL: (0, T.appendQueryParams)(o, n.extensionOptions),
+                        var s = {
+                            extensionURL: (0, S.appendQueryParams)(o, n.extensionOptions),
                             hostOrigin: window.location.origin,
                             iframeAttrs: a
                         };
-                        n.coordinator.sendSupervisorInit(u);
-                        n.extension.state !== s.ExtensionState.Released && (n.helperNotLoadedTimeout = setTimeout(function() {
+                        n.coordinator.sendSupervisorInit(s);
+                        n.extension.state !== u.ExtensionState.Released && (n.helperNotLoadedTimeout = setTimeout(function() {
                             console.warn("Extension Warning (" + n.extension.id + "): Extension Helper Library Not Loaded")
                         }, 1e4))
                     }, n.getExtensionAuth = function() {
-                        var e = _.tokenManager.getToken(n.extension.clientId);
+                        var e = x.tokenManager.getToken(n.extension.clientId);
                         return {
                             channelId: e.payload.channel_id,
                             clientId: n.extension.clientId,
@@ -13565,8 +13635,8 @@
                         return r && !e.isLinked || r && !n.extension.bitsEnabled
                     }, n.onExtensionLoaded = function(e) {
                         n.hasLoaded = !0, n.contextManager.initializeContext(), n.helperNotLoadedTimeout && (clearTimeout(n.helperNotLoadedTimeout), delete n.helperNotLoadedTimeout), n.tracker.trackEvent("extension_helper_load_success", {}), n.iframe.style.removeProperty("display");
-                        var t = _.tokenManager.getToken(n.extension.clientId);
-                        n.handleToken(t, t), n.emit(s.ExtensionFrameEvents.ExtensionFrameLoaded, n.extension.asObject), n.sendExtensionProductPrices(), n.sendExtensionBitsProductPrices(), n.sendExtensionDisplayState()
+                        var t = x.tokenManager.getToken(n.extension.clientId);
+                        n.handleToken(t, t), n.emit(u.ExtensionFrameEvents.ExtensionFrameLoaded, n.extension.asObject), n.sendExtensionProductPrices(), n.sendExtensionBitsProductPrices(), n.sendExtensionDisplayState()
                     }, n.onExtensionUserAction = function(e) {
                         n.handleUserAction[e.payload.type].call(n, e)
                     }, n.onExtensionPubSubRecived = function(e) {
@@ -13576,21 +13646,21 @@
                         n.tracker.trackEvent("extension_network_request", {
                             request_duration: e.payload.duration,
                             request_end_time: e.payload.endTime,
-                            request_file_type: (0, T.getFileType)(e.payload.url),
+                            request_file_type: (0, S.getFileType)(e.payload.url),
                             request_start_time: e.payload.startTime,
                             request_url: e.payload.url
                         })
                     }, n.emitConfirmationRequest = function(e) {
-                        n.emit(s.ExtensionFrameEvents.RequestModal, e)
+                        n.emit(u.ExtensionFrameEvents.RequestModal, e)
                     }, n.sendAuthUpdate = function(e) {
                         n.sendIdentityLinkUpdate(e), n.coordinator.sendExtensionAuth(n.getExtensionAuth())
                     }, n.sendBootstrap = function(e) {
                         n.hasBootstrapped = !0, n.sendIdentityLinkUpdate(e);
-                        var t = (0, m.getFeatureFlags)(n.installationAbilities, n.clientAbilities);
+                        var t = (0, v.getFeatureFlags)(n.installationAbilities, n.clientAbilities);
                         n.coordinator.sendExtensionBootstrap(n.getExtensionAuth(), t, n.configuration)
                     }, n.sendIdentityLinkUpdate = function(e) {
                         var t = e.isUserLoggedIn && n.canRequestIdLink;
-                        n.emit(s.ExtensionFrameEvents.IdentityLinked, e.isLinked, t)
+                        n.emit(u.ExtensionFrameEvents.IdentityLinked, e.isLinked, t)
                     }, n.beginPurchase = function(e) {
                         var t = e.payload.sku,
                             r = n.extension.vendorCode;
@@ -13627,19 +13697,19 @@
                             callback: n.onMouseEnter.bind(n)
                         }], n.eventListeners.forEach(function(e) {
                             e.target.addEventListener(e.event, e.callback)
-                        }), n.contextManager.on("context", n.onContextUpdate), n.coordinator.on(s.SupervisorAction.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(s.ExtensionAction.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(s.FunctionAction.TwitchExtMinimize, n.onMinimize), n.coordinator.on(s.ExtensionAction.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(s.ExtensionAction.TwitchExtUserAction, n.onExtensionUserAction), n.onBeginPurchase && n.coordinator.on(s.ExtensionAction.TwitchExtBeginPurchase, n.beginPurchase), n.coordinator.on(s.ExtensionAction.TwitchExtBitsOnHover, n.showBitsBalance), n.coordinator.on(s.ExtensionAction.TwitchExtPubSubReceived, n.onExtensionPubSubRecived), n.coordinator.on(s.ExtensionAction.TwitchExtLongtask, n.onLongtask), _.tokenManager.subscribe(n.extension.clientId, n.handleToken);
-                        var e = _.tokenManager.getToken(n.extension.clientId);
+                        }), n.contextManager.on("context", n.onContextUpdate), n.coordinator.on(u.SupervisorAction.SupervisorReady, n.initSupervisedExtension), n.coordinator.on(u.ExtensionAction.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.on(u.FunctionAction.TwitchExtMinimize, n.onMinimize), n.coordinator.on(u.ExtensionAction.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.on(u.ExtensionAction.TwitchExtUserAction, n.onExtensionUserAction), n.onBeginPurchase && n.coordinator.on(u.ExtensionAction.TwitchExtBeginPurchase, n.beginPurchase), n.coordinator.on(u.ExtensionAction.TwitchExtBitsOnHover, n.showBitsBalance), n.coordinator.on(u.ExtensionAction.TwitchExtPubSubReceived, n.onExtensionPubSubRecived), n.coordinator.on(u.ExtensionAction.TwitchExtLongtask, n.onLongtask), x.tokenManager.subscribe(n.extension.clientId, n.handleToken);
+                        var e = x.tokenManager.getToken(n.extension.clientId);
                         e && !e.isNearExpiration && n.handleToken(e, e), n.bindHelperPubsub()
                     }, n.reloadExtension = function() {
                         n.hasLoaded = !1, n.hasBootstrapped = !1, n.coordinator.sendExtensionReloadMessage()
                     }, n.unsetupListeners = function() {
                         n.eventListeners.forEach(function(e) {
                             e.target.removeEventListener(e.event, e.callback)
-                        }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(s.ExtensionAction.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(s.ExtensionAction.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(s.ExtensionAction.TwitchExtUserAction, n.onExtensionUserAction), n.coordinator.off(s.ExtensionAction.TwitchExtLongtask, n.onLongtask), n.coordinator.off(s.FunctionAction.TwitchExtMinimize, n.onMinimize), n.unregisterFunctionModals(), _.tokenManager.unsubscribe(n.extension.clientId, n.handleToken), n.helperPubsubAdapter && n.helperPubsubAdapter.destroy()
+                        }), n.contextManager.off("context", n.coordinator.sendContext), n.coordinator.off(u.ExtensionAction.TwitchExtLoaded, n.onExtensionLoaded), n.coordinator.off(u.ExtensionAction.TwitchExtNetworkTiming, n.onExtensionNetworkTraffic), n.coordinator.off(u.ExtensionAction.TwitchExtUserAction, n.onExtensionUserAction), n.coordinator.off(u.ExtensionAction.TwitchExtLongtask, n.onLongtask), n.coordinator.off(u.FunctionAction.TwitchExtMinimize, n.onMinimize), n.unregisterFunctionModals(), x.tokenManager.unsubscribe(n.extension.clientId, n.handleToken), n.helperPubsubAdapter && n.helperPubsubAdapter.destroy()
                     }, n.registerFunctionModals = function() {
-                        n.functionManager.registerFunctionModal(s.FunctionAction.FollowAction, new p.FollowModal(n.params.loginId, n.tracker)), n.canRequestIdLink && n.functionManager.registerFunctionModal(s.FunctionAction.IdShareRequest, new d.SimpleRequestModal), n.extension.bitsEnabled && n.functionManager.registerFunctionModal(s.FunctionAction.UseBits, new f.BitsConfirmationModal(String(n.params.loginId), n.tracker, new y.Pubsub, n.showUseBitsSuccess, n.extension, n.extensionBitsProducts))
+                        n.functionManager.registerFunctionModal(u.FunctionAction.FollowAction, new d.FollowModal(n.params.loginId, n.tracker)), n.functionManager.registerFunctionModal(u.FunctionAction.SubscribeToChannel, new i.SubscribeToChannel), n.canRequestIdLink && n.functionManager.registerFunctionModal(u.FunctionAction.IdShareRequest, new h.SimpleRequestModal), n.extension.bitsEnabled && n.functionManager.registerFunctionModal(u.FunctionAction.UseBits, new p.BitsConfirmationModal(String(n.params.loginId), n.tracker, new g.Pubsub, n.showUseBitsSuccess, n.extension, n.extensionBitsProducts))
                     }, n.unregisterFunctionModals = function() {
-                        n.functionManager.unregisterFunctionModal(s.FunctionAction.FollowAction), n.extension.bitsEnabled && n.functionManager.unregisterFunctionModal(s.FunctionAction.UseBits)
+                        n.functionManager.unregisterFunctionModal(u.FunctionAction.FollowAction), n.extension.bitsEnabled && n.functionManager.unregisterFunctionModal(u.FunctionAction.UseBits)
                     }, n.handlePurchaseCompleted = function(e) {
                         var t = e.msg.sku;
                         n.extensionProducts.then(function(e) {
@@ -13648,14 +13718,14 @@
                             }) && n.coordinator.sendExtensionReloadEntitlementsMessage()
                         })
                     }, n.onMinimize = function() {
-                        n.emit(s.ExtensionFrameEvents.Minimize)
+                        n.emit(u.ExtensionFrameEvents.Minimize)
                     }, n.showBitsBalance = function() {
-                        n.emit(s.ExtensionFrameEvents.ShowBitsBalance)
+                        n.emit(u.ExtensionFrameEvents.ShowBitsBalance)
                     }, n.showUseBitsSuccess = function(e) {
-                        n.emit(s.ExtensionFrameEvents.ShowUseBitsSuccess, e)
+                        n.emit(u.ExtensionFrameEvents.ShowUseBitsSuccess, e)
                     }, n.handleBitsTransactionCompleted = function(e) {
-                        var t = c.Initiator.Other;
-                        String(n.params.loginId) === e.user_id && (t = c.Initiator.CurrentUser);
+                        var t = l.Initiator.Other;
+                        String(n.params.loginId) === e.user_id && (t = l.Initiator.CurrentUser);
                         var r = {
                             sku: e.sku,
                             displayName: e.sku,
@@ -13669,7 +13739,7 @@
                                 return t.sku === e.sku
                             });
                             n.coordinator.sendBitsTransactionCompleteMessage({
-                                action: s.ExtensionAction.TwitchExtBitsTransactionComplete,
+                                action: u.ExtensionAction.TwitchExtBitsTransactionComplete,
                                 product: i || r,
                                 transactionId: e.transaction_id,
                                 userId: e.user_id,
@@ -13679,7 +13749,7 @@
                             })
                         }).catch(function() {
                             n.coordinator.sendBitsTransactionCompleteMessage({
-                                action: s.ExtensionAction.TwitchExtBitsTransactionComplete,
+                                action: u.ExtensionAction.TwitchExtBitsTransactionComplete,
                                 product: r,
                                 transactionId: e.transaction_id,
                                 userId: e.user_id,
@@ -13688,13 +13758,13 @@
                                 initiator: t
                             })
                         })
-                    }, n.extension = new h.Extension(t.extension), n.params = P({
-                        platform: s.ExtensionPlatform.Web
+                    }, n.extension = new m.Extension(t.extension), n.params = A({
+                        platform: u.ExtensionPlatform.Web
                     }, t, {
-                        mode: t.platform === s.ExtensionPlatform.Mobile ? s.ExtensionMode.Viewer : t.mode
-                    }), n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.activationAnchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.extension.token && !_.tokenManager.getToken(n.extension.clientId) && _.tokenManager.registerToken(n.extension.clientId, n.extension.token), n.registerFunctionModals(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && b.extensionService.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), b.extensionService.onBitsTransactionCompleted(n.params.channelId, n.extension.clientId, n.params.loginId, n.handleBitsTransactionCompleted), n
+                        mode: t.platform === u.ExtensionPlatform.Mobile ? u.ExtensionMode.Viewer : t.mode
+                    }), n.iframe = n.createSupervisorIFrame(t.iframeClassName, n.activationAnchor, n.extensionOptions), void 0 !== t.onBeginPurchase && (n.onBeginPurchase = t.onBeginPurchase), n.setupListeners(), n.extension.token && !x.tokenManager.getToken(n.extension.clientId) && x.tokenManager.registerToken(n.extension.clientId, n.extension.token), n.registerFunctionModals(), n.tracker.trackEvent("extension_render", {}), t.parentElement.appendChild(n.iframe), n.visibilityChanged(), n.params.loginId && w.extensionService.onPurchaseCompleted(n.params.loginId, n.handlePurchaseCompleted), w.extensionService.onBitsTransactionCompleted(n.params.channelId, n.extension.clientId, n.params.loginId, n.handleBitsTransactionCompleted), n
                 }
-                return S(t, e), Object.defineProperty(t.prototype, "activationAnchor", {
+                return P(t, e), Object.defineProperty(t.prototype, "activationAnchor", {
                     get: function() {
                         return this.params.anchor
                     },
@@ -13702,19 +13772,19 @@
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "tracker", {
                     get: function() {
-                        return (0, C.memoize)(this.buildTracker)
+                        return (0, T.memoize)(this.buildTracker)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "contextManager", {
                     get: function() {
-                        return (0, C.memoize)(this.buildContextManager)
+                        return (0, T.memoize)(this.buildContextManager)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "coordinator", {
                     get: function() {
-                        return (0, C.memoize)(this.buildCoordinator)
+                        return (0, T.memoize)(this.buildCoordinator)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -13724,7 +13794,7 @@
                             anchor: this.activationAnchor,
                             language: this.language,
                             mode: this.params.mode,
-                            state: s.ExtensionStateMap[this.extension.state],
+                            state: u.ExtensionStateMap[this.extension.state],
                             platform: this.params.platform,
                             popout: this.params.isPopout || !1
                         }
@@ -13733,7 +13803,7 @@
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "functionManager", {
                     get: function() {
-                        return (0, C.memoize)(this.buildFunctionManager)
+                        return (0, T.memoize)(this.buildFunctionManager)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -13751,13 +13821,13 @@
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "purchaseService", {
                     get: function() {
-                        return (0, C.memoize)(this.buildPurchaseService)
+                        return (0, T.memoize)(this.buildPurchaseService)
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "canRequestIdLink", {
                     get: function() {
-                        var e = _.tokenManager.getToken(this.extension.clientId);
+                        var e = x.tokenManager.getToken(this.extension.clientId);
                         return !e.isBroadcaster && (e.isLinked || this.extension.requestIdentityLink)
                     },
                     enumerable: !0,
@@ -13786,24 +13856,24 @@
                     enumerable: !0,
                     configurable: !0
                 }), t.prototype.getSandboxFlags = function(e) {
-                    return e && e.canLinkExternalContent ? A.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : A.join(" ")
+                    return e && e.canLinkExternalContent ? M.concat(["allow-popups", "allow-popups-to-escape-sandbox"]).join(" ") : M.join(" ")
                 }, t.prototype.getViewWithPermissions = function() {
                     var e = this.extension.views;
                     switch (this.params.mode) {
-                        case s.ExtensionMode.Config:
-                            return e[h.ExtensionViewType.Config];
-                        case s.ExtensionMode.Dashboard:
-                            return e[h.ExtensionViewType.LiveConfig];
-                        case s.ExtensionMode.Viewer:
+                        case u.ExtensionMode.Config:
+                            return e[m.ExtensionViewType.Config];
+                        case u.ExtensionMode.Dashboard:
+                            return e[m.ExtensionViewType.LiveConfig];
+                        case u.ExtensionMode.Viewer:
                             switch (this.activationAnchor) {
-                                case s.ExtensionAnchor.Component:
-                                    return e[h.ExtensionViewType.Component];
-                                case s.ExtensionAnchor.Hidden:
-                                    return e[h.ExtensionViewType.Hidden];
-                                case s.ExtensionAnchor.Overlay:
-                                    return e[h.ExtensionViewType.VideoOverlay];
-                                case s.ExtensionAnchor.Panel:
-                                    return e[h.ExtensionViewType.Panel]
+                                case u.ExtensionAnchor.Component:
+                                    return e[m.ExtensionViewType.Component];
+                                case u.ExtensionAnchor.Hidden:
+                                    return e[m.ExtensionViewType.Hidden];
+                                case u.ExtensionAnchor.Overlay:
+                                    return e[m.ExtensionViewType.VideoOverlay];
+                                case u.ExtensionAnchor.Panel:
+                                    return e[m.ExtensionViewType.Panel]
                             }
                     }
                 }, t.prototype.trackSequence = function(e, t, n, r) {
@@ -13840,7 +13910,7 @@
                             var t = this.extension,
                                 n = t.sku,
                                 r = t.vendorCode;
-                            this.extension.isMonetized ? (this.extensionProductsCache = (0, a.getExtensionProducts)(r, n, this.language), e = this.extensionProductsCache) : e = Promise.resolve({
+                            this.extension.isMonetized ? (this.extensionProductsCache = (0, s.getExtensionProducts)(r, n, this.language), e = this.extensionProductsCache) : e = Promise.resolve({
                                 products: []
                             })
                         }
@@ -13853,7 +13923,7 @@
                         var e = this.extensionBitsProductsCache;
                         if (void 0 === e) {
                             var t = this.extension.clientId;
-                            this.extensionBitsProductsCache = (0, i.getProducts)(t), e = this.extensionBitsProductsCache
+                            this.extensionBitsProductsCache = (0, a.getProducts)(t), e = this.extensionBitsProductsCache
                         }
                         return e
                     },
@@ -13863,7 +13933,7 @@
                     return {
                         description: e.description,
                         developerName: e.developer_name,
-                        displayPrice: (0, E.formatPrice)(e.price.price, e.price.currency_unit),
+                        displayPrice: (0, O.formatPrice)(e.price.price, e.price.currency_unit),
                         extensionName: this.extension.name,
                         shortDescription: e.short_description,
                         sku: e.sku,
@@ -13878,14 +13948,14 @@
                     var e = this;
                     this.extension.bitsEnabled ? this.extensionBitsProducts.then(function(t) {
                         var n = t.products.filter(function(t) {
-                            return e.extension.state !== s.ExtensionState.Released || !0 !== t.inDevelopment
+                            return e.extension.state !== u.ExtensionState.Released || !0 !== t.inDevelopment
                         }).map(function(t) {
                             var n = {
                                 cost: t.cost,
                                 displayName: t.displayName,
                                 sku: t.sku
                             };
-                            return e.extension.state !== s.ExtensionState.Released && (n.inDevelopment = t.inDevelopment), n
+                            return e.extension.state !== u.ExtensionState.Released && (n.inDevelopment = t.inDevelopment), n
                         });
                         e.coordinator.sendBitsProductsMessage(n)
                     }) : this.coordinator.sendBitsProductsMessage([])
@@ -13894,18 +13964,18 @@
                     if (e) {
                         var t = e();
                         switch (t.anchor) {
-                            case s.ExtensionAnchor.Overlay:
+                            case u.ExtensionAnchor.Overlay:
                                 this.setVisible(t.isVisible);
                                 break;
-                            case s.ExtensionAnchor.Component:
+                            case u.ExtensionAnchor.Component:
                                 this.setVisible(t.isVisible), this.setPosition(t.position)
                         }
                     }
                 }, t.prototype.bindHelperPubsub = function() {
-                    this.helperPubsubAdapter = this.params.helperPubsubAdapter || new v.HelperPubsubAdapter(this.coordinator, this.tracker)
+                    this.helperPubsubAdapter = this.params.helperPubsubAdapter || new y.HelperPubsubAdapter(this.coordinator, this.tracker)
                 }, t
             }(o.EventEmitter2);
-            t.ExtensionFrame = R
+            t.ExtensionFrame = I
         },
         Ioao: function(e, t, n) {
             var r = n("heNW"),
@@ -15178,6 +15248,21 @@
                 return r(e).getTime() === r(new Date).getTime()
             }
         },
+        MU5F: function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            });
+            var r = n("24gY");
+            Object.keys(r).forEach(function(e) {
+                "default" !== e && "__esModule" !== e && Object.defineProperty(t, e, {
+                    enumerable: !0,
+                    get: function() {
+                        return r[e]
+                    }
+                })
+            })
+        },
         MYMM: function(e, t, n) {
             var r = n("v61W");
             e.exports = function e(t) {
@@ -16398,7 +16483,7 @@
                             }
                         }, r.updateLocalContext = function(e) {
                             void 0 === e && (e = {});
-                            var t = c({}, r.context, e, r.getPlayerContext(), r.getBaseContext());
+                            var t = c({}, r.context, r.getPlayerContext(), e, r.getBaseContext());
                             void 0 !== t.theme && (t.theme = r.translateTheme(t.theme)), r.diffAndEmitContext(t)
                         }, r.diffAndEmitContext = function(e) {
                             var t = r.context;
@@ -19687,7 +19772,16 @@
                     }
                 })
             });
-            t.ExtensionEventActions = [o.SupervisorAction.SupervisorReady, r.ExtensionAction.TwitchExtLoaded, r.ExtensionAction.TwitchExtLongtask, r.ExtensionAction.TwitchExtUserAction, r.ExtensionAction.TwitchExtNetworkTiming, r.ExtensionAction.TwitchExtBeginPurchase, r.ExtensionAction.TwitchExtBitsOnHover, r.ExtensionAction.TwitchExtUseBits, r.ExtensionAction.TwitchExtPubSubReceived, r.ExtensionAction.TwitchExtPubsubListen, r.ExtensionAction.TwitchExtPubsubUnlisten, i.FunctionAction.FollowAction, i.FunctionAction.FollowStatusRequest, i.FunctionAction.IdShareRequest, i.FunctionAction.TwitchExtMinimize]
+            var u = n("5oWj");
+            Object.keys(u).forEach(function(e) {
+                "default" !== e && "__esModule" !== e && Object.defineProperty(t, e, {
+                    enumerable: !0,
+                    get: function() {
+                        return u[e]
+                    }
+                })
+            });
+            t.ExtensionEventActions = [o.SupervisorAction.SupervisorReady, r.ExtensionAction.TwitchExtLoaded, r.ExtensionAction.TwitchExtLongtask, r.ExtensionAction.TwitchExtUserAction, r.ExtensionAction.TwitchExtNetworkTiming, r.ExtensionAction.TwitchExtBeginPurchase, r.ExtensionAction.TwitchExtBitsOnHover, r.ExtensionAction.TwitchExtUseBits, r.ExtensionAction.TwitchExtPubSubReceived, r.ExtensionAction.TwitchExtPubsubListen, r.ExtensionAction.TwitchExtPubsubUnlisten, i.FunctionAction.FollowAction, i.FunctionAction.FollowStatusRequest, i.FunctionAction.IdShareRequest, i.FunctionAction.TwitchExtMinimize, i.FunctionAction.UseBits, i.FunctionAction.SubscribeToChannel]
         },
         "UNi/": function(e, t) {
             e.exports = function(e, t) {
@@ -20604,7 +20698,9 @@
                             }), d.track(s.BitsModalDataScience.UseBitsFailure)
                         }, this.onModalResult = function(e) {
                             d.replyCallback = function(t) {
-                                d.useBitsInProgress = !1, t.didConfirm && t.didUseBits && d.onSuccess(t.bitsBalance || 0), d.loginId && d.offBitsBalanceUpdate(d.loginId), e(t)
+                                d.useBitsInProgress = !1, t.didConfirm && t.didUseBits && d.onSuccess(t.bitsBalance || 0), d.loginId && d.offBitsBalanceUpdate(d.loginId), e(l({
+                                    action: a.FunctionAction.UseBitsComplete
+                                }, t))
                             }
                         }, this.onOpen = function(e) {
                             d.openCallback = function(t) {
@@ -25768,7 +25864,7 @@
             });
             var r = t.FunctionAction = void 0;
             ! function(e) {
-                e.LoginRequest = "twitch-ext-login-request", e.FollowAction = "twitch-ext-follow-action", e.FollowComplete = "twitch-ext-follow-complete", e.FollowStatusRequest = "twitch-ext-follow-status", e.FollowStatusResponse = "twitch-ext-follow-status-response", e.IdShareRequest = "twitch-ext-id-share-request", e.TwitchExtMinimize = "twitch-ext-minimize", e.UseBitsPromptRequired = "twitch-ext-use-bits", e.UseBits = "twitch-ext-use-bits", e.UseBitsComplete = "twitch-ext-use-bits-complete"
+                e.LoginRequest = "twitch-ext-login-request", e.FollowAction = "twitch-ext-follow-action", e.FollowComplete = "twitch-ext-follow-complete", e.FollowStatusRequest = "twitch-ext-follow-status", e.FollowStatusResponse = "twitch-ext-follow-status-response", e.IdShareRequest = "twitch-ext-id-share-request", e.TwitchExtMinimize = "twitch-ext-minimize", e.UseBitsPromptRequired = "twitch-ext-use-bits", e.SubscribeToChannel = "twitch-ext-subscribe-to-channel", e.SubscribeToChannelResult = "twitch-ext-subscribe-to-channel-result", e.UseBits = "twitch-ext-use-bits", e.UseBitsComplete = "twitch-ext-use-bits-complete"
             }(r || (t.FunctionAction = r = {}))
         },
         jl2H: function(e, t, n) {
@@ -34842,16 +34938,15 @@
                             (0, r.followChannel)(e, t, i).then(function(e) {
                                 var t = e.channel,
                                     r = e.channelId,
-                                    i = e.isFollowing,
-                                    a = {
-                                        action: o.FunctionAction.FollowComplete,
-                                        channel: t,
-                                        didFollow: i
-                                    };
+                                    i = e.isFollowing;
                                 n.tracker.trackEvent("extension_follow", {
                                     target_channel: t,
                                     target_channel_id: r
-                                }), n.replyCallback(a)
+                                }), n.replyCallback({
+                                    action: o.FunctionAction.FollowComplete,
+                                    channel: t,
+                                    didFollow: i
+                                })
                             })
                         }
                     }
