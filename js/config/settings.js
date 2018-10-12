@@ -41,7 +41,7 @@ window.__twilightSettings = {
     "dashboard_payout_history": true,
     "dashboard_vp_widget_enabled": true,
     "deprecated_messages_download_enabled": true,
-    "detector_urls": ["https://s0.2mdn.net/", "https://adservice.google.com", "https://pagead2.googlesyndication.com/", "https://r.nexac.com/e/getdata.xgi?foo=bar"],
+    "detector_urls": [],
     "dev_extension_sandbox_launch": "on",
     "dev_insights_feature_launch": "on",
     "drops_itemnames_enabled": false,
