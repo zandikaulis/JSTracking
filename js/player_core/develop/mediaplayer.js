@@ -2305,7 +2305,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.3.0-421759bc";
+    return "2.3.0-e708d3a6";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3140,7 +3140,7 @@ MediaSink.prototype.setPlaybackRate = function (rate) {
 MediaSink.prototype.addCue = function (start, end, onCue) {
     // endTime musst be larger than startTime on Edge
     if (end <= start) {
-        end = start + 1;
+        end = start + MIN_PLAYABLE_BUFFER;
     }
     // `var VTTCue` was in closure scope. However, with videojs hls tech,
     // gloval.VTTCue is temporarily polyfilled on Edge and then restored.
