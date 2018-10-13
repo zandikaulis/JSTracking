@@ -366,18 +366,6 @@ window.__twilightSettings = {
                 "value": "control"
             }]
         },
-        "1f57c754-ceb2-40e4-8d49-c51cfc007f14": {
-            "name": "TWILIGHT_SUB_CHECKOUT",
-            "v": 3621,
-            "t": 2,
-            "groups": [{
-                "weight": 100,
-                "value": "yes"
-            }, {
-                "weight": 0,
-                "value": "no"
-            }]
-        },
         "2005226d-07fe-46cf-a229-d91dd03d8d3a": {
             "name": "delete_XP",
             "v": 3634,
@@ -1577,6 +1565,18 @@ window.__twilightSettings = {
             }, {
                 "weight": 100,
                 "value": "experiment"
+            }]
+        },
+        "eafe4659-5bfa-45d8-98f9-8750cbbadb08": {
+            "name": "AMAZON_PAY_BITS",
+            "v": 4871,
+            "t": 1,
+            "groups": [{
+                "weight": 0,
+                "value": "yes"
+            }, {
+                "weight": 100,
+                "value": "no"
             }]
         },
         "ec70bd08-dbc8-4f48-9f60-d035fec3eb20": {
