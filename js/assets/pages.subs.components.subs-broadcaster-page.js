@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [177], {
+    [171], {
         "0WFu": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -38,13 +38,13 @@
                     }, t.prototype.render = function() {
                         return this.props.data.loading || !this.props.data.user ? s.createElement("div", {
                             className: "subs-broadcaster-banner"
-                        }, s.createElement(f.Va, {
+                        }, s.createElement(f.Wa, {
                             className: "subs-broadcaster-banner__broadcaster-info",
-                            textAlign: f.Jb.Center,
-                            display: f.W.Flex,
-                            flexDirection: f.Y.Column,
+                            textAlign: f.Kb.Center,
+                            display: f.X.Flex,
+                            flexDirection: f.Z.Column,
                             alignItems: f.f.Center,
-                            flexWrap: f.Z.NoWrap,
+                            flexWrap: f.Aa.NoWrap,
                             padding: {
                                 x: 1,
                                 y: 3
@@ -56,43 +56,43 @@
                             breakpointLarge: {
                                 padding: 5
                             }
-                        }, s.createElement(f.Va, {
+                        }, s.createElement(f.Wa, {
                             margin: 1,
                             breakpointLarge: {
                                 margin: 1
                             },
                             fullWidth: !0
-                        }, s.createElement(f.cb, {
+                        }, s.createElement(f.db, {
                             height: 40
-                        })), s.createElement(f.Va, {
+                        })), s.createElement(f.Wa, {
                             margin: 1,
                             breakpointLarge: {
                                 margin: 2
                             }
-                        }, s.createElement(f.cb, {
+                        }, s.createElement(f.db, {
                             height: 80,
                             width: 80
-                        })), s.createElement(f.Va, {
+                        })), s.createElement(f.Wa, {
                             className: "subs-broadcaster-banner__description",
                             margin: 1,
                             breakpointLarge: {
                                 margin: 2
                             },
                             fullWidth: !0
-                        }, s.createElement(f.cb, {
+                        }, s.createElement(f.db, {
                             lineCount: 1
                         })))) : s.createElement("div", {
                             style: {
                                 backgroundImage: "url(" + this.props.data.user.bannerImageURL
                             },
                             className: "subs-broadcaster-banner"
-                        }, s.createElement(f.Va, {
+                        }, s.createElement(f.Wa, {
                             className: "subs-broadcaster-banner__broadcaster-info",
-                            textAlign: f.Jb.Center,
-                            display: f.W.Flex,
-                            flexDirection: f.Y.Column,
+                            textAlign: f.Kb.Center,
+                            display: f.X.Flex,
+                            flexDirection: f.Z.Column,
                             alignItems: f.f.Center,
-                            flexWrap: f.Z.NoWrap,
+                            flexWrap: f.Aa.NoWrap,
                             padding: {
                                 x: 1,
                                 y: 3
@@ -104,16 +104,16 @@
                             breakpointLarge: {
                                 padding: 5
                             }
-                        }, s.createElement(f.Na, {
+                        }, s.createElement(f.Oa, {
                             margin: 1,
                             breakpointLarge: {
                                 margin: 1
                             }
-                        }, s.createElement(f.V, {
-                            type: f.Nb.H2,
+                        }, s.createElement(f.W, {
+                            type: f.Ob.H2,
                             bold: !0,
                             color: f.O.Overlay
-                        }, this.props.data.user.displayName)), s.createElement(f.Na, {
+                        }, this.props.data.user.displayName)), s.createElement(f.Oa, {
                             margin: 1,
                             breakpointLarge: {
                                 margin: 2
@@ -122,29 +122,29 @@
                             alt: this.props.data.user.displayName,
                             size: 96,
                             src: this.props.data.user.profileImageURL
-                        })), s.createElement(f.Va, {
+                        })), s.createElement(f.Wa, {
                             className: "subs-broadcaster-banner__description",
                             margin: 1,
                             breakpointLarge: {
                                 margin: 2
                             }
-                        }, s.createElement(f.V, {
+                        }, s.createElement(f.W, {
                             color: f.O.Overlay
                         }, this.props.data.user.description)), this.verifiedPartner()))
                     }, t.prototype.verifiedPartner = function() {
-                        return this.props.data.user && this.props.data.user.roles.isPartner ? s.createElement(f.Va, {
-                            display: f.W.Flex
-                        }, s.createElement(f.mb, {
-                            asset: f.nb.Verified,
-                            type: f.ob.Brand
-                        }), s.createElement(f.Na, {
+                        return this.props.data.user && this.props.data.user.roles.isPartner ? s.createElement(f.Wa, {
+                            display: f.X.Flex
+                        }, s.createElement(f.nb, {
+                            asset: f.ob.Verified,
+                            type: f.pb.Brand
+                        }), s.createElement(f.Oa, {
                             margin: {
                                 x: 1
                             }
-                        }, s.createElement(f.V, {
+                        }, s.createElement(f.W, {
                             color: f.O.Overlay
                         }, Object(o.d)("Verified Twitch Partner", "SubsBroadcasterBanner")))) : null
-                    }, t = a.__decorate([Object(h.c)("SubsBroadcasterBanner"), Object(l.a)(g, {
+                    }, t = a.__decorate([Object(h.b)("SubsBroadcasterBanner"), Object(l.a)(g, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -182,31 +182,31 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? s.createElement(f.cb, null) : s.createElement(f.Va, {
+                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? s.createElement(f.db, null) : s.createElement(f.Wa, {
                             className: "subs-plan-esports",
                             alignItems: f.f.Center,
-                            flexDirection: f.Y.Column,
+                            flexDirection: f.Z.Column,
                             margin: {
                                 x: 5
                             }
-                        }, s.createElement(f.Na, {
+                        }, s.createElement(f.Oa, {
                             margin: 1,
-                            textAlign: f.Jb.Center
-                        }, s.createElement(f.V, {
-                            type: f.Nb.H3,
+                            textAlign: f.Kb.Center
+                        }, s.createElement(f.W, {
+                            type: f.Ob.H3,
                             color: f.O.Link,
                             bold: !0
-                        }, this.productName)), s.createElement(f.Na, {
+                        }, this.productName)), s.createElement(f.Oa, {
                             margin: 1,
-                            textAlign: f.Jb.Center
-                        }, s.createElement(f.V, null, Object(o.d)("Your VIP pass to the best of the Overwatch League", "SubsPlanEsports"))), this.baseEmotes(), s.createElement(f.Va, {
+                            textAlign: f.Kb.Center
+                        }, s.createElement(f.W, null, Object(o.d)("Your VIP pass to the best of the Overwatch League", "SubsPlanEsports"))), this.baseEmotes(), s.createElement(f.Wa, {
                             margin: 1,
-                            display: f.W.Flex,
-                            justifyContent: f.Ua.Center
+                            display: f.X.Flex,
+                            justifyContent: f.Va.Center
                         }, this.makePlanWrappers()))
                     }, t.prototype.makePlanWrappers = function() {
                         var e = this;
-                        if (!this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1) return [s.createElement(f.cb, {
+                        if (!this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1) return [s.createElement(f.db, {
                             key: "subs-broadcaster__emote-placeholder"
                         })];
                         var t = Object(o.d)("Overwatch League All-Access Pass Benefits", "SubsPlanEsports"),
@@ -218,109 +218,109 @@
                             u = Object(o.d)("Overwatch In-Game Content", "SubPlanEsports"),
                             l = Object(o.d)("Get All-Access Pass for $19.99 with Twitch Prime", "SubsPlanEsports"),
                             d = Object(o.d)("Offer available for a limited time. Terms and conditions apply", "SubsPlanEsports");
-                        return "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? [s.createElement(f.xb, {
+                        return "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? [s.createElement(f.yb, {
                             "data-test-selector": "mobile-sub-container",
                             key: "subs-broadcaster-plan-0",
                             className: "subs-plan-esports__plan",
                             margin: 1,
                             elevation: 2,
-                            display: f.W.Flex,
-                            flexDirection: f.Y.Column,
+                            display: f.X.Flex,
+                            flexDirection: f.Z.Column,
                             padding: 2,
-                            textAlign: f.Jb.Center
-                        }, s.createElement(f.Na, {
+                            textAlign: f.Kb.Center
+                        }, s.createElement(f.Oa, {
                             margin: 1
-                        }, s.createElement(f.V, {
-                            type: f.Nb.H3,
+                        }, s.createElement(f.W, {
+                            type: f.Ob.H3,
                             color: f.O.Link
-                        }, this.productName)), s.createElement(f.Va, {
+                        }, this.productName)), s.createElement(f.Wa, {
                             margin: {
                                 x: 1,
                                 bottom: 1
                             }
-                        }, s.createElement(f.Va, {
-                            display: f.W.Flex,
-                            justifyContent: f.Ua.Center
-                        }, s.createElement(f.Va, {
+                        }, s.createElement(f.Wa, {
+                            display: f.X.Flex,
+                            justifyContent: f.Va.Center
+                        }, s.createElement(f.Wa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(f.mb, {
-                            asset: f.nb.Crown,
-                            type: f.ob.Prime
-                        })), s.createElement(f.V, {
-                            type: f.Nb.H5
-                        }, l)), s.createElement(f.T, {
+                        }, s.createElement(f.nb, {
+                            asset: f.ob.Crown,
+                            type: f.pb.Prime
+                        })), s.createElement(f.W, {
+                            type: f.Ob.H5
+                        }, l)), s.createElement(f.U, {
                             to: "https://blog.twitch.tv/overwatch-league-all-access-pass-on-twitch-8cbf3e23df0a",
                             targetBlank: !0,
                             hoverUnderlineNone: !1
-                        }, d)), s.createElement(f.Va, {
+                        }, d)), s.createElement(f.Wa, {
                             margin: 1,
-                            display: f.W.Flex,
-                            flexWrap: f.Z.Wrap,
+                            display: f.X.Flex,
+                            flexWrap: f.Aa.Wrap,
                             flexGrow: 1,
                             alignItems: f.f.Center,
-                            justifyContent: f.Ua.Center
-                        }, s.createElement(f.V, {
+                            justifyContent: f.Va.Center
+                        }, s.createElement(f.W, {
                             bold: !0
-                        }, t), s.createElement(f.Va, {
+                        }, t), s.createElement(f.Wa, {
                             padding: {
                                 top: 1
                             }
-                        }, s.createElement(f.V, null, n), s.createElement(f.V, null, i), s.createElement(f.V, null, r), s.createElement(f.V, null, a), s.createElement(f.V, null, c), s.createElement(f.V, null, u))))] : this.props.subscriptionProducts.map(function(p, m) {
+                        }, s.createElement(f.W, null, n), s.createElement(f.W, null, i), s.createElement(f.W, null, r), s.createElement(f.W, null, a), s.createElement(f.W, null, c), s.createElement(f.W, null, u))))] : this.props.subscriptionProducts.map(function(p, m) {
                             var b = p.price;
-                            return Object(y.g)([p]) && (b = Object(y.c)(p)), s.createElement(f.xb, {
+                            return Object(y.g)([p]) && (b = Object(y.c)(p)), s.createElement(f.yb, {
                                 key: "subs-broadcaster-plan-" + m,
                                 className: "subs-plan-esports__plan",
                                 margin: 1,
                                 elevation: 2,
-                                display: f.W.Flex,
-                                flexDirection: f.Y.Column,
+                                display: f.X.Flex,
+                                flexDirection: f.Z.Column,
                                 padding: 2,
-                                textAlign: f.Jb.Center,
+                                textAlign: f.Kb.Center,
                                 "data-test-selector": "sub-tier-container"
-                            }, s.createElement(f.Na, {
+                            }, s.createElement(f.Oa, {
                                 margin: 1
-                            }, s.createElement(f.V, {
-                                type: f.Nb.H3,
+                            }, s.createElement(f.W, {
+                                type: f.Ob.H3,
                                 color: f.O.Link
                             }, Object(o.d)("{price} All-Access Pass", {
                                 price: p.price
-                            }, "SubsPlanEsports"))), s.createElement(f.Va, {
+                            }, "SubsPlanEsports"))), s.createElement(f.Wa, {
                                 margin: {
                                     x: 1,
                                     bottom: 1
                                 }
-                            }, s.createElement(f.Va, {
-                                display: f.W.Flex,
-                                justifyContent: f.Ua.Center
-                            }, s.createElement(f.Va, {
+                            }, s.createElement(f.Wa, {
+                                display: f.X.Flex,
+                                justifyContent: f.Va.Center
+                            }, s.createElement(f.Wa, {
                                 margin: {
                                     right: .5
                                 }
-                            }, s.createElement(f.mb, {
-                                asset: f.nb.Crown,
-                                type: f.ob.Prime
-                            })), s.createElement(f.V, {
-                                type: f.Nb.H5
-                            }, l)), s.createElement(f.T, {
+                            }, s.createElement(f.nb, {
+                                asset: f.ob.Crown,
+                                type: f.pb.Prime
+                            })), s.createElement(f.W, {
+                                type: f.Ob.H5
+                            }, l)), s.createElement(f.U, {
                                 to: "https://blog.twitch.tv/overwatch-league-all-access-pass-on-twitch-8cbf3e23df0a",
                                 targetBlank: !0,
                                 hoverUnderlineNone: !1
-                            }, d)), s.createElement(f.Va, {
+                            }, d)), s.createElement(f.Wa, {
                                 margin: 1,
-                                display: f.W.Flex,
-                                flexWrap: f.Z.Wrap,
+                                display: f.X.Flex,
+                                flexWrap: f.Aa.Wrap,
                                 flexGrow: 1,
                                 alignItems: f.f.Center,
-                                justifyContent: f.Ua.Center
-                            }, s.createElement(f.V, {
+                                justifyContent: f.Va.Center
+                            }, s.createElement(f.W, {
                                 bold: !0
-                            }, t), s.createElement(f.Va, {
+                            }, t), s.createElement(f.Wa, {
                                 padding: {
                                     top: 1
                                 }
-                            }, s.createElement(f.V, null, n), s.createElement(f.V, null, i), s.createElement(f.V, null, r), s.createElement(f.V, null, a), s.createElement(f.V, null, c), s.createElement(f.V, null, u))), s.createElement(f.Va, {
+                            }, s.createElement(f.W, null, n), s.createElement(f.W, null, i), s.createElement(f.W, null, r), s.createElement(f.W, null, a), s.createElement(f.W, null, c), s.createElement(f.W, null, u))), s.createElement(f.Wa, {
                                 margin: 1
                             }, s.createElement(E.a, {
                                 isSubbedToTier: e.isSubbedToTier(m),
@@ -341,28 +341,28 @@
                         return !1
                     }, t.prototype.baseEmotes = function() {
                         var e = Object(b.b)(this.props.subscriptionProducts[0].emotes);
-                        return s.createElement(f.Va, {
+                        return s.createElement(f.Wa, {
                             margin: 1,
                             className: "subs-plan-esports__base-emotes"
                         }, s.createElement(v.a, {
                             emotes: e,
                             locked: !1
                         }))
-                    }, t = a.__decorate([Object(h.c)("SubsPlanEsports")], t)
+                    }, t = a.__decorate([Object(h.b)("SubsPlanEsports")], t)
                 }(s.Component)),
                 P = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(f.Va, null, s.createElement(k, {
+                        return s.createElement(f.Wa, null, s.createElement(k, {
                             channelName: this.props.channelDisplayName
-                        }), s.createElement(f.Va, {
-                            display: f.W.Flex,
+                        }), s.createElement(f.Wa, {
+                            display: f.X.Flex,
                             padding: {
                                 top: 2
                             },
-                            justifyContent: f.Ua.Center
+                            justifyContent: f.Va.Center
                         }, s.createElement(S, {
                             subbedPlatform: this.props.subbedPlatform,
                             subscriptionProducts: this.props.subscriptionProducts,
@@ -372,20 +372,20 @@
                         })))
                     }, t
                 }(s.Component),
-                N = n("4iu0"),
-                T = n("L+W6"),
+                T = n("4iu0"),
+                O = n("L+W6"),
                 C = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.subscriptionProduct.emotes.length < 1 ? null : s.createElement(f.Va, {
+                        return this.props.subscriptionProduct.emotes.length < 1 ? null : s.createElement(f.Wa, {
                             key: this.props.subscriptionProduct.id,
-                            display: f.W.Flex,
-                            flexDirection: f.Y.Column,
+                            display: f.X.Flex,
+                            flexDirection: f.Z.Column,
                             alignItems: f.f.Center,
                             margin: 1
-                        }, this.buildEmotes(this.props.subscriptionProduct.emotes), this.props.hidePrice ? null : s.createElement(f.V, null, Object(o.d)("{price} emote", {
+                        }, this.buildEmotes(this.props.subscriptionProduct.emotes), this.props.hidePrice ? null : s.createElement(f.W, null, Object(o.d)("{price} emote", {
                             price: this.props.subscriptionProduct.price
                         }, "SubsBonusEmote")))
                     }, t.prototype.buildEmotes = function(e) {
@@ -404,7 +404,7 @@
             ! function(e) {
                 e[e.Tier1 = 0] = "Tier1", e[e.Tier2 = 1] = "Tier2", e[e.Tier3 = 2] = "Tier3"
             }(i || (i = {}));
-            var O = function(e) {
+            var N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -454,66 +454,66 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? this.messages.mobileSubbed : this.messages.subscribe;
-                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? s.createElement(f.Va, {
-                            display: f.W.Flex,
-                            justifyContent: f.Ua.Center,
+                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? s.createElement(f.Wa, {
+                            display: f.X.Flex,
+                            justifyContent: f.Va.Center,
                             alignItems: f.f.Center,
                             fullHeight: !0
-                        }, s.createElement(f.Xa, null)) : s.createElement(f.Va, {
+                        }, s.createElement(f.Ya, null)) : s.createElement(f.Wa, {
                             className: "subs-broadcaster-tabbed-tiers",
-                            display: f.W.Flex,
-                            flexDirection: f.Y.Column,
+                            display: f.X.Flex,
+                            flexDirection: f.Z.Column,
                             alignItems: f.f.Center
-                        }, s.createElement(f.Na, {
+                        }, s.createElement(f.Oa, {
                             margin: 1
-                        }, s.createElement(f.V, {
-                            type: f.Nb.H3,
+                        }, s.createElement(f.W, {
+                            type: f.Ob.H3,
                             color: f.O.Link,
                             bold: !0
                         }, e)), "IOS" !== this.props.subbedPlatform && "ANDROID" !== this.props.subbedPlatform ? this.makeTabs() : null, this.makeTabContents())
                     }, t.prototype.makeTabs = function() {
-                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? s.createElement(f.cb, null) : 1 === this.props.subscriptionProducts.length ? s.createElement(f.zb, null, s.createElement(f.yb, {
+                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? s.createElement(f.db, null) : 1 === this.props.subscriptionProducts.length ? s.createElement(f.Ab, null, s.createElement(f.zb, {
                             active: !0,
                             "data-a-target": "subscribe-tab-" + i.Tier1
-                        }, this.props.subscriptionProducts[0].price)) : s.createElement(f.zb, null, s.createElement(f.yb, {
+                        }, this.props.subscriptionProducts[0].price)) : s.createElement(f.Wa, null, s.createElement(f.Ab, null, s.createElement(f.zb, {
                             active: this.state.activeTab === i.Tier1,
                             onClick: this.toggleActiveTab,
                             "data-a-target": "subscribe-tab-" + i.Tier1
-                        }, this.props.subscriptionProducts[0].price), s.createElement(f.yb, {
+                        }, this.props.subscriptionProducts[0].price), s.createElement(f.zb, {
                             active: this.state.activeTab === i.Tier2,
                             onClick: this.toggleActiveTab,
                             "data-a-target": "subscribe-tab-" + i.Tier2
-                        }, this.props.subscriptionProducts[1].price), s.createElement(f.yb, {
+                        }, this.props.subscriptionProducts[1].price), s.createElement(f.zb, {
                             active: this.state.activeTab === i.Tier3,
                             onClick: this.toggleActiveTab,
                             "data-a-target": "subscribe-tab-" + i.Tier3
-                        }, this.props.subscriptionProducts[2].price))
+                        }, this.props.subscriptionProducts[2].price)))
                     }, t.prototype.makeTabContents = function() {
-                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? s.createElement(f.cb, null) : s.createElement(f.Va, {
+                        return !this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1 ? s.createElement(f.db, null) : s.createElement(f.Wa, {
                             className: "subs-broadcaster-tabbed-tiers__tab",
-                            display: f.W.Flex,
-                            flexDirection: f.Y.Column,
+                            display: f.X.Flex,
+                            flexDirection: f.Z.Column,
                             alignItems: f.f.Center,
-                            textAlign: f.Jb.Center
-                        }, s.createElement(f.Na, {
+                            textAlign: f.Kb.Center
+                        }, s.createElement(f.Oa, {
                             margin: 1
-                        }, s.createElement(f.V, {
-                            type: f.Nb.H4,
+                        }, s.createElement(f.W, {
+                            type: f.Ob.H4,
                             bold: !0
                         }, Object(o.d)("Channel Subscription for {displayName}", {
                             displayName: this.props.channelDisplayName
-                        }, "SubsBroadcasterPlanTabs"))), s.createElement(f.V, {
-                            type: f.Nb.P
+                        }, "SubsBroadcasterPlanTabs"))), s.createElement(f.W, {
+                            type: f.Ob.P
                         }, Object(o.d)("{numEmotes, plural, one {Includes Ad-Free Viewing, Subscriber Badges and 1 Emote.} other {Includes Ad-Free Viewing, Subscriber Badges and {numEmotes, number} Emotes.}}", {
                             numEmotes: this.props.subscriptionProducts[0].emotes.length
-                        }, "SubsBroadcasterPlanTabs")), s.createElement(f.V, {
-                            type: f.Nb.P
-                        }, this.messages.perkChat), this.getSubButton(), s.createElement(f.Na, {
+                        }, "SubsBroadcasterPlanTabs")), s.createElement(f.W, {
+                            type: f.Ob.P
+                        }, this.messages.perkChat), this.getSubButton(), s.createElement(f.Oa, {
                             margin: {
                                 top: 2
                             }
-                        }, s.createElement(f.V, {
-                            type: f.Nb.H4,
+                        }, s.createElement(f.W, {
+                            type: f.Ob.H4,
                             bold: !0
                         }, this.messages.includedEmotes)), this.getBonusEmotes(), this.baseEmotes())
                     }, t.prototype.getSubButton = function() {
@@ -531,20 +531,20 @@
                         }
                         var t = e.price;
                         Object(y.g)([e]) && (t = Object(y.c)(e));
-                        var n = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? s.createElement(f.V, {
-                            type: f.Nb.H5
-                        }, Object(o.d)("Tier 1 Subscription", "SubsBroadcasterPlanTabs")) : s.createElement(T.a, {
+                        var n = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? s.createElement(f.W, {
+                            type: f.Ob.H5
+                        }, Object(o.d)("Tier 1 Subscription", "SubsBroadcasterPlanTabs")) : s.createElement(O.a, {
                             subscriptionProduct: e
                         });
-                        return s.createElement(f.Va, {
+                        return s.createElement(f.Wa, {
                             margin: {
                                 top: 1
                             }
-                        }, s.createElement(f.Va, {
+                        }, s.createElement(f.Wa, {
                             margin: {
                                 top: 1
                             }
-                        }, n), s.createElement(f.Va, {
+                        }, n), s.createElement(f.Wa, {
                             margin: {
                                 top: 1
                             }
@@ -592,13 +592,13 @@
                                 subscriptionProduct: t
                             }))
                         }
-                        return s.createElement(f.Va, {
-                            display: f.W.InlineFlex,
+                        return s.createElement(f.Wa, {
+                            display: f.X.InlineFlex,
                             "data-test-selector": "bonus-emote-container"
                         }, e)
                     }, t.prototype.baseEmotes = function() {
                         var e = Object(b.b)(this.props.subscriptionProducts[0].emotes);
-                        return s.createElement(f.Va, {
+                        return s.createElement(f.Wa, {
                             className: "subs-broadcaster-tabbed-tiers__emotes"
                         }, s.createElement(v.a, {
                             emotes: e,
@@ -606,8 +606,8 @@
                         }))
                     }, t
                 }(s.Component),
-                V = Object(h.c)("SubPlanTabs")(O),
-                I = n("a5fV"),
+                I = Object(h.b)("SubPlanTabs")(N),
+                W = n("a5fV"),
                 x = n("0WFu"),
                 j = (n("DQVP"), function(e) {
                     function t() {
@@ -633,63 +633,63 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (!this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1) return s.createElement(f.cb, null);
+                        if (!this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1) return s.createElement(f.db, null);
                         this.setMessages();
                         var e = "IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform ? this.messages.subscribed : this.messages.subscribeNow;
-                        return s.createElement(f.Va, {
+                        return s.createElement(f.Wa, {
                             className: "subs-plan-tiers",
                             alignItems: f.f.Center,
-                            flexDirection: f.Y.Column,
+                            flexDirection: f.Z.Column,
                             margin: {
                                 x: 5
                             }
-                        }, s.createElement(f.Na, {
+                        }, s.createElement(f.Oa, {
                             margin: 1,
-                            textAlign: f.Jb.Center
-                        }, s.createElement(f.V, {
-                            type: f.Nb.H3,
+                            textAlign: f.Kb.Center
+                        }, s.createElement(f.W, {
+                            type: f.Ob.H3,
                             color: f.O.Link,
                             bold: !0
-                        }, e)), s.createElement(f.Na, {
+                        }, e)), s.createElement(f.Oa, {
                             margin: 1,
-                            textAlign: f.Jb.Center
-                        }, s.createElement(f.V, null, this.messages.subscriptionPerks)), this.baseEmotes(), s.createElement(f.Va, {
+                            textAlign: f.Kb.Center
+                        }, s.createElement(f.W, null, this.messages.subscriptionPerks)), this.baseEmotes(), s.createElement(f.Wa, {
                             margin: 1,
-                            display: f.W.Flex,
-                            justifyContent: f.Ua.Center
+                            display: f.X.Flex,
+                            justifyContent: f.Va.Center
                         }, this.makePlanWrappers()))
                     }, t.prototype.makePlanWrappers = function() {
                         var e = this;
-                        if (!this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1) return [s.createElement(f.cb, {
+                        if (!this.props.subscriptionProducts || this.props.subscriptionProducts.length < 1) return [s.createElement(f.db, {
                             key: "subs-broadcaster__emote-placeholder"
                         })];
                         if ("IOS" === this.props.subbedPlatform || "ANDROID" === this.props.subbedPlatform) {
                             var t = this.props.subscriptionProducts.find(function(e) {
                                 return "1000" === e.tier
                             });
-                            return [s.createElement(f.xb, {
+                            return [s.createElement(f.yb, {
                                 "data-test-selector": "mobile-sub-container",
                                 key: "subs-broadcaster-plan-0",
                                 className: "subs-plan-tiers__plan",
                                 margin: 1,
                                 elevation: 2,
-                                display: f.W.Flex,
-                                flexDirection: f.Y.Column,
+                                display: f.X.Flex,
+                                flexDirection: f.Z.Column,
                                 padding: 2,
-                                textAlign: f.Jb.Center
-                            }, s.createElement(f.Na, {
+                                textAlign: f.Kb.Center
+                            }, s.createElement(f.Oa, {
                                 margin: 1
-                            }, s.createElement(f.V, {
-                                type: f.Nb.H3,
+                            }, s.createElement(f.W, {
+                                type: f.Ob.H3,
                                 color: f.O.Link
-                            }, Object(o.d)("Tier 1 Subscription", "SubsPlanTiers"))), s.createElement(f.Va, {
+                            }, Object(o.d)("Tier 1 Subscription", "SubsPlanTiers"))), s.createElement(f.Wa, {
                                 margin: 1,
-                                display: f.W.Flex,
-                                flexWrap: f.Z.Wrap,
+                                display: f.X.Flex,
+                                flexWrap: f.Aa.Wrap,
                                 flexGrow: 1,
                                 alignItems: f.f.Center,
-                                justifyContent: f.Ua.Center
-                            }, s.createElement(f.V, null, this.messages.includes), this.bonusEmotesMessage(0)), this.bonusEmotes(0), t && s.createElement(f.Va, {
+                                justifyContent: f.Va.Center
+                            }, s.createElement(f.W, null, this.messages.includes), this.bonusEmotesMessage(0)), this.bonusEmotes(0), t && s.createElement(f.Wa, {
                                 margin: 1
                             }, s.createElement(E.a, {
                                 isSubbedToTier: this.isSubbedToTier(0),
@@ -702,35 +702,37 @@
                         }
                         return this.props.subscriptionProducts.map(function(t, n) {
                             var i = t.price;
-                            Object(y.g)([t]) && (i = Object(y.c)(t)), t.priceInfo && (i = Object(I.a)(Object(I.b)(t.priceInfo.total, t.priceInfo.exponent), t.priceInfo.currency));
-                            var r = i;
-                            return t.tier && null === (r = String(Object(x.a)(t.tier))) && (r = "1"), s.createElement(f.xb, {
+                            Object(y.g)([t]) && (i = Object(y.c)(t)), t.priceInfo && (i = Object(W.a)(Object(W.b)(t.priceInfo.total, t.priceInfo.exponent), t.priceInfo.currency));
+                            var r = null;
+                            t.tier && (r = Object(x.a)(t.tier));
+                            var a = r ? Object(o.d)("Tier {tier} Subscription", {
+                                tier: r
+                            }, "SubsPlanTiers") : Object(o.d)("Subscription", "SubsPlanTiers");
+                            return s.createElement(f.yb, {
                                 key: "subs-broadcaster-plan-" + n,
                                 className: "subs-plan-tiers__plan",
                                 margin: 1,
                                 elevation: 2,
-                                display: f.W.Flex,
-                                flexDirection: f.Y.Column,
+                                display: f.X.Flex,
+                                flexDirection: f.Z.Column,
                                 padding: 2,
-                                textAlign: f.Jb.Center,
+                                textAlign: f.Kb.Center,
                                 "data-test-selector": "sub-tier-container"
-                            }, s.createElement(f.Na, {
+                            }, s.createElement(f.Oa, {
                                 margin: 1
-                            }, s.createElement(f.V, {
-                                type: f.Nb.H3,
+                            }, s.createElement(f.W, {
+                                type: f.Ob.H3,
                                 color: f.O.Link
-                            }, Object(o.d)("Tier {tier} Subscription", {
-                                tier: r
-                            }, "SubsPlanTiers"))), s.createElement(f.Va, {
+                            }, a)), s.createElement(f.Wa, {
                                 margin: 1,
-                                display: f.W.Flex,
-                                flexWrap: f.Z.Wrap,
+                                display: f.X.Flex,
+                                flexWrap: f.Aa.Wrap,
                                 flexGrow: 1,
                                 alignItems: f.f.Center,
-                                justifyContent: f.Ua.Center
-                            }, s.createElement(f.V, null, e.messages.includes), e.bonusEmotesMessage(n)), e.bonusEmotes(n), s.createElement(T.a, {
+                                justifyContent: f.Va.Center
+                            }, s.createElement(f.W, null, e.messages.includes), e.bonusEmotesMessage(n)), e.bonusEmotes(n), s.createElement(O.a, {
                                 subscriptionProduct: t
-                            }), s.createElement(f.Va, {
+                            }), s.createElement(f.Wa, {
                                 margin: 1
                             }, s.createElement(E.a, {
                                 isSubbedToTier: e.isSubbedToTier(n),
@@ -750,7 +752,7 @@
                         return !1
                     }, t.prototype.baseEmotes = function() {
                         var e = Object(b.b)(this.props.subscriptionProducts[0].emotes);
-                        return s.createElement(f.Va, {
+                        return s.createElement(f.Wa, {
                             margin: 1,
                             className: "subs-plan-tiers__base-emotes"
                         }, s.createElement(v.a, {
@@ -769,7 +771,7 @@
                             default:
                                 t = 0
                         }
-                        return t > 0 ? s.createElement(f.V, {
+                        return t > 0 ? s.createElement(f.W, {
                             bold: !0
                         }, Object(o.d)("{bonusEmoteCount, plural, one {plus 1 bonus emote!} other {plus {bonusEmoteCount, number} bonus emotes!}}", {
                             bonusEmoteCount: t
@@ -789,9 +791,9 @@
                                 subscriptionProduct: e,
                                 hidePrice: !0
                             })
-                        }), s.createElement(f.Va, {
-                            display: f.W.Flex,
-                            justifyContent: f.Ua.Center,
+                        }), s.createElement(f.Wa, {
+                            display: f.X.Flex,
+                            justifyContent: f.Va.Center,
                             "data-test-selector": "bonus-emote-container"
                         }, t)
                     }, t.prototype.setMessages = function() {
@@ -805,38 +807,38 @@
                         }
                     }, t
                 }(s.Component)),
-                w = Object(h.c)("SubsPlanTiers")(j),
+                w = Object(h.b)("SubsPlanTiers")(j),
                 D = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(f.Va, null, s.createElement(k, {
+                        return s.createElement(f.Wa, null, s.createElement(k, {
                             channelName: this.props.channelDisplayName
-                        }), s.createElement(N.a, {
+                        }), s.createElement(T.a, {
                             subscriptionProducts: this.props.subscriptionProducts
-                        }), s.createElement(f.Va, {
+                        }), s.createElement(f.Wa, {
                             padding: {
                                 top: 2
                             },
                             breakpointMedium: {
-                                display: f.W.Hide
+                                display: f.X.Hide
                             }
-                        }, s.createElement(V, {
+                        }, s.createElement(I, {
                             subbedPlatform: this.props.subbedPlatform,
                             channelDisplayName: this.props.channelDisplayName,
                             channelId: this.props.channelId,
                             channelLogin: this.props.channelLogin,
                             subscriptionProducts: this.props.subscriptionProducts,
                             subTier: this.props.subTier
-                        })), s.createElement(f.Va, {
+                        })), s.createElement(f.Wa, {
                             padding: {
                                 top: 2
                             },
-                            display: f.W.Hide,
-                            justifyContent: f.Ua.Center,
+                            display: f.X.Hide,
+                            justifyContent: f.Va.Center,
                             breakpointMedium: {
-                                display: f.W.Flex
+                                display: f.X.Flex
                             }
                         }, s.createElement(w, {
                             subbedPlatform: this.props.subbedPlatform,
@@ -879,24 +881,24 @@
                     return a.__extends(t, e), t.prototype.componentWillMount = function() {
                         this.updateState(this.props)
                     }, t.prototype.componentDidMount = function() {
-                        o.o.setPageTitle("Subscriptions"), this.props.latencyTracking.reportInteractive()
+                        o.p.setPageTitle("Subscriptions"), this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.updateState(e)
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading) return s.createElement(f.Va, {
-                            display: f.W.Flex,
-                            justifyContent: f.Ua.Center,
+                        if (this.props.data.loading) return s.createElement(f.Wa, {
+                            display: f.X.Flex,
+                            justifyContent: f.Va.Center,
                             alignItems: f.f.Center,
                             fullHeight: !0
-                        }, s.createElement(f.Xa, null));
+                        }, s.createElement(f.Ya, null));
                         if (this.props.data.error) return s.createElement(c.a, {
                             message: "Something went wrong"
                         });
-                        if (!this.props.data.user || !this.props.data.user.id || !this.props.data.user.subscriptionProducts || this.props.data.user.subscriptionProducts.length < 1) return window.location.replace("https://twitch.tv/" + this.props.match.params.channelName), s.createElement(f.Va, {
-                            display: f.W.Flex,
-                            justifyContent: f.Ua.Center,
+                        if (!this.props.data.user || !this.props.data.user.id || !this.props.data.user.subscriptionProducts || this.props.data.user.subscriptionProducts.length < 1) return window.location.replace("https://twitch.tv/" + this.props.match.params.channelName), s.createElement(f.Wa, {
+                            display: f.X.Flex,
+                            justifyContent: f.Va.Center,
                             alignItems: f.f.Center
-                        }, s.createElement(f.Xa, null));
+                        }, s.createElement(f.Ya, null));
                         var e = this.props.data.user && this.props.data.user.campaignProperties && this.props.data.user.campaignProperties.domains && this.props.data.user.campaignProperties.domains.length > 0 || !1,
                             t = s.createElement(D, {
                                 subbedPlatform: this.state.subPlatform,
@@ -922,15 +924,15 @@
                                 }
                             }
                         }
-                    }), Object(h.c)("SubsBroadcasterPage", {
+                    }), Object(h.b)("SubsBroadcasterPage", {
                         destination: p.a.SubsBroadcasterPage
                     }), Object(d.a)({
                         location: m.PageviewLocation.SubsBroadcasterPage
                     })], t)
                 }(s.Component),
-                L = Object(r.connect)()(B);
+                A = Object(r.connect)()(B);
             n.d(t, "SubsBroadcasterPage", function() {
-                return L
+                return A
             })
         },
         "3Bft": function(e, t, n) {
@@ -977,7 +979,7 @@
                             channel: e.channel,
                             channel_id: e.channelId,
                             clickthrough_location: e.clickthroughLocation
-                        }, r.n.track(a.SpadeEventType.SubsLandingStreamerClick, t), [2]
+                        }, r.o.track(a.SpadeEventType.SubsLandingStreamerClick, t), [2]
                     })
                 })
             }
@@ -1017,7 +1019,7 @@
                             vod_type: "",
                             viewport_height: window.innerHeight,
                             viewport_width: window.innerWidth
-                        }, r.n.track(a.SpadeEventType.Subscription, n), [2]
+                        }, r.o.track(a.SpadeEventType.Subscription, n), [2]
                     })
                 })
             }
@@ -1036,13 +1038,13 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (this.hasDiscount(this.props.subscriptionProducts)) {
                             var e = this.getMessage();
-                            return r.createElement(o.xb, {
-                                textAlign: o.Jb.Center,
+                            return r.createElement(o.yb, {
+                                textAlign: o.Kb.Center,
                                 className: "sub-discount-banner",
                                 padding: 1,
                                 color: o.O.Overlay,
                                 "data-test-selector": "sub-discount-banner"
-                            }, r.createElement(o.V, {
+                            }, r.createElement(o.W, {
                                 bold: !0
                             }, e))
                         }
@@ -1050,9 +1052,9 @@
                     }, t.prototype.getMessage = function() {
                         var e = Object(s.d)(this.props.subscriptionProducts[0], this.props.isGift);
                         return this.props.isGift ? Object(a.d)("Gift a sub and get {percent} off!", {
-                            percent: Object(a.e)(e / 100, "percent")
+                            percent: Object(a.f)(e / 100, "percent")
                         }, "SubDiscountBanner") : Object(a.d)("Get {percent} off the first month of any paid subscription!", {
-                            percent: Object(a.e)(e / 100, "percent")
+                            percent: Object(a.f)(e / 100, "percent")
                         }, "SubDiscountBanner")
                     }, t.prototype.hasDiscount = function(e) {
                         return this.props.isGift ? Object(s.e)(e) : Object(s.g)(e)
@@ -1218,19 +1220,19 @@
                 s = n("/7QA"),
                 o = n("GnwI"),
                 c = n("Ue10"),
-                u = (n("GOKC"), r.createElement(c.xb, {
+                u = (n("GOKC"), r.createElement(c.yb, {
                     alignItems: c.f.Center,
                     background: c.r.Overlay,
                     borderRadius: c.x.Small,
                     className: "emote-button__lock",
                     color: c.O.Overlay,
                     "data-test-selector": "emote-button-lock",
-                    display: c.W.InlineFlex,
-                    justifyContent: c.Ua.Center,
-                    position: c.db.Absolute,
-                    zIndex: c.ac.Above
-                }, r.createElement(c.mb, {
-                    asset: c.nb.Lock,
+                    display: c.X.InlineFlex,
+                    justifyContent: c.Va.Center,
+                    position: c.eb.Absolute,
+                    zIndex: c.bc.Above
+                }, r.createElement(c.nb, {
+                    asset: c.ob.Lock,
                     height: 10,
                     width: 10
                 }))),
@@ -1254,7 +1256,7 @@
                                 k = f[0];
                             m[g] = k
                         }
-                        d = r.createElement(o.b, {
+                        d = r.createElement(o.a, {
                             className: "emote-picker__emote-image",
                             src: p,
                             srcSet: m,
@@ -1263,13 +1265,13 @@
                     }
                     return r.createElement("div", {
                         className: "emote-button"
-                    }, r.createElement(c.Qb, {
+                    }, r.createElement(c.Rb, {
                         label: i || Object(s.d)("Emote", "EmoteButton"),
-                        direction: c.Sb.Bottom
-                    }, r.createElement(c.Na, {
-                        display: c.W.Flex,
+                        direction: c.Tb.Bottom
+                    }, r.createElement(c.Oa, {
+                        display: c.X.Flex,
                         alignItems: c.f.Center,
-                        justifyContent: c.Ua.Center
+                        justifyContent: c.Va.Center
                     }, r.createElement("button", {
                         "data-test-selector": "emote-button-clickable",
                         className: t,
@@ -1297,10 +1299,10 @@
                                     onClick: e.props.locked ? void 0 : e.handleClickEmote
                                 })
                             });
-                        return r.createElement(c.Va, {
-                            display: c.W.Flex,
-                            flexWrap: c.Z.Wrap,
-                            justifyContent: c.Ua.Center
+                        return r.createElement(c.Wa, {
+                            display: c.X.Flex,
+                            flexWrap: c.Aa.Wrap,
+                            justifyContent: c.Va.Center
                         }, t)
                     }, t
                 }(r.Component));
@@ -1332,9 +1334,9 @@
                                     checkoutButtonTier: n.props.tierPrice
                                 })
                             }, n.openCheckout = function() {
-                                n.state.hasPopupExperiment && s.m.set(o.b, n.props.productName)
+                                n.state.hasPopupExperiment && s.n.set(o.b, n.props.productName)
                             }, !1 === n.props.targetBlank) return n;
-                        var i = s.o.experiments.getAssignment(c.b.InstreamCheckout);
+                        var i = s.p.experiments.getAssignment(c.b.InstreamCheckout);
                         return n.state = {
                             hasPopupExperiment: "yes" === i
                         }, n
@@ -1346,7 +1348,7 @@
                                 ariaLabel: e,
                                 "data-test-selector": p,
                                 disabled: !0,
-                                icon: d.nb.Star
+                                icon: d.ob.Star
                             }, e)
                         }
                         var t = this.props.isEsportChannel ? Object(s.d)("Get the All-Access Pass", "SubTierButton") : Object(s.d)("Subscribe Now", "SubTierButton");
@@ -1356,12 +1358,12 @@
                             linkTo: this.state.hasPopupExperiment ? void 0 : this.props.url,
                             onClick: this.handleClick,
                             purchase: this.props.tierPrice
-                        }, Object(d.bc)(this.props), {
+                        }, Object(d.cc)(this.props), {
                             targetBlank: void 0 === this.props.targetBlank || this.props.targetBlank
                         }), t)
                     }, t
                 }(r.Component),
-                b = Object(a.compose)(Object(u.c)("SubTierButton", {
+                b = Object(a.compose)(Object(u.b)("SubTierButton", {
                     autoReportInteractive: !0
                 }))(m);
             n.d(t, !1, function() {
@@ -1395,26 +1397,26 @@
                         var p = void 0;
                         if (e.isGift && n ? p = Object(r.d)("{price} (Save {percent})", {
                                 price: Object(s.c)(e.subscriptionProduct, e.isGift),
-                                percent: Object(r.e)(Object(s.d)(e.subscriptionProduct, e.isGift) / 100, "percent")
+                                percent: Object(r.f)(Object(s.d)(e.subscriptionProduct, e.isGift) / 100, "percent")
                             }, "SubDiscountPriceLabel") : e.isPaidUpgrade && u ? p = Object(r.d)("{price} / First Month", {
                                 price: Object(s.a)(e.subscriptionProduct)
                             }, "SubDiscountPriceLabel") : c && (p = Object(r.d)("{price} for the first month (Save {percent})", {
                                 price: Object(s.c)(e.subscriptionProduct, e.isGift),
-                                percent: Object(r.e)(Object(s.d)(e.subscriptionProduct, e.isGift) / 100, "percent")
-                            }, "SubDiscountPriceLabel")), p) return i.createElement(o.Va, {
+                                percent: Object(r.f)(Object(s.d)(e.subscriptionProduct, e.isGift) / 100, "percent")
+                            }, "SubDiscountPriceLabel")), p) return i.createElement(o.Wa, {
                             "data-test-selector": "sub-discount-price-label__discounted"
-                        }, i.createElement(o.V, {
+                        }, i.createElement(o.W, {
                             className: "sub-discount-price-label__original-price",
                             color: o.O.Alt2,
-                            decoration: o.Lb.Strikethrough
-                        }, d), i.createElement(o.V, {
+                            decoration: o.Mb.Strikethrough
+                        }, d), i.createElement(o.W, {
                             bold: !0,
                             className: "sub-discount-price-label__discount-price"
                         }, p))
                     }
-                    return i.createElement(o.Va, {
+                    return i.createElement(o.Wa, {
                         "data-test-selector": "sub-discount-price-label__non-discounted"
-                    }, i.createElement(o.V, null, d))
+                    }, i.createElement(o.W, null, d))
                 });
             n.d(t, !1, function() {
                 return "sub-discount-price-label__discounted"
@@ -1825,7 +1827,7 @@
 
             function u() {
                 c.forEach(function(e) {
-                    return i.m.remove(e)
+                    return i.n.remove(e)
                 })
             }
 
@@ -1862,7 +1864,7 @@
                                         c = a.medium,
                                         u = a.content_index,
                                         l = a.email_id;
-                                    o.o.tracking.trackPageview(i.__assign({
+                                    o.p.tracking.trackPageview(i.__assign({
                                         content: s,
                                         medium: c,
                                         content_index: u,
@@ -1870,7 +1872,7 @@
                                         location: e.location
                                     }, t))
                                 }
-                            }, o.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
+                            }, o.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
                         }
                         return i.__extends(s, n), s.prototype.componentDidMount = function() {
                             var e = this;
@@ -1987,7 +1989,7 @@
             }
 
             function a(e, t) {
-                return Object(i.e)(e, {
+                return Object(i.f)(e, {
                     style: "currency",
                     currency: t
                 })
@@ -2030,25 +2032,25 @@
                     return i.__generator(this, function(i) {
                         switch (i.label) {
                             case 0:
-                                t = r.n.getVideoPlayerTrackingData().vodID, n = !!t, c = {
+                                t = r.o.getVideoPlayerTrackingData().vodID, n = !!t, c = {
                                     channelID: e.channelID,
                                     withVideo: !1
                                 }, n && (c.withVideo = !0, c.videoID = t), u = null, i.label = 1;
                             case 1:
-                                return i.trys.push([1, 3, , 4]), [4, r.o.apollo.client.query({
+                                return i.trys.push([1, 3, , 4]), [4, r.p.apollo.client.query({
                                     query: o,
                                     variables: c
                                 })];
                             case 2:
                                 return u = i.sent(), [3, 4];
                             case 3:
-                                return l = i.sent(), r.j.error(l, "Failed to make query for channel info in FollowEvent reporting.", {
+                                return l = i.sent(), r.k.error(l, "Failed to make query for channel info in FollowEvent reporting.", {
                                     channelID: e.channelID
                                 }), [3, 4];
                             case 4:
-                                return d = u && u.data && u.data.user || null, u && !d && r.j.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
+                                return d = u && u.data && u.data.user || null, u && !d && r.k.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
                                     channelID: e.channelID
-                                }), p = null, u && n && ((m = u && u.data && u.data.video) ? p = Object(s.a)(m.broadcastType) : r.j.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
+                                }), p = null, u && n && ((m = u && u.data && u.data.video) ? p = Object(s.a)(m.broadcastType) : r.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: t
                                 })), b = d && d.self, h = b ? !!b.subscriptionBenefit : null, f = b && b.subscriptionBenefit && b.subscriptionBenefit.purchasedWithPrime || !1, g = b ? b.canPrimeSubscribe : null, k = {
                                     action: e.action,
@@ -2073,7 +2075,7 @@
                                     vod_type: p,
                                     viewport_height: window.innerHeight,
                                     viewport_width: window.innerWidth
-                                }, r.n.track(a.SpadeEventType.Subscription, k), [2]
+                                }, r.o.track(a.SpadeEventType.Subscription, k), [2]
                         }
                     })
                 })

@@ -309,33 +309,33 @@
                         })
                     }, t.prototype.render = function() {
                         for (var e = [], t = 0; t < this.state.terms.length; t++) e.push(this.renderTerm(this.state.terms[t], t));
-                        return d.createElement(m.Na, {
+                        return d.createElement(m.Oa, {
                             fullWidth: !0
                         }, d.createElement("div", {
                             className: "chat-terms-control",
                             "data-a-target": "chat-terms-control"
-                        }, d.createElement(m.Va, {
-                            display: m.W.Flex,
-                            flexDirection: m.Y.Row,
+                        }, d.createElement(m.Wa, {
+                            display: m.X.Flex,
+                            flexDirection: m.Z.Row,
                             alignItems: m.f.Stretch,
                             fullWidth: !0,
-                            flexWrap: m.Z.NoWrap
-                        }, d.createElement(m.Va, {
+                            flexWrap: m.Aa.NoWrap
+                        }, d.createElement(m.Wa, {
                             flexGrow: 1
-                        }, d.createElement(m.Ca, {
+                        }, d.createElement(m.Da, {
                             label: "",
                             error: this.state.errorAddingTerm,
                             errorMessage: this.state.errorAddingLabel || ""
-                        }, d.createElement(m.Pa, {
+                        }, d.createElement(m.Qa, {
                             "data-a-target": "add-term-input",
                             "data-test-selector": a.AddTermInput,
                             ariaLabel: Object(l.d)("Add term", "ChatTermsControl"),
                             refDelegate: this.saveAddInputRef,
-                            type: m.Ra.Text,
+                            type: m.Sa.Text,
                             placeholder: this.props.addPlaceholder,
                             onKeyDown: this.handleAddKeyDown,
                             error: this.state.errorAddingTerm
-                        }))), d.createElement(m.Va, {
+                        }))), d.createElement(m.Wa, {
                             flexShrink: 0,
                             margin: {
                                 top: .5
@@ -344,31 +344,31 @@
                             onClick: this.handleAdd,
                             "data-a-target": "add-term",
                             "data-test-selector": a.AddTermButton
-                        }, Object(l.d)("Add", "ChatTermsControl")))), d.createElement(m.Va, {
+                        }, Object(l.d)("Add", "ChatTermsControl")))), d.createElement(m.Wa, {
                             className: "chat-terms"
                         }, e)))
                     }, t.prototype.renderTerm = function(e, t) {
                         if (t === this.state.editingIndex) return this.renderEditTermRow(e, t);
                         var n = null;
-                        if (!0 == !e.isModEditable && this.props.type === i.Banned) n = d.createElement(m.Va, {
+                        if (!0 == !e.isModEditable && this.props.type === i.Banned) n = d.createElement(m.Wa, {
                             alignItems: m.f.Center,
-                            display: m.W.Flex,
+                            display: m.X.Flex,
                             margin: {
                                 left: "auto"
                             },
                             fullHeight: !0
-                        }, d.createElement(m.ab, {
+                        }, d.createElement(m.bb, {
                             label: Object(l.d)("private", "ChatTermsControl")
                         }));
                         else if (e.expiresAt) {
-                            var r = Object(l.h)(new Date(e.expiresAt), {
+                            var r = Object(l.i)(new Date(e.expiresAt), {
                                 style: "numeric"
                             });
-                            n = d.createElement(m.Va, {
+                            n = d.createElement(m.Wa, {
                                 margin: {
                                     right: 1
                                 }
-                            }, d.createElement(m.V, {
+                            }, d.createElement(m.W, {
                                 ellipsis: !0,
                                 color: m.O.Alt2
                             }, " ", Object(l.d)("Expires {relativeTime}", {
@@ -376,8 +376,8 @@
                             }, "ChatTermsControl"), " "))
                         }
                         var s = null;
-                        t === this.state.justSavedIndex && (s = d.createElement(m.Na, {
-                            position: m.db.Absolute,
+                        t === this.state.justSavedIndex && (s = d.createElement(m.Oa, {
+                            position: m.eb.Absolute,
                             margin: {
                                 left: 5
                             }
@@ -389,13 +389,13 @@
                             type: m.n.FadeOut,
                             enabled: !0,
                             onAnimationEnd: this.clearLabels
-                        }, d.createElement(m.Va, {
-                            position: m.db.Absolute,
+                        }, d.createElement(m.Wa, {
+                            position: m.eb.Absolute,
                             attachRight: !0
                         }, Object(l.d)("Saved", "ChatTermsControl"))))));
                         var o = Object(l.d)("Edit", "ChatTermsControl"),
                             c = Object(l.d)("Delete", "ChatTermsControl");
-                        return d.createElement(m.Na, {
+                        return d.createElement(m.Oa, {
                             className: "chat-term-row",
                             key: t,
                             "data-index": t
@@ -403,44 +403,44 @@
                             className: "chat-terms-control__term-row",
                             "data-selectable": t,
                             "data-test-selector": a.EditTermArea
-                        }, d.createElement(m.Ha, null, d.createElement(m.P, {
+                        }, d.createElement(m.Ia, null, d.createElement(m.P, {
                             cols: 6
-                        }, d.createElement(m.Va, {
+                        }, d.createElement(m.Wa, {
                             "data-test-selector": a.DisplayedTerm,
                             margin: {
                                 right: 1
                             },
-                            display: m.W.Flex,
+                            display: m.X.Flex,
                             alignItems: m.f.Center,
-                            justifyContent: m.Ua.Between,
+                            justifyContent: m.Va.Between,
                             fullHeight: !0
-                        }, d.createElement(m.V, {
+                        }, d.createElement(m.W, {
                             ellipsis: !0
                         }, e.phrases.join(" ")))), d.createElement(m.P, {
                             cols: 4
-                        }, d.createElement(m.Va, {
+                        }, d.createElement(m.Wa, {
                             alignItems: m.f.Center,
-                            display: m.W.Flex,
-                            flexWrap: m.Z.NoWrap,
+                            display: m.X.Flex,
+                            flexWrap: m.Aa.NoWrap,
                             fullHeight: !0
                         }, n)), d.createElement(m.P, {
                             cols: 1
-                        }, d.createElement(m.Qb, {
+                        }, d.createElement(m.Rb, {
                             label: o
                         }, d.createElement(m.A, {
                             "data-a-target": "edit-term",
                             "data-test-selector": a.EditTermButton,
-                            icon: m.nb.Edit,
+                            icon: m.ob.Edit,
                             ariaLabel: o,
                             onClick: this.handleEdit
                         }))), d.createElement(m.P, {
                             cols: 1
-                        }, d.createElement(m.Qb, {
+                        }, d.createElement(m.Rb, {
                             label: c
                         }, d.createElement(m.A, {
                             "data-a-target": "delete-term",
                             "data-test-selector": a.DelTermButton,
-                            icon: m.nb.Trash,
+                            icon: m.ob.Trash,
                             ariaLabel: c,
                             onClick: this.handleDelete
                         })), s))))
@@ -451,65 +451,65 @@
                         return d.createElement(s.a, {
                             key: "clickout-item-" + t,
                             onClickOut: this.cancelEdit
-                        }, d.createElement(m.Va, {
+                        }, d.createElement(m.Wa, {
                             key: "line-item-" + t,
                             className: "chat-term-row",
-                            position: m.db.Relative
-                        }, d.createElement(m.Va, {
+                            position: m.eb.Relative
+                        }, d.createElement(m.Wa, {
                             key: t,
                             "data-index": t,
-                            display: m.W.Flex,
-                            flexDirection: m.Y.Row,
-                            flexWrap: m.Z.NoWrap
-                        }, d.createElement(m.Va, {
+                            display: m.X.Flex,
+                            flexDirection: m.Z.Row,
+                            flexWrap: m.Aa.NoWrap
+                        }, d.createElement(m.Wa, {
                             flexGrow: 1
-                        }, d.createElement(m.Pa, {
+                        }, d.createElement(m.Qa, {
                             autoFocus: !0,
                             ariaLabel: Object(l.d)("Edit term", "ChatTermsControl"),
                             "data-a-target": "edit-term-input",
                             "data-test-selector": a.EditTermInput,
                             refDelegate: this.saveEditInputRef,
-                            type: m.Ra.Text,
+                            type: m.Sa.Text,
                             defaultValue: e.phrases.join(" "),
                             onKeyDown: this.handleEditKeyDown
-                        })), d.createElement(m.Va, {
+                        })), d.createElement(m.Wa, {
                             flexShrink: 0
-                        }, d.createElement(m.Qb, {
+                        }, d.createElement(m.Rb, {
                             label: n
                         }, d.createElement(m.A, {
                             "data-a-target": "save-term-edit",
                             "data-test-selector": a.EditConfirmButton,
-                            icon: m.nb.Check,
+                            icon: m.ob.Check,
                             ariaLabel: n,
                             onClick: this.confirmEdit
-                        })), d.createElement(m.Qb, {
+                        })), d.createElement(m.Rb, {
                             label: i
                         }, d.createElement(m.A, {
                             "data-a-target": "cancel-term-edit",
                             "data-test-selector": a.EditCancelButton,
-                            icon: m.nb.Close,
+                            icon: m.ob.Close,
                             ariaLabel: i,
                             onClick: this.cancelEdit
                         })))), r))
                     }, t.prototype.renderEditBalloon = function(e, t) {
                         var n = null;
-                        return e.expiresAt ? n = d.createElement(m.Va, null, Object(l.d)("Save changes to make term always active", "ChatTermsControl")) : this.props.type === i.Banned && this.props.channelID === this.props.userID && (n = d.createElement(m.Va, null, d.createElement(m.N, {
+                        return e.expiresAt ? n = d.createElement(m.Wa, null, Object(l.d)("Save changes to make term always active", "ChatTermsControl")) : this.props.type === i.Banned && this.props.channelID === this.props.userID && (n = d.createElement(m.Wa, null, d.createElement(m.N, {
                             "data-test-selector": "isModEditableCheckbox",
                             id: "isModEditableCheckbox",
                             label: "Mark as Private",
                             defaultChecked: !e.isModEditable,
                             onChange: this.onCheckModEditableChange
-                        }), d.createElement(m.V, {
+                        }), d.createElement(m.W, {
                             color: m.O.Alt2,
-                            fontSize: m.Aa.Size8
+                            fontSize: m.Ba.Size8
                         }, Object(l.d)("Private terms are not viewable to anyone except for yourself.", "ChatTermsControl")))), n ? d.createElement(m.u, {
                             key: "edit-balloon-" + t,
                             direction: m.v.Right,
                             size: m.w.Large,
                             show: !0
-                        }, d.createElement(m.Va, {
+                        }, d.createElement(m.Wa, {
                             margin: 1
-                        }, d.createElement(m.xb, {
+                        }, d.createElement(m.yb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: .5
@@ -522,7 +522,7 @@
                 h = n("Temx"),
                 k = n("kk6A"),
                 v = n("5R7h"),
-                g = (n("R17a"), function(e) {
+                b = (n("R17a"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -630,10 +630,10 @@
                     }, t.prototype.render = function() {
                         if (!this.state.terms) return null;
                         var e = null;
-                        return this.props.type === i.Banned && (e = d.createElement(m.V, {
+                        return this.props.type === i.Banned && (e = d.createElement(m.W, {
                             color: m.O.Alt2,
-                            fontSize: m.Aa.Size8
-                        }, Object(l.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "ChatTermsSetting"))), d.createElement(m.Va, {
+                            fontSize: m.Ba.Size8
+                        }, Object(l.d)("Tip: Some terms may be marked as Private and only visible to the channel owner.", "ChatTermsSetting"))), d.createElement(m.Wa, {
                             margin: {
                                 bottom: 2
                             }
@@ -648,7 +648,7 @@
                             onTermEdit: this.editTerm,
                             onTermDelete: this.deleteTerm,
                             type: this.props.type
-                        })), d.createElement(m.Va, {
+                        })), d.createElement(m.Wa, {
                             margin: {
                                 top: .5
                             }
@@ -663,7 +663,7 @@
                         name: "deleteChannelPermittedTerm"
                     })], t)
                 }(d.Component)),
-                b = function(e) {
+                g = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleOptOutChange = function(e) {
@@ -681,34 +681,34 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? d.createElement(m.Va, null) : d.createElement(m.xb, {
+                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? d.createElement(m.Wa, null) : d.createElement(m.yb, {
                             padding: {
                                 top: 2
                             }
-                        }, d.createElement(m.Ha, null, d.createElement(m.P, {
+                        }, d.createElement(m.Ia, null, d.createElement(m.P, {
                             cols: 2
-                        }, d.createElement(m.V, {
+                        }, d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Nb.Strong
+                            type: m.Ob.Strong
                         }, Object(l.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), d.createElement(m.P, {
                             cols: 5
-                        }, d.createElement(m.V, {
+                        }, d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Nb.Strong
-                        }, Object(l.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), d.createElement(m.V, {
+                            type: m.Ob.Strong
+                        }, Object(l.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), d.createElement(m.W, {
                             color: m.O.Alt2
-                        }, Object(l.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), d.createElement(g, {
+                        }, Object(l.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), d.createElement(b, {
                             channelID: this.props.data.user.id,
                             userID: this.props.data.currentUser.id,
                             type: i.Banned,
                             addPlaceholderMsg: Object(l.d)("Add new blocked term or phrase", "AutoModBlockedTermAdditionPlaceHolder"),
                             terms: this.props.data.user.blockedTerms
-                        }), d.createElement(m.V, {
+                        }), d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Nb.Strong
-                        }, Object(l.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), d.createElement(m.V, {
+                            type: m.Ob.Strong
+                        }, Object(l.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), d.createElement(m.W, {
                             color: m.O.Alt2
-                        }, Object(l.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), d.createElement(g, {
+                        }, Object(l.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), d.createElement(b, {
                             channelID: this.props.data.user.id,
                             userID: this.props.data.currentUser.id,
                             type: i.Permitted,
@@ -718,9 +718,9 @@
                             defaultChecked: this.props.data.user.chatSettings.isOptedOutOfGlobalBannedWordsList,
                             label: Object(l.d)("Opt out of commonly blocked terms", "AutoModSettings"),
                             onChange: this.handleOptOutChange
-                        }), d.createElement(m.V, {
+                        }), d.createElement(m.W, {
                             color: m.O.Alt2,
-                            fontSize: m.Aa.Size8
+                            fontSize: m.Ba.Size8
                         }, Object(l.d)("AutoMod level 0 automatically holds messages containing commonly blocked terms for mods to review. If you enable this feature AutoMod won't hold these messages.", "AutoModSettings")))))
                     }, t
                 }(d.Component),
@@ -745,9 +745,9 @@
                 }
             }), Object(u.a)(A, {
                 name: "onUpdateChatSettings"
-            }), Object(E.c)("ChatTermsContainer"))(b);
+            }), Object(E.b)("ChatTermsContainer"))(g);
             n.d(t, !1, function() {
-                return b
+                return g
             }), n.d(t, "a", function() {
                 return y
             })
@@ -1254,7 +1254,7 @@
                         })
                     }, t
                 }(i.Component),
-                u = Object(r.compose)(Object(o.c)("ChatTermsPage", {
+                u = Object(r.compose)(Object(o.b)("ChatTermsPage", {
                     autoReportInteractive: !0,
                     destination: l.a.DashboardSettingsModerationChatTerms
                 }), Object(d.a)({

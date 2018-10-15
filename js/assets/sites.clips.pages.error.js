@@ -114,17 +114,17 @@
             }), n.d(t, "e", function() {
                 return O
             }), n.d(t, "i", function() {
-                return x
-            }), n.d(t, "h", function() {
                 return y
+            }), n.d(t, "h", function() {
+                return x
             }), n.d(t, "f", function() {
                 return E
             }), n.d(t, "k", function() {
-                return C
-            }), n.d(t, "u", function() {
-                return w
-            }), n.d(t, "s", function() {
                 return k
+            }), n.d(t, "u", function() {
+                return C
+            }), n.d(t, "s", function() {
+                return w
             }), n.d(t, "d", function() {
                 return _
             });
@@ -148,12 +148,12 @@
                 v = "UNKNOWN",
                 b = "FIRST_PARTY",
                 O = "CUSTOM",
-                x = "SPONSORED",
-                y = "THIRD_PARTY",
+                y = "SPONSORED",
+                x = "THIRD_PARTY",
                 E = "DISPLAY_ONLY",
-                C = ((r = {})[i.a.Gray] = "#979797", r[i.a.Purple] = "#9c3ee8", r[i.a.Green] = "#1db2a5", r[i.a.Blue] = "#0099fe", r[i.a.Red] = "#f43021", r[i.a.Yellow] = "#f3a71a", r),
-                w = "bits_sponsored_cheermotes",
-                k = "bits_sponsored_cheermotes_announcement",
+                k = ((r = {})[i.a.Gray] = "#979797", r[i.a.Purple] = "#9c3ee8", r[i.a.Green] = "#1db2a5", r[i.a.Blue] = "#0099fe", r[i.a.Red] = "#f43021", r[i.a.Yellow] = "#f3a71a", r),
+                C = "bits_sponsored_cheermotes",
+                w = "bits_sponsored_cheermotes_announcement",
                 _ = "bits_charity_event"
         },
         "60o1": function(e, t, n) {
@@ -226,7 +226,7 @@
                                         s = o.medium,
                                         u = o.content_index,
                                         l = o.email_id;
-                                    c.o.tracking.trackPageview(r.__assign({
+                                    c.p.tracking.trackPageview(r.__assign({
                                         content: a,
                                         medium: s,
                                         content_index: u,
@@ -234,7 +234,7 @@
                                         location: e.location
                                     }, t))
                                 }
-                            }, c.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                            }, c.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                         }
                         return r.__extends(a, n), a.prototype.componentDidMount = function() {
                             var e = this;
@@ -421,13 +421,13 @@
                 u = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
                 l = {};
 
-            function d(e, t, n, i, o, a) {
-                void 0 === o && (o = !1), void 0 === a && (a = !1);
-                var c = Object(s.a)(t.displayName, t.username);
+            function d(e, t, n, i, o, a, c) {
+                void 0 === o && (o = !1), void 0 === a && (a = !1), void 0 === c && (c = !1);
+                var u = Object(s.a)(t.displayName, t.username);
                 return {
                     badges: t.badges || {},
                     bits: t.bits,
-                    user: r.__assign({}, c, {
+                    user: r.__assign({}, u, {
                         userLogin: t.username,
                         userID: t.userID,
                         userType: t.userType,
@@ -435,6 +435,7 @@
                     }),
                     messageParts: f(e, t.emotes || {}, t.bits, n, i, t.username),
                     deleted: o,
+                    banned: c,
                     hidden: a,
                     timestamp: Date.now()
                 }
@@ -445,7 +446,7 @@
             }
 
             function f(e, t, n, r, s, u) {
-                var l = Object(c.e)(i.o.store.getState()),
+                var l = Object(c.e)(i.p.store.getState()),
                     d = {
                         cheers: n ? r : void 0,
                         emotes: {
@@ -632,7 +633,7 @@
                                 }
                         }
                     }(this.props.match.params.error);
-                    return i.createElement(p.xb, {
+                    return i.createElement(p.yb, {
                         className: "clips-error-page",
                         background: p.r.Base,
                         margin: {
@@ -640,28 +641,28 @@
                         },
                         elevation: 3,
                         color: p.O.Base,
-                        textAlign: p.Jb.Center
+                        textAlign: p.Kb.Center
                     }, i.createElement(p.o, {
                         ratio: p.p.Aspect16x9
-                    }, i.createElement(p.Va, {
-                        display: p.W.Flex,
-                        justifyContent: p.Ua.Center,
+                    }, i.createElement(p.Wa, {
+                        display: p.X.Flex,
+                        justifyContent: p.Va.Center,
                         alignItems: p.f.Center,
-                        flexDirection: p.Y.Column,
+                        flexDirection: p.Z.Column,
                         padding: 1
                     }, i.createElement(p.S, {
                         src: Object(u.d)("58765", 2),
                         alt: Object(o.d)("Not like this... not like this", "ClipsError")
-                    }), i.createElement(p.V, {
-                        fontSize: p.Aa.Size4
-                    }, e.title), i.createElement(p.V, {
-                        fontSize: p.Aa.Size5
-                    }, e.subtitle), e.link && i.createElement(p.V, {
-                        fontSize: p.Aa.Size5
+                    }), i.createElement(p.W, {
+                        fontSize: p.Ba.Size4
+                    }, e.title), i.createElement(p.W, {
+                        fontSize: p.Ba.Size5
+                    }, e.subtitle), e.link && i.createElement(p.W, {
+                        fontSize: p.Ba.Size5
                     }, i.createElement("a", {
                         href: e.link
                     }, Object(o.d)("Report Issue", "ClipsError"))))))
-                }, t = r.__decorate([Object(l.c)("ClipsErrorPage", {
+                }, t = r.__decorate([Object(l.b)("ClipsErrorPage", {
                     destination: c.a.ClipsError,
                     autoReportInteractive: !0
                 }), Object(a.a)({
@@ -703,10 +704,10 @@
                     if (0 === b.length && (O = p), b += t, p !== v.length - 1 && !h(v[p + 1])) return e;
                     var f = d && Object(o.c)(b, O, d);
                     if (f) return e.concat(f);
-                    var x = n && Object(r.d)(b, n);
-                    if (x) return e.concat(x);
-                    var y = m && Object(a.a)(b, m);
+                    var y = n && Object(r.d)(b, n);
                     if (y) return e.concat(y);
+                    var x = m && Object(a.a)(b, m);
+                    if (x) return e.concat(x);
                     var E = g && function(e, t) {
                         var n = e.match(u);
                         if (!n) return l(e, t.sessionUser) ? [{

@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [188], {
+    [182], {
         "0Ex5": function(e, n) {
             var t = {
                 kind: "Document",
@@ -96,8 +96,8 @@
                     g = t("WkKR"),
                     N = t("LFgC"),
                     y = t("uP5h"),
-                    S = t("QhAx"),
-                    R = t("VyuC"),
+                    R = t("QhAx"),
+                    S = t("VyuC"),
                     D = t("TjZe"),
                     E = t("s/24"),
                     _ = 3e5,
@@ -143,7 +143,7 @@
                                             case 2:
                                                 return t.sent(), this.isEligible = !1, [3, 4];
                                             case 3:
-                                                return n = t.sent(), l.j.error(n, "Failed to request new chatter ritual token."), [3, 4];
+                                                return n = t.sent(), l.k.error(n, "Failed to request new chatter ritual token."), [3, 4];
                                             case 4:
                                                 return [2]
                                         }
@@ -164,7 +164,7 @@
                                 })
                             }, n.expireRitualToken = function(e) {
                                 delete n.expirationTimeouts[e];
-                                Object(k.e)(S, {
+                                Object(k.e)(R, {
                                     id: n.props.channelID
                                 }, function(n) {
                                     return n.channel && n.channel.self && n.channel.self.ritualTokens && (n.channel.self.ritualTokens = n.channel.self.ritualTokens.filter(function(n) {
@@ -213,7 +213,7 @@
                                             case 2:
                                                 return i = s.sent(), [3, 4];
                                             case 3:
-                                                return r = s.sent(), l.j.error(r, "Failed to redeem new chatter ritual."), this.handleGenericError(), [2];
+                                                return r = s.sent(), l.k.error(r, "Failed to redeem new chatter ritual."), this.handleGenericError(), [2];
                                             case 4:
                                                 if (i.data.redeemRitualToken.error) switch (i.data.redeemRitualToken.error.code) {
                                                     case y.RitualTokenMutationErrors.UserBanned:
@@ -262,7 +262,7 @@
                                             case 2:
                                                 return t = r.sent(), [3, 4];
                                             case 3:
-                                                return i = r.sent(), l.j.error(i, "Failed to redeem new chatter ritual."), [3, 4];
+                                                return i = r.sent(), l.k.error(i, "Failed to redeem new chatter ritual."), [3, 4];
                                             case 4:
                                                 return t && t.data.dismissRitualToken.token ? [2] : (this.handleGenericError(), [2])
                                         }
@@ -321,7 +321,7 @@
                         isLoggedIn: Object(f.f)(e),
                         isSubsOnlyModeEnabled: e.chat.subsOnlyMode
                     }
-                }, null), Object(u.a)(S, {
+                }, null), Object(u.a)(R, {
                     options: function(e) {
                         return {
                             variables: {
@@ -332,7 +332,7 @@
                     skip: O
                 }), Object(c.a)(function(n) {
                     return {
-                        query: S,
+                        query: R,
                         variables: {
                             id: n.channelID
                         },
@@ -351,7 +351,7 @@
                     },
                     mapMessageTypesToProps: (i = {}, i[m.PubsubMessageType.ChannelStreamUp] = "streamUp", i[m.PubsubMessageType.ChannelStreamDown] = "streamDown", i),
                     skip: O
-                }]), Object(u.a)(R, {
+                }]), Object(u.a)(S, {
                     name: "dismissToken"
                 }), Object(u.a)(D, {
                     name: "redeemToken"
@@ -424,10 +424,10 @@
                         return t.onEmoteClick = function(e) {
                             if (t.renderedTokenID) {
                                 var n = e.currentTarget.dataset.emoteString;
-                                n ? t.props.onRitualRedeemed(t.renderedTokenID, n) : r.j.warn("[NewChatterRitual] Could not find clicked emote ID.")
-                            } else r.j.warn("[NewChatterRitual] Could not find clicked Ritual token.")
+                                n ? t.props.onRitualRedeemed(t.renderedTokenID, n) : r.k.warn("[NewChatterRitual] Could not find clicked emote ID.")
+                            } else r.k.warn("[NewChatterRitual] Could not find clicked Ritual token.")
                         }, t.onCloseButtonClick = function() {
-                            t.renderedTokenID ? t.props.onRitualDismissed(t.renderedTokenID) : r.j.warn("[NewChatterRitual] Could not find clicked Ritual token.")
+                            t.renderedTokenID ? t.props.onRitualDismissed(t.renderedTokenID) : r.k.warn("[NewChatterRitual] Could not find clicked Ritual token.")
                         }, t.getAvailableToken = function() {
                             return t.props.ritualTokens.find(function(e) {
                                 return e.type === l.RitualTokenType.NewChatter && e.status === l.RitualTokenStatus.Available && (!e.expiresAt || Date.now() < new Date(e.expiresAt).valueOf())
@@ -439,27 +439,27 @@
                             n = this.getAvailableToken();
                         if (this.renderedTokenID = n ? n.id : null, !n) return null;
                         var t = u.map(function(n) {
-                            return a.createElement(o.Va, {
+                            return a.createElement(o.Wa, {
                                 key: n.id,
                                 flexShrink: 0,
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Qb, {
+                            }, a.createElement(o.Rb, {
                                 label: n.alt
-                            }, a.createElement(o.Sa, {
-                                type: o.Ta.Alpha,
+                            }, a.createElement(o.Ta, {
+                                type: o.Ua.Alpha,
                                 onClick: e.onEmoteClick,
                                 "data-emote-string": n.alt,
                                 "data-test-selector": "emote-button"
-                            }, a.createElement(o.Va, {
+                            }, a.createElement(o.Wa, {
                                 padding: .5
                             }, a.createElement("img", {
                                 className: "new-chatter-ritual__emote",
                                 src: Object(s.d)(n.id, 3)
                             })))))
                         });
-                        return a.createElement(o.xb, {
+                        return a.createElement(o.yb, {
                             background: o.r.Base,
                             border: !0,
                             className: "new-chatter-ritual",
@@ -471,21 +471,21 @@
                                 left: .5,
                                 y: .5
                             }
-                        }, a.createElement(o.Va, {
+                        }, a.createElement(o.Wa, {
                             alignItems: o.f.Center,
-                            display: o.W.Flex,
-                            flexWrap: o.Z.NoWrap
-                        }, a.createElement(o.Va, {
+                            display: o.X.Flex,
+                            flexWrap: o.Aa.NoWrap
+                        }, a.createElement(o.Wa, {
                             flexShrink: 1,
                             margin: {
                                 right: .5
                             }
-                        }, this.props.bannerMessage), t, a.createElement(o.xb, {
+                        }, this.props.bannerMessage), t, a.createElement(o.yb, {
                             borderLeft: !0,
                             flexShrink: 0
                         }, a.createElement(o.A, {
                             ariaLabel: "close",
-                            icon: o.nb.Close,
+                            icon: o.ob.Close,
                             onClick: this.onCloseButtonClick,
                             size: o.B.Large,
                             "data-test-selector": "dismiss-button"
@@ -907,7 +907,7 @@
                         user_banner: e.bannerMessage,
                         user_message: null
                     };
-                    i.n.track(a.SpadeEventType.NewChatterTokenStatus, n)
+                    i.o.track(a.SpadeEventType.NewChatterTokenStatus, n)
                 },
                 o = function(e) {
                     var n = {
@@ -916,7 +916,7 @@
                         user_banner: e.bannerMessage,
                         user_message: e.userMessage
                     };
-                    i.n.track(a.SpadeEventType.NewChatterTokenStatus, n)
+                    i.o.track(a.SpadeEventType.NewChatterTokenStatus, n)
                 },
                 l = function(e) {
                     var n = {
@@ -925,7 +925,7 @@
                         user_banner: null,
                         user_message: null
                     };
-                    i.n.track(a.SpadeEventType.NewChatterTokenStatus, n)
+                    i.o.track(a.SpadeEventType.NewChatterTokenStatus, n)
                 },
                 u = function(e) {
                     var n = {
@@ -934,14 +934,14 @@
                         user_banner: e.bannerMessage,
                         user_message: null
                     };
-                    i.n.track(a.SpadeEventType.NewChatterTokenStatus, n)
+                    i.o.track(a.SpadeEventType.NewChatterTokenStatus, n)
                 },
                 d = function(e) {
                     var n = {
                         action: e.action,
                         channel_id: e.channelID
                     };
-                    i.n.track(a.SpadeEventType.NewChatterOnboardingInteraction, n)
+                    i.o.track(a.SpadeEventType.NewChatterOnboardingInteraction, n)
                 }
         },
         Y9qK: function(e, n, t) {
@@ -1096,7 +1096,7 @@
             });
             var i = t("/7QA"),
                 a = function() {
-                    return i.l.get("ritualsFeatureFlagOverride", i.b.get("viewer_milestones_enabled", !1))
+                    return i.m.get("ritualsFeatureFlagOverride", i.b.get("viewer_milestones_enabled", !1))
                 }
         }
     }

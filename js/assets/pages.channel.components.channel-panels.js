@@ -1,14 +1,17 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [118], {
+        "/Z6v": function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_dark_2x-c98151cef856bab0e62c.png"
+        },
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return o
             });
-            var i = n("mrSG"),
-                o = n("q1tI"),
+            var r = n("mrSG"),
+                i = n("q1tI"),
                 a = n("Ue10"),
-                r = (n("sL9O"), function(e) {
+                o = (n("sL9O"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -29,18 +32,18 @@
                             }), t.finalizeSelections(e.dataTransfer.files)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(a.X, {
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return i.createElement(a.Y, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, o.createElement(a.Na, {
-                            position: a.db.Absolute,
+                        }, i.createElement(a.Oa, {
+                            position: a.eb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: a.ac.Above
-                        }, o.createElement("input", {
+                            zIndex: a.bc.Above
+                        }, i.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
                             className: "drag-and-drop-file-picker__input",
@@ -55,22 +58,22 @@
                     }, t.prototype.finalizeSelections = function(e) {
                         e && this.props.onFilesSubmitted(Array.from(e))
                     }, t
-                }(o.Component))
+                }(i.Component))
         },
         "0HeA": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return l
+                return c
             });
-            var i, o, a = n("/7QA"),
-                r = n("DMoW");
+            var r, i, a = n("/7QA"),
+                o = n("DMoW");
             ! function(e) {
                 e.Default = "default", e.Extension = "extension"
-            }(o || (o = {}));
-            var s = ((i = {})[r.y.DEFAULT] = o.Default, i[r.y.EXTENSION] = o.Extension, i);
+            }(i || (i = {}));
+            var s = ((r = {})[o.z.DEFAULT] = i.Default, r[o.z.EXTENSION] = i.Extension, r);
 
-            function l(e, t) {
-                a.n.track(e, {
+            function c(e, t) {
+                a.o.track(e, {
                     panel_id: t.panelID,
                     panel_type: s[t.panelType],
                     channel_id: t.channelID,
@@ -78,21 +81,22 @@
                 })
             }
         },
+        "1P3F": function(e, t, n) {},
         "1pP+": function(e, t, n) {},
         "1uty": function(e, t, n) {
             "use strict";
-            var i = "_erd";
+            var r = "_erd";
 
-            function o(e) {
-                return e[i]
+            function i(e) {
+                return e[r]
             }
             e.exports = {
                 initState: function(e) {
-                    return e[i] = {}, o(e)
+                    return e[r] = {}, i(e)
                 },
-                getState: o,
+                getState: i,
                 cleanState: function(e) {
-                    delete e[i]
+                    delete e[r]
                 }
             }
         },
@@ -101,13 +105,13 @@
             n.d(t, "d", function() {
                 return a
             }), n.d(t, "b", function() {
-                return r
+                return o
             }), n.d(t, "c", function() {
                 return s
             }), n.d(t, "e", function() {
-                return l
-            }), n.d(t, "h", function() {
                 return c
+            }), n.d(t, "h", function() {
+                return l
             }), n.d(t, "f", function() {
                 return u
             }), n.d(t, "a", function() {
@@ -115,19 +119,19 @@
             }), n.d(t, "g", function() {
                 return p
             });
-            var i = n("/7QA"),
-                o = n("D7An");
+            var r = n("/7QA"),
+                i = n("D7An");
 
             function a(e, t) {
-                return "/ext/" + h(e, t)
+                return "/ext/" + m(e, t)
             }
 
-            function r(e, t, n) {
-                return "control" === i.o.experiments.getAssignment(o.b.ExtensionConfigureModal) ? {
-                    pathname: s(e) + "/" + h(t, n) + "/configure"
+            function o(e, t, n) {
+                return "control" === r.p.experiments.getAssignment(i.b.ExtensionConfigureModal) ? {
+                    pathname: s(e) + "/" + m(t, n) + "/configure"
                 } : {
-                    pathname: "" + l(e),
-                    search: "?configure=true&extensionID=" + h(t, n)
+                    pathname: "" + c(e),
+                    search: "?configure=true&extensionID=" + m(t, n)
                 }
             }
 
@@ -135,11 +139,11 @@
                 return "/" + e + "/dashboard/extensions"
             }
 
-            function l(e) {
+            function c(e) {
                 return "/" + e + "/dashboard/extensions/manage"
             }
 
-            function c(e) {
+            function l(e) {
                 return "/" + e + "/dashboard/extensions/whitelisted"
             }
 
@@ -158,37 +162,43 @@
                 return "/ext/search?q=" + encodeURIComponent(e)
             }
 
-            function h(e, t) {
+            function m(e, t) {
                 return t ? e + "-" + t : e
             }
+        },
+        "2DIU": function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_1x-4f76ba5fbbaca5a76d41.png"
+        },
+        "2xEe": function(e, t, n) {
+            e.exports = n.p + "assets/paypal_dark_1x-29d0a02f9cc67088594b.png"
         },
         "5IFo": function(e, t, n) {
             "use strict";
             n.d(t, "e", function() {
-                return r
+                return o
             }), n.d(t, "d", function() {
                 return s
             }), n.d(t, "b", function() {
-                return c
+                return l
             }), n.d(t, "a", function() {
                 return u
             }), n.d(t, "c", function() {
                 return d
             }), n.d(t, "g", function() {
-                return h
-            }), n.d(t, "f", function() {
                 return m
+            }), n.d(t, "f", function() {
+                return h
             });
-            var i, o = n("/7QA"),
+            var r, i = n("/7QA"),
                 a = n("2xye");
 
-            function r(e) {
+            function o(e) {
                 var t = {
                     category_id: e.categoryID,
                     extension_id: e.extensionClientID,
                     extension_version: e.extensionVersion
                 };
-                o.n.track(a.SpadeEventType.ExtensionInstall, t)
+                i.o.track(a.SpadeEventType.ExtensionInstall, t)
             }
 
             function s(e) {
@@ -196,10 +206,10 @@
                     extension_id: e.extensionClientID,
                     extension_version: e.extensionVersion
                 };
-                o.n.track(a.SpadeEventType.ExtensionConfigureView, t)
+                i.o.track(a.SpadeEventType.ExtensionConfigureView, t)
             }
 
-            function l(e, t) {
+            function c(e, t) {
                 return {
                     action: e,
                     extension_id: t.extensionId,
@@ -213,16 +223,16 @@
                 }
             }
 
-            function c(e) {
-                o.n.track(a.SpadeEventType.ExtensionStreamerComponentSettings, l(i.Open, e))
+            function l(e) {
+                i.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(r.Open, e))
             }
 
             function u(e) {
-                o.n.track(a.SpadeEventType.ExtensionStreamerComponentSettings, l(i.Close, e))
+                i.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(r.Close, e))
             }
 
             function d(e) {
-                o.n.track(a.SpadeEventType.ExtensionStreamerComponentSettings, l(i.Save, e))
+                i.o.track(a.SpadeEventType.ExtensionStreamerComponentSettings, c(r.Save, e))
             }
 
             function p(e) {
@@ -236,49 +246,242 @@
                 }
             }
 
-            function h(e) {
-                o.n.track(a.SpadeEventType.ExtensionPopoutClicked, p(e))
+            function m(e) {
+                i.o.track(a.SpadeEventType.ExtensionPopoutClicked, p(e))
             }
 
-            function m(e) {
-                o.n.track(a.SpadeEventType.ExtensionPopinClicked, p(e))
+            function h(e) {
+                i.o.track(a.SpadeEventType.ExtensionPopinClicked, p(e))
             }! function(e) {
                 e.Open = "open", e.Close = "close", e.Save = "save"
-            }(i || (i = {}))
+            }(r || (r = {}))
+        },
+        "5gJ6": function(e, t, n) {
+            "use strict";
+            var r, i = n("mrSG"),
+                a = n("q1tI"),
+                o = n("/MKj"),
+                s = n("/7QA"),
+                c = n("2DIU"),
+                l = n.n(c),
+                u = n("TSpM"),
+                d = n.n(u),
+                p = n("vE+g"),
+                m = n.n(p),
+                h = n("/Z6v"),
+                f = n.n(h),
+                y = n("WJ6U"),
+                g = n.n(y),
+                b = n("uReR"),
+                v = n.n(b),
+                E = n("SPyc"),
+                C = n.n(E),
+                k = n("bOWA"),
+                P = n.n(k),
+                S = n("KL9a"),
+                O = n.n(S),
+                x = n("iSjI"),
+                I = n.n(x),
+                w = n("bQeB"),
+                _ = n.n(w),
+                N = n("HvcU"),
+                T = n.n(N),
+                D = n("GA+j"),
+                j = n.n(D),
+                R = n("FBRg"),
+                F = n.n(R),
+                A = n("2xEe"),
+                M = n.n(A),
+                W = n("q8H6"),
+                B = n.n(W),
+                L = n("oQBz"),
+                U = n.n(L),
+                z = n("PwAB"),
+                G = n.n(z),
+                H = n("/0dD"),
+                V = n("XDQu");
+            ! function(e) {
+                e.AmericanExpress = "american_express", e.Discover = "discover", e.MasterCard = "mastercard", e.Visa = "visa"
+            }(r || (r = {}));
+            var q = n("cWO5"),
+                X = n("Ue10"),
+                Y = (n("88jh"), function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.__extends(t, e), t.prototype.render = function() {
+                        if ("prime" === this.props.paymentProvider) return a.createElement(X.nb, {
+                            asset: X.ob.LogoTwitchPrime,
+                            width: 66,
+                            height: 30,
+                            type: X.pb.Brand
+                        });
+                        var e = this.imageSource,
+                            t = e.src,
+                            n = e.alt,
+                            r = e.srcSet;
+                        return a.createElement(X.Wa, {
+                            className: "payment-method-image"
+                        }, a.createElement(X.S, {
+                            src: t,
+                            alt: n,
+                            srcSet: r
+                        }))
+                    }, Object.defineProperty(t.prototype, "imageSource", {
+                        get: function() {
+                            var e = Object(s.d)("credit card", "PaymentMethodImage");
+                            switch (this.props.paymentProvider) {
+                                case "xsolla_v3":
+                                    return {
+                                        src: G.a,
+                                        srcSet: {
+                                            "1x": U.a,
+                                            "2x": G.a
+                                        },
+                                        alt: Object(s.d)("Xsolla icon", "PaymentMethodImage")
+                                    };
+                                case "google_iab":
+                                    return {
+                                        src: g.a,
+                                        alt: Object(s.d)("Android icon", "PaymentMethodImage")
+                                    }
+                            }
+                            switch (this.props.paymentInstrumentType) {
+                                case q.a.CreditCard:
+                                    switch (this.props.cardType) {
+                                        case r.AmericanExpress:
+                                            return {
+                                                src: v.a,
+                                                alt: Object(s.d)("American Express", "PaymentMethodImage")
+                                            };
+                                        case r.Discover:
+                                            return {
+                                                src: C.a,
+                                                alt: Object(s.d)("Discover", "PaymentMethodImage")
+                                            };
+                                        case r.MasterCard:
+                                            return {
+                                                src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? O.a : P.a,
+                                                alt: Object(s.d)("Mastercard", "PaymentMethodImage")
+                                            };
+                                        case r.Visa:
+                                            return {
+                                                src: I.a,
+                                                alt: Object(s.d)("Visa", "PaymentMethodImage")
+                                            };
+                                        default:
+                                            return {
+                                                src: _.a,
+                                                srcSet: {
+                                                    "1x": _.a,
+                                                    "2x": T.a
+                                                },
+                                                alt: e
+                                            }
+                                    }
+                                case q.a.AmazonPay:
+                                    return {
+                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? m.a : l.a,
+                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                            "1x": m.a,
+                                            "2x": f.a
+                                        } : {
+                                            "1x": l.a,
+                                            "2x": d.a
+                                        },
+                                        alt: Object(s.d)("Amazon Pay", "PaymentMethodImage")
+                                    };
+                                case q.a.Paypal:
+                                    return {
+                                        src: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? M.a : j.a,
+                                        srcSet: this.props.darkModeEnabled && !this.props.ignoreDarkMode ? {
+                                            "1x": M.a,
+                                            "2x": B.a
+                                        } : {
+                                            "1x": j.a,
+                                            "2x": F.a
+                                        },
+                                        alt: Object(s.d)("Paypal", "PaymentMethodImage")
+                                    };
+                                default:
+                                    return {
+                                        src: _.a,
+                                        srcSet: {
+                                            "1x": _.a,
+                                            "2x": T.a
+                                        },
+                                        alt: e
+                                    }
+                            }
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(a.Component));
+            var Z = Object(o.connect)(function(e) {
+                return {
+                    darkModeEnabled: Object(V.a)(e) === H.a.Dark
+                }
+            })(Y);
+            n.d(t, !1, function() {
+                return Y
+            }), n.d(t, "a", function() {
+                return Z
+            })
+        },
+        "6fcp": function(e, t, n) {
+            "use strict";
+            var r;
+            n.d(t, "a", function() {
+                    return r
+                }),
+                function(e) {
+                    e.NotConfigured = "not-configured", e.MissingPublicKey = "missing-public-key", e.InvalidPublicKey = "invalid-public-key", e.AlreadyConfigured = "already-configured", e.MissingHostedFieldTarget = "missing-hosted-field-target", e.Validation = "validation", e.InvalidParameter = "invalid-parameter", e.APIError = "api-error", e.PayPalNotConfigured = "paypal-not-configured", e.PayPalCanceled = "paypal-canceled", e.PayPalError = "paypal-error", e.InvalidRoutingNumber = "invalid-routing-number", e.NotFound = "not-found", e.MissingPlan = "missing-plan", e.InvalidAddon = "invalid-addon", e.InvalidCurrency = "invalid-currency", e.GiftCardCurrencyMisMatch = "gift-card-currency-mismatch"
+                }(r || (r = {}))
+        },
+        "6oOb": function(e, t, n) {
+            "use strict";
+            var r;
+            n.d(t, "a", function() {
+                    return r
+                }),
+                function(e) {
+                    e[e.NOT_STARTED = 0] = "NOT_STARTED", e[e.CONFIRMATION = 1] = "CONFIRMATION"
+                }(r || (r = {}))
         },
         "7sSR": function(e, t, n) {
             "use strict";
-            var i = n("t3DW").forEach,
-                o = n("W+U1"),
+            var r = n("t3DW").forEach,
+                i = n("W+U1"),
                 a = n("Sa1T"),
-                r = n("LO96"),
+                o = n("LO96"),
                 s = n("UFhH"),
-                l = n("q7TX"),
-                c = n("GOnX"),
+                c = n("q7TX"),
+                l = n("GOnX"),
                 u = n("wnTG"),
                 d = n("1uty"),
                 p = n("GNKm"),
-                h = n("yUZ2");
+                m = n("yUZ2");
 
-            function m(e) {
+            function h(e) {
                 return Array.isArray(e) || void 0 !== e.length
             }
 
             function f(e) {
                 if (Array.isArray(e)) return e;
                 var t = [];
-                return i(e, function(e) {
+                return r(e, function(e) {
                     t.push(e)
                 }), t
             }
 
-            function g(e) {
+            function y(e) {
                 return e && 1 === e.nodeType
             }
 
-            function v(e, t, n) {
-                var i = e[t];
-                return void 0 !== i && null !== i || void 0 === n ? i : n
+            function g(e, t, n) {
+                var r = e[t];
+                return void 0 !== r && null !== r || void 0 === n ? r : n
             }
             e.exports = function(e) {
                 var t;
@@ -289,121 +492,129 @@
                     set: e.idHandler.set
                 };
                 else {
-                    var n = r(),
-                        y = s({
+                    var n = o(),
+                        b = s({
                             idGenerator: n,
                             stateHandler: d
                         });
-                    t = y
+                    t = b
                 }
-                var b = e.reporter;
-                b || (b = l(!1 === b));
-                var E = v(e, "batchProcessor", u({
-                        reporter: b
+                var v = e.reporter;
+                v || (v = c(!1 === v));
+                var E = g(e, "batchProcessor", u({
+                        reporter: v
                     })),
-                    x = {};
-                x.callOnAdd = !!v(e, "callOnAdd", !0), x.debug = !!v(e, "debug", !1);
-                var k, C = a(t),
-                    w = o({
+                    C = {};
+                C.callOnAdd = !!g(e, "callOnAdd", !0), C.debug = !!g(e, "debug", !1);
+                var k, P = a(t),
+                    S = i({
                         stateHandler: d
                     }),
-                    S = v(e, "strategy", "object"),
-                    I = {
-                        reporter: b,
+                    O = g(e, "strategy", "object"),
+                    x = {
+                        reporter: v,
                         batchProcessor: E,
                         stateHandler: d,
                         idHandler: t
                     };
-                if ("scroll" === S && (c.isLegacyOpera() ? (b.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), S = "object") : c.isIE(9) && (b.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), S = "object")), "scroll" === S) k = h(I);
+                if ("scroll" === O && (l.isLegacyOpera() ? (v.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), O = "object") : l.isIE(9) && (v.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), O = "object")), "scroll" === O) k = m(x);
                 else {
-                    if ("object" !== S) throw new Error("Invalid strategy name: " + S);
-                    k = p(I)
+                    if ("object" !== O) throw new Error("Invalid strategy name: " + O);
+                    k = p(x)
                 }
-                var P = {};
+                var I = {};
                 return {
-                    listenTo: function(e, n, o) {
+                    listenTo: function(e, n, i) {
                         function a(e) {
-                            var t = C.get(e);
-                            i(t, function(t) {
+                            var t = P.get(e);
+                            r(t, function(t) {
                                 t(e)
                             })
                         }
 
-                        function r(e, t, n) {
-                            C.add(t, n), e && n(t)
+                        function o(e, t, n) {
+                            P.add(t, n), e && n(t)
                         }
-                        if (o || (o = n, n = e, e = {}), !n) throw new Error("At least one element required.");
-                        if (!o) throw new Error("Listener required.");
-                        if (g(n)) n = [n];
+                        if (i || (i = n, n = e, e = {}), !n) throw new Error("At least one element required.");
+                        if (!i) throw new Error("Listener required.");
+                        if (y(n)) n = [n];
                         else {
-                            if (!m(n)) return b.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
+                            if (!h(n)) return v.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
                             n = f(n)
                         }
                         var s = 0,
-                            l = v(e, "callOnAdd", x.callOnAdd),
-                            c = v(e, "onReady", function() {}),
-                            u = v(e, "debug", x.debug);
-                        i(n, function(e) {
+                            c = g(e, "callOnAdd", C.callOnAdd),
+                            l = g(e, "onReady", function() {}),
+                            u = g(e, "debug", C.debug);
+                        r(n, function(e) {
                             d.getState(e) || (d.initState(e), t.set(e));
                             var p = t.get(e);
-                            if (u && b.log("Attaching listener to element", p, e), !w.isDetectable(e)) return u && b.log(p, "Not detectable."), w.isBusy(e) ? (u && b.log(p, "System busy making it detectable"), r(l, e, o), P[p] = P[p] || [], void P[p].push(function() {
-                                ++s === n.length && c()
-                            })) : (u && b.log(p, "Making detectable..."), w.markBusy(e, !0), k.makeDetectable({
+                            if (u && v.log("Attaching listener to element", p, e), !S.isDetectable(e)) return u && v.log(p, "Not detectable."), S.isBusy(e) ? (u && v.log(p, "System busy making it detectable"), o(c, e, i), I[p] = I[p] || [], void I[p].push(function() {
+                                ++s === n.length && l()
+                            })) : (u && v.log(p, "Making detectable..."), S.markBusy(e, !0), k.makeDetectable({
                                 debug: u
                             }, e, function(e) {
-                                if (u && b.log(p, "onElementDetectable"), d.getState(e)) {
-                                    w.markAsDetectable(e), w.markBusy(e, !1), k.addListener(e, a), r(l, e, o);
+                                if (u && v.log(p, "onElementDetectable"), d.getState(e)) {
+                                    S.markAsDetectable(e), S.markBusy(e, !1), k.addListener(e, a), o(c, e, i);
                                     var t = d.getState(e);
                                     if (t && t.startSize) {
-                                        var h = e.offsetWidth,
-                                            m = e.offsetHeight;
-                                        t.startSize.width === h && t.startSize.height === m || a(e)
+                                        var m = e.offsetWidth,
+                                            h = e.offsetHeight;
+                                        t.startSize.width === m && t.startSize.height === h || a(e)
                                     }
-                                    P[p] && i(P[p], function(e) {
+                                    I[p] && r(I[p], function(e) {
                                         e()
                                     })
-                                } else u && b.log(p, "Element uninstalled before being detectable.");
-                                delete P[p], ++s === n.length && c()
+                                } else u && v.log(p, "Element uninstalled before being detectable.");
+                                delete I[p], ++s === n.length && l()
                             }));
-                            u && b.log(p, "Already detecable, adding listener."), r(l, e, o), s++
-                        }), s === n.length && c()
+                            u && v.log(p, "Already detecable, adding listener."), o(c, e, i), s++
+                        }), s === n.length && l()
                     },
-                    removeListener: C.removeListener,
-                    removeAllListeners: C.removeAllListeners,
+                    removeListener: P.removeListener,
+                    removeAllListeners: P.removeAllListeners,
                     uninstall: function(e) {
-                        if (!e) return b.error("At least one element is required.");
-                        if (g(e)) e = [e];
+                        if (!e) return v.error("At least one element is required.");
+                        if (y(e)) e = [e];
                         else {
-                            if (!m(e)) return b.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
+                            if (!h(e)) return v.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
                             e = f(e)
                         }
-                        i(e, function(e) {
-                            C.removeAllListeners(e), k.uninstall(e), d.cleanState(e)
+                        r(e, function(e) {
+                            P.removeAllListeners(e), k.uninstall(e), d.cleanState(e)
                         })
                     }
                 }
             }
         },
+        "85n/": function(e, t, n) {
+            "use strict";
+            var r = n("TQGo");
+            n.d(t, "a", function() {
+                return r.a
+            })
+        },
+        "88jh": function(e, t, n) {},
         "8ENv": function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var i = function() {
+            var r = function() {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
-                            var i = t[n];
-                            i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
                         }
                     }
-                    return function(t, n, i) {
-                        return n && e(t.prototype, n), i && e(t, i), t
+                    return function(t, n, r) {
+                        return n && e(t.prototype, n), r && e(t, r), t
                     }
                 }(),
-                o = r(n("J2m7")),
-                a = r(n("xweI"));
+                i = o(n("J2m7")),
+                a = o(n("xweI"));
 
-            function r(e) {
+            function o(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -414,7 +625,7 @@
                         if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
                     }(this, e), this.refs = {}
                 }
-                return i(e, [{
+                return r(e, [{
                     key: "add",
                     value: function(e, t) {
                         this.refs[e] || (this.refs[e] = []), this.refs[e].push(t)
@@ -433,7 +644,7 @@
                     key: "getActive",
                     value: function() {
                         var e = this;
-                        return (0, o.default)(this.refs[this.active.collection], function(t) {
+                        return (0, i.default)(this.refs[this.active.collection], function(t) {
                             return t.node.sortableInfo.index == e.active.index
                         })
                     }
@@ -455,27 +666,544 @@
             t.default = s
         },
         "8sUD": function(e, t, n) {},
+        "9fjZ": function(e, t, n) {
+            var r = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "TicketDescription"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "productName"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "taxCountry"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            alias: {
+                                kind: "Name",
+                                value: "product"
+                            },
+                            name: {
+                                kind: "Name",
+                                value: "subscriptionProduct"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "productName"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "productName"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "displayName"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "priceInfo"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "taxCountry"
+                                        },
+                                        value: {
+                                            kind: "Variable",
+                                            name: {
+                                                kind: "Name",
+                                                value: "taxCountry"
+                                            }
+                                        }
+                                    }],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "currency"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "exponent"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "isTaxInclusive"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "price"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "tax"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "total"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "interval"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "unit"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "hasAdFree"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "hasFastChat"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "hasSubonlyVideoArchive"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "tier"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "owner"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "displayName"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "bannerImageURL"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "profileImageURL"
+                                            },
+                                            arguments: [{
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "width"
+                                                },
+                                                value: {
+                                                    kind: "IntValue",
+                                                    value: "300"
+                                                }
+                                            }],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "broadcastBadges"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "FragmentSpread",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "badge"
+                                                    },
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "subscriptionProducts"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "tier"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "emotes"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "id"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "token"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "giftPromotion"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "newPrice"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "self"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "promotion"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "newPrice"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "paidUpgradePromotion"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "newPrice"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "benefit"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "gift"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "isGift"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "requestInfo"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "countryCode"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 667
+                }
+            };
+            r.loc.source = {
+                body: '#import "twilight/features/badges/models/badge-fragment.gql"\nquery TicketDescription($productName: String! $taxCountry: String) {\nproduct: subscriptionProduct(productName: $productName) {\nid\ndisplayName\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\nhasAdFree\nhasFastChat\nhasSubonlyVideoArchive\ntier\nowner {\nid\ndisplayName\nbannerImageURL\nprofileImageURL(width: 300)\nbroadcastBadges {\n...badge\n}\nsubscriptionProducts {\nid\ntier\nemotes {\nid\ntoken\n}\n}\n}\ngiftPromotion {\nnewPrice\n}\nself {\npromotion {\nnewPrice\n}\npaidUpgradePromotion {\nnewPrice\n}\nbenefit {\nid\ngift {\nisGift\n}\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}',
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            var i = {};
+            r.definitions = r.definitions.concat(function(e) {
+                return e.filter(function(e) {
+                    if ("FragmentDefinition" !== e.kind) return !0;
+                    var t = e.name.value;
+                    return !i[t] && (i[t] = !0, !0)
+                })
+            }(n("IKE4").definitions)), e.exports = r
+        },
+        AVF4: function(e, t, n) {
+            e.exports = n.p + "assets/credit_cards_1x-0c57bd2e9d4cd4bb8474.png"
+        },
+        Aoab: function(e, t, n) {},
         BCEg: function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var i = Object.assign || function(e) {
+            var r = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
-                        for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i])
+                        for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                     }
                     return e
                 },
-                o = function() {
+                i = function() {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
-                            var i = t[n];
-                            i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
                         }
                     }
-                    return function(t, n, i) {
-                        return n && e(t.prototype, n), i && e(t, i), t
+                    return function(t, n, r) {
+                        return n && e(t.prototype, n), r && e(t, r), t
                     }
                 }();
             t.default = function(e) {
@@ -502,7 +1230,7 @@
                                 configurable: !0
                             }
                         }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-                    }(n, t), o(n, [{
+                    }(n, t), i(n, [{
                         key: "componentDidMount",
                         value: function() {
                             var e = (0, s.findDOMNode)(this);
@@ -511,30 +1239,33 @@
                     }, {
                         key: "getWrappedInstance",
                         value: function() {
-                            return (0, l.default)(u.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call"), this.refs.wrappedInstance
+                            return (0, c.default)(u.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call"), this.refs.wrappedInstance
                         }
                     }, {
                         key: "render",
                         value: function() {
                             var t = u.withRef ? "wrappedInstance" : null;
-                            return r.default.createElement(e, i({
+                            return o.default.createElement(e, r({
                                 ref: t
                             }, this.props))
                         }
                     }]), n
-                }(a.Component), t.displayName = (0, c.provideDisplayName)("sortableHandle", e), n
+                }(a.Component), t.displayName = (0, l.provideDisplayName)("sortableHandle", e), n
             };
             var a = n("q1tI"),
-                r = u(a),
+                o = u(a),
                 s = n("i8i4"),
-                l = u(n("QLaP")),
-                c = n("jTc+");
+                c = u(n("QLaP")),
+                l = n("jTc+");
 
             function u(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
+        },
+        BIez: function(e, t, n) {
+            e.exports = n.p + "assets/credit_cards_2x-051201f07d7c83cdf807.png"
         },
         BaCc: function(e, t) {
             var n = {
@@ -596,9 +1327,81 @@
             };
             e.exports = n
         },
+        C8FX: function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                i = n("q1tI"),
+                a = n("/7QA"),
+                o = n("Ue10");
+            n("uUdG");
+            var s = function(e) {
+                function t() {
+                    return null !== e && e.apply(this, arguments) || this
+                }
+                return r.__extends(t, e), t.prototype.render = function() {
+                    return this.props.price ? i.createElement(o.Wa, {
+                        display: o.X.Flex,
+                        flexDirection: o.Z.Column
+                    }, this.props.productDiscountPrice && i.createElement(o.W, {
+                        bold: !0,
+                        className: "ticket-price__promotion",
+                        fontSize: o.Ba.Size4
+                    }, Object(a.d)("{discountedPrice} / First Month*", {
+                        discountedPrice: this.props.productDiscountPrice
+                    }, "TicketPrice")), i.createElement(o.Wa, {
+                        display: o.X.Flex,
+                        justifyContent: o.Va.Center,
+                        flexWrap: o.Aa.Wrap
+                    }, i.createElement(o.W, {
+                        type: o.Ob.Span,
+                        fontSize: o.Ba.Size4,
+                        decoration: this.props.productDiscountPrice ? o.Mb.Strikethrough : void 0,
+                        "data-a-target": "js-test-ticket-price-text"
+                    }, Object(a.d)("{price} / {interval}", {
+                        price: i.createElement(o.W, {
+                            type: o.Ob.Span,
+                            bold: !0
+                        }, this.props.price),
+                        interval: function(e) {
+                            switch (e) {
+                                case "WEEK":
+                                    return Object(a.d)("Week", "TicketPrice");
+                                case "MONTH":
+                                    return Object(a.d)("Month", "TicketPrice");
+                                case "YEAR":
+                                    return Object(a.d)("Year", "TicketPrice");
+                                case "ONE_TIME":
+                                    return Object(a.d)("One-Time Purchase", "TicketPrice");
+                                default:
+                                    return ""
+                            }
+                        }(this.props.interval)
+                    }, "TicketDescription")), this.formattedTaxInclusivity && i.createElement(o.Oa, {
+                        margin: {
+                            left: .5
+                        }
+                    }, i.createElement(o.W, {
+                        fontSize: o.Ba.Size4,
+                        type: o.Ob.Span,
+                        decoration: this.props.productDiscountPrice ? o.Mb.Strikethrough : void 0
+                    }, Object(a.d)("(Includes VAT)", "TicketDescription"))))) : i.createElement(o.Ya, {
+                        fillContent: !0
+                    })
+                }, Object.defineProperty(t.prototype, "formattedTaxInclusivity", {
+                    get: function() {
+                        return this.props.showEuSubs && this.props.productPriceTaxInclusive ? Object(a.d)("(Includes VAT)", "TicketPrice") : ""
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t
+            }(i.PureComponent);
+            n.d(t, "a", function() {
+                return s
+            })
+        },
         CUlp: function(e, t, n) {
-            var i, o;
-            "undefined" != typeof window && window, void 0 === (o = "function" == typeof(i = function() {
+            var r, i;
+            "undefined" != typeof window && window, void 0 === (i = "function" == typeof(r = function() {
                 "use strict";
 
                 function e() {}
@@ -606,8 +1409,8 @@
                 return t.on = function(e, t) {
                     if (e && t) {
                         var n = this._events = this._events || {},
-                            i = n[e] = n[e] || [];
-                        return -1 == i.indexOf(t) && i.push(t), this
+                            r = n[e] = n[e] || [];
+                        return -1 == r.indexOf(t) && r.push(t), this
                     }
                 }, t.once = function(e, t) {
                     if (e && t) {
@@ -618,51 +1421,275 @@
                 }, t.off = function(e, t) {
                     var n = this._events && this._events[e];
                     if (n && n.length) {
-                        var i = n.indexOf(t);
-                        return -1 != i && n.splice(i, 1), this
+                        var r = n.indexOf(t);
+                        return -1 != r && n.splice(r, 1), this
                     }
                 }, t.emitEvent = function(e, t) {
                     var n = this._events && this._events[e];
                     if (n && n.length) {
                         n = n.slice(0), t = t || [];
-                        for (var i = this._onceEvents && this._onceEvents[e], o = 0; o < n.length; o++) {
-                            var a = n[o];
-                            i && i[a] && (this.off(e, a), delete i[a]), a.apply(this, t)
+                        for (var r = this._onceEvents && this._onceEvents[e], i = 0; i < n.length; i++) {
+                            var a = n[i];
+                            r && r[a] && (this.off(e, a), delete r[a]), a.apply(this, t)
                         }
                         return this
                     }
                 }, t.allOff = function() {
                     delete this._events, delete this._onceEvents
                 }, e
-            }) ? i.call(t, n, t, e) : i) || (e.exports = o)
+            }) ? r.call(t, n, t, e) : r) || (e.exports = i)
+        },
+        D8NC: function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_1x-94c97f413ee6005ab1a1.png"
+        },
+        EF6p: function(e, t, n) {
+            e.exports = n.p + "assets/more_methods_1x-98862ad01d0cfaef3e09.png"
         },
         "EZh/": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return i
+                return r
             });
-            var i = 3
+            var r = 3
         },
         EuHz: function(e, t, n) {
             "use strict";
             n.r(t);
-            var i = n("/MKj"),
-                o = n("mrSG"),
-                a = n("1hWM"),
-                r = n("q1tI"),
-                s = n("oJmH"),
+            var r, i = n("/MKj"),
+                a = n("mrSG"),
+                o = n("1hWM"),
+                s = n("q1tI"),
+                c = n("oJmH"),
                 l = n("pQUg"),
-                c = n.n(l),
-                u = n("Nxrd"),
-                d = n("/7QA"),
-                p = n("yR8l"),
+                u = n.n(l),
+                d = n("Nxrd"),
+                p = n("/7QA"),
+                m = n("yR8l"),
                 h = n("geRD"),
-                m = n("5zC2"),
-                f = n("OzNJ"),
-                g = n("GnwI"),
-                v = n("7JxC"),
-                y = n("6x+I");
-            var b, E = {
+                f = n("5zC2"),
+                y = n("fvjX"),
+                g = n("aCAx"),
+                b = n("KJv/"),
+                v = n("1rIY"),
+                E = (r = Object(v.a)("ExtensionActionContext", {
+                    currentChannelID: null,
+                    currentActionRequest: null,
+                    currentActionRequestUI: null,
+                    sendActionResult: function() {
+                        return null
+                    }
+                })).InnerProvider,
+                C = r.withContext,
+                k = n("MU5F"),
+                P = n("x7UT"),
+                S = n("UUve"),
+                O = n("/aPz"),
+                x = n("6oOb");
+            var I, w = n("TilG"),
+                _ = 1e4;
+            ! function(e) {
+                e[e.NotStarted = 0] = "NotStarted", e[e.InProgress = 1] = "InProgress", e[e.Confirming = 2] = "Confirming", e[e.TimedOut = 3] = "TimedOut", e[e.Subscribed = 4] = "Subscribed", e[e.Cancelled = 5] = "Cancelled", e[e.Error = 6] = "Error", e[e.ProductNotAvailable = 7] = "ProductNotAvailable"
+            }(I || (I = {}));
+            var N = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            checkoutProgress: x.a.NOT_STARTED,
+                            subscriptionState: I.NotStarted
+                        }, t.onCheckoutModalClosed = function() {
+                            t.state.checkoutProgress !== x.a.CONFIRMATION && t.setState({
+                                subscriptionState: I.Cancelled
+                            })
+                        }, t.onCheckoutProgress = function(e) {
+                            e === x.a.CONFIRMATION && (t.waitForPubsubTimeout = setTimeout(function() {
+                                t.waitForPubsubTimeout = void 0, t.setState({
+                                    subscriptionState: I.TimedOut
+                                })
+                            }, _), t.setState({
+                                subscriptionState: I.Confirming
+                            })), t.setState({
+                                checkoutProgress: e
+                            })
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidUpdate = function(e, t) {
+                        var n = this.props.currentSubscriptionData;
+                        if (n)
+                            if (n.error) this.setState({
+                                subscriptionState: I.Error
+                            });
+                            else if (this.state.subscriptionState !== I.NotStarted || n.loading) {
+                            if (t.subscriptionState === this.state.subscriptionState) {
+                                if (this.state.subscriptionState === I.Confirming) {
+                                    var r = this.didUserReceiveSubscription(e),
+                                        i = !!this.props.pubsub.messages.entitlementMessage;
+                                    r ? (clearTimeout(this.waitForPubsubTimeout), this.waitForPubsubTimeout = void 0, this.setState({
+                                        subscriptionState: I.Subscribed
+                                    })) : i && this.waitForPubsubTimeout ? (clearTimeout(this.waitForPubsubTimeout), this.waitForPubsubTimeout = void 0, n.refetch()) : this.waitForPubsubTimeout || this.setState({
+                                        subscriptionState: I.Cancelled
+                                    })
+                                }
+                                return
+                            }
+                            switch (this.state.subscriptionState) {
+                                case I.Confirming:
+                                    n.refetch();
+                                    break;
+                                case I.TimedOut:
+                                    this.setState({
+                                        subscriptionState: I.Confirming
+                                    });
+                                    break;
+                                case I.Subscribed:
+                                case I.Cancelled:
+                                case I.Error:
+                                case I.ProductNotAvailable:
+                                    this.handleActionResult()
+                            }
+                        } else this.handleActionRequest()
+                    }, t.prototype.render = function() {
+                        return null
+                    }, t.prototype.didUserReceiveSubscription = function(e) {
+                        var t = this.props.currentSubscriptionData,
+                            n = e.currentSubscriptionData;
+                        if (!t || !n) return !1;
+                        var r = t.user,
+                            i = n.user;
+                        if (!(r && r.self && i && i.self)) return !1;
+                        var a = null === i.self.subscriptionBenefit && null !== r.self.subscriptionBenefit,
+                            o = !(!r.self.subscriptionBenefit || !i.self.subscriptionBenefit || r.self.subscriptionBenefit.tier === i.self.subscriptionBenefit.tier);
+                        return a || o
+                    }, t.prototype.handleActionRequest = function() {
+                        var e = this.props,
+                            t = e.currentActionRequest,
+                            n = e.currentSubscriptionData;
+                        if (t && n) {
+                            var r = null;
+                            switch (t.options.tier) {
+                                case k.ActionRequestSubTier.Upsell:
+                                    var i = n.user;
+                                    if (i && i.subscriptionProducts && i.self) {
+                                        var a = function(e, t) {
+                                            if (!t) return null;
+                                            var n = t.filter(function(e) {
+                                                    return null !== e
+                                                }).sort(function(e, t) {
+                                                    return e.tier < t.tier ? -1 : e.tier > t.tier ? 1 : -0
+                                                }),
+                                                r = n.findIndex(function(t) {
+                                                    return t.tier === e
+                                                });
+                                            return null === e ? n[0] : r === n.length - 1 ? null : n[r + 1]
+                                        }(i.self.subscriptionBenefit && i.self.subscriptionBenefit.tier, i.subscriptionProducts);
+                                        a && (r = a.name)
+                                    }
+                            }
+                            r ? (this.setState({
+                                subscriptionState: I.InProgress
+                            }), this.openCheckout(r)) : this.setState({
+                                subscriptionState: I.ProductNotAvailable
+                            })
+                        }
+                    }, t.prototype.handleActionResult = function() {
+                        this.props.sendActionResult({
+                            didSubscribe: this.state.subscriptionState === I.Subscribed
+                        })
+                    }, t.prototype.openCheckout = function(e) {
+                        Object(S.d)(), p.n.set(S.b, e), this.props.showSubscriptionCheckoutModal({
+                            productName: e,
+                            onCheckoutProgress: this.onCheckoutProgress,
+                            onClose: this.onCheckoutModalClosed
+                        })
+                    }, t
+                }(s.Component),
+                T = Object(y.compose)(Object(m.a)(w, {
+                    name: "currentSubscriptionData",
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelID: e.currentChannelID
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return !e.currentActionRequest || !e.currentChannelID
+                    }
+                }), Object(P.a)([{
+                    topic: function(e) {
+                        return Object(O.E)(e.currentSubscriptionData && e.currentSubscriptionData.currentUser && e.currentSubscriptionData.currentUser.id || "")
+                    },
+                    mapMessageTypesToProps: {
+                        "*": "entitlementMessage"
+                    },
+                    skip: function(e) {
+                        return !e.currentSubscriptionData || !e.currentSubscriptionData.currentUser || !e.currentSubscriptionData.currentUser.id
+                    }
+                }]))(N);
+            var D = Object(y.compose)(C(function(e) {
+                    return {
+                        currentActionRequest: e.currentActionRequest,
+                        currentChannelID: e.currentChannelID,
+                        sendActionResult: e.sendActionResult
+                    }
+                }), Object(i.connect)(null, function(e) {
+                    return Object(y.bindActionCreators)({
+                        showSubscriptionCheckoutModal: function(e) {
+                            var t = a.__rest(e, []);
+                            return Object(g.d)(b.CheckoutModal, t)
+                        }
+                    }, e)
+                }))(T),
+                j = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            currentActionRequest: null,
+                            currentActionRequestUI: null,
+                            isGlobalRender: !1
+                        }, t.handleModalRequest = function(e) {
+                            var n = null,
+                                r = !1;
+                            switch (e.action) {
+                                case o.FunctionAction.SubscribeToChannel:
+                                    n = s.createElement(D, null), r = !0;
+                                    break;
+                                default:
+                                    return
+                            }
+                            t.setState({
+                                currentActionRequest: e,
+                                currentActionRequestUI: n,
+                                isGlobalRender: r
+                            })
+                        }, t.sendActionResult = function(e) {
+                            var n = t.state.currentActionRequest;
+                            n && n.resultCallback && n.resultCallback(e), t.setState({
+                                currentActionRequest: null,
+                                currentActionRequestUI: null,
+                                isGlobalRender: !1
+                            })
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        o.extensionService.on(o.ExtensionServiceEvents.RequestModal, this.handleModalRequest)
+                    }, t.prototype.componentWillUnmount = function() {
+                        o.extensionService.off(o.ExtensionServiceEvents.RequestModal, this.handleModalRequest)
+                    }, t.prototype.render = function() {
+                        return s.createElement(E, {
+                            value: {
+                                currentChannelID: this.props.channelID,
+                                currentActionRequest: this.state.currentActionRequest,
+                                currentActionRequestUI: this.state.currentActionRequestUI,
+                                sendActionResult: this.sendActionResult
+                            }
+                        }, this.state.isGlobalRender && this.state.currentActionRequestUI, this.props.children)
+                    }, t
+                }(s.Component),
+                R = n("OzNJ"),
+                F = n("GnwI"),
+                A = n("7JxC"),
+                M = n("6x+I");
+            var W, B = {
                     allowedTypes: ["BlockQuote", "Emph", "Hardbreak", "Heading", "Item", "Link", "List", "Paragraph", "Softbreak", "Strong", "Text"],
                     className: "panel-description",
                     renderers: {
@@ -670,7 +1697,7 @@
                             function t() {
                                 return null !== e && e.apply(this, arguments) || this
                             }
-                            return o.__extends(t, e), t.prototype.render = function() {
+                            return a.__extends(t, e), t.prototype.render = function() {
                                 var e;
                                 switch (this.props.level) {
                                     case 1:
@@ -682,11 +1709,11 @@
                                     default:
                                         e = "h5"
                                 }
-                                return Object(r.createElement)(e, {}, this.props.children)
+                                return Object(s.createElement)(e, {}, this.props.children)
                             }, t
-                        }(r.Component),
+                        }(s.Component),
                         Link: function(e) {
-                            return r.createElement("a", {
+                            return s.createElement("a", {
                                 href: e.href,
                                 title: e.title,
                                 rel: "noopener noreferrer",
@@ -697,29 +1724,29 @@
                     skipHtml: !0,
                     softBreak: "br"
                 },
-                x = n("2xye"),
-                k = n("JVUd"),
-                C = n("0HeA"),
-                w = n("Ue10");
+                L = n("2xye"),
+                U = n("JVUd"),
+                z = n("0HeA"),
+                G = n("Ue10");
             n("ZAO/");
             ! function(e) {
                 e.Description = "description_test_selector", e.Image = "image_test_selector", e.Link = "link_url_test_selector", e.Panel = "channel_panel_test_selector", e.Title = "title_test_selector"
-            }(b || (b = {}));
-            var S = /^https?:\/\//,
-                I = function(e) {
+            }(W || (W = {}));
+            var H = /^https?:\/\//,
+                V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDescriptionClick = function(e) {
                             var n = e.target;
                             if ("A" === n.nodeName) {
-                                var i = n;
-                                t.trackClick(i.href)
+                                var r = n;
+                                t.trackClick(r.href)
                             }
                         }, t.onImageClick = function() {
                             t.props.panel.linkURL && t.trackClick(t.props.panel.linkURL)
                         }, t.trackClick = function(e) {
                             var n = t.props.panel.id;
-                            n && Object(C.a)(x.SpadeEventType.PanelClick, {
+                            n && Object(z.a)(L.SpadeEventType.PanelClick, {
                                 panelID: n,
                                 channelID: t.props.channelID,
                                 panelType: t.props.panel.type,
@@ -727,57 +1754,57 @@
                             })
                         }, t.trackImpression = function() {
                             var e = t.props.panel.id;
-                            e && Object(C.a)(x.SpadeEventType.PanelImpression, {
+                            e && Object(z.a)(L.SpadeEventType.PanelImpression, {
                                 panelID: e,
                                 channelID: t.props.channelID,
                                 panelType: t.props.panel.type
                             })
                         }, t
                     }
-                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.impressionListener.registerImpressionCallback(this.trackImpression)
                     }, t.prototype.render = function() {
-                        var e = this.props.panel.imageURL ? r.createElement("img", {
-                            "data-test-selector": b.Image,
+                        var e = this.props.panel.imageURL ? s.createElement("img", {
+                            "data-test-selector": W.Image,
                             src: this.props.panel.imageURL,
-                            alt: Object(d.d)("Panel Content", "ChannelPanels")
+                            alt: Object(p.d)("Panel Content", "ChannelPanels")
                         }) : "";
-                        e && this.props.panel.linkURL && S.test(this.props.panel.linkURL) && (e = r.createElement(w.T, {
+                        e && this.props.panel.linkURL && H.test(this.props.panel.linkURL) && (e = s.createElement(G.U, {
                             to: this.props.panel.linkURL,
                             onClick: this.onImageClick,
                             targetBlank: !0,
-                            "data-test-selector": b.Link
+                            "data-test-selector": W.Link
                         }, e));
                         var t = null;
-                        return this.props.panel.description && (t = r.createElement("div", {
+                        return this.props.panel.description && (t = s.createElement("div", {
                             onClick: this.onDescriptionClick,
-                            "data-test-selector": b.Description
-                        }, r.createElement(w.Wb, null, r.createElement(y, o.__assign({
+                            "data-test-selector": W.Description
+                        }, s.createElement(G.Xb, null, s.createElement(M, a.__assign({
                             source: function(e) {
-                                return e.replace(/(^|\n)(#+)([^\s#]+)/g, function(e, t, n, i) {
-                                    return "" + t + n + " " + i
+                                return e.replace(/(^|\n)(#+)([^\s#]+)/g, function(e, t, n, r) {
+                                    return "" + t + n + " " + r
                                 })
                             }(this.props.panel.description)
-                        }, E))))), r.createElement(w.Va, o.__assign({
+                        }, B))))), s.createElement(G.Wa, a.__assign({
                             className: "default-panel",
                             margin: {
                                 bottom: 2,
                                 right: 2
                             },
-                            "data-test-selector": b.Panel
-                        }, Object(w.bc)(this.props)), this.props.panel.title && r.createElement(w.V, {
-                            type: w.Nb.H3,
-                            "data-test-selector": b.Title
+                            "data-test-selector": W.Panel
+                        }, Object(G.cc)(this.props)), this.props.panel.title && s.createElement(G.W, {
+                            type: G.Ob.H3,
+                            "data-test-selector": W.Title
                         }, this.props.panel.title), e, t)
                     }, t
-                }(r.Component),
-                P = Object(s.compose)(Object(k.a)("DefaultPanel", {
+                }(s.Component),
+                q = Object(c.compose)(Object(U.a)("DefaultPanel", {
                     pixels: 100
-                }))(I),
-                _ = n("TVJu"),
-                D = n("EZh/"),
-                O = n("DMoW"),
-                T = (n("8sUD"), function(e) {
+                }))(V),
+                X = n("TVJu"),
+                Y = n("EZh/"),
+                Z = n("DMoW"),
+                K = (n("8sUD"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -786,8 +1813,8 @@
                             isTypeSelectionMode: !1,
                             errorMessage: ""
                         }, t.createDefaultPanel = function() {
-                            return o.__awaiter(t, void 0, void 0, function() {
-                                return o.__generator(this, function(e) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                return a.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
                                             this.setState({
@@ -796,7 +1823,7 @@
                                         case 1:
                                             return e.trys.push([1, 3, , 4]), [4, this.props.createPanel({
                                                 channelID: this.props.channelID,
-                                                type: O.y.DEFAULT
+                                                type: Z.z.DEFAULT
                                             })];
                                         case 2:
                                             return e.sent(), this.setState({
@@ -806,7 +1833,7 @@
                                             }), [3, 4];
                                         case 3:
                                             return e.sent(), this.setState({
-                                                errorMessage: Object(d.d)("Failed to create Text/Image Panel, please try again.", "CreatePanel"),
+                                                errorMessage: Object(p.d)("Failed to create Text/Image Panel, please try again.", "CreatePanel"),
                                                 isCreatingDefaultPanel: !1
                                             }), [3, 4];
                                         case 4:
@@ -815,8 +1842,8 @@
                                 })
                             })
                         }, t.createExtensionPanel = function() {
-                            return o.__awaiter(t, void 0, void 0, function() {
-                                return o.__generator(this, function(e) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                return a.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
                                             this.setState({
@@ -825,7 +1852,7 @@
                                         case 1:
                                             return e.trys.push([1, 3, , 4]), [4, this.props.createPanel({
                                                 channelID: this.props.channelID,
-                                                type: O.y.EXTENSION
+                                                type: Z.z.EXTENSION
                                             })];
                                         case 2:
                                             return e.sent(), this.setState({
@@ -835,7 +1862,7 @@
                                             }), [3, 4];
                                         case 3:
                                             return e.sent(), this.setState({
-                                                errorMessage: Object(d.d)("Failed to create Extension Panel, please try again.", "CreatePanel"),
+                                                errorMessage: Object(p.d)("Failed to create Extension Panel, please try again.", "CreatePanel"),
                                                 isCreatingExtensionPanel: !1
                                             }), [3, 4];
                                         case 4:
@@ -849,148 +1876,147 @@
                             })
                         }, t
                     }
-                    return o.__extends(t, e), t.prototype.render = function() {
-                        var e = r.createElement(w.z, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        var e = s.createElement(G.z, {
                             fullWidth: !0,
-                            icon: w.nb.NavSettings,
+                            icon: G.ob.NavSettings,
                             onClick: this.createExtensionPanel,
-                            state: this.state.isCreatingExtensionPanel ? w.E.Loading : w.E.Default,
-                            type: w.F.Hollow
-                        }, Object(d.d)("Extension Panel", "CreatePanel"));
-                        return this.state.isTypeSelectionMode ? r.createElement(w.xb, {
+                            state: this.state.isCreatingExtensionPanel ? G.E.Loading : G.E.Default,
+                            type: G.F.Hollow
+                        }, Object(p.d)("Extension Panel", "CreatePanel"));
+                        return this.state.isTypeSelectionMode ? s.createElement(G.yb, {
                             border: !0,
-                            background: w.r.Alt2,
+                            background: G.r.Alt2,
                             className: "create-panel",
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(w.o, {
-                            ratio: w.p.Aspect3x4
-                        }, r.createElement(w.Va, {
+                        }, s.createElement(G.o, {
+                            ratio: G.p.Aspect3x4
+                        }, s.createElement(G.Wa, {
                             padding: 1
-                        }, this.state.errorMessage && r.createElement(w.V, {
-                            color: w.O.Error
-                        }, this.state.errorMessage), r.createElement(w.Va, {
+                        }, this.state.errorMessage && s.createElement(G.W, {
+                            color: G.O.Error
+                        }, this.state.errorMessage), s.createElement(G.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }, r.createElement(w.z, {
+                        }, s.createElement(G.z, {
                             fullWidth: !0,
-                            icon: w.nb.GridLayout,
+                            icon: G.ob.GridLayout,
                             onClick: this.createDefaultPanel,
-                            state: this.state.isCreatingDefaultPanel ? w.E.Loading : w.E.Default,
-                            type: w.F.Hollow
-                        }, Object(d.d)("Add a Text or Image Panel", "CreatePanel"))), this.props.canCreateExtensionPanel && e))) : r.createElement(w.xb, {
+                            state: this.state.isCreatingDefaultPanel ? G.E.Loading : G.E.Default,
+                            type: G.F.Hollow
+                        }, Object(p.d)("Add a Text or Image Panel", "CreatePanel"))), this.props.canCreateExtensionPanel && e))) : s.createElement(G.yb, {
                             border: !0,
-                            background: w.r.Alt2,
+                            background: G.r.Alt2,
                             className: "create-panel",
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(w.Sa, {
-                            type: w.Ta.Alpha,
+                        }, s.createElement(G.Ta, {
+                            type: G.Ua.Alpha,
                             onClick: this.toggleSelectionMode
-                        }, r.createElement(w.o, {
-                            ratio: w.p.Aspect3x4
-                        }, r.createElement(w.Va, {
-                            display: w.W.Flex,
-                            alignItems: w.f.Center,
-                            justifyContent: w.Ua.Center,
+                        }, s.createElement(G.o, {
+                            ratio: G.p.Aspect3x4
+                        }, s.createElement(G.Wa, {
+                            display: G.X.Flex,
+                            alignItems: G.f.Center,
+                            justifyContent: G.Va.Center,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(w.mb, {
-                            asset: w.nb.Plus,
+                        }, s.createElement(G.nb, {
+                            asset: G.ob.Plus,
                             height: 100,
                             width: 100,
-                            type: w.ob.Placeholder
+                            type: G.pb.Placeholder
                         })))))
                     }, t
-                }(r.Component)),
-                L = n("aCAx"),
-                R = n("kRBY"),
-                N = n("KJdW"),
-                F = n.n(N),
-                A = n("/ZC1"),
-                B = n("cZKs"),
-                j = n("KGBd");
+                }(s.Component)),
+                Q = n("kRBY"),
+                J = n("KJdW"),
+                $ = n.n(J),
+                ee = n("/ZC1"),
+                te = n("cZKs"),
+                ne = n("KGBd");
             n("xVpv");
-            var z = ["image/*"],
-                U = {
+            var re = ["image/*"],
+                ie = {
                     x: 0,
                     y: 0,
                     width: 100,
                     height: 100
                 },
-                W = {
+                ae = {
                     x: 0,
                     y: 0,
                     width: 320,
                     height: 180
                 },
-                M = function(e) {
+                oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             base64Image: "",
-                            crop: U,
+                            crop: ie,
                             error: "",
                             file: void 0,
                             isCropping: !1,
-                            pixelCrop: W
+                            pixelCrop: ae
                         }, t.onFilesSubmitted = function(e) {
                             var n = e[0],
-                                i = new FileReader;
-                            i.onloadend = function() {
-                                var e = i.result,
-                                    o = new Image;
-                                o.onload = function() {
-                                    var i = function(e, t, n) {
-                                            var i = e.height,
-                                                o = e.width,
-                                                a = i > t,
-                                                r = o > n;
+                                r = new FileReader;
+                            r.onloadend = function() {
+                                var e = r.result,
+                                    i = new Image;
+                                i.onload = function() {
+                                    var r = function(e, t, n) {
+                                            var r = e.height,
+                                                i = e.width,
+                                                a = r > t,
+                                                o = i > n;
                                             return {
                                                 percentCrop: {
                                                     x: 0,
                                                     y: 0,
-                                                    height: (a ? t : i) / i * 100,
-                                                    width: (r ? n : o) / o * 100
+                                                    height: (a ? t : r) / r * 100,
+                                                    width: (o ? n : i) / i * 100
                                                 },
                                                 pixelCrop: {
                                                     x: 0,
                                                     y: 0,
-                                                    height: a ? t : i,
-                                                    width: r ? n : o
+                                                    height: a ? t : r,
+                                                    width: o ? n : i
                                                 }
                                             }
-                                        }(o, W.height, W.width),
-                                        a = i.percentCrop,
-                                        r = i.pixelCrop;
+                                        }(i, ae.height, ae.width),
+                                        a = r.percentCrop,
+                                        o = r.pixelCrop;
                                     t.setState({
                                         base64Image: e,
                                         crop: a,
                                         file: n,
                                         isCropping: !0,
-                                        pixelCrop: r
+                                        pixelCrop: o
                                     })
-                                }, o.onerror = function() {
+                                }, i.onerror = function() {
                                     t.setState({
                                         error: "Failed to read file"
                                     })
-                                }, o.src = e
-                            }, i.onerror = function() {
+                                }, i.src = e
+                            }, r.onerror = function() {
                                 t.setState({
                                     error: "Failed to read file"
                                 })
-                            }, i.readAsDataURL(n)
+                            }, r.readAsDataURL(n)
                         }, t.onImageSelectionComplete = function() {
                             var e = t.state,
                                 n = e.file,
-                                i = e.pixelCrop;
+                                r = e.pixelCrop;
                             n && (t.props.onImageSelectionComplete({
                                 file: n,
-                                pixelCrop: i,
-                                previewSrc: Object(j.a)(t.state.base64Image, t.state.pixelCrop.x, t.state.pixelCrop.y, t.state.pixelCrop.width, t.state.pixelCrop.height, t.state.pixelCrop.width, t.state.pixelCrop.height)
+                                pixelCrop: r,
+                                previewSrc: Object(ne.a)(t.state.base64Image, t.state.pixelCrop.x, t.state.pixelCrop.y, t.state.pixelCrop.width, t.state.pixelCrop.height, t.state.pixelCrop.width, t.state.pixelCrop.height)
                             }), t.props.onClose())
                         }, t.updateCrop = function(e, n) {
                             t.setState({
@@ -999,79 +2025,77 @@
                             })
                         }, t
                     }
-                    return o.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(w.xb, {
-                            background: w.r.Base,
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        return s.createElement(G.yb, {
+                            background: G.r.Base,
                             className: "default-panel-image-picker",
-                            textAlign: w.Jb.Center
-                        }, this.state.base64Image ? this.renderImageCropper() : this.renderFilePicker(), r.createElement(B.a, {
+                            textAlign: G.Kb.Center
+                        }, this.state.base64Image ? this.renderImageCropper() : this.renderFilePicker(), s.createElement(te.a, {
                             closeOnBackdropClick: !this.state.isCropping
                         }))
                     }, t.prototype.renderImageCropper = function() {
-                        return r.createElement(w.Va, {
+                        return s.createElement(G.Wa, {
                             padding: 2
-                        }, r.createElement(F.a, {
+                        }, s.createElement($.a, {
                             src: this.state.base64Image,
                             crop: this.state.crop,
                             onChange: this.updateCrop,
                             onComplete: this.updateCrop
-                        }), r.createElement(w.Va, {
-                            display: w.W.Flex,
-                            flexDirection: w.Y.Row,
+                        }), s.createElement(G.Wa, {
+                            display: G.X.Flex,
+                            flexDirection: G.Z.Row,
                             margin: {
                                 top: 1
                             },
-                            justifyContent: w.Ua.Center
-                        }, r.createElement(w.z, {
+                            justifyContent: G.Va.Center
+                        }, s.createElement(G.z, {
                             onClick: this.onImageSelectionComplete
-                        }, Object(d.d)("Done", "DefaultPanelImagePickerComponent")), r.createElement(w.Va, {
+                        }, Object(p.d)("Done", "DefaultPanelImagePickerComponent")), s.createElement(G.Wa, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(w.z, {
+                        }, s.createElement(G.z, {
                             onClick: this.props.onClose
-                        }, Object(d.d)("Cancel", "DefaultPanelImagePickerComponent")))))
+                        }, Object(p.d)("Cancel", "DefaultPanelImagePickerComponent")))))
                     }, t.prototype.renderFilePicker = function() {
-                        return r.createElement(w.o, {
-                            ratio: w.p.Aspect1x1
-                        }, r.createElement(A.a, {
-                            allowedFileTypes: z,
+                        return s.createElement(G.o, {
+                            ratio: G.p.Aspect1x1
+                        }, s.createElement(ee.a, {
+                            allowedFileTypes: re,
                             multiFile: !1,
                             onFilesSubmitted: this.onFilesSubmitted
-                        }, r.createElement(w.Va, {
-                            display: w.W.Flex,
-                            flexDirection: w.Y.Column
-                        }, r.createElement(w.Va, null, r.createElement(w.mb, {
-                            asset: w.nb.Upload,
-                            type: w.ob.Alt2,
+                        }, s.createElement(G.Wa, {
+                            display: G.X.Flex,
+                            flexDirection: G.Z.Column
+                        }, s.createElement(G.Wa, null, s.createElement(G.nb, {
+                            asset: G.ob.Upload,
+                            type: G.pb.Alt2,
                             height: 50,
                             width: 50
-                        })), r.createElement(w.V, {
-                            type: w.Nb.H3,
-                            color: w.O.Alt2,
-                            fontSize: w.Aa.Size4
-                        }, Object(d.d)("Choose a file or drag it here.", "DefaultPanelImagePickerComponent")))))
+                        })), s.createElement(G.W, {
+                            type: G.Ob.H3,
+                            color: G.O.Alt2,
+                            fontSize: G.Ba.Size4
+                        }, Object(p.d)("Choose a file or drag it here.", "DefaultPanelImagePickerComponent")))))
                     }, t
-                }(r.Component),
-                V = n("fvjX");
-            var H = Object(i.connect)(null, function(e) {
-                    return Object(V.bindActionCreators)({
-                        onClose: L.c
+                }(s.Component);
+            var se = Object(i.connect)(null, function(e) {
+                    return Object(y.bindActionCreators)({
+                        onClose: g.c
                     }, e)
-                })(M),
-                q = n("PZVp"),
-                G = n("/aPz"),
-                Y = n("b6Yk");
-            var Q;
+                })(oe),
+                ce = n("PZVp"),
+                le = n("b6Yk");
+            var ue;
             n("U0Fp");
             ! function(e) {
                 e.AddImage = "add_image_selector", e.SavePanel = "save_default_panel_selector"
-            }(Q || (Q = {}));
-            var X, K = 1e6;
+            }(ue || (ue = {}));
+            var de, pe = 1e6;
             ! function(e) {
                 e[e.ImageUploadFailed = 0] = "ImageUploadFailed", e[e.ImageUploadSizeFailed = 1] = "ImageUploadSizeFailed", e[e.Unexpected = 2] = "Unexpected"
-            }(X || (X = {}));
-            var J = function(e) {
+            }(de || (de = {}));
+            var me = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -1092,17 +2116,17 @@
                             imagePreviewSRC: e.previewSrc
                         })
                     }, t.handleInputChange = function(e) {
-                        var n, i = e.currentTarget;
+                        var n, r = e.currentTarget;
                         t.setState(((n = {
                             canSave: !0,
                             errorMessage: ""
-                        })[i.name] = i.value, n))
+                        })[r.name] = r.value, n))
                     }, t.handleDescriptionChange = function(e) {
-                        var n, i = e.currentTarget;
+                        var n, r = e.currentTarget;
                         t.setState(((n = {
                             canSave: !0,
                             errorMessage: ""
-                        })[i.name] = i.value, n))
+                        })[r.name] = r.value, n))
                     }, t.handleSaveComplete = function() {
                         t.setState({
                             canSave: !1,
@@ -1112,26 +2136,26 @@
                     }, t.handleErrorMessage = function(e) {
                         var n;
                         switch (e) {
-                            case X.ImageUploadFailed:
-                                n = Object(d.d)("Image Upload Failed. Please try again.", "DefaultPanelEditComponent");
+                            case de.ImageUploadFailed:
+                                n = Object(p.d)("Image Upload Failed. Please try again.", "DefaultPanelEditComponent");
                                 break;
-                            case X.ImageUploadSizeFailed:
-                                n = Object(d.d)("Please choose a file smaller than {maxFileSize}.", {
+                            case de.ImageUploadSizeFailed:
+                                n = Object(p.d)("Please choose a file smaller than {maxFileSize}.", {
                                     maxFileSize: "1MB"
                                 }, "DefaultPanelEditComponent");
                                 break;
-                            case X.Unexpected:
+                            case de.Unexpected:
                             default:
-                                n = Object(d.d)("Something went wrong. Please try again.", "DefaultPanelEditComponent")
+                                n = Object(p.d)("Something went wrong. Please try again.", "DefaultPanelEditComponent")
                         }
                         t.setState({
                             errorMessage: n,
                             isSaving: !1
                         })
                     }, t.savePanel = function() {
-                        return o.__awaiter(t, void 0, void 0, function() {
+                        return a.__awaiter(t, void 0, void 0, function() {
                             var e, t;
-                            return o.__generator(this, function(n) {
+                            return a.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         if (!this.state.canSave) return [3, 6];
@@ -1150,7 +2174,7 @@
                                     case 2:
                                         return n.sent(), this.handleSaveComplete(), [3, 4];
                                     case 3:
-                                        return n.sent(), this.handleErrorMessage(X.Unexpected), [3, 4];
+                                        return n.sent(), this.handleErrorMessage(de.Unexpected), [3, 4];
                                     case 4:
                                         return [3, 6];
                                     case 5:
@@ -1161,21 +2185,21 @@
                             })
                         })
                     }, t.saveWithPanelImage = function() {
-                        return o.__awaiter(t, void 0, void 0, function() {
-                            var e, t, n, i, a, r = this;
-                            return o.__generator(this, function(s) {
+                        return a.__awaiter(t, void 0, void 0, function() {
+                            var e, t, n, r, i, o = this;
+                            return a.__generator(this, function(s) {
                                 switch (s.label) {
                                     case 0:
-                                        if (e = this.state.imageCrop, (t = this.state.imageFile).size > K) return this.handleErrorMessage(X.ImageUploadSizeFailed), [2];
+                                        if (e = this.state.imageCrop, (t = this.state.imageFile).size > pe) return this.handleErrorMessage(de.ImageUploadSizeFailed), [2];
                                         s.label = 1;
                                     case 1:
                                         return s.trys.push([1, 3, , 4]), [4, function(e, t) {
-                                            return o.__awaiter(this, void 0, Promise, function() {
-                                                var n, i;
-                                                return o.__generator(this, function(o) {
-                                                    switch (o.label) {
+                                            return a.__awaiter(this, void 0, Promise, function() {
+                                                var n, r;
+                                                return a.__generator(this, function(i) {
+                                                    switch (i.label) {
                                                         case 0:
-                                                            return o.trys.push([0, 2, , 3]), [4, Y.a.post("/v5/users/" + e + "/upload_panel_image", {
+                                                            return i.trys.push([0, 2, , 3]), [4, le.a.post("/v5/users/" + e + "/upload_panel_image", {
                                                                 body: {
                                                                     height: t.height,
                                                                     width: t.width,
@@ -1184,9 +2208,9 @@
                                                                 }
                                                             })];
                                                         case 1:
-                                                            return 200 === (n = o.sent()).status && n.body ? [2, n.body] : [2, Promise.reject("Failed to fetch URL")];
+                                                            return 200 === (n = i.sent()).status && n.body ? [2, n.body] : [2, Promise.reject("Failed to fetch URL")];
                                                         case 2:
-                                                            return i = o.sent(), [2, Promise.reject(i)];
+                                                            return r = i.sent(), [2, Promise.reject(r)];
                                                         case 3:
                                                             return [2]
                                                     }
@@ -1194,12 +2218,12 @@
                                             })
                                         }(this.props.channelID, e)];
                                     case 2:
-                                        return a = s.sent(), i = a.upload_id, n = a.url, [3, 4];
+                                        return i = s.sent(), r = i.upload_id, n = i.url, [3, 4];
                                     case 3:
-                                        return s.sent(), [2, this.handleErrorMessage(X.Unexpected)];
+                                        return s.sent(), [2, this.handleErrorMessage(de.Unexpected)];
                                     case 4:
-                                        return this.unsubscribe = d.k.subscribe({
-                                            topic: Object(G.A)(i),
+                                        return this.unsubscribe = p.l.subscribe({
+                                            topic: Object(O.A)(r),
                                             success: function() {
                                                 (function(e, t) {
                                                     return fetch(e, {
@@ -1207,31 +2231,31 @@
                                                         body: new Blob([t])
                                                     })
                                                 })(n, t).catch(function() {
-                                                    r.unsubscribe(), r.handleErrorMessage(X.Unexpected)
-                                                }), r.timeoutFunc = setTimeout(function() {
-                                                    r.unsubscribe(), r.handleErrorMessage(X.ImageUploadFailed)
+                                                    o.unsubscribe(), o.handleErrorMessage(de.Unexpected)
+                                                }), o.timeoutFunc = setTimeout(function() {
+                                                    o.unsubscribe(), o.handleErrorMessage(de.ImageUploadFailed)
                                                 }, 1e4)
                                             },
                                             failure: function() {
-                                                r.handleErrorMessage(X.Unexpected)
+                                                o.handleErrorMessage(de.Unexpected)
                                             },
                                             onMessage: function(e) {
-                                                return o.__awaiter(r, void 0, void 0, function() {
-                                                    return o.__generator(this, function(t) {
+                                                return a.__awaiter(o, void 0, void 0, function() {
+                                                    return a.__generator(this, function(t) {
                                                         switch (t.label) {
                                                             case 0:
-                                                                if (e.upload_id !== i) return [3, 8];
+                                                                if (e.upload_id !== r) return [3, 8];
                                                                 switch (clearTimeout(this.timeoutFunc), e.status) {
-                                                                    case q.a.POSTPROCESS_COMPLETE:
+                                                                    case ce.a.POSTPROCESS_COMPLETE:
                                                                         return [3, 1];
-                                                                    case q.a.FILE_SIZE_VALIDATION_FAILED:
+                                                                    case ce.a.FILE_SIZE_VALIDATION_FAILED:
                                                                         return [3, 5]
                                                                 }
                                                                 return [3, 6];
                                                             case 1:
                                                                 return t.trys.push([1, 3, , 4]), [4, this.props.updatePanel({
                                                                     id: this.props.panel.id,
-                                                                    imageURL: "https://static-cdn.jtvnw.net/jtv_user_pictures/panel-" + this.props.channelID + "-image-" + i,
+                                                                    imageURL: "https://static-cdn.jtvnw.net/jtv_user_pictures/panel-" + this.props.channelID + "-image-" + r,
                                                                     description: this.state.description,
                                                                     linkURL: this.state.linkURL,
                                                                     title: this.state.title
@@ -1239,13 +2263,13 @@
                                                             case 2:
                                                                 return t.sent(), this.handleSaveComplete(), [3, 4];
                                                             case 3:
-                                                                return t.sent(), this.handleErrorMessage(X.ImageUploadFailed), [3, 4];
+                                                                return t.sent(), this.handleErrorMessage(de.ImageUploadFailed), [3, 4];
                                                             case 4:
                                                                 return [3, 7];
                                                             case 5:
-                                                                return this.handleErrorMessage(X.ImageUploadSizeFailed), [3, 7];
+                                                                return this.handleErrorMessage(de.ImageUploadSizeFailed), [3, 7];
                                                             case 6:
-                                                                this.handleErrorMessage(X.Unexpected), t.label = 7;
+                                                                this.handleErrorMessage(de.Unexpected), t.label = 7;
                                                             case 7:
                                                                 this.unsubscribe && this.unsubscribe(), t.label = 8;
                                                             case 8:
@@ -1264,176 +2288,176 @@
                         })
                     }, t
                 }
-                return o.__extends(t, e), t.prototype.componentWillUnmount = function() {
+                return a.__extends(t, e), t.prototype.componentWillUnmount = function() {
                     void 0 !== this.unsubscribe && this.unsubscribe()
                 }, t.prototype.render = function() {
                     var e = this.props.panel,
-                        t = Object(d.d)("Supports {markdownLink} (No HTML)", {
-                            markdownLink: r.createElement("a", {
+                        t = Object(p.d)("Supports {markdownLink} (No HTML)", {
+                            markdownLink: s.createElement("a", {
                                 href: "https://help.twitch.tv/customer/portal/articles/839490-markdown-basics",
                                 target: "_blank"
-                            }, Object(d.d)("Markdown", "DefaultPanelEditComponent"))
+                            }, Object(p.d)("Markdown", "DefaultPanelEditComponent"))
                         }, "DefaultPanelEditComponent");
-                    return r.createElement(w.Va, {
+                    return s.createElement(G.Wa, {
                         padding: 1
-                    }, r.createElement(w.Va, {
+                    }, s.createElement(G.Wa, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(w.Ca, {
+                    }, s.createElement(G.Da, {
                         id: "panel-title",
-                        label: Object(d.d)("Panel Title", "DefaultPanelEdit")
-                    }, r.createElement(w.Pa, {
+                        label: Object(p.d)("Panel Title", "DefaultPanelEdit")
+                    }, s.createElement(G.Qa, {
                         defaultValue: e.title || "",
                         id: "panel-title",
                         name: "title",
                         onChange: this.handleInputChange,
-                        type: w.Ra.Text
-                    }))), r.createElement(w.Va, {
+                        type: G.Sa.Text
+                    }))), s.createElement(G.Wa, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(w.Va, {
-                        display: w.W.Flex,
-                        flexDirection: w.Y.Row,
-                        justifyContent: w.Ua.Between,
+                    }, s.createElement(G.Wa, {
+                        display: G.X.Flex,
+                        flexDirection: G.Z.Row,
+                        justifyContent: G.Va.Between,
                         margin: {
                             bottom: .5
                         }
-                    }, r.createElement(w.z, {
+                    }, s.createElement(G.z, {
                         onClick: this.showDefaultPanelImagePicker,
-                        "data-test-selector": Q.AddImage
-                    }, Object(d.d)("Add Image", "DefaultPanelEdit")), r.createElement("img", {
+                        "data-test-selector": ue.AddImage
+                    }, Object(p.d)("Add Image", "DefaultPanelEdit")), s.createElement("img", {
                         className: "panel-preview-image",
                         src: this.state.imagePreviewSRC ? this.state.imagePreviewSRC : e.imageURL || ""
-                    })), r.createElement(w.V, {
-                        type: w.Nb.P
-                    }, Object(d.d)("Images will be scaled to 320px wide", "DefaultPanelEdit"))), r.createElement(w.Va, {
+                    })), s.createElement(G.W, {
+                        type: G.Ob.P
+                    }, Object(p.d)("Images will be scaled to 320px wide", "DefaultPanelEdit"))), s.createElement(G.Wa, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(w.Ca, {
+                    }, s.createElement(G.Da, {
                         id: "panel-link-url",
-                        label: Object(d.d)("Image Links To:", "DefaultPanelEdit")
-                    }, r.createElement(w.Pa, {
+                        label: Object(p.d)("Image Links To:", "DefaultPanelEdit")
+                    }, s.createElement(G.Qa, {
                         defaultValue: e.linkURL || "",
                         id: "panel-link-url",
                         name: "linkURL",
                         onChange: this.handleInputChange,
-                        type: w.Ra.Text
-                    }))), r.createElement(w.Va, {
+                        type: G.Sa.Text
+                    }))), s.createElement(G.Wa, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(w.Va, {
-                        display: w.W.Flex,
-                        flexDirection: w.Y.Row,
-                        justifyContent: w.Ua.Between,
+                    }, s.createElement(G.Wa, {
+                        display: G.X.Flex,
+                        flexDirection: G.Z.Row,
+                        justifyContent: G.Va.Between,
                         margin: {
                             bottom: .5
                         }
-                    }, r.createElement(w.V, {
-                        type: w.Nb.Strong
-                    }, Object(d.d)("Description:", "DefaultPanelEdit")), r.createElement(w.Va, null, t)), r.createElement(w.Kb, {
+                    }, s.createElement(G.W, {
+                        type: G.Ob.Strong
+                    }, Object(p.d)("Description:", "DefaultPanelEdit")), s.createElement(G.Wa, null, t)), s.createElement(G.Lb, {
                         defaultValue: e.description || "",
                         id: "description",
                         name: "description",
                         noResize: !0,
                         onChange: this.handleDescriptionChange,
                         rows: 6
-                    })), r.createElement(w.Va, {
-                        display: w.W.Flex,
-                        flexDirection: w.Y.Row
-                    }, r.createElement(w.z, {
-                        "data-test-selector": Q.SavePanel,
+                    })), s.createElement(G.Wa, {
+                        display: G.X.Flex,
+                        flexDirection: G.Z.Row
+                    }, s.createElement(G.z, {
+                        "data-test-selector": ue.SavePanel,
                         disabled: !this.state.canSave,
                         onClick: this.savePanel,
-                        state: this.state.isSaving ? w.E.Loading : w.E.Default
-                    }, Object(d.d)("Submit", "DefaultPanelEdit")), r.createElement(w.z, {
-                        type: w.F.Text,
+                        state: this.state.isSaving ? G.E.Loading : G.E.Default
+                    }, Object(p.d)("Submit", "DefaultPanelEdit")), s.createElement(G.z, {
+                        type: G.F.Text,
                         onClick: this.props.removePanel
-                    }, Object(d.d)("Remove", "DefaultPanelEdit"))), r.createElement(w.Va, {
-                        textAlign: w.Jb.Center
-                    }, this.state.errorMessage && r.createElement(w.V, {
-                        color: w.O.Error
+                    }, Object(p.d)("Remove", "DefaultPanelEdit"))), s.createElement(G.Wa, {
+                        textAlign: G.Kb.Center
+                    }, this.state.errorMessage && s.createElement(G.W, {
+                        color: G.O.Error
                     }, this.state.errorMessage)))
                 }, t
-            }(r.Component);
-            var Z, $ = Object(i.connect)(function(e) {
+            }(s.Component);
+            var he, fe = Object(i.connect)(function(e) {
                     return {
-                        authToken: Object(R.a)(e)
+                        authToken: Object(Q.a)(e)
                     }
                 }, function(e) {
                     return {
                         showDefaultPanelImagePicker: function(t) {
-                            return e(Object(L.d)(H, t))
+                            return e(Object(g.d)(se, t))
                         }
                     }
-                })(J),
-                ee = function(e) {
+                })(me),
+                ye = function(e) {
                     var t = e.channelName,
                         n = e.panel,
-                        i = e.removePanel,
-                        o = Object(d.d)("This panel's name is: {panelName}", {
-                            panelName: r.createElement(w.V, {
+                        r = e.removePanel,
+                        i = Object(p.d)("This panel's name is: {panelName}", {
+                            panelName: s.createElement(G.W, {
                                 bold: !0,
-                                type: w.Nb.Span,
-                                transform: w.Mb.Uppercase
+                                type: G.Ob.Span,
+                                transform: G.Nb.Uppercase
                             }, " ", n.slotID)
                         }, "ExtensionPanelEdit");
-                    return r.createElement(w.Va, {
-                        alignItems: w.f.Center,
-                        display: w.W.Flex,
-                        flexDirection: w.Y.Column,
-                        textAlign: w.Jb.Center
-                    }, r.createElement(w.Va, {
+                    return s.createElement(G.Wa, {
+                        alignItems: G.f.Center,
+                        display: G.X.Flex,
+                        flexDirection: G.Z.Column,
+                        textAlign: G.Kb.Center
+                    }, s.createElement(G.Wa, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(w.mb, {
-                        asset: w.nb.Extensions,
-                        type: w.ob.Brand,
+                    }, s.createElement(G.nb, {
+                        asset: G.ob.Extensions,
+                        type: G.pb.Brand,
                         height: 40,
                         width: 40
-                    })), r.createElement(w.Va, {
+                    })), s.createElement(G.Wa, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(w.V, null, Object(d.d)("To add an Extension to this space, activate it in your Extension Manager.", "Edit Extension Panel"))), r.createElement(w.Va, {
+                    }, s.createElement(G.W, null, Object(p.d)("To add an Extension to this space, activate it in your Extension Manager.", "Edit Extension Panel"))), s.createElement(G.Wa, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(w.z, {
+                    }, s.createElement(G.z, {
                         linkTo: "/" + t + "/dashboard/extensions"
-                    }, Object(d.d)("Extension Manager", "Edit Extension Panel"))), r.createElement(w.Va, {
+                    }, Object(p.d)("Extension Manager", "Edit Extension Panel"))), s.createElement(G.Wa, {
                         margin: {
                             y: 2
                         }
-                    }, r.createElement(w.V, null, o)), r.createElement(w.Va, {
+                    }, s.createElement(G.W, null, i)), s.createElement(G.Wa, {
                         fullWidth: !0,
                         margin: {
                             top: "auto"
                         }
-                    }, r.createElement(w.z, {
-                        type: w.F.Text,
+                    }, s.createElement(G.z, {
+                        type: G.F.Text,
                         fullWidth: !0,
-                        onClick: i
-                    }, Object(d.d)("Remove", "Edit Extension Panel"))))
+                        onClick: r
+                    }, Object(p.d)("Remove", "Edit Extension Panel"))))
                 },
-                te = (n("abgr"), function(e) {
+                ge = (n("abgr"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isRemoving: !1,
                             showRemoveConfirmation: !1
-                        }, t.logger = d.j.withCategory("EditPanel"), t.cancelRemovePanel = function() {
+                        }, t.logger = p.k.withCategory("EditPanel"), t.cancelRemovePanel = function() {
                             t.setState({
                                 showRemoveConfirmation: !1
                             })
                         }, t.confirmRemovePanel = function() {
-                            return o.__awaiter(t, void 0, void 0, function() {
+                            return a.__awaiter(t, void 0, void 0, function() {
                                 var e;
-                                return o.__generator(this, function(t) {
+                                return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             this.setState({
@@ -1459,70 +2483,70 @@
                             })
                         }, t
                     }
-                    return o.__extends(t, e), t.prototype.render = function() {
-                        var e = r.createElement(w.xb, {
+                    return a.__extends(t, e), t.prototype.render = function() {
+                        var e = s.createElement(G.yb, {
                                 border: !0,
                                 className: "edit-panel edit-panel--overlay " + (this.props.isSorting ? "edit-panel--sorting" : ""),
-                                position: w.db.Absolute,
-                                zIndex: w.ac.Default
-                            }, r.createElement(w.o, {
-                                ratio: w.p.Aspect3x4
-                            }, r.createElement(w.Va, {
-                                alignItems: w.f.Center,
-                                display: w.W.Flex,
-                                flexDirection: w.Y.Column,
-                                justifyContent: w.Ua.Center,
-                                textAlign: w.Jb.Center
-                            }, r.createElement(w.V, {
-                                color: w.O.Overlay
-                            }, Object(d.d)("Are you sure you want to delete this panel?", "EditPanel")), r.createElement(w.Va, {
+                                position: G.eb.Absolute,
+                                zIndex: G.bc.Default
+                            }, s.createElement(G.o, {
+                                ratio: G.p.Aspect3x4
+                            }, s.createElement(G.Wa, {
+                                alignItems: G.f.Center,
+                                display: G.X.Flex,
+                                flexDirection: G.Z.Column,
+                                justifyContent: G.Va.Center,
+                                textAlign: G.Kb.Center
+                            }, s.createElement(G.W, {
+                                color: G.O.Overlay
+                            }, Object(p.d)("Are you sure you want to delete this panel?", "EditPanel")), s.createElement(G.Wa, {
                                 margin: {
                                     top: 2
                                 }
-                            }, r.createElement(w.z, {
+                            }, s.createElement(G.z, {
                                 "data-test-selector": "confirm_delete_panel_selector",
-                                state: this.state.isRemoving ? w.E.Loading : w.E.Default,
+                                state: this.state.isRemoving ? G.E.Loading : G.E.Default,
                                 onClick: this.confirmRemovePanel
-                            }, Object(d.d)("Delete", "EditPanel")), r.createElement(w.Va, {
-                                display: w.W.InlineBlock,
+                            }, Object(p.d)("Delete", "EditPanel")), s.createElement(G.Wa, {
+                                display: G.X.InlineBlock,
                                 margin: {
                                     left: 1
                                 }
-                            }, r.createElement(w.z, {
-                                type: w.F.Text,
+                            }, s.createElement(G.z, {
+                                type: G.F.Text,
                                 onClick: this.cancelRemovePanel,
                                 overlay: !0
-                            }, Object(d.d)("Cancel", "EditPanel"))))))),
+                            }, Object(p.d)("Cancel", "EditPanel"))))))),
                             t = null;
-                        return "DefaultPanel" === this.props.panel.__typename ? t = r.createElement($, {
+                        return "DefaultPanel" === this.props.panel.__typename ? t = s.createElement(fe, {
                             channelID: this.props.channelID,
                             panel: this.props.panel,
                             removePanel: this.removePanel,
                             updatePanel: this.props.updatePanel
-                        }) : "ExtensionPanel" === this.props.panel.__typename && (t = r.createElement(ee, {
+                        }) : "ExtensionPanel" === this.props.panel.__typename && (t = s.createElement(ye, {
                             channelName: this.props.channelName,
                             panel: this.props.panel,
                             removePanel: this.removePanel
-                        })), r.createElement(w.Va, {
-                            position: w.db.Relative
-                        }, this.state.showRemoveConfirmation && e, r.createElement(w.xb, {
+                        })), s.createElement(G.Wa, {
+                            position: G.eb.Relative
+                        }, this.state.showRemoveConfirmation && e, s.createElement(G.yb, {
                             border: !0,
-                            background: w.r.Alt2,
+                            background: G.r.Alt2,
                             className: "edit-panel " + (this.props.isSorting ? "edit-panel--sorting" : ""),
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(w.o, {
-                            ratio: w.p.Aspect3x4
+                        }, s.createElement(G.o, {
+                            ratio: G.p.Aspect3x4
                         }, t)))
                     }, t
-                }(r.PureComponent)),
-                ne = Object(u.SortableElement)(function(e) {
-                    return r.createElement(w.Va, {
+                }(s.PureComponent)),
+                be = Object(d.SortableElement)(function(e) {
+                    return s.createElement(G.Wa, {
                         margin: {
                             x: 1
                         }
-                    }, r.createElement(te, {
+                    }, s.createElement(ge, {
                         channelID: e.channelID,
                         channelName: e.channelName,
                         panel: e.panel,
@@ -1531,55 +2555,55 @@
                         isSorting: e.isSorting
                     }))
                 }),
-                ie = Object(u.SortableContainer)(function(e) {
+                ve = Object(d.SortableContainer)(function(e) {
                     var t = 0,
-                        n = e.items.map(function(n, i) {
-                            return "ExtensionPanel" === n.__typename && t++, r.createElement(ne, {
+                        n = e.items.map(function(n, r) {
+                            return "ExtensionPanel" === n.__typename && t++, s.createElement(be, {
                                 key: n.id,
                                 channelID: e.channelID,
                                 channelName: e.channelName,
                                 updatePanel: e.updatePanel,
                                 deletePanel: e.deletePanel,
                                 isSorting: e.isSorting,
-                                index: i,
+                                index: r,
                                 panel: n
                             })
                         }),
-                        i = t < D.a,
-                        o = r.createElement(w.Va, {
+                        r = t < Y.a,
+                        i = s.createElement(G.Wa, {
                             margin: {
                                 x: .5
                             }
-                        }, r.createElement(T, {
+                        }, s.createElement(K, {
                             key: "create-panel",
-                            canCreateExtensionPanel: i,
+                            canCreateExtensionPanel: r,
                             createPanel: e.createPanel,
                             channelID: e.channelID
                         }));
-                    return r.createElement(w.Va, {
-                        display: w.W.Flex,
-                        flexDirection: w.Y.Row,
-                        flexWrap: w.Z.Wrap,
-                        justifyContent: w.Ua.Center
-                    }, n, o)
+                    return s.createElement(G.Wa, {
+                        display: G.X.Flex,
+                        flexDirection: G.Z.Row,
+                        flexWrap: G.Aa.Wrap,
+                        justifyContent: G.Va.Center
+                    }, n, i)
                 }),
-                oe = n("Oz8M"),
-                ae = n("saS/"),
-                re = n("Rsna"),
-                se = n("ry+o"),
-                le = n("Og0W");
+                Ee = n("Oz8M"),
+                Ce = n("saS/"),
+                ke = n("Rsna"),
+                Pe = n("ry+o"),
+                Se = n("Og0W");
             n("1pP+");
             ! function(e) {
                 e.Container = "channel_panels_container_selector", e.EmptyMessage = "no_panels_message", e.Masonry = "masonry_container_selector", e.EditToggle = "channel_panels_toggle_selector", e.Sortable = "sortable_edit_panel_list_selector"
-            }(Z || (Z = {}));
-            var ce = {
+            }(he || (he = {}));
+            var Oe = {
                     columnWidth: 320,
                     fitWidth: !0,
                     gutter: 20,
                     horizontalOrder: !0,
                     transitionDuration: "0"
                 },
-                ue = function(e) {
+                xe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1595,17 +2619,17 @@
                             t.setState({
                                 isEditMode: !t.state.isEditMode
                             })
-                        }, t.onExtensionPoppedOut = function(e, n, i) {
-                            var a;
+                        }, t.onExtensionPoppedOut = function(e, n, r) {
+                            var i;
                             t.setState({
-                                popout: o.__assign({}, t.state.popout, (a = {}, a[Object(f.c)(e, n)] = i, a))
+                                popout: a.__assign({}, t.state.popout, (i = {}, i[Object(R.c)(e, n)] = r, i))
                             })
                         }, t.onExtensionPopoutRestored = function(e, n) {
-                            var i = Object(f.c)(e, n),
-                                o = t.state.popout[i];
-                            o && o.window && o.window.close();
+                            var r = Object(R.c)(e, n),
+                                i = t.state.popout[r];
+                            i && i.window && i.window.close();
                             var a = Object.keys(t.state.popout).filter(function(e) {
-                                return e !== i
+                                return e !== r
                             }).reduce(function(e, n) {
                                 return e[n] = t.state.popout[n], e
                             }, {});
@@ -1622,31 +2646,31 @@
                             });
                             var n = t.props.channelPanelsData.user;
                             if (n) {
-                                var i = Object(u.arrayMove)(n.panels, e.oldIndex, e.newIndex),
-                                    o = i.map(function(e) {
+                                var r = Object(d.arrayMove)(n.panels, e.oldIndex, e.newIndex),
+                                    i = r.map(function(e) {
                                         return e && e.id
                                     }).filter(function(e) {
                                         return e
                                     });
                                 t.props.orderPanels(Object(h.a)({
-                                    ids: o
-                                })), Object(h.e)(le, {
+                                    ids: i
+                                })), Object(h.e)(Se, {
                                     login: t.props.channelName
                                 }, function(e) {
-                                    return e.user && (e.user.panels = i), e
+                                    return e.user && (e.user.panels = r), e
                                 })
                             }
                         }, t.createPanel = function(e) {
-                            return o.__awaiter(t, void 0, void 0, function() {
+                            return a.__awaiter(t, void 0, void 0, function() {
                                 var t;
-                                return o.__generator(this, function(n) {
+                                return a.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 2, , 3]), [4, this.props.createPanel(Object(h.a)(o.__assign({}, e, {
+                                            return n.trys.push([0, 2, , 3]), [4, this.props.createPanel(Object(h.a)(a.__assign({}, e, {
                                                 channelID: this.props.channelID
                                             })))];
                                         case 1:
-                                            return t = n.sent().data, Object(h.e)(le, {
+                                            return t = n.sent().data, Object(h.e)(Se, {
                                                 login: this.props.channelName
                                             }, function(e) {
                                                 return t.createPanel && e.user && e.user.panels.push(t.createPanel.panel), e
@@ -1659,13 +2683,13 @@
                                 })
                             })
                         }, t.deletePanel = function(e) {
-                            return o.__awaiter(t, void 0, void 0, function() {
-                                return o.__generator(this, function(t) {
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                return a.__generator(this, function(t) {
                                     switch (t.label) {
                                         case 0:
                                             return [4, this.props.deletePanel(Object(h.a)(e))];
                                         case 1:
-                                            return t.sent(), Object(h.e)(le, {
+                                            return t.sent(), Object(h.e)(Se, {
                                                 login: this.props.channelName
                                             }, function(t) {
                                                 return t.user && (t.user.panels = t.user.panels.filter(function(t) {
@@ -1680,11 +2704,11 @@
                         }, t.canEditPanels = function() {
                             var e = t.props.channelPanelsData,
                                 n = e.currentUser,
-                                i = e.user;
-                            return !!(n && n.id && i && n.id === i.id) || !!(n && n.roles && n.roles.isSiteAdmin)
+                                r = e.user;
+                            return !!(n && n.id && r && n.id === r.id) || !!(n && n.roles && n.roles.isSiteAdmin)
                         }, t
                     }
-                    return o.__extends(t, e), t.prototype.componentDidUpdate = function() {
+                    return a.__extends(t, e), t.prototype.componentDidUpdate = function() {
                         this.props.channelPanelsData.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.channelID !== e.channelID && this.setState({
@@ -1694,50 +2718,52 @@
                         var e = this.props.channelPanelsData,
                             t = e.error,
                             n = e.loading,
-                            i = e.user,
-                            o = null;
-                        if (n) return r.createElement(v.a, null);
-                        o = this.state.isEditMode ? r.createElement(w.Va, null, this.renderEditPanels()) : t || !i || i && !i.panels.length ? r.createElement(w.xb, {
-                            color: w.O.Alt2,
+                            r = e.user,
+                            i = null;
+                        if (n) return s.createElement(A.a, null);
+                        i = this.state.isEditMode ? s.createElement(G.Wa, null, this.renderEditPanels()) : t || !r || r && !r.panels.length ? s.createElement(G.yb, {
+                            color: G.O.Alt2,
                             padding: {
                                 y: 5
                             },
-                            textAlign: w.Jb.Center,
-                            "data-test-selector": Z.EmptyMessage
-                        }, r.createElement(w.V, {
+                            textAlign: G.Kb.Center,
+                            "data-test-selector": he.EmptyMessage
+                        }, s.createElement(G.W, {
                             italic: !0,
-                            fontSize: w.Aa.Size4
-                        }, Object(d.d)("It's empty in here", "ChannelPanels"))) : r.createElement(c.a, {
+                            fontSize: G.Ba.Size4
+                        }, Object(p.d)("It's empty in here", "ChannelPanels"))) : s.createElement(u.a, {
                             className: "channel-panels-container",
-                            options: ce,
-                            "data-test-selector": Z.Masonry,
+                            options: Oe,
+                            "data-test-selector": he.Masonry,
                             ref: this.saveMasonryRef
                         }, this.renderPanels());
-                        var a = r.createElement(w.Va, {
-                            display: w.W.Flex,
+                        var a = s.createElement(G.Wa, {
+                            display: G.X.Flex,
                             margin: {
                                 bottom: 2
                             },
-                            "data-test-selector": Z.EditToggle
-                        }, r.createElement(w.Pb, {
+                            "data-test-selector": he.EditToggle
+                        }, s.createElement(G.Qb, {
                             id: "edit-panels-toggle",
                             onChange: this.toggleEditMode
-                        }), r.createElement(w.Va, {
+                        }), s.createElement(G.Wa, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(w.V, null, Object(d.d)("Edit Panels", "Channel Panels"))));
-                        return r.createElement(w.Va, {
+                        }, s.createElement(G.W, null, Object(p.d)("Edit Panels", "Channel Panels"))));
+                        return s.createElement(j, {
+                            channelID: this.props.channelID
+                        }, s.createElement(G.Wa, {
                             className: "channel-panels",
-                            "data-test-selector": Z.Container
-                        }, this.canEditPanels() && a, o)
+                            "data-test-selector": he.Container
+                        }, this.canEditPanels() && a, i))
                     }, t.prototype.renderEditPanels = function() {
                         var e = this.props.channelPanelsData.user;
                         if (!e) return null;
                         var t = e.panels.filter(function(e) {
                             return e
                         });
-                        return r.createElement(ie, {
+                        return s.createElement(ve, {
                             axis: "xy",
                             channelID: this.props.channelID,
                             channelName: this.props.channelName,
@@ -1754,35 +2780,35 @@
                         var e = this,
                             t = this.props.channelPanelsData,
                             n = t.currentUser,
-                            i = t.user;
-                        if (!i) return null;
-                        var o = this.getExtensionSlots();
-                        return i.panels.map(function(t, i) {
+                            r = t.user;
+                        if (!r) return null;
+                        var i = this.getExtensionSlots();
+                        return r.panels.map(function(t, r) {
                             if (!t) return null;
                             if ("ExtensionPanel" === t.__typename && t.slotID) {
-                                var s = o[t.slotID];
-                                if (s && !e.state.destroyedExtensions.includes(s.id)) {
-                                    var l = void 0 !== e.state.popout[Object(f.d)(s)];
-                                    return r.createElement("div", {
+                                var a = i[t.slotID];
+                                if (a && !e.state.destroyedExtensions.includes(a.id)) {
+                                    var c = void 0 !== e.state.popout[Object(R.d)(a)];
+                                    return s.createElement("div", {
                                         key: t.id
-                                    }, r.createElement(_.a, {
+                                    }, s.createElement(X.a, {
                                         channelID: e.props.channelID,
                                         channelName: e.props.channelName,
-                                        installation: s,
-                                        isFramePoppedOut: l,
+                                        installation: a,
+                                        isFramePoppedOut: c,
                                         isPopout: !1,
                                         login: n && n.login,
                                         loginID: n && n.id,
-                                        mode: a.ExtensionMode.Viewer,
+                                        mode: o.ExtensionMode.Viewer,
                                         onExtensionLoaded: e.layoutMasonry,
                                         onExtensionPopoutClosed: e.onExtensionPopoutRestored,
                                         onExtensionPoppedOut: e.onExtensionPoppedOut,
                                         panel: t
                                     }))
                                 }
-                            } else if ("DefaultPanel" === t.__typename) return r.createElement(P, {
+                            } else if ("DefaultPanel" === t.__typename) return s.createElement(q, {
                                 channelID: e.props.channelID,
-                                "data-a-target": "panel-" + i,
+                                "data-a-target": "panel-" + r,
                                 key: t.id,
                                 panel: t
                             })
@@ -1792,11 +2818,11 @@
                         var e = this.props.extensionsForChannel.installedExtensions;
                         return e ? e.reduce(function(e, t) {
                             var n = t.activationConfig;
-                            return t.extension.token && n.state === a.ExtensionActivationStatus.Active && (e[n.slot] = t), e
+                            return t.extension.token && n.state === o.ExtensionActivationStatus.Active && (e[n.slot] = t), e
                         }, {}) : {}
                     }, t
-                }(r.Component),
-                de = Object(s.compose)(Object(g.c)("ChannelPanels"), Object(p.a)(le, {
+                }(s.Component),
+                Ie = Object(c.compose)(Object(F.b)("ChannelPanels"), Object(m.a)(Se, {
                     name: "channelPanelsData",
                     options: function(e) {
                         return {
@@ -1805,15 +2831,15 @@
                             }
                         }
                     }
-                }), Object(p.a)(oe, {
+                }), Object(m.a)(Ee, {
                     name: "createPanel"
-                }), Object(p.a)(ae, {
+                }), Object(m.a)(Ce, {
                     name: "deletePanel"
-                }), Object(p.a)(se, {
+                }), Object(m.a)(Pe, {
                     name: "updatePanel"
-                }), Object(p.a)(re, {
+                }), Object(m.a)(ke, {
                     name: "orderPanels"
-                }), Object(m.c)({
+                }), Object(f.c)({
                     name: "extensionsForChannel",
                     options: function(e) {
                         return {
@@ -1822,54 +2848,60 @@
                             }
                         }
                     }
-                }))(ue);
-            var pe = Object(i.connect)(function(e) {
+                }))(xe);
+            var we = Object(i.connect)(function(e) {
                 return {
                     rightColumnExpanded: e.ui.rightColumnExpanded,
                     sideNavExpanded: e.ui.sideNavExpanded
                 }
-            })(de);
+            })(Ie);
             n.d(t, "PublicProps", function() {}), n.d(t, "ChannelPanels", function() {
-                return pe
+                return we
             })
+        },
+        FBRg: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_2x-bddabc156344e695fa56.png"
+        },
+        "GA+j": function(e, t, n) {
+            e.exports = n.p + "assets/paypal_1x-a2a2f7d96b4384f9f1d7.png"
         },
         GNKm: function(e, t, n) {
             "use strict";
-            var i = n("GOnX");
+            var r = n("GOnX");
             e.exports = function(e) {
                 var t = (e = e || {}).reporter,
                     n = e.batchProcessor,
-                    o = e.stateHandler.getState;
+                    i = e.stateHandler.getState;
                 if (!t) throw new Error("Missing required dependency: reporter.");
 
                 function a(e) {
-                    return o(e).object
+                    return i(e).object
                 }
                 return {
-                    makeDetectable: function(e, a, r) {
-                        r || (r = a, a = e, e = null), (e = e || {}).debug, i.isIE(8) ? r(a) : function(e, a) {
-                            var r = "display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; padding: 0; margin: 0; opacity: 0; z-index: -1000; pointer-events: none;",
+                    makeDetectable: function(e, a, o) {
+                        o || (o = a, a = e, e = null), (e = e || {}).debug, r.isIE(8) ? o(a) : function(e, a) {
+                            var o = "display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; padding: 0; margin: 0; opacity: 0; z-index: -1000; pointer-events: none;",
                                 s = !1,
-                                l = window.getComputedStyle(e),
-                                c = e.offsetWidth,
+                                c = window.getComputedStyle(e),
+                                l = e.offsetWidth,
                                 u = e.offsetHeight;
 
                             function d() {
                                 function n() {
-                                    if ("static" === l.position) {
+                                    if ("static" === c.position) {
                                         e.style.position = "relative";
-                                        var n = function(e, t, n, i) {
-                                            var o = n[i];
-                                            "auto" !== o && "0" !== function(e) {
+                                        var n = function(e, t, n, r) {
+                                            var i = n[r];
+                                            "auto" !== i && "0" !== function(e) {
                                                 return e.replace(/[^-\d\.]/g, "")
-                                            }(o) && (e.warn("An element that is positioned static has style." + i + "=" + o + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + i + " will be set to 0. Element: ", t), t.style[i] = 0)
+                                            }(i) && (e.warn("An element that is positioned static has style." + r + "=" + i + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + r + " will be set to 0. Element: ", t), t.style[r] = 0)
                                         };
-                                        n(t, e, l, "top"), n(t, e, l, "right"), n(t, e, l, "bottom"), n(t, e, l, "left")
+                                        n(t, e, c, "top"), n(t, e, c, "right"), n(t, e, c, "bottom"), n(t, e, c, "left")
                                     }
                                 }
-                                "" !== l.position && (n(), s = !0);
-                                var c = document.createElement("object");
-                                c.style.cssText = r, c.tabIndex = -1, c.type = "text/html", c.onload = function() {
+                                "" !== c.position && (n(), s = !0);
+                                var l = document.createElement("object");
+                                l.style.cssText = o, l.tabIndex = -1, l.type = "text/html", l.onload = function() {
                                     s || n(),
                                         function e(t, n) {
                                             t.contentDocument ? n(t.contentDocument) : setTimeout(function() {
@@ -1878,13 +2910,13 @@
                                         }(this, function(t) {
                                             a(e)
                                         })
-                                }, i.isIE() || (c.data = "about:blank"), e.appendChild(c), o(e).object = c, i.isIE() && (c.data = "about:blank")
+                                }, r.isIE() || (l.data = "about:blank"), e.appendChild(l), i(e).object = l, r.isIE() && (l.data = "about:blank")
                             }
-                            o(e).startSize = {
-                                width: c,
+                            i(e).startSize = {
+                                width: l,
                                 height: u
                             }, n ? n.add(d) : d()
-                        }(a, r)
+                        }(a, o)
                     },
                     addListener: function(e, t) {
                         if (!a(e)) throw new Error("Element is not detectable by this strategy.");
@@ -1892,20 +2924,20 @@
                         function n() {
                             t(e)
                         }
-                        i.isIE(8) ? (o(e).object = {
+                        r.isIE(8) ? (i(e).object = {
                             proxy: n
                         }, e.attachEvent("onresize", n)) : a(e).contentDocument.defaultView.addEventListener("resize", n)
                     },
                     uninstall: function(e) {
-                        i.isIE(8) ? e.detachEvent("onresize", o(e).object.proxy) : e.removeChild(a(e)), delete o(e).object
+                        r.isIE(8) ? e.detachEvent("onresize", i(e).object.proxy) : e.removeChild(a(e)), delete i(e).object
                     }
                 }
             }
         },
         GOnX: function(e, t, n) {
             "use strict";
-            var i = e.exports = {};
-            i.isIE = function(e) {
+            var r = e.exports = {};
+            r.isIE = function(e) {
                 return !! function() {
                     var e = navigator.userAgent.toLowerCase();
                     return -1 !== e.indexOf("msie") || -1 !== e.indexOf("trident") || -1 !== e.indexOf(" edge/")
@@ -1918,12 +2950,52 @@
                     } while (n[0]);
                     return e > 4 ? e : void 0
                 }())
-            }, i.isLegacyOpera = function() {
+            }, r.isLegacyOpera = function() {
                 return !!window.opera
             }
         },
+        H5OX: function(e, t, n) {},
+        HGFl: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return i
+            }), n.d(t, "b", function() {
+                return a
+            }), n.d(t, "c", function() {
+                return o
+            }), n.d(t, "d", function() {
+                return s
+            });
+            var r = n("NAv5"),
+                i = {
+                    RFC3399: "YYYY-MM-DDTHH:mm:ssZ",
+                    timeString: "h:mma"
+                };
+
+            function a(e, t) {
+                return Object(r.format)(e, t)
+            }
+
+            function o(e) {
+                return Object(r.parse)(e)
+            }
+
+            function s(e, t) {
+                var n = e.split(":");
+                if (2 !== n.length) throw new Error("invalid time string: " + e);
+                var r = parseInt(n[0], 10),
+                    i = parseInt(n[1].substring(0, 2), 10),
+                    a = n[1].substring(n[1].length - 2);
+                if (12 === r && "am" === a && (r = 0), "pm" === a && r < 12 && (r += 12), isNaN(r) || r < 0 || r > 23 || isNaN(i) || i < 0 || i > 59) throw new Error("invalid time string: " + e);
+                var o = t || new Date;
+                return o.setHours(r, i), o
+            }
+        },
+        HvcU: function(e, t, n) {
+            e.exports = n.p + "assets/generic_credit_card_2x-9e855c7d5c5359ac9208.png"
+        },
         Hy43: function(e, t, n) {
-            var i, o;
+            var r, i;
             /*!
              * Outlayer v2.1.1
              * the brains and guts of a layout library
@@ -1934,27 +3006,27 @@
              * the brains and guts of a layout library
              * MIT license
              */
-            ! function(a, r) {
+            ! function(a, o) {
                 "use strict";
-                i = [n("CUlp"), n("QK1G"), n("YVj6"), n("KK1e")], void 0 === (o = function(e, t, n, i) {
-                    return function(e, t, n, i, o) {
+                r = [n("CUlp"), n("QK1G"), n("YVj6"), n("KK1e")], void 0 === (i = function(e, t, n, r) {
+                    return function(e, t, n, r, i) {
                         var a = e.console,
-                            r = e.jQuery,
+                            o = e.jQuery,
                             s = function() {},
-                            l = 0,
-                            c = {};
+                            c = 0,
+                            l = {};
 
                         function u(e, t) {
-                            var n = i.getQueryElement(e);
+                            var n = r.getQueryElement(e);
                             if (n) {
-                                this.element = n, r && (this.$element = r(this.element)), this.options = i.extend({}, this.constructor.defaults), this.option(t);
-                                var o = ++l;
-                                this.element.outlayerGUID = o, c[o] = this, this._create();
+                                this.element = n, o && (this.$element = o(this.element)), this.options = r.extend({}, this.constructor.defaults), this.option(t);
+                                var i = ++c;
+                                this.element.outlayerGUID = i, l[i] = this, this._create();
                                 var s = this._getOption("initLayout");
                                 s && this.layout()
                             } else a && a.error("Bad element for " + this.constructor.namespace + ": " + (n || e))
                         }
-                        u.namespace = "outlayer", u.Item = o, u.defaults = {
+                        u.namespace = "outlayer", u.Item = i, u.defaults = {
                             containerStyle: {
                                 position: "relative"
                             },
@@ -1981,8 +3053,8 @@
                             }
                             return t.prototype = Object.create(e.prototype), t.prototype.constructor = t, t
                         }
-                        i.extend(d, t.prototype), d.option = function(e) {
-                            i.extend(this.options, e)
+                        r.extend(d, t.prototype), d.option = function(e) {
+                            r.extend(this.options, e)
                         }, d._getOption = function(e) {
                             var t = this.constructor.compatOptions[e];
                             return t && void 0 !== this.options[t] ? this.options[t] : this.options[e]
@@ -1995,20 +3067,20 @@
                             resize: "isResizeBound",
                             resizeContainer: "isResizingContainer"
                         }, d._create = function() {
-                            this.reloadItems(), this.stamps = [], this.stamp(this.options.stamp), i.extend(this.element.style, this.options.containerStyle);
+                            this.reloadItems(), this.stamps = [], this.stamp(this.options.stamp), r.extend(this.element.style, this.options.containerStyle);
                             var e = this._getOption("resize");
                             e && this.bindResize()
                         }, d.reloadItems = function() {
                             this.items = this._itemize(this.element.children)
                         }, d._itemize = function(e) {
-                            for (var t = this._filterFindItemElements(e), n = this.constructor.Item, i = [], o = 0; o < t.length; o++) {
-                                var a = t[o],
-                                    r = new n(a, this);
-                                i.push(r)
+                            for (var t = this._filterFindItemElements(e), n = this.constructor.Item, r = [], i = 0; i < t.length; i++) {
+                                var a = t[i],
+                                    o = new n(a, this);
+                                r.push(o)
                             }
-                            return i
+                            return r
                         }, d._filterFindItemElements = function(e) {
-                            return i.filterFindElements(e, this.options.itemSelector)
+                            return r.filterFindElements(e, this.options.itemSelector)
                         }, d.getItemElements = function() {
                             return this.items.map(function(e) {
                                 return e.element
@@ -2023,8 +3095,8 @@
                         }, d.getSize = function() {
                             this.size = n(this.element)
                         }, d._getMeasurement = function(e, t) {
-                            var i, o = this.options[e];
-                            o ? ("string" == typeof o ? i = this.element.querySelector(o) : o instanceof HTMLElement && (i = o), this[e] = i ? n(i)[t] : o) : this[e] = 0
+                            var r, i = this.options[e];
+                            i ? ("string" == typeof i ? r = this.element.querySelector(i) : i instanceof HTMLElement && (r = i), this[e] = r ? n(r)[t] : i) : this[e] = 0
                         }, d.layoutItems = function(e, t) {
                             e = this._getItemsForLayout(e), this._layoutItems(e, t), this._postLayout()
                         }, d._getItemsForLayout = function(e) {
@@ -2035,8 +3107,8 @@
                             if (this._emitCompleteOnItems("layout", e), e && e.length) {
                                 var n = [];
                                 e.forEach(function(e) {
-                                    var i = this._getItemLayoutPosition(e);
-                                    i.item = e, i.isInstant = t || e.isLayoutInstant, n.push(i)
+                                    var r = this._getItemLayoutPosition(e);
+                                    r.item = e, r.isInstant = t || e.isLayoutInstant, n.push(r)
                                 }, this), this._processLayoutQueue(n)
                             }
                         }, d._getItemLayoutPosition = function() {
@@ -2054,15 +3126,15 @@
                                 if ("number" == typeof e) return e;
                                 var t = e.match(/(^\d*\.?\d*)(\w*)/),
                                     n = t && t[1],
-                                    i = t && t[2];
+                                    r = t && t[2];
                                 if (!n.length) return 0;
                                 n = parseFloat(n);
-                                var o = h[i] || 1;
-                                return n * o
+                                var i = m[r] || 1;
+                                return n * i
                             }(e), this.stagger;
                             this.stagger = 0
-                        }, d._positionItem = function(e, t, n, i, o) {
-                            i ? e.goTo(t, n) : (e.stagger(o * this.stagger), e.moveTo(t, n))
+                        }, d._positionItem = function(e, t, n, r, i) {
+                            r ? e.goTo(t, n) : (e.stagger(i * this.stagger), e.moveTo(t, n))
                         }, d._postLayout = function() {
                             this.resizeContainer()
                         }, d.resizeContainer = function() {
@@ -2079,26 +3151,26 @@
                         }, d._emitCompleteOnItems = function(e, t) {
                             var n = this;
 
-                            function i() {
+                            function r() {
                                 n.dispatchEvent(e + "Complete", null, [t])
                             }
-                            var o = t.length;
-                            if (t && o) {
+                            var i = t.length;
+                            if (t && i) {
                                 var a = 0;
                                 t.forEach(function(t) {
-                                    t.once(e, r)
+                                    t.once(e, o)
                                 })
-                            } else i();
+                            } else r();
 
-                            function r() {
-                                ++a == o && i()
+                            function o() {
+                                ++a == i && r()
                             }
                         }, d.dispatchEvent = function(e, t, n) {
-                            var i = t ? [t].concat(n) : n;
-                            if (this.emitEvent(e, i), r)
-                                if (this.$element = this.$element || r(this.element), t) {
-                                    var o = r.Event(t);
-                                    o.type = e, this.$element.trigger(o, n)
+                            var r = t ? [t].concat(n) : n;
+                            if (this.emitEvent(e, r), o)
+                                if (this.$element = this.$element || o(this.element), t) {
+                                    var i = o.Event(t);
+                                    i.type = e, this.$element.trigger(i, n)
                                 } else this.$element.trigger(e, n)
                         }, d.ignore = function(e) {
                             var t = this.getItem(e);
@@ -2110,10 +3182,10 @@
                             (e = this._find(e)) && (this.stamps = this.stamps.concat(e), e.forEach(this.ignore, this))
                         }, d.unstamp = function(e) {
                             (e = this._find(e)) && e.forEach(function(e) {
-                                i.removeFrom(this.stamps, e), this.unignore(e)
+                                r.removeFrom(this.stamps, e), this.unignore(e)
                             }, this)
                         }, d._find = function(e) {
-                            if (e) return "string" == typeof e && (e = this.element.querySelectorAll(e)), e = i.makeArray(e)
+                            if (e) return "string" == typeof e && (e = this.element.querySelectorAll(e)), e = r.makeArray(e)
                         }, d._manageStamps = function() {
                             this.stamps && this.stamps.length && (this._getBoundingRect(), this.stamps.forEach(this._manageStamp, this))
                         }, d._getBoundingRect = function() {
@@ -2127,22 +3199,22 @@
                             }
                         }, d._manageStamp = s, d._getElementOffset = function(e) {
                             var t = e.getBoundingClientRect(),
-                                i = this._boundingRect,
-                                o = n(e),
+                                r = this._boundingRect,
+                                i = n(e),
                                 a = {
-                                    left: t.left - i.left - o.marginLeft,
-                                    top: t.top - i.top - o.marginTop,
-                                    right: i.right - t.right - o.marginRight,
-                                    bottom: i.bottom - t.bottom - o.marginBottom
+                                    left: t.left - r.left - i.marginLeft,
+                                    top: t.top - r.top - i.marginTop,
+                                    right: r.right - t.right - i.marginRight,
+                                    bottom: r.bottom - t.bottom - i.marginBottom
                                 };
                             return a
-                        }, d.handleEvent = i.handleEvent, d.bindResize = function() {
+                        }, d.handleEvent = r.handleEvent, d.bindResize = function() {
                             e.addEventListener("resize", this), this.isResizeBound = !0
                         }, d.unbindResize = function() {
                             e.removeEventListener("resize", this), this.isResizeBound = !1
                         }, d.onresize = function() {
                             this.resize()
-                        }, i.debounceMethod(u, "onresize", 100), d.resize = function() {
+                        }, r.debounceMethod(u, "onresize", 100), d.resize = function() {
                             this.isResizeBound && this.needsResizeLayout() && this.layout()
                         }, d.needsResizeLayout = function() {
                             var e = n(this.element),
@@ -2187,14 +3259,14 @@
                             }
                         }, d.getItems = function(e) {
                             var t = [];
-                            return (e = i.makeArray(e)).forEach(function(e) {
+                            return (e = r.makeArray(e)).forEach(function(e) {
                                 var n = this.getItem(e);
                                 n && t.push(n)
                             }, this), t
                         }, d.remove = function(e) {
                             var t = this.getItems(e);
                             this._emitCompleteOnItems("remove", t), t && t.length && t.forEach(function(e) {
-                                e.remove(), i.removeFrom(this.items, e)
+                                e.remove(), r.removeFrom(this.items, e)
                             }, this)
                         }, d.destroy = function() {
                             var e = this.element.style;
@@ -2202,61 +3274,681 @@
                                 e.destroy()
                             }), this.unbindResize();
                             var t = this.element.outlayerGUID;
-                            delete c[t], delete this.element.outlayerGUID, r && r.removeData(this.element, this.constructor.namespace)
+                            delete l[t], delete this.element.outlayerGUID, o && o.removeData(this.element, this.constructor.namespace)
                         }, u.data = function(e) {
-                            var t = (e = i.getQueryElement(e)) && e.outlayerGUID;
-                            return t && c[t]
+                            var t = (e = r.getQueryElement(e)) && e.outlayerGUID;
+                            return t && l[t]
                         }, u.create = function(e, t) {
                             var n = p(u);
-                            return n.defaults = i.extend({}, u.defaults), i.extend(n.defaults, t), n.compatOptions = i.extend({}, u.compatOptions), n.namespace = e, n.data = u.data, n.Item = p(o), i.htmlInit(n, e), r && r.bridget && r.bridget(e, n), n
+                            return n.defaults = r.extend({}, u.defaults), r.extend(n.defaults, t), n.compatOptions = r.extend({}, u.compatOptions), n.namespace = e, n.data = u.data, n.Item = p(i), r.htmlInit(n, e), o && o.bridget && o.bridget(e, n), n
                         };
-                        var h = {
+                        var m = {
                             ms: 1,
                             s: 1e3
                         };
-                        return u.Item = o, u
-                    }(a, e, t, n, i)
-                }.apply(t, i)) || (e.exports = o)
+                        return u.Item = i, u
+                    }(a, e, t, n, r)
+                }.apply(t, r)) || (e.exports = i)
             }(window)
         },
         ITnh: function(e, t, n) {
             e.exports = n("Lrin")()
         },
+        JH5r: function(e, t, n) {},
+        Jgup: function(e, t, n) {
+            "use strict";
+            n.d(t, "b", function() {
+                return i
+            }), n.d(t, "a", function() {
+                return a
+            });
+            var r = n("/7QA");
+
+            function i(e) {
+                switch (e.toUpperCase()) {
+                    case "A1":
+                        return Object(r.d)("Anonymous Proxy", "format-country");
+                    case "A2":
+                        return Object(r.d)("Satellite Provider", "format-country");
+                    case "AD":
+                        return Object(r.d)("Andorra", "format-country");
+                    case "AE":
+                        return Object(r.d)("United Arab Emirates", "format-country");
+                    case "AF":
+                        return Object(r.d)("Afghanistan", "format-country");
+                    case "AG":
+                        return Object(r.d)("Antigua and Barbuda", "format-country");
+                    case "AI":
+                        return Object(r.d)("Anguilla", "format-country");
+                    case "AL":
+                        return Object(r.d)("Albania", "format-country");
+                    case "AM":
+                        return Object(r.d)("Armenia", "format-country");
+                    case "AO":
+                        return Object(r.d)("Angola", "format-country");
+                    case "AP":
+                        return Object(r.d)("Asia/Pacific Region", "format-country");
+                    case "AQ":
+                        return Object(r.d)("Antarctica", "format-country");
+                    case "AR":
+                        return Object(r.d)("Argentina", "format-country");
+                    case "AS":
+                        return Object(r.d)("American Samoa", "format-country");
+                    case "AT":
+                        return Object(r.d)("Austria", "format-country");
+                    case "AU":
+                        return Object(r.d)("Australia", "format-country");
+                    case "AW":
+                        return Object(r.d)("Aruba", "format-country");
+                    case "AX":
+                        return Object(r.d)("Aland Islands", "format-country");
+                    case "AZ":
+                        return Object(r.d)("Azerbaijan", "format-country");
+                    case "BA":
+                        return Object(r.d)("Bosnia and Herzegovina", "format-country");
+                    case "BB":
+                        return Object(r.d)("Barbados", "format-country");
+                    case "BD":
+                        return Object(r.d)("Bangladesh", "format-country");
+                    case "BE":
+                        return Object(r.d)("Belgium", "format-country");
+                    case "BF":
+                        return Object(r.d)("Burkina Faso", "format-country");
+                    case "BG":
+                        return Object(r.d)("Bulgaria", "format-country");
+                    case "BH":
+                        return Object(r.d)("Bahrain", "format-country");
+                    case "BI":
+                        return Object(r.d)("Burundi", "format-country");
+                    case "BJ":
+                        return Object(r.d)("Benin", "format-country");
+                    case "BL":
+                        return Object(r.d)("Saint Bartelemey", "format-country");
+                    case "BM":
+                        return Object(r.d)("Bermuda", "format-country");
+                    case "BN":
+                        return Object(r.d)("Brunei", "format-country");
+                    case "BO":
+                        return Object(r.d)("Bolivia", "format-country");
+                    case "BQ":
+                        return Object(r.d)("Bonaire, Saint Eustatius, and Saba", "format-country");
+                    case "BR":
+                        return Object(r.d)("Brazil", "format-country");
+                    case "BS":
+                        return Object(r.d)("Bahamas", "format-country");
+                    case "BT":
+                        return Object(r.d)("Bhutan", "format-country");
+                    case "BV":
+                        return Object(r.d)("Bouvet Island", "format-country");
+                    case "BW":
+                        return Object(r.d)("Botswana", "format-country");
+                    case "BY":
+                        return Object(r.d)("Belarus", "format-country");
+                    case "BZ":
+                        return Object(r.d)("Belize", "format-country");
+                    case "CA":
+                        return Object(r.d)("Canada", "format-country");
+                    case "CC":
+                        return Object(r.d)("Cocos (Keeling) Islands", "format-country");
+                    case "CD":
+                        return Object(r.d)("Congo, The Democratic Republic of the", "format-country");
+                    case "CF":
+                        return Object(r.d)("Central African Republic", "format-country");
+                    case "CG":
+                        return Object(r.d)("Congo", "format-country");
+                    case "CH":
+                        return Object(r.d)("Switzerland", "format-country");
+                    case "CI":
+                        return Object(r.d)("Ivory Coast", "format-country");
+                    case "CK":
+                        return Object(r.d)("Cook Islands", "format-country");
+                    case "CL":
+                        return Object(r.d)("Chile", "format-country");
+                    case "CM":
+                        return Object(r.d)("Cameroon", "format-country");
+                    case "CN":
+                        return Object(r.d)("China", "format-country");
+                    case "CO":
+                        return Object(r.d)("Colombia", "format-country");
+                    case "CR":
+                        return Object(r.d)("Costa Rica", "format-country");
+                    case "CU":
+                        return Object(r.d)("Cuba", "format-country");
+                    case "CV":
+                        return Object(r.d)("Cape Verde", "format-country");
+                    case "CW":
+                        return Object(r.d)("Curacao", "format-country");
+                    case "CX":
+                        return Object(r.d)("Christmas Island", "format-country");
+                    case "CY":
+                        return Object(r.d)("Cyprus", "format-country");
+                    case "CZ":
+                        return Object(r.d)("Czech Republic", "format-country");
+                    case "DE":
+                        return Object(r.d)("Germany", "format-country");
+                    case "DJ":
+                        return Object(r.d)("Djibouti", "format-country");
+                    case "DK":
+                        return Object(r.d)("Denmark", "format-country");
+                    case "DM":
+                        return Object(r.d)("Dominica", "format-country");
+                    case "DO":
+                        return Object(r.d)("Dominican Republic", "format-country");
+                    case "DZ":
+                        return Object(r.d)("Algeria", "format-country");
+                    case "EC":
+                        return Object(r.d)("Ecuador", "format-country");
+                    case "EE":
+                        return Object(r.d)("Estonia", "format-country");
+                    case "EG":
+                        return Object(r.d)("Egypt", "format-country");
+                    case "EH":
+                        return Object(r.d)("Western Sahara", "format-country");
+                    case "ER":
+                        return Object(r.d)("Eritrea", "format-country");
+                    case "ES":
+                        return Object(r.d)("Spain", "format-country");
+                    case "ET":
+                        return Object(r.d)("Ethiopia", "format-country");
+                    case "EU":
+                        return Object(r.d)("Europe", "format-country");
+                    case "FI":
+                        return Object(r.d)("Finland", "format-country");
+                    case "FJ":
+                        return Object(r.d)("Fiji", "format-country");
+                    case "FK":
+                        return Object(r.d)("Falkland Islands (Malvinas)", "format-country");
+                    case "FM":
+                        return Object(r.d)("Micronesia", "format-country");
+                    case "FO":
+                        return Object(r.d)("Faroe Islands", "format-country");
+                    case "FR":
+                        return Object(r.d)("France", "format-country");
+                    case "GA":
+                        return Object(r.d)("Gabon", "format-country");
+                    case "GB":
+                        return Object(r.d)("United Kingdom", "format-country");
+                    case "GD":
+                        return Object(r.d)("Grenada", "format-country");
+                    case "GE":
+                        return Object(r.d)("Georgia", "format-country");
+                    case "GF":
+                        return Object(r.d)("French Guiana", "format-country");
+                    case "GG":
+                        return Object(r.d)("Guernsey", "format-country");
+                    case "GH":
+                        return Object(r.d)("Ghana", "format-country");
+                    case "GI":
+                        return Object(r.d)("Gibraltar", "format-country");
+                    case "GL":
+                        return Object(r.d)("Greenland", "format-country");
+                    case "GM":
+                        return Object(r.d)("Gambia", "format-country");
+                    case "GN":
+                        return Object(r.d)("Guinea", "format-country");
+                    case "GP":
+                        return Object(r.d)("Guadeloupe", "format-country");
+                    case "GQ":
+                        return Object(r.d)("Equatorial Guinea", "format-country");
+                    case "GR":
+                        return Object(r.d)("Greece", "format-country");
+                    case "GS":
+                        return Object(r.d)("South Georgia and the South Sandwich Islands", "format-country");
+                    case "GT":
+                        return Object(r.d)("Guatemala", "format-country");
+                    case "GU":
+                        return Object(r.d)("Guam", "format-country");
+                    case "GW":
+                        return Object(r.d)("Guinea-Bissau", "format-country");
+                    case "GY":
+                        return Object(r.d)("Guyana", "format-country");
+                    case "HK":
+                        return Object(r.d)("Hong Kong", "format-country");
+                    case "HM":
+                        return Object(r.d)("Heard Island and McDonald Islands", "format-country");
+                    case "HN":
+                        return Object(r.d)("Honduras", "format-country");
+                    case "HR":
+                        return Object(r.d)("Croatia", "format-country");
+                    case "HT":
+                        return Object(r.d)("Haiti", "format-country");
+                    case "HU":
+                        return Object(r.d)("Hungary", "format-country");
+                    case "ID":
+                        return Object(r.d)("Indonesia", "format-country");
+                    case "IE":
+                        return Object(r.d)("Ireland", "format-country");
+                    case "IL":
+                        return Object(r.d)("Israel", "format-country");
+                    case "IM":
+                        return Object(r.d)("Isle of Man", "format-country");
+                    case "IN":
+                        return Object(r.d)("India", "format-country");
+                    case "IO":
+                        return Object(r.d)("British Indian Ocean Territory", "format-country");
+                    case "IQ":
+                        return Object(r.d)("Iraq", "format-country");
+                    case "IR":
+                        return Object(r.d)("Iran", "format-country");
+                    case "IS":
+                        return Object(r.d)("Iceland", "format-country");
+                    case "IT":
+                        return Object(r.d)("Italy", "format-country");
+                    case "JE":
+                        return Object(r.d)("Jersey", "format-country");
+                    case "JM":
+                        return Object(r.d)("Jamaica", "format-country");
+                    case "JO":
+                        return Object(r.d)("Jordan", "format-country");
+                    case "JP":
+                        return Object(r.d)("Japan", "format-country");
+                    case "KE":
+                        return Object(r.d)("Kenya", "format-country");
+                    case "KG":
+                        return Object(r.d)("Kyrgyzstan", "format-country");
+                    case "KH":
+                        return Object(r.d)("Cambodia", "format-country");
+                    case "KI":
+                        return Object(r.d)("Kiribati", "format-country");
+                    case "KM":
+                        return Object(r.d)("Comoros", "format-country");
+                    case "KN":
+                        return Object(r.d)("Saint Kitts and Nevis", "format-country");
+                    case "KP":
+                        return Object(r.d)("North Korea", "format-country");
+                    case "KR":
+                        return Object(r.d)("South Korea", "format-country");
+                    case "KW":
+                        return Object(r.d)("Kuwait", "format-country");
+                    case "KY":
+                        return Object(r.d)("Cayman Islands", "format-country");
+                    case "KZ":
+                        return Object(r.d)("Kazakhstan", "format-country");
+                    case "LA":
+                        return Object(r.d)("Laos", "format-country");
+                    case "LB":
+                        return Object(r.d)("Lebanon", "format-country");
+                    case "LC":
+                        return Object(r.d)("Saint Lucia", "format-country");
+                    case "LI":
+                        return Object(r.d)("Liechtenstein", "format-country");
+                    case "LK":
+                        return Object(r.d)("Sri Lanka", "format-country");
+                    case "LR":
+                        return Object(r.d)("Liberia", "format-country");
+                    case "LS":
+                        return Object(r.d)("Lesotho", "format-country");
+                    case "LT":
+                        return Object(r.d)("Lithuania", "format-country");
+                    case "LU":
+                        return Object(r.d)("Luxembourg", "format-country");
+                    case "LV":
+                        return Object(r.d)("Latvia", "format-country");
+                    case "LY":
+                        return Object(r.d)("Libya", "format-country");
+                    case "MA":
+                        return Object(r.d)("Morocco", "format-country");
+                    case "MC":
+                        return Object(r.d)("Monaco", "format-country");
+                    case "MD":
+                        return Object(r.d)("Moldova", "format-country");
+                    case "ME":
+                        return Object(r.d)("Montenegro", "format-country");
+                    case "MF":
+                        return Object(r.d)("Saint Martin", "format-country");
+                    case "MG":
+                        return Object(r.d)("Madagascar", "format-country");
+                    case "MH":
+                        return Object(r.d)("Marshall Islands", "format-country");
+                    case "MK":
+                        return Object(r.d)("Macedonia", "format-country");
+                    case "ML":
+                        return Object(r.d)("Mali", "format-country");
+                    case "MM":
+                        return Object(r.d)("Myanmar", "format-country");
+                    case "MN":
+                        return Object(r.d)("Mongolia", "format-country");
+                    case "MO":
+                        return Object(r.d)("Macao", "format-country");
+                    case "MP":
+                        return Object(r.d)("Northern Mariana Islands", "format-country");
+                    case "MQ":
+                        return Object(r.d)("Martinique", "format-country");
+                    case "MR":
+                        return Object(r.d)("Mauritania", "format-country");
+                    case "MS":
+                        return Object(r.d)("Montserrat", "format-country");
+                    case "MT":
+                        return Object(r.d)("Malta", "format-country");
+                    case "MU":
+                        return Object(r.d)("Mauritius", "format-country");
+                    case "MV":
+                        return Object(r.d)("Maldives", "format-country");
+                    case "MW":
+                        return Object(r.d)("Malawi", "format-country");
+                    case "MX":
+                        return Object(r.d)("Mexico", "format-country");
+                    case "MY":
+                        return Object(r.d)("Malaysia", "format-country");
+                    case "MZ":
+                        return Object(r.d)("Mozambique", "format-country");
+                    case "NA":
+                        return Object(r.d)("Namibia", "format-country");
+                    case "NC":
+                        return Object(r.d)("New Caledonia", "format-country");
+                    case "NE":
+                        return Object(r.d)("Niger", "format-country");
+                    case "NF":
+                        return Object(r.d)("Norfolk Island", "format-country");
+                    case "NG":
+                        return Object(r.d)("Nigeria", "format-country");
+                    case "NI":
+                        return Object(r.d)("Nicaragua", "format-country");
+                    case "NL":
+                        return Object(r.d)("Netherlands", "format-country");
+                    case "NO":
+                        return Object(r.d)("Norway", "format-country");
+                    case "NP":
+                        return Object(r.d)("Nepal", "format-country");
+                    case "NR":
+                        return Object(r.d)("Nauru", "format-country");
+                    case "NU":
+                        return Object(r.d)("Niue", "format-country");
+                    case "NZ":
+                        return Object(r.d)("New Zealand", "format-country");
+                    case "O1":
+                        return Object(r.d)("Other Country", "format-country");
+                    case "OM":
+                        return Object(r.d)("Oman", "format-country");
+                    case "PA":
+                        return Object(r.d)("Panama", "format-country");
+                    case "PE":
+                        return Object(r.d)("Peru", "format-country");
+                    case "PF":
+                        return Object(r.d)("French Polynesia", "format-country");
+                    case "PG":
+                        return Object(r.d)("Papua New Guinea", "format-country");
+                    case "PH":
+                        return Object(r.d)("Philippines", "format-country");
+                    case "PK":
+                        return Object(r.d)("Pakistan", "format-country");
+                    case "PL":
+                        return Object(r.d)("Poland", "format-country");
+                    case "PM":
+                        return Object(r.d)("Saint Pierre and Miquelon", "format-country");
+                    case "PN":
+                        return Object(r.d)("Pitcairn", "format-country");
+                    case "PR":
+                        return Object(r.d)("Puerto Rico", "format-country");
+                    case "PS":
+                        return Object(r.d)("Palestine", "format-country");
+                    case "PT":
+                        return Object(r.d)("Portugal", "format-country");
+                    case "PW":
+                        return Object(r.d)("Palau", "format-country");
+                    case "PY":
+                        return Object(r.d)("Paraguay", "format-country");
+                    case "QA":
+                        return Object(r.d)("Qatar", "format-country");
+                    case "RE":
+                        return Object(r.d)("Reunion", "format-country");
+                    case "RO":
+                        return Object(r.d)("Romania", "format-country");
+                    case "RS":
+                        return Object(r.d)("Serbia", "format-country");
+                    case "RU":
+                        return Object(r.d)("Russia", "format-country");
+                    case "RW":
+                        return Object(r.d)("Rwanda", "format-country");
+                    case "SA":
+                        return Object(r.d)("Saudi Arabia", "format-country");
+                    case "SB":
+                        return Object(r.d)("Solomon Islands", "format-country");
+                    case "SC":
+                        return Object(r.d)("Seychelles", "format-country");
+                    case "SD":
+                        return Object(r.d)("Sudan", "format-country");
+                    case "SE":
+                        return Object(r.d)("Sweden", "format-country");
+                    case "SG":
+                        return Object(r.d)("Singapore", "format-country");
+                    case "SH":
+                        return Object(r.d)("Saint Helena", "format-country");
+                    case "SI":
+                        return Object(r.d)("Slovenia", "format-country");
+                    case "SJ":
+                        return Object(r.d)("Svalbard and Jan Mayen", "format-country");
+                    case "SK":
+                        return Object(r.d)("Slovakia", "format-country");
+                    case "SL":
+                        return Object(r.d)("Sierra Leone", "format-country");
+                    case "SM":
+                        return Object(r.d)("San Marino", "format-country");
+                    case "SN":
+                        return Object(r.d)("Senegal", "format-country");
+                    case "SO":
+                        return Object(r.d)("Somalia", "format-country");
+                    case "SR":
+                        return Object(r.d)("Suriname", "format-country");
+                    case "SS":
+                        return Object(r.d)("South Sudan", "format-country");
+                    case "ST":
+                        return Object(r.d)("Sao Tome and Principe", "format-country");
+                    case "SV":
+                        return Object(r.d)("El Salvador", "format-country");
+                    case "SX":
+                        return Object(r.d)("Sint Maarten", "format-country");
+                    case "SY":
+                        return Object(r.d)("Syria", "format-country");
+                    case "SZ":
+                        return Object(r.d)("Swaziland", "format-country");
+                    case "TC":
+                        return Object(r.d)("Turks and Caicos Islands", "format-country");
+                    case "TD":
+                        return Object(r.d)("Chad", "format-country");
+                    case "TF":
+                        return Object(r.d)("French Southern Territories", "format-country");
+                    case "TG":
+                        return Object(r.d)("Togo", "format-country");
+                    case "TH":
+                        return Object(r.d)("Thailand", "format-country");
+                    case "TJ":
+                        return Object(r.d)("Tajikistan", "format-country");
+                    case "TK":
+                        return Object(r.d)("Tokelau", "format-country");
+                    case "TL":
+                        return Object(r.d)("East Timor", "format-country");
+                    case "TM":
+                        return Object(r.d)("Turkmenistan", "format-country");
+                    case "TN":
+                        return Object(r.d)("Tunisia", "format-country");
+                    case "TO":
+                        return Object(r.d)("Tonga", "format-country");
+                    case "TR":
+                        return Object(r.d)("Turkey", "format-country");
+                    case "TT":
+                        return Object(r.d)("Trinidad and Tobago", "format-country");
+                    case "TV":
+                        return Object(r.d)("Tuvalu", "format-country");
+                    case "TW":
+                        return Object(r.d)("Taiwan", "format-country");
+                    case "TZ":
+                        return Object(r.d)("Tanzania", "format-country");
+                    case "UA":
+                        return Object(r.d)("Ukraine", "format-country");
+                    case "UG":
+                        return Object(r.d)("Uganda", "format-country");
+                    case "UM":
+                        return Object(r.d)("United States Minor Outlying Islands", "format-country");
+                    case "US":
+                        return Object(r.d)("United States", "format-country");
+                    case "UY":
+                        return Object(r.d)("Uruguay", "format-country");
+                    case "UZ":
+                        return Object(r.d)("Uzbekistan", "format-country");
+                    case "VA":
+                        return Object(r.d)("Vatican City", "format-country");
+                    case "VC":
+                        return Object(r.d)("Saint Vincent and the Grenadines", "format-country");
+                    case "VE":
+                        return Object(r.d)("Venezuela", "format-country");
+                    case "VG":
+                        return Object(r.d)("British Virgin Islands", "format-country");
+                    case "VI":
+                        return Object(r.d)("U.S. Virgin Islands", "format-country");
+                    case "VN":
+                        return Object(r.d)("Vietnam", "format-country");
+                    case "VU":
+                        return Object(r.d)("Vanuatu", "format-country");
+                    case "WF":
+                        return Object(r.d)("Wallis and Futuna", "format-country");
+                    case "WS":
+                        return Object(r.d)("Samoa", "format-country");
+                    case "YE":
+                        return Object(r.d)("Yemen", "format-country");
+                    case "YT":
+                        return Object(r.d)("Mayotte", "format-country");
+                    case "ZA":
+                        return Object(r.d)("South Africa", "format-country");
+                    case "ZM":
+                        return Object(r.d)("Zambia", "format-country");
+                    case "ZW":
+                        return Object(r.d)("Zimbabwe", "format-country");
+                    default:
+                        return e
+                }
+            }
+            var a = ["US", "CA", "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "A1", "AQ", "AG", "AR", "AM", "AW", "AP", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", "VG", "BN", "BG", "BF", "BI", "KH", "CM", "CV", "KY", "CF", "TD", "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "TL", "EC", "EG", "SV", "GQ", "ER", "EE", "ET", "EU", "FK", "FO", "FJ", "FI", "FR", "GF", "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "HN", "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", "CI", "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KW", "KG", "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "KP", "MP", "NO", "OM", "O1", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", "LC", "MF", "PM", "VC", "WS", "SM", "ST", "A2", "SA", "SN", "RS", "SC", "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "KR", "SS", "ES", "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", "TH", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", "VI", "UG", "UA", "AE", "GB", "UM", "UY", "UZ", "VU", "VA", "VE", "VN", "WF", "EH", "YE", "ZM", "ZW"]
+        },
         KGBd: function(e, t, n) {
             "use strict";
 
-            function i(e, t, n, i, o, a, r) {
+            function r(e, t, n, r, i, a, o) {
                 var s = document.createElement("canvas");
-                s.width = a, s.height = r;
-                var l = s.getContext("2d"),
-                    c = "";
-                if (l) {
+                s.width = a, s.height = o;
+                var c = s.getContext("2d"),
+                    l = "";
+                if (c) {
                     var u = new Image;
-                    u.src = e, l.drawImage(u, t, n, i, o, 0, 0, a, r), c = s.toDataURL("image/png")
+                    u.src = e, c.drawImage(u, t, n, r, i, 0, 0, a, o), l = s.toDataURL("image/png")
                 }
-                return s.remove(), c
+                return s.remove(), l
             }
             n.d(t, "a", function() {
-                return i
+                return r
+            })
+        },
+        "KJv/": function(e, t, n) {
+            "use strict";
+            n.r(t);
+            var r = n("mrSG"),
+                i = n("q1tI"),
+                a = n("oJmH"),
+                o = n("/7QA"),
+                s = n("cZKs"),
+                c = n("8/mp"),
+                l = n("yR8l"),
+                u = n("UUve"),
+                d = n("NvVO"),
+                p = n("2xye"),
+                m = n("SNyx"),
+                h = n("GnwI"),
+                f = n("Nk81"),
+                y = n("Ue10"),
+                g = n("LS/W");
+            n("H5OX");
+
+            function b(e) {
+                return !e.recipientLogin
+            }
+            var v = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.startTime = Date.now(), t.handleOnClose = function() {
+                            Object(u.d)(), t.props.onClose && t.props.onClose()
+                        }, t.onBeforeUnloadHandler = function() {
+                            Object(u.d)(), window.removeEventListener("beforeunload", t.onBeforeUnloadHandler)
+                        }, t.trackBenchmarkComplete = function() {
+                            t.props.latencyTracking.unsubscribeFromInteractivityCompletion(t.trackBenchmarkComplete);
+                            var e = Date.now() - t.startTime;
+                            new f.a(o.p.tracking, o.p.logger).trackCompleteTransition(d.a.SubsCheckoutPage, p.PageviewLocation.SubsCheckoutPage, "SubsCheckoutPage", e, e, !1, document.hidden)
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.latencyTracking.subscribeToInteractivityCompletion(this.trackBenchmarkComplete), this.reportInteractive(), window.addEventListener("beforeunload", this.onBeforeUnloadHandler)
+                    }, t.prototype.componentDidUpdate = function() {
+                        this.reportInteractive()
+                    }, t.prototype.componentWillUnmount = function() {
+                        Object(u.d)(), this.props.latencyTracking.unsubscribeFromInteractivityCompletion(this.trackBenchmarkComplete)
+                    }, t.prototype.render = function() {
+                        var e;
+                        if (this.props.data && this.props.data.loading) e = null;
+                        else {
+                            var t = this.props.data && this.props.data.recipient || null;
+                            e = i.createElement(c.b, {
+                                suppressScrollX: !0
+                            }, i.createElement(m.a, {
+                                productName: this.props.productName,
+                                isGift: !(!t || !t.id) || !!this.props.mysteryGiftCount,
+                                recipientID: t && t.id,
+                                recipientDisplayName: t && t.displayName,
+                                mysteryGiftCount: this.props.mysteryGiftCount || null,
+                                onCheckoutProgress: this.props.onCheckoutProgress
+                            }))
+                        }
+                        return i.createElement(y.yb, {
+                            background: y.r.Alt,
+                            className: "checkout-modal__container"
+                        }, e, i.createElement(s.a, {
+                            ignoreEscKey: !0,
+                            closeOnPageNavigation: !0,
+                            onClose: this.handleOnClose
+                        }))
+                    }, t.prototype.reportInteractive = function() {
+                        b(this.props) ? this.props.latencyTracking.reportInteractive() : !this.props.data || this.props.data.loading && !this.props.data.error || this.props.latencyTracking.reportInteractive()
+                    }, t
+                }(i.Component),
+                E = Object(a.compose)(Object(h.b)("CheckoutModal"), Object(l.a)(g, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                recipientLogin: e.recipientLogin
+                            }
+                        }
+                    },
+                    skip: function(e) {
+                        return b(e)
+                    }
+                }))(v);
+            n.d(t, "CheckoutModal", function() {
+                return E
+            }), n.d(t, "CheckoutModalPublicProps", function() {}), n.d(t, "clearSubscriptionCheckoutKeys", function() {
+                return u.d
+            }), n.d(t, "SUB_CHECKOUT__PRODUCT_KEY", function() {
+                return u.b
+            }), n.d(t, "SUB_CHECKOUT__RECIPIENT_KEY", function() {
+                return u.c
+            }), n.d(t, "showLoginModalWithCheckoutDispatch", function() {
+                return u.e
             })
         },
         KK1e: function(e, t, n) {
-            var i, o, a;
-            window, o = [n("CUlp"), n("QK1G")], void 0 === (a = "function" == typeof(i = function(e, t) {
+            var r, i, a;
+            window, i = [n("CUlp"), n("QK1G")], void 0 === (a = "function" == typeof(r = function(e, t) {
                 "use strict";
                 var n = document.documentElement.style,
-                    i = "string" == typeof n.transition ? "transition" : "WebkitTransition",
-                    o = "string" == typeof n.transform ? "transform" : "WebkitTransform",
+                    r = "string" == typeof n.transition ? "transition" : "WebkitTransition",
+                    i = "string" == typeof n.transform ? "transform" : "WebkitTransform",
                     a = {
                         WebkitTransition: "webkitTransitionEnd",
                         transition: "transitionend"
-                    }[i],
-                    r = {
-                        transform: o,
-                        transition: i,
-                        transitionDuration: i + "Duration",
-                        transitionProperty: i + "Property",
-                        transitionDelay: i + "Delay"
+                    }[r],
+                    o = {
+                        transform: i,
+                        transition: r,
+                        transitionDuration: r + "Duration",
+                        transitionProperty: r + "Property",
+                        transitionDelay: r + "Delay"
                     };
 
                 function s(e, t) {
@@ -2265,8 +3957,8 @@
                         y: 0
                     }, this._create())
                 }
-                var l = s.prototype = Object.create(e.prototype);
-                l.constructor = s, l._create = function() {
+                var c = s.prototype = Object.create(e.prototype);
+                c.constructor = s, c._create = function() {
                     this._transn = {
                         ingProperties: {},
                         clean: {},
@@ -2274,57 +3966,57 @@
                     }, this.css({
                         position: "absolute"
                     })
-                }, l.handleEvent = function(e) {
+                }, c.handleEvent = function(e) {
                     var t = "on" + e.type;
                     this[t] && this[t](e)
-                }, l.getSize = function() {
+                }, c.getSize = function() {
                     this.size = t(this.element)
-                }, l.css = function(e) {
+                }, c.css = function(e) {
                     var t = this.element.style;
                     for (var n in e) {
-                        var i = r[n] || n;
-                        t[i] = e[n]
+                        var r = o[n] || n;
+                        t[r] = e[n]
                     }
-                }, l.getPosition = function() {
+                }, c.getPosition = function() {
                     var e = getComputedStyle(this.element),
                         t = this.layout._getOption("originLeft"),
                         n = this.layout._getOption("originTop"),
-                        i = e[t ? "left" : "right"],
-                        o = e[n ? "top" : "bottom"],
-                        a = parseFloat(i),
-                        r = parseFloat(o),
-                        s = this.layout.size; - 1 != i.indexOf("%") && (a = a / 100 * s.width), -1 != o.indexOf("%") && (r = r / 100 * s.height), a = isNaN(a) ? 0 : a, r = isNaN(r) ? 0 : r, a -= t ? s.paddingLeft : s.paddingRight, r -= n ? s.paddingTop : s.paddingBottom, this.position.x = a, this.position.y = r
-                }, l.layoutPosition = function() {
+                        r = e[t ? "left" : "right"],
+                        i = e[n ? "top" : "bottom"],
+                        a = parseFloat(r),
+                        o = parseFloat(i),
+                        s = this.layout.size; - 1 != r.indexOf("%") && (a = a / 100 * s.width), -1 != i.indexOf("%") && (o = o / 100 * s.height), a = isNaN(a) ? 0 : a, o = isNaN(o) ? 0 : o, a -= t ? s.paddingLeft : s.paddingRight, o -= n ? s.paddingTop : s.paddingBottom, this.position.x = a, this.position.y = o
+                }, c.layoutPosition = function() {
                     var e = this.layout.size,
                         t = {},
                         n = this.layout._getOption("originLeft"),
-                        i = this.layout._getOption("originTop"),
-                        o = n ? "paddingLeft" : "paddingRight",
+                        r = this.layout._getOption("originTop"),
+                        i = n ? "paddingLeft" : "paddingRight",
                         a = n ? "left" : "right",
-                        r = n ? "right" : "left",
-                        s = this.position.x + e[o];
-                    t[a] = this.getXValue(s), t[r] = "";
-                    var l = i ? "paddingTop" : "paddingBottom",
-                        c = i ? "top" : "bottom",
-                        u = i ? "bottom" : "top",
-                        d = this.position.y + e[l];
-                    t[c] = this.getYValue(d), t[u] = "", this.css(t), this.emitEvent("layout", [this])
-                }, l.getXValue = function(e) {
+                        o = n ? "right" : "left",
+                        s = this.position.x + e[i];
+                    t[a] = this.getXValue(s), t[o] = "";
+                    var c = r ? "paddingTop" : "paddingBottom",
+                        l = r ? "top" : "bottom",
+                        u = r ? "bottom" : "top",
+                        d = this.position.y + e[c];
+                    t[l] = this.getYValue(d), t[u] = "", this.css(t), this.emitEvent("layout", [this])
+                }, c.getXValue = function(e) {
                     var t = this.layout._getOption("horizontal");
                     return this.layout.options.percentPosition && !t ? e / this.layout.size.width * 100 + "%" : e + "px"
-                }, l.getYValue = function(e) {
+                }, c.getYValue = function(e) {
                     var t = this.layout._getOption("horizontal");
                     return this.layout.options.percentPosition && t ? e / this.layout.size.height * 100 + "%" : e + "px"
-                }, l._transitionTo = function(e, t) {
+                }, c._transitionTo = function(e, t) {
                     this.getPosition();
                     var n = this.position.x,
-                        i = this.position.y,
-                        o = e == this.position.x && t == this.position.y;
-                    if (this.setPosition(e, t), !o || this.isTransitioning) {
+                        r = this.position.y,
+                        i = e == this.position.x && t == this.position.y;
+                    if (this.setPosition(e, t), !i || this.isTransitioning) {
                         var a = e - n,
-                            r = t - i,
+                            o = t - r,
                             s = {};
-                        s.transform = this.getTranslate(a, r), this.transition({
+                        s.transform = this.getTranslate(a, o), this.transition({
                             to: s,
                             onTransitionEnd: {
                                 transform: this.layoutPosition
@@ -2332,17 +4024,17 @@
                             isCleaning: !0
                         })
                     } else this.layoutPosition()
-                }, l.getTranslate = function(e, t) {
+                }, c.getTranslate = function(e, t) {
                     var n = this.layout._getOption("originLeft"),
-                        i = this.layout._getOption("originTop");
-                    return "translate3d(" + (e = n ? e : -e) + "px, " + (t = i ? t : -t) + "px, 0)"
-                }, l.goTo = function(e, t) {
+                        r = this.layout._getOption("originTop");
+                    return "translate3d(" + (e = n ? e : -e) + "px, " + (t = r ? t : -t) + "px, 0)"
+                }, c.goTo = function(e, t) {
                     this.setPosition(e, t), this.layoutPosition()
-                }, l.moveTo = l._transitionTo, l.setPosition = function(e, t) {
+                }, c.moveTo = c._transitionTo, c.setPosition = function(e, t) {
                     this.position.x = parseFloat(e), this.position.y = parseFloat(t)
-                }, l._nonTransition = function(e) {
+                }, c._nonTransition = function(e) {
                     for (var t in this.css(e.to), e.isCleaning && this._removeStyles(e.to), e.onTransitionEnd) e.onTransitionEnd[t].call(this)
-                }, l.transition = function(e) {
+                }, c.transition = function(e) {
                     if (parseFloat(this.layout.options.transitionDuration)) {
                         var t = this._transn;
                         for (var n in e.onTransitionEnd) t.onEnd[n] = e.onTransitionEnd[n];
@@ -2350,29 +4042,29 @@
                         e.from && (this.css(e.from), this.element.offsetHeight), this.enableTransition(e.to), this.css(e.to), this.isTransitioning = !0
                     } else this._nonTransition(e)
                 };
-                var c = "opacity," + function(e) {
+                var l = "opacity," + function(e) {
                     return e.replace(/([A-Z])/g, function(e) {
                         return "-" + e.toLowerCase()
                     })
-                }(o);
-                l.enableTransition = function() {
+                }(i);
+                c.enableTransition = function() {
                     if (!this.isTransitioning) {
                         var e = this.layout.options.transitionDuration;
                         e = "number" == typeof e ? e + "ms" : e, this.css({
-                            transitionProperty: c,
+                            transitionProperty: l,
                             transitionDuration: e,
                             transitionDelay: this.staggerDelay || 0
                         }), this.element.addEventListener(a, this, !1)
                     }
-                }, l.onwebkitTransitionEnd = function(e) {
+                }, c.onwebkitTransitionEnd = function(e) {
                     this.ontransitionend(e)
-                }, l.onotransitionend = function(e) {
+                }, c.onotransitionend = function(e) {
                     this.ontransitionend(e)
                 };
                 var u = {
                     "-webkit-transform": "transform"
                 };
-                l.ontransitionend = function(e) {
+                c.ontransitionend = function(e) {
                     if (e.target === this.element) {
                         var t = this._transn,
                             n = u[e.propertyName] || e.propertyName;
@@ -2380,14 +4072,14 @@
                                 for (var t in e) return !1;
                                 return !0
                             }(t.ingProperties) && this.disableTransition(), n in t.clean && (this.element.style[e.propertyName] = "", delete t.clean[n]), n in t.onEnd) {
-                            var i = t.onEnd[n];
-                            i.call(this), delete t.onEnd[n]
+                            var r = t.onEnd[n];
+                            r.call(this), delete t.onEnd[n]
                         }
                         this.emitEvent("transitionEnd", [this])
                     }
-                }, l.disableTransition = function() {
+                }, c.disableTransition = function() {
                     this.removeTransitionStyles(), this.element.removeEventListener(a, this, !1), this.isTransitioning = !1
-                }, l._removeStyles = function(e) {
+                }, c._removeStyles = function(e) {
                     var t = {};
                     for (var n in e) t[n] = "";
                     this.css(t)
@@ -2397,19 +4089,19 @@
                     transitionDuration: "",
                     transitionDelay: ""
                 };
-                return l.removeTransitionStyles = function() {
+                return c.removeTransitionStyles = function() {
                     this.css(d)
-                }, l.stagger = function(e) {
+                }, c.stagger = function(e) {
                     e = isNaN(e) ? 0 : e, this.staggerDelay = e + "ms"
-                }, l.removeElem = function() {
+                }, c.removeElem = function() {
                     this.element.parentNode.removeChild(this.element), this.css({
                         display: ""
                     }), this.emitEvent("remove", [this])
-                }, l.remove = function() {
-                    i && parseFloat(this.layout.options.transitionDuration) ? (this.once("transitionEnd", function() {
+                }, c.remove = function() {
+                    r && parseFloat(this.layout.options.transitionDuration) ? (this.once("transitionEnd", function() {
                         this.removeElem()
                     }), this.hide()) : this.removeElem()
-                }, l.reveal = function() {
+                }, c.reveal = function() {
                     delete this.isHidden, this.css({
                         display: ""
                     });
@@ -2421,13 +4113,13 @@
                         isCleaning: !0,
                         onTransitionEnd: t
                     })
-                }, l.onRevealTransitionEnd = function() {
+                }, c.onRevealTransitionEnd = function() {
                     this.isHidden || this.emitEvent("reveal")
-                }, l.getHideRevealTransitionEndProperty = function(e) {
+                }, c.getHideRevealTransitionEndProperty = function(e) {
                     var t = this.layout.options[e];
                     if (t.opacity) return "opacity";
                     for (var n in t) return n
-                }, l.hide = function() {
+                }, c.hide = function() {
                     this.isHidden = !0, this.css({
                         display: ""
                     });
@@ -2439,11 +4131,11 @@
                         isCleaning: !0,
                         onTransitionEnd: t
                     })
-                }, l.onHideTransitionEnd = function() {
+                }, c.onHideTransitionEnd = function() {
                     this.isHidden && (this.css({
                         display: "none"
                     }), this.emitEvent("hide"))
-                }, l.destroy = function() {
+                }, c.destroy = function() {
                     this.css({
                         position: "",
                         left: "",
@@ -2454,8 +4146,18 @@
                         transform: ""
                     })
                 }, s
-            }) ? i.apply(t, o) : i) || (e.exports = a)
+            }) ? r.apply(t, i) : r) || (e.exports = a)
         },
+        KL9a: function(e, t, n) {
+            e.exports = n.p + "assets/mastercard_dark-a85ba185886a8899fef1.svg"
+        },
+        KRuc: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_2x-36ebff55eec001d935d0.png"
+        },
+        KYZ7: function(e, t, n) {
+            e.exports = n.p + "assets/turbo-logo-a785836787e34974eea8.svg"
+        },
+        KjOM: function(e, t, n) {},
         LO96: function(e, t, n) {
             "use strict";
             e.exports = function() {
@@ -2467,14 +4169,110 @@
                 }
             }
         },
+        "LS/W": function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "CheckoutModal_GiftRecipient"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "recipientLogin"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            alias: {
+                                kind: "Name",
+                                value: "recipient"
+                            },
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "login"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "recipientLogin"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "displayName"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 122
+                }
+            };
+            n.loc.source = {
+                body: "query CheckoutModal_GiftRecipient ($recipientLogin: String!) {\nrecipient: user(login: $recipientLogin){\nid\ndisplayName\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
         Lrin: function(e, t, n) {
             "use strict";
-            var i = n("vylb");
+            var r = n("vylb");
 
-            function o() {}
+            function i() {}
             e.exports = function() {
-                function e(e, t, n, o, a, r) {
-                    if (r !== i) {
+                function e(e, t, n, i, a, o) {
+                    if (o !== r) {
                         var s = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
                         throw s.name = "Invariant Violation", s
                     }
@@ -2503,32 +4301,33 @@
                     shape: t,
                     exact: t
                 };
-                return n.checkPropTypes = o, n.PropTypes = n, n
+                return n.checkPropTypes = i, n.PropTypes = n, n
             }
         },
         NAeX: function(e, t, n) {},
+        NwMv: function(e, t, n) {},
         Nxrd: function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.arrayMove = t.sortableHandle = t.sortableElement = t.sortableContainer = t.SortableHandle = t.SortableElement = t.SortableContainer = void 0;
-            var i = n("jTc+");
+            var r = n("jTc+");
             Object.defineProperty(t, "arrayMove", {
                 enumerable: !0,
                 get: function() {
-                    return i.arrayMove
+                    return r.arrayMove
                 }
             });
-            var o = s(n("ezMb")),
+            var i = s(n("ezMb")),
                 a = s(n("hk6T")),
-                r = s(n("BCEg"));
+                o = s(n("BCEg"));
 
             function s(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            t.SortableContainer = o.default, t.SortableElement = a.default, t.SortableHandle = r.default, t.sortableContainer = o.default, t.sortableElement = a.default, t.sortableHandle = r.default
+            t.SortableContainer = i.default, t.SortableElement = a.default, t.SortableHandle = o.default, t.sortableContainer = i.default, t.sortableElement = a.default, t.sortableHandle = o.default
         },
         Og0W: function(e, t) {
             var n = {
@@ -3012,33 +4811,33 @@
         OzNJ: function(e, t, n) {
             "use strict";
             n.d(t, "b", function() {
-                return i
+                return r
             }), n.d(t, "a", function() {
-                return o
+                return i
             }), n.d(t, "e", function() {
                 return s
             }), n.d(t, "f", function() {
-                return l
-            }), n.d(t, "g", function() {
                 return c
+            }), n.d(t, "g", function() {
+                return l
             }), n.d(t, "c", function() {
                 return u
             }), n.d(t, "d", function() {
                 return d
             });
-            var i, o, a = n("1hWM"),
-                r = n("DMoW");
+            var r, i, a = n("1hWM"),
+                o = n("DMoW");
 
             function s(e) {
-                return e.isBitsEnabled ? i.Bits : e.vendorCode && e.sku ? i.InExtensionPurchases : null
-            }
-
-            function l(e) {
-                var t = [];
-                return e.component && e.component.viewerURL && t.push(r.t.COMPONENT), e.panel && e.panel.viewerURL && t.push(r.t.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && t.push(r.t.VIDEO_OVERLAY), t
+                return e.isBitsEnabled ? r.Bits : e.vendorCode && e.sku ? r.InExtensionPurchases : null
             }
 
             function c(e) {
+                var t = [];
+                return e.component && e.component.viewerURL && t.push(o.u.COMPONENT), e.panel && e.panel.viewerURL && t.push(o.u.PANEL), e.videoOverlay && e.videoOverlay.viewerURL && t.push(o.u.VIDEO_OVERLAY), t
+            }
+
+            function l(e) {
                 var t = [a.ExtensionPlatform.Web];
                 return e.mobile && e.mobile.viewerURL && t.push(a.ExtensionPlatform.Mobile), t
             }
@@ -3051,23 +4850,26 @@
                 return u(e.extension.id, e.extension.version)
             }! function(e) {
                 e[e.Bits = 0] = "Bits", e[e.InExtensionPurchases = 1] = "InExtensionPurchases"
-            }(i || (i = {})),
+            }(r || (r = {})),
             function(e) {
                 e[e.Deactivate = 0] = "Deactivate", e[e.Replace = 1] = "Replace", e[e.Uninstall = 2] = "Uninstall"
-            }(o || (o = {}))
+            }(i || (i = {}))
         },
         PZVp: function(e, t, n) {
             "use strict";
-            var i;
+            var r;
             n.d(t, "a", function() {
-                    return i
+                    return r
                 }),
                 function(e) {
                     e[e.REQUESTED = 0] = "REQUESTED", e[e.POSTPROCESS_STARTED = 1] = "POSTPROCESS_STARTED", e[e.POSTPROCESS_COMPLETE = 2] = "POSTPROCESS_COMPLETE", e[e.COMPLETE = 3] = "COMPLETE", e[e.VALIDATION_FAILED = 4] = "VALIDATION_FAILED", e[e.POSTPROCESS_FAILED = 5] = "POSTPROCESS_FAILED", e[e.POSTPROCESS_RETRYING = 6] = "POSTPROCESS_RETRYING", e[e.FEATURE_SERVICE_FAILED = 7] = "FEATURE_SERVICE_FAILED", e[e.IS_IMAGE_VALIDATION_FAILED = 110] = "IS_IMAGE_VALIDATION_FAILED", e[e.ASPECT_RATIO_VALIDATION_FAILED = 111] = "ASPECT_RATIO_VALIDATION_FAILED", e[e.WIDTH_VALIDATION_FAILED = 112] = "WIDTH_VALIDATION_FAILED", e[e.HEIGHT_VALIDATION_FAILED = 113] = "HEIGHT_VALIDATION_FAILED", e[e.IMAGE_FORMAT_VALIDATION_FAILED = 114] = "IMAGE_FORMAT_VALIDATION_FAILED", e[e.FILE_SIZE_VALIDATION_FAILED = 120] = "FILE_SIZE_VALIDATION_FAILED", e[e.TRANSFORMATION_FAILED = 210] = "TRANSFORMATION_FAILED", e[e.PROCESSING_FAILED = 220] = "PROCESSING_FAILED"
-                }(i || (i = {}))
+                }(r || (r = {}))
+        },
+        PwAB: function(e, t, n) {
+            e.exports = n.p + "assets/xsolla_2x-b8ef30f34626976fddc4.png"
         },
         QK1G: function(e, t, n) {
-            var i;
+            var r;
             /*!
              * getSize v2.0.2
              * measure size of elements
@@ -3078,9 +4880,9 @@
              * measure size of elements
              * MIT license
              */
-            ! function(o, a) {
+            ! function(i, a) {
                 "use strict";
-                void 0 === (i = function() {
+                void 0 === (r = function() {
                     return function() {
                         function e(e) {
                             var t = parseFloat(e),
@@ -3091,27 +4893,27 @@
                                 console.error(e)
                             },
                             n = ["paddingLeft", "paddingRight", "paddingTop", "paddingBottom", "marginLeft", "marginRight", "marginTop", "marginBottom", "borderLeftWidth", "borderRightWidth", "borderTopWidth", "borderBottomWidth"],
-                            i = n.length;
+                            r = n.length;
 
-                        function o(e) {
+                        function i(e) {
                             var n = getComputedStyle(e);
                             return n || t("Style returned " + n + ". Are you running this code in a hidden iframe on Firefox? See http://bit.ly/getsizebug1"), n
                         }
-                        var a, r = !1;
+                        var a, o = !1;
 
                         function s(t) {
                             if (function() {
-                                    if (r) return;
-                                    r = !0;
+                                    if (o) return;
+                                    o = !0;
                                     var t = document.createElement("div");
                                     t.style.width = "200px", t.style.padding = "1px 2px 3px 4px", t.style.borderStyle = "solid", t.style.borderWidth = "1px 2px 3px 4px", t.style.boxSizing = "border-box";
                                     var n = document.body || document.documentElement;
                                     n.appendChild(t);
-                                    var i = o(t);
-                                    s.isBoxSizeOuter = a = 200 == e(i.width), n.removeChild(t)
+                                    var r = i(t);
+                                    s.isBoxSizeOuter = a = 200 == e(r.width), n.removeChild(t)
                                 }(), "string" == typeof t && (t = document.querySelector(t)), t && "object" == typeof t && t.nodeType) {
-                                var l = o(t);
-                                if ("none" == l.display) return function() {
+                                var c = i(t);
+                                if ("none" == c.display) return function() {
                                     for (var e = {
                                             width: 0,
                                             height: 0,
@@ -3119,38 +4921,90 @@
                                             innerHeight: 0,
                                             outerWidth: 0,
                                             outerHeight: 0
-                                        }, t = 0; t < i; t++) {
-                                        var o = n[t];
-                                        e[o] = 0
+                                        }, t = 0; t < r; t++) {
+                                        var i = n[t];
+                                        e[i] = 0
                                     }
                                     return e
                                 }();
-                                var c = {};
-                                c.width = t.offsetWidth, c.height = t.offsetHeight;
-                                for (var u = c.isBorderBox = "border-box" == l.boxSizing, d = 0; d < i; d++) {
+                                var l = {};
+                                l.width = t.offsetWidth, l.height = t.offsetHeight;
+                                for (var u = l.isBorderBox = "border-box" == c.boxSizing, d = 0; d < r; d++) {
                                     var p = n[d],
-                                        h = l[p],
-                                        m = parseFloat(h);
-                                    c[p] = isNaN(m) ? 0 : m
+                                        m = c[p],
+                                        h = parseFloat(m);
+                                    l[p] = isNaN(h) ? 0 : h
                                 }
-                                var f = c.paddingLeft + c.paddingRight,
-                                    g = c.paddingTop + c.paddingBottom,
-                                    v = c.marginLeft + c.marginRight,
-                                    y = c.marginTop + c.marginBottom,
-                                    b = c.borderLeftWidth + c.borderRightWidth,
-                                    E = c.borderTopWidth + c.borderBottomWidth,
-                                    x = u && a,
-                                    k = e(l.width);
-                                !1 !== k && (c.width = k + (x ? 0 : f + b));
-                                var C = e(l.height);
-                                return !1 !== C && (c.height = C + (x ? 0 : g + E)), c.innerWidth = c.width - (f + b), c.innerHeight = c.height - (g + E), c.outerWidth = c.width + v, c.outerHeight = c.height + y, c
+                                var f = l.paddingLeft + l.paddingRight,
+                                    y = l.paddingTop + l.paddingBottom,
+                                    g = l.marginLeft + l.marginRight,
+                                    b = l.marginTop + l.marginBottom,
+                                    v = l.borderLeftWidth + l.borderRightWidth,
+                                    E = l.borderTopWidth + l.borderBottomWidth,
+                                    C = u && a,
+                                    k = e(c.width);
+                                !1 !== k && (l.width = k + (C ? 0 : f + v));
+                                var P = e(c.height);
+                                return !1 !== P && (l.height = P + (C ? 0 : y + E)), l.innerWidth = l.width - (f + v), l.innerHeight = l.height - (y + E), l.outerWidth = l.width + g, l.outerHeight = l.height + b, l
                             }
                         }
                         return s
                     }()
-                }.call(t, n, t, e)) || (e.exports = i)
+                }.call(t, n, t, e)) || (e.exports = r)
             }(window)
         },
+        QV0B: function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                i = n("q1tI"),
+                a = n("Ue10"),
+                o = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            collapsed: !0
+                        }, t.toggleCollapsed = function() {
+                            t.setState(function(e) {
+                                return {
+                                    collapsed: !e.collapsed
+                                }
+                            })
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return this.props.collapsable ? i.createElement(i.Fragment, null, i.createElement(a.Wa, {
+                            display: this.state.collapsed ? a.X.Hide : a.X.Block,
+                            breakpointLarge: {
+                                display: a.X.Block
+                            }
+                        }, i.createElement(a.H, null, this.props.children)), i.createElement(a.Wa, {
+                            display: a.X.Block,
+                            breakpointLarge: {
+                                display: a.X.Hide
+                            }
+                        }, i.createElement(a.Ta, {
+                            onClick: this.toggleCollapsed,
+                            hover: !1,
+                            type: a.Ua.Alpha
+                        }, i.createElement(a.Wa, {
+                            fullWidth: !0,
+                            textAlign: a.Kb.Center,
+                            alignItems: a.f.Center,
+                            padding: {
+                                y: 1
+                            }
+                        }, i.createElement(a.W, {
+                            type: a.Ob.Span,
+                            color: a.O.Link
+                        }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : i.createElement(a.H, null, this.props.children)
+                    }, t
+                }(i.Component);
+            n.d(t, "a", function() {
+                return o
+            })
+        },
+        QxOQ: function(e, t, n) {},
+        "R9u/": function(e, t, n) {},
         Rsna: function(e, t) {
             var n = {
                 kind: "Document",
@@ -3323,25 +5177,3020 @@
             };
             e.exports = n
         },
+        SNyx: function(e, t, n) {
+            "use strict";
+            var r, i = n("/MKj"),
+                a = n("fvjX"),
+                o = n("1/iK"),
+                s = n("y5D0"),
+                c = n("kRBY"),
+                l = n("mrSG"),
+                u = n("NAv5"),
+                d = n("q1tI"),
+                p = n("/7QA"),
+                m = n("ZDlU"),
+                h = n("yR8l"),
+                f = n("HGFl"),
+                y = n("DMoW"),
+                g = n("b6Yk"),
+                b = n("tIid");
+            ! function(e) {
+                e[e.PERSONAL_SUB = 0] = "PERSONAL_SUB", e[e.GIFT_SUB = 1] = "GIFT_SUB", e[e.MYSTERY_GIFT = 2] = "MYSTERY_GIFT"
+            }(r || (r = {}));
+            var v, E, C = n("Ue10"),
+                k = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        var e;
+                        return e = this.props.purchaseFlow === r.GIFT_SUB || this.props.purchaseFlow === r.MYSTERY_GIFT ? this.isEsportPurchase ? this.giftEsportMessageText : this.giftSubMessageText : this.isEsportPurchase ? this.personalEsportMessageText : "turbo" === this.props.product.product.name ? this.turboMessageText : this.personalSubMessageText, d.createElement(C.Wa, null, e)
+                    }, Object.defineProperty(t.prototype, "turboMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Twitch Turbo subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                "x:link": function(e) {
+                                    return d.createElement(C.U, {
+                                        targetBlank: !0,
+                                        to: "https://help.twitch.tv/"
+                                    }, e)
+                                }
+                            }, "CheckoutDescription");
+                            return d.createElement(C.W, null, e)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
+                        get: function() {
+                            var e = this.props.product.product.owner;
+                            return e && e.id && Object(b.a)(e.id, this.props.sessionUser)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "personalEsportMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Pass is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                "x:link": function(e) {
+                                    return d.createElement(C.U, {
+                                        targetBlank: !0,
+                                        to: "https://help.twitch.tv/"
+                                    }, e)
+                                }
+                            }, "CheckoutDescription");
+                            return d.createElement(C.W, null, e)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "giftEsportMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Pass gift is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                "x:link": function(e) {
+                                    return d.createElement(C.U, {
+                                        targetBlank: !0,
+                                        to: "https://help.twitch.tv/"
+                                    }, e)
+                                }
+                            }, "CheckoutDescription");
+                            return d.createElement(C.W, null, e)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "personalSubMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Channel Subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                    "x:link": function(e) {
+                                        return d.createElement(C.U, {
+                                            targetBlank: !0,
+                                            to: "https://help.twitch.tv/"
+                                        }, e)
+                                    }
+                                }, "CheckoutDescription"),
+                                t = Object(p.d)('You may cancel at any time by selecting "Do Not Renew" on your <x:link>subscriptions page</x:link>.', {
+                                    "x:link": function(e) {
+                                        return d.createElement(C.U, {
+                                            targetBlank: !0,
+                                            to: "/subscriptions"
+                                        }, e)
+                                    }
+                                }, "CheckoutDescription");
+                            return d.createElement(d.Fragment, null, d.createElement(C.W, null, e), this.props.product.product.interval.unit === y.J.MONTH && d.createElement(C.W, null, t))
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "giftSubMessageText", {
+                        get: function() {
+                            var e = Object(p.d)("Buying a Gift Subscription is fast, easy, and secure. Don't hesitate to contact <x:link>Purchase Support</x:link> if you need help.", {
+                                "x:link": function(e) {
+                                    return d.createElement(C.U, {
+                                        targetBlank: !0,
+                                        to: "https://help.twitch.tv/"
+                                    }, e)
+                                }
+                            }, "CheckoutDescription");
+                            return d.createElement(C.W, null, e)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(d.PureComponent),
+                P = (n("JH5r"), function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        return d.createElement(C.yb, {
+                            className: "checkout-error-brick",
+                            background: C.r.Base,
+                            borderTop: !0,
+                            borderRight: !0,
+                            borderBottom: !0,
+                            borderRadius: C.x.Small,
+                            display: C.X.Flex,
+                            flexDirection: C.Z.Column,
+                            justifyContent: C.Va.Center,
+                            padding: {
+                                x: 1,
+                                y: 2
+                            }
+                        }, this.props.children)
+                    }, t
+                }(d.Component));
+            n("acxT");
+            ! function(e) {
+                e[e.DefaultMessage = 0] = "DefaultMessage", e[e.PriceChangeNotice = 1] = "PriceChangeNotice", e[e.InvalidResidence = 2] = "InvalidResidence"
+            }(v || (v = {})),
+            function(e) {
+                e[e.Info = 0] = "Info", e[e.Error = 1] = "Error"
+            }(E || (E = {}));
+            var S = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        return this.props.level === E.Error ? d.createElement(P, null, d.createElement(C.W, {
+                            bold: !0
+                        }, this.title), d.createElement(C.Wa, {
+                            margin: {
+                                top: 1
+                            }
+                        }, d.createElement(C.W, null, this.message))) : this.props.level === E.Info ? d.createElement(C.yb, {
+                            className: "checkout-error--info",
+                            display: C.X.Flex,
+                            padding: {
+                                x: 2,
+                                y: 1
+                            },
+                            margin: {
+                                bottom: 2
+                            }
+                        }, d.createElement(C.nb, {
+                            asset: C.ob.NotificationInfo
+                        }), d.createElement(C.Wa, {
+                            margin: {
+                                left: 2
+                            }
+                        }, d.createElement(C.W, null, this.message))) : void 0
+                    }, Object.defineProperty(t.prototype, "title", {
+                        get: function() {
+                            return this.props.errorCode === v.DefaultMessage ? Object(p.d)("Payment not processed", "CheckoutError") : this.props.errorCode === v.InvalidResidence ? Object(p.d)("Invalid country of residence", "CheckoutError") : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "message", {
+                        get: function() {
+                            return this.props.errorCode === v.DefaultMessage ? Object(p.d)("Something went wrong, and your payment could not be processed at this time. Please try again later.", "CheckoutError") : this.props.errorCode === v.PriceChangeNotice ? Object(p.d)("We made a change to the price to reflect your country of purchase. Please review the updated price and confirm your payment again.", "CheckoutError") : this.props.errorCode === v.InvalidResidence ? Object(p.d)("Make sure your country of residence and postal code are both valid.", "CheckoutError") : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(d.Component),
+                O = n("6oOb"),
+                x = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        return this.props.progress === O.a.CONFIRMATION ? d.createElement(C.W, {
+                            type: C.Ob.H2,
+                            bold: !0
+                        }, Object(p.d)("Purchase Successful", "CheckoutHeader")) : d.createElement(C.W, {
+                            type: C.Ob.H2,
+                            bold: !0
+                        }, this.headerText)
+                    }, Object.defineProperty(t.prototype, "headerText", {
+                        get: function() {
+                            return this.props.purchaseFlow === r.GIFT_SUB || this.props.purchaseFlow === r.MYSTERY_GIFT ? this.isEsportPurchase ? Object(p.d)("Gift All-Access Pass", "CheckoutHeader") : Object(p.d)("Gift A Subscription", "CheckoutHeader") : this.props.purchaseFlow === r.PERSONAL_SUB ? this.isEsportPurchase ? Object(p.d)("Get Your All-Access Pass", "CheckoutHeader") : Object(p.d)("Subscription Payment Information", "CheckoutHeader") : Object(p.d)("Checkout", "CheckoutHeader")
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
+                        get: function() {
+                            var e = this.props.product && this.props.product.product.owner;
+                            return e && e.id && Object(b.a)(e.id, this.props.sessionUser)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(d.Component);
+            var I, w = Object(i.connect)(function(e) {
+                    return {
+                        sessionUser: Object(c.e)(e)
+                    }
+                })(x),
+                _ = (n("u/1r"), function(e) {
+                    return d.createElement(C.Wa, {
+                        fullWidth: !0,
+                        padding: 3,
+                        overflow: C.Za.Auto
+                    }, d.createElement(C.Wa, {
+                        display: C.X.Flex,
+                        justifyContent: C.Va.Center,
+                        flexWrap: C.Aa.Wrap
+                    }, d.createElement(C.Wa, {
+                        display: C.X.Hide,
+                        alignItems: C.f.Start,
+                        breakpointLarge: {
+                            display: C.X.Flex
+                        }
+                    }, e.productDescription), d.createElement(C.Wa, {
+                        className: "checkout-layout__content",
+                        breakpointLarge: {
+                            margin: {
+                                left: 4
+                            }
+                        }
+                    }, e.header, d.createElement(C.Wa, {
+                        display: C.X.Flex,
+                        breakpointLarge: {
+                            display: C.X.Hide
+                        }
+                    }, e.productDescription), d.createElement(C.Wa, {
+                        margin: {
+                            y: 1
+                        }
+                    }, e.children))))
+                }),
+                N = function() {
+                    var e = Object(p.d)('By clicking "Complete Purchase", you hereby agree to Twitch\'s <x:tos>Terms of Sale</x:tos> and <x:privacy>Privacy Policy</x:privacy>. Your payment method will be saved for future purchases, and, if applicable, recurring subscription payments.', {
+                        "x:tos": function(e) {
+                            return d.createElement(C.U, {
+                                targetBlank: !0,
+                                to: "https://twitch.tv/p/legal/terms-of-sale/"
+                            }, e)
+                        },
+                        "x:privacy": function(e) {
+                            return d.createElement(C.U, {
+                                targetBlank: !0,
+                                to: "https://twitch.tv/p/legal/privacy-policy/"
+                            }, e)
+                        }
+                    }, "CheckoutDisclaimer");
+                    return d.createElement(C.Wa, {
+                        padding: {
+                            y: 2
+                        }
+                    }, d.createElement(C.W, null, e))
+                };
+
+            function T(e) {
+                switch (e) {
+                    case I.GIFTABLE_RECIPIENT:
+                    case I.NEW_PURCHASE:
+                    case I.TIER_UPGRADE:
+                    case I.PRIME_UPGRADE:
+                    case I.UNKNOWN:
+                        return !0;
+                    case I.NO_ITEM:
+                    case I.NON_GIFTABLE_RECIPIENT:
+                    case I.NO_MASS_GIFTING:
+                    case I.TIER_DOWNGRADE:
+                    case I.MOBILE_UPGRADE:
+                    case I.API_INELIGIBLE:
+                    default:
+                        return !1
+                }
+            }! function(e) {
+                e[e.GIFTABLE_RECIPIENT = 0] = "GIFTABLE_RECIPIENT", e[e.NEW_PURCHASE = 1] = "NEW_PURCHASE", e[e.TIER_UPGRADE = 2] = "TIER_UPGRADE", e[e.PRIME_UPGRADE = 3] = "PRIME_UPGRADE", e[e.UNKNOWN = 4] = "UNKNOWN", e[e.NO_ITEM = 5] = "NO_ITEM", e[e.NON_GIFTABLE_RECIPIENT = 6] = "NON_GIFTABLE_RECIPIENT", e[e.NO_MASS_GIFTING = 7] = "NO_MASS_GIFTING", e[e.TIER_DOWNGRADE = 8] = "TIER_DOWNGRADE", e[e.MOBILE_UPGRADE = 9] = "MOBILE_UPGRADE", e[e.API_INELIGIBLE = 10] = "API_INELIGIBLE"
+            }(I || (I = {}));
+            var D, j = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        var e;
+                        switch (this.props.productEligibility) {
+                            case I.NON_GIFTABLE_RECIPIENT:
+                                e = this.isEsportPurchase ? Object(p.d)("Sorry, an All-Access Pass to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
+                                    "x:bold": function(e) {
+                                        return d.createElement(C.W, {
+                                            type: C.Ob.Span,
+                                            bold: !0
+                                        }, e)
+                                    },
+                                    recipientName: this.props.product.recipient && this.props.product.recipient.displayName || ""
+                                }, "IneligiblePurchaseNotice") : Object(p.d)("Sorry, a Gift Subscription to this channel is not available for <x:bold>{recipientName}</x:bold>.", {
+                                    "x:bold": function(e) {
+                                        return d.createElement(C.W, {
+                                            type: C.Ob.Span,
+                                            bold: !0
+                                        }, e)
+                                    },
+                                    recipientName: this.props.product.recipient && this.props.product.recipient.displayName || ""
+                                }, "IneligiblePurchaseNotice");
+                                break;
+                            case I.NO_MASS_GIFTING:
+                                e = Object(p.d)("Community gifts are not eligible for this product.", "IneligiblePurchaseNotice");
+                                break;
+                            case I.TIER_DOWNGRADE:
+                                var t = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.login;
+                                e = Object(p.d)("You are currently subscribed to a higher-tier subscription that offers more benefits. <x:subsLink>Click here to compare subscription benefits</x:subsLink>. If you would still like to purchase this, please <x:subsMgmtLink>cancel your existing subscription</x:subsMgmtLink> or wait for your existing subscription to end.", {
+                                    "x:subsLink": function(e) {
+                                        return d.createElement(C.U, {
+                                            type: C.V.Inherit,
+                                            to: "/subs/" + (t || ""),
+                                            underline: !0
+                                        }, e)
+                                    },
+                                    "x:subsMgmtLink": function(e) {
+                                        return d.createElement(C.U, {
+                                            type: C.V.Inherit,
+                                            to: "/subscriptions",
+                                            underline: !0
+                                        }, e)
+                                    }
+                                }, "IneligiblePurchaseNotice");
+                                break;
+                            case I.MOBILE_UPGRADE:
+                                var n = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.displayName;
+                                return d.createElement(m.a, null, d.createElement(C.W, {
+                                    bold: !0
+                                }, Object(p.d)("You purchased a subscription to {productDisplayName} on your mobile device.", {
+                                    productDisplayName: n || ""
+                                }, "IneligiblePurchaseNotice")), d.createElement(C.Wa, {
+                                    margin: {
+                                        top: 1
+                                    }
+                                }, d.createElement(C.W, null, Object(p.d)("Upgrading your mobile subscription is currently not supported.", "IneligiblePurchaseNotice"))));
+                            default:
+                                e = Object(p.d)("You are not eligible for this purchase.", "IneligiblePurchaseNotice")
+                        }
+                        return d.createElement(C.yb, {
+                            background: C.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(C.W, {
+                            color: C.O.Error
+                        }, e))
+                    }, Object.defineProperty(t.prototype, "isEsportPurchase", {
+                        get: function() {
+                            var e = this.props.product.product.owner;
+                            return e && e.id && Object(b.a)(e.id, this.props.sessionUser)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(d.PureComponent),
+                R = function(e) {
+                    return d.createElement(C.yb, {
+                        background: C.r.Base,
+                        borderMarked: !0,
+                        padding: 1,
+                        margin: {
+                            y: 1
+                        }
+                    }, d.createElement(C.Wa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, d.createElement(C.W, null, Object(p.d)("You are currently subscribed for free with Twitch Prime. If you choose to upgrade to the {newPrice} subscription, you will be immediately billed for {newPrice} and your new subscription will auto-renew every month.", {
+                        newPrice: e.newPrice
+                    }, "UpgradePrimeWarning"))), d.createElement(C.Wa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, d.createElement(C.W, null, Object(p.d)("You'll be able to subscribe to another channel for free with Twitch Prime 30 days after you last used your free subscription.", "UpgradePrimeWarning"))), d.createElement(C.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradePrimeWarning")))
+                },
+                F = function(e) {
+                    return d.createElement(C.yb, {
+                        background: C.r.Base,
+                        borderMarked: !0,
+                        padding: 1,
+                        margin: {
+                            y: 1
+                        }
+                    }, d.createElement(C.Wa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, d.createElement(C.W, null, Object(p.d)("You are currently subscribed to the {originalPrice} subscription plan. If you choose to upgrade to the {newPrice} subscription plan, you will be immediately billed for {newPrice} and your currently active subscription plan for {originalPrice} will not renew any further.", {
+                        originalPrice: e.originalPrice,
+                        newPrice: e.newPrice
+                    }, "UpgradeTierWarning"))), d.createElement(C.Wa, {
+                        margin: {
+                            bottom: .5
+                        }
+                    }, d.createElement(C.W, null, Object(p.d)("Please note that pro-rated refunds cannot be offered for the remaining time on your {originalPrice} subscription plan", {
+                        originalPrice: e.originalPrice
+                    }, "UpgradeTierWarning"))), d.createElement(C.W, null, Object(p.d)("If you upgrade your subscription, your sub anniversary, sub streaks, and badge tenure will be maintained.", "UpgradeTierWarning")))
+                },
+                A = (n("mIie"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.enablePaidUpgradeFlag = p.b.get("earth_wind_fire", !1), t.chargeTimeMessage = Object(p.d)("You will be charged on {date}", {
+                            date: Object(p.c)(new Date(Date.now()), "medium")
+                        }, "PurchasePreview"), t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        var e = d.createElement(d.Fragment, null),
+                            t = d.createElement(d.Fragment, null);
+                        if (this.props.purchaseFlow === r.GIFT_SUB) t = this.renderGiftSubPurchase();
+                        else if (this.props.purchaseFlow === r.MYSTERY_GIFT) t = this.renderMysteryGiftSubPurchase();
+                        else if (this.props.purchaseFlow === r.PERSONAL_SUB)
+                            if (this.props.eligiblePromotions && this.props.eligiblePromotions.isOneMonthFreeEligible && (e = this.renderOneFreeMonth()), this.props.productEligibility === I.TIER_UPGRADE) t = this.renderTierUpgrade();
+                            else if (this.props.productEligibility === I.PRIME_UPGRADE) {
+                            var n = this.formattedPrice;
+                            n && (t = d.createElement(R, {
+                                newPrice: n
+                            }))
+                        } else this.props.productEligibility === I.NEW_PURCHASE && this.hasActiveGiftSubscription && (this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion && (e = this.renderSubtemberDiscount()), t = this.renderGiftSubUpgrade());
+                        return d.createElement(d.Fragment, null, e, (!this.hasActiveGiftSubscription || this.props.purchaseFlow !== r.PERSONAL_SUB) && d.createElement(C.Wa, {
+                            margin: {
+                                top: 1
+                            }
+                        }, d.createElement(C.W, null, this.chargeTimeMessage)), t)
+                    }, t.prototype.renderTierUpgrade = function() {
+                        var e = this.props.existingPurchases && this.props.existingPurchases.compatiblePurchases && this.props.existingPurchases.compatiblePurchases[0];
+                        if (!e) return null;
+                        var t = e.price,
+                            n = e.currency,
+                            r = e.divisor,
+                            i = Object(p.f)(t / r, {
+                                style: "currency",
+                                currency: n
+                            }),
+                            a = this.formattedPrice;
+                        return i && a ? d.createElement(F, {
+                            originalPrice: i,
+                            newPrice: a
+                        }) : null
+                    }, t.prototype.renderGiftSubUpgrade = function() {
+                        var e = this.props.benefit.endsAt;
+                        if (!e) return null;
+                        var t = Object(f.c)(e);
+                        return d.createElement(C.yb, {
+                            background: C.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(C.W, null, Object(p.d)("You will be charged when your Gift Subscription ends on <x:strong>{giftSubEndDateFormatted, date, short}</x:strong>.", {
+                            giftSubEndDateFormatted: t,
+                            "x:strong": function(e) {
+                                return d.createElement(C.W, {
+                                    type: C.Ob.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "PurchasePreview")))
+                    }, t.prototype.renderGiftSubPurchase = function() {
+                        var e, t = this.props.product.recipient && this.props.product.recipient.displayName;
+                        if (this.formattedPrice) return e = this.isEsportPurchase ? Object(p.d)("You are buying a {price} Overwatch League All-Access Pass for {recipientName}.", {
+                            price: this.formattedPrice,
+                            recipientName: d.createElement(C.W, {
+                                type: C.Ob.Span,
+                                bold: !0
+                            }, t || "")
+                        }, "PurchasePreview") : Object(p.d)("You are buying a Single Month {price} Gift Subscription for {recipientName}.", {
+                            price: this.formattedPrice,
+                            recipientName: d.createElement(C.W, {
+                                type: C.Ob.Span,
+                                bold: !0
+                            }, t || "")
+                        }, "PurchasePreview"), d.createElement(C.yb, {
+                            background: C.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(C.W, null, e))
+                    }, t.prototype.renderMysteryGiftSubPurchase = function() {
+                        var e, t = this.props.product.product && this.props.product.product.tier,
+                            n = t && parseInt(t, 10) / 1e3,
+                            r = this.props.product.quantity;
+                        if (!r || !this.formattedPrice) return null;
+                        var i = Object(p.d)("Gift recipients will be chosen at random, starting with viewers of the streamer's channel who do not currently subscribe. <x:gift-info>Learn how Twitch picks recipients.</x:gift-info>", {
+                            "x:gift-info": function(e) {
+                                return d.createElement(C.U, {
+                                    targetBlank: !0,
+                                    to: "https://help.twitch.tv/customer/portal/articles/2903710-gift-subscriptions#CommunityGifting"
+                                }, e)
+                            }
+                        }, "PurchasePreview");
+                        e = this.isEsportPurchase ? Object(p.d)("{quantity, plural, one {{quantity} x Overwatch League All-Access Pass Gift} other {{quantity} x Overwatch League All-Access Pass Gifts}}", {
+                            quantity: r
+                        }, "PurchasePreview") : Object(p.d)("{quantity, plural, one {{quantity} x Single Month Tier {numericalTier} Gift Subscription} other {{quantity} x Single Month Tier {numericalTier} Gift Subscriptions}}", {
+                            quantity: r,
+                            numericalTier: n
+                        }, "PurchasePreview");
+                        var a = this.props.product.product.priceInfo.total * r,
+                            o = Object(p.d)("{price} each", {
+                                price: this.formattedPrice
+                            }, "PurchasePreview"),
+                            s = Object(p.d)("Total {totalPrice}", {
+                                totalPrice: Object(p.f)(a / Math.pow(10, this.props.product.product.priceInfo.exponent), {
+                                    style: "currency",
+                                    currency: this.props.product.product.priceInfo.currency
+                                })
+                            }, "PurchasePreview");
+                        return d.createElement(d.Fragment, null, d.createElement(C.yb, {
+                            background: C.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(C.Wa, null, d.createElement(C.W, {
+                            type: C.Ob.H5
+                        }, e)), d.createElement(C.Wa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(C.W, {
+                            type: C.Ob.H5
+                        }, o)), d.createElement(C.W, {
+                            type: C.Ob.H5,
+                            bold: !0
+                        }, s)), d.createElement(C.W, null, i))
+                    }, t.prototype.renderOneFreeMonth = function() {
+                        var e = new Date,
+                            t = this.props.benefit;
+                        t && null !== t.endsAt && (e = Object(f.c)(t.endsAt));
+                        var n = new Date(e);
+                        return n.setMonth(e.getMonth() + 1), d.createElement(C.yb, {
+                            background: C.r.Base,
+                            borderMarked: !0,
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(C.W, null, Object(p.d)("Your next month is on us. You will be charged when your free month ends on <x:strong>{futureChargeDate, date, short}</x:strong>.", {
+                            futureChargeDate: n,
+                            "x:strong": function(e) {
+                                return d.createElement(C.W, {
+                                    type: C.Ob.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "PurchasePreview")))
+                    }, t.prototype.renderSubtemberDiscount = function() {
+                        return this.enablePaidUpgradeFlag && this.props.eligiblePromotions && this.props.eligiblePromotions.paidUpgradePromotion ? d.createElement(C.yb, {
+                            background: C.r.Base,
+                            className: "purchase-preview__promotion-banner",
+                            padding: 1,
+                            margin: {
+                                y: 1
+                            },
+                            display: C.X.Flex,
+                            flexDirection: C.Z.Column
+                        }, d.createElement(C.W, {
+                            bold: !0
+                        }, Object(p.d)("*Subtember Limited-Time Promotion Applied", "PurchasePreview")), d.createElement(C.W, null, Object(p.d)("Your first month will cost {discountedPrice} and {oldPrice} for each recurring month.", {
+                            discountedPrice: this.props.eligiblePromotions.paidUpgradePromotion.newPrice,
+                            oldPrice: this.props.eligiblePromotions.paidUpgradePromotion.oldPrice
+                        }, "PurchasePreview"))) : null
+                    }, Object.defineProperty(t.prototype, "formattedPrice", {
+                        get: function() {
+                            return this.props.product.product.priceInfo ? Object(p.f)(this.props.product.product.priceInfo.total / Math.pow(10, this.props.product.product.priceInfo.exponent), {
+                                style: "currency",
+                                currency: this.props.product.product.priceInfo.currency
+                            }) : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "hasActiveGiftSubscription", {
+                        get: function() {
+                            return !!(this.props.benefit && this.props.benefit.gift && this.props.benefit.gift.isGift)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isEsportPurchase", {
+                        get: function() {
+                            return this.props.product.product.owner && this.props.product.product.owner.id && Object(b.a)(this.props.product.product.owner.id, this.props.sessionUser)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(d.Component)),
+                M = n("9C/b"),
+                W = (n("NwMv"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.goBackToChannel = function() {
+                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        return d.createElement(C.Wa, {
+                            className: "gift-sub-receipt__container",
+                            padding: {
+                                y: 2
+                            }
+                        }, d.createElement(C.Wa, {
+                            padding: {
+                                bottom: 2
+                            }
+                        }, this.getGiftSubReceiptInfo()), d.createElement(C.yb, {
+                            borderTop: !0,
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, d.createElement(C.Wa, {
+                            className: "gift-sub-receipt__label",
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, {
+                            bold: !0
+                        }, Object(p.d)("Gift Status", "GiftSubReceipt"))), d.createElement(C.Wa, {
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, null, Object(p.d)("Active", "GiftSubReceipt")))), this.props.invoicePrice && d.createElement(C.yb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, d.createElement(C.Wa, {
+                            className: "gift-sub-receipt__label",
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, {
+                            bold: !0
+                        }, Object(p.d)("Your Invoice Total", "GiftSubReceipt"))), d.createElement(C.Wa, {
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, null, Object(p.f)(this.props.invoicePrice / 100, {
+                            style: "currency",
+                            currency: this.props.invoiceCurrency
+                        })))), d.createElement(C.Wa, {
+                            margin: {
+                                y: 3
+                            }
+                        }, d.createElement(C.z, {
+                            onClick: this.goBackToChannel
+                        }, Object(p.d)("Go back to {displayName}", {
+                            displayName: this.props.productOwnerDisplayName
+                        }, "GiftSubReceipt"))))
+                    }, t.prototype.getGiftSubReceiptInfo = function() {
+                        if (this.props.invoicePrice) return this.props.isEsportChannel ? d.createElement(C.W, {
+                            "data-test-selector": "esport-gift-sub-receipt-info-selector"
+                        }, Object(p.d)("You have purchased a {price} Overwatch League All-Access Pass for <x:strong>{recipientDisplayName}</x:strong>", {
+                            price: Object(p.f)(this.props.invoicePrice / 100, {
+                                style: "currency",
+                                currency: this.props.invoiceCurrency
+                            }),
+                            recipientDisplayName: this.props.recipientDisplayName || "",
+                            "x:strong": function(e) {
+                                return d.createElement(C.W, {
+                                    type: C.Ob.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "GiftSubReceipt")) : d.createElement(C.W, {
+                            "data-test-selector": "gift-sub-receipt-info-selector"
+                        }, Object(p.d)("You have purchased a {price} Gift Subscription for <x:strong>{recipientDisplayName}</x:strong>", {
+                            price: Object(p.f)(this.props.invoicePrice / 100, {
+                                style: "currency",
+                                currency: this.props.invoiceCurrency
+                            }),
+                            recipientDisplayName: this.props.recipientDisplayName || "",
+                            "x:strong": function(e) {
+                                return d.createElement(C.W, {
+                                    type: C.Ob.Span,
+                                    bold: !0
+                                }, e)
+                            }
+                        }, "GiftSubReceipt"))
+                    }, t
+                }(d.PureComponent)),
+                B = Object(M.a)(W),
+                L = (n("XE3n"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.goBackToChannel = function() {
+                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), t.props.history.push("/" + t.props.productOwnerLogin)
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        return d.createElement(C.Wa, {
+                            className: "gift-sub-receipt__container",
+                            padding: {
+                                y: 2
+                            }
+                        }, d.createElement(C.yb, {
+                            padding: {
+                                bottom: 2
+                            }
+                        }, this.getMysteryGiftSubReceiptInfo()), d.createElement(C.yb, {
+                            borderTop: !0,
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, d.createElement(C.Wa, {
+                            className: "gift-sub-receipt__label",
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, {
+                            bold: !0
+                        }, Object(p.d)("Gift Status", "MysteryGiftSubReceipt"))), d.createElement(C.Wa, {
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, null, Object(p.d)("Active", "MysteryGiftSubReceipt")))), this.props.invoicePrice && d.createElement(C.yb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, d.createElement(C.Wa, {
+                            className: "gift-sub-receipt__label",
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, {
+                            bold: !0
+                        }, Object(p.d)("Your Invoice Total", "MysteryGiftSubReceipt"))), d.createElement(C.Wa, {
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, null, Object(p.f)(this.props.invoicePrice / 100, {
+                            style: "currency",
+                            currency: this.props.invoiceCurrency
+                        })))), d.createElement(C.Wa, {
+                            margin: {
+                                y: 3
+                            }
+                        }, d.createElement(C.z, {
+                            onClick: this.goBackToChannel
+                        }, Object(p.d)("Go back to {displayName}", {
+                            displayName: this.props.productOwnerDisplayName
+                        }, "MysteryGiftSubReceipt"))))
+                    }, t.prototype.getMysteryGiftSubReceiptInfo = function() {
+                        if (this.props.invoicePrice && this.props.tier) {
+                            var e = parseInt(this.props.tier, 10) / 1e3,
+                                t = Object(p.d)("{quantity, plural, one {Your gift is now being given in the channel.} other {Your gifts are now being given in the channel.}}", {
+                                    quantity: this.props.mysteryGiftCount
+                                }, "MysteryGiftSubReceipt");
+                            return this.props.isEsportChannel ? d.createElement(d.Fragment, null, d.createElement(C.W, null, Object(p.d)("{quantity, plural, one {You have purchased {quantity} x Overwatch League All-Access Pass Gift.} other {You have purchased {quantity} x Overwatch League All-Access Pass Gifts.}}", {
+                                quantity: this.props.mysteryGiftCount
+                            }, "MysteryGiftSubReceipt")), d.createElement(C.W, null, t)) : d.createElement(d.Fragment, null, d.createElement(C.W, null, Object(p.d)("{quantity, plural, one {You have purchased {quantity} x Single Month Tier {tier} Gift Subscription.} other {You have purchased {quantity} x Single Month Tier {tier} Gift Subscriptions.}}", {
+                                quantity: this.props.mysteryGiftCount,
+                                tier: e
+                            }, "MysteryGiftSubReceipt")), d.createElement(C.W, null, t))
+                        }
+                    }, t
+                }(d.PureComponent)),
+                U = Object(M.a)(L),
+                z = (n("ZHRK"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.goBackToChannel = function() {
+                            (window.opener || window.top !== window.self) && (parent.window.close(), window.close()), "turbo" === t.props.productOwnerLogin ? t.props.history.push("/settings/turbo") : t.props.history.push("/" + t.props.productOwnerLogin)
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        var e;
+                        return e = this.props.giftSubEndsAt ? Object(p.d)("Your paid subscription will begin on <x:strong>{endsAt}</x:strong> after your Gift Subscription ends", {
+                            "x:strong": function(e) {
+                                return d.createElement(C.W, {
+                                    type: C.Ob.Span,
+                                    bold: !0
+                                }, e)
+                            },
+                            endsAt: Object(p.c)(new Date(this.props.giftSubEndsAt), "long")
+                        }, "PersonalSubReceipt") : Object(p.d)("Active", "PersonalSubReceipt"), d.createElement(C.Wa, {
+                            className: "personal-sub-receipt"
+                        }, d.createElement(C.yb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, d.createElement(C.Wa, {
+                            className: "personal-sub-receipt__label",
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, {
+                            bold: !0
+                        }, Object(p.d)("Subscription for", "PersonalSubReceipt"))), d.createElement(C.Wa, {
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, null, this.props.purchaserDisplayName))), d.createElement(C.yb, {
+                            borderBottom: !0,
+                            padding: {
+                                y: 3
+                            }
+                        }, d.createElement(C.Wa, {
+                            className: "personal-sub-receipt__label",
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, {
+                            bold: !0
+                        }, Object(p.d)("Status", "PersonalSubReceipt"))), d.createElement(C.Wa, {
+                            display: C.X.InlineBlock
+                        }, d.createElement(C.W, null, e))), d.createElement(C.Wa, {
+                            margin: {
+                                y: 3
+                            }
+                        }, d.createElement(C.z, {
+                            onClick: this.goBackToChannel
+                        }, Object(p.d)("Go back to {displayName}", {
+                            displayName: this.props.productOwnerDisplayName
+                        }, "PersonalSubReceipt"))))
+                    }, t
+                }(d.Component)),
+                G = Object(M.a)(z),
+                H = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        if (!this.props.product || !this.props.purchaseInvoice.price) return null;
+                        var e = this.props.product.product && this.props.product.product.owner && this.props.product.product.owner.id || "",
+                            t = Object(b.a)(e, this.props.sessionUser),
+                            n = this.props.product.product,
+                            i = n && n.owner,
+                            a = this.props.benefit;
+                        return this.props.purchaseFlow === r.MYSTERY_GIFT ? d.createElement(U, {
+                            productOwnerDisplayName: i && i.displayName || "",
+                            productOwnerLogin: i && i.login || "",
+                            invoicePrice: this.props.purchaseInvoice.price,
+                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
+                            tier: this.props.purchaseInvoice.tier || "",
+                            mysteryGiftCount: this.props.product.quantity || 1,
+                            isEsportChannel: t
+                        }) : this.props.purchaseFlow === r.GIFT_SUB ? this.props.product.recipient ? d.createElement(B, {
+                            recipientDisplayName: this.props.product.recipient.displayName,
+                            productOwnerDisplayName: i && i.displayName || "",
+                            productOwnerLogin: i && i.login || "",
+                            invoicePrice: this.props.purchaseInvoice && this.props.purchaseInvoice.price || void 0,
+                            invoiceCurrency: this.props.purchaseInvoice && this.props.purchaseInvoice.currency || "USD",
+                            isEsportChannel: t
+                        }) : null : "turbo" === this.props.product.product.name ? this.props.benefit ? d.createElement(G, {
+                            purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
+                            productOwnerDisplayName: "turbo",
+                            productOwnerLogin: "turbo",
+                            giftSubEndsAt: a && a.gift && (a.gift.isGift || null) && a.endsAt,
+                            invoicePrice: this.props.purchaseInvoice.price,
+                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
+                            invoiceDivisor: this.props.purchaseInvoice.divisor || 100
+                        }) : null : d.createElement(G, {
+                            purchaserDisplayName: this.props.currentUser && this.props.currentUser.displayName || "",
+                            productOwnerDisplayName: i && i.displayName || "",
+                            productOwnerLogin: i && i.login || "",
+                            giftSubEndsAt: a && a.gift && (a.gift.isGift || null) && a.endsAt || "",
+                            invoicePrice: this.props.purchaseInvoice.price,
+                            invoiceCurrency: this.props.purchaseInvoice.currency || "USD",
+                            invoiceDivisor: this.props.purchaseInvoice.divisor || 100
+                        })
+                    }, t
+                }(d.PureComponent),
+                V = n("V+q8"),
+                q = n("oJmH"),
+                X = n("Jgup"),
+                Y = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.unsupportedCountries = new Set(["A1", "A2", "AP", "AQ", "CU", "EU", "IR", "KP", "MM", "O1", "SD", "SS", "SY", "TL"]), t.displayCountries = X.a.filter(function(e) {
+                            return !t.unsupportedCountries.has(e)
+                        }), t.onCountryChange = function(e) {
+                            t.props.onChange({
+                                countryCode: e.currentTarget.value,
+                                zipCode: ""
+                            })
+                        }, t.onZipChange = function(e) {
+                            t.props.onChange({
+                                countryCode: t.props.countryCode,
+                                zipCode: e.currentTarget.value
+                            })
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        return d.createElement(C.Wa, {
+                            display: C.X.Flex,
+                            flexWrap: C.Aa.Wrap
+                        }, d.createElement(C.Wa, null, d.createElement(C.Da, {
+                            id: "country-of-residence",
+                            label: Object(p.d)("Country of Residence", "CountryOfResidenceSelector"),
+                            labelOptional: Object(p.d)("Price may vary", "CountryOfResidenceSelector")
+                        }, d.createElement(C.tb, {
+                            onChange: this.onCountryChange,
+                            value: this.props.countryCode
+                        }, this.displayCountries.map(function(e) {
+                            return d.createElement("option", {
+                                key: e,
+                                value: e
+                            }, Object(X.b)(e))
+                        })))), this.zipCodeRequired && d.createElement(C.Wa, {
+                            margin: {
+                                left: 1
+                            }
+                        }, d.createElement(C.Da, {
+                            id: "zip-code",
+                            label: Object(p.d)("Postal Code", "CountryOfResidenceSelector")
+                        }, d.createElement(C.Qa, {
+                            type: C.Sa.Text,
+                            placeholder: Object(p.d)("12345", "CountryOfResidenceSelector"),
+                            value: this.props.zipCode || "",
+                            error: this.props.zipCodeError,
+                            onChange: this.onZipChange
+                        }))))
+                    }, Object.defineProperty(t.prototype, "zipCodeRequired", {
+                        get: function() {
+                            return ["US", "CA"].includes(this.props.countryCode)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(d.PureComponent),
+                Z = (n("lqDW"), function() {
+                    return d.createElement(C.yb, {
+                        className: "payment-method--notice--unavailable",
+                        display: C.X.Flex,
+                        padding: {
+                            x: 2,
+                            y: 1
+                        },
+                        margin: {
+                            bottom: 2
+                        }
+                    }, d.createElement(C.nb, {
+                        asset: C.ob.NotificationInfo
+                    }), d.createElement(C.Wa, {
+                        margin: {
+                            left: 2
+                        }
+                    }, d.createElement(C.W, null, Object(p.d)("This payment method is not available in your country. Please complete checkout using the 'More Methods' option.", "PaymentMethodNotice"))))
+                });
+            ! function(e) {
+                e[e.ACTIVE = 0] = "ACTIVE", e[e.DISABLED = 1] = "DISABLED", e[e.HIDDEN = 2] = "HIDDEN"
+            }(D || (D = {}));
+            var K = n("2xye");
+            var Q, J, $, ee, te = function() {
+                function e(e) {
+                    this.store = {
+                        savedPaymentAvailable: null,
+                        savedPaymentDisplayed: null
+                    }, this.counter = 0, this.config = {
+                        allowDuplicateEvents: !(!e || !e.allowDuplicateEvents)
+                    }
+                }
+                return e.prototype.get = function(e) {
+                    return this.store[e]
+                }, e.prototype.set = function(e) {
+                    this.store = Object.assign(this.store, e)
+                }, e.prototype.reportEvent = function() {
+                    (0 === this.counter || this.config.allowDuplicateEvents) && (this.counter++, function(e) {
+                        var t = {
+                            saved_payment_available: e.savedPaymentAvailable,
+                            saved_payment_displayed: e.savedPaymentDisplayed
+                        };
+                        p.o.track(K.SpadeEventType.PaymentFormDisplay, t)
+                    }(this.store))
+                }, e
+            }();
+            ! function(e) {
+                e.Failed = "failed", e.Pending = "pending", e.Success = "success"
+            }(Q || (Q = {})),
+            function(e) {
+                e.MysteryGifting = "mystery_gifting", e.Gifting = "gifting", e.Personal = "personal"
+            }(J || (J = {})),
+            function(e) {
+                e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlyPayWithAmazon = "recurly_pay_with_amazon", e.ZuoraCreditCard = "zuora_credit_card", e.Xsolla = "xsolla"
+            }($ || ($ = {})),
+            function(e) {
+                e.VendorLoginClick = "vendor_login_click", e.CompletePurchaseClick = "complete_purchase_click", e.PaypalTokenError = "paypal_token_error", e.RadioButtonClick = "radio_button_click", e.TokenError = "token_error", e.PriceChangeAlert = "price_change_alert", e.UnsupportedCountryAlert = "unsupported_country_alert"
+            }(ee || (ee = {}));
+            var ne = n("GnwI"),
+                re = (n("TEvY"), function() {
+                    function e(e) {}
+                    e.prototype.bind = function(e) {}
+                }(), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            amazonScriptLoaded: null,
+                            walletLoaded: null,
+                            billingAgreementId: null,
+                            awaitingResponse: !1,
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode,
+                            paymentMethodEnabled: t.props.eligibilityStatus === D.ACTIVE,
+                            zipCodeError: !1
+                        }, t.handleSubmit = function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                var e = this;
+                                return l.__generator(this, function(t) {
+                                    switch (t.label) {
+                                        case 0:
+                                            return this.hasValidResidence() ? (this.setState({
+                                                awaitingResponse: !0,
+                                                zipCodeError: !1
+                                            }), [4, this.props.onSuccess({
+                                                payment_flow: $.RecurlyPayWithAmazon,
+                                                payment_provider: "recurly",
+                                                payment_info: {
+                                                    token: this.state.billingAgreementId,
+                                                    gateway: "amazon"
+                                                },
+                                                residence: {
+                                                    country_code: this.state.userCountryOfResidence,
+                                                    zip_code: this.state.userZipCode
+                                                },
+                                                errorCallback: function() {
+                                                    return e.setState({
+                                                        awaitingResponse: !1
+                                                    })
+                                                }
+                                            })]) : (this.setState({
+                                                zipCodeError: !0
+                                            }), [2]);
+                                        case 1:
+                                            return t.sent(), [2]
+                                    }
+                                })
+                            })
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                paymentMethodEnabled: !0
+                            })
+                        }, t.hasValidResidence = function() {
+                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this;
+                        window.onAmazonLoginReady = function() {
+                            window.amazon.Login.setClientId(e.props.clientID)
+                        }, window.onAmazonPaymentsReady = function() {
+                            e.props.latencyTracking.reportInteractive(), e.setState({
+                                amazonScriptLoaded: !0
+                            }), window.OffAmazonPayments.Button("recurly-amazon-pay__button", e.props.sellerID, {
+                                type: "PwA",
+                                color: "DarkGray",
+                                useAmazonAddressBook: !1,
+                                agreementType: "BillingAgreement",
+                                authorization: function() {
+                                    window.amazon.Login.authorize({
+                                        scope: "profile payments:widget payments:autopay_consent payments:billing_address",
+                                        popup: !0
+                                    }, function(e) {
+                                        if (e.error) return "err"
+                                    })
+                                },
+                                onSignIn: function(t) {
+                                    e.setState({
+                                        walletLoaded: !0,
+                                        billingAgreementId: t.getAmazonBillingAgreementId()
+                                    }), e.initWidget()
+                                }
+                            })
+                        };
+                        var t = document.querySelector("#pwa-script");
+                        t && document.body.removeChild(t);
+                        var n = document.createElement("script");
+                        n.type = "text/javascript", n.id = "pwa-script", n.src = "https://static-na.payments-amazon.com/OffAmazonPayments/us" + (this.props.isProduction ? "" : "/sandbox") + "/js/Widgets.js?sellerId=" + this.props.sellerID, n.async = !0, document.body.appendChild(n)
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
+                            paymentMethodEnabled: this.props.eligibilityStatus === D.ACTIVE
+                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.initWidget = function() {
+                        var e = {
+                            agreementType: "BillingAgreement",
+                            amazonBillingAgreementId: this.state.billingAgreementId,
+                            sellerId: this.props.sellerID,
+                            design: {
+                                designMode: "responsive"
+                            },
+                            onPaymentSelect: function() {
+                                return !0
+                            },
+                            onError: function() {
+                                return !1
+                            }
+                        };
+                        new window.OffAmazonPayments.Widgets.Wallet(e).bind("recurly-amazon-pay__wallet")
+                    }, t.prototype.render = function() {
+                        return this.state.amazonScriptLoaded ? d.createElement(d.Fragment, null, this.props.showEuSubs && d.createElement(C.Wa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(Y, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: this.state.zipCodeError,
+                            onChange: this.handleCORChange
+                        })), d.createElement(C.yb, {
+                            background: C.r.Base,
+                            border: !0,
+                            className: "recurly-amazon-pay"
+                        }, !this.state.paymentMethodEnabled && d.createElement(C.Wa, {
+                            display: C.X.Flex,
+                            justifyContent: C.Va.Center,
+                            margin: 5
+                        }, d.createElement(Z, null)), this.state.paymentMethodEnabled && d.createElement(d.Fragment, null, d.createElement(C.Wa, {
+                            display: this.state.walletLoaded ? C.X.Hide : C.X.Flex,
+                            justifyContent: C.Va.Center,
+                            margin: 5
+                        }, d.createElement("div", {
+                            id: "recurly-amazon-pay__button"
+                        })), d.createElement(C.Wa, {
+                            display: this.state.walletLoaded ? C.X.Flex : C.X.Hide,
+                            flexDirection: C.Z.Column,
+                            alignItems: C.f.Center,
+                            margin: {
+                                top: 2
+                            }
+                        }, d.createElement("div", {
+                            id: "recurly-amazon-pay__wallet",
+                            className: "recurly-amazon-pay__wallet"
+                        }), d.createElement(C.Wa, {
+                            padding: {
+                                top: 1
+                            },
+                            display: C.X.Flex,
+                            justifyContent: C.Va.Center
+                        }, d.createElement(C.z, {
+                            onClick: this.handleSubmit,
+                            state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
+                            disabled: this.state.awaitingResponse
+                        }, this.props.submitButtonCopy)))))) : d.createElement(C.Ya, null)
+                    }, t = l.__decorate([Object(ne.b)("RecurlyAmazonPay")], t)
+                }(d.Component)),
+                ie = n("/0dD"),
+                ae = n("XDQu"),
+                oe = n("6fcp"),
+                se = (n("Aoab"), {
+                    light: "#000",
+                    dark: "#fff"
+                }),
+                ce = {
+                    light: "#a49fad",
+                    dark: "#898395"
+                },
+                le = function() {
+                    return {
+                        cvv: !1,
+                        first_name: !1,
+                        last_name: !1,
+                        month: !1,
+                        number: !1,
+                        year: !1,
+                        zip: !1
+                    }
+                },
+                ue = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            firstName: "",
+                            lastName: "",
+                            recurlyReady: !1,
+                            awaitingResponse: !1,
+                            errorMessage: "",
+                            errorState: le(),
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode,
+                            paymentMethodEnabled: t.props.eligibilityStatus === D.ACTIVE
+                        }, t.handleSubmit = function(e) {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                var t = this;
+                                return l.__generator(this, function(n) {
+                                    return e.preventDefault(), this.setState(function(e) {
+                                        return {
+                                            awaitingResponse: !0,
+                                            errorState: l.__assign({}, e.errorState)
+                                        }
+                                    }), window.recurly.token(this.form, function(e, n) {
+                                        return l.__awaiter(t, void 0, void 0, function() {
+                                            var t;
+                                            return l.__generator(this, function(r) {
+                                                switch (r.label) {
+                                                    case 0:
+                                                        return t = this.validateResidence(), e || t.length ? (this.handleValidationError(e, t), this.setState({
+                                                            awaitingResponse: !1
+                                                        }), [3, 3]) : [3, 1];
+                                                    case 1:
+                                                        return [4, this.handleValidationSuccess(n)];
+                                                    case 2:
+                                                        r.sent(), r.label = 3;
+                                                    case 3:
+                                                        return [2]
+                                                }
+                                            })
+                                        })
+                                    }), [2]
+                                })
+                            })
+                        }, t.validateResidence = function() {
+                            if (!t.props.showEuSubs) return [];
+                            var e = [];
+                            return ["US", "CA"].includes(t.state.userCountryOfResidence) && !t.state.userZipCode && e.push("zip"), e
+                        }, t.handleValidationSuccess = function(e) {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                var t = this;
+                                return l.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            return [4, this.props.onSuccess({
+                                                payment_flow: $.RecurlyCreditCard,
+                                                payment_provider: "recurly",
+                                                payment_info: {
+                                                    token: e.id,
+                                                    gateway: "cc",
+                                                    card_bin_country: e.billing_info && e.billing_info.cc_bin_country
+                                                },
+                                                residence: {
+                                                    country_code: this.state.userCountryOfResidence,
+                                                    zip_code: this.state.userZipCode
+                                                },
+                                                errorCallback: function() {
+                                                    return t.setState({
+                                                        awaitingResponse: !1
+                                                    })
+                                                }
+                                            })];
+                                        case 1:
+                                            return n.sent(), [2]
+                                    }
+                                })
+                            })
+                        }, t.handleValidationError = function(e, n) {
+                            var r = le(),
+                                i = "";
+                            n.length && n.forEach(function(e) {
+                                r[e] = !0
+                            }), e && (i = Object(p.d)("The transaction was declined due to invalid data. Please make sure you have entered the correct information.", "RecurlyCreditCard"), e.code !== oe.a.Validation && e.code !== oe.a.InvalidParameter || (e.fields && e.fields.forEach(function(e) {
+                                r[e] = !0
+                            }), i = Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "RecurlyCreditCard"))), t.setState({
+                                errorMessage: i,
+                                errorState: r
+                            })
+                        }, t.handleFirstName = function(e) {
+                            t.setState({
+                                firstName: e.currentTarget.value
+                            })
+                        }, t.handleLastName = function(e) {
+                            t.setState({
+                                lastName: e.currentTarget.value
+                            })
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                paymentMethodEnabled: !0
+                            })
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentWillMount = function() {
+                        var e = this;
+                        this.recurlyPollId = setInterval(function() {
+                            window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.recurlyPollId), e.setupConfigs(), e.pollForHostedField())
+                        }, 500)
+                    }, t.prototype.componentWillUnmount = function() {
+                        clearInterval(this.recurlyPollId), clearInterval(this.hostedFieldPollId)
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        window.recurly && this.props.darkModeEnabled !== e.darkModeEnabled && this.setupConfigs(), e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
+                            paymentMethodEnabled: this.props.eligibilityStatus === D.ACTIVE
+                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.render = function() {
+                        var e = this;
+                        return d.createElement(C.Wa, {
+                            className: "recurly-credit-card",
+                            fullWidth: !0
+                        }, d.createElement(C.Wa, {
+                            display: this.state.recurlyReady ? C.X.Hide : C.X.Block
+                        }, d.createElement(C.Ya, {
+                            fillContent: !0
+                        })), d.createElement(C.Wa, {
+                            display: this.state.recurlyReady ? C.X.Block : C.X.Hide
+                        }, d.createElement("form", {
+                            className: "recurly-form",
+                            ref: function(t) {
+                                return e.form = t
+                            }
+                        }, d.createElement(C.Wa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, d.createElement(C.Da, {
+                            id: "recurly-name",
+                            label: Object(p.d)("Name", "RecurlyCreditCard")
+                        }, d.createElement("div", {
+                            id: "recurly-name"
+                        }, d.createElement(C.Ia, {
+                            gutterSize: C.Ja.Medium
+                        }, d.createElement(C.P, {
+                            cols: 6
+                        }, d.createElement(C.Qa, {
+                            id: "recurly-first-name",
+                            type: C.Sa.Text,
+                            placeholder: Object(p.d)("First Name", "RecurlyCreditCard"),
+                            value: this.state.firstName,
+                            onChange: this.handleFirstName,
+                            error: this.state.errorState.first_name
+                        }), d.createElement("input", {
+                            type: "hidden",
+                            "data-recurly": "first_name",
+                            value: this.state.firstName
+                        })), d.createElement(C.P, {
+                            cols: 6
+                        }, d.createElement(C.Qa, {
+                            id: "recurly-last-name",
+                            type: C.Sa.Text,
+                            placeholder: Object(p.d)("Last Name", "RecurlyCreditCard"),
+                            value: this.state.lastName,
+                            onChange: this.handleLastName,
+                            error: this.state.errorState.last_name
+                        }), d.createElement("input", {
+                            type: "hidden",
+                            "data-recurly": "last_name",
+                            value: this.state.lastName
+                        })))))), d.createElement(C.Wa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, d.createElement(C.Da, {
+                            id: "recurly-credit-card",
+                            label: Object(p.d)("Credit Card", "RecurlyCreditCard")
+                        }, d.createElement("div", {
+                            id: "recurly-credit-card"
+                        }, d.createElement(C.Ia, {
+                            gutterSize: C.Ja.Medium
+                        }, d.createElement(C.P, {
+                            cols: 8
+                        }, d.createElement("div", {
+                            id: "recurly-number",
+                            "data-recurly": "number",
+                            className: this.state.errorState.number ? "recurly-error" : ""
+                        })), d.createElement(C.P, {
+                            cols: 4
+                        }, d.createElement("div", {
+                            id: "recurly-cvv",
+                            "data-recurly": "cvv",
+                            className: this.state.errorState.cvv ? "recurly-error" : ""
+                        })))))), d.createElement(C.Wa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, d.createElement(C.Da, {
+                            id: "recurly-credit-card",
+                            label: Object(p.d)("Expiration Date", "RecurlyCreditCard")
+                        }, d.createElement("div", {
+                            id: "recurly-credit-card"
+                        }, d.createElement(C.Ia, {
+                            gutterSize: C.Ja.Medium
+                        }, d.createElement(C.P, {
+                            cols: 6
+                        }, d.createElement("div", {
+                            id: "recurly-month",
+                            "data-recurly": "month",
+                            className: this.state.errorState.month ? "recurly-error" : ""
+                        })), d.createElement(C.P, {
+                            cols: 6
+                        }, d.createElement("div", {
+                            id: "recurly-year",
+                            "data-recurly": "year",
+                            className: this.state.errorState.year ? "recurly-error" : ""
+                        })))))), this.props.showEuSubs && d.createElement(C.Wa, {
+                            margin: {
+                                bottom: 1
+                            }
+                        }, d.createElement(Y, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: this.state.errorState.zip,
+                            onChange: this.handleCORChange
+                        })), d.createElement("input", {
+                            type: "hidden",
+                            name: "recurly-country",
+                            "data-recurly": "country",
+                            value: "US"
+                        }), d.createElement("input", {
+                            type: "hidden",
+                            name: "recurly-token",
+                            "data-recurly": "token"
+                        }), this.props.eligibilityStatus === D.DISABLED && d.createElement(Z, null), d.createElement(C.Wa, {
+                            margin: {
+                                top: 2
+                            },
+                            display: C.X.Flex,
+                            justifyContent: C.Va.Center,
+                            breakpointLarge: {
+                                justifyContent: C.Va.Start
+                            }
+                        }, d.createElement(C.z, {
+                            onClick: this.handleSubmit,
+                            state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
+                            disabled: this.state.awaitingResponse || !this.state.paymentMethodEnabled
+                        }, this.props.submitButtonCopy)))))
+                    }, t.prototype.pollForHostedField = function() {
+                        var e = this;
+                        this.hostedFieldPollId = setInterval(function() {
+                            document.querySelector(".recurly-hosted-field > iframe") && (e.setState({
+                                recurlyReady: !0
+                            }), clearInterval(e.hostedFieldPollId))
+                        }, 500)
+                    }, t.prototype.setupConfigs = function() {
+                        var e = !window.location.href.includes("/products/") && this.props.darkModeEnabled,
+                            t = e ? ce.dark : ce.light,
+                            n = e ? se.dark : se.light;
+                        window.recurly.configure({
+                            publicKey: this.props.publicKey,
+                            fraud: {
+                                kount: {
+                                    dataCollector: !0
+                                }
+                            },
+                            required: ["cvv"],
+                            fields: {
+                                all: {
+                                    style: {
+                                        height: "auto",
+                                        fontSize: "12px",
+                                        fontColor: n,
+                                        placeholder: {
+                                            color: t
+                                        }
+                                    }
+                                },
+                                number: {
+                                    selector: "#recurly-number",
+                                    style: {
+                                        fontColor: n,
+                                        placeholder: {
+                                            content: Object(p.d)("Card Number", "RecurlyCreditCard"),
+                                            color: t
+                                        }
+                                    }
+                                },
+                                month: {
+                                    selector: "#recurly-month",
+                                    inputType: "select",
+                                    style: {
+                                        fontColor: n,
+                                        placeholder: {
+                                            content: Object(p.d)("Select Month", "RecurlyCreditCard"),
+                                            color: t
+                                        }
+                                    }
+                                },
+                                year: {
+                                    selector: "#recurly-year",
+                                    inputType: "select",
+                                    style: {
+                                        fontColor: n,
+                                        placeholder: {
+                                            content: Object(p.d)("Select Year", "RecurlyCreditCard"),
+                                            color: t
+                                        }
+                                    }
+                                },
+                                cvv: {
+                                    selector: "#recurly-cvv",
+                                    style: {
+                                        fontColor: n,
+                                        placeholder: {
+                                            content: Object(p.d)("CVV", "RecurlyCreditCard"),
+                                            color: t
+                                        }
+                                    }
+                                }
+                            }
+                        })
+                    }, t = l.__decorate([Object(ne.b)("RecurlyCreditCard")], t)
+                }(d.Component);
+            var de, pe = Object(i.connect)(function(e) {
+                    return {
+                        darkModeEnabled: Object(ae.a)(e) === ie.a.Dark
+                    }
+                })(ue),
+                me = (n("a7Xb"), function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            paypalConfigured: !1,
+                            awaitingResponse: !1,
+                            hasError: !1,
+                            zipCodeError: !1,
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode,
+                            paymentMethodEnabled: t.props.eligibilityStatus === D.ACTIVE
+                        }, t.handleValidationSuccess = function(e) {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                var t = this;
+                                return l.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            return [4, this.props.onSuccess({
+                                                payment_flow: $.RecurlyPaypal,
+                                                payment_provider: "recurly",
+                                                payment_info: {
+                                                    token: e.id,
+                                                    gateway: "paypal"
+                                                },
+                                                residence: {
+                                                    country_code: this.state.userCountryOfResidence,
+                                                    zip_code: this.state.userZipCode
+                                                },
+                                                errorCallback: function() {
+                                                    return t.setState({
+                                                        awaitingResponse: !1
+                                                    })
+                                                }
+                                            })];
+                                        case 1:
+                                            return n.sent(), [2]
+                                    }
+                                })
+                            })
+                        }, t.handleValidationError = function() {
+                            t.setState({
+                                hasError: !0
+                            })
+                        }, t.handleClick = function() {
+                            t.hasValidResidence() ? (t.setState({
+                                awaitingResponse: !0,
+                                hasError: !1,
+                                zipCodeError: !1
+                            }), t.paypalInstance.start()) : t.setState({
+                                awaitingResponse: !1,
+                                hasError: !0,
+                                zipCodeError: !0
+                            })
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                paymentMethodEnabled: !0
+                            })
+                        }, t.hasValidResidence = function() {
+                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this;
+                        this.pollForRecurly = setInterval(function() {
+                            window.recurly && (e.props.latencyTracking.reportInteractive(), clearInterval(e.pollForRecurly), e.setupConfigs(), e.setState({
+                                paypalConfigured: !0
+                            }))
+                        }, 500)
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        e.eligibilityStatus !== this.props.eligibilityStatus && this.setState({
+                            paymentMethodEnabled: this.props.eligibilityStatus === D.ACTIVE
+                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.componentWillUnmount = function() {
+                        clearInterval(this.pollForRecurly)
+                    }, t.prototype.render = function() {
+                        return this.state.paypalConfigured ? d.createElement(C.Wa, null, this.props.showEuSubs && d.createElement(C.Wa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(Y, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: this.state.zipCodeError,
+                            onChange: this.handleCORChange
+                        })), !this.state.paymentMethodEnabled && d.createElement(Z, null), d.createElement(C.yb, {
+                            className: "recurly-paypal",
+                            background: C.r.Base,
+                            border: !0,
+                            display: C.X.Flex,
+                            justifyContent: C.Va.Center
+                        }, d.createElement(C.Wa, {
+                            margin: {
+                                top: 5
+                            }
+                        }, d.createElement(C.z, {
+                            "data-a-target": "recurly-paypal__button",
+                            onClick: this.handleClick,
+                            state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
+                            disabled: this.state.awaitingResponse || !this.state.paymentMethodEnabled
+                        }, Object(p.d)("Checkout With PayPal", "RecurlyPaypal"))))) : d.createElement(C.Wa, {
+                            margin: {
+                                y: 2
+                            }
+                        }, d.createElement(C.Ya, null))
+                    }, t.prototype.setupConfigs = function() {
+                        var e = this;
+                        window.recurly.configure(this.props.publicKey);
+                        var t = window.recurly.PayPal({
+                            braintree: {
+                                clientAuthorization: this.props.braintreeClientAuthorization
+                            }
+                        });
+                        t.on("token", function(t) {
+                            e.handleValidationSuccess(t)
+                        }), t.on("error", function() {
+                            e.handleValidationError(), e.setState({
+                                awaitingResponse: !1
+                            })
+                        }), t.on("cancel", function() {
+                            e.setState({
+                                awaitingResponse: !1
+                            })
+                        }), this.paypalInstance = t
+                    }, t = l.__decorate([Object(ne.b)("RecurlyPaypal")], t)
+                }(d.Component)),
+                he = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            xsollaLoaded: !1,
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode
+                        }, t.onIframeLoad = function() {
+                            t.props.latencyTracking.reportInteractive(), t.setState({
+                                xsollaLoaded: !0
+                            })
+                        }, t.handleXsollaEvent = function(e) {
+                            if ((!e.origin || e.origin.includes("xsolla")) && e.data) try {
+                                var n = JSON.parse(e.data);
+                                if (n.command && "status" === n.command)
+                                    if (n.data && n.data.paymentInfo) switch (n.data.paymentInfo.status) {
+                                        case "done":
+                                            t.props.trackPaymentFormInteraction({
+                                                paymentFlow: $.Xsolla,
+                                                action: ee.CompletePurchaseClick,
+                                                actionDetail: Q.Pending
+                                            }), t.props.trackPaymentFormInteraction({
+                                                paymentFlow: $.Xsolla,
+                                                action: ee.CompletePurchaseClick,
+                                                actionDetail: Q.Success
+                                            });
+                                            break;
+                                        case "troubled":
+                                            t.props.trackPaymentFormInteraction({
+                                                paymentFlow: $.Xsolla,
+                                                action: ee.CompletePurchaseClick,
+                                                actionDetail: Q.Pending
+                                            }), t.props.trackPaymentFormInteraction({
+                                                paymentFlow: $.Xsolla,
+                                                action: ee.CompletePurchaseClick,
+                                                actionDetail: Q.Failed
+                                            })
+                                    }
+                            } catch (e) {}
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                xsollaLoaded: !1
+                            }), t.props.handleCountryChange(e.countryCode)
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this.iframe;
+                        e && (e.addEventListener("load", this.onIframeLoad), window.addEventListener("message", this.handleXsollaEvent))
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.componentWillUnmount = function() {
+                        window.removeEventListener("message", this.handleXsollaEvent)
+                    }, t.prototype.render = function() {
+                        var e = this;
+                        return d.createElement(d.Fragment, null, this.props.showEuSubs && d.createElement(C.Wa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(Y, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: !1,
+                            onChange: this.handleCORChange
+                        })), d.createElement(C.Wa, {
+                            fullWidth: !0
+                        }, !this.state.xsollaLoaded && d.createElement(C.Ya, {
+                            fillContent: !0
+                        }), d.createElement(C.Wa, {
+                            fullWidth: !0,
+                            display: this.state.xsollaLoaded ? C.X.Inline : C.X.Hide
+                        }, d.createElement("iframe", {
+                            ref: function(t) {
+                                return e.iframe = t
+                            },
+                            id: "xsolla",
+                            src: this.props.iframeURL,
+                            width: "100%",
+                            height: "650px"
+                        }))))
+                    }, t = l.__decorate([Object(ne.b)("XsollaMoreMethods")], t)
+                }(d.Component),
+                fe = n("f00E"),
+                ye = n("WlZp");
+            n("vGoz");
+            ! function(e) {
+                e.ZUORA_PARENT_LAYOUT = "zuora-payment-method__zuora-parent-layout", e.UPDATE_PAYMENT_BUTTON = "zuora-payment-method__update-payment-button"
+            }(de || (de = {}));
+            var ge = function(e) {
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.state = {
+                        zuoraConfigured: !1,
+                        awaitingResponse: !1,
+                        errorMessage: "",
+                        nullValueErrors: [],
+                        sessionId: Object(fe.b)()
+                    }, t.handleSubmit = function(e) {
+                        e.preventDefault(), t.setState({
+                            awaitingResponse: !0,
+                            errorMessage: "",
+                            nullValueErrors: []
+                        }), window.Z.submit()
+                    }, t.renderErrorMessage = function() {
+                        if (t.state.nullValueErrors.length) {
+                            var e = t.state.nullValueErrors.map(function(e, t) {
+                                return d.createElement(C.Wa, {
+                                    key: t,
+                                    margin: {
+                                        left: 2
+                                    }
+                                }, d.createElement(C.W, {
+                                    color: C.O.Error
+                                }, "• ", e))
+                            });
+                            return d.createElement("div", null, d.createElement(C.Wa, {
+                                margin: {
+                                    top: 1,
+                                    left: 1,
+                                    bottom: .5
+                                }
+                            }, d.createElement(C.W, {
+                                color: C.O.Error
+                            }, Object(p.d)("We are sorry but your credit card payment could not be processed. Please correct the fields below.", "ZuoraCreditCard"))), e)
+                        }
+                        if (t.state.errorMessage) return d.createElement(C.Wa, {
+                            margin: {
+                                top: 1,
+                                left: 1
+                            }
+                        }, d.createElement(C.W, {
+                            color: C.O.Error
+                        }, t.state.errorMessage))
+                    }, t.successCallback = function(e) {
+                        return l.__awaiter(t, void 0, void 0, function() {
+                            var t = this;
+                            return l.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        if (!e.success) return [2];
+                                        n.label = 1;
+                                    case 1:
+                                        return n.trys.push([1, 3, , 4]), [4, this.props.onSuccess({
+                                            payment_flow: $.ZuoraCreditCard,
+                                            payment_provider: "zuora",
+                                            payment_info: {
+                                                token: e.refId,
+                                                gateway: "cc"
+                                            },
+                                            errorCallback: function() {
+                                                return t.setState({
+                                                    awaitingResponse: !1
+                                                })
+                                            }
+                                        })];
+                                    case 2:
+                                        return n.sent(), [3, 4];
+                                    case 3:
+                                        return n.sent(), this.setState({
+                                            awaitingResponse: !1
+                                        }), [3, 4];
+                                    case 4:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, t.errorCallback = function(e, n, r) {
+                        if (t.setState({
+                                awaitingResponse: !1
+                            }), "unknown" === n) return t.parseGatewayErrorMessage(r);
+                        window.Z.sendErrorMessageToHpm(e, r)
+                    }, t.parseGatewayErrorMessage = function(e) {
+                        return e.includes("NullValue") ? t.parseNullValueErrorMessage(e) : e.includes("Invalid CC Number") ? t.setState({
+                            errorMessage: Object(p.d)("You entered an invalid card number. Please update your card and try again.", "ZuoraCreditCard")
+                        }) : t.setState({
+                            errorMessage: Object(p.d)("We couldn't process your payment. Please try again.", "ZuoraCreditCard")
+                        })
+                    }, t.parseNullValueErrorMessage = function(e) {
+                        var n = e.replace("[HostedPageFieldValidationError]&nbsp; ", "").replace(/\s/g, "").split(":NullValue,"),
+                            r = {
+                                creditCardHolderName: Object(p.d)("Name on Card", "ZuoraCreditCard"),
+                                creditCardAddress1: Object(p.d)("Billing Address", "ZuoraCreditCard"),
+                                creditCardCity: Object(p.d)("City", "ZuoraCreditCard"),
+                                creditCardPostalCode: Object(p.d)("Zip Code", "ZuoraCreditCard")
+                            },
+                            i = n.map(function(e) {
+                                var t = r[e];
+                                return t || ""
+                            }).filter(function(e) {
+                                return "" !== e
+                            });
+                        t.setState({
+                            nullValueErrors: i
+                        })
+                    }, t
+                }
+                return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    var e = this;
+                    if (document.querySelector("#zuora-script")) this.initZuoraIFrame();
+                    else {
+                        var t = document.createElement("script");
+                        t.src = "https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js", t.async = !0, t.id = "zuora-script", document.body.appendChild(t), t.onload = function() {
+                            e.props.latencyTracking.reportInteractive(), e.initZuoraIFrame()
+                        }
+                    }
+                }, t.prototype.render = function() {
+                    return d.createElement("div", null, !this.state.zuoraConfigured && d.createElement(C.Wa, {
+                        padding: {
+                            y: 5
+                        }
+                    }, d.createElement(C.Ya, {
+                        fillContent: !0
+                    })), d.createElement(C.Wa, {
+                        display: this.state.zuoraConfigured ? C.X.Block : C.X.Hide,
+                        "data-test-selector": de.ZUORA_PARENT_LAYOUT
+                    }, this.renderErrorMessage(), d.createElement("div", {
+                        id: "zuora_payment",
+                        className: this.state.awaitingResponse ? "zuora-disabled" : ""
+                    }), d.createElement(C.Wa, {
+                        margin: {
+                            top: 2
+                        },
+                        display: C.X.Flex,
+                        justifyContent: C.Va.Center,
+                        breakpointLarge: {
+                            justifyContent: C.Va.Start
+                        }
+                    }, d.createElement(C.z, {
+                        onClick: this.handleSubmit,
+                        state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
+                        disabled: this.state.awaitingResponse,
+                        "data-test-selector": de.UPDATE_PAYMENT_BUTTON
+                    }, this.props.submitButtonCopy)), d.createElement(ye.a, {
+                        isProduction: this.props.isProductionConfig,
+                        sessionId: this.state.sessionId
+                    })))
+                }, t.prototype.initZuoraIFrame = function() {
+                    var e = this,
+                        t = {
+                            id: this.props.hostedPageID,
+                            url: this.props.hostedPageURL,
+                            style: "inline",
+                            submitEnabled: "true",
+                            field_accountId: this.props.externalAccountID,
+                            tenantId: this.props.tenantID,
+                            token: this.props.token,
+                            key: this.props.publicKey,
+                            signature: this.props.signature,
+                            locale: this.formattedLocale
+                        };
+                    window.Z.renderWithErrorHandler(t, {
+                        creditCardCountry: "USA"
+                    }, this.successCallback, this.errorCallback);
+                    var n = document.getElementById("z_hppm_iframe");
+                    n && n.addEventListener("load", function() {
+                        e.setState({
+                            zuoraConfigured: !0
+                        })
+                    })
+                }, Object.defineProperty(t.prototype, "formattedLocale", {
+                    get: function() {
+                        var e = this.props.languageCode || "en";
+                        if (e.includes("-")) {
+                            var t = e.split("-");
+                            e = t[0] + "_" + t[1].toUpperCase()
+                        }
+                        return e
+                    },
+                    enumerable: !0,
+                    configurable: !0
+                }), t = l.__decorate([Object(ne.b)("ZuoraCreditCard")], t)
+            }(d.Component);
+            var be, ve = Object(i.connect)(function(e) {
+                return {
+                    languageCode: Object(c.b)(e)
+                }
+            })(ge);
+            ! function(e) {
+                e.RecurlyAmazonPay = "recurly_amazon_pay", e.RecurlyCreditCard = "recurly_credit_card", e.RecurlyPaypal = "recurly_paypal", e.RecurlySavedPayment = "recurly_saved_payment", e.Xsolla = "xsolla", e.ZuoraCreditCard = "zuora_credit_card"
+            }(be || (be = {}));
+            var Ee = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.submitButtonCopy = Object(p.d)("Complete Purchase", "PaymentMethods"), t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        switch (this.props.type) {
+                            case be.RecurlyAmazonPay:
+                                return d.createElement(re, l.__assign({
+                                    submitButtonCopy: this.submitButtonCopy,
+                                    onSuccess: this.props.handleCompletePurchase
+                                }, this.props.configs.recurly.payWithAmazonConfigs, {
+                                    userCountryOfResidence: this.props.userCountryOfResidence,
+                                    userZipCode: this.props.userZipCode,
+                                    eligibilityStatus: this.props.eligibilityStatus,
+                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                                    showEuSubs: this.props.showEuSubs
+                                }));
+                            case be.RecurlyCreditCard:
+                                return d.createElement(pe, {
+                                    publicKey: this.props.configs.recurly.publicKey,
+                                    submitButtonCopy: this.submitButtonCopy,
+                                    onSuccess: this.props.handleCompletePurchase,
+                                    userCountryOfResidence: this.props.userCountryOfResidence,
+                                    userZipCode: this.props.userZipCode,
+                                    eligibilityStatus: this.props.eligibilityStatus,
+                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                                    showEuSubs: this.props.showEuSubs
+                                });
+                            case be.RecurlyPaypal:
+                                return d.createElement(me, {
+                                    publicKey: this.props.configs.recurly.publicKey,
+                                    braintreeClientAuthorization: this.props.configs.recurly.braintreeClientAuthorization,
+                                    submitButtonCopy: this.submitButtonCopy,
+                                    onSuccess: this.props.handleCompletePurchase,
+                                    userCountryOfResidence: this.props.userCountryOfResidence,
+                                    userZipCode: this.props.userZipCode,
+                                    eligibilityStatus: this.props.eligibilityStatus,
+                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                                    showEuSubs: this.props.showEuSubs
+                                });
+                            case be.ZuoraCreditCard:
+                                return d.createElement(ve, l.__assign({
+                                    submitButtonCopy: this.submitButtonCopy,
+                                    onSuccess: this.props.handleCompletePurchase,
+                                    isProductionConfig: this.props.configs.recurly.payWithAmazonConfigs.isProduction
+                                }, this.props.configs.zuora));
+                            default:
+                                return d.createElement(he, l.__assign({
+                                    userCountryOfResidence: this.props.userCountryOfResidence,
+                                    userZipCode: this.props.userZipCode,
+                                    handleCountryChange: this.props.handleCountryChange,
+                                    trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                                    showEuSubs: this.props.showEuSubs
+                                }, this.props.configs.xsolla))
+                        }
+                    }, t
+                }(d.PureComponent),
+                Ce = n("D8NC"),
+                ke = n.n(Ce),
+                Pe = n("yrda"),
+                Se = n.n(Pe),
+                Oe = n("AVF4"),
+                xe = n.n(Oe),
+                Ie = n("BIez"),
+                we = n.n(Ie),
+                _e = n("EF6p"),
+                Ne = n.n(_e),
+                Te = n("xgE2"),
+                De = n.n(Te),
+                je = n("ZiR0"),
+                Re = n.n(je),
+                Fe = n("KRuc"),
+                Ae = n.n(Fe),
+                Me = {
+                    CreditCard: function() {
+                        return Object(p.d)("Credit Card", "TicketDescription")
+                    },
+                    Paypal: function() {
+                        return Object(p.d)("Paypal", "TicketDescription")
+                    },
+                    AmazonPay: function() {
+                        return Object(p.d)("Amazon Pay", "TicketDescription")
+                    },
+                    MoreMethods: function() {
+                        return Object(p.d)("More Methods", "TicketDescription")
+                    }
+                },
+                We = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.paymentProviders = [{
+                            paymentMethodType: be.RecurlyCreditCard,
+                            paymentFlow: $.RecurlyCreditCard,
+                            button: {
+                                label: Me.CreditCard(),
+                                src: xe.a,
+                                alt: Me.CreditCard(),
+                                srcSet: {
+                                    "1x": xe.a,
+                                    "2x": we.a
+                                }
+                            }
+                        }, {
+                            paymentMethodType: be.ZuoraCreditCard,
+                            paymentFlow: $.ZuoraCreditCard,
+                            button: {
+                                label: Me.CreditCard(),
+                                src: xe.a,
+                                alt: Me.CreditCard(),
+                                srcSet: {
+                                    "1x": xe.a,
+                                    "2x": we.a
+                                }
+                            }
+                        }, {
+                            paymentMethodType: be.RecurlyPaypal,
+                            paymentFlow: $.RecurlyPaypal,
+                            button: {
+                                label: Me.Paypal(),
+                                src: Re.a,
+                                alt: Me.Paypal(),
+                                srcSet: {
+                                    "1x": Re.a,
+                                    "2x": Ae.a
+                                }
+                            }
+                        }, {
+                            paymentMethodType: be.RecurlyAmazonPay,
+                            paymentFlow: $.RecurlyPayWithAmazon,
+                            button: {
+                                label: Me.AmazonPay(),
+                                src: ke.a,
+                                alt: Me.AmazonPay(),
+                                srcSet: {
+                                    "1x": ke.a,
+                                    "2x": Se.a
+                                }
+                            }
+                        }, {
+                            paymentMethodType: be.Xsolla,
+                            paymentFlow: $.Xsolla,
+                            button: {
+                                label: Me.MoreMethods(),
+                                src: Ne.a,
+                                alt: Me.MoreMethods(),
+                                srcSet: {
+                                    "1x": Ne.a,
+                                    "2x": De.a
+                                }
+                            }
+                        }], t.handleClick = function(e, n) {
+                            return function() {
+                                t.props.trackPaymentFormInteraction({
+                                    paymentFlow: n,
+                                    action: ee.RadioButtonClick,
+                                    actionDetail: n
+                                }), t.props.handleClick(e)
+                            }
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.eligiblePaymentMethods.length <= 1) return null;
+                        var e = this,
+                            t = this.paymentProviders.map(function(t) {
+                                var n = e.props.eligiblePaymentMethods.find(function(e) {
+                                    return e.type === t.paymentMethodType
+                                });
+                                return n && n.status !== D.HIDDEN ? d.createElement(C.P, {
+                                    key: t.paymentMethodType,
+                                    cols: {
+                                        default: 6,
+                                        sm: 3
+                                    }
+                                }, d.createElement(C.Ka, {
+                                    label: t.button.label,
+                                    type: C.La.Radio,
+                                    src: t.button.src,
+                                    alt: t.button.alt,
+                                    srcSet: t.button.srcSet,
+                                    value: t.paymentMethodType,
+                                    onChange: e.handleClick(t.paymentMethodType, t.paymentFlow),
+                                    checked: e.props.selectedProvider === t.paymentMethodType
+                                })) : null
+                            });
+                        return d.createElement(C.Wa, null, d.createElement(C.Ia, {
+                            gutterSize: C.Ja.Small
+                        }, t))
+                    }, t
+                }(d.PureComponent),
+                Be = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            selectedProvider: be.RecurlyCreditCard
+                        }, t.renderPaymentMethods = function() {
+                            var e = t.props,
+                                n = e.configs,
+                                r = e.handleCompletePurchase,
+                                i = e.handleCountryChange,
+                                a = e.trackPaymentFormInteraction,
+                                o = t.props.eligiblePaymentMethods,
+                                s = t;
+                            return Object.values(be).map(function(e) {
+                                var t = o.find(function(t) {
+                                    return t.type === e
+                                });
+                                return t && t.status !== D.HIDDEN ? d.createElement(C.Wa, {
+                                    key: t.type,
+                                    display: s.state.selectedProvider === e ? C.X.Inline : C.X.Hide
+                                }, d.createElement(Ee, {
+                                    type: t.type,
+                                    configs: n,
+                                    eligibilityStatus: t.status,
+                                    userCountryOfResidence: s.props.userCountryOfResidence,
+                                    userZipCode: s.props.userZipCode,
+                                    handleCompletePurchase: r,
+                                    handleCountryChange: i,
+                                    trackPaymentFormInteraction: a,
+                                    showEuSubs: s.props.showEuSubs
+                                })) : null
+                            })
+                        }, t.handlePaymentMethodSelectorToggleChange = function(e) {
+                            t.setState({
+                                selectedProvider: e
+                            })
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentWillMount = function() {
+                        if (!document.querySelector("#recurly-script")) {
+                            var e = document.createElement("script");
+                            e.src = "https://js.recurly.com/v4/recurly.js", e.async = !0, e.id = "recurly-script", document.body.appendChild(e);
+                            for (var t = [be.RecurlyCreditCard, be.ZuoraCreditCard, be.RecurlyPaypal, be.RecurlyAmazonPay, be.Xsolla], n = this.props.eligiblePaymentMethods.filter(function(e) {
+                                    return e.status !== D.HIDDEN
+                                }).map(function(e) {
+                                    return e.type
+                                }), r = 0, i = t; r < i.length; r++) {
+                                var a = i[r];
+                                if (n.includes(a)) {
+                                    this.state = {
+                                        selectedProvider: a
+                                    };
+                                    break
+                                }
+                            }
+                        }
+                    }, t.prototype.render = function() {
+                        return d.createElement(C.Wa, null, d.createElement(We, {
+                            eligiblePaymentMethods: this.props.eligiblePaymentMethods,
+                            selectedProvider: this.state.selectedProvider,
+                            handleClick: this.handlePaymentMethodSelectorToggleChange,
+                            trackPaymentFormInteraction: this.props.trackPaymentFormInteraction
+                        }), d.createElement(C.Wa, {
+                            margin: {
+                                top: 1
+                            }
+                        }, this.renderPaymentMethods()))
+                    }, t
+                }(d.Component),
+                Le = n("85n/"),
+                Ue = n("cWO5"),
+                ze = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            awaitingResponse: !1,
+                            userCountryOfResidence: t.props.userCountryOfResidence,
+                            userZipCode: t.props.userZipCode,
+                            zipCodeError: !1,
+                            paymentMethodEnabled: t.props.eligibility.status === D.ACTIVE
+                        }, t.isPaymentMethodExpired = function(e) {
+                            var n = t.zeroIndexedMonth(e),
+                                r = e.expirationYear;
+                            if (void 0 === n || !r) return !1;
+                            var i = Object(u.startOfMonth)(new Date),
+                                a = new Date(r, n, 1);
+                            return !!Object(u.isBefore)(a, i)
+                        }, t.zeroIndexedMonth = function(e) {
+                            if (e.expirationMonth) return e.expirationMonth - 1
+                        }, t.handleSubmit = function() {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                var e, t, n = this;
+                                return l.__generator(this, function(r) {
+                                    switch (r.label) {
+                                        case 0:
+                                            if (!this.hasValidResidence()) return this.setState({
+                                                zipCodeError: !0
+                                            }), [2];
+                                            switch (this.setState({
+                                                awaitingResponse: !0,
+                                                zipCodeError: !1
+                                            }), this.props.savedPaymentMethod.paymentType) {
+                                                case Ue.a.AmazonPay:
+                                                    e = $.RecurlyPayWithAmazon, t = "amazon";
+                                                    break;
+                                                case Ue.a.Paypal:
+                                                    e = $.RecurlyPaypal, t = "paypal";
+                                                    break;
+                                                default:
+                                                    e = $.RecurlyCreditCard, t = "cc"
+                                            }
+                                            return [4, this.props.handleCompletePurchase({
+                                                payment_flow: e,
+                                                payment_provider: "recurly",
+                                                payment_info: {
+                                                    token: "",
+                                                    gateway: t,
+                                                    card_bin_country: null
+                                                },
+                                                residence: {
+                                                    country_code: this.state.userCountryOfResidence,
+                                                    zip_code: this.state.userZipCode
+                                                },
+                                                savedPayment: !0,
+                                                errorCallback: function() {
+                                                    return n.setState({
+                                                        awaitingResponse: !1
+                                                    })
+                                                }
+                                            })];
+                                        case 1:
+                                            return r.sent(), [2]
+                                    }
+                                })
+                            })
+                        }, t.handleCORChange = function(e) {
+                            t.setState({
+                                userCountryOfResidence: e.countryCode,
+                                userZipCode: e.zipCode,
+                                paymentMethodEnabled: !0
+                            })
+                        }, t.hasValidResidence = function() {
+                            return !t.props.showEuSubs || (!["US", "CA"].includes(t.state.userCountryOfResidence) || !!t.state.userZipCode)
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentDidUpdate = function(e) {
+                        e.eligibility !== this.props.eligibility && this.setState({
+                            paymentMethodEnabled: this.props.eligibility.status === D.ACTIVE
+                        }), e.userCountryOfResidence !== this.props.userCountryOfResidence && this.setState({
+                            userCountryOfResidence: this.props.userCountryOfResidence
+                        })
+                    }, t.prototype.render = function() {
+                        var e = this.props.savedPaymentMethod,
+                            t = this.isPaymentMethodExpired(e);
+                        return d.createElement(d.Fragment, null, d.createElement(C.yb, {
+                            background: C.r.Base,
+                            border: !0,
+                            borderRadius: C.x.Small,
+                            padding: 2
+                        }, d.createElement(Le.a, {
+                            paymentMethod: e,
+                            ignoreDarkMode: !0
+                        })), this.props.showEuSubs && d.createElement(C.Wa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(Y, {
+                            countryCode: this.state.userCountryOfResidence,
+                            zipCode: this.state.userZipCode,
+                            zipCodeError: this.state.zipCodeError,
+                            onChange: this.handleCORChange
+                        })), !this.state.paymentMethodEnabled && d.createElement(Z, null), d.createElement(C.Wa, {
+                            margin: {
+                                y: 2
+                            }
+                        }, d.createElement(C.z, {
+                            onClick: this.handleSubmit,
+                            state: this.state.awaitingResponse ? C.E.Loading : C.E.Default,
+                            disabled: this.state.awaitingResponse || t || !this.state.paymentMethodEnabled
+                        }, Object(p.d)("Complete Purchase", "SavedMethods"))))
+                    }, t
+                }(d.Component),
+                Ge = function() {
+                    function e(e) {
+                        var t = this;
+                        this.recurlyCountries = p.b.get("payments_recurly_countries", ["US"]), this.getDeterminedTaxCountry = function() {
+                            if (t.userBestGuessCountry) return t.userBestGuessCountry;
+                            var e = t.savedPaymentMethod && t.savedPaymentMethod.billingCountry;
+                            return t.ipCountryCode && e && t.userCountryOfResidence ? t.ipCountryCode === e ? t.ipCountryCode : t.userCountryOfResidence : t.userCountryOfResidence ? t.userCountryOfResidence : t.ipCountryCode
+                        }, this.productName = e.productName, this.userCountryOfResidence = e.userCountryOfResidence, this.ipCountryCode = e.ipCountryCode, this.userBestGuessCountry = e.userBestGuessCountry, this.savedPaymentMethod = e.savedPaymentMethod, this.showEuSubs = e.showEuSubs, this.disablePayPal = e.disablePayPal, this.disableAmazonPay = e.disableAmazonPay
+                    }
+                    return e.prototype.getAvailableMethods = function() {
+                        if (!this.showEuSubs) return "owlallaccess2018" === this.productName ? [be.ZuoraCreditCard, be.Xsolla] : "US" !== this.ipCountryCode ? [be.Xsolla] : [be.RecurlyCreditCard, be.RecurlyPaypal, be.RecurlyAmazonPay, be.RecurlySavedPayment, be.Xsolla];
+                        var e = [];
+                        return this.recurlyCountries.includes(this.getDeterminedTaxCountry()) && "owlallaccess2018" !== this.productName && (this.recurlyCreditCardEligible && e.push(be.RecurlyCreditCard), this.recurlyPaypalEligible && e.push(be.RecurlyPaypal), this.recurlyAmazonPayEligible && e.push(be.RecurlyAmazonPay), this.recurlySavedPaymentEligible && e.push(be.RecurlySavedPayment)), this.xsollaEligible && e.push(be.Xsolla), this.zuoraCreditCardEligible && e.push(be.ZuoraCreditCard), e
+                    }, Object.defineProperty(e.prototype, "recurlySavedPaymentEligible", {
+                        get: function() {
+                            if (this.savedPaymentMethod && this.savedPaymentMethod.paymentType) switch (this.savedPaymentMethod.paymentType) {
+                                case Ue.a.AmazonPay:
+                                    return this.recurlyAmazonPayEligible;
+                                case Ue.a.CreditCard:
+                                    return this.recurlyCreditCardEligible;
+                                case Ue.a.Paypal:
+                                    return this.recurlyPaypalEligible;
+                                default:
+                                    return !1
+                            }
+                            return !1
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "recurlyAmazonPayEligible", {
+                        get: function() {
+                            return !this.disableAmazonPay && "US" === this.getDeterminedTaxCountry()
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "recurlyCreditCardEligible", {
+                        get: function() {
+                            return !0
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "recurlyPaypalEligible", {
+                        get: function() {
+                            return !this.disablePayPal && "US" === this.getDeterminedTaxCountry()
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "xsollaEligible", {
+                        get: function() {
+                            return !0
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(e.prototype, "zuoraCreditCardEligible", {
+                        get: function() {
+                            return "owlallaccess2018" === this.productName
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), e
+                }(),
+                He = n("iWNC"),
+                Ve = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            useSavedPaymentMethod: !0,
+                            eligiblePaymentMethods: []
+                        }, t.tracker = new te({
+                            allowDuplicateEvents: !1
+                        }), t.eligibilityComputer = new Ge({
+                            productName: t.props.productName,
+                            userCountryOfResidence: t.props.countryOfResidence,
+                            ipCountryCode: t.props.ipCountryCode,
+                            userBestGuessCountry: t.props.userBestGuessCountry,
+                            savedPaymentMethod: void 0,
+                            showEuSubs: t.props.showEuSubs,
+                            disablePayPal: !1,
+                            disableAmazonPay: !1
+                        }), t.toggleChangePaymentMethods = function() {
+                            t.setState(function(e) {
+                                return {
+                                    useSavedPaymentMethod: !e.useSavedPaymentMethod
+                                }
+                            })
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.data && (this.props.data.currentUser || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent()), this.eligibilityComputer = new Ge({
+                            productName: this.props.productName,
+                            userCountryOfResidence: this.props.countryOfResidence,
+                            ipCountryCode: this.props.ipCountryCode,
+                            userBestGuessCountry: this.props.userBestGuessCountry,
+                            savedPaymentMethod: this.savedPaymentMethod,
+                            showEuSubs: this.props.showEuSubs,
+                            disablePayPal: this.disablePayPal,
+                            disableAmazonPay: this.disableAmazonPay
+                        });
+                        var e = this.eligibilityComputer.getAvailableMethods();
+                        if (this.props.showEuSubs) {
+                            var t = Object.values(be).map(function(t) {
+                                return {
+                                    type: t,
+                                    status: e.includes(t) ? D.ACTIVE : D.HIDDEN
+                                }
+                            });
+                            this.setState({
+                                eligiblePaymentMethods: t
+                            })
+                        } else {
+                            t = e.map(function(e) {
+                                return {
+                                    type: e,
+                                    status: D.ACTIVE
+                                }
+                            });
+                            this.setState({
+                                eligiblePaymentMethods: t
+                            })
+                        }
+                    }, t.prototype.componentDidUpdate = function(e, t) {
+                        if (this.props.data && (this.props.data.currentUser || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), null !== this.tracker.get("savedPaymentAvailable") && null !== this.tracker.get("savedPaymentDisplayed") && this.tracker.reportEvent()), e.userBestGuessCountry !== this.props.userBestGuessCountry || e.data && this.props.data && e.data.currentUser !== this.props.data.currentUser) {
+                            this.eligibilityComputer = new Ge({
+                                productName: this.props.productName,
+                                userCountryOfResidence: this.props.countryOfResidence,
+                                ipCountryCode: this.props.ipCountryCode,
+                                userBestGuessCountry: this.props.userBestGuessCountry,
+                                savedPaymentMethod: this.savedPaymentMethod,
+                                showEuSubs: this.props.showEuSubs,
+                                disablePayPal: this.disablePayPal,
+                                disableAmazonPay: this.disableAmazonPay
+                            });
+                            var n = this.eligibilityComputer.getAvailableMethods();
+                            if (this.props.showEuSubs) {
+                                var r = Object.values(be).map(function(e) {
+                                    var r = t.eligiblePaymentMethods.find(function(t) {
+                                            return t.type === e
+                                        }),
+                                        i = r && r.status === D.HIDDEN ? D.HIDDEN : D.DISABLED;
+                                    return {
+                                        type: e,
+                                        status: n.includes(e) ? D.ACTIVE : i
+                                    }
+                                });
+                                this.setState({
+                                    eligiblePaymentMethods: r
+                                })
+                            } else {
+                                r = n.map(function(e) {
+                                    return {
+                                        type: e,
+                                        status: D.ACTIVE
+                                    }
+                                });
+                                this.setState({
+                                    eligiblePaymentMethods: r
+                                })
+                            }
+                        }
+                    }, t.prototype.render = function() {
+                        if (this.props.data && !this.props.data.currentUser && !this.props.data.error) return d.createElement(C.Wa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(C.db, {
+                            lineCount: 6
+                        }));
+                        var e = this.state.eligiblePaymentMethods.find(function(e) {
+                                return e.type === be.RecurlySavedPayment
+                            }),
+                            t = this.state.eligiblePaymentMethods.filter(function(e) {
+                                return e.status !== D.HIDDEN
+                            });
+                        return d.createElement(d.Fragment, null, this.renderWalletHeader(), e && this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature && this.savedPaymentMethod && d.createElement(ze, {
+                            handleCompletePurchase: this.props.handleCompletePurchase,
+                            savedPaymentMethod: this.savedPaymentMethod,
+                            handleCountryChange: this.props.handleCountryChange,
+                            eligibility: e,
+                            userCountryOfResidence: this.props.countryOfResidence || this.props.ipCountryCode,
+                            userZipCode: this.props.userZipCode,
+                            showEuSubs: this.props.showEuSubs
+                        }), this.props.configs && t.length > 0 && !(this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature) && d.createElement(C.Wa, {
+                            "data-a-target": "PAYMENT_METHOD_SELECTOR"
+                        }, d.createElement(Be, {
+                            handleCompletePurchase: this.props.handleCompletePurchase,
+                            handleCountryChange: this.props.handleCountryChange,
+                            trackPaymentFormInteraction: this.props.trackPaymentFormInteraction,
+                            eligiblePaymentMethods: t,
+                            userCountryOfResidence: this.props.countryOfResidence || this.props.ipCountryCode,
+                            userZipCode: this.props.userZipCode,
+                            configs: this.props.configs,
+                            showEuSubs: this.props.showEuSubs
+                        })))
+                    }, t.prototype.renderWalletHeader = function() {
+                        return d.createElement(C.Wa, {
+                            display: C.X.Flex,
+                            justifyContent: C.Va.Between,
+                            margin: {
+                                y: 2
+                            }
+                        }, this.renderWalletTitle(), d.createElement(C.Wa, {
+                            padding: {
+                                left: 1
+                            },
+                            display: C.X.Flex,
+                            alignItems: C.f.End
+                        }, this.renderPaymentMethodToggle()))
+                    }, t.prototype.renderWalletTitle = function() {
+                        return this.state.useSavedPaymentMethod && this.showSavedPaymentsFeature ? d.createElement(C.W, {
+                            type: C.Ob.H4,
+                            bold: !0
+                        }, Object(p.d)("Saved Payment Method", "Wallet")) : d.createElement(C.W, {
+                            type: C.Ob.H4,
+                            bold: !0
+                        }, Object(p.d)("Choose Your Payment Method", "Wallet"))
+                    }, t.prototype.renderPaymentMethodToggle = function() {
+                        if (this.showSavedPaymentsFeature) return this.state.useSavedPaymentMethod ? d.createElement(C.U, {
+                            onClick: this.toggleChangePaymentMethods,
+                            "data-a-target": "js-test-change-payment-method"
+                        }, Object(p.d)("Change Payment Method", "Wallet")) : d.createElement(C.Wa, {
+                            display: C.X.Flex
+                        }, d.createElement(C.nb, {
+                            asset: C.ob.AngleLeft,
+                            width: 10,
+                            height: 10,
+                            type: C.pb.Brand
+                        }), d.createElement(C.Wa, {
+                            margin: {
+                                left: 1
+                            }
+                        }, d.createElement(C.U, {
+                            onClick: this.toggleChangePaymentMethods,
+                            "data-a-target": "js-test-use-existing-payment-method"
+                        }, Object(p.d)("Use Existing Payment Method", "Wallet"))))
+                    }, Object.defineProperty(t.prototype, "isLargePurchase", {
+                        get: function() {
+                            if (!this.props.product) return !1;
+                            var e = this.props.product.product.priceInfo,
+                                t = this.props.product.quantity;
+                            return e.total * t > 5e4
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "showSavedPaymentsFeature", {
+                        get: function() {
+                            if (this.props.data && this.props.data.error) return !1;
+                            if ("owlallaccess2018" === this.props.productName) return !1;
+                            if (this.savedPaymentMethod) {
+                                if (this.isLargePurchase) {
+                                    if (this.savedPaymentMethod.isRestricted) {
+                                        var e = !!(this.props.data && this.props.data.currentUser && this.props.data.currentUser.settings && this.props.data.currentUser.settings.hasTwoFactorEnabled);
+                                        return this.tracker.set({
+                                            savedPaymentAvailable: !0,
+                                            savedPaymentDisplayed: e
+                                        }), e
+                                    }
+                                    return this.tracker.set({
+                                        savedPaymentAvailable: !0,
+                                        savedPaymentDisplayed: !0
+                                    }), !0
+                                }
+                                return !0
+                            }
+                            return !1
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "savedPaymentMethod", {
+                        get: function() {
+                            var e = (this.props.data && this.props.data.currentUser && this.props.data.currentUser.paymentMethods || []).filter(function(e) {
+                                return "recurly" === e.provider
+                            })[0];
+                            return e ? e.paymentType === Ue.a.Paypal && this.disablePayPal ? null : e.paymentType === Ue.a.AmazonPay && this.disableAmazonPay ? null : e : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disablePayPal", {
+                        get: function() {
+                            return !this.props.configs || !this.props.configs.recurly.braintreeClientAuthorization
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "disableAmazonPay", {
+                        get: function() {
+                            return !this.props.configs || !this.props.configs.recurly.payWithAmazonConfigs.clientID
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(d.Component),
+                qe = Object(q.compose)(Object(ne.b)("Wallet"), Object(h.a)(He, {
+                    options: function() {
+                        return {
+                            fetchPolicy: "cache-and-network"
+                        }
+                    }
+                }))(Ve),
+                Xe = n("T3lN");
+            var Ye = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            progress: O.a.NOT_STARTED,
+                            showErrors: !1,
+                            userBestGuessCountry: null
+                        }, t.enablePaidUpgradeFlag = p.b.get("earth_wind_fire", !1), t.paidUpgradePromotionStartDate = p.b.get("earth_wind_fire_start", "2018-09-10T00:00:00Z"), t.paidUpgradePromotionEndDate = p.b.get("earth_wind_fire_end", "2018-11-02T59:59:59Z"), t.recurlyTaxEnabled = p.b.get("recurly_tax_enabled", "false"), t.trackPaymentFormInteraction = function(e) {
+                            if (t.props.data.subscriptionProduct) {
+                                var n = t.props.isGift ? J.Gifting : J.Personal;
+                                t.props.mysteryGiftCount && (n = J.MysteryGifting),
+                                    function(e) {
+                                        var t = {
+                                            channel: e.channelLogin,
+                                            channel_id: e.channelId,
+                                            payment_type: e.paymentType,
+                                            payment_flow: e.paymentFlow,
+                                            quantity: e.quantity,
+                                            action: e.action,
+                                            action_detail: e.actionDetail,
+                                            product_id: e.productId,
+                                            ticket_price: e.ticketPrice,
+                                            currency: e.currency,
+                                            saved_payment: e.savedPayment
+                                        };
+                                        p.o.track(K.SpadeEventType.PaymentFormInteraction, t)
+                                    }({
+                                        channelLogin: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.login,
+                                        channelId: t.props.data.subscriptionProduct.owner && t.props.data.subscriptionProduct.owner.id,
+                                        paymentType: n,
+                                        productId: t.props.productName,
+                                        quantity: t.props.mysteryGiftCount || 1,
+                                        ticketPrice: t.props.data.subscriptionProduct.priceInfo.total,
+                                        currency: t.props.data.subscriptionProduct.priceInfo.currency,
+                                        paymentFlow: e.paymentFlow,
+                                        action: e.action,
+                                        actionDetail: e.actionDetail || "",
+                                        savedPayment: e.savedPayment || !1
+                                    })
+                            }
+                        }, t.handleCountryChange = function(e) {
+                            t.setState({
+                                userBestGuessCountry: e
+                            });
+                            var n = l.__assign({}, t.props.data.variables, {
+                                taxCountry: e
+                            });
+                            t.props.data.refetch(n)
+                        }, t.completePurchase = function(e) {
+                            return l.__awaiter(t, void 0, void 0, function() {
+                                var t, n, r, i;
+                                return l.__generator(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            t = this.props.data.subscriptionProduct, n = {
+                                                payment_provider: e.payment_provider,
+                                                payment_info: l.__assign({}, e.payment_info),
+                                                is_gift: this.props.isGift,
+                                                mystery_gift_count: this.props.mysteryGiftCount,
+                                                recipient_id: this.props.recipientID,
+                                                ip_country_code: this.props.data.requestInfo.countryCode,
+                                                price_info: {
+                                                    id: t && t.priceInfo && t.priceInfo.id,
+                                                    currency: t && t.priceInfo && t.priceInfo.currency
+                                                },
+                                                residence: e.residence,
+                                                device_id: p.p.session.deviceID,
+                                                tab_session_id: p.p.session.tabID
+                                            }, this.setState({
+                                                showErrors: !1
+                                            }), r = "/kraken/checkout/users/" + (this.props.data.currentUser && this.props.data.currentUser.id) + "/products/" + this.props.productName + "/purchase/complete", a.label = 1;
+                                        case 1:
+                                            return a.trys.push([1, 3, , 4]), [4, g.a.post(r, {
+                                                body: n
+                                            }, {
+                                                version: 5
+                                            })];
+                                        case 2:
+                                            return (i = a.sent()).error || i.body && i.body.error ? (this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: ee.CompletePurchaseClick,
+                                                actionDetail: Q.Failed,
+                                                savedPayment: e.savedPayment
+                                            }), i.body && "UNSUPPORTED_COUNTRY" === i.body.error && i.body.error_details && i.body.error_details.country ? (this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: ee.UnsupportedCountryAlert,
+                                                actionDetail: i.body.error_details.country,
+                                                savedPayment: e.savedPayment
+                                            }), this.handleCountryChange(i.body.error_details.country)) : i.body && "INVALID_RESIDENCE" === i.body.error ? this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: v.InvalidResidence,
+                                                    level: E.Error
+                                                }
+                                            }) : i.body && "PRICE_INFO_INVALID" === i.body.error && i.body.error_details && i.body.error_details.country ? (this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: ee.PriceChangeAlert,
+                                                actionDetail: i.body.error_details.country,
+                                                savedPayment: e.savedPayment
+                                            }), this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: v.PriceChangeNotice,
+                                                    level: E.Info
+                                                }
+                                            }), this.handleCountryChange(i.body.error_details.country)) : this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: v.DefaultMessage,
+                                                    level: E.Error
+                                                }
+                                            }), e.errorCallback && e.errorCallback(), [2]) : (this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: ee.CompletePurchaseClick,
+                                                actionDetail: Q.Success,
+                                                savedPayment: e.savedPayment
+                                            }), this.props.data.refetch(), this.setState({
+                                                purchaseResponse: i.body,
+                                                progress: O.a.CONFIRMATION
+                                            }), [3, 4]);
+                                        case 3:
+                                            return a.sent(), this.setState({
+                                                showErrors: !0,
+                                                errors: {
+                                                    code: v.DefaultMessage,
+                                                    level: E.Error
+                                                }
+                                            }), e.errorCallback && e.errorCallback(), this.trackPaymentFormInteraction({
+                                                paymentFlow: e.payment_flow,
+                                                action: ee.CompletePurchaseClick,
+                                                actionDetail: Q.Failed,
+                                                savedPayment: e.savedPayment
+                                            }), [3, 4];
+                                        case 4:
+                                            return [2]
+                                    }
+                                })
+                            })
+                        }, t
+                    }
+                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.data.loading && !this.props.data.error || (this.props.latencyTracking.reportInteractive(), this.state.progress < O.a.CONFIRMATION && this.productAlreadyOwned && !this.props.isGift && this.setState({
+                            progress: O.a.CONFIRMATION
+                        }))
+                    }, t.prototype.componentDidUpdate = function(e, t) {
+                        (e.data.loading && !this.props.data.loading || this.props.data.error) && (this.props.latencyTracking.reportInteractive(), this.state.progress < O.a.CONFIRMATION && this.productAlreadyOwned && !this.props.isGift && this.setState({
+                            progress: O.a.CONFIRMATION
+                        })), this.state.progress !== t.progress && this.props.onCheckoutProgress && this.props.onCheckoutProgress(this.state.progress)
+                    }, t.prototype.render = function() {
+                        if (!this.props.data.subscriptionProduct && this.props.data.loading) return d.createElement(_, null, d.createElement(C.Ya, {
+                            fillContent: !0
+                        }));
+                        if (this.props.data.error) return d.createElement(m.a, null);
+                        if (this.productEligibility === I.MOBILE_UPGRADE) {
+                            var e = this.shoppingCartItem,
+                                t = e && e.product && e.product.owner && e.product.owner.displayName;
+                            return d.createElement(m.a, null, d.createElement(C.W, {
+                                bold: !0
+                            }, Object(p.d)("You purchased a subscription to {productDisplayName} on your mobile device.", {
+                                productDisplayName: t || this.props.productName
+                            }, "CheckoutPayments")), d.createElement(C.Wa, {
+                                margin: {
+                                    top: 1
+                                }
+                            }, d.createElement(C.W, null, Object(p.d)("Upgrading your mobile subscription is currently not supported.", "CheckoutPayments"))))
+                        }
+                        if (this.state.progress === O.a.CONFIRMATION) {
+                            var n = d.createElement(w, {
+                                product: this.shoppingCartItem,
+                                purchaseFlow: this.purchaseFlow,
+                                progress: this.state.progress
+                            });
+                            return d.createElement(_, {
+                                productDescription: this.renderTicketDescription(),
+                                header: n
+                            }, this.purchaseInvoice && d.createElement(H, {
+                                currentUser: this.props.data.currentUser,
+                                purchaseFlow: this.purchaseFlow,
+                                product: this.shoppingCartItem,
+                                purchaseInvoice: this.purchaseInvoice && this.purchaseInvoice,
+                                sessionUser: this.props.sessionUser,
+                                benefit: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.benefit
+                            }))
+                        }
+                        var r = d.createElement(w, {
+                                product: this.shoppingCartItem,
+                                purchaseFlow: this.purchaseFlow,
+                                progress: this.state.progress
+                            }),
+                            i = this.shoppingCartItem && this.shoppingCartItem.product.owner && this.shoppingCartItem.product.owner.displayName,
+                            a = "/" + (i || "");
+                        return d.createElement(_, {
+                            productDescription: this.renderTicketDescription(),
+                            header: r
+                        }, !T(this.productEligibility) && d.createElement(d.Fragment, null, d.createElement(j, {
+                            product: this.shoppingCartItem,
+                            existingPurchases: this.existingPurchases,
+                            productEligibility: this.productEligibility,
+                            sessionUser: this.props.sessionUser
+                        }), d.createElement(C.Wa, {
+                            margin: {
+                                top: 2
+                            }
+                        }, d.createElement(C.z, {
+                            linkTo: a
+                        }, Object(p.d)("Go back to {channel}", {
+                            channel: i || "Twitch"
+                        }, "CheckoutPayments")))), T(this.productEligibility) && d.createElement(d.Fragment, null, d.createElement(k, {
+                            purchaseFlow: this.purchaseFlow,
+                            product: this.shoppingCartItem
+                        }), d.createElement(C.Wa, {
+                            margin: {
+                                y: 1
+                            }
+                        }, d.createElement(A, {
+                            purchaseFlow: this.purchaseFlow,
+                            product: this.shoppingCartItem,
+                            existingPurchases: this.existingPurchases,
+                            productEligibility: this.productEligibility,
+                            benefit: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.benefit,
+                            eligiblePromotions: this.eligiblePromotions,
+                            sessionUser: this.props.sessionUser
+                        })), this.state.showErrors && this.state.errors && d.createElement(C.Wa, {
+                            margin: {
+                                y: 2
+                            }
+                        }, d.createElement(S, {
+                            errorCode: this.state.errors.code,
+                            level: this.state.errors.level
+                        })), this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.shoppingCartItem && d.createElement(qe, {
+                            handleCompletePurchase: this.completePurchase,
+                            handleCountryChange: this.handleCountryChange,
+                            productName: this.props.productName,
+                            trackPaymentFormInteraction: this.trackPaymentFormInteraction,
+                            configs: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.shoppingCartItem && this.props.data.subscriptionProduct.self.checkoutConfigs.paymentProviderConfigs,
+                            ipCountryCode: this.props.data.requestInfo.countryCode,
+                            countryOfResidence: this.props.data.currentUser && this.props.data.currentUser.residence && this.props.data.currentUser.residence.countryCode,
+                            userBestGuessCountry: this.state.userBestGuessCountry,
+                            userZipCode: this.props.data.currentUser && this.props.data.currentUser.residence && this.props.data.currentUser.residence.postalCode,
+                            product: this.shoppingCartItem,
+                            showEuSubs: this.showEuSubs
+                        }), d.createElement(N, null)))
+                    }, t.prototype.renderTicketDescription = function() {
+                        return this.productEligibility === I.MOBILE_UPGRADE || this.DEPRECRATE_hasActiveMobileSub ? null : d.createElement(V.a, {
+                            productName: this.props.productName,
+                            isGift: this.props.isGift && this.canGift,
+                            showPaidUpgrade: this.enablePaidUpgrade,
+                            priceCountry: this.state.userBestGuessCountry,
+                            invoicePrice: null,
+                            showEuSubs: this.showEuSubs
+                        })
+                    }, Object.defineProperty(t.prototype, "purchaseFlow", {
+                        get: function() {
+                            return this.props.isGift ? this.props.mysteryGiftCount && this.props.mysteryGiftCount > 0 ? r.MYSTERY_GIFT : r.GIFT_SUB : r.PERSONAL_SUB
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "canPurchase", {
+                        get: function() {
+                            return !!(this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.props.data.subscriptionProduct.self.checkoutConfigs.canPurchase)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "productEligibility", {
+                        get: function() {
+                            var e = this;
+                            if (!this.canPurchase) return I.API_INELIGIBLE;
+                            if (!this.shoppingCartItem) return I.NO_ITEM;
+                            if (this.purchaseFlow === r.GIFT_SUB) return this.canGift ? I.GIFTABLE_RECIPIENT : I.NON_GIFTABLE_RECIPIENT;
+                            if (this.purchaseFlow === r.MYSTERY_GIFT) return this.canGift ? I.GIFTABLE_RECIPIENT : I.NO_MASS_GIFTING;
+                            var t = this.existingPurchases && this.existingPurchases.compatiblePurchases;
+                            if (t) {
+                                var n = t.find(function(e) {
+                                        return e.paymentProvider.toUpperCase() === y.A.PRIME
+                                    }),
+                                    i = t.find(function(t) {
+                                        return t.productType.toUpperCase() === y.L.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) < parseInt(t.productTier, 10)
+                                    }),
+                                    a = t.find(function(t) {
+                                        return t.productType.toUpperCase() === y.L.CHANSUB && !!t.productTier && parseInt(e.shoppingCartItem.product.tier, 10) > parseInt(t.productTier, 10)
+                                    }),
+                                    o = t.find(function(e) {
+                                        return e.paymentProvider.toUpperCase() === y.A.GOOGLE_IAB
+                                    });
+                                if (n) return I.PRIME_UPGRADE;
+                                if (i) return I.TIER_DOWNGRADE;
+                                if (a) return o ? I.MOBILE_UPGRADE : I.TIER_UPGRADE
+                            }
+                            return !this.existingPurchases || this.existingPurchases && !this.existingPurchases.details && !this.existingPurchases.compatiblePurchases || this.existingPurchases.details && this.existingPurchases.details.state === y.M.INACTIVE ? I.NEW_PURCHASE : I.UNKNOWN
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "shoppingCartItem", {
+                        get: function() {
+                            var e = this.props.data.subscriptionProduct;
+                            return e ? {
+                                product: {
+                                    id: e.id,
+                                    name: e.name,
+                                    priceInfo: e.priceInfo,
+                                    interval: e.interval,
+                                    tier: e.tier,
+                                    owner: e.owner
+                                },
+                                recipient: this.props.recipientID ? {
+                                    id: this.props.recipientID,
+                                    displayName: this.props.recipientDisplayName
+                                } : null,
+                                quantity: this.props.mysteryGiftCount || 1
+                            } : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "purchaseInvoice", {
+                        get: function() {
+                            if (this.state.purchaseResponse && this.state.purchaseResponse.invoice_total) return {
+                                price: this.state.purchaseResponse.invoice_total.price,
+                                currency: this.state.purchaseResponse.invoice_total.currency,
+                                divisor: 100,
+                                tier: this.state.purchaseResponse.product_tier
+                            };
+                            var e = this.existingPurchases && this.existingPurchases.details;
+                            return e && {
+                                price: e.price,
+                                currency: e.currency,
+                                divisor: e.divisor,
+                                tier: e.productTier
+                            }
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "existingPurchases", {
+                        get: function() {
+                            return this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.purchase
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "productAlreadyOwned", {
+                        get: function() {
+                            return !(!this.existingPurchases || !this.existingPurchases.details)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "DEPRECRATE_hasActiveMobileSub", {
+                        get: function() {
+                            var e = this.existingPurchases;
+                            return !(!e || !e.details || e.details.paymentProvider.toUpperCase() !== y.A.GOOGLE_IAB)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "enablePaidUpgrade", {
+                        get: function() {
+                            if (!this.enablePaidUpgradeFlag) return !1;
+                            if (!this.props.data.subscriptionProduct || !this.props.data.subscriptionProduct.self) return !1;
+                            var e = this.props.data.subscriptionProduct.self.benefit && this.props.data.subscriptionProduct.self.benefit.paidUpgrade && this.props.data.subscriptionProduct.self.benefit.paidUpgrade.startsAt,
+                                t = !!(this.props.data.subscriptionProduct.self.benefit && this.props.data.subscriptionProduct.self.benefit.gift && this.props.data.subscriptionProduct.self.benefit.gift.isGift);
+                            return !!(e && Object(u.isWithinRange)(Object(f.c)(e), Object(f.c)(this.paidUpgradePromotionStartDate), Object(f.c)(this.paidUpgradePromotionEndDate)) || this.productEligibility === I.NEW_PURCHASE && t && this.eligiblePromotions.paidUpgradePromotion)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "canGift", {
+                        get: function() {
+                            return !!(this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && this.props.data.subscriptionProduct.self.checkoutConfigs.canGift)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "eligiblePromotions", {
+                        get: function() {
+                            var e = !1;
+                            return this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.checkoutConfigs && (e = this.props.data.subscriptionProduct.self.checkoutConfigs.isOneMonthFreeEligible), {
+                                isOneMonthFreeEligible: e,
+                                promotion: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.promotion,
+                                paidUpgradePromotion: this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.self && this.props.data.subscriptionProduct.self.paidUpgradePromotion
+                            }
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "showEuSubs", {
+                        get: function() {
+                            return "true" === this.recurlyTaxEnabled || "staff" === this.recurlyTaxEnabled && !!(this.props.sessionUser && this.props.sessionUser.roles && this.props.sessionUser.roles.isStaff)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(d.Component),
+                Ze = Object(a.compose)(Object(h.a)(Xe, {
+                    options: function(e) {
+                        return {
+                            fetchPolicy: "network-only",
+                            variables: {
+                                productName: e.productName,
+                                isGift: e.isGift,
+                                recipientID: e.recipientID,
+                                includePromotion: function(e) {
+                                    return !["turbo", "owlallaccess2018"].includes(e.productName)
+                                }(e),
+                                mysteryGiftCount: e.mysteryGiftCount,
+                                taxCountry: ""
+                            }
+                        }
+                    }
+                }), Object(ne.b)("CheckoutPayments"))(Ye);
+            var Ke = Object(i.connect)(function(e) {
+                return {
+                    isLoggedIn: Object(c.f)(e),
+                    sessionUser: Object(c.e)(e)
+                }
+            }, function(e) {
+                return Object(a.bindActionCreators)({
+                    promptLogin: function() {
+                        return Object(s.e)(o.a.DashboardPage)
+                    }
+                }, e)
+            })(Ze);
+            n.d(t, "a", function() {
+                return Ke
+            })
+        },
+        SPyc: function(e, t, n) {
+            e.exports = n.p + "assets/discover-d67f6b00db816208999c.svg"
+        },
         Sa1T: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
                 var t = {};
 
                 function n(n) {
-                    var i = e.get(n);
-                    return void 0 === i ? [] : t[i] || []
+                    var r = e.get(n);
+                    return void 0 === r ? [] : t[r] || []
                 }
                 return {
                     get: n,
-                    add: function(n, i) {
-                        var o = e.get(n);
-                        t[o] || (t[o] = []), t[o].push(i)
+                    add: function(n, r) {
+                        var i = e.get(n);
+                        t[i] || (t[i] = []), t[i].push(r)
                     },
                     removeListener: function(e, t) {
-                        for (var i = n(e), o = 0, a = i.length; o < a; ++o)
-                            if (i[o] === t) {
-                                i.splice(o, 1);
+                        for (var r = n(e), i = 0, a = r.length; i < a; ++i)
+                            if (r[i] === t) {
+                                r.splice(i, 1);
                                 break
                             }
                     },
@@ -3352,231 +8201,1383 @@
                 }
             }
         },
+        T3lN: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "CheckoutPayments"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "productName"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "String"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "includePromotion"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "Boolean"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "isGift"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "Boolean"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "recipientID"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "ID"
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "mysteryGiftCount"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "Int"
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "taxCountry"
+                            }
+                        },
+                        type: {
+                            kind: "NamedType",
+                            name: {
+                                kind: "Name",
+                                value: "String"
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "currentUser"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "displayName"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "residence"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "countryCode"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "postalCode"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "subscriptionProduct"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "productName"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "productName"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "name"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "priceInfo"
+                                    },
+                                    arguments: [{
+                                        kind: "Argument",
+                                        name: {
+                                            kind: "Name",
+                                            value: "taxCountry"
+                                        },
+                                        value: {
+                                            kind: "Variable",
+                                            name: {
+                                                kind: "Name",
+                                                value: "taxCountry"
+                                            }
+                                        }
+                                    }],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "currency"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "exponent"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "isTaxInclusive"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "price"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "tax"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "total"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "interval"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "unit"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "tier"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "type"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "owner"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "id"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "displayName"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "login"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "self"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "checkoutConfigs"
+                                            },
+                                            arguments: [{
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "isGift"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isGift"
+                                                    }
+                                                }
+                                            }, {
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "recipientID"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "recipientID"
+                                                    }
+                                                }
+                                            }, {
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "mysteryGiftCount"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "mysteryGiftCount"
+                                                    }
+                                                }
+                                            }, {
+                                                kind: "Argument",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "taxCountryCode"
+                                                },
+                                                value: {
+                                                    kind: "Variable",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "taxCountry"
+                                                    }
+                                                }
+                                            }],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "canGift"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "canPurchase"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "isOneMonthFreeEligible"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "paymentProviderConfigs"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "xsolla"
+                                                            },
+                                                            arguments: [],
+                                                            directives: [],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "iframeURL"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }]
+                                                            }
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "recurly"
+                                                            },
+                                                            arguments: [],
+                                                            directives: [],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "payWithAmazonConfigs"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: [],
+                                                                    selectionSet: {
+                                                                        kind: "SelectionSet",
+                                                                        selections: [{
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "clientID"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "isProduction"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }, {
+                                                                            kind: "Field",
+                                                                            name: {
+                                                                                kind: "Name",
+                                                                                value: "sellerID"
+                                                                            },
+                                                                            arguments: [],
+                                                                            directives: []
+                                                                        }]
+                                                                    }
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "publicKey"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "braintreeClientAuthorization"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }]
+                                                            }
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "zuora"
+                                                            },
+                                                            arguments: [],
+                                                            directives: [],
+                                                            selectionSet: {
+                                                                kind: "SelectionSet",
+                                                                selections: [{
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "externalAccountID"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "token"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "tenantID"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "publicKey"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "signature"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "hostedPageID"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "hostedPageURL"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }, {
+                                                                    kind: "Field",
+                                                                    name: {
+                                                                        kind: "Name",
+                                                                        value: "externalAccountID"
+                                                                    },
+                                                                    arguments: [],
+                                                                    directives: []
+                                                                }]
+                                                            }
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "purchase"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "details"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "paymentProvider"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "price"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "currency"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "divisor"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "state"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "productType"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "productTier"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "compatiblePurchases"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "paymentProvider"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "price"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "currency"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "state"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "productType"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "productTier"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }, {
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "divisor"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "benefit"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "tier"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "paidUpgrade"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "startsAt"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "endsAt"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "purchasedWithPrime"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "gift"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "isGift"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "promotion"
+                                            },
+                                            arguments: [],
+                                            directives: [{
+                                                kind: "Directive",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "include"
+                                                },
+                                                arguments: [{
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "if"
+                                                    },
+                                                    value: {
+                                                        kind: "Variable",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "includePromotion"
+                                                        }
+                                                    }
+                                                }]
+                                            }],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "discountType"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "discountValue"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "newPrice"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "oldPrice"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "paidUpgradePromotion"
+                                            },
+                                            arguments: [],
+                                            directives: [{
+                                                kind: "Directive",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "include"
+                                                },
+                                                arguments: [{
+                                                    kind: "Argument",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "if"
+                                                    },
+                                                    value: {
+                                                        kind: "Variable",
+                                                        name: {
+                                                            kind: "Name",
+                                                            value: "includePromotion"
+                                                        }
+                                                    }
+                                                }]
+                                            }],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "newPrice"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "oldPrice"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "discountType"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "discountValue"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "requestInfo"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "countryCode"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 1370
+                }
+            };
+            n.loc.source = {
+                body: "query CheckoutPayments($productName: String! $includePromotion: Boolean! $isGift: Boolean! $recipientID: ID $mysteryGiftCount: Int $taxCountry: String) {\ncurrentUser {\nid\ndisplayName\nresidence {\ncountryCode\npostalCode\n}\n}\nsubscriptionProduct(productName: $productName) {\nid\nname\npriceInfo(taxCountry: $taxCountry) {\ncurrency\nexponent\nid\nisTaxInclusive\nprice\ntax\ntotal\n}\ninterval {\nunit\n}\ntier\ntype\nowner {\nid\ndisplayName\nlogin\n}\nself {\ncheckoutConfigs (isGift: $isGift recipientID: $recipientID mysteryGiftCount: $mysteryGiftCount taxCountryCode: $taxCountry) {\ncanGift\ncanPurchase\nisOneMonthFreeEligible\npaymentProviderConfigs {\nxsolla {\niframeURL\n}\nrecurly {\npayWithAmazonConfigs {\nclientID\nisProduction\nsellerID\n}\npublicKey\nbraintreeClientAuthorization\n}\nzuora {\nexternalAccountID\ntoken\ntenantID\npublicKey\nsignature\nhostedPageID\nhostedPageURL\nexternalAccountID\n}\n}\n}\npurchase {\ndetails {\npaymentProvider\nprice\ncurrency\ndivisor\nstate\nproductType\nproductTier\n}\ncompatiblePurchases {\npaymentProvider\nprice\ncurrency\nstate\nproductType\nproductTier\ndivisor\n}\n}\nbenefit {\nid\ntier\npaidUpgrade {\nstartsAt\n}\nendsAt\npurchasedWithPrime\ngift {\nisGift\n}\n}\npromotion @include(if: $includePromotion) {\ndiscountType\ndiscountValue\nnewPrice\noldPrice\n}\npaidUpgradePromotion @include(if: $includePromotion) {\nnewPrice\noldPrice\ndiscountType\ndiscountValue\n}\n}\n}\nrequestInfo {\ncountryCode\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
+        TEvY: function(e, t, n) {},
+        TQGo: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return l
+            });
+            var r = n("mrSG"),
+                i = n("NAv5"),
+                a = n("q1tI"),
+                o = n("/7QA"),
+                s = n("Ue10"),
+                c = n("5gJ6"),
+                l = (n("KjOM"), function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return a.createElement(s.yb, {
+                            className: this.isExpired ? "payment-method-display--expired" : "",
+                            display: s.X.Flex,
+                            justifyContent: this.props.justifyContent || s.Va.Between,
+                            flexWrap: s.Aa.Wrap,
+                            fullWidth: !0
+                        }, a.createElement(s.Wa, {
+                            alignItems: s.f.Center,
+                            display: s.X.Flex,
+                            margin: {
+                                right: 1
+                            }
+                        }, a.createElement(c.a, {
+                            paymentInstrumentType: this.paymentMethod.paymentType,
+                            cardType: this.paymentMethod.cardType,
+                            paymentProvider: this.paymentMethod.provider,
+                            ignoreDarkMode: this.props.ignoreDarkMode
+                        }), this.renderLastFour()), a.createElement(s.Wa, {
+                            display: s.X.Flex,
+                            justifyContent: s.Va.Center,
+                            flexDirection: s.Z.Column
+                        }, this.renderBillingEmail(), this.renderExpirationDate()))
+                    }, t.prototype.renderLastFour = function() {
+                        return this.paymentMethod.lastFour ? a.createElement(s.Wa, {
+                            display: s.X.Flex,
+                            margin: {
+                                x: 2
+                            }
+                        }, a.createElement(s.W, {
+                            bold: !0
+                        }, Object(o.d)("Ending in {lastFour}", {
+                            lastFour: this.paymentMethod.lastFour
+                        }, "PaymentMethodDisplay"))) : null
+                    }, t.prototype.renderExpirationDate = function() {
+                        var e = this.zeroIndexedMonth,
+                            t = this.paymentMethod.expirationYear;
+                        if (void 0 === e || !t) return null;
+                        var n = new Date(t, e),
+                            r = "";
+                        return r = this.isExpired ? Object(o.d)("Expired {expirationDate}", {
+                            expirationDate: Object(o.c)(n, {
+                                month: "2-digit",
+                                year: "numeric"
+                            })
+                        }, "PaymentMethodDisplay") : Object(o.d)("Expires {expirationDate}", {
+                            expirationDate: Object(o.c)(n, {
+                                month: "2-digit",
+                                year: "numeric"
+                            })
+                        }, "PaymentMethodDisplay"), a.createElement(s.Wa, {
+                            alignItems: s.f.Center,
+                            display: s.X.Flex,
+                            justifyContent: s.Va.End
+                        }, a.createElement(s.W, {
+                            ellipsis: !0,
+                            color: s.O.Alt2,
+                            bold: this.isExpired
+                        }, r))
+                    }, t.prototype.renderBillingEmail = function() {
+                        return this.paymentMethod.billingEmail ? a.createElement(s.Wa, {
+                            alignItems: s.f.Center,
+                            display: s.X.Flex,
+                            justifyContent: s.Va.End
+                        }, a.createElement(s.W, {
+                            ellipsis: !0,
+                            color: s.O.Alt2
+                        }, this.paymentMethod.billingEmail)) : null
+                    }, Object.defineProperty(t.prototype, "paymentMethod", {
+                        get: function() {
+                            return this.props.paymentMethod
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "isExpired", {
+                        get: function() {
+                            var e = this.zeroIndexedMonth,
+                                t = this.props.paymentMethod.expirationYear;
+                            if (void 0 === e || !t) return !1;
+                            var n = Object(i.startOfMonth)(new Date),
+                                r = new Date(t, e, 1);
+                            return !!Object(i.isBefore)(r, n)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "zeroIndexedMonth", {
+                        get: function() {
+                            if (this.props.paymentMethod.expirationMonth) return this.props.paymentMethod.expirationMonth - 1
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(a.PureComponent))
+        },
+        TSpM: function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_2x-2eccd73373faaefa6764.png"
+        },
         TVJu: function(e, t, n) {
             "use strict";
-            var i = n("mrSG"),
-                o = n("/MKj"),
+            var r = n("mrSG"),
+                i = n("/MKj"),
                 a = n("fvjX"),
-                r = n("1/iK"),
+                o = n("1/iK"),
                 s = n("aCAx"),
-                l = n("y5D0"),
-                c = n("kRBY"),
+                c = n("y5D0"),
+                l = n("kRBY"),
                 u = n("/HY+"),
                 d = n("TSYQ"),
                 p = n("1hWM"),
-                h = n("q1tI"),
-                m = n("oJmH"),
+                m = n("q1tI"),
+                h = n("oJmH"),
                 f = n("/7QA"),
-                g = n("eJ65"),
-                v = n("edgk"),
-                y = n("2xye"),
-                b = n("4Wd7"),
+                y = n("eJ65"),
+                g = n("edgk"),
+                b = n("2xye"),
+                v = n("4Wd7"),
                 E = n("0Log"),
-                x = n("geRD"),
+                C = n("geRD"),
                 k = n("/aPz"),
-                C = n("H31v");
+                P = n("H31v");
 
-            function w(e, t, n) {
-                Object(x.e)(e, void 0, function(e) {
+            function S(e, t, n) {
+                Object(C.e)(e, void 0, function(e) {
                     return e ? (e.currentUser && e.currentUser.bitsBalance && (e.currentUser.bitsBalance = n), e) : e
                 }, function() {
                     return !t
                 })
             }
-            var S, I = n("4h+t"),
-                P = n("BaCc"),
-                _ = n("Ue10"),
-                D = "test_selector_legal_disclaimer",
-                O = "test_selector_confirm_button",
+            var O, x = n("4h+t"),
+                I = n("BaCc"),
+                w = n("Ue10"),
+                _ = "test_selector_legal_disclaimer",
+                N = "test_selector_confirm_button",
                 T = "test_selector_buy_bits_button",
-                L = "test_selector_cancel_button",
-                R = function(e) {
-                    var t = Object(I.a)(),
+                D = "test_selector_cancel_button",
+                j = function(e) {
+                    var t = Object(x.a)(),
                         n = Object(f.d)("Confirm", "BitsConfrimationDialogue"),
-                        i = Object(f.d)("Settings", "BitsConfrimationDialogue"),
-                        o = h.createElement(_.T, {
+                        r = Object(f.d)("Settings", "BitsConfrimationDialogue"),
+                        i = m.createElement(w.U, {
                             to: "https://www.twitch.tv/settings/connections"
-                        }, i),
-                        a = h.createElement(_.Na, {
-                            display: _.W.InlineFlex,
-                            alignContent: _.e.Center,
-                            alignItems: _.f.Center,
+                        }, r),
+                        a = m.createElement(w.Oa, {
+                            display: w.X.InlineFlex,
+                            alignContent: w.e.Center,
+                            alignItems: w.f.Center,
                             margin: {
                                 left: .5
                             }
-                        }, h.createElement("span", null, h.createElement(b.a, {
+                        }, m.createElement("span", null, m.createElement(v.a, {
                             animated: !1,
                             showImage: !0,
                             showAmount: !0,
                             prefix: "Cheer",
                             bitsConfig: t,
-                            size: b.b.ExtremelySmall,
-                            display: _.W.InlineFlex,
+                            size: v.b.ExtremelySmall,
+                            display: w.X.InlineFlex,
                             amount: e.newBalance,
-                            alignItems: _.f.Center,
+                            alignItems: w.f.Center,
                             formattedNumber: !0
                         }))),
-                        r = Object(f.d)("After confirming, your Bits balance will be {newBalance}", {
+                        o = Object(f.d)("After confirming, your Bits balance will be {newBalance}", {
                             newBalance: a
                         }, "BitsConfrimationDialogue"),
                         s = Object(f.d)('By clicking "{ConfirmText}," you agree to share your Twitch ID with {ExtensionName}. You can manage account connections under {Settings}.', {
                             ConfirmText: n,
                             ExtensionName: e.extensionName,
-                            Settings: o
+                            Settings: i
                         }, "BitsConfrimationDialogue");
-                    return h.createElement(_.Va, {
+                    return m.createElement(w.Wa, {
                         className: "bits-confirmation-dialog"
-                    }, h.createElement(_.Va, {
+                    }, m.createElement(w.Wa, {
                         padding: 1
-                    }, h.createElement(_.Va, {
+                    }, m.createElement(w.Wa, {
                         margin: {
                             bottom: 1
                         },
-                        display: _.W.Flex,
-                        justifyContent: _.Ua.Between
-                    }, h.createElement(_.Va, null, h.createElement(_.V, {
-                        fontSize: _.Aa.Size5,
+                        display: w.X.Flex,
+                        justifyContent: w.Va.Between
+                    }, m.createElement(w.Wa, null, m.createElement(w.W, {
+                        fontSize: w.Ba.Size5,
                         bold: !0
-                    }, e.extensionItemLabel), h.createElement(_.V, null, e.extensionName)), h.createElement("span", null, h.createElement(b.a, {
+                    }, e.extensionItemLabel), m.createElement(w.W, null, e.extensionName)), m.createElement("span", null, m.createElement(v.a, {
                         animated: !1,
                         showImage: !0,
                         showAmount: !0,
                         prefix: "Cheer",
                         bitsConfig: t,
-                        size: b.b.ExtraSmall,
-                        display: _.W.InlineFlex,
+                        size: v.b.ExtraSmall,
+                        display: w.X.InlineFlex,
                         amount: e.cost,
-                        alignItems: _.f.Center
-                    }))), h.createElement(_.Va, {
-                        display: _.W.Flex,
+                        alignItems: w.f.Center
+                    }))), m.createElement(w.Wa, {
+                        display: w.X.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, h.createElement(_.Na, {
-                        display: _.W.Flex
-                    }, h.createElement(_.V, null, r))), h.createElement(_.Va, {
-                        display: _.W.Inline
-                    }, h.createElement(_.Va, {
-                        display: _.W.InlineBlock,
+                    }, m.createElement(w.Oa, {
+                        display: w.X.Flex
+                    }, m.createElement(w.W, null, o))), m.createElement(w.Wa, {
+                        display: w.X.Inline
+                    }, m.createElement(w.Wa, {
+                        display: w.X.InlineBlock,
                         margin: {
                             right: 1
                         }
-                    }, h.createElement(_.z, {
-                        "data-test-selector": O,
+                    }, m.createElement(w.z, {
+                        "data-test-selector": N,
                         onClick: function() {
                             e.onConfirm().then(function(t) {
-                                "number" == typeof t && Number.isInteger(t) && w(P, e.userID, t)
-                            }), w(P, e.userID, e.newBalance)
+                                "number" == typeof t && Number.isInteger(t) && S(I, e.userID, t)
+                            }), S(I, e.userID, e.newBalance)
                         }
-                    }, n)), h.createElement(_.Va, {
-                        display: _.W.InlineBlock,
+                    }, n)), m.createElement(w.Wa, {
+                        display: w.X.InlineBlock,
                         margin: {
                             right: 1
                         }
-                    }, h.createElement(_.z, {
+                    }, m.createElement(w.z, {
                         "data-test-selector": T,
                         linkTo: e.bitsLandingPageUrl,
                         targetBlank: !0,
-                        type: _.F.Hollow
-                    }, e.buyBitsText)), h.createElement(_.Va, {
-                        display: _.W.InlineBlock
-                    }, h.createElement(_.z, {
-                        "data-test-selector": L,
+                        type: w.F.Hollow
+                    }, e.buyBitsText)), m.createElement(w.Wa, {
+                        display: w.X.InlineBlock
+                    }, m.createElement(w.z, {
+                        "data-test-selector": D,
                         onClick: e.onClose,
-                        type: _.F.Hollow
-                    }, e.cancelText)))), h.createElement(_.xb, {
+                        type: w.F.Hollow
+                    }, e.cancelText)))), m.createElement(w.yb, {
                         borderTop: !0,
                         padding: 1
-                    }, h.createElement(_.V, {
-                        "data-test-selector": D
+                    }, m.createElement(w.W, {
+                        "data-test-selector": _
                     }, s)))
                 },
-                N = "test_selector_buy_bits_button",
+                R = "test_selector_buy_bits_button",
                 F = "test_selector_cancel_button",
-                A = Object(I.a)(),
-                B = function(e) {
+                A = Object(x.a)(),
+                M = function(e) {
                     var t, n = e.bitsBalance - e.cost,
-                        i = Math.abs(n),
-                        o = h.createElement(_.Na, {
-                            display: _.W.InlineFlex,
+                        r = Math.abs(n),
+                        i = m.createElement(w.Oa, {
+                            display: w.X.InlineFlex,
                             margin: {
                                 x: .5
                             }
-                        }, h.createElement("span", null, h.createElement(b.a, {
+                        }, m.createElement("span", null, m.createElement(v.a, {
                             animated: !1,
                             showImage: !0,
                             showAmount: !0,
                             prefix: "Cheer",
                             bitsConfig: A,
-                            size: b.b.ExtremelySmall,
-                            display: _.W.InlineFlex,
-                            amount: i,
-                            alignItems: _.f.Center,
+                            size: v.b.ExtremelySmall,
+                            display: w.X.InlineFlex,
+                            amount: r,
+                            alignItems: w.f.Center,
                             formattedNumber: !0
                         })));
-                    return t = h.createElement(_.Na, {
-                        display: _.W.Flex
-                    }, h.createElement(_.V, null, Object(f.d)("You need {BitsRequired} more Bits to proceed.", {
-                        BitsRequired: o
-                    }, "BitsUpsellDialog"))), h.createElement(_.Va, {
+                    return t = m.createElement(w.Oa, {
+                        display: w.X.Flex
+                    }, m.createElement(w.W, null, Object(f.d)("You need {BitsRequired} more Bits to proceed.", {
+                        BitsRequired: i
+                    }, "BitsUpsellDialog"))), m.createElement(w.Wa, {
                         className: "bits-upsell-dialog",
                         padding: 1
-                    }, h.createElement(_.Va, {
+                    }, m.createElement(w.Wa, {
                         margin: {
                             bottom: 1
                         },
-                        display: _.W.Flex,
-                        justifyContent: _.Ua.Between
-                    }, h.createElement(_.Va, null, h.createElement(_.V, {
-                        fontSize: _.Aa.Size5,
+                        display: w.X.Flex,
+                        justifyContent: w.Va.Between
+                    }, m.createElement(w.Wa, null, m.createElement(w.W, {
+                        fontSize: w.Ba.Size5,
                         bold: !0
-                    }, e.extensionItemLabel), h.createElement(_.V, null, e.extensionName)), h.createElement("span", null, h.createElement(b.a, {
+                    }, e.extensionItemLabel), m.createElement(w.W, null, e.extensionName)), m.createElement("span", null, m.createElement(v.a, {
                         animated: !1,
                         showImage: !0,
                         showAmount: !0,
                         prefix: "Cheer",
                         bitsConfig: A,
-                        size: b.b.ExtraSmall,
-                        display: _.W.InlineFlex,
+                        size: v.b.ExtraSmall,
+                        display: w.X.InlineFlex,
                         amount: e.cost,
-                        alignItems: _.f.Center
-                    }))), h.createElement(_.Va, {
-                        display: _.W.Flex,
+                        alignItems: w.f.Center
+                    }))), m.createElement(w.Wa, {
+                        display: w.X.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, t), h.createElement(_.Va, {
-                        display: _.W.Inline
-                    }, h.createElement(_.Va, {
-                        display: _.W.InlineBlock,
+                    }, t), m.createElement(w.Wa, {
+                        display: w.X.Inline
+                    }, m.createElement(w.Wa, {
+                        display: w.X.InlineBlock,
                         margin: {
                             right: 1
                         }
-                    }, h.createElement(_.z, {
-                        "data-test-selector": N,
+                    }, m.createElement(w.z, {
+                        "data-test-selector": R,
                         linkTo: e.bitsLandingPageUrl,
                         targetBlank: !0,
-                        type: _.F.Default
-                    }, e.buyBitsText)), h.createElement(_.Va, {
-                        display: _.W.InlineBlock
-                    }, h.createElement(_.z, {
+                        type: w.F.Default
+                    }, e.buyBitsText)), m.createElement(w.Wa, {
+                        display: w.X.InlineBlock
+                    }, m.createElement(w.z, {
                         "data-test-selector": F,
                         onClick: e.onClose,
-                        type: _.F.Hollow
+                        type: w.F.Hollow
                     }, e.cancelText))))
                 },
-                j = function(e) {
+                W = function(e) {
                     var t = Object(f.d)("Buy Bits", "UseBitsDialog"),
                         n = Object(f.d)("Cancel", "UseBitsDialog"),
-                        i = null;
+                        r = null;
                     if (e)
                         if (e.bitsBalance >= e.cost) {
-                            var o = e.bitsBalance - e.cost;
-                            i = h.createElement(R, {
+                            var i = e.bitsBalance - e.cost;
+                            r = m.createElement(j, {
                                 cost: e.cost,
                                 extensionName: e.extensionName,
                                 extensionItemLabel: e.extensionItemLabel,
-                                newBalance: o,
+                                newBalance: i,
                                 bitsBalance: e.bitsBalance,
                                 bitsLandingPageUrl: "https://twitch.tv/bits",
                                 buyBitsText: t,
@@ -3585,7 +9586,7 @@
                                 onClose: e.onClose,
                                 userID: e.userID
                             })
-                        } else i = h.createElement(B, {
+                        } else r = m.createElement(M, {
                             cost: e.cost,
                             extensionName: e.extensionName,
                             extensionItemLabel: e.extensionItemLabel,
@@ -3596,57 +9597,57 @@
                             onConfirm: e.onConfirm,
                             onClose: e.onClose
                         });
-                    return h.createElement(_.Va, {
+                    return m.createElement(w.Wa, {
                         className: "use-bits-dialog"
-                    }, i)
+                    }, r)
                 },
-                z = "test_selectors_close_button",
-                U = function(e) {
+                B = "test_selectors_close_button",
+                L = function(e) {
                     var t = Object(f.d)("Sorry, something went wrong. Please try again.", "UseBitsErrorDialog"),
                         n = Object(f.d)("Close", "UseBitsErrorDialog");
-                    return h.createElement(_.Va, {
+                    return m.createElement(w.Wa, {
                         className: "use-bits-error-dialog",
                         padding: 1
-                    }, h.createElement(_.Na, {
-                        display: _.W.Flex,
-                        alignContent: _.e.Center,
+                    }, m.createElement(w.Oa, {
+                        display: w.X.Flex,
+                        alignContent: w.e.Center,
                         margin: {
                             bottom: 1
                         }
-                    }, h.createElement(_.V, null, t)), h.createElement(_.z, {
-                        "data-test-selector": z,
+                    }, m.createElement(w.W, null, t)), m.createElement(w.z, {
+                        "data-test-selector": B,
                         onClick: e.onClose
                     }, n))
                 },
-                W = n("5zC2"),
-                M = n("22qk"),
-                V = n("5IFo"),
+                U = n("5zC2"),
+                z = n("22qk"),
+                G = n("5IFo"),
                 H = n("JVUd"),
-                q = n("4qQ0"),
-                G = n("0HeA"),
-                Y = n("yR8l"),
-                Q = n("eDVu"),
-                X = n("KtNF"),
+                V = n("4qQ0"),
+                q = n("0HeA"),
+                X = n("yR8l"),
+                Y = n("eDVu"),
+                Z = n("KtNF"),
                 K = (n("NAeX"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return i.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return r.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         e.data.currentUser && this.props.startTimer && this.props.startTimer()
                     }, t.prototype.render = function() {
                         if (this.props.data.loading || !this.props.data.currentUser) return null;
-                        var e = this.props.showSuccessText ? h.createElement(_.V, {
-                                type: _.Nb.Span,
+                        var e = this.props.showSuccessText ? m.createElement(w.W, {
+                                type: w.Ob.Span,
                                 className: "extension-bits-balance-success"
                             }, Object(f.d)("Success!", "ExtensionPanelBitsBalanceDialog")) : null,
-                            t = h.createElement(X.a, {
+                            t = m.createElement(Z.a, {
                                 withImage: !0,
                                 withText: !0,
                                 animated: !1,
                                 count: this.props.data.currentUser.bitsBalance || 0,
-                                bitsConfig: Object(I.a)()
+                                bitsConfig: Object(x.a)()
                             });
-                        return h.createElement(_.Va, {
+                        return m.createElement(w.Wa, {
                             margin: {
                                 top: 0,
                                 right: 1,
@@ -3659,194 +9660,194 @@
                     }, t.prototype.componentDidMount = function() {
                         this.props.data.currentUser && this.props.startTimer && this.props.startTimer()
                     }, t
-                }(h.Component)),
-                J = Object(m.compose)(Object(Q.a)(function(e) {
+                }(m.Component)),
+                Q = Object(h.compose)(Object(Y.a)(function(e) {
                     return function(e, t, n) {
                         return {
                             topic: n ? Object(k.B)(n) : "",
                             type: E.PubsubMessageType.UserBitsBalanceUpdate,
                             mutator: function(e, t) {
-                                return t && e.message_type === C.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
+                                return t && e.message_type === P.b.Balance ? (t.currentUser && e.data && (t.currentUser.bitsBalance = e.data.balance), t) : t
                             },
                             skip: !t || !n,
                             query: e
                         }
-                    }(P, e.channelID, e.userID)
-                }), Object(Y.a)(P))(K);
+                    }(I, e.channelID, e.userID)
+                }), Object(X.a)(I))(K);
             ! function(e) {
                 e.ExtensionName = "extension_name_selector", e.ShowExtensionButton = "show_extension_button_selector"
-            }(S || (S = {}));
-            var Z = function(e) {
+            }(O || (O = {}));
+            var J = function(e) {
                 var t = e.extension.views.panel ? e.extension.views.panel.height : 300;
-                return h.createElement(_.Oa, {
-                    alignItems: _.f.Center,
-                    background: _.r.Alt2,
+                return m.createElement(w.Pa, {
+                    alignItems: w.f.Center,
+                    background: w.r.Alt2,
                     borderLeft: !0,
                     borderTop: !0,
                     borderRight: !0,
-                    display: _.W.Flex,
-                    flexDirection: _.Y.Column,
+                    display: w.X.Flex,
+                    flexDirection: w.Z.Column,
                     fullWidth: !0,
-                    justifyContent: _.Ua.Center,
-                    color: _.O.Base,
-                    position: _.db.Relative
-                }, h.createElement("div", {
+                    justifyContent: w.Va.Center,
+                    color: w.O.Base,
+                    position: w.eb.Relative
+                }, m.createElement("div", {
                     style: {
                         height: t
                     }
-                }, h.createElement("img", {
+                }, m.createElement("img", {
                     src: e.extension.iconUrl
-                }), h.createElement(_.Va, {
+                }), m.createElement(w.Wa, {
                     margin: 1,
-                    textAlign: _.Jb.Center
-                }, h.createElement(_.V, {
-                    fontSize: _.Aa.Size5
+                    textAlign: w.Kb.Center
+                }, m.createElement(w.W, {
+                    fontSize: w.Ba.Size5
                 }, Object(f.d)("{name} is popped out.", {
-                    name: h.createElement(_.V, {
-                        "data-test-selector": S.ExtensionName,
-                        type: _.Nb.Span,
+                    name: m.createElement(w.W, {
+                        "data-test-selector": O.ExtensionName,
+                        type: w.Ob.Span,
                         bold: !0
                     }, e.extension.name)
-                }, "ExtensionPopoutPlaceholder"))), h.createElement(_.z, {
-                    "data-test-selector": S.ShowExtensionButton,
+                }, "ExtensionPopoutPlaceholder"))), m.createElement(w.z, {
+                    "data-test-selector": O.ShowExtensionButton,
                     onClick: e.onExtensionShowClicked
                 }, Object(f.d)("Show Extension", "ExtensionPopoutPlaceholder"))))
             };
-            Z.displayName = "ExtensionPopoutPlaceholder";
+            J.displayName = "ExtensionPopoutPlaceholder";
             var $, ee = function(e) {
-                    return h.createElement(_.Va, {
+                    return m.createElement(w.Wa, {
                         padding: 1
-                    }, h.createElement(_.Va, null, h.createElement("span", null, Object(f.d)("You must be logged in to use this extension feature.", "FeatureNeedsAuthDialog")), h.createElement(_.xb, {
+                    }, m.createElement(w.Wa, null, m.createElement("span", null, Object(f.d)("You must be logged in to use this extension feature.", "FeatureNeedsAuthDialog")), m.createElement(w.yb, {
                         borderTop: !0,
                         margin: {
                             y: 1
                         }
-                    }), h.createElement(_.Va, {
-                        display: _.W.Flex,
-                        justifyContent: _.Ua.Start
-                    }, h.createElement(_.z, {
+                    }), m.createElement(w.Wa, {
+                        display: w.X.Flex,
+                        justifyContent: w.Va.Start
+                    }, m.createElement(w.z, {
                         "data-test-selector": "qa-needs-auth-close-selector",
-                        type: _.F.Hollow,
+                        type: w.F.Hollow,
                         onClick: e.close
                     }, Object(f.d)("Close", "FeatureNeedsAuthDialog")))))
                 },
                 te = function(e) {
                     var t = function(t) {
-                        return h.createElement(_.Va, null, h.createElement("span", {
+                        return m.createElement(w.Wa, null, m.createElement("span", {
                             "data-test-selector": "confirmation_message_selector"
-                        }, t), h.createElement(_.xb, {
+                        }, t), m.createElement(w.yb, {
                             borderTop: !0,
                             margin: {
                                 y: 1
                             }
-                        }), h.createElement(_.Va, {
-                            display: _.W.Flex,
-                            justifyContent: _.Ua.Start
-                        }, h.createElement(_.z, {
-                            type: _.F.Hollow,
+                        }), m.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            justifyContent: w.Va.Start
+                        }, m.createElement(w.z, {
+                            type: w.F.Hollow,
                             onClick: e.cancelFollow
                         }, Object(f.d)("Close", "FollowDialog"))))
                     };
-                    if (null === e.currentFollowRequest.options.channel) return h.createElement(_.Va, {
+                    if (null === e.currentFollowRequest.options.channel) return m.createElement(w.Wa, {
                         padding: 1
                     }, t(Object(f.d)("The channel you are attempting to follow does not exist.", "FollowDialog")));
                     var n = Object(f.d)("You are about to follow {name}.", {
-                            name: h.createElement(_.V, {
-                                type: _.Nb.Span,
+                            name: m.createElement(w.W, {
+                                type: w.Ob.Span,
                                 bold: !0
                             }, e.currentFollowRequest.options.channel)
                         }, "FollowDialog"),
-                        i = Object(f.d)("Receive updates on {name}'s activity, including when they go live and upload videos or clips, on mobile, email, and web.", {
+                        r = Object(f.d)("Receive updates on {name}'s activity, including when they go live and upload videos or clips, on mobile, email, and web.", {
                             name: e.currentFollowRequest.options.channel
                         }, "FollowDialog"),
-                        o = h.createElement(_.Va, null, h.createElement("span", {
+                        i = m.createElement(w.Wa, null, m.createElement("span", {
                             "data-test-selector": "confirmation_message_selector"
-                        }, n), h.createElement(_.xb, {
+                        }, n), m.createElement(w.yb, {
                             borderTop: !0,
                             margin: {
                                 y: 1
                             }
-                        }), h.createElement(_.Va, {
-                            display: _.W.Flex,
-                            justifyContent: _.Ua.Start
-                        }, h.createElement(_.Va, {
+                        }), m.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            justifyContent: w.Va.Start
+                        }, m.createElement(w.Wa, {
                             margin: {
                                 right: 1
                             }
-                        }, h.createElement(_.z, {
-                            type: _.F.Default,
+                        }, m.createElement(w.z, {
+                            type: w.F.Default,
                             "data-test-selector": "toggle_follow_button_selector",
                             onClick: e.confirmFollow
-                        }, Object(f.d)("Follow", "FollowDialog"))), h.createElement(_.z, {
-                            type: _.F.Hollow,
+                        }, Object(f.d)("Follow", "FollowDialog"))), m.createElement(w.z, {
+                            type: w.F.Hollow,
                             onClick: e.cancelFollow
-                        }, Object(f.d)("Cancel", "FollowDialog"))), h.createElement(_.xb, {
+                        }, Object(f.d)("Cancel", "FollowDialog"))), m.createElement(w.yb, {
                             borderTop: !0,
                             margin: {
                                 y: 1
                             }
-                        }), h.createElement(_.Va, {
-                            display: _.W.Flex,
-                            justifyContent: _.Ua.Start
-                        }, h.createElement(_.Va, {
+                        }), m.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            justifyContent: w.Va.Start
+                        }, m.createElement(w.Wa, {
                             flexGrow: 1
-                        }, h.createElement(_.V, {
-                            type: _.Nb.Span,
-                            fontSize: _.Aa.Size5
-                        }, Object(f.d)("Notifications", "FollowDialog"))), h.createElement(_.Pb, {
+                        }, m.createElement(w.W, {
+                            type: w.Ob.Span,
+                            fontSize: w.Ba.Size5
+                        }, Object(f.d)("Notifications", "FollowDialog"))), m.createElement(w.Qb, {
                             id: "ext-follow-notification",
                             checked: e.currentFollowRequest.notifications,
                             onChange: e.onNotificationsChanged
-                        })), h.createElement(_.V, {
-                            type: _.Nb.Span,
-                            color: _.O.Alt2,
-                            fontSize: _.Aa.Size7
-                        }, i)),
+                        })), m.createElement(w.W, {
+                            type: w.Ob.Span,
+                            color: w.O.Alt2,
+                            fontSize: w.Ba.Size7
+                        }, r)),
                         a = Object(f.d)("You are already following {name}.", {
-                            name: h.createElement(_.V, {
-                                type: _.Nb.Span,
+                            name: m.createElement(w.W, {
+                                type: w.Ob.Span,
                                 bold: !0
                             }, e.currentFollowRequest.options.channel)
                         }, "FollowDialog"),
-                        r = e.currentFollowRequest.options.isFollowing ? t(a) : o;
-                    return h.createElement(_.Va, {
+                        o = e.currentFollowRequest.options.isFollowing ? t(a) : i;
+                    return m.createElement(w.Wa, {
                         padding: 1
-                    }, r)
+                    }, o)
                 };
             ! function(e) {
                 e.ManagePermissionsLink = "manage_permissions_link_selector", e.ToggleIdentityBalloon = "toggle_identity_balloon_selector", e.ToggleIdentityButton = "toggle_identity_button_selector"
             }($ || ($ = {}));
-            var ne, ie = function(e) {
+            var ne, re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderGrantPermissionsButton = function() {
                             var e = Object(f.d)("Grant Permissions", "ExtensionPanel");
-                            return h.createElement(_.Qb, {
+                            return m.createElement(w.Rb, {
                                 label: e,
-                                direction: _.Sb.Top,
-                                align: _.Rb.Right,
+                                direction: w.Tb.Top,
+                                align: w.Sb.Right,
                                 offsetX: ".6rem"
-                            }, h.createElement(_.Va, {
-                                display: _.W.Flex,
-                                alignItems: _.f.Center
-                            }, h.createElement(_.A, {
+                            }, m.createElement(w.Wa, {
+                                display: w.X.Flex,
+                                alignItems: w.f.Center
+                            }, m.createElement(w.A, {
                                 ariaLabel: e,
-                                icon: _.nb.PermissionsAdd
+                                icon: w.ob.PermissionsAdd
                             })))
                         }, t.renderRevokePermissionsButton = function() {
                             var e = Object(f.d)("Revoke Permissions", "ExtensionPanel");
-                            return h.createElement(_.Qb, {
+                            return m.createElement(w.Rb, {
                                 label: e,
-                                direction: _.Sb.Top,
-                                align: _.Rb.Right,
+                                direction: w.Tb.Top,
+                                align: w.Sb.Right,
                                 offsetX: ".6rem"
-                            }, h.createElement(_.Va, {
-                                display: _.W.Flex,
-                                alignItems: _.f.Center
-                            }, h.createElement(_.A, {
+                            }, m.createElement(w.Wa, {
+                                display: w.X.Flex,
+                                alignItems: w.f.Center
+                            }, m.createElement(w.A, {
                                 ariaLabel: e,
-                                icon: _.nb.PermissionsAdded,
-                                statusAlertIcon: _.nb.PermissionsRemove
+                                icon: w.ob.PermissionsAdded,
+                                statusAlertIcon: w.ob.PermissionsRemove
                             })))
                         }, t.saveGrantPermissionsBalloonRef = function(e) {
                             t.grantPermissionsBalloon = e
@@ -3856,7 +9857,7 @@
                             t.props.isLinked ? t.props.onUnlinkIdentity && t.props.onUnlinkIdentity() : t.props.onLinkIdentity && t.props.onLinkIdentity(), t.grantPermissionsBalloon.toggleBalloon(!1)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.grantPermissionsBalloon && this.grantPermissionsBalloon.toggleBalloon(this.props.isDialogOpen)
                     }, t.prototype.componentDidUpdate = function(e) {
                         e.isDialogOpen !== this.props.isDialogOpen && this.grantPermissionsBalloon && this.grantPermissionsBalloon.toggleBalloon(this.props.isDialogOpen)
@@ -3865,228 +9866,228 @@
                             t = e.isLinked;
                         if (!e.isLinkEnabled) return null;
                         var n = t ? this.renderRevokePermissionsButton() : this.renderGrantPermissionsButton(),
-                            i = Object(f.d)("You are granting {name} the following access:", {
-                                name: h.createElement(_.V, {
-                                    type: _.Nb.Strong
+                            r = Object(f.d)("You are granting {name} the following access:", {
+                                name: m.createElement(w.W, {
+                                    type: w.Ob.Strong
                                 }, this.props.extension.name)
                             }, "Extension Panel"),
-                            o = Object(f.d)("You are revoking the following access for {name}:", {
-                                name: h.createElement(_.V, {
-                                    type: _.Nb.Strong
+                            i = Object(f.d)("You are revoking the following access for {name}:", {
+                                name: m.createElement(w.W, {
+                                    type: w.Ob.Strong
                                 }, this.props.extension.name)
                             }, "Extension Panel");
-                        return h.createElement(g.a, {
-                            display: _.W.InlineFlex,
+                        return m.createElement(y.a, {
+                            display: w.X.InlineFlex,
                             ref: this.saveGrantPermissionsBalloonRef,
                             onToggle: this.props.onDialogToggle
-                        }, h.createElement("span", {
+                        }, m.createElement("span", {
                             "data-test-selector": $.ToggleIdentityBalloon
-                        }, n), h.createElement(_.u, {
-                            direction: _.v.TopRight,
-                            size: _.w.Small
-                        }, h.createElement(_.Va, {
+                        }, n), m.createElement(w.u, {
+                            direction: w.v.TopRight,
+                            size: w.w.Small
+                        }, m.createElement(w.Wa, {
                             padding: 1
-                        }, h.createElement(_.Va, null, t ? o : i), h.createElement(_.xb, {
+                        }, m.createElement(w.Wa, null, t ? i : r), m.createElement(w.yb, {
                             borderTop: !0,
                             margin: {
                                 y: 1
                             }
-                        }), h.createElement(_.Va, null, h.createElement(_.V, {
-                            type: _.Nb.P,
+                        }), m.createElement(w.Wa, null, m.createElement(w.W, {
+                            type: w.Ob.P,
                             bold: !0
-                        }, Object(f.d)("Your Twitch User ID", "Extension Panel")), h.createElement(_.V, {
-                            type: _.Nb.P
-                        }, Object(f.d)("Allows this extension to know your User ID on Twitch.", "Extension Panel")), h.createElement("a", {
+                        }, Object(f.d)("Your Twitch User ID", "Extension Panel")), m.createElement(w.W, {
+                            type: w.Ob.P
+                        }, Object(f.d)("Allows this extension to know your User ID on Twitch.", "Extension Panel")), m.createElement("a", {
                             "data-test-selector": $.ManagePermissionsLink,
                             href: "https://twitch.tv/settings/connections",
                             target: "_blank"
-                        }, Object(f.d)("Manage Permissions", "Extension Panel"))), h.createElement(_.xb, {
+                        }, Object(f.d)("Manage Permissions", "Extension Panel"))), m.createElement(w.yb, {
                             borderTop: !0,
                             margin: {
                                 y: 1
                             }
-                        }), h.createElement(_.Va, {
-                            display: _.W.Flex,
-                            justifyContent: _.Ua.Center
-                        }, h.createElement(_.Va, {
+                        }), m.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            justifyContent: w.Va.Center
+                        }, m.createElement(w.Wa, {
                             margin: {
                                 right: 1
                             }
-                        }, h.createElement(_.z, {
-                            type: _.F.Hollow,
+                        }, m.createElement(w.z, {
+                            type: w.F.Hollow,
                             onClick: this.onCancelIdentityLink
-                        }, Object(f.d)("Cancel", "Extension Panel"))), h.createElement(_.z, {
-                            type: t ? _.F.Alert : _.F.Default,
+                        }, Object(f.d)("Cancel", "Extension Panel"))), m.createElement(w.z, {
+                            type: t ? w.F.Alert : w.F.Default,
                             "data-test-selector": $.ToggleIdentityButton,
                             onClick: this.toggleIdentity
                         }, t ? Object(f.d)("Revoke", "Extension Panel") : Object(f.d)("Grant", "Extension Panel"))))))
                     }, t
-                }(h.Component),
-                oe = n("x65u");
+                }(m.Component),
+                ie = n("x65u");
             (ne || (ne = {})).PopoutButton = "popout_button_selector";
-            var ae, re = function(e) {
+            var ae, oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function(e) {
                             t.props.onClick && t.props.onClick(e)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        if (!Object(oe.a)()) return null;
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        if (!Object(ie.a)()) return null;
                         var e = Object(f.d)("Pop Out Extension", "PopoutButton");
-                        return h.createElement("span", null, h.createElement(_.Qb, {
+                        return m.createElement("span", null, m.createElement(w.Rb, {
                             label: e,
-                            direction: _.Sb.Top,
-                            align: _.Rb.Right,
+                            direction: w.Tb.Top,
+                            align: w.Sb.Right,
                             offsetX: ".6rem"
-                        }, h.createElement(_.Va, {
-                            display: _.W.Flex,
-                            alignItems: _.f.Center
-                        }, h.createElement(_.A, {
+                        }, m.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            alignItems: w.f.Center
+                        }, m.createElement(w.A, {
                             "data-test-selector": ne.PopoutButton,
                             onClick: this.onClick,
                             ariaLabel: e,
-                            icon: _.nb.Popout
+                            icon: w.ob.Popout
                         }))))
                     }, t
-                }(h.Component),
+                }(m.Component),
                 se = function(e) {
                     var t, n = e.cancel,
-                        i = e.confirm,
-                        o = e.isLoggedIn,
+                        r = e.confirm,
+                        i = e.isLoggedIn,
                         a = e.isLinked,
-                        r = e.isLinkEnabled,
+                        o = e.isLinkEnabled,
                         s = e.purchaseIntentPayload;
-                    return t = o ? h.createElement(_.Va, {
+                    return t = i ? m.createElement(w.Wa, {
                         padding: {
                             x: 1,
                             bottom: 1,
                             top: .5
                         },
                         fullWidth: !0
-                    }, h.createElement(_.Va, {
+                    }, m.createElement(w.Wa, {
                         padding: {
                             bottom: 2
                         }
-                    }, h.createElement(_.V, {
-                        fontSize: _.Aa.Size5,
+                    }, m.createElement(w.W, {
+                        fontSize: w.Ba.Size5,
                         bold: !0
-                    }, Object(f.d)("In-Extension Purchase", "PurchaseConfirmation"))), h.createElement(_.Va, null, h.createElement(_.Ha, {
-                        gutterSize: _.Ia.Default
-                    }, h.createElement(_.P, {
+                    }, Object(f.d)("In-Extension Purchase", "PurchaseConfirmation"))), m.createElement(w.Wa, null, m.createElement(w.Ia, {
+                        gutterSize: w.Ja.Default
+                    }, m.createElement(w.P, {
                         cols: {
                             default: 9
                         }
-                    }, h.createElement(_.V, {
-                        fontSize: _.Aa.Size6,
+                    }, m.createElement(w.W, {
+                        fontSize: w.Ba.Size6,
                         bold: !0
-                    }, s.title)), h.createElement(_.P, {
+                    }, s.title)), m.createElement(w.P, {
                         cols: {
                             default: 3
                         }
-                    }, h.createElement(_.Va, {
+                    }, m.createElement(w.Wa, {
                         fullWidth: !0,
-                        textAlign: _.Jb.Right
-                    }, h.createElement(_.V, {
-                        fontSize: _.Aa.Size6,
+                        textAlign: w.Kb.Right
+                    }, m.createElement(w.W, {
+                        fontSize: w.Ba.Size6,
                         bold: !0
-                    }, s.displayPrice))))), h.createElement(_.Va, {
+                    }, s.displayPrice))))), m.createElement(w.Wa, {
                         fullWidth: !0,
                         padding: {
                             bottom: 1
                         }
-                    }, h.createElement(_.V, {
-                        color: _.O.Alt2
+                    }, m.createElement(w.W, {
+                        color: w.O.Alt2
                     }, Object(f.d)("{name} extension", {
                         name: s.extensionName
-                    }, "PurchaseConfirmation"))), h.createElement(_.Va, {
+                    }, "PurchaseConfirmation"))), m.createElement(w.Wa, {
                         fullWidth: !0
-                    }, h.createElement(_.V, {
+                    }, m.createElement(w.W, {
                         className: "t-extension-panel__description",
-                        color: _.O.Alt2
-                    }, s.description), h.createElement(_.xb, {
+                        color: w.O.Alt2
+                    }, s.description), m.createElement(w.yb, {
                         borderBottom: !0,
                         margin: {
                             y: 1
                         }
-                    }), h.createElement(_.Va, null, h.createElement(_.Ha, {
-                        gutterSize: _.Ia.Default
-                    }, h.createElement(_.P, {
+                    }), m.createElement(w.Wa, null, m.createElement(w.Ia, {
+                        gutterSize: w.Ja.Default
+                    }, m.createElement(w.P, {
                         cols: {
                             default: 4
                         }
-                    }, h.createElement(_.z, {
+                    }, m.createElement(w.z, {
                         "data-test-selector": "purchase_ui_buy_selector",
-                        onClick: i,
+                        onClick: r,
                         fullWidth: !0
-                    }, Object(f.d)("Buy", "PurchaseConfirmation"))), h.createElement(_.P, {
+                    }, Object(f.d)("Buy", "PurchaseConfirmation"))), m.createElement(w.P, {
                         cols: {
                             default: 3
                         }
-                    }, h.createElement(_.z, {
+                    }, m.createElement(w.z, {
                         "data-test-selector": "purchase_ui_cancel_selector",
                         onClick: n,
-                        type: _.F.Hollow
-                    }, Object(f.d)("Cancel", "PurchaseConfirmation")))), !a && h.createElement(_.Va, null, h.createElement(_.xb, {
+                        type: w.F.Hollow
+                    }, Object(f.d)("Cancel", "PurchaseConfirmation")))), !a && m.createElement(w.Wa, null, m.createElement(w.yb, {
                         borderBottom: !0,
                         margin: {
                             y: 1
                         }
-                    }), h.createElement(_.V, {
-                        fontSize: _.Aa.Size8,
-                        color: _.O.Alt2
+                    }), m.createElement(w.W, {
+                        fontSize: w.Ba.Size8,
+                        color: w.O.Alt2
                     }, Object(f.d)('By clicking "Buy", you agree to share your Twitch ID with {name}. You can manage account connections under', {
                         name: s.extensionName
-                    }, "PurchaseConfirmation"), " ", h.createElement("a", {
+                    }, "PurchaseConfirmation"), " ", m.createElement("a", {
                         href: "/settings/connections"
-                    }, Object(f.d)("Settings", "PurchaseConfirmation")), "."))))) : h.createElement(_.Va, {
+                    }, Object(f.d)("Settings", "PurchaseConfirmation")), "."))))) : m.createElement(w.Wa, {
                         padding: {
                             x: 1,
                             bottom: 1,
                             top: .5
                         },
                         fullWidth: !0
-                    }, h.createElement(_.Va, {
+                    }, m.createElement(w.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, h.createElement(_.V, {
-                        fontSize: _.Aa.Size5
-                    }, Object(f.d)("You must be logged in to use this extension feature.", "PurchaseConfirmation"))), h.createElement(_.xb, {
+                    }, m.createElement(w.W, {
+                        fontSize: w.Ba.Size5
+                    }, Object(f.d)("You must be logged in to use this extension feature.", "PurchaseConfirmation"))), m.createElement(w.yb, {
                         borderBottom: !0,
                         margin: {
                             y: 1
                         }
-                    }), h.createElement(_.z, {
+                    }), m.createElement(w.z, {
                         "data-test-selector": "purchase_ui_cancel_selector",
                         onClick: n,
-                        type: _.F.Hollow
-                    }, Object(f.d)("Close", "PurchaseConfirmation"))), h.createElement(_.u, {
-                        direction: _.v.TopRight,
+                        type: w.F.Hollow
+                    }, Object(f.d)("Close", "PurchaseConfirmation"))), m.createElement(w.u, {
+                        direction: w.v.TopRight,
                         "data-test-selector": "purchase_ui_selector",
-                        noTail: !r,
+                        noTail: !o,
                         offsetX: "10px",
                         offsetY: "-2px",
                         tailOffset: 33,
                         show: !0,
-                        size: _.w.Medium
-                    }, h.createElement("button", {
+                        size: w.w.Medium
+                    }, m.createElement("button", {
                         className: "t-extension-panel__close t-extension-panel__top-controls",
                         onClick: n
-                    }, h.createElement(_.mb, {
-                        asset: _.nb.Close,
+                    }, m.createElement(w.nb, {
+                        asset: w.ob.Close,
                         height: 11,
                         width: 11
-                    })), h.createElement(_.Va, {
-                        display: _.W.Flex,
+                    })), m.createElement(w.Wa, {
+                        display: w.X.Flex,
                         flexGrow: 1,
-                        flexDirection: _.Y.Column,
-                        justifyContent: _.Ua.Center,
-                        alignItems: _.f.Center
+                        flexDirection: w.Z.Column,
+                        justifyContent: w.Va.Center,
+                        alignItems: w.f.Center
                     }, t))
                 };
             (ae || (ae = {})).RestoreDefaultSizeButton = "restore-default-size-button";
-            var le, ce = function(e) {
+            var ce, le = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.state = {
@@ -4096,38 +10097,38 @@
                     }, t.onWindowResize = function() {
                         var e = window.outerWidth,
                             n = window.outerHeight,
-                            i = e !== t.defaultPopoutWidth || n !== t.defaultPopoutHeight;
+                            r = e !== t.defaultPopoutWidth || n !== t.defaultPopoutHeight;
                         t.setState({
-                            isRestoreDefaultSizeVisible: i
+                            isRestoreDefaultSizeVisible: r
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                return r.__extends(t, e), t.prototype.componentDidMount = function() {
                     window.addEventListener("resize", this.onWindowResize)
                 }, t.prototype.componentWillUnmount = function() {
                     window.removeEventListener("resize", this.onWindowResize)
                 }, t.prototype.render = function() {
                     if (!this.props.isPopout || !this.state.isRestoreDefaultSizeVisible) return null;
                     var e = Object(f.d)("Resize to Default", "RestoreDefaultSizeButton");
-                    return h.createElement("span", null, h.createElement(_.Qb, {
+                    return m.createElement("span", null, m.createElement(w.Rb, {
                         label: e,
-                        direction: _.Sb.Top,
-                        align: _.Rb.Right,
+                        direction: w.Tb.Top,
+                        align: w.Sb.Right,
                         offsetX: ".6rem"
-                    }, h.createElement(_.Va, {
-                        display: _.W.Flex,
-                        alignItems: _.f.Center
-                    }, h.createElement(_.A, {
+                    }, m.createElement(w.Wa, {
+                        display: w.X.Flex,
+                        alignItems: w.f.Center
+                    }, m.createElement(w.A, {
                         "data-test-selector": ae.RestoreDefaultSizeButton,
                         onClick: this.onClick,
                         ariaLabel: e,
-                        icon: _.nb.FullscreenExit
+                        icon: w.ob.FullscreenExit
                     }))))
                 }, t
-            }(h.Component);
+            }(m.Component);
             ! function(e) {
                 e.AcceptButton = "accept-button", e.DeclineButton = "decline-button", e.DeclinedMessage = "declined-message", e.WarningMessage = "warning-message"
-            }(le || (le = {}));
+            }(ce || (ce = {}));
             var ue, de = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -4139,68 +10140,68 @@
                         })
                     }, t
                 }
-                return i.__extends(t, e), t.prototype.render = function() {
+                return r.__extends(t, e), t.prototype.render = function() {
                     var e = null;
-                    return e = this.state.declined ? h.createElement(h.Fragment, null, h.createElement(_.V, {
-                        type: _.Nb.P,
-                        "data-test-selector": le.DeclinedMessage
-                    }, Object(f.d)("You’ve declined to use this test extension. To use it, please refresh this page and select accept.", "TestExtensionDialog")), h.createElement(_.Va, {
+                    return e = this.state.declined ? m.createElement(m.Fragment, null, m.createElement(w.W, {
+                        type: w.Ob.P,
+                        "data-test-selector": ce.DeclinedMessage
+                    }, Object(f.d)("You’ve declined to use this test extension. To use it, please refresh this page and select accept.", "TestExtensionDialog")), m.createElement(w.Wa, {
                         padding: {
                             top: 2
                         },
-                        display: _.W.Flex,
-                        justifyContent: _.Ua.Center
-                    }, h.createElement(_.z, {
+                        display: w.X.Flex,
+                        justifyContent: w.Va.Center
+                    }, m.createElement(w.z, {
                         targetBlank: !0,
                         linkTo: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions",
-                        type: _.F.Hollow
-                    }, Object(f.d)("Learn More", "TestExtensionDialog")))) : h.createElement(h.Fragment, null, h.createElement(_.V, {
-                        type: _.Nb.P,
-                        "data-test-selector": le.WarningMessage
-                    }, Object(f.d)("This is a Test Extension that Twitch has not evaluated; it may not be ready for primetime. Proceed only if you are familiar with the developer, the Extension, or Channel.", "TestExtensionDialog"), h.createElement(_.Na, {
+                        type: w.F.Hollow
+                    }, Object(f.d)("Learn More", "TestExtensionDialog")))) : m.createElement(m.Fragment, null, m.createElement(w.W, {
+                        type: w.Ob.P,
+                        "data-test-selector": ce.WarningMessage
+                    }, Object(f.d)("This is a Test Extension that Twitch has not evaluated; it may not be ready for primetime. Proceed only if you are familiar with the developer, the Extension, or Channel.", "TestExtensionDialog"), m.createElement(w.Oa, {
                         padding: {
                             left: .5
                         }
-                    }, h.createElement(_.T, {
+                    }, m.createElement(w.U, {
                         targetBlank: !0,
                         linkTo: "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions"
-                    }, Object(f.d)("Learn More.", "TestExtensionDialog")))), h.createElement(_.Va, {
+                    }, Object(f.d)("Learn More.", "TestExtensionDialog")))), m.createElement(w.Wa, {
                         padding: {
                             top: 2
                         },
-                        display: _.W.Flex,
-                        justifyContent: _.Ua.Center
-                    }, h.createElement(_.z, {
+                        display: w.X.Flex,
+                        justifyContent: w.Va.Center
+                    }, m.createElement(w.z, {
                         onClick: this.onDeclined,
-                        type: _.F.Hollow,
-                        "data-test-selector": le.DeclineButton
-                    }, Object(f.d)("Decline", "TestExtensionDialog")), h.createElement(_.Va, {
+                        type: w.F.Hollow,
+                        "data-test-selector": ce.DeclineButton
+                    }, Object(f.d)("Decline", "TestExtensionDialog")), m.createElement(w.Wa, {
                         padding: {
                             left: 1
                         }
-                    }, h.createElement(_.z, {
+                    }, m.createElement(w.z, {
                         onClick: this.props.onAccepted,
-                        "data-test-selector": le.AcceptButton
-                    }, Object(f.d)("Accept", "TestExtensionDialog"))))), h.createElement(_.o, {
-                        ratio: _.p.Aspect3x4
-                    }, h.createElement(_.xb, {
-                        alignItems: _.f.Center,
+                        "data-test-selector": ce.AcceptButton
+                    }, Object(f.d)("Accept", "TestExtensionDialog"))))), m.createElement(w.o, {
+                        ratio: w.p.Aspect3x4
+                    }, m.createElement(w.yb, {
+                        alignItems: w.f.Center,
                         border: !0,
-                        display: _.W.Flex,
-                        justifyContent: _.Ua.Center,
+                        display: w.X.Flex,
+                        justifyContent: w.Va.Center,
                         padding: 2
-                    }, h.createElement(_.Va, null, h.createElement(_.V, {
-                        type: _.Nb.Strong
+                    }, m.createElement(w.Wa, null, m.createElement(w.W, {
+                        type: w.Ob.Strong
                     }, this.props.extensionName), e)))
                 }, t
-            }(h.Component);
+            }(m.Component);
             n("bVvr");
             ! function(e) {
                 e.ExtensionDescriptionButton = "extension_description_button_selector", e.ExtensionReportButton = "extension_report_button_selector", e.ExtensionPanel = "extension_panel_selector", e.ExtensionDetailsLink = "extension_details_link_selector", e.ToggleFollowButton = "toggle_follow_button_selector", e.ConfirmationMessage = "confirmation_message_selector", e.PopoutButton = "popout_button_selector", e.UseBitsConfirmationToggleBalloonWrapper = "confirmation_message_selector"
             }(ue || (ue = {}));
             var pe = 3e3,
-                he = 32,
-                me = function(e) {
+                me = 32,
+                he = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4215,11 +10216,11 @@
                             testExtensionAccepted: !1
                         }, t.renderExtensionFrame = function() {
                             var e, n = d("extension-panel-extension-frame", ((e = {})["extension-panel-extension-frame__popout"] = t.props.isPopout, e));
-                            return t.extension.state === p.ExtensionState.Released || t.state.testExtensionAccepted ? h.createElement(_.Va, null, h.createElement(_.xb, {
+                            return t.extension.state === p.ExtensionState.Released || t.state.testExtensionAccepted ? m.createElement(w.Wa, null, m.createElement(w.yb, {
                                 borderTop: !0,
                                 borderRight: !0,
                                 borderLeft: !0
-                            }, h.createElement(W.a, {
+                            }, m.createElement(U.a, {
                                 channelID: t.props.channelID,
                                 channelLogin: t.props.channelName,
                                 className: n,
@@ -4232,70 +10233,70 @@
                                 isPopout: t.props.isPopout,
                                 onBeginPurchase: t.onBeginPurchase,
                                 saveExtensionAPI: t.saveExtensionAPI
-                            })), h.createElement(_.Va, {
-                                position: _.db.Relative,
+                            })), m.createElement(w.Wa, {
+                                position: w.eb.Relative,
                                 fullWidth: !0
-                            }, t.purchaseUI())) : h.createElement(de, {
+                            }, t.purchaseUI())) : m.createElement(de, {
                                 extensionName: t.extension.name,
                                 onAccepted: t.onTestExtensionAccepted
                             })
                         }, t.renderFollowConfirmation = function() {
-                            return null === t.state.currentFollowRequest ? null : h.createElement(g.a, {
+                            return null === t.state.currentFollowRequest ? null : m.createElement(y.a, {
                                 ref: t.saveFollowConfirmationBalloonRef
-                            }, h.createElement("span", null), h.createElement(_.u, {
-                                direction: _.v.TopRight,
-                                size: _.w.Medium,
+                            }, m.createElement("span", null), m.createElement(w.u, {
+                                direction: w.v.TopRight,
+                                size: w.w.Medium,
                                 noTail: !0,
                                 offsetY: "2rem",
                                 offsetX: "-2rem"
-                            }, h.createElement(te, {
+                            }, m.createElement(te, {
                                 currentFollowRequest: t.state.currentFollowRequest,
                                 confirmFollow: t.confirmFollow,
                                 onNotificationsChanged: t.onNotificationsChanged,
                                 cancelFollow: t.cancelFollow
                             })))
                         }, t.renderFeatureNeedsAuthBalloon = function() {
-                            return h.createElement(g.a, {
+                            return m.createElement(y.a, {
                                 ref: t.saveFeatureNeedsAuthBalloonRef
-                            }, h.createElement("span", null), h.createElement(_.u, {
-                                direction: _.v.TopRight,
-                                size: _.w.Medium,
+                            }, m.createElement("span", null), m.createElement(w.u, {
+                                direction: w.v.TopRight,
+                                size: w.w.Medium,
                                 noTail: !0,
                                 offsetY: "2rem",
                                 offsetX: "-2rem"
-                            }, h.createElement(ee, {
+                            }, m.createElement(ee, {
                                 close: t.dismissLoginPrompt
                             })))
                         }, t.renderUseBitsConfirmation = function() {
                             if (!t.state.currentUseBitsRequest || !t.state.currentUseBitsRequest.options) return null;
                             var e = null;
-                            if (t.state.currentUseBitsRequest.options.error) e = h.createElement(U, {
+                            if (t.state.currentUseBitsRequest.options.error) e = m.createElement(L, {
                                 error: t.state.currentUseBitsRequest.options.error,
                                 onClose: t.cancelUseBits
                             });
                             else if (t.state.currentUseBitsRequest.options.payload) {
                                 var n = t.state.currentUseBitsRequest.options.payload,
-                                    i = n.bitsBalance,
-                                    o = n.extensionItemLabel,
+                                    r = n.bitsBalance,
+                                    i = n.extensionItemLabel,
                                     a = n.extensionName,
-                                    r = t.state.currentUseBitsRequest.options.payload.bitsRequired;
-                                void 0 === r && (r = 0), e = h.createElement(j, {
-                                    bitsBalance: i,
-                                    cost: r,
-                                    extensionItemLabel: o,
+                                    o = t.state.currentUseBitsRequest.options.payload.bitsRequired;
+                                void 0 === o && (o = 0), e = m.createElement(W, {
+                                    bitsBalance: r,
+                                    cost: o,
+                                    extensionItemLabel: i,
                                     extensionName: a,
                                     userID: t.props.loginID,
                                     onClose: t.cancelUseBits,
                                     onConfirm: t.confirmUseBits
                                 })
                             }
-                            return h.createElement(g.a, {
+                            return m.createElement(y.a, {
                                 "data-test-selector": ue.UseBitsConfirmationToggleBalloonWrapper,
                                 ref: t.saveUseBitsConfirmationBalloonRef,
                                 onToggle: t.onToggleUseBitsConfirmationBalloon
-                            }, h.createElement("span", null), h.createElement(_.u, {
-                                direction: _.v.TopRight,
-                                size: _.w.Medium,
+                            }, m.createElement("span", null), m.createElement(w.u, {
+                                direction: w.v.TopRight,
+                                size: w.w.Medium,
                                 noTail: !0,
                                 offsetY: "2rem",
                                 offsetX: "-2rem"
@@ -4305,32 +10306,32 @@
                                 testExtensionAccepted: !0
                             })
                         }, t.getCurrentMedium = function() {
-                            if (t.props.isPopout) return y.PageviewMedium.ExtensionPage;
+                            if (t.props.isPopout) return b.PageviewMedium.ExtensionPage;
                             switch (t.props.mode) {
                                 case p.ExtensionMode.Dashboard:
-                                    return y.PageviewMedium.DashboardLive;
+                                    return b.PageviewMedium.DashboardLive;
                                 case p.ExtensionMode.Config:
-                                    return y.PageviewMedium.ExtensionConfiguration;
+                                    return b.PageviewMedium.ExtensionConfiguration;
                                 case p.ExtensionMode.Viewer:
                             }
-                            return y.PageviewMedium.Channel
+                            return b.PageviewMedium.Channel
                         }, t.subscribeFrameEvents = function() {
                             t.extensionFrameAPI && (t.extensionFrameAPI.on("showBitsBalance", t.onShowBitsBalance), t.extensionFrameAPI.on("showUseBitsSuccess", t.onShowUseBitsSuccess), t.extensionFrameAPI.on("identityLinked", t.onIdentityLinked), t.extensionFrameAPI.on("extensionFrameLoaded", t.onExtensionLoaded), t.extensionFrameAPI.on("requestModal", t.onModalRequested))
                         }, t.unsubscribeFrameEvents = function() {
                             t.extensionFrameAPI && (t.extensionFrameAPI.off("showBitsBalance", t.onShowBitsBalance), t.extensionFrameAPI.off("showUseBitsSuccess", t.onShowUseBitsSuccess), t.extensionFrameAPI.off("identityLinked", t.onIdentityLinked), t.extensionFrameAPI.off("extensionFrameLoaded", t.onExtensionLoaded), t.extensionFrameAPI.off("requestModal", t.onModalRequested))
                         }, t.getPopoutHeight = function() {
                             var e = 300;
-                            return t.extension.views.panel && (e = t.extension.views.panel.height), e + he
+                            return t.extension.views.panel && (e = t.extension.views.panel.height), e + me
                         }, t.getExtensionPopoutUrl = function() {
                             var e = t.props.installation.activationConfig,
                                 n = t.extension.clientId + "-" + t.extension.version;
                             t.extension.state === p.ExtensionState.Released && (n = t.extension.clientId);
-                            var i = "/popout/" + t.props.channelName + "/extensions/" + n + "/" + e.anchor;
-                            return t.props.mode !== p.ExtensionMode.Viewer && (i = i + "/" + t.props.mode), i
+                            var r = "/popout/" + t.props.channelName + "/extensions/" + n + "/" + e.anchor;
+                            return t.props.mode !== p.ExtensionMode.Viewer && (r = r + "/" + t.props.mode), r
                         }, t.onExtensionPopoutClosed = function() {
                             if (!t.state.popoutRestoreIntentTracked) {
                                 var e = t.props.installation.activationConfig;
-                                Object(V.f)({
+                                Object(G.f)({
                                     extensionID: t.extension.clientId,
                                     extensionVersion: t.extension.version,
                                     anchor: e.anchor,
@@ -4343,13 +10344,13 @@
                             }
                             if (t.props.onExtensionPopoutClosed) {
                                 var n = t.extension,
-                                    i = n.id,
-                                    o = n.version;
-                                t.props.onExtensionPopoutClosed(i, o)
+                                    r = n.id,
+                                    i = n.version;
+                                t.props.onExtensionPopoutClosed(r, i)
                             }
                         }, t.onExtensionPopout = function() {
                             var e = t.props.installation.activationConfig;
-                            Object(V.g)({
+                            Object(G.g)({
                                 extensionID: t.extension.clientId,
                                 extensionVersion: t.extension.version,
                                 anchor: e.anchor,
@@ -4358,18 +10359,18 @@
                                 channelID: t.props.channelID
                             });
                             var n = "width=320,height=" + t.getPopoutHeight() + ",resizable=yes,scrollbars=no,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no",
-                                i = window.open(t.getExtensionPopoutUrl(), "_blank", n);
-                            if (i && (t.onExtensionPopoutClosed && Object(v.a)(i, t.onExtensionPopoutClosed), i.opener = null), t.props.onExtensionPoppedOut) {
-                                var o = t.extension,
-                                    a = o.id,
-                                    r = o.version;
-                                t.props.onExtensionPoppedOut(a, r, i)
+                                r = window.open(t.getExtensionPopoutUrl(), "_blank", n);
+                            if (r && (t.onExtensionPopoutClosed && Object(g.a)(r, t.onExtensionPopoutClosed), r.opener = null), t.props.onExtensionPoppedOut) {
+                                var i = t.extension,
+                                    a = i.id,
+                                    o = i.version;
+                                t.props.onExtensionPoppedOut(a, o, r)
                             }
-                        }, t.onFollowRequested = function(e, n, i) {
+                        }, t.onFollowRequested = function(e, n, r) {
                             t.setState({
                                 currentFollowRequest: {
                                     options: e,
-                                    defaultResult: i,
+                                    defaultResult: r,
                                     notifications: !0,
                                     onResult: n
                                 }
@@ -4390,11 +10391,11 @@
                             t.state.currentFollowRequest.onResult(t.state.currentFollowRequest.defaultResult), t.setState({
                                 currentFollowRequest: null
                             })
-                        }, t.onUseBitsRequested = function(e, n, i) {
+                        }, t.onUseBitsRequested = function(e, n, r) {
                             t.setState({
                                 currentUseBitsRequest: {
                                     options: e,
-                                    defaultResult: i,
+                                    defaultResult: r,
                                     onResult: n
                                 }
                             }), t.useBitsConfirmationBalloon.toggleBalloon(!0)
@@ -4454,7 +10455,7 @@
                             var e = t.state && t.state.bitsBalance;
                             if (null !== e) {
                                 var n = e.showSuccessText;
-                                return t.hideBitsBalanceTimeout && (clearTimeout(t.hideBitsBalanceTimeout), t.hideBitsBalanceTimeout = null, t.startHideBitsBalanceTimer()), h.createElement(J, {
+                                return t.hideBitsBalanceTimeout && (clearTimeout(t.hideBitsBalanceTimeout), t.hideBitsBalanceTimeout = null, t.startHideBitsBalanceTimer()), m.createElement(Q, {
                                     showSuccessText: n,
                                     startTimer: t.startHideBitsBalanceTimer,
                                     channelID: t.props.channelID,
@@ -4489,7 +10490,7 @@
                         }, t.onNotificationsChanged = function(e) {
                             var n = t.state.currentFollowRequest;
                             null !== n && t.setState({
-                                currentFollowRequest: i.__assign({}, n, {
+                                currentFollowRequest: r.__assign({}, n, {
                                     notifications: e.currentTarget.checked
                                 })
                             })
@@ -4497,16 +10498,16 @@
                             switch (e.action) {
                                 case p.FunctionAction.FollowAction:
                                     var n = e,
-                                        i = n.options;
-                                    t.onFollowRequested(i, n.resultCallback, n.defaultResult);
+                                        r = n.options;
+                                    t.onFollowRequested(r, n.resultCallback, n.defaultResult);
                                     break;
                                 case p.FunctionAction.LoginRequest:
                                     t.featureNeedsAuthBalloon && t.onLoginRequested(e.resultCallback, e.defaultResult);
                                     break;
-                                case p.FunctionAction.UseBitsPromptRequired:
-                                    var o = e,
-                                        a = o.options;
-                                    t.onUseBitsRequested(a, o.resultCallback, o.defaultResult);
+                                case p.FunctionAction.UseBits:
+                                    var i = e,
+                                        a = i.options;
+                                    t.onUseBitsRequested(a, i.resultCallback, i.defaultResult);
                                     break;
                                 case p.FunctionAction.IdShareRequest:
                                     t.setState({
@@ -4516,16 +10517,16 @@
                         }, t.handleReportExtensionClick = function() {
                             var e = t.extension,
                                 n = e.id,
-                                i = e.version,
-                                o = e.name;
+                                r = e.version,
+                                i = e.name;
                             t.props.isLoggedIn ? t.props.showReportExtensionModal({
                                 reportContext: {
-                                    contentType: q.a.Extension,
-                                    contentID: n + "-" + i,
+                                    contentType: V.a.Extension,
+                                    contentID: n + "-" + r,
                                     targetUserID: t.props.channelID
                                 },
                                 title: Object(f.d)("Report {extensionName}", {
-                                    extensionName: o
+                                    extensionName: i
                                 }, "ReportExtensionModal")
                             }) : t.props.promptLogin()
                         }, t.dismissLoginPrompt = function() {
@@ -4533,7 +10534,7 @@
                         }, t.trackImpression = function() {
                             if (t.props.panel) {
                                 var e = t.props.panel.id;
-                                e && Object(G.a)(y.SpadeEventType.PanelImpression, {
+                                e && Object(q.a)(b.SpadeEventType.PanelImpression, {
                                     panelID: e,
                                     channelID: t.props.channelID,
                                     panelType: t.props.panel.type
@@ -4541,7 +10542,7 @@
                             }
                         }, t
                     }
-                    return i.__extends(t, e), Object.defineProperty(t.prototype, "extension", {
+                    return r.__extends(t, e), Object.defineProperty(t.prototype, "extension", {
                         get: function() {
                             return this.props.installation.extension
                         },
@@ -4556,43 +10557,43 @@
                     }, t.prototype.render = function() {
                         var e, t = Object(f.d)("More Info", "ExtensionPanel"),
                             n = Object(f.d)("Report Extension", "ExtensionPanel"),
-                            i = Object(M.d)(this.extension.id, this.extension.version) + "?tt_medium=" + this.getCurrentMedium() + "&tt_content=" + y.PageviewContent.ExtensionPanel,
-                            o = d(this.props.className || "extension-panel", ((e = {})["extension-panel__popout"] = this.props.isPopout, e)),
-                            a = this.props.isFramePoppedOut ? h.createElement(Z, {
+                            r = Object(z.d)(this.extension.id, this.extension.version) + "?tt_medium=" + this.getCurrentMedium() + "&tt_content=" + b.PageviewContent.ExtensionPanel,
+                            i = d(this.props.className || "extension-panel", ((e = {})["extension-panel__popout"] = this.props.isPopout, e)),
+                            a = this.props.isFramePoppedOut ? m.createElement(J, {
                                 extension: this.extension,
                                 onExtensionShowClicked: this.onExtensionPopoutClosed
                             }) : this.renderExtensionFrame();
-                        return h.createElement(_.Va, {
-                            className: o,
+                        return m.createElement(w.Wa, {
+                            className: i,
                             margin: {
                                 bottom: 2,
                                 right: 2
                             },
                             "data-test-selector": ue.ExtensionPanel
-                        }, a, h.createElement(_.xb, {
+                        }, a, m.createElement(w.yb, {
                             borderRight: !0,
                             borderBottom: !0,
                             borderLeft: !0,
-                            flexDirection: _.Y.Column,
-                            display: _.W.Flex
-                        }, h.createElement(_.xb, {
-                            display: _.W.Flex,
-                            alignItems: _.f.Center
-                        }, h.createElement(_.Va, {
+                            flexDirection: w.Z.Column,
+                            display: w.X.Flex
+                        }, m.createElement(w.yb, {
+                            display: w.X.Flex,
+                            alignItems: w.f.Center
+                        }, m.createElement(w.Wa, {
                             flexGrow: 1,
                             margin: {
                                 x: 1
                             }
-                        }, h.createElement("a", {
-                            href: i,
+                        }, m.createElement("a", {
+                            href: r,
                             target: "_blank",
                             "data-test-selector": ue.ExtensionDetailsLink
-                        }, this.extension.name)), this.props.isFramePoppedOut || this.props.isPopout ? null : h.createElement(re, {
+                        }, this.extension.name)), this.props.isFramePoppedOut || this.props.isPopout ? null : m.createElement(oe, {
                             "data-test-selector": ue.PopoutButton,
                             onClick: this.onExtensionPopout
-                        }), h.createElement(ce, {
+                        }), m.createElement(le, {
                             isPopout: this.props.isPopout
-                        }), h.createElement(ie, {
+                        }), m.createElement(re, {
                             extension: this.extension,
                             isDialogOpen: this.state.isIdentityLinkOpen,
                             onDialogToggle: this.onIdentityLinkDialogToggle,
@@ -4600,36 +10601,36 @@
                             isLinkEnabled: this.state.isLinkEnabled,
                             onLinkIdentity: this.onLinkIdentity,
                             onUnlinkIdentity: this.onUnlinkIdentity
-                        }), this.renderFollowConfirmation(), this.renderFeatureNeedsAuthBalloon(), this.renderUseBitsConfirmation(), h.createElement(g.a, null, h.createElement("span", null, h.createElement(_.Qb, {
+                        }), this.renderFollowConfirmation(), this.renderFeatureNeedsAuthBalloon(), this.renderUseBitsConfirmation(), m.createElement(y.a, null, m.createElement("span", null, m.createElement(w.Rb, {
                             label: t,
-                            direction: _.Sb.Top,
-                            align: _.Rb.Right,
+                            direction: w.Tb.Top,
+                            align: w.Sb.Right,
                             offsetX: ".6rem"
-                        }, h.createElement(_.Va, {
-                            display: _.W.Flex,
-                            alignItems: _.f.Center
-                        }, h.createElement(_.A, {
+                        }, m.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            alignItems: w.f.Center
+                        }, m.createElement(w.A, {
                             "data-test-selector": ue.ExtensionDescriptionButton,
-                            icon: _.nb.More,
+                            icon: w.ob.More,
                             ariaLabel: t
-                        })))), h.createElement(_.u, {
-                            direction: _.v.TopRight,
-                            size: _.w.Medium,
+                        })))), m.createElement(w.u, {
+                            direction: w.v.TopRight,
+                            size: w.w.Medium,
                             offsetX: ".6rem"
-                        }, h.createElement(_.Va, {
-                            display: _.W.Flex,
-                            justifyContent: _.Ua.Between,
-                            flexWrap: _.Z.NoWrap
-                        }, h.createElement(_.xb, {
+                        }, m.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            justifyContent: w.Va.Between,
+                            flexWrap: w.Aa.NoWrap
+                        }, m.createElement(w.yb, {
                             padding: 1,
                             flexShrink: 3
-                        }, h.createElement(_.V, null, this.extension.summary)), h.createElement(_.xb, {
+                        }, m.createElement(w.W, null, this.extension.summary)), m.createElement(w.yb, {
                             borderLeft: !0,
                             margin: 1
-                        }, h.createElement(_.A, {
+                        }, m.createElement(w.A, {
                             "data-test-selector": ue.ExtensionReportButton,
                             ariaLabel: n,
-                            icon: _.nb.ChatRiskFlag,
+                            icon: w.ob.ChatRiskFlag,
                             onClick: this.handleReportExtensionClick
                         })))))), this.renderBitsBalanceUI()))
                     }, t.prototype.purchaseUI = function() {
@@ -4637,57 +10638,254 @@
                             t = this.state && this.state.purchaseIntent;
                         if (null !== t) {
                             var n = this.state,
-                                i = n.isLinked,
-                                o = n.isLinkEnabled,
+                                r = n.isLinked,
+                                i = n.isLinkEnabled,
                                 a = t,
-                                r = a.payload,
+                                o = a.payload,
                                 s = a.makePurchase;
-                            return h.createElement(se, {
+                            return m.createElement(se, {
                                 confirm: function() {
                                     s(), e.setState({
                                         purchaseIntent: null
                                     })
                                 },
                                 cancel: this.cancelPurchase,
-                                isLinked: i,
-                                isLinkEnabled: o,
-                                purchaseIntentPayload: r,
+                                isLinked: r,
+                                isLinkEnabled: i,
+                                purchaseIntentPayload: o,
                                 isLoggedIn: this.props.isLoggedIn
                             })
                         }
                     }, t
-                }(h.Component),
-                fe = Object(m.compose)(Object(H.a)("ExtensionPanel", {
+                }(m.Component),
+                fe = Object(h.compose)(Object(H.a)("ExtensionPanel", {
                     pixels: 100
-                }))(me);
+                }))(he);
 
-            function ge(e) {
+            function ye(e) {
                 return {
-                    isLoggedIn: Object(c.f)(e),
-                    languageCode: Object(c.b)(e),
+                    isLoggedIn: Object(l.f)(e),
+                    languageCode: Object(l.b)(e),
                     locale: e.session.locale
                 }
             }
 
-            function ve(e) {
+            function ge(e) {
                 return Object(a.bindActionCreators)({
                     promptLogin: function() {
-                        return Object(l.e)(r.a.ReportHoster)
+                        return Object(c.e)(o.a.ReportHoster)
                     },
                     showReportExtensionModal: function(e) {
-                        var t = i.__rest(e, []);
+                        var t = r.__rest(e, []);
                         return Object(s.d)(u.a, t)
                     }
                 }, e)
             }
-            var ye = Object(o.connect)(ge, ve)(fe);
+            var be = Object(i.connect)(ye, ge)(fe);
             n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return ge
-            }), n.d(t, !1, function() {
-                return ve
-            }), n.d(t, "a", function() {
                 return ye
+            }), n.d(t, !1, function() {
+                return ge
+            }), n.d(t, "a", function() {
+                return be
             })
+        },
+        TilG: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "ExtensionActionSubscribeToChannel"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "channelID"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "currentUser"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }]
+                            }
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "channelID"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "subscriptionProducts"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "FragmentSpread",
+                                            name: {
+                                                kind: "Name",
+                                                value: "extensionActionSubscriptionProduct"
+                                            },
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "self"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "subscriptionBenefit"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "id"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }, {
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "tier"
+                                                    },
+                                                    arguments: [],
+                                                    directives: []
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }, {
+                    kind: "FragmentDefinition",
+                    name: {
+                        kind: "Name",
+                        value: "extensionActionSubscriptionProduct"
+                    },
+                    typeCondition: {
+                        kind: "NamedType",
+                        name: {
+                            kind: "Name",
+                            value: "SubscriptionProduct"
+                        }
+                    },
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "name"
+                            },
+                            arguments: [],
+                            directives: []
+                        }, {
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "tier"
+                            },
+                            arguments: [],
+                            directives: []
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 292
+                }
+            };
+            n.loc.source = {
+                body: "query ExtensionActionSubscribeToChannel($channelID: ID!) {\ncurrentUser {\nid\n}\nuser(id: $channelID) {\nid\nsubscriptionProducts {\n...extensionActionSubscriptionProduct\n}\nself {\nsubscriptionBenefit {\nid\ntier\n}\n}\n}\n}\nfragment extensionActionSubscriptionProduct on SubscriptionProduct {\nname\ntier\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
         },
         U0Fp: function(e, t, n) {},
         UFhH: function(e, t, n) {
@@ -4701,10 +10899,10 @@
                         return t && void 0 !== t.id ? t.id : null
                     },
                     set: function(e) {
-                        var i = n(e);
-                        if (!i) throw new Error("setId required the element to have a resize detection state.");
-                        var o = t.generate();
-                        return i.id = o, o
+                        var r = n(e);
+                        if (!r) throw new Error("setId required the element to have a resize detection state.");
+                        var i = t.generate();
+                        return r.id = i, i
                     }
                 }
             }
@@ -4712,10 +10910,397 @@
         UL9e: function(e, t, n) {
             "use strict";
             (e.exports = {}).getOption = function(e, t, n) {
-                var i = e[t];
-                if ((void 0 === i || null === i) && void 0 !== n) return n;
-                return i
+                var r = e[t];
+                if ((void 0 === r || null === r) && void 0 !== n) return n;
+                return r
             }
+        },
+        "V+q8": function(e, t, n) {
+            "use strict";
+            var r = n("/MKj"),
+                i = n("kRBY"),
+                a = n("mrSG"),
+                o = n("q1tI"),
+                s = n("oJmH"),
+                c = n("/7QA"),
+                l = n("ZS2+"),
+                u = n("yR8l"),
+                d = n("tIid"),
+                p = n("DMoW"),
+                m = n("ZEQw"),
+                h = n("uIkQ"),
+                f = n("7SjK"),
+                y = n("OpME"),
+                g = n("Ue10"),
+                b = function(e) {
+                    return o.createElement(g.Wa, {
+                        padding: 2
+                    }, o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 2
+                        }
+                    }, o.createElement(g.W, {
+                        bold: !0
+                    }, Object(c.d)("Subscription benefits", "ChannelSubscriptionBenefits"))), o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Directly support the broadcaster", "ChannelSubscriptionBenefits"))), e.hasAdFree && o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Ad-free (with limited exceptions)", "ChannelSubscriptionBenefits"))), o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Chat during subscriber-only mode", "ChannelSubscriptionBenefits"))), e.hasFastChat && o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Not affected by chat slow mode", "ChannelSubscriptionBenefits"))), e.hasSubonlyVideoArchive && o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Access to VODs", "ChannelSubscriptionBenefits"))), e.badges.length > 0 && o.createElement(o.Fragment, null, o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Subscriber Badges:", "ChannelSubscriptionBenefits"))), o.createElement(g.Wa, {
+                        margin: {
+                            bottom: 1
+                        },
+                        display: g.X.Flex,
+                        flexWrap: g.Aa.Wrap,
+                        justifyContent: g.Va.Center
+                    }, e.badges.map(function(e) {
+                        return o.createElement(g.Wa, {
+                            key: e.setID + "/" + e.version,
+                            margin: .5
+                        }, o.createElement(h.a, {
+                            badge: e
+                        }))
+                    }))), e.emotes.length > 0 && o.createElement(o.Fragment, null, o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("{numEmotes, plural, one {# Subscriber Emote:} other {# Subscriber Emotes:}}", {
+                        numEmotes: e.emotes.length
+                    }, "ChannelSubscriptionBenefits"))), o.createElement(f.a, {
+                        emotes: Object(y.b)(e.emotes),
+                        locked: !1
+                    })))
+                },
+                v = n("C8FX"),
+                E = (n("QxOQ"), function(e) {
+                    return o.createElement(o.Fragment, null, o.createElement("div", {
+                        className: "channel-subscription-header__banner-image",
+                        style: {
+                            backgroundImage: "url(" + e.bannerImageURL
+                        }
+                    }, o.createElement(g.yb, {
+                        background: g.r.Overlay,
+                        position: g.eb.Absolute,
+                        fullHeight: !0,
+                        fullWidth: !0
+                    }), o.createElement(g.Wa, {
+                        className: "channel-subscription-header__banner-background",
+                        textAlign: g.Kb.Center
+                    }, o.createElement(g.Wa, {
+                        padding: {
+                            top: 3
+                        },
+                        display: g.X.Flex,
+                        justifyContent: g.Va.Center
+                    }, o.createElement(g.q, {
+                        alt: e.ownerDisplayName || "",
+                        size: 96,
+                        src: e.profileImageURL
+                    })))), o.createElement(g.Wa, {
+                        textAlign: g.Kb.Center,
+                        padding: {
+                            bottom: .5
+                        }
+                    }, o.createElement(g.Oa, {
+                        margin: {
+                            top: 3
+                        }
+                    }, o.createElement(g.W, {
+                        type: g.Ob.H4,
+                        bold: !0
+                    }, e.ownerDisplayName)), o.createElement(g.Oa, {
+                        margin: .5
+                    }, o.createElement(g.W, {
+                        type: g.Ob.H5
+                    }, e.productDisplayName)), o.createElement(v.a, {
+                        price: e.productPrice,
+                        interval: e.productPriceInterval,
+                        productDiscountPrice: e.productDiscountPrice || void 0,
+                        productPriceTaxInclusive: e.productPriceTaxInclusive,
+                        showEuSubs: e.showEuSubs
+                    })))
+                }),
+                C = n("ZDlU"),
+                k = n("QV0B"),
+                P = n("mb7O"),
+                S = (n("ZsMu"), function() {
+                    return o.createElement(P.a, null, o.createElement(g.Wa, {
+                        className: "error-ticket-description__header",
+                        padding: 2
+                    }, o.createElement(g.yb, {
+                        fullHeight: !0,
+                        background: g.r.Alt2
+                    }, o.createElement(C.a, null))), o.createElement(k.a, {
+                        collapsable: !0
+                    }, o.createElement(g.yb, {
+                        className: "error-ticket-description__body",
+                        padding: 2,
+                        borderTop: !0
+                    }, o.createElement(g.yb, {
+                        fullHeight: !0,
+                        background: g.r.Alt2
+                    }, o.createElement(C.a, null)))))
+                }),
+                O = (n("1P3F"), function() {
+                    return o.createElement(P.a, null, o.createElement(g.Wa, {
+                        className: "placeholder-ticket-description__header",
+                        padding: 2
+                    }, o.createElement(g.yb, {
+                        fullHeight: !0,
+                        background: g.r.Alt2
+                    })), o.createElement(k.a, {
+                        collapsable: !0
+                    }, o.createElement(g.yb, {
+                        padding: 2,
+                        borderTop: !0
+                    }, o.createElement(g.db, {
+                        lineCount: 30
+                    }))))
+                }),
+                x = n("KYZ7"),
+                I = n.n(x),
+                w = (n("R9u/"), function(e) {
+                    return o.createElement(P.a, null, o.createElement(g.yb, {
+                        background: g.r.Base
+                    }, o.createElement(g.Wa, {
+                        className: "turbo-ticket-description__banner-image",
+                        padding: 3,
+                        display: g.X.Flex,
+                        alignItems: g.f.Center,
+                        justifyContent: g.Va.Center
+                    }, o.createElement(g.S, {
+                        className: "turbo-ticket-description__banner-logo",
+                        src: I.a,
+                        alt: Object(c.d)("Twitch Turbo Logo", "TurboTicketDescription")
+                    })), o.createElement(g.yb, {
+                        borderBottom: !0,
+                        textAlign: g.Kb.Center,
+                        padding: 2
+                    }, o.createElement(v.a, {
+                        price: e.productPrice,
+                        interval: e.productPriceInterval,
+                        productPriceTaxInclusive: e.productPriceTaxInclusive,
+                        showEuSubs: e.showEuSubs
+                    })), o.createElement(k.a, {
+                        collapsable: !0,
+                        showButtonLabel: Object(c.d)("Show Turbo Benefits", "TurboTicketDescription"),
+                        hideButtonLabel: Object(c.d)("Hide Turbo Benefits", "TurboTicketDescription")
+                    }, o.createElement(g.Wa, {
+                        padding: 2
+                    }, o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, {
+                        bold: !0
+                    }, Object(c.d)("Subscription Benefits", "TurboTicketDescription"))), o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Ad-Free Viewing (with limited exceptions)", "TurboTicketDescription"))), o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Chat Badge", "TurboTicketDescription"))), o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Expanded Emote Set", "TurboTicketDescription"))), o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Custom Chat Username Colors", "TurboTicketDescription"))), o.createElement(g.Oa, {
+                        margin: {
+                            bottom: 1
+                        }
+                    }, o.createElement(g.W, null, Object(c.d)("Extended Broadcast Storage", "TurboTicketDescription")))))))
+                }),
+                _ = n("GnwI"),
+                N = n("9fjZ"),
+                T = l.a.wrap(function() {
+                    return n.e(191).then(n.bind(null, "skV9"))
+                }, "CampaignsTicketDescription"),
+                D = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.isTurboProduct = "turbo" === t.props.productName, t.tierToDisplayMap = {
+                            1000: Object(c.d)("Tier 1 Channel Subscription", "TicketDescription"),
+                            2000: Object(c.d)("Tier 2 Channel Subscription", "TicketDescription"),
+                            3000: Object(c.d)("Tier 3 Channel Subscription", "TicketDescription")
+                        }, t
+                    }
+                    return a.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.componentDidUpdate = function() {
+                        this.props.data.loading || this.props.data.error || this.props.latencyTracking.reportInteractive()
+                    }, t.prototype.render = function() {
+                        var e = this.props.data,
+                            t = e.product,
+                            n = e.loading,
+                            r = e.error;
+                        return !t && n ? o.createElement(O, null) : !t || r ? o.createElement(S, null) : this.isTurboProduct ? o.createElement(w, {
+                            productPrice: this.price,
+                            productPriceInterval: t.interval && t.interval.unit,
+                            productPriceTaxInclusive: this.taxInclusive,
+                            showEuSubs: this.props.showEuSubs
+                        }) : this.isEsportsProduct ? o.createElement(T, {
+                            ownerID: t.owner && t.owner.id,
+                            badges: this.badges,
+                            emotes: this.emotes,
+                            productPrice: this.price,
+                            productDiscountPrice: this.productDiscountPrice,
+                            productPriceInterval: t.interval && t.interval.unit,
+                            productPriceTaxInclusive: this.taxInclusive,
+                            showEuSubs: this.props.showEuSubs
+                        }) : o.createElement(P.a, null, o.createElement(g.yb, {
+                            background: g.r.Base
+                        }, o.createElement(E, {
+                            bannerImageURL: t.owner && t.owner.bannerImageURL,
+                            profileImageURL: t.owner && t.owner.profileImageURL,
+                            ownerDisplayName: t.owner && t.owner.displayName,
+                            productDisplayName: this.productDisplayName,
+                            productPrice: this.price,
+                            productDiscountPrice: this.productDiscountPrice,
+                            productPriceInterval: t.interval && t.interval.unit,
+                            productPriceTaxInclusive: this.taxInclusive,
+                            showEuSubs: this.props.showEuSubs
+                        }), o.createElement(k.a, {
+                            collapsable: !0,
+                            showButtonLabel: Object(c.d)("Show Subscription Benefits", "TicketDescription"),
+                            hideButtonLabel: Object(c.d)("Hide Subscription Benefits", "TicketDescription")
+                        }, o.createElement(b, {
+                            hasAdFree: t.hasAdFree,
+                            hasFastChat: t.hasFastChat,
+                            hasSubonlyVideoArchive: t.hasSubonlyVideoArchive,
+                            badges: this.badges,
+                            emotes: this.emotes
+                        }))))
+                    }, Object.defineProperty(t.prototype, "isEsportsProduct", {
+                        get: function() {
+                            var e = this.props.data.product;
+                            return !!(e && e.owner && e.owner.id && Object(d.a)(e.owner.id, this.props.sessionUser))
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "taxInclusive", {
+                        get: function() {
+                            var e = this.props.data.product && this.props.data.product.priceInfo;
+                            return !("US" === this.props.priceCountry || e && "USD" === e.currency && null === this.props.priceCountry && "US" === this.props.data.requestInfo.countryCode) && !(!e || !e.isTaxInclusive)
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "price", {
+                        get: function() {
+                            if (this.props.invoicePrice) return this.props.invoicePrice;
+                            if (this.props.data.loading) return null;
+                            var e = this.props.data.product;
+                            return e && e.priceInfo ? Object(c.f)(e.priceInfo.total / Math.pow(10, e.priceInfo.exponent), {
+                                style: "currency",
+                                currency: e.priceInfo.currency
+                            }) : null
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "productDiscountPrice", {
+                        get: function() {
+                            if (this.props.isGift) return this.props.data.product && this.props.data.product.giftPromotion && this.props.data.product.giftPromotion.newPrice;
+                            if (!this.props.data.product || !this.props.data.product.self) return null;
+                            var e = this.props.data.product.self.paidUpgradePromotion && this.props.data.product.self.paidUpgradePromotion.newPrice;
+                            return this.props.showPaidUpgrade && e ? e : this.props.data.product.self.promotion && this.props.data.product.self.promotion.newPrice
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "productDisplayName", {
+                        get: function() {
+                            var e = this.props.data.product;
+                            return e && e.priceInfo && e.priceInfo.currency !== p.p.USD ? this.tierToDisplayMap[e.tier || ""] || Object(c.d)("Channel Subscription", "TicketDescription") : e && e.displayName
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "badges", {
+                        get: function() {
+                            var e = [];
+                            if (this.props.data.product && this.props.data.product.owner && this.props.data.product.owner.broadcastBadges) {
+                                var t = this.props.data.product.owner.broadcastBadges;
+                                (t && t.filter(function(e) {
+                                    return e && "subscriber" === e.setID
+                                }).sort(function(e, t) {
+                                    return e && t && parseInt(e.version, 10) < parseInt(t.version, 10) ? -1 : 1
+                                })).forEach(function(t) {
+                                    if (t) {
+                                        var n = {
+                                            id: t.id,
+                                            setID: t.setID,
+                                            version: t.version,
+                                            title: t.title,
+                                            image1x: t.image1x,
+                                            image2x: t.image2x,
+                                            image4x: t.image4x,
+                                            clickAction: m.b,
+                                            clickURL: t.clickURL || ""
+                                        };
+                                        e.push(n)
+                                    }
+                                })
+                            }
+                            return e
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "emotes", {
+                        get: function() {
+                            var e = [],
+                                t = this.props.data.product;
+                            return t && t.owner && t.owner.subscriptionProducts && t.owner.subscriptionProducts.forEach(function(n) {
+                                n && n.emotes && n.tier <= t.tier && n.emotes.forEach(function(t) {
+                                    t && t.id && t.token && e.push({
+                                        id: t.id,
+                                        token: t.token
+                                    })
+                                })
+                            }), e
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(o.Component),
+                j = Object(s.compose)(Object(_.b)("TicketDescription"), Object(u.a)(N, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                productName: e.productName,
+                                taxCountry: e.priceCountry
+                            }
+                        }
+                    }
+                }))(D);
+            var R = Object(r.connect)(function(e) {
+                return {
+                    sessionUser: Object(i.e)(e)
+                }
+            })(j);
+            n.d(t, "a", function() {
+                return R
+            })
         },
         "W+U1": function(e, t, n) {
             "use strict";
@@ -4738,10 +11323,51 @@
                 }
             }
         },
+        WJ6U: function(e, t, n) {
+            e.exports = n.p + "assets/android_1x-38340be28156bb72233a.svg"
+        },
+        WlZp: function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                i = n("q1tI"),
+                a = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(t, e), Object.defineProperty(t.prototype, "kaptchaIframeSrc", {
+                        get: function() {
+                            return "https://secure" + (this.props.isProduction ? "" : "var") + ".paymentech.com/kount/LogoHtm?m=300532&s=" + this.props.sessionId
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "kaptchaImgSrc", {
+                        get: function() {
+                            return "https://secure" + (this.props.isProduction ? "" : "var") + ".paymentech.com/kount/LogoGif?m=300532&s=" + this.props.sessionId
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t.prototype.render = function() {
+                        return i.createElement("iframe", {
+                            width: "1",
+                            height: "1",
+                            scrolling: "no",
+                            src: this.kaptchaIframeSrc
+                        }, i.createElement("img", {
+                            width: "137",
+                            height: "33",
+                            src: this.kaptchaImgSrc
+                        }))
+                    }, t
+                }(i.Component);
+            n.d(t, "a", function() {
+                return a
+            })
+        },
+        XE3n: function(e, t, n) {},
         YVj6: function(e, t, n) {
-            var i, o;
-            ! function(a, r) {
-                i = [n("x0Ue")], void 0 === (o = function(e) {
+            var r, i;
+            ! function(a, o) {
+                r = [n("x0Ue")], void 0 === (i = function(e) {
                     return function(e, t) {
                         "use strict";
                         var n = {
@@ -4772,25 +11398,25 @@
                         }, n.handleEvent = function(e) {
                             var t = "on" + e.type;
                             this[t] && this[t](e)
-                        }, n.filterFindElements = function(e, i) {
-                            var o = [];
+                        }, n.filterFindElements = function(e, r) {
+                            var i = [];
                             return (e = n.makeArray(e)).forEach(function(e) {
                                 if (e instanceof HTMLElement)
-                                    if (i) {
-                                        t(e, i) && o.push(e);
-                                        for (var n = e.querySelectorAll(i), a = 0; a < n.length; a++) o.push(n[a])
-                                    } else o.push(e)
-                            }), o
+                                    if (r) {
+                                        t(e, r) && i.push(e);
+                                        for (var n = e.querySelectorAll(r), a = 0; a < n.length; a++) i.push(n[a])
+                                    } else i.push(e)
+                            }), i
                         }, n.debounceMethod = function(e, t, n) {
-                            var i = e.prototype[t],
-                                o = t + "Timeout";
+                            var r = e.prototype[t],
+                                i = t + "Timeout";
                             e.prototype[t] = function() {
-                                var e = this[o];
+                                var e = this[i];
                                 e && clearTimeout(e);
                                 var t = arguments,
                                     a = this;
-                                this[o] = setTimeout(function() {
-                                    i.apply(a, t), delete a[o]
+                                this[i] = setTimeout(function() {
+                                    r.apply(a, t), delete a[i]
                                 }, n || 100)
                             }
                         }, n.docReady = function(e) {
@@ -4801,64 +11427,295 @@
                                 return t + "-" + n
                             }).toLowerCase()
                         };
-                        var i = e.console;
-                        return n.htmlInit = function(t, o) {
+                        var r = e.console;
+                        return n.htmlInit = function(t, i) {
                             n.docReady(function() {
-                                var a = n.toDashed(o),
-                                    r = "data-" + a,
-                                    s = document.querySelectorAll("[" + r + "]"),
-                                    l = document.querySelectorAll(".js-" + a),
-                                    c = n.makeArray(s).concat(n.makeArray(l)),
-                                    u = r + "-options",
+                                var a = n.toDashed(i),
+                                    o = "data-" + a,
+                                    s = document.querySelectorAll("[" + o + "]"),
+                                    c = document.querySelectorAll(".js-" + a),
+                                    l = n.makeArray(s).concat(n.makeArray(c)),
+                                    u = o + "-options",
                                     d = e.jQuery;
-                                c.forEach(function(e) {
-                                    var n, a = e.getAttribute(r) || e.getAttribute(u);
+                                l.forEach(function(e) {
+                                    var n, a = e.getAttribute(o) || e.getAttribute(u);
                                     try {
                                         n = a && JSON.parse(a)
                                     } catch (t) {
-                                        return void(i && i.error("Error parsing " + r + " on " + e.className + ": " + t))
+                                        return void(r && r.error("Error parsing " + o + " on " + e.className + ": " + t))
                                     }
                                     var s = new t(e, n);
-                                    d && d.data(e, o, s)
+                                    d && d.data(e, i, s)
                                 })
                             })
                         }, n
                     }(a, e)
-                }.apply(t, i)) || (e.exports = o)
+                }.apply(t, r)) || (e.exports = i)
             }(window)
         },
         "ZAO/": function(e, t, n) {},
+        ZHRK: function(e, t, n) {},
+        ZiR0: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_1x-2a610ceedc14dc7f9673.png"
+        },
+        ZsMu: function(e, t, n) {},
+        a7Xb: function(e, t, n) {},
         abgr: function(e, t, n) {},
+        acxT: function(e, t, n) {},
+        b6Yk: function(e, t, n) {
+            "use strict";
+            n.d(t, "a", function() {
+                return o
+            });
+            var r = n("mrSG"),
+                i = n("/7QA"),
+                a = n("kRBY"),
+                o = function() {
+                    function e() {}
+                    return e.get = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.request(e, r.__assign({}, t, {
+                                            method: "GET"
+                                        }), n)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.getOrThrow = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                            method: "GET"
+                                        }), n)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.put = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.request(e, r.__assign({}, t, {
+                                            method: "PUT"
+                                        }), n)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.putOrThrow = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                            method: "PUT"
+                                        }), n)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.post = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.request(e, r.__assign({}, t, {
+                                            method: "POST"
+                                        }), n)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.postOrThrow = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                            method: "POST"
+                                        }), n)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.delete = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.request(e, r.__assign({}, t, {
+                                            method: "DELETE"
+                                        }), n)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.deleteOrThrow = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
+                                            method: "DELETE"
+                                        }), n)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.request = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            var i, a, o, s;
+                            return r.__generator(this, function(c) {
+                                switch (c.label) {
+                                    case 0:
+                                        return t = this.constructOptions(t, n), i = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, i), o = r.__assign({}, t, {
+                                            body: a
+                                        }), [4, this._fetch(e, o)];
+                                    case 1:
+                                        return s = c.sent(), [4, this.constructLegacyAPIResponse(s)];
+                                    case 2:
+                                        return [2, c.sent()]
+                                }
+                            })
+                        })
+                    }, e.requestOrThrow = function(e, t, n) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            var i;
+                            return r.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        return a.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
+                                    case 1:
+                                        if ((i = a.sent()).requestError) throw i.requestError;
+                                        if (i.error) throw new Error("Error while sending legacy-api request: " + i.error.status + " - " + i.error.message);
+                                        return [2, r.__assign({}, i, {
+                                            body: i.body
+                                        })];
+                                    case 2:
+                                        throw a.sent();
+                                    case 3:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, e.getAPIURL = function(e) {
+                        return new URL(e, i.p.config.apiBaseURL)
+                    }, e.constructLegacyAPIResponse = function(e) {
+                        return r.__awaiter(this, void 0, Promise, function() {
+                            var t, n, i, a;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
+                                    case 0:
+                                        t = {
+                                            status: e.status
+                                        }, r.label = 1;
+                                    case 1:
+                                        return r.trys.push([1, 3, , 4]), [4, e.json()];
+                                    case 2:
+                                        return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
+                                    case 3:
+                                        return i = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = i), [3, 4];
+                                    case 4:
+                                        return [2, t]
+                                }
+                            })
+                        })
+                    }, e._fetch = function(e, t) {
+                        return void 0 === t && (t = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        return [4, fetch(this.getAPIURL(e).toString(), t)];
+                                    case 1:
+                                        return [2, n.sent()]
+                                }
+                            })
+                        })
+                    }, e.constructOptions = function(e, t) {
+                        return e = Object.assign({}, e, {
+                            headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                        })
+                    }, e.serialize = function(e, t) {
+                        return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                            contentType: t
+                        }), null) : null
+                    }, e.getDefaultHeaders = function(e, t) {
+                        var n = i.p.store.getState(),
+                            r = {
+                                Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
+                                "Accept-Language": "en-us",
+                                "Client-ID": i.p.config.legacyClientID,
+                                "X-Requested-With": "XMLHttpRequest"
+                            };
+                        e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
+                        var o = Object(a.e)(n);
+                        return o && (r.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (r["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                            r[e] && delete r[e]
+                        }), r
+                    }, e.logger = i.p.logger.withCategory("legacy-api"), e
+                }()
+        },
+        bOWA: function(e, t, n) {
+            e.exports = n.p + "assets/mastercard-280a786ec3225a087428.svg"
+        },
+        bQeB: function(e, t, n) {
+            e.exports = n.p + "assets/generic_credit_card_1x-a6b9cd93075728ab4114.png"
+        },
         bVvr: function(e, t, n) {},
+        bfgy: function(e, t, n) {},
+        cWO5: function(e, t, n) {
+            "use strict";
+            var r;
+            n.d(t, "a", function() {
+                    return r
+                }),
+                function(e) {
+                    e.AmazonPay = "amazon", e.CreditCard = "credit_card", e.Paypal = "paypal"
+                }(r || (r = {}))
+        },
         ezMb: function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var i = Object.assign || function(e) {
+            var r = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
-                        for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i])
+                        for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                     }
                     return e
                 },
-                o = function() {
+                i = function() {
                     return function(e, t) {
                         if (Array.isArray(e)) return e;
                         if (Symbol.iterator in Object(e)) return function(e, t) {
                             var n = [],
-                                i = !0,
-                                o = !1,
+                                r = !0,
+                                i = !1,
                                 a = void 0;
                             try {
-                                for (var r, s = e[Symbol.iterator](); !(i = (r = s.next()).done) && (n.push(r.value), !t || n.length !== t); i = !0);
+                                for (var o, s = e[Symbol.iterator](); !(r = (o = s.next()).done) && (n.push(o.value), !t || n.length !== t); r = !0);
                             } catch (e) {
-                                o = !0, a = e
+                                i = !0, a = e
                             } finally {
                                 try {
-                                    !i && s.return && s.return()
+                                    !r && s.return && s.return()
                                 } finally {
-                                    if (o) throw a
+                                    if (i) throw a
                                 }
                             }
                             return n
@@ -4869,16 +11726,16 @@
                 a = function() {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
-                            var i = t[n];
-                            i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
                         }
                     }
-                    return function(t, n, i) {
-                        return n && e(t.prototype, n), i && e(t, i), t
+                    return function(t, n, r) {
+                        return n && e(t.prototype, n), r && e(t, r), t
                     }
                 }();
             t.default = function(e) {
-                var t, n, h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+                var t, n, m = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
                     withRef: !1
                 };
                 return n = t = function(t) {
@@ -4892,9 +11749,9 @@
                         }(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, e));
                         return t.handleStart = function(e) {
                             var n = t.props,
-                                i = n.distance,
-                                o = n.shouldCancelStart;
-                            if (2 === e.button || o(e)) return !1;
+                                r = n.distance,
+                                i = n.shouldCancelStart;
+                            if (2 === e.button || i(e)) return !1;
                             t._touched = !0, t._pos = {
                                 x: e.pageX,
                                 y: e.pageY
@@ -4903,17 +11760,17 @@
                                 return null != e.sortableInfo
                             });
                             if (a && a.sortableInfo && t.nodeIsChild(a) && !t.state.sorting) {
-                                var r = t.props.useDragHandle,
+                                var o = t.props.useDragHandle,
                                     s = a.sortableInfo,
-                                    l = s.index,
-                                    c = s.collection;
-                                if (r && !(0, p.closest)(e.target, function(e) {
+                                    c = s.index,
+                                    l = s.collection;
+                                if (o && !(0, p.closest)(e.target, function(e) {
                                         return null != e.sortableHandle
                                     })) return;
                                 t.manager.active = {
-                                    index: l,
-                                    collection: c
-                                }, "a" === e.target.tagName.toLowerCase() && e.preventDefault(), i || (0 === t.props.pressDelay ? t.handlePress(e) : t.pressTimer = setTimeout(function() {
+                                    index: c,
+                                    collection: l
+                                }, "a" === e.target.tagName.toLowerCase() && e.preventDefault(), r || (0 === t.props.pressDelay ? t.handlePress(e) : t.pressTimer = setTimeout(function() {
                                     return t.handlePress(e)
                                 }, t.props.pressDelay))
                             }
@@ -4921,15 +11778,15 @@
                             return e.sortableInfo.manager === t.manager
                         }, t.handleMove = function(e) {
                             var n = t.props,
-                                i = n.distance,
-                                o = n.pressThreshold;
+                                r = n.distance,
+                                i = n.pressThreshold;
                             if (!t.state.sorting && t._touched) {
                                 t._delta = {
                                     x: t._pos.x - e.pageX,
                                     y: t._pos.y - e.pageY
                                 };
                                 var a = Math.abs(t._delta.x) + Math.abs(t._delta.y);
-                                i || o && !(o && a >= o) ? i && a >= i && t.manager.isActive() && t.handlePress(e) : (clearTimeout(t.cancelTimer), t.cancelTimer = setTimeout(t.cancel, 0))
+                                r || i && !(i && a >= i) ? r && a >= r && t.manager.isActive() && t.handlePress(e) : (clearTimeout(t.cancelTimer), t.cancelTimer = setTimeout(t.cancel, 0))
                             }
                         }, t.handleEnd = function() {
                             var e = t.props.distance;
@@ -4939,29 +11796,29 @@
                         }, t.handlePress = function(e) {
                             var n = t.manager.getActive();
                             if (n) {
-                                var i = t.props,
-                                    o = i.axis,
-                                    a = i.getHelperDimensions,
-                                    r = i.helperClass,
-                                    s = i.hideSortableGhost,
-                                    l = i.onSortStart,
-                                    c = i.useWindowAsScrollContainer,
+                                var r = t.props,
+                                    i = r.axis,
+                                    a = r.getHelperDimensions,
+                                    o = r.helperClass,
+                                    s = r.hideSortableGhost,
+                                    c = r.onSortStart,
+                                    l = r.useWindowAsScrollContainer,
                                     u = n.node,
                                     d = n.collection,
-                                    h = u.sortableInfo.index,
+                                    m = u.sortableInfo.index,
                                     f = (0, p.getElementMargin)(u),
-                                    g = t.container.getBoundingClientRect(),
-                                    v = a({
-                                        index: h,
+                                    y = t.container.getBoundingClientRect(),
+                                    g = a({
+                                        index: m,
                                         node: u,
                                         collection: d
                                     });
-                                t.node = u, t.margin = f, t.width = v.width, t.height = v.height, t.marginOffset = {
+                                t.node = u, t.margin = f, t.width = g.width, t.height = g.height, t.marginOffset = {
                                     x: t.margin.left + t.margin.right,
                                     y: Math.max(t.margin.top, t.margin.bottom)
-                                }, t.boundingClientRect = u.getBoundingClientRect(), t.containerBoundingRect = g, t.index = h, t.newIndex = h, t.axis = {
-                                    x: o.indexOf("x") >= 0,
-                                    y: o.indexOf("y") >= 0
+                                }, t.boundingClientRect = u.getBoundingClientRect(), t.containerBoundingRect = y, t.index = m, t.newIndex = m, t.axis = {
+                                    x: i.indexOf("x") >= 0,
+                                    y: i.indexOf("y") >= 0
                                 }, t.offsetEdge = t.getEdgeOffset(u), t.initialOffset = t.getOffset(e), t.initialScroll = {
                                     top: t.scrollContainer.scrollTop,
                                     left: t.scrollContainer.scrollLeft
@@ -4969,22 +11826,22 @@
                                     top: window.pageYOffset,
                                     left: window.pageXOffset
                                 };
-                                var y, b = u.querySelectorAll("input, textarea, select"),
+                                var b, v = u.querySelectorAll("input, textarea, select"),
                                     E = u.cloneNode(!0),
-                                    x = [].concat(m(E.querySelectorAll("input, textarea, select")));
-                                if (x.forEach(function(e, t) {
-                                        "file" !== e.type && b[t] && (e.value = b[t].value)
-                                    }), t.helper = t.document.body.appendChild(E), t.helper.style.position = "fixed", t.helper.style.top = t.boundingClientRect.top - f.top + "px", t.helper.style.left = t.boundingClientRect.left - f.left + "px", t.helper.style.width = t.width + "px", t.helper.style.height = t.height + "px", t.helper.style.boxSizing = "border-box", t.helper.style.pointerEvents = "none", s && (t.sortableGhost = u, u.style.visibility = "hidden", u.style.opacity = 0), t.minTranslate = {}, t.maxTranslate = {}, t.axis.x && (t.minTranslate.x = (c ? 0 : g.left) - t.boundingClientRect.left - t.width / 2, t.maxTranslate.x = (c ? t.contentWindow.innerWidth : g.left + g.width) - t.boundingClientRect.left - t.width / 2), t.axis.y && (t.minTranslate.y = (c ? 0 : g.top) - t.boundingClientRect.top - t.height / 2, t.maxTranslate.y = (c ? t.contentWindow.innerHeight : g.top + g.height) - t.boundingClientRect.top - t.height / 2), r)(y = t.helper.classList).add.apply(y, m(r.split(" ")));
+                                    C = [].concat(h(E.querySelectorAll("input, textarea, select")));
+                                if (C.forEach(function(e, t) {
+                                        "file" !== e.type && v[t] && (e.value = v[t].value)
+                                    }), t.helper = t.document.body.appendChild(E), t.helper.style.position = "fixed", t.helper.style.top = t.boundingClientRect.top - f.top + "px", t.helper.style.left = t.boundingClientRect.left - f.left + "px", t.helper.style.width = t.width + "px", t.helper.style.height = t.height + "px", t.helper.style.boxSizing = "border-box", t.helper.style.pointerEvents = "none", s && (t.sortableGhost = u, u.style.visibility = "hidden", u.style.opacity = 0), t.minTranslate = {}, t.maxTranslate = {}, t.axis.x && (t.minTranslate.x = (l ? 0 : y.left) - t.boundingClientRect.left - t.width / 2, t.maxTranslate.x = (l ? t.contentWindow.innerWidth : y.left + y.width) - t.boundingClientRect.left - t.width / 2), t.axis.y && (t.minTranslate.y = (l ? 0 : y.top) - t.boundingClientRect.top - t.height / 2, t.maxTranslate.y = (l ? t.contentWindow.innerHeight : y.top + y.height) - t.boundingClientRect.top - t.height / 2), o)(b = t.helper.classList).add.apply(b, h(o.split(" ")));
                                 t.listenerNode = e.touches ? u : t.contentWindow, p.events.move.forEach(function(e) {
                                     return t.listenerNode.addEventListener(e, t.handleSortMove, !1)
                                 }), p.events.end.forEach(function(e) {
                                     return t.listenerNode.addEventListener(e, t.handleSortEnd, !1)
                                 }), t.setState({
                                     sorting: !0,
-                                    sortingIndex: h
-                                }), l && l({
+                                    sortingIndex: m
+                                }), c && c({
                                     node: u,
-                                    index: h,
+                                    index: m,
                                     collection: d
                                 }, e)
                             }
@@ -4993,23 +11850,23 @@
                             e.preventDefault(), t.updatePosition(e), t.animateNodes(), t.autoscroll(), n && n(e)
                         }, t.handleSortEnd = function(e) {
                             var n = t.props,
-                                i = n.hideSortableGhost,
-                                o = n.onSortEnd,
+                                r = n.hideSortableGhost,
+                                i = n.onSortEnd,
                                 a = t.manager.active.collection;
                             t.listenerNode && (p.events.move.forEach(function(e) {
                                 return t.listenerNode.removeEventListener(e, t.handleSortMove)
                             }), p.events.end.forEach(function(e) {
                                 return t.listenerNode.removeEventListener(e, t.handleSortEnd)
-                            })), t.helper.parentNode.removeChild(t.helper), i && t.sortableGhost && (t.sortableGhost.style.visibility = "", t.sortableGhost.style.opacity = "");
-                            for (var r = t.manager.refs[a], s = 0, l = r.length; s < l; s++) {
-                                var c = r[s],
-                                    u = c.node;
-                                c.edgeOffset = null, u.style[p.vendorPrefix + "Transform"] = "", u.style[p.vendorPrefix + "TransitionDuration"] = ""
+                            })), t.helper.parentNode.removeChild(t.helper), r && t.sortableGhost && (t.sortableGhost.style.visibility = "", t.sortableGhost.style.opacity = "");
+                            for (var o = t.manager.refs[a], s = 0, c = o.length; s < c; s++) {
+                                var l = o[s],
+                                    u = l.node;
+                                l.edgeOffset = null, u.style[p.vendorPrefix + "Transform"] = "", u.style[p.vendorPrefix + "TransitionDuration"] = ""
                             }
                             clearInterval(t.autoscrollInterval), t.autoscrollInterval = null, t.manager.active = null, t.setState({
                                 sorting: !1,
                                 sortingIndex: null
-                            }), "function" == typeof o && o({
+                            }), "function" == typeof i && i({
                                 oldIndex: t.index,
                                 newIndex: t.newIndex,
                                 collection: a
@@ -5020,19 +11877,19 @@
                                     x: 0,
                                     y: 0
                                 },
-                                i = {
+                                r = {
                                     x: 1,
                                     y: 1
                                 },
-                                o = {
+                                i = {
                                     x: 10,
                                     y: 10
                                 };
-                            e.y >= t.maxTranslate.y - t.height / 2 ? (n.y = 1, i.y = o.y * Math.abs((t.maxTranslate.y - t.height / 2 - e.y) / t.height)) : e.x >= t.maxTranslate.x - t.width / 2 ? (n.x = 1, i.x = o.x * Math.abs((t.maxTranslate.x - t.width / 2 - e.x) / t.width)) : e.y <= t.minTranslate.y + t.height / 2 ? (n.y = -1, i.y = o.y * Math.abs((e.y - t.height / 2 - t.minTranslate.y) / t.height)) : e.x <= t.minTranslate.x + t.width / 2 && (n.x = -1, i.x = o.x * Math.abs((e.x - t.width / 2 - t.minTranslate.x) / t.width)), t.autoscrollInterval && (clearInterval(t.autoscrollInterval), t.autoscrollInterval = null, t.isAutoScrolling = !1), 0 === n.x && 0 === n.y || (t.autoscrollInterval = setInterval(function() {
+                            e.y >= t.maxTranslate.y - t.height / 2 ? (n.y = 1, r.y = i.y * Math.abs((t.maxTranslate.y - t.height / 2 - e.y) / t.height)) : e.x >= t.maxTranslate.x - t.width / 2 ? (n.x = 1, r.x = i.x * Math.abs((t.maxTranslate.x - t.width / 2 - e.x) / t.width)) : e.y <= t.minTranslate.y + t.height / 2 ? (n.y = -1, r.y = i.y * Math.abs((e.y - t.height / 2 - t.minTranslate.y) / t.height)) : e.x <= t.minTranslate.x + t.width / 2 && (n.x = -1, r.x = i.x * Math.abs((e.x - t.width / 2 - t.minTranslate.x) / t.width)), t.autoscrollInterval && (clearInterval(t.autoscrollInterval), t.autoscrollInterval = null, t.isAutoScrolling = !1), 0 === n.x && 0 === n.y || (t.autoscrollInterval = setInterval(function() {
                                 t.isAutoScrolling = !0;
                                 var e = {
-                                    left: 1 * i.x * n.x,
-                                    top: 1 * i.y * n.y
+                                    left: 1 * r.x * n.x,
+                                    top: 1 * r.y * n.y
                                 };
                                 t.scrollContainer.scrollTop += e.top, t.scrollContainer.scrollLeft += e.left, t.translate.x += e.left, t.translate.y += e.top, t.animateNodes()
                             }, 5))
@@ -5065,15 +11922,15 @@
                             var e = this,
                                 t = this.props,
                                 n = t.getContainer,
-                                i = t.useWindowAsScrollContainer,
-                                o = this.props.contentWindow || window;
-                            this.container = "function" == typeof n ? n(this.getWrappedInstance()) : (0, c.findDOMNode)(this), this.document = this.container.ownerDocument || document, this.scrollContainer = i ? this.document.body : this.container, this.contentWindow = "function" == typeof o ? o() : o;
+                                r = t.useWindowAsScrollContainer,
+                                i = this.props.contentWindow || window;
+                            this.container = "function" == typeof n ? n(this.getWrappedInstance()) : (0, l.findDOMNode)(this), this.document = this.container.ownerDocument || document, this.scrollContainer = r ? this.document.body : this.container, this.contentWindow = "function" == typeof i ? i() : i;
                             var a = function(t) {
                                 e.events.hasOwnProperty(t) && p.events[t].forEach(function(n) {
                                     return e.container.addEventListener(n, e.events[t], !1)
                                 })
                             };
-                            for (var r in this.events) a(r)
+                            for (var o in this.events) a(o)
                         }
                     }, {
                         key: "componentWillUnmount",
@@ -5115,22 +11972,22 @@
                             var e = this.props.lockOffset;
                             Array.isArray(e) || (e = [e, e]), (0, u.default)(2 === e.length, "lockOffset prop of SortableContainer should be a single value or an array of exactly two values. Given %s", e);
                             var t = e,
-                                n = o(t, 2),
-                                i = n[0],
+                                n = i(t, 2),
+                                r = n[0],
                                 a = n[1];
-                            return [this.getLockPixelOffset(i), this.getLockPixelOffset(a)]
+                            return [this.getLockPixelOffset(r), this.getLockPixelOffset(a)]
                         }
                     }, {
                         key: "getLockPixelOffset",
                         value: function(e) {
                             var t = e,
                                 n = e,
-                                i = "px";
+                                r = "px";
                             if ("string" == typeof e) {
-                                var o = /^[+-]?\d*(?:\.\d*)?(px|%)$/.exec(e);
-                                (0, u.default)(null !== o, 'lockOffset value should be a number or a string of a number followed by "px" or "%". Given %s', e), t = n = parseFloat(e), i = o[1]
+                                var i = /^[+-]?\d*(?:\.\d*)?(px|%)$/.exec(e);
+                                (0, u.default)(null !== i, 'lockOffset value should be a number or a string of a number followed by "px" or "%". Given %s', e), t = n = parseFloat(e), r = i[1]
                             }
-                            return (0, u.default)(isFinite(t) && isFinite(n), "lockOffset value should be a finite. Given %s", e), "%" === i && (t = t * this.width / 100, n = n * this.height / 100), {
+                            return (0, u.default)(isFinite(t) && isFinite(n), "lockOffset value should be a finite. Given %s", e), "%" === r && (t = t * this.width / 100, n = n * this.height / 100), {
                                 x: t,
                                 y: n
                             }
@@ -5140,28 +11997,28 @@
                         value: function(e) {
                             var t = this.props,
                                 n = t.lockAxis,
-                                i = t.lockToContainerEdges,
+                                r = t.lockToContainerEdges,
                                 a = this.getOffset(e),
-                                r = {
+                                o = {
                                     x: a.x - this.initialOffset.x,
                                     y: a.y - this.initialOffset.y
                                 };
-                            if (r.y -= window.pageYOffset - this.initialWindowScroll.top, r.x -= window.pageXOffset - this.initialWindowScroll.left, this.translate = r, i) {
+                            if (o.y -= window.pageYOffset - this.initialWindowScroll.top, o.x -= window.pageXOffset - this.initialWindowScroll.left, this.translate = o, r) {
                                 var s = this.getLockPixelOffsets(),
-                                    l = o(s, 2),
-                                    c = l[0],
-                                    u = l[1],
+                                    c = i(s, 2),
+                                    l = c[0],
+                                    u = c[1],
                                     d = {
-                                        x: this.width / 2 - c.x,
-                                        y: this.height / 2 - c.y
+                                        x: this.width / 2 - l.x,
+                                        y: this.height / 2 - l.y
                                     },
-                                    h = {
+                                    m = {
                                         x: this.width / 2 - u.x,
                                         y: this.height / 2 - u.y
                                     };
-                                r.x = (0, p.limit)(this.minTranslate.x + d.x, this.maxTranslate.x - h.x, r.x), r.y = (0, p.limit)(this.minTranslate.y + d.y, this.maxTranslate.y - h.y, r.y)
+                                o.x = (0, p.limit)(this.minTranslate.x + d.x, this.maxTranslate.x - m.x, o.x), o.y = (0, p.limit)(this.minTranslate.y + d.y, this.maxTranslate.y - m.y, o.y)
                             }
-                            "x" === n ? r.y = 0 : "y" === n && (r.x = 0), this.helper.style[p.vendorPrefix + "Transform"] = "translate3d(" + r.x + "px," + r.y + "px, 0)"
+                            "x" === n ? o.y = 0 : "y" === n && (o.x = 0), this.helper.style[p.vendorPrefix + "Transform"] = "translate3d(" + o.x + "px," + o.y + "px, 0)"
                         }
                     }, {
                         key: "animateNodes",
@@ -5169,56 +12026,56 @@
                             var e = this.props,
                                 t = e.transitionDuration,
                                 n = e.hideSortableGhost,
-                                i = this.manager.getOrderedRefs(),
-                                o = {
+                                r = this.manager.getOrderedRefs(),
+                                i = {
                                     left: this.scrollContainer.scrollLeft - this.initialScroll.left,
                                     top: this.scrollContainer.scrollTop - this.initialScroll.top
                                 },
                                 a = {
-                                    left: this.offsetEdge.left + this.translate.x + o.left,
-                                    top: this.offsetEdge.top + this.translate.y + o.top
+                                    left: this.offsetEdge.left + this.translate.x + i.left,
+                                    top: this.offsetEdge.top + this.translate.y + i.top
                                 },
-                                r = {
+                                o = {
                                     top: window.pageYOffset - this.initialWindowScroll.top,
                                     left: window.pageXOffset - this.initialWindowScroll.left
                                 };
                             this.newIndex = null;
-                            for (var s = 0, l = i.length; s < l; s++) {
-                                var c = i[s].node,
-                                    u = c.sortableInfo.index,
-                                    d = c.offsetWidth,
-                                    h = c.offsetHeight,
-                                    m = {
+                            for (var s = 0, c = r.length; s < c; s++) {
+                                var l = r[s].node,
+                                    u = l.sortableInfo.index,
+                                    d = l.offsetWidth,
+                                    m = l.offsetHeight,
+                                    h = {
                                         width: this.width > d ? d / 2 : this.width / 2,
-                                        height: this.height > h ? h / 2 : this.height / 2
+                                        height: this.height > m ? m / 2 : this.height / 2
                                     },
                                     f = {
                                         x: 0,
                                         y: 0
                                     },
-                                    g = i[s].edgeOffset;
-                                g || (i[s].edgeOffset = g = this.getEdgeOffset(c));
-                                var v = s < i.length - 1 && i[s + 1],
-                                    y = s > 0 && i[s - 1];
-                                v && !v.edgeOffset && (v.edgeOffset = this.getEdgeOffset(v.node)), u !== this.index ? (t && (c.style[p.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? u < this.index && (a.left + r.left - m.width <= g.left && a.top + r.top <= g.top + m.height || a.top + r.top + m.height <= g.top) ? (f.x = this.width + this.marginOffset.x, g.left + f.x > this.containerBoundingRect.width - m.width && (f.x = v.edgeOffset.left - g.left, f.y = v.edgeOffset.top - g.top), null === this.newIndex && (this.newIndex = u)) : u > this.index && (a.left + r.left + m.width >= g.left && a.top + r.top + m.height >= g.top || a.top + r.top + m.height >= g.top + h) && (f.x = -(this.width + this.marginOffset.x), g.left + f.x < this.containerBoundingRect.left + m.width && (f.x = y.edgeOffset.left - g.left, f.y = y.edgeOffset.top - g.top), this.newIndex = u) : u > this.index && a.left + r.left + m.width >= g.left ? (f.x = -(this.width + this.marginOffset.x), this.newIndex = u) : u < this.index && a.left + r.left <= g.left + m.width && (f.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = u)) : this.axis.y && (u > this.index && a.top + r.top + m.height >= g.top ? (f.y = -(this.height + this.marginOffset.y), this.newIndex = u) : u < this.index && a.top + r.top <= g.top + m.height && (f.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = u))), c.style[p.vendorPrefix + "Transform"] = "translate3d(" + f.x + "px," + f.y + "px,0)") : n && (this.sortableGhost = c, c.style.visibility = "hidden", c.style.opacity = 0)
+                                    y = r[s].edgeOffset;
+                                y || (r[s].edgeOffset = y = this.getEdgeOffset(l));
+                                var g = s < r.length - 1 && r[s + 1],
+                                    b = s > 0 && r[s - 1];
+                                g && !g.edgeOffset && (g.edgeOffset = this.getEdgeOffset(g.node)), u !== this.index ? (t && (l.style[p.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? u < this.index && (a.left + o.left - h.width <= y.left && a.top + o.top <= y.top + h.height || a.top + o.top + h.height <= y.top) ? (f.x = this.width + this.marginOffset.x, y.left + f.x > this.containerBoundingRect.width - h.width && (f.x = g.edgeOffset.left - y.left, f.y = g.edgeOffset.top - y.top), null === this.newIndex && (this.newIndex = u)) : u > this.index && (a.left + o.left + h.width >= y.left && a.top + o.top + h.height >= y.top || a.top + o.top + h.height >= y.top + m) && (f.x = -(this.width + this.marginOffset.x), y.left + f.x < this.containerBoundingRect.left + h.width && (f.x = b.edgeOffset.left - y.left, f.y = b.edgeOffset.top - y.top), this.newIndex = u) : u > this.index && a.left + o.left + h.width >= y.left ? (f.x = -(this.width + this.marginOffset.x), this.newIndex = u) : u < this.index && a.left + o.left <= y.left + h.width && (f.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = u)) : this.axis.y && (u > this.index && a.top + o.top + h.height >= y.top ? (f.y = -(this.height + this.marginOffset.y), this.newIndex = u) : u < this.index && a.top + o.top <= y.top + h.height && (f.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = u))), l.style[p.vendorPrefix + "Transform"] = "translate3d(" + f.x + "px," + f.y + "px,0)") : n && (this.sortableGhost = l, l.style.visibility = "hidden", l.style.opacity = 0)
                             }
                             null == this.newIndex && (this.newIndex = this.index)
                         }
                     }, {
                         key: "getWrappedInstance",
                         value: function() {
-                            return (0, u.default)(h.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableContainer() call"), this.refs.wrappedInstance
+                            return (0, u.default)(m.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableContainer() call"), this.refs.wrappedInstance
                         }
                     }, {
                         key: "render",
                         value: function() {
-                            var t = h.withRef ? "wrappedInstance" : null;
-                            return s.default.createElement(e, i({
+                            var t = m.withRef ? "wrappedInstance" : null;
+                            return s.default.createElement(e, r({
                                 ref: t
                             }, (0, p.omit)(this.props, "contentWindow", "useWindowAsScrollContainer", "distance", "helperClass", "hideSortableGhost", "transitionDuration", "useDragHandle", "pressDelay", "pressThreshold", "shouldCancelStart", "onSortStart", "onSortMove", "onSortEnd", "axis", "lockAxis", "lockOffset", "lockToContainerEdges", "getContainer", "getHelperDimensions")))
                         }
                     }]), n
-                }(r.Component), t.displayName = (0, p.provideDisplayName)("sortableList", e), t.defaultProps = {
+                }(o.Component), t.displayName = (0, p.provideDisplayName)("sortableList", e), t.defaultProps = {
                     axis: "y",
                     transitionDuration: 300,
                     pressDelay: 0,
@@ -5239,43 +12096,43 @@
                         }
                     }
                 }, t.propTypes = {
-                    axis: l.default.oneOf(["x", "y", "xy"]),
-                    distance: l.default.number,
-                    lockAxis: l.default.string,
-                    helperClass: l.default.string,
-                    transitionDuration: l.default.number,
-                    contentWindow: l.default.any,
-                    onSortStart: l.default.func,
-                    onSortMove: l.default.func,
-                    onSortEnd: l.default.func,
-                    shouldCancelStart: l.default.func,
-                    pressDelay: l.default.number,
-                    useDragHandle: l.default.bool,
-                    useWindowAsScrollContainer: l.default.bool,
-                    hideSortableGhost: l.default.bool,
-                    lockToContainerEdges: l.default.bool,
-                    lockOffset: l.default.oneOfType([l.default.number, l.default.string, l.default.arrayOf(l.default.oneOfType([l.default.number, l.default.string]))]),
-                    getContainer: l.default.func,
-                    getHelperDimensions: l.default.func
+                    axis: c.default.oneOf(["x", "y", "xy"]),
+                    distance: c.default.number,
+                    lockAxis: c.default.string,
+                    helperClass: c.default.string,
+                    transitionDuration: c.default.number,
+                    contentWindow: c.default.any,
+                    onSortStart: c.default.func,
+                    onSortMove: c.default.func,
+                    onSortEnd: c.default.func,
+                    shouldCancelStart: c.default.func,
+                    pressDelay: c.default.number,
+                    useDragHandle: c.default.bool,
+                    useWindowAsScrollContainer: c.default.bool,
+                    hideSortableGhost: c.default.bool,
+                    lockToContainerEdges: c.default.bool,
+                    lockOffset: c.default.oneOfType([c.default.number, c.default.string, c.default.arrayOf(c.default.oneOfType([c.default.number, c.default.string]))]),
+                    getContainer: c.default.func,
+                    getHelperDimensions: c.default.func
                 }, t.childContextTypes = {
-                    manager: l.default.object.isRequired
+                    manager: c.default.object.isRequired
                 }, n
             };
-            var r = n("q1tI"),
-                s = h(r),
-                l = h(n("17x9")),
-                c = n("i8i4"),
-                u = h(n("QLaP")),
-                d = h(n("8ENv")),
+            var o = n("q1tI"),
+                s = m(o),
+                c = m(n("17x9")),
+                l = n("i8i4"),
+                u = m(n("QLaP")),
+                d = m(n("8ENv")),
                 p = n("jTc+");
 
-            function h(e) {
+            function m(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
 
-            function m(e) {
+            function h(e) {
                 if (Array.isArray(e)) {
                     for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
                     return n
@@ -5284,7 +12141,7 @@
             }
         },
         hNNL: function(e, t, n) {
-            var i, o, a;
+            var r, i, a;
             /*!
              * Masonry v4.2.0
              * Cascading grid layout library
@@ -5292,109 +12149,109 @@
              * MIT License
              * by David DeSandro
              */
-            window, o = [n("Hy43"), n("QK1G")], void 0 === (a = "function" == typeof(i = function(e, t) {
+            window, i = [n("Hy43"), n("QK1G")], void 0 === (a = "function" == typeof(r = function(e, t) {
                 "use strict";
                 var n = e.create("masonry");
                 n.compatOptions.fitWidth = "isFitWidth";
-                var i = n.prototype;
-                return i._resetLayout = function() {
+                var r = n.prototype;
+                return r._resetLayout = function() {
                     this.getSize(), this._getMeasurement("columnWidth", "outerWidth"), this._getMeasurement("gutter", "outerWidth"), this.measureColumns(), this.colYs = [];
                     for (var e = 0; e < this.cols; e++) this.colYs.push(0);
                     this.maxY = 0, this.horizontalColIndex = 0
-                }, i.measureColumns = function() {
+                }, r.measureColumns = function() {
                     if (this.getContainerWidth(), !this.columnWidth) {
                         var e = this.items[0],
                             n = e && e.element;
                         this.columnWidth = n && t(n).outerWidth || this.containerWidth
                     }
-                    var i = this.columnWidth += this.gutter,
-                        o = this.containerWidth + this.gutter,
-                        a = o / i,
-                        r = i - o % i;
-                    a = Math[r && r < 1 ? "round" : "floor"](a), this.cols = Math.max(a, 1)
-                }, i.getContainerWidth = function() {
+                    var r = this.columnWidth += this.gutter,
+                        i = this.containerWidth + this.gutter,
+                        a = i / r,
+                        o = r - i % r;
+                    a = Math[o && o < 1 ? "round" : "floor"](a), this.cols = Math.max(a, 1)
+                }, r.getContainerWidth = function() {
                     var e = this._getOption("fitWidth") ? this.element.parentNode : this.element,
                         n = t(e);
                     this.containerWidth = n && n.innerWidth
-                }, i._getItemLayoutPosition = function(e) {
+                }, r._getItemLayoutPosition = function(e) {
                     e.getSize();
                     var t = e.size.outerWidth % this.columnWidth,
                         n = Math[t && t < 1 ? "round" : "ceil"](e.size.outerWidth / this.columnWidth);
                     n = Math.min(n, this.cols);
-                    for (var i = this[this.options.horizontalOrder ? "_getHorizontalColPosition" : "_getTopColPosition"](n, e), o = {
-                            x: this.columnWidth * i.col,
-                            y: i.y
-                        }, a = i.y + e.size.outerHeight, r = n + i.col, s = i.col; s < r; s++) this.colYs[s] = a;
-                    return o
-                }, i._getTopColPosition = function(e) {
+                    for (var r = this[this.options.horizontalOrder ? "_getHorizontalColPosition" : "_getTopColPosition"](n, e), i = {
+                            x: this.columnWidth * r.col,
+                            y: r.y
+                        }, a = r.y + e.size.outerHeight, o = n + r.col, s = r.col; s < o; s++) this.colYs[s] = a;
+                    return i
+                }, r._getTopColPosition = function(e) {
                     var t = this._getTopColGroup(e),
                         n = Math.min.apply(Math, t);
                     return {
                         col: t.indexOf(n),
                         y: n
                     }
-                }, i._getTopColGroup = function(e) {
+                }, r._getTopColGroup = function(e) {
                     if (e < 2) return this.colYs;
-                    for (var t = [], n = this.cols + 1 - e, i = 0; i < n; i++) t[i] = this._getColGroupY(i, e);
+                    for (var t = [], n = this.cols + 1 - e, r = 0; r < n; r++) t[r] = this._getColGroupY(r, e);
                     return t
-                }, i._getColGroupY = function(e, t) {
+                }, r._getColGroupY = function(e, t) {
                     if (t < 2) return this.colYs[e];
                     var n = this.colYs.slice(e, e + t);
                     return Math.max.apply(Math, n)
-                }, i._getHorizontalColPosition = function(e, t) {
+                }, r._getHorizontalColPosition = function(e, t) {
                     var n = this.horizontalColIndex % this.cols;
                     n = e > 1 && n + e > this.cols ? 0 : n;
-                    var i = t.size.outerWidth && t.size.outerHeight;
-                    return this.horizontalColIndex = i ? n + e : this.horizontalColIndex, {
+                    var r = t.size.outerWidth && t.size.outerHeight;
+                    return this.horizontalColIndex = r ? n + e : this.horizontalColIndex, {
                         col: n,
                         y: this._getColGroupY(n, e)
                     }
-                }, i._manageStamp = function(e) {
+                }, r._manageStamp = function(e) {
                     var n = t(e),
-                        i = this._getElementOffset(e),
-                        o = this._getOption("originLeft") ? i.left : i.right,
-                        a = o + n.outerWidth,
-                        r = Math.floor(o / this.columnWidth);
-                    r = Math.max(0, r);
+                        r = this._getElementOffset(e),
+                        i = this._getOption("originLeft") ? r.left : r.right,
+                        a = i + n.outerWidth,
+                        o = Math.floor(i / this.columnWidth);
+                    o = Math.max(0, o);
                     var s = Math.floor(a / this.columnWidth);
                     s -= a % this.columnWidth ? 0 : 1, s = Math.min(this.cols - 1, s);
-                    for (var l = (this._getOption("originTop") ? i.top : i.bottom) + n.outerHeight, c = r; c <= s; c++) this.colYs[c] = Math.max(l, this.colYs[c])
-                }, i._getContainerSize = function() {
+                    for (var c = (this._getOption("originTop") ? r.top : r.bottom) + n.outerHeight, l = o; l <= s; l++) this.colYs[l] = Math.max(c, this.colYs[l])
+                }, r._getContainerSize = function() {
                     this.maxY = Math.max.apply(Math, this.colYs);
                     var e = {
                         height: this.maxY
                     };
                     return this._getOption("fitWidth") && (e.width = this._getContainerFitWidth()), e
-                }, i._getContainerFitWidth = function() {
+                }, r._getContainerFitWidth = function() {
                     for (var e = 0, t = this.cols; --t && 0 === this.colYs[t];) e++;
                     return (this.cols - e) * this.columnWidth - this.gutter
-                }, i.needsResizeLayout = function() {
+                }, r.needsResizeLayout = function() {
                     var e = this.containerWidth;
                     return this.getContainerWidth(), e != this.containerWidth
                 }, n
-            }) ? i.apply(t, o) : i) || (e.exports = a)
+            }) ? r.apply(t, i) : r) || (e.exports = a)
         },
         hk6T: function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            var i = Object.assign || function(e) {
+            var r = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
-                        for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i])
+                        for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                     }
                     return e
                 },
-                o = function() {
+                i = function() {
                     function e(e, t) {
                         for (var n = 0; n < t.length; n++) {
-                            var i = t[n];
-                            i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, i.key, i)
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
                         }
                     }
-                    return function(t, n, i) {
-                        return n && e(t.prototype, n), i && e(t, i), t
+                    return function(t, n, r) {
+                        return n && e(t.prototype, n), r && e(t, r), t
                     }
                 }();
             t.default = function(e) {
@@ -5421,14 +12278,14 @@
                                 configurable: !0
                             }
                         }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-                    }(n, t), o(n, [{
+                    }(n, t), i(n, [{
                         key: "componentDidMount",
                         value: function() {
                             var e = this.props,
                                 t = e.collection,
                                 n = e.disabled,
-                                i = e.index;
-                            n || this.setDraggable(t, i)
+                                r = e.index;
+                            n || this.setDraggable(t, r)
                         }
                     }, {
                         key: "componentWillReceiveProps",
@@ -5436,8 +12293,8 @@
                             if (this.props.index !== e.index && this.node && (this.node.sortableInfo.index = e.index), this.props.disabled !== e.disabled) {
                                 var t = e.collection,
                                     n = e.disabled,
-                                    i = e.index;
-                                n ? this.removeDraggable(t) : this.setDraggable(t, i)
+                                    r = e.index;
+                                n ? this.removeDraggable(t) : this.setDraggable(t, r)
                             } else this.props.collection !== e.collection && (this.removeDraggable(this.props.collection), this.setDraggable(e.collection, e.index))
                         }
                     }, {
@@ -5451,7 +12308,7 @@
                     }, {
                         key: "setDraggable",
                         value: function(e, t) {
-                            var n = this.node = (0, l.findDOMNode)(this);
+                            var n = this.node = (0, c.findDOMNode)(this);
                             n.sortableInfo = {
                                 index: t,
                                 collection: e,
@@ -5468,13 +12325,13 @@
                     }, {
                         key: "getWrappedInstance",
                         value: function() {
-                            return (0, c.default)(d.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call"), this.refs.wrappedInstance
+                            return (0, l.default)(d.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call"), this.refs.wrappedInstance
                         }
                     }, {
                         key: "render",
                         value: function() {
                             var t = d.withRef ? "wrappedInstance" : null;
-                            return r.default.createElement(e, i({
+                            return o.default.createElement(e, r({
                                 ref: t
                             }, (0, u.omit)(this.props, "collection", "disabled", "index")))
                         }
@@ -5490,10 +12347,10 @@
                 }, n
             };
             var a = n("q1tI"),
-                r = d(a),
+                o = d(a),
                 s = d(n("17x9")),
-                l = n("i8i4"),
-                c = d(n("QLaP")),
+                c = n("i8i4"),
+                l = d(n("QLaP")),
                 u = n("jTc+");
 
             function d(e) {
@@ -5502,19 +12359,178 @@
                 }
             }
         },
+        iSjI: function(e, t, n) {
+            e.exports = n.p + "assets/visa-0862ac17dccf1c7a5a22.svg"
+        },
+        iWNC: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "SavedInstruments_UserPaymentMethods"
+                    },
+                    variableDefinitions: [],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "currentUser"
+                            },
+                            arguments: [],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "paymentMethods"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "provider"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "paymentType"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "billingCountry"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "billingEmail"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "cardType"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "lastFour"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "expirationMonth"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "expirationYear"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }, {
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "isRestricted"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "settings"
+                                    },
+                                    arguments: [],
+                                    directives: [],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "hasTwoFactorEnabled"
+                                            },
+                                            arguments: [],
+                                            directives: []
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 227
+                }
+            };
+            n.loc.source = {
+                body: "query SavedInstruments_UserPaymentMethods {\ncurrentUser {\nid\npaymentMethods {\nprovider\npaymentType\nbillingCountry\nbillingEmail\ncardType\nlastFour\nexpirationMonth\nexpirationYear\nisRestricted\n}\nsettings {\nhasTwoFactorEnabled\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
         "jTc+": function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.arrayMove = function(e, t, n) {
-                var i = e.slice(0);
-                if (n >= i.length)
-                    for (var o = n - i.length; 1 + o--;) i.push(void 0);
-                return i.splice(n, 0, i.splice(t, 1)[0]), i
+                var r = e.slice(0);
+                if (n >= r.length)
+                    for (var i = n - r.length; 1 + i--;) r.push(void 0);
+                return r.splice(n, 0, r.splice(t, 1)[0]), r
             }, t.omit = function(e) {
-                for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-                return Object.keys(e).reduce(function(t, i) {
-                    return -1 === n.indexOf(i) && (t[i] = e[i]), t
+                for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
+                return Object.keys(e).reduce(function(t, r) {
+                    return -1 === n.indexOf(r) && (t[r] = e[r]), t
                 }, {})
             }, t.closest = function(e, t) {
                 for (; e;) {
@@ -5528,10 +12544,10 @@
             }, t.getElementMargin = function(e) {
                 var t = window.getComputedStyle(e);
                 return {
-                    top: i(t.marginTop),
-                    right: i(t.marginRight),
-                    bottom: i(t.marginBottom),
-                    left: i(t.marginLeft)
+                    top: r(t.marginTop),
+                    right: r(t.marginRight),
+                    bottom: r(t.marginBottom),
+                    left: r(t.marginLeft)
                 }
             }, t.provideDisplayName = function(e, t) {
                 var n = t.displayName || t.name;
@@ -5553,22 +12569,49 @@
                 }
             }();
 
-            function i(e) {
+            function r(e) {
                 return "px" === e.substr(-2) ? parseFloat(e) : 0
             }
         },
+        lqDW: function(e, t, n) {},
+        mIie: function(e, t, n) {},
+        mb7O: function(e, t, n) {
+            "use strict";
+            var r = n("q1tI"),
+                i = n("Ue10"),
+                a = (n("bfgy"), function(e) {
+                    return r.createElement(i.Wa, {
+                        className: "ticket-wrapper__container",
+                        "data-a-target": "js-test-ticket-container",
+                        margin: {
+                            bottom: 2
+                        }
+                    }, r.createElement(i.G, {
+                        elevation: 1
+                    }, e.children))
+                }),
+                o = a;
+            n.d(t, !1, function() {
+                return a
+            }), n.d(t, "a", function() {
+                return o
+            })
+        },
+        oQBz: function(e, t, n) {
+            e.exports = n.p + "assets/xsolla_1x-920aa1ba72411e5fe0aa.png"
+        },
         pQUg: function(e, t, n) {
-            var i = "undefined" != typeof window,
-                o = i ? window.Masonry || n("hNNL") : null,
-                a = i ? n("vX6Q") : null,
-                r = n("3OWR"),
+            var r = "undefined" != typeof window,
+                i = r ? window.Masonry || n("hNNL") : null,
+                a = r ? n("vX6Q") : null,
+                o = n("3OWR"),
                 s = n("7sSR"),
-                l = n("sEfC"),
-                c = n("Puqe"),
+                c = n("sEfC"),
+                l = n("Puqe"),
                 u = n("ITnh"),
                 d = n("q1tI"),
                 p = n("fhzG"),
-                h = {
+                m = {
                     enableResizableChildren: u.bool,
                     disableImagesLoaded: u.bool,
                     onImagesLoaded: u.func,
@@ -5578,12 +12621,12 @@
                     onLayoutComplete: u.func,
                     onRemoveComplete: u.func
                 },
-                m = p({
+                h = p({
                     masonry: !1,
                     erd: void 0,
                     latestKnownDomChildren: [],
                     displayName: "MasonryComponent",
-                    propTypes: h,
+                    propTypes: m,
                     getDefaultProps: function() {
                         return {
                             enableResizableChildren: !1,
@@ -5597,7 +12640,7 @@
                         }
                     },
                     initializeMasonry: function(e) {
-                        this.masonry && !e || (this.masonry = new o(this.masonryContainer, this.props.options), this.props.onLayoutComplete && this.masonry.on("layoutComplete", this.props.onLayoutComplete), this.props.onRemoveComplete && this.masonry.on("removeComplete", this.props.onRemoveComplete), this.latestKnownDomChildren = this.getCurrentDomChildren())
+                        this.masonry && !e || (this.masonry = new i(this.masonryContainer, this.props.options), this.props.onLayoutComplete && this.masonry.on("layoutComplete", this.props.onLayoutComplete), this.props.onRemoveComplete && this.masonry.on("removeComplete", this.props.onRemoveComplete), this.latestKnownDomChildren = this.getCurrentDomChildren())
                     },
                     getCurrentDomChildren: function() {
                         var e = this.masonryContainer,
@@ -5611,30 +12654,30 @@
                             });
                         t.length !== this.latestKnownDomChildren.length && (e = !0);
                         var n = this.getCurrentDomChildren(),
-                            i = t.filter(function(e) {
+                            r = t.filter(function(e) {
                                 return !~n.indexOf(e)
                             }),
-                            o = n.filter(function(e) {
+                            i = n.filter(function(e) {
                                 return !~t.indexOf(e)
                             }),
                             a = 0,
-                            r = o.filter(function(e) {
+                            o = i.filter(function(e) {
                                 var t = a === n.indexOf(e);
                                 return t && a++, t
                             }),
-                            s = o.filter(function(e) {
-                                return -1 === r.indexOf(e)
+                            s = i.filter(function(e) {
+                                return -1 === o.indexOf(e)
                             }),
-                            l = [];
-                        return 0 === i.length && (l = t.filter(function(e, t) {
+                            c = [];
+                        return 0 === r.length && (c = t.filter(function(e, t) {
                             return t !== n.indexOf(e)
                         })), this.latestKnownDomChildren = n, {
                             old: t,
                             new: n,
-                            removed: i,
+                            removed: r,
                             appended: s,
-                            prepended: r,
-                            moved: l,
+                            prepended: o,
+                            moved: c,
                             forceItemReload: e
                         }
                     },
@@ -5644,7 +12687,7 @@
                         e.removed.length > 0 && (this.props.enableResizableChildren && e.removed.forEach(this.erd.removeAllListeners, this.erd), this.masonry.remove(e.removed), t = !0), e.appended.length > 0 && (this.masonry.appended(e.appended), 0 === e.prepended.length && (t = !0), this.props.enableResizableChildren && e.appended.forEach(this.listenToElementResize, this)), e.prepended.length > 0 && (this.masonry.prepended(e.prepended), this.props.enableResizableChildren && e.prepended.forEach(this.listenToElementResize, this)), t && this.masonry.reloadItems(), this.masonry.layout()
                     },
                     imagesLoaded: function() {
-                        this.props.disableImagesLoaded || a(this.masonryContainer).on(this.props.updateOnEachImageLoad ? "progress" : "always", l(function(e) {
+                        this.props.disableImagesLoaded || a(this.masonryContainer).on(this.props.updateOnEachImageLoad ? "progress" : "always", c(function(e) {
                             this.props.onImagesLoaded && this.props.onImagesLoaded(e), this.masonry.layout()
                         }.bind(this), 100))
                     },
@@ -5674,13 +12717,13 @@
                         this.masonryContainer = e
                     },
                     render: function() {
-                        var e = c(this.props, Object.keys(h));
-                        return d.createElement(this.props.elementType, r({}, e, {
+                        var e = l(this.props, Object.keys(m));
+                        return d.createElement(this.props.elementType, o({}, e, {
                             ref: this.setRef
                         }), this.props.children)
                     }
                 });
-            e.exports = m, e.exports.default = m
+            e.exports = h, e.exports.default = h
         },
         q7TX: function(e, t, n) {
             "use strict";
@@ -5692,7 +12735,7 @@
                     error: t
                 };
                 if (!e && window.console) {
-                    var i = function(e, t) {
+                    var r = function(e, t) {
                         e[t] = function() {
                             var e = console[t];
                             if (e.apply) e.apply(console, arguments);
@@ -5700,10 +12743,13 @@
                                 for (var n = 0; n < arguments.length; n++) e(arguments[n])
                         }
                     };
-                    i(n, "log"), i(n, "warn"), i(n, "error")
+                    r(n, "log"), r(n, "warn"), r(n, "error")
                 }
                 return n
             }
+        },
+        q8H6: function(e, t, n) {
+            e.exports = n.p + "assets/paypal_dark_2x-74742ec8600998675dc5.png"
         },
         "ry+o": function(e, t) {
             var n = {
@@ -6054,13 +13100,22 @@
             "use strict";
             (e.exports = {}).forEach = function(e, t) {
                 for (var n = 0; n < e.length; n++) {
-                    var i = t(e[n]);
-                    if (i) return i
+                    var r = t(e[n]);
+                    if (r) return r
                 }
             }
         },
+        "u/1r": function(e, t, n) {},
+        uReR: function(e, t, n) {
+            e.exports = n.p + "assets/amex-0e89bed815722eb64119.svg"
+        },
+        uUdG: function(e, t, n) {},
+        "vE+g": function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_dark_1x-27fb4921a874a8f4d84b.png"
+        },
+        vGoz: function(e, t, n) {},
         vX6Q: function(e, t, n) {
-            var i, o;
+            var r, i;
             /*!
              * imagesLoaded v4.1.3
              * JavaScript is all like "You images are done yet or what?"
@@ -6071,20 +13126,20 @@
              * JavaScript is all like "You images are done yet or what?"
              * MIT License
              */
-            ! function(a, r) {
+            ! function(a, o) {
                 "use strict";
-                i = [n("CUlp")], void 0 === (o = function(e) {
+                r = [n("CUlp")], void 0 === (i = function(e) {
                     return function(e, t) {
                         var n = e.jQuery,
-                            i = e.console;
+                            r = e.console;
 
-                        function o(e, t) {
+                        function i(e, t) {
                             for (var n in t) e[n] = t[n];
                             return e
                         }
 
-                        function a(e, t, i) {
-                            if (!(this instanceof a)) return new a(e, t, i);
+                        function a(e, t, r) {
+                            if (!(this instanceof a)) return new a(e, t, r);
                             "string" == typeof e && (e = document.querySelectorAll(e)), this.elements = function(e) {
                                 var t = [];
                                 if (Array.isArray(e)) t = e;
@@ -6092,7 +13147,7 @@
                                     for (var n = 0; n < e.length; n++) t.push(e[n]);
                                 else t.push(e);
                                 return t
-                            }(e), this.options = o({}, this.options), "function" == typeof t ? i = t : o(this.options, t), i && this.on("always", i), this.getImages(), n && (this.jqDeferred = new n.Deferred), setTimeout(function() {
+                            }(e), this.options = i({}, this.options), "function" == typeof t ? r = t : i(this.options, t), r && this.on("always", r), this.getImages(), n && (this.jqDeferred = new n.Deferred), setTimeout(function() {
                                 this.check()
                             }.bind(this))
                         }
@@ -6101,21 +13156,21 @@
                         }, a.prototype.addElementImages = function(e) {
                             "IMG" == e.nodeName && this.addImage(e), !0 === this.options.background && this.addElementBackgroundImages(e);
                             var t = e.nodeType;
-                            if (t && r[t]) {
-                                for (var n = e.querySelectorAll("img"), i = 0; i < n.length; i++) {
-                                    var o = n[i];
-                                    this.addImage(o)
+                            if (t && o[t]) {
+                                for (var n = e.querySelectorAll("img"), r = 0; r < n.length; r++) {
+                                    var i = n[r];
+                                    this.addImage(i)
                                 }
                                 if ("string" == typeof this.options.background) {
                                     var a = e.querySelectorAll(this.options.background);
-                                    for (i = 0; i < a.length; i++) {
-                                        var s = a[i];
+                                    for (r = 0; r < a.length; r++) {
+                                        var s = a[r];
                                         this.addElementBackgroundImages(s)
                                     }
                                 }
                             }
                         };
-                        var r = {
+                        var o = {
                             1: !0,
                             9: !0,
                             11: !0
@@ -6125,35 +13180,35 @@
                             this.img = e
                         }
 
-                        function l(e, t) {
+                        function c(e, t) {
                             this.url = e, this.element = t, this.img = new Image
                         }
                         return a.prototype.addElementBackgroundImages = function(e) {
                             var t = getComputedStyle(e);
                             if (t)
-                                for (var n = /url\((['"])?(.*?)\1\)/gi, i = n.exec(t.backgroundImage); null !== i;) {
-                                    var o = i && i[2];
-                                    o && this.addBackground(o, e), i = n.exec(t.backgroundImage)
+                                for (var n = /url\((['"])?(.*?)\1\)/gi, r = n.exec(t.backgroundImage); null !== r;) {
+                                    var i = r && r[2];
+                                    i && this.addBackground(i, e), r = n.exec(t.backgroundImage)
                                 }
                         }, a.prototype.addImage = function(e) {
                             var t = new s(e);
                             this.images.push(t)
                         }, a.prototype.addBackground = function(e, t) {
-                            var n = new l(e, t);
+                            var n = new c(e, t);
                             this.images.push(n)
                         }, a.prototype.check = function() {
                             var e = this;
 
-                            function t(t, n, i) {
+                            function t(t, n, r) {
                                 setTimeout(function() {
-                                    e.progress(t, n, i)
+                                    e.progress(t, n, r)
                                 })
                             }
                             this.progressedCount = 0, this.hasAnyBroken = !1, this.images.length ? this.images.forEach(function(e) {
                                 e.once("progress", t), e.check()
                             }) : this.complete()
                         }, a.prototype.progress = function(e, t, n) {
-                            this.progressedCount++, this.hasAnyBroken = this.hasAnyBroken || !e.isLoaded, this.emitEvent("progress", [this, e, t]), this.jqDeferred && this.jqDeferred.notify && this.jqDeferred.notify(this, e), this.progressedCount == this.images.length && this.complete(), this.options.debug && i && i.log("progress: " + n, e, t)
+                            this.progressedCount++, this.hasAnyBroken = this.hasAnyBroken || !e.isLoaded, this.emitEvent("progress", [this, e, t]), this.jqDeferred && this.jqDeferred.notify && this.jqDeferred.notify(this, e), this.progressedCount == this.images.length && this.complete(), this.options.debug && r && r.log("progress: " + n, e, t)
                         }, a.prototype.complete = function() {
                             var e = this.hasAnyBroken ? "fail" : "done";
                             if (this.isComplete = !0, this.emitEvent(e, [this]), this.emitEvent("always", [this]), this.jqDeferred) {
@@ -6175,11 +13230,11 @@
                             this.confirm(!1, "onerror"), this.unbindEvents()
                         }, s.prototype.unbindEvents = function() {
                             this.proxyImage.removeEventListener("load", this), this.proxyImage.removeEventListener("error", this), this.img.removeEventListener("load", this), this.img.removeEventListener("error", this)
-                        }, l.prototype = Object.create(s.prototype), l.prototype.check = function() {
+                        }, c.prototype = Object.create(s.prototype), c.prototype.check = function() {
                             this.img.addEventListener("load", this), this.img.addEventListener("error", this), this.img.src = this.url, this.getIsImageComplete() && (this.confirm(0 !== this.img.naturalWidth, "naturalWidth"), this.unbindEvents())
-                        }, l.prototype.unbindEvents = function() {
+                        }, c.prototype.unbindEvents = function() {
                             this.img.removeEventListener("load", this), this.img.removeEventListener("error", this)
-                        }, l.prototype.confirm = function(e, t) {
+                        }, c.prototype.confirm = function(e, t) {
                             this.isLoaded = e, this.emitEvent("progress", [this, this.element, t])
                         }, a.makeJQueryPlugin = function(t) {
                             (t = t || e.jQuery) && ((n = t).fn.imagesLoaded = function(e, t) {
@@ -6187,7 +13242,7 @@
                             })
                         }, a.makeJQueryPlugin(), a
                     }(a, e)
-                }.apply(t, i)) || (e.exports = o)
+                }.apply(t, r)) || (e.exports = i)
             }("undefined" != typeof window ? window : this)
         },
         vylb: function(e, t, n) {
@@ -6196,20 +13251,20 @@
         },
         wnTG: function(e, t, n) {
             "use strict";
-            var i = n("UL9e");
+            var r = n("UL9e");
 
-            function o() {
+            function i() {
                 var e = {},
                     t = 0,
                     n = 0,
-                    i = 0;
+                    r = 0;
                 return {
-                    add: function(o, a) {
-                        a || (a = o, o = 0), o > n ? n = o : o < i && (i = o), e[o] || (e[o] = []), e[o].push(a), t++
+                    add: function(i, a) {
+                        a || (a = i, i = 0), i > n ? n = i : i < r && (r = i), e[i] || (e[i] = []), e[i].push(a), t++
                     },
                     process: function() {
-                        for (var t = i; t <= n; t++)
-                            for (var o = e[t], a = 0; a < o.length; a++)(0, o[a])()
+                        for (var t = r; t <= n; t++)
+                            for (var i = e[t], a = 0; a < i.length; a++)(0, i[a])()
                     },
                     size: function() {
                         return t
@@ -6218,44 +13273,44 @@
             }
             e.exports = function(e) {
                 var t = (e = e || {}).reporter,
-                    n = i.getOption(e, "async", !0),
-                    a = i.getOption(e, "auto", !0);
+                    n = r.getOption(e, "async", !0),
+                    a = r.getOption(e, "auto", !0);
                 a && !n && (t && t.warn("Invalid options combination. auto=true and async=false is invalid. Setting async=true."), n = !0);
-                var r, s = o(),
-                    l = !1;
+                var o, s = i(),
+                    c = !1;
 
-                function c() {
-                    for (l = !0; s.size();) {
+                function l() {
+                    for (c = !0; s.size();) {
                         var e = s;
-                        s = o(), e.process()
+                        s = i(), e.process()
                     }
-                    l = !1
+                    c = !1
                 }
 
                 function u() {
-                    r = function(e) {
+                    o = function(e) {
                         return function(e) {
                             return setTimeout(e, 0)
                         }(e)
-                    }(c)
+                    }(l)
                 }
                 return {
                     add: function(e, t) {
-                        !l && a && n && 0 === s.size() && u(), s.add(e, t)
+                        !c && a && n && 0 === s.size() && u(), s.add(e, t)
                     },
                     force: function(e) {
-                        l || (void 0 === e && (e = n), r && (function(e) {
+                        c || (void 0 === e && (e = n), o && (function(e) {
                             clearTimeout(e)
-                        }(r), r = null), e ? u() : c())
+                        }(o), o = null), e ? u() : l())
                     }
                 }
             }
         },
         x0Ue: function(e, t, n) {
-            var i, o;
-            ! function(a, r) {
+            var r, i;
+            ! function(a, o) {
                 "use strict";
-                void 0 === (o = "function" == typeof(i = r) ? i.call(t, n, t, e) : i) || (e.exports = o)
+                void 0 === (i = "function" == typeof(r = o) ? r.call(t, n, t, e) : r) || (e.exports = i)
             }(window, function() {
                 "use strict";
                 var e = function() {
@@ -6263,8 +13318,8 @@
                     if (e.matches) return "matches";
                     if (e.matchesSelector) return "matchesSelector";
                     for (var t = ["webkit", "moz", "ms", "o"], n = 0; n < t.length; n++) {
-                        var i = t[n] + "MatchesSelector";
-                        if (e[i]) return i
+                        var r = t[n] + "MatchesSelector";
+                        if (e[r]) return r
                     }
                 }();
                 return function(t, n) {
@@ -6277,300 +13332,306 @@
             n.d(t, "a", function() {
                 return a
             });
-            var i = n("/7QA"),
-                o = "extensions_popout_enabled";
+            var r = n("/7QA"),
+                i = "extensions_popout_enabled";
 
             function a() {
-                return "on" === i.b.get(o, "off")
+                return "on" === r.b.get(i, "off")
             }
         },
         xVpv: function(e, t, n) {},
+        xgE2: function(e, t, n) {
+            e.exports = n.p + "assets/more_methods_2x-3b1c8bbdaabcd0fb7c8a.png"
+        },
         yUZ2: function(e, t, n) {
             "use strict";
-            var i = n("t3DW").forEach;
+            var r = n("t3DW").forEach;
             e.exports = function(e) {
                 var t = (e = e || {}).reporter,
                     n = e.batchProcessor,
-                    o = e.stateHandler.getState,
+                    i = e.stateHandler.getState,
                     a = (e.stateHandler.hasState, e.idHandler);
                 if (!n) throw new Error("Missing required dependency: batchProcessor");
                 if (!t) throw new Error("Missing required dependency: reporter.");
-                var r = function() {
+                var o = function() {
                         var e = document.createElement("div");
                         e.style.cssText = "position: absolute; width: 1000px; height: 1000px; visibility: hidden; margin: 0; padding: 0;";
                         var t = document.createElement("div");
                         t.style.cssText = "position: absolute; width: 500px; height: 500px; overflow: scroll; visibility: none; top: -1500px; left: -1500px; visibility: hidden; margin: 0; padding: 0;", t.appendChild(e), document.body.insertBefore(t, document.body.firstChild);
                         var n = 500 - t.clientWidth,
-                            i = 500 - t.clientHeight;
+                            r = 500 - t.clientHeight;
                         return document.body.removeChild(t), {
                             width: n,
-                            height: i
+                            height: r
                         }
                     }(),
                     s = "erd_scroll_detection_container";
 
-                function l(e, n, i) {
-                    if (e.addEventListener) e.addEventListener(n, i);
+                function c(e, n, r) {
+                    if (e.addEventListener) e.addEventListener(n, r);
                     else {
                         if (!e.attachEvent) return t.error("[scroll] Don't know how to add event listeners.");
-                        e.attachEvent("on" + n, i)
+                        e.attachEvent("on" + n, r)
                     }
                 }
 
-                function c(e, n, i) {
-                    if (e.removeEventListener) e.removeEventListener(n, i);
+                function l(e, n, r) {
+                    if (e.removeEventListener) e.removeEventListener(n, r);
                     else {
                         if (!e.detachEvent) return t.error("[scroll] Don't know how to remove event listeners.");
-                        e.detachEvent("on" + n, i)
+                        e.detachEvent("on" + n, r)
                     }
                 }
 
                 function u(e) {
-                    return o(e).container.childNodes[0].childNodes[0].childNodes[0]
+                    return i(e).container.childNodes[0].childNodes[0].childNodes[0]
                 }
 
                 function d(e) {
-                    return o(e).container.childNodes[0].childNodes[0].childNodes[1]
+                    return i(e).container.childNodes[0].childNodes[0].childNodes[1]
                 }
                 return function(e, t) {
                     if (!document.getElementById(e)) {
                         var n = t + "_animation",
-                            i = t + "_animation_active",
-                            o = "/* Created by the element-resize-detector library. */\n";
-                        o += "." + t + " > div::-webkit-scrollbar { display: none; }\n\n", o += "." + i + " { -webkit-animation-duration: 0.1s; animation-duration: 0.1s; -webkit-animation-name: " + n + "; animation-name: " + n + "; }\n", o += "@-webkit-keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }\n",
+                            r = t + "_animation_active",
+                            i = "/* Created by the element-resize-detector library. */\n";
+                        i += "." + t + " > div::-webkit-scrollbar { display: none; }\n\n", i += "." + r + " { -webkit-animation-duration: 0.1s; animation-duration: 0.1s; -webkit-animation-name: " + n + "; animation-name: " + n + "; }\n", i += "@-webkit-keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }\n",
                             function(t, n) {
                                 n = n || function(e) {
                                     document.head.appendChild(e)
                                 };
-                                var i = document.createElement("style");
-                                i.innerHTML = t, i.id = e, n(i)
-                            }(o += "@keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }")
+                                var r = document.createElement("style");
+                                r.innerHTML = t, r.id = e, n(r)
+                            }(i += "@keyframes " + n + " { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }")
                     }
                 }("erd_scroll_detection_scrollbar_style", s), {
-                    makeDetectable: function(e, c, p) {
-                        function h() {
+                    makeDetectable: function(e, l, p) {
+                        function m() {
                             if (e.debug) {
                                 var n = Array.prototype.slice.call(arguments);
-                                if (n.unshift(a.get(c), "Scroll: "), t.log.apply) t.log.apply(null, n);
+                                if (n.unshift(a.get(l), "Scroll: "), t.log.apply) t.log.apply(null, n);
                                 else
-                                    for (var i = 0; i < n.length; i++) t.log(n[i])
+                                    for (var r = 0; r < n.length; r++) t.log(n[r])
                             }
                         }
 
-                        function m(e) {
-                            var t = o(e).container.childNodes[0],
+                        function h(e) {
+                            var t = i(e).container.childNodes[0],
                                 n = getComputedStyle(t);
                             return !n.width || -1 === n.width.indexOf("px")
                         }
 
                         function f() {
-                            var e = getComputedStyle(c),
+                            var e = getComputedStyle(l),
                                 t = {};
-                            return t.position = e.position, t.width = c.offsetWidth, t.height = c.offsetHeight, t.top = e.top, t.right = e.right, t.bottom = e.bottom, t.left = e.left, t.widthCSS = e.width, t.heightCSS = e.height, t
-                        }
-
-                        function g() {
-                            if (h("storeStyle invoked."), o(c)) {
-                                var e = f();
-                                o(c).style = e
-                            } else h("Aborting because element has been uninstalled")
-                        }
-
-                        function v(e, t, n) {
-                            o(e).lastWidth = t, o(e).lastHeight = n
+                            return t.position = e.position, t.width = l.offsetWidth, t.height = l.offsetHeight, t.top = e.top, t.right = e.right, t.bottom = e.bottom, t.left = e.left, t.widthCSS = e.width, t.heightCSS = e.height, t
                         }
 
                         function y() {
-                            return 2 * r.width + 1
+                            if (m("storeStyle invoked."), i(l)) {
+                                var e = f();
+                                i(l).style = e
+                            } else m("Aborting because element has been uninstalled")
+                        }
+
+                        function g(e, t, n) {
+                            i(e).lastWidth = t, i(e).lastHeight = n
                         }
 
                         function b() {
-                            return 2 * r.height + 1
+                            return 2 * o.width + 1
+                        }
+
+                        function v() {
+                            return 2 * o.height + 1
                         }
 
                         function E(e) {
-                            return e + 10 + y()
-                        }
-
-                        function x(e) {
                             return e + 10 + b()
                         }
 
-                        function k(e, t, n) {
-                            var i = u(e),
-                                o = d(e),
-                                a = E(t),
-                                r = x(n),
-                                s = function(e) {
-                                    return 2 * e + y()
-                                }(t),
-                                l = function(e) {
-                                    return 2 * e + b()
-                                }(n);
-                            i.scrollLeft = a, i.scrollTop = r, o.scrollLeft = s, o.scrollTop = l
+                        function C(e) {
+                            return e + 10 + v()
                         }
 
-                        function C() {
-                            var e = o(c).container;
+                        function k(e, t, n) {
+                            var r = u(e),
+                                i = d(e),
+                                a = E(t),
+                                o = C(n),
+                                s = function(e) {
+                                    return 2 * e + b()
+                                }(t),
+                                c = function(e) {
+                                    return 2 * e + v()
+                                }(n);
+                            r.scrollLeft = a, r.scrollTop = o, i.scrollLeft = s, i.scrollTop = c
+                        }
+
+                        function P() {
+                            var e = i(l).container;
                             if (!e) {
-                                (e = document.createElement("div")).className = s, e.style.cssText = "visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0; padding: 0;", o(c).container = e,
+                                (e = document.createElement("div")).className = s, e.style.cssText = "visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0; padding: 0;", i(l).container = e,
                                     function(e) {
                                         e.className += " " + s + "_animation_active"
-                                    }(e), c.appendChild(e);
+                                    }(e), l.appendChild(e);
                                 var t = function() {
-                                    o(c).onRendered && o(c).onRendered()
+                                    i(l).onRendered && i(l).onRendered()
                                 };
-                                l(e, "animationstart", t), o(c).onAnimationStart = t
+                                c(e, "animationstart", t), i(l).onAnimationStart = t
                             }
                             return e
                         }
 
-                        function w() {
-                            if (h("Injecting elements"), o(c)) {
+                        function S() {
+                            if (m("Injecting elements"), i(l)) {
                                 ! function() {
-                                    var e = o(c).style;
+                                    var e = i(l).style;
                                     if ("static" === e.position) {
-                                        c.style.position = "relative";
-                                        var n = function(e, t, n, i) {
-                                            var o = n[i];
-                                            "auto" !== o && "0" !== function(e) {
+                                        l.style.position = "relative";
+                                        var n = function(e, t, n, r) {
+                                            var i = n[r];
+                                            "auto" !== i && "0" !== function(e) {
                                                 return e.replace(/[^-\d\.]/g, "")
-                                            }(o) && (e.warn("An element that is positioned static has style." + i + "=" + o + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + i + " will be set to 0. Element: ", t), t.style[i] = 0)
+                                            }(i) && (e.warn("An element that is positioned static has style." + r + "=" + i + " which is ignored due to the static positioning. The element will need to be positioned relative, so the style." + r + " will be set to 0. Element: ", t), t.style[r] = 0)
                                         };
-                                        n(t, c, e, "top"), n(t, c, e, "right"), n(t, c, e, "bottom"), n(t, c, e, "left")
+                                        n(t, l, e, "top"), n(t, l, e, "right"), n(t, l, e, "bottom"), n(t, l, e, "left")
                                     }
                                 }();
-                                var e = o(c).container;
-                                e || (e = C());
-                                var n = r.width,
-                                    i = r.height,
-                                    a = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; " + function(e, t, n, i) {
-                                        return e = e ? e + "px" : "0", t = t ? t + "px" : "0", n = n ? n + "px" : "0", "left: " + e + "; top: " + t + "; right: " + (i = i ? i + "px" : "0") + "; bottom: " + n + ";"
-                                    }(-(1 + n), -(1 + i), -i, -n),
+                                var e = i(l).container;
+                                e || (e = P());
+                                var n = o.width,
+                                    r = o.height,
+                                    a = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; " + function(e, t, n, r) {
+                                        return e = e ? e + "px" : "0", t = t ? t + "px" : "0", n = n ? n + "px" : "0", "left: " + e + "; top: " + t + "; right: " + (r = r ? r + "px" : "0") + "; bottom: " + n + ";"
+                                    }(-(1 + n), -(1 + r), -r, -n),
                                     u = document.createElement("div"),
                                     d = document.createElement("div"),
                                     p = document.createElement("div"),
-                                    m = document.createElement("div"),
+                                    h = document.createElement("div"),
                                     f = document.createElement("div"),
-                                    g = document.createElement("div");
-                                u.dir = "ltr", u.style.cssText = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;", u.className = s, d.className = s, d.style.cssText = a, p.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", m.style.cssText = "position: absolute; left: 0; top: 0;", f.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", g.style.cssText = "position: absolute; width: 200%; height: 200%;", p.appendChild(m), f.appendChild(g), d.appendChild(p), d.appendChild(f), u.appendChild(d), e.appendChild(u), l(p, "scroll", v), l(f, "scroll", y), o(c).onExpandScroll = v, o(c).onShrinkScroll = y
-                            } else h("Aborting because element has been uninstalled");
+                                    y = document.createElement("div");
+                                u.dir = "ltr", u.style.cssText = "position: absolute; flex: none; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;", u.className = s, d.className = s, d.style.cssText = a, p.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", h.style.cssText = "position: absolute; left: 0; top: 0;", f.style.cssText = "position: absolute; flex: none; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;", y.style.cssText = "position: absolute; width: 200%; height: 200%;", p.appendChild(h), f.appendChild(y), d.appendChild(p), d.appendChild(f), u.appendChild(d), e.appendChild(u), c(p, "scroll", g), c(f, "scroll", b), i(l).onExpandScroll = g, i(l).onShrinkScroll = b
+                            } else m("Aborting because element has been uninstalled");
 
-                            function v() {
-                                o(c).onExpand && o(c).onExpand()
+                            function g() {
+                                i(l).onExpand && i(l).onExpand()
                             }
 
-                            function y() {
-                                o(c).onShrink && o(c).onShrink()
+                            function b() {
+                                i(l).onShrink && i(l).onShrink()
                             }
                         }
 
-                        function S() {
-                            function r(e, t, n) {
-                                var i = function(e) {
+                        function O() {
+                            function o(e, t, n) {
+                                var r = function(e) {
                                         return u(e).childNodes[0]
                                     }(e),
-                                    o = E(t),
-                                    a = x(n);
-                                i.style.width = o + "px", i.style.height = a + "px"
+                                    i = E(t),
+                                    a = C(n);
+                                r.style.width = i + "px", r.style.height = a + "px"
                             }
 
-                            function s(i) {
-                                var s = c.offsetWidth,
-                                    u = c.offsetHeight;
-                                h("Storing current size", s, u), v(c, s, u), n.add(0, function() {
-                                    if (o(c))
-                                        if (l()) {
+                            function s(r) {
+                                var s = l.offsetWidth,
+                                    u = l.offsetHeight;
+                                m("Storing current size", s, u), g(l, s, u), n.add(0, function() {
+                                    if (i(l))
+                                        if (c()) {
                                             if (e.debug) {
-                                                var n = c.offsetWidth,
-                                                    i = c.offsetHeight;
-                                                n === s && i === u || t.warn(a.get(c), "Scroll: Size changed before updating detector elements.")
+                                                var n = l.offsetWidth,
+                                                    r = l.offsetHeight;
+                                                n === s && r === u || t.warn(a.get(l), "Scroll: Size changed before updating detector elements.")
                                             }
-                                            r(c, s, u)
-                                        } else h("Aborting because element container has not been initialized");
-                                    else h("Aborting because element has been uninstalled")
+                                            o(l, s, u)
+                                        } else m("Aborting because element container has not been initialized");
+                                    else m("Aborting because element has been uninstalled")
                                 }), n.add(1, function() {
-                                    o(c) ? l() ? k(c, s, u) : h("Aborting because element container has not been initialized") : h("Aborting because element has been uninstalled")
-                                }), i && n.add(2, function() {
-                                    o(c) ? l() ? i() : h("Aborting because element container has not been initialized") : h("Aborting because element has been uninstalled")
+                                    i(l) ? c() ? k(l, s, u) : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
+                                }), r && n.add(2, function() {
+                                    i(l) ? c() ? r() : m("Aborting because element container has not been initialized") : m("Aborting because element has been uninstalled")
                                 })
                             }
 
-                            function l() {
-                                return !!o(c).container
+                            function c() {
+                                return !!i(l).container
                             }
 
                             function p() {
-                                h("notifyListenersIfNeeded invoked");
-                                var e = o(c);
-                                return void 0 === o(c).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height ? h("Not notifying: Size is the same as the start size, and there has been no notification yet.") : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight ? h("Not notifying: Size already notified") : (h("Current size not notified, notifying..."), e.lastNotifiedWidth = e.lastWidth, e.lastNotifiedHeight = e.lastHeight, void i(o(c).listeners, function(e) {
-                                    e(c)
+                                m("notifyListenersIfNeeded invoked");
+                                var e = i(l);
+                                return void 0 === i(l).lastNotifiedWidth && e.lastWidth === e.startSize.width && e.lastHeight === e.startSize.height ? m("Not notifying: Size is the same as the start size, and there has been no notification yet.") : e.lastWidth === e.lastNotifiedWidth && e.lastHeight === e.lastNotifiedHeight ? m("Not notifying: Size already notified") : (m("Current size not notified, notifying..."), e.lastNotifiedWidth = e.lastWidth, e.lastNotifiedHeight = e.lastHeight, void r(i(l).listeners, function(e) {
+                                    e(l)
                                 }))
                             }
 
                             function f() {
-                                if (h("Scroll detected."), m(c)) h("Scroll event fired while unrendered. Ignoring...");
+                                if (m("Scroll detected."), h(l)) m("Scroll event fired while unrendered. Ignoring...");
                                 else {
-                                    var e = c.offsetWidth,
-                                        t = c.offsetHeight;
-                                    e !== c.lastWidth || t !== c.lastHeight ? (h("Element size changed."), s(p)) : h("Element size has not changed (" + e + "x" + t + ").")
+                                    var e = l.offsetWidth,
+                                        t = l.offsetHeight;
+                                    e !== l.lastWidth || t !== l.lastHeight ? (m("Element size changed."), s(p)) : m("Element size has not changed (" + e + "x" + t + ").")
                                 }
                             }
-                            if (h("registerListenersAndPositionElements invoked."), o(c)) {
-                                o(c).onRendered = function() {
-                                    if (h("startanimation triggered."), m(c)) h("Ignoring since element is still unrendered...");
+                            if (m("registerListenersAndPositionElements invoked."), i(l)) {
+                                i(l).onRendered = function() {
+                                    if (m("startanimation triggered."), h(l)) m("Ignoring since element is still unrendered...");
                                     else {
-                                        h("Element rendered.");
-                                        var e = u(c),
-                                            t = d(c);
-                                        0 !== e.scrollLeft && 0 !== e.scrollTop && 0 !== t.scrollLeft && 0 !== t.scrollTop || (h("Scrollbars out of sync. Updating detector elements..."), s(p))
+                                        m("Element rendered.");
+                                        var e = u(l),
+                                            t = d(l);
+                                        0 !== e.scrollLeft && 0 !== e.scrollTop && 0 !== t.scrollLeft && 0 !== t.scrollTop || (m("Scrollbars out of sync. Updating detector elements..."), s(p))
                                     }
-                                }, o(c).onExpand = f, o(c).onShrink = f;
-                                var g = o(c).style;
-                                r(c, g.width, g.height)
-                            } else h("Aborting because element has been uninstalled")
+                                }, i(l).onExpand = f, i(l).onShrink = f;
+                                var y = i(l).style;
+                                o(l, y.width, y.height)
+                            } else m("Aborting because element has been uninstalled")
+                        }
+
+                        function x() {
+                            if (m("finalizeDomMutation invoked."), i(l)) {
+                                var e = i(l).style;
+                                g(l, e.width, e.height), k(l, e.width, e.height)
+                            } else m("Aborting because element has been uninstalled")
                         }
 
                         function I() {
-                            if (h("finalizeDomMutation invoked."), o(c)) {
-                                var e = o(c).style;
-                                v(c, e.width, e.height), k(c, e.width, e.height)
-                            } else h("Aborting because element has been uninstalled")
+                            p(l)
                         }
 
-                        function P() {
-                            p(c)
-                        }
-
-                        function _() {
-                            h("Installing..."), o(c).listeners = [],
+                        function w() {
+                            m("Installing..."), i(l).listeners = [],
                                 function() {
                                     var e = f();
-                                    o(c).startSize = {
+                                    i(l).startSize = {
                                         width: e.width,
                                         height: e.height
-                                    }, h("Element start size", o(c).startSize)
-                                }(), n.add(0, g), n.add(1, w), n.add(2, S), n.add(3, I), n.add(4, P)
+                                    }, m("Element start size", i(l).startSize)
+                                }(), n.add(0, y), n.add(1, S), n.add(2, O), n.add(3, x), n.add(4, I)
                         }
-                        p || (p = c, c = e, e = null), e = e || {}, h("Making detectable..."),
+                        p || (p = l, l = e, e = null), e = e || {}, m("Making detectable..."),
                             function(e) {
                                 return ! function(e) {
                                     return e === e.ownerDocument.body || e.ownerDocument.body.contains(e)
                                 }(e) || null === getComputedStyle(e)
-                            }(c) ? (h("Element is detached"), C(), h("Waiting until element is attached..."), o(c).onRendered = function() {
-                                h("Element is now attached"), _()
-                            }) : _()
+                            }(l) ? (m("Element is detached"), P(), m("Waiting until element is attached..."), i(l).onRendered = function() {
+                                m("Element is now attached"), w()
+                            }) : w()
                     },
                     addListener: function(e, t) {
-                        if (!o(e).listeners.push) throw new Error("Cannot add listener to an element that is not detectable.");
-                        o(e).listeners.push(t)
+                        if (!i(e).listeners.push) throw new Error("Cannot add listener to an element that is not detectable.");
+                        i(e).listeners.push(t)
                     },
                     uninstall: function(e) {
-                        var t = o(e);
-                        t && (t.onExpandScroll && c(u(e), "scroll", t.onExpandScroll), t.onShrinkScroll && c(d(e), "scroll", t.onShrinkScroll), t.onAnimationStart && c(t.container, "animationstart", t.onAnimationStart), t.container && e.removeChild(t.container))
+                        var t = i(e);
+                        t && (t.onExpandScroll && l(u(e), "scroll", t.onExpandScroll), t.onShrinkScroll && l(d(e), "scroll", t.onShrinkScroll), t.onAnimationStart && l(t.container, "animationstart", t.onAnimationStart), t.container && e.removeChild(t.container))
                     }
                 }
             }
+        },
+        yrda: function(e, t, n) {
+            e.exports = n.p + "assets/amazon_pay_2x-914335e3401a72109a8a.png"
         }
     }
 ]);

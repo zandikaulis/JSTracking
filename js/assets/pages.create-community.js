@@ -132,26 +132,26 @@
                 O = n("GnwI"),
                 _ = n("Ue10"),
                 E = (n("O9qh"), function() {
-                    return u.createElement(_.Va, {
+                    return u.createElement(_.Wa, {
                         className: "community-requirements",
                         flexGrow: 0,
                         flexShrink: 0
-                    }, u.createElement(_.xb, {
+                    }, u.createElement(_.yb, {
                         border: !0,
                         background: _.r.Base,
                         padding: 1
-                    }, u.createElement(_.Wb, null, u.createElement("h4", null, Object(d.d)("Requirements", "CommunityRequirements")), u.createElement("ul", {
+                    }, u.createElement(_.Xb, null, u.createElement("h4", null, Object(d.d)("Requirements", "CommunityRequirements")), u.createElement("ul", {
                         className: "community-requirements__list"
                     }, u.createElement("li", null, Object(d.d)("Your account must be at least 90 days old", "CommunityRequirements")), u.createElement("li", null, Object(d.d)("You must have <x:link>two-factor authentication</x:link> enabled", {
                         "x:link": function(e) {
-                            return u.createElement(_.T, {
+                            return u.createElement(_.U, {
                                 to: "https://help.twitch.tv/customer/en/portal/articles/2186271-two-factor-authentication-with-authy",
                                 targetBlank: !0
                             }, e)
                         }
                     }, "CommunityRequirements")), u.createElement("li", null, Object(d.d)("You cannot currently create more than 5 Communities", "CommunityRequirements")), u.createElement("li", null, Object(d.d)("You must agree to the <x:link>Twitch Community Guidelines</x:link>", {
                         "x:link": function(e) {
-                            return u.createElement(_.T, {
+                            return u.createElement(_.U, {
                                 to: "https://www.twitch.tv/p/legal/community-guidelines/",
                                 targetBlank: !0
                             }, e)
@@ -192,7 +192,7 @@
                                                 summary: this.state.shortDescription
                                             }))];
                                         case 2:
-                                            return (t = r.sent()).data.createCommunity && t.data.createCommunity.community && t.data.createCommunity.community.name ? (d.o.history.push("/communities/" + t.data.createCommunity.community.name), [2]) : (n = null, t.data.createCommunity ? t.data.createCommunity.error && (n = function(e) {
+                                            return (t = r.sent()).data.createCommunity && t.data.createCommunity.community && t.data.createCommunity.community.name ? (d.p.history.push("/communities/" + t.data.createCommunity.community.name), [2]) : (n = null, t.data.createCommunity ? t.data.createCommunity.error && (n = function(e) {
                                                 var t = Object(d.d)("That name is unavailable", "CreateCommunityErrors");
                                                 switch (e) {
                                                     case a.ACCOUNT_TOO_YOUNG:
@@ -239,7 +239,7 @@
                         }, t.getSupportsMarkdownText = function() {
                             return Object(d.d)("Supports <x:link>Markdown</x:link> (No HTML)", {
                                 "x:link": function(e) {
-                                    return u.createElement(_.T, {
+                                    return u.createElement(_.U, {
                                         to: "https://help.twitch.tv/customer/portal/articles/839490-markdown-basics",
                                         targetBlank: !0
                                     }, e)
@@ -283,28 +283,28 @@
                             n = Object(d.d)("{count}/160", {
                                 count: t
                             }, "CreateCommunityPage"),
-                            a = this.state.errorMessage && u.createElement(_.Va, {
+                            a = this.state.errorMessage && u.createElement(_.Wa, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
                                 },
                                 "data-test-selector": N.ErrorWrapper
-                            }, u.createElement(_.V, {
+                            }, u.createElement(_.W, {
                                 color: _.O.Error
                             }, this.state.errorMessage));
-                        return u.createElement(_.Va, {
+                        return u.createElement(_.Wa, {
                             margin: 3
-                        }, u.createElement(_.Va, {
+                        }, u.createElement(_.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, u.createElement(_.V, {
-                            type: _.Nb.H2
-                        }, e)), u.createElement(_.Va, {
-                            display: _.W.Flex,
-                            flexDirection: _.Y.Row,
-                            flexWrap: _.Z.Wrap
-                        }, u.createElement(_.xb, {
+                        }, u.createElement(_.W, {
+                            type: _.Ob.H2
+                        }, e)), u.createElement(_.Wa, {
+                            display: _.X.Flex,
+                            flexDirection: _.Z.Row,
+                            flexWrap: _.Aa.Wrap
+                        }, u.createElement(_.yb, {
                             className: "create-community-page__form-wrapper",
                             background: _.r.Base,
                             flexShrink: 0,
@@ -314,76 +314,76 @@
                             margin: {
                                 right: 3
                             }
-                        }, a, u.createElement(_.Va, {
+                        }, a, u.createElement(_.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, u.createElement(_.Ca, {
+                        }, u.createElement(_.Da, {
                             id: "create-community-page__form-name",
                             label: Object(d.d)("Name *", "CreateCommunityPage")
-                        }, u.createElement(_.Pa, {
+                        }, u.createElement(_.Qa, {
                             id: "create-community-page__form-name",
                             onChange: this.onNameChange,
-                            type: _.Ra.Text,
+                            type: _.Sa.Text,
                             "data-test-selector": N.Name
-                        }))), u.createElement(_.Va, {
+                        }))), u.createElement(_.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, u.createElement(_.Ca, {
+                        }, u.createElement(_.Da, {
                             id: "create-community-page__form-display-name",
                             label: Object(d.d)("Display Name", "CreateCommunityPage")
-                        }, u.createElement(_.Pa, {
+                        }, u.createElement(_.Qa, {
                             id: "create-community-page__form-display-name",
                             onChange: this.onDisplayNameChange,
-                            type: _.Ra.Text,
+                            type: _.Sa.Text,
                             "data-test-selector": N.DisplayName
-                        }))), u.createElement(_.Va, {
+                        }))), u.createElement(_.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, u.createElement(_.Ca, {
+                        }, u.createElement(_.Da, {
                             id: "create-community-page__form-short-description",
                             label: Object(d.d)("Short Description *", "CreateCommunityPage"),
                             hint: n
-                        }, Object(d.d)("A short description used in search results and social media links. 160 characters max.", "CreateCommunityPage"), u.createElement(_.Kb, {
+                        }, Object(d.d)("A short description used in search results and social media links. 160 characters max.", "CreateCommunityPage"), u.createElement(_.Lb, {
                             id: "create-community-page__form-short-description",
                             onChange: this.onShortDescriptionChange,
                             "data-test-selector": N.ShortDescription
-                        }))), u.createElement(_.Va, {
+                        }))), u.createElement(_.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, u.createElement(_.Ca, {
+                        }, u.createElement(_.Da, {
                             id: "create-community-page__form-long-description",
                             label: Object(d.d)("Long Description *", "CreateCommunityPage")
-                        }, Object(d.d)("A long description that appears on the community page.", "CreateCommunityPage"), u.createElement(_.Kb, {
+                        }, Object(d.d)("A long description that appears on the community page.", "CreateCommunityPage"), u.createElement(_.Lb, {
                             id: "create-community-page__form-long-description",
                             onChange: this.onLongDescriptionChange,
                             "data-test-selector": N.LongDescription
-                        }), u.createElement(_.V, {
+                        }), u.createElement(_.W, {
                             color: _.O.Alt2
-                        }, this.getSupportsMarkdownText()))), u.createElement(_.Va, {
+                        }, this.getSupportsMarkdownText()))), u.createElement(_.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, u.createElement(_.Ca, {
+                        }, u.createElement(_.Da, {
                             id: "create-community-page__form-rules",
                             label: Object(d.d)("Rules *", "CreateCommunityPage")
                         }, Object(d.d)("A set of rules outlining the types of games or content that is acceptable for this community. Must adhere to the <x:link>Twitch Terms of Service</x:link>.", {
                             "x:link": function(e) {
-                                return u.createElement(_.T, {
+                                return u.createElement(_.U, {
                                     to: "https://twitch.tv/p/legal/terms-of-service/",
                                     targetBlank: !0
                                 }, e)
                             }
-                        }, "CreateCommunityPage"), u.createElement(_.Kb, {
+                        }, "CreateCommunityPage"), u.createElement(_.Lb, {
                             id: "create-community-page__form-rules",
                             onChange: this.onRulesChange,
                             "data-test-selector": N.Rules
-                        }), u.createElement(_.V, {
+                        }), u.createElement(_.W, {
                             color: _.O.Alt2
-                        }, this.getSupportsMarkdownText()))), u.createElement(_.Va, {
+                        }, this.getSupportsMarkdownText()))), u.createElement(_.Wa, {
                             margin: {
                                 bottom: 1
                             }
@@ -394,7 +394,7 @@
                         })), this.renderCreateButton(e)), u.createElement(E, null)))
                     }, t
                 }(u.Component),
-                k = Object(l.compose)(Object(O.c)("CreateCommunityPage", {
+                k = Object(l.compose)(Object(O.b)("CreateCommunityPage", {
                     autoReportInteractive: !0,
                     destination: h.a.CommunityCreate
                 }), Object(C.a)(b, {

@@ -152,7 +152,7 @@
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, n.o.config.apiBaseURL)
+                        return new URL(e, n.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return r.__awaiter(this, void 0, Promise, function() {
                             var t, i, n, a;
@@ -193,11 +193,11 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var i = n.o.store.getState(),
+                        var i = n.p.store.getState(),
                             r = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": n.o.config.legacyClientID,
+                                "Client-ID": n.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
@@ -205,7 +205,7 @@
                         return s && (r.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (r["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             r[e] && delete r[e]
                         }), r
-                    }, e.logger = n.o.logger.withCategory("legacy-api"), e
+                    }, e.logger = n.p.logger.withCategory("legacy-api"), e
                 }()
         },
         lEVP: function(e, t, i) {
@@ -222,7 +222,7 @@
                 m = i("GnwI"),
                 h = i("O4UZ"),
                 f = i("b6Yk"),
-                p = l.o.logger.withCategory("verify-email"),
+                p = l.p.logger.withCategory("verify-email"),
                 y = function(e, t) {
                     return n.__awaiter(void 0, void 0, void 0, function() {
                         var i, r;
@@ -284,7 +284,7 @@
                             i.dismissalData = {
                                 dismissalCount: t + 1,
                                 dismissalDateTimeMs: Date.now()
-                            }, l.l.set(S, i.dismissalData), i.setState({
+                            }, l.m.set(S, i.dismissalData), i.setState({
                                 verifyEmailBarState: E.DISMISSED
                             }), i.resetAfterDismissalTimeoutID = setTimeout(function() {
                                 return n.__awaiter(i, void 0, void 0, function() {
@@ -299,7 +299,7 @@
                                         }
                                     })
                                 })
-                            }, 1.01 * I), l.o.tracking.track(v.SpadeEventType.VerifyEmailBar, {
+                            }, 1.01 * I), l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
                                 action: r.Dismiss
                             })
                         }, i.onClickToVerify = function(e) {
@@ -318,13 +318,13 @@
                                                 i.setState({
                                                     verifyEmailBarState: E.DISMISSED
                                                 }), i.afterVerifyDismissTimeoutID = null
-                                            }, b), l.o.tracking.track(v.SpadeEventType.VerifyEmailBar, {
+                                            }, b), l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
                                                 action: r.Click
                                             }), [2]
                                     }
                                 })
                             })
-                        }, i.dismissalData = l.l.getOptional(S), i
+                        }, i.dismissalData = l.m.getOptional(S), i
                     }
                     return n.__extends(t, e), t.prototype.componentWillUnmount = function() {
                         null !== this.resetAfterDismissalTimeoutID && clearTimeout(this.resetAfterDismissalTimeoutID), null !== this.afterVerifyDismissTimeoutID && clearTimeout(this.afterVerifyDismissTimeoutID)
@@ -342,7 +342,7 @@
                         if (this.state.isError) return null;
                         switch (this.state.verifyEmailBarState) {
                             case E.CLICK_TO_VERIFY:
-                                return this.impressionEventFired || (l.o.tracking.track(v.SpadeEventType.VerifyEmailBar, {
+                                return this.impressionEventFired || (l.p.tracking.track(v.SpadeEventType.VerifyEmailBar, {
                                     action: r.Impress
                                 }), this.impressionEventFired = !0), this.renderClickToVerify();
                             case E.EMAIL_SENT:
@@ -358,29 +358,29 @@
                         return a.createElement(g.i, {
                             type: g.n.SlideInTop,
                             duration: g.k.ExtraLong
-                        }, a.createElement(g.Va, {
+                        }, a.createElement(g.Wa, {
                             fullWidth: !0,
-                            position: g.db.Relative
-                        }, a.createElement(g.xb, {
+                            position: g.eb.Relative
+                        }, a.createElement(g.yb, {
                             className: "verify-email-bar",
-                            display: g.W.Flex,
+                            display: g.X.Flex,
                             alignItems: g.f.Center,
-                            justifyContent: g.Ua.Center,
+                            justifyContent: g.Va.Center,
                             elevation: 1
-                        }, a.createElement(g.Na, {
+                        }, a.createElement(g.Oa, {
                             fullHeight: !0,
                             fullWidth: !0,
                             padding: 1
                         }, a.createElement("button", {
                             onClick: this.onClickToVerify,
                             "data-test-selector": w
-                        }, a.createElement(g.Va, {
-                            display: g.W.Flex,
+                        }, a.createElement(g.Wa, {
+                            display: g.X.Flex,
                             alignItems: g.f.Center,
-                            justifyContent: g.Ua.Center
-                        }, a.createElement(g.Va, {
+                            justifyContent: g.Va.Center
+                        }, a.createElement(g.Wa, {
                             className: "verify-email-bar__copy",
-                            display: g.W.Flex,
+                            display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
                                 right: 1
@@ -388,19 +388,19 @@
                             padding: {
                                 right: .5
                             }
-                        }, a.createElement(g.mb, {
-                            asset: g.nb.NotificationWarning,
-                            type: g.ob.Inherit
-                        })), a.createElement(g.Va, {
+                        }, a.createElement(g.nb, {
+                            asset: g.ob.NotificationWarning,
+                            type: g.pb.Inherit
+                        })), a.createElement(g.Wa, {
                             className: "verify-email-bar__copy"
-                        }, a.createElement(g.V, {
-                            fontSize: g.Aa.Size5,
+                        }, a.createElement(g.W, {
+                            fontSize: g.Ba.Size5,
                             color: g.O.Inherit
                         }, Object(l.d)("Keep your account secure and verify {email}.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")))))), a.createElement(g.xb, {
+                        }, "VerifyEmail")))))), a.createElement(g.yb, {
                             className: "verify-email-bar__dismiss",
-                            position: g.db.Absolute,
+                            position: g.eb.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
@@ -409,23 +409,23 @@
                                 x: 1,
                                 y: .5
                             }
-                        }, a.createElement(g.T, {
-                            type: g.U.Inherit,
+                        }, a.createElement(g.U, {
+                            type: g.V.Inherit,
                             onClick: this.dismissBarClickHandler,
                             "data-test-selector": D,
                             hoverColorInherit: !0,
                             hoverUnderlineNone: !0
                         }, Object(l.d)("Not Now", "VerifyEmail"))))))
                     }, t.prototype.renderEmailSent = function() {
-                        return a.createElement(g.xb, {
+                        return a.createElement(g.yb, {
                             className: "verify-email-bar verify-email-bar--success",
-                            display: g.W.Flex,
-                            justifyContent: g.Ua.Center,
+                            display: g.X.Flex,
+                            justifyContent: g.Va.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.xb, {
-                            display: g.W.Flex,
+                        }, a.createElement(g.yb, {
+                            display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
                                 right: 1
@@ -434,25 +434,25 @@
                                 right: .5
                             },
                             color: g.O.Overlay
-                        }, a.createElement(g.mb, {
-                            asset: g.nb.NavMessages,
-                            type: g.ob.Inherit
-                        })), a.createElement(g.V, {
-                            fontSize: g.Aa.Size5,
+                        }, a.createElement(g.nb, {
+                            asset: g.ob.NavMessages,
+                            type: g.pb.Inherit
+                        })), a.createElement(g.W, {
+                            fontSize: g.Ba.Size5,
                             color: g.O.Overlay
                         }, Object(l.d)("Check your inbox at {email} for your verification email.", {
                             email: this.props.data.currentUser.email
                         }, "VerifyEmail")))
                     }, t.prototype.renderErrorSending = function() {
-                        return a.createElement(g.xb, {
+                        return a.createElement(g.yb, {
                             className: "verify-email-bar verify-email-bar--error",
-                            display: g.W.Flex,
-                            justifyContent: g.Ua.Center,
+                            display: g.X.Flex,
+                            justifyContent: g.Va.Center,
                             alignItems: g.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, a.createElement(g.xb, {
-                            display: g.W.Flex,
+                        }, a.createElement(g.yb, {
+                            display: g.X.Flex,
                             alignItems: g.f.Center,
                             margin: {
                                 right: 1
@@ -461,16 +461,16 @@
                                 right: .5
                             },
                             color: g.O.Overlay
-                        }, a.createElement(g.mb, {
-                            asset: g.nb.DeadGlitch,
-                            type: g.ob.Inherit
-                        })), a.createElement(g.V, {
-                            fontSize: g.Aa.Size5,
+                        }, a.createElement(g.nb, {
+                            asset: g.ob.DeadGlitch,
+                            type: g.pb.Inherit
+                        })), a.createElement(g.W, {
+                            fontSize: g.Ba.Size5,
                             color: g.O.Overlay
                         }, Object(l.d)("Oops...we were unable to send an email to {email}. Please try again later or update your email.", {
                             email: this.props.data.currentUser.email
-                        }, "VerifyEmail")), a.createElement(g.xb, {
-                            position: g.db.Absolute,
+                        }, "VerifyEmail")), a.createElement(g.yb, {
+                            position: g.eb.Absolute,
                             attachRight: !0,
                             margin: {
                                 right: 2
@@ -496,7 +496,7 @@
                         return this.props.data && !(this.props.data.loading || this.props.data.error) && this.props.data.currentUser && this.props.data.requestInfo
                     }, t
                 }(a.Component),
-                O = Object(c.compose)(Object(m.c)("VerifyEmail"), Object(u.a)(_), Object(s.connect)(function(e) {
+                O = Object(c.compose)(Object(m.b)("VerifyEmail"), Object(u.a)(_), Object(s.connect)(function(e) {
                     return {
                         blockedByGDPRBanner: Object(d.h)(e)
                     }

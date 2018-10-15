@@ -30,16 +30,16 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(o.X, {
+                        return a.createElement(o.Y, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, a.createElement(o.Na, {
-                            position: o.db.Absolute,
+                        }, a.createElement(o.Oa, {
+                            position: o.eb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: o.ac.Above
+                            zIndex: o.bc.Above
                         }, a.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -124,7 +124,7 @@
                     var r = [];
                     do {
                         r.push(u(e))
-                    } while (!J(e, o.TokenKind.EOF));
+                    } while (!X(e, o.TokenKind.EOF));
                     return {
                         kind: i.DOCUMENT,
                         definitions: r,
@@ -160,7 +160,7 @@
             }
 
             function u(e) {
-                if (z(e, o.TokenKind.NAME)) switch (e.token.value) {
+                if (Y(e, o.TokenKind.NAME)) switch (e.token.value) {
                     case "query":
                     case "mutation":
                     case "subscription":
@@ -177,14 +177,14 @@
                     case "directive":
                         return I(e)
                 } else {
-                    if (z(e, o.TokenKind.BRACE_L)) return l(e);
+                    if (Y(e, o.TokenKind.BRACE_L)) return l(e);
                     if (A(e)) return I(e)
                 }
-                throw Q(e)
+                throw q(e)
             }
 
             function l(e) {
-                if (z(e, o.TokenKind.NAME)) switch (e.token.value) {
+                if (Y(e, o.TokenKind.NAME)) switch (e.token.value) {
                     case "query":
                     case "mutation":
                     case "subscription":
@@ -192,11 +192,11 @@
                     case "fragment":
                         return function(e) {
                             var t = e.token;
-                            if (q(e, "fragment"), e.options.experimentalFragmentVariables) return {
+                            if (J(e, "fragment"), e.options.experimentalFragmentVariables) return {
                                 kind: i.FRAGMENT_DEFINITION,
                                 name: E(e),
                                 variableDefinitions: h(e),
-                                typeCondition: (q(e, "on"), w(e)),
+                                typeCondition: (J(e, "on"), w(e)),
                                 directives: C(e, !1),
                                 selectionSet: p(e),
                                 loc: H(e, t)
@@ -204,19 +204,19 @@
                             return {
                                 kind: i.FRAGMENT_DEFINITION,
                                 name: E(e),
-                                typeCondition: (q(e, "on"), w(e)),
+                                typeCondition: (J(e, "on"), w(e)),
                                 directives: C(e, !1),
                                 selectionSet: p(e),
                                 loc: H(e, t)
                             }
                         }(e)
-                } else if (z(e, o.TokenKind.BRACE_L)) return d(e);
-                throw Q(e)
+                } else if (Y(e, o.TokenKind.BRACE_L)) return d(e);
+                throw q(e)
             }
 
             function d(e) {
                 var t = e.token;
-                if (z(e, o.TokenKind.BRACE_L)) return {
+                if (Y(e, o.TokenKind.BRACE_L)) return {
                     kind: i.OPERATION_DEFINITION,
                     operation: "query",
                     name: void 0,
@@ -227,7 +227,7 @@
                 };
                 var r = m(e),
                     n = void 0;
-                return z(e, o.TokenKind.NAME) && (n = c(e)), {
+                return Y(e, o.TokenKind.NAME) && (n = c(e)), {
                     kind: i.OPERATION_DEFINITION,
                     operation: r,
                     name: n,
@@ -248,11 +248,11 @@
                     case "subscription":
                         return "subscription"
                 }
-                throw Q(e, t)
+                throw q(e, t)
             }
 
             function h(e) {
-                return z(e, o.TokenKind.PAREN_L) ? X(e, o.TokenKind.PAREN_L, f, o.TokenKind.PAREN_R) : []
+                return Y(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, f, o.TokenKind.PAREN_R) : []
             }
 
             function f(e) {
@@ -261,7 +261,7 @@
                     kind: i.VARIABLE_DEFINITION,
                     variable: b(e),
                     type: (Z(e, o.TokenKind.COLON), N(e)),
-                    defaultValue: J(e, o.TokenKind.EQUALS) ? T(e, !0) : void 0,
+                    defaultValue: X(e, o.TokenKind.EQUALS) ? T(e, !0) : void 0,
                     loc: H(e, t)
                 }
             }
@@ -279,15 +279,15 @@
                 var t = e.token;
                 return {
                     kind: i.SELECTION_SET,
-                    selections: X(e, o.TokenKind.BRACE_L, g, o.TokenKind.BRACE_R),
+                    selections: Q(e, o.TokenKind.BRACE_L, g, o.TokenKind.BRACE_R),
                     loc: H(e, t)
                 }
             }
 
             function g(e) {
-                return z(e, o.TokenKind.SPREAD) ? function(e) {
+                return Y(e, o.TokenKind.SPREAD) ? function(e) {
                     var t = e.token;
-                    if (Z(e, o.TokenKind.SPREAD), z(e, o.TokenKind.NAME) && "on" !== e.token.value) return {
+                    if (Z(e, o.TokenKind.SPREAD), Y(e, o.TokenKind.NAME) && "on" !== e.token.value) return {
                         kind: i.FRAGMENT_SPREAD,
                         name: E(e),
                         directives: C(e, !1),
@@ -307,14 +307,14 @@
                         r = c(e),
                         n = void 0,
                         a = void 0;
-                    J(e, o.TokenKind.COLON) ? (n = r, a = c(e)) : a = r;
+                    X(e, o.TokenKind.COLON) ? (n = r, a = c(e)) : a = r;
                     return {
                         kind: i.FIELD,
                         alias: n,
                         name: a,
                         arguments: v(e, !1),
                         directives: C(e, !1),
-                        selectionSet: z(e, o.TokenKind.BRACE_L) ? p(e) : void 0,
+                        selectionSet: Y(e, o.TokenKind.BRACE_L) ? p(e) : void 0,
                         loc: H(e, t)
                     }
                 }(e)
@@ -322,7 +322,7 @@
 
             function v(e, t) {
                 var r = t ? O : y;
-                return z(e, o.TokenKind.PAREN_L) ? X(e, o.TokenKind.PAREN_L, r, o.TokenKind.PAREN_R) : []
+                return Y(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, r, o.TokenKind.PAREN_R) : []
             }
 
             function y(e) {
@@ -346,7 +346,7 @@
             }
 
             function E(e) {
-                if ("on" === e.token.value) throw Q(e);
+                if ("on" === e.token.value) throw q(e);
                 return c(e)
             }
 
@@ -362,7 +362,7 @@
                                 values: function(e, t, r, n) {
                                     Z(e, t);
                                     var a = [];
-                                    for (; !J(e, n);) a.push(r(e));
+                                    for (; !X(e, n);) a.push(r(e));
                                     return a
                                 }(e, o.TokenKind.BRACKET_L, n, o.TokenKind.BRACKET_R),
                                 loc: H(e, r)
@@ -373,7 +373,7 @@
                             var r = e.token;
                             Z(e, o.TokenKind.BRACE_L);
                             var n = [];
-                            for (; !J(e, o.TokenKind.BRACE_R);) n.push(k(e, t));
+                            for (; !X(e, o.TokenKind.BRACE_R);) n.push(k(e, t));
                             return {
                                 kind: i.OBJECT,
                                 fields: n,
@@ -411,7 +411,7 @@
                     case o.TokenKind.DOLLAR:
                         if (!t) return b(e)
                 }
-                throw Q(e)
+                throw q(e)
             }
 
             function D(e) {
@@ -443,7 +443,7 @@
             }
 
             function C(e, t) {
-                for (var r = []; z(e, o.TokenKind.AT);) r.push(S(e, t));
+                for (var r = []; Y(e, o.TokenKind.AT);) r.push(S(e, t));
                 return r
             }
 
@@ -460,11 +460,11 @@
             function N(e) {
                 var t = e.token,
                     r = void 0;
-                return J(e, o.TokenKind.BRACKET_L) ? (r = N(e), Z(e, o.TokenKind.BRACKET_R), r = {
+                return X(e, o.TokenKind.BRACKET_L) ? (r = N(e), Z(e, o.TokenKind.BRACKET_R), r = {
                     kind: i.LIST_TYPE,
                     type: r,
                     loc: H(e, t)
-                }) : r = w(e), J(e, o.TokenKind.BANG) ? {
+                }) : r = w(e), X(e, o.TokenKind.BANG) ? {
                     kind: i.NON_NULL_TYPE,
                     type: r,
                     loc: H(e, t)
@@ -486,9 +486,9 @@
                     case "schema":
                         return function(e) {
                             var t = e.token;
-                            q(e, "schema");
+                            J(e, "schema");
                             var r = C(e, !0),
-                                n = X(e, o.TokenKind.BRACE_L, R, o.TokenKind.BRACE_R);
+                                n = Q(e, o.TokenKind.BRACE_L, R, o.TokenKind.BRACE_R);
                             return {
                                 kind: i.SCHEMA_DEFINITION,
                                 directives: r,
@@ -500,7 +500,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            q(e, "scalar");
+                            J(e, "scalar");
                             var n = c(e),
                                 a = C(e, !0);
                             return {
@@ -515,7 +515,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            q(e, "type");
+                            J(e, "type");
                             var n = c(e),
                                 a = M(e),
                                 o = C(e, !0),
@@ -534,7 +534,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            q(e, "interface");
+                            J(e, "interface");
                             var n = c(e),
                                 a = C(e, !0),
                                 o = P(e);
@@ -551,7 +551,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            q(e, "union");
+                            J(e, "union");
                             var n = c(e),
                                 a = C(e, !0),
                                 o = U(e);
@@ -568,10 +568,10 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            q(e, "enum");
+                            J(e, "enum");
                             var n = c(e),
                                 a = C(e, !0),
-                                o = V(e);
+                                o = W(e);
                             return {
                                 kind: i.ENUM_TYPE_DEFINITION,
                                 description: r,
@@ -585,7 +585,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            q(e, "input");
+                            J(e, "input");
                             var n = c(e),
                                 a = C(e, !0),
                                 o = K(e);
@@ -605,10 +605,10 @@
                                 case "scalar":
                                     return function(e) {
                                         var t = e.token;
-                                        q(e, "extend"), q(e, "scalar");
+                                        J(e, "extend"), J(e, "scalar");
                                         var r = c(e),
                                             n = C(e, !0);
-                                        if (0 === n.length) throw Q(e);
+                                        if (0 === n.length) throw q(e);
                                         return {
                                             kind: i.SCALAR_TYPE_EXTENSION,
                                             name: r,
@@ -619,12 +619,12 @@
                                 case "type":
                                     return function(e) {
                                         var t = e.token;
-                                        q(e, "extend"), q(e, "type");
+                                        J(e, "extend"), J(e, "type");
                                         var r = c(e),
                                             n = M(e),
                                             a = C(e, !0),
                                             o = P(e);
-                                        if (0 === n.length && 0 === a.length && 0 === o.length) throw Q(e);
+                                        if (0 === n.length && 0 === a.length && 0 === o.length) throw q(e);
                                         return {
                                             kind: i.OBJECT_TYPE_EXTENSION,
                                             name: r,
@@ -637,11 +637,11 @@
                                 case "interface":
                                     return function(e) {
                                         var t = e.token;
-                                        q(e, "extend"), q(e, "interface");
+                                        J(e, "extend"), J(e, "interface");
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = P(e);
-                                        if (0 === n.length && 0 === a.length) throw Q(e);
+                                        if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.INTERFACE_TYPE_EXTENSION,
                                             name: r,
@@ -653,11 +653,11 @@
                                 case "union":
                                     return function(e) {
                                         var t = e.token;
-                                        q(e, "extend"), q(e, "union");
+                                        J(e, "extend"), J(e, "union");
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = U(e);
-                                        if (0 === n.length && 0 === a.length) throw Q(e);
+                                        if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.UNION_TYPE_EXTENSION,
                                             name: r,
@@ -669,11 +669,11 @@
                                 case "enum":
                                     return function(e) {
                                         var t = e.token;
-                                        q(e, "extend"), q(e, "enum");
+                                        J(e, "extend"), J(e, "enum");
                                         var r = c(e),
                                             n = C(e, !0),
-                                            a = V(e);
-                                        if (0 === n.length && 0 === a.length) throw Q(e);
+                                            a = W(e);
+                                        if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.ENUM_TYPE_EXTENSION,
                                             name: r,
@@ -685,11 +685,11 @@
                                 case "input":
                                     return function(e) {
                                         var t = e.token;
-                                        q(e, "extend"), q(e, "input");
+                                        J(e, "extend"), J(e, "input");
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = K(e);
-                                        if (0 === n.length && 0 === a.length) throw Q(e);
+                                        if (0 === n.length && 0 === a.length) throw q(e);
                                         return {
                                             kind: i.INPUT_OBJECT_TYPE_EXTENSION,
                                             name: r,
@@ -699,22 +699,22 @@
                                         }
                                     }(e)
                             }
-                            throw Q(e, t)
+                            throw q(e, t)
                         }(e);
                     case "directive":
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            q(e, "directive"), Z(e, o.TokenKind.AT);
+                            J(e, "directive"), Z(e, o.TokenKind.AT);
                             var n = c(e),
-                                a = x(e);
-                            q(e, "on");
+                                a = B(e);
+                            J(e, "on");
                             var s = function(e) {
-                                J(e, o.TokenKind.PIPE);
+                                X(e, o.TokenKind.PIPE);
                                 var t = [];
                                 do {
-                                    t.push(W(e))
-                                } while (J(e, o.TokenKind.PIPE));
+                                    t.push(V(e))
+                                } while (X(e, o.TokenKind.PIPE));
                                 return t
                             }(e);
                             return {
@@ -727,11 +727,11 @@
                             }
                         }(e)
                 }
-                throw Q(e, t)
+                throw q(e, t)
             }
 
             function A(e) {
-                return z(e, o.TokenKind.STRING) || z(e, o.TokenKind.BLOCK_STRING)
+                return Y(e, o.TokenKind.STRING) || Y(e, o.TokenKind.BLOCK_STRING)
             }
 
             function L(e) {
@@ -757,20 +757,20 @@
                     e.advance();
                     do {
                         t.push(w(e))
-                    } while (z(e, o.TokenKind.NAME))
+                    } while (Y(e, o.TokenKind.NAME))
                 }
                 return t
             }
 
             function P(e) {
-                return z(e, o.TokenKind.BRACE_L) ? X(e, o.TokenKind.BRACE_L, F, o.TokenKind.BRACE_R) : []
+                return Y(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, F, o.TokenKind.BRACE_R) : []
             }
 
             function F(e) {
                 var t = e.token,
                     r = L(e),
                     n = c(e),
-                    a = x(e);
+                    a = B(e);
                 Z(e, o.TokenKind.COLON);
                 var s = N(e),
                     u = C(e, !0);
@@ -785,18 +785,18 @@
                 }
             }
 
-            function x(e) {
-                return z(e, o.TokenKind.PAREN_L) ? X(e, o.TokenKind.PAREN_L, B, o.TokenKind.PAREN_R) : []
+            function B(e) {
+                return Y(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, x, o.TokenKind.PAREN_R) : []
             }
 
-            function B(e) {
+            function x(e) {
                 var t = e.token,
                     r = L(e),
                     n = c(e);
                 Z(e, o.TokenKind.COLON);
                 var a = N(e),
                     s = void 0;
-                J(e, o.TokenKind.EQUALS) && (s = j(e));
+                X(e, o.TokenKind.EQUALS) && (s = j(e));
                 var u = C(e, !0);
                 return {
                     kind: i.INPUT_VALUE_DEFINITION,
@@ -811,17 +811,17 @@
 
             function U(e) {
                 var t = [];
-                if (J(e, o.TokenKind.EQUALS)) {
-                    J(e, o.TokenKind.PIPE);
+                if (X(e, o.TokenKind.EQUALS)) {
+                    X(e, o.TokenKind.PIPE);
                     do {
                         t.push(w(e))
-                    } while (J(e, o.TokenKind.PIPE))
+                    } while (X(e, o.TokenKind.PIPE))
                 }
                 return t
             }
 
-            function V(e) {
-                return z(e, o.TokenKind.BRACE_L) ? X(e, o.TokenKind.BRACE_L, G, o.TokenKind.BRACE_R) : []
+            function W(e) {
+                return Y(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, G, o.TokenKind.BRACE_R) : []
             }
 
             function G(e) {
@@ -839,29 +839,29 @@
             }
 
             function K(e) {
-                return z(e, o.TokenKind.BRACE_L) ? X(e, o.TokenKind.BRACE_L, B, o.TokenKind.BRACE_R) : []
+                return Y(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, x, o.TokenKind.BRACE_R) : []
             }
 
-            function W(e) {
+            function V(e) {
                 var t = e.token,
                     r = c(e);
                 if (s.DirectiveLocation.hasOwnProperty(r.value)) return r;
-                throw Q(e, t)
+                throw q(e, t)
             }
 
             function H(e, t) {
-                if (!e.options.noLocation) return new Y(t, e.lastToken, e.source)
+                if (!e.options.noLocation) return new z(t, e.lastToken, e.source)
             }
 
-            function Y(e, t, r) {
+            function z(e, t, r) {
                 this.start = e.start, this.end = t.end, this.startToken = e, this.endToken = t, this.source = r
             }
 
-            function z(e, t) {
+            function Y(e, t) {
                 return e.token.kind === t
             }
 
-            function J(e, t) {
+            function X(e, t) {
                 var r = e.token.kind === t;
                 return r && e.advance(), r
             }
@@ -872,23 +872,23 @@
                 throw (0, a.syntaxError)(e.source, r.start, "Expected " + t + ", found " + (0, o.getTokenDesc)(r))
             }
 
-            function q(e, t) {
+            function J(e, t) {
                 var r = e.token;
                 if (r.kind === o.TokenKind.NAME && r.value === t) return e.advance(), r;
                 throw (0, a.syntaxError)(e.source, r.start, 'Expected "' + t + '", found ' + (0, o.getTokenDesc)(r))
             }
 
-            function Q(e, t) {
+            function q(e, t) {
                 var r = t || e.token;
                 return (0, a.syntaxError)(e.source, r.start, "Unexpected " + (0, o.getTokenDesc)(r))
             }
 
-            function X(e, t, r, n) {
+            function Q(e, t, r, n) {
                 Z(e, t);
-                for (var a = [r(e)]; !J(e, n);) a.push(r(e));
+                for (var a = [r(e)]; !X(e, n);) a.push(r(e));
                 return a
             }
-            Y.prototype.toJSON = Y.prototype.inspect = function() {
+            z.prototype.toJSON = z.prototype.inspect = function() {
                 return {
                     start: this.start,
                     end: this.end
@@ -1514,18 +1514,18 @@
             var n = r("q1tI"),
                 a = r("Ue10"),
                 o = function(e) {
-                    return n.createElement(a.Va, {
+                    return n.createElement(a.Wa, {
                         margin: {
                             top: 2,
                             bottom: 1,
                             x: 1
                         }
-                    }, n.createElement(a.V, {
+                    }, n.createElement(a.W, {
                         bold: !0,
                         color: a.O.Alt,
-                        fontSize: a.Aa.Size7,
-                        transform: a.Mb.Uppercase,
-                        type: a.Nb.H4
+                        fontSize: a.Ba.Size7,
+                        transform: a.Nb.Uppercase,
+                        type: a.Ob.H4
                     }, e.children))
                 };
             r.d(t, "a", function() {
@@ -1622,7 +1622,7 @@
                             changedSinceSubmit: !1
                         }, t.renderDescriptor = function() {
                             return t.props.descriptor.split("\n").map(function(e, t) {
-                                return h.createElement(j.V, {
+                                return h.createElement(j.W, {
                                     key: t
                                 }, e)
                             })
@@ -1631,9 +1631,9 @@
                                     disabled: t.state.buttonDisabled,
                                     onClick: t.handleSubmit
                                 }, t.props.buttonText),
-                                r = h.createElement(j.Qb, {
+                                r = h.createElement(j.Rb, {
                                     label: t.props.errorString,
-                                    direction: j.Sb.Right,
+                                    direction: j.Tb.Right,
                                     show: !0
                                 }, e);
                             return t.props.errorString.length && !t.state.changedSinceSubmit ? r : e
@@ -1663,23 +1663,23 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return h.createElement(j.Va, {
+                        return h.createElement(j.Wa, {
                             alignSelf: j.g.Start,
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Column
-                        }, h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Row,
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Column
+                        }, h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Row,
                             margin: {
                                 bottom: 1
                             }
-                        }, h.createElement(j.Pa, {
-                            type: j.Ra.Text,
+                        }, h.createElement(j.Qa, {
+                            type: j.Sa.Text,
                             placeholder: this.props.placeholder,
                             value: this.state.inputValue,
                             onChange: this.handleChangeInput,
                             maxLength: 25
-                        }), h.createElement(j.Va, null, this.renderButton())), h.createElement(j.Va, null, this.renderDescriptor()))
+                        }), h.createElement(j.Wa, null, this.renderButton())), h.createElement(j.Wa, null, this.renderDescriptor()))
                     }, t
                 }(h.Component),
                 k = r("8/mp");
@@ -1699,49 +1699,49 @@
                             var e = t.props.buttonConfiguration === a.AllButtons,
                                 r = e || t.props.buttonConfiguration === a.MoveUpAndRemoveOnly,
                                 o = e || t.props.buttonConfiguration === a.MoveDownAndRemoveOnly;
-                            return h.createElement(j.Va, null, r && h.createElement(j.Qb, {
+                            return h.createElement(j.Wa, null, r && h.createElement(j.Rb, {
                                 label: Object(g.d)("Move Up", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.nb.ArrowUp,
+                                icon: j.ob.ArrowUp,
                                 onClick: t.handleOnMoveClick(n.Up),
                                 disabled: t.props.isDisabled
-                            })), o && h.createElement(j.Qb, {
+                            })), o && h.createElement(j.Rb, {
                                 label: Object(g.d)("Move Down", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.nb.ArrowDown,
+                                icon: j.ob.ArrowDown,
                                 onClick: t.handleOnMoveClick(n.Down),
                                 disabled: t.props.isDisabled
-                            })), r && h.createElement(j.Qb, {
+                            })), r && h.createElement(j.Rb, {
                                 label: Object(g.d)("Move To Top", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.nb.ToTop,
+                                icon: j.ob.ToTop,
                                 onClick: t.handleOnMoveClick(n.ToTop),
                                 disabled: t.props.isDisabled
-                            })), o && h.createElement(j.Qb, {
+                            })), o && h.createElement(j.Rb, {
                                 label: Object(g.d)("Move To Bottom", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.nb.ToBottom,
+                                icon: j.ob.ToBottom,
                                 onClick: t.handleOnMoveClick(n.ToBottom),
                                 disabled: t.props.isDisabled
-                            })), h.createElement(j.Qb, {
+                            })), h.createElement(j.Rb, {
                                 label: Object(g.d)("Remove", "TeamsDashboard"),
-                                direction: j.Sb.Left
+                                direction: j.Tb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
-                                icon: j.nb.Trash,
+                                icon: j.ob.Trash,
                                 onClick: t.handleDeleteClick,
                                 disabled: t.props.isDisabled
                             })))
@@ -1769,28 +1769,28 @@
                             "data-test-selector": this.props.listItemsSelector,
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             background: this.state.isHovered ? j.r.Base : void 0,
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Row,
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Row,
                             fullWidth: !0,
-                            justifyContent: j.Ua.Between,
+                            justifyContent: j.Va.Between,
                             padding: 1
-                        }, h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Row,
+                        }, h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Row,
                             alignItems: j.f.Center
                         }, h.createElement(j.q, {
                             src: this.props.member.avatarSrc,
                             alt: e,
                             size: 30
-                        }), h.createElement(j.Va, {
+                        }), h.createElement(j.Wa, {
                             margin: {
                                 left: 1
                             }
-                        }, h.createElement(j.V, null, this.props.member.displayName))), h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Row,
+                        }, h.createElement(j.W, null, this.props.member.displayName))), h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Row,
                             alignItems: j.f.Center
                         }, this.state.isHovered && this.renderButtons())))
                     }, t
@@ -1818,20 +1818,20 @@
                         }
                         e.onMoveClick(t, a)
                     };
-                    return h.createElement(j.Va, {
+                    return h.createElement(j.Wa, {
                         fullWidth: !0,
                         margin: {
                             top: 2,
                             bottom: 2
                         }
-                    }, e.header && h.createElement(j.V, {
-                        type: j.Nb.H3
+                    }, e.header && h.createElement(j.W, {
+                        type: j.Ob.H3
                     }, e.header), e.members.length ? function(r) {
                         var n = e.onMoveClick ? t : void 0;
-                        return h.createElement(k.b, null, h.createElement(j.Va, {
+                        return h.createElement(k.b, null, h.createElement(j.Wa, {
                             className: "members-list",
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Column
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Column
                         }, r.map(function(t, o) {
                             return h.createElement(N, {
                                 key: t.id,
@@ -1848,23 +1848,23 @@
                                 isDisabled: e.isDisabled
                             })
                         })))
-                    }(e.members) : h.createElement(j.V, null, e.emptyStateText))
+                    }(e.members) : h.createElement(j.W, null, e.emptyStateText))
                 },
                 I = function(e) {
-                    return h.createElement(k.b, null, h.createElement(j.Va, {
-                        display: j.W.Flex,
-                        flexDirection: j.Y.Column,
+                    return h.createElement(k.b, null, h.createElement(j.Wa, {
+                        display: j.X.Flex,
+                        flexDirection: j.Z.Column,
                         alignItems: j.f.Start,
                         padding: 2
-                    }, h.createElement(j.Va, {
-                        display: j.W.Flex,
+                    }, h.createElement(j.Wa, {
+                        display: j.X.Flex,
                         padding: {
                             bottom: 2
                         },
                         fullWidth: !0
-                    }, h.createElement(j.V, {
+                    }, h.createElement(j.W, {
                         "data-test-selector": e.titleSelector,
-                        type: j.Nb.H1
+                        type: j.Ob.H1
                     }, e.title)), e.children))
                 };
             ! function(e) {
@@ -1903,7 +1903,7 @@
                         avatarSrc: e.logo
                     }
                 },
-                x = function(e, t) {
+                B = function(e, t) {
                     return e.map(function(e, r) {
                         return {
                             id: e.id,
@@ -1913,7 +1913,7 @@
                         }
                     })
                 },
-                B = function(e) {
+                x = function(e) {
                     return e.filter(function(e) {
                         return e.checked
                     }).map(function(e) {
@@ -1923,7 +1923,7 @@
                 U = function() {
                     return Object(g.d)("Twitch username", "TeamsDashboard")
                 },
-                V = function(e) {
+                W = function(e) {
                     switch (e) {
                         case C.Revenue:
                             return Object(g.d)("Revenue", "TeamsDashboard");
@@ -1957,16 +1957,16 @@
                         })
                     })
                 },
-                W = function(e, t) {
-                    return z("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership")
+                V = function(e, t) {
+                    return Y("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership")
                 },
                 H = function(e, t) {
-                    return z("/v5/teams/" + e + "/dashboard/featured_channels/" + t)
+                    return Y("/v5/teams/" + e + "/dashboard/featured_channels/" + t)
                 },
-                Y = function(e, t) {
-                    return z("/v5/teams/" + e + "/dashboard/channels/" + t + "/invitation")
+                z = function(e, t) {
+                    return Y("/v5/teams/" + e + "/dashboard/channels/" + t + "/invitation")
                 },
-                z = function(e) {
+                Y = function(e) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         return l.__generator(this, function(t) {
                             switch (t.label) {
@@ -1978,13 +1978,13 @@
                         })
                     })
                 },
-                J = function(e, t, r) {
-                    return q("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", r)
+                X = function(e, t, r) {
+                    return J("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", r)
                 },
                 Z = function(e, t, r) {
-                    return q("/v5/teams/" + e + "/dashboard/featured_channels/" + t, r)
+                    return J("/v5/teams/" + e + "/dashboard/featured_channels/" + t, r)
                 },
-                q = function(e, t) {
+                J = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         return l.__generator(this, function(r) {
                             switch (r.label) {
@@ -2000,7 +2000,7 @@
                         })
                     })
                 },
-                Q = function(e) {
+                q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2100,7 +2100,7 @@
                         })
                     }, t.prototype.render = function() {
                         return h.createElement(I, {
-                            title: V(C.FeaturedChannels),
+                            title: W(C.FeaturedChannels),
                             titleSelector: "featured-channels-page-title"
                         }, h.createElement(_, {
                             descriptor: Object(g.d)("Pick channels to feature. Featured channels do not need to be a member of the team.\nIf none of the featured channels are live, your team will feature a live member based on member ordering.", "TeamsDashboard"),
@@ -2116,12 +2116,12 @@
                             isDisabled: this.state.isDisabled,
                             onMoveClick: this.handleMoveFeaturedChannel
                         }))
-                    }, t = l.__decorate([Object(D.c)("FeaturedChannelsPage", {
+                    }, t = l.__decorate([Object(D.b)("FeaturedChannelsPage", {
                         autoReportInteractive: !0,
                         destination: T.a.TeamsDashboardFeaturedChannels
                     })], t)
                 }(h.Component),
-                X = r("6XEL");
+                Q = r("6XEL");
             ! function(e) {
                 e.StatsRevealed = "stats_revealed", e.RevenueRevealed = "revenue_revealed"
             }(A || (A = {}));
@@ -2131,7 +2131,7 @@
                         return l.__generator(this, function(o) {
                             switch (o.label) {
                                 case 0:
-                                    return r = "/v5/teams/" + e + "/dashboard/members" + (t ? "?" + t + "=true" : ""), [4, Object(X.c)({
+                                    return r = "/v5/teams/" + e + "/dashboard/members" + (t ? "?" + t + "=true" : ""), [4, Object(Q.c)({
                                         path: r
                                     })];
                                 case 1:
@@ -2197,7 +2197,7 @@
                                         case 0:
                                             return this.setState({
                                                 isDisabled: !0
-                                            }), [4, J(this.props.teamName, e, r)];
+                                            }), [4, X(this.props.teamName, e, r)];
                                         case 1:
                                             return a.sent() && (t = this.state.members.findIndex(function(t) {
                                                 return t.id === e
@@ -2216,7 +2216,7 @@
                                         case 0:
                                             return this.setState({
                                                 isDisabled: !0
-                                            }), [4, Y(this.props.teamName, e)];
+                                            }), [4, z(this.props.teamName, e)];
                                         case 1:
                                             return t.sent() && this.setState({
                                                 invitations: this.state.invitations.filter(function(t) {
@@ -2234,7 +2234,7 @@
                                         case 0:
                                             return this.setState({
                                                 isDisabled: !0
-                                            }), [4, W(this.props.teamName, e)];
+                                            }), [4, V(this.props.teamName, e)];
                                         case 1:
                                             return t.sent() && this.setState({
                                                 members: this.state.members.filter(function(t) {
@@ -2259,7 +2259,7 @@
                                                 return l.__generator(this, function(a) {
                                                     switch (a.label) {
                                                         case 0:
-                                                            return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(X.c)({
+                                                            return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(Q.c)({
                                                                 path: t
                                                             })];
                                                         case 1:
@@ -2280,7 +2280,7 @@
                         })
                     }, t.prototype.render = function() {
                         return h.createElement(I, {
-                            title: V(C.Members),
+                            title: W(C.Members),
                             titleSelector: "members-page-title"
                         }, h.createElement(_, {
                             descriptor: Object(g.d)("Live team members will always be at the top. Order is respected for live members and offline members.\nOrder also determines which member will be featured in the video player.", "TeamsDashboard"),
@@ -2304,7 +2304,7 @@
                             onMoveClick: this.handleMoveMember,
                             isDisabled: this.state.isDisabled
                         }))
-                    }, t = l.__decorate([Object(D.c)("MembersPage", {
+                    }, t = l.__decorate([Object(D.b)("MembersPage", {
                         autoReportInteractive: !0,
                         destination: T.a.TeamsDashboardMembers
                     })], t)
@@ -2358,13 +2358,13 @@
                     return l.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return h.createElement(j.Va, {
+                        return h.createElement(j.Wa, {
                             className: "month-select-menu"
-                        }, h.createElement(j.sb, {
+                        }, h.createElement(j.tb, {
                             disabled: this.props.isDisabled,
                             onChange: this.handleChange
                         }, this.getDropdownOptions(this.validatedCurrentDate, this.props.earliestDate)))
-                    }, t = l.__decorate([Object(D.c)("MonthSelectMenuComponent")], t)
+                    }, t = l.__decorate([Object(D.b)("MonthSelectMenuComponent")], t)
                 }(h.Component),
                 le = ["twitch_subscriptions", "prime_subscriptions", "gift_subscriptions", "bits", "ads", "bounty_board"],
                 de = function(e) {
@@ -2387,7 +2387,7 @@
                 },
                 me = r("WyAD"),
                 he = function(e) {
-                    return Object(g.e)(e / 100, {
+                    return Object(g.f)(e / 100, {
                         style: "currency",
                         currency: "USD"
                     })
@@ -2487,7 +2487,7 @@
                         this.myChart.data = pe(e.datasets, e.timestampLabels), this.myChart.update()
                     }, t.prototype.render = function() {
                         var e = this;
-                        return h.createElement(j.Na, {
+                        return h.createElement(j.Oa, {
                             flexGrow: 0,
                             flexShrink: 1,
                             fullWidth: !0
@@ -2501,7 +2501,7 @@
                             var e = be(this.canvas.getContext("2d"));
                             this.canvas.height = 36 * e, this.canvas.style.height = "36rem", this.canvas.getContext("2d").setTransform(e, 0, 0, e, 0, 0)
                         }
-                    }, t = l.__decorate([Object(D.c)("RevenueCanvas", {
+                    }, t = l.__decorate([Object(D.b)("RevenueCanvas", {
                         autoReportInteractive: !0
                     })], t)
                 }(h.Component),
@@ -2595,34 +2595,34 @@
             }($ || ($ = {}));
             var ye, Oe, Ee = function(e) {
                     var t, r;
-                    return e.isLoading ? (t = h.createElement(j.V, {
-                        type: j.Nb.H5
-                    }, h.createElement(j.cb, {
+                    return e.isLoading ? (t = h.createElement(j.W, {
+                        type: j.Ob.H5
+                    }, h.createElement(j.db, {
                         width: 90
-                    })), r = h.createElement(j.Va, null, h.createElement(j.cb, {
+                    })), r = h.createElement(j.Wa, null, h.createElement(j.db, {
                         width: 140,
                         height: 40
-                    }))) : (t = h.createElement(j.V, {
+                    }))) : (t = h.createElement(j.W, {
                         color: j.O.Alt2,
-                        type: j.Nb.H5,
+                        type: j.Ob.H5,
                         "data-test-selector": $.Title
-                    }, e.title), r = h.createElement(j.Va, {
+                    }, e.title), r = h.createElement(j.Wa, {
                         alignItems: j.f.Start,
-                        display: j.W.Flex,
-                        flexDirection: j.Y.Row
-                    }, h.createElement(j.Va, {
+                        display: j.X.Flex,
+                        flexDirection: j.Z.Row
+                    }, h.createElement(j.Wa, {
                         margin: {
                             top: .5
                         }
-                    }, h.createElement(j.V, {
+                    }, h.createElement(j.W, {
                         "data-test-selector": $.Symbol,
-                        type: j.Nb.H4
-                    }, "$")), h.createElement(j.V, {
+                        type: j.Ob.H4
+                    }, "$")), h.createElement(j.W, {
                         "data-test-selector": $.Dollars,
-                        type: j.Nb.H1
-                    }, Object(g.e)(Math.floor(e.cents / 100))))), h.createElement(j.Va, {
-                        display: j.W.Flex,
-                        flexDirection: j.Y.Column,
+                        type: j.Ob.H1
+                    }, Object(g.f)(Math.floor(e.cents / 100))))), h.createElement(j.Wa, {
+                        display: j.X.Flex,
+                        flexDirection: j.Z.Column,
                         flexGrow: 1,
                         margin: 1
                     }, t, r)
@@ -2639,13 +2639,13 @@
                                 title: t.title + " *"
                             })
                         });
-                    return h.createElement(j.xb, {
+                    return h.createElement(j.yb, {
                         borderMarked: !0,
                         border: !0,
                         fullWidth: !0,
                         background: j.r.Base,
-                        display: j.W.Flex,
-                        justifyContent: j.Ua.Between,
+                        display: j.X.Flex,
+                        justifyContent: j.Va.Between,
                         alignItems: j.f.Center,
                         padding: 1
                     }, h.createElement(Ee, {
@@ -2686,7 +2686,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderMenu = function() {
-                            if (t.props.isLoading) return h.createElement(j.cb, {
+                            if (t.props.isLoading) return h.createElement(j.db, {
                                 width: 180,
                                 height: 30
                             });
@@ -2710,7 +2710,7 @@
                                 noTail: !0
                             }, h.createElement(k.b, {
                                 className: "team-members-select-menu__scroller"
-                            }, h.createElement(j.Va, null, h.createElement(j.xb, {
+                            }, h.createElement(j.Wa, null, h.createElement(j.yb, {
                                 borderBottom: !0,
                                 padding: 1
                             }, h.createElement(j.N, {
@@ -2724,7 +2724,7 @@
                                     onChange: t.props.toggleMemberChecked.bind(t, r),
                                     disabled: e >= M && !r.checked
                                 };
-                                return h.createElement(j.Va, {
+                                return h.createElement(j.Wa, {
                                     key: r.id,
                                     margin: 1
                                 }, h.createElement(j.N, l.__assign({}, n)))
@@ -2734,10 +2734,10 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return h.createElement(j.Va, {
+                        return h.createElement(j.Wa, {
                             className: "team-members-select-menu"
                         }, this.renderMenu())
-                    }, t = l.__decorate([Object(D.c)("TeamMembersSelectMenu", {
+                    }, t = l.__decorate([Object(D.b)("TeamMembersSelectMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(h.Component),
@@ -2767,7 +2767,7 @@
                     return Re(e.getUTCHours()) + ":" + Re(e.getUTCMinutes()) + ":" + Re(e.getUTCSeconds())
                 },
                 Re = function(e) {
-                    return Object(g.e)(e, {
+                    return Object(g.f)(e, {
                         minimumIntegerDigits: 2,
                         maximumFractionDigits: 0
                     })
@@ -2778,7 +2778,7 @@
                         return l.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return a = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + r + "&end_date=" + n + "&fraction=day", [4, Object(X.c)({
+                                    return a = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + r + "&end_date=" + n + "&fraction=day", [4, Object(Q.c)({
                                         path: a
                                     })];
                                 case 1:
@@ -2794,14 +2794,14 @@
                             if (le.includes(u))
                                 for (var l = 0, d = r[i][u]; l < d.length; l++) {
                                     var m = d[l],
-                                        h = xe(m.timestamp);
+                                        h = Be(m.timestamp);
                                     n[h] && (n[h][u] += m.cents)
                                 }
                         }
                     return n
                 },
                 Fe = function(e, t) {
-                    for (var r = {}, n = new Date(xe(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) r[n.toISOString()] = {
+                    for (var r = {}, n = new Date(Be(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) r[n.toISOString()] = {
                         gift_subscriptions: 0,
                         twitch_subscriptions: 0,
                         prime_subscriptions: 0,
@@ -2811,11 +2811,11 @@
                     };
                     return r
                 },
-                xe = function(e) {
+                Be = function(e) {
                     var t = new Date(e);
                     return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())).toISOString()
                 },
-                Be = function() {
+                xe = function() {
                     var e = Object(g.d)("Date", "TeamsDashboard") + "," + Ne(),
                         t = "," + Object(g.d)("Total", "TeamsDashboard") + "\n";
                     return le.reduce(function(e, t) {
@@ -2827,13 +2827,13 @@
                         n = le.reduce(function(e, r) {
                             return e + Math.round(t[r])
                         }, 0),
-                        a = "," + Ve(n) + "\n";
+                        a = "," + We(n) + "\n";
                     return le.reduce(function(e, r) {
-                        return e + "," + Ve(t[r])
+                        return e + "," + We(t[r])
                     }, r) + a
                 },
-                Ve = function(e) {
-                    return Object(g.e)(e / 100, {
+                We = function(e) {
+                    return Object(g.f)(e / 100, {
                         useGrouping: !1,
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2
@@ -2853,23 +2853,23 @@
                             })
                         }, r.toggleGroupChecked = function() {
                             var e = !r.state.groupChecked,
-                                t = x(r.state.members, e);
+                                t = B(r.state.members, e);
                             r.setState({
                                 groupChecked: e,
                                 members: t
                             })
                         }, r.renderChartLoadingSpinner = function() {
-                            return h.createElement(j.xb, {
+                            return h.createElement(j.yb, {
                                 attachTop: !0,
                                 attachLeft: !0,
                                 background: j.r.Base,
                                 fullHeight: !0,
                                 fullWidth: !0,
-                                position: j.db.Absolute
-                            }, h.createElement(j.Xa, {
+                                position: j.eb.Absolute
+                            }, h.createElement(j.Ya, {
                                 delay: 100,
                                 fillContent: !0,
-                                size: j.vb.Large
+                                size: j.wb.Large
                             }))
                         }, r.handleTimeRangeChange = function(e, t) {
                             return l.__awaiter(r, void 0, void 0, function() {
@@ -2879,7 +2879,7 @@
                                         case 0:
                                             return this.setState({
                                                 isLoadingRevenues: !0
-                                            }), [4, Me(this.props.teamName, B(this.state.members), e.toISOString(), t.toISOString())];
+                                            }), [4, Me(this.props.teamName, x(this.state.members), e.toISOString(), t.toISOString())];
                                         case 1:
                                             return r = n.sent(), this.setState({
                                                 startTime: e,
@@ -2898,7 +2898,7 @@
                                         case 0:
                                             return this.setState({
                                                 isLoadingRevenues: !0
-                                            }), [4, Me(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                            }), [4, Me(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                         case 1:
                                             return e = t.sent(), this.setState({
                                                 revenues: e,
@@ -2908,8 +2908,8 @@
                                 })
                             })
                         }, r.handleCSVClick = function() {
-                            var e = Ce(r.state.revenues, Ue, Be());
-                            Se(e, V(C.Revenue) + " - " + ne(r.state.startTime) + ".csv")
+                            var e = Ce(r.state.revenues, Ue, xe());
+                            Se(e, W(C.Revenue) + " - " + ne(r.state.startTime) + ".csv")
                         }, r.state = {
                             isLoadingMembers: !0,
                             members: [],
@@ -2930,14 +2930,14 @@
                                     case 1:
                                         return e = r.sent(), this.setState({
                                             isLoadingMembers: !1,
-                                            members: x(e, !0)
+                                            members: B(e, !0)
                                         }, function() {
                                             return l.__awaiter(t, void 0, void 0, function() {
                                                 var e;
                                                 return l.__generator(this, function(t) {
                                                     switch (t.label) {
                                                         case 0:
-                                                            return [4, Me(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                                            return [4, Me(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                                         case 1:
                                                             return e = t.sent(), this.setState({
                                                                 isLoadingRevenues: !1,
@@ -2953,20 +2953,20 @@
                     }, t.prototype.render = function() {
                         var e = this.state.isLoadingMembers || this.state.isLoadingRevenues;
                         return h.createElement(I, {
-                            title: V(C.Revenue),
+                            title: W(C.Revenue),
                             titleSelector: "revenue-page-title"
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             border: !0,
                             fullWidth: !0
-                        }, h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Row,
-                            justifyContent: j.Ua.Between,
+                        }, h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Row,
+                            justifyContent: j.Va.Between,
                             margin: 2
-                        }, h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Row
-                        }, h.createElement(j.Va, {
+                        }, h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Row
+                        }, h.createElement(j.Wa, {
                             margin: {
                                 right: 1
                             }
@@ -2983,82 +2983,82 @@
                             earliestDate: this.props.earliestDataDate,
                             currentDate: this.props.currentDate,
                             onMonthSelection: this.handleTimeRangeChange
-                        })), h.createElement(j.Va, null, h.createElement(j.z, {
+                        })), h.createElement(j.Wa, null, h.createElement(j.z, {
                             disabled: e,
                             "data-test-selector": "revenue-csv-button",
-                            icon: j.nb.Download,
+                            icon: j.ob.Download,
                             onClick: this.handleCSVClick,
                             type: j.F.Hollow
-                        }, we()))), h.createElement(j.Va, {
+                        }, we()))), h.createElement(j.Wa, {
                             margin: 2
                         }, h.createElement(De, {
                             isLoading: e,
                             data: this.state.revenues
-                        }), h.createElement(j.Va, {
+                        }), h.createElement(j.Wa, {
                             margin: {
                                 top: .5
                             }
-                        }, h.createElement(j.V, {
+                        }, h.createElement(j.W, {
                             color: j.O.Alt2
-                        }, Object(g.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), h.createElement(j.xb, {
+                        }, Object(g.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), h.createElement(j.yb, {
                             background: j.r.Base,
                             borderTop: !0,
                             padding: 2
-                        }, h.createElement(j.Va, {
+                        }, h.createElement(j.Wa, {
                             className: "chart-container",
-                            position: j.db.Relative
+                            position: j.eb.Relative
                         }, h.createElement(ve, {
                             data: this.state.revenues
                         }), e ? this.renderChartLoadingSpinner() : null))))
-                    }, t = l.__decorate([Object(D.c)("RevenuePage", {
+                    }, t = l.__decorate([Object(D.b)("RevenuePage", {
                         autoReportInteractive: !0,
                         destination: T.a.TeamsDashboardRevenue
                     })], t)
                 }(h.Component),
                 Ke = r("idPT"),
-                We = r("O3/n"),
+                Ve = r("O3/n"),
                 He = r("Pp1Y"),
-                Ye = function(e) {
+                ze = function(e) {
                     var t = e.teamName;
-                    return h.createElement(Ke.a, null, h.createElement(j.Va, {
+                    return h.createElement(Ke.a, null, h.createElement(j.Wa, {
                         margin: 1
-                    }, h.createElement(We.a, null, Object(g.d)("Team Dashboard", "TeamsDashboard")), h.createElement("ul", null, h.createElement(ze, {
+                    }, h.createElement(Ve.a, null, Object(g.d)("Team Dashboard", "TeamsDashboard")), h.createElement("ul", null, h.createElement(Ye, {
                         to: "/teams/" + t + "/dashboard/" + C.Revenue,
                         testSelector: "side-nav-revenue"
-                    }, V(C.Revenue)), h.createElement(ze, {
+                    }, W(C.Revenue)), h.createElement(Ye, {
                         to: "/teams/" + t + "/dashboard/" + C.Stats,
                         testSelector: "side-nav-stats"
-                    }, V(C.Stats)), h.createElement(ze, {
+                    }, W(C.Stats)), h.createElement(Ye, {
                         to: "/teams/" + t + "/dashboard/" + C.Members
-                    }, V(C.Members)), h.createElement(ze, {
+                    }, W(C.Members)), h.createElement(Ye, {
                         to: "/teams/" + t + "/dashboard/" + C.FeaturedChannels
-                    }, V(C.FeaturedChannels)), h.createElement(ze, {
+                    }, W(C.FeaturedChannels)), h.createElement(Ye, {
                         to: "/teams/" + t + "/dashboard/" + C.Settings
-                    }, V(C.Settings)))))
+                    }, W(C.Settings)))))
                 },
-                ze = function(e) {
+                Ye = function(e) {
                     return h.createElement("li", null, h.createElement(He.a, {
                         "data-test-selector": e.testSelector,
                         exact: !0,
                         linkTo: e.to
                     }, e.children))
                 },
-                Je = r("f00E");
+                Xe = r("f00E");
             ! function(e) {
                 e.Background = "background", e.Banner = "banner", e.Logo = "logo"
             }(ye || (ye = {})),
             function(e) {
                 e.JPEG = "image/jpeg", e.PNG = "image/png"
             }(Oe || (Oe = {}));
-            var Ze, qe = function(e, t) {
+            var Ze, Je = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n;
                         return l.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 3, , 4]), [4, Qe(e, t)];
+                                    return a.trys.push([0, 3, , 4]), [4, qe(e, t)];
                                 case 1:
-                                    return r = a.sent(), [4, Xe(r.url, t)];
+                                    return r = a.sent(), [4, Qe(r.url, t)];
                                 case 2:
                                     if (!a.sent()) throw new Error("failed to upload");
                                     return [2, l.__assign({}, t, {
@@ -3072,7 +3072,7 @@
                         })
                     })
                 },
-                Qe = function(e, t) {
+                qe = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n, a;
                         return l.__generator(this, function(o) {
@@ -3091,7 +3091,7 @@
                         })
                     })
                 },
-                Xe = function(e, t) {
+                Qe = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n;
                         return l.__generator(this, function(a) {
@@ -3136,7 +3136,7 @@
                     return l.__extends(t, e), t.prototype.render = function() {
                         var e = Boolean(this.props.imageSrc),
                             t = this.state.isHoveringOver || this.props.isUploading;
-                        return h.createElement(j.Oa, {
+                        return h.createElement(j.Pa, {
                             background: j.r.Alt2,
                             "data-test-selector": Ze.HoverWrapper,
                             fullHeight: !0,
@@ -3148,16 +3148,16 @@
                             allowedFileTypes: this.props.allowedFileTypes,
                             error: this.props.hasErrored,
                             onFilesSubmitted: this.handleFilesSubmitted
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             alignItems: j.f.Center,
                             background: j.r.Alt2,
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Column,
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: j.Ua.Center,
-                            overflow: j.Ya.Hidden,
-                            textAlign: j.Jb.Center
+                            justifyContent: j.Va.Center,
+                            overflow: j.Za.Hidden,
+                            textAlign: j.Kb.Center
                         }, h.createElement(j.i, {
                             duration: j.k.Long,
                             enabled: e,
@@ -3165,7 +3165,7 @@
                         }, e ? this.renderImage() : null), h.createElement(j.i, {
                             enabled: t,
                             type: j.n.FadeIn
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
@@ -3173,8 +3173,8 @@
                             background: t ? j.r.Overlay : void 0,
                             color: t ? j.O.Overlay : j.O.Alt2,
                             "data-test-selector": Ze.PlaceholderContainer,
-                            display: !e || t ? j.W.Block : j.W.Hide,
-                            position: j.db.Absolute
+                            display: !e || t ? j.X.Block : j.X.Hide,
+                            position: j.eb.Absolute
                         }, this.props.isUploading ? this.renderLoadingSpinner() : this.renderPlaceholder()))))))
                     }, t.prototype.renderImage = function() {
                         return h.createElement(j.S, {
@@ -3183,26 +3183,26 @@
                             src: this.props.imageSrc
                         })
                     }, t.prototype.renderLoadingSpinner = function() {
-                        return h.createElement(j.Xa, {
+                        return h.createElement(j.Ya, {
                             fillContent: !0,
                             inheritColor: !0
                         })
                     }, t.prototype.renderPlaceholder = function() {
-                        return h.createElement(j.xb, {
+                        return h.createElement(j.yb, {
                             alignItems: j.f.Center,
                             "data-test-selector": Ze.Placeholder,
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Column,
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: j.Ua.Center
-                        }, h.createElement(j.mb, {
-                            asset: j.nb.Upload,
+                            justifyContent: j.Va.Center
+                        }, h.createElement(j.nb, {
+                            asset: j.ob.Upload,
                             height: 36,
                             width: 36,
-                            type: j.ob.Inherit
-                        }), h.createElement(j.V, {
-                            fontSize: j.Aa.Size6
+                            type: j.pb.Inherit
+                        }), h.createElement(j.W, {
+                            fontSize: j.Ba.Size6
                         }, Object(g.d)("Choose a file", "TeamDashboard")))
                     }, t
                 }(h.Component),
@@ -3233,7 +3233,7 @@
                                                     case 1:
                                                         return o.trys.push([1, 3, 4, 5]), this.setState({
                                                             isUploading: !0
-                                                        }), [4, qe(this.props.teamName, {
+                                                        }), [4, Je(this.props.teamName, {
                                                             category: this.props.imageCategory,
                                                             fileType: e.type,
                                                             id: null,
@@ -3394,43 +3394,43 @@
                         didError: !1,
                         didSave: !1,
                         team: t.team
-                    }, r.inputID = Object(Je.b)(), r.textAreaID = Object(Je.b)(), r
+                    }, r.inputID = Object(Xe.b)(), r.textAreaID = Object(Xe.b)(), r
                 }
                 return l.__extends(t, e), t.prototype.render = function() {
                     var e = this.state.team;
                     return h.createElement(I, {
-                        title: V(C.Settings),
+                        title: W(C.Settings),
                         titleSelector: et.PageTitle
-                    }, h.createElement(j.Va, {
+                    }, h.createElement(j.Wa, {
                         className: "settings-page"
-                    }, h.createElement(j.Va, {
+                    }, h.createElement(j.Wa, {
                         fullWidth: !0
-                    }, h.createElement(j.Ca, {
+                    }, h.createElement(j.Da, {
                         "data-test-selector": et.FormGroupDisplayName,
                         error: !e.displayName,
                         id: this.inputID,
                         label: Object(g.d)("Display Name", "TeamsDashboard")
-                    }, h.createElement(j.Pa, {
+                    }, h.createElement(j.Qa, {
                         disabled: this.state.isSaving,
                         error: !e.displayName,
                         id: this.inputID,
                         maxLength: 65,
                         onChange: this.handleDisplayNameChange,
                         required: !0,
-                        type: j.Ra.Text,
+                        type: j.Sa.Text,
                         value: e.displayName
-                    }))), h.createElement(j.Va, {
+                    }))), h.createElement(j.Wa, {
                         margin: {
                             top: 2
                         },
                         fullWidth: !0
-                    }, h.createElement(j.Ca, {
+                    }, h.createElement(j.Da, {
                         "data-test-selector": et.FormGroupDescription,
                         id: this.textAreaID,
                         label: Object(g.d)("Description", "TeamsDashboard"),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("Supports Markdown", "TeamsDashboard")
-                    }, h.createElement(j.Kb, {
+                    }, h.createElement(j.Lb, {
                         disabled: this.state.isSaving,
                         id: this.textAreaID,
                         maxLength: 1e4,
@@ -3438,16 +3438,16 @@
                         onChange: this.handleDescriptionChange,
                         rows: 5,
                         value: e.description || ""
-                    }))), h.createElement(j.Va, {
+                    }))), h.createElement(j.Wa, {
                         margin: {
                             top: 2
                         }
-                    }, h.createElement(j.Ca, {
+                    }, h.createElement(j.Da, {
                         "data-test-selector": et.FormGroupLogo,
                         label: this.formatLogoLabel(),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("Square JPG or PNG at least 600x600px. Max 500 KB.", "TeamsDashboard")
-                    }, h.createElement(j.Va, {
+                    }, h.createElement(j.Wa, {
                         className: "logo"
                     }, h.createElement(at, {
                         imageAlt: this.formatLogoLabel(),
@@ -3455,16 +3455,16 @@
                         imageSrc: e.logoURL,
                         onUpload: this.handleLogoUpload,
                         teamName: e.name
-                    })))), h.createElement(j.Va, {
+                    })))), h.createElement(j.Wa, {
                         margin: {
                             top: 2
                         }
-                    }, h.createElement(j.Ca, {
+                    }, h.createElement(j.Da, {
                         "data-test-selector": et.FormGroupBanner,
                         label: this.formatBannerLabel(),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("JPG or PNG at least 640x125px. Max 500 KB.", "TeamsDashboard")
-                    }, h.createElement(j.Va, {
+                    }, h.createElement(j.Wa, {
                         fullWidth: !0,
                         className: "banner"
                     }, h.createElement(at, {
@@ -3473,16 +3473,16 @@
                         imageSrc: e.bannerURL,
                         onUpload: this.handleBannerUpload,
                         teamName: e.name
-                    })))), h.createElement(j.Va, {
+                    })))), h.createElement(j.Wa, {
                         margin: {
                             top: 2
                         }
-                    }, h.createElement(j.Ca, {
+                    }, h.createElement(j.Da, {
                         "data-test-selector": et.FormGroupBackground,
                         label: this.formatBackgroundLabel(),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("JPG or PNG. Max 500 KB.", "TeamsDashboard")
-                    }, h.createElement(j.Va, {
+                    }, h.createElement(j.Wa, {
                         fullWidth: !0,
                         className: "background"
                     }, h.createElement(at, {
@@ -3491,7 +3491,7 @@
                         imageSrc: e.backgroundImageURL,
                         onUpload: this.handleBackgroundUpload,
                         teamName: e.name
-                    })))), h.createElement(j.Va, {
+                    })))), h.createElement(j.Wa, {
                         margin: {
                             top: 2
                         }
@@ -3504,13 +3504,13 @@
                         onClick: this.handleClick,
                         state: e,
                         type: t
-                    }, h.createElement(j.Va, {
-                        display: j.W.Inline,
+                    }, h.createElement(j.Wa, {
+                        display: j.X.Inline,
                         margin: {
                             x: 4
                         }
                     }, r))
-                }, t = l.__decorate([Object(D.c)("SettingsPage", {
+                }, t = l.__decorate([Object(D.b)("SettingsPage", {
                     autoReportInteractive: !0,
                     destination: T.a.TeamsDashboardSettings
                 })], t)
@@ -3558,9 +3558,9 @@
                     }
                 },
                 gt = function(e) {
-                    return h.createElement(j.Va, {
+                    return h.createElement(j.Wa, {
                         className: "metric-select-menu"
-                    }, h.createElement(j.sb, {
+                    }, h.createElement(j.tb, {
                         disabled: e.isDisabled,
                         value: e.metric,
                         onChange: function(t) {
@@ -3604,8 +3604,8 @@
                     switch (n) {
                         case ut.AverageViewers:
                             t = Object(g.d)("Average = {number}", {
-                                number: h.createElement(j.V, {
-                                    type: j.Nb.Strong
+                                number: h.createElement(j.W, {
+                                    type: j.Ob.Strong
                                 }, a(o))
                             }, "TeamsDashboardMetricSummary");
                             break;
@@ -3616,22 +3616,22 @@
                         case ut.NewFollowers:
                         case ut.StreamDuration:
                             t = Object(g.d)("Total = {numberOrDuration}", {
-                                numberOrDuration: h.createElement(j.V, {
-                                    type: j.Nb.Strong
+                                numberOrDuration: h.createElement(j.W, {
+                                    type: j.Ob.Strong
                                 }, a(o))
                             }, "TeamsDashboardMetricSummary");
                             break;
                         default:
                             throw new Error("Unrecognized metric: " + n)
                     }
-                    return h.createElement(j.V, {
+                    return h.createElement(j.W, {
                         color: j.O.Alt2,
-                        fontSize: j.Aa.Size4
+                        fontSize: j.Ba.Size4
                     }, t)
                 };
 
             function Ot(e) {
-                return Object(g.e)(e, {
+                return Object(g.f)(e, {
                     maximumFractionDigits: 0
                 })
             }
@@ -3647,10 +3647,10 @@
                         this.myChart && this.props.chartData.chartType === e.chartData.chartType ? this.updateChartData(e.chartData) : this.rebuildChart(e)
                     }, t.prototype.render = function() {
                         var e = this;
-                        return h.createElement(j.Va, {
+                        return h.createElement(j.Wa, {
                             fullHeight: !0,
                             fullWidth: !0
-                        }, h.createElement(j.Na, {
+                        }, h.createElement(j.Oa, {
                             flexGrow: 0,
                             flexShrink: 1,
                             fullWidth: !0
@@ -3770,7 +3770,7 @@
                             var e = Dt(this.canvas.getContext("2d"));
                             this.canvas.height = 36 * e, this.canvas.style.height = "36rem", this.canvas.getContext("2d").setTransform(e, 0, 0, e, 0, 0)
                         }
-                    }, t = l.__decorate([Object(D.c)("StatsCanvas")], t)
+                    }, t = l.__decorate([Object(D.b)("StatsCanvas")], t)
                 }(h.Component),
                 Dt = function(e) {
                     return 1 / (e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1)
@@ -3796,7 +3796,7 @@
                             case ut.MinutesWatched:
                                 e = i.map(function(e) {
                                     return a[e].count
-                                }), t = g.e, r = i.map(function() {
+                                }), t = g.f, r = i.map(function() {
                                     return ""
                                 });
                                 break;
@@ -3812,7 +3812,7 @@
                             case ut.NewFollowers:
                                 e = i.reduce(function(e, t) {
                                     return e.push(a[t].count + (e.length ? e[e.length - 1] : 0)), e
-                                }, []), t = g.e, r = i.map(function() {
+                                }, []), t = g.f, r = i.map(function() {
                                     return ""
                                 });
                                 break;
@@ -3841,7 +3841,7 @@
                 }(h.PureComponent),
                 kt = function(e) {
                     var t = e.columnName;
-                    return h.createElement(j.Ha, null, h.createElement(j.P, {
+                    return h.createElement(j.Ia, null, h.createElement(j.P, {
                         cols: {
                             default: 3
                         }
@@ -3849,58 +3849,58 @@
                         cols: {
                             default: 5
                         }
-                    }, h.createElement(j.V, {
+                    }, h.createElement(j.W, {
                         bold: !0
                     }, t)), h.createElement(j.P, {
                         cols: {
                             default: 2
                         }
-                    }, h.createElement(j.Va, {
-                        textAlign: j.Jb.Right
-                    }, h.createElement(j.V, {
+                    }, h.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, h.createElement(j.W, {
                         bold: !0
                     }, Object(g.d)("Views", "TeamsDashboard")))), h.createElement(j.P, {
                         cols: {
                             default: 2
                         }
-                    }, h.createElement(j.Va, {
-                        textAlign: j.Jb.Right
-                    }, h.createElement(j.V, {
+                    }, h.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, h.createElement(j.W, {
                         bold: !0
                     }, Object(g.d)("Percent", "TeamsDashboard")))))
                 },
                 Ct = function(e) {
                     var t = e.rowContent;
-                    return h.createElement(j.Ha, null, h.createElement(j.P, {
+                    return h.createElement(j.Ia, null, h.createElement(j.P, {
                         cols: {
                             default: 3
                         }
-                    }, h.createElement(j.Va, {
+                    }, h.createElement(j.Wa, {
                         fullHeight: !0,
-                        display: j.W.Flex,
+                        display: j.X.Flex,
                         alignItems: j.f.Center
-                    }, h.createElement(j.gb, {
+                    }, h.createElement(j.hb, {
                         value: t.percent,
                         mask: !0
                     }))), h.createElement(j.P, {
                         cols: {
                             default: 5
                         }
-                    }, h.createElement(j.V, {
+                    }, h.createElement(j.W, {
                         ellipsis: !0
                     }, t.name)), h.createElement(j.P, {
                         cols: {
                             default: 2
                         }
-                    }, h.createElement(j.Va, {
-                        textAlign: j.Jb.Right
-                    }, h.createElement(j.V, null, Object(g.e)(t.views)))), h.createElement(j.P, {
+                    }, h.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, h.createElement(j.W, null, Object(g.f)(t.views)))), h.createElement(j.P, {
                         cols: {
                             default: 2
                         }
-                    }, h.createElement(j.Va, {
-                        textAlign: j.Jb.Right
-                    }, h.createElement(j.V, null, Object(g.e)(t.percent), "%"))))
+                    }, h.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, h.createElement(j.W, null, Object(g.f)(t.percent), "%"))))
                 },
                 St = function(e, t, r, n) {
                     return 0 === e.length ? wt() : n && 1 === e.length ? It(e[0].name) : At(e, r, t)
@@ -3915,12 +3915,12 @@
                     }, "TeamsDashboard")
                 },
                 wt = function() {
-                    return h.createElement(j.V, {
+                    return h.createElement(j.W, {
                         color: j.O.Alt2
                     }, Object(g.d)("Not enough data for us to display", "TeamsDashboard"))
                 },
                 It = function(e) {
-                    return h.createElement(j.V, null, Object(g.d)("The top viewer location was {name}", {
+                    return h.createElement(j.W, null, Object(g.d)("The top viewer location was {name}", {
                         name: e
                     }, "TeamsDashboard"))
                 },
@@ -3938,7 +3938,7 @@
                             }
                         })
                     });
-                    return h.createElement(j.Va, null, h.createElement(kt, {
+                    return h.createElement(j.Wa, null, h.createElement(kt, {
                         columnName: t
                     }), n)
                 },
@@ -3949,29 +3949,29 @@
                         a = e.rowData.sort(function(e, t) {
                             return t.views - e.views || e.name.localeCompare(t.name)
                         });
-                    return t = e.isLoading ? h.createElement(j.cb, {
+                    return t = e.isLoading ? h.createElement(j.db, {
                         width: 180
-                    }) : Nt(e.tableName, a.length), r = e.isLoading ? h.createElement(j.Va, null, h.createElement(j.V, null, h.createElement(j.cb, null)), h.createElement(j.V, null, h.createElement(j.cb, null))) : St(a, n, e.columnName, e.isGeo), h.createElement(j.Va, {
-                        display: j.W.Flex,
-                        flexDirection: j.Y.Column,
+                    }) : Nt(e.tableName, a.length), r = e.isLoading ? h.createElement(j.Wa, null, h.createElement(j.W, null, h.createElement(j.db, null)), h.createElement(j.W, null, h.createElement(j.db, null))) : St(a, n, e.columnName, e.isGeo), h.createElement(j.Wa, {
+                        display: j.X.Flex,
+                        flexDirection: j.Z.Column,
                         padding: 2,
                         className: "table",
-                        flexWrap: j.Z.NoWrap,
+                        flexWrap: j.Aa.NoWrap,
                         fullWidth: !0
-                    }, h.createElement(j.Va, {
+                    }, h.createElement(j.Wa, {
                         margin: {
                             bottom: 1
                         }
-                    }, h.createElement(j.V, {
-                        type: j.Nb.H4
+                    }, h.createElement(j.W, {
+                        type: j.Ob.H4
                     }, t)), r)
                 },
                 Rt = function(e) {
                     var t = Object(g.d)("Referrer", "TeamsDashboard"),
                         r = Object(g.d)("Views by Referrer", "TeamsDashboard"),
                         n = "";
-                    return e.internalReferral && e.internalReferral.length && (r = Object(g.d)("Views from Outside Twitch", "TeamsDashboard"), n = h.createElement(j.xb, {
-                        display: j.W.Flex,
+                    return e.internalReferral && e.internalReferral.length && (r = Object(g.d)("Views from Outside Twitch", "TeamsDashboard"), n = h.createElement(j.yb, {
+                        display: j.X.Flex,
                         flexGrow: 1,
                         borderBottom: !0,
                         borderLeft: !0
@@ -3980,18 +3980,18 @@
                         tableName: Object(g.d)("Views from Twitch", "TeamsDashboard"),
                         columnName: t,
                         rowData: e.internalReferral
-                    }))), h.createElement(j.xb, {
+                    }))), h.createElement(j.yb, {
                         className: "all-tables-wrapper",
-                        display: j.W.Flex,
-                        flexDirection: j.Y.Row,
+                        display: j.X.Flex,
+                        flexDirection: j.Z.Row,
                         borderTop: !0
-                    }, h.createElement(j.Va, {
-                        display: j.W.Flex,
+                    }, h.createElement(j.Wa, {
+                        display: j.X.Flex,
                         flexGrow: 1,
-                        flexDirection: j.Y.Column,
-                        flexWrap: j.Z.NoWrap
-                    }, h.createElement(j.xb, {
-                        display: j.W.Flex,
+                        flexDirection: j.Z.Column,
+                        flexWrap: j.Aa.NoWrap
+                    }, h.createElement(j.yb, {
+                        display: j.X.Flex,
                         flexGrow: 1,
                         borderBottom: !0
                     }, h.createElement(Lt, {
@@ -4000,21 +4000,21 @@
                         columnName: Object(g.d)("Location", "TeamsDashboard"),
                         rowData: e.geographical,
                         isGeo: !0
-                    })), h.createElement(j.xb, {
-                        display: j.W.Flex,
+                    })), h.createElement(j.yb, {
+                        display: j.X.Flex,
                         flexGrow: 1
                     }, h.createElement(Lt, {
                         isLoading: e.isLoading,
                         tableName: Object(g.d)("Views by Platform", "TeamsDashboard"),
                         columnName: Object(g.d)("Platform", "TeamsDashboard"),
                         rowData: e.platform
-                    }))), h.createElement(j.Va, {
-                        display: j.W.Flex,
+                    }))), h.createElement(j.Wa, {
+                        display: j.X.Flex,
                         flexGrow: 1,
-                        flexDirection: j.Y.Column,
-                        flexWrap: j.Z.NoWrap
-                    }, n, h.createElement(j.xb, {
-                        display: j.W.Flex,
+                        flexDirection: j.Z.Column,
+                        flexWrap: j.Aa.NoWrap
+                    }, n, h.createElement(j.yb, {
+                        display: j.X.Flex,
                         flexGrow: 1,
                         borderLeft: !0
                     }, h.createElement(Lt, {
@@ -4032,22 +4032,22 @@
                     internalReferral: [],
                     externalReferral: []
                 },
-                xt = function(e, t, r, n) {
+                Bt = function(e, t, r, n) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var a, o, i, s;
                         return l.__generator(this, function(c) {
                             switch (c.label) {
                                 case 0:
-                                    return a = Ft, t.length < 1 ? [2, a] : (o = t.join(","), i = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + o + "&start_time=" + r + "&end_time=" + n, [4, Object(X.c)({
+                                    return a = Ft, t.length < 1 ? [2, a] : (o = t.join(","), i = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + o + "&start_time=" + r + "&end_time=" + n, [4, Object(Q.c)({
                                         path: i
                                     })]);
                                 case 1:
-                                    return [2, (s = c.sent()).body ? Bt(s.body) : a]
+                                    return [2, (s = c.sent()).body ? xt(s.body) : a]
                             }
                         })
                     })
                 },
-                Bt = function(e) {
+                xt = function(e) {
                     for (var t = e.video_play_demographics, r = {
                             geographical: [],
                             platform: [],
@@ -4084,7 +4084,7 @@
                     return r
                 },
                 Ut = r("NAv5"),
-                Vt = function(e, t, r, n, a) {
+                Wt = function(e, t, r, n, a) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var o, i, s, c, u, d, m, h, f, b;
                         return l.__generator(this, function(l) {
@@ -4109,7 +4109,7 @@
                                     }
                                     return [3, 15];
                                 case 1:
-                                    return s = qt, [4, Ht(o)];
+                                    return s = Jt, [4, Ht(o)];
                                 case 2:
                                     return i = s.apply(void 0, [l.sent(), n, a, nr]), [3, 16];
                                 case 3:
@@ -4119,7 +4119,7 @@
                                 case 5:
                                     return u = Zt, [4, Gt(o)];
                                 case 6:
-                                    return i = u.apply(void 0, [l.sent(), n, a, Qt]), [3, 16];
+                                    return i = u.apply(void 0, [l.sent(), n, a, qt]), [3, 16];
                                 case 7:
                                     return d = Zt, [4, Kt(o)];
                                 case 8:
@@ -4127,19 +4127,19 @@
                                 case 9:
                                     return [4, Gt(o)];
                                 case 10:
-                                    return m = l.sent(), h = Jt(m), i = Zt(h, n, a, Xt), [3, 16];
+                                    return m = l.sent(), h = Xt(m), i = Zt(h, n, a, Qt), [3, 16];
                                 case 11:
-                                    return f = Zt, [4, Wt(o)];
+                                    return f = Zt, [4, Vt(o)];
                                 case 12:
                                     return i = f.apply(void 0, [l.sent(), n, a, er]), [3, 16];
                                 case 13:
-                                    return b = Zt, [4, Yt(o)];
+                                    return b = Zt, [4, zt(o)];
                                 case 14:
                                     return i = b.apply(void 0, [l.sent(), n, a, ar]), [3, 16];
                                 case 15:
                                     throw new Error("fetch type is not in StatsMetric enum");
                                 case 16:
-                                    return [2, zt(i)]
+                                    return [2, Yt(i)]
                             }
                         })
                     })
@@ -4150,7 +4150,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(X.c)({
+                                    return [4, Object(Q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4165,7 +4165,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(X.c)({
+                                    return [4, Object(Q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4174,13 +4174,13 @@
                         })
                     })
                 },
-                Wt = function(e) {
+                Vt = function(e) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var t;
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(X.c)({
+                                    return [4, Object(Q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4195,7 +4195,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(X.c)({
+                                    return [4, Object(Q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4204,13 +4204,13 @@
                         })
                     })
                 },
-                Yt = function(e) {
+                zt = function(e) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var t;
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(X.c)({
+                                    return [4, Object(Q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4219,7 +4219,7 @@
                         })
                     })
                 },
-                zt = function(e) {
+                Yt = function(e) {
                     for (var t = {}, r = 0, n = Object.keys(e); r < n.length; r++)
                         for (var a = 0, o = e[n[r]]; a < o.length; a++) {
                             var i = o[a],
@@ -4233,7 +4233,7 @@
                         }
                     return t
                 },
-                Jt = function(e) {
+                Xt = function(e) {
                     for (var t = {}, r = 0, n = Object.keys(e); r < n.length; r++) {
                         var a = n[r],
                             o = e[a];
@@ -4253,14 +4253,14 @@
                     }
                     return a
                 },
-                qt = function(e, t, r, n) {
+                Jt = function(e, t, r, n) {
                     for (var a = {}, o = 0, i = Object.keys(e); o < i.length; o++) {
                         var s = i[o];
                         a[s] = n(t, r, e[s])
                     }
                     return a
                 },
-                Qt = function(e, t, r) {
+                qt = function(e, t, r) {
                     return $t(e, t, r).map(function(e) {
                         var t = e.count / 48;
                         return {
@@ -4270,7 +4270,7 @@
                         }
                     })
                 },
-                Xt = function(e, t, r) {
+                Qt = function(e, t, r) {
                     return $t(e, t, r).map(function(e) {
                         return {
                             timestamp: e.timestamp,
@@ -4387,7 +4387,7 @@
                         return l.__generator(this, function(l) {
                             switch (l.label) {
                                 case 0:
-                                    for (a = {}, o = [], i = 0, s = cr; i < s.length; i++) m = s[i], o.push(Vt(m, e, t, r, n));
+                                    for (a = {}, o = [], i = 0, s = cr; i < s.length; i++) m = s[i], o.push(Wt(m, e, t, r, n));
                                     return [4, Promise.all(o)];
                                 case 1:
                                     for (c = l.sent(), u = 0, d = cr; u < d.length; u++) {
@@ -4427,7 +4427,7 @@
                             }))
                         }, r.toggleGroupChecked = function() {
                             var e = !r.state.groupChecked,
-                                t = x(r.state.members, e);
+                                t = B(r.state.members, e);
                             r.setState({
                                 groupChecked: e,
                                 members: t
@@ -4450,20 +4450,20 @@
                                 return l.__generator(this, function(u) {
                                     switch (u.label) {
                                         case 0:
-                                            return r = B(this.state.members), a = e.toISOString(), o = t.toISOString(), i = {
+                                            return r = x(this.state.members), a = e.toISOString(), o = t.toISOString(), i = {
                                                 isLoadingDemographics: !1,
                                                 demographics: Ft,
                                                 isLoadingStats: !1,
                                                 data: {}
                                             }, n !== ut.AverageViewers ? [3, 2] : (this.setState({
                                                 isLoadingDemographics: !0
-                                            }), s = i, [4, xt(this.props.teamName, r, a, o)]);
+                                            }), s = i, [4, Bt(this.props.teamName, r, a, o)]);
                                         case 1:
                                             s.demographics = u.sent(), u.label = 2;
                                         case 2:
                                             return this.setState({
                                                 isLoadingStats: !0
-                                            }), c = i, [4, Vt(n, this.props.teamName, r, a, o)];
+                                            }), c = i, [4, Wt(n, this.props.teamName, r, a, o)];
                                         case 3:
                                             return c.data = u.sent(), [2, i]
                                     }
@@ -4475,9 +4475,9 @@
                                 return l.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return [4, ur(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                            return [4, ur(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                         case 1:
-                                            return e = r.sent(), 0 === Object.keys(e).length ? [2] : (t = Ce(e, dr, lr()), Se(t, V(C.Stats) + " - " + ne(this.state.startTime) + ".csv"), [2])
+                                            return e = r.sent(), 0 === Object.keys(e).length ? [2] : (t = Ce(e, dr, lr()), Se(t, W(C.Stats) + " - " + ne(this.state.startTime) + ".csv"), [2])
                                     }
                                 })
                             })
@@ -4511,17 +4511,17 @@
                                 })
                             })
                         }, r.renderChartLoadingSpinner = function() {
-                            return h.createElement(j.xb, {
+                            return h.createElement(j.yb, {
                                 attachTop: !0,
                                 attachLeft: !0,
                                 background: j.r.Alt,
                                 fullHeight: !0,
                                 fullWidth: !0,
-                                position: j.db.Absolute
-                            }, h.createElement(j.Xa, {
+                                position: j.eb.Absolute
+                            }, h.createElement(j.Ya, {
                                 delay: 100,
                                 fillContent: !0,
-                                size: j.vb.Large
+                                size: j.wb.Large
                             }))
                         }, r.renderViewershipTables = function() {
                             return h.createElement(Rt, l.__assign({
@@ -4550,7 +4550,7 @@
                                     case 1:
                                         return e = r.sent(), this.setState({
                                             isLoadingMembers: !1,
-                                            members: x(e, !0)
+                                            members: B(e, !0)
                                         }, function() {
                                             return l.__awaiter(t, void 0, void 0, function() {
                                                 var e;
@@ -4570,20 +4570,20 @@
                     }, t.prototype.render = function() {
                         var e = this.state.isLoadingMembers || this.state.isLoadingStats || this.state.isLoadingDemographics;
                         return h.createElement(I, {
-                            title: V(C.Stats),
+                            title: W(C.Stats),
                             titleSelector: "stats-page-title"
-                        }, h.createElement(j.xb, {
+                        }, h.createElement(j.yb, {
                             border: !0,
                             fullWidth: !0
-                        }, h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Row,
-                            justifyContent: j.Ua.Between,
+                        }, h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Row,
+                            justifyContent: j.Va.Between,
                             margin: 2
-                        }, h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Row
-                        }, h.createElement(j.Va, {
+                        }, h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Row
+                        }, h.createElement(j.Wa, {
                             margin: {
                                 right: 1
                             }
@@ -4595,7 +4595,7 @@
                             onMemberSelectClose: this.handleMemberSelectionChange,
                             toggleMemberChecked: this.toggleMemberChecked,
                             toggleGroupChecked: this.toggleGroupChecked
-                        })), h.createElement(j.Va, {
+                        })), h.createElement(j.Wa, {
                             margin: {
                                 right: 1
                             }
@@ -4608,21 +4608,21 @@
                             isDisabled: e,
                             metric: this.state.metric,
                             onChange: this.onMetricChange
-                        })), h.createElement(j.Va, null, h.createElement(j.z, {
+                        })), h.createElement(j.Wa, null, h.createElement(j.z, {
                             disabled: e,
                             "data-test-selector": "stats-csv-button",
-                            icon: j.nb.Download,
+                            icon: j.ob.Download,
                             onClick: this.handleCSVClick,
                             type: j.F.Hollow
-                        }, we()))), h.createElement(j.Va, {
+                        }, we()))), h.createElement(j.Wa, {
                             margin: 2,
-                            position: j.db.Relative
-                        }, h.createElement(j.Va, {
+                            position: j.eb.Relative
+                        }, h.createElement(j.Wa, {
                             className: "metric-summary-container"
                         }, h.createElement(yt, {
                             data: this.state.data,
                             metric: this.state.metric
-                        })), h.createElement(j.Va, {
+                        })), h.createElement(j.Wa, {
                             className: "chart-container",
                             margin: {
                                 top: 2
@@ -4631,7 +4631,7 @@
                             data: this.state.data,
                             dataType: this.state.metric
                         })), e ? this.renderChartLoadingSpinner() : null), this.state.metric === ut.AverageViewers ? this.renderViewershipTables() : ""))
-                    }, t = l.__decorate([Object(D.c)("StatsPage", {
+                    }, t = l.__decorate([Object(D.b)("StatsPage", {
                         autoReportInteractive: !0,
                         destination: T.a.TeamsDashboardStats
                     })], t)
@@ -4643,7 +4643,7 @@
                         var r = e.call(this, t) || this;
                         return r.state = {
                             isError: !1
-                        }, r.logger = g.o.logger.withCategory("team-dashboard-root"), r.redirectToRevenuePage = function() {
+                        }, r.logger = g.p.logger.withCategory("team-dashboard-root"), r.redirectToRevenuePage = function() {
                             return h.createElement(f.a, {
                                 to: "/teams/" + r.props.match.params.teamName + "/dashboard/" + C.Revenue
                             })
@@ -4664,7 +4664,7 @@
                                 teamName: r.props.match.params.teamName
                             })
                         }, r.renderFeaturedChannelsPage = function() {
-                            return h.createElement(Q, {
+                            return h.createElement(q, {
                                 teamName: r.props.match.params.teamName
                             })
                         }, r.renderSettingsPage = function() {
@@ -4673,7 +4673,7 @@
                                 onUpdate: r.handleUpdate
                             })
                         }, r.handleUpdate = function(e) {
-                            r.props.data.team && g.o.apollo.client.writeFragment({
+                            r.props.data.team && g.p.apollo.client.writeFragment({
                                 id: "Team:" + r.props.data.team.id,
                                 fragment: pr,
                                 data: {
@@ -4703,21 +4703,21 @@
                         var e;
                         return this.state.isError ? e = h.createElement(v.a, {
                             message: Object(g.d)("An error occurred on this page", "TeamDashboardRoot")
-                        }) : this.props.isLoggedIn ? e = this.props.data.loading ? h.createElement(j.Xa, {
+                        }) : this.props.isLoggedIn ? e = this.props.data.loading ? h.createElement(j.Ya, {
                             fillContent: !0
-                        }) : null === this.props.data.team ? h.createElement(y.a, null) : h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexWrap: j.Z.NoWrap,
+                        }) : null === this.props.data.team ? h.createElement(y.a, null) : h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexWrap: j.Aa.NoWrap,
                             fullHeight: !0,
-                            overflow: j.Ya.Hidden,
-                            position: j.db.Relative
-                        }, h.createElement(Ye, {
+                            overflow: j.Za.Hidden,
+                            position: j.eb.Relative
+                        }, h.createElement(ze, {
                             teamName: this.props.match.params.teamName
-                        }), h.createElement(j.Na, {
+                        }), h.createElement(j.Oa, {
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0,
-                            position: j.db.Relative
+                            position: j.eb.Relative
                         }, h.createElement("main", null, h.createElement(b.a, null, h.createElement(p.a, {
                             exact: !0,
                             path: "/teams/:teamName/dashboard",
@@ -4744,12 +4744,12 @@
                             render: this.renderSettingsPage
                         }), h.createElement(p.a, {
                             component: y.a
-                        }))))) : (this.props.onAnonymousVisit(), e = h.createElement(j.Xa, {
+                        }))))) : (this.props.onAnonymousVisit(), e = h.createElement(j.Ya, {
                             fillContent: !0
-                        })), h.createElement(j.Va, {
-                            display: j.W.Flex,
-                            flexDirection: j.Y.Column,
-                            flexWrap: j.Z.NoWrap,
+                        })), h.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexDirection: j.Z.Column,
+                            flexWrap: j.Aa.NoWrap,
                             fullHeight: !0
                         }, h.createElement(E.a, null), e)
                     }, t
@@ -4786,10 +4786,10 @@
                 o = r("uNOt"),
                 i = r("Ue10"),
                 s = (r("obKW"), function(e) {
-                    return a.createElement(i.Oa, {
+                    return a.createElement(i.Pa, {
                         borderRadius: i.x.Medium,
-                        display: i.W.Block,
-                        fontSize: i.Aa.Size5,
+                        display: i.X.Block,
+                        fontSize: i.Ba.Size5,
                         padding: {
                             x: 1,
                             y: .5
@@ -4799,7 +4799,7 @@
                         className: "dashboard-side-nav__link",
                         exact: e.exact,
                         to: e.linkTo
-                    }, Object(i.bc)(e)), e.children))
+                    }, Object(i.cc)(e)), e.children))
                 });
             r.d(t, "a", function() {
                 return s
@@ -5233,7 +5233,7 @@
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, a.o.config.apiBaseURL)
+                        return new URL(e, a.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return n.__awaiter(this, void 0, Promise, function() {
                             var t, r, a, o;
@@ -5274,11 +5274,11 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var r = a.o.store.getState(),
+                        var r = a.p.store.getState(),
                             n = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": a.o.config.legacyClientID,
+                                "Client-ID": a.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (n["Content-Type"] = "application/json; charset=UTF-8");
@@ -5286,7 +5286,7 @@
                         return i && (n.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (n["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             n[e] && delete n[e]
                         }), n
-                    }, e.logger = a.o.logger.withCategory("legacy-api"), e
+                    }, e.logger = a.p.logger.withCategory("legacy-api"), e
                 }()
         },
         cSnd: function(e, t, r) {
@@ -5418,13 +5418,13 @@
                 a = r("8/mp"),
                 o = r("Ue10"),
                 i = (r("8dXP"), function(e) {
-                    return n.createElement(o.Oa, {
+                    return n.createElement(o.Pa, {
                         background: o.r.Alt,
                         borderRight: !0,
                         flexShrink: 0,
                         flexGrow: 0,
                         fullHeight: !0,
-                        position: o.db.Relative
+                        position: o.eb.Relative
                     }, n.createElement("nav", {
                         className: "dashboard-side-nav"
                     }, n.createElement(a.b, {

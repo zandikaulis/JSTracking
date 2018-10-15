@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [210], {
+    [204], {
         OfRZ: function(e, t, r) {
             "use strict";
             r.r(t);
@@ -24,18 +24,18 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return n.createElement(h.Va, null, n.createElement(h.Na, {
+                        return n.createElement(h.Wa, null, n.createElement(h.Oa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement("header", null, n.createElement(h.Na, {
+                        }, n.createElement("header", null, n.createElement(h.Oa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(h.V, {
-                            type: h.Nb.H2
-                        }, Object(g.d)("Register Your Application", "DevCreateApp"))), n.createElement(h.V, {
-                            type: h.Nb.P
+                        }, n.createElement(h.W, {
+                            type: h.Ob.H2
+                        }, Object(g.d)("Register Your Application", "DevCreateApp"))), n.createElement(h.W, {
+                            type: h.Ob.P
                         }, Object(g.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevCreateApp")))), n.createElement(f.a, {
                             onSave: this.props.onSave,
                             categories: this.props.categories,
@@ -44,7 +44,7 @@
                         }))
                     }, t
                 }(n.Component),
-                y = Object(u.c)("DevAppCreateComponent")(v),
+                y = Object(u.b)("DevAppCreateComponent")(v),
                 b = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -112,12 +112,12 @@
                             onSave: this.onSave,
                             errorMessage: this.state.errorMessage,
                             onFormChange: this.onFormChange
-                        }) : n.createElement(h.Xa, {
+                        }) : n.createElement(h.Ya, {
                             fillContent: !0
                         })
                     }, t
                 }(n.Component),
-                C = Object(o.compose)(i.a, Object(u.c)("DevAppCreatePage", {
+                _ = Object(o.compose)(i.a, Object(u.b)("DevAppCreatePage", {
                     destination: p.a.DevSiteAppCreate
                 }), Object(s.a)({
                     location: l.PageviewLocation.DevSiteAppCreate
@@ -125,7 +125,7 @@
             r.d(t, "DevAppCreateContainer", function() {
                 return b
             }), r.d(t, "DevAppCreatePage", function() {
-                return C
+                return _
             })
         },
         RDVj: function(e, t, r) {},
@@ -154,7 +154,7 @@
                                         c = o.medium,
                                         p = o.content_index,
                                         l = o.email_id;
-                                    s.o.tracking.trackPageview(a.__assign({
+                                    s.p.tracking.trackPageview(a.__assign({
                                         content: i,
                                         medium: c,
                                         content_index: p,
@@ -162,7 +162,7 @@
                                         location: e.location
                                     }, t))
                                 }
-                            }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), n
+                            }, s.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), n
                         }
                         return a.__extends(i, r), i.prototype.componentDidMount = function() {
                             var e = this;
@@ -216,25 +216,25 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return n.createElement(c.Va, {
+                        return n.createElement(c.Wa, {
                             margin: {
                                 bottom: 1
                             },
                             className: "dev-app-secret"
-                        }, n.createElement(c.Na, {
+                        }, n.createElement(c.Oa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(c.V, {
-                            type: c.Nb.H5
-                        }, Object(i.d)("Client Secret", "DevAppSecret"))), n.createElement(c.Na, {
+                        }, n.createElement(c.W, {
+                            type: c.Ob.H5
+                        }, Object(i.d)("Client Secret", "DevAppSecret"))), n.createElement(c.Oa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(c.V, {
-                            type: c.Nb.P,
+                        }, n.createElement(c.W, {
+                            type: c.Ob.P,
                             color: c.O.Alt2
-                        }, Object(i.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && n.createElement(c.Va, {
+                        }, Object(i.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && n.createElement(c.Wa, {
                             margin: {
                                 bottom: 1
                             },
@@ -248,7 +248,7 @@
                         }, Object(i.d)("New Secret", "DevAppSecret")))
                     }, t
                 }(n.Component),
-                l = Object(s.c)("DevAppSecret", {
+                l = Object(s.b)("DevAppSecret", {
                     autoReportInteractive: !0
                 })(p),
                 u = (r("RDVj"), "app-form-other-category-input"),
@@ -277,33 +277,33 @@
                                 type: r
                             }, e)
                         }, t.renderOtherCategoryField = function() {
-                            return n.createElement(c.Va, {
+                            return n.createElement(c.Wa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, n.createElement(c.Ca, {
+                            }, n.createElement(c.Da, {
                                 label: Object(i.d)("Other Details", "AppForm"),
                                 hint: Object(i.d)("Developing something not in our list? Tell us about it!", "DevAppForm")
-                            }, n.createElement(c.Pa, {
+                            }, n.createElement(c.Qa, {
                                 value: t.state.categoryOther,
-                                type: c.Ra.Text,
+                                type: c.Sa.Text,
                                 onChange: t.setCategoryOther,
                                 "data-test-selector": u
                             })))
                         }, t.renderExistingAppDetails = function() {
-                            if (t.props.app) return n.createElement(c.Va, {
+                            if (t.props.app) return n.createElement(c.Wa, {
                                 "data-test-selector": m
-                            }, n.createElement(c.Va, {
+                            }, n.createElement(c.Wa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, n.createElement(c.Ca, {
+                            }, n.createElement(c.Da, {
                                 label: Object(i.d)("Client ID", "AppForm"),
                                 hint: Object(i.d)("Passed to authorization endpoints to identify your application. You cannot change your application's client id.", "DevAppForm")
-                            }, n.createElement(c.Pa, {
+                            }, n.createElement(c.Qa, {
                                 value: t.state.id,
                                 readOnly: !0,
-                                type: c.Ra.Text,
+                                type: c.Sa.Text,
                                 "data-test-selector": u
                             }))))
                         }, t.isClientNameInvalidError = function() {
@@ -324,14 +324,14 @@
                             if (t.state.isNotificationDismissed) return null;
                             if (t.props.errorMessage) {
                                 var e = t.props.errorMessage;
-                                return t.isClientNameInvalidError() && (e = Object(i.d)("We could not create the application due to an error with the fields below.", "DevAppForm")), n.createElement(c.Va, {
+                                return t.isClientNameInvalidError() && (e = Object(i.d)("We could not create the application due to an error with the fields below.", "DevAppForm")), n.createElement(c.Wa, {
                                     margin: {
                                         bottom: 1
                                     },
                                     padding: 1,
                                     "data-test-selector": h
-                                }, n.createElement(c.La, {
-                                    type: c.Ma.Error,
+                                }, n.createElement(c.Ma, {
+                                    type: c.Na.Error,
                                     title: e || "",
                                     narrow: !0,
                                     description: Object(i.d)("Please try again", "DevAppForm"),
@@ -387,49 +387,49 @@
                         "9" === this.state.category && (t = this.renderOtherCategoryField());
                         var r = this.renderErrorMessage(),
                             a = this.renderSaveButton();
-                        return n.createElement(c.Va, {
+                        return n.createElement(c.Wa, {
                             className: "dev-app-form"
-                        }, n.createElement(c.Ha, null, n.createElement(c.P, {
+                        }, n.createElement(c.Ia, null, n.createElement(c.P, {
                             cols: {
                                 default: 12,
                                 md: 7
                             }
-                        }, r, n.createElement("form", null, n.createElement(c.Va, {
+                        }, r, n.createElement("form", null, n.createElement(c.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(c.Ca, {
+                        }, n.createElement(c.Da, {
                             label: Object(i.d)("Name", "DevAppForm"),
                             hint: Object(i.d)("Displayed to users when authorizing your application.", "DevAppForm"),
                             error: this.isClientNameInvalidError(),
                             errorMessage: this.clientNameInvalidErrorMessage()
-                        }, n.createElement(c.Pa, {
+                        }, n.createElement(c.Qa, {
                             value: this.state.name,
                             required: !0,
-                            type: c.Ra.Text,
+                            type: c.Sa.Text,
                             onChange: this.setName,
                             "data-test-selector": "app-form-name-input",
                             error: this.isClientNameInvalidError()
-                        }))), n.createElement(c.Va, {
+                        }))), n.createElement(c.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(c.Ca, {
+                        }, n.createElement(c.Da, {
                             label: Object(i.d)("OAuth Redirect URL", "DevAppForm"),
                             hint: Object(i.d)("Will receive the result of all client authorizations: either an access token or a failure message. This must exactly match the redirect_uri parameter passed to the authorization endpoint. When testing locally, you can set this to http://localhost.", "DevAppForm")
-                        }, n.createElement(c.Pa, {
+                        }, n.createElement(c.Qa, {
                             value: this.state.redirectUrl,
                             required: !0,
-                            type: c.Ra.Text,
+                            type: c.Sa.Text,
                             onChange: this.setRedirectUrl,
                             "data-test-selector": "app-form-redirect-input"
-                        }))), n.createElement(c.Va, {
+                        }))), n.createElement(c.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, n.createElement(c.Ca, {
+                        }, n.createElement(c.Da, {
                             label: Object(i.d)("Category", "DevAppForm")
-                        }, n.createElement(c.sb, {
+                        }, n.createElement(c.tb, {
                             defaultValue: this.state.category,
                             onChange: this.setCategory,
                             "data-test-selector": "app-form-category-select"
@@ -440,7 +440,7 @@
                         }, Object(i.d)("Please select a category", "DevAppForm")), e))), t, this.renderExistingAppDetails(), this.renderAppSecret(), a))))
                     }, t
                 }(n.Component),
-                f = Object(o.compose)(Object(s.c)("DevAppForm", {
+                f = Object(o.compose)(Object(s.b)("DevAppForm", {
                     autoReportInteractive: !0
                 }))(g);
             r.d(t, !1, function() {

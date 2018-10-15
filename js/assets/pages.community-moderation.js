@@ -1473,7 +1473,7 @@
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, o.o.config.apiBaseURL)
+                        return new URL(e, o.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return i.__awaiter(this, void 0, Promise, function() {
                             var t, n, o, r;
@@ -1514,11 +1514,11 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var n = o.o.store.getState(),
+                        var n = o.p.store.getState(),
                             i = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": o.o.config.legacyClientID,
+                                "Client-ID": o.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
@@ -1526,7 +1526,7 @@
                         return a && (i.Authorization = "OAuth " + a.authToken, a.legacyCSRFToken && (i["Twitch-Api-Token"] = a.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             i[e] && delete i[e]
                         }), i
-                    }, e.logger = o.o.logger.withCategory("legacy-api"), e
+                    }, e.logger = o.p.logger.withCategory("legacy-api"), e
                 }()
         },
         bvb9: function(e, t, n) {},
@@ -1544,8 +1544,8 @@
                 c = n("/MKj"),
                 d = n("fvjX"),
                 p = n("/7QA"),
-                h = n("yR8l"),
-                y = n("/0dD"),
+                y = n("yR8l"),
+                h = n("/0dD"),
                 g = n("76Lv"),
                 f = n("1/iK"),
                 v = n("y5D0"),
@@ -1578,7 +1578,7 @@
                         }, t.trackResponse = function(e) {
                             if (t.props.data) {
                                 var n = "follow" === e ? C.SpadeEventType.CommunityFollow : C.SpadeEventType.CommunityUnfollow;
-                                p.o.tracking.track(n, {
+                                p.p.tracking.track(n, {
                                     community_id: t.props.data.community.id,
                                     name: t.props.data.community.name,
                                     is_official: !1,
@@ -1657,14 +1657,14 @@
                     }, t.prototype.render = function() {
                         var e = Object(p.d)("Follow", "DirectoryFollowButton"),
                             t = this.props.buttonType,
-                            n = t && t === w.F.Hollow ? w.nb.FollowHollow : w.nb.Heart;
+                            n = t && t === w.F.Hollow ? w.ob.FollowHollow : w.ob.Heart;
                         if (this.props.isLoggedIn) {
-                            if (!this.props.data || this.props.data.loading) return i.createElement(w.Va, {
-                                display: w.W.Flex,
-                                justifyContent: w.Ua.Center
-                            }, i.createElement(w.Va, {
+                            if (!this.props.data || this.props.data.loading) return i.createElement(w.Wa, {
+                                display: w.X.Flex,
+                                justifyContent: w.Va.Center
+                            }, i.createElement(w.Wa, {
                                 alignItems: w.f.Center
-                            }, i.createElement(w.cb, {
+                            }, i.createElement(w.db, {
                                 width: 70,
                                 height: 30
                             })));
@@ -1673,8 +1673,8 @@
                         var o, r = this.showUnfollowButton() ? Object(p.d)("Unfollow", "DirectoryFollowButton") : e,
                             a = this.showUnfollowButton() ? "directory-unfollow-button" : "directory-follow-button",
                             s = this.showUnfollowButton() ? "unfollow-button" : "follow-button",
-                            m = this.showUnfollowButton() ? w.nb.Heart : n,
-                            l = !this.showUnfollowButton() && t && t === w.F.Hollow ? w.nb.Heart : w.nb.Unheart,
+                            m = this.showUnfollowButton() ? w.ob.Heart : n,
+                            l = !this.showUnfollowButton() && t && t === w.F.Hollow ? w.ob.Heart : w.ob.Unheart,
                             c = this.showUnfollowButton() ? Object(p.d)("Following", "DirectoryFollowButton") : e;
                         return o = this.props.animatedButton ? i.createElement(S.a, u.__assign({
                             ariaLabel: r,
@@ -1685,24 +1685,24 @@
                             onClick: this.followClicked,
                             text: c,
                             type: t || w.F.Default
-                        }, Object(w.bc)(this.props))) : i.createElement(w.z, u.__assign({
+                        }, Object(w.cc)(this.props))) : i.createElement(w.z, u.__assign({
                             ariaLabel: r,
                             "data-a-target": a,
                             "data-test-selector": s,
                             icon: m,
                             onClick: this.followClicked,
                             statusAlertIcon: this.props.isLoggedIn ? l : void 0
-                        }, Object(w.bc)(this.props), {
+                        }, Object(w.cc)(this.props), {
                             type: t || w.F.Default
-                        }), c), i.createElement(w.Va, {
-                            display: this.showUnfollowButton() ? w.W.Flex : void 0,
+                        }), c), i.createElement(w.Wa, {
+                            display: this.showUnfollowButton() ? w.X.Flex : void 0,
                             fullWidth: !!this.showUnfollowButton() || void 0,
-                            flexDirection: this.showUnfollowButton() ? w.Y.Column : void 0,
+                            flexDirection: this.showUnfollowButton() ? w.Z.Column : void 0,
                             className: this.showUnfollowButton() ? "directory-follow-btn" : void 0
                         }, o)
                     }, t.prototype.reportInteractive = function() {
                         this.props.isLoggedIn && this.props.directoryName && !this.communityDataLoaded() || this.props.latencyTracking.reportInteractive()
-                    }, t = u.__decorate([Object(h.a)(N, {
+                    }, t = u.__decorate([Object(y.a)(N, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -1713,11 +1713,11 @@
                         skip: function(e) {
                             return !e.isLoggedIn || !e.directoryName
                         }
-                    }), Object(h.a)(E, {
+                    }), Object(y.a)(E, {
                         name: "followCommunity"
-                    }), Object(h.a)(O, {
+                    }), Object(y.a)(O, {
                         name: "unfollowCommunity"
-                    }), Object(_.c)("DirectoryFollowButton")], t)
+                    }), Object(_.b)("DirectoryFollowButton")], t)
                 }(i.Component);
             var U = Object(c.connect)(function(e) {
                     return {
@@ -1737,13 +1737,13 @@
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
                         var e, t, n, o = {};
-                        this.props.data.loading || this.props.data.error || !this.props.data.community ? (e = i.createElement(w.cb, {
+                        this.props.data.loading || this.props.data.error || !this.props.data.community ? (e = i.createElement(w.db, {
                             width: 60,
                             height: 84
-                        }), t = i.createElement(w.cb, {
+                        }), t = i.createElement(w.db, {
                             width: 300,
                             height: 29
-                        }), n = i.createElement(w.cb, {
+                        }), n = i.createElement(w.db, {
                             width: 65,
                             height: 18
                         })) : (e = i.createElement(w.I, {
@@ -1753,61 +1753,61 @@
                             aspect: w.p.BoxArt
                         }), o = {
                             backgroundImage: "url(" + this.props.data.community.coverURL + ")"
-                        }, t = i.createElement(w.V, {
+                        }, t = i.createElement(w.W, {
                             color: w.O.Overlay,
-                            type: w.Nb.H3
-                        }, this.props.data.community.displayName), n = i.createElement(w.V, {
+                            type: w.Ob.H3
+                        }, this.props.data.community.displayName), n = i.createElement(w.W, {
                             color: w.O.Overlay,
-                            type: w.Nb.P
+                            type: w.Ob.P
                         }, Object(p.d)("{followers, plural, one {# Follower} other {# Followers}}", {
                             followers: this.props.data.community.followersCount || 0
                         }, "CommunityModerationBanner")));
-                        var r = l("community-moderation-banner", Object(g.b)(y.a.Dark));
-                        return i.createElement(w.Na, {
+                        var r = l("community-moderation-banner", Object(g.b)(h.a.Dark));
+                        return i.createElement(w.Oa, {
                             className: r,
-                            position: w.db.Relative
+                            position: w.eb.Relative
                         }, i.createElement("div", {
                             style: o
-                        }, i.createElement(w.Va, {
-                            position: w.db.Absolute,
+                        }, i.createElement(w.Wa, {
+                            position: w.eb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
                             className: "community-moderation-banner__content",
                             padding: 3,
-                            display: w.W.Flex,
-                            flexDirection: w.Y.Row,
-                            justifyContent: w.Ua.Between,
+                            display: w.X.Flex,
+                            flexDirection: w.Z.Row,
+                            justifyContent: w.Va.Between,
                             alignItems: w.f.End
-                        }, i.createElement(w.Va, {
-                            display: w.W.Flex,
-                            flexDirection: w.Y.Row,
+                        }, i.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            flexDirection: w.Z.Row,
                             alignItems: w.f.End
-                        }, e, i.createElement(w.Va, {
+                        }, e, i.createElement(w.Wa, {
                             margin: {
                                 left: 2
                             },
-                            display: w.W.Flex,
-                            flexDirection: w.Y.Column
-                        }, i.createElement(w.T, {
+                            display: w.X.Flex,
+                            flexDirection: w.Z.Column
+                        }, i.createElement(w.U, {
                             to: "/directory/communities"
-                        }, i.createElement(w.mb, {
-                            asset: w.nb.GlyphArrLeft,
+                        }, i.createElement(w.nb, {
+                            asset: w.ob.GlyphArrLeft,
                             height: 10,
                             width: 10
-                        }), Object(p.d)("Communities", "CommunityModerationBanner")), t, n)), i.createElement(w.Va, {
-                            display: w.W.Flex,
-                            flexDirection: w.Y.Row,
+                        }), Object(p.d)("Communities", "CommunityModerationBanner")), t, n)), i.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            flexDirection: w.Z.Row,
                             alignItems: w.f.End
                         }, i.createElement(U, {
                             directoryName: this.props.communityName
-                        }), i.createElement(w.Va, {
+                        }), i.createElement(w.Wa, {
                             margin: {
                                 left: 1
                             }
                         }, i.createElement(w.z, {
-                            icon: w.nb.Check,
+                            icon: w.ob.Check,
                             linkTo: "/communities/" + encodeURIComponent(this.props.communityName)
                         }, Object(p.d)("Done", "CommunityModerationBanner")))))))
                     }, t
@@ -1816,7 +1816,7 @@
                     return {
                         isLoggedIn: !!e.session.user
                     }
-                }), Object(h.a)(D, {
+                }), Object(y.a)(D, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1828,11 +1828,11 @@
                 }))(F),
                 M = n("V+GM"),
                 j = n("NvVO"),
-                V = n("aCAx"),
-                x = n("b6Yk"),
+                x = n("aCAx"),
+                B = n("b6Yk"),
                 R = n("oJmH"),
-                B = n("cZKs"),
-                A = function(e) {
+                A = n("cZKs"),
+                L = function(e) {
                     switch (e) {
                         case "TARGET_USER_OWNER":
                             return Object(p.d)("You cannot ban or timeout the owner of this community", "BanTimeoutErrorMessages");
@@ -1848,24 +1848,24 @@
                             return Object(p.d)("Something went wrong", "BanTimeoutErrorMessages")
                     }
                 },
-                L = n("MT35"),
-                P = (n("q+lQ"), "error-message"),
-                q = function(e) {
+                W = n("MT35"),
+                V = (n("q+lQ"), "error-message"),
+                P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             error: "",
                             reason: ""
                         }, t.renderErrorMessage = function() {
-                            return t.state.error ? i.createElement(w.Va, {
+                            return t.state.error ? i.createElement(w.Wa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, i.createElement(w.V, {
+                            }, i.createElement(w.W, {
                                 color: w.O.Error,
-                                type: w.Nb.H4,
-                                "data-test-selector": P
-                            }, A(t.state.error))) : null
+                                type: w.Ob.H4,
+                                "data-test-selector": V
+                            }, L(t.state.error))) : null
                         }, t.onReasonChange = function(e) {
                             var n = e.target.value;
                             t.setState({
@@ -1890,7 +1890,7 @@
                                                 }
                                             }), [4, this.props.banUserFromCommunity(e)]) : [2];
                                         case 1:
-                                            return null === (t = n.sent()).data.banUserFromCommunity.error ? (p.o.tracking.track(C.SpadeEventType.CommunityModeration, {
+                                            return null === (t = n.sent()).data.banUserFromCommunity.error ? (p.p.tracking.track(C.SpadeEventType.CommunityModeration, {
                                                 community_id: this.props.communityID,
                                                 name: this.props.communityName,
                                                 is_official: !1,
@@ -1907,43 +1907,43 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(w.Na, {
-                            position: w.db.Relative
-                        }, i.createElement(w.xb, {
+                        return i.createElement(w.Oa, {
+                            position: w.eb.Relative
+                        }, i.createElement(w.yb, {
                             background: w.r.Base,
                             className: "stream-ban-modal"
-                        }, i.createElement(w.Va, {
+                        }, i.createElement(w.Wa, {
                             padding: 2
-                        }, this.renderErrorMessage(), i.createElement(w.Va, {
+                        }, this.renderErrorMessage(), i.createElement(w.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(w.V, {
-                            type: w.Nb.H4
+                        }, i.createElement(w.W, {
+                            type: w.Ob.H4
                         }, Object(p.d)("Are you sure you want to ban {name}?", {
                             name: this.props.username
-                        }, "StreamBanModal"))), i.createElement(w.xb, {
+                        }, "StreamBanModal"))), i.createElement(w.yb, {
                             borderTop: !0
-                        }, i.createElement(w.Va, {
+                        }, i.createElement(w.Wa, {
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(w.V, {
+                        }, i.createElement(w.W, {
                             bold: !0
-                        }, Object(p.d)("Reason (Required)", "StreamBanModal")), i.createElement(w.Pa, {
-                            type: w.Ra.Text,
+                        }, Object(p.d)("Reason (Required)", "StreamBanModal")), i.createElement(w.Qa, {
+                            type: w.Sa.Text,
                             placeholder: Object(p.d)("Please be as detailed as possible", "StreamBanModal"),
                             onChange: this.onReasonChange,
                             "data-test-selector": "reason-input"
-                        }))), i.createElement(w.xb, {
+                        }))), i.createElement(w.yb, {
                             borderTop: !0
-                        }, i.createElement(w.Va, {
+                        }, i.createElement(w.Wa, {
                             padding: {
                                 top: 2
                             },
-                            textAlign: w.Jb.Center
-                        }, i.createElement(w.Va, {
-                            display: w.W.Inline,
+                            textAlign: w.Kb.Center
+                        }, i.createElement(w.Wa, {
+                            display: w.X.Inline,
                             margin: {
                                 x: 1
                             }
@@ -1951,8 +1951,8 @@
                             type: w.F.Text,
                             onClick: this.props.onCloseModal,
                             "data-test-selector": "cancel-button"
-                        }, Object(p.d)("Cancel", "StreamBanModal"))), i.createElement(w.Va, {
-                            display: w.W.Inline,
+                        }, Object(p.d)("Cancel", "StreamBanModal"))), i.createElement(w.Wa, {
+                            display: w.X.Inline,
                             margin: {
                                 x: 1
                             }
@@ -1960,20 +1960,20 @@
                             onClick: this.banUserFromCommunity,
                             disabled: !this.state.reason.length,
                             "data-test-selector": "ban-button"
-                        }, Object(p.d)("Ban", "StreamBanModal")))))), i.createElement(B.a, {
+                        }, Object(p.d)("Ban", "StreamBanModal")))))), i.createElement(A.a, {
                             closeOnBackdropClick: !0
                         })))
                     }, t
                 }(i.Component),
-                G = Object(R.compose)(Object(h.a)(L, {
+                q = Object(R.compose)(Object(y.a)(W, {
                     name: "banUserFromCommunity"
-                }))(q);
+                }))(P);
             var z = Object(c.connect)(null, function(e) {
                     return Object(d.bindActionCreators)({
-                        onCloseModal: V.c
+                        onCloseModal: x.c
                     }, e)
-                })(G),
-                H = function(e) {
+                })(q),
+                G = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSuccess = function() {
@@ -1991,9 +1991,9 @@
                         })
                     }, t
                 }(i.Component),
-                Y = (n("TcEZ"), n("uCyD")),
+                H = (n("TcEZ"), n("uCyD")),
                 $ = "error-message",
-                W = function(e) {
+                Q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2001,15 +2001,15 @@
                             error: "",
                             reason: ""
                         }, t.renderErrorMessage = function() {
-                            return t.state.error ? i.createElement(w.Va, {
+                            return t.state.error ? i.createElement(w.Wa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, i.createElement(w.V, {
+                            }, i.createElement(w.W, {
                                 color: w.O.Error,
-                                type: w.Nb.H4,
+                                type: w.Ob.H4,
                                 "data-test-selector": $
-                            }, A(t.state.error))) : null
+                            }, L(t.state.error))) : null
                         }, t.onReasonChange = function(e) {
                             var n = e.target.value;
                             t.setState({
@@ -2040,7 +2040,7 @@
                                                 }
                                             }), [4, this.props.timeoutUserFromCommunity(e)]) : [2];
                                         case 1:
-                                            return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (p.o.tracking.track(C.SpadeEventType.CommunityModeration, {
+                                            return null === (t = n.sent()).data.timeoutUserFromCommunity.error ? (p.p.tracking.track(C.SpadeEventType.CommunityModeration, {
                                                 community_id: this.props.communityID,
                                                 name: this.props.communityName,
                                                 is_official: !1,
@@ -2058,41 +2058,41 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(w.Na, {
-                            position: w.db.Relative
-                        }, i.createElement(w.xb, {
+                        return i.createElement(w.Oa, {
+                            position: w.eb.Relative
+                        }, i.createElement(w.yb, {
                             background: w.r.Base,
                             className: "stream-timeout-modal"
-                        }, i.createElement(w.Va, {
+                        }, i.createElement(w.Wa, {
                             padding: 2
-                        }, this.renderErrorMessage(), i.createElement(w.Va, {
+                        }, this.renderErrorMessage(), i.createElement(w.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(w.V, {
-                            type: w.Nb.H4
+                        }, i.createElement(w.W, {
+                            type: w.Ob.H4
                         }, Object(p.d)("Are you sure you want to timeout {name}?", {
                             name: this.props.username
-                        }, "StreamTimeoutModal"))), i.createElement(w.xb, {
+                        }, "StreamTimeoutModal"))), i.createElement(w.yb, {
                             borderTop: !0
-                        }, i.createElement(w.Va, {
+                        }, i.createElement(w.Wa, {
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(w.V, {
+                        }, i.createElement(w.W, {
                             bold: !0
-                        }, Object(p.d)("Reason (Required)", "StreamTimeoutModal")), i.createElement(w.Pa, {
-                            type: w.Ra.Text,
+                        }, Object(p.d)("Reason (Required)", "StreamTimeoutModal")), i.createElement(w.Qa, {
+                            type: w.Sa.Text,
                             placeholder: Object(p.d)("Please be as detailed as possible", "StreamTimeoutModal"),
                             onChange: this.onReasonChange,
                             "data-test-selector": "reason-input"
-                        }))), i.createElement(w.Va, {
+                        }))), i.createElement(w.Wa, {
                             margin: {
                                 y: 2
                             }
-                        }, i.createElement(w.V, {
+                        }, i.createElement(w.W, {
                             bold: !0
-                        }, Object(p.d)("Duration", "StreamTimeoutModal")), i.createElement(w.sb, {
+                        }, Object(p.d)("Duration", "StreamTimeoutModal")), i.createElement(w.tb, {
                             defaultValue: "2",
                             onChange: this.onDurationHoursChange
                         }, i.createElement("option", {
@@ -2105,15 +2105,15 @@
                             value: "12"
                         }, Object(p.d)("12 hours", "StreamTimeoutModal")), i.createElement("option", {
                             value: "24"
-                        }, Object(p.d)("24 hours", "StreamTimeoutModal")))), i.createElement(w.xb, {
+                        }, Object(p.d)("24 hours", "StreamTimeoutModal")))), i.createElement(w.yb, {
                             borderTop: !0
-                        }, i.createElement(w.Va, {
+                        }, i.createElement(w.Wa, {
                             padding: {
                                 top: 2
                             },
-                            textAlign: w.Jb.Center
-                        }, i.createElement(w.Va, {
-                            display: w.W.Inline,
+                            textAlign: w.Kb.Center
+                        }, i.createElement(w.Wa, {
+                            display: w.X.Inline,
                             margin: {
                                 x: 1
                             }
@@ -2121,8 +2121,8 @@
                             type: w.F.Text,
                             onClick: this.props.onCloseModal,
                             "data-test-selector": "cancel-button"
-                        }, Object(p.d)("Cancel", "StreamTimeoutModal"))), i.createElement(w.Va, {
-                            display: w.W.Inline,
+                        }, Object(p.d)("Cancel", "StreamTimeoutModal"))), i.createElement(w.Wa, {
+                            display: w.X.Inline,
                             margin: {
                                 x: 1
                             }
@@ -2130,20 +2130,20 @@
                             onClick: this.timeoutUserFromCommunity,
                             disabled: !this.state.reason.length,
                             "data-test-selector": "timeout-button"
-                        }, Object(p.d)("Timeout", "StreamTimeoutModal")))))), i.createElement(B.a, {
+                        }, Object(p.d)("Timeout", "StreamTimeoutModal")))))), i.createElement(A.a, {
                             closeOnBackdropClick: !0
                         })))
                     }, t
                 }(i.Component),
-                Q = Object(R.compose)(Object(h.a)(Y, {
+                X = Object(R.compose)(Object(y.a)(H, {
                     name: "timeoutUserFromCommunity"
-                }))(W);
-            var J, K = Object(c.connect)(null, function(e) {
+                }))(Q);
+            var Y, Z = Object(c.connect)(null, function(e) {
                     return Object(d.bindActionCreators)({
-                        onCloseModal: V.c
+                        onCloseModal: x.c
                     }, e)
-                })(Q),
-                Z = function(e) {
+                })(X),
+                J = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSuccess = function() {
@@ -2151,7 +2151,7 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(K, {
+                        return i.createElement(Z, {
                             communityID: this.props.communityID,
                             communityName: this.props.communityName,
                             userID: this.props.user.id,
@@ -2161,7 +2161,7 @@
                         })
                     }, t
                 }(i.Component),
-                X = n("8/mp"),
+                K = n("8/mp"),
                 ee = n("yLwq"),
                 te = n("f00E"),
                 ne = n("H/lO"),
@@ -2174,23 +2174,23 @@
                             searchText: "",
                             searching: !1
                         }, n.inputTimeout = 0, n.renderUsers = function(e) {
-                            return i.createElement(w.Va, {
+                            return i.createElement(w.Wa, {
                                 padding: 1
                             }, e.map(function(e) {
-                                return i.createElement(w.Va, {
-                                    display: w.W.Flex,
-                                    flexDirection: w.Y.Row,
+                                return i.createElement(w.Wa, {
+                                    display: w.X.Flex,
+                                    flexDirection: w.Z.Row,
                                     key: "user-search-form-result:" + e.id,
-                                    justifyContent: w.Ua.Between,
+                                    justifyContent: w.Va.Between,
                                     alignItems: w.f.Center,
                                     padding: {
                                         y: .5
                                     }
-                                }, i.createElement(w.Va, {
-                                    display: w.W.Flex,
-                                    flexDirection: w.Y.Row,
+                                }, i.createElement(w.Wa, {
+                                    display: w.X.Flex,
+                                    flexDirection: w.Z.Row,
                                     alignItems: w.f.Center
-                                }, i.createElement(w.Va, {
+                                }, i.createElement(w.Wa, {
                                     margin: {
                                         right: 1
                                     }
@@ -2200,9 +2200,9 @@
                                     alt: Object(p.d)("{user} Avatar", {
                                         user: e.displayName
                                     }, "UserSearchForm")
-                                })), i.createElement(w.V, null, e.displayName)), i.createElement(w.Va, {
-                                    display: w.W.Flex,
-                                    flexDirection: w.Y.Row,
+                                })), i.createElement(w.W, null, e.displayName)), i.createElement(w.Wa, {
+                                    display: w.X.Flex,
+                                    flexDirection: w.Z.Row,
                                     alignItems: w.f.Center
                                 }, n.props.getUserContent(e)))
                             }))
@@ -2253,10 +2253,10 @@
                         }, n.searchClient = new ie.a({
                             appId: p.a.algoliaApplicationID,
                             apiKey: p.a.algoliaAPIKey,
-                            apolloClient: p.o.apollo.client,
-                            logger: p.j,
+                            apolloClient: p.p.apollo.client,
+                            logger: p.k,
                             config: p.a,
-                            stats: p.o.stats
+                            stats: p.p.stats
                         }), t.clearSearchText && t.clearSearchText(n.clearSearchText), n
                     }
                     return u.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
@@ -2265,40 +2265,40 @@
                         var e = l({
                             "user-search-form--disabled": this.state.searching || this.state.results.length > 0
                         });
-                        return i.createElement(w.Va, {
+                        return i.createElement(w.Wa, {
                             className: "user-search-form"
-                        }, i.createElement(w.xb, {
+                        }, i.createElement(w.yb, {
                             key: "user-search-form-input",
                             padding: 1,
                             border: !0
-                        }, i.createElement(w.Va, {
+                        }, i.createElement(w.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(w.V, {
-                            fontSize: w.Aa.Size4
-                        }, this.props.title)), this.props.description && i.createElement(w.Va, {
+                        }, i.createElement(w.W, {
+                            fontSize: w.Ba.Size4
+                        }, this.props.title)), this.props.description && i.createElement(w.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(w.V, null, this.props.description)), i.createElement(w.Va, {
+                        }, i.createElement(w.W, null, this.props.description)), i.createElement(w.Wa, {
                             margin: {
                                 bottom: 1
                             },
-                            position: w.db.Relative
-                        }, i.createElement(w.Pa, {
-                            type: w.Ra.Search,
+                            position: w.eb.Relative
+                        }, i.createElement(w.Qa, {
+                            type: w.Sa.Search,
                             placeholder: this.props.placeholder,
                             onChange: this.onChange,
-                            icon: w.nb.GlyphLive,
+                            icon: w.ob.GlyphLive,
                             value: this.state.searchText
                         }), i.createElement(w.u, {
                             show: this.state.results.length > 0,
                             size: w.w.ExtraLarge,
                             direction: w.v.TopCenter
-                        }, i.createElement(X.b, {
+                        }, i.createElement(K.b, {
                             className: "user-search-form__results"
-                        }, i.createElement(w.Va, null, this.state.results.length > 0 && this.renderUsers(this.state.results)))))), this.props.displayUsers && this.props.displayUsers.length > 0 && i.createElement(w.xb, {
+                        }, i.createElement(w.Wa, null, this.state.results.length > 0 && this.renderUsers(this.state.results)))))), this.props.displayUsers && this.props.displayUsers.length > 0 && i.createElement(w.yb, {
                             key: "user-search-form-results",
                             className: e,
                             borderLeft: !0,
@@ -2314,7 +2314,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             moderatedUsers: {}
-                        }, t.logger = p.j.withCategory("community-channel-moderation"), t.clearSearchText = null, t.getButtonsForUser = function(e) {
+                        }, t.logger = p.k.withCategory("community-channel-moderation"), t.clearSearchText = null, t.getButtonsForUser = function(e) {
                             var n = t.state.moderatedUsers[e.id];
                             if (n) {
                                 var o = n.isBanned ? Object(p.d)("Unban", "CommunityChannelModeration") : Object(p.d)("Untimeout", "CommunityChannelModeration");
@@ -2322,16 +2322,16 @@
                                     return t.unmoderateUser(n)
                                 })
                             }
-                            return i.createElement(w.Va, {
-                                display: w.W.Flex,
-                                flexDirection: w.Y.Row
+                            return i.createElement(w.Wa, {
+                                display: w.X.Flex,
+                                flexDirection: w.Z.Row
                             }, t.props.userCanBan && t.renderButton(Object(p.d)("Ban", "CommunityChannelModeration"), function() {
                                 return t.banUser(e)
                             }), t.props.userCanTimeout && t.renderButton(Object(p.d)("Timeout", "CommunityChannelModeration"), function() {
                                 return t.timeoutUser(e)
                             }))
                         }, t.renderButton = function(e, t) {
-                            return i.createElement(w.Va, {
+                            return i.createElement(w.Wa, {
                                 margin: {
                                     left: .5
                                 }
@@ -2349,9 +2349,9 @@
                                         case 0:
                                             this.logger.debug("Loading moderated users"), r.label = 1;
                                         case 1:
-                                            return r.trys.push([1, 4, , 5]), [4, x.a.get("/kraken/communities/" + e + "/bans?limit=100")];
+                                            return r.trys.push([1, 4, , 5]), [4, B.a.get("/kraken/communities/" + e + "/bans?limit=100")];
                                         case 2:
-                                            return t = r.sent(), [4, x.a.get("/kraken/communities/" + e + "/timeouts?limit=100")];
+                                            return t = r.sent(), [4, B.a.get("/kraken/communities/" + e + "/timeouts?limit=100")];
                                         case 3:
                                             return n = r.sent(), (t.error || t.requestError) && (n.error || n.requestError) ? (this.logger.warn("Error loading users", {
                                                 banResponseError: t.error,
@@ -2379,7 +2379,7 @@
                                 }, e
                             }, {})
                         }, t.banUser = function(e) {
-                            t.props.showModal(H, {
+                            t.props.showModal(G, {
                                 user: e,
                                 communityID: t.props.communityID,
                                 communityName: t.props.communityName,
@@ -2387,7 +2387,7 @@
                                 onSuccess: t.onBanUserSuccess
                             })
                         }, t.timeoutUser = function(e) {
-                            t.props.showModal(Z, {
+                            t.props.showModal(J, {
                                 user: e,
                                 communityID: t.props.communityID,
                                 onSuccess: t.onTimeoutUserSuccess
@@ -2473,59 +2473,59 @@
                 }(i.Component),
                 me = Object(d.compose)(Object(c.connect)(null, function(e) {
                     return Object(d.bindActionCreators)({
-                        showModal: V.d
+                        showModal: x.d
                     }, e)
-                }), Object(h.a)(re, {
+                }), Object(y.a)(re, {
                     name: "unbanUser"
-                }), Object(h.a)(ae, {
+                }), Object(y.a)(ae, {
                     name: "untimeoutUser"
                 }))(se),
                 ue = "community-moderation-page-error-message";
             ! function(e) {
                 e[e.Moderation = 0] = "Moderation", e[e.Settings = 1] = "Settings"
-            }(J || (J = {}));
+            }(Y || (Y = {}));
             var le = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderDefaultContent = function() {
-                            return i.createElement(w.Va, {
-                                display: w.W.Flex,
-                                flexDirection: w.Y.Column
-                            }, i.createElement(w.Va, {
+                            return i.createElement(w.Wa, {
+                                display: w.X.Flex,
+                                flexDirection: w.Z.Column
+                            }, i.createElement(w.Wa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, i.createElement(w.V, {
-                                type: w.Nb.H2
-                            }, Object(p.d)("Moderation", "CommunityModerationPage"))), i.createElement(w.Va, {
+                            }, i.createElement(w.W, {
+                                type: w.Ob.H2
+                            }, Object(p.d)("Moderation", "CommunityModerationPage"))), i.createElement(w.Wa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, i.createElement(w.zb, null, i.createElement(w.yb, {
+                            }, i.createElement(w.Ab, null, i.createElement(w.zb, {
                                 linkTo: "/communities/" + t.props.match.params.encodedCommunityName + "/moderation/log",
-                                active: t.props.activeTab === J.Moderation
-                            }, Object(p.d)("Moderation", "CommunityModerationPageTab")), t.props.showSettingsTab && i.createElement(w.yb, {
+                                active: t.props.activeTab === Y.Moderation
+                            }, Object(p.d)("Moderation", "CommunityModerationPageTab")), t.props.showSettingsTab && i.createElement(w.zb, {
                                 linkTo: "/communities/" + t.props.match.params.encodedCommunityName + "/moderation/settings",
-                                active: t.props.activeTab === J.Settings
+                                active: t.props.activeTab === Y.Settings
                             }, Object(p.d)("Settings", "CommunityModerationPageTab")))), t.props.children)
                         }, t.renderErrorMessage = function(e) {
-                            return i.createElement(w.Va, {
-                                display: w.W.Flex,
-                                flexDirection: w.Y.Row,
+                            return i.createElement(w.Wa, {
+                                display: w.X.Flex,
+                                flexDirection: w.Z.Row,
                                 alignItems: w.f.Center,
-                                justifyContent: w.Ua.Center,
+                                justifyContent: w.Va.Center,
                                 padding: 5,
                                 "data-test-selector": ue
-                            }, i.createElement(w.V, {
+                            }, i.createElement(w.W, {
                                 italic: !0,
-                                fontSize: w.Aa.Size4
+                                fontSize: w.Ba.Size4
                             }, e))
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.isLoggedIn || this.props.login()
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? this.props.loading ? i.createElement(w.Xa, {
+                        return this.props.isLoggedIn ? this.props.loading ? i.createElement(w.Ya, {
                             fillContent: !0
                         }) : this.props.error ? this.renderErrorMessage(Object(p.d)("Error loading data. Please try again.", "CommunityModerationPage")) : this.props.userHasPermissionToView ? this.renderDefaultContent() : this.renderErrorMessage(Object(p.d)("You don't have permission to perform that action.", "CommunityModerationPage")) : this.renderErrorMessage(Object(p.d)("You're not logged in.", "CommunityModerationPage"))
                     }, t
@@ -2544,12 +2544,12 @@
                 de = n("2Ygb"),
                 pe = n("aDGs");
 
-            function he(e) {
+            function ye(e) {
                 return function(t) {
                     var n = function(e) {
                         function n() {
                             var t = null !== e && e.apply(this, arguments) || this;
-                            return t.logger = p.j.withCategory("with-community-moderation"), t.track = function(e, n) {
+                            return t.logger = p.k.withCategory("with-community-moderation"), t.track = function(e, n) {
                                 var i = t.props.data.community,
                                     o = t.props.currentUser,
                                     r = t.props.data.currentUser && t.props.data.currentUser.roles;
@@ -2563,7 +2563,7 @@
                                         is_subadmin: r && r.isSiteAdmin || !1,
                                         is_admin: r && r.isStaff
                                     }, n);
-                                    p.n.track(e, a)
+                                    p.o.track(e, a)
                                 } else t.logger.warn("Failed to track community moderation event")
                             }, t.isCommunityOwner = function() {
                                 var e = t.props.data.community;
@@ -2591,7 +2591,7 @@
                                 login: e.session.user.login
                             } : null
                         }
-                    }), Object(h.a)(pe, {
+                    }), Object(y.a)(pe, {
                         options: function(t) {
                             return {
                                 variables: {
@@ -2605,7 +2605,7 @@
                     }))(n)
                 }
             }
-            var ye, ge = function(e) {
+            var he, ge = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2631,29 +2631,29 @@
                             loading: t,
                             error: n,
                             userHasPermissionToView: r,
-                            activeTab: J.Moderation,
+                            activeTab: Y.Moderation,
                             showSettingsTab: this.props.communityModeration.isCommunityOwner
                         }, a)
                     }, t
                 }(i.Component),
-                fe = Object(d.compose)(Object(_.c)("CommunityModerationLogPage", {
+                fe = Object(d.compose)(Object(_.b)("CommunityModerationLogPage", {
                     autoReportInteractive: !0,
                     destination: j.a.CommunityModeration
                 }), Object(M.a)({
                     location: C.PageviewLocation.CommunityModerationLog
-                }), he({
+                }), ye({
                     log: !0
                 }))(ge);
             ! function(e) {
                 e.TwoFactor = "two_factor_not_enabled", e.EmailVerification = "unverified_email"
-            }(ye || (ye = {}));
+            }(he || (he = {}));
             var ve, ke = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             working: !1,
                             error: null
-                        }, t.logger = p.j.withCategory("community-leader-modal"), t.onClickSave = function() {
+                        }, t.logger = p.k.withCategory("community-leader-modal"), t.onClickSave = function() {
                             return u.__awaiter(t, void 0, void 0, function() {
                                 var e, t, n, i, o;
                                 return u.__generator(this, function(r) {
@@ -2664,14 +2664,14 @@
                                                 error: null
                                             }), e = Object(p.d)("Failed to save. Please try again.", "CommunityLeaderModal"), r.label = 1;
                                         case 1:
-                                            return r.trys.push([1, 3, , 4]), this.logger.debug("Saving new community leader"), [4, x.a.put("/kraken/communities/" + this.props.communityID, {
+                                            return r.trys.push([1, 3, , 4]), this.logger.debug("Saving new community leader"), [4, B.a.put("/kraken/communities/" + this.props.communityID, {
                                                 headers: {
                                                     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
                                                 },
                                                 body: "owner_user_id=" + this.props.user.id
                                             })];
                                         case 2:
-                                            return t = r.sent(), n = null, t.requestError ? n = e : t.error && (i = t.error.message, n = i === ye.TwoFactor ? Object(p.d)("User does not have Two Factor Authorization enabled.", "CommunityLeaderModal") : i === ye.EmailVerification ? Object(p.d)("User has not verified their email.", "CommunityLeaderModal") : e), n ? (this.setState({
+                                            return t = r.sent(), n = null, t.requestError ? n = e : t.error && (i = t.error.message, n = i === he.TwoFactor ? Object(p.d)("User does not have Two Factor Authorization enabled.", "CommunityLeaderModal") : i === he.EmailVerification ? Object(p.d)("User has not verified their email.", "CommunityLeaderModal") : e), n ? (this.setState({
                                                 working: !1,
                                                 error: n
                                             }), [2]) : (this.props.closeModal(), this.props.onSuccess(this.props.user.id), [3, 4]);
@@ -2688,39 +2688,39 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(w.xb, {
+                        return i.createElement(w.yb, {
                             padding: 2,
                             background: w.r.Base,
                             className: "ban-user-modal"
-                        }, i.createElement(w.V, {
-                            fontSize: w.Aa.Size4
+                        }, i.createElement(w.W, {
+                            fontSize: w.Ba.Size4
                         }, Object(p.d)("Are you sure you want to make {user} the new community leader?", {
                             user: this.props.user.displayName
-                        }, "CommunityLeaderModal")), i.createElement(w.xb, {
+                        }, "CommunityLeaderModal")), i.createElement(w.yb, {
                             margin: {
                                 y: 2
                             },
                             borderBottom: !0
-                        }, i.createElement(w.Va, {
+                        }, i.createElement(w.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, i.createElement(w.V, null, Object(p.d)("By changing this setting you will no longer be community leader. This action is irreversible.", "CommunityLeaderModal"))), this.state.error && i.createElement(w.Va, {
+                        }, i.createElement(w.W, null, Object(p.d)("By changing this setting you will no longer be community leader. This action is irreversible.", "CommunityLeaderModal"))), this.state.error && i.createElement(w.Wa, {
                             margin: {
                                 bottom: 1
                             },
                             "data-test-selector": "community-leader-modal-error"
-                        }, i.createElement(w.V, {
+                        }, i.createElement(w.W, {
                             color: w.O.Error
-                        }, this.state.error))), i.createElement(w.Va, {
-                            display: w.W.Flex,
-                            flexDirection: w.Y.Row,
+                        }, this.state.error))), i.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            flexDirection: w.Z.Row,
                             alignItems: w.f.Center,
-                            justifyContent: w.Ua.Center
+                            justifyContent: w.Va.Center
                         }, i.createElement(w.z, {
                             type: w.F.Text,
                             onClick: this.props.closeModal
-                        }, Object(p.d)("Cancel", "CommunityLeaderModal")), i.createElement(w.Va, {
+                        }, Object(p.d)("Cancel", "CommunityLeaderModal")), i.createElement(w.Wa, {
                             margin: {
                                 left: 2
                             }
@@ -2732,7 +2732,7 @@
                 }(i.Component),
                 be = Object(c.connect)(null, function(e) {
                     return Object(d.bindActionCreators)({
-                        closeModal: V.c
+                        closeModal: x.c
                     }, e)
                 })(ke),
                 Ce = function(e) {
@@ -2740,7 +2740,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getButtonForUser = function(e) {
                             if (e.id === t.props.currentUserID) return null;
-                            return i.createElement(w.Va, {
+                            return i.createElement(w.Wa, {
                                 margin: {
                                     left: .5
                                 }
@@ -2774,7 +2774,7 @@
                     }
                 }, function(e) {
                     return Object(d.bindActionCreators)({
-                        showModal: V.d
+                        showModal: x.d
                     }, e)
                 })(Ce),
                 _e = function(e) {
@@ -2782,14 +2782,14 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             moderators: {}
-                        }, t.logger = p.j.withCategory("community-moderators"), t.getButtonForUser = function(e) {
+                        }, t.logger = p.k.withCategory("community-moderators"), t.getButtonForUser = function(e) {
                             return t.state.moderators[e.id] ? t.renderButton(Object(p.d)("Remove", "CommunityModerators"), function() {
                                 return t.onClickRemove(e)
                             }) : t.renderButton(Object(p.d)("Add", "CommunityModerators"), function() {
                                 return t.onClickAdd(e)
                             })
                         }, t.renderButton = function(e, t) {
-                            return i.createElement(w.Va, {
+                            return i.createElement(w.Wa, {
                                 margin: {
                                     left: .5
                                 }
@@ -2812,7 +2812,7 @@
                                                 }
                                             }), this.logger.debug("Adding moderator"), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, x.a.putOrThrow("/kraken/communities/" + this.props.communityID + "/moderators/" + e.id)];
+                                            return n.trys.push([1, 3, , 4]), [4, B.a.putOrThrow("/kraken/communities/" + this.props.communityID + "/moderators/" + e.id)];
                                         case 2:
                                             return n.sent(), this.props.track(C.SpadeEventType.CommunityRoleEdit, {
                                                 target_id: e.id,
@@ -2846,7 +2846,7 @@
                                                 }
                                             }), this.logger.debug("Removing moderator"), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, x.a.deleteOrThrow("/kraken/communities/" + this.props.communityID + "/moderators/" + e.id)];
+                                            return n.trys.push([1, 3, , 4]), [4, B.a.deleteOrThrow("/kraken/communities/" + this.props.communityID + "/moderators/" + e.id)];
                                         case 2:
                                             return n.sent(), this.props.track(C.SpadeEventType.CommunityRoleEdit, {
                                                 target_id: e.id,
@@ -2875,7 +2875,7 @@
                                         case 0:
                                             this.logger.debug("Fetching moderators"), i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, x.a.getOrThrow("/kraken/communities/" + this.props.communityID + "/moderators")];
+                                            return i.trys.push([1, 3, , 4]), [4, B.a.getOrThrow("/kraken/communities/" + this.props.communityID + "/moderators")];
                                         case 2:
                                             return e = i.sent(), t = this.normalizeModerators(e.body.moderators), this.setState({
                                                 moderators: t
@@ -2935,28 +2935,28 @@
                             value: e.initialValue
                         })
                     }, t.prototype.render = function() {
-                        return i.createElement(w.Va, null, i.createElement(w.Va, {
+                        return i.createElement(w.Wa, null, i.createElement(w.Wa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, i.createElement(w.V, {
+                        }, i.createElement(w.W, {
                             bold: !0
-                        }, this.props.title)), this.props.description && i.createElement(w.Va, {
+                        }, this.props.title)), this.props.description && i.createElement(w.Wa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, i.createElement(w.V, null, this.props.description)), i.createElement(w.Va, {
-                            display: w.W.Flex,
-                            flexDirection: w.Y.Row,
+                        }, i.createElement(w.W, null, this.props.description)), i.createElement(w.Wa, {
+                            display: w.X.Flex,
+                            flexDirection: w.Z.Row,
                             alignItems: w.f.Center,
-                            justifyContent: w.Ua.Between
-                        }, i.createElement(w.Va, {
+                            justifyContent: w.Va.Between
+                        }, i.createElement(w.Wa, {
                             flexGrow: 1
-                        }, i.createElement(w.Pa, {
-                            type: w.Ra.Text,
+                        }, i.createElement(w.Qa, {
+                            type: w.Sa.Text,
                             value: this.state.value,
                             onChange: this.onInputChange
-                        })), i.createElement(w.Va, {
+                        })), i.createElement(w.Wa, {
                             margin: {
                                 left: 1
                             }
@@ -2964,12 +2964,12 @@
                             state: this.props.saving ? w.E.Loading : w.E.Default,
                             onClick: this.onClickSave,
                             disabled: !this.state.value || this.state.value === this.props.initialValue
-                        }, Object(p.d)("Save", "CommunitySettingInput")))), this.props.error && i.createElement(w.Va, {
+                        }, Object(p.d)("Save", "CommunitySettingInput")))), this.props.error && i.createElement(w.Wa, {
                             margin: {
                                 bottom: 1
                             },
                             "data-test-selector": "community-setting-input-error"
-                        }, i.createElement(w.V, {
+                        }, i.createElement(w.W, {
                             color: w.O.Error
                         }, this.props.error)))
                     }, t
@@ -2984,7 +2984,7 @@
                         return t.state = {
                             saving: !1,
                             error: null
-                        }, t.logger = p.j.withCategory("display-name-input"), t.onClickSave = function(e) {
+                        }, t.logger = p.k.withCategory("display-name-input"), t.onClickSave = function(e) {
                             return u.__awaiter(t, void 0, void 0, function() {
                                 var t, n, i, o;
                                 return u.__generator(this, function(r) {
@@ -3031,7 +3031,7 @@
                         })
                     }, t
                 }(i.Component),
-                Oe = Object(h.a)(Ne, {
+                Oe = Object(y.a)(Ne, {
                     name: "updateCommunity"
                 })(Ee),
                 Te = n("cr+I"),
@@ -3042,7 +3042,7 @@
                         return t.state = {
                             saving: !1,
                             error: null
-                        }, t.logger = p.j.withCategory("moderation-email-input"), t.onClickSave = function(e) {
+                        }, t.logger = p.k.withCategory("moderation-email-input"), t.onClickSave = function(e) {
                             return u.__awaiter(t, void 0, void 0, function() {
                                 var t, n;
                                 return u.__generator(this, function(i) {
@@ -3055,7 +3055,7 @@
                                         case 1:
                                             return i.trys.push([1, 3, , 4]), t = Te.stringify({
                                                 email: e
-                                            }), [4, x.a.putOrThrow("/kraken/communities/" + this.props.communityID, {
+                                            }), [4, B.a.putOrThrow("/kraken/communities/" + this.props.communityID, {
                                                 headers: {
                                                     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
                                                 },
@@ -3129,12 +3129,12 @@
                             loading: e,
                             error: t,
                             userHasPermissionToView: this.props.communityModeration.isCommunityOwner,
-                            activeTab: J.Settings,
+                            activeTab: Y.Settings,
                             showSettingsTab: !0
                         }, i.createElement(Se, {
                             communityID: o,
                             onChange: this.onChangeCommunityLeader
-                        }), i.createElement(w.xb, {
+                        }), i.createElement(w.yb, {
                             border: !0,
                             padding: 1,
                             margin: {
@@ -3144,7 +3144,7 @@
                         }, i.createElement(Oe, {
                             displayName: n && n.displayName || "",
                             communityID: o
-                        }), i.createElement(w.Va, {
+                        }), i.createElement(w.Wa, {
                             margin: {
                                 top: 2
                             }
@@ -3152,7 +3152,7 @@
                             email: n && n.email || "",
                             communityID: o,
                             communityName: n && n.name || ""
-                        }))), i.createElement(w.Va, {
+                        }))), i.createElement(w.Wa, {
                             margin: {
                                 top: 1
                             }
@@ -3162,11 +3162,11 @@
                         })))
                     }, t
                 }(i.Component)),
-                Ie = Object(d.compose)(Object(_.c)("CommunityModerationSettingsPage", {
+                Ie = Object(d.compose)(Object(_.b)("CommunityModerationSettingsPage", {
                     destination: j.a.CommunityModeration
                 }), Object(M.a)({
                     location: C.PageviewLocation.CommunityModerationSettings
-                }), o.a, he({
+                }), o.a, ye({
                     settings: !0
                 }))(Fe),
                 Me = function(e) {
@@ -3175,9 +3175,9 @@
                     })
                 },
                 je = function(e) {
-                    return e.match.params.page && "log" !== e.match.params.page && "settings" !== e.match.params.page ? i.createElement(m.a, null) : i.createElement(w.Va, null, i.createElement(I, {
+                    return e.match.params.page && "log" !== e.match.params.page && "settings" !== e.match.params.page ? i.createElement(m.a, null) : i.createElement(w.Wa, null, i.createElement(I, {
                         communityName: decodeURIComponent(e.match.params.encodedCommunityName)
-                    }), i.createElement(w.Va, {
+                    }), i.createElement(w.Wa, {
                         padding: 3
                     }, i.createElement(s.a, null, i.createElement(a.a, {
                         path: "/communities/:encodedCommunityName/moderation/log",
@@ -3194,11 +3194,11 @@
                         component: m.a
                     }))))
                 },
-                Ve = Object(o.a)(je);
+                xe = Object(o.a)(je);
             n.d(t, "CommunityModerationRootPresentation", function() {
                 return je
             }), n.d(t, "CommunityModerationRoot", function() {
-                return Ve
+                return xe
             })
         },
         "q+lQ": function(e, t, n) {},

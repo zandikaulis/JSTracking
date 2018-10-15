@@ -224,13 +224,13 @@
                             type: s.F.Hollow
                         }, Object(l.d)("Share", "ShareEvent"))), a.createElement(o.a, null, n, a.createElement(s.u, {
                             direction: this.props.balloonDirection
-                        }, a.createElement(s.Va, {
+                        }, a.createElement(s.Wa, {
                             padding: 1
-                        }, a.createElement(s.Va, {
-                            display: s.W.Flex,
-                            flexDirection: s.Y.Row,
-                            flexWrap: s.Z.NoWrap,
-                            justifyContent: s.Ua.Center
+                        }, a.createElement(s.Wa, {
+                            display: s.X.Flex,
+                            flexDirection: s.Z.Row,
+                            flexWrap: s.Aa.NoWrap,
+                            justifyContent: s.Va.Center
                         }, a.createElement(r.a, {
                             type: r.b.Twitter,
                             text: this.props.title,
@@ -300,19 +300,19 @@
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
                         return u.createElement(v.a, null, u.createElement(k.z, {
-                            icon: k.nb.More,
+                            icon: k.ob.More,
                             type: k.F.Hollow
                         }), u.createElement(k.u, {
                             direction: this.props.balloonDirection,
                             tailOffset: this.props.tailOffset
-                        }, u.createElement(k.Va, {
+                        }, u.createElement(k.Wa, {
                             padding: {
                                 y: 1
                             }
-                        }, u.createElement(k.Sa, {
+                        }, u.createElement(k.Ta, {
                             disabled: !this.props.targetUser,
                             onClick: this.handleReportClick
-                        }, u.createElement(k.Va, {
+                        }, u.createElement(k.Wa, {
                             padding: {
                                 x: 1,
                                 y: .5
@@ -889,8 +889,8 @@
                             n = Object(c.d)("Reminder Set", "FollowEvent");
                         if (this.props.small) {
                             var t = e,
-                                i = p.nb.Heart;
-                            return this.props.areNotificationsEnabled && (t = n, i = p.nb.FollowCheck), s.createElement(p.Qb, {
+                                i = p.ob.Heart;
+                            return this.props.areNotificationsEnabled && (t = n, i = p.ob.FollowCheck), s.createElement(p.Rb, {
                                 label: t,
                                 direction: this.props.tooltipDirection
                             }, s.createElement(p.A, {
@@ -903,7 +903,7 @@
                         return s.createElement(p.z, {
                             type: this.props.areNotificationsEnabled ? p.F.Success : p.F.Default,
                             onClick: this.handleButton,
-                            icon: this.props.areNotificationsEnabled ? p.nb.FollowCheck : p.nb.Heart,
+                            icon: this.props.areNotificationsEnabled ? p.ob.FollowCheck : p.ob.Heart,
                             ariaLabel: this.props.areNotificationsEnabled ? n : e
                         }, this.props.areNotificationsEnabled ? n : e)
                     }, n.prototype.createOptimisticResponse = function(e) {
@@ -974,92 +974,91 @@
                 c = t("kRBY"),
                 u = t("fvjX"),
                 m = t("yR8l"),
-                v = t("2iEm"),
-                p = t("kduP"),
-                k = t("rO6o"),
-                f = t("irYM"),
-                g = t("LfZz"),
-                h = t("Jhye");
-            var b = t("ug+5"),
-                E = t("Ue10"),
-                N = Object(d.c)("EventListCard", {
+                v = t("kduP"),
+                p = t("rO6o"),
+                k = t("irYM"),
+                f = t("LfZz"),
+                g = t("Jhye");
+            var h = t("ug+5"),
+                b = t("Ue10"),
+                E = Object(d.b)("EventListCard", {
                     autoReportInteractive: !0
                 })(function(e) {
                     var n = new Date(e.event.startAt),
                         t = new Date(e.event.endAt),
                         a = n > new Date,
-                        o = Object(p.b)(e.event.id),
+                        o = Object(v.b)(e.event.id),
                         d = !(!e.event.self || !e.event.self.isFollowing),
-                        s = e.upwardBalloons ? E.v.Top : E.v.Bottom,
-                        c = e.upwardBalloons ? E.Sb.Top : E.Sb.Bottom,
+                        s = e.upwardBalloons ? b.v.Top : b.v.Bottom,
+                        c = e.upwardBalloons ? b.Tb.Top : b.Tb.Bottom,
                         u = e.event.game && e.event.game.displayName || "-",
                         m = e.channel && (e.channel.displayName || e.channel.login) || "-",
+                        E = null,
                         N = null,
-                        y = null,
-                        S = null;
-                    return e.channel && e.channel.id && e.channel.login && (a && (N = l.createElement(E.Va, {
+                        y = null;
+                    return e.channel && e.channel.id && e.channel.login && (a && (E = l.createElement(b.Wa, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(f.a, {
+                    }, l.createElement(k.a, {
                         eventID: e.event.id,
                         eventTypename: e.event.__typename,
                         areNotificationsEnabled: d,
                         channelLogin: e.channel.login,
                         channelID: e.channel.id,
-                        eventLocation: b.a.ChannelEvents,
+                        eventLocation: h.a.ChannelEvents,
                         tooltipDirection: c
-                    }))), y = l.createElement(E.Va, {
+                    }))), N = l.createElement(b.Wa, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(h.a, {
+                    }, l.createElement(g.a, {
                         id: e.event.id,
                         title: e.event.title,
                         channelLogin: e.channel.login,
                         channelID: e.channel.id,
-                        eventLocation: b.a.ChannelEvents,
+                        eventLocation: h.a.ChannelEvents,
                         balloonDirection: s
-                    })), S = l.createElement(g.a, {
+                    })), y = l.createElement(f.a, {
                         targetUser: {
                             id: e.channel.id,
                             displayName: m
                         },
                         eventID: e.event.id,
                         balloonDirection: s
-                    })), l.createElement(E.xb, {
+                    })), l.createElement(b.yb, {
                         margin: {
                             y: 1
                         },
-                        background: E.r.Base,
+                        background: b.r.Base,
                         elevation: 1
-                    }, l.createElement(E.G, {
+                    }, l.createElement(b.G, {
                         row: !0
-                    }, l.createElement(E.Na, {
+                    }, l.createElement(b.Oa, {
                         flexShrink: 0
-                    }, l.createElement(v.a, {
+                    }, l.createElement(b.U, {
                         to: o
-                    }, l.createElement(E.I, {
-                        size: E.J.Size32,
-                        aspect: E.p.Aspect16x9,
+                    }, l.createElement(b.I, {
+                        size: b.J.Size32,
+                        aspect: b.p.Aspect16x9,
                         src: e.event.imageURL,
                         alt: e.event.title
-                    }, l.createElement(k.a, {
+                    }, l.createElement(p.a, {
                         date: n
-                    })))), l.createElement(E.H, null, l.createElement(E.Va, {
+                    })))), l.createElement(b.H, null, l.createElement(b.Wa, {
                         margin: {
                             x: 2
                         }
-                    }, l.createElement(E.Na, {
+                    }, l.createElement(b.Oa, {
                         margin: {
                             bottom: 1
                         }
-                    }, l.createElement(v.a, {
+                    }, l.createElement(b.U, {
                         to: o
-                    }, l.createElement(E.V, {
-                        type: E.Nb.H4
-                    }, e.event.title))), l.createElement(E.V, {
-                        color: E.O.Alt2
+                    }, l.createElement(b.W, {
+                        type: b.Ob.H4
+                    }, e.event.title))), l.createElement(b.W, {
+                        color: b.O.Alt2
                     }, function(e, n) {
                         var t = new Date,
                             a = {
@@ -1079,44 +1078,44 @@
                         }), t.getFullYear() !== n.getFullYear() && (l = i.__assign({}, l, {
                             year: "numeric"
                         })));
-                        var o = Object(r.i)(e, a),
-                            d = Object(r.i)(n, l);
+                        var o = Object(r.j)(e, a),
+                            d = Object(r.j)(n, l);
                         return Object(r.d)("{startTime} - {endTime}", {
                             startTime: o,
                             endTime: d
                         }, "EventListCard")
-                    }(n, t)), l.createElement(E.V, {
-                        color: E.O.Alt2
+                    }(n, t)), l.createElement(b.W, {
+                        color: b.O.Alt2
                     }, Object(r.d)("{channelName} streaming {gameName}", {
                         channelName: m,
                         gameName: u
-                    }, "EventListCard")), l.createElement(E.Va, {
-                        display: E.W.Flex,
+                    }, "EventListCard")), l.createElement(b.Wa, {
+                        display: b.X.Flex,
                         margin: {
                             top: 2
                         }
-                    }, N, y, l.createElement(E.Va, {
+                    }, E, N, l.createElement(b.Wa, {
                         margin: {
                             right: 1
                         }
-                    }, l.createElement(E.z, {
-                        type: E.F.Hollow,
+                    }, l.createElement(b.z, {
+                        type: b.F.Hollow,
                         linkTo: o
-                    }, Object(r.d)("View Details", "EventListCard"))), S)))))
+                    }, Object(r.d)("View Details", "EventListCard"))), y)))))
                 }),
-                y = t("4hz/"),
-                S = t("ePeS"),
-                F = t("QTKY"),
-                w = {
+                N = t("4hz/"),
+                y = t("ePeS"),
+                S = t("QTKY"),
+                F = {
                     options: function(e) {
                         return {
                             variables: {
                                 channelLogin: e.channelLogin,
                                 limit: 20,
-                                before: e.filter === S.a.Future ? null : (new Date).toISOString(),
-                                after: e.filter !== S.a.Future ? null : (new Date).toISOString(),
-                                sortOrder: e.filter === S.a.Future ? "ASC" : "DESC",
-                                following: e.isLoggedIn && e.filter === S.a.Future
+                                before: e.filter === y.a.Future ? null : (new Date).toISOString(),
+                                after: e.filter !== y.a.Future ? null : (new Date).toISOString(),
+                                sortOrder: e.filter === y.a.Future ? "ASC" : "DESC",
+                                following: e.isLoggedIn && e.filter === y.a.Future
                             }
                         }
                     },
@@ -1127,7 +1126,7 @@
                                     var n = e.data.user.eventLeaves.edges[Math.max(e.data.user.eventLeaves.edges.length - 1, 0)],
                                         t = n && n.cursor || "";
                                     return e.data.fetchMore({
-                                        query: F,
+                                        query: S,
                                         variables: i.__assign({}, e.data.variables, {
                                             cursor: t
                                         }),
@@ -1148,7 +1147,7 @@
                         })
                     }
                 },
-                C = Object(u.compose)(Object(m.a)(F, w), Object(d.c)("ChannelEventsSchedule", {
+                w = Object(u.compose)(Object(m.a)(S, F), Object(d.b)("ChannelEventsSchedule", {
                     autoReportInteractive: !0
                 }))(function(e) {
                     var n = null,
@@ -1165,7 +1164,7 @@
                             displayName: e.node.channel.displayName
                         }), e.node.__typename) {
                             case "EventLeaf":
-                                return l.createElement(N, {
+                                return l.createElement(E, {
                                     key: e.node.id,
                                     event: e.node,
                                     channel: a,
@@ -1176,19 +1175,19 @@
                         }
                     }) : n = Object(r.d)("Nothing here yet", "ChannelEventsSchedule"), a = e.data.user.eventLeaves.pageInfo.hasNextPage;
                     else if (e.data.error) n = Object(r.d)("Error loading events", "ChannelEventsSchedule");
-                    else if (e.data.loading && (!e.data.user || !e.data.user.eventLeaves)) return l.createElement(y.a, null);
-                    return null !== n && (t = l.createElement(E.Va, {
+                    else if (e.data.loading && (!e.data.user || !e.data.user.eventLeaves)) return l.createElement(N.a, null);
+                    return null !== n && (t = l.createElement(b.Wa, {
                         margin: {
                             top: 5
                         },
-                        display: E.W.Flex,
-                        flexDirection: E.Y.Row,
-                        justifyContent: E.Ua.Center
-                    }, l.createElement(E.V, {
-                        type: E.Nb.H4,
-                        color: E.O.Alt2,
+                        display: b.X.Flex,
+                        flexDirection: b.Z.Row,
+                        justifyContent: b.Va.Center
+                    }, l.createElement(b.W, {
+                        type: b.Ob.H4,
+                        color: b.O.Alt2,
                         italic: !0
-                    }, n))), l.createElement(E.Va, null, i, t, e.data.loading && l.createElement(E.Xa, {
+                    }, n))), l.createElement(b.Wa, null, i, t, e.data.loading && l.createElement(b.Ya, {
                         fillContent: !0
                     }), l.createElement(o.a, {
                         loadMore: e.loadMore,
@@ -1199,57 +1198,57 @@
                     return {
                         isLoggedIn: Object(c.f)(e)
                     }
-                })(C),
-                D = function(e) {
+                })(w),
+                C = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.handleToggleChange = function(e) {
-                            var t = Object(S.b)(e.currentTarget.value),
+                            var t = Object(y.b)(e.currentTarget.value),
                                 i = a.parse(n.props.searchQuery);
-                            t !== S.a.Future ? i.filter = t : delete i.filter, n.props.onEventToggle(a.stringify(i))
+                            t !== y.a.Future ? i.filter = t : delete i.filter, n.props.onEventToggle(a.stringify(i))
                         }, n
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.channelLogin,
                             n = a.parse(this.props.searchQuery),
-                            t = Object(S.b)(n.filter);
-                        return l.createElement(E.Va, {
-                            display: E.W.Flex,
+                            t = Object(y.b)(n.filter);
+                        return l.createElement(b.Wa, {
+                            display: b.X.Flex,
                             flexGrow: 1,
                             fullHeight: !0
-                        }, l.createElement(E.Na, {
+                        }, l.createElement(b.Oa, {
                             fullWidth: !0
-                        }, l.createElement(o.b, null, l.createElement(E.Va, {
+                        }, l.createElement(o.b, null, l.createElement(b.Wa, {
                             fullWidth: !0,
                             padding: {
                                 y: 2,
                                 x: 3
                             }
-                        }, l.createElement(E.qb, null, l.createElement(E.rb, {
+                        }, l.createElement(b.rb, null, l.createElement(b.sb, {
                             name: "events-toggle",
                             label: Object(r.d)("Future Events", "ChannelEventsPage"),
-                            defaultChecked: t === S.a.Future,
+                            defaultChecked: t === y.a.Future,
                             onChange: this.handleToggleChange,
-                            value: S.a.Future
-                        }), l.createElement(E.rb, {
+                            value: y.a.Future
+                        }), l.createElement(b.sb, {
                             name: "events-toggle",
                             label: Object(r.d)("Past Events", "ChannelEventsPage"),
-                            defaultChecked: t === S.a.Past,
+                            defaultChecked: t === y.a.Past,
                             onChange: this.handleToggleChange,
-                            value: S.a.Past
+                            value: y.a.Past
                         })), l.createElement(O, {
                             filter: t,
                             channelLogin: e
                         })))))
                     }, n
                 }(l.Component),
-                L = Object(d.c)("ChannelEventsContent", {
+                D = Object(d.b)("ChannelEventsContent", {
                     autoReportInteractive: !0
-                })(D);
+                })(C);
             t.d(n, "ChannelEventsContentComponent", function() {
-                return D
+                return C
             }), t.d(n, "ChannelEventsContent", function() {
-                return L
+                return D
             })
         },
         rO6o: function(e, n, t) {
@@ -1264,34 +1263,34 @@
                         t = Object(a.c)(e.date, {
                             day: "numeric"
                         });
-                    return i.createElement(l.xb, {
+                    return i.createElement(l.yb, {
                         background: l.r.Base,
                         elevation: 2,
-                        display: l.W.Flex,
-                        flexDirection: l.Y.Column,
+                        display: l.X.Flex,
+                        flexDirection: l.Z.Column,
                         className: "event-calendar-date",
                         margin: {
                             top: .5,
                             left: .5
                         },
-                        position: l.db.Absolute,
+                        position: l.eb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        flexWrap: l.Z.NoWrap
-                    }, i.createElement(l.xb, {
+                        flexWrap: l.Aa.NoWrap
+                    }, i.createElement(l.yb, {
                         className: "event-calendar-date__month",
-                        display: l.W.Flex,
-                        justifyContent: l.Ua.Center,
+                        display: l.X.Flex,
+                        justifyContent: l.Va.Center,
                         background: l.r.AccentAlt2
-                    }, i.createElement(l.V, {
-                        fontSize: l.Aa.Size6,
-                        transform: l.Mb.Uppercase,
+                    }, i.createElement(l.W, {
+                        fontSize: l.Ba.Size6,
+                        transform: l.Nb.Uppercase,
                         color: l.O.Overlay
-                    }, n)), i.createElement(l.Va, {
-                        display: l.W.Flex,
-                        justifyContent: l.Ua.Center
-                    }, i.createElement(l.V, {
-                        fontSize: l.Aa.Size3,
+                    }, n)), i.createElement(l.Wa, {
+                        display: l.X.Flex,
+                        justifyContent: l.Va.Center
+                    }, i.createElement(l.W, {
+                        fontSize: l.Ba.Size3,
                         color: l.O.Base
                     }, t)))
                 });
@@ -1321,7 +1320,7 @@
                     channel_id: e.channelID,
                     location: e.location
                 };
-                return l.o.tracking.track(r.SpadeEventType.EventShare, n)
+                return l.p.tracking.track(r.SpadeEventType.EventShare, n)
             }
 
             function d(e) {
@@ -1332,7 +1331,7 @@
                     event_id: e.eventID,
                     location: e.location
                 };
-                return l.o.tracking.track(r.SpadeEventType.EventFollowing, n)
+                return l.p.tracking.track(r.SpadeEventType.EventFollowing, n)
             }! function(e) {
                 e.ChannelEvents = "channel_events", e.DashboardEvents = "dashboard_events", e.EventDetails = "event_details", e.EventManagment = "event_managment", e.EventSidebar = "event_sidebar"
             }(i || (i = {})),

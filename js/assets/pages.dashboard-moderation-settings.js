@@ -21,7 +21,7 @@
                     return p.__extends(n, t), n.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, n.prototype.render = function() {
-                        return b.createElement(f.Va, null)
+                        return b.createElement(f.Wa, null)
                     }, n
                 }(b.Component);
             var l = Object(r.compose)(Object(o.connect)(function(t) {
@@ -32,7 +32,7 @@
                 return Object(r.bindActionCreators)({
                     logout: a.f
                 }, t)
-            }), Object(d.c)("DashboardModerationSettingsPage", {
+            }), Object(d.b)("DashboardModerationSettingsPage", {
                 destination: c.a.DashboardSettingsModeration
             }), Object(i.a)({
                 location: s.PageviewLocation.DashboardSettingsModeration

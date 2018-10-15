@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [179], {
+    [173], {
         "1VMv": function(e, t) {
             var n = {
                 kind: "Document",
@@ -365,44 +365,44 @@
                             a = Object(c.d)("Close", "ChatResubNotification"),
                             i = Object(c.d)("Add a message to the streamer", "ChatResubNotification"),
                             o = this.state.sharing ? k.E.Loading : k.E.Default;
-                        return r.createElement(k.Va, {
+                        return r.createElement(k.Wa, {
                             className: e,
                             padding: 1,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.db.Absolute
-                        }, r.createElement(k.xb, {
+                            position: k.eb.Absolute
+                        }, r.createElement(k.yb, {
                             className: "share-input__container",
-                            position: k.db.Relative,
+                            position: k.eb.Relative,
                             border: !0,
                             background: k.r.Base,
                             padding: 1
-                        }, r.createElement(k.Va, {
-                            position: k.db.Absolute,
+                        }, r.createElement(k.Wa, {
+                            position: k.eb.Absolute,
                             attachTop: !0,
                             attachRight: !0
                         }, r.createElement(k.A, {
                             ariaLabel: a,
                             onClick: this.props.onClose,
                             type: k.C.Secondary,
-                            icon: k.nb.Close,
+                            icon: k.ob.Close,
                             "data-a-target": "resub-notification-close-form-btn",
                             "data-test-selector": "share-input__close-form-btn"
-                        })), r.createElement(k.Va, {
-                            textAlign: k.Jb.Center,
+                        })), r.createElement(k.Wa, {
+                            textAlign: k.Kb.Center,
                             padding: {
                                 top: 1,
                                 bottom: 2
                             }
-                        }, this.props.children), r.createElement(k.Va, {
-                            display: k.W.Flex,
-                            flexWrap: k.Z.NoWrap
-                        }, r.createElement(k.Va, {
+                        }, this.props.children), r.createElement(k.Wa, {
+                            display: k.X.Flex,
+                            flexWrap: k.Aa.NoWrap
+                        }, r.createElement(k.Wa, {
                             fullWidth: !0
-                        }, r.createElement(k.Pa, {
+                        }, r.createElement(k.Qa, {
                             autoFocus: !0,
-                            type: k.Ra.Text,
+                            type: k.Sa.Text,
                             value: this.state.formInputValue,
                             onChange: this.onInputChange,
                             placeholder: i,
@@ -423,33 +423,33 @@
                         a = s("chat-share-prompt", {
                             "chat-share-prompt--hidden": e.hide || !e.children
                         });
-                    return r.createElement(k.Va, {
-                        position: k.db.Absolute,
+                    return r.createElement(k.Wa, {
+                        position: k.eb.Absolute,
                         fullWidth: !0,
                         className: a,
                         padding: {
                             y: .5,
                             left: .5
                         }
-                    }, r.createElement(k.Va, {
-                        display: k.W.Flex,
+                    }, r.createElement(k.Wa, {
+                        display: k.X.Flex,
                         padding: 1,
-                        justifyContent: k.Ua.Between,
+                        justifyContent: k.Va.Between,
                         alignItems: k.f.Center,
-                        flexWrap: k.Z.NoWrap
-                    }, r.createElement(k.V, {
+                        flexWrap: k.Aa.NoWrap
+                    }, r.createElement(k.W, {
                         "data-a-target": "resub-notification-months-subbed-text",
                         "data-test-selector": "share-prompt__text"
-                    }, e.children), r.createElement(k.Va, {
-                        display: k.W.Flex,
-                        flexWrap: k.Z.NoWrap,
+                    }, e.children), r.createElement(k.Wa, {
+                        display: k.X.Flex,
+                        flexWrap: k.Aa.NoWrap,
                         alignItems: k.f.Center,
                         flexShrink: 0,
                         padding: {
                             left: .5
                         }
-                    }, r.createElement(k.Va, {
-                        display: k.W.Inline,
+                    }, r.createElement(k.Wa, {
+                        display: k.X.Inline,
                         padding: {
                             right: .5
                         },
@@ -459,13 +459,13 @@
                         size: k.D.Small,
                         "data-a-target": "resub-notification-share-notification-btn",
                         "data-test-selector": "share-prompt__share-btn"
-                    }, t)), r.createElement(k.Va, {
+                    }, t)), r.createElement(k.Wa, {
                         flexShrink: 0
                     }, r.createElement(k.A, {
                         ariaLabel: n,
                         onClick: e.onClickClose,
                         type: k.C.Secondary,
-                        icon: k.nb.Close,
+                        icon: k.ob.Close,
                         "data-a-target": "resub-notification-close-notification-btn",
                         "data-test-selector": "share-prompt__close-btn"
                     })))))
@@ -509,7 +509,7 @@
                                                 return e.user.self && (e.user.self.purchaseTokens = e.user.self.purchaseTokens.slice(1)), e
                                             }, Object(h.e)(N, {
                                                 channelLogin: this.props.channelLogin
-                                            }, t), c.n.track(p.SpadeEventType.FuelSocialShare, {
+                                            }, t), c.o.track(p.SpadeEventType.FuelSocialShare, {
                                                 channel_id: this.props.data.user.id,
                                                 user_id: this.props.currentUserID,
                                                 asin: e.asin,
@@ -548,7 +548,7 @@
                                                 message: e
                                             }))];
                                         case 2:
-                                            return a.sent(), c.n.track(p.SpadeEventType.FuelSocialShare, {
+                                            return a.sent(), c.o.track(p.SpadeEventType.FuelSocialShare, {
                                                 channel_id: this.props.data.user.id,
                                                 user_id: this.props.currentUserID,
                                                 asin: t.asin,
@@ -599,23 +599,23 @@
                             i = e.badges.map(this.renderLootBadge),
                             s = e.emoteSets.map(this.renderLootEmoteSet),
                             o = e.bits.map(this.renderLootBits, this);
-                        return (a.length || i.length || s.length || o.length) && (n = r.createElement(k.Va, {
+                        return (a.length || i.length || s.length || o.length) && (n = r.createElement(k.Wa, {
                             "data-test-selector": "share-purchase__loot",
                             padding: {
                                 bottom: 1
                             },
-                            display: k.W.Flex,
-                            justifyContent: k.Ua.Center
+                            display: k.X.Flex,
+                            justifyContent: k.Va.Center
                         }, a, i, s, o), t = Object(c.d)("You bought {product} and opened a Twitch Crate! Let {channelName} know you shared the love.", {
                             product: r.createElement("strong", null, e.title),
                             channelName: r.createElement("strong", null, this.props.channelDisplayName)
-                        }, "ShareToChat")), r.createElement(k.Va, {
+                        }, "ShareToChat")), r.createElement(k.Wa, {
                             className: "chat-resub-notification",
                             padding: 0,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.db.Absolute
+                            position: k.eb.Absolute
                         }, r.createElement(b, {
                             hide: this.state.showMessageInput,
                             onClickShare: this.toggleContentShown,
@@ -624,7 +624,7 @@
                             hide: !this.state.showMessageInput,
                             onShare: this.sharePurchase,
                             onClose: this.toggleContentShown
-                        }, r.createElement(k.Va, {
+                        }, r.createElement(k.Wa, {
                             padding: {
                                 bottom: 1
                             }
@@ -632,11 +632,11 @@
                             width: 40,
                             height: 40,
                             src: e.imageThumbnail
-                        }))), n, r.createElement(k.V, null, Object(c.d)("Score! Give a shout out to {channelName} in Chat about all your sweet loot!", {
+                        }))), n, r.createElement(k.W, null, Object(c.d)("Score! Give a shout out to {channelName} in Chat about all your sweet loot!", {
                             channelName: r.createElement("strong", null, this.props.channelDisplayName)
                         }, "ShareToChat"))))
                     }, t.prototype.renderLootInGameContent = function(e) {
-                        return r.createElement(k.Va, {
+                        return r.createElement(k.Wa, {
                             key: e.id,
                             margin: {
                                 top: .5,
@@ -649,7 +649,7 @@
                         }))
                     }, t.prototype.renderLootEmoteSet = function(e) {
                         return Object(v.b)(e.emoteSet.emotes).map(function(e) {
-                            return r.createElement(k.Va, {
+                            return r.createElement(k.Wa, {
                                 key: e.id,
                                 margin: {
                                     top: .5,
@@ -663,7 +663,7 @@
                             }))
                         })
                     }, t.prototype.renderLootBadge = function(e) {
-                        return r.createElement(k.Va, {
+                        return r.createElement(k.Wa, {
                             key: e.id,
                             margin: {
                                 top: .5,
@@ -675,7 +675,7 @@
                             src: e.badge.image2x
                         }))
                     }, t.prototype.renderLootBits = function(e) {
-                        if (this.props.bitsConfig) return r.createElement(k.Va, {
+                        if (this.props.bitsConfig) return r.createElement(k.Wa, {
                             key: e.id,
                             margin: {
                                 top: .5,
@@ -725,29 +725,29 @@
                         n = s("rare-emote__neck", {
                             "rare-emote__neck--animate": !!e.animate
                         });
-                    return r.createElement(k.Va, {
-                        overflow: k.Ya.Hidden,
+                    return r.createElement(k.Wa, {
+                        overflow: k.Za.Hidden,
                         className: "rare-emote"
-                    }, r.createElement(k.Na, {
-                        zIndex: k.ac.Above,
-                        position: k.db.Relative
+                    }, r.createElement(k.Oa, {
+                        zIndex: k.bc.Above,
+                        position: k.eb.Relative
                     }, r.createElement("img", {
                         className: t,
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
-                    })), r.createElement(k.Va, {
-                        position: k.db.Relative,
-                        zIndex: k.ac.Default,
+                    })), r.createElement(k.Wa, {
+                        position: k.eb.Relative,
+                        zIndex: k.bc.Default,
                         className: n
-                    }, r.createElement(k.mb, {
+                    }, r.createElement(k.nb, {
                         width: 28,
                         height: 28,
-                        asset: k.nb.Neck
+                        asset: k.ob.Neck
                     })))
                 }),
                 L = 3;
             var P = n("cpJf"),
                 F = n("EnXQ"),
-                V = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -799,7 +799,7 @@
                                                                     }),
                                                                     method: "POST",
                                                                     headers: {
-                                                                        "Client-ID": c.o.config.legacyClientID,
+                                                                        "Client-ID": c.p.config.legacyClientID,
                                                                         Accept: "application/json; charset=UTF-8",
                                                                         "content-type": "application/json; charset=UTF-8",
                                                                         Authorization: "OAuth " + a
@@ -833,7 +833,7 @@
                                         case 3:
                                             return [3, 6];
                                         case 4:
-                                            return n = a.sent(), c.j.error(n, "Failed to post resub message"), [3, 6];
+                                            return n = a.sent(), c.k.error(n, "Failed to post resub message"), [3, 6];
                                         case 5:
                                             return this.setState({
                                                 sendingMessage: !1
@@ -854,13 +854,13 @@
                     }, t.prototype.render = function() {
                         return this.dataIsReady(this.props) && this.resubExists(this.props, this.state) && this.props.data.user.self && this.props.data.user.self.resubNotification ? this.renderResubToken(this.props.data.user.self.resubNotification) : null
                     }, t.prototype.renderResubToken = function(e) {
-                        return r.createElement(k.Va, {
+                        return r.createElement(k.Wa, {
                             className: "chat-resub-notification",
                             padding: 0,
                             attachTop: !0,
                             attachLeft: !0,
                             attachRight: !0,
-                            position: k.db.Absolute
+                            position: k.eb.Absolute
                         }, r.createElement(b, {
                             hide: this.state.showMessageInput,
                             onClickShare: this.toggleContentShown,
@@ -874,7 +874,7 @@
                         }, r.createElement(D, {
                             emoteID: this.randomEmoteId,
                             animate: this.state.showMessageInput
-                        }), r.createElement(k.V, null, Object(c.d)("Hooray! Let {channelName} know it's your {monthsSubbed, number} month anniversary.", {
+                        }), r.createElement(k.W, null, Object(c.d)("Hooray! Let {channelName} know it's your {monthsSubbed, number} month anniversary.", {
                             channelName: r.createElement("strong", null, this.props.channelDisplayName),
                             monthsSubbed: e.months
                         }, "ChatResubNotification"))))
@@ -883,7 +883,7 @@
                         return P.c[e]
                     }, t
                 }(r.Component),
-                O = Object(w.compose)(Object(u.a)(F, {
+                W = Object(w.compose)(Object(u.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -904,13 +904,13 @@
                     skip: function(e) {
                         return !e.currentUserId
                     }
-                }]))(V);
+                }]))(O);
             var j, x = Object(o.connect)(function(e) {
                 var t = Object(R.e)(e);
                 return {
                     currentUserId: t ? t.id : null
                 }
-            })(O);
+            })(W);
             n("z5b3");
             ! function(e) {
                 e[e.Resub = 1] = "Resub", e[e.Purchase = 2] = "Purchase"
@@ -953,7 +953,7 @@
                         n = s({
                             "share-to-chat__space--hidden": e !== j.Purchase
                         });
-                    return r.createElement(k.Va, null, r.createElement(k.Va, {
+                    return r.createElement(k.Wa, null, r.createElement(k.Wa, {
                         className: t
                     }, r.createElement(x, {
                         authToken: this.props.authToken,
@@ -961,7 +961,7 @@
                         channelLogin: this.props.channelLogin,
                         requestSpace: this.requestResubSpace,
                         dismissSpace: this.dismissResubSpace
-                    })), r.createElement(k.Va, {
+                    })), r.createElement(k.Wa, {
                         className: n
                     }, r.createElement(T, {
                         channelDisplayName: this.props.channelDisplayName,

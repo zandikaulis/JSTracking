@@ -109,7 +109,7 @@ window.__twilightSettings = {
     "quantcast_labels": "gaming",
     "quantcast_url": "https://edge.quantserve.com/quant.js",
     "raids_use_legacy_api": false,
-    "recurly_tax_enabled": "staff",
+    "recurly_tax_enabled": "true",
     "search_tracking_enabled": true,
     "single_message_delete": "off",
     "sizmek_versatag_channels": ["riotgames", "tekken", "rocketleague"],

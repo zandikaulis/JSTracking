@@ -30,16 +30,16 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return n.createElement(i.X, {
+                        return n.createElement(i.Y, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, n.createElement(i.Na, {
-                            position: i.db.Absolute,
+                        }, n.createElement(i.Oa, {
+                            position: i.eb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: i.ac.Above
+                            zIndex: i.bc.Above
                         }, n.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -80,7 +80,7 @@
                         "default-avatar__selected": e.selected,
                         "default-avatar": !0
                     };
-                    return c.createElement(h.Va, {
+                    return c.createElement(h.Wa, {
                         padding: {
                             bottom: 1
                         }
@@ -91,13 +91,13 @@
                         "aria-label": Object(d.d)("Click to select Default Avatar Number {index, number}", {
                             index: e.index
                         }, "Default Avatar")
-                    }, c.createElement(h.xb, {
+                    }, c.createElement(h.yb, {
                         fullHeight: !0,
                         fullWidth: !0,
-                        position: h.db.Relative,
+                        position: h.eb.Relative,
                         className: u(t),
                         borderRadius: h.x.Small,
-                        overflow: h.Ya.Hidden
+                        overflow: h.Za.Hidden
                     }, c.createElement("img", {
                         alt: Object(d.d)("Default Avatar Number {index, number}", {
                             index: e.index
@@ -108,14 +108,14 @@
                 I = a("94Uw"),
                 S = a("Sejb"),
                 E = a("kMGJ"),
-                A = a("vpah"),
-                y = a("GnwI"),
+                y = a("vpah"),
+                A = a("GnwI"),
                 k = (a("bWJD"), a("c81k"));
             ! function(e) {
                 e.PreviewImage = "preview-image", e.UpdateButton = "update-button", e.StatusMessage = "status-message"
             }(r || (r = {}));
-            var U = ["image/*"],
-                O = function(e) {
+            var O = ["image/*"],
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -123,14 +123,14 @@
                             imagePreviewURL: "",
                             currentImageHasTallAspectRatio: !1,
                             imageFormat: ""
-                        }, t.currentImage = null, t.logger = d.j.withCategory("ProfileImagePicker"), t.pubsubTimeout = 0, t.successCloseTimeout = 0, t.onImageInputChange = function(e) {
+                        }, t.currentImage = null, t.logger = d.k.withCategory("ProfileImagePicker"), t.pubsubTimeout = 0, t.successCloseTimeout = 0, t.onImageInputChange = function(e) {
                             var a;
                             if (null !== e) {
                                 a = e[0];
                                 var r = Object(S.a)(a),
                                     n = (a.size / 1024 / 1024).toFixed(4);
                                 parseInt(n, 10) > 10 ? t.setState({
-                                    statusMessage: A.b.BadSizeError
+                                    statusMessage: y.b.BadSizeError
                                 }) : (t.setState({
                                     selectedImageIndex: void 0,
                                     imagePreviewURL: "",
@@ -153,7 +153,7 @@
                                     })
                                 }))
                             } else t.setState({
-                                statusMessage: A.b.ImageNotSelected
+                                statusMessage: y.b.ImageNotSelected
                             })
                         }, t.onUpdateButtonClick = function(e) {
                             return l.__awaiter(t, void 0, void 0, function() {
@@ -163,10 +163,10 @@
                                         case 0:
                                             if (e.preventDefault(), void 0 !== this.state.selectedImageIndex) return this.setDefaultAvatar(), [2];
                                             if (!this.currentImage) return this.setState({
-                                                statusMessage: A.b.ImageNotSelected
+                                                statusMessage: y.b.ImageNotSelected
                                             }), [2];
                                             this.setState({
-                                                statusMessage: A.b.Uploading
+                                                statusMessage: y.b.Uploading
                                             }), s.label = 1;
                                         case 1:
                                             return s.trys.push([1, 3, , 4]), [4, Object(E.a)(this.props.userID, this.props.authToken, I.a.ProfileImage, this.state.imageFormat)];
@@ -174,17 +174,17 @@
                                             return t = s.sent(), a = t.upload_url, r = t.upload_id, [3, 4];
                                         case 3:
                                             return n = s.sent(), this.logger.error(n, "Request for upload ID failed to get expected response from server."), this.setState({
-                                                statusMessage: A.b.UnexpectedError
+                                                statusMessage: y.b.UnexpectedError
                                             }), [2];
                                         case 4:
-                                            return this.unsubscribe = d.k.subscribe({
+                                            return this.unsubscribe = d.l.subscribe({
                                                 topic: Object(b.n)(this.props.userID),
                                                 success: function() {
                                                     try {
                                                         Object(E.c)(a, i.currentImage)
                                                     } catch (e) {
                                                         i.logger.error(e, "Profile Image upload failed."), i.unsubscribe(), i.setState({
-                                                            statusMessage: A.b.UnexpectedError,
+                                                            statusMessage: y.b.UnexpectedError,
                                                             selectedImageIndex: void 0,
                                                             imagePreviewURL: "",
                                                             imageFormat: "",
@@ -197,7 +197,7 @@
                                                 },
                                                 failure: function() {
                                                     i.setState({
-                                                        statusMessage: A.b.UnexpectedError,
+                                                        statusMessage: y.b.UnexpectedError,
                                                         selectedImageIndex: void 0,
                                                         imagePreviewURL: "",
                                                         currentImageHasTallAspectRatio: !1
@@ -207,9 +207,9 @@
                                                     if (e.upload_id === r) {
                                                         clearTimeout(i.pubsubTimeout);
                                                         var t = null;
-                                                        t = e.status === A.a.Success ? A.b.Success : e.status === A.a.BadSize ? A.b.BadSizeError : e.status === A.a.NonImage ? A.b.NonImageError : e.status === A.a.WrongFormat ? A.b.WrongFormatError : A.b.UnexpectedError, i.unsubscribe && i.unsubscribe(), i.setState({
+                                                        t = e.status === y.a.Success ? y.b.Success : e.status === y.a.BadSize ? y.b.BadSizeError : e.status === y.a.NonImage ? y.b.NonImageError : e.status === y.a.WrongFormat ? y.b.WrongFormatError : y.b.UnexpectedError, i.unsubscribe && i.unsubscribe(), i.setState({
                                                             statusMessage: t
-                                                        }), t === A.b.Success ? i.handleImageUpdated() : (i.setState({
+                                                        }), t === y.b.Success ? i.handleImageUpdated() : (i.setState({
                                                             imagePreviewURL: "",
                                                             imageFormat: ""
                                                         }), i.currentImage = null)
@@ -226,7 +226,7 @@
                             })
                         }, t.handlePubSubTimeout = function() {
                             t.unsubscribe(), t.setState({
-                                statusMessage: A.b.TimeoutError
+                                statusMessage: y.b.TimeoutError
                             })
                         }, t
                     }
@@ -249,60 +249,60 @@
                                 "profile-edit__image-preview": !0,
                                 "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
                             };
-                            a = c.createElement(h.xb, {
+                            a = c.createElement(h.yb, {
                                 className: u(n),
-                                position: h.db.Relative,
+                                position: h.eb.Relative,
                                 background: h.r.Base
-                            }, c.createElement(h.Oa, {
+                            }, c.createElement(h.Pa, {
                                 borderRadius: h.x.Small,
-                                overflow: h.Ya.Hidden
+                                overflow: h.Za.Hidden
                             }, c.createElement("img", {
                                 "data-test-selector": r.PreviewImage,
                                 src: "" + this.state.imagePreviewURL
                             })))
                         }
                         var i = null;
-                        "" === this.state.imagePreviewURL && (i = c.createElement(h.Va, {
+                        "" === this.state.imagePreviewURL && (i = c.createElement(h.Wa, {
                             className: "profile-edit__upload-info"
-                        }, c.createElement(h.Va, null, c.createElement(h.mb, {
-                            asset: h.nb.Plus,
-                            type: h.ob.Alt2,
+                        }, c.createElement(h.Wa, null, c.createElement(h.nb, {
+                            asset: h.ob.Plus,
+                            type: h.pb.Alt2,
                             height: 20,
                             width: 20
-                        })), c.createElement(h.V, {
-                            type: h.Nb.H3,
+                        })), c.createElement(h.W, {
+                            type: h.Ob.H3,
                             color: h.O.Alt2,
-                            fontSize: h.Aa.Size4
+                            fontSize: h.Ba.Size4
                         }, Object(d.d)("Upload a Photo", "Profile Edit"))));
                         var s = null;
                         this.props.showCloser && (s = c.createElement(p.a, null));
                         var o = null;
                         if (null !== this.state.statusMessage) {
-                            var l = Object(A.c)(this.state.statusMessage),
+                            var l = Object(y.c)(this.state.statusMessage),
                                 g = l.message,
                                 b = l.type;
-                            o = c.createElement(h.ab, {
+                            o = c.createElement(h.bb, {
                                 label: g,
                                 type: b
                             })
                         }
                         var I = this.props.login;
-                        return this.props.displayName && (I = this.props.displayName), c.createElement(h.Va, {
+                        return this.props.displayName && (I = this.props.displayName), c.createElement(h.Wa, {
                             className: "profile-edit",
-                            position: h.db.Relative,
+                            position: h.eb.Relative,
                             fullHeight: !0
-                        }, c.createElement(h.xb, {
+                        }, c.createElement(h.yb, {
                             className: "profile-edit__background-container",
                             background: h.r.Base,
                             fullWidth: !0
-                        }, c.createElement(h.Va, {
+                        }, c.createElement(h.Wa, {
                             padding: 2,
-                            display: h.W.InlineBlock,
-                            position: h.db.Relative,
-                            textAlign: h.Jb.Center,
+                            display: h.X.InlineBlock,
+                            position: h.eb.Relative,
+                            textAlign: h.Kb.Center,
                             fullWidth: !0
-                        }, c.createElement(h.xb, {
-                            textAlign: h.Jb.Left,
+                        }, c.createElement(h.yb, {
+                            textAlign: h.Kb.Left,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
@@ -310,35 +310,35 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(h.V, {
-                            type: h.Nb.H3,
+                        }, c.createElement(h.W, {
+                            type: h.Ob.H3,
                             color: h.O.Alt2,
-                            fontSize: h.Aa.Size4
+                            fontSize: h.Ba.Size4
                         }, Object(d.d)("Edit Profile Picture for {userName}", {
                             userName: I
-                        }, "Profile Edit"), " ")), c.createElement(h.Va, {
+                        }, "Profile Edit"), " ")), c.createElement(h.Wa, {
                             className: "profile-edit__upload-container",
-                            display: h.W.InlineBlock,
-                            position: h.db.Relative,
-                            textAlign: h.Jb.Center,
+                            display: h.X.InlineBlock,
+                            position: h.eb.Relative,
+                            textAlign: h.Kb.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, c.createElement(h.Va, {
+                        }, c.createElement(h.Wa, {
                             className: "profile-edit__upload",
-                            display: h.W.InlineBlock,
-                            position: h.db.Relative,
-                            textAlign: h.Jb.Center
+                            display: h.X.InlineBlock,
+                            position: h.eb.Relative,
+                            textAlign: h.Kb.Center
                         }, c.createElement(m.a, {
-                            allowedFileTypes: U,
+                            allowedFileTypes: O,
                             onFilesSubmitted: this.onImageInputChange
-                        }, i), a)), c.createElement(h.xb, {
+                        }, i), a)), c.createElement(h.yb, {
                             "data-test-selector": r.StatusMessage,
-                            fontSize: h.Aa.Size4,
-                            position: h.db.Relative,
-                            textAlign: h.Jb.Center,
+                            fontSize: h.Ba.Size4,
+                            position: h.eb.Relative,
+                            textAlign: h.Kb.Center,
                             className: "profile-edit__status-message"
-                        }, o), c.createElement(h.xb, {
+                        }, o), c.createElement(h.yb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: .5
@@ -346,22 +346,22 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(h.Va, {
-                            textAlign: h.Jb.Left,
+                        }, c.createElement(h.Wa, {
+                            textAlign: h.Kb.Left,
                             margin: {
                                 bottom: 1
                             }
-                        }, c.createElement(h.V, {
-                            type: h.Nb.H3,
+                        }, c.createElement(h.W, {
+                            type: h.Ob.H3,
                             color: h.O.Alt2,
-                            fontSize: h.Aa.Size5
-                        }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(h.Tb, {
-                            childWidth: h.Ub.ExtraSmall,
-                            gutterSize: h.Vb.ExtraSmall,
+                            fontSize: h.Ba.Size5
+                        }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(h.Ub, {
+                            childWidth: h.Vb.ExtraSmall,
+                            gutterSize: h.Wb.ExtraSmall,
                             placeholderItems: 3
-                        }, t)), c.createElement(h.Va, {
-                            display: h.W.Flex,
-                            justifyContent: h.Ua.Center
+                        }, t)), c.createElement(h.Wa, {
+                            display: h.X.Flex,
+                            justifyContent: h.Va.Center
                         }, c.createElement(h.z, {
                             "data-test-selector": r.UpdateButton,
                             onClick: this.onUpdateButtonClick,
@@ -374,16 +374,16 @@
                                 switch (r.label) {
                                     case 0:
                                         this.setState({
-                                            statusMessage: A.b.Uploading
-                                        }), e = A.b.UnexpectedError, r.label = 1;
+                                            statusMessage: y.b.Uploading
+                                        }), e = y.b.UnexpectedError, r.label = 1;
                                     case 1:
                                         return r.trys.push([1, 3, , 4]), [4, Object(E.b)(this.props.userID, this.props.authToken, this.state.selectedImageIndex)];
                                     case 2:
-                                        return 204 === (t = r.sent()).status || 200 === t.status ? e = A.b.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
+                                        return 204 === (t = r.sent()).status || 200 === t.status ? e = y.b.Success : this.logger.error(new Error("Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), "Default Avatar PUT failed. Fetch returned non-200 status: " + t.status), [3, 4];
                                     case 3:
                                         return a = r.sent(), this.logger.error(a, "Default Avatar PUT failed."), [3, 4];
                                     case 4:
-                                        return e === A.b.Success ? this.handleImageUpdated() : this.setState({
+                                        return e === y.b.Success ? this.handleImageUpdated() : this.setState({
                                             statusMessage: e
                                         }), [2]
                                 }
@@ -397,7 +397,7 @@
                                         return e.trys.push([0, 2, , 3]), [4, this.props.data.refetch()];
                                     case 1:
                                         return e.sent(), this.setState({
-                                            statusMessage: A.b.Success
+                                            statusMessage: y.b.Success
                                         }), this.successCloseTimeout = setTimeout(this.props.closeModal, 1e3), [3, 3];
                                     case 2:
                                         return e.sent(), this.setState({
@@ -411,7 +411,7 @@
                         })
                     }, t
                 }(c.Component),
-                _ = Object(i.compose)(Object(y.c)("Profile Edit", {
+                _ = Object(i.compose)(Object(A.b)("Profile Edit", {
                     autoReportInteractive: !0
                 }), Object(g.a)(k, {
                     options: function(e) {
@@ -421,7 +421,7 @@
                             }
                         }
                     }
-                }))(O);
+                }))(U);
             var w = Object(n.connect)(function(e) {
                 return {
                     authToken: Object(o.a)(e)
@@ -629,20 +629,20 @@
                     return s.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return o.createElement(d.Va, {
+                        return o.createElement(d.Wa, {
                             className: "edit-profile-overlay",
-                            display: d.W.Flex,
-                            justifyContent: d.Ua.Center,
+                            display: d.X.Flex,
+                            justifyContent: d.Va.Center,
                             alignContent: d.e.Center,
                             fullHeight: !0,
                             fullWidth: !0
                         }, o.createElement(d.A, {
                             overlay: !0,
                             ariaLabel: Object(l.d)("Edit Profile", "ChannelHeader"),
-                            icon: d.nb.Edit,
+                            icon: d.ob.Edit,
                             onClick: this.openModal
                         }))
-                    }, t = s.__decorate([Object(c.c)("EditProfileOverlay")], t)
+                    }, t = s.__decorate([Object(c.b)("EditProfileOverlay")], t)
                 }(o.Component));
             var p = Object(r.connect)(null, function(e) {
                 return Object(n.bindActionCreators)({
@@ -726,47 +726,47 @@
                     case n.Success:
                         return {
                             message: Object(i.d)("Success!", "Profile Edit"),
-                            type: s.bb.Success
+                            type: s.cb.Success
                         };
                     case n.UnexpectedError:
                         return {
                             message: Object(i.d)("Unexpected error, please try again.", "Profile Edit"),
-                            type: s.bb.Alert
+                            type: s.cb.Alert
                         };
                     case n.BadSizeError:
                         return {
                             message: Object(i.d)("Image might exceed 10MB.", "Profile Edit"),
-                            type: s.bb.Alert
+                            type: s.cb.Alert
                         };
                     case n.NonImageError:
                         return {
                             message: Object(i.d)("You must upload an image.", "Profile Edit"),
-                            type: s.bb.Alert
+                            type: s.cb.Alert
                         };
                     case n.WrongFormatError:
                         return {
                             message: Object(i.d)("You must select a valid image type.", "Profile Edit"),
-                            type: s.bb.Alert
+                            type: s.cb.Alert
                         };
                     case n.TimeoutError:
                         return {
                             message: Object(i.d)("Upload timed-out. Please try again.", "Profile Edit"),
-                            type: s.bb.Alert
+                            type: s.cb.Alert
                         };
                     case n.Uploading:
                         return {
                             message: Object(i.d)("Uploading....", "Profile Edit"),
-                            type: s.bb.Brand
+                            type: s.cb.Brand
                         };
                     case n.ImageNotSelected:
                         return {
                             message: Object(i.d)("Select a image first.", "Profile Edit"),
-                            type: s.bb.Alert
+                            type: s.cb.Alert
                         };
                     default:
                         return {
                             message: Object(i.d)("Please try again.", "Profile Edit"),
-                            type: s.bb.Alert
+                            type: s.cb.Alert
                         }
                 }
             }! function(e) {

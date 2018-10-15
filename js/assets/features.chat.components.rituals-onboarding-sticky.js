@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [180], {
+    [174], {
         IWck: function(e, n, t) {
             "use strict";
             var i, a;
@@ -38,7 +38,7 @@
                         user_banner: e.bannerMessage,
                         user_message: null
                     };
-                    i.n.track(a.SpadeEventType.NewChatterTokenStatus, n)
+                    i.o.track(a.SpadeEventType.NewChatterTokenStatus, n)
                 },
                 o = function(e) {
                     var n = {
@@ -47,7 +47,7 @@
                         user_banner: e.bannerMessage,
                         user_message: e.userMessage
                     };
-                    i.n.track(a.SpadeEventType.NewChatterTokenStatus, n)
+                    i.o.track(a.SpadeEventType.NewChatterTokenStatus, n)
                 },
                 l = function(e) {
                     var n = {
@@ -56,7 +56,7 @@
                         user_banner: null,
                         user_message: null
                     };
-                    i.n.track(a.SpadeEventType.NewChatterTokenStatus, n)
+                    i.o.track(a.SpadeEventType.NewChatterTokenStatus, n)
                 },
                 c = function(e) {
                     var n = {
@@ -65,14 +65,14 @@
                         user_banner: e.bannerMessage,
                         user_message: null
                     };
-                    i.n.track(a.SpadeEventType.NewChatterTokenStatus, n)
+                    i.o.track(a.SpadeEventType.NewChatterTokenStatus, n)
                 },
                 u = function(e) {
                     var n = {
                         action: e.action,
                         channel_id: e.channelID
                     };
-                    i.n.track(a.SpadeEventType.NewChatterOnboardingInteraction, n)
+                    i.o.track(a.SpadeEventType.NewChatterOnboardingInteraction, n)
                 }
         },
         bDCY: function(e, n, t) {
@@ -265,65 +265,65 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(g.xb, {
+                        return a.createElement(g.yb, {
                             background: g.r.Base,
                             color: g.O.Alt
-                        }, a.createElement(g.Va, {
+                        }, a.createElement(g.Wa, {
                             padding: {
                                 bottom: .5,
                                 top: 1,
                                 x: 1
                             }
-                        }, a.createElement(g.Va, {
+                        }, a.createElement(g.Wa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(g.V, {
+                        }, a.createElement(g.W, {
                             bold: !0,
-                            type: g.Nb.H5
-                        }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(g.Va, {
+                            type: g.Ob.H5
+                        }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(g.Wa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(g.V, {
-                            type: g.Nb.Span
-                        }, Object(o.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), a.createElement(g.V, null, a.createElement(g.T, {
+                        }, a.createElement(g.W, {
+                            type: g.Ob.Span
+                        }, Object(o.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), a.createElement(g.W, null, a.createElement(g.U, {
                             onClick: this.props.onClick,
                             to: "/" + this.props.channelLogin + "/dashboard/settings",
                             "data-test-selector": "rituals-sticky-link"
-                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(g.xb, {
+                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(g.yb, {
                             alignItems: g.f.Center,
                             background: g.r.Alt2,
                             borderBottom: !0,
                             color: g.O.Alt2,
-                            display: g.W.Flex,
+                            display: g.X.Flex,
                             padding: {
                                 x: 1,
                                 y: .5
                             }
-                        }, a.createElement(g.mb, {
-                            asset: g.nb.Lock,
+                        }, a.createElement(g.nb, {
+                            asset: g.ob.Lock,
                             height: 12,
                             width: 12
-                        }), a.createElement(g.Va, {
-                            display: g.W.Inline,
+                        }), a.createElement(g.Wa, {
+                            display: g.X.Inline,
                             margin: {
                                 left: .5
                             }
-                        }, a.createElement(g.V, {
-                            fontSize: g.Aa.Size8,
-                            type: g.Nb.Span
-                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(g.xb, {
+                        }, a.createElement(g.W, {
+                            fontSize: g.Ba.Size8,
+                            type: g.Ob.Span
+                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(g.yb, {
                             attachRight: !0,
                             attachTop: !0,
                             padding: {
                                 x: .5,
                                 top: 1
                             },
-                            position: g.db.Absolute
+                            position: g.eb.Absolute
                         }, a.createElement(g.A, {
                             ariaLabel: Object(o.d)("Close", "RitualsOnboardingSticky"),
-                            icon: g.nb.Close,
+                            icon: g.ob.Close,
                             onClick: this.props.onDismiss,
                             size: g.B.Small,
                             type: g.C.Secondary,
@@ -343,13 +343,13 @@
                                 channelID: t.props.channelID
                             })
                         }, t.onDismiss = function() {
-                            o.l.set(v, !0), t.setState({
+                            o.m.set(v, !0), t.setState({
                                 isDismissed: !0
                             }), Object(h.c)({
                                 action: b.a.Dismiss,
                                 channelID: t.props.channelID
                             })
-                        }, t.state.isDismissed = o.l.get(v, !1), t
+                        }, t.state.isDismissed = o.m.get(v, !1), t
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
                         return !this.props.data || this.props.data.loading || this.props.data.error ? null : this.props.data.channel.settings.isRitualsEnabled ? this.state.isDismissed ? null : a.createElement(f, {
@@ -404,7 +404,7 @@
             });
             var i = t("/7QA"),
                 a = function() {
-                    return i.l.get("ritualsFeatureFlagOverride", i.b.get("viewer_milestones_enabled", !1))
+                    return i.m.get("ritualsFeatureFlagOverride", i.b.get("viewer_milestones_enabled", !1))
                 }
         }
     }

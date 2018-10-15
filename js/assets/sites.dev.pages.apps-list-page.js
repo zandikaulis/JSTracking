@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [211], {
+    [205], {
         "V+GM": function(e, t, n) {
             "use strict";
             var r = n("mrSG"),
@@ -25,7 +25,7 @@
                                         s = o.medium,
                                         c = o.content_index,
                                         l = o.email_id;
-                                    p.o.tracking.trackPageview(r.__assign({
+                                    p.p.tracking.trackPageview(r.__assign({
                                         content: i,
                                         medium: s,
                                         content_index: c,
@@ -33,7 +33,7 @@
                                         location: e.location
                                     }, t))
                                 }
-                            }, p.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : p.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
+                            }, p.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : p.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
                         }
                         return r.__extends(i, n), i.prototype.componentDidMount = function() {
                             var e = this;
@@ -90,7 +90,7 @@
                 return Object(m.format)(e, t)
             }
             var _ = n("Ue10"),
-                f = function(e) {
+                b = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDelete = function(e) {
@@ -102,12 +102,12 @@
                     }, t.prototype.render = function() {
                         var e = h(new Date(this.props.app.created_at), "MM/DD/YYYY, hh:mm a"),
                             t = h(new Date(this.props.app.updated_at), "MM/DD/YYYY, hh:mm a");
-                        return a.createElement(_.Fb, {
+                        return a.createElement(_.Gb, {
                             key: this.props.app.id
-                        }, a.createElement(_.Cb, null, this.props.app.name), a.createElement(_.Cb, null, this.props.app.redirect_uri), a.createElement(_.Cb, null, e), a.createElement(_.Cb, null, t), a.createElement(_.Cb, null, a.createElement(_.Va, {
-                            display: _.W.Flex,
-                            justifyContent: _.Ua.Center
-                        }, a.createElement(_.Va, {
+                        }, a.createElement(_.Db, null, this.props.app.name), a.createElement(_.Db, null, this.props.app.redirect_uri), a.createElement(_.Db, null, e), a.createElement(_.Db, null, t), a.createElement(_.Db, null, a.createElement(_.Wa, {
+                            display: _.X.Flex,
+                            justifyContent: _.Va.Center
+                        }, a.createElement(_.Wa, {
                             margin: {
                                 right: 1
                             }
@@ -122,13 +122,13 @@
                         }, Object(o.d)("Delete", "DevAppListRow")))))
                     }, t
                 }(a.Component),
-                v = Object(l.c)("DevAppListRow")(f),
-                b = function(e) {
+                f = Object(l.b)("DevAppListRow")(b),
+                v = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderAppRows = function() {
                             return t.props.apps.map(function(e) {
-                                return a.createElement(v, {
+                                return a.createElement(f, {
                                     key: e.id,
                                     app: e,
                                     onDelete: t.props.onDelete
@@ -140,20 +140,20 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.renderAppRows();
-                        return a.createElement(_.Ab, {
+                        return a.createElement(_.Bb, {
                             alternateRows: !0
-                        }, a.createElement(_.Db, null, a.createElement(_.Eb, {
+                        }, a.createElement(_.Eb, null, a.createElement(_.Fb, {
                             label: Object(o.d)("Name", "DevAppsList")
-                        }), a.createElement(_.Eb, {
+                        }), a.createElement(_.Fb, {
                             label: Object(o.d)("URL", "DevAppsList")
-                        }), a.createElement(_.Eb, {
+                        }), a.createElement(_.Fb, {
                             label: Object(o.d)("Date Created", "DevAppsList")
-                        }), a.createElement(_.Eb, {
+                        }), a.createElement(_.Fb, {
                             label: Object(o.d)("Last Updated", "DevAppsList")
-                        }), a.createElement(_.Eb, {
+                        }), a.createElement(_.Fb, {
                             label: ""
-                        })), a.createElement(_.Bb, null, e))
-                    }, t = r.__decorate([Object(l.c)("DevAppsList", {
+                        })), a.createElement(_.Cb, null, e))
+                    }, t = r.__decorate([Object(l.b)("DevAppsList", {
                         autoReportInteractive: !0
                     })], t)
                 }(a.Component),
@@ -164,42 +164,42 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return a.createElement(_.Va, {
+                        return a.createElement(_.Wa, {
                             className: "dev-apps"
-                        }, a.createElement(_.Na, {
+                        }, a.createElement(_.Oa, {
                             margin: {
                                 bottom: 2
                             },
-                            display: _.W.Flex,
-                            justifyContent: _.Ua.Between
-                        }, a.createElement("header", null, a.createElement(_.Va, null, a.createElement(_.Va, {
+                            display: _.X.Flex,
+                            justifyContent: _.Va.Between
+                        }, a.createElement("header", null, a.createElement(_.Wa, null, a.createElement(_.Wa, {
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(_.V, {
-                            type: _.Nb.H3
-                        }, Object(o.d)("Developer Applications", "DevApps"))), a.createElement(_.V, {
-                            type: _.Nb.P
-                        }, Object(o.d)("You have registered these apps to use the Twitch API", "DevApps"))), a.createElement(_.Va, {
+                        }, a.createElement(_.W, {
+                            type: _.Ob.H3
+                        }, Object(o.d)("Developer Applications", "DevApps"))), a.createElement(_.W, {
+                            type: _.Ob.P
+                        }, Object(o.d)("You have registered these apps to use the Twitch API", "DevApps"))), a.createElement(_.Wa, {
                             margin: {
                                 bottom: 1
                             },
-                            justifyContent: _.Ua.End,
-                            display: _.W.Flex
+                            justifyContent: _.Va.End,
+                            display: _.X.Flex
                         }, a.createElement(_.z, {
-                            icon: _.nb.Plus,
+                            icon: _.ob.Plus,
                             onClick: Object(d.c)(d.a.RegisterApp),
                             linkTo: "/console/apps/create"
-                        }, Object(o.d)("Register Your Application", "DevApps"))))), a.createElement(_.Va, null, a.createElement(b, {
+                        }, Object(o.d)("Register Your Application", "DevApps"))))), a.createElement(_.Wa, null, a.createElement(v, {
                             apps: this.props.apps,
                             onDelete: this.props.onDelete
                         })))
                     }, t
                 }(a.Component),
-                E = Object(l.c)("DevAppsComponent", {
+                y = Object(l.b)("DevAppsComponent", {
                     autoReportInteractive: !0
                 })(D),
-                y = function(e) {
+                g = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -268,18 +268,18 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return a.createElement(E, {
+                        return a.createElement(y, {
                             apps: this.state.apps,
                             onDelete: this.onDelete
                         })
-                    }, t = r.__decorate([Object(l.c)("DevAppsListPage", {
+                    }, t = r.__decorate([Object(l.b)("DevAppsListPage", {
                         destination: s.a.DevSiteApps
                     }), Object(i.a)({
                         location: c.PageviewLocation.DevSiteApps
                     })], t)
                 }(a.Component);
             n.d(t, "DevAppsPage", function() {
-                return y
+                return g
             })
         }
     }

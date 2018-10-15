@@ -21,24 +21,24 @@
                             var n = e.state.wasDismissed;
                             switch (t.status) {
                                 case u.NetworkIntegrationConnectionStatus.NetworkDisconnected:
-                                    a.j.warn("Network connection has been lost.");
+                                    a.k.warn("Network connection has been lost.");
                                     break;
                                 case u.NetworkIntegrationConnectionStatus.WebsiteUnreachable:
-                                    a.j.warn("Network is connected but website is unreachable.");
+                                    a.k.warn("Network is connected but website is unreachable.");
                                     break;
                                 default:
-                                    a.j.info("Network conection has been restored"), n = !1
+                                    a.k.info("Network conection has been restored"), n = !1
                             }
                             e.setState({
                                 currentStatus: t.status,
                                 wasDismissed: n
                             })
                         }, e.onConnected = function() {
-                            a.o.integrations.network && a.o.integrations.network.updateStatus({
+                            a.p.integrations.network && a.p.integrations.network.updateStatus({
                                 status: u.NetworkIntegrationConnectionStatus.Online
                             })
                         }, e.onDisconnected = function() {
-                            a.o.integrations.network && a.o.integrations.network.updateStatus({
+                            a.p.integrations.network && a.p.integrations.network.updateStatus({
                                 status: u.NetworkIntegrationConnectionStatus.WebsiteUnreachable
                             })
                         }, e.pubsubDriver = s.a.getInstance(a.a.pubsubEnvironment), e.state = {
@@ -48,8 +48,8 @@
                     }
                     return o.__extends(n, t), n.prototype.componentDidMount = function() {
                         var t = this;
-                        a.o.integrations.network && (this.connectionChangedUnsubscriber = a.o.integrations.network.onConnectionChanged(this.onConnectionChanged), this.pubsubDriver.on("connected", this.onConnected), this.pubsubDriver.on("reconnected", this.onConnected), this.pubsubDriver.on("disconnected", this.onDisconnected), this.pubsubDriver._clientReady || (this.initialWebsocketCheckTimeout = setTimeout(function() {
-                            t.pubsubDriver._clientReady || a.o.integrations.network.updateStatus({
+                        a.p.integrations.network && (this.connectionChangedUnsubscriber = a.p.integrations.network.onConnectionChanged(this.onConnectionChanged), this.pubsubDriver.on("connected", this.onConnected), this.pubsubDriver.on("reconnected", this.onConnected), this.pubsubDriver.on("disconnected", this.onDisconnected), this.pubsubDriver._clientReady || (this.initialWebsocketCheckTimeout = setTimeout(function() {
+                            t.pubsubDriver._clientReady || a.p.integrations.network.updateStatus({
                                 status: u.NetworkIntegrationConnectionStatus.WebsiteUnreachable
                             })
                         }, 15e3)))

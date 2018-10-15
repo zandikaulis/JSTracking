@@ -6,8 +6,8 @@
             r.r(t);
             var s = r("/MKj"),
                 n = r("fvjX"),
-                o = r("1/iK"),
-                i = r("y5D0"),
+                i = r("1/iK"),
+                o = r("y5D0"),
                 a = r("kRBY"),
                 c = r("mrSG"),
                 u = r("q1tI"),
@@ -24,8 +24,8 @@
             function m() {
                 return h.b.get(v, !1)
             }
-            var y = r("Ue10"),
-                b = (r("Sqs6"), function(e) {
+            var b = r("Ue10"),
+                y = (r("Sqs6"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -59,37 +59,37 @@
                             message: Object(h.d)("You must be logged in to view this page", "MessagesDisclosurePage")
                         })) : this.state.errorLoadingMessagesDisclosure ? u.createElement(g.a, {
                             message: Object(h.d)("Oops, something went wrong.", "MessagesDisclosurePage")
-                        }) : u.createElement(y.Va, {
+                        }) : u.createElement(b.Wa, {
                             className: "messages-disclosure-page",
-                            alignItems: y.f.Center,
-                            display: y.W.Flex,
+                            alignItems: b.f.Center,
+                            display: b.X.Flex,
                             fullWidth: !0,
                             fullHeight: !0,
-                            justifyContent: y.Ua.Center,
-                            position: y.db.Absolute
-                        }, u.createElement(y.Va, {
-                            alignItems: y.f.Center,
+                            justifyContent: b.Va.Center,
+                            position: b.eb.Absolute
+                        }, u.createElement(b.Wa, {
+                            alignItems: b.f.Center,
                             className: "messages-disclosure-page__body",
-                            display: y.W.Flex,
-                            flexDirection: y.Y.Column
+                            display: b.X.Flex,
+                            flexDirection: b.Z.Column
                         }, !this.state.hasLoadedMessagesDisclosure && this.renderPlaceholder(), this.state.hasLoadedMessagesDisclosure && this.renderLoadedBody())) : u.createElement(f.a, null)
                     }, t.prototype.renderPlaceholder = function() {
-                        return u.createElement(y.Va, {
-                            justifyContent: y.Ua.Center
-                        }, u.createElement(y.cb, {
+                        return u.createElement(b.Wa, {
+                            justifyContent: b.Va.Center
+                        }, u.createElement(b.db, {
                             height: 130,
                             width: 180
                         }))
                     }, t.prototype.renderLoadedBody = function() {
-                        return u.createElement(u.Fragment, null, u.createElement(y.S, {
+                        return u.createElement(u.Fragment, null, u.createElement(b.S, {
                             src: l.a,
                             alt: Object(h.d)("Envelope fading into smoke", "MessagesDisclosurePage")
-                        }), this.state.fileURL && this.renderDownloadIFrame() || u.createElement(y.Va, {
+                        }), this.state.fileURL && this.renderDownloadIFrame() || u.createElement(b.Wa, {
                             margin: {
                                 y: 2
                             }
-                        }, u.createElement(y.V, {
-                            fontSize: y.Aa.Size5
+                        }, u.createElement(b.W, {
+                            fontSize: b.Ba.Size5
                         }, Object(h.d)("None of your private messages were affected.", "MessagesDisclosurePage"))))
                     }, t.prototype.renderDownloadIFrame = function() {
                         return u.createElement("iframe", {
@@ -99,9 +99,9 @@
                         })
                     }, t
                 }(u.Component)),
-                D = Object(n.compose)(Object(w.c)("MessagesDisclosurePage", {
+                D = Object(n.compose)(Object(w.b)("MessagesDisclosurePage", {
                     destination: p.a.MessagesDisclosurePage
-                }))(b);
+                }))(y);
             var O = Object(s.connect)(function(e) {
                 return {
                     sessionUser: Object(a.e)(e)
@@ -109,7 +109,7 @@
             }, function(e) {
                 return Object(n.bindActionCreators)({
                     login: function() {
-                        return Object(i.e)(o.a.MessagesDisclosurePage)
+                        return Object(o.e)(i.a.MessagesDisclosurePage)
                     }
                 }, e)
             })(D);
@@ -120,12 +120,12 @@
         b6Yk: function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
-                return i
+                return o
             });
             var s = r("mrSG"),
                 n = r("/7QA"),
-                o = r("kRBY"),
-                i = function() {
+                i = r("kRBY"),
+                o = function() {
                     function e() {}
                     return e.get = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), s.__awaiter(this, void 0, Promise, function() {
@@ -233,13 +233,13 @@
                         })
                     }, e.request = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), s.__awaiter(this, void 0, Promise, function() {
-                            var n, o, i, a;
+                            var n, i, o, a;
                             return s.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, r), n = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, n), i = s.__assign({}, t, {
-                                            body: o
-                                        }), [4, this._fetch(e, i)];
+                                        return t = this.constructOptions(t, r), n = t.headers ? t.headers["Content-Type"] : void 0, i = this.serialize(t.body, n), o = s.__assign({}, t, {
+                                            body: i
+                                        }), [4, this._fetch(e, o)];
                                     case 1:
                                         return a = c.sent(), [4, this.constructLegacyAPIResponse(a)];
                                     case 2:
@@ -250,28 +250,28 @@
                     }, e.requestOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), s.__awaiter(this, void 0, Promise, function() {
                             var n;
-                            return s.__generator(this, function(o) {
-                                switch (o.label) {
+                            return s.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return o.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
+                                        return i.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
                                     case 1:
-                                        if ((n = o.sent()).requestError) throw n.requestError;
+                                        if ((n = i.sent()).requestError) throw n.requestError;
                                         if (n.error) throw new Error("Error while sending legacy-api request: " + n.error.status + " - " + n.error.message);
                                         return [2, s.__assign({}, n, {
                                             body: n.body
                                         })];
                                     case 2:
-                                        throw o.sent();
+                                        throw i.sent();
                                     case 3:
                                         return [2]
                                 }
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, n.o.config.apiBaseURL)
+                        return new URL(e, n.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return s.__awaiter(this, void 0, Promise, function() {
-                            var t, r, n, o;
+                            var t, r, n, i;
                             return s.__generator(this, function(s) {
                                 switch (s.label) {
                                     case 0:
@@ -283,7 +283,7 @@
                                     case 2:
                                         return r = s.sent(), e.ok ? t.body = r : t.error = r, [3, 4];
                                     case 3:
-                                        return n = s.sent(), e.headers && e.headers.get && (o = e.headers.get("Content-Type")) && -1 !== o.indexOf("application/json") && (t.requestError = n), [3, 4];
+                                        return n = s.sent(), e.headers && e.headers.get && (i = e.headers.get("Content-Type")) && -1 !== i.indexOf("application/json") && (t.requestError = n), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
@@ -309,19 +309,19 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var r = n.o.store.getState(),
+                        var r = n.p.store.getState(),
                             s = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": n.o.config.legacyClientID,
+                                "Client-ID": n.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (s["Content-Type"] = "application/json; charset=UTF-8");
-                        var i = Object(o.e)(r);
-                        return i && (s.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (s["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        var o = Object(i.e)(r);
+                        return o && (s.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (s["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             s[e] && delete s[e]
                         }), s
-                    }, e.logger = n.o.logger.withCategory("legacy-api"), e
+                    }, e.logger = n.p.logger.withCategory("legacy-api"), e
                 }()
         },
         wU95: function(e, t, r) {

@@ -1,12 +1,12 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
     [114], {
-        "0ly3": function(e, t, n) {
+        "0ly3": function(e, t, a) {
             "use strict";
-            var a = n("mrSG"),
-                i = n("q1tI"),
-                r = n("HSqT"),
-                o = n("Ue10"),
-                s = function(e) {
+            var n = a("mrSG"),
+                i = a("q1tI"),
+                r = a("HSqT"),
+                s = a("Ue10"),
+                o = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onChange = function(e) {
@@ -18,31 +18,31 @@
                             }, e.label)
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        var e = i.createElement(o.sb, {
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        var e = i.createElement(s.tb, {
                             onChange: this.onChange,
                             disabled: this.props.disabled,
                             defaultValue: this.props.defaultLanguage
                         }, Object(r.b)().map(this.renderLanguageOption));
-                        return this.props.label && (e = i.createElement(o.Ca, {
+                        return this.props.label && (e = i.createElement(s.Da, {
                             label: this.props.label
                         }, e)), e
                     }, t
                 }(i.Component);
-            n.d(t, "a", function() {
-                return s
+            a.d(t, "a", function() {
+                return o
             })
         },
-        "2Dck": function(e, t, n) {
+        "2Dck": function(e, t, a) {
             "use strict";
-            n.d(t, "b", function() {
-                return a
-            }), n.d(t, "c", function() {
+            a.d(t, "b", function() {
+                return n
+            }), a.d(t, "c", function() {
                 return i
-            }), n.d(t, "a", function() {
+            }), a.d(t, "a", function() {
                 return r
             });
-            var a = "https://help.twitch.tv/customer/portal/articles/983016",
+            var n = "https://help.twitch.tv/customer/portal/articles/983016",
                 i = 140,
                 r = {
                     Accept: "application/vnd.twitchtv.v5+json; charset=UTF-8",
@@ -50,8 +50,8 @@
                     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
                 }
         },
-        "79jw": function(e, t, n) {
-            var a = {
+        "79jw": function(e, t, a) {
+            var n = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -273,7 +273,7 @@
                     end: 341
                 }
             };
-            a.loc.source = {
+            n.loc.source = {
                 body: '#import "twilight/features/tags/models/tag-fragment.gql"\nquery TopTags($limit: Int! $showTopTagsByCategory: Boolean! $categoryName: String) {\ngame(name: $categoryName) @include(if: $showTopTagsByCategory) {\nid\ntags(tagType: TOP limit: $limit) {\n...tagFragment\n}\n}\ntopTags(limit: $limit) @skip(if: $showTopTagsByCategory) {\n...tagFragment\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -282,26 +282,26 @@
                 }
             };
             var i = {};
-            a.definitions = a.definitions.concat(function(e) {
+            n.definitions = n.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
                     return !i[t] && (i[t] = !0, !0)
                 })
-            }(n("iiOx").definitions)), e.exports = a
+            }(a("iiOx").definitions)), e.exports = n
         },
-        "97MP": function(e, t, n) {},
-        AZIu: function(e, t, n) {
+        "97MP": function(e, t, a) {},
+        AZIu: function(e, t, a) {
             "use strict";
-            n.d(t, "a", function() {
-                return a
-            }), n.d(t, "b", function() {
-                return o
+            a.d(t, "a", function() {
+                return n
+            }), a.d(t, "b", function() {
+                return s
             });
-            var a, i = n("/7QA"),
-                r = n("2xye");
+            var n, i = a("/7QA"),
+                r = a("2xye");
 
-            function o(e) {
+            function s(e) {
                 var t = {
                     section: e.section,
                     tag_position: e.tagPosition,
@@ -310,51 +310,51 @@
                     tag_id: e.tagId,
                     dismiss: e.dismiss
                 };
-                i.n.track(r.SpadeEventType.BrowseFilter, t)
+                i.o.track(r.SpadeEventType.BrowseFilter, t)
             }! function(e) {
                 e.Categories = "browse_categories", e.LiveChannels = "browse_livechannels", e.IncategoryChannels = "browse_incategory_channels"
-            }(a || (a = {}))
+            }(n || (n = {}))
         },
-        C29h: function(e, t, n) {
+        C29h: function(e, t, a) {
             "use strict";
-            var a = n("mrSG"),
-                i = n("q1tI"),
-                r = n("9C/b"),
-                o = n("fvjX"),
-                s = n("/7QA"),
-                l = n("N3I0"),
-                c = n("8/mp"),
-                d = n("f00E"),
-                u = n("3W+h"),
-                m = n("H/lO"),
-                p = n("NZDK"),
-                g = n("yR8l"),
-                h = n("DMoW"),
-                f = n("GIun"),
-                v = n("Ue10"),
-                y = function(e) {
-                    var t, n = e.onClick,
-                        a = e.tag;
-                    n && (t = function() {
-                        return n(a)
+            var n = a("mrSG"),
+                i = a("q1tI"),
+                r = a("9C/b"),
+                s = a("fvjX"),
+                o = a("/7QA"),
+                l = a("N3I0"),
+                d = a("8/mp"),
+                c = a("f00E"),
+                u = a("3W+h"),
+                g = a("H/lO"),
+                m = a("NZDK"),
+                p = a("yR8l"),
+                h = a("DMoW"),
+                f = a("GIun"),
+                v = a("Ue10"),
+                b = function(e) {
+                    var t, a = e.onClick,
+                        n = e.tag;
+                    a && (t = function() {
+                        return a(n)
                     });
                     var r = "localizedDescription" in e.tag ? e.tag.localizedDescription : void 0;
-                    return i.createElement(f.a, null, i.createElement(v.Sa, {
+                    return i.createElement(f.a, null, i.createElement(v.Ta, {
                         onClick: t
-                    }, i.createElement(v.Va, {
+                    }, i.createElement(v.Wa, {
                         padding: {
                             y: .5,
                             x: 1
                         }
-                    }, i.createElement(v.V, {
+                    }, i.createElement(v.W, {
                         title: r
-                    }, a.localizedName))))
+                    }, n.localizedName))))
                 };
-            var b, S = n("Ryvb");
+            var k, T = a("Ryvb");
             ! function(e) {
                 e.SuggestedTags = "suggested-tags"
-            }(b || (b = {}));
-            var k, T, C = function(e) {
+            }(k || (k = {}));
+            var y, S, N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -366,14 +366,14 @@
                         }, t.renderTags = function() {
                             if (!t.props.data.game || !t.props.data.game.tags || !t.state.filteredTopTags) return null;
                             var e;
-                            return e = t.state.filteredTopTags.map(t.renderSuggestedTag), i.createElement(v.Va, {
+                            return e = t.state.filteredTopTags.map(t.renderSuggestedTag), i.createElement(v.Wa, {
                                 padding: {
                                     bottom: 1
                                 }
                             }, e)
                         }, t.renderSuggestedTag = function(e) {
-                            return i.createElement(y, {
-                                "data-test-selector": b.SuggestedTags,
+                            return i.createElement(b, {
+                                "data-test-selector": k.SuggestedTags,
                                 key: e.id,
                                 onClick: function() {
                                     return t.props.onAddTag(e)
@@ -382,59 +382,59 @@
                             })
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return n.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.data.game,
-                            n = e.data.game;
+                            a = e.data.game;
                         if (function(e, t) {
-                                return e.length !== t.length || e.some(function(e, n) {
-                                    return t[n] !== e
+                                return e.length !== t.length || e.some(function(e, a) {
+                                    return t[a] !== e
                                 })
                             }(this.props.selectedTagIDs, e.selectedTagIDs) || function(e, t) {
-                                var n = e || [],
-                                    a = t || [];
-                                return n.length !== a.length || n.some(function(e, t) {
-                                    return e.id !== a[t].id
+                                var a = e || [],
+                                    n = t || [];
+                                return a.length !== n.length || a.some(function(e, t) {
+                                    return e.id !== n[t].id
                                 })
-                            }(t && t.tags, n && n.tags)) {
-                            var a = n && n.tags && n.tags.filter(function(e) {
+                            }(t && t.tags, a && a.tags)) {
+                            var n = a && a.tags && a.tags.filter(function(e) {
                                 return !e.isAutomated
                             }).filter(function(t) {
                                 return !e.selectedTagIDs.includes(t.id)
                             }).slice(0, 7) || [];
                             this.setState({
-                                filteredTopTags: a
+                                filteredTopTags: n
                             })
                         }
                     }, t.prototype.render = function() {
-                        return this.props.data.loading || this.props.data.error ? null : this.props.data.game && this.props.data.game.tags && 0 !== this.props.data.game.tags.length && this.state.filteredTopTags && 0 !== this.state.filteredTopTags.length ? i.createElement(v.Va, null, i.createElement(v.Va, {
+                        return this.props.data.loading || this.props.data.error ? null : this.props.data.game && this.props.data.game.tags && 0 !== this.props.data.game.tags.length && this.state.filteredTopTags && 0 !== this.state.filteredTopTags.length ? i.createElement(v.Wa, null, i.createElement(v.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, i.createElement(v.V, {
+                        }, i.createElement(v.W, {
                             bold: !0
-                        }, Object(s.d)("Suggestions", "TagSuggestions"))), this.renderTags(), i.createElement(v.Va, {
+                        }, Object(o.d)("Suggestions", "TagSuggestions"))), this.renderTags(), i.createElement(v.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, i.createElement(v.V, {
+                        }, i.createElement(v.W, {
                             bold: !0
-                        }, Object(s.d)("All Tags", "AllTagsTitle")))) : null
+                        }, Object(o.d)("All Tags", "AllTagsTitle")))) : null
                     }, t
                 }(i.Component),
-                E = Object(g.a)(S, {
+                C = Object(p.a)(T, {
                     options: function(e) {
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.M.TOP,
+                                tagType: h.N.TOP,
                                 limit: 50
                             }
                         }
                     }
-                })(C),
-                N = n("79jw"),
+                })(N),
+                E = a("79jw"),
                 _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -447,11 +447,11 @@
                         }, t.renderTag = function(e) {
                             return i.createElement(f.a, {
                                 key: e.id
-                            }, i.createElement(v.Sa, {
+                            }, i.createElement(v.Ta, {
                                 onClick: function() {
                                     return t.props.onAddTag(e)
                                 }
-                            }, i.createElement(v.Va, {
+                            }, i.createElement(v.Wa, {
                                 padding: {
                                     y: .5,
                                     x: 1
@@ -459,18 +459,18 @@
                             }, e.localizedName || e.tagName)))
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.data.error ? null : this.props.data.loading ? i.createElement(v.Va, {
-                            display: v.W.Flex,
-                            justifyContent: v.Ua.Center,
+                    return n.__extends(t, e), t.prototype.render = function() {
+                        return this.props.data.error ? null : this.props.data.loading ? i.createElement(v.Wa, {
+                            display: v.X.Flex,
+                            justifyContent: v.Va.Center,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, i.createElement(v.Xa, null)) : i.createElement(v.Va, null, this.renderTags())
+                        }, i.createElement(v.Ya, null)) : i.createElement(v.Wa, null, this.renderTags())
                     }, t
                 }(i.Component),
-                O = Object(o.compose)(Object(g.a)(N, {
+                O = Object(s.compose)(Object(p.a)(E, {
                     options: function(e) {
                         return {
                             variables: {
@@ -481,151 +481,151 @@
                         }
                     }
                 }))(_),
-                F = n("sLmD"),
-                I = n("AZIu");
-            n("97MP");
+                F = a("sLmD"),
+                w = a("AZIu");
+            a("97MP");
             ! function(e) {
                 e[e.TagAll = 0] = "TagAll", e[e.TagAllMinusAutomation = 1] = "TagAllMinusAutomation", e[e.TagCategory = 2] = "TagCategory", e[e.StreamTag = 3] = "StreamTag"
-            }(k || (k = {})),
+            }(y || (y = {})),
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
-            }(T || (T = {}));
-            var R = function(e) {
+            }(S || (S = {}));
+            var I = function(e) {
                     function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.state = {
+                        var a = e.call(this, t) || this;
+                        return a.state = {
                             isOpen: !1,
                             searching: !1,
                             searchTerm: ""
-                        }, n.languageCode = Object(F.a)(), n.renderSearchContent = function() {
+                        }, a.languageCode = Object(F.a)(), a.renderSearchContent = function() {
                             var e = null;
-                            return e = n.props.type === k.StreamTag ? n.renderStreamTagResults() : n.renderTagResults(), i.createElement(c.b, {
+                            return e = a.props.type === y.StreamTag ? a.renderStreamTagResults() : a.renderTagResults(), i.createElement(d.b, {
                                 className: "tag-search__scrollable-area",
                                 suppressScrollX: !0
-                            }, i.createElement(v.Va, {
-                                "data-test-selector": T.SearchContent
-                            }, n.renderSuggestedTags(), e))
-                        }, n.renderTagSearchResult = function(e) {
+                            }, i.createElement(v.Wa, {
+                                "data-test-selector": S.SearchContent
+                            }, a.renderSuggestedTags(), e))
+                        }, a.renderTagSearchResult = function(e) {
                             var t = Object(F.b)(e),
-                                a = "tag_scope" in e ? e.tag_scope : void 0;
-                            return i.createElement(y, {
+                                n = "tag_scope" in e ? e.tag_scope : void 0;
+                            return i.createElement(b, {
                                 key: t.id,
                                 onClick: function() {
-                                    return n.onTagResultSelected(t, a)
+                                    return a.onTagResultSelected(t, n)
                                 },
                                 tag: t
                             })
-                        }, n.renderStreamTagResults = function() {
-                            return n.props.type === k.StreamTag && n.state.isOpen ? "" === n.state.searchTerm ? i.createElement(O, {
-                                categoryName: n.props.categoryName,
-                                onAddTag: n.onTagResultSelected,
+                        }, a.renderStreamTagResults = function() {
+                            return a.props.type === y.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? i.createElement(O, {
+                                categoryName: a.props.categoryName,
+                                onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
-                            }) : !n.state.searchResults && n.state.searching ? n.renderLoading() : n.state.searchResults && n.state.searchResults.streamTags && n.state.searchResults.streamTags.hits.length ? n.state.searchResults.streamTags.hits.map(n.renderTagSearchResult) : n.renderNoResults() : null
-                        }, n.renderTagResults = function() {
-                            return n.state.isOpen ? n.props.type === k.TagAll && "" === n.state.searchTerm ? i.createElement(O, {
-                                onAddTag: n.onTagResultSelected,
+                            }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.streamTags && a.state.searchResults.streamTags.hits.length ? a.state.searchResults.streamTags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
+                        }, a.renderTagResults = function() {
+                            return a.state.isOpen ? a.props.type === y.TagAll && "" === a.state.searchTerm ? i.createElement(O, {
+                                onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
-                            }) : !n.state.searchResults && n.state.searching ? n.renderLoading() : n.state.searchResults && n.state.searchResults.tags && n.state.searchResults.tags.hits.length ? n.state.searchResults.tags.hits.map(n.renderTagSearchResult) : n.renderNoResults() : null
-                        }, n.setTagSearchRef = function(e) {
-                            n.tagSearch = e
-                        }, n.onTagResultSelected = function(e, t) {
-                            if (n.toggleTagSearch(!1), n.clearSearchTerm(), n.props.type === k.TagCategory && "SCOPE_ALL" === t ? s.o.history.push(u.a.Popular, {
+                            }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.tags && a.state.searchResults.tags.hits.length ? a.state.searchResults.tags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
+                        }, a.setTagSearchRef = function(e) {
+                            a.tagSearch = e
+                        }, a.onTagResultSelected = function(e, t) {
+                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === y.TagCategory && "SCOPE_ALL" === t ? o.p.history.push(u.a.Popular, {
                                     persistTags: !0
-                                }) : n.props.type === k.TagAll && "SCOPE_CATEGORY" === t && s.o.history.push(u.a.Games, {
+                                }) : a.props.type === y.TagAll && "SCOPE_CATEGORY" === t && o.p.history.push(u.a.Games, {
                                     persistTags: !0
-                                }), n.props.onTagClick && (n.props.onTagClick(e), n.props.section && n.props.numSelectedTags)) {
-                                var a = {
-                                    section: n.props.section,
-                                    tagPosition: n.props.numSelectedTags,
+                                }), a.props.onTagClick && (a.props.onTagClick(e), a.props.section && a.props.numSelectedTags)) {
+                                var n = {
+                                    section: a.props.section,
+                                    tagPosition: a.props.numSelectedTags,
                                     searchEvent: !0,
                                     tagId: e.id,
                                     dismiss: !1
                                 };
-                                Object(I.b)(a)
+                                Object(w.b)(n)
                             }
-                        }, n.onInputChange = function(e) {
-                            n.props.onInputChange && n.props.onInputChange(e), clearTimeout(n.inputTimeout), n.toggleTagSearch(!0), n.setState({
+                        }, a.onInputChange = function(e) {
+                            a.props.onInputChange && a.props.onInputChange(e), clearTimeout(a.inputTimeout), a.toggleTagSearch(!0), a.setState({
                                 searchTerm: e,
                                 searching: !0
                             }, function() {
-                                (n.props.type !== k.TagAll && n.props.type !== k.StreamTag || n.props.type === k.TagAll && "" !== n.state.searchTerm || n.props.type === k.StreamTag && "" !== n.state.searchTerm) && (n.inputTimeout = setTimeout(function() {
-                                    n.search(n.state.searchTerm)
+                                (a.props.type !== y.TagAll && a.props.type !== y.StreamTag || a.props.type === y.TagAll && "" !== a.state.searchTerm || a.props.type === y.StreamTag && "" !== a.state.searchTerm) && (a.inputTimeout = setTimeout(function() {
+                                    a.search(a.state.searchTerm)
                                 }, 200))
                             })
-                        }, n.onFocusInput = function() {
-                            "" === n.state.searchTerm ? n.onInputChange("") : n.toggleTagSearch(!0)
-                        }, n.onSearchClose = function() {
-                            n.toggleTagSearch(!1)
-                        }, n.toggleTagSearch = function(e) {
-                            n.tagSearch && n.tagSearch.toggle(e), n.setState({
+                        }, a.onFocusInput = function() {
+                            "" === a.state.searchTerm ? a.onInputChange("") : a.toggleTagSearch(!0)
+                        }, a.onSearchClose = function() {
+                            a.toggleTagSearch(!1)
+                        }, a.toggleTagSearch = function(e) {
+                            a.tagSearch && a.tagSearch.toggle(e), a.setState({
                                 isOpen: e
                             })
-                        }, n.clearSearchTerm = function() {
-                            n.tagSearch && n.tagSearch.setValue(""), n.setState({
+                        }, a.clearSearchTerm = function() {
+                            a.tagSearch && a.tagSearch.setValue(""), a.setState({
                                 searchTerm: "",
                                 searching: !1
                             })
-                        }, n.searchClient = new p.a({
-                            appId: s.a.algoliaApplicationID,
-                            apiKey: s.a.algoliaAPIKey,
-                            apolloClient: s.o.apollo.client,
-                            logger: s.j,
-                            config: s.a,
-                            stats: s.o.stats
-                        }), n
+                        }, a.searchClient = new m.a({
+                            appId: o.a.algoliaApplicationID,
+                            apiKey: o.a.algoliaAPIKey,
+                            apolloClient: o.p.apollo.client,
+                            logger: o.k,
+                            config: o.a,
+                            stats: o.p.stats
+                        }), a
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return n.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(l.a, {
                             autoFocus: this.props.autoFocus,
-                            "data-test-selector": T.SearchDropdown,
+                            "data-test-selector": S.SearchDropdown,
                             inline: this.props.inline,
                             inputSize: this.props.inputSize,
                             onChange: this.onInputChange,
                             onFocusInput: this.onFocusInput,
                             onClose: this.onSearchClose,
-                            placeholder: Object(s.d)("Search Tags", "TagSearch"),
+                            placeholder: Object(o.d)("Search Tags", "TagSearch"),
                             ref: this.setTagSearchRef
                         }, this.renderSearchContent())
                     }, t.prototype.renderLoading = function() {
-                        return i.createElement(v.Va, {
-                            display: v.W.Flex,
-                            justifyContent: v.Ua.Center,
+                        return i.createElement(v.Wa, {
+                            display: v.X.Flex,
+                            justifyContent: v.Va.Center,
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, i.createElement(v.Xa, {
+                        }, i.createElement(v.Ya, {
                             delay: 0
                         }))
                     }, t.prototype.renderNoResults = function() {
-                        return this.state.searching ? null : i.createElement(v.Va, {
+                        return this.state.searching ? null : i.createElement(v.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(s.d)("No results found", "TagSearch"))
+                        }, Object(o.d)("No results found", "TagSearch"))
                     }, t.prototype.renderSuggestedTags = function() {
-                        if (this.props.type !== k.TagAllMinusAutomation || "" !== this.state.searchTerm) return null;
+                        if (this.props.type !== y.TagAllMinusAutomation || "" !== this.state.searchTerm) return null;
                         var e = this.props.selectedTags && this.props.selectedTags.map(function(e) {
                             return e.id
                         }) || [];
-                        return i.createElement(v.Va, null, i.createElement(E, {
+                        return i.createElement(v.Wa, null, i.createElement(C, {
                             gameName: this.props.categoryName,
                             onAddTag: this.onTagResultSelected,
                             selectedTagIDs: e
                         }))
                     }, t.prototype.search = function(e) {
-                        return a.__awaiter(this, void 0, void 0, function() {
-                            var t, n, i;
-                            return a.__generator(this, function(a) {
-                                switch (a.label) {
+                        return n.__awaiter(this, void 0, void 0, function() {
+                            var t, a, i;
+                            return n.__generator(this, function(n) {
+                                switch (n.label) {
                                     case 0:
                                         return e = e || "", t = {
                                             hitsPerPage: 100,
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
-                                        }, n = m.a.Tags, this.props.type === k.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:SCOPE_ALL"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === k.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_ALL" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === k.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_CATEGORY" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === k.StreamTag && (n = m.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(n, e, d.a(), t)];
+                                        }, a = g.a.Tags, this.props.type === y.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:SCOPE_ALL"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === y.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_ALL" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === y.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_CATEGORY" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === y.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, c.a(), t)];
                                     case 1:
-                                        return i = a.sent(), this.setState({
+                                        return i = n.sent(), this.setState({
                                             searchResults: i,
                                             searching: !1
                                         }), [2]
@@ -634,55 +634,55 @@
                         })
                     }, t
                 }(i.Component),
-                w = Object(o.compose)(r.a)(R);
-            n.d(t, "b", function() {
-                return k
-            }), n.d(t, !1, function() {
-                return T
-            }), n.d(t, !1, function() {
-                return R
-            }), n.d(t, "a", function() {
-                return w
+                A = Object(s.compose)(r.a)(I);
+            a.d(t, "b", function() {
+                return y
+            }), a.d(t, !1, function() {
+                return S
+            }), a.d(t, !1, function() {
+                return I
+            }), a.d(t, "a", function() {
+                return A
             })
         },
-        FsIG: function(e, t, n) {
+        FsIG: function(e, t, a) {
             "use strict";
 
-            function a(e) {
+            function n(e) {
                 return e || ""
             }
 
             function i(e) {
                 return e ? e.toString() : ""
             }
-            n.d(t, "b", function() {
-                return a
-            }), n.d(t, "a", function() {
+            a.d(t, "b", function() {
+                return n
+            }), a.d(t, "a", function() {
                 return i
             })
         },
-        GIun: function(e, t, n) {
+        GIun: function(e, t, a) {
             "use strict";
-            var a = n("q1tI"),
+            var n = a("q1tI"),
                 i = function(e) {
-                    var t = a.Children.only(e.children);
-                    return a.cloneElement(t, {
+                    var t = n.Children.only(e.children);
+                    return n.cloneElement(t, {
                         "data-selectable": !0,
                         tabIndex: -1
                     })
                 };
-            n.d(t, "a", function() {
+            a.d(t, "a", function() {
                 return i
             })
         },
-        HSqT: function(e, t, n) {
+        HSqT: function(e, t, a) {
             "use strict";
-            n.d(t, "a", function() {
-                return o
-            }), n.d(t, "b", function() {
+            a.d(t, "a", function() {
                 return s
+            }), a.d(t, "b", function() {
+                return o
             });
-            var a = n("/7QA"),
+            var n = a("/7QA"),
                 i = [{
                     code: "ar",
                     label: "العربية"
@@ -772,27 +772,27 @@
                     label: "American Sign Language"
                 }, {
                     code: "other",
-                    label: e ? Object(a.d)("Other", "broadcaster-languages") : "Other"
+                    label: e ? Object(n.d)("Other", "broadcaster-languages") : "Other"
                 }]
             }
-            var o = new Set(i.concat(r()).map(function(e) {
+            var s = new Set(i.concat(r()).map(function(e) {
                 return e.code
             }));
 
-            function s() {
-                var e = a.o.intl.getLanguageCode(),
+            function o() {
+                var e = n.p.intl.getLanguageCode(),
                     t = function(t) {
                         return "en" === t.code ? 0 : e && e.startsWith(t.code) ? 1 : 2
                     };
-                return i.slice().sort(function(e, n) {
-                    var a = t(e),
-                        i = t(n);
-                    return a !== i ? a - i : a + ":" + e.label < i + ":" + n.label ? -1 : 1
+                return i.slice().sort(function(e, a) {
+                    var n = t(e),
+                        i = t(a);
+                    return n !== i ? n - i : n + ":" + e.label < i + ":" + a.label ? -1 : 1
                 }).concat(r(!0))
             }
         },
-        HUHH: function(e, t, n) {
-            var a = {
+        HUHH: function(e, t, a) {
+            var n = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -910,7 +910,7 @@
                     end: 257
                 }
             };
-            a.loc.source = {
+            n.loc.source = {
                 body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nmutation EditBroadcastModal_UpdateChannelTagsInput($input: UpdateContentTagsInput!) {\nupdateContentTags(input: $input) {\ncontent {\n... on Stream {\nid\ntags {\n...broadcastTagFragment\n}\n}\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -919,16 +919,16 @@
                 }
             };
             var i = {};
-            a.definitions = a.definitions.concat(function(e) {
+            n.definitions = n.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
                     return !i[t] && (i[t] = !0, !0)
                 })
-            }(n("Iqxx").definitions)), e.exports = a
+            }(a("Iqxx").definitions)), e.exports = n
         },
         Iqxx: function(e, t) {
-            var n = {
+            var a = {
                 kind: "Document",
                 definitions: [{
                     kind: "FragmentDefinition",
@@ -994,7 +994,7 @@
                     end: 98
                 }
             };
-            n.loc.source = {
+            a.loc.source = {
                 body: "fragment broadcastTagFragment on Tag {\nid\nlocalizedName\ntagName\nisAutomated\nlocalizedDescription\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -1002,49 +1002,49 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = a
         },
-        N3I0: function(e, t, n) {
+        N3I0: function(e, t, a) {
             "use strict";
-            var a = n("mrSG"),
-                i = n("q1tI"),
-                r = n("u5aL"),
-                o = n("/7QA"),
-                s = n("Ue10"),
+            var n = a("mrSG"),
+                i = a("q1tI"),
+                r = a("u5aL"),
+                s = a("/7QA"),
+                o = a("Ue10"),
                 l = function() {
-                    return i.createElement(s.Va, {
-                        display: s.W.Flex,
-                        flexDirection: s.Y.Column,
-                        justifyContent: s.Ua.Center,
-                        alignItems: s.f.Center,
+                    return i.createElement(o.Wa, {
+                        display: o.X.Flex,
+                        flexDirection: o.Z.Column,
+                        justifyContent: o.Va.Center,
+                        alignItems: o.f.Center,
                         flexGrow: 1,
                         fullHeight: !0,
                         padding: {
                             y: 1
                         },
-                        zIndex: s.ac.Above
-                    }, i.createElement(s.xb, {
-                        color: s.O.Alt2,
-                        textAlign: s.Jb.Center,
+                        zIndex: o.bc.Above
+                    }, i.createElement(o.yb, {
+                        color: o.O.Alt2,
+                        textAlign: o.Kb.Center,
                         flexShrink: 1
-                    }, i.createElement(s.mb, {
-                        asset: s.nb.DeadGlitch,
+                    }, i.createElement(o.nb, {
+                        asset: o.ob.DeadGlitch,
                         width: 46,
                         height: 48
-                    })), i.createElement(s.Na, {
+                    })), i.createElement(o.Oa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Jb.Center
-                    }, i.createElement(s.V, {
-                        type: s.Nb.H4,
+                        textAlign: o.Kb.Center
+                    }, i.createElement(o.W, {
+                        type: o.Ob.H4,
                         "data-test-selector": "search-error-message"
-                    }, Object(o.d)("Search is not available at this time", "DropdownSearchError"))), i.createElement(s.V, {
-                        type: s.Nb.P
-                    }, Object(o.d)("Please try again later", "DropdownSearchError")))
+                    }, Object(s.d)("Search is not available at this time", "DropdownSearchError"))), i.createElement(o.W, {
+                        type: o.Ob.P
+                    }, Object(s.d)("Please try again later", "DropdownSearchError")))
                 },
-                c = n("8Ad5"),
-                d = function(e) {
+                d = a("8Ad5"),
+                c = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1062,29 +1062,29 @@
                                 isInputFocused: !1
                             })
                         }, t.onKeyDown = function(e) {
-                            var n = function() {
+                            var a = function() {
                                 e.preventDefault(), e.stopPropagation()
                             };
-                            e.keyCode === c.a.Esc ? t.setState({
+                            e.keyCode === d.a.Esc ? t.setState({
                                 isOpen: !1
-                            }) : e.keyCode === c.a.Up ? (n(), t.focusNext(-1)) : e.keyCode === c.a.Down && (n(), t.focusNext(1))
+                            }) : e.keyCode === d.a.Up ? (a(), t.focusNext(-1)) : e.keyCode === d.a.Down && (a(), t.focusNext(1))
                         }, t.onClickOut = function() {
                             t.state.isOpen && t.setState({
                                 isOpen: !1
                             }), t.props.onClose && t.props.onClose()
                         }, t.onMouseOver = function(e) {
-                            var n = e.target.closest("[data-selectable]");
-                            n && (n.focus(), n.tabIndex = 0, t.state.currentFocus && (t.state.currentFocus.tabIndex = -1), t.setState({
-                                currentFocus: n
-                            }), t.props.onFocusChange && t.props.onFocusChange(n))
+                            var a = e.target.closest("[data-selectable]");
+                            a && (a.focus(), a.tabIndex = 0, t.state.currentFocus && (t.state.currentFocus.tabIndex = -1), t.setState({
+                                currentFocus: a
+                            }), t.props.onFocusChange && t.props.onFocusChange(a))
                         }, t.getInputRef = function(e) {
                             t.inputRef = e
                         }, t
                     }
-                    return a.__extends(t, e), t.prototype.render = function() {
+                    return n.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? i.createElement(l, null) : i.Children.only(this.props.children),
-                            n = i.createElement(s.pb, {
+                            a = i.createElement(o.qb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -1099,23 +1099,23 @@
                             });
                         return this.props.inline ? i.createElement(r.a, {
                             onClickOut: this.onClickOut
-                        }, i.createElement(s.xb, {
-                            background: this.state.isInputFocused || this.state.isOpen ? s.r.Base : void 0,
-                            borderRadius: s.x.Large,
+                        }, i.createElement(o.yb, {
+                            background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
+                            borderRadius: o.x.Large,
                             padding: .5,
-                            position: s.db.Relative,
+                            position: o.eb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && i.createElement(s.xb, {
+                        }, a, e && i.createElement(o.yb, {
                             attachLeft: !0,
-                            background: s.r.Base,
-                            borderRadius: s.x.Large,
-                            display: this.state.isOpen ? s.W.Block : s.W.Hide,
+                            background: o.r.Base,
+                            borderRadius: o.x.Large,
+                            display: this.state.isOpen ? o.X.Block : o.X.Hide,
                             fullWidth: !0,
                             padding: {
                                 y: 1
                             },
-                            position: s.db.Absolute,
-                            zIndex: s.ac.Above,
+                            position: o.eb.Absolute,
+                            zIndex: o.bc.Above,
                             elevation: 3
                         }, i.createElement("div", {
                             tabIndex: 0,
@@ -1123,7 +1123,7 @@
                             onMouseOver: this.props.enableMouseEvents ? this.onMouseOver : void 0
                         }, t)))) : i.createElement(r.a, {
                             onClickOut: this.onClickOut
-                        }, n, e && i.createElement(s.u, a.__assign({
+                        }, a, e && i.createElement(o.u, n.__assign({
                             noTail: !0
                         }, this.props.balloonProps, {
                             show: this.state.isOpen
@@ -1139,23 +1139,23 @@
                     }, t.prototype.setValue = function(e) {
                         this.inputRef.value = e
                     }, t.prototype.focusNext = function(e) {
-                        var t, n = document.querySelectorAll("[data-selectable=true]"),
-                            a = document.activeElement,
-                            i = Array.prototype.indexOf.call(n, a);
-                        if ((t = i < 0 ? e > 0 ? 0 : n.length - 1 : i + e) < 0 && (t = 0), !(t >= n.length)) {
-                            var r = n.item(t);
+                        var t, a = document.querySelectorAll("[data-selectable=true]"),
+                            n = document.activeElement,
+                            i = Array.prototype.indexOf.call(a, n);
+                        if ((t = i < 0 ? e > 0 ? 0 : a.length - 1 : i + e) < 0 && (t = 0), !(t >= a.length)) {
+                            var r = a.item(t);
                             r.focus(), r.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
                                 currentFocus: r
                             }), this.props.onFocusChange && this.props.onFocusChange(r)
                         }
                     }, t
                 }(i.Component);
-            n.d(t, "a", function() {
-                return d
+            a.d(t, "a", function() {
+                return c
             })
         },
-        Ryvb: function(e, t, n) {
-            var a = {
+        Ryvb: function(e, t, a) {
+            var n = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1311,7 +1311,7 @@
                     end: 237
                 }
             };
-            a.loc.source = {
+            n.loc.source = {
                 body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery SuggestedTags($gameName: String! $tagType: TagType! $limit: Int!) {\ngame(name: $gameName) {\nid\ntags(tagType: $tagType limit: $limit) {\n...broadcastTagFragment\n}\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -1320,16 +1320,16 @@
                 }
             };
             var i = {};
-            a.definitions = a.definitions.concat(function(e) {
+            n.definitions = n.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
                     return !i[t] && (i[t] = !0, !0)
                 })
-            }(n("Iqxx").definitions)), e.exports = a
+            }(a("Iqxx").definitions)), e.exports = n
         },
-        X6el: function(e, t, n) {
-            var a = {
+        X6el: function(e, t, a) {
+            var n = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1793,7 +1793,7 @@
                     end: 566
                 }
             };
-            a.loc.source = {
+            n.loc.source = {
                 body: '#import "twilight/features/tags/models/broadcast-tag-fragment.gql"\nquery EditBroadcastModal($login: String!) {\nuser(login: $login) {\nid\nlastBroadcast {\nid\ntitle\ngame {\nid\nname\nboxArtURL(width: 40 height: 55)\n}\n}\nstream {\nid\ngame {\nid\nname\nboxArtURL(width: 40 height: 55)\n}\ntags {\n...broadcastTagFragment\n}\ntitle\n}\nbroadcastSettings {\nid\nlanguage\ngame {\nid\nname\n}\ntitle\n}\ndirectories {\nnodes {\nid\ndisplayName\ndirectoryType\nname\nbroadcastersCount\nviewersCount\navatarURL(width: 40 height: 55)\n}\n}\nchatSettings {\nisBroadcasterLanguageModeEnabled\n}\n}\ncurrentUser {\nid\n}\n}',
                 name: "GraphQL request",
                 locationOffset: {
@@ -1802,16 +1802,16 @@
                 }
             };
             var i = {};
-            a.definitions = a.definitions.concat(function(e) {
+            n.definitions = n.definitions.concat(function(e) {
                 return e.filter(function(e) {
                     if ("FragmentDefinition" !== e.kind) return !0;
                     var t = e.name.value;
                     return !i[t] && (i[t] = !0, !0)
                 })
-            }(n("Iqxx").definitions)), e.exports = a
+            }(a("Iqxx").definitions)), e.exports = n
         },
         aP55: function(e, t) {
-            var n = {
+            var a = {
                 kind: "Document",
                 definitions: [{
                     kind: "OperationDefinition",
@@ -1896,7 +1896,7 @@
                     end: 177
                 }
             };
-            n.loc.source = {
+            a.loc.source = {
                 body: "mutation EditBroadcastModal_UpdateChatSettingsInput($input: UpdateChatSettingsInput!) {\nupdateChatSettings(input: $input) {\nchatSettings {\nisBroadcasterLanguageModeEnabled\n}\n}\n}",
                 name: "GraphQL request",
                 locationOffset: {
@@ -1904,25 +1904,232 @@
                     column: 1
                 }
             };
-            e.exports = n
+            e.exports = a
         },
-        bDGO: function(e, t, n) {
+        b6Yk: function(e, t, a) {
             "use strict";
-            n.r(t);
-            var a, i = n("mrSG"),
-                r = n("q1tI"),
-                o = n("/MKj"),
-                s = n("fvjX"),
-                l = n("/7QA"),
-                c = n("cZKs"),
-                d = n("aCAx"),
-                u = n("kOut"),
-                m = n("Ue10");
-            n("w4St");
+            a.d(t, "a", function() {
+                return s
+            });
+            var n = a("mrSG"),
+                i = a("/7QA"),
+                r = a("kRBY"),
+                s = function() {
+                    function e() {}
+                    return e.get = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.request(e, n.__assign({}, t, {
+                                            method: "GET"
+                                        }), a)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.getOrThrow = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.requestOrThrow(e, n.__assign({}, t, {
+                                            method: "GET"
+                                        }), a)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.put = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.request(e, n.__assign({}, t, {
+                                            method: "PUT"
+                                        }), a)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.putOrThrow = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.requestOrThrow(e, n.__assign({}, t, {
+                                            method: "PUT"
+                                        }), a)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.post = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.request(e, n.__assign({}, t, {
+                                            method: "POST"
+                                        }), a)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.postOrThrow = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.requestOrThrow(e, n.__assign({}, t, {
+                                            method: "POST"
+                                        }), a)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.delete = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.request(e, n.__assign({}, t, {
+                                            method: "DELETE"
+                                        }), a)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.deleteOrThrow = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(i) {
+                                switch (i.label) {
+                                    case 0:
+                                        return [4, this.requestOrThrow(e, n.__assign({}, t, {
+                                            method: "DELETE"
+                                        }), a)];
+                                    case 1:
+                                        return [2, i.sent()]
+                                }
+                            })
+                        })
+                    }, e.request = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            var i, r, s, o;
+                            return n.__generator(this, function(l) {
+                                switch (l.label) {
+                                    case 0:
+                                        return t = this.constructOptions(t, a), i = t.headers ? t.headers["Content-Type"] : void 0, r = this.serialize(t.body, i), s = n.__assign({}, t, {
+                                            body: r
+                                        }), [4, this._fetch(e, s)];
+                                    case 1:
+                                        return o = l.sent(), [4, this.constructLegacyAPIResponse(o)];
+                                    case 2:
+                                        return [2, l.sent()]
+                                }
+                            })
+                        })
+                    }, e.requestOrThrow = function(e, t, a) {
+                        return void 0 === t && (t = {}), void 0 === a && (a = {}), n.__awaiter(this, void 0, Promise, function() {
+                            var i;
+                            return n.__generator(this, function(r) {
+                                switch (r.label) {
+                                    case 0:
+                                        return r.trys.push([0, 2, , 3]), [4, this.request(e, t, a)];
+                                    case 1:
+                                        if ((i = r.sent()).requestError) throw i.requestError;
+                                        if (i.error) throw new Error("Error while sending legacy-api request: " + i.error.status + " - " + i.error.message);
+                                        return [2, n.__assign({}, i, {
+                                            body: i.body
+                                        })];
+                                    case 2:
+                                        throw r.sent();
+                                    case 3:
+                                        return [2]
+                                }
+                            })
+                        })
+                    }, e.getAPIURL = function(e) {
+                        return new URL(e, i.p.config.apiBaseURL)
+                    }, e.constructLegacyAPIResponse = function(e) {
+                        return n.__awaiter(this, void 0, Promise, function() {
+                            var t, a, i, r;
+                            return n.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        t = {
+                                            status: e.status
+                                        }, n.label = 1;
+                                    case 1:
+                                        return n.trys.push([1, 3, , 4]), [4, e.json()];
+                                    case 2:
+                                        return a = n.sent(), e.ok ? t.body = a : t.error = a, [3, 4];
+                                    case 3:
+                                        return i = n.sent(), e.headers && e.headers.get && (r = e.headers.get("Content-Type")) && -1 !== r.indexOf("application/json") && (t.requestError = i), [3, 4];
+                                    case 4:
+                                        return [2, t]
+                                }
+                            })
+                        })
+                    }, e._fetch = function(e, t) {
+                        return void 0 === t && (t = {}), n.__awaiter(this, void 0, Promise, function() {
+                            return n.__generator(this, function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        return [4, fetch(this.getAPIURL(e).toString(), t)];
+                                    case 1:
+                                        return [2, a.sent()]
+                                }
+                            })
+                        })
+                    }, e.constructOptions = function(e, t) {
+                        return e = Object.assign({}, e, {
+                            headers: n.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                        })
+                    }, e.serialize = function(e, t) {
+                        return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
+                            contentType: t
+                        }), null) : null
+                    }, e.getDefaultHeaders = function(e, t) {
+                        var a = i.p.store.getState(),
+                            n = {
+                                Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
+                                "Accept-Language": "en-us",
+                                "Client-ID": i.p.config.legacyClientID,
+                                "X-Requested-With": "XMLHttpRequest"
+                            };
+                        e.body && FormData.prototype.isPrototypeOf(e.body) || (n["Content-Type"] = "application/json; charset=UTF-8");
+                        var s = Object(r.e)(a);
+                        return s && (n.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (n["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                            n[e] && delete n[e]
+                        }), n
+                    }, e.logger = i.p.logger.withCategory("legacy-api"), e
+                }()
+        },
+        bDGO: function(e, t, a) {
+            "use strict";
+            a.r(t);
+            var n, i = a("mrSG"),
+                r = a("q1tI"),
+                s = a("/MKj"),
+                o = a("fvjX"),
+                l = a("/7QA"),
+                d = a("cZKs"),
+                c = a("aCAx"),
+                u = a("kOut"),
+                g = a("Ue10");
+            a("w4St");
             ! function(e) {
                 e.TITLE = "edit-broadcast.title"
-            }(a || (a = {}));
-            var p = function(e) {
+            }(n || (n = {}));
+            var m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
                     return t.handleOnSubmit = function(e) {
@@ -1930,21 +2137,21 @@
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(m.xb, {
+                    return r.createElement(g.yb, {
                         className: "edit-broadcast__container",
-                        background: m.r.Base,
+                        background: g.r.Base,
                         padding: {
                             x: 2,
                             y: 3
                         }
-                    }, r.createElement(m.Va, {
-                        "data-test-selector": a.TITLE,
+                    }, r.createElement(g.Wa, {
+                        "data-test-selector": n.TITLE,
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(m.V, {
-                        type: m.Nb.H4
-                    }, Object(l.d)("Broadcast Options", "EditBroadcastModal"))), r.createElement(m.xb, {
+                    }, r.createElement(g.W, {
+                        type: g.Ob.H4
+                    }, Object(l.d)("Broadcast Options", "EditBroadcastModal"))), r.createElement(g.yb, {
                         borderTop: !0,
                         margin: {
                             top: 2
@@ -1953,418 +2160,168 @@
                             top: 2
                         }
                     }, r.createElement(u.a, {
-                        cancelComponent: r.createElement(m.Va, {
+                        cancelComponent: r.createElement(g.Wa, {
                             margin: {
                                 left: 1
                             }
-                        }, r.createElement(m.z, {
+                        }, r.createElement(g.z, {
                             onClick: this.props.closeModal,
-                            type: m.F.Text
+                            type: g.F.Text
                         }, Object(l.d)("Cancel", "EditBroadcastModal"))),
                         onSubmit: this.handleOnSubmit,
                         channelLogin: this.props.channelLogin
-                    })), r.createElement(c.a, null))
+                    })), r.createElement(d.a, null))
                 }, t
             }(r.Component);
-            var g = Object(o.connect)(null, function(e) {
-                return Object(s.bindActionCreators)({
-                    closeModal: d.c
+            var p = Object(s.connect)(null, function(e) {
+                return Object(o.bindActionCreators)({
+                    closeModal: c.c
                 }, e)
-            })(p);
-            n.d(t, "TestSelectors", function() {
-                return a
-            }), n.d(t, "EditBroadcastModalComponent", function() {
+            })(m);
+            a.d(t, "TestSelectors", function() {
+                return n
+            }), a.d(t, "EditBroadcastModalComponent", function() {
+                return m
+            }), a.d(t, "EditBroadcastModal", function() {
                 return p
-            }), n.d(t, "EditBroadcastModal", function() {
-                return g
             })
         },
-        "d8/y": function(e, t, n) {},
-        iUE2: function(e, t, n) {},
-        kOut: function(e, t, n) {
+        iUE2: function(e, t, a) {},
+        kOut: function(e, t, a) {
             "use strict";
-            var a, i, r, o, s = n("mrSG"),
-                l = n("cr+I"),
-                c = n("q1tI"),
-                d = n("oJmH"),
-                u = n("/7QA"),
-                m = n("0ly3"),
-                p = n("yR8l"),
-                g = n("geRD"),
-                h = n("DMoW"),
-                f = n("b6Yk"),
-                v = n("f00E"),
-                y = n("N3I0"),
-                b = n("8/mp"),
-                S = n("6x+I"),
-                k = n("Ue10"),
-                T = (n("d8/y"), function(e) {
-                    return e.community ? c.createElement(b.b, {
-                        suppressScrollX: !0
-                    }, c.createElement(k.Va, {
-                        margin: 1
-                    }, c.createElement(k.xb, {
-                        borderBottom: !0,
-                        padding: {
-                            bottom: 2
-                        },
-                        margin: {
-                            bottom: .5
-                        }
-                    }, c.createElement(k.V, null, Object(u.d)("{streamerCount} Streamers", {
-                        streamerCount: e.community.channels || 0
-                    }, "CommunityInfoPanel"))), c.createElement(k.V, {
-                        type: k.Nb.Strong,
-                        color: k.O.Alt2
-                    }, Object(u.d)("Community Description", "CommunityInfoPanel")), c.createElement(k.V, null, e.community.summary), c.createElement(k.xb, {
-                        borderTop: !0,
-                        padding: {
-                            top: .5
-                        },
-                        margin: {
-                            top: 2
-                        }
-                    }, c.createElement(k.V, {
-                        type: k.Nb.Strong,
-                        color: k.O.Alt2
-                    }, Object(u.d)("Community Rules", "CommunityInfoPanel"))), c.createElement(S, {
-                        source: e.community.rules
-                    }))) : c.createElement(k.Na, {
-                        padding: {
-                            y: 5
-                        },
-                        className: "community-info-panel__placeholder"
-                    }, c.createElement(k.V, {
-                        fontSize: k.Aa.Size4,
-                        italic: !0,
-                        color: k.O.Alt2
-                    }, Object(u.d)("Hover over a community", "CommunityInfoPanel")))
-                }),
-                C = n("GIun"),
-                E = n("N0BP"),
+            var n, i, r, s, o = a("mrSG"),
+                l = a("cr+I"),
+                d = a("q1tI"),
+                c = a("oJmH"),
+                u = a("/7QA"),
+                g = a("0ly3"),
+                m = a("yR8l"),
+                p = a("geRD"),
+                h = a("DMoW"),
+                f = a("b6Yk"),
+                v = a("f00E"),
+                b = a("N3I0"),
+                k = a("GIun"),
+                T = a("8/mp"),
+                y = a("N0BP"),
+                S = a("Ue10"),
                 N = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.onClick = function() {
-                            t.props.onCommunityResultSelected(t.props.community)
-                        }, t
-                    }
-                    return s.__extends(t, e), t.prototype.showComponentUpdate = function() {
-                        return !1
-                    }, t.prototype.render = function() {
-                        return c.createElement(C.a, null, c.createElement(k.Sa, s.__assign({
-                            key: "community_" + this.props.community.objectID,
-                            tabIndex: -1,
-                            onClick: this.onClick
-                        }, Object(E.a)(this.props)), c.createElement(k.Va, {
-                            fullWidth: !0,
-                            padding: {
-                                y: .5,
-                                x: 1
-                            }
-                        }, c.createElement(k.G, {
-                            row: !0
-                        }, c.createElement(k.I, {
-                            src: this.props.community.avatar_image_url ? this.props.community.avatar_image_url : "",
-                            alt: this.props.community.name,
-                            size: k.J.Size2,
-                            aspect: k.p.BoxArt
-                        }), c.createElement(k.Va, {
-                            fullWidth: !0,
-                            display: k.W.Flex,
-                            overflow: k.Ya.Hidden,
-                            position: k.db.Relative
-                        }, c.createElement(k.Na, {
-                            margin: {
-                                left: .5
-                            },
-                            flexGrow: 1
-                        }, c.createElement(k.V, {
-                            type: k.Nb.Span,
-                            fontSize: k.Aa.Size7,
-                            ellipsis: !0
-                        }, this.props.community.name)), c.createElement(k.Va, {
-                            display: k.W.Flex,
-                            alignItems: k.f.Center,
-                            attachRight: !0
-                        }, c.createElement(k.mb, {
-                            asset: k.nb.NavProfile,
-                            type: k.ob.Alt2,
-                            width: 12,
-                            height: 12
-                        }), c.createElement(k.V, {
-                            type: k.Nb.Span,
-                            className: "search-panel__link",
-                            ellipsis: !0
-                        }, Object(u.e)(this.props.community.viewers || 0))))))))
-                    }, t
-                }(c.Component),
-                _ = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            focusedCommunityIdx: null
-                        }, t.communitySearch = null, t.onFocusChange = function(e) {
-                            var n = e.dataset.idx;
-                            t.setState({
-                                focusedCommunityIdx: n ? parseInt(n, 10) : null
-                            })
-                        }, t.setCommunitySearchRef = function(e) {
-                            t.communitySearch = e
-                        }, t.onCommunityResultSelected = function(e) {
-                            t.communitySearch && t.communitySearch.setValue(""), t.props.onCommunityResultSelected(e)
-                        }, t
-                    }
-                    return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
-                        this.communitySearch && e.isCommunitySearchOpen !== this.props.isCommunitySearchOpen && this.communitySearch.toggle(e.isCommunitySearchOpen)
-                    }, t.prototype.render = function() {
-                        var e = this,
-                            t = this.props.communityResults ? this.props.communityResults.hits : [];
-                        return c.createElement("div", null, c.createElement(k.Ca, {
-                            error: this.props.error,
-                            errorMessage: this.props.errorMessage,
-                            label: Object(u.d)("Communities", "CommunitySearch")
-                        }, c.createElement(y.a, {
-                            enableMouseEvents: !0,
-                            onChange: this.props.onCommunityInputChange,
-                            onFocusChange: this.onFocusChange,
-                            ref: this.setCommunitySearchRef,
-                            placeholder: Object(u.d)("Add up to 3 communities", "CommunitySearch"),
-                            balloonProps: {
-                                size: k.w.Medium,
-                                direction: k.v.Bottom
-                            },
-                            showDropdown: t.length > 0
-                        }, c.createElement(k.Va, {
-                            display: k.W.Flex
-                        }, c.createElement(b.b, {
-                            height: 300,
-                            suppressScrollX: !0,
-                            className: "edit-broadcast__community-search__section"
-                        }, c.createElement(k.Va, null, t.map(function(t, n) {
-                            return c.createElement(N, {
-                                key: t.objectID,
-                                "data-idx": n,
-                                community: t,
-                                onCommunityResultSelected: e.onCommunityResultSelected
-                            })
-                        }))), c.createElement(k.Va, {
-                            className: "edit-broadcast__community-search__section"
-                        }, c.createElement(T, {
-                            community: this.props.communityResults && null !== this.state.focusedCommunityIdx ? t[this.state.focusedCommunityIdx] : null
-                        }))))), c.createElement(k.Va, {
-                            margin: {
-                                top: .5
-                            }
-                        }, this.props.selectedCommunities && this.props.selectedCommunities.map(function(t, n) {
-                            return c.createElement(k.Va, {
-                                display: k.W.Inline,
-                                margin: {
-                                    right: .5
-                                },
-                                key: t.objectID + "_" + n
-                            }, c.createElement(k.Gb, {
-                                type: k.Ib.Accent,
-                                action: k.Hb.Remove,
-                                label: t.name,
-                                key: t.objectID,
-                                onClick: e.props.onRemoveCommunity,
-                                "data-idx": n
-                            }))
-                        })))
-                    }, t
-                }(c.Component),
-                O = n("H/lO"),
-                F = n("NZDK"),
-                I = 50,
-                R = function(e) {
-                    function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.state = {
-                            communityResults: null,
-                            communityTerm: "",
-                            isCommunitySearchOpen: !1,
-                            hoveredCommunity: null,
-                            queryID: "",
-                            isWaiting: !1
-                        }, n.onCommunityInputChange = function(e) {
-                            return s.__awaiter(n, void 0, void 0, function() {
-                                var t = this;
-                                return s.__generator(this, function(n) {
-                                    return this.props.onChange && this.props.onChange(""), this.inputTimer && (clearTimeout(this.inputTimer), this.inputTimer = 0), e ? (this.setState({
-                                        communityResults: null,
-                                        isWaiting: !0
-                                    }), this.inputTimer = setTimeout(function() {
-                                        return t.doCommunitySearch(e)
-                                    }, I), [2]) : (this.setState({
-                                        isCommunitySearchOpen: !1,
-                                        communityTerm: ""
-                                    }), [2])
-                                })
-                            })
-                        }, n.onCommunityResultSelected = function(e) {
-                            n.props.selectedCommunities && 3 === n.props.selectedCommunities.length ? n.props.onError(Object(u.d)("You can only participate in up to 3 Communities at the same time.", "EditBroadcastModal")) : (n.setState({
-                                isCommunitySearchOpen: !1
-                            }), n.props.onCommunityResultSelected(e))
-                        }, n.searchClient = new F.a({
-                            appId: u.a.algoliaApplicationID,
-                            apiKey: u.a.algoliaAPIKey,
-                            apolloClient: u.o.apollo.client,
-                            logger: u.j,
-                            config: u.a,
-                            stats: u.o.stats
-                        }), n
-                    }
-                    return s.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(_, s.__assign({}, this.props, {
-                            onCommunityInputChange: this.onCommunityInputChange,
-                            isCommunitySearchOpen: this.state.isCommunitySearchOpen,
-                            communityResults: this.state.communityResults,
-                            selectedCommunities: this.props.selectedCommunities,
-                            onCommunityResultSelected: this.onCommunityResultSelected,
-                            onRemoveCommunity: this.props.onRemoveCommunity
-                        }))
-                    }, t.prototype.doCommunitySearch = function(e) {
-                        return s.__awaiter(this, void 0, void 0, function() {
-                            var t, n, a;
-                            return s.__generator(this, function(i) {
-                                switch (i.label) {
-                                    case 0:
-                                        this.inputTimer = 0, t = Object(v.a)(), this.setState({
-                                            queryID: t
-                                        }), n = null, i.label = 1;
-                                    case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(O.a.Communities, e, t)];
-                                    case 2:
-                                        return n = i.sent(), [3, 4];
-                                    case 3:
-                                        return a = i.sent(), u.j.error(a, "Algolia top results search failed"), [2, null];
-                                    case 4:
-                                        return n && n.communities && n.id === t ? (this.setState({
-                                            communityResults: n.communities,
-                                            isCommunitySearchOpen: !0
-                                        }), [2]) : [2, null]
-                                }
-                            })
-                        })
-                    }, t
-                }(c.Component),
-                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClick = function() {
                             t.props.onClick(t.props.game)
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(k.Sa, s.__assign({
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return d.createElement(S.Ta, o.__assign({
                             onClick: this.onClick,
                             tabIndex: -1
-                        }, Object(E.a)(this.props)), c.createElement(k.Va, {
+                        }, Object(y.a)(this.props)), d.createElement(S.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, c.createElement(k.G, {
+                        }, d.createElement(S.G, {
                             row: !0
-                        }, c.createElement(k.I, {
+                        }, d.createElement(S.I, {
                             alt: this.props.game.name,
                             src: "https://static-cdn.jtvnw.net/ttv-boxart/" + this.props.game.name + "-40x55.jpg",
-                            size: k.J.Size3,
-                            aspect: k.p.BoxArt
-                        }), c.createElement(k.H, {
-                            overflow: k.Ya.Hidden
-                        }, c.createElement(k.Na, {
+                            size: S.J.Size3,
+                            aspect: S.p.BoxArt
+                        }), d.createElement(S.H, {
+                            overflow: S.Za.Hidden
+                        }, d.createElement(S.Oa, {
                             padding: {
                                 x: 1
                             }
-                        }, c.createElement(k.V, {
-                            type: k.Nb.P
+                        }, d.createElement(S.W, {
+                            type: S.Ob.P
                         }, this.props.game.name))))))
                     }, t
-                }(c.Component),
-                A = n("fVj5"),
-                x = function(e) {
+                }(d.Component),
+                C = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.gameSearch = null, t.setGameSearchRef = function(e) {
                             t.gameSearch = e
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return o.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         this.gameSearch && e.isGameSearchOpen !== this.props.isGameSearchOpen && this.gameSearch.toggle(e.isGameSearchOpen), this.gameSearch && e.selectedGame !== this.props.selectedGame && this.gameSearch.setValue(e.selectedGame)
                     }, t.prototype.componentDidMount = function() {
                         this.gameSearch && this.gameSearch.setValue(this.props.selectedGame)
                     }, t.prototype.render = function() {
                         var e = this,
-                            t = Object(u.d)("Game/Category", "GameSearch"),
-                            n = Object(u.d)("Search for a game or category", "GameSearch");
-                        return Object(A.b)() && (t = Object(u.d)("Category", "GameSearch"), n = Object(u.d)("Search for a category", "GameSearch")), c.createElement(k.Ca, {
+                            t = Object(u.d)("Category", "GameSearch"),
+                            a = Object(u.d)("Search for a category", "GameSearch");
+                        return d.createElement(S.Da, {
                             error: this.props.error,
                             errorMessage: this.props.errorMessage,
                             label: t
-                        }, c.createElement(y.a, {
+                        }, d.createElement(b.a, {
                             onChange: this.props.onGameInputChange,
                             ref: this.setGameSearchRef,
-                            placeholder: n,
+                            placeholder: a,
                             balloonProps: {
                                 show: this.props.isGameSearchOpen,
-                                direction: k.v.Bottom
+                                direction: S.v.Bottom
                             }
-                        }, c.createElement(b.b, {
+                        }, d.createElement(T.b, {
                             className: "edit-broadcast__game-search",
                             suppressScrollX: !0
-                        }, c.createElement("div", null, this.props.gameResults && this.props.gameResults.hits.map(function(t) {
-                            return c.createElement(C.a, {
+                        }, d.createElement("div", null, this.props.gameResults && this.props.gameResults.hits.map(function(t) {
+                            return d.createElement(k.a, {
                                 key: t.objectID
-                            }, c.createElement(w, {
+                            }, d.createElement(N, {
                                 game: t,
                                 onClick: e.props.onGameResultSelected,
                                 key: t.objectID
                             }))
                         })))))
                     }, t
-                }(c.Component),
-                D = 100,
-                L = function(e) {
+                }(d.Component),
+                E = a("H/lO"),
+                _ = a("NZDK"),
+                O = 100,
+                F = function(e) {
                     function t(t) {
-                        var n = e.call(this, t) || this;
-                        return n.state = {
+                        var a = e.call(this, t) || this;
+                        return a.state = {
                             gameResults: null,
                             gameTerm: "",
                             isGameSearchOpen: !1,
                             queryID: "",
                             isWaiting: !1
-                        }, n.onGameInputChange = function(e) {
-                            return s.__awaiter(n, void 0, void 0, function() {
+                        }, a.onGameInputChange = function(e) {
+                            return o.__awaiter(a, void 0, void 0, function() {
                                 var t = this;
-                                return s.__generator(this, function(n) {
+                                return o.__generator(this, function(a) {
                                     return this.inputTimer && (clearTimeout(this.inputTimer), this.inputTimer = 0), e ? (this.setState({
                                         gameResults: null,
                                         isWaiting: !0
                                     }), this.inputTimer = setTimeout(function() {
                                         return t.doGameSearch(e)
-                                    }, D), [2]) : (this.setState({
+                                    }, O), [2]) : (this.setState({
                                         isGameSearchOpen: !1,
                                         gameTerm: ""
                                     }), this.props.onGameCleared(), [2])
                                 })
                             })
-                        }, n.onGameResultSelected = function(e) {
-                            n.setState({
+                        }, a.onGameResultSelected = function(e) {
+                            a.setState({
                                 isGameSearchOpen: !1
-                            }), n.props.onGameResultSelected(e)
-                        }, n.searchClient = new F.a({
+                            }), a.props.onGameResultSelected(e)
+                        }, a.searchClient = new _.a({
                             appId: u.a.algoliaApplicationID,
                             apiKey: u.a.algoliaAPIKey,
-                            apolloClient: u.o.apollo.client,
-                            logger: u.j,
+                            apolloClient: u.p.apollo.client,
+                            logger: u.k,
                             config: u.a,
-                            stats: u.o.stats
-                        }), n
+                            stats: u.p.stats
+                        }), a
                     }
-                    return s.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(x, s.__assign({}, this.props, {
+                    return o.__extends(t, e), t.prototype.render = function() {
+                        return d.createElement(C, o.__assign({}, this.props, {
                             onGameInputChange: this.onGameInputChange,
                             isGameSearchOpen: this.state.isGameSearchOpen,
                             gameResults: this.state.gameResults,
@@ -2372,25 +2329,25 @@
                             onGameResultSelected: this.onGameResultSelected
                         }))
                     }, t.prototype.doGameSearch = function(e) {
-                        return s.__awaiter(this, void 0, void 0, function() {
-                            var t, n, a;
-                            return s.__generator(this, function(i) {
+                        return o.__awaiter(this, void 0, void 0, function() {
+                            var t, a, n;
+                            return o.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
                                         return this.inputTimer = 0, t = Object(v.a)(), [4, this.setState({
                                             queryID: t
                                         })];
                                     case 1:
-                                        i.sent(), n = null, i.label = 2;
+                                        i.sent(), a = null, i.label = 2;
                                     case 2:
-                                        return i.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(O.a.Games, e, t)];
+                                        return i.trys.push([2, 4, , 5]), [4, this.searchClient.queryForType(E.a.Games, e, t)];
                                     case 3:
-                                        return n = i.sent(), [3, 5];
+                                        return a = i.sent(), [3, 5];
                                     case 4:
-                                        return a = i.sent(), u.j.error(a, "Algolia top results search failed"), [2, null];
+                                        return n = i.sent(), u.k.error(n, "Algolia top results search failed"), [2, null];
                                     case 5:
-                                        return n && n.games && 0 !== n.games.totalHits ? (this.setState({
-                                            gameResults: n.games,
+                                        return a && a.games && 0 !== a.games.totalHits ? (this.setState({
+                                            gameResults: a.games,
                                             isGameSearchOpen: !0
                                         }), [2]) : (this.setState({
                                             isGameSearchOpen: !1
@@ -2399,11 +2356,11 @@
                             })
                         })
                     }, t
-                }(c.Component),
-                V = n("2Dck");
+                }(d.Component),
+                w = a("2Dck");
             ! function(e) {
-                e.Title = "title", e.GoLiveNotification = "goLiveNotification", e.GameCategory = "gameCategory", e.Communities = "communities", e.Language = "language", e.Tags = "tags"
-            }(a || (a = {})),
+                e.Title = "title", e.GoLiveNotification = "goLiveNotification", e.GameCategory = "gameCategory", e.Language = "language", e.Tags = "tags"
+            }(n || (n = {})),
             function(e) {
                 e.Empty = "empty", e.FailedAutomod = "failed_automod", e.FailedAutomodTitle = "failed_automod_title", e.NoError = "", e.TitleTooLong = "title-too-long"
             }(i || (i = {})),
@@ -2412,15 +2369,15 @@
             }(r || (r = {})),
             function(e) {
                 e.Complete = "complete", e.Errored = "errored", e.Fetching = "fetching", e.Ready = "ready"
-            }(o || (o = {}));
-            var G = n("GnwI"),
-                j = n("lr7A"),
-                B = n("HUHH"),
-                M = n("aP55"),
-                P = n("X6el");
-            n("iUE2");
+            }(s || (s = {}));
+            var I = a("GnwI"),
+                A = a("lr7A"),
+                L = a("HUHH"),
+                D = a("aP55"),
+                R = a("X6el");
+            a("iUE2");
 
-            function q(e) {
+            function G(e) {
                 switch (e) {
                     default: return e;
                     case i.Empty:
@@ -2435,8 +2392,8 @@
                             return Object(u.d)("Title too long.", "EditBroadcastComponent")
                 }
             }
-            var z = 2500,
-                U = function(e) {
+            var x = 2500,
+                B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2448,7 +2405,6 @@
                                     isEnabled: !1
                                 },
                                 gameCategory: {},
-                                communities: {},
                                 language: {
                                     value: "en"
                                 },
@@ -2457,48 +2413,35 @@
                             gameResults: null,
                             loaded: !1,
                             queryID: null,
-                            requestState: o.Ready,
-                            selectedCommunities: [],
+                            requestState: s.Ready,
                             selectedGame: "",
                             selectedTags: [],
                             modifiedTags: {}
-                        }, t.checkTagExperiment = Object(A.b)(), t.setInitialState = function(e) {
-                            var n = e.data,
-                                a = n.currentUser,
-                                i = n.user;
-                            return s.__awaiter(t, void 0, void 0, function() {
+                        }, t.setInitialState = function(e) {
+                            var a = e.data,
+                                n = a.currentUser,
+                                i = a.user;
+                            return o.__awaiter(t, void 0, void 0, function() {
                                 var e, t;
-                                return s.__generator(this, function(n) {
-                                    switch (n.label) {
+                                return o.__generator(this, function(a) {
+                                    switch (a.label) {
                                         case 0:
-                                            return a && a.id && i && i.id ? (e = i.id === a.id) ? [4, this.fetchGoLiveNotification(i.id)] : [3, 2] : [2];
+                                            return n && n.id && i && i.id ? (e = i.id === n.id) ? [4, this.fetchGoLiveNotification(i.id)] : [3, 2] : [2];
                                         case 1:
-                                            t = n.sent(), n.label = 2;
+                                            t = a.sent(), a.label = 2;
                                         case 2:
-                                            return this.setState(function(n) {
-                                                var a = s.__assign({}, n, {
+                                            return this.setState(function(a) {
+                                                var n = o.__assign({}, a, {
                                                         loaded: !0
                                                     }),
                                                     r = i.broadcastSettings,
-                                                    o = i.directories,
-                                                    l = i.lastBroadcast,
-                                                    c = i.stream,
-                                                    d = o && o.nodes || [],
-                                                    u = c && c.tags || [];
-                                                return r && (a.fields.language.value = r.language), a.fields.title.value = c && c.title || l && l.title || "", a.selectedGame = c && c.id && c.game && c.game.name || l && l.game && l.game.name || "", a.fields.goLiveNotification = {
+                                                    s = i.lastBroadcast,
+                                                    l = i.stream,
+                                                    d = l && l.tags || [];
+                                                return r && (n.fields.language.value = r.language), n.fields.title.value = l && l.title || s && s.title || "", n.selectedGame = l && l.id && l.game && l.game.name || s && s.game && s.game.name || "", n.fields.goLiveNotification = {
                                                     isEnabled: e,
                                                     value: t
-                                                }, a.selectedCommunities = d.reduce(function(e, t) {
-                                                    return t && t.directoryType === h.q.COMMUNITY && e.push({
-                                                        avatar_image_url: t.avatarURL || "",
-                                                        channels: t.broadcastersCount || 0,
-                                                        name: t.name,
-                                                        objectID: t.id,
-                                                        rules: "",
-                                                        summary: "",
-                                                        viewers: t.viewersCount || 0
-                                                    }), e
-                                                }, []), a.selectedTags = u.map(function(e) {
+                                                }, n.selectedTags = d.map(function(e) {
                                                     return {
                                                         id: e.id,
                                                         tagName: e.tagName,
@@ -2506,7 +2449,7 @@
                                                         isAutomated: e.isAutomated,
                                                         localizedDescription: e.localizedDescription
                                                     }
-                                                }), a
+                                                }), n
                                             }, this.onLoad), [2]
                                     }
                                 })
@@ -2516,43 +2459,42 @@
                             var e = t.props.onLoad;
                             e && e()
                         }, t.handleErrorByType = function(e) {
-                            return function(n) {
-                                t.setState(function(a) {
-                                    var i = s.__assign({}, a);
-                                    return i.fields[e].errorType = n, i.buttonDisabled = !t.areAllFieldsValid(i.fields), i
+                            return function(a) {
+                                t.setState(function(n) {
+                                    var i = o.__assign({}, n);
+                                    return i.fields[e].errorType = a, i.buttonDisabled = !t.areAllFieldsValid(i.fields), i
                                 })
                             }
                         }, t.handleChangeByType = function(e) {
-                            return function(n) {
-                                var a = n.currentTarget.value;
-                                t.setField(e, a)
+                            return function(a) {
+                                var n = a.currentTarget.value;
+                                t.setField(e, n)
                             }
-                        }, t.setField = function(e, n) {
+                        }, t.setField = function(e, a) {
                             t.setState(function(r) {
-                                var o = s.__assign({}, r);
-                                return o.fields[e].value = t.normalizeString(n).slice(0, V.c).join(""), o.fields[e].errorType = function(e, t) {
+                                var s = o.__assign({}, r);
+                                return s.fields[e].value = t.normalizeString(a).slice(0, w.c).join(""), s.fields[e].errorType = function(e, t) {
                                     switch (t) {
-                                        case a.Title:
-                                            if (e.match(/^$/) && t === a.Title) return i.Empty;
+                                        case n.Title:
+                                            if (e.match(/^$/) && t === n.Title) return i.Empty;
                                         default:
-                                        case a.Communities:
-                                        case a.GameCategory:
-                                        case a.GoLiveNotification:
-                                        case a.Language:
+                                        case n.GameCategory:
+                                        case n.GoLiveNotification:
+                                        case n.Language:
                                             return i.NoError
                                     }
-                                }(n, e), o.buttonDisabled = !t.areAllFieldsValid(o.fields), o
+                                }(a, e), s.buttonDisabled = !t.areAllFieldsValid(s.fields), s
                             })
                         }, t.getRemainingCharacters = function(e) {
-                            return (V.c - (e && t.normalizeString(e).length || 0)).toString()
+                            return (w.c - (e && t.normalizeString(e).length || 0)).toString()
                         }, t.areAllFieldsValid = function(e) {
-                            return Object.keys(e).reduce(function(t, n) {
-                                return t && "communities" !== n && "tags" !== n ? !e[n].errorType : t
+                            return Object.keys(e).reduce(function(t, a) {
+                                return t && "tags" !== a ? !e[a].errorType : t
                             }, !0)
                         }, t.handleLanguageChange = function(e) {
                             t.setState(function(t) {
-                                var n = s.__assign({}, t);
-                                return n.fields.language.value = e, n
+                                var a = o.__assign({}, t);
+                                return a.fields.language.value = e, a
                             })
                         }, t.handleBroadcastLanguageModeEnabledChange = function(e) {
                             t.setState({
@@ -2562,101 +2504,87 @@
                             return t.setState({
                                 selectedGame: ""
                             })
-                        }, t.handleCommunityResultSelected = function(e) {
-                            var n = t.state.selectedCommunities || [];
-                            t.setState({
-                                selectedCommunities: n ? n.concat([e]) : [e]
-                            })
                         }, t.handleGameResultSelected = function(e) {
                             t.setState({
                                 selectedGame: e.name
                             })
-                        }, t.handleRemoveCommunity = function(e) {
-                            t.handleErrorByType(a.Communities)("");
-                            var n = e.currentTarget.dataset.idx;
-                            n && t.setState(function(e) {
-                                var t = e.selectedCommunities || [];
-                                return t.splice(parseInt(n, 10), 1), {
-                                    selectedCommunities: t
-                                }
-                            })
                         }, t.handleTagResultSelected = function(e) {
                             t.setState(function(t) {
-                                var n;
+                                var a;
                                 return {
                                     selectedTags: (t.selectedTags || []).concat([e]),
-                                    modifiedTags: s.__assign({}, t.modifiedTags, (n = {}, n[e.id] = !0, n))
+                                    modifiedTags: o.__assign({}, t.modifiedTags, (a = {}, a[e.id] = !0, a))
                                 }
                             })
                         }, t.handleRemoveTag = function(e) {
-                            t.handleErrorByType(a.Tags)("");
-                            var n = e.currentTarget.dataset.idx;
-                            n && t.setState(function(e) {
-                                var t, a = e.selectedTags.slice();
-                                return a.splice(parseInt(n, 10), 1), {
-                                    selectedTags: a,
-                                    modifiedTags: s.__assign({}, e.modifiedTags, (t = {}, t[e.selectedTags[parseInt(n, 10)].id] = !1, t))
+                            t.handleErrorByType(n.Tags)("");
+                            var a = e.currentTarget.dataset.idx;
+                            a && t.setState(function(e) {
+                                var t, n = e.selectedTags.slice();
+                                return n.splice(parseInt(a, 10), 1), {
+                                    selectedTags: n,
+                                    modifiedTags: o.__assign({}, e.modifiedTags, (t = {}, t[e.selectedTags[parseInt(a, 10)].id] = !1, t))
                                 }
                             })
                         }, t.handleSubmit = function() {
-                            return s.__awaiter(t, void 0, void 0, function() {
-                                var e, t, n, a, i, r = this;
-                                return s.__generator(this, function(l) {
+                            return o.__awaiter(t, void 0, void 0, function() {
+                                var e, t, a, n, i, r = this;
+                                return o.__generator(this, function(l) {
                                     switch (l.label) {
                                         case 0:
                                             return (e = this.props.data.user && this.props.data.user.id) ? (this.setState({
                                                 buttonDisabled: !0,
-                                                requestState: o.Fetching
-                                            }), [4, Promise.all([this.updateChannel(e), this.updateGoLiveNotification(e), this.updateChannelCommunities(e), this.updateChannelBroadcasterLanguageEnabled(e), this.updateChannelTags(e)])]) : [3, 3];
+                                                requestState: s.Fetching
+                                            }), [4, Promise.all([this.updateChannel(e), this.updateGoLiveNotification(e), this.updateChannelBroadcasterLanguageEnabled(e), this.updateChannelTags(e)])]) : [3, 3];
                                         case 1:
                                             return t = l.sent(), [4, this.props.data.refetch()];
                                         case 2:
-                                            l.sent(), n = s.__assign({}, this.state.fields), a = t.reduce(function(e, t) {
-                                                var a = t && t.errorType;
-                                                return t && (n[t.fieldType].errorType = a), e || !!a
+                                            l.sent(), a = o.__assign({}, this.state.fields), n = t.reduce(function(e, t) {
+                                                var n = t && t.errorType;
+                                                return t && (a[t.fieldType].errorType = n), e || !!n
                                             }, !1), this.setState({
-                                                buttonDisabled: a,
-                                                fields: n,
-                                                requestState: a ? o.Errored : o.Complete
-                                            }), (i = this.props.onSubmit) && i(!a), setTimeout(function() {
+                                                buttonDisabled: n,
+                                                fields: a,
+                                                requestState: n ? s.Errored : s.Complete
+                                            }), (i = this.props.onSubmit) && i(!n), setTimeout(function() {
                                                 r.setState({
-                                                    requestState: o.Ready,
+                                                    requestState: s.Ready,
                                                     buttonDisabled: !1
                                                 })
-                                            }, z), l.label = 3;
+                                            }, x), l.label = 3;
                                         case 3:
                                             return [2]
                                     }
                                 })
                             })
                         }, t.fetchGoLiveNotification = function(e) {
-                            return s.__awaiter(t, void 0, void 0, function() {
-                                var t, n;
-                                return s.__generator(this, function(a) {
-                                    switch (a.label) {
+                            return o.__awaiter(t, void 0, void 0, function() {
+                                var t, a;
+                                return o.__generator(this, function(n) {
+                                    switch (n.label) {
                                         case 0:
                                             return t = "/kraken/users/" + e + "/notifications/custom?notification_type=streamup", [4, f.a.get(t)];
                                         case 1:
-                                            return (n = a.sent()).body && !n.error ? [2, n.body.is_default ? "" : n.body.message] : [2]
+                                            return (a = n.sent()).body && !a.error ? [2, a.body.is_default ? "" : a.body.message] : [2]
                                     }
                                 })
                             })
                         }, t
                     }
-                    return s.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
+                    return o.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.data.user,
-                            n = e.data.user;
-                        n && n.chatSettings && n.chatSettings.isBroadcasterLanguageModeEnabled !== this.state.broadcasterLanguageModeEnabled && this.setState({
-                            broadcasterLanguageModeEnabled: n.chatSettings.isBroadcasterLanguageModeEnabled
-                        }), !t && n && this.setInitialState(e);
+                            a = e.data.user;
+                        a && a.chatSettings && a.chatSettings.isBroadcasterLanguageModeEnabled !== this.state.broadcasterLanguageModeEnabled && this.setState({
+                            broadcasterLanguageModeEnabled: a.chatSettings.isBroadcasterLanguageModeEnabled
+                        }), !t && a && this.setInitialState(e);
                         var i = t && t.broadcastSettings,
-                            r = n && n.broadcastSettings;
+                            r = a && a.broadcastSettings;
                         if (i && r) {
-                            r.title && i.title !== r.title && this.setField(a.Title, r.title);
-                            var o = i.game && i.game.name,
-                                s = r.game && r.game.name;
-                            s && o !== s && (this.setField(a.GameCategory, s), this.setState({
-                                selectedGame: s
+                            r.title && i.title !== r.title && this.setField(n.Title, r.title);
+                            var s = i.game && i.game.name,
+                                o = r.game && r.game.name;
+                            o && s !== o && (this.setField(n.GameCategory, o), this.setState({
+                                selectedGame: o
                             }))
                         }
                     }, t.prototype.componentDidMount = function() {
@@ -2664,47 +2592,47 @@
                     }, t.prototype.render = function() {
                         var e = this.props.cancelComponent,
                             t = this.state.requestState;
-                        return this.props.data.error ? null : c.createElement(k.Va, {
+                        return this.props.data.error ? null : d.createElement(S.Wa, {
                             fullHeight: !0,
-                            display: k.W.Flex,
-                            flexDirection: k.Y.Column,
-                            alignItems: k.f.Center,
-                            justifyContent: k.Ua.Center
-                        }, c.createElement(k.Va, {
+                            display: S.X.Flex,
+                            flexDirection: S.Z.Column,
+                            alignItems: S.f.Center,
+                            justifyContent: S.Va.Center
+                        }, d.createElement(S.Wa, {
                             fullWidth: !0
-                        }, this.getContent(), c.createElement(k.Va, {
+                        }, this.getContent(), d.createElement(S.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(k.T, {
+                        }, d.createElement(S.U, {
                             targetBlank: !0,
-                            to: V.b
-                        }, Object(u.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), c.createElement(k.Va, {
-                            alignItems: k.f.Start,
-                            display: k.W.Flex,
-                            flexDirection: k.Y.Row,
+                            to: w.b
+                        }, Object(u.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), d.createElement(S.Wa, {
+                            alignItems: S.f.Start,
+                            display: S.X.Flex,
+                            flexDirection: S.Z.Row,
                             fullWidth: !0,
-                            justifyContent: k.Ua.Start,
+                            justifyContent: S.Va.Start,
                             margin: {
                                 top: 1
                             }
-                        }, c.createElement(k.z, {
-                            disabled: !this.state.loaded || this.state.buttonDisabled || t === o.Fetching || t === o.Errored,
+                        }, d.createElement(S.z, {
+                            disabled: !this.state.loaded || this.state.buttonDisabled || t === s.Fetching || t === s.Errored,
                             fullWidth: !e,
-                            icon: t === o.Complete ? k.nb.Check : void 0,
+                            icon: t === s.Complete ? S.ob.Check : void 0,
                             onClick: this.handleSubmit,
-                            state: t === o.Complete ? k.E.Success : k.E.Default
+                            state: t === s.Complete ? S.E.Success : S.E.Default
                         }, this.getButtonText()), e || null)))
                     }, t.prototype.getButtonText = function() {
                         switch (this.state.requestState) {
-                            case o.Complete:
+                            case s.Complete:
                                 return "";
-                            case o.Errored:
+                            case s.Errored:
                                 return Object(u.d)("An error occurred", "EditBroadcastComponent");
-                            case o.Fetching:
+                            case s.Fetching:
                                 return Object(u.d)("Updating...", "EditBroadcastComponent");
                             default:
-                            case o.Ready:
+                            case s.Ready:
                                 var e = this.props.submitText;
                                 return void 0 !== e ? e : Object(u.d)("Done", "EditBroadcastComponent")
                         }
@@ -2712,112 +2640,97 @@
                         var e;
                         if (this.props.data && this.props.data.currentUser && this.props.data.user && this.props.data.user.stream && !this.props.data.loading && this.state.loaded) {
                             var t = this.state.fields,
-                                n = t.title,
+                                a = t.title,
                                 i = t.goLiveNotification,
-                                o = t.gameCategory,
-                                s = t.communities,
-                                l = q(n.errorType),
-                                d = q(i.errorType),
-                                p = q(o.errorType),
-                                g = q(s.errorType);
-                            e = c.createElement(c.Fragment, null, c.createElement(k.Va, {
+                                s = t.gameCategory,
+                                o = G(a.errorType),
+                                l = G(i.errorType),
+                                c = G(s.errorType);
+                            e = d.createElement(d.Fragment, null, d.createElement(S.Wa, {
                                 "data-test-selector": r.PrimaryContent,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(k.Ca, {
+                            }, d.createElement(S.Da, {
                                 "data-test-selector": r.TitleLabel,
-                                error: !!l,
-                                errorMessage: l,
+                                error: !!o,
+                                errorMessage: o,
                                 label: Object(u.d)("Title", "EditBroadcastComponent"),
-                                labelOptional: this.getRemainingCharacters(n.value)
-                            }, c.createElement(k.Kb, {
+                                labelOptional: this.getRemainingCharacters(a.value)
+                            }, d.createElement(S.Lb, {
                                 "data-test-selector": r.TitleInput,
-                                onChange: this.handleChangeByType(a.Title),
+                                onChange: this.handleChangeByType(n.Title),
                                 noResize: !0,
                                 placeholder: Object(u.d)("Enter a title", "EditBroadcastComponent"),
                                 rows: 3,
                                 value: this.state.fields.title.value
-                            }))), this.state.fields.goLiveNotification.isEnabled && c.createElement(k.Va, {
+                            }))), this.state.fields.goLiveNotification.isEnabled && d.createElement(S.Wa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(k.Ca, {
-                                error: !!d,
-                                errorMessage: d,
+                            }, d.createElement(S.Da, {
+                                error: !!l,
+                                errorMessage: l,
                                 label: Object(u.d)("Go Live Notification", "EditBroadcastComponent"),
                                 labelOptional: this.getRemainingCharacters(i.value)
-                            }, c.createElement(k.Kb, {
+                            }, d.createElement(S.Lb, {
                                 "data-test-selector": r.GoLiveNotification,
                                 noResize: !0,
-                                onChange: this.handleChangeByType(a.GoLiveNotification),
+                                onChange: this.handleChangeByType(n.GoLiveNotification),
                                 placeholder: Object(u.d)("{channelName} went live!", {
                                     channelName: this.props.channelLogin
                                 }, "EditBroadcastComponent"),
                                 rows: 3,
                                 value: this.state.fields.goLiveNotification.value
-                            }))), c.createElement(k.Va, {
+                            }))), d.createElement(S.Wa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, c.createElement(L, {
-                                error: !!p,
-                                errorMessage: p,
+                            }, d.createElement(F, {
+                                error: !!c,
+                                errorMessage: c,
                                 onGameResultSelected: this.handleGameResultSelected,
                                 onGameCleared: this.handleGameCleared,
                                 selectedGame: this.state.selectedGame
-                            })), !Object(A.b)() && c.createElement(k.Va, {
-                                margin: {
-                                    bottom: 2
-                                }
-                            }, c.createElement(R, {
-                                error: !!g,
-                                errorMessage: g,
-                                selectedCommunities: this.state.selectedCommunities,
-                                onChange: this.handleErrorByType(a.Communities),
-                                onCommunityResultSelected: this.handleCommunityResultSelected,
-                                onRemoveCommunity: this.handleRemoveCommunity,
-                                onError: this.handleErrorByType(a.Communities)
-                            })), this.renderTagSelect(), c.createElement(k.Va, {
+                            })), this.renderTagSelect(), d.createElement(S.Wa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, c.createElement(m.a, {
+                            }, d.createElement(g.a, {
                                 label: Object(u.d)("Language", "EditBroadcastComponent"),
                                 onChange: this.handleLanguageChange,
                                 defaultLanguage: this.state.fields.language.value || "en",
                                 disabled: !1
-                            }), c.createElement(k.Va, {
+                            }), d.createElement(S.Wa, {
                                 margin: {
                                     top: .5
                                 }
-                            }, c.createElement(k.N, {
+                            }, d.createElement(S.N, {
                                 label: Object(u.d)("Restrict Chat Language", "EditBroadcastComponent"),
                                 onChange: this.handleBroadcastLanguageModeEnabledChange,
                                 checked: this.state.broadcasterLanguageModeEnabled,
                                 "data-test-selector": r.BroadcastLanguageMode
                             }))))
-                        } else e = c.createElement(k.Va, {
+                        } else e = d.createElement(S.Wa, {
                             fullWidth: !0,
                             padding: {
                                 y: 2
                             }
-                        }, c.createElement(k.Xa, {
+                        }, d.createElement(S.Ya, {
                             fillContent: !0
                         }));
                         return e
                     }, t.prototype.renderTagSelect = function() {
-                        if (!this.checkTagExperiment) return null;
-                        var e = q(this.state.fields.tags.errorType);
-                        return c.createElement(k.Va, {
+                        var e = G(this.state.fields.tags.errorType);
+                        return d.createElement(S.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, c.createElement(j.a, {
+                        }, d.createElement(A.a, {
                             error: !!e,
                             errorMessage: e,
                             gameName: this.state.selectedGame,
-                            onError: this.handleErrorByType(a.Tags),
+                            onError: this.handleErrorByType(n.Tags),
                             onRemoveTag: this.handleRemoveTag,
                             onTagResultSelected: this.handleTagResultSelected,
                             selectedTags: this.state.selectedTags,
@@ -2827,31 +2740,31 @@
                     }, t.prototype.normalizeString = function(e) {
                         return Array.from(e.normalize ? e.normalize("NFC") : e)
                     }, t.prototype.updateChannel = function(e) {
-                        return s.__awaiter(this, void 0, void 0, function() {
-                            var t, n, r, o;
-                            return s.__generator(this, function(s) {
-                                switch (s.label) {
+                        return o.__awaiter(this, void 0, void 0, function() {
+                            var t, a, r, s;
+                            return o.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
                                         return t = {
                                             "channel[broadcaster_language]": this.state.fields.language.value,
                                             "channel[game]": this.state.selectedGame,
                                             "channel[status]": this.state.fields.title.value || "",
                                             on_site: "1"
-                                        }, n = "/kraken/channels/" + e, [4, f.a.put(n, {
+                                        }, a = "/kraken/channels/" + e, [4, f.a.put(a, {
                                             body: l.stringify(t, {
                                                 arrayFormat: "bracket"
                                             }),
-                                            headers: V.a
+                                            headers: w.a
                                         })];
                                     case 1:
-                                        if (r = s.sent().error) {
-                                            if ((o = r.message).includes("Title is too long")) return [2, {
+                                        if (r = o.sent().error) {
+                                            if ((s = r.message).includes("Title is too long")) return [2, {
                                                 errorType: i.TitleTooLong,
-                                                fieldType: a.Title
+                                                fieldType: n.Title
                                             }];
-                                            if (o.includes("Status contains banned words")) return [2, {
+                                            if (s.includes("Status contains banned words")) return [2, {
                                                 errorType: i.FailedAutomodTitle,
-                                                fieldType: a.Title
+                                                fieldType: n.Title
                                             }]
                                         }
                                         return [2]
@@ -2859,9 +2772,9 @@
                             })
                         })
                     }, t.prototype.updateGoLiveNotification = function(e) {
-                        return s.__awaiter(this, void 0, void 0, function() {
-                            var t, n;
-                            return s.__generator(this, function(i) {
+                        return o.__awaiter(this, void 0, void 0, function() {
+                            var t, a;
+                            return o.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
                                         return this.state.fields.goLiveNotification.isEnabled ? (t = "/kraken/users/" + e + "/notifications/custom", [4, f.a.request(t, {
@@ -2872,9 +2785,9 @@
                                             method: "PUT"
                                         })]) : [3, 2];
                                     case 1:
-                                        if (n = i.sent().error) return [2, {
-                                            errorType: n && n.message,
-                                            fieldType: a.GoLiveNotification
+                                        if (a = i.sent().error) return [2, {
+                                            errorType: a && a.message,
+                                            fieldType: n.GoLiveNotification
                                         }];
                                         i.label = 2;
                                     case 2:
@@ -2882,38 +2795,13 @@
                                 }
                             })
                         })
-                    }, t.prototype.updateChannelCommunities = function(e) {
-                        return s.__awaiter(this, void 0, void 0, function() {
-                            var t, n, i;
-                            return s.__generator(this, function(r) {
-                                switch (r.label) {
-                                    case 0:
-                                        return t = "/kraken/channels/" + e + "/communities/", n = this.state.selectedCommunities.map(function(e) {
-                                            return e.objectID
-                                        }), [4, f.a.put(t, {
-                                            body: l.stringify({
-                                                community_ids: n,
-                                                on_site: "1"
-                                            }, {
-                                                arrayFormat: "bracket"
-                                            }),
-                                            headers: V.a
-                                        })];
-                                    case 1:
-                                        return (i = r.sent().error) ? [2, {
-                                            errorType: i && i.message,
-                                            fieldType: a.Language
-                                        }] : [2]
-                                }
-                            })
-                        })
                     }, t.prototype.updateChannelBroadcasterLanguageEnabled = function(e) {
-                        return s.__awaiter(this, void 0, void 0, function() {
-                            var t, n, a, i, r, o, l, c, d;
-                            return s.__generator(this, function(s) {
-                                switch (s.label) {
+                        return o.__awaiter(this, void 0, void 0, function() {
+                            var t, a, n, i, r, s, l, d, c;
+                            return o.__generator(this, function(o) {
+                                switch (o.label) {
                                     case 0:
-                                        return t = this.props, n = t.channelLogin, a = t.data.user, i = t.updateChatSettings, r = this.state.broadcasterLanguageModeEnabled, i && a && a.chatSettings && a.chatSettings.isBroadcasterLanguageModeEnabled !== r ? (o = {
+                                        return t = this.props, a = t.channelLogin, n = t.data.user, i = t.updateChatSettings, r = this.state.broadcasterLanguageModeEnabled, i && n && n.chatSettings && n.chatSettings.isBroadcasterLanguageModeEnabled !== r ? (s = {
                                             channelID: e,
                                             isBroadcasterLanguageModeEnabled: r
                                         }, l = {
@@ -2924,52 +2812,52 @@
                                                     __typename: "ChatSettings"
                                                 }
                                             }
-                                        }, [4, i(Object(g.b)(o, l))]) : [2];
+                                        }, [4, i(Object(p.b)(s, l))]) : [2];
                                     case 1:
-                                        return c = s.sent(), d = function(e) {
-                                            return a.chatSettings && c.data.updateChatSettings && c.data.updateChatSettings.chatSettings && (a.chatSettings.isBroadcasterLanguageModeEnabled = c.data.updateChatSettings.chatSettings.isBroadcasterLanguageModeEnabled), e
-                                        }, Object(g.e)(P, {
-                                            login: n
-                                        }, d), [2]
+                                        return d = o.sent(), c = function(e) {
+                                            return n.chatSettings && d.data.updateChatSettings && d.data.updateChatSettings.chatSettings && (n.chatSettings.isBroadcasterLanguageModeEnabled = d.data.updateChatSettings.chatSettings.isBroadcasterLanguageModeEnabled), e
+                                        }, Object(p.e)(R, {
+                                            login: a
+                                        }, c), [2]
                                 }
                             })
                         })
                     }, t.prototype.updateChannelTags = function(e) {
-                        return s.__awaiter(this, void 0, void 0, function() {
-                            var t, n, a, i, r, o;
-                            return s.__generator(this, function(l) {
+                        return o.__awaiter(this, void 0, void 0, function() {
+                            var t, a, n, i, r, s;
+                            return o.__generator(this, function(l) {
                                 switch (l.label) {
                                     case 0:
                                         if (!this.state.selectedTags) return [2];
-                                        for (i in t = [], n = [], a = this.state.modifiedTags) !0 === a[i] ? t.push(i) : n.push(i);
-                                        return 0 === t.length && 0 === n.length ? [2] : (r = {
+                                        for (i in t = [], a = [], n = this.state.modifiedTags) !0 === n[i] ? t.push(i) : a.push(i);
+                                        return 0 === t.length && 0 === a.length ? [2] : (r = {
                                             contentID: e,
                                             contentType: h.n.LIVE_CHANNEL,
                                             addedTagIDs: t,
-                                            removedTagIDs: n,
+                                            removedTagIDs: a,
                                             authorID: e
-                                        }, o = {
+                                        }, s = {
                                             updateContentTags: {
                                                 __typename: "UpdateContentTagsPayload",
                                                 content: {
                                                     id: e,
                                                     tags: this.state.selectedTags.map(function(e) {
-                                                        return s.__assign({}, e, {
+                                                        return o.__assign({}, e, {
                                                             __typename: "Tag"
                                                         })
                                                     }),
                                                     __typename: "Stream"
                                                 }
                                             }
-                                        }, [4, this.props.updateChannelTags(Object(g.b)(r, o))]);
+                                        }, [4, this.props.updateChannelTags(Object(p.b)(r, s))]);
                                     case 1:
                                         return l.sent(), [2]
                                 }
                             })
                         })
                     }, t
-                }(c.Component),
-                W = Object(d.compose)(Object(G.c)("EditBroadcast"), Object(p.a)(P, {
+                }(d.Component),
+                j = Object(c.compose)(Object(I.b)("EditBroadcast"), Object(m.a)(R, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -2978,38 +2866,38 @@
                             }
                         }
                     }
-                }), Object(p.a)(M, {
+                }), Object(m.a)(D, {
                     name: "updateChatSettings"
-                }), Object(p.a)(B, {
+                }), Object(m.a)(L, {
                     name: "updateChannelTags"
-                }))(U);
-            n.d(t, !1, function() {
-                return U
-            }), n.d(t, "a", function() {
-                return W
+                }))(B);
+            a.d(t, !1, function() {
+                return B
+            }), a.d(t, "a", function() {
+                return j
             })
         },
-        lr7A: function(e, t, n) {
+        lr7A: function(e, t, a) {
             "use strict";
-            var a, i = n("mrSG"),
-                r = n("q1tI"),
-                o = n("/7QA"),
-                s = n("FsIG"),
-                l = n("C29h"),
-                c = n("Ue10");
-            n("sEux");
+            var n, i = a("mrSG"),
+                r = a("q1tI"),
+                s = a("/7QA"),
+                o = a("FsIG"),
+                l = a("C29h"),
+                d = a("Ue10");
+            a("sEux");
             ! function(e) {
                 e.NoTagsSelected = "no-tags-selected", e.SelectedTag = "selected-tag"
-            }(a || (a = {}));
-            var d = function(e) {
+            }(n || (n = {}));
+            var c = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderErrorMessage = function() {
-                            if (t.props.error && t.props.errorMessage) return r.createElement(c.Va, {
+                            if (t.props.error && t.props.errorMessage) return r.createElement(d.Wa, {
                                 margin: {
                                     top: .5
                                 }
-                            }, r.createElement(c.Ba, {
+                            }, r.createElement(d.Ca, {
                                 errorMessage: t.props.errorMessage
                             }))
                         }, t.renderTagSearch = function() {
@@ -3024,36 +2912,36 @@
                         }, t.onTagResultSelected = function(e) {
                             5 === t.props.selectedTags.filter(function(e) {
                                 return !e.isAutomated
-                            }).length && t.props.onError ? t.props.onError(Object(o.d)("You can only select up to 5 tags at the same time.", "TagSelectorSearch")) : t.props.selectedTags.map(function(e) {
+                            }).length && t.props.onError ? t.props.onError(Object(s.d)("You can only select up to 5 tags at the same time.", "TagSelectorSearch")) : t.props.selectedTags.map(function(e) {
                                 return e.id
                             }).includes(e.id) || t.props.onTagResultSelected && t.props.onTagResultSelected(e)
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(o.d)("Tags", "TagSelectorSearch");
-                        return r.createElement(c.Va, null, r.createElement(c.Va, {
-                            display: c.W.Flex,
-                            justifyContent: c.Ua.Between
-                        }, r.createElement(c.Fa, {
-                            id: Object(s.b)(e),
+                        var e = Object(s.d)("Tags", "TagSelectorSearch");
+                        return r.createElement(d.Wa, null, r.createElement(d.Wa, {
+                            display: d.X.Flex,
+                            justifyContent: d.Va.Between
+                        }, r.createElement(d.Ga, {
+                            id: Object(o.b)(e),
                             label: e
-                        }), this.renderHelpButton()), r.createElement(c.Va, {
-                            alignContent: c.e.Center
-                        }, r.createElement(c.Va, {
-                            position: c.db.Relative,
+                        }), this.renderHelpButton()), r.createElement(d.Wa, {
+                            alignContent: d.e.Center
+                        }, r.createElement(d.Wa, {
+                            position: d.eb.Relative,
                             margin: {
                                 y: .5
                             }
                         }, this.renderTagSearch()), this.renderErrorMessage(), this.renderSelectedTags()))
                     }, t.prototype.renderSelectedTags = function() {
                         var e = this;
-                        return 0 !== this.props.selectedTags.length || this.props.readOnly ? 0 === this.props.selectedTags.length ? r.createElement(c.Va, {
-                            "data-test-selector": a.NoTagsSelected
-                        }, r.createElement(c.Pa, {
-                            type: c.Ra.Text,
-                            placeholder: Object(o.d)("No tags were selected", "TagSelectorSearch"),
+                        return 0 !== this.props.selectedTags.length || this.props.readOnly ? 0 === this.props.selectedTags.length ? r.createElement(d.Wa, {
+                            "data-test-selector": n.NoTagsSelected
+                        }, r.createElement(d.Qa, {
+                            type: d.Sa.Text,
+                            placeholder: Object(s.d)("No tags were selected", "TagSelectorSearch"),
                             disabled: !0
-                        })) : r.createElement(c.Va, {
+                        })) : r.createElement(d.Wa, {
                             margin: {
                                 top: .5
                             },
@@ -3062,43 +2950,43 @@
                                 top: .5
                             },
                             className: "selected-tags"
-                        }, this.props.selectedTags.map(function(t, n) {
-                            return r.createElement(c.Va, {
-                                display: c.W.InlineBlock,
+                        }, this.props.selectedTags.map(function(t, a) {
+                            return r.createElement(d.Wa, {
+                                display: d.X.InlineBlock,
                                 margin: {
                                     right: .5,
                                     bottom: .5
                                 },
-                                key: t.id + "_" + n
-                            }, r.createElement(c.Gb, {
-                                "data-test-selector": a.SelectedTag,
-                                action: t.isAutomated ? void 0 : c.Hb.Remove,
+                                key: t.id + "_" + a
+                            }, r.createElement(d.Hb, {
+                                "data-test-selector": n.SelectedTag,
+                                action: t.isAutomated ? void 0 : d.Ib.Remove,
                                 label: t.localizedName || t.tagName,
                                 key: t.id,
                                 onClick: t.isAutomated ? void 0 : e.props.onRemoveTag,
-                                "data-idx": n
+                                "data-idx": a
                             }))
                         })) : null
                     }, t.prototype.renderHelpButton = function() {
-                        return this.props.showHelpButton ? r.createElement(c.Va, null, Object(o.d)("<x:link>Learn More</x:link>", {
+                        return this.props.showHelpButton ? r.createElement(d.Wa, null, Object(s.d)("<x:link>Learn More</x:link>", {
                             "x:link": function(e) {
-                                return r.createElement(c.T, {
+                                return r.createElement(d.U, {
                                     to: "https://link.twitch.tv/learntags"
                                 }, e)
                             }
                         }, "TagSuggestions")) : null
                     }, t
                 }(r.Component),
-                u = d;
-            n.d(t, !1, function() {
-                return a
-            }), n.d(t, !1, function() {
-                return d
-            }), n.d(t, "a", function() {
+                u = c;
+            a.d(t, !1, function() {
+                return n
+            }), a.d(t, !1, function() {
+                return c
+            }), a.d(t, "a", function() {
                 return u
             })
         },
-        sEux: function(e, t, n) {},
-        w4St: function(e, t, n) {}
+        sEux: function(e, t, a) {},
+        w4St: function(e, t, a) {}
     }
 ]);

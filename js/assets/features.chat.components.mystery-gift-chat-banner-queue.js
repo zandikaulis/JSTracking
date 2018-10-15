@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [184], {
+    [178], {
         "/2Fp": function(e, t) {
             var n = {
                 kind: "Document",
@@ -110,8 +110,8 @@
                 s = n("0Log"),
                 u = n("/aPz"),
                 p = n("/7QA"),
-                c = n("V6PS"),
-                d = n.n(c),
+                d = n("V6PS"),
+                c = n.n(d),
                 l = n("yR8l"),
                 m = n("QVaV"),
                 y = [5, 10, 20, 30, 40, 50, 60];
@@ -134,10 +134,10 @@
                             t.props.data && t.props.data.user && (t.props.data.user.displayName && (e = t.props.data.user.displayName), t.props.data.user.login && (n = t.props.data.user.login));
                             var i = Object(v.a)(t.props.tier) || "";
                             return n || e ? Object(p.d)("{mysteryGiftCount, plural, one {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!} other {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
-                                displayName: r.createElement(C.V, {
+                                displayName: r.createElement(C.W, {
                                     bold: !0,
                                     color: C.O.Link,
-                                    type: C.Nb.Span
+                                    type: C.Ob.Span
                                 }, Object(m.a)(n, e)),
                                 mysteryGiftCount: t.props.mysteryGiftCount,
                                 tier: i
@@ -156,21 +156,21 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.mysteryGiftCount !== e.mysteryGiftCount && (this.bannerDuration = 1e3 * f(this.props.mysteryGiftCount), this.start = Date.now())
                     }, t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(C.Va, {
+                        return r.createElement(r.Fragment, null, r.createElement(C.Wa, {
                             alignItems: C.f.Center,
-                            display: C.W.Flex,
+                            display: C.X.Flex,
                             padding: {
                                 x: 2,
                                 y: 1
                             }
-                        }, r.createElement(C.Va, {
+                        }, r.createElement(C.Wa, {
                             padding: {
                                 right: 1
                             }
                         }, r.createElement(C.S, {
-                            src: d.a,
+                            src: c.a,
                             alt: Object(p.d)("Mystery gifts being given out!", "MysteryGiftChatBanner")
-                        })), r.createElement(C.V, null, this.getBannerText())), r.createElement(g.a, {
+                        })), r.createElement(C.W, null, this.getBannerText())), r.createElement(g.a, {
                             getRemainingTime: this.getRemainingTime,
                             onCountdownEnd: this.handleCountdownEnd,
                             totalCountdownTime: this.bannerDuration
@@ -188,9 +188,9 @@
                     skip: function(e) {
                         return !e.userID
                     }
-                }), Object(b.c)("MysteryGiftChatBanner"))(k),
+                }), Object(b.b)("MysteryGiftChatBanner"))(k),
                 D = function(e) {
-                    return 0 === e.purchases.length ? null : r.createElement(C.xb, {
+                    return 0 === e.purchases.length ? null : r.createElement(C.yb, {
                         background: C.r.Base,
                         fullWidth: !0
                     }, e.purchases.slice(0, 2).map(function(t) {
@@ -249,7 +249,7 @@
                     topic: function(e) {
                         return Object(u.p)(e.channelID)
                     }
-                }]), Object(b.c)("MysteryGiftChatBannerQueue"))(T);
+                }]), Object(b.b)("MysteryGiftChatBannerQueue"))(T);
             n.d(t, "MysteryGiftChatBannersQueueContainer", function() {
                 return T
             }), n.d(t, "MysteryGiftChatBannerQueue", function() {

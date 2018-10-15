@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [181], {
+    [175], {
         "6TSi": function(e, t) {},
         "6XEL": function(e, t, n) {
             "use strict";
@@ -18,16 +18,16 @@
                 return a
             });
             var o, s = n("dG1e"),
-                d = n("rSo7"),
-                u = n("eAwD");
+                u = n("rSo7"),
+                d = n("eAwD");
 
             function c(e, t, n) {
                 return e.sort(function(e, i) {
                     for (var r = 0; r < t.length; r++) {
                         var a = t[r],
                             s = n[r] || o.Ascending,
-                            d = l(a(e), a(i)) * s;
-                        if (0 !== d) return d
+                            u = l(a(e), a(i)) * s;
+                        if (0 !== u) return u
                     }
                     return 0
                 })
@@ -44,9 +44,9 @@
             }), n.d(t, "c", function() {
                 return s.a
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {
-                return d.a
-            }), n.d(t, !1, function() {
                 return u.a
+            }), n.d(t, !1, function() {
+                return d.a
             }), n.d(t, "a", function() {
                 return o
             }), n.d(t, "d", function() {
@@ -61,8 +61,8 @@
                 a = n("lZCe"),
                 o = n("D7An"),
                 s = n("/MKj"),
-                d = n("9C/b"),
-                u = n("/7QA"),
+                u = n("9C/b"),
+                d = n("/7QA"),
                 c = n("/aPz"),
                 l = n("kRBY"),
                 p = n("ll/k"),
@@ -116,7 +116,7 @@
                     raid_target_id: Number(t.targetChannelID),
                     raid_id: t.id
                 }, n);
-                u.n.track(e, r)
+                d.o.track(e, r)
             }
             var E = n("cr+I");
 
@@ -139,8 +139,8 @@
             var I = n("G8UE"),
                 k = n("aUoe"),
                 T = n("yR8l"),
-                x = n("oMhb");
-            var N = Object(T.a)(x, {
+                O = n("oMhb");
+            var x = Object(T.a)(O, {
                 options: function(e) {
                     return {
                         variables: {
@@ -156,9 +156,9 @@
                 return r.createElement(t, i.__assign({}, n))
             });
 
-            function O(e) {
+            function N(e) {
                 return function(t) {
-                    return r.createElement(N, i.__assign({}, t, {
+                    return r.createElement(x, i.__assign({}, t, {
                         component: e
                     }))
                 }
@@ -168,7 +168,7 @@
                 j = (n("SUms"), {
                     "data-test-selector": "current-raiders"
                 }),
-                V = O(function(e) {
+                L = N(function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getRemainingTime = function() {
@@ -183,50 +183,50 @@
                         var e = this.props.data,
                             t = e.sourceChannel,
                             n = e.targetChannel;
-                        return r.createElement(P.xb, {
+                        return r.createElement(P.yb, {
                             className: "raid-notification",
                             background: P.r.AccentAlt2,
                             color: P.O.Overlay,
-                            position: P.db.Absolute,
-                            zIndex: P.ac.Above,
+                            position: P.eb.Absolute,
+                            zIndex: P.bc.Above,
                             fullWidth: !0
-                        }, r.createElement(P.Va, {
+                        }, r.createElement(P.Wa, {
                             className: "raid-notification__content",
                             padding: {
                                 y: 1,
                                 x: 2
                             },
-                            display: P.W.Flex,
-                            justifyContent: P.Ua.Between
-                        }, r.createElement(P.Va, {
+                            display: P.X.Flex,
+                            justifyContent: P.Va.Between
+                        }, r.createElement(P.Wa, {
                             alignItems: P.f.Center,
-                            display: P.W.Flex
+                            display: P.X.Flex
                         }, r.createElement(P.q, {
                             size: 36,
                             src: t.profileImageURL,
                             alt: t.displayName
-                        }), r.createElement(P.mb, {
-                            asset: P.nb.AngleRight,
+                        }), r.createElement(P.nb, {
+                            asset: P.ob.AngleRight,
                             height: 10
                         }), r.createElement(P.q, {
                             size: 36,
                             src: n.profileImageURL,
                             alt: n.displayName
-                        }), r.createElement(P.Va, {
+                        }), r.createElement(P.Wa, {
                             padding: {
                                 left: 1
                             }
-                        }, r.createElement(P.V, {
+                        }, r.createElement(P.W, {
                             color: P.O.OverlayAlt,
-                            type: P.Nb.P,
+                            type: P.Ob.P,
                             className: "raid-notification__channel-name"
-                        }, Object(u.d)("{sourceDisplayName} is", {
+                        }, Object(d.d)("{sourceDisplayName} is", {
                             sourceDisplayName: t.displayName
-                        }, "RaidCTASourceChannel")), r.createElement(P.V, null, Object(u.d)("raiding {targetDisplayName}", {
+                        }, "RaidCTASourceChannel")), r.createElement(P.W, null, Object(d.d)("raiding {targetDisplayName}", {
                             targetDisplayName: n.displayName
-                        }, "RaidCTATargetChannel")), r.createElement(P.V, i.__assign({
+                        }, "RaidCTATargetChannel")), r.createElement(P.W, i.__assign({
                             bold: !0
-                        }, j), Object(u.d)("{viewerCount, plural, one {# raider} other {# raiders}}", {
+                        }, j), Object(d.d)("{viewerCount, plural, one {# raider} other {# raiders}}", {
                             viewerCount: this.props.raid.viewerCount
                         }, "RaidCTATotalRaiders")))), this.props.children), r.createElement(A.a, {
                             totalCountdownTime: 1e3 * this.props.raid.totalDurationInSeconds,
@@ -235,20 +235,20 @@
                         }))
                     }, t
                 }(r.Component)),
-                U = {
+                J = {
                     "data-test-selector": "raid-cancel-button"
                 },
-                L = function(e) {
-                    return r.createElement(P.Va, {
+                U = function(e) {
+                    return r.createElement(P.Wa, {
                         alignSelf: P.g.Center
                     }, r.createElement(P.z, i.__assign({
                         size: P.D.Large,
                         type: P.F.Hollow,
                         overlay: !0,
                         onClick: e.onCancelRaid
-                    }, U), Object(u.d)("Cancel", "RaidCTACancel")))
+                    }, J), Object(d.d)("Cancel", "RaidCTACancel")))
                 },
-                J = {
+                W = {
                     "data-test-selector": "join-raid-button"
                 },
                 F = {
@@ -266,22 +266,22 @@
                     }, t.prototype.componentWillUnmount = function() {
                         clearTimeout(this.timerID)
                     }, t.prototype.render = function() {
-                        return this.props.hasJoined ? r.createElement(P.Va, {
+                        return this.props.hasJoined ? r.createElement(P.Wa, {
                             alignSelf: P.g.Center
                         }, r.createElement(P.z, i.__assign({
                             size: P.D.Large,
                             type: P.F.Hollow,
                             overlay: !0,
                             onClick: this.handleLeaveRaid
-                        }, F), Object(u.d)("Leave", "RaidCTALeave"))) : r.createElement(P.Va, {
+                        }, F), Object(d.d)("Leave", "RaidCTALeave"))) : r.createElement(P.Wa, {
                             alignSelf: P.g.Center
                         }, r.createElement(P.z, i.__assign({
                             size: P.D.Large,
                             onClick: this.props.onJoinRaid
-                        }, J), Object(u.d)("Join", "RaidCTAJoin")))
+                        }, W), Object(d.d)("Join", "RaidCTAJoin")))
                     }, t
                 }(r.Component),
-                G = function(e) {
+                V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -329,7 +329,7 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.subscribe(this.props.channelID)
                     }, t.prototype.render = function() {
-                        return this.shouldRenderRaidNotification ? r.createElement(V, {
+                        return this.shouldRenderRaidNotification ? r.createElement(L, {
                             raid: this.state.raid,
                             onRaidInvitePeriodOver: this.handleRaidInvitePeriodOver
                         }, this.renderCTAButton()) : null
@@ -343,12 +343,12 @@
                             return t.subscribe(e.channelID)
                         }))
                     }, t.prototype.subscribe = function(e) {
-                        this.unsubscribe = u.o.pubsub.subscribe({
+                        this.unsubscribe = d.p.pubsub.subscribe({
                             topic: Object(c.t)(e),
                             onMessage: this.handlePubsubMessage
                         })
                     }, t.prototype.renderCTAButton = function() {
-                        return this.isRaidCreator ? r.createElement(L, {
+                        return this.isRaidCreator ? r.createElement(U, {
                             onCancelRaid: this.handleCancelRaid
                         }) : r.createElement(q, {
                             onJoinRaid: this.handleJoinRaid,
@@ -378,26 +378,26 @@
                         configurable: !0
                     }), t
                 }(r.Component);
-            var M = Object(s.connect)(function(e) {
+            var G = Object(s.connect)(function(e) {
                     return {
                         user: Object(l.e)(e)
                     }
-                })(G),
-                z = Object(d.a)(M),
-                W = n("Kukq"),
+                })(V),
+                M = Object(u.a)(G),
+                z = n("Kukq"),
                 B = n("oJmH"),
-                H = n("5zf8"),
-                Q = function(e) {
+                X = n("5zf8"),
+                H = function(e) {
                     var t = e.sourceChannel,
                         n = e.targetChannel;
-                    return r.createElement(P.Va, {
-                        display: P.W.Flex
+                    return r.createElement(P.Wa, {
+                        display: P.X.Flex
                     }, r.createElement(P.q, {
                         size: 36,
                         src: t.profileImageURL,
                         alt: t.displayName
-                    }), r.createElement(P.mb, {
-                        asset: P.nb.AngleRight,
+                    }), r.createElement(P.nb, {
+                        asset: P.ob.AngleRight,
                         height: 10
                     }), r.createElement(P.q, {
                         size: 36,
@@ -405,26 +405,26 @@
                         alt: n.displayName
                     }))
                 },
-                X = function(e) {
+                Q = function(e) {
                     var t = e.seconds;
-                    return r.createElement(P.xb, {
-                        display: P.W.Flex,
+                    return r.createElement(P.yb, {
+                        display: P.X.Flex,
                         alignItems: P.f.Center,
-                        justifyContent: P.Ua.Center,
+                        justifyContent: P.Va.Center,
                         color: P.O.Overlay
-                    }, r.createElement(P.Xa, {
-                        size: P.vb.Large,
+                    }, r.createElement(P.Ya, {
+                        size: P.wb.Large,
                         delay: 0,
                         inheritColor: !0
-                    }), r.createElement(P.Va, {
-                        position: P.db.Absolute
+                    }), r.createElement(P.Wa, {
+                        position: P.eb.Absolute
                     }, t))
                 },
-                Z = n("eRLD"),
-                $ = {
+                Y = n("eRLD"),
+                Z = {
                     "data-test-selector": "raid-message"
                 },
-                Y = {
+                $ = {
                     "data-test-selector": "raid-cancel-button"
                 },
                 K = {
@@ -439,28 +439,28 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.raid.isGoing && this.props.onRaidGo(this.props.targetChannel.login), this.props.timerPhase.isForced && this.props.onRaidNow()
                     }, t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(P.Va, {
-                            display: P.W.Flex,
-                            justifyContent: P.Ua.Between
-                        }, r.createElement(P.Va, {
+                        return r.createElement(r.Fragment, null, r.createElement(P.Wa, {
+                            display: P.X.Flex,
+                            justifyContent: P.Va.Between
+                        }, r.createElement(P.Wa, {
                             alignItems: P.f.Center,
-                            display: P.W.Flex
-                        }, r.createElement(Q, {
+                            display: P.X.Flex
+                        }, r.createElement(H, {
                             sourceChannel: this.props.sourceChannel,
                             targetChannel: this.props.targetChannel
-                        }), r.createElement(P.Va, i.__assign({
+                        }), r.createElement(P.Wa, i.__assign({
                             padding: {
                                 left: 1
                             }
-                        }, $), this.props.timerPhase.isWaiting ? te(this.props, this.props.timerPhase.secondsUntilTransition) : ne(this.props))), this.props.timerPhase.isReady && this.props.timerPhase.secondsUntilTransition <= 10 && r.createElement(X, {
+                        }, Z), this.props.timerPhase.isWaiting ? te(this.props, this.props.timerPhase.secondsUntilTransition) : ne(this.props))), this.props.timerPhase.isReady && this.props.timerPhase.secondsUntilTransition <= 10 && r.createElement(Q, {
                             seconds: this.props.timerPhase.secondsUntilTransition
-                        })), r.createElement(P.Va, {
-                            display: P.W.Flex,
-                            justifyContent: P.Ua.End,
+                        })), r.createElement(P.Wa, {
+                            display: P.X.Flex,
+                            justifyContent: P.Va.End,
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(P.Va, {
+                        }, r.createElement(P.Wa, {
                             margin: {
                                 right: 1
                             }
@@ -468,61 +468,61 @@
                             type: P.F.Hollow,
                             size: P.D.Small,
                             onClick: this.props.onCancelRaid
-                        }, Y), r.createElement(P.xb, {
+                        }, $), r.createElement(P.yb, {
                             padding: {
                                 x: 1
                             },
                             color: P.O.Overlay
-                        }, Object(u.d)("Cancel", "RaidCreatorButton")))), r.createElement(P.Va, null, r.createElement(P.z, i.__assign({
+                        }, Object(d.d)("Cancel", "RaidCreatorButton")))), r.createElement(P.Wa, null, r.createElement(P.z, i.__assign({
                             size: P.D.Small,
                             onClick: this.props.onRaidNow,
                             disabled: this.props.timerPhase.isWaiting
-                        }, K), r.createElement(P.Va, {
+                        }, K), r.createElement(P.Wa, {
                             padding: {
                                 x: 1
                             }
-                        }, Object(u.d)("Raid Now", "RaidCreatorButton"))))))
+                        }, Object(d.d)("Raid Now", "RaidCreatorButton"))))))
                     }, t
                 }(r.Component),
                 te = function(e, t) {
-                    return Object(u.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}}", {
+                    return Object(d.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}}", {
                         "x:block": function(e) {
-                            return r.createElement(P.V, {
+                            return r.createElement(P.W, {
                                 bold: !0
                             }, e)
                         },
                         "x:strong": function(e) {
-                            return r.createElement(P.V, {
+                            return r.createElement(P.W, {
                                 key: "raid-count",
-                                type: P.Nb.Strong
+                                type: P.Ob.Strong
                             }, e)
                         },
                         "x:span": function(e) {
-                            return r.createElement(P.V, {
-                                type: P.Nb.Span
+                            return r.createElement(P.W, {
+                                type: P.Ob.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
-                        secondsRemaining: Object(H.b)(t, H.a.HumanizedShort),
+                        secondsRemaining: Object(X.b)(t, X.a.HumanizedShort),
                         targetDisplayName: e.targetChannel.displayName
                     }, "RaidCreatorMessageTimeLeft")
                 },
                 ne = function(e) {
-                    return Object(u.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}}", {
+                    return Object(d.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}}", {
                         "x:block": function(e) {
-                            return r.createElement(P.V, {
+                            return r.createElement(P.W, {
                                 bold: !0
                             }, e)
                         },
                         "x:strong": function(e) {
-                            return r.createElement(P.V, {
+                            return r.createElement(P.W, {
                                 key: "raid-count",
-                                type: P.Nb.Strong
+                                type: P.Ob.Strong
                             }, e)
                         },
                         "x:span": function(e) {
-                            return r.createElement(P.V, {
-                                type: P.Nb.Span
+                            return r.createElement(P.W, {
+                                type: P.Ob.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
@@ -530,7 +530,7 @@
                     }, "RaidCreatorMessageCanRaid")
                 },
                 ie = function(e) {
-                    return r.createElement(Z.a, {
+                    return r.createElement(Y.a, {
                         raid: e.raid
                     }, function(t) {
                         return r.createElement(ee, i.__assign({}, e, {
@@ -586,20 +586,20 @@
                     }, t.prototype.componentWillUnmount = function() {
                         clearTimeout(this.joinDelayTimerID)
                     }, t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(P.Va, {
-                            justifyContent: P.Ua.Between,
-                            display: P.W.Flex
-                        }, r.createElement(P.Va, {
+                        return r.createElement(r.Fragment, null, r.createElement(P.Wa, {
+                            justifyContent: P.Va.Between,
+                            display: P.X.Flex
+                        }, r.createElement(P.Wa, {
                             alignItems: P.f.Center,
-                            display: P.W.Flex
-                        }, r.createElement(Q, {
+                            display: P.X.Flex
+                        }, r.createElement(H, {
                             sourceChannel: this.props.sourceChannel,
                             targetChannel: this.props.targetChannel
-                        }), r.createElement(P.Va, {
+                        }), r.createElement(P.Wa, {
                             padding: {
                                 left: 1
                             }
-                        }, se(this.props))), r.createElement(P.Va, {
+                        }, se(this.props))), r.createElement(P.Wa, {
                             alignSelf: P.g.Center
                         }, this.renderActionable())), this.props.raid.isGoing && r.createElement(ae, {
                             from: this.props.raid.jitterSeconds,
@@ -607,52 +607,52 @@
                             onCountdownEnd: this.handleCountdownEnd
                         }))
                     }, t.prototype.renderActionable = function() {
-                        return this.props.raid.isGoing && this.props.raid.jitterSeconds > 2 ? r.createElement(X, {
+                        return this.props.raid.isGoing && this.props.raid.jitterSeconds > 2 ? r.createElement(Q, {
                             seconds: this.state.remainingJitterSeconds
-                        }) : this.props.hasJoined ? r.createElement(de, {
+                        }) : this.props.hasJoined ? r.createElement(ue, {
                             onLeaveRaid: this.handleLeaveRaid
-                        }) : r.createElement(ue, {
+                        }) : r.createElement(de, {
                             onJoinRaid: this.props.onJoinRaid
                         })
                     }, t
                 }(r.Component),
                 se = function(e) {
-                    return Object(u.d)("{viewerCount, plural,     one {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raider</x:block>}     other {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raiders</x:block>}}", {
+                    return Object(d.d)("{viewerCount, plural,     one {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raider</x:block>}     other {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raiders</x:block>}}", {
                         "x:block": function(e) {
-                            return r.createElement(P.V, null, e)
+                            return r.createElement(P.W, null, e)
                         },
-                        sourceDisplayName: r.createElement(P.V, {
-                            type: P.Nb.Strong
+                        sourceDisplayName: r.createElement(P.W, {
+                            type: P.Ob.Strong
                         }, e.sourceChannel.displayName),
-                        targetDisplayName: r.createElement(P.V, {
-                            type: P.Nb.Strong
+                        targetDisplayName: r.createElement(P.W, {
+                            type: P.Ob.Strong
                         }, e.targetChannel.displayName),
                         viewerCount: e.raid.viewerCount
                     }, "RaidViewerMessage")
                 },
-                de = function(e) {
+                ue = function(e) {
                     var t = e.onLeaveRaid;
                     return r.createElement(P.z, {
                         size: P.D.Small,
                         type: P.F.Hollow,
                         onClick: t
-                    }, r.createElement(P.xb, {
+                    }, r.createElement(P.yb, {
                         padding: {
                             x: 1
                         },
                         color: P.O.Overlay
-                    }, Object(u.d)("Leave", "RaidViewerButton")))
+                    }, Object(d.d)("Leave", "RaidViewerButton")))
                 },
-                ue = function(e) {
+                de = function(e) {
                     var t = e.onJoinRaid;
                     return r.createElement(P.z, {
                         size: P.D.Small,
                         onClick: t
-                    }, r.createElement(P.Va, {
+                    }, r.createElement(P.Wa, {
                         padding: {
                             x: 1
                         }
-                    }, Object(u.d)("Join", "RaidViewerButton")))
+                    }, Object(d.d)("Join", "RaidViewerButton")))
                 },
                 ce = {
                     "data-test-selector": "raid-banner"
@@ -699,13 +699,13 @@
                                 raid: e,
                                 sourceChannel: n,
                                 targetChannel: a
-                            })), r.createElement(P.xb, i.__assign({
+                            })), r.createElement(P.yb, i.__assign({
                                 background: P.r.AccentAlt2,
                                 color: P.O.Overlay,
-                                position: P.db.Absolute,
-                                zIndex: P.ac.Above,
+                                position: P.eb.Absolute,
+                                zIndex: P.bc.Above,
                                 fullWidth: !0
-                            }, ce), r.createElement(P.Va, {
+                            }, ce), r.createElement(P.Wa, {
                                 padding: {
                                     y: 1,
                                     x: 2
@@ -741,7 +741,7 @@
                     return {
                         user: Object(l.e)(e)
                     }
-                }), d.a, O)(le),
+                }), u.a, N)(le),
                 he = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -758,7 +758,7 @@
                     }, t
                 }(r.Component),
                 fe = function(e) {
-                    return r.createElement(W.a, {
+                    return r.createElement(z.a, {
                         channelID: e.channelID
                     }, function(t) {
                         return r.createElement(he, i.__assign({}, e, t))
@@ -770,7 +770,7 @@
                         channel: e.channelID,
                         assignments: {
                             fallback: function() {
-                                return r.createElement(z, i.__assign({}, e))
+                                return r.createElement(M, i.__assign({}, e))
                             },
                             test: function() {
                                 return r.createElement(fe, {
@@ -783,7 +783,7 @@
             n.d(t, "RaidNotification", function() {
                 return me
             }), n.d(t, "RaidNotificationWithPubsub", function() {
-                return M
+                return G
             }), n.d(t, "Props", function() {}), n.d(t, "PublicProps", function() {})
         },
         "7qJZ": function(e, t, n) {
@@ -890,9 +890,9 @@
                     }, e.prototype.destroy = function() {
                         i = void 0
                     }, e.prototype.setStorageData = function(e) {
-                        r.l.set("raids-left", e)
+                        r.m.set("raids-left", e)
                     }, e.prototype.getStorageData = function() {
-                        return r.l.get("raids-left", {})
+                        return r.m.get("raids-left", {})
                     }, e
                 }()
         },
@@ -903,14 +903,14 @@
                 a = n("/7QA"),
                 o = n("/aPz"),
                 s = n("G8UE"),
-                d = n("aUoe"),
-                u = function(e) {
+                u = n("aUoe"),
+                d = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.raidStorage = s.RaidStorage.instance, t.handleJoin = function(e) {
                             return t.setState({
                                 raid: e.withStorage(t.raidStorage.joinRaid(e))
-                            }), d.c(e.id)
+                            }), u.c(e.id)
                         }, t.handleExpire = function(e) {
                             t.setState({
                                 raid: e.withStorage(t.raidStorage.expireRaid(e))
@@ -918,11 +918,11 @@
                         }, t.handleLeave = function(e) {
                             return t.setState({
                                 raid: e.withStorage(t.raidStorage.leaveRaid(e))
-                            }), d.d(e.id)
+                            }), u.d(e.id)
                         }, t.handleCancel = function(e) {
-                            return d.a(e.sourceChannelID)
+                            return u.a(e.sourceChannelID)
                         }, t.handleRaidNow = function(e) {
-                            return d.e(e.sourceChannelID)
+                            return u.e(e.sourceChannelID)
                         }, t.unsubscribe = function() {}, t.handlePubsubMessage = function(e) {
                             switch (e.type) {
                                 case s.RAID_UPDATE_V2:
@@ -961,14 +961,14 @@
                             return t.subscribe(t.props.channelID)
                         }))
                     }, t.prototype.subscribe = function(e) {
-                        this.unsubscribe = a.o.pubsub.subscribe({
+                        this.unsubscribe = a.p.pubsub.subscribe({
                             topic: Object(o.t)(e),
                             onMessage: this.handlePubsubMessage
                         })
                     }, t
                 }(r.Component);
             n.d(t, "a", function() {
-                return u
+                return d
             })
         },
         Leb6: function(e, t, n) {},
@@ -1029,9 +1029,9 @@
             }), n.d(t, "d", function() {
                 return s
             }), n.d(t, "e", function() {
-                return d
-            }), n.d(t, "a", function() {
                 return u
+            }), n.d(t, "a", function() {
+                return d
             }), n.d(t, "b", function() {
                 return c
             });
@@ -1055,7 +1055,7 @@
                 })
             }
 
-            function d(e) {
+            function u(e) {
                 return Object(a.c)({
                     headers: l(),
                     path: "/kraken/raids/go?source_id=" + e,
@@ -1063,7 +1063,7 @@
                 })
             }
 
-            function u(e) {
+            function d(e) {
                 return Object(a.c)({
                     headers: l(),
                     path: "/kraken/raids?source_id=" + e,
@@ -1090,7 +1090,7 @@
 
             function l() {
                 return {
-                    "X-Device-Id": r.o.session.deviceID
+                    "X-Device-Id": r.p.session.deviceID
                 }
             }
         },
@@ -1211,16 +1211,16 @@
                     }, e.request = function(e, t, n) {
                         return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
                             var r, a, o, s;
-                            return i.__generator(this, function(d) {
-                                switch (d.label) {
+                            return i.__generator(this, function(u) {
+                                switch (u.label) {
                                     case 0:
                                         return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, r), o = i.__assign({}, t, {
                                             body: a
                                         }), [4, this._fetch(e, o)];
                                     case 1:
-                                        return s = d.sent(), [4, this.constructLegacyAPIResponse(s)];
+                                        return s = u.sent(), [4, this.constructLegacyAPIResponse(s)];
                                     case 2:
-                                        return [2, d.sent()]
+                                        return [2, u.sent()]
                                 }
                             })
                         })
@@ -1245,7 +1245,7 @@
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, r.o.config.apiBaseURL)
+                        return new URL(e, r.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return i.__awaiter(this, void 0, Promise, function() {
                             var t, n, r, a;
@@ -1286,11 +1286,11 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var n = r.o.store.getState(),
+                        var n = r.p.store.getState(),
                             i = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": r.o.config.legacyClientID,
+                                "Client-ID": r.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
@@ -1298,7 +1298,7 @@
                         return o && (i.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (i["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             i[e] && delete i[e]
                         }), i
-                    }, e.logger = r.o.logger.withCategory("legacy-api"), e
+                    }, e.logger = r.p.logger.withCategory("legacy-api"), e
                 }()
         },
         dG1e: function(e, t, n) {
@@ -1355,22 +1355,22 @@
                 o = 10,
                 s = 90;
 
-            function d(e) {
+            function u(e) {
                 return e < 10 ? a.TimerPhase.waitingFor(o - e) : e < s ? a.TimerPhase.readyFor(s - e) : a.TimerPhase.forced()
             }
-            var u = new Map;
+            var d = new Map;
             var c = function() {},
                 l = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            timerPhase: d(0)
+                            timerPhase: u(0)
                         }, t.stop = c, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
                         this.stop = function(e, t) {
-                            var n = u.get(e);
+                            var n = d.get(e);
                             if (n) n.listeners.add(t);
                             else {
                                 var i = new Set([t]),
@@ -1383,14 +1383,14 @@
                                 n = {
                                     listeners: i,
                                     timerID: a
-                                }, u.set(e, n)
+                                }, d.set(e, n)
                             }
                             return function() {
-                                n && (n.listeners.delete(t), 0 === n.listeners.size && (u.delete(e), clearInterval(n.timerID)))
+                                n && (n.listeners.delete(t), 0 === n.listeners.size && (d.delete(e), clearInterval(n.timerID)))
                             }
                         }(this.props.raid.id, function(t) {
                             e.setState({
-                                timerPhase: d(t)
+                                timerPhase: u(t)
                             })
                         })
                     }, t.prototype.componentWillUnmount = function() {

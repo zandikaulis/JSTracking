@@ -5,13 +5,13 @@
             var a = n("q1tI"),
                 r = n("Ue10"),
                 s = (n("j/Uj"), function() {
-                    return a.createElement(r.Va, {
+                    return a.createElement(r.Wa, {
                         className: "top-stats-chart-loading",
                         flexGrow: 1,
                         flexShrink: 0,
-                        justifyContent: r.Ua.Center,
+                        justifyContent: r.Va.Center,
                         fullWidth: !0
-                    }, a.createElement(r.Xa, {
+                    }, a.createElement(r.Ya, {
                         fillContent: !0
                     }))
                 });
@@ -70,13 +70,13 @@
                     var t = e.children,
                         n = e.tooltip,
                         s = e.title;
-                    return a.createElement(i.Va, {
+                    return a.createElement(i.Wa, {
                         margin: {
                             bottom: 4
                         }
                     }, a.createElement(l, {
                         tooltip: n
-                    }, s), a.createElement(i.xb, {
+                    }, s), a.createElement(i.yb, {
                         borderRadius: Object(r.b)() ? i.x.Large : void 0,
                         elevation: 1,
                         background: i.r.Base
@@ -85,14 +85,14 @@
                 l = function(e) {
                     var t = e.children,
                         n = e.tooltip;
-                    return a.createElement(i.Va, {
+                    return a.createElement(i.Wa, {
                         alignItems: i.f.Center,
-                        display: i.W.Flex,
+                        display: i.X.Flex,
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(i.V, {
-                        type: i.Nb.H5,
+                    }, a.createElement(i.W, {
+                        type: i.Ob.H5,
                         bold: !0
                     }, t), n && a.createElement(s.a, {
                         direction: i.v.TopRight
@@ -342,15 +342,15 @@
                 s = n("2xye"),
                 i = n("Ue10"),
                 o = (n("qZmV"), function(e) {
-                    return a.createElement(i.Va, {
+                    return a.createElement(i.Wa, {
                         className: "clip-card-row"
-                    }, a.createElement(i.Sa, {
-                        type: i.Ta.Alpha,
+                    }, a.createElement(i.Ta, {
+                        type: i.Ua.Alpha,
                         blurAfterClick: !0,
                         targetBlank: !0,
                         linkTo: e.url + "?tt_content=" + s.PageviewContent.TopClips + "&tt_medium=" + s.PageviewMedium.ChannelAnalytics,
                         onClick: e.onClick
-                    }, a.createElement(i.xb, {
+                    }, a.createElement(i.yb, {
                         padding: {
                             x: 2,
                             y: 1
@@ -363,58 +363,58 @@
                         size: i.J.Size8,
                         aspect: i.p.Aspect16x9
                     }), a.createElement(i.H, {
-                        overflow: i.Ya.Hidden
-                    }, a.createElement(i.Va, {
-                        display: i.W.Flex,
+                        overflow: i.Za.Hidden
+                    }, a.createElement(i.Wa, {
+                        display: i.X.Flex,
                         flexGrow: 1,
                         alignItems: i.f.Center,
-                        justifyContent: i.Ua.Between,
+                        justifyContent: i.Va.Between,
                         margin: {
                             left: 1
                         },
                         ellipsis: !0
-                    }, a.createElement(i.Va, {
-                        display: i.W.Flex,
-                        flexDirection: i.Y.Column,
+                    }, a.createElement(i.Wa, {
+                        display: i.X.Flex,
+                        flexDirection: i.Z.Column,
                         ellipsis: !0
-                    }, a.createElement(i.V, {
+                    }, a.createElement(i.W, {
                         color: i.O.Base,
-                        type: i.Nb.H5,
+                        type: i.Ob.H5,
                         ellipsis: !0
-                    }, e.title), a.createElement(i.Va, {
-                        display: i.W.Flex,
-                        flexWrap: i.Z.NoWrap
-                    }, a.createElement(i.mb, {
-                        asset: i.nb.GlyphLive,
-                        type: i.ob.Alt2
-                    }), a.createElement(i.Va, {
-                        display: i.W.Inline,
+                    }, e.title), a.createElement(i.Wa, {
+                        display: i.X.Flex,
+                        flexWrap: i.Aa.NoWrap
+                    }, a.createElement(i.nb, {
+                        asset: i.ob.GlyphLive,
+                        type: i.pb.Alt2
+                    }), a.createElement(i.Wa, {
+                        display: i.X.Inline,
                         padding: {
                             left: .5
                         },
                         ellipsis: !0
-                    }, a.createElement(i.V, {
-                        type: i.Nb.Span
-                    }, e.curatorName)))))), a.createElement(i.Va, {
-                        display: i.W.Flex,
+                    }, a.createElement(i.W, {
+                        type: i.Ob.Span
+                    }, e.curatorName)))))), a.createElement(i.Wa, {
+                        display: i.X.Flex,
                         flexGrow: 1,
-                        justifyContent: i.Ua.End,
+                        justifyContent: i.Va.End,
                         padding: {
                             left: 2
                         }
-                    }, a.createElement(i.mb, {
-                        asset: i.nb.GlyphViews,
-                        type: i.ob.Alt2
-                    }), a.createElement(i.Va, {
-                        display: i.W.Flex,
+                    }, a.createElement(i.nb, {
+                        asset: i.ob.GlyphViews,
+                        type: i.pb.Alt2
+                    }), a.createElement(i.Wa, {
+                        display: i.X.Flex,
                         padding: {
                             left: .5
                         }
-                    }, a.createElement(i.V, {
+                    }, a.createElement(i.W, {
                         bold: !0,
-                        fontSize: i.Aa.Size5,
+                        fontSize: i.Ba.Size5,
                         color: i.O.Alt,
-                        type: i.Nb.Span
+                        type: i.Ob.Span
                     }, Object(r.d)("{views, number}", {
                         views: e.views
                     }, "StreamSummaryClipViews"))))))))
@@ -446,7 +446,7 @@
                 S = n("NAv5"),
                 C = n("oJmH"),
                 E = n("FOa4"),
-                w = (n("WHSC"), function(e) {
+                O = (n("WHSC"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setContainerRef = function(e) {
@@ -470,12 +470,12 @@
                         })
                     }, t
                 }(s.Component)),
-                A = n("u2gS"),
-                O = n("Ue10");
+                w = n("u2gS"),
+                j = n("Ue10");
             ! function(e) {
                 e.Custom = "custom", e.Default = "default", e.Last7Days = "last_7_days", e.Last30Days = "last_30_days", e.CurrentMonth = "current_month", e.oneMonthAgo = "t_minus_1_month", e.twoMonthsAgo = "t_minus_2_month"
             }(a || (a = {}));
-            var j = function(e) {
+            var k = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this,
                         r = t.now || new Date,
@@ -530,26 +530,26 @@
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this;
-                    return s.createElement(O.Va, {
-                        display: O.W.Flex,
-                        flexDirection: O.Y.Column
+                    return s.createElement(j.Wa, {
+                        display: j.X.Flex,
+                        flexDirection: j.Z.Column
                     }, this.presets.map(function(t, n) {
-                        return s.createElement(O.xb, {
-                            color: O.O.Link,
+                        return s.createElement(j.yb, {
+                            color: j.O.Link,
                             margin: {
                                 bottom: .5
                             },
                             key: n
-                        }, s.createElement(O.Sa, {
-                            selected: Object(A.f)(e.props.interval, t.interval),
+                        }, s.createElement(j.Ta, {
+                            selected: Object(w.f)(e.props.interval, t.interval),
                             onClick: e.handleClickFor(t.interval),
-                            borderRadius: O.x.Small
-                        }, s.createElement(O.xb, {
+                            borderRadius: j.x.Small
+                        }, s.createElement(j.yb, {
                             padding: 1,
-                            textAlign: O.Jb.Center
-                        }, s.createElement(O.V, {
+                            textAlign: j.Kb.Center
+                        }, s.createElement(j.W, {
                             noWrap: !0,
-                            fontSize: O.Aa.Size5
+                            fontSize: j.Ba.Size5
                         }, t.message))))
                     }))
                 }, t.prototype.handleClickFor = function(e) {
@@ -560,7 +560,7 @@
                 }, t
             }(s.Component);
 
-            function k(e, t, n) {
+            function A(e, t, n) {
                 void 0 === n && (n = new Date);
                 var a = r.__assign({}, e, t);
                 if (Object(S.differenceInDays)(a.end, a.start) >= 0) return a;
@@ -576,19 +576,19 @@
                     start: Object(S.subDays)(a.end, s)
                 }) : e
             }
-            var x = n("6XEL");
+            var T = n("6XEL");
 
-            function T(e) {
+            function x(e) {
                 return r.__awaiter(this, void 0, void 0, function() {
                     var t, n, a, s, i;
                     return r.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                return t = "/api/channels/" + e + "/revenue_splits", n = "/api/channels/" + e + "/subscriber_count", [4, Promise.all([Object(x.c)({
+                                return t = "/api/channels/" + e + "/revenue_splits", n = "/api/channels/" + e + "/subscriber_count", [4, Promise.all([Object(T.c)({
                                     path: t
                                 }, {
                                     excludeHeaders: ["Twitch-Api-Token"]
-                                }), Object(x.c)({
+                                }), Object(T.c)({
                                     path: n
                                 }, {
                                     excludeHeaders: ["Twitch-Api-Token"]
@@ -620,9 +620,9 @@
                                             return n && (n.score = t.score, e.set(n.plan, n)), e
                                         }, n);
                                         var a = Array.from(n.values());
-                                        return Object(x.d)(a, [function(e) {
+                                        return Object(T.d)(a, [function(e) {
                                             return e.plan
-                                        }], [x.a.Ascending])
+                                        }], [T.a.Ascending])
                                     }(s.body, i.body)
                                 }]
                         }
@@ -631,31 +631,31 @@
             }
             var D = n("bM8u");
 
-            function V(e) {
-                return e === A.d.None ? D.e : D.a
+            function _(e) {
+                return e === w.d.None ? D.e : D.a
             }
 
-            function _(e) {
-                return e === A.d.None ? D.f : Object.keys(D.g)
+            function R(e) {
+                return e === w.d.None ? D.f : Object.keys(D.g)
             }
-            var R, P = {
+            var P, W = {
                     "data-test-selector": "commit-button"
                 },
-                N = {
+                V = {
                     "data-test-selector": "cancel-button"
                 },
                 F = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleStartChange = function(e) {
-                            var t = k(n.state.interval, {
+                            var t = A(n.state.interval, {
                                 start: e
                             });
                             n.setState({
                                 interval: t
                             })
                         }, n.handleEndChange = function(e) {
-                            var t = k(n.state.interval, {
+                            var t = A(n.state.interval, {
                                 end: Object(S.endOfDay)(e)
                             });
                             n.setState({
@@ -671,61 +671,61 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = new Date;
-                        return s.createElement("div", null, s.createElement(O.Va, {
-                            display: O.W.Flex,
-                            flexWrap: O.Z.NoWrap,
+                        return s.createElement("div", null, s.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            flexWrap: j.Aa.NoWrap,
                             margin: {
                                 bottom: 2
                             }
-                        }, s.createElement(O.Va, {
+                        }, s.createElement(j.Wa, {
                             padding: {
                                 right: 2
                             },
-                            textAlign: O.Jb.Center
-                        }, s.createElement(O.V, {
-                            color: O.O.Alt2,
-                            fontSize: O.Aa.Size4
-                        }, Object(u.d)("Start date", "ChannelAnalyticsDateRangePicker")), s.createElement(w, {
+                            textAlign: j.Kb.Center
+                        }, s.createElement(j.W, {
+                            color: j.O.Alt2,
+                            fontSize: j.Ba.Size4
+                        }, Object(u.d)("Start date", "ChannelAnalyticsDateRangePicker")), s.createElement(O, {
                             date: this.state.interval.start,
                             startRange: this.state.interval.start,
                             endRange: this.state.interval.end,
                             maxDate: e,
                             onChange: this.handleStartChange
-                        })), s.createElement(O.Va, {
+                        })), s.createElement(j.Wa, {
                             padding: {
                                 right: 2
                             },
-                            textAlign: O.Jb.Center
-                        }, s.createElement(O.V, {
-                            color: O.O.Alt2,
-                            fontSize: O.Aa.Size4
-                        }, Object(u.d)("End date", "ChannelAnalyticsDateRangePicker")), s.createElement(w, {
+                            textAlign: j.Kb.Center
+                        }, s.createElement(j.W, {
+                            color: j.O.Alt2,
+                            fontSize: j.Ba.Size4
+                        }, Object(u.d)("End date", "ChannelAnalyticsDateRangePicker")), s.createElement(O, {
                             date: this.state.interval.end,
                             startRange: this.state.interval.start,
                             endRange: this.state.interval.end,
                             minDate: this.state.interval.start,
                             maxDate: e,
                             onChange: this.handleEndChange
-                        })), s.createElement(O.xb, {
+                        })), s.createElement(j.yb, {
                             padding: {
                                 top: .5,
                                 left: 2
                             },
                             borderLeft: !0
-                        }, s.createElement(j, {
+                        }, s.createElement(k, {
                             interval: this.state.interval,
                             onChange: this.props.onCommit
-                        }))), s.createElement(O.Va, {
-                            display: O.W.Flex,
-                            justifyContent: O.Ua.Center
-                        }, s.createElement(O.Va, {
+                        }))), s.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            justifyContent: j.Va.Center
+                        }, s.createElement(j.Wa, {
                             margin: {
                                 right: 2
                             }
-                        }, s.createElement(O.z, r.__assign({}, P, {
+                        }, s.createElement(j.z, r.__assign({}, W, {
                             onClick: this.handleUpdateClick
-                        }), Object(u.d)("Update", "ChannelAnalyticsDateRangePicker"))), s.createElement(O.z, r.__assign({}, N, {
-                            type: O.F.Text,
+                        }), Object(u.d)("Update", "ChannelAnalyticsDateRangePicker"))), s.createElement(j.z, r.__assign({}, V, {
+                            type: j.F.Text,
                             onClick: this.props.onDismiss
                         }), Object(u.d)("Clear", "ChannelAnalyticsDateRangePicker"))))
                     }, t
@@ -735,13 +735,13 @@
                 return void 0 === t && (t = new Date), e.start <= e.end && e.end <= Object(S.endOfDay)(t)
             }
 
-            function M(e) {
-                u.n.track(y.SpadeEventType.ChannelAnalyticsInteraction, e)
+            function N(e) {
+                u.o.track(y.SpadeEventType.ChannelAnalyticsInteraction, e)
             }! function(e) {
                 e.OpenDatePicker = "open_date_picker", e.VisitPreviousDateRange = "visit_previous_date_range", e.VisitNextDateRange = "visit_next_date_range", e.ExportDataRevenue = "export_data_revenue", e.ExportDataStream = "export_data_stream", e.ViewDetailsReferrers = "view_details_referrers", e.ViewDetailsClips = "view_details_clips", e.TopStreamsSelectDate = "topstreams_select_date", e.TopStreamsSelectAvgViewers = "topstreams_select_avg_viewers", e.TopStreamsSelectNewFollowers = "topstreams_select_new_followers", e.TopStreamsSelectNewSubscribers = "topstreams_select_new_subscribers", e.TopStreamsStream = "topstreams_stream", e.TopClipsClip = "topclips_clip", e.DownloadMySubs = "download_my_subs", e.DownloadMySubsSuccess = "download_my_subs_success", e.EmailToSubs = "email_to_subs", e.OverlapChannel = "overlap_channel", e.OverlapGame = "overlap_game"
-            }(R || (R = {}));
-            var I = n("bket"),
-                W = n("Snp4"),
+            }(P || (P = {}));
+            var M = n("bket"),
+                I = n("Snp4"),
                 B = n("CFgy"),
                 U = {
                     "data-test-selector": "time-range"
@@ -756,77 +756,77 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleDatePickerOpen = function() {
-                            M({
-                                action: R.OpenDatePicker
+                            N({
+                                action: P.OpenDatePicker
                             })
                         }, t.handlePrevious = function() {
-                            M({
-                                action: R.VisitPreviousDateRange
+                            N({
+                                action: P.VisitPreviousDateRange
                             })
                         }, t.handleNext = function() {
-                            M({
-                                action: R.VisitNextDateRange
+                            N({
+                                action: P.VisitNextDateRange
                             })
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.urlStore.params;
-                        return s.createElement(O.Va, {
-                            position: O.db.Relative,
-                            zIndex: O.ac.Above
-                        }, s.createElement(I.a, {
+                        return s.createElement(j.Wa, {
+                            position: j.eb.Relative,
+                            zIndex: j.bc.Above
+                        }, s.createElement(M.a, {
                             onOpen: this.handleDatePickerOpen,
                             control: function(n) {
                                 var a = n.toggle;
-                                return s.createElement(O.Va, {
+                                return s.createElement(j.Wa, {
                                     padding: {
                                         bottom: 2
                                     }
-                                }, s.createElement(W.a, {
+                                }, s.createElement(I.a, {
                                     previousPath: e.pathWithShiftedInterval(-1),
                                     nextPath: e.pathWithShiftedInterval(1),
                                     onPrevious: e.handlePrevious,
                                     onNext: e.handleNext
-                                }, s.createElement(O.Sa, r.__assign({}, H, {
-                                    type: O.Ta.Base,
+                                }, s.createElement(j.Ta, r.__assign({}, H, {
+                                    type: j.Ua.Base,
                                     onClick: a
-                                }), s.createElement(O.Va, {
-                                    textAlign: O.Jb.Center
-                                }, s.createElement(O.V, r.__assign({
-                                    color: O.O.Link
+                                }), s.createElement(j.Wa, {
+                                    textAlign: j.Kb.Center
+                                }, s.createElement(j.W, r.__assign({
+                                    color: j.O.Link
                                 }, U, {
-                                    fontSize: O.Aa.Size4
-                                }), e.formatDateRange(t)), s.createElement(O.V, r.__assign({}, z, {
-                                    fontSize: O.Aa.Size6,
-                                    color: O.O.Alt2
+                                    fontSize: j.Ba.Size4
+                                }), e.formatDateRange(t)), s.createElement(j.W, r.__assign({}, z, {
+                                    fontSize: j.Ba.Size6,
+                                    color: j.O.Alt2
                                 }), e.formatDaysInRange(t))))))
                             }
                         }, function(n) {
                             var a = n.close;
-                            return s.createElement(O.xb, {
+                            return s.createElement(j.yb, {
                                 margin: {
                                     top: 5
                                 },
-                                position: O.db.Absolute,
-                                display: O.W.Flex,
-                                alignItems: O.f.Center,
-                                flexDirection: O.Y.Column,
-                                zIndex: O.ac.Above,
+                                position: j.eb.Absolute,
+                                display: j.X.Flex,
+                                alignItems: j.f.Center,
+                                flexDirection: j.Z.Column,
+                                zIndex: j.bc.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
-                            }, s.createElement(O.xb, {
+                            }, s.createElement(j.yb, {
                                 margin: {
                                     top: .5
                                 },
                                 elevation: 4,
-                                position: O.db.Relative,
-                                display: O.W.Flex,
-                                background: O.r.Base,
-                                zIndex: O.ac.Above,
+                                position: j.eb.Relative,
+                                display: j.X.Flex,
+                                background: j.r.Base,
+                                zIndex: j.bc.Above,
                                 attachTop: !0
-                            }, s.createElement(O.Va, {
+                            }, s.createElement(j.Wa, {
                                 padding: {
                                     top: 2,
                                     right: 2,
@@ -854,17 +854,17 @@
                         return L(t) ? this.props.urlStore.buildPathWithParams(t) : ""
                     }, t
                 }(s.Component),
-                q = n("kduP"),
-                Y = n("a7UW"),
-                J = n("6E8S"),
+                X = n("kduP"),
+                q = n("a7UW"),
+                Y = n("6E8S"),
                 K = n("vxFv"),
-                X = (n("8kcC"), function(e) {
+                Z = (n("8kcC"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.props.gameOverlaps && 0 !== this.props.gameOverlaps.length ? s.createElement(O.Va, {
+                        return e = this.props.gameOverlaps && 0 !== this.props.gameOverlaps.length ? s.createElement(j.Wa, {
                             padding: {
                                 y: 1
                             }
@@ -879,7 +879,7 @@
                             name: "",
                             boxArtURL: u.a.defaultBoxArtURL,
                             percentage: this.remainingPercentage()
-                        })) : s.createElement(Y.a, null), s.createElement(J.a, {
+                        })) : s.createElement(q.a, null), s.createElement(Y.a, {
                             title: Object(u.d)("What games / categories do my viewers like to watch?", "ChannelAnalyticsViewerOverlapPanel"),
                             tooltip: Object(u.d)("When they were not watching your channel, your viewers spent x% of their watch time watching these categories over the past 7 days.", "ChannelAnalyticsViewerOverlapPanel")
                         }, e)
@@ -891,105 +891,105 @@
                 }(s.Component)),
                 Q = function(e) {
                     var t = function() {
-                        M({
-                            action: R.OverlapGame
+                        N({
+                            action: P.OverlapGame
                         })
                     };
-                    return s.createElement(O.xb, {
+                    return s.createElement(j.yb, {
                         className: "game-card-row",
                         padding: {
                             y: 1,
                             right: 2,
                             left: 2
                         },
-                        fontSize: O.Aa.Size5
-                    }, s.createElement(O.Ha, null, s.createElement(O.P, {
+                        fontSize: j.Ba.Size5
+                    }, s.createElement(j.Ia, null, s.createElement(j.P, {
                         cols: {
                             default: 5,
                             xs: 5,
                             sm: 5
                         }
-                    }, s.createElement(O.Va, {
+                    }, s.createElement(j.Wa, {
                         padding: {
                             left: 0,
                             right: 1
                         },
                         fullHeight: !0,
-                        display: O.W.Flex,
-                        alignItems: O.f.Center
-                    }, s.createElement(O.Va, {
+                        display: j.X.Flex,
+                        alignItems: j.f.Center
+                    }, s.createElement(j.Wa, {
                         margin: {
                             right: 1
                         }
-                    }, e.name && s.createElement(O.T, {
+                    }, e.name && s.createElement(j.U, {
                         onClick: t,
-                        to: e.name && Object(q.c)(e.name),
+                        to: e.name && Object(X.c)(e.name),
                         targetBlank: !0
-                    }, s.createElement(O.I, {
+                    }, s.createElement(j.I, {
                         src: e.boxArtURL,
                         alt: e.name,
-                        aspect: O.p.Aspect3x4,
-                        size: O.J.Size4
-                    })), !e.name && s.createElement(O.I, {
+                        aspect: j.p.Aspect3x4,
+                        size: j.J.Size4
+                    })), !e.name && s.createElement(j.I, {
                         src: e.boxArtURL,
                         alt: "",
-                        aspect: O.p.Aspect3x4,
-                        size: O.J.Size4
-                    })), s.createElement(O.Va, {
+                        aspect: j.p.Aspect3x4,
+                        size: j.J.Size4
+                    })), s.createElement(j.Wa, {
                         ellipsis: !0
-                    }, e.name && s.createElement(O.T, {
+                    }, e.name && s.createElement(j.U, {
                         onClick: t,
-                        to: e.name && Object(q.c)(e.name),
+                        to: e.name && Object(X.c)(e.name),
                         hoverUnderlineNone: !0,
                         targetBlank: !0
-                    }, s.createElement(O.V, {
+                    }, s.createElement(j.W, {
                         className: "game-card-row__link-text",
-                        fontSize: O.Aa.Size5,
+                        fontSize: j.Ba.Size5,
                         ellipsis: !0
-                    }, e.name)), !e.name && Object(u.d)("Other", "ChannelAnalyticsViewerOverlapPanel")))), s.createElement(O.P, {
+                    }, e.name)), !e.name && Object(u.d)("Other", "ChannelAnalyticsViewerOverlapPanel")))), s.createElement(j.P, {
                         cols: {
                             default: 2,
                             xs: 3,
                             sm: 2
                         }
-                    }, s.createElement(O.Va, {
+                    }, s.createElement(j.Wa, {
                         padding: {
                             right: 1
                         },
                         fullHeight: !0,
-                        display: O.W.Flex,
-                        alignItems: O.f.Center,
-                        justifyContent: O.Ua.End
-                    }, s.createElement(O.V, {
-                        color: O.O.Alt2,
+                        display: j.X.Flex,
+                        alignItems: j.f.Center,
+                        justifyContent: j.Va.End
+                    }, s.createElement(j.W, {
+                        color: j.O.Alt2,
                         ellipsis: !0
-                    }, Object(K.a)(e.percentage)))), s.createElement(O.P, {
+                    }, Object(K.a)(e.percentage)))), s.createElement(j.P, {
                         cols: {
                             default: 5,
                             xs: 4,
                             sm: 5
                         }
-                    }, s.createElement(O.Va, {
-                        display: O.W.Flex,
-                        alignItems: O.f.Center,
+                    }, s.createElement(j.Wa, {
+                        display: j.X.Flex,
+                        alignItems: j.f.Center,
                         fullHeight: !0
-                    }, s.createElement(O.Va, {
-                        display: O.W.Flex,
+                    }, s.createElement(j.Wa, {
+                        display: j.X.Flex,
                         flexGrow: 1
-                    }, s.createElement(O.xb, {
+                    }, s.createElement(j.yb, {
                         fullWidth: !0,
-                        background: O.r.Alt2,
-                        borderRadius: O.x.Small
-                    }, s.createElement(O.gb, {
+                        background: j.r.Alt2,
+                        borderRadius: j.x.Small
+                    }, s.createElement(j.hb, {
                         value: Math.max(100 * e.percentage, 1)
                     })))))))
                 },
-                Z = function() {
-                    return s.createElement(O.Va, {
+                J = function() {
+                    return s.createElement(j.Wa, {
                         margin: {
                             bottom: 3
                         }
-                    }, s.createElement(O.cb, {
+                    }, s.createElement(j.db, {
                         height: 510
                     }))
                 },
@@ -1032,43 +1032,43 @@
                             className: "breakdown-card-row",
                             onMouseEnter: this.handleHover,
                             onMouseLeave: this.handleHover
-                        }, s.createElement(O.xb, {
+                        }, s.createElement(j.yb, {
                             padding: {
                                 x: 2,
                                 y: 1
                             },
                             className: this.props.children ? "breakdown-card" : "",
-                            position: O.db.Relative
-                        }, s.createElement(O.Va, {
-                            display: O.W.Flex,
-                            justifyContent: O.Ua.Between
-                        }, s.createElement(O.Va, {
-                            display: O.W.Flex,
-                            alignItems: O.f.Center
+                            position: j.eb.Relative
+                        }, s.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            justifyContent: j.Va.Between
+                        }, s.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            alignItems: j.f.Center
                         }, s.createElement("div", {
                             className: "revenue-breakdown-panel__key",
                             style: {
                                 backgroundColor: this.props.keyColor
                             }
-                        }), s.createElement(O.Va, {
+                        }), s.createElement(j.Wa, {
                             margin: {
                                 left: 1
                             }
-                        }, s.createElement(O.V, {
-                            type: O.Nb.H5
-                        }, this.props.title))), s.createElement(O.Va, {
-                            textAlign: O.Jb.Right
-                        }, s.createElement(O.V, {
-                            type: O.Nb.H5,
+                        }, s.createElement(j.W, {
+                            type: j.Ob.H5
+                        }, this.props.title))), s.createElement(j.Wa, {
+                            textAlign: j.Kb.Right
+                        }, s.createElement(j.W, {
+                            type: j.Ob.H5,
                             bold: !0
-                        }, this.props.revenue), s.createElement(O.V, {
-                            type: O.Nb.H6,
-                            color: O.O.Alt2
+                        }, this.props.revenue), s.createElement(j.W, {
+                            type: j.Ob.H6,
+                            color: j.O.Alt2
                         }, Object(u.d)("{lastRevenue} last period", {
                             lastRevenue: this.props.lastRevenue
-                        }, "ChannelAnalyticsRevenueBreakdownPanel")))), this.props.children && this.state.isHovered ? s.createElement(O.u, {
+                        }, "ChannelAnalyticsRevenueBreakdownPanel")))), this.props.children && this.state.isHovered ? s.createElement(j.u, {
                             show: !0,
-                            direction: O.v.TopRight,
+                            direction: j.v.TopRight,
                             offsetY: "-0.5rem",
                             offsetX: "2rem"
                         }, this.props.children) : null))
@@ -1088,51 +1088,51 @@
                     var n = t.filter(function(t) {
                         return e === t.productID
                     })[0];
-                    return n ? Object(u.e)(n.total, {
+                    return n ? Object(u.f)(n.total, {
                         style: "currency",
                         currency: "USD"
-                    }) : Object(u.e)(0, {
+                    }) : Object(u.f)(0, {
                         style: "currency",
                         currency: "USD"
                     })
                 },
                 ge = function(e) {
-                    return s.createElement(O.Va, {
+                    return s.createElement(j.Wa, {
                         padding: {
                             x: 1,
                             y: 2
                         }
-                    }, s.createElement("table", null, s.createElement("thead", null, s.createElement("tr", null, s.createElement("td", null, s.createElement(O.Va, {
+                    }, s.createElement("table", null, s.createElement("thead", null, s.createElement("tr", null, s.createElement("td", null, s.createElement(j.Wa, {
                         padding: {
                             right: 2
                         }
-                    }, s.createElement(O.V, {
+                    }, s.createElement(j.W, {
                         bold: !0
-                    }, Object(u.d)("Subscription", "ChannelAnalyticsPaidSubs")))), s.createElement("td", null, s.createElement(O.Va, {
+                    }, Object(u.d)("Subscription", "ChannelAnalyticsPaidSubs")))), s.createElement("td", null, s.createElement(j.Wa, {
                         padding: {
                             right: 2
                         }
-                    }, s.createElement(O.V, {
+                    }, s.createElement(j.W, {
                         bold: !0
-                    }, Object(u.d)("Subscribers", "ChannelAnalyticsPaidSubs")))), s.createElement("td", null, s.createElement(O.Va, {
+                    }, Object(u.d)("Subscribers", "ChannelAnalyticsPaidSubs")))), s.createElement("td", null, s.createElement(j.Wa, {
                         padding: {
                             right: 2
                         }
-                    }, s.createElement(O.V, {
+                    }, s.createElement(j.W, {
                         bold: !0
                     }, Object(u.d)("Revenue", "ChannelAnalyticsPaidSubs")))))), s.createElement("tbody", null, function(e) {
                         var t = e.revenue;
                         return e.subCounts.map(function(e) {
                             return {
                                 tier: Object(ue.b)(e.defaultPrice),
-                                subscribers: Object(u.e)(e.total),
+                                subscribers: Object(u.f)(e.total),
                                 revenue: he(e.productID, t)
                             }
                         })
                     }(e).map(function(e, t) {
                         return s.createElement("tr", {
                             key: t
-                        }, s.createElement("td", null, s.createElement(O.V, r.__assign({}, pe), e.tier)), s.createElement("td", null, s.createElement(O.V, r.__assign({}, de), e.subscribers)), s.createElement("td", null, s.createElement(O.V, r.__assign({}, me), e.revenue)))
+                        }, s.createElement("td", null, s.createElement(j.W, r.__assign({}, pe), e.tier)), s.createElement("td", null, s.createElement(j.W, r.__assign({}, de), e.subscribers)), s.createElement("td", null, s.createElement(j.W, r.__assign({}, me), e.revenue)))
                     }))))
                 },
                 be = (n("WuTM"), {
@@ -1142,33 +1142,33 @@
                     "data-test-selector": "payout-link"
                 },
                 ye = function(e) {
-                    if (e.channel.role === A.d.None) return null;
+                    if (e.channel.role === w.d.None) return null;
                     if (e.revenue.isLoading) return s.createElement(ve, null);
                     var t = e.revenue,
                         n = t.streams,
                         a = t.lookbackStreams,
-                        i = s.createElement(Y.a, null);
+                        i = s.createElement(q.a, null);
                     return n.getTotalAmountAllStreams() && (i = s.createElement(s.Fragment, null, s.createElement(Se, {
                         totalAmount: n.getTotalAmountAllStreams()
-                    }), s.createElement(O.Va, {
+                    }), s.createElement(j.Wa, {
                         padding: {
                             top: 2,
                             bottom: 1
                         }
-                    }, s.createElement(O.Va, {
-                        textAlign: O.Jb.Right,
+                    }, s.createElement(j.Wa, {
+                        textAlign: j.Kb.Right,
                         padding: {
                             x: 2
                         }
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H6,
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H6,
                         bold: !0,
-                        color: O.O.Alt2
-                    }, Object(u.d)("Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel"))), s.createElement(O.Va, null, s.createElement(ce, {
+                        color: j.O.Alt2
+                    }, Object(u.d)("Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel"))), s.createElement(j.Wa, null, s.createElement(ce, {
                         title: Object(u.d)("Paid subs", "ChannelAnalyticsRevenueBreakdownPanel"),
                         revenue: Ce(n.twitchSubscriptions.total),
                         lastRevenue: Ce(a.twitchSubscriptions.total),
-                        keyColor: O.R.Purple8
+                        keyColor: j.R.Purple8
                     }, !e.subCounts.isLoading && s.createElement(ge, {
                         revenue: e.revenue.streams.twitchSubscriptionProducts,
                         subCounts: e.subCounts.streams.twitchSubscriptionProducts
@@ -1176,12 +1176,12 @@
                         title: Object(u.d)("Twitch Prime subs", "ChannelAnalyticsRevenueBreakdownPanel"),
                         revenue: Ce(n.primeSubscriptions.total),
                         lastRevenue: Ce(a.primeSubscriptions.total),
-                        keyColor: O.R.PrimeBlue
+                        keyColor: j.R.PrimeBlue
                     }), s.createElement(ce, {
                         title: Object(u.d)("Gifted subs", "ChannelAnalyticsRevenueBreakdownPanel"),
                         revenue: Ce(n.giftSubscriptions.total),
                         lastRevenue: Ce(a.giftSubscriptions.total),
-                        keyColor: O.R.Purple6
+                        keyColor: j.R.Purple6
                     }, !e.subCounts.isLoading && s.createElement(ge, {
                         revenue: e.revenue.streams.giftSubscriptionProducts,
                         subCounts: e.subCounts.streams.giftSubscriptionProducts
@@ -1189,7 +1189,7 @@
                         title: Object(u.d)("Ads", "ChannelAnalyticsRevenueBreakdownPanel"),
                         revenue: Ce(n.ads.total),
                         lastRevenue: Ce(a.ads.total),
-                        keyColor: O.R.Purple11
+                        keyColor: j.R.Purple11
                     }), s.createElement(ce, {
                         title: Object(u.d)("Bits", "ChannelAnalyticsRevenueBreakdownPanel"),
                         revenue: Ce(n.bits.total),
@@ -1199,7 +1199,7 @@
                         title: Object(u.d)("Game Sales", "ChannelAnalyticsRevenueBreakdownPanel"),
                         revenue: Ce(n.gameCommerce.total),
                         lastRevenue: Ce(a.gameCommerce.total),
-                        keyColor: O.R.Orange
+                        keyColor: j.R.Orange
                     }), s.createElement(ce, {
                         title: Object(u.d)("Extensions", "ChannelAnalyticsRevenueBreakdownPanel"),
                         revenue: Ce(n.extensions.total),
@@ -1209,7 +1209,7 @@
                         title: Object(u.d)("Bounties", "ChannelAnalyticsRevenueBreakdownPanel"),
                         revenue: Ce(n.bountyBoard.total),
                         lastRevenue: Ce(a.bountyBoard.total),
-                        keyColor: O.R.Yellow
+                        keyColor: j.R.Yellow
                     }))), re() && s.createElement(oe.a, r.__assign({
                         message: Object(u.d)("View payout history", "ChannelAnalyticsRevenueBreakdownPanel"),
                         linkTo: {
@@ -1221,81 +1221,81 @@
                             }
                         },
                         borderTop: !0
-                    }, fe)))), s.createElement(J.a, {
+                    }, fe)))), s.createElement(Y.a, {
                         title: Object(u.d)("Where does my revenue come from?", "ChannelAnalyticsRevenueBreakdownPanel"),
                         tooltip: Object(u.d)("Your estimated revenue minus Twitch’s share, fees, and taxes. Your payment is sent 45 days after the end of each month your balance reaches $100 or more.", "ChannelAnalyticsRevenueBreakdownPanel")
                     }, i)
                 },
                 ve = function() {
-                    return s.createElement(O.Va, {
+                    return s.createElement(j.Wa, {
                         margin: {
                             bottom: 2
                         }
-                    }, s.createElement(O.cb, {
+                    }, s.createElement(j.db, {
                         height: 448
                     }))
                 },
                 Se = function(e) {
-                    return s.createElement(O.Va, r.__assign({
-                        textAlign: O.Jb.Center,
+                    return s.createElement(j.Wa, r.__assign({
+                        textAlign: j.Kb.Center,
                         padding: {
                             y: 2
                         }
-                    }, be), s.createElement(O.Va, {
-                        display: O.W.Flex,
-                        justifyContent: O.Ua.Center
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H2
+                    }, be), s.createElement(j.Wa, {
+                        display: j.X.Flex,
+                        justifyContent: j.Va.Center
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H2
                     }, Object(le.a)(e.totalAmount, function(e, t) {
                         switch (e.type) {
                             case "currency":
-                                return s.createElement(O.Na, {
+                                return s.createElement(j.Oa, {
                                     key: t,
-                                    display: O.W.InlineBlock,
+                                    display: j.X.InlineBlock,
                                     padding: {
                                         top: .5,
                                         right: .5
                                     },
-                                    verticalAlign: 0 === t ? O.Xb.TextTop : O.Xb.Baseline
-                                }, s.createElement(O.V, {
-                                    color: O.O.Alt2,
-                                    fontSize: O.Aa.Size6,
-                                    type: O.Nb.Span
+                                    verticalAlign: 0 === t ? j.Yb.TextTop : j.Yb.Baseline
+                                }, s.createElement(j.W, {
+                                    color: j.O.Alt2,
+                                    fontSize: j.Ba.Size6,
+                                    type: j.Ob.Span
                                 }, e.value));
                             case "integer":
                             case "group":
-                                return s.createElement(O.V, {
+                                return s.createElement(j.W, {
                                     key: t,
-                                    type: O.Nb.Span,
+                                    type: j.Ob.Span,
                                     bold: !0
                                 }, e.value);
                             case "decimal":
                             case "fraction":
-                                return s.createElement(O.V, {
+                                return s.createElement(j.W, {
                                     key: t,
-                                    type: O.Nb.Span,
-                                    fontSize: O.Aa.Size6,
+                                    type: j.Ob.Span,
+                                    fontSize: j.Ba.Size6,
                                     bold: !0
                                 }, e.value);
                             default:
-                                return s.createElement(O.V, {
+                                return s.createElement(j.W, {
                                     key: t,
-                                    type: O.Nb.Span,
+                                    type: j.Ob.Span,
                                     bold: !0
                                 }, e.value)
                         }
                     }, function(e) {
-                        return s.createElement(O.V, {
+                        return s.createElement(j.W, {
                             key: "key",
-                            type: O.Nb.Span,
+                            type: j.Ob.Span,
                             bold: !0
                         }, e)
-                    }))), s.createElement(O.V, {
-                        type: O.Nb.H6
+                    }))), s.createElement(j.W, {
+                        type: j.Ob.H6
                     }, Object(u.d)("Total Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel")))
                 },
                 Ce = function(e) {
-                    return Object(u.e)(e, {
+                    return Object(u.f)(e, {
                         style: "currency",
                         currency: "USD"
                     })
@@ -1308,63 +1308,63 @@
                         }))
                     })
                 },
-                we = n("cZKs"),
-                Ae = n("x7UT"),
-                Oe = n("0Log"),
-                je = n("geRD"),
-                ke = n("/aPz"),
-                xe = n("fWgO"),
-                Te = (n("dxV6"), {
+                Oe = n("cZKs"),
+                we = n("x7UT"),
+                je = n("0Log"),
+                ke = n("geRD"),
+                Ae = n("/aPz"),
+                Te = n("fWgO"),
+                xe = (n("dxV6"), {
                     "data-test-selector": "cancel-button"
                 }),
                 De = function(e) {
-                    return s.createElement(O.Va, {
+                    return s.createElement(j.Wa, {
                         padding: {
                             y: 2
                         }
-                    }, s.createElement(O.V, {
-                        color: O.O.Alt2
-                    }, Object(u.d)("A CSV of your subscribers is being generated.", "ChannelAnalyticsEmailSubsList")), s.createElement(O.V, {
-                        color: O.O.Alt2
-                    }, Object(u.d)("This may take several minutes if you have a large number of subscribers.", "ChannelAnalyticsEmailSubsList")), s.createElement(O.Va, {
+                    }, s.createElement(j.W, {
+                        color: j.O.Alt2
+                    }, Object(u.d)("A CSV of your subscribers is being generated.", "ChannelAnalyticsEmailSubsList")), s.createElement(j.W, {
+                        color: j.O.Alt2
+                    }, Object(u.d)("This may take several minutes if you have a large number of subscribers.", "ChannelAnalyticsEmailSubsList")), s.createElement(j.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, s.createElement(O.gb, {
+                    }, s.createElement(j.hb, {
                         mask: !0,
                         value: e.progress
                     })))
                 },
-                Ve = function() {
-                    return s.createElement(O.Va, {
+                _e = function() {
+                    return s.createElement(j.Wa, {
                         padding: {
                             y: 2
                         }
-                    }, s.createElement(O.V, {
-                        color: O.O.Alt2
-                    }, Object(u.d)("An error occurred.", "ChannelAnalyticsEmailSubsList")), s.createElement(O.V, {
-                        color: O.O.Alt2
+                    }, s.createElement(j.W, {
+                        color: j.O.Alt2
+                    }, Object(u.d)("An error occurred.", "ChannelAnalyticsEmailSubsList")), s.createElement(j.W, {
+                        color: j.O.Alt2
                     }, Object(u.d)("Please wait a few minutes and try again.", "ChannelAnalyticsEmailSubsList")))
                 },
-                _e = function(e) {
-                    return s.createElement(O.Va, {
+                Re = function(e) {
+                    return s.createElement(j.Wa, {
                         padding: {
                             y: 2
                         }
-                    }, s.createElement(O.V, {
-                        color: O.O.Alt2
-                    }, Object(u.d)("Your download is ready. If it did not download automatically", "ChannelAnalyticsEmailSubsList"), " ", s.createElement(O.T, {
+                    }, s.createElement(j.W, {
+                        color: j.O.Alt2
+                    }, Object(u.d)("Your download is ready. If it did not download automatically", "ChannelAnalyticsEmailSubsList"), " ", s.createElement(j.U, {
                         onClick: e.downloadFile
-                    }, Object(u.d)("please click this link", "ChannelAnalyticsEmailSubsList")), "."), s.createElement(O.Va, {
+                    }, Object(u.d)("please click this link", "ChannelAnalyticsEmailSubsList")), "."), s.createElement(j.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, s.createElement(O.V, {
-                        color: O.O.Alt2,
-                        fontSize: O.Aa.Size7
+                    }, s.createElement(j.W, {
+                        color: j.O.Alt2,
+                        fontSize: j.Ba.Size7
                     }, Object(u.d)("The download link will expire after 10 minutes. If the link has expired, please close this modal and try again.", "ChannelAnalyticsEmailSubsList"))))
                 },
-                Re = function(e) {
+                Pe = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.downloadFile = function() {
@@ -1379,41 +1379,41 @@
                     }, t.prototype.componentDidUpdate = function() {
                         !this.downloaded && this.props.pubsub.messages.subscribersCSVComplete && (this.downloaded = !0, this.downloadFile())
                     }, t.prototype.render = function() {
-                        return s.createElement(O.xb, {
+                        return s.createElement(j.yb, {
                             className: "download-subs-list-modal",
-                            background: O.r.Base,
+                            background: j.r.Base,
                             elevation: 3,
                             padding: {
                                 x: 2,
                                 top: 3,
                                 bottom: 2
                             }
-                        }, s.createElement(O.xb, {
+                        }, s.createElement(j.yb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
                             }
-                        }, s.createElement(O.V, {
-                            type: O.Nb.H4,
-                            color: O.O.Alt
-                        }, Object(u.d)("Download Subscriber List", "ChannelAnalyticsEmailSubsList"))), s.createElement(O.xb, {
+                        }, s.createElement(j.W, {
+                            type: j.Ob.H4,
+                            color: j.O.Alt
+                        }, Object(u.d)("Download Subscriber List", "ChannelAnalyticsEmailSubsList"))), s.createElement(j.yb, {
                             borderBottom: !0
-                        }, this.renderModalBody()), s.createElement(O.Va, {
-                            display: O.W.Flex,
-                            justifyContent: O.Ua.Center,
+                        }, this.renderModalBody()), s.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            justifyContent: j.Va.Center,
                             padding: {
                                 top: 2
                             }
-                        }, s.createElement(O.z, r.__assign({}, Te, {
-                            type: O.F.Text,
+                        }, s.createElement(j.z, r.__assign({}, xe, {
+                            type: j.F.Text,
                             onClick: this.props.onClose
-                        }), Object(u.d)("Close", "ChannelAnalyticsEmailSubsList"))), s.createElement(we.a, {
+                        }), Object(u.d)("Close", "ChannelAnalyticsEmailSubsList"))), s.createElement(Oe.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t.prototype.renderModalBody = function() {
-                        return this.props.pubsub.messages.subscribersCSVComplete ? s.createElement(_e, {
+                        return this.props.pubsub.messages.subscribersCSVComplete ? s.createElement(Re, {
                             downloadFile: this.downloadFile
-                        }) : this.state.error || this.props.pubsub.messages.subscribersCSVInProgress && this.props.pubsub.messages.subscribersCSVInProgress.error ? s.createElement(Ve, null) : s.createElement(De, {
+                        }) : this.state.error || this.props.pubsub.messages.subscribersCSVInProgress && this.props.pubsub.messages.subscribersCSVInProgress.error ? s.createElement(_e, null) : s.createElement(De, {
                             progress: this.getDownloadProgress()
                         })
                     }, t.prototype.generateCSV = function() {
@@ -1426,7 +1426,7 @@
                                             channelID: this.props.channelID
                                         }, t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, this.props.downloadSubsList(Object(je.a)(e))];
+                                        return t.trys.push([1, 3, , 4]), [4, this.props.downloadSubsList(Object(ke.a)(e))];
                                     case 2:
                                         return t.sent(), [3, 4];
                                     case 3:
@@ -1443,23 +1443,23 @@
                     }, t.prototype.getDownloadProgress = function() {
                         return this.props.pubsub.messages.subscribersCSVInProgress ? this.props.pubsub.messages.subscribersCSVInProgress.percent : 0
                     }, t.prototype.trackDownloadSuccess = function() {
-                        M({
-                            action: R.DownloadMySubsSuccess
+                        N({
+                            action: P.DownloadMySubsSuccess
                         })
                     }, t
                 }(s.Component),
-                Pe = Object(c.compose)(Object(p.a)(xe, {
+                We = Object(c.compose)(Object(p.a)(Te, {
                     name: "downloadSubsList"
-                }), Object(Ae.a)([{
+                }), Object(we.a)([{
                     topic: function(e) {
-                        return Object(ke.x)(e.channelID || "")
+                        return Object(Ae.x)(e.channelID || "")
                     },
-                    mapMessageTypesToProps: (se = {}, se[Oe.PubsubMessageType.SubscribersCSVComplete] = "subscribersCSVComplete", se[Oe.PubsubMessageType.SubscribersCSVInProgress] = "subscribersCSVInProgress", se),
+                    mapMessageTypesToProps: (se = {}, se[je.PubsubMessageType.SubscribersCSVComplete] = "subscribersCSVComplete", se[je.PubsubMessageType.SubscribersCSVInProgress] = "subscribersCSVInProgress", se),
                     skip: function(e) {
                         return !e.channelID
                     }
-                }]))(Re),
-                Ne = {
+                }]))(Pe),
+                Ve = {
                     "data-test-selector": "cancel-button"
                 },
                 Fe = {
@@ -1478,7 +1478,7 @@
                                         case 0:
                                             return this.setState({
                                                 requestState: ie.InFlight
-                                            }), [4, Object(x.c)({
+                                            }), [4, Object(T.c)({
                                                 path: "/api/channels/" + this.props.channelLogin + "/subscriber_emails",
                                                 method: "POST",
                                                 body: {
@@ -1513,100 +1513,100 @@
                         }, n
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        var e = s.createElement(O.V, {
-                                color: O.O.Error
+                        var e = s.createElement(j.W, {
+                                color: j.O.Error
                             }, Object(u.d)("Oops, something went wrong. Please try again.", "ChannelAnalyticsEmailSubs")),
-                            t = s.createElement(s.Fragment, null, s.createElement(O.xb, {
+                            t = s.createElement(s.Fragment, null, s.createElement(j.yb, {
                                 borderBottom: !0
-                            }, s.createElement(O.Va, {
+                            }, s.createElement(j.Wa, {
                                 padding: {
                                     y: 2
                                 }
-                            }, s.createElement(O.V, {
-                                color: O.O.Alt2
+                            }, s.createElement(j.W, {
+                                color: j.O.Alt2
                             }, Object(u.d)("Use this form to send a message to all {subscribers,number} of your active subscribers.", {
                                 subscribers: this.props.totalSubscribers
-                            }, "ChannelAnalyticsEmailSubs")), s.createElement(O.Va, {
+                            }, "ChannelAnalyticsEmailSubs")), s.createElement(j.Wa, {
                                 padding: {
                                     top: 2,
                                     bottom: 1
                                 }
-                            }, s.createElement(O.Ca, {
+                            }, s.createElement(j.Da, {
                                 label: Object(u.d)("Message Title", "ChannelAnalyticsEmailSubs")
-                            }, s.createElement(O.Pa, {
-                                type: O.Ra.Text,
+                            }, s.createElement(j.Qa, {
+                                type: j.Sa.Text,
                                 onChange: this.handleTitleChange
-                            }))), s.createElement(O.Va, {
+                            }))), s.createElement(j.Wa, {
                                 padding: {
                                     y: 1
                                 }
-                            }, s.createElement(O.Ca, {
+                            }, s.createElement(j.Da, {
                                 label: Object(u.d)("Message Body", "ChannelAnalyticsEmailSubs")
-                            }, s.createElement(O.Kb, {
+                            }, s.createElement(j.Lb, {
                                 onChange: this.handleBodyChange,
                                 rows: 6
-                            }))), this.state.requestState === ie.Failed && e)), s.createElement(O.Va, {
-                                display: O.W.Flex,
-                                justifyContent: O.Ua.Center,
+                            }))), this.state.requestState === ie.Failed && e)), s.createElement(j.Wa, {
+                                display: j.X.Flex,
+                                justifyContent: j.Va.Center,
                                 padding: {
                                     top: 2
                                 }
-                            }, s.createElement(O.Va, {
+                            }, s.createElement(j.Wa, {
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(O.z, r.__assign({}, Ne, {
+                            }, s.createElement(j.z, r.__assign({}, Ve, {
                                 onClick: this.props.onClose,
-                                type: O.F.Text
-                            }), Object(u.d)("Cancel", "ChannelAnalyticsEmailSubs"))), s.createElement(O.Va, {
+                                type: j.F.Text
+                            }), Object(u.d)("Cancel", "ChannelAnalyticsEmailSubs"))), s.createElement(j.Wa, {
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(O.z, r.__assign({}, Fe, {
+                            }, s.createElement(j.z, r.__assign({}, Fe, {
                                 disabled: "" === this.state.body || "" === this.state.title || this.state.requestState === ie.InFlight,
                                 onClick: this.handleSendEmail
                             }), this.state.requestState === ie.InFlight ? Object(u.d)("Sending Email...", "ChannelAnalyticsEmailSubs") : Object(u.d)("Send Email", "ChannelAnalyticsEmailSubs"))))),
-                            n = s.createElement(s.Fragment, null, s.createElement(O.xb, {
+                            n = s.createElement(s.Fragment, null, s.createElement(j.yb, {
                                 borderBottom: !0
-                            }, s.createElement(O.Va, {
+                            }, s.createElement(j.Wa, {
                                 padding: {
                                     y: 2
                                 }
-                            }, s.createElement(O.V, {
-                                color: O.O.Alt2
-                            }, Object(u.d)("Your email has been sent!", "ChannelAnalyticsEmailSubs")))), s.createElement(O.Va, {
-                                display: O.W.Flex,
-                                justifyContent: O.Ua.Center,
+                            }, s.createElement(j.W, {
+                                color: j.O.Alt2
+                            }, Object(u.d)("Your email has been sent!", "ChannelAnalyticsEmailSubs")))), s.createElement(j.Wa, {
+                                display: j.X.Flex,
+                                justifyContent: j.Va.Center,
                                 padding: {
                                     top: 2
                                 }
-                            }, s.createElement(O.z, {
+                            }, s.createElement(j.z, {
                                 onClick: this.props.onClose
                             }, Object(u.d)("Close", "ChannelAnalyticsEmailSubs"))));
-                        return s.createElement(O.xb, {
-                            background: O.r.Base,
+                        return s.createElement(j.yb, {
+                            background: j.r.Base,
                             elevation: 3,
                             padding: {
                                 x: 2,
                                 top: 3,
                                 bottom: 2
                             }
-                        }, s.createElement(O.xb, {
+                        }, s.createElement(j.yb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
                             }
-                        }, s.createElement(O.V, {
-                            type: O.Nb.H4,
-                            color: O.O.Alt
-                        }, Object(u.d)("Send Email to Subscribers", "ChannelAnalyticsEmailSubs"))), this.state.requestState === ie.Success ? n : t, s.createElement(we.a, {
+                        }, s.createElement(j.W, {
+                            type: j.Ob.H4,
+                            color: j.O.Alt
+                        }, Object(u.d)("Send Email to Subscribers", "ChannelAnalyticsEmailSubs"))), this.state.requestState === ie.Success ? n : t, s.createElement(Oe.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(s.Component),
-                Me = n("B+LW"),
-                Ie = n("1AsC"),
-                We = (n("N8uI"), {
+                Ne = n("B+LW"),
+                Me = n("1AsC"),
+                Ie = (n("N8uI"), {
                     1000: function() {
                         return Object(u.d)("Tier 1 subs", "ChannelAnalyticsSubscribersPanel")
                     },
@@ -1627,11 +1627,11 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.emailButtons = function(e) {
-                            return s.createElement(O.xb, {
-                                display: O.W.Flex
-                            }, s.createElement(Me.a, {
+                            return s.createElement(j.yb, {
+                                display: j.X.Flex
+                            }, s.createElement(Ne.a, {
                                 triggerModal: function(e) {
-                                    return s.createElement(Pe, {
+                                    return s.createElement(We, {
                                         channelID: n.props.channel.id,
                                         onClose: e
                                     })
@@ -1639,9 +1639,9 @@
                             }, function(e) {
                                 return s.createElement(oe.a, r.__assign({}, Be, {
                                     message: Object(u.d)("Download my subscriber list", "ChannelAnalyticsSubscribersPanel"),
-                                    onClick: Object(C.compose)(e, qe)
+                                    onClick: Object(C.compose)(e, Xe)
                                 }))
-                            }), s.createElement(Me.a, {
+                            }), s.createElement(Ne.a, {
                                 triggerModal: function(t) {
                                     return s.createElement(Le, {
                                         channelLogin: n.props.channel.name,
@@ -1650,7 +1650,7 @@
                                     })
                                 }
                             }, function(e) {
-                                return s.createElement(O.xb, {
+                                return s.createElement(j.yb, {
                                     borderLeft: !0,
                                     flexGrow: 1
                                 }, s.createElement(oe.a, r.__assign({}, Ue, {
@@ -1660,11 +1660,11 @@
                             }))
                         }, n.subscriptionRows = function() {
                             return n.state.subscriptions.map(function(e) {
-                                return s.createElement(Ye, {
-                                    name: We[e.plan](),
+                                return s.createElement(qe, {
+                                    name: Ie[e.plan](),
                                     revSplit: e.revenueSplit + " / " + (100 - e.revenueSplit),
-                                    score: Object(u.e)(e.score),
-                                    count: Object(u.e)(e.count),
+                                    score: Object(u.f)(e.score),
+                                    count: Object(u.f)(e.count),
                                     key: e.id
                                 })
                             })
@@ -1676,26 +1676,26 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.fetchSubscriptions()
                     }, t.prototype.render = function() {
-                        if (this.props.channel.role === A.d.None) return null;
-                        if (this.state.isLoading) return s.createElement(Je, null);
-                        var e = s.createElement(Y.a, null),
+                        if (this.props.channel.role === w.d.None) return null;
+                        if (this.state.isLoading) return s.createElement(Ye, null);
+                        var e = s.createElement(q.a, null),
                             t = this.state.subscriptions.reduce(function(e, t) {
                                 return e + t.score
                             }, 0),
                             n = this.state.subscriptions.reduce(function(e, t) {
                                 return e + t.count
                             }, 0);
-                        return this.state.subscriptions.length && (e = s.createElement(s.Fragment, null, s.createElement(O.xb, {
+                        return this.state.subscriptions.length && (e = s.createElement(s.Fragment, null, s.createElement(j.yb, {
                             borderBottom: !0,
                             padding: {
                                 top: 1,
                                 bottom: 2
                             }
-                        }, s.createElement(He, null), this.subscriptionRows(), s.createElement(Ye, {
+                        }, s.createElement(He, null), this.subscriptionRows(), s.createElement(qe, {
                             name: Object(u.d)("Total", "ChannelAnalyticsSubscribersPanel"),
-                            score: Object(u.e)(t),
-                            count: Object(u.e)(n)
-                        })), this.emailButtons(n))), s.createElement(Ie.a, {
+                            score: Object(u.f)(t),
+                            count: Object(u.f)(n)
+                        })), this.emailButtons(n))), s.createElement(Me.a, {
                             title: Object(u.d)("How many subscribers do I have today?", "ChannelAnalyticsSubscribersPanel")
                         }, e)
                     }, t.prototype.fetchSubscriptions = function() {
@@ -1704,13 +1704,13 @@
                             return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.props.channel.role === A.d.None ? [2, this.setState({
+                                        return this.props.channel.role === w.d.None ? [2, this.setState({
                                             isLoading: !1,
                                             subscriptions: []
                                         })] : (this.setState({
                                             isLoading: !0,
                                             subscriptions: []
-                                        }), [4, T(this.props.channel.name)]);
+                                        }), [4, x(this.props.channel.name)]);
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             isLoading: !1
@@ -1723,102 +1723,102 @@
                     }, t
                 }(s.Component),
                 He = function() {
-                    return s.createElement(O.xb, {
+                    return s.createElement(j.yb, {
                         padding: {
                             x: 2,
                             top: 2
                         },
-                        position: O.db.Relative
-                    }, s.createElement(O.Ha, null, s.createElement(O.P, {
+                        position: j.eb.Relative
+                    }, s.createElement(j.Ia, null, s.createElement(j.P, {
                         cols: 8
-                    }, s.createElement(O.Va, {
-                        textAlign: O.Jb.Right
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H6,
+                    }, s.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H6,
                         bold: !0,
-                        color: O.O.Alt2
-                    }, Object(u.d)("Revenue Split", "ChannelAnalyticsSubscribersPanel")))), s.createElement(O.P, {
+                        color: j.O.Alt2
+                    }, Object(u.d)("Revenue Split", "ChannelAnalyticsSubscribersPanel")))), s.createElement(j.P, {
                         cols: 2
-                    }, s.createElement(O.Va, {
-                        textAlign: O.Jb.Right
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H6,
+                    }, s.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H6,
                         bold: !0,
-                        color: O.O.Alt2
-                    }, Object(u.d)("Sub Points", "ChannelAnalyticsSubscribersPanel")))), s.createElement(O.P, {
+                        color: j.O.Alt2
+                    }, Object(u.d)("Sub Points", "ChannelAnalyticsSubscribersPanel")))), s.createElement(j.P, {
                         cols: 2
-                    }, s.createElement(O.Va, {
-                        textAlign: O.Jb.Right
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H6,
+                    }, s.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H6,
                         bold: !0,
-                        color: O.O.Alt2
+                        color: j.O.Alt2
                     }, Object(u.d)("Subscribers", "ChannelAnalyticsSubscribersPanel"))))))
                 };
 
             function Ge() {
-                M({
-                    action: R.EmailToSubs
+                N({
+                    action: P.EmailToSubs
                 })
             }
 
-            function qe() {
-                M({
-                    action: R.DownloadMySubs
+            function Xe() {
+                N({
+                    action: P.DownloadMySubs
                 })
             }
-            var Ye = function(e) {
-                    return s.createElement(O.xb, {
+            var qe = function(e) {
+                    return s.createElement(j.yb, {
                         className: "subscribers-panel-row",
                         padding: {
                             x: 2,
                             y: 1
                         },
-                        position: O.db.Relative
-                    }, s.createElement(O.Ha, null, s.createElement(O.P, {
+                        position: j.eb.Relative
+                    }, s.createElement(j.Ia, null, s.createElement(j.P, {
                         cols: 6
-                    }, s.createElement(O.Va, {
-                        textAlign: O.Jb.Left
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H5,
-                        color: O.O.Alt
-                    }, e.name))), s.createElement(O.P, {
+                    }, s.createElement(j.Wa, {
+                        textAlign: j.Kb.Left
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H5,
+                        color: j.O.Alt
+                    }, e.name))), s.createElement(j.P, {
                         cols: 2
-                    }, s.createElement(O.Va, {
-                        textAlign: O.Jb.Right
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H5
-                    }, e.revSplit))), s.createElement(O.P, {
+                    }, s.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H5
+                    }, e.revSplit))), s.createElement(j.P, {
                         cols: 2
-                    }, s.createElement(O.Va, {
-                        textAlign: O.Jb.Right
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H5,
+                    }, s.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H5,
                         bold: !0
-                    }, e.score))), s.createElement(O.P, {
+                    }, e.score))), s.createElement(j.P, {
                         cols: 2
-                    }, s.createElement(O.Va, {
-                        textAlign: O.Jb.Right
-                    }, s.createElement(O.V, {
-                        type: O.Nb.H5,
+                    }, s.createElement(j.Wa, {
+                        textAlign: j.Kb.Right
+                    }, s.createElement(j.W, {
+                        type: j.Ob.H5,
                         bold: !0
                     }, e.count)))))
                 },
-                Je = function() {
-                    return s.createElement(O.Va, {
+                Ye = function() {
+                    return s.createElement(j.Wa, {
                         margin: {
                             bottom: 3
                         }
-                    }, s.createElement(O.cb, {
+                    }, s.createElement(j.db, {
                         height: 510
                     }))
                 },
                 Ke = n("FXHi"),
-                Xe = function(e) {
+                Ze = function(e) {
                     var t = e.channel,
                         n = e.topClips;
                     if (n.isLoading) return s.createElement(et, null);
-                    var a = s.createElement(Y.a, null);
+                    var a = s.createElement(q.a, null);
                     if (n.clips.length) {
                         var r = Object(u.d)("View details", "ChannelAnalyticsTopClipsPanel"),
                             i = {
@@ -1832,27 +1832,27 @@
                             clipsAttrs: n
                         }), s.createElement(oe.a, {
                             message: r,
-                            onClick: Ze,
+                            onClick: Je,
                             linkTo: i
                         }))
                     }
-                    return s.createElement(J.a, {
+                    return s.createElement(Y.a, {
                         title: Object(u.d)("What were my top clips?", "ChannelAnalyticsTopClipsPanel")
                     }, a)
                 },
                 Qe = function(e) {
                     if (e.clipsAttrs.isLoading)
-                        for (var t = [], n = 0; n < 5; n++) t.push(s.createElement(O.xb, {
+                        for (var t = [], n = 0; n < 5; n++) t.push(s.createElement(j.yb, {
                             borderBottom: !0,
                             padding: {
                                 x: 2,
                                 y: 1
                             },
                             key: n
-                        }, s.createElement(O.cb, {
+                        }, s.createElement(j.db, {
                             height: 50
                         })));
-                    return s.createElement(O.xb, {
+                    return s.createElement(j.yb, {
                         borderBottom: !0
                     }, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
                         return s.createElement(Ke.a, r.__assign({}, e, {
@@ -1862,23 +1862,23 @@
                     }))
                 };
 
-            function Ze() {
-                M({
-                    action: R.ViewDetailsClips
+            function Je() {
+                N({
+                    action: P.ViewDetailsClips
                 })
             }
 
             function $e() {
-                M({
-                    action: R.TopClipsClip
+                N({
+                    action: P.TopClipsClip
                 })
             }
             var et = function() {
-                    return s.createElement(O.Va, {
+                    return s.createElement(j.Wa, {
                         margin: {
                             bottom: 2
                         }
-                    }, s.createElement(O.cb, {
+                    }, s.createElement(j.db, {
                         height: 448
                     }))
                 },
@@ -2077,10 +2077,10 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.download = function() {
                             var e;
-                            t.props.dataGroup === D.b.StreamSummaries ? (M({
-                                action: R.ExportDataStream
-                            }), e = at(t.props.analyticsResponse.streamSessions.sessions, t.props.aggregation)) : (M({
-                                action: R.ExportDataRevenue
+                            t.props.dataGroup === D.b.StreamSummaries ? (N({
+                                action: P.ExportDataStream
+                            }), e = at(t.props.analyticsResponse.streamSessions.sessions, t.props.aggregation)) : (N({
+                                action: P.ExportDataRevenue
                             }), e = nt({
                                 revenue: t.props.analyticsResponse.revenue.streams,
                                 subscriptions: t.props.analyticsResponse.subCounts.streams
@@ -2101,14 +2101,14 @@
                 it = n("TDse"),
                 ot = function() {
                     function e(e) {
-                        this.defaultTopStats = [], this.topStatsKeys = [], this.channel = e, this.defaultTopStats = V(this.channel.role), this.topStatsKeys = _(this.channel.role), this.statsStorageKey = this.channel.name + "-top"
+                        this.defaultTopStats = [], this.topStatsKeys = [], this.channel = e, this.defaultTopStats = _(this.channel.role), this.topStatsKeys = R(this.channel.role), this.statsStorageKey = this.channel.name + "-top"
                     }
                     return e.prototype.store = function(e) {
                         var t;
-                        u.l.set("channel-analytics-stats", r.__assign({}, this.storedStats(), ((t = {})[this.statsStorageKey] = e, t)))
+                        u.m.set("channel-analytics-stats", r.__assign({}, this.storedStats(), ((t = {})[this.statsStorageKey] = e, t)))
                     }, e.prototype.storedStats = function() {
                         var e;
-                        return u.l.get("channel-analytics-stats", ((e = {})[this.statsStorageKey] = [], e))
+                        return u.m.get("channel-analytics-stats", ((e = {})[this.statsStorageKey] = [], e))
                     }, e.prototype.getValidStoredStats = function() {
                         var e = this,
                             t = this.storedStats(),
@@ -2131,7 +2131,7 @@
                                     selectedStats: r
                                 }
                             })
-                        }, n.statsStorage = new ot(n.props.channel), n.defaultTopStats = V(n.props.channel.role), n.topStatsKeys = _(n.props.channel.role), n.state = {
+                        }, n.statsStorage = new ot(n.props.channel), n.defaultTopStats = _(n.props.channel.role), n.topStatsKeys = R(n.props.channel.role), n.state = {
                             selectedStats: n.defaultTopStats
                         }, n
                     }
@@ -2164,36 +2164,36 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return s.createElement(O.Va, {
-                            position: O.db.Relative
-                        }, s.createElement(I.a, {
+                        return s.createElement(j.Wa, {
+                            position: j.eb.Relative
+                        }, s.createElement(M.a, {
                             control: function(e) {
                                 var t = e.toggle;
-                                return s.createElement(O.Va, {
-                                    display: O.W.Flex,
+                                return s.createElement(j.Wa, {
+                                    display: j.X.Flex,
                                     fullHeight: !0
-                                }, s.createElement(O.A, r.__assign({
+                                }, s.createElement(j.A, r.__assign({
                                     ariaLabel: Object(u.d)("Select top statistic", "ChannelAnalyticsDropdownAria"),
-                                    icon: O.nb.GlyphArrUpDown,
+                                    icon: j.ob.GlyphArrUpDown,
                                     onClick: t,
-                                    size: O.B.Small
+                                    size: j.B.Small
                                 }, ut)))
                             }
                         }, function(t) {
                             var n = t.close;
-                            return s.createElement(O.u, {
+                            return s.createElement(j.u, {
                                 show: !0,
-                                direction: O.v.BottomRight,
+                                direction: j.v.BottomRight,
                                 tailOffset: 5
                             }, e.props.availableStats.map(function(t) {
-                                return s.createElement(O.Sa, r.__assign({
+                                return s.createElement(j.Ta, r.__assign({
                                     onClick: Object(C.compose)(n, e.props.onUpdateStat.bind(e, t, e.props.index)),
                                     key: t,
-                                    type: O.Ta.Alpha
-                                }, ct), s.createElement(O.Va, {
+                                    type: j.Ua.Alpha
+                                }, ct), s.createElement(j.Wa, {
                                     padding: 1
-                                }, s.createElement(O.V, {
-                                    color: O.O.Link
+                                }, s.createElement(j.W, {
+                                    color: j.O.Link
                                 }, D.g[t].title())))
                             }))
                         }))
@@ -2228,15 +2228,15 @@
                         }, function(a) {
                             var r = a.stats,
                                 i = a.onUpdateStat;
-                            return s.createElement(O.xb, {
+                            return s.createElement(j.yb, {
                                 margin: {
                                     bottom: 4
                                 },
-                                background: O.r.Base,
+                                background: j.r.Base,
                                 elevation: 1
-                            }, s.createElement(O.xb, {
-                                display: O.W.Flex,
-                                flexWrap: O.Z.Wrap
+                            }, s.createElement(j.yb, {
+                                display: j.X.Flex,
+                                flexWrap: j.Aa.Wrap
                             }, r.map(function(t, a) {
                                 var r = t.Tab;
                                 return s.createElement(r, {
@@ -2248,20 +2248,20 @@
                                     key: a,
                                     onClick: e.handleTabClick
                                 }, s.createElement(pt, {
-                                    availableStats: _(e.props.channel.role),
+                                    availableStats: R(e.props.channel.role),
                                     index: a,
                                     onUpdateStat: i
                                 }))
-                            })), s.createElement(O.xb, {
+                            })), s.createElement(j.yb, {
                                 padding: 2,
                                 borderBottom: !0
-                            }, s.createElement(O.Va, {
-                                display: O.W.Flex,
-                                flexDirection: O.Y.RowReverse,
+                            }, s.createElement(j.Wa, {
+                                display: j.X.Flex,
+                                flexDirection: j.Z.RowReverse,
                                 padding: {
                                     bottom: 1
                                 }
-                            }, s.createElement("div", null, s.createElement(O.sb, {
+                            }, s.createElement("div", null, s.createElement(j.tb, {
                                 disabled: !e.isDataAvailable(r[n].dataGroup),
                                 onChange: e.handleAggregationChange,
                                 value: e.props.urlStore.params.topStatsAggregation
@@ -2290,11 +2290,11 @@
                     }), t
                 }(s.Component),
                 ht = function() {
-                    return s.createElement(O.Va, {
+                    return s.createElement(j.Wa, {
                         margin: {
                             bottom: 3
                         }
-                    }, s.createElement(O.cb, {
+                    }, s.createElement(j.db, {
                         height: 510
                     }))
                 },
@@ -2345,38 +2345,38 @@
                             n = e.lastIndexes,
                             a = 0 !== t ? n[t - 1] : 0,
                             i = a + this.props.itemsPerPage;
-                        return s.createElement(O.Va, null, this.props.children({
+                        return s.createElement(j.Wa, null, this.props.children({
                             firstItemIndex: a,
                             lastItemIndex: i
-                        }), s.createElement(O.xb, {
-                            display: O.W.Flex,
-                            justifyContent: O.Ua.Between,
-                            alignItems: O.f.Center,
+                        }), s.createElement(j.yb, {
+                            display: j.X.Flex,
+                            justifyContent: j.Va.Between,
+                            alignItems: j.f.Center,
                             borderTop: !0
-                        }, s.createElement(O.xb, {
+                        }, s.createElement(j.yb, {
                             borderRight: !0,
-                            display: O.W.Flex
-                        }, s.createElement(O.z, r.__assign({
-                            type: O.F.Text,
+                            display: j.X.Flex
+                        }, s.createElement(j.z, r.__assign({
+                            type: j.F.Text,
                             onClick: this.handleNavLeft,
                             disabled: 0 === t
-                        }, ft), s.createElement(O.Va, {
+                        }, ft), s.createElement(j.Wa, {
                             padding: 1,
-                            display: O.W.Flex
-                        }, s.createElement(O.mb, {
-                            asset: O.nb.GlyphArrLeft
-                        })))), this.renderPageButtons(), s.createElement(O.xb, {
+                            display: j.X.Flex
+                        }, s.createElement(j.nb, {
+                            asset: j.ob.GlyphArrLeft
+                        })))), this.renderPageButtons(), s.createElement(j.yb, {
                             borderLeft: !0,
-                            display: O.W.Flex
-                        }, s.createElement(O.z, r.__assign({
-                            type: O.F.Text,
+                            display: j.X.Flex
+                        }, s.createElement(j.z, r.__assign({
+                            type: j.F.Text,
                             onClick: this.handleNavRight,
                             disabled: t === this.totalPages - 1
-                        }, yt), s.createElement(O.Va, {
+                        }, yt), s.createElement(j.Wa, {
                             padding: 1,
-                            display: O.W.Flex
-                        }, s.createElement(O.mb, {
-                            asset: O.nb.GlyphArrRight
+                            display: j.X.Flex
+                        }, s.createElement(j.nb, {
+                            asset: j.ob.GlyphArrRight
                         }))))))
                     }, t.prototype.renderPageButtons = function() {
                         var e = this.state.currentPageIndex,
@@ -2384,12 +2384,12 @@
                             n = this.totalPages,
                             a = this.props.marginPagesToDisplay || 0;
                         if (n <= 8)
-                            for (var i = 0; i < n; i++) t.push(s.createElement(O.z, {
+                            for (var i = 0; i < n; i++) t.push(s.createElement(j.z, {
                                 key: i,
-                                type: O.F.Text,
+                                type: j.F.Text,
                                 onClick: this.handleNavTo.bind(this, i),
                                 disabled: e === i
-                            }, s.createElement(O.Va, {
+                            }, s.createElement(j.Wa, {
                                 padding: {
                                     x: .5
                                 }
@@ -2398,28 +2398,28 @@
                             var o = Math.max(e - 1, a),
                                 l = Math.min(e + 1, n - a - 1);
                             for (i = 0; i < a; i++) t.push(this.renderPageAtIndex(i));
-                            o > a && t.push(s.createElement(O.Va, r.__assign({
+                            o > a && t.push(s.createElement(j.Wa, r.__assign({
                                 key: "ellipsis-1",
                                 padding: 1
                             }, bt), "..."));
                             for (i = o; i <= l; i++) t.push(this.renderPageAtIndex(i));
-                            l < n - a - 1 && t.push(s.createElement(O.Va, r.__assign({
+                            l < n - a - 1 && t.push(s.createElement(j.Wa, r.__assign({
                                 key: "ellipsis-2",
                                 padding: 1
                             }, bt), "..."));
                             for (i = n - a; i < n; i++) t.push(this.renderPageAtIndex(i))
                         }
-                        return s.createElement(O.Va, r.__assign({
-                            display: O.W.Flex,
-                            justifyContent: O.Ua.Around
+                        return s.createElement(j.Wa, r.__assign({
+                            display: j.X.Flex,
+                            justifyContent: j.Va.Around
                         }, gt), t)
                     }, t.prototype.renderPageAtIndex = function(e) {
-                        return s.createElement(O.z, {
+                        return s.createElement(j.z, {
                             key: e,
-                            type: O.F.Text,
+                            type: j.F.Text,
                             onClick: this.handleNavTo.bind(this, e),
                             disabled: this.state.currentPageIndex === e
-                        }, s.createElement(O.Va, {
+                        }, s.createElement(j.Wa, {
                             padding: {
                                 x: .5
                             }
@@ -2441,51 +2441,51 @@
                 Et = function(e) {
                     var t = e.stream,
                         n = e.statNum;
-                    return s.createElement(O.Va, {
+                    return s.createElement(j.Wa, {
                         className: "stream-card-row"
-                    }, s.createElement(O.Sa, {
-                        type: O.Ta.Alpha,
+                    }, s.createElement(j.Ta, {
+                        type: j.Ua.Alpha,
                         blurAfterClick: !0,
                         targetBlank: !0,
                         linkTo: {
                             pathname: "/" + t.channel.name + "/dashboard/stream-summary/" + t.id,
                             search: "?tt_content=" + y.PageviewContent.TopStreams + "&tt_medium=" + y.PageviewMedium.ChannelAnalytics
                         },
-                        onClick: wt
-                    }, s.createElement(O.xb, {
+                        onClick: Ot
+                    }, s.createElement(j.yb, {
                         padding: {
                             x: 2,
                             y: 1
                         }
-                    }, s.createElement(O.G, {
+                    }, s.createElement(j.G, {
                         row: !0
-                    }, s.createElement(O.I, r.__assign({
+                    }, s.createElement(j.I, r.__assign({
                         src: t.videoSmallThumbnail || "https://vod-secure.twitch.tv/_404/404_processing_80x45.png",
                         alt: t.startChannelStatus,
-                        size: O.J.Size8,
-                        aspect: O.p.Aspect16x9
-                    }, St)), s.createElement(O.H, {
-                        overflow: O.Ya.Hidden
-                    }, s.createElement(O.Va, {
-                        display: O.W.Flex,
+                        size: j.J.Size8,
+                        aspect: j.p.Aspect16x9
+                    }, St)), s.createElement(j.H, {
+                        overflow: j.Za.Hidden
+                    }, s.createElement(j.Wa, {
+                        display: j.X.Flex,
                         flexGrow: 1,
-                        alignItems: O.f.Center,
-                        justifyContent: O.Ua.Between,
+                        alignItems: j.f.Center,
+                        justifyContent: j.Va.Between,
                         margin: {
                             left: 1
                         },
                         ellipsis: !0
-                    }, s.createElement(O.Va, {
-                        display: O.W.Flex,
-                        flexDirection: O.Y.Column,
+                    }, s.createElement(j.Wa, {
+                        display: j.X.Flex,
+                        flexDirection: j.Z.Column,
                         ellipsis: !0
-                    }, s.createElement(O.V, {
-                        color: O.O.Base,
-                        type: O.Nb.H5,
+                    }, s.createElement(j.W, {
+                        color: j.O.Base,
+                        type: j.Ob.H5,
                         ellipsis: !0
-                    }, t.startChannelStatus), s.createElement(O.V, {
-                        color: O.O.Alt2,
-                        type: O.Nb.Span,
+                    }, t.startChannelStatus), s.createElement(j.W, {
+                        color: j.O.Alt2,
+                        type: j.Ob.Span,
                         ellipsis: !0
                     }, Object(u.d)("{start} - {end, time, short}", {
                         start: Object(u.c)(t.interval.start, {
@@ -2496,18 +2496,18 @@
                             minute: "numeric"
                         }),
                         end: t.interval.end
-                    }, "ChannelAnalyticsStreamCard"))))), void 0 !== n && s.createElement(O.Va, {
-                        display: O.W.Flex,
+                    }, "ChannelAnalyticsStreamCard"))))), void 0 !== n && s.createElement(j.Wa, {
+                        display: j.X.Flex,
                         flexGrow: 1,
-                        justifyContent: O.Ua.End,
+                        justifyContent: j.Va.End,
                         padding: {
                             left: 2
                         }
-                    }, s.createElement(O.V, r.__assign({
+                    }, s.createElement(j.W, r.__assign({
                         bold: !0,
-                        fontSize: O.Aa.Size5,
-                        color: O.O.Alt,
-                        type: O.Nb.Span
+                        fontSize: j.Ba.Size5,
+                        color: j.O.Alt,
+                        type: j.Ob.Span
                     }, Ct), Object(u.d)("{statNum, number}", {
                         statNum: function(e) {
                             if (e < 10) return Math.floor(10 * e) / 10;
@@ -2516,64 +2516,64 @@
                     }, "ChannelAnalyticsStreamCard")))))))
                 };
 
-            function wt() {
-                M({
-                    action: R.TopStreamsStream
+            function Ot() {
+                N({
+                    action: P.TopStreamsStream
                 })
             }
-            var At;
+            var wt;
             ! function(e) {
                 e.Date = "date", e.AvgViewers = "avg_viewers", e.NewFollowers = "new_followers", e.NewSubscribers = "new_subscribers"
-            }(At || (At = {}));
-            var Ot, jt = function(e) {
+            }(wt || (wt = {}));
+            var jt, kt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortType: At.Date
+                            sortType: wt.Date
                         }, t.sortDropdown = function() {
-                            return s.createElement(O.sb, {
+                            return s.createElement(j.tb, {
                                 value: t.state.sortType,
                                 onChange: t.handleSortTypeChange
                             }, s.createElement("option", {
-                                value: At.Date
+                                value: wt.Date
                             }, Object(u.d)("Date", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
-                                value: At.AvgViewers
+                                value: wt.AvgViewers
                             }, Object(u.d)("Average Viewers", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
-                                value: At.NewFollowers
+                                value: wt.NewFollowers
                             }, Object(u.d)("New Followers", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
-                                value: At.NewSubscribers
+                                value: wt.NewSubscribers
                             }, Object(u.d)("New Subscriptions", "ChannelAnalyticsTopStreamsPanel")))
                         }, t.streamsListInView = function(e) {
                             var n = e.firstItemIndex,
                                 a = e.lastItemIndex;
-                            return s.createElement(O.Va, null, t.sortedStreamSummaries().slice(n, a).map(function(e, n) {
+                            return s.createElement(j.Wa, null, t.sortedStreamSummaries().slice(n, a).map(function(e, n) {
                                 return s.createElement(Et, {
                                     stream: e,
-                                    statNum: t.state.sortType !== At.Date ? t.statNumForStreamSummary(e) : void 0,
+                                    statNum: t.state.sortType !== wt.Date ? t.statNumForStreamSummary(e) : void 0,
                                     key: n
                                 })
                             }))
                         }, t.handleSortTypeChange = function(e) {
                             var n = e.target.value;
                             switch (n) {
-                                case At.NewFollowers:
-                                    M({
-                                        action: R.TopStreamsSelectNewFollowers
+                                case wt.NewFollowers:
+                                    N({
+                                        action: P.TopStreamsSelectNewFollowers
                                     });
                                     break;
-                                case At.AvgViewers:
-                                    M({
-                                        action: R.TopStreamsSelectAvgViewers
+                                case wt.AvgViewers:
+                                    N({
+                                        action: P.TopStreamsSelectAvgViewers
                                     });
                                     break;
-                                case At.NewSubscribers:
-                                    M({
-                                        action: R.TopStreamsSelectNewSubscribers
+                                case wt.NewSubscribers:
+                                    N({
+                                        action: P.TopStreamsSelectNewSubscribers
                                     });
                                     break;
-                                case At.Date:
-                                    M({
-                                        action: R.TopStreamsSelectDate
+                                case wt.Date:
+                                    N({
+                                        action: P.TopStreamsSelectDate
                                     })
                             }
                             t.setState({
@@ -2581,44 +2581,44 @@
                             })
                         }, t.statNumForStreamSummary = function(e) {
                             switch (t.state.sortType) {
-                                case At.NewFollowers:
+                                case wt.NewFollowers:
                                     return e.followersChange;
-                                case At.NewSubscribers:
+                                case wt.NewSubscribers:
                                     return e.subscriptionsNew;
-                                case At.AvgViewers:
+                                case wt.AvgViewers:
                                 default:
                                     return e.avgViewerCount
                             }
                         }, t.sortedStreamSummaries = function() {
                             var e = t.props.streamSessions.sessions.slice();
                             switch (t.state.sortType) {
-                                case At.NewFollowers:
-                                    return Object(x.d)(e, [function(e) {
+                                case wt.NewFollowers:
+                                    return Object(T.d)(e, [function(e) {
                                         return e.followersChange
-                                    }], [x.a.Descending]);
-                                case At.NewSubscribers:
-                                    return Object(x.d)(e, [function(e) {
+                                    }], [T.a.Descending]);
+                                case wt.NewSubscribers:
+                                    return Object(T.d)(e, [function(e) {
                                         return e.subscriptionsNew
-                                    }], [x.a.Descending]);
-                                case At.Date:
-                                    return Object(x.d)(e, [function(e) {
+                                    }], [T.a.Descending]);
+                                case wt.Date:
+                                    return Object(T.d)(e, [function(e) {
                                         return e.interval.start
-                                    }], [x.a.Descending]);
-                                case At.AvgViewers:
+                                    }], [T.a.Descending]);
+                                case wt.AvgViewers:
                                 default:
-                                    return Object(x.d)(e, [function(e) {
+                                    return Object(T.d)(e, [function(e) {
                                         return e.avgViewerCount
-                                    }], [x.a.Descending])
+                                    }], [T.a.Descending])
                             }
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             t = this.props.streamSessions;
-                        if (t.isLoading) return s.createElement(kt, null);
+                        if (t.isLoading) return s.createElement(At, null);
                         var n = t.sessions.length,
-                            a = s.createElement(Y.a, null);
-                        return n && (a = s.createElement(s.Fragment, null, s.createElement(O.Va, {
+                            a = s.createElement(q.a, null);
+                        return n && (a = s.createElement(s.Fragment, null, s.createElement(j.Wa, {
                             padding: {
                                 x: 2,
                                 top: 2
@@ -2626,48 +2626,48 @@
                             margin: {
                                 bottom: .5
                             },
-                            display: O.W.Flex,
-                            justifyContent: O.Ua.Between
-                        }, s.createElement(O.Va, null, s.createElement(O.V, {
-                            type: O.Nb.H5,
+                            display: j.X.Flex,
+                            justifyContent: j.Va.Between
+                        }, s.createElement(j.Wa, null, s.createElement(j.W, {
+                            type: j.Ob.H5,
                             noWrap: !0
                         }, Object(u.d)("{count} streams", {
                             count: s.createElement("strong", null, n)
-                        }, "ChannelAnalyticsTopStreamsPanel"))), s.createElement(O.Va, {
-                            display: O.W.Flex,
-                            alignItems: O.f.Center
-                        }, s.createElement(O.Va, {
+                        }, "ChannelAnalyticsTopStreamsPanel"))), s.createElement(j.Wa, {
+                            display: j.X.Flex,
+                            alignItems: j.f.Center
+                        }, s.createElement(j.Wa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(O.V, {
+                        }, s.createElement(j.W, {
                             noWrap: !0
                         }, Object(u.d)("Sort by:", "ChannelAnalyticsTopStreamsPanel"))), this.sortDropdown())), s.createElement(vt, {
                             totalItems: n,
                             itemsPerPage: 5,
                             marginPagesToDisplay: 1
                         }, function(t) {
-                            return s.createElement(O.Va, {
+                            return s.createElement(j.Wa, {
                                 padding: {
                                     top: 1,
                                     bottom: 1
                                 }
                             }, e.streamsListInView(t))
-                        }))), s.createElement(J.a, {
+                        }))), s.createElement(Y.a, {
                             title: Object(u.d)("What were my streams during this period?", "ChannelAnalyticsTopStreamsPanel")
                         }, a)
                     }, t
                 }(s.Component),
-                kt = function() {
-                    return s.createElement(O.Va, {
+                At = function() {
+                    return s.createElement(j.Wa, {
                         margin: {
                             bottom: 2
                         }
-                    }, s.createElement(O.cb, {
+                    }, s.createElement(j.db, {
                         height: 448
                     }))
                 },
-                xt = (n("mvbP"), function(e) {
+                Tt = (n("mvbP"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2677,12 +2677,12 @@
                             var t = this.props.channelOverlaps.filter(function(e) {
                                 return e.channel.displayName
                             });
-                            e = s.createElement(O.Va, {
+                            e = s.createElement(j.Wa, {
                                 padding: {
                                     y: 1
                                 }
                             }, t.slice(0, 5).map(function(e, t) {
-                                return s.createElement(Tt, {
+                                return s.createElement(xt, {
                                     login: e.channel.login || "",
                                     displayName: e.channel.displayName || "",
                                     image: e.channel.profileImageURL,
@@ -2690,124 +2690,124 @@
                                     key: t
                                 })
                             }))
-                        } else e = s.createElement(Y.a, null);
-                        return s.createElement(J.a, {
+                        } else e = s.createElement(q.a, null);
+                        return s.createElement(Y.a, {
                             title: Object(u.d)("Which channels have viewers in common with mine?", "ChannelAnalyticsViewerOverlapPanel"),
                             tooltip: Object(u.d)("You and another channel had x% of viewers in common over the past 30 days.", "ChannelAnalyticsViewerOverlapPanel")
                         }, e)
                     }, t
                 }(s.Component)),
-                Tt = function(e) {
+                xt = function(e) {
                     var t = function() {
-                            M({
-                                action: R.OverlapChannel
+                            N({
+                                action: P.OverlapChannel
                             })
                         },
                         n = null;
                     return n = function(e, t) {
                         return e.toLowerCase() !== t.toLowerCase()
-                    }(e.login, e.displayName) ? s.createElement(O.Va, {
+                    }(e.login, e.displayName) ? s.createElement(j.Wa, {
                         className: "channel-card-row__link-text"
-                    }, s.createElement(O.V, {
-                        fontSize: O.Aa.Size5,
+                    }, s.createElement(j.W, {
+                        fontSize: j.Ba.Size5,
                         ellipsis: !0
-                    }, e.login), s.createElement(O.V, {
-                        fontSize: O.Aa.Size6,
-                        color: O.O.Alt2,
+                    }, e.login), s.createElement(j.W, {
+                        fontSize: j.Ba.Size6,
+                        color: j.O.Alt2,
                         ellipsis: !0
-                    }, e.displayName)) : s.createElement(O.V, {
+                    }, e.displayName)) : s.createElement(j.W, {
                         className: "channel-card-row__link-text",
-                        fontSize: O.Aa.Size5,
+                        fontSize: j.Ba.Size5,
                         ellipsis: !0
-                    }, e.displayName), s.createElement(O.xb, {
+                    }, e.displayName), s.createElement(j.yb, {
                         className: "channel-card-row",
                         padding: {
                             y: 1,
                             right: 2,
                             left: 2
                         },
-                        fontSize: O.Aa.Size5
-                    }, s.createElement(O.Ha, null, s.createElement(O.P, {
+                        fontSize: j.Ba.Size5
+                    }, s.createElement(j.Ia, null, s.createElement(j.P, {
                         cols: {
                             default: 5,
                             xs: 5,
                             sm: 5
                         }
-                    }, s.createElement(O.Va, {
+                    }, s.createElement(j.Wa, {
                         padding: {
                             left: 0,
                             right: 1
                         },
                         fullHeight: !0,
-                        display: O.W.Flex,
-                        alignItems: O.f.Center
-                    }, e.image && s.createElement(O.Va, {
+                        display: j.X.Flex,
+                        alignItems: j.f.Center
+                    }, e.image && s.createElement(j.Wa, {
                         margin: {
                             right: 1
                         }
-                    }, s.createElement(O.T, {
+                    }, s.createElement(j.U, {
                         onClick: t,
                         to: "/" + e.login,
                         targetBlank: !0
-                    }, s.createElement(O.q, {
+                    }, s.createElement(j.q, {
                         src: e.image,
                         size: 40,
                         alt: e.displayName
-                    }))), s.createElement(O.Va, {
+                    }))), s.createElement(j.Wa, {
                         ellipsis: !0
-                    }, s.createElement(O.T, {
+                    }, s.createElement(j.U, {
                         onClick: t,
                         to: "/" + e.login,
                         hoverUnderlineNone: !0,
                         targetBlank: !0
-                    }, n)))), s.createElement(O.P, {
+                    }, n)))), s.createElement(j.P, {
                         cols: {
                             default: 2,
                             xs: 3,
                             sm: 2
                         }
-                    }, s.createElement(O.Va, {
+                    }, s.createElement(j.Wa, {
                         padding: {
                             right: 1
                         },
                         fullHeight: !0,
-                        display: O.W.Flex,
-                        alignItems: O.f.Center,
-                        justifyContent: O.Ua.End
-                    }, s.createElement(O.V, {
-                        color: O.O.Alt2,
+                        display: j.X.Flex,
+                        alignItems: j.f.Center,
+                        justifyContent: j.Va.End
+                    }, s.createElement(j.W, {
+                        color: j.O.Alt2,
                         ellipsis: !0
-                    }, Object(K.a)(e.percentage)))), s.createElement(O.P, {
+                    }, Object(K.a)(e.percentage)))), s.createElement(j.P, {
                         cols: {
                             default: 5,
                             xs: 4,
                             sm: 5
                         }
-                    }, s.createElement(O.Va, {
-                        display: O.W.Flex,
-                        alignItems: O.f.Center,
+                    }, s.createElement(j.Wa, {
+                        display: j.X.Flex,
+                        alignItems: j.f.Center,
                         fullHeight: !0
-                    }, s.createElement(O.Va, {
-                        display: O.W.Flex,
+                    }, s.createElement(j.Wa, {
+                        display: j.X.Flex,
                         flexGrow: 1
-                    }, s.createElement(O.xb, {
+                    }, s.createElement(j.yb, {
                         fullWidth: !0,
-                        background: O.r.Alt2,
-                        borderRadius: O.x.Small
-                    }, s.createElement(O.gb, {
+                        background: j.r.Alt2,
+                        borderRadius: j.x.Small
+                    }, s.createElement(j.hb, {
                         value: Math.max(100 * e.percentage, 1)
                     })))))))
                 },
                 Dt = function() {
-                    return s.createElement(O.Va, {
+                    return s.createElement(j.Wa, {
                         margin: {
                             bottom: 2
                         }
-                    }, s.createElement(O.cb, {
+                    }, s.createElement(j.db, {
                         height: 448
                     }))
                 },
-                Vt = function() {
+                _t = function() {
                     function e(e, t) {
                         this.channels = e.map(function(e) {
                             return {
@@ -2844,8 +2844,8 @@
                 }();
             ! function(e) {
                 e.Pageview = "pageview", e.DateSelect = "date_select", e.DateAggregationSelect = "date_aggregation_select", e.TabSelect = "tab_select", e.TabDropdownSelect = "tab_dropdown_select"
-            }(Ot || (Ot = {}));
-            var _t = {
+            }(jt || (jt = {}));
+            var Rt = {
                     tab_ad_breaks: !1,
                     tab_avg_chat_messages: !1,
                     tab_avg_chatters: !1,
@@ -2861,47 +2861,47 @@
                     tab_subscriptions: !1,
                     tab_time_streamed: !1
                 },
-                Rt = function(e) {
+                Pt = function(e) {
                     return "tab_" + e.replace(/-/g, "_")
                 },
-                Pt = function(e) {
+                Wt = function(e) {
                     return function(e) {
                         return new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate()))
                     }(e).getTime() / 1e3
                 };
-            var Nt = n("IFXb"),
+            var Vt = n("IFXb"),
                 Ft = n("VxtK"),
                 Lt = n("n/0j"),
-                Mt = (n("+zwc"), function(e) {
-                    return s.createElement(O.Va, {
+                Nt = (n("+zwc"), function(e) {
+                    return s.createElement(j.Wa, {
                         className: "channel-analytics-responsive-column",
-                        display: O.W.Flex,
+                        display: j.X.Flex,
                         flexGrow: 1,
-                        flexWrap: O.Z.NoWrap,
-                        flexDirection: O.Y.Column,
+                        flexWrap: j.Aa.NoWrap,
+                        flexDirection: j.Z.Column,
                         padding: {
                             left: 1,
                             right: 1
                         }
                     }, e.children)
                 }),
-                It = (n("ct6I"), function(e) {
-                    return s.createElement(O.xb, {
+                Mt = (n("ct6I"), function(e) {
+                    return s.createElement(j.yb, {
                         className: "channel-analytics-responsive-column-container",
                         margin: {
                             top: 1,
                             bottom: 1
                         },
-                        display: O.W.Flex,
-                        flexDirection: O.Y.Column,
-                        flexWrap: O.Z.NoWrap,
-                        alignItems: O.f.Stretch,
+                        display: j.X.Flex,
+                        flexDirection: j.Z.Column,
+                        flexWrap: j.Aa.NoWrap,
+                        alignItems: j.f.Stretch,
                         breakpointMedium: {
-                            flexDirection: O.Y.Row
+                            flexDirection: j.Z.Row
                         }
                     }, e.children)
                 }),
-                Wt = (n("wOe/"), {
+                It = (n("wOe/"), {
                     "data-test-selector": "live-dashboard-link"
                 }),
                 Bt = {
@@ -2912,99 +2912,99 @@
 
             function zt(e) {
                 var t = function(e) {
-                    var t = e.role === A.d.Partner || e.role === A.d.Affiliate;
+                    var t = e.role === w.d.Partner || e.role === w.d.Affiliate;
                     return {
                         link: t ? "/" + e.name + "/dashboard/live" : "/" + e.name + "/dashboard/broadcast",
                         text: t ? Object(u.d)("Go to Live Dashboard", "NoAvailableChannelAnalyticsNotice") : Object(u.d)("Go to Streaming Tools", "NoAvailableChannelAnalyticsNotice")
                     }
                 }(e.channel);
-                return s.createElement(O.Va, {
-                    position: O.db.Relative
-                }, s.createElement(O.Va, {
-                    display: O.W.Flex,
-                    justifyContent: O.Ua.Center
-                }, s.createElement(O.Va, {
-                    position: O.db.Absolute,
+                return s.createElement(j.Wa, {
+                    position: j.eb.Relative
+                }, s.createElement(j.Wa, {
+                    display: j.X.Flex,
+                    justifyContent: j.Va.Center
+                }, s.createElement(j.Wa, {
+                    position: j.eb.Absolute,
                     fullWidth: !0,
                     margin: {
                         top: 5
                     },
-                    zIndex: O.ac.Default
-                }, s.createElement(O.Tb, {
-                    childWidth: O.Ub.Medium,
+                    zIndex: j.bc.Default
+                }, s.createElement(j.Ub, {
+                    childWidth: j.Vb.Medium,
                     center: !0
                 }, s.createElement("div", {
                     className: "ca-welcome-modal"
-                }, s.createElement(O.i, {
-                    type: O.n.SlideInBottom,
-                    duration: O.k.Medium,
+                }, s.createElement(j.i, {
+                    type: j.n.SlideInBottom,
+                    duration: j.k.Medium,
                     enabled: !0,
-                    timing: O.m.EaseInOut
-                }, s.createElement(O.xb, {
+                    timing: j.m.EaseInOut
+                }, s.createElement(j.yb, {
                     border: !0,
                     padding: 2,
-                    background: O.r.Base,
+                    background: j.r.Base,
                     elevation: 3
-                }, s.createElement(O.Va, {
-                    display: O.W.Flex,
-                    alignItems: O.f.Center,
+                }, s.createElement(j.Wa, {
+                    display: j.X.Flex,
+                    alignItems: j.f.Center,
                     margin: {
                         bottom: 1
                     }
-                }, s.createElement(O.q, r.__assign({}, Bt, {
+                }, s.createElement(j.q, r.__assign({}, Bt, {
                     size: 30
-                })), s.createElement(O.Va, {
+                })), s.createElement(j.Wa, {
                     margin: {
                         left: .5
                     }
-                }, s.createElement(O.V, {
-                    type: O.Nb.H4,
+                }, s.createElement(j.W, {
+                    type: j.Ob.H4,
                     bold: !0
-                }, Object(u.d)("Welcome to Channel Analytics", "NoAvailableChannelAnalyticsNotice")))), s.createElement(O.Wb, null, s.createElement(O.V, {
-                    fontSize: O.Aa.Size5
-                }, Object(u.d)("Your stream and revenue stats – all in one place. Stream to get started!", "NoAvailableChannelAnalyticsNotice"))), s.createElement(O.Va, {
+                }, Object(u.d)("Welcome to Channel Analytics", "NoAvailableChannelAnalyticsNotice")))), s.createElement(j.Xb, null, s.createElement(j.W, {
+                    fontSize: j.Ba.Size5
+                }, Object(u.d)("Your stream and revenue stats – all in one place. Stream to get started!", "NoAvailableChannelAnalyticsNotice"))), s.createElement(j.Wa, {
                     padding: {
                         top: 1
                     }
-                }, s.createElement(O.Va, {
+                }, s.createElement(j.Wa, {
                     margin: {
                         right: 1
                     },
-                    display: O.W.InlineBlock
-                }, s.createElement(O.z, r.__assign({
+                    display: j.X.InlineBlock
+                }, s.createElement(j.z, r.__assign({
                     linkTo: t.link
-                }, Wt), t.text)), s.createElement(O.z, {
+                }, It), t.text)), s.createElement(j.z, {
                     linkTo: Ut,
-                    type: O.F.Text
+                    type: j.F.Text
                 }, Object(u.d)("Learn More", "NoAvailableChannelAnalyticsNotice"))))))))))
             }
             var Ht = function(e) {
                     return s.createElement(s.Fragment, null, s.createElement(zt, {
                         channel: e.channel
-                    }), s.createElement(ht, null), s.createElement(It, null, s.createElement(Mt, null, s.createElement(ve, null), s.createElement(Ft.b, null), s.createElement(et, null)), s.createElement(Mt, null, s.createElement(Je, null), s.createElement(kt, null), s.createElement(Dt, null), s.createElement(Z, null))))
+                    }), s.createElement(ht, null), s.createElement(Mt, null, s.createElement(Nt, null, s.createElement(ve, null), s.createElement(Ft.b, null), s.createElement(et, null)), s.createElement(Nt, null, s.createElement(Ye, null), s.createElement(At, null), s.createElement(Dt, null), s.createElement(J, null))))
                 },
                 Gt = n("Pf3A");
-            var qt = function(e) {
+            var Xt = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.track = function(e) {
                             var t = n.props.urlStore;
                             ! function(e) {
-                                u.n.track(y.SpadeEventType.ChannelAnalyticsTopStatsView, e)
+                                u.o.track(y.SpadeEventType.ChannelAnalyticsTopStatsView, e)
                             }(function(e, t) {
                                 var n = t.selectedStats,
                                     a = n[t.topStatsIndex],
                                     s = {};
                                 return n.forEach(function(e) {
-                                    s[Rt(e)] = !0
+                                    s[Pt(e)] = !0
                                 }), r.__assign({
                                     action: e,
                                     chart: a,
                                     date_range_selection: t.dateRangeSelection,
-                                    date_start: Pt(t.start),
-                                    date_end: Pt(t.end),
+                                    date_start: Wt(t.start),
+                                    date_end: Wt(t.end),
                                     date_aggregation: t.topStatsAggregation
-                                }, _t, s)
+                                }, Rt, s)
                             }(e, r.__assign({
                                 dateRangeSelection: n.dateRangeSelection,
                                 selectedStats: n.statsStorage.getValidStoredStats()
@@ -3012,7 +3012,7 @@
                         }, n.handleSelectStat = function(e, t, a) {
                             n.props.urlStore.replace({
                                 topStatsIndex: t
-                            }), n.track(Ot.TabDropdownSelect)
+                            }), n.track(jt.TabDropdownSelect)
                         }, n.handleDateSelect = function(e) {
                             var t = e.start,
                                 a = e.end,
@@ -3020,19 +3020,19 @@
                             n.dateRangeSelection = r, n.props.urlStore.replace({
                                 start: t,
                                 end: a
-                            }), n.track(Ot.DateSelect)
+                            }), n.track(jt.DateSelect)
                         }, n.handleAggregationSelect = function(e) {
                             n.props.urlStore.replace({
                                 topStatsAggregation: e
-                            }), n.track(Ot.DateAggregationSelect)
+                            }), n.track(jt.DateAggregationSelect)
                         }, n.handleTabSelect = function(e) {
-                            n.track(Ot.TabSelect)
+                            n.track(jt.TabSelect)
                         };
                         var s = n.props.channel;
                         return n.statsStorage = new ot(s), n.dateRangeSelection = a.Default, n
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.track(Ot.Pageview), u.l.set(Lt.a, !0)
+                        this.track(jt.Pageview), u.m.set(Lt.a, !0)
                     }, t.prototype.render = function() {
                         var e = this.props,
                             t = e.urlStore,
@@ -3047,7 +3047,7 @@
                                     r = t.isLoading || n.isLoading,
                                     s = n.hasSessions,
                                     i = t.hasSessions,
-                                    o = a !== A.d.None;
+                                    o = a !== w.d.None;
                                 return !(r || s || i || o)
                             }({
                                 viewingSessions: {
@@ -3060,7 +3060,7 @@
                                 },
                                 role: n.role
                             });
-                        return s.createElement(s.Fragment, null, s.createElement(Nt.a, null, s.createElement(G, {
+                        return s.createElement(s.Fragment, null, s.createElement(Vt.a, null, s.createElement(G, {
                             urlStore: t,
                             onDateSelect: this.handleDateSelect
                         }), o ? s.createElement(Ht, {
@@ -3073,7 +3073,7 @@
                             a = e.channel,
                             r = n.streamSessions,
                             i = n.topClips,
-                            o = Vt.fromData(this.props.data);
+                            o = _t.fromData(this.props.data);
                         return s.createElement(s.Fragment, null, s.createElement(mt, {
                             channel: a,
                             urlStore: t,
@@ -3081,7 +3081,7 @@
                             onStatsSelect: this.handleSelectStat,
                             onAggregationSelect: this.handleAggregationSelect,
                             onTabSelect: this.handleTabSelect
-                        }), s.createElement(It, null, s.createElement(Mt, null, s.createElement(Ee, {
+                        }), s.createElement(Mt, null, s.createElement(Nt, null, s.createElement(Ee, {
                             channel: a,
                             revenue: n.revenue,
                             subCounts: n.subCounts
@@ -3089,7 +3089,7 @@
                             var t = e.location;
                             return s.createElement(Ft.a, {
                                 streamSessionsQuery: r,
-                                onViewDetails: Jt,
+                                onViewDetails: Yt,
                                 linkToDetails: {
                                     pathname: "/" + a.name + "/dashboard/channel-analytics/referrals",
                                     search: t.search,
@@ -3099,12 +3099,12 @@
                                     }
                                 }
                             })
-                        }), s.createElement(Xe, {
+                        }), s.createElement(Ze, {
                             channel: a,
                             topClips: i
-                        })), s.createElement(Mt, null, s.createElement(ze, {
+                        })), s.createElement(Nt, null, s.createElement(ze, {
                             channel: a
-                        }), s.createElement(jt, {
+                        }), s.createElement(kt, {
                             streamSessions: r
                         }), s.createElement(h.a, {
                             name: b.b.ChannelAnalyticsContentOverlapPanels,
@@ -3116,9 +3116,9 @@
                                     return null
                                 },
                                 yes: function() {
-                                    return s.createElement(s.Fragment, null, s.createElement(xt, {
+                                    return s.createElement(s.Fragment, null, s.createElement(Tt, {
                                         channelOverlaps: o.channels
-                                    }), s.createElement(X, {
+                                    }), s.createElement(Z, {
                                         gameOverlaps: o.games
                                     }))
                                 }
@@ -3126,9 +3126,9 @@
                         }))))
                     }, t
                 }(s.Component),
-                Yt = Object(c.compose)(Object(p.a)(Gt, {
+                qt = Object(c.compose)(Object(p.a)(Gt, {
                     skip: function() {
-                        return "yes" !== u.o.experiments.getAssignment(b.b.ChannelAnalyticsContentOverlapPanels)
+                        return "yes" !== u.p.experiments.getAssignment(b.b.ChannelAnalyticsContentOverlapPanels)
                     },
                     options: function(e) {
                         return {
@@ -3137,22 +3137,22 @@
                             }
                         }
                     }
-                }), Object(v.c)("ChannelAnalyticsIndexPage", {
+                }), Object(v.b)("ChannelAnalyticsIndexPage", {
                     destination: f.a.ChannelDashboardChannelAnalytics,
                     autoReportInteractive: !0
                 }), Object(g.a)({
                     location: y.PageviewLocation.DashboardChannelAnalytics
-                }))(qt);
+                }))(Xt);
 
-            function Jt() {
-                M({
-                    action: R.ViewDetailsReferrers
+            function Yt() {
+                N({
+                    action: P.ViewDetailsReferrers
                 })
             }
             var Kt = n("LA8z"),
-                Xt = n("4rCz"),
+                Zt = n("4rCz"),
                 Qt = n("lBsv"),
-                Zt = n("MDe2");
+                Jt = n("MDe2");
 
             function $t(e) {
                 return e.sessionUser && e.sessionUser.login === e.channelLogin
@@ -3161,53 +3161,53 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderError = function(e) {
-                            return s.createElement(O.Va, {
-                                display: O.W.Flex,
-                                flexDirection: O.Y.Column,
-                                alignItems: O.f.Center,
-                                alignContent: O.e.Center,
-                                justifyContent: O.Ua.Center,
+                            return s.createElement(j.Wa, {
+                                display: j.X.Flex,
+                                flexDirection: j.Z.Column,
+                                alignItems: j.f.Center,
+                                alignContent: j.e.Center,
+                                justifyContent: j.Va.Center,
                                 padding: {
                                     top: 5,
                                     right: 0,
                                     bottom: 5,
                                     left: 0
                                 }
-                            }, s.createElement(O.Va, {
+                            }, s.createElement(j.Wa, {
                                 padding: {
                                     top: 5,
                                     bottom: .5
                                 }
-                            }, s.createElement(O.q, {
+                            }, s.createElement(j.q, {
                                 src: "https://static-cdn.jtvnw.net/emoticons/v1/86/2.0",
                                 alt: "BibleThump",
                                 size: 50
-                            })), s.createElement(O.V, {
-                                color: O.O.Alt2,
-                                fontSize: O.Aa.Size5
+                            })), s.createElement(j.W, {
+                                color: j.O.Alt2,
+                                fontSize: j.Ba.Size5
                             }, e))
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e, t = this,
                             n = s.createElement(Qt.a, {
-                                message: Object(Xt.d)("Payout History", "ChannelAnalyticsPayoutsPage"),
+                                message: Object(Zt.d)("Payout History", "ChannelAnalyticsPayoutsPage"),
                                 backLinkTo: this.returnLocation
                             });
                         if (!re()) return s.createElement(Kt.a, null);
                         if ($t(this.props))
-                            if (!this.props.data || this.props.data.error) e = this.renderError(Object(Xt.d)("Sorry, something went wrong loading your payout history. Please try again later", "ChannelAnalyticsPayoutsPage"));
-                            else if (this.props.data.loading) e = s.createElement(O.Va, {
+                            if (!this.props.data || this.props.data.error) e = this.renderError(Object(Zt.d)("Sorry, something went wrong loading your payout history. Please try again later", "ChannelAnalyticsPayoutsPage"));
+                            else if (this.props.data.loading) e = s.createElement(j.Wa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            textAlign: O.Jb.Center,
+                            textAlign: j.Kb.Center,
                             padding: {
                                 y: 4
                             },
                             margin: {
                                 y: 4
                             }
-                        }, s.createElement(O.Xa, {
+                        }, s.createElement(j.Ya, {
                             fillContent: !0
                         }));
                         else {
@@ -3216,45 +3216,45 @@
                                 height: "600px",
                                 width: "100%",
                                 src: a.payout.history.iframeURL
-                            }), s.createElement(O.Va, {
-                                textAlign: O.Jb.Left,
+                            }), s.createElement(j.Wa, {
+                                textAlign: j.Kb.Left,
                                 margin: 1
-                            }, s.createElement(O.V, {
-                                type: O.Nb.P
-                            }, Object(Xt.d)("Showing all payouts since October 2016. For information regarding payouts before that date, please <x:link>contact support</x:link>.", {
+                            }, s.createElement(j.W, {
+                                type: j.Ob.P
+                            }, Object(Zt.d)("Showing all payouts since October 2016. For information regarding payouts before that date, please <x:link>contact support</x:link>.", {
                                 "x:link": function(e) {
-                                    return s.createElement(O.T, {
+                                    return s.createElement(j.U, {
                                         to: "https://help.twitch.tv/customer/portal/emails/new",
                                         targetBlank: !0
                                     }, e)
                                 }
-                            }, "ChannelAnalyticsPayoutsPage"))), s.createElement(O.Va, {
-                                textAlign: O.Jb.Left,
+                            }, "ChannelAnalyticsPayoutsPage"))), s.createElement(j.Wa, {
+                                textAlign: j.Kb.Left,
                                 margin: 1
-                            }, s.createElement(O.V, {
-                                type: O.Nb.P
-                            }, Object(Xt.d)("This page shows your earnings from Twitch for each pay period. These numbers may not exactly match your revenue on the Channel Analytics page, as the latter is an estimate of your earnings.", "ChannelAnalyticsPayoutsPage"))), s.createElement(O.Va, {
-                                textAlign: O.Jb.Left,
+                            }, s.createElement(j.W, {
+                                type: j.Ob.P
+                            }, Object(Zt.d)("This page shows your earnings from Twitch for each pay period. These numbers may not exactly match your revenue on the Channel Analytics page, as the latter is an estimate of your earnings.", "ChannelAnalyticsPayoutsPage"))), s.createElement(j.Wa, {
+                                textAlign: j.Kb.Left,
                                 margin: 1
-                            }, s.createElement(O.V, {
-                                type: O.Nb.P,
+                            }, s.createElement(j.W, {
+                                type: j.Ob.P,
                                 bold: !0
-                            }, Object(Xt.d)("Have a new payout method you would like to use? <x:link>Change your payout method.</x:link>", {
+                            }, Object(Zt.d)("Have a new payout method you would like to use? <x:link>Change your payout method.</x:link>", {
                                 "x:link": function(e) {
-                                    return s.createElement(O.T, {
+                                    return s.createElement(j.U, {
                                         to: "/" + t.props.channelLogin + "/dashboard/settings/revenue/payouts",
                                         targetBlank: !0
                                     }, e)
                                 }
                             }, "ChannelAnalyticsPayoutsPage"))))
-                        } else e = this.renderError(Object(Xt.d)("This page is restricted to the channel owner only. For further help, please contact the channel owner or Twitch support.", "ChannelAnalyticsPayoutsPage"));
-                        return s.createElement(Nt.a, null, n, s.createElement(O.xb, {
+                        } else e = this.renderError(Object(Zt.d)("This page is restricted to the channel owner only. For further help, please contact the channel owner or Twitch support.", "ChannelAnalyticsPayoutsPage"));
+                        return s.createElement(Vt.a, null, n, s.createElement(j.yb, {
                             margin: {
                                 top: 2
                             },
                             padding: 2,
                             elevation: 1,
-                            background: O.r.Base
+                            background: j.r.Base
                         }, e))
                     }, Object.defineProperty(t.prototype, "returnLocation", {
                         get: function() {
@@ -3264,7 +3264,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                tn = Object(c.compose)(Object(v.c)("ChannelAnalyticsPayoutsPage", {
+                tn = Object(c.compose)(Object(v.b)("ChannelAnalyticsPayoutsPage", {
                     destination: f.a.ChannelDashboardChannelAnalyticsPayouts,
                     autoReportInteractive: !0
                 }), Object(g.a)({
@@ -3273,7 +3273,7 @@
                     return {
                         sessionUser: Object(d.e)(e)
                     }
-                }), Object(p.a)(Zt, {
+                }), Object(p.a)(Jt, {
                     skip: function(e) {
                         return !$t(e)
                     },
@@ -3309,7 +3309,7 @@
                             t = this.props.channelAnalyticsResponse.streamSessions,
                             n = t.isLoading,
                             a = t.sessions;
-                        return s.createElement(s.Fragment, null, s.createElement(Nt.a, null, s.createElement(o.a, null, function(t) {
+                        return s.createElement(s.Fragment, null, s.createElement(Vt.a, null, s.createElement(o.a, null, function(t) {
                             var n = t.location;
                             return s.createElement(Qt.a, {
                                 backLinkTo: {
@@ -3331,7 +3331,7 @@
                         })), s.createElement(ne, null))
                     }, t
                 }(s.Component),
-                rn = Object(c.compose)(Object(v.c)("ChannelAnalyticsReferralsPage", {
+                rn = Object(c.compose)(Object(v.b)("ChannelAnalyticsReferralsPage", {
                     destination: f.a.ChannelDashboardChannelAnalyticsReferrals,
                     autoReportInteractive: !0
                 }), Object(g.a)({
@@ -3429,7 +3429,7 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.fetchTopClips(), this.fetchRevenues(), this.fetchSubCounts(), this.fetchStreamSessions()
                     }, t.prototype.componentDidUpdate = function(e) {
-                        Object(A.f)(this.props.interval, e.interval) || (this.fetchTopClips(), this.fetchRevenues(), this.fetchSubCounts(), this.fetchStreamSessions())
+                        Object(w.f)(this.props.interval, e.interval) || (this.fetchTopClips(), this.fetchRevenues(), this.fetchSubCounts(), this.fetchStreamSessions())
                     }, t.prototype.render = function() {
                         return this.props.channel ? this.props.children(this.state) : s.createElement("span", null)
                     }, t.prototype.fetchStreamSessions = function() {
@@ -3514,12 +3514,12 @@
                                                 return r.__generator(this, function(o) {
                                                     switch (o.label) {
                                                         case 0:
-                                                            return e.role === A.d.None ? [2, {
+                                                            return e.role === w.d.None ? [2, {
                                                                 isError: !1,
                                                                 streams: mn
                                                             }] : (n = "/kraken/channels/" + e.id + "/dashboard/revenues", a = un.stringify(r.__assign({}, Object(dn.a)(t.start, Object(S.addDays)(t.end, 1)), {
                                                                 fraction: "day"
-                                                            })), s = [n, a].join("?"), [4, Object(x.c)({
+                                                            })), s = [n, a].join("?"), [4, Object(T.c)({
                                                                 path: s
                                                             })]);
                                                         case 1:
@@ -3587,10 +3587,10 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        u.o.setPageTitle(Object(u.d)("Channel Analytics", "DashboardChannelAnalyticsPage"))
+                        u.p.setPageTitle(Object(u.d)("Channel Analytics", "DashboardChannelAnalyticsPage"))
                     }, t.prototype.render = function() {
                         var e = this,
-                            t = A.c.fromChannelData(this.props.data);
+                            t = w.c.fromChannelData(this.props.data);
                         if (!t) return null;
                         if (!this.props.data.loading && this.props.data.channel) {
                             var n = this.props.userID === this.props.data.channel.id,
@@ -3619,7 +3619,7 @@
                                     }
                                 }), s.createElement(o.a, {
                                     render: function() {
-                                        return s.createElement(Yt, {
+                                        return s.createElement(qt, {
                                             channel: t,
                                             urlStore: n,
                                             channelAnalyticsResponse: a,
@@ -3678,13 +3678,13 @@
 
             function r(e, t, n) {
                 if (Boolean(Intl && Intl.NumberFormat && Intl.NumberFormat.prototype.formatToParts)) {
-                    var r = a.o.intl.getLanguageCode() || "en";
+                    var r = a.p.intl.getLanguageCode() || "en";
                     return Intl.NumberFormat(r, {
                         style: "currency",
                         currency: "USD"
                     }).formatToParts(e).map(t)
                 }
-                return [n(Object(a.e)(e, {
+                return [n(Object(a.f)(e, {
                     style: "currency",
                     currency: "USD"
                 }))]
@@ -3889,7 +3889,7 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(s.Na, {
+                        return r.createElement(s.Oa, {
                             fullWidth: !0
                         }, r.createElement("canvas", {
                             ref: this.handleCanvasReady
@@ -4478,7 +4478,7 @@
                             return e.videoPlayExternalReferrers
                         })),
                         v = a.createElement(i.a, null);
-                    return (b.total || f.total || y.total) && (v = a.createElement(a.Fragment, null, a.createElement(p.xb, {
+                    return (b.total || f.total || y.total) && (v = a.createElement(a.Fragment, null, a.createElement(p.yb, {
                         borderBottom: !0,
                         padding: {
                             bottom: 1
@@ -4507,11 +4507,11 @@
                     }, v)
                 },
                 g = function() {
-                    return a.createElement(p.Va, {
+                    return a.createElement(p.Wa, {
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(p.cb, {
+                    }, a.createElement(p.db, {
                         height: 448
                     }))
                 };
@@ -4539,11 +4539,11 @@
                     alt: "TearGlove"
                 },
                 c = function() {
-                    return r.createElement(i.Va, a.__assign({
+                    return r.createElement(i.Wa, a.__assign({
                         alignItems: i.f.Center,
-                        display: i.W.Flex,
-                        flexDirection: i.Y.Column,
-                        justifyContent: i.Ua.Center,
+                        display: i.X.Flex,
+                        flexDirection: i.Z.Column,
+                        justifyContent: i.Va.Center,
                         flexGrow: 0,
                         flexShrink: 1,
                         fullWidth: !0,
@@ -4551,15 +4551,15 @@
                             top: 5,
                             bottom: 5
                         }
-                    }, o), r.createElement(i.Va, {
+                    }, o), r.createElement(i.Wa, {
                         padding: {
                             bottom: 1
                         }
                     }, r.createElement(i.q, a.__assign({}, l, {
                         size: 50
-                    }))), r.createElement(i.V, {
+                    }))), r.createElement(i.W, {
                         color: i.O.Alt2,
-                        fontSize: i.Aa.Size5
+                        fontSize: i.Ba.Size5
                     }, Object(s.d)("Not enough data for us to display", "ChannelAnalyticsNoData")))
                 };
             n.d(t, !1, function() {
@@ -4580,9 +4580,9 @@
                 u = n("a7UW"),
                 p = n("Ue10"),
                 d = (n("JfkF"), function() {
-                    return s.createElement(p.Va, {
+                    return s.createElement(p.Wa, {
                         className: "top-stats-chart-no-data",
-                        display: p.W.Flex
+                        display: p.X.Flex
                     }, s.createElement(u.a, null))
                 }),
                 m = n("CFgy"),
@@ -4940,7 +4940,7 @@
                         }
                     }, t
                 }(s.Component),
-                w = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDataFromSession = function(e) {
@@ -4972,12 +4972,12 @@
                         })
                     }, t
                 }(s.Component),
-                A = function(e) {
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.formatTooltipLabel = function(e) {
                             return Object(a.d)("{percent} Host/Raid Viewers", {
-                                percent: Object(a.e)(e.value, {
+                                percent: Object(a.f)(e.value, {
                                     maximumFractionDigits: 2,
                                     minimumFractionDigits: 0,
                                     style: "percent"
@@ -4995,7 +4995,7 @@
                             })
                         }, t.formatYAxis = function(e) {
                             var t = Number(e);
-                            return isNaN(t) ? e : Object(a.e)(t, {
+                            return isNaN(t) ? e : Object(a.f)(t, {
                                 maximumFractionDigits: 2,
                                 minimumFractionDigits: 0,
                                 style: "percent"
@@ -5016,7 +5016,7 @@
                         })
                     }, t
                 }(s.Component),
-                O = function(e) {
+                j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDataFromSession = function(e) {
@@ -5048,7 +5048,7 @@
                         })
                     }, t
                 }(s.Component),
-                j = function(e) {
+                k = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDataFromSession = function(e) {
@@ -5080,7 +5080,7 @@
                         })
                     }, t
                 }(s.Component),
-                k = function(e) {
+                A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDataFromSession = function(e) {
@@ -5112,7 +5112,7 @@
                         })
                     }, t
                 }(s.Component),
-                x = function(e) {
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDataFromSession = function(e) {
@@ -5143,12 +5143,12 @@
                         })
                     }, t
                 }(s.Component),
-                T = function(e) {
+                x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.formatTooltipLabel = function(e) {
                             var t = e.value <= 10 && 0 !== e.value ? 2 : 0,
-                                n = Object(a.e)(e.value, {
+                                n = Object(a.f)(e.value, {
                                     style: "currency",
                                     currency: "USD",
                                     maximumFractionDigits: t,
@@ -5160,7 +5160,7 @@
                             }, "ChannelAnalyticsTopStatsRevenueTooltip")
                         }, t.formatTooltipTitle = function(e) {
                             var n = e.value <= 10 && 0 !== e.value ? 2 : 0,
-                                r = Object(a.e)(e.value, {
+                                r = Object(a.f)(e.value, {
                                     style: "currency",
                                     currency: "USD",
                                     maximumFractionDigits: n,
@@ -5216,7 +5216,7 @@
                     }, t
                 }(s.Component),
                 D = n("A2wf"),
-                V = function(e) {
+                _ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.formatTooltipLabel = function(e) {
@@ -5311,8 +5311,8 @@
                         }), r
                     }, t
                 }(s.Component),
-                _ = n("rSo7"),
-                R = function(e) {
+                R = n("rSo7"),
+                P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDataFromSession = function(e) {
@@ -5326,7 +5326,7 @@
                             })
                         }, t.formatTooltipLabel = function(e) {
                             var t = Math.floor(e.value);
-                            return Object(_.a)(t)
+                            return Object(R.a)(t)
                         }, t.formatTooltipTitle = function(e) {
                             if (t.props.aggregation.isByDay) {
                                 var n = new Date(Number(e.label));
@@ -5359,78 +5359,78 @@
                         })
                     }, t
                 }(s.Component),
-                P = n("TSYQ"),
-                N = n("2iEm"),
-                F = (n("H+Kr"), {
+                W = n("TSYQ"),
+                V = (n("H+Kr"), {
                     "data-test-selector": "up-trend-indicator"
                 }),
-                L = {
+                F = {
                     "data-test-selector": "down-trend-indicator"
                 },
-                M = {
+                L = {
                     "data-test-selector": "tab-selector"
                 },
-                I = function(e) {
+                N = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        var e = P("top-stats-tab", {
+                        var e = W("top-stats-tab", {
                             "top-stats-tab--active": this.props.isActive
                         });
-                        return s.createElement(p.Va, r.__assign({
+                        return s.createElement(p.Wa, r.__assign({
                             className: e,
-                            display: p.W.Flex,
+                            display: p.X.Flex,
                             flexGrow: 1
-                        }, M), s.createElement(p.Na, {
+                        }, L), s.createElement(p.Oa, {
                             flexGrow: 1,
-                            flexDirection: p.Y.Column,
-                            textAlign: p.Jb.Center
-                        }, s.createElement(N.a, {
+                            flexDirection: p.Z.Column,
+                            textAlign: p.Kb.Center
+                        }, s.createElement(p.U, {
                             onClick: this.props.onClick,
                             to: this.props.linkTo,
                             className: "top-stats-tab__link",
-                            replace: !0
-                        }, s.createElement(p.Va, {
-                            display: p.W.Flex,
+                            replace: !0,
+                            hoverUnderlineNone: !0
+                        }, s.createElement(p.Wa, {
+                            display: p.X.Flex,
                             flexGrow: 1,
-                            flexDirection: p.Y.Column,
+                            flexDirection: p.Z.Column,
                             padding: {
                                 left: 3,
                                 right: 1,
                                 y: 1
                             },
                             ellipsis: !0
-                        }, s.createElement(p.V, {
+                        }, s.createElement(p.W, {
                             className: "top-stats-tab__title",
-                            type: p.Nb.H3
-                        }, this.props.title, this.renderTrendIndicator()), s.createElement(p.V, {
-                            type: p.Nb.H6,
+                            type: p.Ob.H3
+                        }, this.props.title, this.renderTrendIndicator()), s.createElement(p.W, {
+                            type: p.Ob.H6,
                             color: p.O.Alt2,
                             title: this.props.subtitle,
                             ellipsis: !0
                         }, this.props.subtitle)))), this.props.children)
                     }, t.prototype.renderTrendIndicator = function() {
-                        return this.props.trend ? this.props.trend > 0 ? s.createElement(p.Va, {
-                            display: p.W.Inline,
+                        return this.props.trend ? this.props.trend > 0 ? s.createElement(p.Wa, {
+                            display: p.X.Inline,
                             margin: {
                                 left: .5
                             }
-                        }, s.createElement(p.mb, r.__assign({
-                            asset: p.nb.GlyphArrUp,
-                            type: p.ob.Success
-                        }, F))) : this.props.trend < 0 ? s.createElement(p.Va, {
-                            display: p.W.Inline,
+                        }, s.createElement(p.nb, r.__assign({
+                            asset: p.ob.GlyphArrUp,
+                            type: p.pb.Success
+                        }, V))) : this.props.trend < 0 ? s.createElement(p.Wa, {
+                            display: p.X.Inline,
                             margin: {
                                 left: .5
                             }
-                        }, s.createElement(p.mb, r.__assign({
-                            asset: p.nb.GlyphArrDown,
-                            type: p.ob.Warn
-                        }, L))) : null : null
+                        }, s.createElement(p.nb, r.__assign({
+                            asset: p.ob.GlyphArrDown,
+                            type: p.pb.Warn
+                        }, F))) : null : null
                     }, t
                 }(s.Component),
-                W = function(e) {
+                M = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5438,7 +5438,7 @@
                         var e, t = this.adBreaks,
                             n = this.previousAdBreaks,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t, i.a.HumanizedShort), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t, i.a.HumanizedShort), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Ad Breaks", "ChannelAnalyticsTopStats"),
@@ -5464,7 +5464,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                B = function(e) {
+                I = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5472,7 +5472,7 @@
                         var e, t = this.adTimePerHour,
                             n = this.previousAdTimePerHour,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t, i.a.HumanizedShort), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t, i.a.HumanizedShort), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Ad Time Per Hour", "ChannelAnalyticsTopStats"),
@@ -5502,7 +5502,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                U = function(e) {
+                B = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5510,7 +5510,7 @@
                         var e, t = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.sessions || []),
                             n = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Average Unique Viewers", "ChannelAnalyticsTopStats"),
@@ -5523,16 +5523,16 @@
                             return e + t.uniqueViewers
                         }, 0) / e.length
                     }, t.prototype.formatTitle = function(e) {
-                        return e < 10 ? Object(a.e)(e, {
+                        return e < 10 ? Object(a.f)(e, {
                             maximumFractionDigits: 1,
                             minimumFractionDigits: 1
-                        }) : Object(a.e)(e, {
+                        }) : Object(a.f)(e, {
                             maximumFractionDigits: 0
                         })
                     }, t
                 }(s.Component);
 
-            function z(e, t) {
+            function U(e, t) {
                 var n = 0,
                     a = 0;
                 return e.forEach(function(e) {
@@ -5540,7 +5540,7 @@
                     a += r.weight * r.value, n += r.weight
                 }), 0 === n ? 0 : a / n
             }
-            var H = function(e) {
+            var z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5548,7 +5548,7 @@
                         var e, t = this.averageViewers(this.props.analyticsResponse.streamSessions.sessions || []),
                             n = this.averageViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Average Viewers", "ChannelAnalyticsTopStats"),
@@ -5557,22 +5557,22 @@
                             onClick: this.props.onClick
                         }, this.props.children)
                     }, t.prototype.averageViewers = function(e) {
-                        return z(e, function(e) {
+                        return U(e, function(e) {
                             return {
                                 weight: Object(m.a)(e.interval),
                                 value: e.avgViewerCount
                             }
                         })
                     }, t.prototype.formatTitle = function(e) {
-                        return e < 10 ? Object(a.e)(e, {
+                        return e < 10 ? Object(a.f)(e, {
                             maximumFractionDigits: 1,
                             minimumFractionDigits: 1
-                        }) : Object(a.e)(e, {
+                        }) : Object(a.f)(e, {
                             maximumFractionDigits: 0
                         })
                     }, t
                 }(s.Component),
-                G = function(e) {
+                H = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5580,9 +5580,9 @@
                         var e, t = this.averageMessages(this.props.analyticsResponse.streamSessions.sessions),
                             n = this.averageMessages(this.props.analyticsResponse.streamSessions.lookbackSessions),
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t, {
                             maximumFractionDigits: 0
-                        }), s.createElement(I, {
+                        }), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Average Chat Messages", "ChannelAnalyticsTopStats"),
@@ -5591,7 +5591,7 @@
                             onClick: this.props.onClick
                         }, this.props.children)
                     }, t.prototype.averageMessages = function(e) {
-                        return z(e, function(e) {
+                        return U(e, function(e) {
                             return {
                                 weight: Object(m.a)(e.interval),
                                 value: e.messagesTotal
@@ -5599,7 +5599,7 @@
                         })
                     }, t
                 }(s.Component),
-                q = function(e) {
+                G = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5607,9 +5607,9 @@
                         var e, t = this.averageUniqueChatters(this.props.analyticsResponse.streamSessions.sessions),
                             n = this.averageUniqueChatters(this.props.analyticsResponse.streamSessions.lookbackSessions),
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t, {
                             maximumFractionDigits: 0
-                        }), s.createElement(I, {
+                        }), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Average Chatters", "ChannelAnalyticsTopStats"),
@@ -5618,7 +5618,7 @@
                             onClick: this.props.onClick
                         }, this.props.children)
                     }, t.prototype.averageUniqueChatters = function(e) {
-                        return z(e, function(e) {
+                        return U(e, function(e) {
                             return {
                                 weight: Object(m.a)(e.interval),
                                 value: e.uniqueChatters
@@ -5626,7 +5626,7 @@
                         })
                     }, t
                 }(s.Component),
-                Y = function(e) {
+                X = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5634,9 +5634,9 @@
                         var e, t = this.previousTotalClipViews,
                             n = this.totalClipViews,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(n, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(n, {
                             maximumFractionDigits: 0
-                        }), s.createElement(I, {
+                        }), s.createElement(N, {
                             title: e,
                             subtitle: Object(a.d)("Clip Views", "ChannelAnalyticsTopStats"),
                             linkTo: this.props.linkTo,
@@ -5662,7 +5662,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                J = function(e) {
+                q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5670,7 +5670,7 @@
                         var e, t = this.clipsCreated,
                             n = this.previousClipsCreated,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Clips Created", "ChannelAnalyticsTopStats"),
@@ -5696,7 +5696,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                K = function(e) {
+                Y = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5704,7 +5704,7 @@
                         var e, t = this.hostRaidViewers(this.props.analyticsResponse.streamSessions.sessions || []),
                             n = this.hostRaidViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Host/Raid Viewers", "ChannelAnalyticsTopStats"),
@@ -5713,21 +5713,21 @@
                             onClick: this.props.onClick
                         }, this.props.children)
                     }, t.prototype.hostRaidViewers = function(e) {
-                        return z(e, function(e) {
+                        return U(e, function(e) {
                             return {
                                 weight: Object(m.a)(e.interval),
                                 value: e.hostedRaidedPercentage
                             }
                         })
                     }, t.prototype.formatTitle = function(e) {
-                        return Object(a.e)(e, {
+                        return Object(a.f)(e, {
                             maximumFractionDigits: 2,
                             minimumFractionDigits: 0,
                             style: "percent"
                         })
                     }, t
                 }(s.Component),
-                X = function(e) {
+                K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5735,7 +5735,7 @@
                         var e, t = this.liveViews,
                             n = this.previousLiveViews,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Live Views", "ChannelAnalyticsTopStats"),
@@ -5761,7 +5761,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                Q = function(e) {
+                Z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5769,7 +5769,7 @@
                         var e, t = this.maxViewers,
                             n = this.previousMaxViewers,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Max Viewers", "ChannelAnalyticsTopStats"),
@@ -5795,7 +5795,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                Z = function(e) {
+                Q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5803,7 +5803,7 @@
                         var e, t = this.minutesWatched,
                             n = this.previousMinutesWatched,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.e)(t), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Minutes Watched", "ChannelAnalyticsTopStats"),
@@ -5829,7 +5829,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                $ = function(e) {
+                J = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5844,7 +5844,7 @@
                                 followersDiff: Math.abs(e),
                                 sign: t
                             }, "ChannelAnalyticsTopStats")
-                        }(t), s.createElement(I, {
+                        }(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("New Followers", "ChannelAnalyticsTopStats"),
@@ -5870,15 +5870,15 @@
                         configurable: !0
                     }), t
                 }(s.Component);
-            var ee, te, ne, ae = n("Knvm"),
-                re = (n("4+Xb"), function(e) {
+            var $, ee, te, ne = n("Knvm"),
+                ae = (n("4+Xb"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.analyticsResponse.revenue.lookbackStreams.getTotalAmountAllStreams(),
                             t = this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams();
-                        return s.createElement(I, {
+                        return s.createElement(N, {
                             title: this.renderTitle(t),
                             trend: t ? Math.sign(t - e) : 0,
                             subtitle: Object(a.d)("Revenue", "ChannelAnalyticsTopStats"),
@@ -5887,21 +5887,21 @@
                             onClick: this.props.onClick
                         }, this.props.children)
                     }, t.prototype.renderTitle = function(e) {
-                        return this.props.analyticsResponse.revenue.isLoading || !this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() ? "—" : Object(ae.a)(e, function(e, t) {
+                        return this.props.analyticsResponse.revenue.isLoading || !this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams() ? "—" : Object(ne.a)(e, function(e, t) {
                             switch (e.type) {
                                 case "currency":
-                                    return s.createElement(p.V, {
+                                    return s.createElement(p.W, {
                                         className: "top-stats-tab-revenue__currency",
-                                        fontSize: p.Aa.Size5,
-                                        type: p.Nb.Span,
+                                        fontSize: p.Ba.Size5,
+                                        type: p.Ob.Span,
                                         key: t
                                     }, e.value);
                                 case "fraction":
                                 case "decimal":
-                                    return s.createElement(p.V, {
+                                    return s.createElement(p.W, {
                                         className: "top-stats-tab-revenue__fraction",
-                                        fontSize: p.Aa.Size4,
-                                        type: p.Nb.Span,
+                                        fontSize: p.Ba.Size4,
+                                        type: p.Ob.Span,
                                         key: t
                                     }, e.value);
                                 default:
@@ -5912,16 +5912,16 @@
                         })
                     }, t
                 }(s.Component)),
-                se = function(e) {
+                re = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e, t = this.props.analyticsResponse.subCounts.streams.getTotalSubCount(),
                             n = this.props.analyticsResponse.subCounts.lookbackStreams.getTotalSubCount();
-                        return e = this.props.analyticsResponse.subCounts.isLoading || !t ? "—" : Object(a.e)(t, {
+                        return e = this.props.analyticsResponse.subCounts.isLoading || !t ? "—" : Object(a.f)(t, {
                             maximumFractionDigits: 0
-                        }), s.createElement(I, {
+                        }), s.createElement(N, {
                             title: e,
                             trend: t ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Subscriptions", "ChannelAnalyticsTopStats"),
@@ -5931,7 +5931,7 @@
                         }, this.props.children)
                     }, t
                 }(s.Component),
-                ie = function(e) {
+                se = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5939,7 +5939,7 @@
                         var e, t = this.timeStreamed,
                             n = this.previousTimeStreamed,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(_.a)(t), s.createElement(I, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(R.a)(t), s.createElement(N, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Time Streamed", "ChannelAnalyticsTopStats"),
@@ -5967,127 +5967,127 @@
                 }(s.Component);
             ! function(e) {
                 e.AdBreaks = "ad-breaks", e.AdTimePerHour = "ad-time-per-hour", e.AverageUniqueViewers = "avg-unique-viewers", e.AverageViewers = "avg-viewers", e.ChatMessages = "avg-chat-messages", e.Chatters = "avg-chatters", e.ClipsCreated = "clips-created", e.ClipViews = "clip-views", e.HostRaidViewers = "host-raid-viewers", e.LiveViews = "live-views", e.MaxViewers = "max-viewers", e.MinutesWatched = "minutes-watched", e.NewFollowers = "new-followers", e.Revenue = "revenue", e.Subscriptions = "subscriptions", e.TimeStreamed = "time-streamed"
-            }(te || (te = {})),
+            }(ee || (ee = {})),
             function(e) {
                 e[e.StreamSummaries = 0] = "StreamSummaries", e[e.Revenue = 1] = "Revenue"
-            }(ne || (ne = {}));
-            var oe = ((ee = {})[te.AverageViewers] = {
+            }(te || (te = {}));
+            var ie = (($ = {})[ee.AverageViewers] = {
                     title: function() {
                         return Object(a.d)("Average Viewers", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: H,
+                    Tab: z,
                     Chart: v,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.LiveViews] = {
+                    dataGroup: te.StreamSummaries
+                }, $[ee.LiveViews] = {
                     title: function() {
                         return Object(a.d)("Live Views", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: X,
-                    Chart: O,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.NewFollowers] = {
+                    Tab: K,
+                    Chart: j,
+                    dataGroup: te.StreamSummaries
+                }, $[ee.NewFollowers] = {
                     title: function() {
                         return Object(a.d)("New Followers", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: $,
-                    Chart: x,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.Subscriptions] = {
+                    Tab: J,
+                    Chart: T,
+                    dataGroup: te.StreamSummaries
+                }, $[ee.Subscriptions] = {
                     title: function() {
                         return Object(a.d)("Subscriptions", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: se,
-                    Chart: V,
-                    dataGroup: ne.Revenue
-                }, ee[te.Revenue] = {
+                    Tab: re,
+                    Chart: _,
+                    dataGroup: te.Revenue
+                }, $[ee.Revenue] = {
                     title: function() {
                         return Object(a.d)("Revenue", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: re,
-                    Chart: T,
-                    dataGroup: ne.Revenue
-                }, ee[te.MinutesWatched] = {
+                    Tab: ae,
+                    Chart: x,
+                    dataGroup: te.Revenue
+                }, $[ee.MinutesWatched] = {
                     title: function() {
                         return Object(a.d)("Minutes Watched", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: Z,
-                    Chart: k,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.TimeStreamed] = {
+                    Tab: Q,
+                    Chart: A,
+                    dataGroup: te.StreamSummaries
+                }, $[ee.TimeStreamed] = {
                     title: function() {
                         return Object(a.d)("Time Streamed", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: ie,
-                    Chart: R,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.MaxViewers] = {
+                    Tab: se,
+                    Chart: P,
+                    dataGroup: te.StreamSummaries
+                }, $[ee.MaxViewers] = {
                     title: function() {
                         return Object(a.d)("Max Viewers", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: Q,
-                    Chart: j,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.AverageUniqueViewers] = {
+                    Tab: Z,
+                    Chart: k,
+                    dataGroup: te.StreamSummaries
+                }, $[ee.AverageUniqueViewers] = {
                     title: function() {
                         return Object(a.d)("Average Unique Viewers", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: U,
+                    Tab: B,
                     Chart: y,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.HostRaidViewers] = {
+                    dataGroup: te.StreamSummaries
+                }, $[ee.HostRaidViewers] = {
                     title: function() {
                         return Object(a.d)("Host/Raid Viewers", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: K,
-                    Chart: A,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.Chatters] = {
+                    Tab: Y,
+                    Chart: w,
+                    dataGroup: te.StreamSummaries
+                }, $[ee.Chatters] = {
                     title: function() {
                         return Object(a.d)("Average Chatters", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: q,
+                    Tab: G,
                     Chart: C,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.ChatMessages] = {
+                    dataGroup: te.StreamSummaries
+                }, $[ee.ChatMessages] = {
                     title: function() {
                         return Object(a.d)("Average Chat Messages", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: G,
+                    Tab: H,
                     Chart: S,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.ClipsCreated] = {
+                    dataGroup: te.StreamSummaries
+                }, $[ee.ClipsCreated] = {
                     title: function() {
                         return Object(a.d)("Clips Created", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: J,
-                    Chart: w,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.ClipViews] = {
+                    Tab: q,
+                    Chart: O,
+                    dataGroup: te.StreamSummaries
+                }, $[ee.ClipViews] = {
                     title: function() {
                         return Object(a.d)("Clip Views", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: Y,
+                    Tab: X,
                     Chart: E,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.AdBreaks] = {
+                    dataGroup: te.StreamSummaries
+                }, $[ee.AdBreaks] = {
                     title: function() {
                         return Object(a.d)("Ad Breaks", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: W,
+                    Tab: M,
                     Chart: g,
-                    dataGroup: ne.StreamSummaries
-                }, ee[te.AdTimePerHour] = {
+                    dataGroup: te.StreamSummaries
+                }, $[ee.AdTimePerHour] = {
                     title: function() {
                         return Object(a.d)("Ad Time Per Hour", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: B,
+                    Tab: I,
                     Chart: f,
-                    dataGroup: ne.StreamSummaries
-                }, ee),
-                le = [te.AverageViewers, te.LiveViews, te.NewFollowers, te.Subscriptions, te.Revenue],
-                ce = [te.AverageViewers, te.LiveViews, te.NewFollowers, te.ChatMessages, te.MinutesWatched],
-                ue = [te.AverageViewers, te.LiveViews, te.NewFollowers, te.MinutesWatched, te.TimeStreamed, te.MaxViewers, te.AverageUniqueViewers, te.HostRaidViewers, te.Chatters, te.ChatMessages, te.ClipsCreated, te.ClipViews, te.AdBreaks, te.AdTimePerHour],
-                pe = [{
+                    dataGroup: te.StreamSummaries
+                }, $),
+                oe = [ee.AverageViewers, ee.LiveViews, ee.NewFollowers, ee.Subscriptions, ee.Revenue],
+                le = [ee.AverageViewers, ee.LiveViews, ee.NewFollowers, ee.ChatMessages, ee.MinutesWatched],
+                ce = [ee.AverageViewers, ee.LiveViews, ee.NewFollowers, ee.MinutesWatched, ee.TimeStreamed, ee.MaxViewers, ee.AverageUniqueViewers, ee.HostRaidViewers, ee.Chatters, ee.ChatMessages, ee.ClipsCreated, ee.ClipViews, ee.AdBreaks, ee.AdTimePerHour],
+                ue = [{
                     defaultPrice: 499,
                     productID: "",
                     timeseries: []
@@ -6101,21 +6101,21 @@
                     timeseries: []
                 }];
             n.d(t, !1, function() {
-                return te
+                return ee
             }), n.d(t, "b", function() {
-                return ne
+                return te
             }), n.d(t, "g", function() {
-                return oe
+                return ie
             }), n.d(t, "d", function() {
                 return 5
             }), n.d(t, "a", function() {
-                return le
+                return oe
             }), n.d(t, "e", function() {
-                return ce
+                return le
             }), n.d(t, "f", function() {
-                return ue
+                return ce
             }), n.d(t, "c", function() {
-                return pe
+                return ue
             })
         },
         ct6I: function(e, t, n) {},
@@ -6457,33 +6457,33 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(i.Va, {
+                        return r.createElement(i.Wa, {
                             fullWidth: !0,
                             fullHeight: !0
-                        }, r.createElement(i.Va, {
-                            display: i.W.Flex,
+                        }, r.createElement(i.Wa, {
+                            display: i.X.Flex,
                             flexGrow: 1,
                             alignItems: i.f.Center,
-                            justifyContent: i.Ua.Center,
-                            flexDirection: i.Y.Column,
+                            justifyContent: i.Va.Center,
+                            flexDirection: i.Z.Column,
                             fullHeight: !0
-                        }, r.createElement(i.mb, {
+                        }, r.createElement(i.nb, {
                             width: 48,
                             height: 48,
-                            asset: i.nb.Lock,
-                            type: i.ob.Alt2
-                        }), r.createElement(i.Va, {
-                            display: i.W.Flex,
+                            asset: i.ob.Lock,
+                            type: i.pb.Alt2
+                        }), r.createElement(i.Wa, {
+                            display: i.X.Flex,
                             alignItems: i.f.Center,
-                            flexDirection: i.Y.Column,
+                            flexDirection: i.Z.Column,
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(i.V, {
+                        }, r.createElement(i.W, {
                             bold: !0,
-                            fontSize: i.Aa.Size3
-                        }, Object(s.d)("Access Denied", "DashboardAccessDenied")), r.createElement(i.V, {
-                            fontSize: i.Aa.Size4,
+                            fontSize: i.Ba.Size3
+                        }, Object(s.d)("Access Denied", "DashboardAccessDenied")), r.createElement(i.W, {
+                            fontSize: i.Ba.Size4,
                             color: i.O.Alt2
                         }, Object(s.d)("You don't have access to this dashboard", "DashboardAccessDenied")))))
                     }, t
@@ -6520,27 +6520,27 @@
                         return r.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, r.createElement(s.xb, {
-                            display: s.W.Flex,
+                        }, r.createElement(s.yb, {
+                            display: s.X.Flex,
                             margin: {
                                 x: 1
                             },
-                            position: s.db.Relative
-                        }, r.createElement(s.xb, {
+                            position: s.eb.Relative
+                        }, r.createElement(s.yb, {
                             className: "hoverable-icon",
-                            display: s.W.InlineFlex,
+                            display: s.X.InlineFlex,
                             color: s.O.Alt2,
                             alignItems: s.f.Center,
-                            justifyContent: s.Ua.Center
-                        }, r.createElement(s.mb, {
-                            asset: s.nb.NotificationInfo,
+                            justifyContent: s.Va.Center
+                        }, r.createElement(s.nb, {
+                            asset: s.ob.NotificationInfo,
                             width: 16,
                             height: 16
                         })), r.createElement(s.u, {
                             show: this.state.isHovered,
                             direction: n,
                             size: a
-                        }, r.createElement(s.Va, {
+                        }, r.createElement(s.Wa, {
                             padding: {
                                 x: 1,
                                 y: 1
@@ -6565,12 +6565,12 @@
             n("qnLe");
 
             function s(e) {
-                return a.createElement(r.xb, {
+                return a.createElement(r.yb, {
                     className: "insight-panel-btn",
                     background: e.background || r.r.Alt,
-                    display: r.W.Flex,
+                    display: r.X.Flex,
                     flexGrow: 1,
-                    flexWrap: r.Z.NoWrap,
+                    flexWrap: r.Aa.NoWrap,
                     borderTop: e.borderTop
                 }, a.createElement(r.z, {
                     disabled: e.disabled,
@@ -6579,7 +6579,7 @@
                     onClick: e.onClick,
                     targetBlank: e.targetBlank,
                     fullWidth: !0
-                }, a.createElement(r.V, {
+                }, a.createElement(r.W, {
                     color: e.color
                 }, e.message)))
             }
@@ -6960,7 +6960,7 @@
                                 index: a
                             });
                             var s = Number(e.yLabel);
-                            return isNaN(s) ? e.yLabel : Object(i.e)(Number(e.yLabel))
+                            return isNaN(s) ? e.yLabel : Object(i.f)(Number(e.yLabel))
                         }, t.formatTooltipAfterLabel = function(e, n) {
                             if (t.props.formatTooltipAfterLabel) {
                                 var a = e.index,
@@ -6981,9 +6981,9 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(l.Va, {
+                        return s.createElement(l.Wa, {
                             className: "top-stats-chart",
-                            position: l.db.Relative
+                            position: l.eb.Relative
                         }, s.createElement(o.a, {
                             onCanvasReady: this.handleCanvasReady
                         }))

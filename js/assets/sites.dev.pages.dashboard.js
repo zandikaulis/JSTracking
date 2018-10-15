@@ -3,16 +3,16 @@
         "5g1g": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
-                o = n("q1tI"),
-                r = n("wUQP"),
+                r = n("q1tI"),
+                o = n("wUQP"),
                 i = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.incremental && Object(r.c)(this.props.name) || Object(r.b)(this.props.name) ? this.props.children : null
+                        return this.props.incremental && Object(o.c)(this.props.name) || Object(o.b)(this.props.name) ? this.props.children : null
                     }, t
-                }(o.Component),
+                }(r.Component),
                 c = i;
             n.d(t, "b", function() {
                 return i
@@ -24,13 +24,13 @@
             "use strict";
             n.r(t);
             var a = n("/MKj"),
-                o = n("kRBY"),
-                r = n("mrSG"),
+                r = n("kRBY"),
+                o = n("mrSG"),
                 i = n("q1tI"),
                 c = n("9C/b"),
                 s = n("2INN"),
-                l = n("mf+E"),
-                d = n("jKe7"),
+                d = n("mf+E"),
+                l = n("jKe7"),
                 u = n("/7QA"),
                 p = n("ZS2+"),
                 b = n("5g1g"),
@@ -39,25 +39,25 @@
                 h = n("Ints"),
                 f = n("Ue10"),
                 D = p.a.wrap(function() {
-                    return n.e(212).then(n.bind(null, "RkBb"))
+                    return n.e(206).then(n.bind(null, "RkBb"))
                 }, "DevOverviewPage"),
                 g = p.a.wrap(function() {
-                    return Promise.all([n.e(0), n.e(211)]).then(n.bind(null, "dE6c"))
+                    return Promise.all([n.e(0), n.e(205)]).then(n.bind(null, "dE6c"))
                 }, "DevAppsPage"),
                 E = p.a.wrap(function() {
-                    return n.e(210).then(n.bind(null, "OfRZ"))
+                    return n.e(204).then(n.bind(null, "OfRZ"))
                 }, "DevAppCreatePage"),
                 k = p.a.wrap(function() {
-                    return n.e(209).then(n.bind(null, "AhYx"))
+                    return n.e(203).then(n.bind(null, "AhYx"))
                 }, "DevAppEditPage"),
                 O = p.a.wrap(function() {
-                    return n.e(208).then(n.bind(null, "635G"))
+                    return n.e(202).then(n.bind(null, "635G"))
                 }, "DevGamesPage"),
-                y = p.a.wrap(function() {
-                    return Promise.all([n.e(31), n.e(0), n.e(207)]).then(n.bind(null, "QH5d"))
-                }, "DevDropsDashboardRoot"),
                 j = p.a.wrap(function() {
-                    return n.e(206).then(n.bind(null, "DrWK"))
+                    return Promise.all([n.e(31), n.e(0), n.e(201)]).then(n.bind(null, "QH5d"))
+                }, "DevDropsDashboardRoot"),
+                y = p.a.wrap(function() {
+                    return n.e(200).then(n.bind(null, "DrWK"))
                 }, "DevExtensionsEnableMonetizationPage"),
                 w = function(e) {
                     function t() {
@@ -68,20 +68,20 @@
                             return !!a && (n ? a === e : a.indexOf(e) > -1)
                         }, t
                     }
-                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.isLoggedIn ? i.createElement(f.Va, {
+                        return this.props.isLoggedIn ? i.createElement(f.Wa, {
                             margin: {
                                 x: 1,
                                 bottom: 2
                             },
                             className: "dev-dashboard"
-                        }, i.createElement(f.lb, {
+                        }, i.createElement(f.mb, {
                             centered: !0
                         }, i.createElement("header", {
                             className: "dev-dashboard__header"
-                        }, i.createElement(f.xb, {
+                        }, i.createElement(f.yb, {
                             padding: {
                                 bottom: 2
                             },
@@ -89,39 +89,39 @@
                                 y: 1
                             },
                             borderBottom: !0
-                        }, i.createElement(f.V, {
-                            type: f.Nb.H2
-                        }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Va, {
+                        }, i.createElement(f.W, {
+                            type: f.Ob.H2
+                        }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(f.zb, null, i.createElement(f.yb, {
+                        }, i.createElement(f.Ab, null, i.createElement(f.zb, {
                             linkTo: "https://dev.twitch.tv/dashboard",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.yb, {
+                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.zb, {
                             onClick: Object(v.c)(v.a.ViewExtensions),
                             linkTo: "https://dev.twitch.tv/dashboard/extensions",
                             active: this.isActive("extensions")
-                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.yb, {
+                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.zb, {
                             onClick: Object(v.c)(v.a.ViewApps),
                             linkTo: "/console/apps",
                             active: this.isActive("apps")
-                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.yb, {
+                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.zb, {
                             onClick: Object(v.c)(v.a.ViewGames),
                             linkTo: "/console/games",
                             active: this.isActive("games")
-                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.yb, {
+                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.zb, {
                             onClick: Object(v.c)(v.a.ViewDrops),
                             linkTo: "/console/drops",
                             active: this.isActive("drops")
                         }, Object(u.d)("Drops", "DevDashboard")), i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(h.a, null, i.createElement(f.yb, {
+                        }, i.createElement(h.a, null, i.createElement(f.zb, {
                             linkTo: "/console/bounty-board",
                             active: this.isActive("bounty-board")
-                        }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Va, {
-                            display: f.W.Block
-                        }, i.createElement(d.a, null, i.createElement(s.a, {
+                        }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Wa, {
+                            display: f.X.Block
+                        }, i.createElement(l.a, null, i.createElement(s.a, {
                             exact: !0,
                             path: "/console",
                             component: D
@@ -144,20 +144,20 @@
                         }), i.createElement(s.a, {
                             exact: !0,
                             path: "/console/extensions/enable-monetization",
-                            component: j
+                            component: y
                         }), i.createElement(s.a, {
                             path: "/console/drops",
-                            component: y
-                        }))))) : i.createElement(l.a, {
+                            component: j
+                        }))))) : i.createElement(d.a, {
                             to: "/login"
                         })
-                    }, t = r.__decorate([Object(m.c)("DevDashboard")], t)
+                    }, t = o.__decorate([Object(m.b)("DevDashboard")], t)
                 }(i.Component),
                 S = Object(c.a)(w);
             var x = Object(a.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(o.f)(e),
-                    user: Object(o.e)(e)
+                    isLoggedIn: Object(r.f)(e),
+                    user: Object(r.e)(e)
                 }
             })(S);
             n.d(t, "DevDashboardRoot", function() {
@@ -167,16 +167,16 @@
         Ints: function(e, t, n) {
             "use strict";
             var a = n("oJmH"),
-                o = n("yR8l"),
-                r = n("GnwI"),
+                r = n("yR8l"),
+                o = n("GnwI"),
                 i = n("cUgj"),
                 c = function(e) {
                     var t = e.data.currentUser && e.data.currentUser.company;
                     return t && t.brandPortalSettings && t.brandPortalSettings.isEnabled ? e.children : null
                 },
-                s = Object(a.compose)(Object(r.c)("DevBountyDashboardFeatureGate", {
+                s = Object(a.compose)(Object(o.b)("DevBountyDashboardFeatureGate", {
                     autoReportInteractive: !0
-                }), Object(o.a)(i))(c);
+                }), Object(r.a)(i))(c);
             n.d(t, !1, function() {
                 return c
             }), n.d(t, "a", function() {
@@ -282,31 +282,31 @@
             }), n.d(t, "b", function() {
                 return c
             }), n.d(t, "c", function() {
-                return l
+                return d
             });
-            var a, o, r = n("/7QA"),
+            var a, r, o = n("/7QA"),
                 i = n("kRBY");
 
             function c(e) {
-                var t = r.o.store.getState(),
-                    n = r.b.get(e, a.Off);
+                var t = o.p.store.getState(),
+                    n = o.b.get(e, a.Off);
                 return !!(n === a.On || n === a.StaffOnly && Object(i.g)(t))
             }! function(e) {
                 e.On = "on", e.Off = "off", e.StaffOnly = "staff"
             }(a || (a = {})),
             function(e) {
                 e[e.Enabled = 1] = "Enabled", e[e.Disabled = 0] = "Disabled"
-            }(o || (o = {}));
+            }(r || (r = {}));
             var s = Math.pow(2, 32);
 
-            function l(e) {
-                var t = r.b.get(e, [0, o.Disabled]),
+            function d(e) {
+                var t = o.b.get(e, [0, r.Disabled]),
                     n = t[0],
                     a = t[1],
-                    c = r.o.session.deviceID,
-                    l = r.o.store.getState();
-                return !(a !== o.Enabled || !Object(i.g)(l)) || function(e, t) {
-                    for (var n = void 0 === t ? 2166136261 : t, a = 0, o = e.length; a < o; a++) n ^= e.charCodeAt(a), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
+                    c = o.p.session.deviceID,
+                    d = o.p.store.getState();
+                return !(a !== r.Enabled || !Object(i.g)(d)) || function(e, t) {
+                    for (var n = void 0 === t ? 2166136261 : t, a = 0, r = e.length; a < r; a++) n ^= e.charCodeAt(a), n += (n << 1) + (n << 4) + (n << 7) + (n << 8) + (n << 24);
                     return n >>> 0
                 }(c + "-" + e) / s < n
             }

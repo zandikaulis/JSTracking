@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [212], {
+    [206], {
         "0xbx": function(t, e, n) {
             "use strict";
             n.d(e, "a", function() {
@@ -55,66 +55,66 @@
                 _ = n("fy8Z"),
                 h = n("0xbx"),
                 f = n("/7QA"),
-                g = n("coZW"),
-                v = n("Ue10"),
-                y = function(t) {
+                y = n("coZW"),
+                g = n("Ue10"),
+                v = function(t) {
                     function e() {
                         return null !== t && t.apply(this, arguments) || this
                     }
                     return a.__extends(e, t), e.prototype.render = function() {
-                        return r.createElement(v.xb, {
+                        return r.createElement(g.yb, {
                             className: "tenant-panel",
-                            display: v.W.Flex,
-                            flexDirection: v.Y.Column,
+                            display: g.X.Flex,
+                            flexDirection: g.Z.Column,
                             border: !0
-                        }, r.createElement(v.Va, {
+                        }, r.createElement(g.Wa, {
                             className: "tenant-panel__info",
-                            display: v.W.Block,
-                            textAlign: v.Jb.Center,
+                            display: g.X.Block,
+                            textAlign: g.Kb.Center,
                             margin: {
                                 y: 1
                             },
                             padding: {
                                 top: 2
                             }
-                        }, r.createElement(v.Na, {
+                        }, r.createElement(g.Oa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(v.V, {
-                            type: v.Nb.H2,
+                        }, r.createElement(g.W, {
+                            type: g.Ob.H2,
                             className: "tenant-panel__count",
-                            color: v.O.Alt2
-                        }, this.props.tenant.count)), r.createElement(v.V, {
-                            type: v.Nb.H3,
-                            transform: v.Mb.Uppercase,
+                            color: g.O.Alt2
+                        }, this.props.tenant.count)), r.createElement(g.W, {
+                            type: g.Ob.H3,
+                            transform: g.Nb.Uppercase,
                             className: "tenant-panel__name",
-                            color: v.O.Alt2
-                        }, this.props.tenant.name)), r.createElement(v.xb, {
+                            color: g.O.Alt2
+                        }, this.props.tenant.name)), r.createElement(g.yb, {
                             className: "tenant-panel__action",
-                            display: v.W.Flex,
+                            display: g.X.Flex,
                             padding: {
                                 y: 1
                             },
-                            background: v.r.Alt2,
-                            justifyContent: v.Ua.Center
-                        }, r.createElement(v.z, {
-                            type: v.F.Hollow,
-                            onClick: Object(g.c)(this.trackLabel()),
+                            background: g.r.Alt2,
+                            justifyContent: g.Va.Center
+                        }, r.createElement(g.z, {
+                            type: g.F.Hollow,
+                            onClick: Object(y.c)(this.trackLabel()),
                             linkTo: this.props.tenant.entryUrl
-                        }, r.createElement(v.V, {
-                            transform: v.Mb.Uppercase
+                        }, r.createElement(g.W, {
+                            transform: g.Nb.Uppercase
                         }, this.buttonText()))))
                     }, e.prototype.trackLabel = function() {
                         var t = this.props.tenant.name.toLowerCase();
-                        if (this.props.company) return Object(g.b)(t);
+                        if (this.props.company) return Object(y.b)(t);
                         switch (t) {
                             case "games":
-                                return g.a.ConsoleRegisterCompanyGames;
+                                return y.a.ConsoleRegisterCompanyGames;
                             case "drops":
-                                return g.a.ConsoleRegisterCompanyDrops;
+                                return y.a.ConsoleRegisterCompanyDrops;
                             default:
-                                return Object(g.b)(t)
+                                return Object(y.b)(t)
                         }
                     }, e.prototype.buttonText = function() {
                         var t = Object(f.d)("View {tenantName}", {
@@ -128,7 +128,7 @@
                             default:
                                 return t
                         }
-                    }, e = a.__decorate([Object(l.c)("DevTenantPanel", {
+                    }, e = a.__decorate([Object(l.b)("DevTenantPanel", {
                         autoReportInteractive: !0
                     })], e)
                 }(r.Component),
@@ -139,28 +139,28 @@
                     return a.__extends(e, t), e.prototype.render = function() {
                         var t = this,
                             e = this.props.tenants.map(function(e, n) {
-                                return r.createElement(v.P, {
+                                return r.createElement(g.P, {
                                     cols: {
                                         default: 12,
                                         sm: 6,
                                         md: 3
                                     },
                                     key: n
-                                }, r.createElement(v.Va, {
+                                }, r.createElement(g.Wa, {
                                     margin: {
                                         bottom: 1
                                     }
-                                }, r.createElement(y, {
+                                }, r.createElement(v, {
                                     tenant: e,
                                     company: t.props.company
                                 })))
                             });
-                        return r.createElement(v.Ha, {
-                            gutterSize: v.Ia.Small
+                        return r.createElement(g.Ia, {
+                            gutterSize: g.Ja.Small
                         }, e)
                     }, e
                 }(r.Component),
-                w = Object(o.compose)(Object(l.c)("DevOverviewPagePresentation", {
+                w = Object(o.compose)(Object(l.b)("DevOverviewPagePresentation", {
                     autoReportInteractive: !0
                 }))(b),
                 k = [{
@@ -180,7 +180,7 @@
                     entryUrl: "/console/drops",
                     count: 0
                 }];
-            var j = function(t) {
+            var O = function(t) {
                     function e() {
                         var e = null !== t && t.apply(this, arguments) || this;
                         return e.state = {
@@ -287,7 +287,7 @@
                         })
                     }, e
                 }(r.Component),
-                C = Object(o.compose)(Object(l.c)("DevOverviewPage", {
+                C = Object(o.compose)(Object(l.b)("DevOverviewPage", {
                     destination: p.a.DevSiteOverview
                 }), Object(i.a)({
                     location: u.PageviewLocation.DevSiteOverview
@@ -295,9 +295,9 @@
                     return {
                         company: Object(d.c)(t)
                     }
-                }))(j);
+                }))(O);
             n.d(e, "DevOverviewPageContainer", function() {
-                return j
+                return O
             }), n.d(e, "DevOverviewPage", function() {
                 return C
             })
@@ -327,7 +327,7 @@
                                         c = s.medium,
                                         p = s.content_index,
                                         u = s.email_id;
-                                    i.o.tracking.trackPageview(a.__assign({
+                                    i.p.tracking.trackPageview(a.__assign({
                                         content: o,
                                         medium: c,
                                         content_index: p,
@@ -335,7 +335,7 @@
                                         location: t.location
                                     }, e))
                                 }
-                            }, i.j.debug("pageViewTracking", t), e.rootLatencyTracker ? e.rootLatencyTracker.setLocation(t.location) : i.j.warn("No latency tracker exists! This means no data will be sent to Spade.", t), r
+                            }, i.k.debug("pageViewTracking", t), e.rootLatencyTracker ? e.rootLatencyTracker.setLocation(t.location) : i.k.warn("No latency tracker exists! This means no data will be sent to Spade.", t), r
                         }
                         return a.__extends(o, n), o.prototype.componentDidMount = function() {
                             var t = this;

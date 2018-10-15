@@ -5,11 +5,11 @@
             i.r(t);
             var n = i("mrSG"),
                 r = i("q1tI"),
-                s = i("oJmH"),
-                a = i("/7QA"),
+                a = i("oJmH"),
+                s = i("/7QA"),
                 o = i("yR8l"),
-                u = i("geRD"),
-                l = i("GnwI"),
+                l = i("geRD"),
+                u = i("GnwI"),
                 c = i("8Ad5"),
                 d = i("f00E"),
                 m = i("H/lO"),
@@ -46,48 +46,48 @@
                         })
                     }, t.prototype.render = function() {
                         var e;
-                        return e = this.props.isWaiting ? r.createElement(b.Va, {
+                        return e = this.props.isWaiting ? r.createElement(b.Wa, {
                             fullHeight: !0
-                        }, r.createElement(b.Xa, {
+                        }, r.createElement(b.Ya, {
                             fillContent: !0
-                        })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : r.createElement(b.Va, {
+                        })) : this.props.hasInput ? this.props.isErrored ? this.getErrorMessage() : this.props.userResults && this.props.userResults.totalHits > 0 ? this.getUserResultContent() : this.getNoResultsMessage() : r.createElement(b.Wa, {
                             margin: 1
-                        }, r.createElement(b.V, {
+                        }, r.createElement(b.W, {
                             color: b.O.Alt2
-                        }, Object(a.d)("Start typing to see a list of suggestions here.", "PrimeGiftExperiment"))), r.createElement("div", {
+                        }, Object(s.d)("Start typing to see a list of suggestions here.", "PrimeGiftExperiment"))), r.createElement("div", {
                             onKeyDown: this.props.onKeyDown
-                        }, r.createElement(b.xb, {
+                        }, r.createElement(b.yb, {
                             className: "gift-recipient-search-result-view",
                             background: b.r.Alt,
-                            position: b.db.Relative,
-                            overflow: b.Ya.Hidden,
-                            display: b.W.Block,
+                            position: b.eb.Relative,
+                            overflow: b.Za.Hidden,
+                            display: b.X.Block,
                             margin: {
                                 bottom: 2
                             },
                             borderLeft: !0,
                             borderBottom: !0,
                             borderRight: !0
-                        }, r.createElement(b.Na, {
-                            overflow: b.Ya.Hidden,
-                            position: b.db.Relative
+                        }, r.createElement(b.Oa, {
+                            overflow: b.Za.Hidden,
+                            position: b.eb.Relative
                         }, r.createElement(g.b, {
                             suppressScrollX: !0
-                        }, r.createElement(b.Va, null, e, r.createElement(g.a, {
+                        }, r.createElement(b.Wa, null, e, r.createElement(g.a, {
                             enabled: !this.props.isWaiting && this.props.hasInput,
                             loadMore: this.props.loadMore
                         }))))))
                     }, t.prototype.getErrorMessage = function() {
-                        return r.createElement(b.Va, {
+                        return r.createElement(b.Wa, {
                             fullWidth: !0,
-                            textAlign: b.Jb.Center,
-                            justifyContent: b.Ua.Center
-                        }, r.createElement(b.V, null, Object(a.d)("Something went wrong", "PrimeGiftExperiment")))
+                            textAlign: b.Kb.Center,
+                            justifyContent: b.Va.Center
+                        }, r.createElement(b.W, null, Object(s.d)("Something went wrong", "PrimeGiftExperiment")))
                     }, t.prototype.getUserResultContent = function() {
                         var e = this;
                         return this.props.userResults ? this.props.userResults.results.map(function(t) {
                             var i = Object(f.a)(t.login || "", t.name || "");
-                            return r.createElement(b.Sa, {
+                            return r.createElement(b.Ta, {
                                 tabIndex: -1,
                                 "data-ts_selectable": !0,
                                 "data-tt_content": !0,
@@ -98,7 +98,7 @@
                                 onClick: e.onUserClick,
                                 "data-test-selector": "subscribe-button__gift_search_result",
                                 selected: !!e.state.selectedUser && e.state.selectedUser.id === t.id
-                            }, r.createElement(b.Va, {
+                            }, r.createElement(b.Wa, {
                                 padding: .5
                             }, r.createElement(b.G, {
                                 row: !0
@@ -108,29 +108,29 @@
                                 size: b.J.Size4,
                                 aspect: b.p.Aspect1x1
                             }), r.createElement(b.H, {
-                                overflow: b.Ya.Hidden
-                            }, r.createElement(b.Na, {
+                                overflow: b.Za.Hidden
+                            }, r.createElement(b.Oa, {
                                 padding: {
                                     x: 1
                                 }
-                            }, r.createElement(b.V, {
-                                type: b.Nb.H5,
+                            }, r.createElement(b.W, {
+                                type: b.Ob.H5,
                                 ellipsis: !0
                             }, i))))))
-                        }) : r.createElement(b.cb, null)
+                        }) : r.createElement(b.db, null)
                     }, t.prototype.updateFormState = function() {
                         this.props.handleFormAction({
                             giftRecipient: this.state.selectedUser
                         })
                     }, t.prototype.getNoResultsMessage = function() {
-                        return r.createElement(b.Va, {
+                        return r.createElement(b.Wa, {
                             margin: 1
-                        }, r.createElement(b.V, {
+                        }, r.createElement(b.W, {
                             color: b.O.Alt2
-                        }, Object(a.d)("No Results", "PrimeGiftExperiment")))
+                        }, Object(s.d)("No Results", "PrimeGiftExperiment")))
                     }, t
                 }(r.Component)),
-                y = Object(s.compose)(Object(l.c)("GiftRecipientSearchResultPanel", {
+                y = Object(a.compose)(Object(u.b)("GiftRecipientSearchResultPanel", {
                     autoReportInteractive: !0
                 }))(v),
                 S = function(e) {
@@ -141,21 +141,21 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return this.props.handleFormAction ? r.createElement(b.Va, {
+                        return this.props.handleFormAction ? r.createElement(b.Wa, {
                             className: "subscription-gift-recipient-search",
-                            display: b.W.Flex,
-                            justifyContent: b.Ua.Center,
+                            display: b.X.Flex,
+                            justifyContent: b.Va.Center,
                             padding: {
                                 top: 1
                             },
                             fullWidth: !0
-                        }, r.createElement(b.Na, {
+                        }, r.createElement(b.Oa, {
                             fullWidth: !0
-                        }, r.createElement("div", null, r.createElement(b.pb, {
+                        }, r.createElement("div", null, r.createElement(b.qb, {
                             onChange: this.handleChange,
                             onKeyDown: this.props.onKeyDown,
                             id: "gift-recipient-search",
-                            placeholder: Object(a.d)("Search for a Twitch ID", "PrimeGiftExperiment"),
+                            placeholder: Object(s.d)("Search for a Twitch ID", "PrimeGiftExperiment"),
                             "data-test-selector": "gift-recipient-search-input-selector"
                         }), r.createElement(y, {
                             hasInput: this.props.hasInput,
@@ -165,7 +165,7 @@
                             loadMore: this.props.loadMore,
                             onKeyDown: this.props.onKeyDown,
                             handleFormAction: this.props.handleFormAction
-                        })))) : r.createElement(b.cb, null)
+                        })))) : r.createElement(b.db, null)
                     }, t
                 }(r.Component),
                 k = 50,
@@ -221,12 +221,12 @@
                                 hasInput: !1
                             }) : e.keyCode === c.a.Up ? i.focusNext(-1) : e.keyCode === c.a.Down && i.focusNext(1))
                         }, i.state = i.getEmptyState(), i.searchClient = new p.a({
-                            appId: a.a.algoliaApplicationID,
-                            apiKey: a.a.algoliaAPIKey,
-                            apolloClient: a.o.apollo.client,
-                            logger: a.j,
-                            config: a.a,
-                            stats: a.o.stats
+                            appId: s.a.algoliaApplicationID,
+                            apiKey: s.a.algoliaAPIKey,
+                            apolloClient: s.p.apollo.client,
+                            logger: s.k,
+                            config: s.a,
+                            stats: s.p.stats
                         }), i
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
@@ -258,7 +258,7 @@
                         }
                     }, t.prototype.doSearch = function(e) {
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var t, i, r, s, a;
+                            var t, i, r, a, s;
                             return n.__generator(this, function(o) {
                                 switch (o.label) {
                                     case 0:
@@ -269,7 +269,7 @@
                                     case 1:
                                         return o.trys.push([1, 3, , 4]), t = 0, [4, this.searchClient.queryForType(m.a.Users, e, i)];
                                     case 2:
-                                        return s = o.sent(), [3, 4];
+                                        return a = o.sent(), [3, 4];
                                     case 3:
                                         return o.sent(), this.setState(n.__assign({}, this.getEmptyState(), {
                                             isErrored: !0,
@@ -277,11 +277,11 @@
                                             term: e
                                         })), [2];
                                     case 4:
-                                        return s ? this.state.queryID !== s.id ? [2] : (a = Object(h.b)({
-                                            searchResults: s,
+                                        return a ? this.state.queryID !== a.id ? [2] : (s = Object(h.b)({
+                                            searchResults: a,
                                             append: !1
                                         }), this.setState(function(i) {
-                                            return n.__assign({}, i, a, {
+                                            return n.__assign({}, i, s, {
                                                 queryID: "",
                                                 term: e,
                                                 hasInput: !0,
@@ -301,14 +301,14 @@
                             n = document.activeElement,
                             r = Array.prototype.indexOf.call(i, n);
                         if ((t = r < 0 ? e > 0 ? 0 : i.length - 1 : r + e) < 0 && (t = 0), !(t >= i.length)) {
-                            var s = i.item(t);
-                            s.focus(), s.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
-                                currentFocus: s
+                            var a = i.item(t);
+                            a.focus(), a.tabIndex = 0, this.state.currentFocus && (this.state.currentFocus.tabIndex = -1), this.setState({
+                                currentFocus: a
                             })
                         }
                     }, t
                 }(r.Component),
-                N = Object(s.compose)(Object(l.c)("GiftRecipientSearch", {
+                N = Object(a.compose)(Object(u.b)("GiftRecipientSearch", {
                     autoReportInteractive: !0
                 }))(_),
                 E = i("0KHE"),
@@ -341,7 +341,7 @@
                                                 giftSuccess: !1
                                             }), i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, this.props.giveGift(Object(u.a)({
+                                            return i.trys.push([1, 3, , 4]), [4, this.props.giveGift(Object(l.a)({
                                                 to: this.state.giftRecipient.id,
                                                 offerID: this.props.offerID
                                             }))];
@@ -367,59 +367,59 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(b.xb, {
-                            display: b.W.Flex,
-                            flexDirection: b.Y.Column,
+                        return r.createElement(b.yb, {
+                            display: b.X.Flex,
+                            flexDirection: b.Z.Column,
                             background: b.r.Base
                         }, this.renderHeader(), this.renderHorizontalRule(), this.renderBody(), this.renderFooter())
                     }, t.prototype.renderHorizontalRule = function() {
-                        return r.createElement(b.xb, {
+                        return r.createElement(b.yb, {
                             fullWidth: !0,
                             flexGrow: 1,
                             borderTop: !0
                         })
                     }, t.prototype.renderHeader = function() {
-                        return r.createElement(b.Va, {
-                            display: b.W.Flex,
-                            flexDirection: b.Y.Row,
-                            justifyContent: b.Ua.Center,
+                        return r.createElement(b.Wa, {
+                            display: b.X.Flex,
+                            flexDirection: b.Z.Row,
+                            justifyContent: b.Va.Center,
                             alignItems: b.f.Center,
                             padding: 2
-                        }, r.createElement(b.V, {
-                            fontSize: b.Aa.Size4,
+                        }, r.createElement(b.W, {
+                            fontSize: b.Ba.Size4,
                             bold: !0
-                        }, Object(a.d)("Choose a Gift Recipient", "PrimeGiftExperimentSubmission")), r.createElement(b.Va, {
-                            display: b.W.InlineFlex,
+                        }, Object(s.d)("Choose a Gift Recipient", "PrimeGiftExperimentSubmission")), r.createElement(b.Wa, {
+                            display: b.X.InlineFlex,
                             margin: 1,
                             attachRight: !0
-                        }, r.createElement(b.ab, {
-                            label: Object(a.d)("Beta", "PrimeGiftExperiment")
+                        }, r.createElement(b.bb, {
+                            label: Object(s.d)("Beta", "PrimeGiftExperiment")
                         })))
                     }, t.prototype.renderBody = function() {
-                        return r.createElement(b.Va, {
+                        return r.createElement(b.Wa, {
                             padding: {
                                 x: 2
                             }
-                        }, r.createElement(b.Va, {
+                        }, r.createElement(b.Wa, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(b.V, {
-                            type: b.Nb.Span
-                        }, Object(a.d)("The recipient will receive a notification and will need to claim the gift before the offer expires.", "PrimeGiftExperimentSubmission"))), r.createElement(N, {
+                        }, r.createElement(b.W, {
+                            type: b.Ob.Span
+                        }, Object(s.d)("The recipient will receive a notification and will need to claim the gift before the offer expires.", "PrimeGiftExperimentSubmission"))), r.createElement(N, {
                             key: "gift-recipient-search-page",
                             onBack: this.goBack,
                             handleFormAction: this.handleFormAction
                         }), this.renderRecipients())
                     }, t.prototype.renderRecipients = function() {
-                        if (this.state.error) return r.createElement(b.Va, {
+                        if (this.state.error) return r.createElement(b.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(b.V, {
+                        }, r.createElement(b.W, {
                             color: b.O.Alt2,
                             italic: !0
-                        }, Object(a.d)("Sorry, it looks like an error occured when we tried to send this gift. Help us improve this beta feature by <x:link>emailing us a bug report</x:link>", {
+                        }, Object(s.d)("Sorry, it looks like an error occured when we tried to send this gift. Help us improve this beta feature by <x:link>emailing us a bug report</x:link>", {
                             "x:link": function(e) {
                                 return r.createElement("a", {
                                     href: "https://help.twitch.tv/customer/portal/emails/new?ticket[custom_category]=Twitch%20Prime&email[subject]=&email[body]=",
@@ -429,14 +429,14 @@
                             }
                         }, "PrimeGiftExperimentSubmission")));
                         var e = this.props.getGiftRecipientList();
-                        return e ? r.createElement(b.Va, {
+                        return e ? r.createElement(b.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(b.V, null, Object(a.d)("Sent gifts to <x:bold>{giftLogins}</x:bold>", {
+                        }, r.createElement(b.W, null, Object(s.d)("Sent gifts to <x:bold>{giftLogins}</x:bold>", {
                             "x:bold": function(e) {
-                                return r.createElement(b.V, {
-                                    type: b.Nb.Span,
+                                return r.createElement(b.W, {
+                                    type: b.Ob.Span,
                                     bold: !0
                                 }, e)
                             },
@@ -444,25 +444,25 @@
                         }, "PrimeGiftExperimentSubmission"))) : null
                     }, t.prototype.renderFooter = function() {
                         var e = 10 - this.props.getGiftRecipientList().length;
-                        return r.createElement(b.xb, {
-                            display: b.W.Flex,
+                        return r.createElement(b.yb, {
+                            display: b.X.Flex,
                             background: b.r.Alt2,
                             attachBottom: !0,
                             padding: {
                                 x: 2,
                                 y: 1
                             }
-                        }, r.createElement(b.Va, {
-                            display: b.W.Flex,
+                        }, r.createElement(b.Wa, {
+                            display: b.X.Flex,
                             flexGrow: 1,
                             flexShrink: 1,
                             alignItems: b.f.Center
-                        }, r.createElement(b.V, null, Object(a.d)("{remainingGifts,number} gifts remain", {
+                        }, r.createElement(b.W, null, Object(s.d)("{remainingGifts,number} gifts remain", {
                             remainingGifts: e
-                        }, "PrimeGiftExperimentSubmission"))), r.createElement(b.Va, {
+                        }, "PrimeGiftExperimentSubmission"))), r.createElement(b.Wa, {
                             flexGrow: 0,
                             flexShrink: 0,
-                            verticalAlign: b.Xb.Middle
+                            verticalAlign: b.Yb.Middle
                         }, r.createElement(b.i, {
                             duration: b.k.Medium,
                             enabled: this.state.giftSuccess,
@@ -472,12 +472,12 @@
                             "data-test-selector": "prime-send-gift-button",
                             state: this.state.isSubmitInTransit ? b.E.Loading : b.E.Default,
                             onClick: this.onGiftClick
-                        }, Object(a.d)("Send as a Gift", "PrimeGiftExperimentSubmission")))))
+                        }, Object(s.d)("Send as a Gift", "PrimeGiftExperimentSubmission")))))
                     }, t
                 }(r.Component)),
-                x = Object(s.compose)(Object(o.a)(E, {
+                R = Object(a.compose)(Object(o.a)(E, {
                     name: "giveGift"
-                }), Object(l.c)("GiftForm", {
+                }), Object(u.b)("GiftForm", {
                     autoReportInteractive: !0
                 }))(F);
             i.d(t, "PRIME_SEND_GIFT_BUTTON_SELECTOR", function() {
@@ -485,7 +485,7 @@
             }), i.d(t, "GiftFormComponent", function() {
                 return F
             }), i.d(t, "GiftForm", function() {
-                return x
+                return R
             })
         },
         "0KHE": function(e, t) {
@@ -713,61 +713,60 @@
         "9kXc": function(e, t, i) {
             "use strict";
             i.d(t, "b", function() {
-                return u
-            }), i.d(t, "a", function() {
                 return l
+            }), i.d(t, "a", function() {
+                return u
             });
             var n = i("/7QA"),
                 r = i("yLwq"),
-                s = i("kduP"),
-                a = i("2xye"),
+                a = i("kduP"),
+                s = i("2xye"),
                 o = i("sLmD");
 
-            function u(e) {
-                var t, i, o, u, d, m = e.append,
-                    p = void 0 !== m && m,
-                    h = e.searchResults,
-                    g = e.currentGameResults,
-                    f = e.currentUserResults,
-                    b = e.currentCommunityResults,
-                    v = e.currentVideoResults,
-                    y = e.currentLiveResults;
-                if (h.games && (t = {
-                        totalHits: h.games.totalHits,
-                        results: p && g ? g.results : []
-                    }, p && h.exhaustedHits && g && !h.games.totalHits && (t.totalHits = g.totalHits), t.results = t.results.concat(h.games.hits.map(function(e, t) {
-                        var i, r = n.o.intl.getLanguageCode();
+            function l(e) {
+                var t, i, o, l, d = e.append,
+                    m = void 0 !== d && d,
+                    p = e.searchResults,
+                    h = e.currentGameResults,
+                    g = e.currentUserResults,
+                    f = e.currentVideoResults,
+                    b = e.currentLiveResults;
+                if (p.games && (t = {
+                        totalHits: p.games.totalHits,
+                        results: m && h ? h.results : []
+                    }, m && p.exhaustedHits && h && !p.games.totalHits && (t.totalHits = h.totalHits), t.results = t.results.concat(p.games.hits.map(function(e, t) {
+                        var i, r = n.p.intl.getLanguageCode();
                         i = r && void 0 !== e.localizations && r in e.localizations ? e.localizations[r] : e.name;
                         var o = c(e.tags);
                         return {
                             title: i,
                             thumbnailAltText: e.name,
                             linkTo: {
-                                pathname: Object(s.c)(e.name),
+                                pathname: Object(a.c)(e.name),
                                 state: {
-                                    content: a.PageviewContent.Game,
+                                    content: s.PageviewContent.Game,
                                     content_index: t,
-                                    medium: a.PageviewMedium.NavSearch
+                                    medium: s.PageviewMedium.NavSearch
                                 }
                             },
                             id: e.objectID,
                             popularity: e.popularity,
                             tags: o
                         }
-                    }))), h.videos) {
-                    var S = p && v ? v.results : [],
-                        k = h.videos.totalHits;
-                    p && h.exhaustedHits && v && !h.videos.totalHits && (k = v.totalHits), u = function(e, t, i) {
+                    }))), p.videos) {
+                    var v = m && f ? f.results : [],
+                        y = p.videos.totalHits;
+                    m && p.exhaustedHits && f && !p.videos.totalHits && (y = f.totalHits), o = function(e, t, i) {
                         return {
-                            results: e.concat(t.hits.map(l)),
+                            results: e.concat(t.hits.map(u)),
                             totalHits: t.totalHits || i
                         }
-                    }(S, h.videos, k)
+                    }(v, p.videos, y)
                 }
-                return h.users && (i = {
-                    totalHits: p && f ? f.totalHits : h.users.totalHits,
-                    results: p && f ? f.results : []
-                }, p && h.exhaustedHits && f && !h.users.totalHits && (i.totalHits = f.totalHits), i.results = i.results.concat(h.users.hits.map(function(e, t) {
+                return p.users && (i = {
+                    totalHits: m && g ? g.totalHits : p.users.totalHits,
+                    results: m && g ? g.results : []
+                }, m && p.exhaustedHits && g && !p.users.totalHits && (i.totalHits = g.totalHits), i.results = i.results.concat(p.users.hits.map(function(e, t) {
                     return {
                         login: e.login,
                         name: e.name,
@@ -776,18 +775,18 @@
                         linkTo: {
                             pathname: "/" + e.login,
                             state: {
-                                content: a.PageviewContent.User,
+                                content: s.PageviewContent.User,
                                 content_index: t,
-                                medium: a.PageviewMedium.NavSearch
+                                medium: s.PageviewMedium.NavSearch
                             }
                         },
                         id: e.objectID,
                         followers: e.followers
                     }
-                }))), h.channels && ((d = {
-                    totalHits: p && y ? y.totalHits : h.channels.totalHits,
-                    results: p && y ? y.results : []
-                }).results = d.results.concat(h.channels.hits.map(function(e, t) {
+                }))), p.channels && ((l = {
+                    totalHits: m && b ? b.totalHits : p.channels.totalHits,
+                    results: m && b ? b.results : []
+                }).results = l.results.concat(p.channels.hits.map(function(e, t) {
                     var i = c(e.graffiti);
                     return {
                         viewerCount: e.channel_count,
@@ -797,45 +796,25 @@
                         linkTo: {
                             pathname: "/" + e.login,
                             state: {
-                                content: a.PageviewContent.Live,
+                                content: s.PageviewContent.Live,
                                 content_index: t,
-                                medium: a.PageviewMedium.NavSearch
+                                medium: s.PageviewMedium.NavSearch
                             }
                         },
                         id: e.objectID,
                         status: e.status,
                         tags: i
                     }
-                }))), h.communities && (o = {
-                    totalHits: h.communities.totalHits,
-                    results: p && b ? b.results : []
-                }, p && h.exhaustedHits && b && !h.communities.totalHits && (o.totalHits = b.totalHits), o.results = o.results.concat(h.communities.hits.map(function(e, t) {
-                    return {
-                        name: e.name,
-                        thumbnail: e.avatar_image_url,
-                        thumbnailAltText: e.name,
-                        linkTo: {
-                            pathname: "/communities/" + e.name,
-                            state: {
-                                content: a.PageviewContent.Community,
-                                content_index: t,
-                                medium: a.PageviewMedium.NavSearch
-                            }
-                        },
-                        viewerCount: e.viewers,
-                        id: e.objectID
-                    }
                 }))), {
                     currentGameResults: t,
                     currentUserResults: i,
-                    currentLiveResults: d,
-                    currentCommunityResults: o,
-                    currentVideoResults: u,
-                    exhaustedHits: h.exhaustedHits
+                    currentLiveResults: l,
+                    currentVideoResults: o,
+                    exhaustedHits: p.exhaustedHits
                 }
             }
 
-            function l(e, t) {
+            function u(e, t) {
                 return {
                     title: e.title,
                     thumbnail: e.thumbnail,
@@ -843,9 +822,9 @@
                     linkTo: {
                         pathname: "/videos/" + e.objectID,
                         state: {
-                            content: a.PageviewContent.Video,
+                            content: s.PageviewContent.Video,
                             content_index: t,
-                            medium: a.PageviewMedium.NavSearch
+                            medium: s.PageviewMedium.NavSearch
                         }
                     },
                     login: e.broadcaster_login,
@@ -927,7 +906,7 @@
                     return n
                 }),
                 function(e) {
-                    e.Games = "game", e.Videos = "vod", e.Users = "user", e.Channels = "live_channel", e.Communities = "community", e.StreamTags = "stream_tag", e.Tags = "tag"
+                    e.Games = "game", e.Videos = "vod", e.Users = "user", e.Channels = "live_channel", e.StreamTags = "stream_tag", e.Tags = "tag"
                 }(n || (n = {}))
         },
         NZDK: function(e, t, i) {
@@ -937,11 +916,11 @@
             });
             var n = i("mrSG"),
                 r = i("hnrd"),
-                s = i("/7QA"),
-                a = i("D7An"),
+                a = i("/7QA"),
+                s = i("D7An"),
                 o = i("H/lO"),
-                u = i("vR4/"),
-                l = i("BSTw"),
+                l = i("vR4/"),
+                u = i("BSTw"),
                 c = i("Z9JJ"),
                 d = {
                     games: {
@@ -981,13 +960,6 @@
                         },
                         optionalFacetFilters: ""
                     },
-                    communities: {
-                        indexName: o.a.Communities,
-                        hitsPerPage: 2,
-                        topNumericFilters: [],
-                        singleTypeNumericFilters: [],
-                        optionalFacetFilters: ""
-                    },
                     streamTags: {
                         indexName: o.a.StreamTags,
                         hitsPerPage: 2,
@@ -1005,37 +977,33 @@
                 },
                 m = function() {
                     function e(e) {
-                        this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === s.o.experiments.getAssignment(a.b.NewSearchBackend), this.getCountryCode()
+                        this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === a.p.experiments.getAssignment(s.b.NewSearchBackend), this.getCountryCode()
                     }
                     return e.prototype.queryTopResults = function(e, t) {
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var i, r, s, a;
+                            var i, r, a, s;
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return r = [], (i = []).push(this.getTopResult(d.games, e)), i.push(this.getTopResult(d.videos, e)), i.push(this.getTopResult(d.users, e)), i.push(this.getTopResult(d.channels, e)), i.push(this.getTopResult(d.communities, e)), r.push(this.getTotalResult(d.games, e)), r.push(this.getTotalResult(d.videos, e)), r.push(this.getTotalResult(d.users, e)), r.push(this.getTotalResult(d.channels, e)), [4, this.query(i.concat(r))];
+                                        return r = [], (i = []).push(this.getTopResult(d.games, e)), i.push(this.getTopResult(d.videos, e)), i.push(this.getTopResult(d.users, e)), i.push(this.getTopResult(d.channels, e)), r.push(this.getTotalResult(d.games, e)), r.push(this.getTotalResult(d.videos, e)), r.push(this.getTotalResult(d.users, e)), r.push(this.getTotalResult(d.channels, e)), [4, this.query(i.concat(r))];
                                     case 1:
-                                        return (s = n.sent()) ? (a = s.results, [2, {
+                                        return (a = n.sent()) ? (s = a.results, [2, {
                                             id: t,
                                             games: {
-                                                totalHits: a[5].nbHits,
-                                                hits: a[0].hits
+                                                totalHits: s[4].nbHits,
+                                                hits: s[0].hits
                                             },
                                             videos: {
-                                                totalHits: a[6].nbHits,
-                                                hits: a[1].hits
+                                                totalHits: s[5].nbHits,
+                                                hits: s[1].hits
                                             },
                                             users: {
-                                                totalHits: a[7].nbHits,
-                                                hits: a[2].hits
+                                                totalHits: s[6].nbHits,
+                                                hits: s[2].hits
                                             },
                                             channels: {
-                                                totalHits: a[8].nbHits,
-                                                hits: a[3].hits
-                                            },
-                                            communities: {
-                                                totalHits: a[4].nbHits,
-                                                hits: a[4].hits
+                                                totalHits: s[7].nbHits,
+                                                hits: s[3].hits
                                             }
                                         }]) : [2, function(e) {
                                             return {
@@ -1055,10 +1023,6 @@
                                                 channels: {
                                                     totalHits: 0,
                                                     hits: []
-                                                },
-                                                communities: {
-                                                    totalHits: 0,
-                                                    hits: []
                                                 }
                                             }
                                         }(t)]
@@ -1066,27 +1030,27 @@
                             })
                         })
                     }, e.prototype.queryForType = function(e, t, i, r) {
-                        var s = void 0 === r ? {} : r,
-                            a = s.page,
-                            u = void 0 === a ? 0 : a,
-                            l = s.hitsPerPage,
-                            c = void 0 === l ? 50 : l,
-                            m = s.facetFilters,
+                        var a = void 0 === r ? {} : r,
+                            s = a.page,
+                            l = void 0 === s ? 0 : s,
+                            u = a.hitsPerPage,
+                            c = void 0 === u ? 50 : u,
+                            m = a.facetFilters,
                             p = void 0 === m ? "" : m,
-                            h = s.numericFilters,
-                            g = s.restrictSearchableAttributes,
+                            h = a.numericFilters,
+                            g = a.restrictSearchableAttributes,
                             f = void 0 === g ? [] : g;
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var r, s, a, l, m, g, b, v, y, S = this;
-                            return n.__generator(this, function(k) {
-                                switch (k.label) {
+                            var r, a, s, u, m, g, b, v, y = this;
+                            return n.__generator(this, function(S) {
+                                switch (S.label) {
                                     case 0:
                                         switch (r = {
                                             id: i,
-                                            currentPage: u
-                                        }, s = function(e) {
-                                            return n.__awaiter(S, void 0, void 0, function() {
-                                                var i, s;
+                                            currentPage: l
+                                        }, a = function(e) {
+                                            return n.__awaiter(y, void 0, void 0, function() {
+                                                var i, a;
                                                 return n.__generator(this, function(n) {
                                                     switch (n.label) {
                                                         case 0:
@@ -1094,7 +1058,7 @@
                                                                 indexName: e.indexName,
                                                                 query: t,
                                                                 params: {
-                                                                    page: u,
+                                                                    page: l,
                                                                     hitsPerPage: c,
                                                                     numericFilters: h || e.singleTypeNumericFilters,
                                                                     facets: "*",
@@ -1103,9 +1067,9 @@
                                                                 }
                                                             }, [4, this.query([i])];
                                                         case 1:
-                                                            return (s = n.sent()) ? (r.exhaustedHits = !s.results[0].nbHits || s.results[0].hits.length < c, [2, {
-                                                                totalHits: s.results[0].nbHits,
-                                                                hits: s.results[0].hits
+                                                            return (a = n.sent()) ? (r.exhaustedHits = !a.results[0].nbHits || a.results[0].hits.length < c, [2, {
+                                                                totalHits: a.results[0].nbHits,
+                                                                hits: a.results[0].hits
                                                             }]) : (r.exhaustedHits = !0, [2, {
                                                                 totalHits: 0,
                                                                 hits: []
@@ -1122,88 +1086,82 @@
                                                 return [3, 5];
                                             case o.a.Videos:
                                                 return [3, 7];
-                                            case o.a.Communities:
-                                                return [3, 9];
                                             case o.a.StreamTags:
-                                                return [3, 11];
+                                                return [3, 9];
                                             case o.a.Tags:
-                                                return [3, 13]
+                                                return [3, 11]
                                         }
-                                        return [3, 15];
+                                        return [3, 13];
                                     case 1:
-                                        return a = r, [4, s(d.games)];
+                                        return s = r, [4, a(d.games)];
                                     case 2:
-                                        return a.games = k.sent(), [3, 16];
+                                        return s.games = S.sent(), [3, 14];
                                     case 3:
-                                        return l = r, [4, s(d.users)];
+                                        return u = r, [4, a(d.users)];
                                     case 4:
-                                        return l.users = k.sent(), [3, 16];
+                                        return u.users = S.sent(), [3, 14];
                                     case 5:
-                                        return m = r, [4, s(d.channels)];
+                                        return m = r, [4, a(d.channels)];
                                     case 6:
-                                        return m.channels = k.sent(), [3, 16];
+                                        return m.channels = S.sent(), [3, 14];
                                     case 7:
-                                        return g = r, [4, s(d.videos)];
+                                        return g = r, [4, a(d.videos)];
                                     case 8:
-                                        return g.videos = k.sent(), [3, 16];
+                                        return g.videos = S.sent(), [3, 14];
                                     case 9:
-                                        return b = r, [4, s(d.communities)];
+                                        return b = r, [4, a(d.streamTags)];
                                     case 10:
-                                        return b.communities = k.sent(), [3, 16];
+                                        return b.streamTags = S.sent(), [3, 14];
                                     case 11:
-                                        return v = r, [4, s(d.streamTags)];
+                                        return v = r, [4, a(d.tags)];
                                     case 12:
-                                        return v.streamTags = k.sent(), [3, 16];
+                                        return v.tags = S.sent(), [3, 14];
                                     case 13:
-                                        return y = r, [4, s(d.tags)];
-                                    case 14:
-                                        return y.tags = k.sent(), [3, 16];
-                                    case 15:
                                         return [2, null];
-                                    case 16:
+                                    case 14:
                                         return [2, r]
                                 }
                             })
                         })
                     }, e.prototype.queryVideos = function(e, t, i) {
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var r, s, a, l;
+                            var r, a, s, u;
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        switch (r = o.a.Videos, s = [], i.length) {
-                                            case u.a.Short:
-                                                s.push("length<=900");
+                                        switch (r = o.a.Videos, a = [], i.length) {
+                                            case l.a.Short:
+                                                a.push("length<=900");
                                                 break;
-                                            case u.a.Long:
-                                                s.push("length>900")
+                                            case l.a.Long:
+                                                a.push("length>900")
                                         }
-                                        switch (a = {
+                                        switch (s = {
                                             indexName: r,
                                             query: e,
                                             params: {
                                                 page: 0,
                                                 hitsPerPage: 50,
-                                                numericFilters: s,
+                                                numericFilters: a,
                                                 facets: "*",
                                                 facetFilters: ""
                                             }
                                         }, i.type) {
-                                            case u.b.PastBroadcasts:
-                                                a.params.facetFilters = "broadcast_type:archive";
+                                            case l.b.PastBroadcasts:
+                                                s.params.facetFilters = "broadcast_type:archive";
                                                 break;
-                                            case u.b.Uploads:
-                                                a.params.facetFilters = "broadcast_type:upload";
+                                            case l.b.Uploads:
+                                                s.params.facetFilters = "broadcast_type:upload";
                                                 break;
-                                            case u.b.Highlights:
-                                                a.params.facetFilters = "broadcast_type:highlight"
+                                            case l.b.Highlights:
+                                                s.params.facetFilters = "broadcast_type:highlight"
                                         }
-                                        return [4, this.query([a])];
+                                        return [4, this.query([s])];
                                     case 1:
-                                        return (l = n.sent()) ? [2, {
+                                        return (u = n.sent()) ? [2, {
                                             id: t,
-                                            totalHits: l.results[0].nbHits,
-                                            hits: l.results[0].hits
+                                            totalHits: u.results[0].nbHits,
+                                            hits: u.results[0].hits
                                         }] : [2, {
                                             id: t,
                                             totalHits: 0,
@@ -1215,7 +1173,7 @@
                     }, e.prototype.getCountryCode = function() {
                         var e = this;
                         this.apolloClient.query({
-                            query: l
+                            query: u
                         }).then(function(t) {
                             e.countryCode = t.data.requestInfo.countryCode
                         }).catch(function(t) {
@@ -1259,13 +1217,13 @@
                         }
                     }, e.prototype.query = function(e) {
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var t, i, r, s, a;
+                            var t, i, r, a, s;
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        i = Date.now(), s = !1, n.label = 1;
+                                        i = Date.now(), a = !1, n.label = 1;
                                     case 1:
-                                        return n.trys.push([1, 6, , 7]), this.sendSearchRequestToForage && e.length > 7 ? (a = e[0].query, [4, this.getSearchResults(a)]) : [3, 3];
+                                        return n.trys.push([1, 6, , 7]), this.sendSearchRequestToForage && e.length > 7 ? (s = e[0].query, [4, this.getSearchResults(s)]) : [3, 3];
                                     case 2:
                                         return t = n.sent(), [3, 5];
                                     case 3:
@@ -1275,9 +1233,9 @@
                                     case 5:
                                         return [3, 7];
                                     case 6:
-                                        return n.sent(), s = !0, t = null, [3, 7];
+                                        return n.sent(), a = !0, t = null, [3, 7];
                                     case 7:
-                                        return r = Date.now(), this.countryCode && (s ? this.stats.recordSearchError(this.countryCode, r - i) : this.stats.recordSearchSuccess(this.countryCode, r - i)), [2, t]
+                                        return r = Date.now(), this.countryCode && (a ? this.stats.recordSearchError(this.countryCode, r - i) : this.stats.recordSearchSuccess(this.countryCode, r - i)), [2, t]
                                 }
                             })
                         })
@@ -1295,19 +1253,19 @@
         QVaV: function(e, t, i) {
             "use strict";
             i.d(t, "a", function() {
-                return s
-            }), i.d(t, "b", function() {
                 return a
+            }), i.d(t, "b", function() {
+                return s
             });
             var n = i("q1tI"),
                 r = /^[\x00-\x7F]*$/,
-                s = function(e, t, i) {
-                    return void 0 === i && (i = !1), t && e && !a(t) ? i ? t + " (" + e + ")" : n.createElement("span", null, t, " ", n.createElement("span", {
+                a = function(e, t, i) {
+                    return void 0 === i && (i = !1), t && e && !s(t) ? i ? t + " (" + e + ")" : n.createElement("span", null, t, " ", n.createElement("span", {
                         className: "intl-login"
                     }, "(" + e + ")")) : t || (e || "")
                 };
 
-            function a(e) {
+            function s(e) {
                 return r.test(e)
             }
         },
@@ -1440,11 +1398,11 @@
                 return "/communities/" + encodeURIComponent(e)
             }
 
-            function s(e) {
+            function a(e) {
                 return "/events/" + encodeURIComponent(e)
             }
 
-            function a(e) {
+            function s(e) {
                 return "/" + encodeURIComponent(e) + "/manager"
             }
             i.d(t, "c", function() {
@@ -1452,21 +1410,21 @@
             }), i.d(t, "a", function() {
                 return r
             }), i.d(t, "b", function() {
-                return s
-            }), i.d(t, "d", function() {
                 return a
+            }), i.d(t, "d", function() {
+                return s
             })
         },
         sLmD: function(e, t, i) {
             "use strict";
             i.d(t, "b", function() {
-                return a
+                return s
             }), i.d(t, "a", function() {
                 return o
             });
             var n = i("/7QA"),
                 r = "en-us",
-                s = {
+                a = {
                     bg: "bg-bg",
                     cs: "cs-cz",
                     da: "da-dk",
@@ -1497,7 +1455,7 @@
                     "zh-cn": "zh-cn",
                     "zh-tw": "zh-tw"
                 },
-                a = function(e) {
+                s = function(e) {
                     var t, i = o();
                     return t = function(e) {
                         return void 0 !== e.tag_id
@@ -1516,7 +1474,7 @@
                 };
 
             function o() {
-                return s[n.o.intl.getLanguageCode() || ""] || r
+                return a[n.p.intl.getLanguageCode() || ""] || r
             }
         },
         "vR4/": function(e, t, i) {
@@ -1541,7 +1499,7 @@
             }), i.d(t, "a", function() {
                 return r
             }), i.d(t, "c", function() {
-                return s
+                return a
             });
             var n = [{
                 id: "profile_image_001",
@@ -1571,7 +1529,7 @@
                 return 300 === t ? i = 300 : 96 !== t && 80 !== t || (i = 150), "https://static-cdn.jtvnw.net/user-default-pictures/" + e.urlSlug + "-profile_image-" + i + "x" + i + ".jpg"
             }
 
-            function s(e, t) {
+            function a(e, t) {
                 var i = parseInt(e, 10) % n.length;
                 return r(n[i], t)
             }

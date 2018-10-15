@@ -135,17 +135,17 @@
                     return t = Object(l.a)() ? Object(a.j)(e.channelLogin, e, i) : Object(a.q)(e.channelLogin, i && {
                         filter: i.filter ? Object(a.z)(i.filter) : void 0,
                         sort: i.sort
-                    }), r.createElement(c.T, {
+                    }), r.createElement(c.U, {
                         to: t,
                         hoverUnderlineNone: !0
-                    }, r.createElement(c.Va, {
-                        display: c.W.InlineFlex,
-                        flexDirection: c.Y.Row,
+                    }, r.createElement(c.Wa, {
+                        display: c.X.InlineFlex,
+                        flexDirection: c.Z.Row,
                         alignItems: c.f.Center
-                    }, r.createElement(c.V, {
-                        type: c.Nb.H5
-                    }, Object(s.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.mb, {
-                        asset: c.nb.AngleRight,
+                    }, r.createElement(c.W, {
+                        type: c.Ob.H5
+                    }, Object(s.d)("Expand All", "VideoShelfExpandLink")), r.createElement(c.nb, {
+                        asset: c.ob.AngleRight,
                         height: 14
                     })))
                 });
@@ -156,27 +156,27 @@
                     e.Title = "title", e.SubTitle = "subtitle"
                 }(n || (n = {}));
             var p = function(e) {
-                if (!e.titleMessage) return r.createElement(c.cb, {
+                if (!e.titleMessage) return r.createElement(c.db, {
                     width: 200
                 });
-                var t = r.createElement(c.V, {
-                        type: c.Nb.H4,
+                var t = r.createElement(c.W, {
+                        type: c.Ob.H4,
                         color: c.O.Base,
                         bold: !0,
                         "data-test-selector": n.Title
                     }, e.titleMessage),
                     i = e.subTitle;
-                return e.subTitle && "string" == typeof e.subTitle ? i = r.createElement(c.V, {
+                return e.subTitle && "string" == typeof e.subTitle ? i = r.createElement(c.W, {
                     color: c.O.Alt2,
-                    type: c.Nb.Span,
+                    type: c.Ob.Span,
                     "data-test-selector": n.SubTitle
-                }, e.subTitle) : e.subTitle && (i = r.createElement(c.Va, {
+                }, e.subTitle) : e.subTitle && (i = r.createElement(c.Wa, {
                     "data-test-selector": n.SubTitle
-                }, i)), r.createElement(r.Fragment, null, r.createElement(c.Va, {
-                    display: c.W.Flex,
-                    flexDirection: c.Y.Row,
+                }, i)), r.createElement(r.Fragment, null, r.createElement(c.Wa, {
+                    display: c.X.Flex,
+                    flexDirection: c.Z.Row,
                     alignItems: c.f.End
-                }, t, e.expandLink && r.createElement(c.Va, {
+                }, t, e.expandLink && r.createElement(c.Wa, {
                     padding: {
                         left: 1
                     }
@@ -235,7 +235,7 @@
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.data && !this.props.data.loading && this.props.data.currentUser && Object(h.b)(this.props.data.currentUser.followedVideos) || null;
-                        return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement("div", null, r.createElement(g.Va, {
+                        return !this.props.data || this.props.data.loading || e && 0 !== e.length ? r.createElement("div", null, r.createElement(g.Wa, {
                             padding: {
                                 bottom: 1
                             }
@@ -252,12 +252,12 @@
                                 source: {},
                                 itemType: c.TwitchDataType.Video
                             },
-                            videoCardSize: g.Ub.Large,
+                            videoCardSize: g.Vb.Large,
                             videos: e
                         })) : null
                     }, t
                 }(r.Component),
-                f = Object(o.compose)(Object(l.a)(m), Object(d.c)("LatestVideosFromFollowedCarousel"))(v)
+                f = Object(o.compose)(Object(l.a)(m), Object(d.b)("LatestVideosFromFollowedCarousel"))(v)
         },
         bdIb: function(e, t, i) {
             "use strict";
@@ -285,7 +285,7 @@
                             },
                             onClick: this.onClickHandler,
                             thumbnailImageProps: {
-                                src: this.props.clip.thumbnailURL || o.o.config.defaultStreamPreviewURL,
+                                src: this.props.clip.thumbnailURL || o.p.config.defaultStreamPreviewURL,
                                 alt: this.props.clip.title
                             },
                             channelDisplayName: this.props.clip.broadcaster && this.props.clip.broadcaster.displayName || "",
@@ -408,21 +408,21 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.unregisterScrollHandler && this.unregisterScrollHandler()
                     }, t.prototype.render = function() {
-                        return a.createElement(u.Na, {
+                        return a.createElement(u.Oa, {
                             margin: {
                                 y: 1
                             },
-                            position: u.db.Relative
+                            position: u.eb.Relative
                         }, a.createElement("div", {
                             className: "preview-card-carousel",
                             ref: this.refHandler
-                        }, a.createElement(u.Va, {
+                        }, a.createElement(u.Wa, {
                             className: "preview-card-carousel__child-container",
-                            overflow: u.Ya.Hidden,
-                            position: u.db.Relative,
+                            overflow: u.Za.Hidden,
+                            position: u.eb.Relative,
                             fullWidth: !0,
                             "data-test-selector": "child-container"
-                        }, a.createElement(u.Na, {
+                        }, a.createElement(u.Oa, {
                             margin: {
                                 bottom: 1
                             }
@@ -432,17 +432,17 @@
                                 transform: this.transformString()
                             },
                             "data-test-selector": "carousel-body"
-                        }, a.createElement(u.Tb, {
+                        }, a.createElement(u.Ub, {
                             noWrap: !0,
                             noGrow: !0,
-                            childWidth: this.props.cardWidth || u.Ub.Large,
-                            gutterSize: u.Vb.Small,
+                            childWidth: this.props.cardWidth || u.Vb.Large,
+                            gutterSize: u.Wb.Small,
                             "data-js-selector": h
-                        }, this.props.children)))), a.createElement(u.Va, {
+                        }, this.props.children)))), a.createElement(u.Wa, {
                             className: "preview-card-carousel__nav",
-                            display: u.W.Flex,
+                            display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.db.Absolute,
+                            position: u.eb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullHeight: !0
@@ -450,11 +450,11 @@
                             direction: m.DirectionPrevious,
                             disabled: !this.props.children || this.isBackButtonDisabled(),
                             onClickHandler: this.moveCarouselBackward
-                        })), a.createElement(u.Va, {
+                        })), a.createElement(u.Wa, {
                             className: "preview-card-carousel__nav",
-                            display: u.W.Flex,
+                            display: u.X.Flex,
                             alignItems: u.f.Center,
-                            position: u.db.Absolute,
+                            position: u.eb.Absolute,
                             attachTop: !0,
                             attachRight: !0,
                             fullHeight: !0
@@ -480,17 +480,17 @@
                     DirectionNext: "next"
                 },
                 v = ((n = {})[m.DirectionPrevious] = "previous", n[m.DirectionNext] = "next", n),
-                f = ((r = {})[m.DirectionPrevious] = u.nb.AngleLeft, r[m.DirectionNext] = u.nb.AngleRight, r),
+                f = ((r = {})[m.DirectionPrevious] = u.ob.AngleLeft, r[m.DirectionNext] = u.ob.AngleRight, r),
                 b = function(e) {
                     var t, i = v[e.direction],
                         n = ((t = {})[m.DirectionPrevious] = Object(l.d)("previous", "CarouselNavButton"), t[m.DirectionNext] = Object(l.d)("next", "CarouselNavButton"), t),
                         r = d("preview-card-carousel__button", "preview-card-carousel__button--" + i, {
                             "preview-card-carousel__button--disabled": e.disabled
                         });
-                    return a.createElement(u.Va, {
+                    return a.createElement(u.Wa, {
                         className: r,
-                        position: u.db.Relative,
-                        display: u.W.Flex,
+                        position: u.eb.Relative,
+                        display: u.X.Flex,
                         alignItems: u.f.Stretch
                     }, a.createElement(u.A, {
                         ariaLabel: n[e.direction],
@@ -506,7 +506,7 @@
                 k = i("XEwr"),
                 y = i("RXle"),
                 x = 10,
-                V = function(e) {
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -517,7 +517,7 @@
                                     var a = o[r];
                                     i.push(a.id), n.push(a.viewCount)
                                 }
-                                l.n.trackItemSectionLoad(s.__assign({
+                                l.o.trackItemSectionLoad(s.__assign({
                                     carousel_content: t.props.tracking.content,
                                     location: t.props.tracking.location,
                                     rendered_item_count: e.length,
@@ -531,7 +531,7 @@
                         }, t.onPreviewCardClick = function(e) {
                             if (t.props.videos) {
                                 var i = t.props.videos[e];
-                                l.n.trackItemSectionClick(s.__assign({
+                                l.o.trackItemSectionClick(s.__assign({
                                     carousel_content: t.props.tracking.content,
                                     item_id: i.id,
                                     item_index: e,
@@ -695,17 +695,17 @@
                         }, this.getVideoCards())
                     }, t
                 }(a.Component),
-                I = Object(c.c)("VideoCarousel", {
+                w = Object(c.b)("VideoCarousel", {
                     autoReportInteractive: !0
-                })(V);
+                })(I);
             i.d(t, "a", function() {
-                return w
+                return V
             });
-            var w = Object(o.connect)(function(e) {
+            var V = Object(o.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
-            })(I)
+            })(w)
         }
     }
 ]);

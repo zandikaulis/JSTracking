@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [207], {
+    [201], {
         "/ZC1": function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
@@ -30,16 +30,16 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(s.X, {
+                        return r.createElement(s.Y, {
                             dragOver: this.state.isDraggingOver,
                             error: this.props.error
-                        }, r.createElement(s.Na, {
-                            position: s.db.Absolute,
+                        }, r.createElement(s.Oa, {
+                            position: s.eb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: s.ac.Above
+                            zIndex: s.bc.Above
                         }, r.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -72,9 +72,9 @@
             }), n.d(t, "H", function() {
                 return p
             }), n.d(t, "n", function() {
-                return d
-            }), n.d(t, "A", function() {
                 return E
+            }), n.d(t, "A", function() {
+                return d
             }), n.d(t, "F", function() {
                 return m
             }), n.d(t, "r", function() {
@@ -92,13 +92,13 @@
             }), n.d(t, "d", function() {
                 return D
             }), n.d(t, "c", function() {
-                return N
-            }), n.d(t, "B", function() {
                 return O
+            }), n.d(t, "B", function() {
+                return N
             }), n.d(t, "b", function() {
-                return R
-            }), n.d(t, "a", function() {
                 return S
+            }), n.d(t, "a", function() {
+                return R
             }), n.d(t, "E", function() {
                 return A
             }), n.d(t, "m", function() {
@@ -110,25 +110,25 @@
             }), n.d(t, "I", function() {
                 return L
             }), n.d(t, "q", function() {
-                return P
-            }), n.d(t, "w", function() {
                 return U
+            }), n.d(t, "w", function() {
+                return P
             }), n.d(t, "f", function() {
-                return M
-            }), n.d(t, "g", function() {
                 return y
+            }), n.d(t, "g", function() {
+                return M
             }), n.d(t, "x", function() {
                 return F
             }), n.d(t, "k", function() {
-                return V
-            }), n.d(t, "p", function() {
                 return j
-            }), n.d(t, "u", function() {
+            }), n.d(t, "p", function() {
                 return k
-            }), n.d(t, "z", function() {
+            }), n.d(t, "u", function() {
                 return G
-            }), n.d(t, "y", function() {
+            }), n.d(t, "z", function() {
                 return w
+            }), n.d(t, "y", function() {
+                return V
             });
             var a = n("/7QA"),
                 r = n("0Log"),
@@ -158,11 +158,11 @@
                 return r.PubsubTopic.VideoThumbnailProcessing + "." + e
             }
 
-            function d(e) {
+            function E(e) {
                 return r.PubsubTopic.ImageUpload + "." + e
             }
 
-            function E(e) {
+            function d(e) {
                 return r.PubsubTopic.UploadService + "." + e
             }
 
@@ -198,19 +198,19 @@
                 return r.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
-            function N(e) {
+            function O(e) {
                 return r.PubsubTopic.BitsLeaderboardEvents + "." + e.id
             }
 
-            function O(e) {
+            function N(e) {
                 return r.PubsubTopic.UserBitsUpdates + "." + e
             }
 
-            function R() {
+            function S() {
                 return r.PubsubTopic.BitsCampaignEvents + ".updates"
             }
 
-            function S(e) {
+            function R(e) {
                 return r.PubsubTopic.ChannelBitsPinEvents + "." + e
             }
 
@@ -234,19 +234,19 @@
                 return r.PubsubTopic.Whispers + "." + e
             }
 
-            function P(e) {
+            function U(e) {
                 return r.PubsubTopic.OnsiteNotifications + "." + e
             }
 
-            function U(e) {
+            function P(e) {
                 return r.PubsubTopic.StreamChatRoom + "." + e
             }
 
-            function M(e) {
+            function y(e) {
                 return r.PubsubTopic.ChannelEventUpdates + "." + e
             }
 
-            function y(e) {
+            function M(e) {
                 return r.PubsubTopic.ChannelSquadUpdates + "." + e
             }
 
@@ -254,20 +254,20 @@
                 return r.PubsubTopic.SubscribersCSV + "." + e
             }
 
-            function V(e) {
+            function j(e) {
                 return r.PubsubTopic.CheerbombEventsTopic + "." + e
             }
 
-            function j(e) {
+            function k(e) {
                 return r.PubsubTopic.MysteryGift + "." + e
             }
 
-            function k(e) {
+            function G(e) {
                 return r.PubsubTopic.SquadUpdates + "." + e
             }
 
-            function G(e) {
-                return a.k.subscribe({
+            function w(e) {
+                return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
                         t.type && !e.type && !e.types || t.type && e.type && t.type !== e.type || t.type && e.types && !e.types.includes(t.type) || Object(s.e)(e.query, e.variables, function(n) {
@@ -279,8 +279,8 @@
                 })
             }
 
-            function w(e) {
-                return a.k.subscribe({
+            function V(e) {
+                return a.l.subscribe({
                     topic: e.topic,
                     onMessage: function(t) {
                         t.type && t.type !== e.type || Object(s.d)({
@@ -455,12 +455,12 @@
         By5U: function(e, t) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var a, r, s, i, o, c, u, l, p, d, E, m, _, h, g, T, f, I, D, N, O, R, S, A, C, b, v, L, P, U, M, y, F, V, j, k, G, w, B, H, x, Y, W, z, K, X, q, Z, J, Q, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, de, Ee, me, _e, he, ge, Te, fe, Ie, De, Ne, Oe, Re, Se, Ae, Ce, be, ve, Le, Pe, Ue, Me, ye, Fe, Ve, je, ke, Ge, we, Be, He, xe, Ye, We, ze, Ke, Xe, qe, Ze, Je, Qe, $e, et, tt, nt, at, rt, st, it, ot, ct;
+            var a, r, s, i, o, c, u, l, p, E, d, m, _, h, g, T, f, I, D, O, N, S, R, A, C, b, v, L, U, P, y, M, F, j, k, G, w, V, B, H, W, x, Y, K, z, X, q, Z, Q, J, $, ee, te, ne, ae, re, se, ie, oe, ce, ue, le, pe, Ee, de, me, _e, he, ge, Te, fe, Ie, De, Oe, Ne, Se, Re, Ae, Ce, be, ve, Le, Ue, Pe, ye, Me, Fe, je, ke, Ge, we, Ve, Be, He, We, xe, Ye, Ke, ze, Xe, qe, Ze, Qe, Je, $e, et, tt, nt, at, rt, st, it, ot, ct;
             n.d(t, "c", function() {
                     return r
-                }), n.d(t, "E", function() {
+                }), n.d(t, "F", function() {
                     return o
-                }), n.d(t, "x", function() {
+                }), n.d(t, "y", function() {
                     return c
                 }), n.d(t, "g", function() {
                     return _
@@ -469,74 +469,76 @@
                 }), n.d(t, "f", function() {
                     return I
                 }), n.d(t, "j", function() {
-                    return O
-                }), n.d(t, "N", function() {
-                    return R
-                }), n.d(t, "G", function() {
+                    return N
+                }), n.d(t, "O", function() {
                     return S
+                }), n.d(t, "H", function() {
+                    return R
                 }), n.d(t, "o", function() {
                     return A
-                }), n.d(t, "F", function() {
+                }), n.d(t, "G", function() {
                     return v
                 }), n.d(t, "b", function() {
                     return F
-                }), n.d(t, "p", function() {
+                }), n.d(t, "q", function() {
                     return j
-                }), n.d(t, "I", function() {
-                    return k
-                }), n.d(t, "K", function() {
+                }), n.d(t, "p", function() {
                     return G
-                }), n.d(t, "z", function() {
+                }), n.d(t, "J", function() {
                     return w
                 }), n.d(t, "L", function() {
+                    return V
+                }), n.d(t, "A", function() {
                     return B
-                }), n.d(t, "q", function() {
+                }), n.d(t, "M", function() {
+                    return H
+                }), n.d(t, "r", function() {
                     return Y
                 }), n.d(t, "n", function() {
-                    return W
-                }), n.d(t, "J", function() {
+                    return K
+                }), n.d(t, "K", function() {
                     return z
                 }), n.d(t, "a", function() {
-                    return K
-                }), n.d(t, "t", function() {
                     return X
-                }), n.d(t, "v", function() {
+                }), n.d(t, "u", function() {
                     return q
-                }), n.d(t, "B", function() {
-                    return J
+                }), n.d(t, "w", function() {
+                    return Z
                 }), n.d(t, "C", function() {
-                    return Q
-                }), n.d(t, "A", function() {
-                    return ee
+                    return J
                 }), n.d(t, "D", function() {
+                    return $
+                }), n.d(t, "B", function() {
                     return te
-                }), n.d(t, "M", function() {
-                    return Ee
+                }), n.d(t, "E", function() {
+                    return ne
+                }), n.d(t, "N", function() {
+                    return me
                 }), n.d(t, "l", function() {
                     return Ne
                 }), n.d(t, "k", function() {
-                    return Oe
-                }), n.d(t, "O", function() {
-                    return Ce
+                    return Se
+                }), n.d(t, "P", function() {
+                    return be
                 }), n.d(t, "m", function() {
-                    return ye
-                }), n.d(t, "y", function() {
+                    return Me
+                }), n.d(t, "z", function() {
                     return Fe
-                }), n.d(t, "s", function() {
-                    return Ge
+                }), n.d(t, "t", function() {
+                    return we
                 }), n.d(t, "i", function() {
                     return Be
                 }), n.d(t, "h", function() {
                     return He
-                }), n.d(t, "u", function() {
-                    return xe
-                }), n.d(t, "H", function() {
+                }), n.d(t, "v", function() {
                     return We
-                }), n.d(t, "w", function() {
-                    return Qe
+                }), n.d(t, "I", function() {
+                    return Ye
+                }), n.d(t, "x", function() {
+                    return Je
                 }), n.d(t, "d", function() {
                     return it
-                }), n.d(t, "r", function() {
+                }), n.d(t, "s", function() {
                     return ot
                 }),
                 function(e) {
@@ -568,10 +570,10 @@
                 }(p || (p = {})),
                 function(e) {
                     e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
-                }(d || (d = {})),
+                }(E || (E = {})),
                 function(e) {
                     e.AR = "AR", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.EN_GB = "EN_GB", e.ES = "ES", e.ES_MX = "ES_MX", e.FI = "FI", e.FR = "FR", e.HI = "HI", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.PL = "PL", e.PT = "PT", e.PT_BR = "PT_BR", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_CN = "ZH_CN", e.ZH_TW = "ZH_TW"
-                }(E || (E = {})),
+                }(d || (d = {})),
                 function(e) {
                     e.AR = "AR", e.ASL = "ASL", e.BG = "BG", e.CS = "CS", e.DA = "DA", e.DE = "DE", e.EL = "EL", e.EN = "EN", e.ES = "ES", e.FI = "FI", e.FR = "FR", e.HU = "HU", e.IT = "IT", e.JA = "JA", e.KO = "KO", e.NL = "NL", e.NO = "NO", e.OTHER = "OTHER", e.PL = "PL", e.PT = "PT", e.RO = "RO", e.RU = "RU", e.SK = "SK", e.SV = "SV", e.TH = "TH", e.TR = "TR", e.VI = "VI", e.ZH = "ZH", e.ZH_HK = "ZH_HK"
                 }(m || (m = {})),
@@ -598,16 +600,16 @@
                 }(D || (D = {})),
                 function(e) {
                     e.CHEER = "CHEER"
-                }(N || (N = {})),
-                function(e) {
-                    e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
                 }(O || (O = {})),
                 function(e) {
+                    e.CREATED = "CREATED", e.CREATING = "CREATING", e.FAILED = "FAILED"
+                }(N || (N = {})),
+                function(e) {
                     e.PRIVATE = "PRIVATE", e.PUBLIC = "PUBLIC"
-                }(R || (R = {})),
+                }(S || (S = {})),
                 function(e) {
                     e.ENDED = "ENDED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.UNKNOWN = "UNKNOWN"
-                }(S || (S = {})),
+                }(R || (R = {})),
                 function(e) {
                     e.ARCHIVES_DISABLED = "ARCHIVES_DISABLED", e.BROADCASTER_NOT_LIVE = "BROADCASTER_NOT_LIVE", e.BROADCAST_FORMAT_INVALID_PREMIERE = "BROADCAST_FORMAT_INVALID_PREMIERE", e.BROADCAST_FORMAT_INVALID_RERUN = "BROADCAST_FORMAT_INVALID_RERUN", e.INTERNAL_SERVER_ERROR = "INTERNAL_SERVER_ERROR", e.MAX_DESCRIPTION_LENGTH_EXCEEDED = "MAX_DESCRIPTION_LENGTH_EXCEEDED", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED", e.VOD_NOT_READY = "VOD_NOT_READY"
                 }(A || (A = {})),
@@ -625,40 +627,43 @@
                 }(L || (L = {})),
                 function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(P || (P = {})),
-                function(e) {
-                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
                 }(U || (U = {})),
                 function(e) {
+                    e.FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED = "FOLLOWER_ONLY_MODE_ENFORCEMENT_FAILED", e.SUB_ONLY_MODE_ENFORCEMENT_FAILED = "SUB_ONLY_MODE_ENFORCEMENT_FAILED", e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT"
+                }(P || (P = {})),
+                function(e) {
                     e.TOKEN_NOT_AVAILABLE = "TOKEN_NOT_AVAILABLE", e.TOKEN_NOT_FOUND = "TOKEN_NOT_FOUND"
-                }(M || (M = {})),
+                }(y || (y = {})),
                 function(e) {
                     e.AVAILABLE = "AVAILABLE", e.DISMISSED = "DISMISSED", e.ELIGIBLE = "ELIGIBLE", e.REDEEMED = "REDEEMED"
-                }(y || (y = {})),
+                }(M || (M = {})),
                 function(e) {
                     e.DURATION_INVALID = "DURATION_INVALID", e.FORBIDDEN = "FORBIDDEN", e.TARGET_ALREADY_BANNED = "TARGET_ALREADY_BANNED", e.TARGET_IS_ADMIN = "TARGET_IS_ADMIN", e.TARGET_IS_ANONYMOUS = "TARGET_IS_ANONYMOUS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_GLOBAL_MOD = "TARGET_IS_GLOBAL_MOD", e.TARGET_IS_MOD = "TARGET_IS_MOD", e.TARGET_IS_SELF = "TARGET_IS_SELF", e.TARGET_IS_STAFF = "TARGET_IS_STAFF", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(F || (F = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
-                }(V || (V = {})),
-                function(e) {
-                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
+                    e.FORBIDDEN = "FORBIDDEN", e.SUCCESS = "SUCCESS", e.TARGET_IS_BROADCASTER = "TARGET_IS_BROADCASTER", e.TARGET_IS_MODERATOR = "TARGET_IS_MODERATOR"
                 }(j || (j = {})),
                 function(e) {
-                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
+                    e.FORBIDDEN = "FORBIDDEN", e.TARGET_NOT_BANNED = "TARGET_NOT_BANNED", e.TARGET_NOT_FOUND = "TARGET_NOT_FOUND"
                 }(k || (k = {})),
                 function(e) {
-                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
+                    e.EUR = "EUR", e.GBP = "GBP", e.USD = "USD"
                 }(G || (G = {})),
                 function(e) {
-                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
+                    e.MONTH = "MONTH", e.ONE_TIME = "ONE_TIME", e.WEEK = "WEEK", e.YEAR = "YEAR"
                 }(w || (w = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
+                    e.CHANSUB = "CHANSUB", e.TEAMSUB = "TEAMSUB", e.TURBO = "TURBO"
+                }(V || (V = {})),
+                function(e) {
+                    e.GOOGLE_IAB = "GOOGLE_IAB", e.PRIME = "PRIME", e.RECURLY = "RECURLY", e.XSOLLA_V3 = "XSOLLA_V3", e.ZUORA = "ZUORA"
                 }(B || (B = {})),
                 function(e) {
-                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                    e.ACTIVE = "ACTIVE", e.CANCELLED = "CANCELLED", e.INACTIVE = "INACTIVE"
                 }(H || (H = {})),
+                function(e) {
+                    e.AMAZON = "AMAZON", e.CREDIT_CARD = "CREDIT_CARD", e.GOOGLE_IAB = "GOOGLE_IAB", e.PAYPAL = "PAYPAL"
+                }(W || (W = {})),
                 function(e) {
                     e.AMERICAN_EXPRESS = "AMERICAN_EXPRESS", e.DISCOVER = "DISCOVER", e.MASTERCARD = "MASTERCARD", e.VISA = "VISA"
                 }(x || (x = {})),
@@ -667,154 +672,151 @@
                 }(Y || (Y = {})),
                 function(e) {
                     e.CATEGORY = "CATEGORY", e.CLIP = "CLIP", e.LIVE_CHANNEL = "LIVE_CHANNEL", e.VOD = "VOD"
-                }(W || (W = {})),
+                }(K || (K = {})),
                 function(e) {
                     e.ANDROID = "ANDROID", e.IOS = "IOS", e.WEB = "WEB"
                 }(z || (z = {})),
                 function(e) {
                     e.ACTIVE = "ACTIVE", e.INACTIVE = "INACTIVE", e.REJECTED_PERMISSIONS = "REJECTED_PERMISSIONS"
-                }(K || (K = {})),
-                function(e) {
-                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(X || (X = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
+                    e.COMPONENT = "COMPONENT", e.HIDDEN = "HIDDEN", e.PANEL = "PANEL", e.VIDEO_OVERLAY = "VIDEO_OVERLAY"
                 }(q || (q = {})),
                 function(e) {
-                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                    e.APPROVED = "APPROVED", e.ASSETS_UPLOADED = "ASSETS_UPLOADED", e.DELETED = "DELETED", e.DEPRECATED = "DEPRECATED", e.IN_REVIEW = "IN_REVIEW", e.IN_TEST = "IN_TEST", e.PENDING_ACTION = "PENDING_ACTION", e.READY_FOR_REVIEW = "READY_FOR_REVIEW", e.REJECTED = "REJECTED", e.RELEASED = "RELEASED", e.UPLOADING = "UPLOADING"
                 }(Z || (Z = {})),
+                function(e) {
+                    e.GAME_COMMERCE = "GAME_COMMERCE", e.GAME_COMMERCE_V2 = "GAME_COMMERCE_V2"
+                }(Q || (Q = {})),
                 function(e) {
                     e.AFFILIATE = "AFFILIATE", e.CUSTOM_PARTNER = "CUSTOM_PARTNER", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PREMIUM_PARTNER = "PREMIUM_PARTNER", e.STANDARD_PARTNER = "STANDARD_PARTNER", e.UNPAID_PARTNER = "UNPAID_PARTNER"
                 }(J || (J = {})),
                 function(e) {
                     e.AGREEMENT_NOT_STARTED = "AGREEMENT_NOT_STARTED", e.AGREEMENT_PENDING_UPGRADE = "AGREEMENT_PENDING_UPGRADE", e.CANCELED = "CANCELED", e.COMPLETED = "COMPLETED", e.PAYOUT_METHOD_NOT_STARTED = "PAYOUT_METHOD_NOT_STARTED", e.PAYOUT_METHOD_PENDING = "PAYOUT_METHOD_PENDING", e.REGISTRATION_NOT_STARTED = "REGISTRATION_NOT_STARTED", e.REVIEW_PENDING = "REVIEW_PENDING", e.ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED = "ROYALTY_TAX_INTERVIEW_ACTION_REQUIRED", e.ROYALTY_TAX_INTERVIEW_FAILED = "ROYALTY_TAX_INTERVIEW_FAILED", e.ROYALTY_TAX_INTERVIEW_MISMATCH = "ROYALTY_TAX_INTERVIEW_MISMATCH", e.ROYALTY_TAX_INTERVIEW_NOT_STARTED = "ROYALTY_TAX_INTERVIEW_NOT_STARTED", e.ROYALTY_TAX_INTERVIEW_PENDING = "ROYALTY_TAX_INTERVIEW_PENDING", e.SERVICE_TAX_INTERVIEW_ACTION_REQUIRED = "SERVICE_TAX_INTERVIEW_ACTION_REQUIRED", e.SERVICE_TAX_INTERVIEW_FAILED = "SERVICE_TAX_INTERVIEW_FAILED", e.SERVICE_TAX_INTERVIEW_MISMATCH = "SERVICE_TAX_INTERVIEW_MISMATCH", e.SERVICE_TAX_INTERVIEW_NOT_STARTED = "SERVICE_TAX_INTERVIEW_NOT_STARTED", e.SERVICE_TAX_INTERVIEW_PENDING = "SERVICE_TAX_INTERVIEW_PENDING"
-                }(Q || (Q = {})),
-                function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }($ || ($ = {})),
                 function(e) {
-                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_AGREEMENT_VERSION = "INVALID_AGREEMENT_VERSION", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(ee || (ee = {})),
                 function(e) {
-                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
+                    e.AFFILIATE = "AFFILIATE", e.EXTENSIONS_DEVELOPER = "EXTENSIONS_DEVELOPER", e.PARTNER = "PARTNER"
                 }(te || (te = {})),
                 function(e) {
-                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.CUSTOM = "CUSTOM", e.LEGACY = "LEGACY", e.PREMIUM = "PREMIUM", e.STANDARD = "STANDARD"
                 }(ne || (ne = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
+                    e.CITY = "CITY", e.COUNTRY = "COUNTRY", e.EMAIL = "EMAIL", e.NAME = "NAME", e.POSTAL = "POSTAL", e.STATE = "STATE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(ae || (ae = {})),
                 function(e) {
-                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
+                    e.FORBIDDEN = "FORBIDDEN", e.INTERNAL_ERROR = "INTERNAL_ERROR", e.INVALID_FORMAT = "INVALID_FORMAT", e.UNAUTHENTICATED = "UNAUTHENTICATED"
                 }(re || (re = {})),
                 function(e) {
-                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
+                    e.BIRTHDATE = "BIRTHDATE", e.CITY = "CITY", e.COMPANY_NAME = "COMPANY_NAME", e.COUNTRY_CODE = "COUNTRY_CODE", e.EMAIL = "EMAIL", e.FIRST_NAME = "FIRST_NAME", e.LAST_NAME = "LAST_NAME", e.MIDDLE_NAME = "MIDDLE_NAME", e.PARENT_EMAIL = "PARENT_EMAIL", e.PARENT_NAME = "PARENT_NAME", e.POSTAL = "POSTAL", e.STATE_CODE = "STATE_CODE", e.STREET_ADDRESS = "STREET_ADDRESS", e.STREET_ADDRESS_2 = "STREET_ADDRESS_2"
                 }(se || (se = {})),
                 function(e) {
-                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
+                    e.ROYALTY = "ROYALTY", e.SERVICE = "SERVICE"
                 }(ie || (ie = {})),
                 function(e) {
-                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.BROADCASTER = "BROADCASTER", e.EVERYONE = "EVERYONE", e.MODERATOR = "MODERATOR", e.SUBSCRIBER = "SUBSCRIBER"
                 }(oe || (oe = {})),
                 function(e) {
-                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
+                    e.MAX_ROOMS_LIMIT_EXCEEDED = "MAX_ROOMS_LIMIT_EXCEEDED", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(ce || (ce = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
+                    e.ADMIN = "ADMIN", e.BROADCASTER = "BROADCASTER", e.GLOBALMOD = "GLOBALMOD", e.MOD = "MOD", e.REGULAR = "REGULAR", e.STAFF = "STAFF"
                 }(ue || (ue = {})),
                 function(e) {
-                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
+                    e.FORBIDDEN = "FORBIDDEN", e.NAME_CONTAINS_INVALID_CHARACTERS = "NAME_CONTAINS_INVALID_CHARACTERS", e.NAME_INAPPROPRIATE = "NAME_INAPPROPRIATE", e.NAME_LENGTH_INVALID = "NAME_LENGTH_INVALID", e.NAME_NOT_UNIQUE = "NAME_NOT_UNIQUE", e.ROLES_INVALID = "ROLES_INVALID", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.TOPIC_INAPPROPRIATE = "TOPIC_INAPPROPRIATE", e.TOPIC_LENGTH_INVALID = "TOPIC_LENGTH_INVALID"
                 }(le || (le = {})),
                 function(e) {
-                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                    e.AUTO_MOD_ENFORCEMENT_FAILED = "AUTO_MOD_ENFORCEMENT_FAILED", e.EMOTE_ONLY_MODE_ENFORCEMENT_FAILED = "EMOTE_ONLY_MODE_ENFORCEMENT_FAILED", e.FORBIDDEN = "FORBIDDEN", e.R9K_MODE_ENFORCEMENT_FAILED = "R9K_MODE_ENFORCEMENT_FAILED", e.RATE_LIMIT_FAILED = "RATE_LIMIT_FAILED", e.SLOW_MODE_ENFORCEMENT_FAILED = "SLOW_MODE_ENFORCEMENT_FAILED", e.SPAM_ENFORCEMENT_FAILED = "SPAM_ENFORCEMENT_FAILED", e.USER_CHAT_BANNED = "USER_CHAT_BANNED", e.USER_CHAT_TIMED_OUT = "USER_CHAT_TIMED_OUT", e.USER_SUSPENDED = "USER_SUSPENDED", e.ZALGO_ENFORCEMENT_FAILED = "ZALGO_ENFORCEMENT_FAILED"
                 }(pe || (pe = {})),
+                function(e) {
+                    e.FORBIDDEN = "FORBIDDEN", e.ROOM_NOT_FOUND = "ROOM_NOT_FOUND", e.SLOW_MODE_DURATION_INVALID = "SLOW_MODE_DURATION_INVALID"
+                }(Ee || (Ee = {})),
                 function(e) {
                     e.CSGO_SKILL = "CSGO_SKILL", e.LOL_SUMMONER_RANK = "LOL_SUMMONER_RANK", e.RELEVANCE = "RELEVANCE", e.VIEWER_COUNT = "VIEWER_COUNT"
                 }(de || (de = {})),
                 function(e) {
                     e.CONTENT = "CONTENT", e.TOP = "TOP"
-                }(Ee || (Ee = {})),
-                function(e) {
-                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(me || (me = {})),
                 function(e) {
-                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.AWAY = "AWAY", e.BUSY = "BUSY", e.OFFLINE = "OFFLINE", e.ONLINE = "ONLINE"
                 }(_e || (_e = {})),
                 function(e) {
-                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
+                    e.CLAIMABLE_GIFT_CREATION_ERROR = "CLAIMABLE_GIFT_CREATION_ERROR", e.GIFT_CREATION_ERROR = "GIFT_CREATION_ERROR", e.MAX_GIFTS_FOR_OFFER_EXCEEDED = "MAX_GIFTS_FOR_OFFER_EXCEEDED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(he || (he = {})),
                 function(e) {
-                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
+                    e.CLAIM_CODE = "CLAIM_CODE", e.DIRECT_ENTITLEMENT = "DIRECT_ENTITLEMENT", e.EXTERNAL = "EXTERNAL"
                 }(ge || (ge = {})),
                 function(e) {
-                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
+                    e.ERROR_STATUS = "ERROR_STATUS", e.GIFT_CLAIMED = "GIFT_CLAIMED", e.GIFT_CLAIM_PENDING = "GIFT_CLAIM_PENDING"
                 }(Te || (Te = {})),
                 function(e) {
-                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
+                    e.GIFT_NOT_CLAIMABLE = "GIFT_NOT_CLAIMABLE", e.NON_EXISTENT_GIFT = "NON_EXISTENT_GIFT", e.UNKNOWN_ERROR = "UNKNOWN_ERROR", e.USER_DOES_NOT_OWN_GIFT = "USER_DOES_NOT_OWN_GIFT"
                 }(fe || (fe = {})),
                 function(e) {
-                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
+                    e.OFFERS_FAILED_TO_UPDATE = "OFFERS_FAILED_TO_UPDATE", e.UNKNOWN = "UNKNOWN"
                 }(Ie || (Ie = {})),
                 function(e) {
-                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
+                    e.TOO_MANY_RECENT_SPENDS = "TOO_MANY_RECENT_SPENDS", e.UNABLE_TO_SPEND = "UNABLE_TO_SPEND"
                 }(De || (De = {})),
+                function(e) {
+                    e.OFFER_ALREADY_CLAIMED = "OFFER_ALREADY_CLAIMED", e.UNKNOWN = "UNKNOWN"
+                }(Oe || (Oe = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.SERIES = "SERIES"
                 }(Ne || (Ne = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK", e.TRENDING = "TRENDING"
-                }(Oe || (Oe = {})),
+                }(Se || (Se = {})),
                 function(e) {
                     e.ALL_TIME = "ALL_TIME", e.LAST_DAY = "LAST_DAY", e.LAST_MONTH = "LAST_MONTH", e.LAST_WEEK = "LAST_WEEK"
                 }(Re || (Re = {})),
                 function(e) {
                     e.CREATED_AT_ASC = "CREATED_AT_ASC", e.CREATED_AT_DESC = "CREATED_AT_DESC", e.TRENDING = "TRENDING", e.VIEWS_ASC = "VIEWS_ASC", e.VIEWS_DESC = "VIEWS_DESC"
-                }(Se || (Se = {})),
-                function(e) {
-                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(Ae || (Ae = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
+                    e.HIGH = "HIGH", e.LOW = "LOW", e.MEDIUM = "MEDIUM"
                 }(Ce || (Ce = {})),
                 function(e) {
-                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.NOT_RESTRICTED = "NOT_RESTRICTED", e.PERMITTED = "PERMITTED", e.TEMPORARY = "TEMPORARY"
                 }(be || (be = {})),
                 function(e) {
-                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
+                    e.BODY_EMPTY = "BODY_EMPTY", e.NOT_DELIVERED = "NOT_DELIVERED", e.TARGET_BANNED = "TARGET_BANNED", e.TARGET_RESTRICTED = "TARGET_RESTRICTED"
                 }(ve || (ve = {})),
                 function(e) {
-                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
+                    e.ALREADY_LINKED = "ALREADY_LINKED", e.CODE_EXPIRED = "CODE_EXPIRED", e.CODE_INCORRECT = "CODE_INCORRECT"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.COMMUNITIES = "COMMUNITIES", e.CREATIVE = "CREATIVE", e.GAMES = "GAMES"
-                }(Pe || (Pe = {})),
-                function(e) {
-                    e.ASC = "ASC", e.DESC = "DESC"
+                    e.all = "all", e.ps4 = "ps4", e.xbox = "xbox"
                 }(Ue || (Ue = {})),
                 function(e) {
+                    e.ASC = "ASC", e.DESC = "DESC"
+                }(Pe || (Pe = {})),
+                function(e) {
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
-                }(Me || (Me = {})),
+                }(ye || (ye = {})),
                 function(e) {
                     e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
-                }(ye || (ye = {})),
+                }(Me || (Me = {})),
                 function(e) {
                     e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(Fe || (Fe = {})),
                 function(e) {
                     e.BITS_KEY_CODE = "BITS_KEY_CODE"
-                }(Ve || (Ve = {})),
-                function(e) {
-                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
                 }(je || (je = {})),
                 function(e) {
-                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
+                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
                 }(ke || (ke = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
+                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(we || (we = {})),
+                function(e) {
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                }(Ve || (Ve = {})),
                 function(e) {
                     e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Be || (Be = {})),
@@ -823,19 +825,19 @@
                 }(He || (He = {})),
                 function(e) {
                     e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
-                }(xe || (xe = {})),
-                function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
-                }(Ye || (Ye = {})),
-                function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(We || (We = {})),
                 function(e) {
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                }(xe || (xe = {})),
+                function(e) {
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                }(Ye || (Ye = {})),
+                function(e) {
                     e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
-                }(ze || (ze = {})),
+                }(Ke || (Ke = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
-                }(Ke || (Ke = {})),
+                }(ze || (ze = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(Xe || (Xe = {})),
@@ -847,10 +849,10 @@
                 }(Ze || (Ze = {})),
                 function(e) {
                     e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
-                }(Je || (Je = {})),
+                }(Qe || (Qe = {})),
                 function(e) {
                     e.ALL = "ALL", e.LIVE = "LIVE"
-                }(Qe || (Qe = {})),
+                }(Je || (Je = {})),
                 function(e) {
                     e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }($e || ($e = {})),
@@ -898,14 +900,14 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Sa, {
+                        return r.createElement(c.Ta, {
                             onClick: this.onClick
-                        }, r.createElement(c.Va, {
+                        }, r.createElement(c.Wa, {
                             padding: 1
-                        }, r.createElement(c.V, null, this.props.game.name)))
+                        }, r.createElement(c.W, null, this.props.game.name)))
                     }, t
                 }(r.Component),
-                l = Object(s.compose)(Object(o.c)("DevGameSuggestion", {
+                l = Object(s.compose)(Object(o.b)("DevGameSuggestion", {
                     autoReportInteractive: !0
                 }))(u),
                 p = function(e) {
@@ -916,14 +918,14 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(c.Gb, {
+                        return r.createElement(c.Hb, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })
                     }, t
                 }(r.Component),
-                d = 100,
-                E = "GAME_SEARCH_INPUT_SELECTOR",
+                E = 100,
+                d = "GAME_SEARCH_INPUT_SELECTOR",
                 m = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -938,7 +940,7 @@
                             }, function() {
                                 n.inputTimer && (clearTimeout(n.inputTimer), n.inputTimer = 0), n.inputTimer = setTimeout(function() {
                                     return n.props.onInputChange(n.state.searchTerm)
-                                }, d)
+                                }, E)
                             })
                         }, n.onClickOut = function() {
                             n.setState({
@@ -969,8 +971,8 @@
                             })
                         }, n.renderSelections = function() {
                             return n.state.games.map(function(e, t) {
-                                return r.createElement(c.Va, {
-                                    display: c.W.InlineBlock,
+                                return r.createElement(c.Wa, {
+                                    display: c.X.InlineBlock,
                                     padding: {
                                         right: .5
                                     }
@@ -1015,30 +1017,30 @@
                         var e = this.renderSuggestions(),
                             t = this.renderSelections(),
                             n = !this.props.multi && this.state.games.length > 0;
-                        return r.createElement(c.Va, null, r.createElement(i.a, {
+                        return r.createElement(c.Wa, null, r.createElement(i.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(c.Va, {
-                            position: c.db.Relative,
+                        }, r.createElement(c.Wa, {
+                            position: c.eb.Relative,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(c.Pa, {
-                            "data-test-selector": E,
+                        }, r.createElement(c.Qa, {
+                            "data-test-selector": d,
                             value: this.state.searchTerm,
                             onChange: this.onGameSearch,
-                            type: c.Ra.Text,
+                            type: c.Sa.Text,
                             onFocus: this.onFocus,
                             disabled: n
                         }), r.createElement(c.u, {
                             show: this.state.showSuggestions
-                        }, e)), r.createElement(c.Va, {
+                        }, e)), r.createElement(c.Wa, {
                             padding: {
                                 bottom: .5
                             }
                         }, t)))
                     }, t
                 }(r.Component),
-                _ = Object(s.compose)(Object(o.c)("DevGameSearch", {
+                _ = Object(s.compose)(Object(o.b)("DevGameSearch", {
                     autoReportInteractive: !0
                 }))(m),
                 h = function(e) {
@@ -1082,7 +1084,7 @@
                 f = n("1mFg"),
                 I = g.a + "/kraken/search/games",
                 D = 7,
-                N = function(e) {
+                O = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -1134,7 +1136,7 @@
             n.d(t, "a", function() {
                 return h
             }), n.d(t, "b", function() {
-                return N
+                return O
             })
         },
         GIun: function(e, t, n) {
@@ -1158,7 +1160,7 @@
                     return a
                 }),
                 function(e) {
-                    e.Games = "game", e.Videos = "vod", e.Users = "user", e.Channels = "live_channel", e.Communities = "community", e.StreamTags = "stream_tag", e.Tags = "tag"
+                    e.Games = "game", e.Videos = "vod", e.Users = "user", e.Channels = "live_channel", e.StreamTags = "stream_tag", e.Tags = "tag"
                 }(a || (a = {}))
         },
         HEnu: function(e, t, n) {
@@ -1196,11 +1198,11 @@
                         (this.dateDidChange(e.minDate, this.props.minDate) || this.dateDidChange(e.maxDate, this.props.maxDate)) && this.setDateRangeIfPresent(this.props.minDate, this.props.maxDate), this.dateDidChange(e.defaultDate, this.props.defaultDate) && this.setDate(this.props.defaultDate)
                     }, t.prototype.render = function() {
                         var e = this.props.inputProps;
-                        return i.createElement(o.Va, {
+                        return i.createElement(o.Wa, {
                             className: "date-picker",
                             "data-a-target": "date-picker"
-                        }, i.createElement(o.Pa, a.__assign({
-                            type: o.Ra.Text,
+                        }, i.createElement(o.Qa, a.__assign({
+                            type: o.Sa.Text,
                             refDelegate: this.setInputRef
                         }, e)), i.createElement("div", {
                             className: "date-picker__container",
@@ -1378,8 +1380,8 @@
                 u = n("H/lO"),
                 l = n("NZDK"),
                 p = n("fvjX"),
-                d = n("N3I0"),
-                E = n("GIun"),
+                E = n("N3I0"),
+                d = n("GIun"),
                 m = n("8/mp"),
                 _ = n("GnwI"),
                 h = n("N0BP"),
@@ -1394,12 +1396,12 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.user.avatar || Object(g.c)(this.props.user.id, 64);
-                        return r.createElement(T.Va, a.__assign({
+                        return r.createElement(T.Wa, a.__assign({
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(h.a)(this.props)), r.createElement(T.Sa, {
+                        }, Object(h.a)(this.props)), r.createElement(T.Ta, {
                             onClick: this.onSelect
                         }, r.createElement(T.G, {
                             row: !0
@@ -1408,17 +1410,17 @@
                             src: e,
                             size: T.J.Size4,
                             aspect: T.p.Aspect1x1
-                        }), r.createElement(T.Va, {
+                        }), r.createElement(T.Wa, {
                             flexGrow: 1,
-                            display: T.W.Flex,
-                            position: T.db.Relative
-                        }, r.createElement(T.Na, {
+                            display: T.X.Flex,
+                            position: T.eb.Relative
+                        }, r.createElement(T.Oa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, r.createElement(T.V, {
-                            type: T.Nb.Span,
+                        }, r.createElement(T.W, {
+                            type: T.Ob.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -1428,10 +1430,10 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.userSearch = null, t.renderSearchContent = function() {
                             var e = null;
-                            return t.props.waiting ? e = r.createElement(T.Xa, {
+                            return t.props.waiting ? e = r.createElement(T.Ya, {
                                 fillContent: !0
                             }) : t.props.userResults && (e = t.props.userResults.map(function(e) {
-                                return r.createElement(E.a, {
+                                return r.createElement(d.a, {
                                     key: e.id
                                 }, r.createElement(f, {
                                     user: e,
@@ -1448,7 +1450,7 @@
                         this.userSearch && e.open !== this.props.open && this.userSearch.toggle(e.open)
                     }, t.prototype.render = function() {
                         var e = this.renderSearchContent();
-                        return r.createElement(T.Va, null, r.createElement(d.a, {
+                        return r.createElement(T.Wa, null, r.createElement(E.a, {
                             onChange: this.props.onInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
@@ -1459,21 +1461,21 @@
                                 size: T.w.Large
                             },
                             onClose: this.props.onSearchClose
-                        }, r.createElement(T.Va, {
+                        }, r.createElement(T.Wa, {
                             className: "user-search__user-search"
                         }, r.createElement(m.b, {
                             contentClassName: "user-search__user-search-content",
                             suppressScrollX: !0
-                        }, r.createElement(T.Va, {
+                        }, r.createElement(T.Wa, {
                             fullWidth: !0
                         }, e)))))
                     }, t
                 }(r.Component),
-                D = Object(p.compose)(Object(_.c)("DevUserSearchDropdown", {
+                D = Object(p.compose)(Object(_.b)("DevUserSearchDropdown", {
                     autoReportInteractive: !0
                 }))(I),
-                N = 100,
-                O = function(e) {
+                O = 100,
+                N = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -1489,7 +1491,7 @@
                                 waiting: !0
                             }), n.inputTimer = setTimeout(function() {
                                 return n.doUserSearch(e)
-                            }, N)) : n.setState({
+                            }, O)) : n.setState({
                                 userResult: [],
                                 waiting: !1,
                                 searchTerm: ""
@@ -1506,7 +1508,7 @@
                                         case 2:
                                             return n = a.sent(), [3, 4];
                                         case 3:
-                                            return r = a.sent(), i.o.logger.error(r, "Algolia User Search failed"), this.setState({
+                                            return r = a.sent(), i.p.logger.error(r, "Algolia User Search failed"), this.setState({
                                                 waiting: !1,
                                                 searchOpen: !1
                                             }), [2];
@@ -1551,12 +1553,12 @@
                                 selected: !0
                             })
                         }, n.searchClient = new l.a({
-                            appId: i.o.config.algoliaApplicationID,
-                            apiKey: i.o.config.algoliaAPIKey,
-                            apolloClient: i.o.apollo.client,
-                            logger: i.o.logger,
-                            config: i.o.config,
-                            stats: i.o.stats
+                            appId: i.p.config.algoliaApplicationID,
+                            apiKey: i.p.config.algoliaAPIKey,
+                            apolloClient: i.p.apollo.client,
+                            logger: i.p.logger,
+                            config: i.p.config,
+                            stats: i.p.stats
                         }), n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
@@ -1571,17 +1573,17 @@
                         })
                     }, t
                 }(r.Component);
-            var R = Object(s.connect)(function(e) {
+            var S = Object(s.connect)(function(e) {
                 return {
                     user: Object(c.e)(e)
                 }
-            })(O);
+            })(N);
             n.d(t, !1, function() {
-                return N
-            }), n.d(t, !1, function() {
                 return O
+            }), n.d(t, !1, function() {
+                return N
             }), n.d(t, "a", function() {
-                return R
+                return S
             })
         },
         Lxz1: function(e, t, n) {
@@ -1599,7 +1601,7 @@
             }), n.d(t, "d", function() {
                 return p
             }), n.d(t, "b", function() {
-                return E
+                return d
             });
             var a, r = n("/7QA"),
                 s = n("2/NB"),
@@ -1629,10 +1631,10 @@
                 p = function() {
                     return Object(r.d)("Unexpected error while uploading your image. Please try again later", "ImageUploader")
                 },
-                d = ((a = {})[s.a.JPEG] = "JPG", a[s.a.PNG] = "PNG", a[s.a.GIF] = "GIF", a),
-                E = function(e) {
+                E = ((a = {})[s.a.JPEG] = "JPG", a[s.a.PNG] = "PNG", a[s.a.GIF] = "GIF", a),
+                d = function(e) {
                     var t = e.map(function(e) {
-                        return d[e]
+                        return E[e]
                     });
                     return t.length > 1 && (t[t.length - 1] = "or " + t[t.length - 1]), Object(r.d)("Incompatible format. File must be an image in {allowedTypes} format.", {
                         allowedTypes: t.join(", ")
@@ -1647,35 +1649,35 @@
                 i = n("/7QA"),
                 o = n("Ue10"),
                 c = function() {
-                    return r.createElement(o.Va, {
-                        display: o.W.Flex,
-                        flexDirection: o.Y.Column,
-                        justifyContent: o.Ua.Center,
+                    return r.createElement(o.Wa, {
+                        display: o.X.Flex,
+                        flexDirection: o.Z.Column,
+                        justifyContent: o.Va.Center,
                         alignItems: o.f.Center,
                         flexGrow: 1,
                         fullHeight: !0,
                         padding: {
                             y: 1
                         },
-                        zIndex: o.ac.Above
-                    }, r.createElement(o.xb, {
+                        zIndex: o.bc.Above
+                    }, r.createElement(o.yb, {
                         color: o.O.Alt2,
-                        textAlign: o.Jb.Center,
+                        textAlign: o.Kb.Center,
                         flexShrink: 1
-                    }, r.createElement(o.mb, {
-                        asset: o.nb.DeadGlitch,
+                    }, r.createElement(o.nb, {
+                        asset: o.ob.DeadGlitch,
                         width: 46,
                         height: 48
-                    })), r.createElement(o.Na, {
+                    })), r.createElement(o.Oa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Jb.Center
-                    }, r.createElement(o.V, {
-                        type: o.Nb.H4,
+                        textAlign: o.Kb.Center
+                    }, r.createElement(o.W, {
+                        type: o.Ob.H4,
                         "data-test-selector": "search-error-message"
-                    }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.V, {
-                        type: o.Nb.P
+                    }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(o.W, {
+                        type: o.Ob.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = n("8Ad5"),
@@ -1719,7 +1721,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? r.createElement(c, null) : r.Children.only(this.props.children),
-                            n = r.createElement(o.pb, {
+                            n = r.createElement(o.qb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -1734,23 +1736,23 @@
                             });
                         return this.props.inline ? r.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(o.xb, {
+                        }, r.createElement(o.yb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
-                            position: o.db.Relative,
+                            position: o.eb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(o.xb, {
+                        }, n, e && r.createElement(o.yb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
-                            display: this.state.isOpen ? o.W.Block : o.W.Hide,
+                            display: this.state.isOpen ? o.X.Block : o.X.Hide,
                             fullWidth: !0,
                             padding: {
                                 y: 1
                             },
-                            position: o.db.Absolute,
-                            zIndex: o.ac.Above,
+                            position: o.eb.Absolute,
+                            zIndex: o.bc.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -1805,48 +1807,48 @@
                             allowedFileTypes: this.props.allowedFileTypes,
                             onFilesSubmitted: this.props.processFiles,
                             error: !!this.props.errorMessage
-                        }, r.createElement(o.Va, {
+                        }, r.createElement(o.Wa, {
                             className: "image-uploader",
-                            textAlign: o.Jb.Center,
-                            display: o.W.Flex,
-                            flexDirection: o.Y.Column,
+                            textAlign: o.Kb.Center,
+                            display: o.X.Flex,
+                            flexDirection: o.Z.Column,
                             alignItems: o.f.Center,
-                            justifyContent: o.Ua.Center,
-                            position: o.db.Relative,
+                            justifyContent: o.Va.Center,
+                            position: o.eb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, this.renderErrorMessage(), r.createElement(o.Va, {
-                            position: o.db.Relative
-                        }, r.createElement(o.Va, {
+                        }, this.renderErrorMessage(), r.createElement(o.Wa, {
+                            position: o.eb.Relative
+                        }, r.createElement(o.Wa, {
                             className: "image-uploader__upload-svg--anim-backfill"
-                        }, r.createElement(o.mb, {
-                            asset: o.nb.Upload,
-                            type: o.ob.Alt2,
+                        }, r.createElement(o.nb, {
+                            asset: o.ob.Upload,
+                            type: o.pb.Alt2,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconWidth || 76
-                        })), r.createElement(o.Va, {
+                        })), r.createElement(o.Wa, {
                             className: "image-uploader__upload-svg--anim-fill",
-                            position: o.db.Absolute,
-                            display: this.props.isLoading ? o.W.Block : o.W.Hide,
+                            position: o.eb.Absolute,
+                            display: this.props.isLoading ? o.X.Block : o.X.Hide,
                             attachTop: !0
-                        }, r.createElement(o.mb, {
-                            asset: o.nb.Upload,
-                            type: o.ob.Brand,
+                        }, r.createElement(o.nb, {
+                            asset: o.ob.Upload,
+                            type: o.pb.Brand,
                             width: this.props.iconWidth || 99,
                             height: this.props.iconHeight || 76
                         }))), this.props.isLoading ? this.renderLoadingState() : this.renderNormalState()))
                     }, t.prototype.renderLoadingState = function() {
-                        return r.createElement(o.Va, {
+                        return r.createElement(o.Wa, {
                             margin: 1,
                             "data-test-selector": "image-uploader-loading"
-                        }, r.createElement(o.V, {
-                            type: o.Nb.H4
+                        }, r.createElement(o.W, {
+                            type: o.Ob.H4
                         }, Object(s.d)("Uploading", "ImageUploader")))
                     }, t.prototype.renderNormalState = function() {
                         var e = Object(s.d)("Browse", "ImageUploader");
-                        return r.createElement(o.Va, null, r.createElement(o.Va, null, r.createElement(o.V, {
-                            type: o.Nb.H4
-                        }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Va, {
+                        return r.createElement(o.Wa, null, r.createElement(o.Wa, null, r.createElement(o.W, {
+                            type: o.Ob.H4
+                        }, Object(s.d)("Drag and drop your image here", "ImageUploader"))), r.createElement(o.Wa, {
                             margin: {
                                 bottom: 2
                             },
@@ -1856,22 +1858,22 @@
                             },
                             fullWidth: !0,
                             "data-test-selector": "image-uploader-hint"
-                        }, r.createElement(o.V, {
-                            type: o.Nb.P,
-                            fontSize: o.Aa.Size7,
+                        }, r.createElement(o.W, {
+                            type: o.Ob.P,
+                            fontSize: o.Ba.Size7,
                             color: o.O.Alt2
-                        }, this.props.hintMessage)), r.createElement(o.Va, null, r.createElement(o.z, {
+                        }, this.props.hintMessage)), r.createElement(o.Wa, null, r.createElement(o.z, {
                             ariaLabel: e,
                             type: o.F.Hollow
                         }, e)))
                     }, t.prototype.renderErrorMessage = function() {
-                        if (this.props.errorMessage) return r.createElement(o.Va, {
+                        if (this.props.errorMessage) return r.createElement(o.Wa, {
                             margin: {
                                 bottom: 1
                             },
                             "data-test-selector": "image-uploader-error"
-                        }, r.createElement(o.V, {
-                            type: o.Nb.H5,
+                        }, r.createElement(o.W, {
+                            type: o.Ob.H5,
                             color: o.O.Error,
                             bold: !0
                         }, this.props.errorMessage))
@@ -1950,7 +1952,7 @@
         NZDK: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return d
+                return E
             });
             var a = n("mrSG"),
                 r = n("hnrd"),
@@ -1991,18 +1993,11 @@
                         indexName: o.a.Channels,
                         hitsPerPage: 6,
                         get topNumericFilters() {
-                            return ["channel_count>10", "updated_on>" + m(E())]
+                            return ["channel_count>10", "updated_on>" + m(d())]
                         },
                         get singleTypeNumericFilters() {
-                            return ["updated_on>" + m(E())]
+                            return ["updated_on>" + m(d())]
                         },
-                        optionalFacetFilters: ""
-                    },
-                    communities: {
-                        indexName: o.a.Communities,
-                        hitsPerPage: 2,
-                        topNumericFilters: [],
-                        singleTypeNumericFilters: [],
                         optionalFacetFilters: ""
                     },
                     streamTags: {
@@ -2020,9 +2015,9 @@
                         optionalFacetFilters: ""
                     }
                 },
-                d = function() {
+                E = function() {
                     function e(e) {
-                        this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === s.o.experiments.getAssignment(i.b.NewSearchBackend), this.getCountryCode()
+                        this.apolloClient = e.apolloClient, this.client = r(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === s.p.experiments.getAssignment(i.b.NewSearchBackend), this.getCountryCode()
                     }
                     return e.prototype.queryTopResults = function(e, t) {
                         return a.__awaiter(this, void 0, void 0, function() {
@@ -2030,29 +2025,25 @@
                             return a.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
-                                        return r = [], (n = []).push(this.getTopResult(p.games, e)), n.push(this.getTopResult(p.videos, e)), n.push(this.getTopResult(p.users, e)), n.push(this.getTopResult(p.channels, e)), n.push(this.getTopResult(p.communities, e)), r.push(this.getTotalResult(p.games, e)), r.push(this.getTotalResult(p.videos, e)), r.push(this.getTotalResult(p.users, e)), r.push(this.getTotalResult(p.channels, e)), [4, this.query(n.concat(r))];
+                                        return r = [], (n = []).push(this.getTopResult(p.games, e)), n.push(this.getTopResult(p.videos, e)), n.push(this.getTopResult(p.users, e)), n.push(this.getTopResult(p.channels, e)), r.push(this.getTotalResult(p.games, e)), r.push(this.getTotalResult(p.videos, e)), r.push(this.getTotalResult(p.users, e)), r.push(this.getTotalResult(p.channels, e)), [4, this.query(n.concat(r))];
                                     case 1:
                                         return (s = a.sent()) ? (i = s.results, [2, {
                                             id: t,
                                             games: {
-                                                totalHits: i[5].nbHits,
+                                                totalHits: i[4].nbHits,
                                                 hits: i[0].hits
                                             },
                                             videos: {
-                                                totalHits: i[6].nbHits,
+                                                totalHits: i[5].nbHits,
                                                 hits: i[1].hits
                                             },
                                             users: {
-                                                totalHits: i[7].nbHits,
+                                                totalHits: i[6].nbHits,
                                                 hits: i[2].hits
                                             },
                                             channels: {
-                                                totalHits: i[8].nbHits,
+                                                totalHits: i[7].nbHits,
                                                 hits: i[3].hits
-                                            },
-                                            communities: {
-                                                totalHits: i[4].nbHits,
-                                                hits: i[4].hits
                                             }
                                         }]) : [2, function(e) {
                                             return {
@@ -2072,10 +2063,6 @@
                                                 channels: {
                                                     totalHits: 0,
                                                     hits: []
-                                                },
-                                                communities: {
-                                                    totalHits: 0,
-                                                    hits: []
                                                 }
                                             }
                                         }(t)]
@@ -2088,21 +2075,21 @@
                             c = void 0 === i ? 0 : i,
                             u = s.hitsPerPage,
                             l = void 0 === u ? 50 : u,
-                            d = s.facetFilters,
-                            E = void 0 === d ? "" : d,
+                            E = s.facetFilters,
+                            d = void 0 === E ? "" : E,
                             m = s.numericFilters,
                             _ = s.restrictSearchableAttributes,
                             h = void 0 === _ ? [] : _;
                         return a.__awaiter(this, void 0, void 0, function() {
-                            var r, s, i, u, d, _, g, T, f, I = this;
-                            return a.__generator(this, function(D) {
-                                switch (D.label) {
+                            var r, s, i, u, E, _, g, T, f = this;
+                            return a.__generator(this, function(I) {
+                                switch (I.label) {
                                     case 0:
                                         switch (r = {
                                             id: n,
                                             currentPage: c
                                         }, s = function(e) {
-                                            return a.__awaiter(I, void 0, void 0, function() {
+                                            return a.__awaiter(f, void 0, void 0, function() {
                                                 var n, s;
                                                 return a.__generator(this, function(a) {
                                                     switch (a.label) {
@@ -2115,7 +2102,7 @@
                                                                     hitsPerPage: l,
                                                                     numericFilters: m || e.singleTypeNumericFilters,
                                                                     facets: "*",
-                                                                    facetFilters: E,
+                                                                    facetFilters: d,
                                                                     restrictSearchableAttributes: h
                                                                 }
                                                             }, [4, this.query([n])];
@@ -2139,45 +2126,39 @@
                                                 return [3, 5];
                                             case o.a.Videos:
                                                 return [3, 7];
-                                            case o.a.Communities:
-                                                return [3, 9];
                                             case o.a.StreamTags:
-                                                return [3, 11];
+                                                return [3, 9];
                                             case o.a.Tags:
-                                                return [3, 13]
+                                                return [3, 11]
                                         }
-                                        return [3, 15];
+                                        return [3, 13];
                                     case 1:
                                         return i = r, [4, s(p.games)];
                                     case 2:
-                                        return i.games = D.sent(), [3, 16];
+                                        return i.games = I.sent(), [3, 14];
                                     case 3:
                                         return u = r, [4, s(p.users)];
                                     case 4:
-                                        return u.users = D.sent(), [3, 16];
+                                        return u.users = I.sent(), [3, 14];
                                     case 5:
-                                        return d = r, [4, s(p.channels)];
+                                        return E = r, [4, s(p.channels)];
                                     case 6:
-                                        return d.channels = D.sent(), [3, 16];
+                                        return E.channels = I.sent(), [3, 14];
                                     case 7:
                                         return _ = r, [4, s(p.videos)];
                                     case 8:
-                                        return _.videos = D.sent(), [3, 16];
+                                        return _.videos = I.sent(), [3, 14];
                                     case 9:
-                                        return g = r, [4, s(p.communities)];
+                                        return g = r, [4, s(p.streamTags)];
                                     case 10:
-                                        return g.communities = D.sent(), [3, 16];
+                                        return g.streamTags = I.sent(), [3, 14];
                                     case 11:
-                                        return T = r, [4, s(p.streamTags)];
+                                        return T = r, [4, s(p.tags)];
                                     case 12:
-                                        return T.streamTags = D.sent(), [3, 16];
+                                        return T.tags = I.sent(), [3, 14];
                                     case 13:
-                                        return f = r, [4, s(p.tags)];
-                                    case 14:
-                                        return f.tags = D.sent(), [3, 16];
-                                    case 15:
                                         return [2, null];
-                                    case 16:
+                                    case 14:
                                         return [2, r]
                                 }
                             })
@@ -2301,7 +2282,7 @@
                     }, e
                 }();
 
-            function E() {
+            function d() {
                 return Math.floor(((new Date).getTime() - 6e5) / 1e3)
             }
 
@@ -2331,8 +2312,8 @@
                 u = n("uLRL"),
                 l = n("fvjX"),
                 p = n("V+GM"),
-                d = n("Svt6"),
-                E = n("NvVO"),
+                E = n("Svt6"),
+                d = n("NvVO"),
                 m = n("2xye"),
                 _ = n("GnwI"),
                 h = n("1mFg");
@@ -2367,14 +2348,14 @@
                 }
             }
             var D = n("0xbx"),
-                N = n("Ue10"),
-                O = n("HGFl");
+                O = n("Ue10"),
+                N = n("HGFl");
 
-            function R() {
-                return S(new Date)
+            function S() {
+                return R(new Date)
             }
 
-            function S(e) {
+            function R(e) {
                 return new Date(function(e) {
                     return e.getTime() + 6e4 * e.getTimezoneOffset()
                 }(e))
@@ -2386,12 +2367,12 @@
                 }(e))
             }
             var C, b = function(e) {
-                var t = Object(O.b)(S(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
-                    n = Object(O.b)(S(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
+                var t = Object(N.b)(R(e.campaign.startDate), "MM/DD/YYYY, hh:mm a"),
+                    n = Object(N.b)(R(e.campaign.endDate), "MM/DD/YYYY, hh:mm a"),
                     a = "/console/drops/" + e.campaign.id;
-                return r.createElement(N.Fb, null, r.createElement(N.Cb, null, r.createElement(N.T, {
+                return r.createElement(O.Gb, null, r.createElement(O.Db, null, r.createElement(O.U, {
                     linkTo: a
-                }, e.campaign.name)), r.createElement(N.Cb, null, e.campaign.id), r.createElement(N.Cb, null, t), r.createElement(N.Cb, null, n), r.createElement(N.Cb, null, e.campaign.enabled.toString()))
+                }, e.campaign.name)), r.createElement(O.Db, null, e.campaign.id), r.createElement(O.Db, null, t), r.createElement(O.Db, null, n), r.createElement(O.Db, null, e.campaign.enabled.toString()))
             };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.EndDate = 1] = "EndDate", e[e.Id = 2] = "Id", e[e.Name = 3] = "Name", e[e.StartDate = 4] = "StartDate"
@@ -2400,11 +2381,11 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortingName: N.ub.Default,
-                            sortingId: N.ub.Default,
-                            sortingStartDate: N.ub.Default,
-                            sortingEndDate: N.ub.Default,
-                            sortingEnabled: N.ub.Default
+                            sortingName: O.vb.Default,
+                            sortingId: O.vb.Default,
+                            sortingStartDate: O.vb.Default,
+                            sortingEndDate: O.vb.Default,
+                            sortingEnabled: O.vb.Default
                         }, t.renderCampaignItems = function() {
                             return t.props.campaigns.map(function(e) {
                                 return r.createElement(b, {
@@ -2445,48 +2426,48 @@
                                 t.props.onSort(C.Enabled, t.state.sortingEnabled)
                             })
                         }, t.toggleSorting = function(e) {
-                            return e === N.ub.Default || e === N.ub.Ascending ? N.ub.Descending : N.ub.Ascending
+                            return e === O.vb.Default || e === O.vb.Ascending ? O.vb.Descending : O.vb.Ascending
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderCampaignItems();
-                        return r.createElement(N.Va, {
+                        return r.createElement(O.Wa, {
                             className: "drops-campaigns"
-                        }, r.createElement(N.Va, {
-                            display: N.W.Flex,
-                            justifyContent: N.Ua.End,
+                        }, r.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.End,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.z, {
+                        }, r.createElement(O.z, {
                             onClick: Object(c.c)(c.a.CreateDropsProcessStart),
                             linkTo: "/console/drops/create",
-                            icon: N.nb.Plus
-                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(N.Ab, null, r.createElement(N.Db, null, r.createElement(N.Eb, {
+                            icon: O.ob.Plus
+                        }, Object(o.d)("Create Drops Campaign", "DevDropsCampaigns"))), r.createElement(O.Bb, null, r.createElement(O.Eb, null, r.createElement(O.Fb, {
                             label: Object(o.d)("Campaign Name", "DevDropsCampaigns"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(O.Fb, {
                             label: Object(o.d)("Campaign ID", "DevDropsCampaigns")
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(O.Fb, {
                             label: Object(o.d)("Start Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingStartDate,
                             onClick: this.sortStartDate
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(O.Fb, {
                             label: Object(o.d)("End Date (UTC)", "DevDropsCampaigns"),
                             sorting: this.state.sortingEndDate,
                             onClick: this.sortEndDate
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(O.Fb, {
                             label: Object(o.d)("Enabled", "DevDropsCampaigns"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(N.Bb, null, e)))
+                        })), r.createElement(O.Cb, null, e)))
                     }, t
                 }(r.Component),
-                L = Object(l.compose)(Object(_.c)("DevDropsCampaignsComponent", {
+                L = Object(l.compose)(Object(_.b)("DevDropsCampaignsComponent", {
                     autoReportInteractive: !0
                 }))(v),
-                P = function(e) {
+                U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2499,7 +2480,7 @@
                                         case 0:
                                             return [4, Object(D.a)(T.a.GetCampaignsByCompany)];
                                         case 1:
-                                            return (e = a.sent()) ? (t = g(this.props.company), n = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(n, {
+                                            return (e = a.sent()) ? (t = g(this.props.company), n = E.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -2531,7 +2512,7 @@
                         }, t.onSort = function(e, n) {
                             switch (e) {
                                 case C.Name:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === O.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.name.localeCompare(t.name)
@@ -2546,7 +2527,7 @@
                                     });
                                     break;
                                 case C.Id:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === O.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.id.localeCompare(t.id)
@@ -2561,7 +2542,7 @@
                                     });
                                     break;
                                 case C.StartDate:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === O.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.startDate.getTime() - t.startDate.getTime()
@@ -2576,7 +2557,7 @@
                                     });
                                     break;
                                 case C.EndDate:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === O.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return e.endDate.getTime() - t.endDate.getTime()
@@ -2591,7 +2572,7 @@
                                     });
                                     break;
                                 case C.Enabled:
-                                    n === N.ub.Ascending ? t.setState(function(e) {
+                                    n === O.vb.Ascending ? t.setState(function(e) {
                                         return {
                                             campaigns: e.campaigns.sort(function(e, t) {
                                                 return Number(e.enabled) - Number(t.enabled)
@@ -2616,20 +2597,20 @@
                         this.getCampaigns()
                     }, t
                 }(r.Component),
-                U = Object(l.compose)(Object(_.c)("DevDropsCampaignsPage", {
+                P = Object(l.compose)(Object(_.b)("DevDropsCampaignsPage", {
                     autoReportInteractive: !0,
-                    destination: E.a.DevSiteDropsCampaigns
+                    destination: d.a.DevSiteDropsCampaigns
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCampaigns
-                }), Object(u.a)())(P),
-                M = n("9C/b"),
-                y = n("DMoW"),
+                }), Object(u.a)())(U),
+                y = n("9C/b"),
+                M = n("DMoW"),
                 F = n("PZVp"),
-                V = n("/aPz"),
-                j = n("2/NB"),
-                k = n("Lxz1"),
-                G = 1e4,
-                w = function() {
+                j = n("/aPz"),
+                k = n("2/NB"),
+                G = n("Lxz1"),
+                w = 1e4,
+                V = function() {
                     return function(e, t) {
                         var n = this;
                         this.getUploadURL = e, this.onFinishUploading = t, this.uploadFile = function(e) {
@@ -2646,15 +2627,15 @@
                                                     method: "PUT"
                                                 })];
                                             case 2:
-                                                return (c = a.sent()).status > 300 && r(new Error(Object(k.e)(c.status))), this.unsubscribe = o.k.subscribe({
-                                                    topic: Object(V.A)(i),
+                                                return (c = a.sent()).status > 300 && r(new Error(Object(G.e)(c.status))), this.unsubscribe = o.l.subscribe({
+                                                    topic: Object(j.A)(i),
                                                     success: function() {
                                                         l.timeoutID = setTimeout(function() {
-                                                            l.unsubscribe(), r(new Error(Object(k.d)()))
-                                                        }, G)
+                                                            l.unsubscribe(), r(new Error(Object(G.d)()))
+                                                        }, w)
                                                     },
                                                     failure: function() {
-                                                        clearTimeout(l.timeoutID), r(new Error(Object(k.d)()))
+                                                        clearTimeout(l.timeoutID), r(new Error(Object(G.d)()))
                                                     },
                                                     onMessage: function(e) {
                                                         if (e.upload_id === i) {
@@ -2664,23 +2645,23 @@
                                                                     break;
                                                                 case F.a.WIDTH_VALIDATION_FAILED:
                                                                 case F.a.HEIGHT_VALIDATION_FAILED:
-                                                                    r(new Error(Object(k.c)()));
+                                                                    r(new Error(Object(G.c)()));
                                                                     break;
                                                                 case F.a.FILE_SIZE_VALIDATION_FAILED:
-                                                                    r(new Error(Object(k.a)()));
+                                                                    r(new Error(Object(G.a)()));
                                                                     break;
                                                                 case F.a.IS_IMAGE_VALIDATION_FAILED:
-                                                                    r(new Error(Object(k.b)(j.b)));
+                                                                    r(new Error(Object(G.b)(k.b)));
                                                                     break;
                                                                 default:
-                                                                    r(new Error(Object(k.d)()))
+                                                                    r(new Error(Object(G.d)()))
                                                             }
                                                             l.unsubscribe && l.unsubscribe()
                                                         }
                                                     }
                                                 }), [3, 4];
                                             case 3:
-                                                return u = a.sent(), o.j.error(u, "unable to upload image"), r(new Error(Object(k.d)())), [3, 4];
+                                                return u = a.sent(), o.k.error(u, "unable to upload image"), r(new Error(Object(G.d)())), [3, 4];
                                             case 4:
                                                 return [2]
                                         }
@@ -2690,7 +2671,7 @@
                         }
                     }
                 }();
-            var B = d.a + "/v5/rbac/current-games";
+            var B = E.a + "/v5/rbac/current-games";
 
             function H() {
                 return a.__awaiter(this, void 0, void 0, function() {
@@ -2720,9 +2701,9 @@
                     })
                 })
             }
-            var x = n("cr+I");
+            var W = n("cr+I");
 
-            function Y(e) {
+            function x(e) {
                 return a.__awaiter(this, void 0, Promise, function() {
                     var t, n, r, s, i, o, c, u, l, p;
                     return a.__generator(this, function(a) {
@@ -2730,7 +2711,7 @@
                             case 0:
                                 return t = e.activeOnly, n = e.companyId, r = e.prevCursor, s = e.nextCursor, i = e.limit, [4, Object(D.a)(T.a.GetItemsByCompany)];
                             case 1:
-                                return (o = a.sent()) ? (c = d.a + "/kraken/accounts/" + n + "/items", (u = x.stringify({
+                                return (o = a.sent()) ? (c = E.a + "/kraken/accounts/" + n + "/items", (u = W.stringify({
                                     active_only: t,
                                     after: s,
                                     before: r,
@@ -2767,9 +2748,9 @@
                     })
                 })
             }
-            var W = n("/MKj"),
-                z = n("aCAx"),
-                K = n("HEnu"),
+            var Y = n("/MKj"),
+                K = n("aCAx"),
+                z = n("HEnu"),
                 X = n("cZKs"),
                 q = n("NLLf"),
                 Z = (n("TofP"), function(e) {
@@ -2777,20 +2758,20 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(N.xb, {
+                        return r.createElement(O.yb, {
                             className: "image-uploader-modal",
-                            background: N.r.Base
+                            background: O.r.Base
                         }, r.createElement(q.a, a.__assign({}, this.props)), r.createElement(X.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(r.Component));
-            var J = Object(W.connect)(null, function(e) {
+            var Q = Object(Y.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        onClose: z.c
+                        onClose: K.c
                     }, e)
                 })(Z),
-                Q = n("u5aL");
+                J = n("u5aL");
             n("ev0B");
             var $, ee = function(e) {
                     function t(t) {
@@ -2819,39 +2800,39 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this,
                             n = t.timeOptions.map(function(t) {
-                                return r.createElement(N.Sa, {
+                                return r.createElement(O.Ta, {
                                     hover: e.state.selectedTime === t,
                                     key: t,
                                     "data-time": t,
                                     onClick: e.onClickTime
-                                }, r.createElement(N.Va, {
+                                }, r.createElement(O.Wa, {
                                     padding: .5
                                 }, t))
                             });
-                        return r.createElement(N.Va, {
-                            position: N.db.Relative,
+                        return r.createElement(O.Wa, {
+                            position: O.eb.Relative,
                             className: "time-picker"
-                        }, r.createElement(Q.a, {
+                        }, r.createElement(J.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(N.Pa, {
-                            type: N.Ra.Text,
+                        }, r.createElement(O.Qa, {
+                            type: O.Sa.Text,
                             onFocus: this.onFocus,
                             readOnly: !0,
                             refDelegate: this.setInputRef,
                             value: this.state.selectedTime
-                        }), r.createElement(N.u, {
+                        }), r.createElement(O.u, {
                             noTail: !0,
                             show: this.state.isOpen,
                             "data-a-target": "time-selector-balloon"
-                        }, r.createElement(N.xb, {
-                            color: N.O.Link,
-                            fontSize: N.Aa.Size5,
+                        }, r.createElement(O.yb, {
+                            color: O.O.Link,
+                            fontSize: O.Ba.Size5,
                             className: "time-picker__dropdown"
                         }, n))))
                     }, t.prototype.notifyChange = function(e) {
-                        this.props.onChange && this.props.onChange(Object(O.d)(e, this.props.defaultDate))
+                        this.props.onChange && this.props.onChange(Object(N.d)(e, this.props.defaultDate))
                     }, t.prototype.timeToString = function(e) {
-                        return Object(O.b)(e, O.a.timeString)
+                        return Object(N.b)(e, N.a.timeString)
                     }, t.timeOptions = function() {
                         for (var e = [], t = ["00", "30"], n = 0, a = ["am", "pm"]; n < a.length; n++)
                             for (var r = a[n], s = 0; s < 12; ++s)
@@ -2872,21 +2853,21 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(N.Sa, {
+                        return r.createElement(O.Ta, {
                             onClick: this.onClick
-                        }, r.createElement(N.Va, {
-                            display: N.W.Flex,
-                            alignItems: N.f.Center,
+                        }, r.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            alignItems: O.f.Center,
                             fullHeight: !0
-                        }, r.createElement(N.Va, {
+                        }, r.createElement(O.Wa, {
                             margin: {
                                 right: 2
                             }
-                        }, r.createElement(N.q, {
+                        }, r.createElement(O.q, {
                             size: 40,
                             alt: this.props.name,
                             src: this.props.avatarURL
-                        })), r.createElement(N.Va, null, r.createElement(N.V, null, this.props.name))))
+                        })), r.createElement(O.Wa, null, r.createElement(O.W, null, this.props.name))))
                     }, t
                 }(r.Component),
                 re = n("Ji7V");
@@ -2909,12 +2890,12 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.data && this.props.data.loading && !this.props.data.users && !this.props.data.error) return r.createElement(N.Xa, null);
-                        if (this.props.data && this.props.data.error) return r.createElement(N.Va, {
+                        if (this.props.data && this.props.data.loading && !this.props.data.users && !this.props.data.error) return r.createElement(O.Ya, null);
+                        if (this.props.data && this.props.data.error) return r.createElement(O.Wa, {
                             "data-test-selector": $.Error
                         });
                         var e = this.renderChannels();
-                        return r.createElement(N.Va, null, e)
+                        return r.createElement(O.Wa, null, e)
                     }, t
                 }(r.Component),
                 oe = Object(ne.a)(re, {
@@ -2943,7 +2924,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         if (this.state.loadError) return null;
                         var e = "https://twitch-ds-vhs-drops-campaign-images-us-west-2-prod.s3-us-west-2.amazonaws.com/" + this.props.id + "/account_link_notification_image_" + this.props.size + "x" + this.props.size + ".jpg";
-                        return r.createElement(N.S, {
+                        return r.createElement(O.S, {
                             src: e,
                             alt: this.props.name,
                             onError: this.preventRender
@@ -2954,33 +2935,21 @@
                 le = n("LFRE");
             n("xYlS");
             ! function(e) {
-                e.FileButton = "dev-drops-campaign-form-file-button", e.ConnectionURL = "dev-drops-campaign-form-connection-url", e.SubmitButton = "dev-drops-campaign-form-submit-button", e.NameField = "dev-drops-campaign-form-name-field", e.Error = "dev-drops-campaign-form-error"
+                e.ConnectionURL = "dev-drops-campaign-form-connection-url", e.Error = "dev-drops-campaign-form-error", e.FileButton = "dev-drops-campaign-form-file-button", e.NameField = "dev-drops-campaign-form-name-field", e.SubmitButton = "dev-drops-campaign-form-submit-button"
             }(se || (se = {}));
             var pe = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    if (n.state = {
-                            startDate: new Date,
-                            startTime: R(),
-                            endDate: new Date,
-                            endTime: R(),
-                            games: [],
-                            channels: [],
-                            connectionURL: "",
-                            itemName: "",
-                            itemIds: new Set,
-                            enabled: !1,
-                            valid: !1
-                        }, n.renderDropsLinkImage = function() {
+                    if (n.renderDropsLinkImage = function() {
                             return n.props.campaign ? r.createElement(ce, {
                                 id: n.props.campaign.id,
                                 name: n.props.campaign.item_name,
                                 size: 80
                             }) : null
                         }, n.renderErrorMessage = function() {
-                            return r.createElement(N.xb, {
+                            if (n.props.errorMessage) return r.createElement(O.yb, {
                                 className: "dev-drops-campaign-form__error",
-                                color: N.O.Overlay,
+                                color: O.O.Overlay,
                                 "data-test-selector": se.Error,
                                 margin: {
                                     top: 1
@@ -3012,9 +2981,7 @@
                                 }) : a ? null : ((t = new Set(e.itemIds)).delete(r), {
                                     itemIds: t
                                 })
-                            }, function() {
-                                return n.validate()
-                            })
+                            }, n.handleFormChange)
                         }, n.onStartDate = function(e) {
                             n.setState({
                                 startDate: e
@@ -3071,9 +3038,9 @@
                                 provider: {
                                     uploadFile: n.setFile
                                 },
-                                allowedFileTypes: [j.a.JPEG]
+                                allowedFileTypes: [k.a.JPEG]
                             };
-                            n.props.showModal(J, t)
+                            n.props.showModal(Q, t)
                         }, n.setFile = function(e) {
                             return n.setState({
                                 image: e
@@ -3088,269 +3055,293 @@
                         }, n.handleFormChange = function() {
                             n.props.onFormChange && n.props.onFormChange(), n.validate()
                         }, n.onSubmit = function(e) {
-                            e.preventDefault();
-                            var t = n.timeWithoutSeconds(n.state.startDate, A(n.state.startTime)),
-                                a = n.timeWithoutSeconds(n.state.endDate, A(n.state.endTime)),
-                                r = {
-                                    connectionURL: n.state.connectionURL,
-                                    enabled: n.state.enabled,
-                                    endTime: a,
-                                    games: n.state.games.map(function(e) {
-                                        return String(e._id)
-                                    }),
-                                    image: n.state.image,
-                                    itemIds: Array.from(n.state.itemIds),
-                                    itemName: n.state.itemName,
-                                    startTime: t,
-                                    whitelistedChannels: n.state.channels
-                                };
-                            n.props.campaign && (r.id = n.props.campaign.id), n.props.onSubmit(r)
-                        }, !t.campaign) return n;
-                    var a = n.findGamesForCampaign(),
-                        s = new Date(t.campaign.start_date / 1e6),
-                        i = new Date(t.campaign.end_date / 1e6);
-                    return n.state = {
-                        campaignId: t.campaign.id,
-                        startDate: s,
-                        startTime: S(s),
-                        endDate: i,
-                        endTime: S(i),
-                        games: a,
-                        itemIds: new Set(t.campaign.item_ids),
-                        enabled: t.campaign.enabled,
-                        connectionURL: t.campaign.click_thru_url,
-                        channels: t.campaign.whitelisted_channel_ids && t.campaign.whitelisted_channel_ids.filter(function(e) {
-                            return e.length
-                        }) || [],
-                        itemName: t.campaign.item_name,
+                            return a.__awaiter(n, void 0, void 0, function() {
+                                var t, n, r;
+                                return a.__generator(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            return e.preventDefault(), t = this.timeWithoutSeconds(this.state.startDate, A(this.state.startTime)), n = this.timeWithoutSeconds(this.state.endDate, A(this.state.endTime)), r = {
+                                                connectionURL: this.state.connectionURL,
+                                                enabled: this.state.enabled,
+                                                endTime: n,
+                                                games: this.state.games.map(function(e) {
+                                                    return String(e._id)
+                                                }),
+                                                image: this.state.image,
+                                                itemIds: Array.from(this.state.itemIds),
+                                                itemName: this.state.itemName,
+                                                startTime: t,
+                                                whitelistedChannels: this.state.channels
+                                            }, this.props.campaign && (r.id = this.props.campaign.id), this.setState({
+                                                isSubmitting: !0
+                                            }), [4, this.props.onSubmit(r)];
+                                        case 1:
+                                            return a.sent(), this.setState({
+                                                isSubmitting: !1
+                                            }), [2]
+                                    }
+                                })
+                            })
+                        }, t.campaign) {
+                        var s = n.findGamesForCampaign(),
+                            i = new Date(t.campaign.start_date / 1e6),
+                            o = new Date(t.campaign.end_date / 1e6);
+                        n.state = {
+                            campaignId: t.campaign.id,
+                            startDate: i,
+                            startTime: R(i),
+                            endDate: o,
+                            endTime: R(o),
+                            games: s,
+                            isSubmitting: !1,
+                            itemIds: new Set(t.campaign.item_ids),
+                            enabled: t.campaign.enabled,
+                            connectionURL: t.campaign.click_thru_url,
+                            channels: t.campaign.whitelisted_channel_ids && t.campaign.whitelisted_channel_ids.filter(function(e) {
+                                return e.length
+                            }) || [],
+                            itemName: t.campaign.item_name,
+                            valid: !1
+                        }
+                    } else n.state = {
+                        channels: [],
+                        connectionURL: "",
+                        enabled: !1,
+                        endDate: new Date,
+                        endTime: S(),
+                        games: [],
+                        isSubmitting: !1,
+                        itemIds: new Set,
+                        itemName: "",
+                        startDate: new Date,
+                        startTime: S(),
                         valid: !1
-                    }, n
+                    };
+                    return n
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    var e, t = this,
-                        n = Object(o.d)("This is to whitelist channels to notify about this drop campaign. Leaving  this empty will enable for everyone who broadcasts the game.", "DevDropsCampaignForm");
-                    this.state.games.length && (n = Object(o.d)("{games, plural, one { This is to whitelist channels to notify about this drop campaign. Leaving this empty will enable for everyone who broadcasts the game. } other { This is to whitelist channels to notify about this drop campaign. Leaving this empty will enable for everyone who broadcasts the games. } }", {
+                    var e = this,
+                        t = Object(o.d)("This is to whitelist channels to notify about this drop campaign. Leaving  this empty will enable for everyone who broadcasts the game.", "DevDropsCampaignForm");
+                    this.state.games.length && (t = Object(o.d)("{games, plural, one { This is to whitelist channels to notify about this drop campaign. Leaving this empty will enable for everyone who broadcasts the game. } other { This is to whitelist channels to notify about this drop campaign. Leaving this empty will enable for everyone who broadcasts the games. } }", {
                         games: this.state.games.length
-                    }, "DevDropsCampaignForm")), this.state.image && (e = r.createElement(N.Va, {
-                        margin: {
-                            x: 1
-                        }
-                    }, r.createElement(N.V, {
-                        color: N.O.Alt
-                    }, this.state.image.name)));
-                    var a, s = r.createElement(N.z, {
-                        onClick: this.onSubmit,
-                        disabled: !this.state.valid,
-                        "data-test-selector": se.SubmitButton
-                    }, Object(o.d)("Submit", "DevDropsCampaignForm"));
-                    this.props.updateSuccess && (s = r.createElement(N.z, {
-                        type: N.F.Success,
-                        "data-test-selector": se.SubmitButton
-                    }, Object(o.d)("Success", "DevDropsCampaignForm"))), this.props.errorMessage && (a = this.renderErrorMessage());
-                    var i = this.renderDropsLinkImage();
-                    return r.createElement(N.Va, {
+                    }, "DevDropsCampaignForm"));
+                    var n = O.E.Default;
+                    this.state.isSubmitting ? n = O.E.Loading : this.props.updateSuccess && (n = O.E.Success);
+                    var a = this.renderDropsLinkImage();
+                    return r.createElement(O.Wa, {
                         className: "dev-drops-campaign-form"
-                    }, a, r.createElement(N.Va, {
+                    }, this.renderErrorMessage(), r.createElement(O.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.N, {
+                    }, r.createElement(O.N, {
                         checked: this.state.enabled,
                         label: Object(o.d)("Enabled", "DevDropsCampaignForm"),
                         onChange: this.setEnabled
-                    })), r.createElement(N.Va, {
+                    })), r.createElement(O.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Campaign Name", "DevDropsCampaignForm")
-                    }, r.createElement(N.Pa, {
-                        type: N.Ra.Text,
+                    }, r.createElement(O.Qa, {
+                        type: O.Sa.Text,
                         value: this.state.itemName,
                         onChange: this.setItemName,
                         "data-test-selector": se.NameField
-                    }))), this.state.campaignId && r.createElement(N.Va, {
+                    }))), this.state.campaignId && r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Campaign ID", "DevDropsCampaignForm")
-                    }, r.createElement(N.Pa, {
-                        type: N.Ra.Text,
+                    }, r.createElement(O.Qa, {
+                        type: O.Sa.Text,
                         value: this.state.campaignId
-                    }))), r.createElement(N.Va, {
+                    }))), r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Ha, null, r.createElement(N.P, {
+                    }, r.createElement(O.Ia, null, r.createElement(O.P, {
                         cols: {
                             default: 12,
                             md: 6
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Start Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(K.a, {
+                    }, r.createElement(z.a, {
                         onChange: this.onStartDate,
                         defaultDate: this.state.startDate
                     }), r.createElement(ee, {
                         onChange: this.onStartTime,
                         defaultDate: this.state.startTime
-                    }))), r.createElement(N.P, {
+                    }))), r.createElement(O.P, {
                         cols: {
                             default: 12,
                             md: 6
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("End Date/Time (UTC)", "DevDropsCampaignForm")
-                    }, r.createElement(K.a, {
+                    }, r.createElement(z.a, {
                         onChange: this.onEndDate,
                         defaultDate: this.state.endDate
                     }), r.createElement(ee, {
                         onChange: this.onEndTime,
                         defaultDate: this.state.endTime
-                    }))))), r.createElement(N.Va, {
+                    }))))), r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Games", "DevDropsCampaignForm")
                     }, r.createElement(ue.a, {
                         onGameSelect: this.onGameSelect,
                         multi: !0,
                         games: this.props.games,
                         defaultGames: this.state.games
-                    }), r.createElement(N.V, {
-                        color: N.O.Alt2
+                    }), r.createElement(O.W, {
+                        color: O.O.Alt2
                     }, Object(o.d)("If your game does not appear in this list, please add it to your company <x:link>here</x:link>.", {
                         "x:link": function(e) {
-                            return r.createElement(N.T, {
+                            return r.createElement(O.U, {
                                 key: e,
                                 to: "/console/games"
                             }, e)
                         }
-                    }, "DevDropsCampaignForm")))), r.createElement(N.Va, {
+                    }, "DevDropsCampaignForm")))), r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Drops Connection URL", "DevDropsCampaignForm"),
                         hint: Object(o.d)("The URL users go to connect their account.", "DevDropsCampaignForm")
-                    }, r.createElement(N.Pa, {
+                    }, r.createElement(O.Qa, {
                         "data-test-selector": se.ConnectionURL,
-                        type: N.Ra.Text,
+                        type: O.Sa.Text,
                         value: this.state.connectionURL,
                         onChange: this.setConnectURL
-                    }))), r.createElement(N.Va, {
+                    }))), r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Whitelisted Channels", "DevDropsCampaignForm"),
-                        hint: n
+                        hint: t
                     }, r.createElement(le.a, {
                         onUserSelect: this.onUserSelect,
                         includeCurrentUser: !0
-                    }))), r.createElement(N.Va, {
+                    }))), r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
                     }, r.createElement(oe, {
                         channels: this.state.channels,
                         onChannelClick: this.onChannelClick
-                    })), r.createElement(N.Va, null, r.createElement(N.Ca, {
+                    })), r.createElement(O.Wa, null, r.createElement(O.Da, {
                         label: Object(o.d)("Campaign Image", "DevDropsCampaignForm"),
                         hint: Object(o.d)("This is the image for Drops Campaign Notifications. Required image size is 120x120. Please note that it may take up to 15 minutes for image changes to take effect.", "DevDropsCampaignForm")
-                    }, i, r.createElement(N.Va, {
+                    }, a, r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         },
-                        display: N.W.Flex,
-                        alignItems: N.f.Center
-                    }, r.createElement(N.z, {
+                        display: O.X.Flex,
+                        alignItems: O.f.Center
+                    }, r.createElement(O.z, {
                         "data-test-selector": se.FileButton,
                         onClick: this.onUploadButtonClick
-                    }, Object(o.d)("Upload Image", "DevDropsCampaignForm")), e))), r.createElement(N.Va, {
+                    }, Object(o.d)("Upload Image", "DevDropsCampaignForm")), this.state.image && r.createElement(O.Wa, {
+                        margin: {
+                            x: 1
+                        }
+                    }, r.createElement(O.W, {
+                        color: O.O.Alt
+                    }, this.state.image.name))))), r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Va, {
+                    }, r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.V, {
-                        type: N.Nb.H3
-                    }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(N.Na, {
+                    }, r.createElement(O.W, {
+                        type: O.Ob.H3
+                    }, Object(o.d)("Items", "DevDropsCampaignForm"))), r.createElement("fieldset", null, r.createElement(O.Oa, {
                         padding: {
                             y: 1
                         }
-                    }, r.createElement("legend", null, r.createElement(N.V, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
+                    }, r.createElement("legend", null, r.createElement(O.W, null, Object(o.d)("Select up to {MAX_DROPS_ITEMS_PER_CAMPAIGN} of your currently active items", {
                         MAX_DROPS_ITEMS_PER_CAMPAIGN: te.b
-                    }, "DevDropsCampaignForm")))), r.createElement(N.Tb, {
-                        childWidth: N.Ub.ExtraSmall,
-                        gutterSize: N.Vb.Small,
+                    }, "DevDropsCampaignForm")))), r.createElement(O.Ub, {
+                        childWidth: O.Vb.ExtraSmall,
+                        gutterSize: O.Wb.Small,
                         placeholderItems: 20
-                    }, this.props.availableItems.map(function(e, n) {
-                        var a = e.translations[e.defaultLanguage],
-                            s = t.state.itemIds.has(e.id);
-                        return r.createElement(N.Va, {
+                    }, this.props.availableItems.map(function(t, n) {
+                        var a = t.translations[t.defaultLanguage],
+                            s = e.state.itemIds.has(t.id);
+                        return r.createElement(O.Wa, {
                             key: n,
-                            position: N.db.Relative,
+                            position: O.eb.Relative,
                             className: "drops-item-selector-container",
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(N.o, {
-                            ratio: N.p.Aspect1x1
-                        }, r.createElement(N.Ja, {
+                        }, r.createElement(O.o, {
+                            ratio: O.p.Aspect1x1
+                        }, r.createElement(O.Ka, {
                             alt: a,
                             checked: s,
                             label: a,
                             name: "item-selector-checkbox",
-                            onChange: t.onItemChange,
-                            src: te.a + "/items/" + t.props.companyId + "/" + e.id + "-120x120.jpg",
-                            type: N.Ka.Checkbox,
-                            value: e.id
-                        })), s && r.createElement(N.xb, {
-                            display: N.W.InlineFlex,
-                            alignItems: N.f.Center,
-                            justifyContent: N.Ua.Center,
-                            background: N.r.Accent,
-                            position: N.db.Absolute,
-                            color: N.O.Overlay,
+                            onChange: e.onItemChange,
+                            src: te.a + "/items/" + e.props.companyId + "/" + t.id + "-120x120.jpg",
+                            type: O.La.Checkbox,
+                            value: t.id
+                        })), s && r.createElement(O.yb, {
+                            display: O.X.InlineFlex,
+                            alignItems: O.f.Center,
+                            justifyContent: O.Va.Center,
+                            background: O.r.Accent,
+                            position: O.eb.Absolute,
+                            color: O.O.Overlay,
                             attachTop: !0
-                        }, r.createElement(N.mb, {
-                            asset: N.nb.Check
-                        })), r.createElement(N.V, {
+                        }, r.createElement(O.nb, {
+                            asset: O.ob.Check
+                        })), r.createElement(O.W, {
                             bold: s,
                             ellipsis: !0
                         }, a))
-                    })))), r.createElement(N.Va, {
+                    })))), r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         }
-                    }, r.createElement(N.Va, {
-                        display: N.W.InlineBlock,
+                    }, r.createElement(O.Wa, {
+                        display: O.X.InlineBlock,
                         padding: {
                             right: 1
                         }
-                    }, r.createElement(N.z, {
-                        type: N.F.Hollow,
+                    }, r.createElement(O.z, {
+                        type: O.F.Hollow,
                         onClick: this.onClickCancel
-                    }, Object(o.d)("Cancel", "DevDropsCampaignForm"))), s))
+                    }, Object(o.d)("Cancel", "DevDropsCampaignForm"))), r.createElement(O.z, {
+                        disabled: !this.state.valid,
+                        "data-test-selector": se.SubmitButton,
+                        onClick: this.onSubmit,
+                        state: n
+                    }, Object(o.d)("Submit", "DevDropsCampaignForm"))))
                 }, t.prototype.timeWithoutSeconds = function(e, t) {
                     return new Date(e.getFullYear(), e.getMonth(), e.getDate(), t.getHours(), t.getMinutes())
                 }, t
             }(r.Component);
-            var de = Object(W.connect)(null, function(e) {
+            var Ee = Object(Y.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        showModal: z.d
+                        showModal: K.d
                     }, e)
                 })(pe),
-                Ee = n("QKmf");
+                de = n("QKmf");
 
             function me() {
                 var e = this;
-                return Object(ne.a)(Ee, {
+                return Object(ne.a)(de, {
                     props: function(t) {
                         return {
                             createUploadURLMutation: function(n) {
@@ -3418,7 +3409,7 @@
                                         case 0:
                                             e = g(this.props.company), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, Y({
+                                            return n.trys.push([1, 3, , 4]), [4, x({
                                                 activeOnly: !0,
                                                 companyId: e,
                                                 limit: 100
@@ -3444,7 +3435,7 @@
                                         case 0:
                                             return a.trys.push([0, 12, , 13]), t = g(this.props.company), n = f(e, t), [4, Object(D.a)(T.a.PostCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(s, {
+                                            return (r = a.sent()) ? (s = E.a + "/kraken/accounts/" + t + "/campaigns", [4, Object(h.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -3490,7 +3481,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new w(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
+                                            t = new V(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -3514,7 +3505,7 @@
                                             case 1:
                                                 if (t = a.sent()) return n = {
                                                     campaignID: e,
-                                                    imageType: y.r.LINK_NOTIFICATION,
+                                                    imageType: M.s.LINK_NOTIFICATION,
                                                     serviceID: g(this.props.company),
                                                     token: t
                                                 }, [2, this.props.createUploadURLMutation(n)];
@@ -3539,39 +3530,39 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.gamesLoaded ? r.createElement(N.Va, {
+                        return this.state.gamesLoaded ? r.createElement(O.Wa, {
                             padding: {
                                 top: 1
                             }
-                        }, r.createElement(N.Va, {
-                            display: N.W.Flex,
-                            justifyContent: N.Ua.Between
-                        }, r.createElement(N.V, {
-                            type: N.Nb.H2
-                        }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(N.z, {
+                        }, r.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Between
+                        }, r.createElement(O.W, {
+                            type: O.Ob.H2
+                        }, Object(o.d)("Drops Campaign", "DevDropsCreateCampaign")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsCreateCampaign"))), r.createElement(N.Ha, null, r.createElement(N.P, {
+                            type: O.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsCreateCampaign"))), r.createElement(O.Ia, null, r.createElement(O.P, {
                             cols: {
                                 default: 12,
                                 md: 5
                             }
-                        }, r.createElement(de, {
+                        }, r.createElement(Ee, {
                             companyId: this.props.company.id,
                             games: this.state.games,
                             availableItems: this.state.items,
                             onCancel: this.onCancel,
                             onSubmit: this.onSubmit,
                             errorMessage: this.state.errorMessage
-                        })))) : r.createElement(N.Xa, null)
+                        })))) : r.createElement(O.Ya, null)
                     }, t
                 }(r.Component),
-                ge = Object(l.compose)(Object(_.c)("DevDropsCreateCampaignPage", {
-                    destination: E.a.DevSiteDropsCreateCampaign
+                ge = Object(l.compose)(Object(_.b)("DevDropsCreateCampaignPage", {
+                    destination: d.a.DevSiteDropsCreateCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateCampaign
-                }), me(), Object(u.a)(), M.a)(he),
+                }), me(), Object(u.a)(), y.a)(he),
                 Te = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3586,7 +3577,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         if (this.state.loadError) return null;
                         var e = te.a + "/items/" + this.props.companyId + "/" + this.props.id + "-" + this.props.size + "x" + this.props.size + ".jpg";
-                        return r.createElement(N.S, {
+                        return r.createElement(O.S, {
                             src: e,
                             alt: this.props.name,
                             onError: this.preventRender
@@ -3595,17 +3586,12 @@
                 }(r.Component);
             n("WM9t");
             ! function(e) {
-                e.FileButton = "dev-drops-item-form-file-button", e.SubmitButton = "dev-drops-item-form-submit-button", e.DefaultLocaleSelect = "dev-drops-item-form-language-field", e.Error = "dev-drops-item-form-error"
+                e.DefaultLocaleSelect = "dev-drops-item-form-language-field", e.Error = "dev-drops-item-form-error", e.FileButton = "dev-drops-item-form-file-button", e.SubmitButton = "dev-drops-item-form-submit-button"
             }(_e || (_e = {}));
             var fe = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
-                    return n.state = {
-                        defaultLocale: "en-US",
-                        translations: {},
-                        active: !1,
-                        valid: !1
-                    }, n.renderDropsItemImage = function() {
+                    return n.renderDropsItemImage = function() {
                         return n.props.item ? r.createElement(Te, {
                             id: n.props.item.ItemID,
                             companyId: n.props.companyId,
@@ -3613,9 +3599,9 @@
                             size: 120
                         }) : null
                     }, n.renderErrorMessage = function() {
-                        return r.createElement(N.xb, {
+                        if (n.props.errorMessage) return r.createElement(O.yb, {
                             className: "dev-drops-item-form__error",
-                            color: N.O.Overlay,
+                            color: O.O.Overlay,
                             "data-test-selector": _e.Error,
                             margin: {
                                 top: 1
@@ -3634,7 +3620,7 @@
                                 translations: a.__assign({}, n.translations, ((r = {})[e] = t, r))
                             }
                         }, function() {
-                            n.localizedNameInputRef.value = "", n.validate()
+                            n.localizedNameInputRef.value = "", n.handleFormChange()
                         })
                     }, n.removeLocalizedName = function(e) {
                         var t = e.currentTarget.dataset.locale;
@@ -3643,7 +3629,7 @@
                             return delete n[t], {
                                 translations: n
                             }
-                        }, n.validate)
+                        }, n.handleFormChange)
                     }, n.setActive = function(e) {
                         n.setState({
                             active: e.target.checked
@@ -3661,9 +3647,9 @@
                             provider: {
                                 uploadFile: n.setFile
                             },
-                            allowedFileTypes: [j.a.JPEG]
+                            allowedFileTypes: [k.a.JPEG]
                         };
-                        n.props.showModal(J, t)
+                        n.props.showModal(Q, t)
                     }, n.setFile = function(e) {
                         return n.setState({
                             image: e
@@ -3680,151 +3666,162 @@
                             }
                         })
                     }, n.onSubmit = function(e) {
-                        e.preventDefault();
-                        var t = {
-                            default_language: n.state.defaultLocale,
-                            active: n.state.active,
-                            translations: n.state.translations,
-                            image: n.state.image
-                        };
-                        n.props.item && (t.item_id = n.props.item.ItemID), n.props.onSubmit(t)
+                        return a.__awaiter(n, void 0, void 0, function() {
+                            var t;
+                            return a.__generator(this, function(n) {
+                                switch (n.label) {
+                                    case 0:
+                                        return e.preventDefault(), t = {
+                                            default_language: this.state.defaultLocale,
+                                            active: this.state.active,
+                                            translations: this.state.translations,
+                                            image: this.state.image
+                                        }, this.props.item && (t.item_id = this.props.item.ItemID), this.setState({
+                                            isSubmitting: !0
+                                        }), [4, this.props.onSubmit(t)];
+                                    case 1:
+                                        return n.sent(), this.setState({
+                                            isSubmitting: !1
+                                        }), [2]
+                                }
+                            })
+                        })
                     }, n.handleFormChange = function() {
                         n.props.onFormChange && n.props.onFormChange(), n.validate()
-                    }, t.item ? (n.state = {
-                        itemId: t.item.ItemID,
-                        defaultLocale: t.item.DefaultLanguage,
-                        translations: t.item.Translations,
+                    }, t.item ? n.state = {
                         active: t.item.Active,
+                        defaultLocale: t.item.DefaultLanguage,
+                        isSubmitting: !1,
+                        itemId: t.item.ItemID,
+                        translations: t.item.Translations,
                         valid: !1
-                    }, n) : n
+                    } : n.state = {
+                        active: !1,
+                        defaultLocale: "en-US",
+                        isSubmitting: !1,
+                        translations: {},
+                        valid: !1
+                    }, n
                 }
                 return a.__extends(t, e), t.prototype.render = function() {
-                    var e, t = this;
-                    this.state.image && (e = r.createElement(N.Va, {
-                        padding: {
-                            x: 1
-                        }
-                    }, r.createElement(N.V, {
-                        color: N.O.Alt
-                    }, this.state.image.name)));
-                    var n, a = r.createElement(N.z, {
-                        onClick: this.onSubmit,
-                        disabled: !this.state.valid,
-                        "data-test-selector": _e.SubmitButton
-                    }, Object(o.d)("Submit", "DevDropsItemForm"));
-                    this.props.updateSuccess && (a = r.createElement(N.z, {
-                        type: N.F.Success,
-                        "data-test-selector": _e.SubmitButton
-                    }, Object(o.d)("Success", "DevDropsItemForm"))), this.props.errorMessage && (n = this.renderErrorMessage());
-                    var s = this.renderDropsItemImage();
-                    return r.createElement(N.Va, {
+                    var e = this,
+                        t = O.E.Default;
+                    this.state.isSubmitting ? t = O.E.Loading : this.props.updateSuccess && (t = O.E.Success);
+                    var n = this.renderDropsItemImage();
+                    return r.createElement(O.Wa, {
                         className: "dev-drops-item-form"
-                    }, n, r.createElement(N.Va, {
+                    }, this.renderErrorMessage(), r.createElement(O.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.N, {
+                    }, r.createElement(O.N, {
                         checked: this.state.active,
                         label: Object(o.d)("Enabled", "DevDropsItemForm"),
                         onChange: this.setActive
-                    })), r.createElement(N.Va, {
+                    })), r.createElement(O.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Item Image", "DevDropsItemForm"),
                         hint: Object(o.d)("Required image size is 120x120. Please note that it may take up to 15 minutes for image changes to take effect.", "DevDropsItemForm")
-                    }, s, r.createElement(N.Va, {
+                    }, n, r.createElement(O.Wa, {
                         padding: {
                             top: 1
                         },
-                        display: N.W.Flex,
-                        alignItems: N.f.Center
-                    }, r.createElement(N.z, {
+                        display: O.X.Flex,
+                        alignItems: O.f.Center
+                    }, r.createElement(O.z, {
                         "data-test-selector": _e.FileButton,
                         onClick: this.onUploadButtonClick
-                    }, Object(o.d)("Upload Image", "DevDropsItemForm")), e))), this.state.itemId && r.createElement(N.Va, {
+                    }, Object(o.d)("Upload Image", "DevDropsItemForm")), this.state.image && r.createElement(O.Wa, {
+                        padding: {
+                            x: 1
+                        }
+                    }, r.createElement(O.W, {
+                        color: O.O.Alt
+                    }, this.state.image.name))))), this.state.itemId && r.createElement(O.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Item ID", "DevDropsItemForm")
-                    }, r.createElement(N.Pa, {
-                        type: N.Ra.Text,
+                    }, r.createElement(O.Qa, {
+                        type: O.Sa.Text,
                         value: this.state.itemId
-                    }))), r.createElement(N.Va, {
+                    }))), r.createElement(O.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Localized Item Names", "DevDropsItemForm"),
                         hint: Object(o.d)("The name of the item a viewer will see for the reward.", "DevDropsItemForm")
-                    }, Object.keys(this.state.translations).map(function(e) {
-                        var n = o.a.locales.find(function(t) {
-                            return t.locale === e
+                    }, Object.keys(this.state.translations).map(function(t) {
+                        var n = o.a.locales.find(function(e) {
+                            return e.locale === t
                         });
-                        if (n) return r.createElement(N.xb, {
-                            key: e,
+                        if (n) return r.createElement(O.yb, {
+                            key: t,
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Ha, null, r.createElement(N.P, {
+                        }, r.createElement(O.Ia, null, r.createElement(O.P, {
                             cols: 4
-                        }, r.createElement(N.Na, {
+                        }, r.createElement(O.Oa, {
                             padding: .5
-                        }, r.createElement(N.V, {
+                        }, r.createElement(O.W, {
                             bold: !0
-                        }, n.name))), r.createElement(N.P, {
+                        }, n.name))), r.createElement(O.P, {
                             cols: 8
-                        }, r.createElement(N.Va, {
-                            display: N.W.Flex,
+                        }, r.createElement(O.Wa, {
+                            display: O.X.Flex,
                             padding: {
                                 left: 2
                             },
-                            alignItems: N.f.Center,
-                            justifyContent: N.Ua.Between
-                        }, r.createElement(N.V, null, t.state.translations[e]), r.createElement(N.z, {
-                            "data-locale": e,
-                            onClick: t.removeLocalizedName,
-                            type: N.F.Hollow
+                            alignItems: O.f.Center,
+                            justifyContent: O.Va.Between
+                        }, r.createElement(O.W, null, e.state.translations[t]), r.createElement(O.z, {
+                            "data-locale": t,
+                            onClick: e.removeLocalizedName,
+                            type: O.F.Hollow
                         }, Object(o.d)("Remove", "DevDropsItemForm"))))))
-                    }), r.createElement(N.Ha, null, r.createElement(N.P, {
+                    }), r.createElement(O.Ia, null, r.createElement(O.P, {
                         cols: 4
-                    }, r.createElement(N.sb, {
+                    }, r.createElement(O.tb, {
                         refDelegate: this.setLocaleSelectorRef
-                    }, o.a.locales.filter(function(e) {
-                        return !t.state.translations[e.locale]
+                    }, o.a.locales.filter(function(t) {
+                        return !e.state.translations[t.locale]
                     }).map(function(e) {
                         return r.createElement("option", {
                             key: e.locale,
                             value: e.locale
                         }, e.name)
-                    }))), r.createElement(N.P, {
+                    }))), r.createElement(O.P, {
                         cols: 8
-                    }, r.createElement(N.Va, {
-                        display: N.W.Flex,
+                    }, r.createElement(O.Wa, {
+                        display: O.X.Flex,
                         padding: {
                             left: 1
                         }
-                    }, r.createElement(N.Va, {
+                    }, r.createElement(O.Wa, {
                         flexGrow: 1,
                         padding: {
                             right: 2
                         }
-                    }, r.createElement(N.Pa, {
+                    }, r.createElement(O.Qa, {
                         refDelegate: this.setLocalizedNameInputRef,
-                        type: N.Ra.Text,
+                        type: O.Sa.Text,
                         placeholder: Object(o.d)("Localized Item Name", "DevDropsItemForm")
-                    })), r.createElement(N.z, {
+                    })), r.createElement(O.z, {
                         onClick: this.addLocalizedName
-                    }, Object(o.d)("Add", "DevDropsItemForm"))))))), r.createElement(N.Va, {
+                    }, Object(o.d)("Add", "DevDropsItemForm"))))))), r.createElement(O.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Ca, {
+                    }, r.createElement(O.Da, {
                         label: Object(o.d)("Default Locale for Item Name", "DevDropsItemForm"),
                         hint: Object(o.d)("The locale to use when no value is provided in the viewer's locale.", "DevDropsItemForm")
-                    }, r.createElement(N.sb, {
+                    }, r.createElement(O.tb, {
                         value: this.state.defaultLocale,
                         onChange: this.setDefaultLocale,
                         "data-test-selector": _e.DefaultLocaleSelect
@@ -3833,27 +3830,32 @@
                             key: e.locale,
                             value: e.locale
                         }, e.name)
-                    })))), r.createElement(N.Va, {
+                    })))), r.createElement(O.Wa, {
                         padding: {
                             top: 2
                         }
-                    }, r.createElement(N.Va, {
-                        display: N.W.InlineBlock,
+                    }, r.createElement(O.Wa, {
+                        display: O.X.InlineBlock,
                         padding: {
                             right: 1
                         }
-                    }, r.createElement(N.z, {
-                        type: N.F.Hollow,
+                    }, r.createElement(O.z, {
+                        type: O.F.Hollow,
                         onClick: this.onClickCancel
-                    }, Object(o.d)("Cancel", "DevDropsItemForm"))), a))
+                    }, Object(o.d)("Cancel", "DevDropsItemForm"))), r.createElement(O.z, {
+                        "data-test-selector": _e.SubmitButton,
+                        disabled: !this.state.valid,
+                        onClick: this.onSubmit,
+                        state: t
+                    }, Object(o.d)("Submit", "DevDropsItemForm"))))
                 }, t
             }(r.Component);
-            var Ie, De, Ne = Object(W.connect)(null, function(e) {
+            var Ie, De, Oe = Object(Y.connect)(null, function(e) {
                     return Object(l.bindActionCreators)({
-                        showModal: z.d
+                        showModal: K.d
                     }, e)
                 })(fe),
-                Oe = function(e) {
+                Ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.onCancel = function() {
@@ -3866,7 +3868,7 @@
                                         case 0:
                                             return a.trys.push([0, 13, , 14]), t = g(this.props.company), [4, Object(D.a)(T.a.CreateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, t, n), s = d.a + "/kraken/accounts/" + t + "/items", [4, Object(h.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, t, n), s = E.a + "/kraken/accounts/" + t + "/items", [4, Object(h.a)(s, {
                                                 method: "POST",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -3916,7 +3918,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new w(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
+                                            t = new V(this.generateUploadURL(n), this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -3939,7 +3941,7 @@
                                                 return [4, Object(D.a)(T.a.PostItemImageUrl)];
                                             case 1:
                                                 if (t = a.sent()) return n = {
-                                                    imageType: y.r.ITEM,
+                                                    imageType: M.s.ITEM,
                                                     itemID: e,
                                                     serviceID: g(this.props.company),
                                                     token: t
@@ -3954,25 +3956,25 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(N.Va, {
+                        return r.createElement(O.Wa, {
                             padding: {
                                 top: 1
                             }
-                        }, r.createElement(N.Va, {
-                            display: N.W.Flex,
-                            justifyContent: N.Ua.Between
-                        }, r.createElement(N.V, {
-                            type: N.Nb.H2
-                        }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(N.z, {
+                        }, r.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Between
+                        }, r.createElement(O.W, {
+                            type: O.Ob.H2
+                        }, Object(o.d)("Drops Item", "DevDropsCreateItem")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsCreateItem"))), r.createElement(N.Ha, null, r.createElement(N.P, {
+                            type: O.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsCreateItem"))), r.createElement(O.Ia, null, r.createElement(O.P, {
                             cols: {
                                 default: 12,
                                 md: 5
                             }
-                        }, r.createElement(Ne, {
+                        }, r.createElement(Oe, {
                             companyId: g(this.props.company),
                             onCancel: this.onCancel,
                             onSubmit: this.onSubmit,
@@ -3980,13 +3982,13 @@
                         }))))
                     }, t
                 }(r.Component),
-                Re = Object(l.compose)(Object(_.c)("DevDropsCreateItemPage", {
+                Se = Object(l.compose)(Object(_.b)("DevDropsCreateItemPage", {
                     autoReportInteractive: !0,
-                    destination: E.a.DevSiteDropsCreateItem
+                    destination: d.a.DevSiteDropsCreateItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsCreateItem
-                }), me(), Object(u.a)(), M.a)(Oe),
-                Se = function(e) {
+                }), me(), Object(u.a)(), y.a)(Ne),
+                Re = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4025,7 +4027,7 @@
                                         case 0:
                                             e = g(this.props.company), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 3, , 4]), [4, Y({
+                                            return n.trys.push([1, 3, , 4]), [4, x({
                                                 activeOnly: !0,
                                                 companyId: e,
                                                 limit: 100
@@ -4047,7 +4049,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = d.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(D.a)(T.a.GetCampaignById)];
+                                            return a.trys.push([0, 6, , 7]), e = E.a + "/kraken/campaigns/" + this.props.match.params.campaignId, [4, Object(D.a)(T.a.GetCampaignById)];
                                         case 1:
                                             return (t = a.sent()) ? [4, Object(h.a)(e, {
                                                 headers: {
@@ -4079,7 +4081,7 @@
                                         case 0:
                                             return a.trys.push([0, 10, , 11]), t = g(this.props.company), n = f(e, String(t)), [4, Object(D.a)(T.a.PutCampaign)];
                                         case 1:
-                                            return (r = a.sent()) ? (s = d.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(h.a)(s, {
+                                            return (r = a.sent()) ? (s = E.a + "/kraken/accounts/" + t + "/campaigns/" + e.id, [4, Object(h.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(n),
                                                 headers: {
@@ -4132,7 +4134,7 @@
                                         case 1:
                                             if (e = a.sent()) return t = g(this.props.company), n = {
                                                 campaignID: this.state.campaign.id,
-                                                imageType: y.r.LINK_NOTIFICATION,
+                                                imageType: M.s.LINK_NOTIFICATION,
                                                 serviceID: t,
                                                 token: e
                                             }, [2, this.props.createUploadURLMutation(n)];
@@ -4150,7 +4152,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new w(this.getUploadURL, this.onFinishUpload), a.label = 1;
+                                            t = new V(this.getUploadURL, this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -4179,27 +4181,27 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.gamesLoaded && this.state.campaign ? r.createElement(N.Va, {
+                        return this.state.gamesLoaded && this.state.campaign ? r.createElement(O.Wa, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(N.Va, {
-                            display: N.W.Flex,
-                            justifyContent: N.Ua.Between
-                        }, r.createElement(N.V, {
-                            type: N.Nb.H2
+                        }, r.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Between
+                        }, r.createElement(O.W, {
+                            type: O.Ob.H2
                         }, Object(o.d)("Drops Campaign: {title}", {
                             title: this.state.campaign.item_name
-                        }, "DevDropsEditCampaign")), r.createElement(N.z, {
+                        }, "DevDropsEditCampaign")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsEditCampaign"))), r.createElement(N.Ha, null, r.createElement(N.P, {
+                            type: O.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsEditCampaign"))), r.createElement(O.Ia, null, r.createElement(O.P, {
                             cols: {
                                 default: 12,
                                 md: 5
                             }
-                        }, r.createElement(de, {
+                        }, r.createElement(Ee, {
                             campaign: this.state.campaign,
                             companyId: this.props.company.id,
                             games: this.state.games,
@@ -4209,14 +4211,14 @@
                             onFormChange: this.onFormChange,
                             onSubmit: this.onSubmit,
                             updateSuccess: this.state.updateSuccess
-                        })))) : r.createElement(N.Xa, null)
+                        })))) : r.createElement(O.Ya, null)
                     }, t
                 }(r.Component),
-                Ae = Object(l.compose)(Object(_.c)("DevDropsEditCampaignPage", {
-                    destination: E.a.DevSiteDropsEditCampaign
+                Ae = Object(l.compose)(Object(_.b)("DevDropsEditCampaignPage", {
+                    destination: d.a.DevSiteDropsEditCampaign
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditCampaign
-                }), me(), Object(u.a)(), M.a)(Se);
+                }), me(), Object(u.a)(), y.a)(Re);
             ! function(e) {
                 e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
             }(Ie || (Ie = {})),
@@ -4234,7 +4236,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = d.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(D.a)(T.a.GetItemByID)];
+                                            return a.trys.push([0, 6, , 7]), e = g(this.props.company), t = E.a + "/kraken/accounts/" + e + "/items/" + this.props.match.params.itemId, [4, Object(D.a)(T.a.GetItemByID)];
                                         case 1:
                                             return (n = a.sent()) ? [4, Object(h.a)(t, {
                                                 headers: {
@@ -4268,7 +4270,7 @@
                                         case 0:
                                             return a.trys.push([0, 10, , 11]), t = g(this.props.company), [4, Object(D.a)(T.a.UpdateItem)];
                                         case 1:
-                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = d.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(h.a)(s, {
+                                            return (n = a.sent()) ? (r = I(e, String(t), n), s = E.a + "/kraken/accounts/" + t + "/items/" + e.item_id, [4, Object(h.a)(s, {
                                                 method: "PUT",
                                                 body: JSON.stringify(r),
                                                 headers: {
@@ -4341,7 +4343,7 @@
                                 return a.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            t = new w(this.getUploadURL, this.onFinishUpload), a.label = 1;
+                                            t = new V(this.getUploadURL, this.onFinishUpload), a.label = 1;
                                         case 1:
                                             return a.trys.push([1, 3, , 4]), [4, t.uploadFile(e)];
                                         case 2:
@@ -4370,27 +4372,27 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return this.state.item ? r.createElement(N.Va, {
+                        return this.state.item ? r.createElement(O.Wa, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(N.Va, {
-                            display: N.W.Flex,
-                            justifyContent: N.Ua.Between
-                        }, r.createElement(N.V, {
-                            type: N.Nb.H2
+                        }, r.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Between
+                        }, r.createElement(O.W, {
+                            type: O.Ob.H2
                         }, Object(o.d)("Drops Item: {name}", {
                             name: this.state.item.Translations[this.state.item.DefaultLanguage]
-                        }, "DevDropsEditItem")), r.createElement(N.z, {
+                        }, "DevDropsEditItem")), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsEditItem"))), r.createElement(N.Ha, null, r.createElement(N.P, {
+                            type: O.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsEditItem"))), r.createElement(O.Ia, null, r.createElement(O.P, {
                             cols: {
                                 default: 12,
                                 md: 5
                             }
-                        }, r.createElement(Ne, {
+                        }, r.createElement(Oe, {
                             onSubmit: this.onSubmit,
                             companyId: g(this.props.company),
                             item: this.state.item,
@@ -4398,51 +4400,47 @@
                             onFormChange: this.onFormChange,
                             errorMessage: this.state.errorMessage,
                             updateSuccess: this.state.updateSuccess
-                        })))) : r.createElement(N.Xa, null)
+                        })))) : r.createElement(O.Ya, null)
                     }, t
                 }(r.Component),
-                ve = Object(l.compose)(Object(_.c)("DevDropsEditItemPage", {
-                    destination: E.a.DevSiteDropsEditItem
+                ve = Object(l.compose)(Object(_.b)("DevDropsEditItemPage", {
+                    destination: d.a.DevSiteDropsEditItem
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsEditItems
-                }), me(), Object(u.a)(), M.a)(be),
+                }), me(), Object(u.a)(), y.a)(be),
                 Le = function(e) {
-                    var t = Object(O.b)(S(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
-                        n = Object(O.b)(S(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
+                    var t = Object(N.b)(R(e.item.createdAt), "MM/DD/YYYY, hh:mm a"),
+                        n = Object(N.b)(R(e.item.updatedAt), "MM/DD/YYYY, hh:mm a"),
                         a = "/console/drops/items/" + e.item.id;
-                    return r.createElement(N.Fb, null, r.createElement(N.Cb, null, r.createElement(N.T, {
+                    return r.createElement(O.Gb, null, r.createElement(O.Db, null, r.createElement(O.U, {
                         linkTo: a
-                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(N.Cb, null, e.item.id), r.createElement(N.Cb, null, t), r.createElement(N.Cb, null, n), r.createElement(N.Cb, null, e.item.active.toString()))
+                    }, e.item.translations[e.item.defaultLanguage])), r.createElement(O.Db, null, e.item.id), r.createElement(O.Db, null, t), r.createElement(O.Db, null, n), r.createElement(O.Db, null, e.item.active.toString()))
                 };
             ! function(e) {
                 e[e.Enabled = 0] = "Enabled", e[e.CreationDate = 1] = "CreationDate", e[e.UpdatedDate = 2] = "UpdatedDate", e[e.Name = 3] = "Name"
             }(Ce || (Ce = {}));
-            var Pe, Ue = function(e) {
+            var Ue, Pe = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        n.state = {
-                            items: [],
-                            sortingName: N.ub.Default,
-                            sortingEnabled: N.ub.Default,
-                            sortingCreationDate: N.ub.Default,
-                            sortingUpdatedDate: N.ub.Default,
-                            currentPage: 1,
-                            maxPages: 1,
-                            seenAllPages: !1,
-                            prevCursor: "",
-                            nextCursor: ""
-                        }, n.handleClickNext = function() {
-                            n.state.seenAllPages || (n.props.onClickPagination(n.state.currentPage + 1, "", n.state.nextCursor), n.setState({
-                                currentPage: n.state.currentPage + 1,
-                                nextCursor: n.state.nextCursor
-                            }))
+                        return n.handleClickNext = function() {
+                            var e = n.props,
+                                t = e.currentPage,
+                                a = e.maxPages,
+                                r = e.nextCursor;
+                            t !== a && n.props.onClickPagination(t + 1, "", r)
                         }, n.handleClickPrev = function() {
-                            1 !== n.state.currentPage && (n.props.onClickPagination(n.state.currentPage - 1, n.state.prevCursor, ""), n.setState({
-                                currentPage: n.state.currentPage - 1,
-                                nextCursor: ""
-                            }))
+                            var e = n.props,
+                                t = e.currentPage,
+                                a = e.prevCursor;
+                            1 !== n.props.currentPage && n.props.onClickPagination(t - 1, a, "")
                         }, n.handleClickIndex = function(e) {
-                            e.goToPage > n.state.currentPage ? n.handleClickNext() : n.handleClickPrev()
+                            if (!(e.goToPage > n.props.maxPages || e.goToPage < 1)) {
+                                var t = n.props,
+                                    a = t.currentPage,
+                                    r = t.nextCursor,
+                                    s = t.prevCursor;
+                                e.goToPage > a ? n.props.onClickPagination(e.goToPage, "", r) : n.props.onClickPagination(e.goToPage, s, "")
+                            }
                         }, n.renderCampaignItems = function() {
                             return n.props.items.map(function(e) {
                                 return r.createElement(Le, {
@@ -4483,64 +4481,56 @@
                                 n.props.onSort(Ce.UpdatedDate, n.state.sortingUpdatedDate)
                             })
                         }, n.toggleSorting = function(e) {
-                            return e === N.ub.Default || e === N.ub.Ascending ? N.ub.Descending : N.ub.Ascending
-                        };
-                        var a = "" === t.nextCursor ? t.currentPage : t.currentPage + 1;
-                        return n.state = {
-                            items: t.items,
-                            sortingName: N.ub.Default,
-                            sortingEnabled: N.ub.Default,
-                            sortingCreationDate: N.ub.Default,
-                            sortingUpdatedDate: N.ub.Default,
-                            seenAllPages: t.currentPage === t.maxPages,
-                            prevCursor: t.prevCursor ? t.prevCursor : "",
-                            nextCursor: t.nextCursor ? t.nextCursor : "",
-                            currentPage: t.currentPage,
-                            maxPages: a
+                            return e === O.vb.Default || e === O.vb.Ascending ? O.vb.Descending : O.vb.Ascending
+                        }, n.state = {
+                            sortingName: O.vb.Default,
+                            sortingEnabled: O.vb.Default,
+                            sortingCreationDate: O.vb.Default,
+                            sortingUpdatedDate: O.vb.Default
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.renderCampaignItems();
-                        return r.createElement(N.Va, null, r.createElement(N.Va, {
-                            display: N.W.Flex,
-                            justifyContent: N.Ua.Between,
+                        return r.createElement(O.Wa, null, r.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Between,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Za, {
-                            currentPage: this.state.currentPage,
-                            totalPages: this.state.maxPages,
+                        }, r.createElement(O.ab, {
+                            currentPage: this.props.currentPage,
+                            totalPages: this.props.maxPages,
                             onClickIndex: this.handleClickIndex,
                             onClickNext: this.handleClickNext,
                             onClickPrevious: this.handleClickPrev,
                             nextPageButtonAriaLabel: "Next Page",
                             previousPageButtonAriaLabel: "Previous Page"
-                        }), r.createElement(N.z, {
+                        }), r.createElement(O.z, {
                             onClick: Object(c.c)(c.a.CreateDropsItemProcessStart),
                             linkTo: "/console/drops/items/create",
-                            icon: N.nb.Plus
-                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(N.Ab, null, r.createElement(N.Db, null, r.createElement(N.Eb, {
+                            icon: O.ob.Plus
+                        }, Object(o.d)("Create Drops Item", "DevDropsItems"))), r.createElement(O.Bb, null, r.createElement(O.Eb, null, r.createElement(O.Fb, {
                             label: Object(o.d)("Item Name", "DevDropsItems"),
                             sorting: this.state.sortingName,
                             onClick: this.sortName
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(O.Fb, {
                             label: Object(o.d)("Item ID", "DevDropsItems")
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(O.Fb, {
                             label: Object(o.d)("Creation Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingCreationDate,
                             onClick: this.sortCreationDate
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(O.Fb, {
                             label: Object(o.d)("Last Updated Date (UTC)", "DevDropsItems"),
                             sorting: this.state.sortingUpdatedDate,
                             onClick: this.sortUpdatedDate
-                        }), r.createElement(N.Eb, {
+                        }), r.createElement(O.Fb, {
                             label: Object(o.d)("Enabled", "DevDropsItems"),
                             sorting: this.state.sortingEnabled,
                             onClick: this.sortEnabled
-                        })), r.createElement(N.Bb, null, e)))
+                        })), r.createElement(O.Cb, null, e)))
                     }, t
                 }(r.Component),
-                Me = function(e) {
+                ye = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4558,7 +4548,7 @@
                                             }), [2];
                                             t = g(this.props.company), a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, Y({
+                                            return a.trys.push([1, 3, , 4]), [4, x({
                                                 companyId: t,
                                                 prevCursor: n,
                                                 nextCursor: r
@@ -4571,7 +4561,7 @@
                                             }, (o = this.state.pageCursors)[e] = i, this.setState({
                                                 currentPage: e,
                                                 pageCursors: o,
-                                                seenAllPages: "" === s.nextCursor
+                                                seenAllPages: !s.nextCursor
                                             })), [3, 4];
                                         case 3:
                                             return a.sent(), [3, 4];
@@ -4584,28 +4574,28 @@
                             var a = t.state.pageCursors[t.state.currentPage].items;
                             switch (e) {
                                 case Ce.Name:
-                                    a = n === N.ub.Ascending ? a.sort(function(e, t) {
+                                    a = n === O.vb.Ascending ? a.sort(function(e, t) {
                                         return e.translations[e.defaultLanguage].localeCompare(t.translations[t.defaultLanguage])
                                     }) : a.sort(function(e, t) {
                                         return t.translations[t.defaultLanguage].localeCompare(e.translations[e.defaultLanguage])
                                     });
                                     break;
                                 case Ce.Enabled:
-                                    a = n === N.ub.Ascending ? a.sort(function(e, t) {
+                                    a = n === O.vb.Ascending ? a.sort(function(e, t) {
                                         return Number(e.active) - Number(t.active)
                                     }) : a.sort(function(e, t) {
                                         return Number(t.active) - Number(e.active)
                                     });
                                     break;
                                 case Ce.CreationDate:
-                                    a = n === N.ub.Ascending ? a.sort(function(e, t) {
+                                    a = n === O.vb.Ascending ? a.sort(function(e, t) {
                                         return e.createdAt.getTime() - t.createdAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.createdAt.getTime() - e.createdAt.getTime()
                                     });
                                     break;
                                 case Ce.UpdatedDate:
-                                    a = n === N.ub.Ascending ? a.sort(function(e, t) {
+                                    a = n === O.vb.Ascending ? a.sort(function(e, t) {
                                         return e.updatedAt.getTime() - t.updatedAt.getTime()
                                     }) : a.sort(function(e, t) {
                                         return t.updatedAt.getTime() - e.updatedAt.getTime()
@@ -4619,7 +4609,7 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.pageCursors[this.state.currentPage];
-                        return e ? r.createElement(Ue, {
+                        return e ? r.createElement(Pe, {
                             items: e.items,
                             onSort: this.onSort,
                             onClickPagination: this.getItems,
@@ -4641,19 +4631,20 @@
                         })
                     }, t
                 }(r.Component),
-                ye = Object(l.compose)(Object(_.c)("DevDropsItemsPage", {
-                    destination: E.a.DevSiteDropsItems
+                Me = Object(l.compose)(Object(_.b)("DevDropsItemsPage", {
+                    destination: d.a.DevSiteDropsItems
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsItems
-                }), Object(u.a)())(Me),
+                }), Object(u.a)())(ye),
                 Fe = n("mLw1");
-            (Pe || (Pe = {})).SubmitButton = "dev-drops-settings-submit";
-            var Ve = function(e) {
+            (Ue || (Ue = {})).SubmitButton = "dev-drops-settings-submit";
+            var je = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             clientId: t.props.currentSettings.clientId,
                             endpoint: t.props.currentSettings.endpoint,
+                            isSubmitting: !1,
                             sendReport: t.props.currentSettings.sendReport,
                             submitSuccess: t.props.submitSuccess
                         }, t.setClientId = function(e) {
@@ -4672,23 +4663,33 @@
                                 submitSuccess: !1
                             })
                         }, t.saveChanges = function(e) {
-                            e.preventDefault();
-                            var n = {
-                                sendReport: t.state.sendReport,
-                                endpoint: t.state.endpoint,
-                                clientId: t.state.clientId
-                            };
-                            t.props.onUpdate(n)
+                            return a.__awaiter(t, void 0, void 0, function() {
+                                var t;
+                                return a.__generator(this, function(n) {
+                                    switch (n.label) {
+                                        case 0:
+                                            return e.preventDefault(), t = {
+                                                sendReport: this.state.sendReport,
+                                                endpoint: this.state.endpoint,
+                                                clientId: this.state.clientId
+                                            }, this.setState({
+                                                isSubmitting: !0
+                                            }), [4, this.props.onUpdate(t)];
+                                        case 1:
+                                            return n.sent(), this.setState({
+                                                isSubmitting: !1
+                                            }), [2]
+                                    }
+                                })
+                            })
                         }, t.renderSubmitButton = function() {
-                            var e = t.state.submitSuccess ? N.F.Success : N.F.Default,
-                                n = t.state.submitSuccess,
-                                a = t.state.submitSuccess ? Object(o.d)("Success", "DevDropsSettings") : Object(o.d)("Submit", "DevDropsSettings");
-                            return r.createElement(N.z, {
-                                "data-test-selector": Pe.SubmitButton,
-                                disabled: n,
-                                type: e,
-                                onClick: t.saveChanges
-                            }, a)
+                            var e = O.E.Default;
+                            return t.state.isSubmitting ? e = O.E.Loading : t.state.submitSuccess && (e = O.E.Success), r.createElement(O.z, {
+                                "data-test-selector": Ue.SubmitButton,
+                                disabled: t.state.submitSuccess,
+                                onClick: t.saveChanges,
+                                state: e
+                            }, Object(o.d)("Submit", "DevDropsSettings"))
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.componentWillReceiveProps = function(e) {
@@ -4706,65 +4707,65 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.renderSubmitButton();
-                        return r.createElement(N.Va, {
+                        return r.createElement(O.Wa, {
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(N.Na, {
-                            display: N.W.Flex,
-                            justifyContent: N.Ua.Between,
+                        }, r.createElement(O.Oa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Between,
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement("header", null, r.createElement(N.Va, null, r.createElement(N.V, {
-                            type: N.Nb.H2
-                        }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(N.z, {
+                        }, r.createElement("header", null, r.createElement(O.Wa, null, r.createElement(O.W, {
+                            type: O.Ob.H2
+                        }, Object(o.d)("VHS Configuration for Drops", "DevDropsSettings"))), r.createElement(O.z, {
                             targetBlank: !0,
                             linkTo: "https://dev.twitch.tv/docs/drops",
-                            type: N.F.Hollow
-                        }, Object(o.d)("Need Help?", "DevDropsSettings")))), r.createElement(N.Ha, null, r.createElement(N.P, {
+                            type: O.F.Hollow
+                        }, Object(o.d)("Need Help?", "DevDropsSettings")))), r.createElement(O.Ia, null, r.createElement(O.P, {
                             cols: {
                                 default: 12,
                                 md: 8,
                                 lg: 5
                             }
-                        }, r.createElement(N.Va, {
+                        }, r.createElement(O.Wa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Va, {
+                        }, r.createElement(O.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Ca, {
+                        }, r.createElement(O.Da, {
                             label: Object(o.d)("Client ID", "DevDropsSettings")
-                        }, r.createElement(N.Pa, {
-                            type: N.Ra.Text,
+                        }, r.createElement(O.Qa, {
+                            type: O.Sa.Text,
                             value: this.state.clientId,
                             onChange: this.setClientId
-                        }))), r.createElement(N.Va, {
+                        }))), r.createElement(O.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.Ca, {
+                        }, r.createElement(O.Da, {
                             label: Object(o.d)("Endpoint", "DevDropsSettings")
-                        }, r.createElement(N.Pa, {
-                            type: N.Ra.Text,
+                        }, r.createElement(O.Qa, {
+                            type: O.Sa.Text,
                             value: this.state.endpoint,
                             onChange: this.setEndpoint
-                        }))), r.createElement(N.Va, {
+                        }))), r.createElement(O.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.N, {
+                        }, r.createElement(O.N, {
                             label: Object(o.d)("Send periodic VHS reports to Endpoint (uncheck to stop getting reports)", "DevDropsSettings"),
                             checked: this.state.sendReport,
                             onChange: this.setReport
                         }))), e)))
                     }, t
                 }(r.Component),
-                je = Object(l.compose)(Object(_.c)("DevDropsSettingsComponent"))(Ve),
-                ke = function(e) {
+                ke = Object(l.compose)(Object(_.b)("DevDropsSettingsComponent"))(je),
+                Ge = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4785,7 +4786,7 @@
                                             if (!(t = a.sent())) return [3, 5];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = d.a + "/kraken/service/" + n, s = {
+                                            return a.trys.push([2, 4, , 5]), n = g(this.props.company), r = E.a + "/kraken/service/" + n, s = {
                                                 client_id: e.clientId,
                                                 enabled: e.sendReport,
                                                 endpoint: e.endpoint,
@@ -4821,7 +4822,7 @@
                                             if (!(e = a.sent())) return [3, 7];
                                             a.label = 2;
                                         case 2:
-                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = d.a + "/kraken/service/" + t, [4, Object(h.a)(n, {
+                                            return a.trys.push([2, 6, , 7]), t = g(this.props.company), n = E.a + "/kraken/service/" + t, [4, Object(h.a)(n, {
                                                 headers: {
                                                     "X-Twitch-VHSCF": e
                                                 }
@@ -4850,7 +4851,7 @@
                     return a.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.loadSettings()
                     }, t.prototype.render = function() {
-                        return this.props.company ? r.createElement(je, {
+                        return this.props.company ? r.createElement(ke, {
                             onUpdate: this.onUpdate,
                             currentSettings: this.state.settings,
                             submitSuccess: this.state.submitSuccess
@@ -4859,28 +4860,28 @@
                         })
                     }, t
                 }(r.Component),
-                Ge = Object(l.compose)(Object(_.c)("DevDropsSettingsPage", {
+                we = Object(l.compose)(Object(_.b)("DevDropsSettingsPage", {
                     autoReportInteractive: !0,
-                    destination: E.a.DevSiteDropsSettings
+                    destination: d.a.DevSiteDropsSettings
                 }), Object(p.a)({
                     location: m.PageviewLocation.DevSiteDropsSettings
-                }), Object(u.a)())(ke),
-                we = function(e) {
+                }), Object(u.a)())(Ge),
+                Ve = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = "/console/drops/items";
-                        return r.createElement(N.Va, null, r.createElement(N.Va, {
+                        return r.createElement(O.Wa, null, r.createElement(O.Wa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(N.zb, null, r.createElement(s.a, {
+                        }, r.createElement(O.Ab, null, r.createElement(s.a, {
                             path: "/console/drops",
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(N.yb, {
+                            return r.createElement(O.zb, {
                                 linkTo: "/console/drops",
                                 active: Boolean(t)
                             }, Object(o.d)("Campaign Manager", "DevDropsDashboardRoot"))
@@ -4889,7 +4890,7 @@
                             exact: !0
                         }, function(t) {
                             var n = t.match;
-                            return r.createElement(N.yb, {
+                            return r.createElement(O.zb, {
                                 linkTo: e,
                                 active: Boolean(n)
                             }, Object(o.d)("Item Manager", "DevDropsDashboardRoot"))
@@ -4898,7 +4899,7 @@
                             exact: !0
                         }, function(e) {
                             var t = e.match;
-                            return r.createElement(N.yb, {
+                            return r.createElement(O.zb, {
                                 onClick: Object(c.c)(c.a.ConfigureDropsSettings),
                                 linkTo: "/console/drops/settings",
                                 active: Boolean(t)
@@ -4906,19 +4907,19 @@
                         }))), r.createElement(i.a, null, r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops",
-                            component: U
+                            component: P
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: e,
-                            component: ye
+                            component: Me
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/settings",
-                            component: Ge
+                            component: we
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/items/create",
-                            component: Re
+                            component: Se
                         }), r.createElement(s.a, {
                             exact: !0,
                             path: "/console/drops/items/:itemId",
@@ -4934,7 +4935,7 @@
                         })))
                     }, t
                 }(r.Component),
-                Be = Object(u.a)()(we);
+                Be = Object(u.a)()(Ve);
             n.d(t, "DevDropsDashboardRoot", function() {
                 return Be
             })
@@ -5316,7 +5317,7 @@
                                         c = s.medium,
                                         u = s.content_index,
                                         l = s.email_id;
-                                    o.o.tracking.trackPageview(a.__assign({
+                                    o.p.tracking.trackPageview(a.__assign({
                                         content: i,
                                         medium: c,
                                         content_index: u,
@@ -5324,7 +5325,7 @@
                                         location: e.location
                                     }, t))
                                 }
-                            }, o.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
+                            }, o.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), r
                         }
                         return a.__extends(i, n), i.prototype.componentDidMount = function() {
                             var e = this;
@@ -5494,7 +5495,7 @@
                     SelfRequested: "self_requested"
                 };
             ! function(e) {
-                e.AddBlockedTerm = "add_blocked_term", e.AddPermittedTerm = "add_permitted_term", e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.AutoModCheerRejected = "automod_cheer_rejected", e.Ban = "ban", e.Clear = "clear", e.DeleteBlockedTerm = "delete_blocked_term", e.DeletePermittedTerm = "delete_permitted_term", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.ModifiedAutoModProperties = "modified_automod_properties", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
+                e.AddBlockedTerm = "add_blocked_term", e.AddPermittedTerm = "add_permitted_term", e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.AutoModCheerRejected = "automod_cheer_rejected", e.Ban = "ban", e.Clear = "clear", e.Delete = "delete", e.DeleteBlockedTerm = "delete_blocked_term", e.DeletePermittedTerm = "delete_permitted_term", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.ModifiedAutoModProperties = "modified_automod_properties", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
             }(a || (a = {})),
             function(e) {
                 e.AutoModMessageRejected = "automod_message_rejected", e.AutoModMessageApproved = "automod_message_approved", e.AutoModMessageDenied = "automod_message_denied", e.AutoModCheerDenied = "automod_cheer_message_denied", e.AutoModCheerTimeout = "automod_cheer_message_timeout"
@@ -5679,7 +5680,7 @@
                             }
                             return this.props.loaded && !this.props.company ? r.createElement(i.a, {
                                 to: "/request-access"
-                            }) : r.createElement(u.Xa, null)
+                            }) : r.createElement(u.Ya, null)
                         }, n.displayName = Object(o.a)(n.name, e), n
                     }(r.Component);
                     return Object(s.connect)(function(e) {

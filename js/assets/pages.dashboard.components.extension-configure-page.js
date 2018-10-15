@@ -121,8 +121,8 @@
                 r = t("1hWM"),
                 s = t("q1tI"),
                 l = t("oJmH"),
-                c = t("mLw1"),
-                d = t("/7QA"),
+                d = t("mLw1"),
+                c = t("/7QA"),
                 u = t("4VQm"),
                 m = t("yR8l"),
                 p = t("V+GM"),
@@ -131,8 +131,8 @@
                 f = t("5zC2"),
                 E = t("1IJ0"),
                 x = t("22qk"),
-                v = t("GnwI"),
-                b = t("Ue10"),
+                b = t("GnwI"),
+                v = t("Ue10"),
                 C = t("Pz3T"),
                 k = function(e) {
                     function n() {
@@ -146,7 +146,7 @@
                         }, n
                     }
                     return o.__extends(n, e), n.prototype.componentDidMount = function() {
-                        d.o.setPageTitle(this.getFormattedPageTitle())
+                        c.p.setPageTitle(this.getFormattedPageTitle())
                     }, n.prototype.componentDidUpdate = function() {
                         this.isLoading() || this.props.latencyTracking.reportInteractive()
                     }, n.prototype.componentWillMount = function() {
@@ -166,40 +166,40 @@
                             a = e.match,
                             o = this.isLoading(),
                             l = n.user && n.user.id ? n.user.id : "",
-                            c = n.currentUser && n.currentUser.id ? n.currentUser.id : "",
+                            d = n.currentUser && n.currentUser.id ? n.currentUser.id : "",
                             m = n.currentUser && n.currentUser.login ? n.currentUser.login : "",
                             p = null;
                         if (o) p = this.renderPlaceholders();
                         else {
                             if (!this.state.installation) return this.renderRedirect(m);
-                            if (l !== c) return this.renderRedirect(m);
+                            if (l !== d) return this.renderRedirect(m);
                             var g = this.state.installation,
                                 h = g.extension;
-                            p = s.createElement(b.Va, {
+                            p = s.createElement(v.Wa, {
                                 fullWidth: !0
-                            }, s.createElement(b.Va, {
+                            }, s.createElement(v.Wa, {
                                 padding: {
                                     bottom: 1
                                 }
-                            }, s.createElement(b.G, {
+                            }, s.createElement(v.G, {
                                 row: !0,
                                 border: !1
-                            }, s.createElement(b.I, {
+                            }, s.createElement(v.I, {
                                 alt: h.name,
-                                src: this.state.hasCardImageError ? d.a.defaultAvatarURL : h.iconUrl,
-                                aspect: b.p.Aspect1x1,
-                                size: b.J.Size6,
+                                src: this.state.hasCardImageError ? c.a.defaultAvatarURL : h.iconUrl,
+                                aspect: v.p.Aspect1x1,
+                                size: v.J.Size6,
                                 onError: this.onCardImageError
-                            }), s.createElement(b.H, null, s.createElement(b.Va, {
+                            }), s.createElement(v.H, null, s.createElement(v.Wa, {
                                 padding: 1
-                            }, s.createElement(b.V, {
-                                type: b.Nb.H4
-                            }, h.name), s.createElement(b.V, {
-                                type: b.Nb.Span,
-                                color: b.O.Alt2
-                            }, Object(d.d)("Created by {extensionAuthor}", {
+                            }, s.createElement(v.W, {
+                                type: v.Ob.H4
+                            }, h.name), s.createElement(v.W, {
+                                type: v.Ob.Span,
+                                color: v.O.Alt2
+                            }, Object(c.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: h.authorName
-                            }, "ExtensionConfigureComponent")))))), s.createElement(b.Va, null, s.createElement(f.a, {
+                            }, "ExtensionConfigureComponent")))))), s.createElement(v.Wa, null, s.createElement(f.a, {
                                 className: "extension-configure-extension-frame",
                                 installation: g,
                                 extensionMode: r.ExtensionMode.Config,
@@ -215,11 +215,11 @@
                         var x = s.createElement(E.a, {
                             channelLogin: a.params.channelLogin,
                             showBackLink: !0,
-                            title: Object(d.d)("Configure", "ExtensionConfigureComponent")
+                            title: Object(c.d)("Configure", "ExtensionConfigureComponent")
                         });
-                        return s.createElement(u.b, null, s.createElement(b.Va, {
+                        return s.createElement(u.b, null, s.createElement(v.Wa, {
                             padding: 2
-                        }, x, s.createElement(b.xb, {
+                        }, x, s.createElement(v.yb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,
@@ -232,28 +232,28 @@
                             return n.props.match.params.extensionID === t.clientId + "-" + t.version
                         })
                     }, n.prototype.getFormattedPageTitle = function() {
-                        return Object(d.d)("Extensions", "ExtensionConfigureComponent")
+                        return Object(c.d)("Extensions", "ExtensionConfigureComponent")
                     }, n.prototype.renderRedirect = function(e) {
-                        return s.createElement(c.a, {
+                        return s.createElement(d.a, {
                             to: Object(x.c)(e)
                         })
                     }, n.prototype.renderPlaceholders = function() {
-                        return s.createElement(b.Va, {
+                        return s.createElement(v.Wa, {
                             fullWidth: !0
-                        }, s.createElement(b.Va, {
-                            display: b.W.Flex,
-                            alignItems: b.f.Center,
+                        }, s.createElement(v.Wa, {
+                            display: v.X.Flex,
+                            alignItems: v.f.Center,
                             padding: {
                                 y: 1
                             }
-                        }, s.createElement(b.Va, null, s.createElement(b.cb, {
+                        }, s.createElement(v.Wa, null, s.createElement(v.db, {
                             width: 60,
                             height: 60
-                        })), s.createElement(b.Va, {
+                        })), s.createElement(v.Wa, {
                             padding: {
                                 left: 1
                             }
-                        }, s.createElement(b.cb, {
+                        }, s.createElement(v.db, {
                             lineCount: 2,
                             width: 200
                         }))))
@@ -263,7 +263,7 @@
                         return e || n
                     }, n
                 }(s.Component),
-                y = Object(l.compose)(Object(v.c)("ExtensionConfigurePage", {
+                y = Object(l.compose)(Object(b.b)("ExtensionConfigurePage", {
                     destination: g.a.ChannelDashboardExtensionsConfigure
                 }), Object(p.a)({
                     location: h.PageviewLocation.DashboardExtensionsConfigure

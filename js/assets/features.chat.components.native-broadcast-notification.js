@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [183], {
+    [177], {
         KSjr: function(e, t, a) {
             "use strict";
             a.r(t);
@@ -106,8 +106,8 @@
                     startDate: 15512544e5,
                     endDate: 15573852e5
                 }, l)],
-                d = "nativeBroadcastNotifDismissed",
-                u = function(e) {
+                u = "nativeBroadcastNotifDismissed",
+                d = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -121,15 +121,15 @@
                                 return e.toLowerCase() !== t.props.channelLogin.toLowerCase()
                             })).map(function(t) {
                                 var a = e.channels[t].displayName || t,
-                                    n = i.o.intl.resolveLocaleFromCode(e.channels[t].languageCode);
+                                    n = i.p.intl.resolveLocaleFromCode(e.channels[t].languageCode);
                                 if (!n) return null;
                                 var s = n.name + " (" + a + ")";
                                 return o.createElement("li", {
                                     key: t
-                                }, o.createElement(r.T, {
+                                }, o.createElement(r.U, {
                                     className: "native-broadcast-notification__link",
                                     to: "/" + t,
-                                    type: r.U.Overlay
+                                    type: r.V.Overlay
                                 }, s))
                             })
                         }, t.onDismiss = function() {
@@ -137,8 +137,8 @@
                             t.setState({
                                 isClosed: !0
                             });
-                            var a = n.__assign({}, i.l.get(d, {}), ((e = {})[t.props.channelLogin.toLowerCase()] = Date.now(), e));
-                            i.l.set(d, a)
+                            var a = n.__assign({}, i.m.get(u, {}), ((e = {})[t.props.channelLogin.toLowerCase()] = Date.now(), e));
+                            i.m.set(u, a)
                         }, t.onExpire = function() {
                             t.setState({
                                 isClosed: !0
@@ -155,49 +155,49 @@
                         if (!e) return null;
                         if (this.hasDismissedForEvent(e.startDate)) return null;
                         var t = this.getChannelLinks(e);
-                        return t.length ? o.createElement(r.xb, {
+                        return t.length ? o.createElement(r.yb, {
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
                             background: r.r.AccentAlt2,
                             color: r.O.Overlay,
                             padding: 1,
-                            position: r.db.Absolute
-                        }, o.createElement(r.Va, {
+                            position: r.eb.Absolute
+                        }, o.createElement(r.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(r.V, {
-                            type: r.Nb.H4
-                        }, e.title)), o.createElement(r.Va, {
+                        }, o.createElement(r.W, {
+                            type: r.Ob.H4
+                        }, e.title)), o.createElement(r.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(r.V, {
+                        }, o.createElement(r.W, {
                             color: r.O.OverlayAlt
                         }, Object(i.d)("Want to watch {eventName} in your local language? Try one of these international broadcasts!", {
                             eventName: e.shortName
-                        }, "NativeBroadcastNotification"))), o.createElement("ul", null, t), o.createElement(r.Va, {
+                        }, "NativeBroadcastNotification"))), o.createElement("ul", null, t), o.createElement(r.Wa, {
                             attachRight: !0,
                             attachTop: !0,
                             margin: 1,
-                            position: r.db.Absolute
+                            position: r.eb.Absolute
                         }, o.createElement(r.A, {
                             ariaLabel: Object(i.d)("Close", "NativeBroadcastNotification"),
-                            icon: r.nb.Close,
+                            icon: r.ob.Close,
                             onClick: this.onDismiss,
                             overlay: !0,
                             size: r.B.Small,
                             "data-a-target": "native-broadcast-notification-close-button"
-                        })), o.createElement(r.Va, {
+                        })), o.createElement(r.Wa, {
                             margin: {
                                 top: .5
                             }
-                        }, o.createElement(r.gb, {
-                            animationDirection: r.hb.Down,
+                        }, o.createElement(r.hb, {
+                            animationDirection: r.ib.Down,
                             animationDuration: 30,
                             onAnimationEnd: this.onExpire,
-                            size: r.ib.ExtraSmall
+                            size: r.jb.ExtraSmall
                         }))) : null
                     }, t.prototype.eventForChannel = function() {
                         var e = Date.now(),
@@ -206,16 +206,16 @@
                             return !(e < a.startDate || e > a.endDate) && !!a.channels[t]
                         })
                     }, t.prototype.hasDismissedForEvent = function(e) {
-                        var t = i.l.get(d, {})[this.props.channelLogin.toLowerCase()];
+                        var t = i.m.get(u, {})[this.props.channelLogin.toLowerCase()];
                         return !!t && t >= e
                     }, t
                 }(o.Component);
             a.d(t, "CLOSE_BUTTON_SELECTOR", function() {
                 return "native-broadcast-notification-close-button"
             }), a.d(t, "LOCAL_STORAGE_KEY", function() {
-                return d
-            }), a.d(t, "NativeBroadcastNotification", function() {
                 return u
+            }), a.d(t, "NativeBroadcastNotification", function() {
+                return d
             })
         }
     }

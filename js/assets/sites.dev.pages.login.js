@@ -46,57 +46,57 @@
                     return p.__extends(t, e), t.prototype.render = function() {
                         return this.props.isLoggedIn ? d.createElement(u.a, {
                             to: "/"
-                        }) : d.createElement(h.Va, {
+                        }) : d.createElement(h.Wa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            display: h.W.Flex,
-                            flexDirection: h.Y.Column,
-                            position: h.db.Absolute,
+                            display: h.X.Flex,
+                            flexDirection: h.Z.Column,
+                            position: h.eb.Absolute,
                             attachTop: !0,
                             attachBottom: !0,
                             breakpointSmall: {
-                                flexDirection: h.Y.Row
+                                flexDirection: h.Z.Row
                             },
                             className: "dev-login-page"
-                        }, d.createElement(h.xb, {
+                        }, d.createElement(h.yb, {
                             flexGrow: 1,
                             flexShrink: 1,
-                            display: h.W.Flex,
+                            display: h.X.Flex,
                             background: h.r.Accent,
-                            justifyContent: h.Ua.Center,
+                            justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
                             className: "dev-login-page__logo-panel"
-                        }, d.createElement(h.T, {
+                        }, d.createElement(h.U, {
                             to: "/"
-                        }, d.createElement(h.xb, {
+                        }, d.createElement(h.yb, {
                             color: h.O.Overlay
-                        }, d.createElement(h.mb, {
-                            asset: h.nb.LogoTwitchDevelopers,
-                            type: h.ob.Inherit,
+                        }, d.createElement(h.nb, {
+                            asset: h.ob.LogoTwitchDevelopers,
+                            type: h.pb.Inherit,
                             width: 220,
                             height: 142
-                        })))), d.createElement(h.Va, {
-                            display: h.W.Flex,
+                        })))), d.createElement(h.Wa, {
+                            display: h.X.Flex,
                             flexGrow: 1,
                             flexShrink: 1,
                             className: "dev-login-page__login-panel",
-                            justifyContent: h.Ua.Center,
+                            justifyContent: h.Va.Center,
                             alignItems: h.f.Center
-                        }, d.createElement(h.Va, {
+                        }, d.createElement(h.Wa, {
                             padding: {
                                 x: 4
                             }
-                        }, d.createElement(h.Va, {
+                        }, d.createElement(h.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(h.V, {
-                            type: h.Nb.P,
-                            fontSize: h.Aa.Size3
+                        }, d.createElement(h.W, {
+                            type: h.Ob.P,
+                            fontSize: h.Ba.Size3
                         }, Object(g.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), d.createElement(h.z, {
                             onClick: this.login,
                             size: h.D.Large,
-                            icon: h.nb.LogoGlitch,
+                            icon: h.ob.LogoGlitch,
                             "data-a-target": "glass-login-button"
                         }, Object(g.d)("Login with Twitch", "DevLogin")))))
                     }, t
@@ -105,7 +105,7 @@
                 return {
                     isLoggedIn: Object(c.f)(e)
                 }
-            }), Object(s.c)("DevLoginPage", {
+            }), Object(s.b)("DevLoginPage", {
                 autoReportInteractive: !0,
                 destination: r.a.DevSiteLogin
             }), Object(a.a)({
@@ -140,7 +140,7 @@
                                         s = a.medium,
                                         l = a.content_index,
                                         p = a.email_id;
-                                    c.o.tracking.trackPageview(i.__assign({
+                                    c.p.tracking.trackPageview(i.__assign({
                                         content: r,
                                         medium: s,
                                         content_index: l,
@@ -148,7 +148,7 @@
                                         location: e.location
                                     }, t))
                                 }
-                            }, c.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), o
+                            }, c.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), o
                         }
                         return i.__extends(r, n), r.prototype.componentDidMount = function() {
                             var e = this;

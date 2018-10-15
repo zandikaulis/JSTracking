@@ -17882,6 +17882,8 @@
                         this.raise("badgesupdated", e)
                     }, e.prototype.clearchat = function(e) {
                         this.raise("clearchat", e)
+                    }, e.prototype.clearmsg = function(e) {
+                        this.raise("clearmsg", e)
                     }, e.prototype.hosting = function(e) {
                         this.raise("hosting", e)
                     }, e.prototype.hosted = function(e) {
@@ -17998,6 +18000,7 @@
                         }
                     }, e.prototype.createChatMessage = function(e, t) {
                         return {
+                            id: a.decodeTag(e.tags.id),
                             user: this.createUser(e),
                             timestamp: a.getInteger(e.tags["tmi-sent-ts"]),
                             body: t
@@ -18512,6 +18515,7 @@
                                                 }
                                             }));
                                             I = {
+                                                id: a.decodeTag(F.id),
                                                 user: this.createUser(e),
                                                 timestamp: a.getInteger(F["tmi-sent-ts"]),
                                                 body: i
@@ -18526,6 +18530,7 @@
                                         } else if ("ritual" === s) {
                                             var z = e.tags["msg-param-ritual-name"];
                                             I = {
+                                                id: a.decodeTag(e.tags.id),
                                                 user: this.createUser(e),
                                                 timestamp: a.getInteger(e.tags["tmi-sent-ts"]),
                                                 body: i
@@ -18586,6 +18591,16 @@
                                             succeeded: !0
                                         });
                                         break;
+                                    case "CLEARMSG":
+                                        var K = a.decodeTag(e.tags["target-msg-id"]),
+                                            X = a.decodeTag(e.tags.login);
+                                        this.events.clearmsg({
+                                            channel: o,
+                                            userLogin: X,
+                                            targetMessageID: K,
+                                            body: i
+                                        });
+                                        break;
                                     case "RECONNECT":
                                         this.connection.onReconnect();
                                         break;
@@ -18593,19 +18608,19 @@
                                         break;
                                     case "USERSTATE":
                                         e.tags.username = this.session.username;
-                                        var K = this.createUser(e);
+                                        var J = this.createUser(e);
                                         this.commands.sendMessage.signal({
                                             channel: o,
                                             msgid: s,
                                             succeeded: !0
-                                        }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(o, this.session.username), a.isJustinfan(this.session.username) || this.session.hasJoinedChannel(o) || (this.session.onJoinedChannel(o, K), this.events.joined({
+                                        }), "mod" === e.tags["user-type"] && this.session.addChannelModerator(o, this.session.username), a.isJustinfan(this.session.username) || this.session.hasJoinedChannel(o) || (this.session.onJoinedChannel(o, J), this.events.joined({
                                             channel: o,
                                             username: this.session.username,
                                             gotUsername: !0
                                         })), e.badges && this.session.updateBadges(o, e.badges) && this.events.badgesupdated({
                                             badges: e.badges,
                                             username: a.username(this.session.username)
-                                        }), this.session.updateUserState(o, K);
+                                        }), this.session.updateUserState(o, J);
                                         break;
                                     case "GLOBALUSERSTATE":
                                         this.logger.debug("Updated global user state", {
@@ -18613,33 +18628,33 @@
                                         }), this.session.globaluserstate = e.tags;
                                         break;
                                     case "ROOMSTATE":
-                                        var X = a.channel(e.params[0]),
-                                            J = this.session.getChannelState(X);
-                                        if (!J) {
+                                        var Z = a.channel(e.params[0]),
+                                            $ = this.session.getChannelState(Z);
+                                        if (!$) {
                                             this.logger.warn("Failed to read existing channel state for message:\n" + JSON.stringify(e, null, 4));
                                             break
                                         }
-                                        var Z = J.roomState,
-                                            $ = u(Z, e.tags);
-                                        J.updateRoomState($), this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === X && this.commands.join.signal({
+                                        var ee = $.roomState,
+                                            te = u(ee, e.tags);
+                                        $.updateRoomState(te), this.commands.join.currentRequest && this.commands.join.currentRequest.joinChannel === Z && this.commands.join.signal({
                                             channel: o,
                                             msgid: s,
                                             succeeded: !0
                                         }), this.events.roomstate({
                                             channel: o,
-                                            state: $
-                                        }), $.slowMode === Z.slowMode && $.slowModeDuration === Z.slowModeDuration || ($.slowMode ? this.events.slowmode({
+                                            state: te
+                                        }), te.slowMode === ee.slowMode && te.slowModeDuration === ee.slowModeDuration || (te.slowMode ? this.events.slowmode({
                                             channel: o,
                                             enabled: !0,
-                                            length: $.slowModeDuration || 0
+                                            length: te.slowModeDuration || 0
                                         }) : this.events.slowmode({
                                             channel: o,
                                             enabled: !1,
                                             length: 0
-                                        })), $.followersOnly === Z.followersOnly && $.followersOnlyRequirement === Z.followersOnlyRequirement || ($.followersOnly ? this.events.followersonly({
+                                        })), te.followersOnly === ee.followersOnly && te.followersOnlyRequirement === ee.followersOnlyRequirement || (te.followersOnly ? this.events.followersonly({
                                             channel: o,
                                             enabled: !0,
-                                            length: $.followersOnlyRequirement || 0
+                                            length: te.followersOnlyRequirement || 0
                                         }) : this.events.followersonly({
                                             channel: o,
                                             enabled: !1,
@@ -18650,12 +18665,12 @@
                                         this.logger.warn("Could not parse message from tmi.twitch.tv:\n" + JSON.stringify(e, null, 4))
                                 } else if ("jtv" === e.prefix) switch (e.command) {
                                     case "MODE":
-                                        var ee = e.params[2];
-                                        "+o" === i ? (this.session.addChannelModerator(o, ee), this.events.mod({
-                                            username: ee,
+                                        var ne = e.params[2];
+                                        "+o" === i ? (this.session.addChannelModerator(o, ne), this.events.mod({
+                                            username: ne,
                                             channel: o
-                                        })) : "-o" === i && (this.session.removeChannelModerator(o, ee), this.events.unmod({
-                                            username: ee,
+                                        })) : "-o" === i && (this.session.removeChannelModerator(o, ne), this.events.unmod({
+                                            username: ne,
                                             channel: o
                                         }));
                                         break;
@@ -18671,28 +18686,28 @@
                                     case "366":
                                         break;
                                     case "JOIN":
-                                        var te = e.prefix.split("!")[0];
-                                        a.isJustinfan(this.session.username) && this.session.username === te && (this.session.onJoinedChannel(o, this.createUser(e)), this.events.joined({
+                                        var re = e.prefix.split("!")[0];
+                                        a.isJustinfan(this.session.username) && this.session.username === re && (this.session.onJoinedChannel(o, this.createUser(e)), this.events.joined({
                                             channel: o,
-                                            username: te,
+                                            username: re,
                                             gotUsername: !0
-                                        })), this.session.username !== te && this.events.joined({
+                                        })), this.session.username !== re && this.events.joined({
                                             channel: o,
-                                            username: te,
+                                            username: re,
                                             gotUsername: !1
                                         });
                                         break;
                                     case "PART":
-                                        var ne = e.prefix.split("!")[0],
-                                            re = this.session.username === ne;
-                                        re && (this.session.onPartedChannel(o), this.commands.part.signal({
+                                        var oe = e.prefix.split("!")[0],
+                                            ie = this.session.username === oe;
+                                        ie && (this.session.onPartedChannel(o), this.commands.part.signal({
                                             channel: o,
                                             msgid: s,
                                             succeeded: !0
                                         })), this.events.parted({
                                             channel: o,
-                                            username: ne,
-                                            isSelf: re
+                                            username: oe,
+                                            isSelf: ie
                                         });
                                         break;
                                     case "WHISPER":
@@ -18704,31 +18719,31 @@
                                         break;
                                     case "PRIVMSG":
                                         if (e.tags.username = e.prefix.split("!")[0], "jtv" === e.tags.username) {
-                                            var oe = a.username(i.split(" ")[0]);
+                                            var ae = a.username(i.split(" ")[0]);
                                             if (i.includes("hosting you for")) {
                                                 W = a.extractNumber(i);
                                                 this.events.hosted({
                                                     channel: o,
-                                                    from: oe,
+                                                    from: ae,
                                                     isAuto: i.includes("auto"),
                                                     viewers: W
                                                 })
                                             } else i.includes("hosting you") && this.events.hosted({
                                                 channel: o,
-                                                from: oe,
+                                                from: ae,
                                                 isAuto: i.includes("auto"),
                                                 viewers: 0
                                             })
                                         } else {
-                                            var ie = i.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
+                                            var se = i.match(/^\u0001ACTION ([^\u0001]+)\u0001$/);
                                             I = this.createChatMessage(e, i);
-                                            if (ie && ie.length >= 2) {
+                                            if (se && se.length >= 2) {
                                                 e.tags["message-type"] = "action";
-                                                var ae = ie[1];
+                                                var ue = se[1];
                                                 this.events.action({
                                                     type: l.Action,
                                                     timestamp: Date.now(),
-                                                    action: ae,
+                                                    action: ue,
                                                     channel: o,
                                                     message: I,
                                                     sentByCurrentUser: !1
@@ -19020,6 +19035,7 @@
                                     emotes: i,
                                     id: Date.now().toString()
                                 }), u = {
+                                    id: "",
                                     body: r,
                                     timestamp: Date.now(),
                                     user: s
@@ -19373,6 +19389,8 @@
                         this.add("chat", e)
                     }, e.prototype.clearchat = function(e) {
                         this.add("clearchat", e)
+                    }, e.prototype.clearmsg = function(e) {
+                        this.add("clearmsg", e)
                     }, e.prototype.crate = function(e) {
                         this.add("crate", e)
                     }, e.prototype.connected = function(e) {

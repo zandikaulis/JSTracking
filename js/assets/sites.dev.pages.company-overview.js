@@ -84,7 +84,7 @@
                     return n
                 }),
                 function(e) {
-                    e.Games = "game", e.Videos = "vod", e.Users = "user", e.Channels = "live_channel", e.Communities = "community", e.StreamTags = "stream_tag", e.Tags = "tag"
+                    e.Games = "game", e.Videos = "vod", e.Users = "user", e.Channels = "live_channel", e.StreamTags = "stream_tag", e.Tags = "tag"
                 }(n || (n = {}))
         },
         LFRE: function(e, t, r) {
@@ -114,12 +114,12 @@
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.user.avatar || Object(v.c)(this.props.user.id, 64);
-                        return a.createElement(b.Va, n.__assign({
+                        return a.createElement(b.Wa, n.__assign({
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(g.a)(this.props)), a.createElement(b.Sa, {
+                        }, Object(g.a)(this.props)), a.createElement(b.Ta, {
                             onClick: this.onSelect
                         }, a.createElement(b.G, {
                             row: !0
@@ -128,17 +128,17 @@
                             src: e,
                             size: b.J.Size4,
                             aspect: b.p.Aspect1x1
-                        }), a.createElement(b.Va, {
+                        }), a.createElement(b.Wa, {
                             flexGrow: 1,
-                            display: b.W.Flex,
-                            position: b.db.Relative
-                        }, a.createElement(b.Na, {
+                            display: b.X.Flex,
+                            position: b.eb.Relative
+                        }, a.createElement(b.Oa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, a.createElement(b.V, {
-                            type: b.Nb.Span,
+                        }, a.createElement(b.W, {
+                            type: b.Ob.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -148,7 +148,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.userSearch = null, t.renderSearchContent = function() {
                             var e = null;
-                            return t.props.waiting ? e = a.createElement(b.Xa, {
+                            return t.props.waiting ? e = a.createElement(b.Ya, {
                                 fillContent: !0
                             }) : t.props.userResults && (e = t.props.userResults.map(function(e) {
                                 return a.createElement(m.a, {
@@ -168,7 +168,7 @@
                         this.userSearch && e.open !== this.props.open && this.userSearch.toggle(e.open)
                     }, t.prototype.render = function() {
                         var e = this.renderSearchContent();
-                        return a.createElement(b.Va, null, a.createElement(d.a, {
+                        return a.createElement(b.Wa, null, a.createElement(d.a, {
                             onChange: this.props.onInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
@@ -179,17 +179,17 @@
                                 size: b.w.Large
                             },
                             onClose: this.props.onSearchClose
-                        }, a.createElement(b.Va, {
+                        }, a.createElement(b.Wa, {
                             className: "user-search__user-search"
                         }, a.createElement(h.b, {
                             contentClassName: "user-search__user-search-content",
                             suppressScrollX: !0
-                        }, a.createElement(b.Va, {
+                        }, a.createElement(b.Wa, {
                             fullWidth: !0
                         }, e)))))
                     }, t
                 }(a.Component),
-                k = Object(p.compose)(Object(f.c)("DevUserSearchDropdown", {
+                k = Object(p.compose)(Object(f.b)("DevUserSearchDropdown", {
                     autoReportInteractive: !0
                 }))(_),
                 S = 100,
@@ -226,7 +226,7 @@
                                         case 2:
                                             return r = n.sent(), [3, 4];
                                         case 3:
-                                            return a = n.sent(), i.o.logger.error(a, "Algolia User Search failed"), this.setState({
+                                            return a = n.sent(), i.p.logger.error(a, "Algolia User Search failed"), this.setState({
                                                 waiting: !1,
                                                 searchOpen: !1
                                             }), [2];
@@ -271,12 +271,12 @@
                                 selected: !0
                             })
                         }, r.searchClient = new l.a({
-                            appId: i.o.config.algoliaApplicationID,
-                            apiKey: i.o.config.algoliaAPIKey,
-                            apolloClient: i.o.apollo.client,
-                            logger: i.o.logger,
-                            config: i.o.config,
-                            stats: i.o.stats
+                            appId: i.p.config.algoliaApplicationID,
+                            apiKey: i.p.config.algoliaAPIKey,
+                            apolloClient: i.p.apollo.client,
+                            logger: i.p.logger,
+                            config: i.p.config,
+                            stats: i.p.stats
                         }), r
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
@@ -312,35 +312,35 @@
                 i = r("/7QA"),
                 o = r("Ue10"),
                 c = function() {
-                    return a.createElement(o.Va, {
-                        display: o.W.Flex,
-                        flexDirection: o.Y.Column,
-                        justifyContent: o.Ua.Center,
+                    return a.createElement(o.Wa, {
+                        display: o.X.Flex,
+                        flexDirection: o.Z.Column,
+                        justifyContent: o.Va.Center,
                         alignItems: o.f.Center,
                         flexGrow: 1,
                         fullHeight: !0,
                         padding: {
                             y: 1
                         },
-                        zIndex: o.ac.Above
-                    }, a.createElement(o.xb, {
+                        zIndex: o.bc.Above
+                    }, a.createElement(o.yb, {
                         color: o.O.Alt2,
-                        textAlign: o.Jb.Center,
+                        textAlign: o.Kb.Center,
                         flexShrink: 1
-                    }, a.createElement(o.mb, {
-                        asset: o.nb.DeadGlitch,
+                    }, a.createElement(o.nb, {
+                        asset: o.ob.DeadGlitch,
                         width: 46,
                         height: 48
-                    })), a.createElement(o.Na, {
+                    })), a.createElement(o.Oa, {
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Jb.Center
-                    }, a.createElement(o.V, {
-                        type: o.Nb.H4,
+                        textAlign: o.Kb.Center
+                    }, a.createElement(o.W, {
+                        type: o.Ob.H4,
                         "data-test-selector": "search-error-message"
-                    }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), a.createElement(o.V, {
-                        type: o.Nb.P
+                    }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), a.createElement(o.W, {
+                        type: o.Ob.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = r("8Ad5"),
@@ -384,7 +384,7 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = void 0 === this.props.showDropdown || this.props.showDropdown,
                             t = this.props.isErrored ? a.createElement(c, null) : a.Children.only(this.props.children),
-                            r = a.createElement(o.pb, {
+                            r = a.createElement(o.qb, {
                                 onChange: this.handleChange,
                                 onKeyDown: this.onKeyDown,
                                 onBlur: this.handleBlur,
@@ -399,23 +399,23 @@
                             });
                         return this.props.inline ? a.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, a.createElement(o.xb, {
+                        }, a.createElement(o.yb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
-                            position: o.db.Relative,
+                            position: o.eb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, r, e && a.createElement(o.xb, {
+                        }, r, e && a.createElement(o.yb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
-                            display: this.state.isOpen ? o.W.Block : o.W.Hide,
+                            display: this.state.isOpen ? o.X.Block : o.X.Hide,
                             fullWidth: !0,
                             padding: {
                                 y: 1
                             },
-                            position: o.db.Absolute,
-                            zIndex: o.ac.Above,
+                            position: o.eb.Absolute,
+                            zIndex: o.bc.Above,
                             elevation: 3
                         }, a.createElement("div", {
                             tabIndex: 0,
@@ -542,18 +542,18 @@
                             t = Object(c.d)("Add {title}", {
                                 title: e
                             }, "DevAddUserModal");
-                        return o.createElement(h.Va, {
+                        return o.createElement(h.Wa, {
                             className: "dev-add-user-modal"
-                        }, o.createElement(h.xb, {
+                        }, o.createElement(h.yb, {
                             background: h.r.Base,
                             padding: 2
-                        }, o.createElement(h.Va, {
+                        }, o.createElement(h.Wa, {
                             className: "dev-add-user-modal__form-container"
-                        }, o.createElement("form", null, o.createElement(h.Va, null, o.createElement(h.Va, {
+                        }, o.createElement("form", null, o.createElement(h.Wa, null, o.createElement(h.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(h.Ca, {
+                        }, o.createElement(h.Da, {
                             "data-test-selector": d.SeachUserFormGroup,
                             error: "" !== this.state.errorMessage,
                             errorMessage: this.state.errorMessage,
@@ -562,44 +562,44 @@
                             limit: 5,
                             onUserSelect: this.onUserSelect,
                             onReset: this.onUserReset
-                        }))), o.createElement(h.Va, {
+                        }))), o.createElement(h.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(h.Ca, {
+                        }, o.createElement(h.Da, {
                             label: Object(c.d)("First Name", "DevAddUserModal")
-                        }, o.createElement(h.Pa, {
-                            type: h.Ra.Text,
+                        }, o.createElement(h.Qa, {
+                            type: h.Sa.Text,
                             value: this.state.firstName,
                             onChange: this.setFirstName
-                        }))), o.createElement(h.Va, {
+                        }))), o.createElement(h.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(h.Ca, {
+                        }, o.createElement(h.Da, {
                             label: Object(c.d)("Last Name", "DevAddUserModal")
-                        }, o.createElement(h.Pa, {
-                            type: h.Ra.Text,
+                        }, o.createElement(h.Qa, {
+                            type: h.Sa.Text,
                             value: this.state.lastName,
                             onChange: this.setLastName
-                        }))), o.createElement(h.Va, {
+                        }))), o.createElement(h.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(h.Ca, {
+                        }, o.createElement(h.Da, {
                             label: Object(c.d)("Title", "DevAddUserModal")
-                        }, o.createElement(h.Pa, {
-                            type: h.Ra.Text,
+                        }, o.createElement(h.Qa, {
+                            type: h.Sa.Text,
                             value: this.state.title,
                             onChange: this.setTitle
-                        }))), o.createElement(h.Va, {
+                        }))), o.createElement(h.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, o.createElement(h.Ca, {
+                        }, o.createElement(h.Da, {
                             label: Object(c.d)("Email", "DevAddUserModal")
-                        }, o.createElement(h.Pa, {
-                            type: h.Ra.Email,
+                        }, o.createElement(h.Qa, {
+                            type: h.Sa.Email,
                             "data-test-selector": d.Email,
                             value: this.state.email,
                             onChange: this.setEmail
@@ -611,7 +611,7 @@
                         }, this.state.errorMessage ? Object(c.d)("Error Adding User. See Fields Above", "DevAddUserModal") : t))))), o.createElement(u.a, null))
                     }, t
                 }(o.Component),
-                g = Object(s.compose)(Object(l.c)("DevAddMemberModal", {
+                g = Object(s.compose)(Object(l.b)("DevAddMemberModal", {
                     autoReportInteractive: !0
                 }))(f);
             var v = Object(a.connect)(null, function(e) {
@@ -626,10 +626,10 @@
                 S = r("NvVO"),
                 C = r("2xye"),
                 E = r("1mFg"),
-                w = r("uLRL"),
-                O = r("Dtp2"),
-                N = r("+GjP"),
-                D = r("tl6o");
+                O = r("uLRL"),
+                w = r("Dtp2"),
+                D = r("+GjP"),
+                N = r("tl6o");
 
             function F(e, t) {
                 return n.__awaiter(this, void 0, void 0, function() {
@@ -637,8 +637,8 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                r = Object(N.e)(k.a + "/v5/rbac/validate", {
-                                    domain_id: D.c,
+                                r = Object(D.e)(k.a + "/v5/rbac/validate", {
+                                    domain_id: N.c,
                                     permission_name: t,
                                     resource: e
                                 }), n.label = 1;
@@ -660,7 +660,7 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderRemoveButton = function() {
                             if (t.props.canRemoveUser) return o.createElement(h.A, {
-                                icon: h.nb.Close,
+                                icon: h.ob.Close,
                                 onClick: t.onRemove,
                                 ariaLabel: Object(c.d)("Remove User", "DevCompanyMember")
                             })
@@ -671,10 +671,10 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.member.firstName + " " + this.props.member.lastName,
                             t = this.renderRemoveButton();
-                        return o.createElement(h.Va, {
-                            display: h.W.Flex,
+                        return o.createElement(h.Wa, {
+                            display: h.X.Flex,
                             alignItems: h.f.Center
-                        }, o.createElement(h.Va, {
+                        }, o.createElement(h.Wa, {
                             padding: {
                                 bottom: .5
                             }
@@ -682,18 +682,18 @@
                             src: this.props.member.profileImage,
                             size: 64,
                             alt: e
-                        })), o.createElement(h.Va, {
+                        })), o.createElement(h.Wa, {
                             fullWidth: !0,
                             margin: {
                                 left: 2
                             }
-                        }, o.createElement(h.V, null, e)), t)
+                        }, o.createElement(h.W, null, e)), t)
                     }, t
                 }(o.Component),
-                U = Object(s.compose)(Object(l.c)("DevMemberItem", {
+                A = Object(s.compose)(Object(l.b)("DevMemberItem", {
                     autoReportInteractive: !0
                 }))(T);
-            var x = function(e) {
+            var U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderMembers = function() {
@@ -706,14 +706,14 @@
                                         md: 4,
                                         lg: 3
                                     }
-                                }, o.createElement(h.Va, {
+                                }, o.createElement(h.Wa, {
                                     margin: {
                                         y: 1
                                     },
                                     padding: {
                                         x: 1
                                     }
-                                }, o.createElement(U, {
+                                }, o.createElement(A, {
                                     member: e,
                                     canRemoveUser: t.props.canRemoveUser,
                                     onRemoveClick: t.onRemoveClick
@@ -735,18 +735,18 @@
                         var e = p(this.props.title),
                             t = this.renderMembers(),
                             r = this.renderAddButton(e);
-                        return o.createElement(h.Va, {
+                        return o.createElement(h.Wa, {
                             className: "dev-member-Group",
                             margin: {
                                 bottom: 3
                             }
-                        }, o.createElement(h.Oa, {
+                        }, o.createElement(h.Pa, {
                             background: h.r.Alt2,
                             padding: 2,
-                            display: h.W.Flex,
-                            justifyContent: h.Ua.Between
-                        }, o.createElement("header", null, o.createElement(h.Qb, {
-                            direction: h.Sb.Right,
+                            display: h.X.Flex,
+                            justifyContent: h.Va.Between
+                        }, o.createElement("header", null, o.createElement(h.Rb, {
+                            direction: h.Tb.Right,
                             label: function(e) {
                                 var t = "";
                                 switch (e) {
@@ -764,15 +764,15 @@
                                 }
                                 return t
                             }(this.props.title)
-                        }, o.createElement(h.V, {
-                            type: h.Nb.H4
-                        }, e)), r)), o.createElement(h.Va, null, o.createElement(h.Ha, null, t)))
+                        }, o.createElement(h.W, {
+                            type: h.Ob.H4
+                        }, e)), r)), o.createElement(h.Wa, null, o.createElement(h.Ia, null, t)))
                     }, t
                 }(o.Component),
-                A = Object(s.compose)(Object(l.c)("DevMemberGroup", {
+                I = Object(s.compose)(Object(l.b)("DevMemberGroup", {
                     autoReportInteractive: !0
-                }))(x),
-                I = r("t04z"),
+                }))(U),
+                x = r("t04z"),
                 j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -791,7 +791,7 @@
                         }, t.renderGroups = function() {
                             return Object.keys(t.state.members).map(function(e) {
                                 var r = t.state.members[e];
-                                return o.createElement(A, {
+                                return o.createElement(I, {
                                     title: e,
                                     members: r,
                                     key: e,
@@ -829,12 +829,12 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.data.loading || this.props.data.error) return o.createElement(h.Va, null);
+                        if (this.props.data.loading || this.props.data.error) return o.createElement(h.Wa, null);
                         var e = this.renderGroups();
-                        return o.createElement(h.Va, null, e)
+                        return o.createElement(h.Wa, null, e)
                     }, t
                 }(o.Component),
-                P = Object(s.compose)(Object(l.c)("DevCompanyMember"), Object(R.a)(I, {
+                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(R.a)(x, {
                     options: function(e) {
                         return {
                             variables: {
@@ -851,8 +851,8 @@
                         }
                     }
                 }))(j),
-                M = k.a + "/v5/rbac/users",
-                V = function(e) {
+                P = k.a + "/v5/rbac/users",
+                q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -878,16 +878,16 @@
                                             return r = n.sent(), this.setState({
                                                 members: {
                                                     administrator: r.administrator.map(function(e) {
-                                                        return Object(O.c)(e)
+                                                        return Object(w.c)(e)
                                                     }),
                                                     manager: r.manager.map(function(e) {
-                                                        return Object(O.c)(e)
+                                                        return Object(w.c)(e)
                                                     }),
                                                     marketer: r.marketer.map(function(e) {
-                                                        return Object(O.c)(e)
+                                                        return Object(w.c)(e)
                                                     }),
                                                     developer: r.developer.map(function(e) {
-                                                        return Object(O.c)(e)
+                                                        return Object(w.c)(e)
                                                     })
                                                 }
                                             }), [3, 4];
@@ -980,7 +980,7 @@
                                                 title: i
                                             }, u = Object(c.d)("Unexpected Failure", "DevCompanyOverview"), n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 7, , 8]), [4, Object(E.a)(M, {
+                                            return n.trys.push([1, 7, , 8]), [4, Object(E.a)(P, {
                                                 method: "POST",
                                                 body: JSON.stringify(t)
                                             })];
@@ -1021,31 +1021,31 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        if (!this.state.members.administrator.length) return o.createElement(h.lb, {
+                        if (!this.state.members.administrator.length) return o.createElement(h.mb, {
                             centered: !0
-                        }, o.createElement(h.Xa, null));
+                        }, o.createElement(h.Ya, null));
                         if (!this.props.company) return o.createElement(b.a, {
                             to: "/"
                         });
                         if (this.state.loadError) return o.createElement(y.a, null);
                         var e = this.props.company && this.props.company.companyName || "";
-                        return o.createElement(h.lb, {
+                        return o.createElement(h.mb, {
                             centered: !0
-                        }, o.createElement(h.Va, {
+                        }, o.createElement(h.Wa, {
                             margin: {
                                 x: 2
                             }
-                        }, o.createElement(h.Va, {
+                        }, o.createElement(h.Wa, {
                             margin: {
                                 top: 2,
                                 bottom: 4
                             },
-                            textAlign: h.Jb.Center
-                        }, o.createElement(h.V, {
-                            type: h.Nb.H1
+                            textAlign: h.Kb.Center
+                        }, o.createElement(h.W, {
+                            type: h.Ob.H1
                         }, Object(c.d)("{name} Role Management", {
                             name: e
-                        }, "DevCompanyMembers"))), o.createElement(h.Va, null, o.createElement(P, {
+                        }, "DevCompanyMembers"))), o.createElement(h.Wa, null, o.createElement(M, {
                             members: this.state.members,
                             canAddUser: this.state.canAddUser,
                             canRemoveUser: this.state.canRemoveUser,
@@ -1054,21 +1054,21 @@
                         }))))
                     }, t
                 }(o.Component),
-                q = Object(s.compose)(Object(l.c)("DevCompanyOverview", {
+                L = Object(s.compose)(Object(l.b)("DevCompanyOverview", {
                     destination: S.a.DevSiteCompanyOverview
                 }), Object(_.a)({
                     location: C.PageviewLocation.DevSiteCompanyOverview
-                }), Object(w.a)())(V);
-            var L = Object(a.connect)(null, function(e) {
+                }), Object(O.a)())(q);
+            var W = Object(a.connect)(null, function(e) {
                 return Object(s.bindActionCreators)({
                     showAddUserModal: function(e) {
                         var t = n.__rest(e, []);
                         return Object(i.d)(v, t)
                     }
                 }, e)
-            })(q);
+            })(L);
             r.d(t, "DevCompanyOverviewPage", function() {
-                return L
+                return W
             })
         },
         NZDK: function(e, t, r) {
@@ -1122,13 +1122,6 @@
                         },
                         optionalFacetFilters: ""
                     },
-                    communities: {
-                        indexName: o.a.Communities,
-                        hitsPerPage: 2,
-                        topNumericFilters: [],
-                        singleTypeNumericFilters: [],
-                        optionalFacetFilters: ""
-                    },
                     streamTags: {
                         indexName: o.a.StreamTags,
                         hitsPerPage: 2,
@@ -1146,7 +1139,7 @@
                 },
                 d = function() {
                     function e(e) {
-                        this.apolloClient = e.apolloClient, this.client = a(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === s.o.experiments.getAssignment(i.b.NewSearchBackend), this.getCountryCode()
+                        this.apolloClient = e.apolloClient, this.client = a(e.appId, e.apiKey), this.stats = e.stats, this.logger = e.logger.withCategory("search-client"), this.sendSearchRequestToForage = "variant" === s.p.experiments.getAssignment(i.b.NewSearchBackend), this.getCountryCode()
                     }
                     return e.prototype.queryTopResults = function(e, t) {
                         return n.__awaiter(this, void 0, void 0, function() {
@@ -1154,29 +1147,25 @@
                             return n.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return a = [], (r = []).push(this.getTopResult(p.games, e)), r.push(this.getTopResult(p.videos, e)), r.push(this.getTopResult(p.users, e)), r.push(this.getTopResult(p.channels, e)), r.push(this.getTopResult(p.communities, e)), a.push(this.getTotalResult(p.games, e)), a.push(this.getTotalResult(p.videos, e)), a.push(this.getTotalResult(p.users, e)), a.push(this.getTotalResult(p.channels, e)), [4, this.query(r.concat(a))];
+                                        return a = [], (r = []).push(this.getTopResult(p.games, e)), r.push(this.getTopResult(p.videos, e)), r.push(this.getTopResult(p.users, e)), r.push(this.getTopResult(p.channels, e)), a.push(this.getTotalResult(p.games, e)), a.push(this.getTotalResult(p.videos, e)), a.push(this.getTotalResult(p.users, e)), a.push(this.getTotalResult(p.channels, e)), [4, this.query(r.concat(a))];
                                     case 1:
                                         return (s = n.sent()) ? (i = s.results, [2, {
                                             id: t,
                                             games: {
-                                                totalHits: i[5].nbHits,
+                                                totalHits: i[4].nbHits,
                                                 hits: i[0].hits
                                             },
                                             videos: {
-                                                totalHits: i[6].nbHits,
+                                                totalHits: i[5].nbHits,
                                                 hits: i[1].hits
                                             },
                                             users: {
-                                                totalHits: i[7].nbHits,
+                                                totalHits: i[6].nbHits,
                                                 hits: i[2].hits
                                             },
                                             channels: {
-                                                totalHits: i[8].nbHits,
+                                                totalHits: i[7].nbHits,
                                                 hits: i[3].hits
-                                            },
-                                            communities: {
-                                                totalHits: i[4].nbHits,
-                                                hits: i[4].hits
                                             }
                                         }]) : [2, function(e) {
                                             return {
@@ -1194,10 +1183,6 @@
                                                     hits: []
                                                 },
                                                 channels: {
-                                                    totalHits: 0,
-                                                    hits: []
-                                                },
-                                                communities: {
                                                     totalHits: 0,
                                                     hits: []
                                                 }
@@ -1218,15 +1203,15 @@
                             f = s.restrictSearchableAttributes,
                             g = void 0 === f ? [] : f;
                         return n.__awaiter(this, void 0, void 0, function() {
-                            var a, s, i, u, d, f, v, b, y, _ = this;
-                            return n.__generator(this, function(k) {
-                                switch (k.label) {
+                            var a, s, i, u, d, f, v, b, y = this;
+                            return n.__generator(this, function(_) {
+                                switch (_.label) {
                                     case 0:
                                         switch (a = {
                                             id: r,
                                             currentPage: c
                                         }, s = function(e) {
-                                            return n.__awaiter(_, void 0, void 0, function() {
+                                            return n.__awaiter(y, void 0, void 0, function() {
                                                 var r, s;
                                                 return n.__generator(this, function(n) {
                                                     switch (n.label) {
@@ -1263,45 +1248,39 @@
                                                 return [3, 5];
                                             case o.a.Videos:
                                                 return [3, 7];
-                                            case o.a.Communities:
-                                                return [3, 9];
                                             case o.a.StreamTags:
-                                                return [3, 11];
+                                                return [3, 9];
                                             case o.a.Tags:
-                                                return [3, 13]
+                                                return [3, 11]
                                         }
-                                        return [3, 15];
+                                        return [3, 13];
                                     case 1:
                                         return i = a, [4, s(p.games)];
                                     case 2:
-                                        return i.games = k.sent(), [3, 16];
+                                        return i.games = _.sent(), [3, 14];
                                     case 3:
                                         return u = a, [4, s(p.users)];
                                     case 4:
-                                        return u.users = k.sent(), [3, 16];
+                                        return u.users = _.sent(), [3, 14];
                                     case 5:
                                         return d = a, [4, s(p.channels)];
                                     case 6:
-                                        return d.channels = k.sent(), [3, 16];
+                                        return d.channels = _.sent(), [3, 14];
                                     case 7:
                                         return f = a, [4, s(p.videos)];
                                     case 8:
-                                        return f.videos = k.sent(), [3, 16];
+                                        return f.videos = _.sent(), [3, 14];
                                     case 9:
-                                        return v = a, [4, s(p.communities)];
+                                        return v = a, [4, s(p.streamTags)];
                                     case 10:
-                                        return v.communities = k.sent(), [3, 16];
+                                        return v.streamTags = _.sent(), [3, 14];
                                     case 11:
-                                        return b = a, [4, s(p.streamTags)];
+                                        return b = a, [4, s(p.tags)];
                                     case 12:
-                                        return b.streamTags = k.sent(), [3, 16];
+                                        return b.tags = _.sent(), [3, 14];
                                     case 13:
-                                        return y = a, [4, s(p.tags)];
-                                    case 14:
-                                        return y.tags = k.sent(), [3, 16];
-                                    case 15:
                                         return [2, null];
-                                    case 16:
+                                    case 14:
                                         return [2, a]
                                 }
                             })
@@ -1458,7 +1437,7 @@
                                         c = s.medium,
                                         u = s.content_index,
                                         l = s.email_id;
-                                    o.o.tracking.trackPageview(n.__assign({
+                                    o.p.tracking.trackPageview(n.__assign({
                                         content: i,
                                         medium: c,
                                         content_index: u,
@@ -1466,7 +1445,7 @@
                                         location: e.location
                                     }, t))
                                 }
-                            }, o.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
+                            }, o.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : o.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
                         }
                         return n.__extends(i, r), i.prototype.componentDidMount = function() {
                             var e = this;
@@ -1766,7 +1745,7 @@
                             }
                             return this.props.loaded && !this.props.company ? a.createElement(i.a, {
                                 to: "/request-access"
-                            }) : a.createElement(u.Xa, null)
+                            }) : a.createElement(u.Ya, null)
                         }, r.displayName = Object(o.a)(r.name, e), r
                     }(a.Component);
                     return Object(s.connect)(function(e) {

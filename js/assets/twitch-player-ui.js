@@ -2631,42 +2631,42 @@
                             var t = this;
                             switch (e) {
                                 case s.PLAYER_AMAZON_LIVE:
-                                    return n.e(204).then(function() {
+                                    return n.e(198).then(function() {
                                         var e = n("iSLP");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_VIEWING:
-                                    return n.e(203).then(function() {
+                                    return n.e(197).then(function() {
                                         var e = n("5Kqy");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_EMBED:
-                                    return n.e(202).then(function() {
+                                    return n.e(196).then(function() {
                                         var e = n("aRgI");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_EDITING:
-                                    return n.e(201).then(function() {
+                                    return n.e(195).then(function() {
                                         var e = n("3K1P");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_CLIPS_WATCH:
-                                    return n.e(200).then(function() {
+                                    return n.e(194).then(function() {
                                         var e = n("8/R1");
                                         t.setState({
                                             playerTypeComponent: e.default
                                         })
                                     }.bind(null, n)).catch(n.oe);
                                 case s.PLAYER_HIGHLIGHTER:
-                                    return n.e(199).then(function() {
+                                    return n.e(193).then(function() {
                                         var e = n("SVNA");
                                         t.setState({
                                             playerTypeComponent: e.default
@@ -16837,28 +16837,29 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.DEFAULT_CAPTION = void 0, t.captions = function() {
-                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s,
-                    t = arguments[1];
+                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
+                    t = arguments[1],
+                    n = (0, a.default)(t, "captions.data.text.length", 0);
                 switch (t.type) {
-                    case i.ACTION_SHOW_CC_MODAL:
+                    case o.ACTION_SHOW_CC_MODAL:
                         return (0, r.default)({}, e, {
                             showCCModal: t.showCCModal
                         });
-                    case i.ACTION_INITIALIZE_CAPTIONS_SETTINGS:
-                    case i.ACTION_SET_CAPTIONS_PRESET:
-                    case i.ACTION_TOGGLE_CAPTIONS:
+                    case o.ACTION_INITIALIZE_CAPTIONS_SETTINGS:
+                    case o.ACTION_SET_CAPTIONS_PRESET:
+                    case o.ACTION_TOGGLE_CAPTIONS:
                         return (0, r.default)({}, e, t.captions);
-                    case i.ACTION_SET_CAPTIONS_DATA:
+                    case o.ACTION_SET_CAPTIONS_DATA:
                         return (0, r.default)({}, e, {
                             data: t.captions.data,
-                            available: e.available || t.captions.data.text.length > 0
+                            available: e.available || n > 0
                         });
-                    case o.ACTION_SET_STREAM:
+                    case s.ACTION_SET_STREAM:
                         return (0, r.default)({}, e, {
-                            available: s.available,
-                            data: s.data
+                            available: u.available,
+                            data: u.data
                         });
-                    case i.ACTION_UPDATE_CAPTIONS_FONT_SIZE:
+                    case o.ACTION_UPDATE_CAPTIONS_FONT_SIZE:
                         return (0, r.default)({}, e, {
                             style: t.style
                         });
@@ -16866,20 +16867,23 @@
                         return e
                 }
             };
-            var r = function(e) {
-                    return e && e.__esModule ? e : {
-                        default: e
-                    }
-                }(n("zdiy")),
-                a = n("8+VK"),
-                i = n("rSwD"),
-                o = n("D3OJ");
-            var s = t.DEFAULT_CAPTION = {
+            var r = l(n("zdiy")),
+                a = l(n("mwIZ")),
+                i = n("8+VK"),
+                o = n("rSwD"),
+                s = n("D3OJ");
+
+            function l(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            var u = t.DEFAULT_CAPTION = {
                 enabled: !1,
                 available: !1,
                 preset: "white-on-black",
                 data: null,
-                style: a.presetMap["white-on-black"],
+                style: i.presetMap["white-on-black"],
                 showCCModal: !1
             }
         },
@@ -17536,7 +17540,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            t.APP_VERSION = "8.3.0"
+            t.APP_VERSION = "8.4.0"
         },
         "NE/w": function(e, t, n) {
             var r;
@@ -20946,7 +20950,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             });
-            t.trustedSpadeURI = "//video-edge-6c67c0.sjc02.hls.ttvnw.net/v1/segment/CnbebtTdKP87nG_nvhlFFaHfux_H2NOkd12MfHSn5oYSCPFIqurwyWThEFD9GfvldFlZL9CmjsFATbqzF58X0MVtpPw2Hx5gUofJn37DjixiGhKxVCi0_eaX8yyiVG4s8o1W9ZOUVouMYknplxRMRZ_5duyK3ObFs8MKBGvX7Skukw7bnSqwJmvP-FxQLz4aQSgNPAsAQOyablDzYpX7S_0n7IHnEqtcV8KdZZobDLW0r6uIGdnwj_tqyAny_E_2kKGoBfGu00i79qXdZYReQ8tMpvpD9aqtUngMI090WwZB1jyXYBzqVLSo3chavLMD9VbQX0054dyzNkSck50YgkL08502x7s3xXSDtIg5inv2ga54HPXVf3mcvCXmtjwfhRNUFEOJsOSY_ck6f3B0o7owVgLrLQeFzvyjrTljX7-xRgsF8TySdPUZAhSCPrhobI3m5FrmFXHFqkugXrIMvZmC4rx55_CFqwD4XUQ9ylpZCE1plKYt-wP9zpIQls32AdFPqDhdRbEsZVfnHvHHvjRwM_YRHfbPJhu8V3_tKhR3M7i9s9G1RH1C5lB7YldOWybRkMkzMgKp8xgWa_t0KFf_Xi_e_KvzbVI35N2oopMeDJYz5jMr0fC1Ag1CGgVO-B8QjyegitQzTHCwSJpo2XocRanzMfLsQR9dc8yX03XW6eIXeBARrkIOpj0UhkWA25z2dMS_jg8IrBeerEGRJNcToGKMAAo2DnoqoEDu7G_5m-Du1I1b2zgh.ts"
+            t.trustedSpadeURI = "//video-edge-5d3f87.sjc02.hls.ttvnw.net/v1/segment/CputhiCNrP5aq96k1RTrCxfV37d0Keea2HFsbIwVrJoCPQ9qH8L_-LkCdi5NZIHRuPJVu6CuNu1ARTttLmQ-ez4BOQk1BMcLFw2NG-wvzLuJ84cYCMwRzAP3QcLpSK4rhWAixio1jorbUlUguuFrgLbekz09PNQzc7cRL-ybpmyvo0G4E76lPHZZL4z4v94MQ5LP8GbFyYIXJIV6DGJFt82RSXjgkoBfOqoxQaKRkraIwqm3vZS20GbR084NDfFyXlwmae-NfbFJpcp0A3vUoapxEGztuok6WyWwVZ4LrZbiSgapc6QilOcyaBfcj2B0F7V9ahPrnB8LID7OFyZKqr7DxY_G-IgM77t4PZ-z3aSaKmdd7ps4LPwxMil-zGTeofQbDkNhjAHhzSyp4khAULHjv1jvamFzWIKVgs0ENylX32kLx5TbnPHIqJmgwlfysDRl_uVktMymDa8rp1z3gQ9RhsTAXkvbwRuSfAXzptopvP10H9SA1wnt2d-rT7h2-njOpDLCXkgk4un4W2wlWTSKAkTc2J2MkDZE8OKg-fCNTUgviLdDgilioYwM2byyeTUt3Fh4SZ5fTQdSY4dlfAheMCZC3PkK2ZpXL_ngcP36syXMynn398ayR9n4j34mIz3TQzYRN9BX-U2kxGGOosVIpTwyd-rMBQJ5msuF1s_eF752kOl7bXrbZNK5u1WlLp_1e--LbxAo-676UK6H0cfSebM89BoQUc_JizhGWn5ms_1-gJ1Cmd2I.ts"
         },
         RhBK: function(e, t, n) {
             "use strict";
@@ -29223,6 +29227,173 @@
                     t.default = O
                 }.call(this, n("yLpj"))
         },
+        bffu: function(e, t, n) {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.ExtensionsAcceptUnreleased = t.ExtensionsAcceptUnreleasedComponent = t.EXT_LEARN_BUTTON = t.EXT_DECLINE_BUTTON = t.EXT_ACCEPT_BUTTON = void 0;
+            var r = function() {
+                    function e(e, t) {
+                        for (var n = 0; n < t.length; n++) {
+                            var r = t[n];
+                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    return function(t, n, r) {
+                        return n && e(t.prototype, n), r && e(t, r), t
+                    }
+                }(),
+                a = p(n("17x9")),
+                i = p(n("q1tI")),
+                o = p(n("TSYQ")),
+                s = n("/MKj"),
+                l = n("1fV9"),
+                u = n("wy0h"),
+                c = n("hm9X"),
+                d = n("vpBF"),
+                f = n("9kay");
+
+            function p(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+
+            function _(e, t, n) {
+                return t in e ? Object.defineProperty(e, t, {
+                    value: n,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : e[t] = n, e
+            }
+            var h = {
+                    installation: c.EXTENSION_INSTALLATION_PROP_TYPE.isRequired,
+                    declineUnreleased: a.default.func.isRequired,
+                    acceptUnreleased: a.default.func.isRequired
+                },
+                m = (0, o.default)({
+                    "pl-menu__section": !0,
+                    "pl-menu__item--label": !0,
+                    "extension-accept-unreleased__header": !0
+                }),
+                E = (0, o.default)({
+                    "pl-menu__section": !0,
+                    "pl-menu__section--with-sep": !0
+                }),
+                y = (0, o.default)({
+                    "pl-menu__item--label": !0,
+                    "extension-accept-unreleased__text": !0
+                }),
+                v = (0, o.default)({
+                    "extension-menu-footer": !0,
+                    "extension-accept-unreleased__footer": !0
+                }),
+                g = "https://help.twitch.tv/customer/portal/articles/2861187-how-to-use-extensions#TestExtViewer",
+                T = i.default.createElement("a", {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                    href: g
+                }, "Learn More"),
+                b = t.EXT_ACCEPT_BUTTON = "qa-ext-accept-unreleased",
+                S = t.EXT_DECLINE_BUTTON = "qa-ext-decline-unreleased",
+                O = t.EXT_LEARN_BUTTON = "qa-ext-learn-unreleased",
+                C = t.ExtensionsAcceptUnreleasedComponent = function(e) {
+                    function t() {
+                        ! function(e, t) {
+                            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+                        }(this, t);
+                        var e = function(e, t) {
+                            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                            return !t || "object" != typeof t && "function" != typeof t ? e : t
+                        }(this, (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments));
+                        return e.handleDecline = e.handleDecline.bind(e), e.handleAccept = e.handleAccept.bind(e), e
+                    }
+                    return function(e, t) {
+                        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+                        e.prototype = Object.create(t && t.prototype, {
+                            constructor: {
+                                value: e,
+                                enumerable: !1,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+                    }(t, i.default.Component), r(t, [{
+                        key: "handleDecline",
+                        value: function() {
+                            var e = this.props.installation;
+                            this.props.declineUnreleased(e.id)
+                        }
+                    }, {
+                        key: "handleAccept",
+                        value: function() {
+                            var e = this.props.installation;
+                            this.props.acceptUnreleased(e.id, e.activationConfig.slot)
+                        }
+                    }, {
+                        key: "render",
+                        value: function() {
+                            var e = this.props.installation,
+                                t = this._renderBody(),
+                                n = this._renderFooter();
+                            return i.default.createElement("div", {
+                                className: "pl-menu__inner"
+                            }, i.default.createElement("div", {
+                                className: m
+                            }, e.extension.name), i.default.createElement("div", {
+                                className: E
+                            }, t), n)
+                        }
+                    }, {
+                        key: "_renderBody",
+                        value: function() {
+                            var e = this.props.installation;
+                            return (0, d.isDeclined)(e) ? i.default.createElement("div", {
+                                className: y
+                            }, "You've declined to use this test extension. To use it, please refresh this page and select accept.") : i.default.createElement("div", {
+                                className: y
+                            }, "This is a Test Extension that Twitch has not evaluated; it may not be ready for primetime. Proceed only if you are familiar with the developer, the Extension, or Channel.", " ", T)
+                        }
+                    }, {
+                        key: "_renderFooter",
+                        value: function() {
+                            var e, t, n, r = this.props.installation,
+                                a = (0, o.default)((_(e = {}, O, !0), _(e, "pl-button", !0), _(e, "pl-button--hollow", !0), e)),
+                                s = (0, o.default)((_(t = {}, b, !0), _(t, "pl-button", !0), _(t, "extension-accept-unreleased-footer__button", !0), t)),
+                                u = (0, o.default)((_(n = {}, S, !0), _(n, "pl-button", !0), _(n, "pl-button--hollow", !0), _(n, "extension-accept-unreleased-footer__button", !0), n));
+                            return (0, d.isDeclined)(r) ? i.default.createElement("div", {
+                                className: v
+                            }, i.default.createElement("a", {
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                href: g
+                            }, i.default.createElement(l.Button, {
+                                className: a
+                            }, "Learn More"))) : i.default.createElement("div", {
+                                className: v
+                            }, i.default.createElement(l.Button, {
+                                className: u,
+                                onClick: this.handleDecline
+                            }, "Decline"), i.default.createElement(l.Button, {
+                                className: s,
+                                onClick: this.handleAccept
+                            }, "Accept"))
+                        }
+                    }]), t
+                }();
+            C.propTypes = h;
+            t.ExtensionsAcceptUnreleased = (0, f.translate)()((0, s.connect)(null, function(e) {
+                return {
+                    declineUnreleased: function(t) {
+                        e((0, u.declineUnreleased)(t))
+                    },
+                    acceptUnreleased: function(t, n) {
+                        e((0, u.acceptUnreleased)(t)), e((0, u.setExtensionMenu)(n, d.EXTENSION_MENU_DETAILS))
+                    }
+                }
+            })(C))
+        },
         biAU: function(e, t, n) {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -30464,8 +30635,10 @@
                         key: "_openMenu",
                         value: function() {
                             var e = this.props,
-                                t = e.installation;
-                            (0, e.onMenuTransition)(t.activationConfig.slot, E.EXTENSION_MENU_DETAILS), this.trackEvent("extension_viewer_overlay_settings", t, {
+                                t = e.installation,
+                                n = e.onMenuTransition,
+                                r = t.activationConfig.slot;
+                            (0, E.isUnreleasedAndUnaccepted)(t) || (0, E.isDeclined)(t) ? n(r, E.EXTENSION_MODAL_ACCEPT_UNRELEASED): n(r, E.EXTENSION_MENU_DETAILS), this.trackEvent("extension_viewer_overlay_settings", t, {
                                 action: "open"
                             })
                         }
@@ -35090,6 +35263,30 @@
                                 })
                             })
                         });
+                    case r.ACTION_DECLINE_UNRELEASED_EXTENSION:
+                        return (0, i.default)({}, e, {
+                            activeInstallations: e.activeInstallations.map(function(e) {
+                                var n = e.id;
+                                return n !== t.installationId ? e : (0, o.default)({}, e, {
+                                    playerState: {
+                                        unreleasedPromptResponded: !0,
+                                        unreleasedAccepted: !1
+                                    }
+                                })
+                            })
+                        });
+                    case r.ACTION_ACCEPT_UNRELEASED_EXTENSION:
+                        return (0, i.default)({}, e, {
+                            activeInstallations: e.activeInstallations.map(function(e) {
+                                var n = e.id;
+                                return n !== t.installationId ? e : (0, o.default)({}, e, {
+                                    playerState: {
+                                        unreleasedPromptResponded: !0,
+                                        unreleasedAccepted: !0
+                                    }
+                                })
+                            })
+                        });
                     default:
                         return e
                 }
@@ -35177,7 +35374,9 @@
                         collapseLocation: s.default.shape({
                             x: s.default.number.isRequired,
                             y: s.default.number.isRequired
-                        })
+                        }),
+                        unreleasedPromptResponded: s.default.bool.isRequired,
+                        unreleasedAccepted: s.default.bool.isRequired
                     })
                 }), t.EXTENSION_MODAL_REQUEST_TYPE = s.default.shape({
                     extensionId: s.default.string.isRequired,
@@ -42742,7 +42941,11 @@
                 "Command Center view: Watch with All-Access Pass": "Command Center view: Watch with All-Access Pass",
                 "Chapter Select": "Chapter Select",
                 "You can only watch this stream on the Twitch website.": "You can only watch this stream on the Twitch website.",
-                "{{broadcasterHero}} vs {{opponentHero}}": "{{broadcasterHero}} vs {{opponentHero}}"
+                "{{broadcasterHero}} vs {{opponentHero}}": "{{broadcasterHero}} vs {{opponentHero}}",
+                "This is a Test Extension that Twitch has not evaluated; it may not be ready for primetime. Proceed only if you are familiar with the developer, the Extension, or Channel.": "This is a Test Extension that Twitch has not evaluated; it may not be ready for primetime. Proceed only if you are familiar with the developer, the Extension, or Channel.",
+                "You've declined to use this test extension. To use it, please refresh this page and select accept.": "You've declined to use this test extension. To use it, please refresh this page and select accept.",
+                Accept: "Accept",
+                Decline: "Decline"
             }
         },
         oq68: function(e, t, n) {
@@ -44175,7 +44378,10 @@
                                 p = t.onPurchaseIntent,
                                 _ = t.shouldShowExtensions,
                                 h = n.find(function(e) {
-                                    return e.activationConfig.anchor === a.ExtensionAnchor.Overlay
+                                    var t = e.activationConfig,
+                                        n = e.extension,
+                                        r = e.playerState;
+                                    return t.anchor === a.ExtensionAnchor.Overlay && ("Released" === n.state || !0 === r.unreleasedAccepted)
                                 });
                             return h ? i.default.createElement(c.ExtensionOverlay, {
                                 height: e.height,
@@ -44214,8 +44420,10 @@
                                 h = n.onComponentHover,
                                 m = n.shouldShowExtensions;
                             return r.filter(function(e) {
-                                var t = e.activationConfig;
-                                return t.anchor === a.ExtensionAnchor.Component && "number" == typeof t.x && "number" == typeof t.y
+                                var t = e.activationConfig,
+                                    n = e.extension,
+                                    r = e.playerState;
+                                return t.anchor === a.ExtensionAnchor.Component && "number" == typeof t.x && "number" == typeof t.y && ("Released" === n.state || !0 === r.unreleasedAccepted)
                             }).map(function(n) {
                                 return i.default.createElement(u.ExtensionComponent, {
                                     installation: n,
@@ -46702,7 +46910,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.EXTENSION_ACTION_MAP = t.EXTENSION_PLAYER_TYPES = t.EXTENSION_COMPONENT_ANCHOR = t.EXTENSION_OVERLAY_ANCHOR = t.EXTENSION_HIDDEN_ANCHOR = t.EXTENSION_MODAL_USE_BITS = t.EXTENSION_MENU_NEEDS_AUTH = t.EXTENSION_MENU_FOLLOW = t.EXTENSION_MENU_REPORT = t.EXTENSION_MENU_MANAGE_ACCESS = t.EXTENSION_MENU_DETAILS = t.EXTENSION_MENU_MAIN = t.EXTENSION_ROLE_BROADCASTER = t.EXTENSION_ROLE_VIEWER = t.EXTENSION_PERMISSION_STATE_GRANTED = t.EXTENSION_PERMISSION_STATE_NONE = void 0, t.parseExtensionToken = T, t.normalizeToInstallationProp = function(e) {
+            }), t.EXTENSION_ACTION_MAP = t.EXTENSION_PLAYER_TYPES = t.EXTENSION_COMPONENT_ANCHOR = t.EXTENSION_OVERLAY_ANCHOR = t.EXTENSION_HIDDEN_ANCHOR = t.EXTENSION_MODAL_ACCEPT_UNRELEASED = t.EXTENSION_MODAL_USE_BITS = t.EXTENSION_MENU_NEEDS_AUTH = t.EXTENSION_MENU_FOLLOW = t.EXTENSION_MENU_REPORT = t.EXTENSION_MENU_MANAGE_ACCESS = t.EXTENSION_MENU_DETAILS = t.EXTENSION_MENU_MAIN = t.EXTENSION_ROLE_BROADCASTER = t.EXTENSION_ROLE_VIEWER = t.EXTENSION_PERMISSION_STATE_GRANTED = t.EXTENSION_PERMISSION_STATE_NONE = void 0, t.parseExtensionToken = T, t.normalizeToInstallationProp = function(e) {
                 var t = T(e.extension.token),
                     n = t.permissionsState === _;
                 return (0, r.default)({}, e, {
@@ -46710,7 +46918,9 @@
                         isUserIdentityLinked: n,
                         token: t,
                         isHidden: !1,
-                        isHighlighted: !1
+                        isHighlighted: !1,
+                        unreleasedPromptResponded: !1,
+                        unreleasedAccepted: !1
                     }
                 })
             }, t.getExtensionSlotNumber = function(e) {
@@ -46726,6 +46936,10 @@
                 var t = e.user.loggedInStatus === l.LOGGED_IN,
                     n = e.env.playerType;
                 return t || g.includes(n) && n !== a.PLAYER_POPOUT
+            }, t.isDeclined = function(e) {
+                return Boolean(e.playerState.unreleasedPromptResponded && !e.playerState.unreleasedAccepted)
+            }, t.isUnreleasedAndUnaccepted = function(e) {
+                return Boolean("Released" !== e.extension.state && !0 !== e.playerState.unreleasedPromptResponded)
             };
             var r = f(n("3OWR")),
                 a = function(e) {
@@ -46754,7 +46968,7 @@
                 m = (t.EXTENSION_ROLE_BROADCASTER = "broadcaster", t.EXTENSION_MENU_MAIN = "main menu", t.EXTENSION_MENU_DETAILS = "extension details", t.EXTENSION_MENU_MANAGE_ACCESS = "extension manage access", t.EXTENSION_MENU_REPORT = "extension report", t.EXTENSION_MENU_FOLLOW = "follow modal"),
                 E = t.EXTENSION_MENU_NEEDS_AUTH = "needs auth modal",
                 y = t.EXTENSION_MODAL_USE_BITS = "use bits modal",
-                v = (t.EXTENSION_HIDDEN_ANCHOR = "hidden", t.EXTENSION_OVERLAY_ANCHOR = "video_overlay", t.EXTENSION_COMPONENT_ANCHOR = "component", {
+                v = (t.EXTENSION_MODAL_ACCEPT_UNRELEASED = "use accept unreleased modal", t.EXTENSION_HIDDEN_ANCHOR = "hidden", t.EXTENSION_OVERLAY_ANCHOR = "video_overlay", t.EXTENSION_COMPONENT_ANCHOR = "component", {
                     permissionsState: p,
                     role: h
                 }),
@@ -47949,11 +48163,11 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.EXTENSIONS_RELOADING = t.EXTENSIONS_LOADING = t.EXTENSIONS_LOADED = t.EXTENSIONS_NOT_LOADED = t.EXTENSION_NOTIFICATION_TIMEOUT = t.EMS_REQUEST_PER_SECOND_LIMIT = t.ACTION_SET_EXTENSION_COLLAPSE_LOCATION = t.ACTION_SET_EXTENSION_VISIBILITY = t.ACTION_SET_EXTENSION_NOTIFICATION = t.ACTION_EXTENSION_HOVER = t.ACTION_PURCHASE_INTENT_RECEIVED = t.ACTION_SET_EXTENSION_MENU = t.ACTION_INIT_EXTENSIONS_API = t.ACTION_SET_EXTENSION_IDENTITY = t.ACTION_REQUEST_TOGGLE_EXTENSION_IDENTITY = t.ACTION_EXTENSION_ACTIVATED = t.ACTION_FETCHING_EXTENSION_INSTALLATIONS = t.ACTION_UPDATE_EXTENSION_INSTALLATION = t.ACTION_CLEAR_EXTENSION_INSTALLATIONS = t.ACTION_SET_EXTENSION_INSTALLATIONS = void 0, t.clearExtensionInstallations = function() {
+            }), t.EXTENSIONS_RELOADING = t.EXTENSIONS_LOADING = t.EXTENSIONS_LOADED = t.EXTENSIONS_NOT_LOADED = t.EXTENSION_NOTIFICATION_TIMEOUT = t.EMS_REQUEST_PER_SECOND_LIMIT = t.ACTION_SET_EXTENSION_COLLAPSE_LOCATION = t.ACTION_ACCEPT_UNRELEASED_EXTENSION = t.ACTION_DECLINE_UNRELEASED_EXTENSION = t.ACTION_SET_EXTENSION_VISIBILITY = t.ACTION_SET_EXTENSION_NOTIFICATION = t.ACTION_EXTENSION_HOVER = t.ACTION_PURCHASE_INTENT_RECEIVED = t.ACTION_SET_EXTENSION_MENU = t.ACTION_INIT_EXTENSIONS_API = t.ACTION_SET_EXTENSION_IDENTITY = t.ACTION_REQUEST_TOGGLE_EXTENSION_IDENTITY = t.ACTION_EXTENSION_ACTIVATED = t.ACTION_FETCHING_EXTENSION_INSTALLATIONS = t.ACTION_UPDATE_EXTENSION_INSTALLATION = t.ACTION_CLEAR_EXTENSION_INSTALLATIONS = t.ACTION_SET_EXTENSION_INSTALLATIONS = void 0, t.clearExtensionInstallations = function() {
                 return {
                     type: l
                 }
-            }, t.updateExtensionInstallation = S, t.setExtensionMenu = function(e, t) {
+            }, t.updateExtensionInstallation = C, t.setExtensionMenu = function(e, t) {
                 return {
                     type: _,
                     menuState: {
@@ -47985,8 +48199,8 @@
                     var a = r().extensions.notification,
                         i = null;
                     a && a.timer && clearTimeout(a.timer), i = setTimeout(function() {
-                        n(O())
-                    }, g), n({
+                        n(A())
+                    }, b), n({
                         type: E,
                         notification: {
                             type: e,
@@ -47995,7 +48209,7 @@
                         }
                     })
                 }
-            }, t.clearExtensionNotification = O, t.requestExtensionIdentityToggle = function(e) {
+            }, t.clearExtensionNotification = A, t.requestExtensionIdentityToggle = function(e) {
                 return {
                     type: f,
                     installationId: e
@@ -48006,7 +48220,7 @@
                     installationId: e,
                     isLinked: t
                 }
-            }, t.fetchExtensionInstallations = C, t.subscribeToExtensionControl = function(e) {
+            }, t.fetchExtensionInstallations = P, t.subscribeToExtensionControl = function(e) {
                 return function(t, n) {
                     var r = n(),
                         o = r.stream;
@@ -48020,21 +48234,21 @@
                                             type: d,
                                             channel: e
                                         }
-                                    }(e)), t(C(e))
+                                    }(e)), t(P(e))
                                 },
                                 onDestroyExtension: function(r) {
                                     var a = n().extensions.activeInstallations,
                                         i = a.filter(function(e) {
                                             return e.id !== r
                                         });
-                                    t(b(e, i))
+                                    t(O(e, i))
                                 },
                                 onActivationChanged: function(r, a) {
                                     var i = n().extensions.activeInstallations,
                                         o = i.find(function(e) {
                                             return e.extension.id === r
                                         });
-                                    t(o ? S(r, a) : C(e))
+                                    t(o ? C(r, a) : P(e))
                                 }
                             })
                         }
@@ -48053,16 +48267,26 @@
                     extension: e,
                     highlightFrame: t
                 }
-            }, t.setExtensionVisibility = A, t.toggleExtensionVisibility = function(e, t) {
+            }, t.setExtensionVisibility = N, t.toggleExtensionVisibility = function(e, t) {
                 return function(n, r) {
                     var a = r().extensions.activeInstallations.find(function(t) {
                         return t.id === e
                     });
-                    a && n(A(e, a.playerState.isHidden, t))
+                    a && n(N(e, a.playerState.isHidden, t))
+                }
+            }, t.declineUnreleased = function(e) {
+                return {
+                    type: v,
+                    installationId: e
+                }
+            }, t.acceptUnreleased = function(e) {
+                return {
+                    type: g,
+                    installationId: e
                 }
             }, t.setExtensionCollapseLocation = function(e, t) {
                 return {
-                    type: v,
+                    type: T,
                     installationId: e,
                     collapseLocation: t
                 }
@@ -48087,12 +48311,14 @@
                 m = t.ACTION_EXTENSION_HOVER = "extension hovered",
                 E = t.ACTION_SET_EXTENSION_NOTIFICATION = "set extension notification",
                 y = t.ACTION_SET_EXTENSION_VISIBILITY = "set extension visibility",
-                v = t.ACTION_SET_EXTENSION_COLLAPSE_LOCATION = "set extension collapse location",
-                g = (t.EMS_REQUEST_PER_SECOND_LIMIT = 3e3, t.EXTENSION_NOTIFICATION_TIMEOUT = 3e3),
-                T = (t.EXTENSIONS_NOT_LOADED = "not loaded", t.EXTENSIONS_LOADED = "loaded", t.EXTENSIONS_LOADING = "loading");
+                v = t.ACTION_DECLINE_UNRELEASED_EXTENSION = "decline using unreleased extension",
+                g = t.ACTION_ACCEPT_UNRELEASED_EXTENSION = "accept using unreleased extension",
+                T = t.ACTION_SET_EXTENSION_COLLAPSE_LOCATION = "set extension collapse location",
+                b = (t.EMS_REQUEST_PER_SECOND_LIMIT = 3e3, t.EXTENSION_NOTIFICATION_TIMEOUT = 3e3),
+                S = (t.EXTENSIONS_NOT_LOADED = "not loaded", t.EXTENSIONS_LOADED = "loaded", t.EXTENSIONS_LOADING = "loading");
             t.EXTENSIONS_RELOADING = "reloading";
 
-            function b(e, t) {
+            function O(e, t) {
                 return {
                     type: s,
                     channel: e,
@@ -48100,7 +48326,7 @@
                 }
             }
 
-            function S(e, t) {
+            function C(e, t) {
                 return {
                     type: u,
                     extensionId: e,
@@ -48108,32 +48334,32 @@
                 }
             }
 
-            function O() {
+            function A() {
                 return {
                     type: E,
                     notification: null
                 }
             }
 
-            function C(e) {
+            function P(e) {
                 return function(t, n) {
                     var a = n(),
                         s = a.extensions,
                         l = a.env.playerType,
                         u = (0, r.default)(o.EXTENSION_PLAYER_TYPES, l),
-                        d = s.channel === e && s.loadingState === T;
+                        d = s.channel === e && s.loadingState === S;
                     return !e || d ? Promise.resolve() : u ? (t(function(e) {
                         return {
                             type: c,
                             channel: e
                         }
                     }(e)), (0, i.getPlayerExtensionsForChannel)(e).then(function(r) {
-                        n().stream.channel === e && t(b(e, r))
-                    })) : (t(b(e, [])), Promise.resolve())
+                        n().stream.channel === e && t(O(e, r))
+                    })) : (t(O(e, [])), Promise.resolve())
                 }
             }
 
-            function A(e, t, n) {
+            function N(e, t, n) {
                 return {
                     type: y,
                     installationId: e,
@@ -49564,8 +49790,8 @@
                         return n && e(t.prototype, n), r && e(t, r), t
                     }
                 }(),
-                a = m(n("q1tI")),
-                i = m(n("17x9")),
+                a = E(n("q1tI")),
+                i = E(n("17x9")),
                 o = n("bDXi"),
                 s = n("hm9X"),
                 l = n("QxQ9"),
@@ -49575,14 +49801,15 @@
                 f = n("B11N"),
                 p = n("Kvvj"),
                 _ = n("IS2M"),
-                h = n("vpBF");
+                h = n("bffu"),
+                m = n("vpBF");
 
-            function m(e) {
+            function E(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            var E = {
+            var y = {
                 closeExtensionMenu: i.default.func,
                 handleMenuTransition: i.default.func.isRequired,
                 installation: s.EXTENSION_INSTALLATION_PROP_TYPE.isRequired,
@@ -49640,7 +49867,7 @@
                     key: "_renderCurrentMenu",
                     value: function() {
                         switch (this.props.submenu) {
-                            case h.EXTENSION_MENU_DETAILS:
+                            case m.EXTENSION_MENU_DETAILS:
                                 return a.default.createElement(l.ExtensionDetailsMenu, {
                                     onMenuTransition: this.props.handleMenuTransition,
                                     onVisibilityToggle: this.props.onVisibilityToggle,
@@ -49652,39 +49879,43 @@
                                     trackEvent: this.props.trackEvent,
                                     windowObj: this.props.windowObj
                                 });
-                            case h.EXTENSION_MENU_MANAGE_ACCESS:
+                            case m.EXTENSION_MENU_MANAGE_ACCESS:
                                 return a.default.createElement(u.ExtensionAccessMenu, {
                                     onMenuTransition: this.props.handleMenuTransition,
                                     onIdentityToggle: this.props.onIdentityToggle,
                                     trackEvent: this.props.trackEvent,
                                     installation: this.props.installation
                                 });
-                            case h.EXTENSION_MENU_REPORT:
+                            case m.EXTENSION_MENU_REPORT:
                                 return a.default.createElement(c.ExtensionReportMenu, {
                                     onMenuTransition: this.props.handleMenuTransition,
                                     channel: void 0,
                                     installation: this.props.installation
                                 });
-                            case h.EXTENSION_MENU_FOLLOW:
+                            case m.EXTENSION_MENU_FOLLOW:
                                 return a.default.createElement(f.ExtensionFollowModal, {
                                     extension: this.props.installation.extension,
                                     options: this.props.modalOptions && this.props.modalOptions.options,
                                     onClose: this._boundOnActionComplete
                                 });
-                            case h.EXTENSION_MENU_NEEDS_AUTH:
+                            case m.EXTENSION_MENU_NEEDS_AUTH:
                                 return a.default.createElement(p.ExtensionFeatureNeedsAuthModal, {
                                     onClose: this._boundOnCancelAction
                                 });
-                            case h.EXTENSION_MENU_MAIN:
+                            case m.EXTENSION_MENU_MAIN:
                                 return a.default.createElement(d.ExtensionListMenu, {
                                     installations: [this.props.installation],
                                     onExtensionClick: this._boundHandleExtensionClick
                                 });
-                            case h.EXTENSION_MODAL_USE_BITS:
+                            case m.EXTENSION_MODAL_USE_BITS:
                                 return a.default.createElement(_.ExtensionUseBitsModalContainer, {
                                     options: this.props.modalOptions && this.props.modalOptions.options,
                                     onClose: this._boundOnActionComplete,
                                     windowObj: this.props.windowObj
+                                });
+                            case m.EXTENSION_MODAL_ACCEPT_UNRELEASED:
+                                return a.default.createElement(h.ExtensionsAcceptUnreleased, {
+                                    installation: this.props.installation
                                 });
                             default:
                                 return null
@@ -49693,7 +49924,7 @@
                 }, {
                     key: "_handleExtensionClick",
                     value: function(e) {
-                        this.props.handleMenuTransition(h.EXTENSION_MENU_DETAILS), this.props.trackEvent("extension_setting_click", e)
+                        this.props.handleMenuTransition(m.EXTENSION_MENU_DETAILS), this.props.trackEvent("extension_setting_click", e)
                     }
                 }, {
                     key: "_onActionComplete",
@@ -49707,7 +49938,7 @@
                         this.props.modalOptions && this._boundOnActionComplete(this.props.modalOptions.options.defaultResult)
                     }
                 }]), t
-            }()).propTypes = E
+            }()).propTypes = y
         },
         zyzd: function(e, t, n) {
             "use strict";

@@ -152,7 +152,7 @@
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, s.o.config.apiBaseURL)
+                        return new URL(e, s.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return r.__awaiter(this, void 0, Promise, function() {
                             var t, n, s, o;
@@ -193,11 +193,11 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var n = s.o.store.getState(),
+                        var n = s.p.store.getState(),
                             r = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": s.o.config.legacyClientID,
+                                "Client-ID": s.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
@@ -205,7 +205,7 @@
                         return i && (r.Authorization = "OAuth " + i.authToken, i.legacyCSRFToken && (r["Twitch-Api-Token"] = i.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             r[e] && delete r[e]
                         }), r
-                    }, e.logger = s.o.logger.withCategory("legacy-api"), e
+                    }, e.logger = s.p.logger.withCategory("legacy-api"), e
                 }()
         },
         rVsl: function(e, t, n) {
@@ -222,7 +222,7 @@
                 l = n("wU95"),
                 h = n.n(l),
                 g = n("Ue10"),
-                f = function(e) {
+                p = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.initiateDownload = function() {
@@ -231,16 +231,16 @@
                         }, t
                     }
                     return c.__extends(t, e), t.prototype.render = function() {
-                        return u.createElement(g.Va, {
+                        return u.createElement(g.Wa, {
                             className: "file-download-button"
                         }, u.createElement(g.z, {
-                            icon: g.nb.Download,
+                            icon: g.ob.Download,
                             type: g.F.Default,
                             onClick: this.initiateDownload
                         }, Object(d.d)("Download", "FileDownload")))
                     }, t
                 }(u.Component),
-                p = n("ZDlU"),
+                f = n("ZDlU"),
                 m = n("NvVO"),
                 y = n("b6Yk"),
                 _ = n("GnwI"),
@@ -282,76 +282,76 @@
                     }, t.prototype.componentDidUpdate = function(e, t) {
                         this.state.hasLoadedMessageHistory && !t.hasLoadedMessageHistory && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return void 0 === this.props.sessionUser ? (this.props.login(), u.createElement(p.a, {
+                        return void 0 === this.props.sessionUser ? (this.props.login(), u.createElement(f.a, {
                             message: Object(d.d)("You must be logged in to view this page", "MessagesPage")
-                        })) : this.state.errorLoadingMessageHistory ? u.createElement(p.a, {
+                        })) : this.state.errorLoadingMessageHistory ? u.createElement(f.a, {
                             message: Object(d.d)("Oops, something went wrong.", "MessagesPage")
-                        }) : u.createElement(g.Va, {
+                        }) : u.createElement(g.Wa, {
                             className: "messages-page",
                             alignItems: g.f.Center,
-                            display: g.W.Flex,
+                            display: g.X.Flex,
                             fullWidth: !0,
                             fullHeight: !0,
-                            justifyContent: g.Ua.Center,
-                            position: g.db.Absolute
-                        }, u.createElement(g.Va, {
+                            justifyContent: g.Va.Center,
+                            position: g.eb.Absolute
+                        }, u.createElement(g.Wa, {
                             alignItems: g.f.Center,
                             className: "messages-page__body",
-                            display: g.W.Flex,
-                            flexDirection: g.Y.Column
+                            display: g.X.Flex,
+                            flexDirection: g.Z.Column
                         }, !this.state.hasLoadedMessageHistory && this.renderPlaceholder(), this.state.hasLoadedMessageHistory && this.renderLoadedBody()))
                     }, t.prototype.renderPlaceholder = function() {
-                        return u.createElement(u.Fragment, null, u.createElement(g.Va, {
-                            justifyContent: g.Ua.Center
-                        }, u.createElement(g.cb, {
+                        return u.createElement(u.Fragment, null, u.createElement(g.Wa, {
+                            justifyContent: g.Va.Center
+                        }, u.createElement(g.db, {
                             height: 130,
                             width: 180
-                        })), u.createElement(g.Va, {
+                        })), u.createElement(g.Wa, {
                             margin: {
                                 bottom: 1,
                                 top: 4
                             }
-                        }, u.createElement(g.cb, {
+                        }, u.createElement(g.db, {
                             height: 15,
                             width: 370
-                        }), u.createElement(g.Va, {
+                        }), u.createElement(g.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.cb, {
+                        }), u.createElement(g.db, {
                             height: 15,
                             width: 380
-                        }), u.createElement(g.Va, {
+                        }), u.createElement(g.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.cb, {
+                        }), u.createElement(g.db, {
                             height: 15,
                             width: 65
-                        }), u.createElement(g.Va, {
+                        }), u.createElement(g.Wa, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.cb, {
+                        }), u.createElement(g.db, {
                             height: 15,
                             width: 310
-                        }), u.createElement(g.Va, {
+                        }), u.createElement(g.Wa, {
                             margin: {
                                 y: 2
                             }
-                        }), u.createElement(g.cb, {
+                        }), u.createElement(g.db, {
                             height: 15,
                             width: 390
-                        }), u.createElement(g.Va, {
+                        }), u.createElement(g.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }), u.createElement(g.cb, {
+                        }), u.createElement(g.db, {
                             height: 15,
                             width: 300
-                        })), u.createElement(g.Va, {
-                            justifyContent: g.Ua.Center
-                        }, u.createElement(g.cb, {
+                        })), u.createElement(g.Wa, {
+                            justifyContent: g.Va.Center
+                        }, u.createElement(g.db, {
                             height: 25,
                             width: 100
                         })))
@@ -359,38 +359,38 @@
                         return u.createElement(u.Fragment, null, u.createElement(g.S, {
                             src: h.a,
                             alt: Object(d.d)("Envelope fading into smoke", "MessagesPage")
-                        }), u.createElement(g.Va, {
+                        }), u.createElement(g.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }, u.createElement(g.V, {
-                            fontSize: g.Aa.Size5
-                        }, Object(d.d)("Messages have been deprecated due to legacy technology. This allows us to work on new ways for you to contact others on Twitch!", "MessagesPage")), u.createElement(g.Va, {
+                        }, u.createElement(g.W, {
+                            fontSize: g.Ba.Size5
+                        }, Object(d.d)("Messages have been deprecated due to legacy technology. This allows us to work on new ways for you to contact others on Twitch!", "MessagesPage")), u.createElement(g.Wa, {
                             margin: {
                                 y: .5
                             }
-                        }), this.getActionCopy(), u.createElement(g.Va, {
+                        }), this.getActionCopy(), u.createElement(g.Wa, {
                             margin: {
                                 y: .5
                             }
-                        }), u.createElement(g.V, {
-                            fontSize: g.Aa.Size5
+                        }), u.createElement(g.W, {
+                            fontSize: g.Ba.Size5
                         }, Object(d.d)('Streamers: You can still contact all your subscribers by clicking "Send e-mail to my subs" from the Channel Analytics page!', "MessagesPage"))), this.getDownloadContent())
                     }, t.prototype.getActionCopy = function() {
-                        return b() ? u.createElement(g.V, {
-                            fontSize: g.Aa.Size5
-                        }, Object(d.d)("You can download old messages until November 1, 2018.", "MessagesPage")) : u.createElement(g.V, {
-                            fontSize: g.Aa.Size5
+                        return b() ? u.createElement(g.W, {
+                            fontSize: g.Ba.Size5
+                        }, Object(d.d)("You can download old messages until November 1, 2018.", "MessagesPage")) : u.createElement(g.W, {
+                            fontSize: g.Ba.Size5
                         }, Object(d.d)("Check back to download your old messages.", "MessagesPage"))
                     }, t.prototype.getDownloadContent = function() {
-                        return b() ? this.state.fileURL ? u.createElement(f, {
+                        return b() ? this.state.fileURL ? u.createElement(p, {
                             fileURL: this.state.fileURL
-                        }) : u.createElement(g.V, {
+                        }) : u.createElement(g.W, {
                             bold: !0
                         }, Object(d.d)("You have no messages to download.", "MessagesPage")) : null
                     }, t
                 }(u.Component),
-                E = Object(s.compose)(Object(_.c)("MessagesPage", {
+                E = Object(s.compose)(Object(_.b)("MessagesPage", {
                     destination: m.a.MessagesPage
                 }))(v);
             var O = Object(r.connect)(function(e) {

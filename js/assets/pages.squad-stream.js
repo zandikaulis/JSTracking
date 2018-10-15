@@ -33,7 +33,7 @@
                         return Object(b.a)(this.props.match.params.channelLogin) ? c.createElement(c.Fragment, null, c.createElement(f.b, {
                             className: "squad-stream-page__root",
                             suppressScrollX: !0
-                        }), c.createElement(S.xb, {
+                        }), c.createElement(S.yb, {
                             fullWidth: !0,
                             fullHeight: !0,
                             className: "squad-stream-page",
@@ -44,20 +44,20 @@
                         }))) : c.createElement(g.a, null)
                     }, t
                 }(c.Component),
-                v = Object(o.compose)(Object(p.c)("SquadStreamPage", {
+                v = Object(o.compose)(Object(p.b)("SquadStreamPage", {
                     destination: l.a.SquadStreamPage,
                     autoReportInteractive: !0
                 }), Object(s.a)({
                     location: d.PageviewLocation.SquadStreamPage
                 }))(q);
-            var w = Object(a.connect)(null, function(e) {
+            var y = Object(a.connect)(null, function(e) {
                 return Object(o.bindActionCreators)({
                     disableSquadMode: r.B,
                     enableSquadMode: r.E
                 }, e)
             })(v);
             n.d(t, "SquadStreamPage", function() {
-                return w
+                return y
             })
         },
         cvcW: function(e, t, n) {},

@@ -47,9 +47,9 @@
             }), n.d(t, "k", function() {
                 return h
             }), n.d(t, "n", function() {
-                return f
-            }), n.d(t, "m", function() {
                 return g
+            }), n.d(t, "m", function() {
+                return f
             }), n.d(t, "r", function() {
                 return v
             }), n.d(t, "t", function() {
@@ -65,9 +65,9 @@
             }), n.d(t, "o", function() {
                 return E
             }), n.d(t, "p", function() {
-                return C
-            }), n.d(t, "u", function() {
                 return T
+            }), n.d(t, "u", function() {
+                return C
             }), n.d(t, "J", function() {
                 return D
             }), n.d(t, "E", function() {
@@ -83,27 +83,27 @@
             }), n.d(t, "H", function() {
                 return M
             }), n.d(t, "C", function() {
-                return U
+                return W
             }), n.d(t, "I", function() {
-                return j
+                return U
             }), n.d(t, "D", function() {
-                return x
+                return j
             }), n.d(t, "G", function() {
                 return F
             }), n.d(t, "B", function() {
-                return W
+                return x
             }), n.d(t, "y", function() {
                 return A
             }), n.d(t, "A", function() {
                 return P
             }), n.d(t, "M", function() {
-                return V
-            }), n.d(t, "z", function() {
                 return L
-            }), n.d(t, "P", function() {
+            }), n.d(t, "z", function() {
                 return B
-            }), n.d(t, "S", function() {
+            }), n.d(t, "P", function() {
                 return z
+            }), n.d(t, "S", function() {
+                return V
             }), n.d(t, "x", function() {
                 return H
             }), n.d(t, "N", function() {
@@ -111,7 +111,7 @@
             }), n.d(t, "R", function() {
                 return q
             }), n.d(t, "Q", function() {
-                return $
+                return X
             });
             var r = "chat.CHAT_HIDDEN",
                 i = "chat.CHAT_SHOWN",
@@ -125,8 +125,8 @@
                 p = "chat.CLOSE_CHAT_RULES",
                 m = "chat.MODERATION_ACTIONS_ENABLED",
                 h = "chat.MODERATION_ACTIONS_DISABLED",
-                f = "chat.MOD_ICONS_ENABLED",
-                g = "chat.MOD_ICONS_DISABLED",
+                g = "chat.MOD_ICONS_ENABLED",
+                f = "chat.MOD_ICONS_DISABLED",
                 v = "chat.SHOW_CHAT_RULES",
                 k = "chat.TIMESTAMPS_ENABLED",
                 b = "chat.TIMESTAMPS_DISABLED",
@@ -134,8 +134,8 @@
                 S = "chat.USERNAME_CONTRAST_DISABLED",
                 _ = "chat.ADD_COMMAND",
                 E = "chat.REMOVE_COMMAND",
-                C = "chat.RENDER_SENT_CHAT_MESSAGE",
-                T = "chat.UNHIDE_IGNORED_COMMAND";
+                T = "chat.RENDER_SENT_CHAT_MESSAGE",
+                C = "chat.UNHIDE_IGNORED_COMMAND";
 
             function D() {
                 return {
@@ -179,19 +179,19 @@
                 }
             }
 
-            function U() {
+            function W() {
                 return {
                     type: c
                 }
             }
 
-            function j() {
+            function U() {
                 return {
                     type: m
                 }
             }
 
-            function x() {
+            function j() {
                 return {
                     type: h
                 }
@@ -199,13 +199,13 @@
 
             function F() {
                 return {
-                    type: f
+                    type: g
                 }
             }
 
-            function W() {
+            function x() {
                 return {
-                    type: g
+                    type: f
                 }
             }
 
@@ -223,25 +223,25 @@
                 }
             }
 
-            function V() {
+            function L() {
                 return {
                     type: u
                 }
             }
 
-            function L() {
+            function B() {
                 return {
                     type: p
                 }
             }
 
-            function B() {
+            function z() {
                 return {
                     type: v
                 }
             }
 
-            function z(e) {
+            function V(e) {
                 return {
                     type: s,
                     roomState: e
@@ -266,14 +266,14 @@
 
             function q(e) {
                 return {
-                    type: C,
+                    type: T,
                     customEvent: e
                 }
             }
 
-            function $(e) {
+            function X(e) {
                 return {
-                    type: T,
+                    type: C,
                     userID: e
                 }
             }
@@ -297,7 +297,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.xb, {
+                        return a.createElement(u.yb, {
                             className: "reporting-modal__container",
                             background: u.r.Base,
                             padding: {
@@ -312,7 +312,7 @@
                         }), a.createElement(l.a, null))
                     }, t
                 }(a.Component));
-            var m = Object(s.compose)(Object(d.c)("ReportUserModal"), Object(o.connect)(null, function(e) {
+            var m = Object(s.compose)(Object(d.b)("ReportUserModal"), Object(o.connect)(null, function(e) {
                 return Object(s.bindActionCreators)({
                     closeModal: c.c
                 }, e)
@@ -1435,11 +1435,11 @@
                 });
                 return r.focusedID = t, d(e) > n && (r = u(r)), r
             }
-            var f = "whisperNotifications.WHISPER_THREAD_NOTIFIED";
+            var g = "whisperNotifications.WHISPER_THREAD_NOTIFIED";
 
-            function g(e, t, n) {
+            function f(e, t, n) {
                 return {
-                    type: f,
+                    type: g,
                     threadID: e,
                     afterMessageID: n,
                     content: t
@@ -1509,26 +1509,26 @@
                             var l = d(e);
                             if (l > t.contentWidth) {
                                 if (e.openedIDs.length <= 1) return e;
-                                for (var f = a.__assign({}, e); l > t.contentWidth && f.openedIDs.length > 1;) l = d(f = u(f));
-                                return f
+                                for (var g = a.__assign({}, e); l > t.contentWidth && g.openedIDs.length > 1;) l = d(g = u(g));
+                                return g
                             }
                             if (t.contentWidth - l >= c) {
-                                var g = Math.floor((t.contentWidth - l) / c),
-                                    v = Math.min(g, e.orderedIDs.length - e.openedIDs.length);
+                                var f = Math.floor((t.contentWidth - l) / c),
+                                    v = Math.min(f, e.orderedIDs.length - e.openedIDs.length);
                                 if (0 === v) return e;
-                                f = a.__assign({}, e);
+                                g = a.__assign({}, e);
                                 for (var k = 0; k < v; k++)
-                                    if ((f = p(f, t.contentWidth)).openedIDs.length > 1)
-                                        for (var b = f.openedIDs, y = b.length, S = 0, _ = f.orderedIDs; S < _.length; S++) {
+                                    if ((g = p(g, t.contentWidth)).openedIDs.length > 1)
+                                        for (var b = g.openedIDs, y = b.length, S = 0, _ = g.orderedIDs; S < _.length; S++) {
                                             var E = _[S];
                                             if (b[y - 1] === E) {
-                                                var C = b.splice(y - 2, 1);
-                                                b.push(C[0]);
+                                                var T = b.splice(y - 2, 1);
+                                                b.push(T[0]);
                                                 break
                                             }
                                             if (b[y - 2] === E) break
                                         }
-                                    return f
+                                    return g
                             }
                             return e;
                         default:
@@ -1539,7 +1539,7 @@
                     switch (void 0 === e && (e = {
                         byThreadID: {}
                     }), t.type) {
-                        case f:
+                        case g:
                             return e.byThreadID[t.threadID] ? o(e, function(e) {
                                 return e.byThreadID[t.threadID]
                             }, function(e) {
@@ -1564,14 +1564,14 @@
                 }
             });
             var k = [];
-            i.o.store.registerReducer("whispers", v);
+            i.p.store.registerReducer("whispers", v);
             var b = n("/MKj"),
                 y = n("XDQu"),
                 S = n("l1Uh"),
                 _ = n("TSYQ"),
                 E = n("q1tI"),
-                C = n("yR8l"),
-                T = n("eDVu"),
+                T = n("yR8l"),
+                C = n("eDVu"),
                 D = n("0Log"),
                 N = n("geRD"),
                 O = n("/aPz"),
@@ -1579,18 +1579,18 @@
                 w = n("8/mp"),
                 R = n("eJ65"),
                 M = n("yLwq"),
-                U = n("f00E"),
-                j = n("kz7j"),
-                x = n("GnwI"),
+                W = n("f00E"),
+                U = n("kz7j"),
+                j = n("GnwI"),
                 F = n("H/lO"),
-                W = n("NZDK"),
+                x = n("NZDK"),
                 A = n("oe5X"),
                 P = n("0FG4"),
-                V = n("cys1"),
-                L = n("Ue10");
+                L = n("cys1"),
+                B = n("Ue10");
 
-            function B(e, t) {
-                return Object(V.f)(Object(A.a)(e, {
+            function z(e, t) {
+                return Object(L.f)(Object(A.a)(e, {
                     emotes: {
                         type: P.a.Position,
                         map: function(e) {
@@ -1609,7 +1609,7 @@
                 }))
             }
             n("jPWu");
-            var z = function(e) {
+            var V = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleThreadClick = function() {
@@ -1620,66 +1620,66 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e, t, n, r = this.props.user,
-                            a = this.props.lastMessage ? B(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes) : null,
+                            a = this.props.lastMessage ? z(this.props.lastMessage.content.content, this.props.lastMessage.content.emotes) : null,
                             o = this.props.unreadMessageCount,
                             s = Object(i.d)("Unknown", "ThreadListItem");
                         return r ? ((e = r.displayName || r.login) || (e = s), t = r.login, n = r.profileImageURL) : (e = s, t = s, n = null), E.createElement("div", {
                             onClick: this.handleThreadClick,
                             role: "listitem"
-                        }, E.createElement(L.xb, {
+                        }, E.createElement(B.yb, {
                             className: "whispers-list-item",
                             borderBottom: !0,
                             padding: 1,
-                            display: L.W.Flex,
-                            flexDirection: L.Y.Row,
-                            flexWrap: L.Z.NoWrap,
+                            display: B.X.Flex,
+                            flexDirection: B.Z.Row,
+                            flexWrap: B.Aa.NoWrap,
                             fullWidth: !0,
-                            alignItems: L.f.Center,
+                            alignItems: B.f.Center,
                             "data-a-target": "whisper-with-" + t
-                        }, E.createElement(L.Va, {
+                        }, E.createElement(B.Wa, {
                             className: "whispers-list-item__avatar",
                             margin: {
                                 right: .5
                             },
                             flexShrink: 0
-                        }, E.createElement(L.q, {
+                        }, E.createElement(B.q, {
                             size: 30,
                             alt: Object(i.d)("{interlocutorName}'s Avatar", {
                                 interlocutorName: e
                             }, "WhisperThreadListItem"),
                             src: n,
                             onLoad: this.props.avatarOnLoadCallback
-                        })), E.createElement(L.Va, {
+                        })), E.createElement(B.Wa, {
                             fullWidth: !0,
-                            display: L.W.Inline
-                        }, E.createElement(L.V, {
-                            fontSize: L.Aa.Size5,
+                            display: B.X.Inline
+                        }, E.createElement(B.W, {
+                            fontSize: B.Ba.Size5,
                             bold: !0,
                             italic: e === s
-                        }, e), E.createElement(L.Va, {
+                        }, e), E.createElement(B.Wa, {
                             className: "whispers-list-item__last-message",
                             ellipsis: !0
-                        }, a)), E.createElement(L.Va, {
+                        }, a)), E.createElement(B.Wa, {
                             className: "whispers-list-item__unread-count",
                             margin: {
                                 right: 1
                             },
-                            textAlign: L.Jb.Right
-                        }, E.createElement(L.V, {
+                            textAlign: B.Kb.Right
+                        }, E.createElement(B.W, {
                             bold: !0
-                        }, o > 0 && !this.props.muted ? o : null), this.props.muted && E.createElement(L.Va, {
-                            display: L.W.Flex,
-                            alignItems: L.f.Center,
-                            justifyContent: L.Ua.Center
-                        }, E.createElement(L.mb, {
-                            type: L.ob.Alt2,
-                            asset: L.nb.WhisperMuted
+                        }, o > 0 && !this.props.muted ? o : null), this.props.muted && E.createElement(B.Wa, {
+                            display: B.X.Flex,
+                            alignItems: B.f.Center,
+                            justifyContent: B.Va.Center
+                        }, E.createElement(B.nb, {
+                            type: B.pb.Alt2,
+                            asset: B.ob.WhisperMuted
                         }))), E.createElement("div", {
                             className: "whispers-list-item__archive"
-                        }, E.createElement(L.A, {
+                        }, E.createElement(B.A, {
                             ariaLabel: Object(i.d)("Archive Thread", "WhisperThreadListItem"),
                             tabIndex: -1,
-                            icon: L.nb.Close,
+                            icon: B.ob.Close,
                             "data-a-target": "whispers-list-item__archive-button",
                             onClick: this.handleArchiveClick,
                             "data-click-out-id": "whispers-list-item__archive-button"
@@ -1697,52 +1697,52 @@
                             });
                             n.props.markAllWhispersAsRead && (Object(H.i)(), n.props.markAllWhispersAsRead(e)), n.props.onMarkAllMessagesRead && n.props.onMarkAllMessagesRead()
                         }, n.toggleDoNotDisturb = function() {
-                            n.state.doNotDisturb ? (i.m.set("whisperDoNotDisturb", !1), Object(H.f)(), n.setState({
+                            n.state.doNotDisturb ? (i.n.set("whisperDoNotDisturb", !1), Object(H.f)(), n.setState({
                                 doNotDisturb: !1
-                            })) : (i.m.set("whisperDoNotDisturb", !0), Object(H.g)(), n.setState({
+                            })) : (i.n.set("whisperDoNotDisturb", !0), Object(H.g)(), n.setState({
                                 doNotDisturb: !0
                             }))
                         }, n.state = {
-                            doNotDisturb: i.m.get("whisperDoNotDisturb", !1)
+                            doNotDisturb: i.n.get("whisperDoNotDisturb", !1)
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.doNotDisturb ? Object(i.d)("Disable Do Not Disturb", "ThreadsBoxSettings") : Object(i.d)("Enable Do Not Disturb", "ThreadsBoxSettings"),
                             t = Object(i.d)("Mark All Whispers as Read", "ThreadsBoxSettings");
-                        return E.createElement(L.Va, {
+                        return E.createElement(B.Wa, {
                             className: "threads-box-settings",
-                            display: L.W.Flex,
-                            flexDirection: L.Y.Column,
+                            display: B.X.Flex,
+                            flexDirection: B.Z.Column,
                             margin: 1
-                        }, E.createElement(L.Sa, {
+                        }, E.createElement(B.Ta, {
                             ariaLabel: e,
                             onClick: this.toggleDoNotDisturb
-                        }, E.createElement(L.Va, {
+                        }, E.createElement(B.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, e)), E.createElement(L.Sa, {
+                        }, e)), E.createElement(B.Ta, {
                             ariaLabel: t,
                             onClick: this.markAllWhispersAsRead
-                        }, E.createElement(L.Va, {
+                        }, E.createElement(B.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
                         }, t)))
-                    }, t = a.__decorate([Object(C.a)(G, {
+                    }, t = a.__decorate([Object(T.a)(G, {
                         name: "markAllWhispersAsRead"
                     })], t)
                 }(E.Component);
 
-            function $(e, t) {
+            function X(e, t) {
                 return e.find(function(e) {
                     return !!e && e.id !== t
                 }) || void 0
             }
-            var Q, K = n("NMMG"),
-                Y = (n("dNN/"), function(e) {
+            var Q, $ = n("NMMG"),
+                K = (n("dNN/"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onMarkAllMessagesRead = function() {
@@ -1755,42 +1755,42 @@
                             return E.createElement("div", {
                                 key: "searchResult:" + e.objectID,
                                 onClick: n.handleUserSearchResultClick(e, t)
-                            }, E.createElement(L.xb, {
+                            }, E.createElement(B.yb, {
                                 className: "whispers-list-item",
                                 borderBottom: !0,
                                 padding: 1,
                                 "data-a-target": "whisper-search-result-" + e.login,
-                                display: L.W.Flex,
-                                flexDirection: L.Y.Row,
-                                flexWrap: L.Z.NoWrap,
+                                display: B.X.Flex,
+                                flexDirection: B.Z.Row,
+                                flexWrap: B.Aa.NoWrap,
                                 fullWidth: !0,
-                                alignItems: L.f.Center
-                            }, E.createElement(L.Va, {
+                                alignItems: B.f.Center
+                            }, E.createElement(B.Wa, {
                                 margin: {
                                     right: .5
                                 },
                                 flexShrink: 0
-                            }, E.createElement(L.q, {
+                            }, E.createElement(B.q, {
                                 size: 30,
                                 src: a,
                                 alt: r
-                            })), E.createElement(L.Va, {
+                            })), E.createElement(B.Wa, {
                                 fullWidth: !0,
-                                display: L.W.Flex,
-                                flexDirection: L.Y.Column
-                            }, E.createElement(L.V, {
-                                fontSize: L.Aa.Size5,
+                                display: B.X.Flex,
+                                flexDirection: B.Z.Column
+                            }, E.createElement(B.W, {
+                                fontSize: B.Ba.Size5,
                                 bold: !0
-                            }, e.login), E.createElement(L.Va, null, " "))))
+                            }, e.login), E.createElement(B.Wa, null, " "))))
                         }, n.saveSettingsMenuRef = function(e) {
                             return n.settingsMenu = e
                         }, n.handleConversationsClick = function() {
-                            n.state.open || (n.props.latencyTracking.resetCustomEvents(j.a.Whispers), n.whispersHistoryLatencyEvent = n.props.latencyTracking.registerCustomEvent({
+                            n.state.open || (n.props.latencyTracking.resetCustomEvents(U.a.Whispers), n.whispersHistoryLatencyEvent = n.props.latencyTracking.registerCustomEvent({
                                 benchmark: 200,
-                                group: j.a.Whispers,
-                                key: j.b.WhispersHistory,
-                                label: j.c.History,
-                                start: j.d.Registration
+                                group: U.a.Whispers,
+                                key: U.b.WhispersHistory,
+                                label: U.c.History,
+                                start: U.d.Registration
                             })), n.setState(function(e) {
                                 return {
                                     open: !e.open
@@ -1824,7 +1824,7 @@
                                 var r = e.objectID;
                                 if (null !== n.props.currentUserID && r !== n.props.currentUserID) {
                                     n.handleClose(), n.clearSearchText();
-                                    var i = Object(K.a)(n.props.currentUserID, r);
+                                    var i = Object($.a)(n.props.currentUserID, r);
                                     Object(H.e)({
                                         threadID: i,
                                         targetUserlogin: e.login,
@@ -1839,16 +1839,16 @@
                         }, n.filterExistingThreads = function(e) {
                             var t = e.toLowerCase();
                             return n.props.orderedThreadIDs.filter(function(e) {
-                                var r = $(n.props.threadsByID[e].participants, n.props.currentUserID);
+                                var r = X(n.props.threadsByID[e].participants, n.props.currentUserID);
                                 return !(!r || !r.displayName) && r.displayName.toLowerCase().indexOf(t) >= 0
                             })
-                        }, n.searchClient = new W.a({
+                        }, n.searchClient = new x.a({
                             appId: i.a.algoliaApplicationID,
                             apiKey: i.a.algoliaAPIKey,
-                            apolloClient: i.o.apollo.client,
-                            logger: i.j,
+                            apolloClient: i.p.apollo.client,
+                            logger: i.k,
                             config: i.a,
-                            stats: i.o.stats
+                            stats: i.p.stats
                         }), n.state = {
                             open: !1,
                             searchText: "",
@@ -1858,21 +1858,21 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         return E.createElement(I.a, {
                             onClickOut: this.handleClose
-                        }, E.createElement(L.Oa, {
+                        }, E.createElement(B.Pa, {
                             className: "whispers-threads-box__container " + (this.state.open ? "whispers-threads-box__container--open" : ""),
-                            display: L.W.Flex,
-                            flexDirection: L.Y.Column,
-                            flexWrap: L.Z.NoWrap,
+                            display: B.X.Flex,
+                            flexDirection: B.Z.Column,
+                            flexWrap: B.Aa.NoWrap,
                             border: !0,
-                            background: L.r.Base,
-                            position: L.db.Absolute,
+                            background: B.r.Base,
+                            position: B.eb.Absolute,
                             attachBottom: !0,
                             attachRight: !0,
                             "data-click-out-id": "threads-box",
                             "data-a-target": "threads-box-" + (this.state.open ? "open" : "closed"),
                             borderRadius: {
-                                topLeft: L.x.Medium,
-                                topRight: L.x.Medium
+                                topLeft: B.x.Medium,
+                                topRight: B.x.Medium
                             }
                         }, E.createElement("div", {
                             "aria-labelledby": "whispers-box-header"
@@ -1881,7 +1881,7 @@
                         var e = null;
                         if (this.props.unreadCount > 0) {
                             var t = this.props.unreadCount > 99 ? "99+" : this.props.unreadCount.toString();
-                            e = E.createElement(L.Va, {
+                            e = E.createElement(B.Wa, {
                                 className: "whispers-threads-box__unread",
                                 margin: {
                                     y: .5
@@ -1891,16 +1891,16 @@
                                 "data-a-target": "whisper-unreads"
                             }, t))
                         }
-                        return E.createElement(L.xb, {
+                        return E.createElement(B.yb, {
                             className: "whispers-threads-box__open-close",
-                            position: L.db.Relative,
-                            background: L.r.Alt2,
-                            display: L.W.Flex,
-                            alignItems: L.f.Center,
-                            justifyContent: L.Ua.Center
-                        }, e, E.createElement(L.A, {
+                            position: B.eb.Relative,
+                            background: B.r.Alt2,
+                            display: B.X.Flex,
+                            alignItems: B.f.Center,
+                            justifyContent: B.Va.Center
+                        }, e, E.createElement(B.A, {
                             ariaLabel: Object(i.d)("Close Threads", "WhisperThreadsBox"),
-                            icon: L.nb.Conversations,
+                            icon: B.ob.Conversations,
                             onClick: this.handleConversationsClick,
                             "data-a-target": "whisper-box-button"
                         }))
@@ -1908,7 +1908,7 @@
                         var e, t = this;
                         if (!this.state.open) return null;
                         var n = null;
-                        "" !== this.state.searchText && (n = E.createElement(L.xb, {
+                        "" !== this.state.searchText && (n = E.createElement(B.yb, {
                             key: "otherPeopleDivider",
                             borderBottom: !0,
                             padding: {
@@ -1917,29 +1917,29 @@
                             }
                         }, Object(i.d)("Other People", "WhispersThreadBox")));
                         var r = null;
-                        if (this.state.searching ? r = E.createElement(L.Va, {
-                                display: L.W.Flex,
-                                flexDirection: L.Y.Column,
+                        if (this.state.searching ? r = E.createElement(B.Wa, {
+                                display: B.X.Flex,
+                                flexDirection: B.Z.Column,
                                 margin: {
                                     top: 4
                                 },
-                                alignItems: L.f.Center
-                            }, E.createElement(L.Xa, {
+                                alignItems: B.f.Center
+                            }, E.createElement(B.Ya, {
                                 delay: 0
                             })) : this.state.searchResults && this.state.searchResults.users && "" !== this.state.searchText && (r = this.state.searchResults.users.hits.filter(function(e) {
                                 return !t.props.threadsByID[e.objectID]
-                            }).map(this.renderUserSearchResult)), this.props.error) e = E.createElement(L.Va, {
+                            }).map(this.renderUserSearchResult)), this.props.error) e = E.createElement(B.Wa, {
                             margin: {
                                 x: "auto"
                             },
-                            display: L.W.Flex,
-                            justifyContent: L.Ua.Center,
-                            alignItems: L.f.Center,
+                            display: B.X.Flex,
+                            justifyContent: B.Va.Center,
+                            alignItems: B.f.Center,
                             fullHeight: !0
-                        }, E.createElement(L.V, {
-                            color: L.O.Error
+                        }, E.createElement(B.W, {
+                            color: B.O.Error
                         }, Object(i.d)("There was a problem loading whispers.", "WhisperThreadsBox")));
-                        else if (this.props.loading) e = E.createElement(L.Xa, null);
+                        else if (this.props.loading) e = E.createElement(B.Ya, null);
                         else {
                             var a = this.props.orderedThreadIDs;
                             "" !== this.state.searchText && (a = this.filterExistingThreads(this.state.searchText)), e = a.filter(function(e) {
@@ -1949,8 +1949,8 @@
                                         t.props.latencyTracking.reportCustomEvent(t.whispersHistoryLatencyEvent)
                                     } : void 0,
                                     i = t.props.threadsByID[e],
-                                    a = $(i.participants, t.props.currentUserID);
-                                return a ? E.createElement(z, {
+                                    a = X(i.participants, t.props.currentUserID);
+                                return a ? E.createElement(V, {
                                     key: "whisperThread:" + i.id,
                                     user: a,
                                     threadID: i.id,
@@ -1973,15 +1973,15 @@
                             pixelThreshold: 200
                         })))
                     }, t.prototype.renderHeader = function() {
-                        return this.state.open ? E.createElement(L.xb, {
+                        return this.state.open ? E.createElement(B.yb, {
                             className: "whispers-threads-box__header",
                             "data-a-target": "whispers-threads-box__header",
-                            alignItems: L.f.Center,
-                            background: L.r.Alt,
+                            alignItems: B.f.Center,
+                            background: B.r.Alt,
                             borderBottom: !0,
-                            color: L.O.Base,
-                            display: L.W.Flex,
-                            flexDirection: L.Y.Row,
+                            color: B.O.Base,
+                            display: B.X.Flex,
+                            flexDirection: B.Z.Row,
                             flexGrow: 0,
                             flexShrink: 0,
                             padding: {
@@ -1989,48 +1989,48 @@
                                 x: 1
                             },
                             "data-click-hide-id": "threads-box-header"
-                        }, E.createElement(L.Na, {
+                        }, E.createElement(B.Oa, {
                             flexGrow: 1,
-                            display: L.W.Flex
+                            display: B.X.Flex
                         }, E.createElement("div", {
                             id: "whispers-box-header"
-                        }, E.createElement(L.V, {
-                            type: L.Nb.Span,
+                        }, E.createElement(B.W, {
+                            type: B.Ob.Span,
                             bold: !0
                         }, Object(i.d)("Whispers", "WhisperThreadsBox")))), E.createElement(R.a, {
                             ref: this.saveSettingsMenuRef
-                        }, E.createElement(L.A, {
+                        }, E.createElement(B.A, {
                             ariaLabel: Object(i.d)("Settings", "WhisperThreadsBox"),
-                            icon: L.nb.Gear,
+                            icon: B.ob.Gear,
                             "data-a-target": "whisper-settings-button"
-                        }), E.createElement(L.u, {
-                            size: L.w.Small,
-                            direction: L.v.BottomRight,
+                        }), E.createElement(B.u, {
+                            size: B.w.Small,
+                            direction: B.v.BottomRight,
                             offsetX: "0.5rem"
                         }, E.createElement(q, {
                             onMarkAllMessagesRead: this.onMarkAllMessagesRead
-                        }))), E.createElement(L.A, {
+                        }))), E.createElement(B.A, {
                             ariaLabel: Object(i.d)("Minimize", "WhisperThreadsBox"),
-                            icon: L.nb.Minimize,
+                            icon: B.ob.Minimize,
                             onClick: this.handleClose,
                             "data-a-target": "whisper-close-button"
                         })) : null
                     }, t.prototype.renderFooter = function() {
-                        return this.state.open ? E.createElement(L.xb, {
-                            display: L.W.Flex,
+                        return this.state.open ? E.createElement(B.yb, {
+                            display: B.X.Flex,
                             flexGrow: 0,
                             flexShrink: 0,
-                            alignItems: L.f.Center,
+                            alignItems: B.f.Center,
                             borderTop: !0,
-                            background: L.r.Alt
-                        }, E.createElement(L.Va, {
+                            background: B.r.Alt
+                        }, E.createElement(B.Wa, {
                             flexGrow: 1,
                             padding: {
                                 top: .5,
                                 bottom: .5,
                                 left: 1
                             }
-                        }, E.createElement(L.pb, {
+                        }, E.createElement(B.qb, {
                             onChange: this.onSearchInputChange,
                             value: this.state.searchText,
                             placeholder: Object(i.d)("Search for People", "WhisperThreadsBox"),
@@ -2044,7 +2044,7 @@
                             return a.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return e ? [4, this.searchClient.queryForType(F.a.Users, e, U.a())] : [2];
+                                        return e ? [4, this.searchClient.queryForType(F.a.Users, e, W.a())] : [2];
                                     case 1:
                                         return t = n.sent(), this.setState({
                                             searchResults: t,
@@ -2053,13 +2053,13 @@
                                 }
                             })
                         })
-                    }, t = a.__decorate([Object(x.c)("WhisperCenter", {
+                    }, t = a.__decorate([Object(j.b)("WhisperCenter", {
                         autoReportInteractive: !0
                     })], t)
                 }(E.Component)),
                 Z = n("MJbm"),
-                J = n("aCAx"),
-                X = n("kRBY"),
+                Y = n("aCAx"),
+                J = n("kRBY"),
                 ee = n("/HY+"),
                 te = n("ZDlU"),
                 ne = n("x7UT"),
@@ -2082,7 +2082,7 @@
                             var t = {
                                 target_user_id: e.targetUserID
                             };
-                            i.n.track(ce.SpadeEventType.WhisperStrangerWarningImpression, t)
+                            i.o.track(ce.SpadeEventType.WhisperStrangerWarningImpression, t)
                         }({
                             targetUserID: this.props.targetUserID
                         })
@@ -2090,42 +2090,41 @@
                         var e;
                         return e = this.props.targetDisplayName ? Object(i.d)("You have blocked whispers from strangers. By sending a whisper to {username}, you will allow them to whisper you for 48 hours. You can disable their access again in whisper settings.", {
                             username: this.props.targetDisplayName
-                        }, "WhisperThread") : Object(i.d)("You have blocked whispers from strangers. By sending a whisper to this user, you will allow them to whisper you for 48 hours. You can disable their access again in whisper settings.", "WhisperThread"), E.createElement(L.Va, {
+                        }, "WhisperThread") : Object(i.d)("You have blocked whispers from strangers. By sending a whisper to this user, you will allow them to whisper you for 48 hours. You can disable their access again in whisper settings.", "WhisperThread"), E.createElement(B.Wa, {
                             attachBottom: !0,
                             padding: 1,
-                            position: L.db.Absolute
-                        }, E.createElement(L.Va, {
+                            position: B.eb.Absolute
+                        }, E.createElement(B.Wa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, E.createElement(L.V, {
-                            color: L.O.Alt2,
-                            fontSize: L.Aa.Size6
-                        }, e)), E.createElement(L.z, {
+                        }, E.createElement(B.W, {
+                            color: B.O.Alt2,
+                            fontSize: B.Ba.Size6
+                        }, e)), E.createElement(B.z, {
                             onClick: this.props.onStrangerWarningConfirmation,
                             "data-test-selector": Q.StrangerWarningConfirmationButton
                         }, Object(i.d)("Got it!", "WhisperThread")))
                     }, t
                 }(E.Component),
-                ue = n("2iEm"),
-                pe = n("NSwr"),
-                me = n("BhFH"),
-                he = n("EvYO"),
-                fe = n("D7An"),
+                ue = n("NSwr"),
+                pe = n("BhFH"),
+                me = n("EvYO"),
+                he = n("D7An"),
                 ge = n("TvOw"),
-                ve = n("m98o"),
-                ke = n("as+V"),
-                be = n("oJmH"),
-                ye = n("iS14"),
-                Se = n("lZZ2"),
-                _e = n("0tEc"),
-                Ee = n("/rr3"),
-                Ce = n("RQ6e"),
+                fe = n("m98o"),
+                ve = n("as+V"),
+                ke = n("oJmH"),
+                be = n("iS14"),
+                ye = n("lZZ2"),
+                Se = n("0tEc"),
+                _e = n("/rr3"),
+                Ee = n("RQ6e"),
                 Te = n("4qQ0"),
-                De = n("Gu45"),
-                Ne = n("dr/4"),
-                Oe = "whispers-report-user-button",
-                Ie = function(e) {
+                Ce = n("Gu45"),
+                De = n("dr/4"),
+                Ne = "whispers-report-user-button",
+                Oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderReportButton = function() {
@@ -2133,11 +2132,11 @@
                                 n = Object(i.d)("Report {displayName}", {
                                     displayName: e
                                 }, "ThreadSettings");
-                            return E.createElement(L.Sa, {
-                                "data-test-selector": Oe,
+                            return E.createElement(B.Ta, {
+                                "data-test-selector": Ne,
                                 ariaLabel: n,
                                 onClick: t.reportUser
-                            }, E.createElement(L.Va, {
+                            }, E.createElement(B.Wa, {
                                 padding: {
                                     y: .5,
                                     x: 1
@@ -2198,7 +2197,7 @@
                                 }, "ReportUserModal")
                             })
                         }, t.onReportModalClose = function(e, n) {
-                            e === Ce.b.Success && n && t.props.onBlock && t.props.onBlock(t.props.threadID)
+                            e === Ee.b.Success && n && t.props.onBlock && t.props.onBlock(t.props.threadID)
                         }, t.blockUser = function() {
                             t.props.showBlockModal({
                                 context: ae.c.WHISPER,
@@ -2221,42 +2220,42 @@
                             n = Object(i.d)("Go to {displayName}'s Channel", {
                                 displayName: e
                             }, "ThreadSettings");
-                        return E.createElement(L.Va, {
-                            display: L.W.Flex,
-                            flexDirection: L.Y.Column,
+                        return E.createElement(B.Wa, {
+                            display: B.X.Flex,
+                            flexDirection: B.Z.Column,
                             margin: 1
-                        }, E.createElement(L.Sa, {
+                        }, E.createElement(B.Ta, {
                             ariaLabel: t,
                             onClick: this.toggleMutethread
-                        }, E.createElement(L.Va, {
+                        }, E.createElement(B.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, t)), E.createElement(L.xb, {
+                        }, t)), E.createElement(B.yb, {
                             borderBottom: !0,
                             margin: {
                                 y: 1,
                                 left: .5
                             }
-                        }), E.createElement(_e.a, {
-                            friendButtonUIType: Ee.a.WhisperSettings,
+                        }), E.createElement(Se.a, {
+                            friendButtonUIType: _e.a.WhisperSettings,
                             targetID: this.props.userID
-                        }), this.renderRevokeButton(), this.renderBlockButton(), this.renderReportButton(), E.createElement(L.Sa, {
+                        }), this.renderRevokeButton(), this.renderBlockButton(), this.renderReportButton(), E.createElement(B.Ta, {
                             linkTo: "/" + this.props.login,
                             onClick: this.onChannelRedirect,
                             ariaLabel: n
-                        }, E.createElement(L.Va, {
+                        }, E.createElement(B.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
                         }, n)))
                     }, t.prototype.renderRevokeButton = function() {
-                        return this.props.hasTemporaryWhisperAccess ? E.createElement(L.Sa, {
+                        return this.props.hasTemporaryWhisperAccess ? E.createElement(B.Ta, {
                             onClick: this.onRevokeButtonClicked,
                             "data-test-selector": "whispers-revoke-access-button"
-                        }, E.createElement(L.Va, {
+                        }, E.createElement(B.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -2268,11 +2267,11 @@
                             displayName: n
                         }, "ThreadSettings"), t = this.unblockUser) : (e = Object(i.d)("Block {displayName}", {
                             displayName: n
-                        }, "ThreadSettings"), t = this.blockUser), E.createElement(L.Sa, {
+                        }, "ThreadSettings"), t = this.blockUser), E.createElement(B.Ta, {
                             "data-test-selector": "whispers-block-user-button",
                             ariaLabel: e,
                             onClick: t
-                        }, E.createElement(L.Va, {
+                        }, E.createElement(B.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
@@ -2289,26 +2288,26 @@
                         configurable: !0
                     }), t
                 }(E.Component);
-            var we = Object(be.compose)(Object(b.connect)(null, function(e) {
+            var Ie = Object(ke.compose)(Object(b.connect)(null, function(e) {
                     return {
                         onCloseThread: function(t) {
                             return e(Object(s.h)(t, Object(S.a)()))
                         }
                     }
-                }), Object(C.a)(De, {
+                }), Object(T.a)(Ce, {
                     name: "revokeWhisperAccess"
-                }), Object(C.a)(Ne, {
+                }), Object(T.a)(De, {
                     name: "setMuteThread"
-                }), Se.a, Object(ye.a)())(Ie),
-                Re = n("pORx");
-            var Me = n("NKxy");
-            var Ue, je = n("vGFN"),
-                xe = (n("hRS0"), "report-as-spam-button"),
-                Fe = "mark-not-spam-button",
-                We = "dismiss-prompt-button",
-                Ae = "spam-prompt-pending-target",
-                Pe = "spam-prompt-reported-target",
-                Ve = {
+                }), ye.a, Object(be.a)())(Oe),
+                we = n("pORx");
+            var Re = n("NKxy");
+            var Me, We = n("vGFN"),
+                Ue = (n("hRS0"), "report-as-spam-button"),
+                je = "mark-not-spam-button",
+                Fe = "dismiss-prompt-button",
+                xe = "spam-prompt-pending-target",
+                Ae = "spam-prompt-reported-target",
+                Pe = {
                     displayName: "???",
                     login: "???",
                     displayBadges: [],
@@ -2320,79 +2319,79 @@
                         var n = e.call(this, t) || this;
                         n.renderPotentialSpamPrompt = function() {
                             if (n.props.spamInfo && "low" !== n.props.spamInfo.likelihood && null === n.props.spamInfo.lastMarkedNotSpamAt) {
-                                if ("pending" === n.state.potentialSpamResolution) return E.createElement(L.Va, {
+                                if ("pending" === n.state.potentialSpamResolution) return E.createElement(B.Wa, {
+                                    "data-a-target": xe,
+                                    className: "thread-header__potential-spam-prompt",
+                                    attachRight: !0,
+                                    attachLeft: !0,
+                                    attachTop: !0
+                                }, E.createElement(B.yb, {
+                                    background: B.r.Alt2,
+                                    padding: .5,
+                                    elevation: 2
+                                }, E.createElement(B.Wa, {
+                                    display: B.X.InlineBlock,
+                                    margin: .5
+                                }, E.createElement(B.W, {
+                                    type: B.Ob.Span,
+                                    fontSize: B.Ba.Size6,
+                                    color: B.O.Alt2
+                                }, Object(i.d)("It looks like this conversation triggered our spam detector. If it is spam, please report it!", "ThreadHeader"))), E.createElement(B.Wa, {
+                                    display: B.X.InlineBlock,
+                                    margin: .5
+                                }, E.createElement(B.z, {
+                                    "data-a-target": Ue,
+                                    type: B.F.Alert,
+                                    onClick: n.reportSpam,
+                                    size: B.D.Small
+                                }, Object(i.d)("Report spam", "ThreadHeader"))), E.createElement(B.Wa, {
+                                    display: B.X.InlineBlock,
+                                    margin: .5
+                                }, E.createElement(B.z, {
+                                    "data-a-target": je,
+                                    onClick: n.markNotSpam,
+                                    size: B.D.Small
+                                }, Object(i.d)("This is not spam", "ThreadHeader")))));
+                                if ("reported" === n.state.potentialSpamResolution && n.interlocutor.displayName) return E.createElement(B.Wa, {
                                     "data-a-target": Ae,
                                     className: "thread-header__potential-spam-prompt",
                                     attachRight: !0,
                                     attachLeft: !0,
                                     attachTop: !0
-                                }, E.createElement(L.xb, {
-                                    background: L.r.Alt2,
+                                }, E.createElement(B.yb, {
+                                    background: B.r.Alt2,
                                     padding: .5,
                                     elevation: 2
-                                }, E.createElement(L.Va, {
-                                    display: L.W.InlineBlock,
+                                }, E.createElement(B.Wa, {
+                                    display: B.X.InlineBlock,
                                     margin: .5
-                                }, E.createElement(L.V, {
-                                    type: L.Nb.Span,
-                                    fontSize: L.Aa.Size6,
-                                    color: L.O.Alt2
-                                }, Object(i.d)("It looks like this conversation triggered our spam detector. If it is spam, please report it!", "ThreadHeader"))), E.createElement(L.Va, {
-                                    display: L.W.InlineBlock,
-                                    margin: .5
-                                }, E.createElement(L.z, {
-                                    "data-a-target": xe,
-                                    type: L.F.Alert,
-                                    onClick: n.reportSpam,
-                                    size: L.D.Small
-                                }, Object(i.d)("Report spam", "ThreadHeader"))), E.createElement(L.Va, {
-                                    display: L.W.InlineBlock,
-                                    margin: .5
-                                }, E.createElement(L.z, {
-                                    "data-a-target": Fe,
-                                    onClick: n.markNotSpam,
-                                    size: L.D.Small
-                                }, Object(i.d)("This is not spam", "ThreadHeader")))));
-                                if ("reported" === n.state.potentialSpamResolution && n.interlocutor.displayName) return E.createElement(L.Va, {
-                                    "data-a-target": Pe,
-                                    className: "thread-header__potential-spam-prompt",
-                                    attachRight: !0,
-                                    attachLeft: !0,
-                                    attachTop: !0
-                                }, E.createElement(L.xb, {
-                                    background: L.r.Alt2,
-                                    padding: .5,
-                                    elevation: 2
-                                }, E.createElement(L.Va, {
-                                    display: L.W.InlineBlock,
-                                    margin: .5
-                                }, E.createElement(L.V, {
-                                    type: L.Nb.Span,
-                                    fontSize: L.Aa.Size6,
-                                    color: L.O.Alt2
+                                }, E.createElement(B.W, {
+                                    type: B.Ob.Span,
+                                    fontSize: B.Ba.Size6,
+                                    color: B.O.Alt2
                                 }, Object(i.d)("Thank you for helping us fight spam. We've blocked {user} from sending you further whispers. You can undo this from the Whisper Settings Menu.", {
                                     user: n.interlocutor.displayName
-                                }, "ThreadHeader"))), E.createElement(L.Va, {
-                                    display: L.W.InlineBlock,
+                                }, "ThreadHeader"))), E.createElement(B.Wa, {
+                                    display: B.X.InlineBlock,
                                     margin: .5
-                                }, E.createElement(L.z, {
-                                    "data-a-target": We,
-                                    type: L.F.Text,
+                                }, E.createElement(B.z, {
+                                    "data-a-target": Fe,
+                                    type: B.F.Text,
                                     onClick: n.dismissSpamPrompt,
-                                    size: L.D.Small
+                                    size: B.D.Small
                                 }, Object(i.d)("Dismiss", "ThreadHeader")))))
                             }
                             return null
                         }, n.reportSpam = function() {
-                            n.props.reportUserMutation(n.interlocutor.id, ge.b.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, ge.a.Other, ae.c.WHISPER, n.props.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(je.l)(n.interlocutor.login, je.a.SpamPropmt), n.setState({
+                            n.props.reportUserMutation(n.interlocutor.id, ge.b.Spam, n.props.threadID), n.props.blockUserMutation(n.interlocutor.id, ge.a.Other, ae.c.WHISPER, n.props.currentUser), n.props.setThreadSpamStatusMutation(n.props.threadID, !0), Object(We.l)(n.interlocutor.login, We.a.SpamPropmt), n.setState({
                                 potentialSpamResolution: "reported"
                             })
                         }, n.markNotSpam = function() {
-                            n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(je.o)(n.props.threadID), n.setState({
+                            n.props.setThreadSpamStatusMutation(n.props.threadID, !1), Object(We.o)(n.props.threadID), n.setState({
                                 potentialSpamResolution: "dismissed"
                             })
                         }, n.dismissSpamPrompt = function() {
-                            n.props.onBlock && n.props.onBlock(n.props.threadID), Object(je.n)(n.props.threadID), n.setState({
+                            n.props.onBlock && n.props.onBlock(n.props.threadID), Object(We.n)(n.props.threadID), n.setState({
                                 potentialSpamResolution: "dismissed"
                             })
                         }, n.onSettingsClick = function(e) {
@@ -2408,13 +2407,13 @@
                                 isElementFocused: !1
                             })
                         }, n.onPresenceClick = function(e, t) {
-                            t.stopPropagation(), n.props.interlocutor && n.props.interlocutorActivity ? Object(he.b)({
+                            t.stopPropagation(), n.props.interlocutor && n.props.interlocutorActivity ? Object(me.b)({
                                 context: e,
                                 friendActivity: n.props.interlocutorActivity,
                                 friendLogin: n.props.interlocutor.login
-                            }) : i.j.warn("[ThreadHeader] Attempted to track presence click without required data.")
+                            }) : i.k.warn("[ThreadHeader] Attempted to track presence click without required data.")
                         };
-                        var r = i.o.experiments.getAssignment(fe.b.ExtendedPresence);
+                        var r = i.p.experiments.getAssignment(he.b.ExtendedPresence);
                         return n.state = {
                             potentialSpamResolution: "pending",
                             hasExtendedRichPresence: "variant_a" === r,
@@ -2437,27 +2436,27 @@
                             }),
                             a = Object(i.d)("Close", "WhisperThreadHeader"),
                             o = Object(i.d)("Settings", "WhisperThreadHeader");
-                        if (this.props.isLoading || !this.props.currentUser || !this.interlocutor) return E.createElement(L.Va, {
+                        if (this.props.isLoading || !this.props.currentUser || !this.interlocutor) return E.createElement(B.Wa, {
                             className: t,
-                            display: L.W.Flex,
-                            justifyContent: L.Ua.Between,
+                            display: B.X.Flex,
+                            justifyContent: B.Va.Between,
                             fullWidth: !0,
-                            alignItems: L.f.Center,
+                            alignItems: B.f.Center,
                             padding: {
                                 y: .5,
                                 x: 1
                             },
                             flexShrink: 0,
                             flexGrow: 0,
-                            flexWrap: L.Z.NoWrap
-                        }, E.createElement(L.cb, {
+                            flexWrap: B.Aa.NoWrap
+                        }, E.createElement(B.db, {
                             height: 20,
                             width: 80
-                        }), E.createElement(L.Va, {
-                            display: L.W.Flex
-                        }, E.createElement(L.A, {
+                        }), E.createElement(B.Wa, {
+                            display: B.X.Flex
+                        }, E.createElement(B.A, {
                             ariaLabel: a,
-                            icon: L.nb.RemoveTag,
+                            icon: B.ob.RemoveTag,
                             "data-a-target": "whispers-thread__close-button-" + this.props.threadID,
                             onClick: this.props.onClose
                         })));
@@ -2468,75 +2467,75 @@
                         if (this.props.interlocutorActivity) {
                             var u = this.props.interlocutorAvailability,
                                 p = this.props.interlocutorActivity;
-                            if (l = E.createElement(L.Va, {
+                            if (l = E.createElement(B.Wa, {
                                     margin: {
                                         left: 1
                                     },
-                                    display: L.W.Flex,
-                                    alignItems: L.f.Center
-                                }, E.createElement(L.eb, {
+                                    display: B.X.Flex,
+                                    alignItems: B.f.Center
+                                }, E.createElement(B.fb, {
                                     status: function(e) {
                                         switch (e) {
-                                            case pe.a.Online:
-                                                return L.fb.Online;
-                                            case pe.a.Away:
-                                            case pe.a.Idle:
-                                                return L.fb.Away;
-                                            case pe.a.Busy:
-                                                return L.fb.Busy;
-                                            case pe.a.Offline:
-                                            case pe.a.Invisible:
+                                            case ue.a.Online:
+                                                return B.gb.Online;
+                                            case ue.a.Away:
+                                            case ue.a.Idle:
+                                                return B.gb.Away;
+                                            case ue.a.Busy:
+                                                return B.gb.Busy;
+                                            case ue.a.Offline:
+                                            case ue.a.Invisible:
                                             default:
-                                                return L.fb.Offline
+                                                return B.gb.Offline
                                         }
-                                    }(u || pe.a.Offline)
+                                    }(u || ue.a.Offline)
                                 })), p) {
                                 var m = {
                                         activity: p,
                                         availability: this.state.hasExtendedRichPresence ? u : void 0
                                     },
-                                    h = Object(ve.b)(m, !0),
-                                    f = null,
-                                    g = Object(ve.c)(this.interlocutor.login, p);
-                                if (g && (f = {
-                                        pathname: g,
+                                    h = Object(fe.b)(m, !0),
+                                    g = null,
+                                    f = Object(fe.c)(this.interlocutor.login, p);
+                                if (f && (g = {
+                                        pathname: f,
                                         state: {
                                             content: ce.PageviewContent.Presence,
                                             medium: ce.PageviewMedium.Whispers
                                         }
-                                    }), f) {
+                                    }), g) {
                                     var v = _({
                                         "thread-header__activity-link--highlighted": this.props.isHighlighted
                                     });
-                                    c = E.createElement(ue.a, {
+                                    c = E.createElement(B.U, {
                                         className: v,
-                                        title: Object(ve.b)(m) || "",
-                                        onClick: this.onPresenceClick.bind(this, he.a.WhisperHeaderLink),
-                                        to: f,
+                                        title: Object(fe.b)(m) || "",
+                                        onClick: this.onPresenceClick.bind(this, me.a.WhisperHeaderLink),
+                                        to: g,
                                         "data-test-selector": "whispers-thread__presence-link"
                                     }, h)
                                 } else c = h;
-                                this.props.isCollapsed || (d = E.createElement(L.Va, {
+                                this.props.isCollapsed || (d = E.createElement(B.Wa, {
                                     padding: {
                                         right: .5
                                     }
-                                }, E.createElement(ke.a, {
-                                    availability: u || pe.a.Offline,
-                                    link: f,
-                                    onClick: this.onPresenceClick.bind(this, he.a.WhisperHeaderButton),
+                                }, E.createElement(ve.a, {
+                                    availability: u || ue.a.Offline,
+                                    link: g,
+                                    onClick: this.onPresenceClick.bind(this, me.a.WhisperHeaderButton),
                                     shouldHollowOverlay: this.props.isHighlighted
                                 })))
                             }
                         }
-                        this.props.isCollapsed || !this.props.currentUser || this.props.interactionsDisabled || (s = E.createElement(R.a, null, E.createElement(L.A, {
+                        this.props.isCollapsed || !this.props.currentUser || this.props.interactionsDisabled || (s = E.createElement(R.a, null, E.createElement(B.A, {
                             ariaLabel: o,
-                            icon: L.nb.Gear,
+                            icon: B.ob.Gear,
                             overlay: e
-                        }), E.createElement(L.u, {
-                            direction: L.v.BottomRight,
+                        }), E.createElement(B.u, {
+                            direction: B.v.BottomRight,
                             offsetX: "0.5rem",
-                            size: L.w.Small
-                        }, E.createElement(we, {
+                            size: B.w.Small
+                        }, E.createElement(Ie, {
                             login: this.interlocutor.login,
                             displayName: this.interlocutor.displayName,
                             currentUser: this.props.currentUser,
@@ -2547,10 +2546,10 @@
                             onBlock: this.props.onBlock,
                             onUnblock: this.props.onUnblock,
                             showReportUserModal: this.props.showReportUserModal,
-                            hasTemporaryWhisperAccess: !!this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.O.TEMPORARY
+                            hasTemporaryWhisperAccess: !!this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.P.TEMPORARY
                         }))));
                         var k = this.interlocutor.displayBadges.map(function(e) {
-                            return E.createElement(L.Na, {
+                            return E.createElement(B.Oa, {
                                 key: e.id,
                                 flexShrink: 0,
                                 margin: {
@@ -2563,9 +2562,9 @@
                                 src: e.imageURL
                             }))
                         });
-                        return E.createElement(L.Va, {
+                        return E.createElement(B.Wa, {
                             className: n,
-                            position: L.db.Relative,
+                            position: B.eb.Relative,
                             fullWidth: !0
                         }, E.createElement("div", {
                             className: "thread-header__click-area",
@@ -2575,56 +2574,56 @@
                             onBlur: this.onBlur,
                             "data-a-target": "thread-header__click-area",
                             tabIndex: 0
-                        }, E.createElement(L.Va, {
+                        }, E.createElement(B.Wa, {
                             className: t,
                             fullWidth: !0,
                             padding: {
                                 x: 1,
                                 y: .5
                             },
-                            alignItems: L.f.Center,
+                            alignItems: B.f.Center,
                             flexGrow: 1,
-                            display: L.W.Flex,
+                            display: B.X.Flex,
                             "data-a-target": "whisper-thread-title-bar-" + (this.interlocutor && this.interlocutor.login),
                             "data-click-out-id": "thread-expand-close",
-                            flexWrap: L.Z.NoWrap
-                        }, E.createElement(L.Va, {
-                            display: L.W.Flex,
-                            flexDirection: L.Y.Column,
+                            flexWrap: B.Aa.NoWrap
+                        }, E.createElement(B.Wa, {
+                            display: B.X.Flex,
+                            flexDirection: B.Z.Column,
                             flexGrow: 1,
                             fullHeight: !0,
-                            overflow: L.Ya.Hidden
-                        }, E.createElement(L.Va, {
-                            display: L.W.Flex,
+                            overflow: B.Za.Hidden
+                        }, E.createElement(B.Wa, {
+                            display: B.X.Flex,
                             flexGrow: 1,
-                            alignItems: L.f.Center,
-                            flexWrap: L.Z.NoWrap,
+                            alignItems: B.f.Center,
+                            flexWrap: B.Aa.NoWrap,
                             padding: {
                                 right: 1
                             },
                             ellipsis: !0
-                        }, k, E.createElement(L.V, {
+                        }, k, E.createElement(B.W, {
                             className: r,
-                            type: L.Nb.Span,
+                            type: B.Ob.Span,
                             bold: !0,
                             ellipsis: !0
-                        }, this.interlocutor.displayName ? this.interlocutor.displayName : Ve.displayName), l), E.createElement(L.xb, {
+                        }, this.interlocutor.displayName ? this.interlocutor.displayName : Pe.displayName), l), E.createElement(B.yb, {
                             className: "thread-header__activity",
-                            color: this.props.isHighlighted ? L.O.Overlay : L.O.Base,
+                            color: this.props.isHighlighted ? B.O.Overlay : B.O.Base,
                             padding: {
                                 right: 1
                             },
                             ellipsis: !0
-                        }, c)), E.createElement(L.Va, {
-                            display: L.W.Flex,
+                        }, c)), E.createElement(B.Wa, {
+                            display: B.X.Flex,
                             flexShrink: 0,
-                            flexDirection: L.Y.Row,
-                            alignItems: L.f.Center
+                            flexDirection: B.Z.Row,
+                            alignItems: B.f.Center
                         }, d, E.createElement("div", {
                             onClick: this.onSettingsClick
-                        }, s), E.createElement(L.A, {
+                        }, s), E.createElement(B.A, {
                             ariaLabel: a,
-                            icon: L.nb.RemoveTag,
+                            icon: B.ob.RemoveTag,
                             "data-a-target": "thread-close-button-" + (this.interlocutor && this.interlocutor.login),
                             "data-test-selector": "thread-header__close-button-" + this.props.threadID,
                             onClick: this.props.onClose,
@@ -2632,15 +2631,15 @@
                         })))), this.renderPotentialSpamPrompt())
                     }, Object.defineProperty(t.prototype, "interlocutor", {
                         get: function() {
-                            return this.props.interlocutor || Ve
+                            return this.props.interlocutor || Pe
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(E.Component),
-                Be = Object(r.compose)(Object(me.a)(), function() {
+                Be = Object(r.compose)(Object(pe.a)(), function() {
                     var e = this;
-                    return Object(C.a)(Re, {
+                    return Object(T.a)(we, {
                         props: function(t) {
                             return {
                                 reportUserMutation: function(n, r, o) {
@@ -2664,7 +2663,7 @@
                                                 case 2:
                                                     return a.sent(), [3, 4];
                                                 case 3:
-                                                    return e = a.sent(), i.j.error(e, "Unable to report user"), [3, 4];
+                                                    return e = a.sent(), i.k.error(e, "Unable to report user"), [3, 4];
                                                 case 4:
                                                     return [2]
                                             }
@@ -2676,7 +2675,7 @@
                     })
                 }(), function() {
                     var e = this;
-                    return Object(C.a)(Me, {
+                    return Object(T.a)(Re, {
                         props: function(t) {
                             return {
                                 setThreadSpamStatusMutation: function(n, r) {
@@ -2699,7 +2698,7 @@
                                                 case 2:
                                                     return a.sent(), [3, 4];
                                                 case 3:
-                                                    return e = a.sent(), i.j.error(e, "Unable to modify threads spam status user"), [3, 4];
+                                                    return e = a.sent(), i.k.error(e, "Unable to modify threads spam status user"), [3, 4];
                                                 case 4:
                                                     return [2]
                                             }
@@ -2713,20 +2712,20 @@
                 ze = n("HAa/");
             ! function(e) {
                 e[e.Timestamp = 0] = "Timestamp", e[e.Whisper = 1] = "Whisper", e[e.Warning = 2] = "Warning", e[e.InactiveUserNotice = 3] = "InactiveUserNotice", e[e.NewMessages = 4] = "NewMessages", e[e.Notification = 5] = "Notification"
-            }(Ue || (Ue = {}));
+            }(Me || (Me = {}));
             n("0JUI");
-            var He = function(e) {
+            var Ve = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.message;
                         switch (e.type) {
-                            case Ue.Timestamp:
-                                return E.createElement(L.xb, {
+                            case Me.Timestamp:
+                                return E.createElement(B.yb, {
                                     className: "thread-message__timestamp",
-                                    color: L.O.Alt2,
-                                    fontSize: L.Aa.Size7
+                                    color: B.O.Alt2,
+                                    fontSize: B.Ba.Size7
                                 }, function(e) {
                                     var t = new Date,
                                         n = new Date;
@@ -2744,43 +2743,43 @@
                                         });
                                     r = e.timestamp.toDateString() === t.toDateString() ? Object(i.d)("Today, {timestamp, time, medium}", {
                                         timestamp: e.timestamp
-                                    }, "ThreadMessage") : e.timestamp < n ? Object(i.i)(e.timestamp, s) : Object(i.i)(e.timestamp, a.__assign({}, o, {
+                                    }, "ThreadMessage") : e.timestamp < n ? Object(i.j)(e.timestamp, s) : Object(i.j)(e.timestamp, a.__assign({}, o, {
                                         weekday: "long"
                                     }));
-                                    var l = Object(i.i)(e.timestamp, a.__assign({}, s, {
+                                    var l = Object(i.j)(e.timestamp, a.__assign({}, s, {
                                         timeZoneName: "short"
                                     }));
-                                    return E.createElement(L.Va, {
+                                    return E.createElement(B.Wa, {
                                         padding: {
                                             y: 1
                                         },
-                                        textAlign: L.Jb.Center
+                                        textAlign: B.Kb.Center
                                     }, E.createElement("span", {
                                         title: l
                                     }, "" + r))
                                 }(e));
-                            case Ue.Warning:
-                                return E.createElement(L.xb, {
+                            case Me.Warning:
+                                return E.createElement(B.yb, {
                                     className: "thread-message__warning",
-                                    color: L.O.Alt2
-                                }, E.createElement(L.Va, {
+                                    color: B.O.Alt2
+                                }, E.createElement(B.Wa, {
                                     padding: {
                                         y: .5,
                                         x: 1
                                     }
                                 }, Object(i.d)("Please don't share passwords or personal information.", "whispers")));
-                            case Ue.InactiveUserNotice:
-                                return E.createElement(L.xb, {
+                            case Me.InactiveUserNotice:
+                                return E.createElement(B.yb, {
                                     className: "thread-message__inactive-user",
-                                    color: L.O.Alt2
-                                }, E.createElement(L.Va, {
+                                    color: B.O.Alt2
+                                }, E.createElement(B.Wa, {
                                     padding: {
                                         y: .5,
                                         x: 1
                                     }
                                 }, Object(i.d)("This account is no longer active.", "whispers")));
-                            case Ue.Whisper:
-                                return this.props.reportOutgoingWhisperRendered && this.props.reportOutgoingWhisperRendered(e.content), E.createElement(L.Va, {
+                            case Me.Whisper:
+                                return this.props.reportOutgoingWhisperRendered && this.props.reportOutgoingWhisperRendered(e.content), E.createElement(B.Wa, {
                                     className: "thread-message__message",
                                     "data-a-target": "whisper-message"
                                 }, function(e) {
@@ -2795,30 +2794,30 @@
                                     var n = [E.createElement("span", {
                                         key: "str-separator"
                                     }, t ? " " : ": ")];
-                                    if (n.push.apply(n, B(e.content, e.emotes)), e.editedAt) {
+                                    if (n.push.apply(n, z(e.content, e.emotes)), e.editedAt) {
                                         var r = Object(i.d)("edited", "ThreadMessage"),
                                             o = Object(i.d)("{timestamp, date, full} {timestamp, time, long}", {
                                                 timestamp: new Date(e.editedAt)
                                             }, "ThreadMessage");
-                                        n.push(E.createElement(L.Na, {
+                                        n.push(E.createElement(B.Oa, {
                                             key: "editedAt",
                                             margin: {
                                                 left: 1
                                             }
-                                        }, E.createElement(L.V, {
-                                            type: L.Nb.Span,
+                                        }, E.createElement(B.W, {
+                                            type: B.Ob.Span,
                                             className: "thread-message__message--edited",
                                             title: o,
-                                            color: L.O.Alt2
+                                            color: B.O.Alt2
                                         }, "(" + r + ")")))
                                     }
                                     var s = e.from && e.from.chatColor || "",
-                                        l = e.from && e.from.displayName || E.createElement(L.V, {
-                                            type: L.Nb.Span,
+                                        l = e.from && e.from.displayName || E.createElement(B.W, {
+                                            type: B.Ob.Span,
                                             italic: !0
                                         }, Object(i.d)("Unknown", "ThreadMessage")),
                                         c = t ? s : "";
-                                    return E.createElement(L.Va, {
+                                    return E.createElement(B.Wa, {
                                         padding: {
                                             x: 1,
                                             y: .5
@@ -2835,29 +2834,29 @@
                                         }
                                     }, n))
                                 }(e));
-                            case Ue.NewMessages:
-                                return E.createElement(L.xb, {
+                            case Me.NewMessages:
+                                return E.createElement(B.yb, {
                                     className: "thread-message__new-messages",
-                                    color: L.O.OverlayAlt,
-                                    fontSize: L.Aa.Size7
-                                }, E.createElement(L.Va, {
-                                    textAlign: L.Jb.Center,
+                                    color: B.O.OverlayAlt,
+                                    fontSize: B.Ba.Size7
+                                }, E.createElement(B.Wa, {
+                                    textAlign: B.Kb.Center,
                                     padding: {
                                         y: .5
                                     }
                                 }, Object(i.d)("New Whispers", "whispers")));
-                            case Ue.Notification:
-                                return E.createElement(L.Va, {
+                            case Me.Notification:
+                                return E.createElement(B.Wa, {
                                     className: "thread-message__notification"
                                 }, function(e) {
-                                    return E.createElement(L.Va, {
+                                    return E.createElement(B.Wa, {
                                         padding: {
                                             y: .5,
                                             x: 1
                                         }
-                                    }, E.createElement(L.V, {
-                                        type: L.Nb.Span,
-                                        color: L.O.Alt2
+                                    }, E.createElement(B.W, {
+                                        type: B.Ob.Span,
+                                        color: B.O.Alt2
                                     }, e.content))
                                 }(e));
                             default:
@@ -2865,7 +2864,7 @@
                         }
                     }, t
                 }(E.Component),
-                Ge = function(e) {
+                He = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2880,7 +2879,7 @@
                             return t.props.loadMore()
                         }, t.renderMessages = function(e) {
                             return e.map(function(e, n) {
-                                return E.createElement(He, {
+                                return E.createElement(Ve, {
                                     message: e,
                                     reportOutgoingWhisperRendered: t.props.reportOutgoingWhisperRendered || void 0,
                                     key: t.generateMessageKey(e, n.toString())
@@ -2891,7 +2890,7 @@
                                 n = [t.createWarningMessage()];
                             return n = (n = n.concat(t.notificationsFor())).concat(t.props.thread.messages.edges.map(function(e) {
                                 return {
-                                    type: Ue.Whisper,
+                                    type: Me.Whisper,
                                     content: e.node.content.content,
                                     from: e.node.from && t.props.participantsByID[+e.node.from.id],
                                     emotes: e.node.content.emotes,
@@ -2914,7 +2913,7 @@
                             return e.sentAt.valueOf() - t.sentAt.valueOf() > 6e5 || e.sentAt.toDateString() !== t.sentAt.toDateString()
                         }, t.createTimestampMessage = function(e) {
                             return {
-                                type: Ue.Timestamp,
+                                type: Me.Timestamp,
                                 timestamp: new Date(e.sentAt)
                             }
                         }, t.notificationsFor = function(e) {
@@ -2923,20 +2922,20 @@
                             }).map(t.createNotificationLine)
                         }, t.createNotificationLine = function(e) {
                             return {
-                                type: Ue.Notification,
+                                type: Me.Notification,
                                 content: e.content
                             }
                         }, t.createNewMessagesIndicator = function() {
                             return {
-                                type: Ue.NewMessages
+                                type: Me.NewMessages
                             }
                         }, t.createWarningMessage = function() {
                             return {
-                                type: Ue.Warning
+                                type: Me.Warning
                             }
                         }, t.createInactiveUserMessage = function() {
                             return {
-                                type: Ue.InactiveUserNotice
+                                type: Me.InactiveUserNotice
                             }
                         }, t.saveScrollRef = function(e) {
                             return t.scroll = e
@@ -2968,12 +2967,12 @@
                         this.props.notifications.length > e.notifications.length && this.scrollToBottom(), e.collapsed && !this.props.collapsed && this.scrollToBottom()
                     }, t.prototype.render = function() {
                         var e = this.getMessages();
-                        return E.createElement(L.Va, {
+                        return E.createElement(B.Wa, {
                             fullHeight: !0
                         }, E.createElement(w.b, {
                             scrollRef: this.saveScrollRef,
                             suppressScrollX: !0
-                        }, E.createElement(L.Va, null, E.createElement(w.a, {
+                        }, E.createElement(B.Wa, null, E.createElement(w.a, {
                             enabled: !this.state.disableInfiniteTrigger,
                             loadMore: this.loadMore,
                             pixelThreshold: 200,
@@ -2982,40 +2981,40 @@
                         }), this.renderMessages(e))))
                     }, t.prototype.generateMessageKey = function(e, t) {
                         switch (e.type) {
-                            case Ue.NewMessages:
-                            case Ue.Warning:
-                            case Ue.InactiveUserNotice:
+                            case Me.NewMessages:
+                            case Me.Warning:
+                            case Me.InactiveUserNotice:
                                 return "" + e.type;
-                            case Ue.Timestamp:
+                            case Me.Timestamp:
                                 return e.type + "-" + e.timestamp.getTime();
-                            case Ue.Whisper:
+                            case Me.Whisper:
                                 return e.type + "-" + e.id;
-                            case Ue.Notification:
+                            case Me.Notification:
                                 return e.type + "-" + t;
                             default:
-                                return i.j.warn("[ThreadMessages] Encountered an unknown message type."), t
+                                return i.k.warn("[ThreadMessages] Encountered an unknown message type."), t
                         }
                     }, t
                 }(E.Component);
-            var qe = Object(b.connect)(function(e, t) {
+            var Ge = Object(b.connect)(function(e, t) {
                     return {
                         notifications: function(e, t) {
                             return e.whispers.notifications.byThreadID[t] || k
                         }(e, t.thread.id)
                     }
-                })(Ge),
-                $e = n("Wcon"),
-                Qe = {};
+                })(He),
+                qe = n("Wcon"),
+                Xe = {};
 
-            function Ke(e, t) {
-                var n = Qe[e.threadID];
+            function Qe(e, t) {
+                var n = Xe[e.threadID];
                 if (n) {
                     if (n.lastReadCursorID >= t) return;
                     clearTimeout(n.timeoutHandle)
                 }
                 var r = setTimeout(function() {
                     var t = a.__assign({
-                        mutation: $e
+                        mutation: qe
                     }, Object(N.a)({
                         threadID: e.threadID,
                         lastReadMessageID: e.lastReadMessageID
@@ -3031,27 +3030,27 @@
                             }
                         }
                     });
-                    i.o.apollo.client.mutate(t), delete Qe[e.threadID]
+                    i.p.apollo.client.mutate(t), delete Xe[e.threadID]
                 }, 250);
-                Qe[e.threadID] = {
+                Xe[e.threadID] = {
                     timeoutHandle: r,
                     lastReadCursorID: t
                 }
             }
-            var Ye = n("TOso");
+            var $e = n("TOso");
 
-            function Ze(e) {
+            function Ke(e) {
                 return e.type === D.PubsubMessageType.WhisperSent
             }
 
-            function Je(e) {
+            function Ze(e) {
                 return e.type === D.PubsubMessageType.WhisperReceived
             }
             n("28vT");
-            var Xe, et, tt = n("Jpf8"),
-                nt = n("4VGW");
-            (et || (et = {})).Wrapper = "thread__wrapper";
-            var rt = function(e) {
+            var Ye, Je, et = n("Jpf8"),
+                tt = n("4VGW");
+            (Je || (Je = {})).Wrapper = "thread__wrapper";
+            var nt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3097,26 +3096,26 @@
                         }, t.markThreadMessagesAsRead = function() {
                             if (!t.props.data.loading && !t.hadError && t.props.data.whisperThread && 0 !== t.props.data.whisperThread.messages.edges.length && 0 !== t.props.data.whisperThread.unreadMessagesCount) {
                                 var e = t.props.data.whisperThread && +t.props.data.whisperThread.messages.edges[0].cursor;
-                                e && !isNaN(e) || (e = 0), Ke({
+                                e && !isNaN(e) || (e = 0), Qe({
                                     threadID: t.props.threadID,
                                     lastReadMessageID: t.props.data.whisperThread && t.props.data.whisperThread.messages.edges[0].node.id || ""
                                 }, e)
                             }
                         }, t.sendWhisper = function(e) {
                             if ("" !== e) {
-                                t.props.latencyTracking.resetCustomEvents(j.a.Whispers), t.outgoingWhisperRenderedEvent = t.props.latencyTracking.registerCustomEvent({
+                                t.props.latencyTracking.resetCustomEvents(U.a.Whispers), t.outgoingWhisperRenderedEvent = t.props.latencyTracking.registerCustomEvent({
                                     benchmark: 150,
-                                    group: j.a.Whispers,
-                                    key: j.b.WhispersRenderSent,
-                                    label: j.c.RenderSent,
-                                    start: j.d.Registration
+                                    group: U.a.Whispers,
+                                    key: U.b.WhispersRenderSent,
+                                    label: U.c.RenderSent,
+                                    start: U.d.Registration
                                 }), t.outgoingWhisperMessage = e;
-                                var n = Object(K.b)(t.props.threadID, t.props.currentUserID);
+                                var n = Object($.b)(t.props.threadID, t.props.currentUserID);
                                 n ? (t.props.data.currentUser && t.interlocutor && Object(H.m)({
                                     threadID: t.props.threadID,
                                     targetUserLogin: t.interlocutor.login,
                                     inChannelChat: !1
-                                }), Object(Ye.b)({
+                                }), Object($e.b)({
                                     currentUserID: t.props.currentUserID,
                                     emotes: t.props.emoteSetsData && t.props.emoteSetsData.emoteMap || {},
                                     message: e,
@@ -3126,20 +3125,20 @@
                                 }).catch(function(e) {
                                     var n, r;
                                     switch (e.message) {
-                                        case Ye.a.RestrictedRecipient:
+                                        case $e.a.RestrictedRecipient:
                                             n = Object(i.d)("Your whisper was not delivered because the recipient's settings prevent them from receiving it.", "Thread");
                                             break;
-                                        case Ye.a.BodyEmpty:
+                                        case $e.a.BodyEmpty:
                                             n = Object(i.d)("Your whisper was not delivered because it was empty.", "Thread");
                                             break;
-                                        case Ye.a.TargetBanned:
+                                        case $e.a.TargetBanned:
                                             n = Object(i.d)("Your whisper was not delivered because the recipient is suspended.", "Thread");
                                             break;
                                         default:
                                             n = Object(i.d)("Your whisper was not delivered.", "Thread")
                                     }
                                     t.props.data.whisperThread && t.props.data.whisperThread.messages.edges.length > 0 && (r = t.props.data.whisperThread.messages.edges[0].node.id), t.props.notifyWhisperThread(t.props.threadID, n, r)
-                                })) : i.j.warn("Unable to parse whisper recipient ID.")
+                                })) : i.k.warn("Unable to parse whisper recipient ID.")
                             }
                         }, t.setAutocompleteInnerComponentRef = function(e) {
                             t.textInput = e
@@ -3153,7 +3152,7 @@
                             t.outgoingWhisperRenderedEvent && e === t.outgoingWhisperMessage && t.props.latencyTracking.reportCustomEvent(t.outgoingWhisperRenderedEvent)
                         }, t.otherParticipant = function() {
                             var e = t.props.data.whisperThread;
-                            if (e) return $(e.participants, t.props.currentUserID)
+                            if (e) return X(e.participants, t.props.currentUserID)
                         }, t.hasUnknownParticipant = function() {
                             var e = t.otherParticipant();
                             return !(e && e.login)
@@ -3179,34 +3178,34 @@
                         var t, n = this.props.activityData.loading ? void 0 : this.props.activityData.user,
                             r = n && n.availability,
                             i = n && n.activity;
-                        return t = !this.state.strangerWarningDismissed && this.interlocutor && this.interlocutor.id && this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.O.NOT_PERMITTED ? E.createElement(de, {
+                        return t = !this.state.strangerWarningDismissed && this.interlocutor && this.interlocutor.id && this.interlocutor.self && this.interlocutor.self.whisperPermissions.receive === ae.P.NOT_PERMITTED ? E.createElement(de, {
                             onStrangerWarningConfirmation: this.onStrangerWarningConfirmation,
                             targetDisplayName: this.interlocutor.displayName,
                             targetUserID: this.interlocutor.id
                         }) : this.renderMessageArea(), E.createElement(I.a, {
                             onClickOut: this.onClickOut
-                        }, E.createElement(L.xb, {
+                        }, E.createElement(B.yb, {
                             className: e,
-                            display: L.W.Flex,
+                            display: B.X.Flex,
                             flexShrink: 0,
                             flexGrow: 0,
-                            position: L.db.Relative,
-                            overflow: L.Ya.Hidden,
-                            background: L.r.Base,
+                            position: B.eb.Relative,
+                            overflow: B.Za.Hidden,
+                            background: B.r.Base,
                             margin: {
                                 left: 1
                             },
-                            alignItems: L.f.Center,
-                            justifyContent: L.Ua.Center,
-                            "data-test-selector": et.Wrapper,
+                            alignItems: B.f.Center,
+                            justifyContent: B.Va.Center,
+                            "data-test-selector": Je.Wrapper,
                             "data-a-target": "whisper-thread-" + (this.interlocutor && this.interlocutor.login) + (this.props.collapsed ? "-collapsed" : ""),
                             elevation: 3
-                        }, t, E.createElement(L.Va, {
-                            position: L.db.Absolute,
+                        }, t, E.createElement(B.Wa, {
+                            position: B.eb.Absolute,
                             fullWidth: !0,
                             flexShrink: 0,
-                            display: L.W.Flex,
-                            alignItems: L.f.Center,
+                            display: B.X.Flex,
+                            alignItems: B.f.Center,
                             attachTop: !0,
                             attachLeft: !0
                         }, E.createElement(Be, {
@@ -3231,16 +3230,16 @@
                         }))))
                     }, t.prototype.renderMessageArea = function() {
                         var e = this.props.emoteSetsData && this.props.emoteSetsData.emoteSets || [];
-                        return [E.createElement(L.Va, {
+                        return [E.createElement(B.Wa, {
                             className: "whispers-thread__autocomplete-container",
-                            position: L.db.Absolute,
+                            position: B.eb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
                             refDelegate: this.setContainerRef,
                             key: "whispers-input"
-                        }, E.createElement(L.Va, {
-                            position: L.db.Absolute,
+                        }, E.createElement(B.Wa, {
+                            position: B.eb.Absolute,
                             fullWidth: !0,
                             padding: {
                                 x: 1,
@@ -3271,9 +3270,9 @@
                                 x: 1,
                                 bottom: 1
                             },
-                            position: L.db.Absolute,
+                            position: B.eb.Absolute,
                             shouldCloseOnClickOut: !0
-                        }))), E.createElement(L.Na, {
+                        }))), E.createElement(B.Oa, {
                             fullWidth: !0,
                             attachLeft: !0,
                             key: "whispers-content"
@@ -3284,14 +3283,14 @@
                     }, t.prototype.renderContent = function() {
                         return this.hadError ? E.createElement(te.a, {
                             message: Object(i.d)("Sorry, something went wrong loading this conversation.", "WhisperThread")
-                        }) : this.props.data.loading || this.props.activityData.loading || !this.props.data.whisperThread ? E.createElement(L.Va, {
-                            display: L.W.Flex,
-                            justifyContent: L.Ua.Center,
-                            alignItems: L.f.Center,
+                        }) : this.props.data.loading || this.props.activityData.loading || !this.props.data.whisperThread ? E.createElement(B.Wa, {
+                            display: B.X.Flex,
+                            justifyContent: B.Va.Center,
+                            alignItems: B.f.Center,
                             margin: 2,
                             fullHeight: !0,
                             flexGrow: 1
-                        }, E.createElement(L.Xa, null)) : E.createElement(qe, {
+                        }, E.createElement(B.Ya, null)) : E.createElement(Ge, {
                             thread: this.props.data.whisperThread,
                             participantsByID: this.getUsersByID(this.props.data.whisperThread.participants),
                             unreadMessagesCount: this.props.data.whisperThread.unreadMessagesCount,
@@ -3308,17 +3307,17 @@
                         return t
                     }, t
                 }(E.Component),
-                it = Object(r.compose)(Object(C.a)(nt, {
+                rt = Object(r.compose)(Object(T.a)(tt, {
                     options: function(e) {
                         return {
                             variables: {
-                                targetUserID: Object(K.b)(e.threadID, e.currentUserID) || ""
+                                targetUserID: Object($.b)(e.threadID, e.currentUserID) || ""
                             },
                             skip: !e.currentUserID || !e.threadID
                         }
                     },
                     name: "activityData"
-                }), Object(C.a)(tt, {
+                }), Object(T.a)(et, {
                     options: function(e) {
                         return {
                             variables: {
@@ -3331,7 +3330,7 @@
                             loadMore: function() {
                                 var t = "";
                                 return e.data.whisperThread && e.data.whisperThread.messages.edges.length > 0 && (t = e.data.whisperThread.messages.edges[e.data.whisperThread.messages.edges.length - 1].cursor), e.data.fetchMore({
-                                    query: tt,
+                                    query: et,
                                     variables: a.__assign({}, e.data.variables, {
                                         cursor: t
                                     }),
@@ -3363,31 +3362,31 @@
                     topic: function(e) {
                         return Object(O.I)(e.currentUserID)
                     },
-                    mapMessageTypesToProps: (Xe = {}, Xe[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Xe[D.PubsubMessageType.WhisperSent] = "whisperSent", Xe),
+                    mapMessageTypesToProps: (Ye = {}, Ye[D.PubsubMessageType.WhisperReceived] = "whisperReceived", Ye[D.PubsubMessageType.WhisperSent] = "whisperSent", Ye),
                     skipMessage: function(e, t) {
-                        return !Ze(e) && !Je(e) || e.data_object.thread_id !== t.threadID
+                        return !Ke(e) && !Ze(e) || e.data_object.thread_id !== t.threadID
                     }
-                }]), Object(ie.a)(), Object(x.c)("WhispersThread", {
+                }]), Object(ie.a)(), Object(j.b)("WhispersThread", {
                     autoReportInteractive: !0
-                }))(rt);
-            var at = Object(b.connect)(function(e) {
+                }))(nt);
+            var it = Object(b.connect)(function(e) {
                     return {
-                        isLoggedIn: Object(X.f)(e)
+                        isLoggedIn: Object(J.f)(e)
                     }
                 }, function(e) {
                     return Object(r.bindActionCreators)({
-                        notifyWhisperThread: g,
+                        notifyWhisperThread: f,
                         showReportUserModal: function(e) {
                             var t = a.__rest(e, []);
-                            return Object(J.d)(ee.a, t)
+                            return Object(Y.d)(ee.a, t)
                         }
                     }, e)
-                })(it),
-                ot = (n("J45U"), function(e) {
+                })(rt),
+                at = (n("J45U"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.resizeAnimationHandle = null, t.renderThread = function(e) {
-                            return e ? E.createElement(at, {
+                            return e ? E.createElement(it, {
                                 key: e.threadID,
                                 currentUserID: t.props.currentUserID,
                                 collapsed: e.collapsed,
@@ -3415,12 +3414,12 @@
                             t = this.props.openedThreads.map(function(t) {
                                 return e.renderThread(t)
                             });
-                        return E.createElement(L.Va, {
+                        return E.createElement(B.Wa, {
                             className: "whispers-open-threads",
-                            display: L.W.Flex,
-                            flexDirection: L.Y.RowReverse,
-                            alignItems: L.f.End,
-                            position: L.db.Absolute,
+                            display: B.X.Flex,
+                            flexDirection: B.Z.RowReverse,
+                            alignItems: B.f.End,
+                            position: B.eb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             refDelegate: S.b
@@ -3429,7 +3428,7 @@
                         }))
                     }, t
                 }(E.Component));
-            var st = Object(b.connect)(function(e) {
+            var ot = Object(b.connect)(function(e) {
                 return {
                     openedThreads: e.whispers.display.openedIDs.map(function(t) {
                         return function(e, t) {
@@ -3466,23 +3465,23 @@
                 areStatesEqual: function(e, t) {
                     return e.whispers.display === t.whispers.display
                 }
-            })(ot);
+            })(at);
 
-            function lt(e) {
+            function st(e) {
                 return Object.keys(e).reduce(function(t, n) {
                     var r = e[n];
                     return r.muted || r.archived ? t : t + r.unreadMessagesCount
                 }, 0)
             }
-            var ct = n("U1yz"),
-                dt = function(e) {
+            var lt = n("U1yz"),
+                ct = function(e) {
                     for (var t = {}, n = 0, r = e; n < r.length; n++) {
                         var i = r[n];
-                        t[i.id] = a.__assign({}, ut(i))
+                        t[i.id] = a.__assign({}, dt(i))
                     }
                     return t
                 },
-                ut = function(e) {
+                dt = function(e) {
                     return {
                         id: e.id,
                         messageHistory: e.messages.edges.map(function(e) {
@@ -3500,13 +3499,13 @@
                         unreadMessagesCount: e.unreadMessagesCount
                     }
                 },
-                pt = n("xXlL");
-            var mt = n("WcC5"),
-                ht = n("PRj+"),
-                ft = (n("c/47"), function(e) {
+                ut = n("xXlL");
+            var pt = n("WcC5"),
+                mt = n("PRj+"),
+                ht = (n("c/47"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
-                        n.erroredLoadingMore = !1, n.logger = i.j.withCategory("whispers"), n.archiveThread = function(e) {
+                        n.erroredLoadingMore = !1, n.logger = i.k.withCategory("whispers"), n.archiveThread = function(e) {
                             if (n.state.threadsByID[e]) {
                                 var t = a.__assign({}, Object(N.a)({
                                     threadID: e,
@@ -3553,7 +3552,7 @@
                             })
                         }, n.handleThreadDataReport = function(e, t) {
                             var r;
-                            n.state.threadsByID[e] || Object(N.e)(ht, {
+                            n.state.threadsByID[e] || Object(N.e)(mt, {
                                 cursor: null
                             }, function(e) {
                                 return e.currentUser && e.currentUser.whisperThreads && e.currentUser.whisperThreads.edges.unshift({
@@ -3571,10 +3570,10 @@
                             var o = a.__assign({}, n.state.threadsByID, ((r = {})[e] = i, r));
                             n.setState({
                                 threadsByID: o,
-                                unreadCount: lt(o)
+                                unreadCount: st(o)
                             })
                         };
-                        var r = n.props.data.currentUser && n.props.data.currentUser.whisperThreads && dt(n.props.data.currentUser.whisperThreads.edges.map(function(e) {
+                        var r = n.props.data.currentUser && n.props.data.currentUser.whisperThreads && ct(n.props.data.currentUser.whisperThreads.edges.map(function(e) {
                             return e.node
                         })) || {};
                         return n.state = {
@@ -3584,7 +3583,7 @@
                             }) || [],
                             renderError: !1,
                             threadsByID: r,
-                            unreadCount: lt(r)
+                            unreadCount: st(r)
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.componentDidCatch = function(e, t) {
@@ -3592,7 +3591,7 @@
                         this.setState({
                             renderError: !0
                         }, function() {
-                            i.o.stats.recordComponentError("Whispers"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
+                            i.p.stats.recordComponentError("Whispers"), n.logger.error(e, "A unhandled exception occurred in the component hierarchy", {
                                 info: t
                             })
                         })
@@ -3601,7 +3600,7 @@
                             error: !!e.data.error
                         });
                         else if (!e.data.loading && e.data.currentUser && e.data.currentUser.whisperThreads) {
-                            var t = dt(e.data.currentUser.whisperThreads.edges.map(function(e) {
+                            var t = ct(e.data.currentUser.whisperThreads.edges.map(function(e) {
                                 return e.node
                             }));
                             this.setState({
@@ -3609,7 +3608,7 @@
                                 orderedThreadIDs: e.data.currentUser.whisperThreads.edges.map(function(e) {
                                     return e.node.id
                                 }),
-                                unreadCount: lt(t)
+                                unreadCount: st(t)
                             })
                         }
                     }, t.prototype.render = function() {
@@ -3619,19 +3618,19 @@
                             "whispers--theatre-mode": this.props.theatreModeEnabled,
                             "whispers--right-column-expanded": this.props.rightColumnExpanded
                         });
-                        return E.createElement(L.Va, {
+                        return E.createElement(B.Wa, {
                             className: e,
-                            position: L.db.Absolute,
+                            position: B.eb.Absolute,
                             attachBottom: !0,
                             attachLeft: !0,
                             margin: {
                                 right: 1
                             }
-                        }, E.createElement(st, {
+                        }, E.createElement(ot, {
                             currentUserID: this.props.data.currentUser.id,
                             reportThreadData: this.handleThreadDataReport,
                             archiveThread: this.archiveThread
-                        }), E.createElement(Y, {
+                        }), E.createElement(K, {
                             currentUserID: this.props.data.currentUser.id,
                             error: this.state.error,
                             loading: this.props.data.loading,
@@ -3642,12 +3641,12 @@
                             archiveThread: this.archiveThread,
                             loadMore: this.loadMore
                         }))
-                    }, t = a.__decorate([Object(C.a)(ht, {
+                    }, t = a.__decorate([Object(T.a)(mt, {
                         props: function(e) {
                             return a.__assign({}, e, {
                                 loadMore: function() {
                                     return e.data.fetchMore({
-                                        query: ht,
+                                        query: mt,
                                         variables: a.__assign({}, e.data.variables, {
                                             cursor: e.data.currentUser && e.data.currentUser.whisperThreads && e.data.currentUser.whisperThreads.edges.length > 0 ? e.data.currentUser.whisperThreads.edges[e.data.currentUser.whisperThreads.edges.length - 1].cursor : null
                                         }),
@@ -3673,19 +3672,19 @@
                                 }
                             })
                         }
-                    }), Object(C.a)(mt, {
+                    }), Object(T.a)(pt, {
                         name: "archiveThread"
-                    }), Object(T.a)(function(e) {
+                    }), Object(C.a)(function(e) {
                         return {
-                            query: ht,
+                            query: mt,
                             types: [D.PubsubMessageType.WhisperDeleted, D.PubsubMessageType.WhisperEdited, D.PubsubMessageType.WhisperSent, D.PubsubMessageType.WhisperAllThreadsUpdate, D.PubsubMessageType.WhisperReceived, D.PubsubMessageType.WhisperThreadUpdate],
                             variables: a.__assign({}, e.data.variables),
                             skip: !e.data.currentUser || void 0 === e.data.currentUser.id,
                             topic: Object(O.I)(e.data.currentUser && e.data.currentUser.id || ""),
                             mutator: function(t, n) {
                                 if (!n.currentUser || !n.currentUser.whisperThreads) return n;
-                                if (Ze(t) || Je(t)) {
-                                    if (Je(t)) {
+                                if (Ke(t) || Ze(t)) {
+                                    if (Ze(t)) {
                                         var r = n.currentUser.whisperThreads.edges.find(function(e) {
                                             return e.node.id === t.data_object.thread_id
                                         });
@@ -3701,13 +3700,13 @@
                                     }
                                     return function(e, t, n, r) {
                                         if (!t.currentUser || !t.currentUser.whisperThreads) return t;
-                                        var a = i.m.get("whisperDoNotDisturb", !1),
+                                        var a = i.n.get("whisperDoNotDisturb", !1),
                                             o = t.currentUser.whisperThreads.edges.find(function(t) {
                                                 return t.node.id === e.data_object.thread_id
                                             });
                                         if (o) {
-                                            var s = Object(pt.c)(e);
-                                            o.node.messages.edges.unshift(s), Je(e) && (e.data_object.thread_id !== n ? o.node.unreadMessagesCount += 1 : Ke({
+                                            var s = Object(ut.c)(e);
+                                            o.node.messages.edges.unshift(s), Ze(e) && (e.data_object.thread_id !== n ? o.node.unreadMessagesCount += 1 : Qe({
                                                 threadID: e.data_object.thread_id,
                                                 lastReadMessageID: e.data_object.message_id
                                             }, e.data_object.id), r({
@@ -3738,7 +3737,7 @@
                                         var r = n.node.messages.edges.find(function(t) {
                                             return t.node.id === e.data_object.message_id
                                         });
-                                        r && (r.node.deletedAt = new Date(1e3 * e.data_object.deleted_at).toISOString(), r.node.content.content = e.data_object.body, r.node.content.emotes = Object(pt.b)(e.data_object.tags.emotes))
+                                        r && (r.node.deletedAt = new Date(1e3 * e.data_object.deleted_at).toISOString(), r.node.content.content = e.data_object.body, r.node.content.emotes = Object(ut.b)(e.data_object.tags.emotes))
                                     }
                                     return t
                                 }(t, n) : function(e) {
@@ -3752,7 +3751,7 @@
                                         var r = n.node.messages.edges.find(function(t) {
                                             return t.node.id === e.data_object.message_id
                                         });
-                                        r && (r.node.editedAt = new Date(1e3 * e.data_object.edited_at).toISOString(), r.node.content.content = e.data_object.body, r.node.content.emotes = Object(pt.b)(e.data_object.tags.emotes))
+                                        r && (r.node.editedAt = new Date(1e3 * e.data_object.edited_at).toISOString(), r.node.content.content = e.data_object.body, r.node.content.emotes = Object(ut.b)(e.data_object.tags.emotes))
                                     }
                                     return t
                                 }(t, n) : function(e) {
@@ -3778,11 +3777,11 @@
                                 }(t, n) : n
                             },
                             skipMessage: function(e, t) {
-                                if (Ze(e)) {
+                                if (Ke(e)) {
                                     if (!t.currentUser || !t.currentUser.whisperThreads) return !1;
                                     var n = void 0;
                                     try {
-                                        n = Object(ct.a)(i.o.apollo.client.cache, e.data_object.thread_id, !0)
+                                        n = Object(lt.a)(i.p.apollo.client.cache, e.data_object.thread_id, !0)
                                     } catch (e) {
                                         return !1
                                     }
@@ -3811,7 +3810,7 @@
                         return e(s.h(t, Object(S.a)()))
                     }
                 }
-            })(ft);
+            })(ht);
             n.d(t, "Whispers", function() {
                 return gt
             })
@@ -4103,7 +4102,7 @@
                 }(d);
                 var p = ":",
                     m = !1;
-                switch (a.o.intl.getLanguageCode()) {
+                switch (a.p.intl.getLanguageCode()) {
                     case "cy":
                     case "da":
                     case "fi":
@@ -4118,15 +4117,15 @@
                         m = !0
                 }
                 var h = d.seconds || 0,
-                    f = d.minutes || 0,
-                    g = d.hours || 0;
+                    g = d.minutes || 0,
+                    f = d.hours || 0;
                 switch (t) {
                     case i.ClockHM:
                     case i.ClockHMS:
-                        var v = (m ? c(g, 2) : g) + p + c(f, 2);
+                        var v = (m ? c(f, 2) : f) + p + c(g, 2);
                         return t === i.ClockHMS && (v += p + c(h, 2)), v;
                     case i.ClockMS:
-                        return (m ? c(f, 2) : f) + p + c(h, 2)
+                        return (m ? c(g, 2) : g) + p + c(h, 2)
                 }
             }
 
@@ -4183,19 +4182,19 @@
                 o = n("/7QA"),
                 s = n("GnwI"),
                 l = n("Ue10"),
-                c = (n("GOKC"), i.createElement(l.xb, {
+                c = (n("GOKC"), i.createElement(l.yb, {
                     alignItems: l.f.Center,
                     background: l.r.Overlay,
                     borderRadius: l.x.Small,
                     className: "emote-button__lock",
                     color: l.O.Overlay,
                     "data-test-selector": "emote-button-lock",
-                    display: l.W.InlineFlex,
-                    justifyContent: l.Ua.Center,
-                    position: l.db.Absolute,
-                    zIndex: l.ac.Above
-                }, i.createElement(l.mb, {
-                    asset: l.nb.Lock,
+                    display: l.X.InlineFlex,
+                    justifyContent: l.Va.Center,
+                    position: l.eb.Absolute,
+                    zIndex: l.bc.Above
+                }, i.createElement(l.nb, {
+                    asset: l.ob.Lock,
                     height: 10,
                     width: 10
                 }))),
@@ -4213,13 +4212,13 @@
                         alt: r
                     });
                     if (e.isCriticalImage) {
-                        for (var p = d.split(" ")[0], m = {}, h = 0, f = d.split(","); h < f.length; h++) {
-                            var g = f[h].trim().split(" "),
-                                v = g[1],
-                                k = g[0];
+                        for (var p = d.split(" ")[0], m = {}, h = 0, g = d.split(","); h < g.length; h++) {
+                            var f = g[h].trim().split(" "),
+                                v = f[1],
+                                k = f[0];
                             m[v] = k
                         }
-                        u = i.createElement(s.b, {
+                        u = i.createElement(s.a, {
                             className: "emote-picker__emote-image",
                             src: p,
                             srcSet: m,
@@ -4228,13 +4227,13 @@
                     }
                     return i.createElement("div", {
                         className: "emote-button"
-                    }, i.createElement(l.Qb, {
+                    }, i.createElement(l.Rb, {
                         label: r || Object(o.d)("Emote", "EmoteButton"),
-                        direction: l.Sb.Bottom
-                    }, i.createElement(l.Na, {
-                        display: l.W.Flex,
+                        direction: l.Tb.Bottom
+                    }, i.createElement(l.Oa, {
+                        display: l.X.Flex,
                         alignItems: l.f.Center,
-                        justifyContent: l.Ua.Center
+                        justifyContent: l.Va.Center
                     }, i.createElement("button", {
                         "data-test-selector": "emote-button-clickable",
                         className: t,
@@ -4262,10 +4261,10 @@
                                     onClick: e.props.locked ? void 0 : e.handleClickEmote
                                 })
                             });
-                        return i.createElement(l.Va, {
-                            display: l.W.Flex,
-                            flexWrap: l.Z.Wrap,
-                            justifyContent: l.Ua.Center
+                        return i.createElement(l.Wa, {
+                            display: l.X.Flex,
+                            flexWrap: l.Aa.Wrap,
+                            justifyContent: l.Va.Center
                         }, t)
                     }, t
                 }(i.Component));
@@ -4670,9 +4669,9 @@
                                     checkoutButtonTier: n.props.tierPrice
                                 })
                             }, n.openCheckout = function() {
-                                n.state.hasPopupExperiment && o.m.set(s.b, n.props.productName)
+                                n.state.hasPopupExperiment && o.n.set(s.b, n.props.productName)
                             }, !1 === n.props.targetBlank) return n;
-                        var r = o.o.experiments.getAssignment(l.b.InstreamCheckout);
+                        var r = o.p.experiments.getAssignment(l.b.InstreamCheckout);
                         return n.state = {
                             hasPopupExperiment: "yes" === r
                         }, n
@@ -4684,7 +4683,7 @@
                                 ariaLabel: e,
                                 "data-test-selector": p,
                                 disabled: !0,
-                                icon: u.nb.Star
+                                icon: u.ob.Star
                             }, e)
                         }
                         var t = this.props.isEsportChannel ? Object(o.d)("Get the All-Access Pass", "SubTierButton") : Object(o.d)("Subscribe Now", "SubTierButton");
@@ -4694,12 +4693,12 @@
                             linkTo: this.state.hasPopupExperiment ? void 0 : this.props.url,
                             onClick: this.handleClick,
                             purchase: this.props.tierPrice
-                        }, Object(u.bc)(this.props), {
+                        }, Object(u.cc)(this.props), {
                             targetBlank: void 0 === this.props.targetBlank || this.props.targetBlank
                         }), t)
                     }, t
                 }(i.Component),
-                h = Object(a.compose)(Object(c.c)("SubTierButton", {
+                h = Object(a.compose)(Object(c.b)("SubTierButton", {
                     autoReportInteractive: !0
                 }))(m);
             n.d(t, !1, function() {
@@ -4913,17 +4912,17 @@
                 }];
 
             function c(e) {
-                var t = i.l.get(o, {}),
+                var t = i.m.get(o, {}),
                     n = t[e.id];
                 n ? (n.uses++, n.lastUpdatedAt = Date.now()) : t[e.id] = {
                     emote: e,
                     lastUpdatedAt: Date.now(),
                     uses: 1
-                }, i.l.set(o, t)
+                }, i.m.set(o, t)
             }
 
             function d() {
-                var e = i.l.get(o, {});
+                var e = i.m.get(o, {});
                 if (!(Object.keys(e).length >= s)) {
                     for (var t = {}, n = 0; n < l.length; n++) {
                         var a = l[n];
@@ -4934,12 +4933,12 @@
                         })
                     }
                     var c = r.__assign({}, t, e);
-                    i.l.set(o, c)
+                    i.m.set(o, c)
                 }
             }
 
             function u() {
-                var e = i.l.get(o, {}) || {},
+                var e = i.m.get(o, {}) || {},
                     t = [];
                 return Object.keys(e).forEach(function(n) {
                     var r = e[n];
@@ -4952,7 +4951,7 @@
             }
 
             function p() {
-                var e = i.l.get(o, {}) || {},
+                var e = i.m.get(o, {}) || {},
                     t = {};
                 return Object.keys(e).forEach(function(n) {
                     void 0 !== e[n] && (t[e[n].emote.token] = {
@@ -5679,7 +5678,7 @@
                 o = (n("efEE"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.logger = a.o.logger.withCategory("resize-detector"), t.onScroll = function() {
+                        return t.logger = a.p.logger.withCategory("resize-detector"), t.onScroll = function() {
                             var e = t.container,
                                 n = e.offsetWidth,
                                 r = e.offsetHeight,
@@ -5984,9 +5983,9 @@
             }), n.d(t, "a", function() {
                 return m
             }), n.d(t, "f", function() {
-                return f
-            }), n.d(t, "d", function() {
                 return g
+            }), n.d(t, "d", function() {
+                return f
             });
             var r = n("mrSG"),
                 i = n("lZdE"),
@@ -6092,7 +6091,7 @@
                         return /[\|\\\^\$\*\+\?\:\#]/.test(e)
                     }(e) ? "^" + e.replace(/\\(?=[&;:])/g, "") + "$" : e
                 },
-                f = function(e, t, n) {
+                g = function(e, t, n) {
                     var r = n || a.d,
                         o = [],
                         s = [],
@@ -6108,7 +6107,7 @@
                         return r[t.token].count - r[e.token].count
                     }), l.concat(o).concat(s)
                 },
-                g = function(e) {
+                f = function(e) {
                     var t = {};
                     return e.filter(function(e) {
                         return !t.hasOwnProperty(e.token) && (t[e.token] = !0)
@@ -6898,14 +6897,14 @@
                                 value: e.id
                             }, e.text)
                         });
-                        return a.createElement(u.Va, {
+                        return a.createElement(u.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, a.createElement(u.Ca, {
+                        }, a.createElement(u.Da, {
                             id: "reporting-modal__select",
                             label: Object(o.d)("Select Reason (required)", "ReportUserModal")
-                        }, a.createElement(u.sb, {
+                        }, a.createElement(u.tb, {
                             id: "reporting-modal__select",
                             "data-test-selector": "reporting-modal.select",
                             disabled: this.props.data.loading || !!this.props.data.error,
@@ -6925,19 +6924,19 @@
                             }
                         }
                     }
-                }), Object(c.c)("ReportReasonSelect"))(m);
+                }), Object(c.b)("ReportReasonSelect"))(m);
             n("y4Ne");
             n.d(t, "a", function() {
-                return g
-            }), n.d(t, "b", function() {
                 return f
+            }), n.d(t, "b", function() {
+                return g
             }), n.d(t, "c", function() {
                 return v
             });
-            var f, g = "community_rules_violation";
+            var g, f = "community_rules_violation";
             ! function(e) {
                 e[e.Unsubmitted = 0] = "Unsubmitted", e[e.Success = 1] = "Success", e[e.FormError = 2] = "FormError", e[e.MutationError = 3] = "MutationError", e[e.UserError = 4] = "UserError", e[e.CommunityError = 5] = "CommunityError"
-            }(f || (f = {}));
+            }(g || (g = {}));
             var v = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -6956,12 +6955,12 @@
                         }, Object(o.d)("terms of service", "ReportUser"))
                     }, "ReportUser"), t.handleSubmit = function(e) {
                         if (e.preventDefault(), t.state.reason && t.state.description.length > 0) {
-                            if (t.state.reason === g && !t.state.selectedCommunityID) {
-                                if (!t.props.targetUser.directories.nodes.length) return void t.props.onError(f.CommunityError);
-                                t.props.onError(f.FormError)
+                            if (t.state.reason === f && !t.state.selectedCommunityID) {
+                                if (!t.props.targetUser.directories.nodes.length) return void t.props.onError(g.CommunityError);
+                                t.props.onError(g.FormError)
                             }
                             t.props.onSubmit(t.state.reason || "", t.state.description, t.state.selectedCommunityID, t.state.selectedCommunityName)
-                        } else t.props.onError(f.FormError)
+                        } else t.props.onError(g.FormError)
                     }, t.handleTextAreaChange = function(e) {
                         t.setState({
                             description: e.target.value
@@ -6974,33 +6973,33 @@
                     }, t
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
-                    return a.createElement(u.Va, {
-                        display: u.W.Flex,
-                        flexDirection: u.Y.Column,
+                    return a.createElement(u.Wa, {
+                        display: u.X.Flex,
+                        flexDirection: u.Z.Column,
                         alignItems: u.f.Center,
-                        justifyContent: u.Ua.Center
+                        justifyContent: u.Va.Center
                     }, this.renderStatusMessage(), this.renderBody())
                 }, t.prototype.renderBody = function() {
-                    return this.props.submitStatus === f.Success ? a.createElement("div", null, a.createElement(u.z, {
+                    return this.props.submitStatus === g.Success ? a.createElement("div", null, a.createElement(u.z, {
                         onClick: this.props.onClose
-                    }, a.createElement(u.Va, {
+                    }, a.createElement(u.Wa, {
                         padding: {
                             x: 2
                         }
-                    }, Object(o.d)("Close", "ReportUser")))) : a.createElement("div", null, a.createElement(u.Va, {
+                    }, Object(o.d)("Close", "ReportUser")))) : a.createElement("div", null, a.createElement(u.Wa, {
                         "data-test-selector": "reporting.title",
                         margin: {
                             bottom: 1
                         },
                         "data-a-target": "reporting-channel-name"
-                    }, a.createElement(u.V, {
-                        type: u.Nb.H4
-                    }, this.props.title), a.createElement(u.xb, {
+                    }, a.createElement(u.W, {
+                        type: u.Ob.H4
+                    }, this.props.title), a.createElement(u.yb, {
                         color: u.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.xb, {
+                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.yb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -7012,18 +7011,18 @@
                     }, a.createElement(h, {
                         reportContentType: this.props.reportContentType,
                         onChange: this.handleReasonChange
-                    }), a.createElement(u.Ca, {
+                    }), a.createElement(u.Da, {
                         id: "reporting__text-area",
                         label: Object(o.d)("Description (required)", "ReportUser")
-                    }, a.createElement(u.Kb, {
+                    }, a.createElement(u.Lb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), a.createElement(u.xb, {
-                        display: u.W.Flex,
-                        justifyContent: u.Ua.Center
+                    }))), a.createElement(u.yb, {
+                        display: u.X.Flex,
+                        justifyContent: u.Va.Center
                     }, a.createElement(u.z, {
                         onClick: this.handleSubmit
-                    }, a.createElement(u.Va, {
+                    }, a.createElement(u.Wa, {
                         padding: {
                             x: 2
                         }
@@ -7031,31 +7030,31 @@
                 }, t.prototype.renderStatusMessage = function() {
                     var e = null;
                     switch (this.props.submitStatus) {
-                        case f.FormError:
+                        case g.FormError:
                             e = Object(o.d)("Reason and Description are required.", "ReportUser");
                             break;
-                        case f.MutationError:
+                        case g.MutationError:
                             e = Object(o.d)("Sorry, a network error occurred when submitting your report. Please try again later.", "ReportUser");
                             break;
-                        case f.Success:
+                        case g.Success:
                             e = Object(o.d)("Thank you for your report.", "ReportUser");
                             break;
-                        case f.UserError:
+                        case g.UserError:
                             e = Object(o.d)("This account could not be reported. It may have already been suspended, or the owner may have deleted it.", "ReportUser");
                             break;
-                        case f.CommunityError:
+                        case g.CommunityError:
                             e = Object(o.d)("A report of this type could not be sent because this user has not selected a Community.", "ReportUser");
                             break;
                         default:
                             return null
                     }
                     var t = i({
-                        "reporting__error-container": this.props.submitStatus !== f.Success,
-                        "reporting__success-container": this.props.submitStatus === f.Success
+                        "reporting__error-container": this.props.submitStatus !== g.Success,
+                        "reporting__success-container": this.props.submitStatus === g.Success
                     });
-                    return a.createElement(u.xb, {
+                    return a.createElement(u.yb, {
                         className: t,
-                        fullWidth: this.props.submitStatus !== f.Success,
+                        fullWidth: this.props.submitStatus !== g.Success,
                         "data-test-selector": "reporting.error",
                         margin: {
                             bottom: 2
@@ -7586,24 +7585,24 @@
                 u = n("a1OF");
             var p, m = n("3YIm"),
                 h = n("NMMG"),
-                f = n("Vl9+");
+                g = n("Vl9+");
 
-            function g(e) {
+            function f(e) {
                 var t = e.currentUserID,
                     n = e.emotes,
                     p = e.message,
-                    g = e.recipientUserID;
-                if ("" === t || "" === p || "" === g) return Promise.reject(new Error("Tried to send a whisper with nonsensical parameters."));
+                    f = e.recipientUserID;
+                if ("" === t || "" === p || "" === f) return Promise.reject(new Error("Tried to send a whisper with nonsensical parameters."));
                 var v = Object(s.b)(),
                     k = r.__assign({
                         mutation: m
                     }, Object(o.a)({
                         message: p,
                         nonce: v,
-                        recipientUserID: g
+                        recipientUserID: f
                     })),
-                    b = Object(h.a)(t, g),
-                    y = Object(c.a)(i.o.apollo.client.cache, b, !0);
+                    b = Object(h.a)(t, f),
+                    y = Object(c.a)(i.p.apollo.client.cache, b, !0);
                 if (y) {
                     var S = function(e, t) {
                         for (var n = [], r = /\S+/g, i = r.exec(e); i;) {
@@ -7649,17 +7648,17 @@
                                         self: {
                                             __typename: "UserSelfConnection",
                                             whisperPermissions: {
-                                                receive: l.O.NOT_PERMITTED,
+                                                receive: l.P.NOT_PERMITTED,
                                                 __typename: "WhisperPermissions"
                                             }
                                         }
                                     }, {
-                                        id: g,
+                                        id: f,
                                         __typename: "User",
                                         self: {
                                             __typename: "UserSelfConnection",
                                             whisperPermissions: {
-                                                receive: l.O.PERMITTED,
+                                                receive: l.P.PERMITTED,
                                                 __typename: "WhisperPermissions"
                                             }
                                         }
@@ -7691,7 +7690,7 @@
                                     } else o.messages.edges[s].node = i;
                                     o.userLastMessageRead && (o.userLastMessageRead.sentAt = i.sentAt), o.unreadMessagesCount = 0, e.writeFragment({
                                         id: Object(a.a)(o),
-                                        fragment: f,
+                                        fragment: g,
                                         data: r.__assign({}, o)
                                     })
                                 }
@@ -7699,12 +7698,12 @@
                         }
                     }
                 }
-                return i.o.apollo.client.mutate(k)
+                return i.p.apollo.client.mutate(k)
             }
             n.d(t, "a", function() {
                     return p
                 }), n.d(t, "b", function() {
-                    return g
+                    return f
                 }),
                 function(e) {
                     e.TargetBanned = "TARGET_BANNED", e.BodyEmpty = "BODY_EMPTY", e.RestrictedRecipient = "TARGET_RESTRICTED", e.NotDelivered = "NOT_DELIVERED"
@@ -7768,7 +7767,7 @@
 
             function c() {
                 l.forEach(function(e) {
-                    return r.m.remove(e)
+                    return r.n.remove(e)
                 })
             }
 
@@ -8325,7 +8324,7 @@
                     e[e.Post = 0] = "Post", e[e.Action = 1] = "Action", e[e.PostWithMention = 2] = "PostWithMention"
                 }(i || (i = {})),
                 function(e) {
-                    e[e.Ban = 0] = "Ban", e[e.Timeout = 1] = "Timeout"
+                    e[e.Ban = 0] = "Ban", e[e.Timeout = 1] = "Timeout", e[e.Delete = 2] = "Delete"
                 }(a || (a = {})),
                 function(e) {
                     e[e.MessageRejectedPrompt = 0] = "MessageRejectedPrompt", e[e.CheerMessageRejectedPrompt = 1] = "CheerMessageRejectedPrompt", e[e.MessageRejected = 2] = "MessageRejected", e[e.MessageAllowed = 3] = "MessageAllowed", e[e.MessageDenied = 4] = "MessageDenied", e[e.CheerMessageDenied = 5] = "CheerMessageDenied", e[e.CheerMessageTimeout = 6] = "CheerMessageTimeout"
@@ -8342,7 +8341,7 @@
             }), n.d(t, "c", function() {
                 return h
             }), n.d(t, "d", function() {
-                return f
+                return g
             });
             var r = n("mrSG"),
                 i = n("/7QA"),
@@ -8353,13 +8352,13 @@
                 c = ["#FF0000", "#0000FF", "#008000", "#B22222", "#FF7F50", "#9ACD32", "#FF4500", "#2E8B57", "#DAA520", "#D2691E", "#5F9EA0", "#1E90FF", "#FF69B4", "#8A2BE2", "#00FF7F"],
                 d = {};
 
-            function u(e, t, n, i, a, o) {
-                void 0 === a && (a = !1), void 0 === o && (o = !1);
-                var s = Object(l.a)(t.displayName, t.username);
+            function u(e, t, n, i, a, o, s) {
+                void 0 === a && (a = !1), void 0 === o && (o = !1), void 0 === s && (s = !1);
+                var c = Object(l.a)(t.displayName, t.username);
                 return {
                     badges: t.badges || {},
                     bits: t.bits,
-                    user: r.__assign({}, s, {
+                    user: r.__assign({}, c, {
                         userLogin: t.username,
                         userID: t.userID,
                         userType: t.userType,
@@ -8367,6 +8366,7 @@
                     }),
                     messageParts: m(e, t.emotes || {}, t.bits, n, i, t.username),
                     deleted: a,
+                    banned: s,
                     hidden: o,
                     timestamp: Date.now()
                 }
@@ -8377,7 +8377,7 @@
             }
 
             function m(e, t, n, r, l, c) {
-                var d = Object(s.e)(i.o.store.getState()),
+                var d = Object(s.e)(i.p.store.getState()),
                     u = {
                         cheers: n ? r : void 0,
                         emotes: {
@@ -8401,7 +8401,7 @@
                 return e.match(/[^\uD800-\uDFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g)
             }
 
-            function f(e, t) {
+            function g(e, t) {
                 return "https://static-cdn.jtvnw.net/emoticons/v1/" + e + "/" + Math.min(Math.ceil(t), 3) + ".0"
             }
         },
@@ -8438,31 +8438,31 @@
 
             function c(e) {
                 return r.__awaiter(this, void 0, void 0, function() {
-                    var t, n, l, c, d, u, p, m, h, f, g, v, k;
+                    var t, n, l, c, d, u, p, m, h, g, f, v, k;
                     return r.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                t = i.n.getVideoPlayerTrackingData().vodID, n = !!t, l = {
+                                t = i.o.getVideoPlayerTrackingData().vodID, n = !!t, l = {
                                     channelID: e.channelID,
                                     withVideo: !1
                                 }, n && (l.withVideo = !0, l.videoID = t), c = null, r.label = 1;
                             case 1:
-                                return r.trys.push([1, 3, , 4]), [4, i.o.apollo.client.query({
+                                return r.trys.push([1, 3, , 4]), [4, i.p.apollo.client.query({
                                     query: s,
                                     variables: l
                                 })];
                             case 2:
                                 return c = r.sent(), [3, 4];
                             case 3:
-                                return d = r.sent(), i.j.error(d, "Failed to make query for channel info in FollowEvent reporting.", {
+                                return d = r.sent(), i.k.error(d, "Failed to make query for channel info in FollowEvent reporting.", {
                                     channelID: e.channelID
                                 }), [3, 4];
                             case 4:
-                                return u = c && c.data && c.data.user || null, c && !u && i.j.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
+                                return u = c && c.data && c.data.user || null, c && !u && i.k.error(new Error("GraphQL empty response"), "Query for channel info in SubEvent reporting returned no data.", {
                                     channelID: e.channelID
-                                }), p = null, c && n && ((m = c && c.data && c.data.video) ? p = Object(o.a)(m.broadcastType) : i.j.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
+                                }), p = null, c && n && ((m = c && c.data && c.data.video) ? p = Object(o.a)(m.broadcastType) : i.k.error(new Error("GraphQL empty response"), "Query for video info in SubEvent reporting returned no data.", {
                                     currentVideoID: t
-                                })), h = u && u.self, f = h ? !!h.subscriptionBenefit : null, g = h && h.subscriptionBenefit && h.subscriptionBenefit.purchasedWithPrime || !1, v = h ? h.canPrimeSubscribe : null, k = {
+                                })), h = u && u.self, g = h ? !!h.subscriptionBenefit : null, f = h && h.subscriptionBenefit && h.subscriptionBenefit.purchasedWithPrime || !1, v = h ? h.canPrimeSubscribe : null, k = {
                                     action: e.action,
                                     can_subscribe: v,
                                     channel: e.channelLogin,
@@ -8472,7 +8472,7 @@
                                     host_channel: e.hostChannelLogin,
                                     host_channel_id: e.hostChannelID,
                                     is_menu_open: e.isMenuOpen,
-                                    is_subscribed: f,
+                                    is_subscribed: g,
                                     is_subscribed_current_tier: h && h.subscriptionBenefit && h.subscriptionBenefit.tier,
                                     mystery_gift_count: e.mysteryGiftCount || null,
                                     sub_location: e.sub_location,
@@ -8480,12 +8480,12 @@
                                     modal: e.modal,
                                     modal_level: e.modalLevel || "",
                                     show_prime_content: e.showPrimeContent,
-                                    show_resub: u ? v && g : null,
+                                    show_resub: u ? v && f : null,
                                     vod_id: t,
                                     vod_type: p,
                                     viewport_height: window.innerHeight,
                                     viewport_width: window.innerWidth
-                                }, i.n.track(a.SpadeEventType.Subscription, k), [2]
+                                }, i.o.track(a.SpadeEventType.Subscription, k), [2]
                         }
                     })
                 })
@@ -8610,8 +8610,9 @@
                 a = n("gvGA"),
                 o = n("5zf8"),
                 s = n("4rCz"),
-                l = n("j0ar"),
-                c = function(e) {
+                l = n("x0+1"),
+                c = n("j0ar"),
+                d = function(e) {
                     var t, n = e.emote,
                         i = n.alt || "";
                     return n.cheerAmount && (i += " " + n.cheerAmount.toString(), t = r.createElement("strong", {
@@ -8619,7 +8620,7 @@
                         style: {
                             color: n.cheerColor
                         }
-                    }, n.cheerAmount)), r.createElement(l.a, {
+                    }, n.cheerAmount)), r.createElement(c.a, {
                         alt: i,
                         cheerText: t,
                         className: "chat-line__message--emote",
@@ -8627,8 +8628,8 @@
                         srcSet: n.images
                     })
                 };
-            c.displayName = "Emote";
-            var d, u = function(e) {
+            d.displayName = "Emote";
+            var u, p = function(e) {
                     var t = e.displayText,
                         n = e.url;
                     return r.createElement("a", {
@@ -8638,23 +8639,23 @@
                         rel: "noreferrer noopener"
                     }, t)
                 },
-                p = n("TSYQ"),
-                m = n("RcPG"),
-                h = (n("VN3V"), function(e) {
+                m = n("TSYQ"),
+                h = n("RcPG"),
+                g = (n("VN3V"), function(e) {
                     var t, n = e.content,
                         i = e.highlightType,
-                        a = p("text-fragment", ((t = {})["text-fragment--moderated-highlight"] = i === m.a.ModeratedText, t));
+                        a = m("text-fragment", ((t = {})["text-fragment--moderated-highlight"] = i === h.a.ModeratedText, t));
                     return r.createElement("span", {
                         className: a,
                         "data-a-target": "chat-message-text"
                     }, n)
                 }),
                 f = n("mrSG"),
-                g = n("yR8l"),
-                v = n("+GjP"),
-                k = n("2xye"),
-                b = n("Ue10"),
-                y = function(e) {
+                v = n("yR8l"),
+                k = n("+GjP"),
+                b = n("2xye"),
+                y = n("Ue10"),
+                S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -8671,73 +8672,73 @@
                         })
                     }, t.prototype.render = function() {
                         var e = i.a.defaultStreamPreviewURL;
-                        return !this.state.hasImageLoadingError && this.props.imageURL && (e = this.props.imageURL), r.createElement(b.I, {
-                            aspect: b.p.Aspect16x9,
+                        return !this.state.hasImageLoadingError && this.props.imageURL && (e = this.props.imageURL), r.createElement(y.I, {
+                            aspect: y.p.Aspect16x9,
                             alt: this.props.altText,
                             src: e,
                             onError: this.handleImageError
                         })
                     }, t
                 }(r.Component),
-                S = (n("Epr8"), "https://static-cdn.jtvnw.net/emoticons/v1/58765/2.0"),
-                _ = {
+                _ = (n("Epr8"), "https://static-cdn.jtvnw.net/emoticons/v1/58765/2.0"),
+                E = {
                     ERROR: "chat-card-error",
                     TITLE: "chat-card-title",
                     DESCRIPTION: "chat-card-description"
                 },
-                E = function(e) {
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderErrorCard = function() {
                             var e = r.createElement("img", {
-                                "data-test-selector": _.ERROR,
-                                src: S,
+                                "data-test-selector": E.ERROR,
+                                src: _,
                                 className: "chat-card__error-img"
                             });
                             return t.renderCardContent(e, t.props.error)
                         }, t.renderCardContent = function(e, t) {
                             var n, i;
-                            return t ? (n = r.createElement(b.V, {
-                                type: b.Nb.Span,
-                                fontSize: b.Aa.Size5,
-                                "data-test-selector": _.TITLE,
+                            return t ? (n = r.createElement(y.W, {
+                                type: y.Ob.Span,
+                                fontSize: y.Ba.Size5,
+                                "data-test-selector": E.TITLE,
                                 title: t.title
-                            }, t.title), i = r.createElement(b.V, {
-                                type: b.Nb.Span,
-                                fontSize: b.Aa.Size6,
-                                color: b.O.Alt2,
-                                "data-test-selector": _.DESCRIPTION
-                            }, t.description)) : (e = r.createElement(b.cb, {
+                            }, t.title), i = r.createElement(y.W, {
+                                type: y.Ob.Span,
+                                fontSize: y.Ba.Size6,
+                                color: y.O.Alt2,
+                                "data-test-selector": E.DESCRIPTION
+                            }, t.description)) : (e = r.createElement(y.db, {
                                 overlay: !0
-                            }), n = r.createElement(b.cb, {
+                            }), n = r.createElement(y.db, {
                                 width: 180
-                            }), i = r.createElement(b.cb, {
+                            }), i = r.createElement(y.db, {
                                 width: 120
-                            })), r.createElement(b.xb, {
-                                background: b.r.Base,
-                                display: b.W.Flex,
-                                flexWrap: b.Z.NoWrap,
+                            })), r.createElement(y.yb, {
+                                background: y.r.Base,
+                                display: y.X.Flex,
+                                flexWrap: y.Aa.NoWrap,
                                 padding: .5
-                            }, r.createElement(b.xb, {
+                            }, r.createElement(y.yb, {
                                 className: "chat-card__preview-img",
-                                background: b.r.Alt2,
-                                display: b.W.Flex,
-                                alignItems: b.f.Center,
-                                justifyContent: b.Ua.Center,
+                                background: y.r.Alt2,
+                                display: y.X.Flex,
+                                alignItems: y.f.Center,
+                                justifyContent: y.Va.Center,
                                 flexShrink: 0
-                            }, e), r.createElement(b.Va, {
-                                display: b.W.Flex,
-                                alignItems: b.f.Center,
-                                overflow: b.Ya.Hidden
-                            }, r.createElement(b.Va, {
+                            }, e), r.createElement(y.Wa, {
+                                display: y.X.Flex,
+                                alignItems: y.f.Center,
+                                overflow: y.Za.Hidden
+                            }, r.createElement(y.Wa, {
                                 padding: {
                                     left: 1
                                 },
                                 fullWidth: !0
-                            }, r.createElement(b.Va, {
+                            }, r.createElement(y.Wa, {
                                 className: "chat-card__title",
                                 ellipsis: !0
-                            }, n), r.createElement(b.Va, {
+                            }, n), r.createElement(y.Wa, {
                                 ellipsis: !0
                             }, i))))
                         }, t
@@ -8746,15 +8747,15 @@
                         var e;
                         if (this.props.error) e = this.renderErrorCard();
                         else if (this.props.data) {
-                            var t = Object(v.e)(this.props.data.contentURL, {
-                                    tt_medium: k.PageviewMedium.Chat,
-                                    tt_content: k.PageviewContent.ChatCard
+                            var t = Object(k.e)(this.props.data.contentURL, {
+                                    tt_medium: b.PageviewMedium.Chat,
+                                    tt_content: b.PageviewContent.ChatCard
                                 }),
-                                n = r.createElement(y, {
+                                n = r.createElement(S, {
                                     altText: this.props.data.title,
                                     imageURL: this.props.data.previewImageURL
                                 });
-                            e = r.createElement(b.T, {
+                            e = r.createElement(y.U, {
                                 className: "chat-card__link",
                                 to: t,
                                 targetBlank: !0
@@ -8763,7 +8764,7 @@
                                 description: this.props.data.description
                             }))
                         } else e = this.renderCardContent();
-                        return r.createElement(b.xb, {
+                        return r.createElement(y.yb, {
                             elevation: 1,
                             margin: {
                                 top: .5
@@ -8772,13 +8773,13 @@
                     }, t
                 }(r.Component),
                 C = n("SceP"),
-                T = {
+                D = {
                     isTimedOut: !1
                 },
-                D = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = T, t.timeoutID = null, t
+                        return t.state = D, t.timeoutID = null, t
                     }
                     return f.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
@@ -8796,12 +8797,12 @@
                             t = e.clip,
                             n = e.error,
                             a = e.loading;
-                        return n || this.state.isTimedOut ? r.createElement(E, {
+                        return n || this.state.isTimedOut ? r.createElement(T, {
                             error: {
                                 title: Object(i.d)("Something went wrong", "ClipsChatCard"),
                                 description: Object(i.d)("We couldn't find that Clip", "ClipsChatCard")
                             }
-                        }) : a || !t ? r.createElement(E, null) : r.createElement(E, {
+                        }) : a || !t ? r.createElement(T, null) : r.createElement(T, {
                             data: {
                                 title: t.title || (t.broadcaster ? Object(i.d)("Clip of {broadcaster}", {
                                     broadcaster: t.broadcaster.displayName
@@ -8815,7 +8816,7 @@
                         })
                     }, t
                 }(r.Component),
-                N = Object(g.a)(C, {
+                O = Object(v.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -8825,20 +8826,20 @@
                             fetchPolicy: e.forceNetworkRequest ? "cache-first" : "cache-only"
                         }
                     }
-                })(D),
-                O = n("gTu3"),
-                I = (n("lpj/"), (d = {})[O.a.Default] = "", d[O.a.Recipient] = "mention-fragment--recipient", d[O.a.Sender] = "mention-fragment--sender", d),
-                w = function(e) {
+                })(N),
+                I = n("gTu3"),
+                w = (n("lpj/"), (u = {})[I.a.Default] = "", u[I.a.Recipient] = "mention-fragment--recipient", u[I.a.Sender] = "mention-fragment--sender", u),
+                R = function(e) {
                     var t = e.isAtMention ? "@" : "",
-                        n = p("mention-fragment", I[e.currentUserMentionRelation]);
+                        n = m("mention-fragment", w[e.currentUserMentionRelation]);
                     return r.createElement("span", {
                         className: n,
                         "data-a-target": "chat-message-mention"
                     }, "" + t + e.recipient)
                 };
-            w.displayName = "MentionFragment";
-            var R = n("QVaV"),
-                M = n("sU0Q"),
+            R.displayName = "MentionFragment";
+            var M = n("QVaV"),
+                W = n("sU0Q"),
                 U = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -8848,15 +8849,15 @@
                             t = e.video,
                             n = e.error,
                             a = e.loading;
-                        if (n || t && !t.owner) return r.createElement(E, {
+                        if (n || t && !t.owner) return r.createElement(T, {
                             error: {
                                 title: Object(i.d)("Something went wrong", "VideoChatCard"),
                                 description: Object(i.d)("We couldn't find that video", "VideoChatCard")
                             }
                         });
-                        if (a || !t) return r.createElement(E, null);
-                        var o = r.createElement(b.V, null, Object(i.c)(new Date(t.publishedAt), "medium"), r.createElement("span", null, " · "), Object(R.a)(t.owner.login, t.owner.displayName));
-                        return r.createElement(E, {
+                        if (a || !t) return r.createElement(T, null);
+                        var o = r.createElement(y.W, null, Object(i.c)(new Date(t.publishedAt), "medium"), r.createElement("span", null, " · "), Object(M.a)(t.owner.login, t.owner.displayName));
+                        return r.createElement(T, {
                             data: {
                                 title: t.title,
                                 description: o,
@@ -8866,7 +8867,7 @@
                         })
                     }, t
                 }(r.Component),
-                j = Object(g.a)(M, {
+                j = Object(v.a)(W, {
                     options: function(e) {
                         return {
                             variables: {
@@ -8877,86 +8878,95 @@
                         }
                     }
                 })(U),
-                x = n("ZtEv");
+                F = n("ZtEv");
 
-            function F(e, t, n) {
+            function x(e, t, n) {
                 void 0 === n && (n = !1);
                 var i = t.content,
                     a = i.displayText,
                     o = i.url;
-                return n ? r.createElement(h, {
+                return n ? r.createElement(g, {
                     key: "message-span-" + e,
                     content: a
-                }) : r.createElement(u, {
+                }) : r.createElement(p, {
                     key: e,
                     displayText: a,
                     url: o
                 })
             }
 
-            function W(e, t) {
+            function A(e, t) {
                 void 0 === t && (t = {});
                 var n = null,
                     i = e.reduce(function(i, o, s) {
                         var l = [];
-                        switch (s > 0 && e[s - 1].type !== m.a.Text && o.type !== m.a.Text && l.push(" "), o.type) {
-                            case m.a.Text:
-                            case m.a.ModeratedText:
-                                var d = o.content,
+                        switch (s > 0 && e[s - 1].type !== h.a.Text && o.type !== h.a.Text && l.push(" "), o.type) {
+                            case h.a.Text:
+                            case h.a.ModeratedText:
+                                var c = o.content,
                                     u = o.type;
-                                l.push(r.createElement(h, {
+                                l.push(r.createElement(g, {
                                     key: s,
-                                    content: d,
+                                    content: c,
                                     highlightType: u
                                 }));
                                 break;
-                            case m.a.CurrentUserHighlight:
-                                l.push(r.createElement(w, {
+                            case h.a.CurrentUserHighlight:
+                                l.push(r.createElement(R, {
                                     isAtMention: !1,
-                                    currentUserMentionRelation: O.a.Recipient,
+                                    currentUserMentionRelation: I.a.Recipient,
                                     recipient: o.content,
                                     key: s
                                 }));
                                 break;
-                            case m.a.Mention:
-                                l.push(r.createElement(w, {
+                            case h.a.Mention:
+                                l.push(r.createElement(R, {
                                     isAtMention: !0,
                                     currentUserMentionRelation: o.content.currentUserMentionRelation,
                                     recipient: o.content.recipient,
                                     key: s
                                 }));
                                 break;
-                            case m.a.Emote:
-                                l.push(r.createElement(c, {
+                            case h.a.Emote:
+                                l.push(r.createElement(d, {
                                     key: s,
                                     emote: o.content
                                 }));
                                 break;
-                            case m.a.Link:
-                                l.push(F(s, o, t.disableLinks));
+                            case h.a.Link:
+                                l.push(x(s, o, t.disableLinks));
                                 break;
-                            case m.a.ClipLink:
+                            case h.a.ClipLink:
                                 n || (n = r.createElement(a.a, {
                                     key: s
-                                }, r.createElement(N, {
+                                }, r.createElement(O, {
                                     slug: o.content.slug,
                                     forceNetworkRequest: t.forceClipsNetworkRequest
-                                }))), l.push(F(s, o, t.disableLinks));
+                                }))), l.push(x(s, o, t.disableLinks));
                                 break;
-                            case m.a.VideoLink:
+                            case h.a.VideoLink:
                                 n || (n = r.createElement(j, {
                                     key: s,
                                     id: o.content.id,
                                     url: o.content.url
-                                })), l.push(F(s, o, t.disableLinks))
+                                })), l.push(x(s, o, t.disableLinks))
                         }
                         return i.concat(l)
                     }, []);
                 return n && (i = i.concat(n)), i
             }
 
-            function A(e) {
-                if (e.moderationType === x.e.Ban) return e.reason ? r.createElement("span", {
+            function P(e) {
+                if (e.moderationType === F.e.Delete) {
+                    var t = e,
+                        n = t.userLogin,
+                        a = t.body;
+                    return r.createElement(l.a, {
+                        targetLogin: n,
+                        messageBody: a
+                    })
+                }
+                if ((e = e).moderationType === F.e.Ban) return e.reason ? r.createElement("span", {
                     className: "chat-line__moderation--ban-with-reason"
                 }, Object(i.d)("{userLogin} has been banned. Reason: {reason}", {
                     userLogin: e.userLogin,
@@ -8967,14 +8977,14 @@
                     userLogin: e.userLogin
                 }, "ChatLine"));
                 if (e.reason && e.duration) {
-                    var t = Object(i.d)("{userLogin} has been timed out for {duration} seconds. Reason: {reason}", {
+                    var o = Object(i.d)("{userLogin} has been timed out for {duration} seconds. Reason: {reason}", {
                         duration: e.duration,
                         reason: e.reason,
                         userLogin: e.userLogin
                     }, "ChatLine");
                     return r.createElement("span", {
                         className: "chat-line__moderation--timeout-with-reason"
-                    }, t)
+                    }, o)
                 }
                 return e.duration ? r.createElement("span", {
                     className: "chat-line__moderation--timeout"
@@ -8984,11 +8994,11 @@
                 }, "ChatLine")) : void 0
             }
 
-            function P(e) {
+            function L(e) {
                 var t = e.daysLeft;
                 0 === t && (t = e.hoursLeft);
                 var n = {
-                    bitsTotal: r.createElement("strong", null, Object(s.e)(e.total, {
+                    bitsTotal: r.createElement("strong", null, Object(s.f)(e.total, {
                         style: "currency",
                         currency: "USD"
                     })),
@@ -8998,7 +9008,7 @@
                         target: "_blank"
                     }, e.learnMore),
                     hashtag: r.createElement("strong", null, e.hashtag),
-                    timeRemaining: Object(s.e)(t)
+                    timeRemaining: Object(s.f)(t)
                 };
                 return r.createElement("span", null, 0 === e.daysLeft ? function(e) {
                     return Object(i.d)("{bitsTotal} total raised so far for {charityName}! {timeRemaining} more hours to show support. Cheer and include {hashtag}. Learn More at {learnMoreURL}", {
@@ -9019,14 +9029,14 @@
                 }(n))
             }
 
-            function V(e) {
+            function B(e) {
                 var t = e.enabled ? Object(i.d)("This room is now in slow mode. You may send messages every {length} seconds.", {
                     length: e.length
                 }, "ChatLine") : Object(i.d)("This room is no longer in slow mode.", "ChatLine");
                 return r.createElement("span", null, t)
             }
 
-            function L(e) {
+            function z(e) {
                 var t;
                 if (e.length > 0) {
                     var n = e.join(", ");
@@ -9037,7 +9047,7 @@
                 return r.createElement("span", null, t)
             }
 
-            function B(e) {
+            function V(e) {
                 if (e.enabled) {
                     var t = 0 === e.length ? Object(i.d)("This room is in followers-only mode.", "ChatLine") : Object(i.d)("This room is now in {length} followers-only mode.", {
                         length: Object(o.b)(60 * e.length)
@@ -9047,20 +9057,20 @@
                 return r.createElement("span", null, Object(i.d)("This room is no longer in followers-only mode.", "ChatLine"))
             }
 
-            function z(e) {
+            function H(e) {
                 return e.enabled ? r.createElement("span", null, Object(i.d)("This room is now in emote-only mode.", "ChatLine")) : r.createElement("span", null, Object(i.d)("This room is no longer in emote-only mode.", "ChatLine"))
             }
 
-            function H(e) {
+            function G(e) {
                 var t = e.enabled ? Object(i.d)("This room is now in subscriber-only mode.", "ChatLine") : Object(i.d)("This room is no longer in subscriber-only mode.", "ChatLine");
                 return r.createElement("span", null, t)
             }
 
-            function G(e) {
+            function q(e) {
                 return e.enabled ? r.createElement("span", null, Object(i.d)("r9k mode has been enabled for this room.", "ChatLine")) : r.createElement("span", null, Object(i.d)("r9k mode has been disabled for this room.", "ChatLine"))
             }
 
-            function q(e) {
+            function X(e) {
                 return e.isAutohost ? Object(i.d)("{host} is now auto hosting you for up to {viewerCount, number} viewers.", {
                     host: e.hostingChannel,
                     viewerCount: e.viewerCount
@@ -9072,7 +9082,7 @@
                 }, "ChatLine")
             }
 
-            function $(e) {
+            function Q(e) {
                 var t = e.getHours() % 12;
                 0 === t && (t = 12);
                 var n = e.getMinutes(),
@@ -9080,13 +9090,13 @@
                 return n < 10 && (r = "0" + r), t + ":" + r
             }
 
-            function Q(e) {
+            function $(e) {
                 return r.createElement("span", {
                     key: "timestamp",
                     className: "chat-line__timestamp",
                     "data-a-target": "chat-timestamp",
                     "data-test-selector": "chat-timestamp"
-                }, $(new Date(e)))
+                }, Q(new Date(e)))
             }
 
             function K(e) {
@@ -9097,7 +9107,7 @@
                     "data-test-selector": "chat-timestamp"
                 }, function(e, t) {
                     void 0 === t && (t = {});
-                    var n = i.o.intl.getLanguageCode() || "en";
+                    var n = i.p.intl.getLanguageCode() || "en";
                     return Intl.DateTimeFormat(n, t).format(e)
                 }(new Date(e), {
                     hour: "numeric",
@@ -9105,29 +9115,29 @@
                 }))
             }
             n.d(t, "f", function() {
-                return W
-            }), n.d(t, "g", function() {
                 return A
-            }), n.d(t, "b", function() {
+            }), n.d(t, "g", function() {
                 return P
-            }), n.d(t, "j", function() {
-                return V
-            }), n.d(t, "i", function() {
+            }), n.d(t, "b", function() {
                 return L
-            }), n.d(t, "d", function() {
+            }), n.d(t, "j", function() {
                 return B
-            }), n.d(t, "c", function() {
+            }), n.d(t, "i", function() {
                 return z
-            }), n.d(t, "k", function() {
+            }), n.d(t, "d", function() {
+                return V
+            }), n.d(t, "c", function() {
                 return H
-            }), n.d(t, "h", function() {
+            }), n.d(t, "k", function() {
                 return G
-            }), n.d(t, "e", function() {
+            }), n.d(t, "h", function() {
                 return q
+            }), n.d(t, "e", function() {
+                return X
             }), n.d(t, "a", function() {
-                return $
-            }), n.d(t, "l", function() {
                 return Q
+            }), n.d(t, "l", function() {
+                return $
             }), n.d(t, "m", function() {
                 return K
             })
@@ -9145,8 +9155,8 @@
                 p = n("geRD"),
                 m = n("f00E"),
                 h = n("D7An"),
-                f = n("2xye"),
-                g = n("GnwI"),
+                g = n("2xye"),
+                f = n("GnwI"),
                 v = n("QVaV"),
                 k = n("Ue10"),
                 b = (n("MPK0"), "report-wizard-block"),
@@ -9157,17 +9167,17 @@
                         return t.state = {
                             userBlocked: t.props.userBlocked || !1
                         }, t.renderBlock = function() {
-                            return a.createElement(k.T, {
+                            return a.createElement(k.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleBlock,
                                 "data-test-selector": b
-                            }, a.createElement(k.Va, {
-                                display: k.W.Flex,
+                            }, a.createElement(k.Wa, {
+                                display: k.X.Flex,
                                 alignItems: k.f.Center
-                            }, a.createElement(k.mb, {
-                                type: k.ob.Brand,
-                                asset: k.nb.Ban
-                            }), a.createElement(k.Va, {
+                            }, a.createElement(k.nb, {
+                                type: k.pb.Brand,
+                                asset: k.ob.Ban
+                            }), a.createElement(k.Wa, {
                                 margin: {
                                     left: .5
                                 }
@@ -9175,27 +9185,27 @@
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))))
                         }, t.renderUnblock = function() {
-                            return a.createElement(k.Va, {
+                            return a.createElement(k.Wa, {
                                 className: "reporting-wizard__block-actions",
-                                display: k.W.Flex,
+                                display: k.X.Flex,
                                 alignItems: k.f.Center
-                            }, a.createElement(k.mb, {
-                                type: k.ob.Success,
-                                asset: k.nb.FollowCheck
-                            }), a.createElement(k.Va, {
+                            }, a.createElement(k.nb, {
+                                type: k.pb.Success,
+                                asset: k.ob.FollowCheck
+                            }), a.createElement(k.Wa, {
                                 margin: {
                                     right: 1
                                 }
-                            }, a.createElement(k.V, {
+                            }, a.createElement(k.W, {
                                 className: "block-user__success",
-                                type: k.Nb.Span
+                                type: k.Ob.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
-                            }, "ReportWizardBlockActions"))), a.createElement(k.T, {
+                            }, "ReportWizardBlockActions"))), a.createElement(k.U, {
                                 hoverUnderlineNone: !0,
                                 onClick: t.handleUnblock,
                                 "data-test-selector": y
-                            }, a.createElement(k.Va, {
+                            }, a.createElement(k.Wa, {
                                 margin: {
                                     left: .5
                                 }
@@ -9217,7 +9227,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(v.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return a.createElement(k.xb, {
+                        return a.createElement(k.yb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -9225,18 +9235,18 @@
                             margin: {
                                 top: 1
                             }
-                        }, a.createElement(k.Va, null, Object(l.d)("Would you like to block {user}?", {
+                        }, a.createElement(k.Wa, null, Object(l.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement(k.xb, {
+                        }, "ReportWizardBlockActions")), a.createElement(k.yb, {
                             color: k.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(k.Wb, {
-                            baseFontSize: k.Aa.Size6
+                        }, a.createElement(k.Xb, {
+                            baseFontSize: k.Ba.Size6
                         }, a.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement("ul", null, a.createElement("li", null, Object(l.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), a.createElement("li", null, Object(l.d)("Prevent them from hosting you", "ReportWizardBlockActions")), a.createElement("li", null, Object(l.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), a.createElement("li", null, Object(l.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), a.createElement(k.Va, {
+                        }, "ReportWizardBlockActions")), a.createElement("ul", null, a.createElement("li", null, Object(l.d)("Prevent them from sending you whispers", "ReportWizardBlockActions")), a.createElement("li", null, Object(l.d)("Prevent them from hosting you", "ReportWizardBlockActions")), a.createElement("li", null, Object(l.d)("Prevent them from adding you as a friend", "ReportWizardBlockActions")), a.createElement("li", null, Object(l.d)("Filter their messages out of chats you don’t moderate", "ReportWizardBlockActions"))))), a.createElement(k.Wa, {
                             margin: {
                                 top: 1
                             }
@@ -9247,7 +9257,7 @@
             ! function(e) {
                 e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
             }(r || (r = {}));
-            var E, C = {
+            var E, T = {
                     generalFilter: function() {
                         return Object(l.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                     },
@@ -9273,7 +9283,7 @@
                         return Object(l.d)("being hateful, harassing, or abusive", "ReportModalWizard")
                     }
                 },
-                T = {
+                C = {
                     input_description: {
                         getTitle: function() {
                             return Object(l.d)("Could you provide more detail about this issue? You may include links to videos, clips, and content outside Twitch.", "ReportModalWizard")
@@ -9368,12 +9378,12 @@
                         type: r.Link
                     },
                     messaging_general: {
-                        getTitle: C.generalFilter,
+                        getTitle: T.generalFilter,
                         value: "general_messaging",
                         omitFromDescription: !0
                     },
                     profile_general: {
-                        getTitle: C.generalFilter,
+                        getTitle: T.generalFilter,
                         value: "general_profile",
                         omitFromDescription: !0
                     },
@@ -9513,7 +9523,7 @@
                         reportReason: _.b.Miscategorized
                     },
                     video_general: {
-                        getTitle: C.generalFilter,
+                        getTitle: T.generalFilter,
                         value: "general_video",
                         omitFromDescription: !0
                     },
@@ -9532,12 +9542,12 @@
                         reportReason: _.b.Harassment
                     },
                     abusiveViolence: {
-                        getTitle: C.abusiveViolence,
+                        getTitle: T.abusiveViolence,
                         value: "threatening violence",
                         reportReason: _.b.Harm
                     },
                     commitingViolence: {
-                        getTitle: C.commitingViolence,
+                        getTitle: T.commitingViolence,
                         value: "committing violence",
                         reportReason: _.b.Harm
                     },
@@ -9666,7 +9676,7 @@
                         reportReason: _.b.ChatBanEvasion
                     },
                     impersonation_me: {
-                        getTitle: C.me,
+                        getTitle: T.me,
                         value: "impersonating me",
                         reportReason: _.b.Impersonation
                     },
@@ -9678,7 +9688,7 @@
                         reportReason: _.b.Impersonation
                     },
                     impersonation_other: {
-                        getTitle: C.someoneElse,
+                        getTitle: T.someoneElse,
                         value: "impersonating someone else",
                         reportReason: _.b.Impersonation
                     },
@@ -9794,20 +9804,20 @@
                         value: "brigading/raids"
                     },
                     external_threatening: {
-                        getTitle: C.threatening,
+                        getTitle: T.threatening,
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: C.abusive,
+                        getTitle: T.abusive,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
-                        getTitle: C.abusiveViolence,
+                        getTitle: T.abusiveViolence,
                         value: "external site; threatening violence",
                         reportReason: _.b.Harm
                     },
                     external_commitingViolence: {
-                        getTitle: C.commitingViolence,
+                        getTitle: T.commitingViolence,
                         value: "external site; committing violence",
                         reportReason: _.b.Harm
                     },
@@ -9861,14 +9871,14 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = this.props.currentCard.getDescription ? a.createElement(k.Va, {
+                        var e = this.props.currentCard.getDescription ? a.createElement(k.Wa, {
                             padding: {
                                 bottom: 1
                             }
                         }, this.props.currentCard.getDescription()) : null;
-                        return a.createElement(k.Va, {
+                        return a.createElement(k.Wa, {
                             className: "reporting-wizard-card"
-                        }, e, a.createElement(k.Ca, {
+                        }, e, a.createElement(k.Da, {
                             label: this.props.currentCard.getLabel ? this.props.currentCard.getLabel() : ""
                         }, this.renderCardItems()))
                     }, t.prototype.renderCardItems = function() {
@@ -9880,43 +9890,43 @@
                         }).map(function(t, n) {
                             switch (t.type) {
                                 case r.Text:
-                                    return a.createElement(k.Va, {
+                                    return a.createElement(k.Wa, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
                                     }, t.getTitle());
                                 case r.Link:
-                                    return a.createElement(k.Va, {
+                                    return a.createElement(k.Wa, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
-                                    }, a.createElement(k.T, {
+                                    }, a.createElement(k.U, {
                                         to: t.value,
                                         targetBlank: !0
-                                    }, a.createElement(k.Va, {
-                                        display: k.W.Flex
-                                    }, a.createElement(k.Va, {
-                                        display: k.W.Inline,
+                                    }, a.createElement(k.Wa, {
+                                        display: k.X.Flex
+                                    }, a.createElement(k.Wa, {
+                                        display: k.X.Inline,
                                         padding: {
                                             right: .5
                                         }
-                                    }, a.createElement(k.mb, {
-                                        asset: k.nb.Document
+                                    }, a.createElement(k.nb, {
+                                        asset: k.ob.Document
                                     })), t.getTitle())));
                                 case r.Textarea:
                                     var i = t.value ? e.props.userTextInputs[t.value] : void 0,
                                         o = t.required && (!i || !!i && 0 === i.trim().length);
-                                    return a.createElement(k.Va, {
+                                    return a.createElement(k.Wa, {
                                         key: n,
                                         padding: {
                                             bottom: 1
                                         }
-                                    }, a.createElement(k.Ca, {
+                                    }, a.createElement(k.Da, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, a.createElement(k.Kb, {
+                                    }, a.createElement(k.Lb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -9926,12 +9936,12 @@
                                     })));
                                 case r.MultipleChoice:
                                 default:
-                                    return a.createElement(k.Va, {
+                                    return a.createElement(k.Wa, {
                                         key: n,
                                         padding: {
                                             y: .5
                                         }
-                                    }, a.createElement(k.jb, {
+                                    }, a.createElement(k.kb, {
                                         checked: !!e.props.currentSelection && e.props.currentSelection.value === t.value,
                                         onChange: e.onSelect,
                                         label: t.getTitle(e.props.targetUser.displayName),
@@ -10000,7 +10010,7 @@
                         return Object(l.d)("Thank you for your concern", "ReportModalWizard")
                     }
                 },
-                U = {
+                W = {
                     getDescription: function() {
                         return Object(l.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                     },
@@ -10009,19 +10019,19 @@
                     type: E.Info,
                     value: "end card"
                 },
-                j = {
-                    socialMedia: i.__assign({}, U, {
-                        items: [T.endBlurb_socialmedia]
+                U = {
+                    socialMedia: i.__assign({}, W, {
+                        items: [C.endBlurb_socialmedia]
                     }),
-                    violence: i.__assign({}, U, {
-                        items: [T.endBlurb_threat]
+                    violence: i.__assign({}, W, {
+                        items: [C.endBlurb_threat]
                     }),
                     legal: {
                         getTitle: M.thanksConcern,
                         getDescription: function() {
                             return Object(l.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
-                        items: [T.endLink_DMCA, T.endLink_trademark, T.endLink_devAgreement],
+                        items: [C.endLink_DMCA, C.endLink_trademark, C.endLink_devAgreement],
                         type: E.Info,
                         value: "ip end"
                     },
@@ -10030,7 +10040,7 @@
                         getDescription: function() {
                             return Object(l.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
-                        items: [T.endLink_selfharm],
+                        items: [C.endLink_selfharm],
                         type: E.Info,
                         value: "selfharm end"
                     },
@@ -10039,17 +10049,17 @@
                         getDescription: function() {
                             return Object(l.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
-                        items: [T.endLink_eventCoC],
+                        items: [C.endLink_eventCoC],
                         value: "twitch event end",
                         type: E.Info
                     }
                 },
-                x = {
+                j = {
                     getTitle: M.report,
                     getLabel: function() {
                         return Object(l.d)("Where is the problem?", "ReportModalWizard")
                     },
-                    items: [T.video, T.whisper, T.chat, T.room, T.profile, T.username, T.report_other],
+                    items: [C.video, C.whisper, C.chat, C.room, C.profile, C.username, C.report_other],
                     type: E.MultipleChoice,
                     value: "content type"
                 },
@@ -10057,42 +10067,42 @@
                     identifyUser: {
                         getTitle: M.reportVideo,
                         getLabel: R.identifyUser,
-                        items: [T.video_streamer, T.video_someoneElse, T.video_chatSomeone],
+                        items: [C.video_streamer, C.video_someoneElse, C.video_chatSomeone],
                         type: E.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
                         getTitle: M.reportVideo,
                         getLabel: R.contentGeneral,
-                        items: [T.revealPersonalInfo, T.video_labeling, T.video_inactive, T.video_general, T.report_ip, T.violateDevAgreement, T.selfharm],
+                        items: [C.revealPersonalInfo, C.video_labeling, C.video_inactive, C.video_general, C.report_ip, C.violateDevAgreement, C.selfharm],
                         type: E.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
                         getTitle: M.reportVideo,
                         getLabel: R.content,
-                        items: [T.report_username, T.violence, T.abusive, T.cheating, T.scam, T.inappropriateContent, T.evasion, T.impersonation, T.underage, T.bitsViolation],
+                        items: [C.report_username, C.violence, C.abusive, C.cheating, C.scam, C.inappropriateContent, C.evasion, C.impersonation, C.underage, C.bitsViolation],
                         type: E.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
-                W = {
+                x = {
                     content: {
                         getTitle: M.reportMessage,
                         getLabel: R.contentGeneral,
-                        items: [T.revealPersonalInfo, T.evasion, T.spam, T.maliciousRaid, T.report_username, T.messaging_general, T.selfharm],
+                        items: [C.revealPersonalInfo, C.evasion, C.spam, C.maliciousRaid, C.report_username, C.messaging_general, C.selfharm],
                         type: E.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
                         getTitle: M.reportMessage,
                         getLabel: R.content,
-                        items: [T.report_emotes, T.violence, T.abusive, T.inappropriateContent, T.impersonation, T.underage, T.bitsViolation],
+                        items: [C.report_emotes, C.violence, C.abusive, C.inappropriateContent, C.impersonation, C.underage, C.bitsViolation],
                         type: E.MultipleChoice,
                         value: "message general report reason"
                     }
                 },
-                A = i.__assign({}, W.content, {
+                A = i.__assign({}, x.content, {
                     getDescription: function() {
                         return Object(l.d)("Please note that we may review additional messages in this conversation to determine the context of your report.", "ReportModalWizard")
                     }
@@ -10101,51 +10111,51 @@
                     content: {
                         getTitle: M.reportProfile,
                         getLabel: R.contentGeneral,
-                        items: [T.revealPersonalInfo, T.inappropriateBadge, T.inappropriateExtension, T.noModeration, T.profile_general, T.report_ip, T.violateDevAgreement, T.selfharm],
+                        items: [C.revealPersonalInfo, C.inappropriateBadge, C.inappropriateExtension, C.noModeration, C.profile_general, C.report_ip, C.violateDevAgreement, C.selfharm],
                         type: E.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
                         getTitle: M.reportProfile,
                         getLabel: R.content,
-                        items: [T.report_username, T.violence, T.abusive, T.scam, T.inappropriateContent, T.evasion, T.impersonation, T.underage, T.bitsViolation],
+                        items: [C.report_username, C.violence, C.abusive, C.scam, C.inappropriateContent, C.evasion, C.impersonation, C.underage, C.bitsViolation],
                         type: E.MultipleChoice,
                         value: "profile general report reason"
                     }
                 },
-                V = {
+                L = {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username}'s Room", {
                             username: e
                         }, "ReportModalWizard")
                     },
                     getLabel: R.identifyUser,
-                    items: [T.report_channelOwner, T.report_member],
+                    items: [C.report_channelOwner, C.report_member],
                     value: "room report user",
                     type: E.MultipleChoice
                 },
-                L = {
+                B = {
                     getTitle: M.tellUsMore,
-                    items: [T.input_description],
+                    items: [C.input_description],
                     type: E.Confirm,
                     value: "tell us more"
                 },
-                B = {
-                    banEvasion: i.__assign({}, L, {
-                        items: [T.input_usernames, T.input_description],
+                z = {
+                    banEvasion: i.__assign({}, B, {
+                        items: [C.input_usernames, C.input_description],
                         value: "ban evasion tell us more"
                     }),
-                    socialMedia: i.__assign({}, L, {
-                        items: [T.input_link, T.input_connection, T.input_description],
-                        nextCard: j.socialMedia,
+                    socialMedia: i.__assign({}, B, {
+                        items: [C.input_link, C.input_connection, C.input_description],
+                        nextCard: U.socialMedia,
                         value: "social media tell us more"
                     })
                 },
-                z = {
+                V = {
                     content: {
                         getTitle: M.reportAbusive,
                         getLabel: R.relevantStatements,
-                        items: [T.hateSpeech, T.harassment, T.abusiveViolence, T.commitingViolence, T.swatting, T.personalInfo],
+                        items: [C.hateSpeech, C.harassment, C.abusiveViolence, C.commitingViolence, C.swatting, C.personalInfo],
                         type: E.MultipleChoice,
                         value: "abuse type"
                     },
@@ -10158,7 +10168,7 @@
                         getLabel: function() {
                             return Object(l.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
                         },
-                        items: [T.threat_me, T.threat_person, T.threat_group, T.threat_selfharm],
+                        items: [C.threat_me, C.threat_person, C.threat_group, C.threat_selfharm],
                         type: E.MultipleChoice,
                         value: "violence type"
                     }
@@ -10173,7 +10183,7 @@
                         getLabel: function() {
                             return Object(l.d)("Where did the problem happen?", "ReportModalWizard")
                         },
-                        items: [T.location_onTwitch, T.location_anotherSite, T.location_TwitchEvent],
+                        items: [C.location_onTwitch, C.location_anotherSite, C.location_TwitchEvent],
                         type: E.MultipleChoice,
                         value: "off-site conduct location"
                     },
@@ -10187,18 +10197,18 @@
                         getDescription: function() {
                             return Object(l.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
-                        items: [T.external_incitingRaids, T.external_threatening, T.external_harassment],
+                        items: [C.external_incitingRaids, C.external_threatening, C.external_harassment],
                         type: E.MultipleChoice,
-                        nextCard: B.socialMedia,
+                        nextCard: z.socialMedia,
                         value: "external site conduct"
                     },
-                    external_violence: i.__assign({}, z.violence, {
-                        items: [T.threat_me, T.threat_person, T.threat_group],
-                        nextCard: B.socialMedia
+                    external_violence: i.__assign({}, V.violence, {
+                        items: [C.threat_me, C.threat_person, C.threat_group],
+                        nextCard: z.socialMedia
                     }),
-                    external_abusive: i.__assign({}, z.content, {
-                        items: [T.hateSpeech, T.harassment, T.external_abusiveViolence, T.external_commitingViolence, T.swatting, T.personalInfo],
-                        nextCard: B.socialMedia
+                    external_abusive: i.__assign({}, V.content, {
+                        items: [C.hateSpeech, C.harassment, C.external_abusiveViolence, C.external_commitingViolence, C.swatting, C.personalInfo],
+                        nextCard: z.socialMedia
                     })
                 },
                 G = {
@@ -10208,7 +10218,7 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: R.contentGeneral,
-                    items: [T.spam_bot, T.spam_scam, T.spam_repeated],
+                    items: [C.spam_bot, C.spam_scam, C.spam_repeated],
                     type: E.MultipleChoice,
                     value: "spam type"
                 },
@@ -10219,11 +10229,11 @@
                         }, "ReportModalWizard")
                     },
                     getLabel: R.relevantStatements,
-                    items: [T.inappropriate_game, T.gory, T.sexuallyViolent, T.childAnimal, T.pornographic, T.suggestive, T.nudity, T.other],
+                    items: [C.inappropriate_game, C.gory, C.sexuallyViolent, C.childAnimal, C.pornographic, C.suggestive, C.nudity, C.other],
                     type: E.MultipleChoice,
                     value: "inappropriate content type"
                 },
-                $ = {
+                X = {
                     getTitle: function(e) {
                         return Object(l.d)("Report {username} for Evading a Ban", {
                             username: e
@@ -10233,9 +10243,9 @@
                         return Object(l.d)("What kind of ban are they evading?", "ReportModalWizard")
                     },
                     value: "ban type",
-                    items: [T.evasion_chat, T.evasion_sitewide, T.evasion_messaging],
+                    items: [C.evasion_chat, C.evasion_sitewide, C.evasion_messaging],
                     type: E.MultipleChoice,
-                    nextCard: B.banEvasion
+                    nextCard: z.banEvasion
                 },
                 Q = {
                     getTitle: function(e) {
@@ -10249,65 +10259,65 @@
                     getDescription: function() {
                         return Object(l.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
-                    items: [T.impersonation_me, T.impersonation_brand, T.impersonation_other],
+                    items: [C.impersonation_me, C.impersonation_brand, C.impersonation_other],
                     type: E.MultipleChoice,
                     value: "impersonation type"
                 },
-                K = x,
-                Y = L,
-                Z = U,
-                J = {
+                $ = j,
+                K = B,
+                Z = W,
+                Y = {
                     video: F.identifyUser,
                     whisper: A,
-                    chat: W.content,
+                    chat: x.content,
                     profile: P.content,
-                    room: V,
+                    room: L,
                     "somewhere else": H.identifyLocation,
                     streamer: F.content,
                     "someone else in video": F.content,
-                    "someone in chat": W.content,
+                    "someone in chat": x.content,
                     general_video: F.general,
-                    general_messaging: W.general,
+                    general_messaging: x.general,
                     general_profile: P.general,
                     "channel owner": P.content,
-                    "community member": W.content,
+                    "community member": x.content,
                     "on twitch": P.content,
                     "another site": H.externalSite,
-                    "twitch event": j.twitchEvent,
-                    "brigading/raids": B.socialMedia,
+                    "twitch event": U.twitchEvent,
+                    "brigading/raids": z.socialMedia,
                     threatening: H.external_violence,
                     "hateful/harassing": H.external_abusive,
                     "external site; threatening violence": H.external_violence,
                     "external site; committing violence": H.external_violence,
-                    "external site; scam": B.socialMedia,
-                    "ban evasion": $,
+                    "external site; scam": z.socialMedia,
+                    "ban evasion": X,
                     spam: G,
-                    hateful: z.content,
+                    hateful: V.content,
                     impersonation: Q,
-                    "violence/threats": z.violence,
-                    "threatening violence": z.violence,
-                    "committing violence": z.violence,
-                    abusive: z.content,
+                    "violence/threats": V.violence,
+                    "threatening violence": V.violence,
+                    "committing violence": V.violence,
+                    abusive: V.content,
                     "inappropriate content": q,
-                    "intellectual property": j.legal,
-                    "violating developer agreement": j.legal
+                    "intellectual property": U.legal,
+                    "violating developer agreement": U.legal
                 },
-                X = {
-                    selfharm: j.selfharm,
-                    harm: j.violence,
+                J = {
+                    selfharm: U.selfharm,
+                    harm: U.violence,
                     other: Z
                 },
                 ee = {
                     CHANNEL_FEED_POST_REPORT: P.content,
                     COMMUNITY_REPORT: P.content,
-                    CHAT_REPORT: W.content,
+                    CHAT_REPORT: x.content,
                     CLIP_REPORT: F.content,
                     EVENT_REPORT: P.content,
                     EXTENSION_REPORT: P.content,
                     LIVE_UP_REPORT: P.content,
-                    ROOM_REPORT: V,
+                    ROOM_REPORT: L,
                     WHISPER_REPORT: A,
-                    VOD_COMMENT_REPORT: W.content
+                    VOD_COMMENT_REPORT: x.content
                 },
                 te = "report-wizard-back",
                 ne = "report-wizard-close",
@@ -10317,7 +10327,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            currentCard: t.props.currentCard || ee[t.props.reportContentType] || K,
+                            currentCard: t.props.currentCard || ee[t.props.reportContentType] || $,
                             prevCards: [],
                             currentSelection: null,
                             prevSelections: [],
@@ -10329,11 +10339,11 @@
                             targetUnknown: !1,
                             reportContext: t.props.reportContentType
                         }, t.renderPrimer = function() {
-                            return a.createElement(k.Va, {
+                            return a.createElement(k.Wa, {
                                 margin: {
                                     top: 1
                                 }
-                            }, a.createElement(k.V, null, Object(l.d)("We are going to ask you a few questions to help us investigate your report quickly and accurately.", "ReportModalWizard")))
+                            }, a.createElement(k.W, null, Object(l.d)("We are going to ask you a few questions to help us investigate your report quickly and accurately.", "ReportModalWizard")))
                         }, t.renderButtons = function() {
                             var e = Object(l.d)("Close", "ReportModalWizard"),
                                 n = t.handleClose,
@@ -10347,26 +10357,26 @@
                                 case E.Confirm:
                                     e = Object(l.d)("Submit Report", "ReportModalWizard"), n = t.handleSubmit, i = !t.state.userTextInput, r = ie
                             }
-                            return a.createElement(k.Va, null, o, a.createElement(k.z, {
+                            return a.createElement(k.Wa, null, o, a.createElement(k.z, {
                                 onClick: n,
                                 disabled: i,
                                 "data-test-selector": r
-                            }, a.createElement(k.Va, {
+                            }, a.createElement(k.Wa, {
                                 padding: {
                                     x: 1
                                 }
                             }, e)))
                         }, t.renderBack = function() {
-                            return a.createElement(k.Va, {
+                            return a.createElement(k.Wa, {
                                 margin: {
                                     right: 1
                                 },
-                                display: k.W.InlineBlock
+                                display: k.X.InlineBlock
                             }, a.createElement(k.z, {
                                 type: k.F.Hollow,
                                 onClick: t.handleBack,
                                 "data-test-selector": te
-                            }, a.createElement(k.Va, {
+                            }, a.createElement(k.Wa, {
                                 padding: {
                                     x: 1
                                 }
@@ -10387,8 +10397,8 @@
                                     i = t.state.displacedSelections[t.state.displacedSelections.length - 1],
                                     a = t.state.currentSelection.differentTarget || t.state.targetUnknown,
                                     o = t.state.currentSelection.reportContext || t.state.reportContext,
-                                    s = e.nextCard || Y;
-                                J[t.state.currentSelection.value] && (s = J[t.state.currentSelection.value]);
+                                    s = e.nextCard || K;
+                                Y[t.state.currentSelection.value] && (s = Y[t.state.currentSelection.value]);
                                 var l = t.state.currentSelection.reportReason || t.state.reportReason,
                                     c = s.type === E.Info;
                                 t.setState({
@@ -10434,7 +10444,7 @@
                                                     });
                                                     break;
                                                 case N.b.Success:
-                                                    r = Z, X[t] && (r = X[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
+                                                    r = Z, J[t] && (r = J[t]), this.state.currentCard.nextCard && (r = this.state.currentCard.nextCard), this.setState({
                                                         currentCard: r,
                                                         prevCards: [],
                                                         prevSelections: [],
@@ -10519,7 +10529,7 @@
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? a.createElement(k.xb, {
+                            t = this.state.error ? a.createElement(k.yb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -10528,19 +10538,19 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             n = this.state.prevCards.length || this.state.currentCard.type === E.Info ? null : this.renderPrimer();
-                        return a.createElement(k.xb, {
+                        return a.createElement(k.yb, {
                             className: "reporting-wizard",
-                            display: k.W.Flex,
+                            display: k.X.Flex,
                             margin: {
                                 x: 1
                             },
-                            flexDirection: k.Y.Column,
+                            flexDirection: k.Z.Column,
                             fullHeight: !0,
                             "data-test-card-value": this.state.currentCard.value
-                        }, t, a.createElement(k.V, {
+                        }, t, a.createElement(k.W, {
                             bold: !0,
-                            fontSize: k.Aa.Size4
-                        }, this.getTitle()), n, a.createElement(k.Va, {
+                            fontSize: k.Ba.Size4
+                        }, this.getTitle()), n, a.createElement(k.Wa, {
                             margin: {
                                 y: 1
                             }
@@ -10594,7 +10604,7 @@
                                     case 1:
                                         return i.trys.push([1, 3, , 4]), [4, this.props.reportUserInCommunity(Object(p.a)(c))];
                                     case 2:
-                                        return i.sent(), l.o.tracking.track(f.SpadeEventType.CommunityModeration, {
+                                        return i.sent(), l.p.tracking.track(g.SpadeEventType.CommunityModeration, {
                                             community_id: r,
                                             name: a,
                                             is_official: !1,
@@ -10608,7 +10618,7 @@
                                             u.state.showWizard || u.trackAction(O.Submit)
                                         }), [3, 4];
                                     case 3:
-                                        return n = i.sent(), l.j.error(n, "ReportUserInCommunity Mutation failed."), this.setState({
+                                        return n = i.sent(), l.k.error(n, "ReportUserInCommunity Mutation failed."), this.setState({
                                             submitStatus: N.b.MutationError
                                         }), [3, 4];
                                     case 4:
@@ -10628,7 +10638,7 @@
                                     case 6:
                                         return i.trys.push([6, 8, , 9]), [4, this.props.reportUser(Object(p.a)(c))];
                                     case 7:
-                                        return i.sent(), this.props.reportContext.contentType === _.a.Community && l.o.tracking.track(f.SpadeEventType.CommunityReport, {
+                                        return i.sent(), this.props.reportContext.contentType === _.a.Community && l.p.tracking.track(g.SpadeEventType.CommunityReport, {
                                             community_id: this.props.reportContext.contentID,
                                             name: this.props.reportContext.extra,
                                             is_official: !1,
@@ -10640,7 +10650,7 @@
                                             u.state.showWizard || u.trackAction(O.Submit)
                                         }), [3, 9];
                                     case 8:
-                                        return d = i.sent(), l.j.error(d, "ReportUser Mutation failed."), this.setState({
+                                        return d = i.sent(), l.k.error(d, "ReportUser Mutation failed."), this.setState({
                                             submitStatus: N.b.MutationError
                                         }), [3, 9];
                                     case 9:
@@ -10675,7 +10685,7 @@
                             closeEventSent: !0
                         }))
                     }, n.trackWizardAction = function(e, t, r, i) {
-                        l.o.tracking.track(f.SpadeEventType.ReportWizardFlowAction, {
+                        l.p.tracking.track(g.SpadeEventType.ReportWizardFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
                             report_sent: n.state.submitStatus === N.b.Success,
@@ -10688,7 +10698,7 @@
                             navigated_to: r
                         })
                     }, n.trackAction = function(e) {
-                        l.o.tracking.track(f.SpadeEventType.ReportFlowAction, {
+                        l.p.tracking.track(g.SpadeEventType.ReportFlowAction, {
                             ui_context: n.props.reportContext.contentType,
                             target_user_id: n.props.reportContext.targetUserID,
                             report_sent: n.state.submitStatus === N.b.Success,
@@ -10697,7 +10707,7 @@
                             report_session_id: n.reportID
                         })
                     }, n.reportID = Object(m.a)();
-                    var r = l.o.experiments.getAssignment(h.b.NewReportingWizard);
+                    var r = l.p.experiments.getAssignment(h.b.NewReportingWizard);
                     return n.state = {
                         submitStatus: N.b.Unsubmitted,
                         showWizard: "yes" === r,
@@ -10711,14 +10721,14 @@
                 }, t.prototype.componentWillUnmount = function() {
                     this.handleClose(), this.state.showWizard || this.trackClose()
                 }, t.prototype.render = function() {
-                    if (this.props.data.error) return a.createElement(k.Va, {
+                    if (this.props.data.error) return a.createElement(k.Wa, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k.V, {
-                        fontSize: k.Aa.Size5
+                    }, a.createElement(k.W, {
+                        fontSize: k.Ba.Size5
                     }, Object(l.d)("There was an unexpected error. Please refresh the page and try again", "ReportUser")));
-                    if (this.props.data.loading) return a.createElement(k.cb, {
+                    if (this.props.data.loading) return a.createElement(k.db, {
                         lineCount: 3
                     });
                     if (this.props.data.targetUser) {
@@ -10731,7 +10741,7 @@
                             title: this.props.title,
                             defaultDescription: this.props.defaultDescription
                         };
-                        return this.state.showWizard ? this.props.data.loading ? a.createElement(k.Xa, null) : a.createElement(ae, i.__assign({}, e, {
+                        return this.state.showWizard ? this.props.data.loading ? a.createElement(k.Ya, null) : a.createElement(ae, i.__assign({}, e, {
                             user: this.props.sessionUser,
                             onBlock: this.onBlock,
                             onUnblock: this.onUnblock,
@@ -10743,12 +10753,12 @@
                             targetUser: this.props.data.targetUser
                         }))
                     }
-                    return a.createElement(k.Va, {
+                    return a.createElement(k.Wa, {
                         margin: {
                             bottom: 1
                         }
-                    }, a.createElement(k.V, {
-                        fontSize: k.Aa.Size5
+                    }, a.createElement(k.W, {
+                        fontSize: k.Ba.Size5
                     }, Object(l.d)("The user you are trying to report does not exist", "ReportUser")))
                 }, Object.defineProperty(t.prototype, "userBlocked", {
                     get: function() {
@@ -10773,7 +10783,7 @@
                         }
                     }
                 }
-            }), Object(g.c)("ReportUser", {
+            }), Object(f.b)("ReportUser", {
                 autoReportInteractive: !0
             }), Object(d.a)(), Object(u.a)(), Object(o.connect)(function(e) {
                 return {
@@ -10915,32 +10925,32 @@
                     }, t
                 }
                 return s.__extends(t, e), t.prototype.render = function() {
-                    return l.createElement(u.xb, {
+                    return l.createElement(u.yb, {
                         background: u.r.Base,
                         padding: {
                             x: 3,
                             top: 3,
                             bottom: 2
                         },
-                        display: u.W.Flex,
-                        flexDirection: u.Y.Column
-                    }, l.createElement(u.Va, {
+                        display: u.X.Flex,
+                        flexDirection: u.Z.Column
+                    }, l.createElement(u.Wa, {
                         "data-test-selector": r.Message
-                    }, this.props.message), l.createElement(u.Va, {
-                        display: u.W.Flex,
-                        flexDirection: u.Y.Row,
-                        justifyContent: u.Ua.Center,
+                    }, this.props.message), l.createElement(u.Wa, {
+                        display: u.X.Flex,
+                        flexDirection: u.Z.Row,
+                        justifyContent: u.Va.Center,
                         padding: {
                             top: 2
                         }
-                    }, l.createElement(u.Va, {
+                    }, l.createElement(u.Wa, {
                         padding: {
                             right: .5
                         }
                     }, l.createElement(u.z, {
                         type: u.F.Text,
                         onClick: this.handleCancelClick
-                    }, Object(c.d)("Cancel", "SettingsConfirmationModal"))), l.createElement(u.Va, {
+                    }, Object(c.d)("Cancel", "SettingsConfirmationModal"))), l.createElement(u.Wa, {
                         padding: {
                             left: .5
                         }
@@ -11222,8 +11232,8 @@
                                 t = i("chat-image", {
                                     "chat-image__animated": !!n.props.cheerText && n.state.imageLoaded
                                 }, n.props.className);
-                            if (n.props.srcSet.themed) e = a.createElement(s.Na, {
-                                display: n.state.imageLoaded ? s.W.InlineBlock : s.W.Hide
+                            if (n.props.srcSet.themed) e = a.createElement(s.Oa, {
+                                display: n.state.imageLoaded ? s.X.InlineBlock : s.X.Hide
                             }, a.createElement(o.a, {
                                 alt: n.props.alt,
                                 className: t,
@@ -11238,8 +11248,8 @@
                                     var d = c[l];
                                     r.push(n.props.srcSet.sources[d] + " " + d)
                                 }
-                                e = a.createElement(s.Na, {
-                                    display: n.state.imageLoaded ? s.W.InlineBlock : s.W.Hide
+                                e = a.createElement(s.Oa, {
+                                    display: n.state.imageLoaded ? s.X.InlineBlock : s.X.Hide
                                 }, a.createElement("img", {
                                     className: t,
                                     onLoad: n.onImageLoad,
@@ -11252,13 +11262,13 @@
                             }
                             return e
                         }, n.renderPlaceholder = function() {
-                            return n.state.imageLoaded ? null : a.createElement(s.Na, {
-                                display: s.W.InlineBlock
-                            }, a.createElement(s.V, {
-                                type: s.Nb.Span,
+                            return n.state.imageLoaded ? null : a.createElement(s.Oa, {
+                                display: s.X.InlineBlock
+                            }, a.createElement(s.W, {
+                                type: s.Ob.Span,
                                 className: "chat-image__placeholder",
-                                align: s.Xb.Top
-                            }, a.createElement(s.cb, {
+                                align: s.Yb.Top
+                            }, a.createElement(s.db, {
                                 height: 28,
                                 width: 28
                             })))
@@ -11269,16 +11279,16 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.state.isHovering && this.state.imageLoaded ? a.createElement(s.Qb, {
-                            direction: this.props.tooltipDirection || s.Sb.Top,
+                        return e = this.state.isHovering && this.state.imageLoaded ? a.createElement(s.Rb, {
+                            direction: this.props.tooltipDirection || s.Tb.Top,
                             label: this.props.alt,
-                            display: s.W.Inline,
+                            display: s.X.Inline,
                             offsetY: "0.9rem",
                             "data-a-target": "emote-name"
                         }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText) : a.createElement("span", {
                             "data-a-target": "emote-name"
-                        }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? a.createElement(s.V, {
-                            type: s.Nb.Span,
+                        }, this.renderPlaceholder(), this.renderImage(), this.props.cheerText), this.props.cheerText ? a.createElement(s.W, {
+                            type: s.Ob.Span,
                             noWrap: !0
                         }, e) : e
                     }, t
@@ -11422,24 +11432,24 @@
                         }, Object(s.d)("Block", "BlockModal"))
                     }, n.prototype.renderMessage = function(e, t) {
                         var n = Object(d.a)(e, t, !0);
-                        return i.createElement(i.Fragment, null, i.createElement(p.xb, {
+                        return i.createElement(i.Fragment, null, i.createElement(p.yb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
                             },
-                            textAlign: p.Jb.Center
-                        }, i.createElement(p.V, {
+                            textAlign: p.Kb.Center
+                        }, i.createElement(p.W, {
                             bold: !0,
-                            type: p.Nb.H4
+                            type: p.Ob.H4
                         }, Object(s.d)("Block {displayName}?", {
                             displayName: n
-                        }, "BlockModal"))), i.createElement(p.xb, {
+                        }, "BlockModal"))), i.createElement(p.yb, {
                             color: p.O.Alt2,
                             padding: {
                                 top: 2
                             }
-                        }, i.createElement(p.Wb, {
-                            baseFontSize: p.Aa.Size6
+                        }, i.createElement(p.Xb, {
+                            baseFontSize: p.Ba.Size6
                         }, i.createElement("p", null, Object(s.d)("Blocking {displayName} will:", {
                             displayName: n
                         }, "BlockModal")), i.createElement("ul", null, i.createElement("li", null, Object(s.d)("Prevent them from sending you whispers", "BlockModal")), i.createElement("li", null, Object(s.d)("Prevent them from hosting you", "BlockModal")), i.createElement("li", null, Object(s.d)("Prevent them from adding you as a friend", "BlockModal")), i.createElement("li", null, Object(s.d)("Filter their messages out of chats you don’t moderate", "BlockModal"))))))
@@ -11557,7 +11567,7 @@
                 l = n("Ue10"),
                 c = function(e) {
                     return a.createElement(l.A, {
-                        icon: l.nb.Emoticons,
+                        icon: l.ob.Emoticons,
                         ariaLabel: Object(s.d)("Emote picker", "EmotePickerButton"),
                         type: l.C.Secondary,
                         onClick: e.onClick,
@@ -11569,8 +11579,8 @@
                 p = n("lZCe"),
                 m = n("ZS2+"),
                 h = n("yR8l"),
-                f = n("x7UT"),
-                g = n("Mj6i"),
+                g = n("x7UT"),
+                f = n("Mj6i"),
                 v = n("UUve"),
                 k = n("1/iK"),
                 b = n("aCAx"),
@@ -11578,8 +11588,8 @@
                 S = n("kRBY"),
                 _ = n("+pBb"),
                 E = n("GzyO"),
-                C = n("OpME"),
-                T = n("cpJf"),
+                T = n("OpME"),
+                C = n("cpJf"),
                 D = n("W8Fi"),
                 N = n("0WFu"),
                 O = n("GnwI"),
@@ -11588,13 +11598,13 @@
                 R = n("8/mp"),
                 M = n("8Ad5");
 
-            function U(e) {
+            function W(e) {
                 return e.charCode === M.a.Enter || e.charCode === M.a.Space
             }
-            var j = n("2xye"),
-                x = n("7SjK"),
+            var U = n("2xye"),
+                j = n("7SjK"),
                 F = n("4rCz"),
-                W = (n("/Kya"), function(e) {
+                x = (n("/Kya"), function(e) {
                     var t = {
                             "emote-picker__tab": !0
                         },
@@ -11605,7 +11615,7 @@
                             "emote-picker__tab--active": e.channelTabEnabled && e.channelTabSelected,
                             "emote-picker__tab--disabled": !e.channelTabEnabled
                         }));
-                        n = a.createElement(l.Na, {
+                        n = a.createElement(l.Oa, {
                             padding: {
                                 x: 1
                             }
@@ -11623,7 +11633,7 @@
                         var s = w(i.__assign({}, t, {
                             "emote-picker__tab--active": !(e.channelTabSelected && e.channelTabEnabled)
                         }));
-                        r = a.createElement(l.Na, {
+                        r = a.createElement(l.Oa, {
                             padding: {
                                 x: 1
                             }
@@ -11637,7 +11647,7 @@
                             tabIndex: 0
                         }, a.createElement("span", null, Object(F.d)("All", "EmotePicker"))))
                     }
-                    return a.createElement(l.xb, {
+                    return a.createElement(l.yb, {
                         background: l.r.Base,
                         borderTop: !0,
                         className: "emote-picker__tabs-container"
@@ -11675,18 +11685,18 @@
                                 tierNum: o
                             }, "assembleSubscribeTexts")
                         }
-                        return a.createElement(l.Va, {
+                        return a.createElement(l.Wa, {
                             className: "emote-picker-plan-upsell",
-                            display: l.W.Flex,
-                            flexDirection: l.Y.Column,
+                            display: l.X.Flex,
+                            flexDirection: l.Z.Column,
                             alignItems: l.f.Center,
                             margin: {
                                 bottom: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(j.a, {
                             emotes: r.emotes,
                             locked: !0
-                        }), a.createElement(l.Va, {
+                        }), a.createElement(l.Wa, {
                             margin: 1,
                             alignItems: l.f.Center
                         }, e), a.createElement(A.a, {
@@ -11699,13 +11709,13 @@
                         }))
                     }, t
                 }(a.Component),
-                V = (n("JGCS"), function(e) {
+                L = (n("JGCS"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.channelTabSelectionKeypress = function(e) {
-                            U(e) && n.selectChannelTab(e)
+                            W(e) && n.selectChannelTab(e)
                         }, n.allTabSelectionKeypress = function(e) {
-                            U(e) && n.selectAllTab(e)
+                            W(e) && n.selectAllTab(e)
                         }, n.onClickEmote = function(e) {
                             if (n.props.onClickEmote) {
                                 n.props.onClickEmote(e.displayName || e.token, e.id);
@@ -11717,7 +11727,7 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.n.track(j.SpadeEventType.EmotePickerClickthrough, t)
+                                s.o.track(U.SpadeEventType.EmotePickerClickthrough, t)
                             }
                         }, n.closeOnEsc = function(e) {
                             e.keyCode === M.a.Esc && n.props.toggleVisibility()
@@ -11756,7 +11766,7 @@
                                 generated_by: e.emotePickerSource,
                                 chatroom_id: e.roomID
                             };
-                            s.n.track(j.SpadeEventType.ViewedEmotePicker, t)
+                            s.o.track(U.SpadeEventType.ViewedEmotePicker, t)
                         }
                         if (!e.gqlError)
                             if (this.state.filter.length > 0) {
@@ -11781,22 +11791,22 @@
                             size: this.props.size ? this.props.size : l.w.Medium,
                             noTail: !0,
                             show: !0
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             className: w("emote-picker")
-                        }, this.renderTabContent(), a.createElement(l.Va, {
+                        }, this.renderTabContent(), a.createElement(l.Wa, {
                             className: "emote-picker__controls-container",
-                            position: l.db.Relative
-                        }, a.createElement(l.xb, {
+                            position: l.eb.Relative
+                        }, a.createElement(l.yb, {
                             padding: 1,
                             borderTop: !0
-                        }, a.createElement(l.Pa, {
+                        }, a.createElement(l.Qa, {
                             autoFocus: !0,
                             onChange: this.handleFilterChange,
                             onKeyDown: this.closeOnEsc,
                             placeholder: Object(s.d)("Search for Emotes", "EmotePicker"),
-                            type: l.Ra.Text,
+                            type: l.Sa.Text,
                             value: this.state.inputValue
-                        })), a.createElement(W, {
+                        })), a.createElement(x, {
                             allTabVisible: this.props.allEmoteSets.length > 0,
                             channelTabEnabled: this.state.channelTabEnabled,
                             channelTabSelected: this.state.channelTabSelected,
@@ -11809,19 +11819,19 @@
                     }, t.prototype.renderTabContent = function() {
                         var e = this,
                             t = [];
-                        if (this.props.gqlError) t.push(a.createElement(l.Va, {
+                        if (this.props.gqlError) t.push(a.createElement(l.Wa, {
                             key: "emotePicker-error"
-                        }, a.createElement(l.V, {
+                        }, a.createElement(l.W, {
                             color: l.O.Error
                         }, Object(s.d)("Unable to load available emotes.", "EmotePicker"))));
-                        else if (this.props.loading) t.push(a.createElement(l.Va, {
+                        else if (this.props.loading) t.push(a.createElement(l.Wa, {
                             alignItems: l.f.Center,
-                            display: l.W.Flex,
+                            display: l.X.Flex,
                             key: "loading",
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: l.Ua.Center
-                        }, a.createElement(l.Xa, {
+                            justifyContent: l.Va.Center
+                        }, a.createElement(l.Ya, {
                             key: "LoadingSpinner"
                         })));
                         else if (this.state.channelTabEnabled && this.state.channelTabSelected) {
@@ -11829,23 +11839,23 @@
                                 var n = this.state.filteredOwnedChannelEmoteSets[0].emotes.map(function(t) {
                                     return t.setID = e.state.filteredOwnedChannelEmoteSets[0].id, t
                                 });
-                                t.push(a.createElement(l.Va, {
+                                t.push(a.createElement(l.Wa, {
                                     className: "emote-picker__content-block",
                                     key: "ownedChannelEmoteSets",
                                     padding: 1,
-                                    position: l.db.Relative
-                                }, a.createElement(x.a, {
+                                    position: l.eb.Relative
+                                }, a.createElement(j.a, {
                                     emotes: n,
                                     onClickEmote: this.onClickEmote,
                                     locked: !1
                                 })))
                             }
                             t = t.concat(this.state.filteredAvailableUpsells.map(function(t) {
-                                return a.createElement(l.Va, {
+                                return a.createElement(l.Wa, {
                                     className: "emote-picker__content-block",
                                     key: "planUpsell:" + t.level,
                                     padding: 1,
-                                    position: l.db.Relative
+                                    position: l.eb.Relative
                                 }, a.createElement(P, {
                                     plan: t,
                                     isEsportChannel: e.props.isEsportChannel,
@@ -11857,15 +11867,15 @@
                             var n = [];
                             return t.emotes.forEach(function(e) {
                                 e.setID = t.id, n.push(e)
-                            }), a.createElement(l.Va, {
+                            }), a.createElement(l.Wa, {
                                 key: "emoteGrid" + t.id,
-                                position: l.db.Relative,
+                                position: l.eb.Relative,
                                 padding: {
                                     top: 1,
                                     bottom: 2
                                 },
                                 className: "emote-picker__content-block"
-                            }, a.createElement(x.a, {
+                            }, a.createElement(j.a, {
                                 emotes: n,
                                 onClickEmote: e.onClickEmote,
                                 locked: !1
@@ -11873,7 +11883,7 @@
                         });
                         return t.length > 0 ? a.createElement(R.b, {
                             className: "emote-picker__tab-content"
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             padding: 1
                         }, t)) : null
                     }, t.prototype.filterEmoteSet = function(e, t) {
@@ -11905,11 +11915,11 @@
                             }
                         }
                         return n
-                    }, t = i.__decorate([Object(O.c)("EmotePickerMenu", {
+                    }, t = i.__decorate([Object(O.b)("EmotePickerMenu", {
                         autoReportInteractive: !0
                     })], t)
                 }(a.Component)),
-                L = function(e) {
+                B = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onClickEmote = function(e) {
@@ -11923,7 +11933,7 @@
                                     emoticon_set_id: e.setID,
                                     generated_by: n.props.emotePickerSource
                                 };
-                                s.n.track(j.SpadeEventType.EmotePickerClickthrough, t)
+                                s.o.track(U.SpadeEventType.EmotePickerClickthrough, t)
                             }
                         }, n.handleFilterChange = function(e) {
                             var t = e.target.value,
@@ -11944,7 +11954,7 @@
                             });
                             var r = Object(E.d)(),
                                 i = 0 === Object.keys(r).length ? void 0 : r;
-                            return Object(C.f)(n, t, i)
+                            return Object(T.f)(n, t, i)
                         }, n.state = {
                             filter: "",
                             filteredEmotes: [],
@@ -11959,7 +11969,7 @@
                                 generated_by: this.props.emotePickerSource,
                                 chatroom_id: this.props.roomID
                             };
-                            s.n.track(j.SpadeEventType.ViewedEmotePicker, e)
+                            s.o.track(U.SpadeEventType.ViewedEmotePicker, e)
                         }
                     }, t.prototype.render = function() {
                         return a.createElement(o.a, {
@@ -11970,54 +11980,54 @@
                             size: this.props.size ? this.props.size : l.w.Medium,
                             noTail: !0,
                             show: !0
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             className: "emote-picker"
-                        }, a.createElement(l.xb, {
+                        }, a.createElement(l.yb, {
                             padding: {
                                 x: 1,
                                 top: 1
                             },
                             borderTop: !0
-                        }, a.createElement(l.Pa, {
+                        }, a.createElement(l.Qa, {
                             autoFocus: !0,
                             onChange: this.handleFilterChange,
                             placeholder: Object(s.d)("Search for Emotes", "EmotePickerCard"),
-                            type: l.Ra.Text,
+                            type: l.Sa.Text,
                             value: this.state.inputValue
                         })), this.renderTabContent())))
                     }, t.prototype.renderTabContent = function() {
-                        return this.props.gqlError ? a.createElement(l.Va, null, a.createElement(l.V, {
+                        return this.props.gqlError ? a.createElement(l.Wa, null, a.createElement(l.W, {
                             "data-test-selector": "emote-picker-menu-error-text",
                             color: l.O.Error
-                        }, Object(s.d)("Unable to load available emotes.", "EmotePickerCard"))) : this.props.loading ? a.createElement(l.Va, {
+                        }, Object(s.d)("Unable to load available emotes.", "EmotePickerCard"))) : this.props.loading ? a.createElement(l.Wa, {
                             alignItems: l.f.Center,
-                            display: l.W.Flex,
+                            display: l.X.Flex,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: l.Ua.Center
-                        }, a.createElement(l.Xa, null)) : "" !== this.state.filter ? this.renderSearchContent() : a.createElement(R.b, {
+                            justifyContent: l.Va.Center
+                        }, a.createElement(l.Ya, null)) : "" !== this.state.filter ? this.renderSearchContent() : a.createElement(R.b, {
                             className: "emote-picker__tab-content"
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             padding: {
                                 x: 1
                             }
                         }, this.getFrequentEmotesGrid(), this.getChannelEmoteGrid(), this.getResidualEmoteGrids()))
                     }, t.prototype.getFrequentEmotesGrid = function() {
-                        return this.props.frequentlyUsedEmotes.length > 0 ? a.createElement(l.Va, {
+                        return this.props.frequentlyUsedEmotes.length > 0 ? a.createElement(l.Wa, {
                             key: "emote-grid--frequent-emotes",
-                            position: l.db.Relative,
+                            position: l.eb.Relative,
                             padding: {
                                 y: 1
                             },
                             className: "emote-picker__content-block"
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             padding: {
                                 x: 2
                             }
-                        }, a.createElement(l.V, {
+                        }, a.createElement(l.W, {
                             bold: !0,
                             color: l.O.Alt
-                        }, Object(s.d)("Frequently Used Emotes", "EmotePickerCard"))), a.createElement(x.a, {
+                        }, Object(s.d)("Frequently Used Emotes", "EmotePickerCard"))), a.createElement(j.a, {
                             emotes: this.props.frequentlyUsedEmotes,
                             onClickEmote: this.onClickEmote,
                             locked: !1
@@ -12026,21 +12036,21 @@
                         var e = this.props.channelSubscriptionProducts.reduce(function(e, t) {
                             return e.concat(t.emotes)
                         }, []);
-                        return e.length > 0 ? a.createElement(l.Va, {
+                        return e.length > 0 ? a.createElement(l.Wa, {
                             key: "emote-grid--channel-emotes",
-                            position: l.db.Relative,
+                            position: l.eb.Relative,
                             padding: {
                                 y: 1
                             },
                             className: "emote-picker__content-block"
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             padding: {
                                 x: 2
                             }
-                        }, a.createElement(l.V, {
+                        }, a.createElement(l.W, {
                             bold: !0,
                             color: l.O.Alt
-                        }, Object(s.d)("ThisChannel Placeholder", "EmotePickerCard"))), a.createElement(x.a, {
+                        }, Object(s.d)("ThisChannel Placeholder", "EmotePickerCard"))), a.createElement(j.a, {
                             emotes: e,
                             onClickEmote: this.onClickEmote,
                             locked: !1
@@ -12060,69 +12070,69 @@
                             "0" === e.setID ? t.push(e) : n.push(e)
                         });
                         var r = [];
-                        return n.length > 0 && r.push(a.createElement(l.Va, {
+                        return n.length > 0 && r.push(a.createElement(l.Wa, {
                             key: "emote-grid--non-global-emotes",
-                            position: l.db.Relative,
+                            position: l.eb.Relative,
                             padding: {
                                 y: 1
                             },
                             className: "emote-picker__content-block"
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             padding: {
                                 x: 2
                             }
-                        }, a.createElement(l.V, {
+                        }, a.createElement(l.W, {
                             bold: !0,
                             color: l.O.Alt
-                        }, Object(s.d)("Placeholder for Residual Emotes", "EmotePickerCard"))), a.createElement(x.a, {
+                        }, Object(s.d)("Placeholder for Residual Emotes", "EmotePickerCard"))), a.createElement(j.a, {
                             emotes: n,
                             onClickEmote: this.onClickEmote,
                             locked: !1
-                        }))), t.length > 0 && r.push(a.createElement(l.Va, {
+                        }))), t.length > 0 && r.push(a.createElement(l.Wa, {
                             key: "emote-grid--global-emotes",
-                            position: l.db.Relative,
+                            position: l.eb.Relative,
                             padding: {
                                 y: 1
                             },
                             className: "emote-picker__content-block"
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             padding: {
                                 x: 2
                             }
-                        }, a.createElement(l.V, {
+                        }, a.createElement(l.W, {
                             bold: !0,
                             color: l.O.Alt
-                        }, Object(s.d)("Global Twitch Emotes", "EmotePickerCard"))), a.createElement(x.a, {
+                        }, Object(s.d)("Global Twitch Emotes", "EmotePickerCard"))), a.createElement(j.a, {
                             emotes: t,
                             onClickEmote: this.onClickEmote,
                             locked: !1
                         }))), a.createElement(a.Fragment, null, r)
                     }, t.prototype.renderSearchContent = function() {
                         var e;
-                        return e = this.state.filteredEmotes.length > 0 ? a.createElement(l.V, null, Object(s.d)('Search Results for "{inputValue}"', {
+                        return e = this.state.filteredEmotes.length > 0 ? a.createElement(l.W, null, Object(s.d)('Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
-                        }, "EmotePickerCard")) : a.createElement(l.V, null, Object(s.d)('No Search Results for "{inputValue}"', {
+                        }, "EmotePickerCard")) : a.createElement(l.W, null, Object(s.d)('No Search Results for "{inputValue}"', {
                             inputValue: this.state.inputValue
                         }, "EmotePickerCard")), a.createElement(R.b, {
                             className: "emote-picker__tab-content"
-                        }, a.createElement(l.Va, {
+                        }, a.createElement(l.Wa, {
                             padding: 1
-                        }, a.createElement(l.Va, {
-                            position: l.db.Relative,
+                        }, a.createElement(l.Wa, {
+                            position: l.eb.Relative,
                             padding: {
                                 top: 1,
                                 bottom: 2
                             },
                             className: "emote-picker__content-block"
-                        }, e, a.createElement(x.a, {
+                        }, e, a.createElement(j.a, {
                             emotes: this.state.filteredEmotes,
                             onClickEmote: this.onClickEmote,
                             locked: !1
                         }))))
                     }, t
                 }(a.Component),
-                B = n("DB+C"),
-                z = function(e) {
+                z = n("DB+C"),
+                V = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         n.handleSubEvent = function(e) {
@@ -12172,7 +12182,7 @@
                     }, t.prototype.render = function() {
                         if (!this.props.visible) return null;
                         var e = this.props.channelData && this.props.channelData.user && this.props.channelData.user.campaignProperties && this.props.channelData.user.campaignProperties.domains && this.props.channelData.user.campaignProperties.domains.length > 0 || !1,
-                            t = a.createElement(V, {
+                            t = a.createElement(L, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 availableUpsells: this.state.availableUpsells,
                                 channelTabVisible: this.state.channelTabVisible,
@@ -12191,7 +12201,7 @@
                                 subscribeTexts: this.state.subscribeTexts,
                                 toggleVisibility: this.props.toggleVisibility
                             }),
-                            n = a.createElement(L, {
+                            n = a.createElement(B, {
                                 allEmoteSets: this.state.allEmoteSets,
                                 channelID: this.props.channelOwnerID,
                                 channelSubscriptionProducts: this.state.channelSubscriptionProducts,
@@ -12236,16 +12246,16 @@
                                 var o = a[r];
                                 o && o.id && n.ownedSetIDs.add(parseInt(o.id, 10))
                             }
-                            n.allEmoteSets = Object(C.a)(e.emoteSetsData.emoteSets)
+                            n.allEmoteSets = Object(T.a)(e.emoteSetsData.emoteSets)
                         }
                         if (e.channelData && e.channelData.user) {
                             var l = void 0;
                             e.channelData.user.self && e.channelData.user.self.subscriptionBenefit && (l = e.channelData.user.self.subscriptionBenefit.platform), n.availableUpsells = function(e, t, n) {
                                 var r = [];
-                                return !n || n !== T.b.IOS && n !== T.b.Android ? (t.forEach(function(n, a) {
+                                return !n || n !== C.b.IOS && n !== C.b.Android ? (t.forEach(function(n, a) {
                                     var o = n.price;
                                     0 === a && Object(D.g)(t) && (o = Object(D.c)(t[0])), n.emotes && n.emotes.length && n.emoteSetID && !e.has(parseInt(n.emoteSetID, 10)) && r.push(i.__assign({}, n, {
-                                        emotes: Object(C.e)(n.emotes, n.emoteSetID),
+                                        emotes: Object(T.e)(n.emotes, n.emoteSetID),
                                         level: a,
                                         price: o
                                     }))
@@ -12261,7 +12271,7 @@
                                     }) : t
                                 }).map(function(e) {
                                     return i.__assign({}, e, {
-                                        emotes: Object(C.e)(e.emotes, e.emoteSetID)
+                                        emotes: Object(T.e)(e.emotes, e.emoteSetID)
                                     })
                                 })
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts), n.subscribeTexts = function(e) {
@@ -12284,7 +12294,7 @@
                                         emotes: []
                                     }], r = 0, i = t; r < i.length; r++) {
                                     var a = i[r];
-                                    a.emotes && a.emoteSetID && e.has(parseInt(a.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(C.e)(a.emotes, a.emoteSetID)))
+                                    a.emotes && a.emoteSetID && e.has(parseInt(a.emoteSetID, 10)) && (n[0].emotes = n[0].emotes.concat(Object(T.e)(a.emotes, a.emoteSetID)))
                                 }
                                 return n[0].emotes.length ? n : []
                             }(n.ownedSetIDs, e.channelData.user.subscriptionProducts)
@@ -12293,10 +12303,10 @@
                     }, t.prototype.subscriptionProductHasEmotes = function(e) {
                         return void 0 !== e.emoteSetID && !!e.emotes && e.emotes.length > 0
                     }, t.prototype.checkAndDisplaySubscriptionCheckout = function() {
-                        if ("yes" === s.o.experiments.getAssignment(y.b.InstreamCheckout)) {
-                            var e = s.m.get(v.b, ""),
-                                t = s.m.get(v.c, ""),
-                                n = s.m.get(v.a, ""),
+                        if ("yes" === s.p.experiments.getAssignment(y.b.InstreamCheckout)) {
+                            var e = s.n.get(v.b, ""),
+                                t = s.n.get(v.c, ""),
+                                n = s.n.get(v.a, ""),
                                 r = Number(n);
                             e && (this.props.channelData && this.props.channelData.user && this.props.channelData.user.subscriptionProducts.map(function(e) {
                                 return e.name
@@ -12325,13 +12335,13 @@
                             return Object(b.d)(m.a, {
                                 component: "CheckoutModal",
                                 loader: function() {
-                                    return Promise.all([n.e(0), n.e(198)]).then(n.bind(null, "KJv/"))
+                                    return Promise.all([n.e(0), n.e(192)]).then(n.bind(null, "KJv/"))
                                 },
                                 componentProps: t
                             })
                         }
                     }, e)
-                }), Object(h.a)(B, {
+                }), Object(h.a)(z, {
                     name: "channelData",
                     skip: function(e) {
                         return !e.channelOwnerID
@@ -12343,7 +12353,7 @@
                             }
                         }
                     }
-                }), Object(f.a)([{
+                }), Object(g.a)([{
                     topic: function(e) {
                         return "user-subscribe-events-v1." + e.currentUserID
                     },
@@ -12353,7 +12363,7 @@
                     skip: function(e) {
                         return !e.currentUserID
                     }
-                }]), Object(O.c)("EmotePicker"), Object(g.a)())(z),
+                }]), Object(O.b)("EmotePicker"), Object(f.a)())(V),
                 G = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -12402,7 +12412,7 @@
                             visible: this.state.isEmotePickerMenuVisible,
                             direction: this.props.direction
                         }));
-                        var n = a.createElement(l.Va, i.__assign({
+                        var n = a.createElement(l.Wa, i.__assign({
                             className: "emote-picker-and-button"
                         }, this.layoutProps), e, t);
                         return this.props.shouldCloseOnClickOut ? a.createElement(o.a, {
@@ -12429,24 +12439,24 @@
                         configurable: !0
                     }), t
                 }(a.Component),
-                q = Object(O.c)("EmotePicker")(G);
-            var $ = Object(r.connect)(function(e) {
+                q = Object(O.b)("EmotePicker")(G);
+            var X = Object(r.connect)(function(e) {
                 return {
                     firstPageLoaded: e.session.firstPageLoaded
                 }
             })(q);
             n.d(t, "a", function() {
-                return $
+                return X
             }), n.d(t, "c", function() {
                 return H
             }), n.d(t, !1, function() {
-                return T.a
+                return C.a
             }), n.d(t, !1, function() {
-                return T.d
+                return C.d
             }), n.d(t, !1, function() {
-                return T.c
+                return C.c
             }), n.d(t, !1, function() {
-                return T.b
+                return C.b
             }), n.d(t, "b", function() {
                 return c
             })
@@ -12472,8 +12482,8 @@
                 void 0 === t && (t = {});
                 var n = t.cheers,
                     u = t.emotes,
-                    f = t.links,
-                    g = t.mentions,
+                    g = t.links,
+                    f = t.mentions,
                     v = m(e),
                     k = "",
                     b = 0;
@@ -12484,9 +12494,9 @@
                     if (m) return e.concat(m);
                     var y = n && Object(r.d)(k, n);
                     if (y) return e.concat(y);
-                    var S = f && Object(o.a)(k, f);
+                    var S = g && Object(o.a)(k, g);
                     if (S) return e.concat(S);
-                    var _ = g && function(e, t) {
+                    var _ = f && function(e, t) {
                         var n = e.match(c);
                         if (!n) return d(e, t.sessionUser) ? [{
                             type: i.a.CurrentUserHighlight,
@@ -12505,7 +12515,7 @@
                                 currentUserMentionRelation: p
                             }
                         }), u.length && r.push(Object(l.a)(u)), r
-                    }(k, g);
+                    }(k, f);
                     return _ ? e.concat([_]) : e.concat(Object(l.a)(k))
                 }, []))
             }
@@ -12553,19 +12563,19 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.resizeAnimationFrame = 0, t.messages = {
                             noMatches: Object(c.d)("No matches.", "AutocompleteBalloon")
-                        }, t.logger = c.j.withCategory("AutocompleteBalloon"), t.renderMatches = function() {
+                        }, t.logger = c.k.withCategory("AutocompleteBalloon"), t.renderMatches = function() {
                             return t.props.matches.map(function(e, n) {
                                 var r = t.state.selectedMatch,
                                     i = r && r.replacement === e.replacement,
                                     a = l("autocomplete-balloon__item", {
                                         "autocomplete-balloon__item--selected": i
                                     });
-                                return o.createElement(p.Va, {
+                                return o.createElement(p.Wa, {
                                     key: "autocomplete-match-" + n,
                                     refDelegate: i ? t.focusOnOption : void 0,
                                     "data-test-selector": m
-                                }, o.createElement(p.Na, {
-                                    display: p.W.Block,
+                                }, o.createElement(p.Oa, {
+                                    display: p.X.Block,
                                     fullWidth: !0
                                 }, o.createElement("button", {
                                     onMouseEnter: t.handleMatchMouseEnter,
@@ -12573,11 +12583,11 @@
                                     "data-a-target": e.replacement,
                                     "data-click-index": n,
                                     onClick: t.onMatchClick
-                                }, o.createElement(p.Va, {
+                                }, o.createElement(p.Wa, {
                                     padding: {
                                         x: .5
                                     },
-                                    display: p.W.Flex,
+                                    display: p.X.Flex,
                                     alignItems: p.f.Center
                                 }, e.element))))
                             })
@@ -12652,16 +12662,16 @@
                         })
                     }, t.prototype.render = function() {
                         var e;
-                        return e = 0 === this.props.matches.length ? o.createElement(p.Va, {
+                        return e = 0 === this.props.matches.length ? o.createElement(p.Wa, {
                             padding: {
                                 x: .5
                             },
                             "data-test-selector": "autocomplete-balloon-no-matches"
-                        }, o.createElement(p.V, {
-                            type: p.Nb.Span,
+                        }, o.createElement(p.W, {
+                            type: p.Ob.Span,
                             color: p.O.Alt2
-                        }, this.messages.noMatches)) : this.renderMatches(), o.createElement(p.Va, {
-                            position: p.db.Relative
+                        }, this.messages.noMatches)) : this.renderMatches(), o.createElement(p.Wa, {
+                            position: p.eb.Relative
                         }, o.createElement(d.a, {
                             onClickOut: this.props.onDismiss
                         }, o.createElement(p.u, {
@@ -12669,26 +12679,26 @@
                             "data-a-target": "autocomplete-balloon",
                             "data-test-selector": "autocomplete-balloon",
                             show: !0
-                        }, o.createElement(p.Na, {
+                        }, o.createElement(p.Oa, {
                             "data-test-selector": "autocomplete-matches-container",
                             className: "autocomplete-balloon",
-                            overflow: p.Ya.Hidden,
-                            display: p.W.Flex,
-                            flexDirection: p.Y.Column
+                            overflow: p.Za.Hidden,
+                            display: p.X.Flex,
+                            flexDirection: p.Z.Column
                         }, o.createElement("div", {
                             style: {
                                 maxHeight: this.state.containerHeight
                             },
                             ref: this.setAutocompleteBalloonElement
-                        }, o.createElement(u.b, null, o.createElement(p.Va, {
+                        }, o.createElement(u.b, null, o.createElement(p.Wa, {
                             padding: {
                                 y: 1
                             }
                         }, e)))))))
                     }, t
                 }(o.Component),
-                f = n("uu1w"),
-                g = n("2xye"),
+                g = n("uu1w"),
+                f = n("2xye"),
                 v = {
                     Chat: "chat",
                     Feed: "feed",
@@ -12699,14 +12709,14 @@
                 y = "@",
                 S = function(e) {
                     switch (e) {
-                        case f.a.Emote:
+                        case g.a.Emote:
                             return k;
-                        case f.a.Hashtag:
+                        case g.a.Hashtag:
                             return b;
-                        case f.a.Mention:
+                        case g.a.Mention:
                             return y;
                         default:
-                            return void c.j.warn("Chat Suggestions tracking was passed an unknown autocomplete type.")
+                            return void c.k.warn("Chat Suggestions tracking was passed an unknown autocomplete type.")
                     }
                 },
                 _ = function(e) {
@@ -12718,7 +12728,7 @@
                             source: e.source,
                             start_character: t
                         };
-                        c.n.track(g.SpadeEventType.ChatSuggestionComplete, n)
+                        c.o.track(f.SpadeEventType.ChatSuggestionComplete, n)
                     }
                 };
             ! function(e) {
@@ -12728,7 +12738,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            autocompleteType: f.a.None,
+                            autocompleteType: g.a.None,
                             matchedCursorPosition: 0,
                             matches: null,
                             value: ""
@@ -12781,7 +12791,7 @@
                             return t.resetDisplayState(), !1
                         }, t.resetDisplayState = function(e, n) {
                             var r = i.__assign({}, t.state, {
-                                autocompleteType: f.a.None,
+                                autocompleteType: g.a.None,
                                 matches: null
                             }, e || {});
                             t.setState(r, n)
@@ -12832,7 +12842,7 @@
                                     source: e.source,
                                     start_character: t
                                 };
-                                c.n.track(g.SpadeEventType.ChatSuggestion, n)
+                                c.o.track(f.SpadeEventType.ChatSuggestion, n)
                             }
                         }({
                             autocompleteType: t.autocompleteType,
@@ -12847,14 +12857,14 @@
                             refDelegate: this.setComponentRefDelegate,
                             value: this.state.value
                         });
-                        return o.createElement(p.Va, null, this.state.matches && o.createElement(h, {
+                        return o.createElement(p.Wa, null, this.state.matches && o.createElement(h, {
                             matches: this.state.matches,
                             onMatchSelect: this.insertReplacement,
                             onDismiss: this.resetDisplayState,
                             containerElement: this.props.containerElement
-                        }), this.props.componentType === r.Input ? o.createElement(p.Pa, i.__assign({}, e, {
-                            type: e.type || p.Ra.Text
-                        })) : o.createElement(p.Kb, i.__assign({}, e)), this.props.children)
+                        }), this.props.componentType === r.Input ? o.createElement(p.Qa, i.__assign({}, e, {
+                            type: e.type || p.Sa.Text
+                        })) : o.createElement(p.Lb, i.__assign({}, e)), this.props.children)
                     }, t.prototype.getValue = function() {
                         return this.state.value
                     }, t.prototype.setValue = function(e) {
@@ -12865,12 +12875,12 @@
                         registerAutocompleteProvider: a.func
                     }, t
                 }(o.Component),
-                C = n("lZdE"),
-                T = n("OpME"),
+                T = n("lZdE"),
+                C = n("OpME"),
                 D = (n("gDzh"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.autocompleteType = f.a.Emote, t.canBeTriggeredByTab = !1, t.getMatches = function(e) {
+                        return t.autocompleteType = g.a.Emote, t.canBeTriggeredByTab = !1, t.getMatches = function(e) {
                             return e.startsWith(":") ? e.length < 3 ? null : t.getMatchedEmotes(e) : null
                         }, t.getMatchedEmotes = function(e) {
                             var n = t.state.hydratedEmotes;
@@ -12886,7 +12896,7 @@
                                 }).reduce(function(e, t) {
                                     return e.concat(t)
                                 }, []);
-                            return i = Object(T.d)(i), (i = Object(T.f)(i, r)).map(function(e) {
+                            return i = Object(C.d)(i), (i = Object(C.f)(i, r)).map(function(e) {
                                 return {
                                     current: ":" + r,
                                     replacement: e.token,
@@ -12894,14 +12904,14 @@
                                 }
                             })
                         }, t.doesEmoteMatchTerm = function(e, t) {
-                            var n = new RegExp("^" + Object(C.a)(t), "i");
+                            var n = new RegExp("^" + Object(T.a)(t), "i");
                             if (e.token.match(n)) return !0;
-                            var r = new RegExp("" + Object(C.a)(t.charAt(0)).toUpperCase()),
-                                i = new RegExp("^" + Object(C.a)(t.slice(1)), "i"),
+                            var r = new RegExp("" + Object(T.a)(t.charAt(0)).toUpperCase()),
+                                i = new RegExp("^" + Object(T.a)(t.slice(1)), "i"),
                                 a = e.token.match(r);
                             return !!(a && a.index && e.token.slice(a.index + 1).match(i))
                         }, t.renderEmoteSuggestion = function(e) {
-                            return [o.createElement(p.Va, {
+                            return [o.createElement(p.Wa, {
                                 padding: {
                                     right: .5
                                 },
@@ -12910,8 +12920,8 @@
                             }, o.createElement("img", {
                                 className: "emote-autocomplete-provider__image",
                                 srcSet: e.srcSet
-                            })), o.createElement(p.V, {
-                                type: p.Nb.Span,
+                            })), o.createElement(p.W, {
+                                type: p.Ob.Span,
                                 key: "emote-text-" + e.id,
                                 ellipsis: !0
                             }, e.token)]
@@ -12920,7 +12930,7 @@
                                 var a = i[r];
                                 a && a.id && a.emotes && n.push({
                                     id: a.id,
-                                    emotes: Object(T.b)(a.emotes)
+                                    emotes: Object(C.b)(a.emotes)
                                 })
                             }
                             t.setState({
@@ -13310,17 +13320,17 @@
                     return n.e(165).then(n.bind(null, "bsVm"))
                 }, "PartnershipSignupPage"),
                 u = function() {
-                    return r.createElement(c.Va, {
-                        display: c.W.Flex,
-                        flexDirection: c.Y.Column,
-                        flexWrap: c.Z.NoWrap,
+                    return r.createElement(c.Wa, {
+                        display: c.X.Flex,
+                        flexDirection: c.Z.Column,
+                        flexWrap: c.Aa.NoWrap,
                         fullHeight: !0,
                         fullWidth: !0
-                    }, r.createElement(o.a, null), r.createElement(s.a, null), r.createElement(c.Na, {
+                    }, r.createElement(o.a, null), r.createElement(s.a, null), r.createElement(c.Oa, {
                         fullHeight: !0,
                         fullWidth: !0
-                    }, r.createElement("main", null, r.createElement(a.b, null, r.createElement(c.Va, {
-                        position: c.db.Relative
+                    }, r.createElement("main", null, r.createElement(a.b, null, r.createElement(c.Wa, {
+                        position: c.eb.Relative
                     }, r.createElement(d, null))), r.createElement(l.Whispers, null))))
                 };
             n.d(t, "PartnerSignupRoot", function() {
@@ -13356,9 +13366,9 @@
             }), n.d(t, "k", function() {
                 return E
             }), n.d(t, "m", function() {
-                return C
-            }), n.d(t, "i", function() {
                 return T
+            }), n.d(t, "i", function() {
+                return C
             }), n.d(t, "e", function() {
                 return D
             }), n.d(t, "d", function() {
@@ -13372,7 +13382,7 @@
             }), n.d(t, "q", function() {
                 return M
             }), n.d(t, "p", function() {
-                return U
+                return W
             });
             var r, i, a, o, s, l, c = n("mrSG"),
                 d = n("/7QA"),
@@ -13380,7 +13390,7 @@
                 p = n("mBWp");
 
             function m(e) {
-                d.o.tracking.track(u.SpadeEventType.WhisperThreadMod, {
+                d.p.tracking.track(u.SpadeEventType.WhisperThreadMod, {
                     conversation_id: e.threadID,
                     action: e.action
                 })
@@ -13394,7 +13404,7 @@
                             case 0:
                                 return [4, R()];
                             case 1:
-                                return t = n.sent(), d.o.tracking.track(u.SpadeEventType.WhisperIgnoreUser, {
+                                return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperIgnoreUser, {
                                     ui_context: e.context,
                                     from_login: t && t.login,
                                     ignored_login: e.targetUserLogin,
@@ -13406,7 +13416,7 @@
                 })
             }
 
-            function f(e, t) {
+            function g(e, t) {
                 return c.__awaiter(this, void 0, void 0, function() {
                     var n;
                     return c.__generator(this, function(r) {
@@ -13414,7 +13424,7 @@
                             case 0:
                                 return [4, R()];
                             case 1:
-                                return n = r.sent(), d.o.tracking.track(u.SpadeEventType.WhisperThreadMod, {
+                                return n = r.sent(), d.p.tracking.track(u.SpadeEventType.WhisperThreadMod, {
                                     conversation_id: e,
                                     action: t,
                                     login: n && n.login
@@ -13424,22 +13434,22 @@
                 })
             }
 
-            function g(e) {
-                d.o.tracking.track(u.SpadeEventType.WhisperAllThreadsMod, {
+            function f(e) {
+                d.p.tracking.track(u.SpadeEventType.WhisperAllThreadsMod, {
                     action: e
                 })
             }
 
             function v() {
-                g(i.MarkAllRead)
+                f(i.MarkAllRead)
             }
 
             function k() {
-                g(i.EnableDoNotDisturb)
+                f(i.EnableDoNotDisturb)
             }
 
             function b() {
-                g(i.DisableDoNotDisturb)
+                f(i.DisableDoNotDisturb)
             }
 
             function y(e, t) {
@@ -13452,11 +13462,11 @@
             }
 
             function S(e) {
-                f(e, s.MarkNotSpam)
+                g(e, s.MarkNotSpam)
             }
 
             function _(e) {
-                f(e, s.Archive)
+                g(e, s.Archive)
             }
 
             function E(e) {
@@ -13466,14 +13476,14 @@
                 })
             }
 
-            function C(e) {
+            function T(e) {
                 m({
                     threadID: e,
                     action: a.Unmute
                 })
             }
 
-            function T(e) {
+            function C(e) {
                 m({
                     threadID: e,
                     action: a.Expand
@@ -13502,7 +13512,7 @@
             }
 
             function I(e) {
-                d.o.tracking.track(u.SpadeEventType.WhisperThreadCreate, {
+                d.p.tracking.track(u.SpadeEventType.WhisperThreadCreate, {
                     conversation_id: e.threadID,
                     target_login: e.targetUserlogin,
                     source: "search_target_result",
@@ -13511,7 +13521,7 @@
             }
 
             function w(e) {
-                d.o.tracking.track(u.SpadeEventType.WhisperSearchClick, {
+                d.p.tracking.track(u.SpadeEventType.WhisperSearchClick, {
                     query: e.searchQuery,
                     source: "conversation_list",
                     rank: e.searchResultRank,
@@ -13530,13 +13540,13 @@
                                     case 0:
                                         e = null, i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, d.o.apollo.client.query({
+                                        return i.trys.push([1, 3, , 4]), [4, d.p.apollo.client.query({
                                             query: p
                                         })];
                                     case 2:
                                         return e = i.sent(), [3, 4];
                                     case 3:
-                                        return n = i.sent(), d.j.error(n, "Failed to make query for current user info in WhisperSent reporting"), [3, 4];
+                                        return n = i.sent(), d.k.error(n, "Failed to make query for current user info in WhisperSent reporting"), [3, 4];
                                     case 4:
                                         return r = e && e.data && e.data.currentUser, t(r), [2]
                                 }
@@ -13554,7 +13564,7 @@
                             case 0:
                                 return [4, R()];
                             case 1:
-                                return t = n.sent(), d.o.tracking.track(u.SpadeEventType.WhisperSent, {
+                                return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperSent, {
                                     to: e.targetUserLogin,
                                     from: t && t.login,
                                     player: "web",
@@ -13568,7 +13578,7 @@
                 })
             }
 
-            function U(e) {
+            function W(e) {
                 return c.__awaiter(this, void 0, void 0, function() {
                     var t;
                     return c.__generator(this, function(n) {
@@ -13576,7 +13586,7 @@
                             case 0:
                                 return [4, R()];
                             case 1:
-                                return t = n.sent(), d.o.tracking.track(u.SpadeEventType.WhisperReceived, {
+                                return t = n.sent(), d.p.tracking.track(u.SpadeEventType.WhisperReceived, {
                                     to: t && t.login,
                                     from: e.targetUserLogin,
                                     player: "web",
@@ -13604,6 +13614,48 @@
             function(e) {
                 e.Channel = "channel", e.Conversation = "conversation"
             }(l || (l = {}))
+        },
+        "x0+1": function(e, t, n) {
+            "use strict";
+            var r = n("mrSG"),
+                i = n("q1tI"),
+                a = n("/7QA"),
+                o = function(e) {
+                    function t() {
+                        var t = null !== e && e.apply(this, arguments) || this;
+                        return t.state = {
+                            alwaysShowMessage: !1
+                        }, t.renderBody = function() {
+                            return t.state.alwaysShowMessage ? t.props.messageBody : i.createElement("span", {
+                                key: "deleted",
+                                className: "chat-line__message--deleted"
+                            }, i.createElement("a", {
+                                href: "",
+                                onClick: t.alwaysShowMessage
+                            }, "<" + Object(a.d)("click to show", "MessageDeletedLine") + ">"))
+                        }, t.alwaysShowMessage = function(e) {
+                            e && e.preventDefault(), t.setState({
+                                alwaysShowMessage: !0
+                            })
+                        }, t
+                    }
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        var e = this.props,
+                            t = e.targetLogin,
+                            n = e.moderatorLogin;
+                        return n ? Object(a.d)("{moderatorLogin} deleted {targetLogin}'s message: {body}", {
+                            moderatorLogin: n,
+                            targetLogin: t,
+                            body: this.renderBody()
+                        }, "MessageDeletedLine") : Object(a.d)("A moderator deleted {targetLogin}'s message: {body}", {
+                            targetLogin: t,
+                            body: this.renderBody()
+                        }, "MessageDeletedLine")
+                    }, t
+                }(i.Component);
+            n.d(t, "a", function() {
+                return o
+            })
         },
         xXlL: function(e, t, n) {
             "use strict";

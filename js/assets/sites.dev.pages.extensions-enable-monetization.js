@@ -1,5 +1,5 @@
 (window.webpackJsonp = window.webpackJsonp || []).push([
-    [206], {
+    [200], {
         DrWK: function(e, t, n) {
             "use strict";
             n.r(t);
@@ -17,12 +17,12 @@
                 h = n("2xye"),
                 E = n("kRBY"),
                 f = n("GnwI"),
-                x = n("coZW"),
-                g = n("Ue10");
+                g = n("coZW"),
+                v = n("Ue10");
             ! function(e) {
                 e[e.ContinueButton = 0] = "ContinueButton", e[e.BackButton = 1] = "BackButton"
             }(o || (o = {}));
-            var v = function(e) {
+            var x = function(e) {
                 function t() {
                     return null !== e && e.apply(this, arguments) || this
                 }
@@ -34,9 +34,9 @@
                         t = a.parse(this.props.location.search),
                         n = t.extensionId,
                         i = t.projectId;
-                    return n && i && (e = "https://dev.twitch.tv/projects/" + n + "/files/" + i + "/edit"), r.createElement(g.lb, {
+                    return n && i && (e = "https://dev.twitch.tv/projects/" + n + "/files/" + i + "/edit"), r.createElement(v.mb, {
                         centered: !0
-                    }, r.createElement(g.Ha, null, r.createElement(g.P, {
+                    }, r.createElement(v.Ia, null, r.createElement(v.P, {
                         cols: {
                             default: 5,
                             xs: 12,
@@ -45,55 +45,55 @@
                             lg: 6,
                             xl: 4
                         }
-                    }, r.createElement(g.Va, {
-                        display: g.W.Flex,
-                        flexDirection: g.Y.Column
-                    }, r.createElement(g.xb, {
+                    }, r.createElement(v.Wa, {
+                        display: v.X.Flex,
+                        flexDirection: v.Z.Column
+                    }, r.createElement(v.yb, {
                         margin: {
                             bottom: 1
                         },
-                        display: g.W.Flex,
-                        flexDirection: g.Y.Row,
-                        alignItems: g.f.Center
-                    }, r.createElement(g.xb, {
+                        display: v.X.Flex,
+                        flexDirection: v.Z.Row,
+                        alignItems: v.f.Center
+                    }, r.createElement(v.yb, {
                         padding: {
                             right: 1
                         }
-                    }, r.createElement(g.mb, {
-                        asset: g.nb.LogoGlitch,
+                    }, r.createElement(v.nb, {
+                        asset: v.ob.LogoGlitch,
                         width: 50,
                         height: 50
-                    })), r.createElement(g.V, {
-                        type: g.Nb.H3
-                    }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(g.xb, {
+                    })), r.createElement(v.W, {
+                        type: v.Ob.H3
+                    }, Object(d.d)("Earn revenue as an extension developer!", "DevExtensionsEnableMonetization"))), r.createElement(v.yb, {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(g.V, {
-                        fontSize: g.Aa.Size4
-                    }, Object(d.d)('Hello! Thanks for your interest in extension monetization. To earn revenue for your account or business, you will need to complete a one-time onboarding. If this is a non-monetized extension, return to the previous extensions details screen and indicate "no".', "DevExtensionsEnableMonetization"))), r.createElement(g.xb, {
+                    }, r.createElement(v.W, {
+                        fontSize: v.Ba.Size4
+                    }, Object(d.d)('Hello! Thanks for your interest in extension monetization. To earn revenue for your account or business, you will need to complete a one-time onboarding. If this is a non-monetized extension, return to the previous extensions details screen and indicate "no".', "DevExtensionsEnableMonetization"))), r.createElement(v.yb, {
                         margin: {
                             bottom: 2
                         }
-                    }, r.createElement(g.V, {
-                        fontSize: g.Aa.Size4
-                    }, Object(d.d)("In most cases, the interview process takes five minutes. Once completed, you will be eligible to receive revenue for any extensions you create.", "DevExtensionsEnableMonetization"))), r.createElement(g.xb, {
+                    }, r.createElement(v.W, {
+                        fontSize: v.Ba.Size4
+                    }, Object(d.d)("In most cases, the interview process takes five minutes. Once completed, you will be eligible to receive revenue for any extensions you create.", "DevExtensionsEnableMonetization"))), r.createElement(v.yb, {
                         margin: {
                             bottom: 1
                         }
-                    }, r.createElement(g.z, {
+                    }, r.createElement(v.z, {
                         linkTo: "https://twitch.tv/" + this.props.user.login + "/dashboard/settings/revenue",
-                        onClick: Object(x.c)(x.a.ExtensionsEnableMonetizationContinue),
+                        onClick: Object(g.c)(g.a.ExtensionsEnableMonetizationContinue),
                         "data-test-selector": o.ContinueButton
-                    }, Object(d.d)("Continue to Onboarding", "DevExtensionsEnableMonetization"))), r.createElement(g.xb, {
+                    }, Object(d.d)("Continue to Onboarding", "DevExtensionsEnableMonetization"))), r.createElement(v.yb, {
                         margin: {
                             bottom: 3
                         }
-                    }, r.createElement(g.T, {
+                    }, r.createElement(v.U, {
                         to: e,
-                        onClick: Object(x.c)(x.a.ExtensionsEnableMonetizationBack),
+                        onClick: Object(g.c)(g.a.ExtensionsEnableMonetizationBack),
                         "data-test-selector": o.BackButton
-                    }, Object(d.d)("Or, return to Extension details page", "DevExtensionsEnableMonetization"))))), r.createElement(g.P, {
+                    }, Object(d.d)("Or, return to Extension details page", "DevExtensionsEnableMonetization"))))), r.createElement(v.P, {
                         cols: {
                             default: 4,
                             xs: 8,
@@ -102,33 +102,33 @@
                             lg: 4,
                             xl: 4
                         }
-                    }, r.createElement(g.xb, {
-                        background: g.r.Alt2
-                    }, r.createElement(g.Va, {
+                    }, r.createElement(v.yb, {
+                        background: v.r.Alt2
+                    }, r.createElement(v.Wa, {
                         padding: {
                             top: 1,
                             left: 2,
                             right: 2
                         }
-                    }, r.createElement(g.V, {
-                        fontSize: g.Aa.Size5
+                    }, r.createElement(v.W, {
+                        fontSize: v.Ba.Size5
                     }, Object(d.d)("Hey, listen! During Step 3 of the onboarding process, you will need to supply tax information of the individual or business that will accept any revenue earned on extensions created with this account. <x:link>Learn More</x:link>.", {
                         "x:link": function(e) {
-                            return r.createElement(g.T, {
+                            return r.createElement(v.U, {
                                 to: "https://dev.twitch.tv/docs/extensions/bits/",
-                                onClick: Object(x.c)(x.a.ExtensionsEnableMonetizationLearnMore)
+                                onClick: Object(g.c)(g.a.ExtensionsEnableMonetizationLearnMore)
                             }, e)
                         }
-                    }, "DevExtensionsEnableMonetization"))), r.createElement(g.Va, {
-                        display: g.W.Block,
-                        textAlign: g.Jb.Center,
+                    }, "DevExtensionsEnableMonetization"))), r.createElement(v.Wa, {
+                        display: v.X.Block,
+                        textAlign: v.Kb.Center,
                         padding: {
                             left: 2,
                             right: 2,
                             bottom: 1,
                             top: 1
                         }
-                    }, r.createElement(g.S, {
+                    }, r.createElement(v.S, {
                         src: u.a,
                         alt: Object(d.d)("Tax Information Interview", "DevExtensionsEnableMonetization")
                     }))))))
@@ -139,12 +139,12 @@
                     isLoggedIn: Object(E.f)(e),
                     user: Object(E.e)(e)
                 }
-            }, null), Object(f.c)("DevExtensionsEnableMonetization", {
+            }, null), Object(f.b)("DevExtensionsEnableMonetization", {
                 autoReportInteractive: !0,
                 destination: b.a.DevSiteExtensionsEnableMonetization
             }), Object(m.a)({
                 location: h.PageviewLocation.DevSiteExtensionsEnableMonetization
-            }))(v);
+            }))(x);
             n.d(t, "DevExtensionsEnableMonetizationPage", function() {
                 return k
             })
@@ -174,7 +174,7 @@
                                         c = a.medium,
                                         l = a.content_index,
                                         d = a.email_id;
-                                    s.o.tracking.trackPageview(o.__assign({
+                                    s.p.tracking.trackPageview(o.__assign({
                                         content: r,
                                         medium: c,
                                         content_index: l,
@@ -182,7 +182,7 @@
                                         location: e.location
                                     }, t))
                                 }
-                            }, s.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
+                            }, s.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : s.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), i
                         }
                         return o.__extends(r, n), r.prototype.componentDidMount = function() {
                             var e = this;

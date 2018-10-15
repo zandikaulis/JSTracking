@@ -8,8 +8,8 @@
                 r = n("/7QA"),
                 a = n("ZDlU"),
                 o = n("7PeK"),
-                l = n("c0Zc"),
-                p = n("Ww25"),
+                p = n("c0Zc"),
+                l = n("Ww25"),
                 c = n("EpBn"),
                 u = n("Ue10"),
                 d = n("Ideu"),
@@ -20,7 +20,7 @@
                             disabled: !1,
                             error: !1,
                             selectedValue: e.props.initialValue
-                        }, e.appSettings = r.o.integrations.appSettings, e.onChange = function(t) {
+                        }, e.appSettings = r.p.integrations.appSettings, e.onChange = function(t) {
                             return s.__awaiter(e, void 0, void 0, function() {
                                 var e, n, i, r;
                                 return s.__generator(this, function(s) {
@@ -73,22 +73,22 @@
                                 selected: this.state.selectedValue === d.AppSettingsIntegrationCloseOption.Close
                             }];
                         return i.createElement(c.a, {
-                            orientation: u.Da.Horizontal,
+                            orientation: u.Ea.Horizontal,
                             label: Object(r.d)("When I Close the App", "DesktopSettingCloseOption"),
                             error: this.state.error
-                        }, i.createElement(u.Va, {
-                            display: u.W.Flex,
-                            flexDirection: u.Y.Row
+                        }, i.createElement(u.Wa, {
+                            display: u.X.Flex,
+                            flexDirection: u.Z.Row
                         }, n.map(function(n) {
                             var s = "desktop-close-option:" + n.label;
-                            return i.createElement(u.Va, {
+                            return i.createElement(u.Wa, {
                                 key: s,
                                 margin: {
                                     right: 2
                                 },
-                                display: u.W.Flex,
-                                flexDirection: u.Y.Row
-                            }, i.createElement(u.jb, {
+                                display: u.X.Flex,
+                                flexDirection: u.Z.Row
+                            }, i.createElement(u.kb, {
                                 checked: n.selected,
                                 value: n.value,
                                 label: n.label,
@@ -97,7 +97,7 @@
                                 disabled: e,
                                 "data-test-selector": "desktop-close-option-radio:" + n.value
                             }))
-                        })), i.createElement(p.a, {
+                        })), i.createElement(l.a, {
                             text: Object(r.d)("What Twitch should do when you close its window.", "DesktopSettingCloseOption")
                         }))
                     }, e
@@ -110,7 +110,7 @@
                             checked: e.props.initialValue,
                             disabled: !1,
                             error: !1
-                        }, e.appSettings = r.o.integrations.appSettings, e.onChanged = function(t) {
+                        }, e.appSettings = r.p.integrations.appSettings, e.onChanged = function(t) {
                             return s.__awaiter(e, void 0, void 0, function() {
                                 var e, n, i, a;
                                 return s.__generator(this, function(s) {
@@ -132,7 +132,7 @@
                                                 error: i
                                             }), [3, 4];
                                         case 3:
-                                            return a = s.sent(), r.j.error(a, "Error settings Desktop startup preference"), this.setState({
+                                            return a = s.sent(), r.k.error(a, "Error settings Desktop startup preference"), this.setState({
                                                 disabled: !1,
                                                 error: !0
                                             }), [3, 4];
@@ -163,7 +163,7 @@
                             checked: e.props.initialValue,
                             disabled: !1,
                             error: !1
-                        }, e.appSettings = r.o.integrations.appSettings, e.onChanged = function(t) {
+                        }, e.appSettings = r.p.integrations.appSettings, e.onChanged = function(t) {
                             return s.__awaiter(e, void 0, void 0, function() {
                                 var e, n, i, a;
                                 return s.__generator(this, function(s) {
@@ -185,7 +185,7 @@
                                                 error: i
                                             }), [3, 4];
                                         case 3:
-                                            return a = s.sent(), r.j.error(a, "Error settings Desktop startup preference"), this.setState({
+                                            return a = s.sent(), r.k.error(a, "Error settings Desktop startup preference"), this.setState({
                                                 disabled: !1,
                                                 error: !0
                                             }), [3, 4];
@@ -218,10 +218,10 @@
                                 return s.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
-                                            if (!r.o.integrations.appSettings || !r.o.integrations.appSettings.get) return [3, 4];
+                                            if (!r.p.integrations.appSettings || !r.p.integrations.appSettings.get) return [3, 4];
                                             e.label = 1;
                                         case 1:
-                                            return e.trys.push([1, 3, , 4]), [4, r.o.integrations.appSettings.get()];
+                                            return e.trys.push([1, 3, , 4]), [4, r.p.integrations.appSettings.get()];
                                         case 2:
                                             return t = e.sent(), this.setState({
                                                 settings: t.settings
@@ -245,7 +245,7 @@
                         });
                         if (!this.state.settings) return null;
                         var t = this.state.settings;
-                        return i.createElement(i.Fragment, null, i.createElement(l.a, {
+                        return i.createElement(i.Fragment, null, i.createElement(p.a, {
                             title: Object(r.d)("Preferences", "SettingsDesktopPage")
                         }), i.createElement(o.a, null, t.closeOption && i.createElement(g, {
                             initialValue: t.closeOption.value

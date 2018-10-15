@@ -385,15 +385,15 @@
                     "^&lt;\\]$": "<]",
                     "^&gt;\\($": ">("
                 },
-                c = ["1.0", "2.0", "3.0"],
-                l = new Set([457, 33, 42, 0]);
+                l = ["1.0", "2.0", "3.0"],
+                c = new Set([457, 33, 42, 0]);
 
             function s(e) {
                 for (var t = [], n = function(e) {
                         if (!e || !e.id || !e.token) return "continue";
                         var n = f(e.token),
                             i = o[n] || n,
-                            r = c.reduce(function(t, n) {
+                            r = l.reduce(function(t, n) {
                                 var a = t;
                                 return a && (a = a.concat(", ")), a.concat("https://static-cdn.jtvnw.net/emoticons/v1/" + e.id + "/" + n + " " + n + "x")
                             }, "");
@@ -433,9 +433,9 @@
                         for (var r = {
                                 id: i.id,
                                 emotes: []
-                            }, o = 0, c = i.emotes; o < c.length; o++) {
-                            var l = c[o];
-                            l && l.id && l.token && r.emotes.push(l)
+                            }, o = 0, l = i.emotes; o < l.length; o++) {
+                            var c = l[o];
+                            c && c.id && c.token && r.emotes.push(c)
                         }
                         t.push(r)
                     }
@@ -451,7 +451,7 @@
                             id: r.id,
                             emotes: d(m(r.emotes), r.id)
                         };
-                        l.has(parseInt(r.id, 10)) ? t.push(o) : n.push(o)
+                        c.has(parseInt(r.id, 10)) ? t.push(o) : n.push(o)
                     }
                 }
                 return n.concat(t)
@@ -464,18 +464,18 @@
                 g = function(e, t, n) {
                     var a = n || r.d,
                         o = [],
-                        c = [],
                         l = [],
+                        c = [],
                         s = new RegExp("^" + Object(i.a)(t), "i");
                     return e.forEach(function(e) {
-                        a[e.token] ? l.push(e) : e.token.match(s) ? o.push(e) : c.push(e)
+                        a[e.token] ? c.push(e) : e.token.match(s) ? o.push(e) : l.push(e)
                     }), o.sort(function(e, t) {
                         return e.token < t.token ? -1 : e.token > t.token ? 1 : 0
-                    }), c.sort(function(e, t) {
-                        return e.token < t.token ? -1 : e.token > t.token ? 1 : 0
                     }), l.sort(function(e, t) {
+                        return e.token < t.token ? -1 : e.token > t.token ? 1 : 0
+                    }), c.sort(function(e, t) {
                         return a[t.token].count - a[e.token].count
-                    }), l.concat(o).concat(c)
+                    }), c.concat(o).concat(l)
                 },
                 v = function(e) {
                     var t = {};
@@ -491,8 +491,8 @@
                 i = n("fvjX"),
                 r = n("1/iK"),
                 o = n("y5D0"),
-                c = n("kRBY"),
-                l = n("mrSG"),
+                l = n("kRBY"),
+                c = n("mrSG"),
                 s = n("q1tI"),
                 d = n("/7QA"),
                 m = n("ZDlU"),
@@ -506,95 +506,95 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderBadge = function(e) {
-                            return s.createElement(k.Va, {
+                            return s.createElement(k.Wa, {
                                 key: e.id,
                                 margin: {
                                     bottom: 2
                                 }
                             }, s.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, s.createElement(k.xb, {
+                            }, s.createElement(k.yb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
-                                display: k.W.Flex,
+                                display: k.X.Flex,
                                 padding: 2,
                                 border: !0
-                            }, s.createElement(k.Na, {
+                            }, s.createElement(k.Oa, {
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, s.createElement("img", {
                                 src: e.imageURL,
                                 title: e.title,
                                 alt: e.title
-                            })))), s.createElement(k.V, {
-                                type: k.Nb.Strong
+                            })))), s.createElement(k.W, {
+                                type: k.Ob.Strong
                             }, e.title))
                         }, t
                     }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.loading) return s.createElement(k.Xa, {
+                    return c.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.loading) return s.createElement(k.Ya, {
                             fillContent: !0
                         });
                         if (!this.props.badges) return null;
                         var e = this.props.badges,
                             t = e.map(this.renderBadge);
-                        return s.createElement(k.Va, {
+                        return s.createElement(k.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }, s.createElement(k.Va, {
-                            display: k.W.Flex,
+                        }, s.createElement(k.Wa, {
+                            display: k.X.Flex,
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.Va, {
+                        }, s.createElement(k.Wa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(k.V, {
-                            type: k.Nb.H3
-                        }, Object(d.d)("Badges from Crates", "BadgesList"))), s.createElement(k.V, {
-                            type: k.Nb.H3,
+                        }, s.createElement(k.W, {
+                            type: k.Ob.H3
+                        }, Object(d.d)("Badges from Crates", "BadgesList"))), s.createElement(k.W, {
+                            type: k.Ob.H3,
                             color: k.O.Alt2
-                        }, Object(d.e)(e.length))), s.createElement(k.Va, {
+                        }, Object(d.f)(e.length))), s.createElement(k.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.V, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), s.createElement(k.Tb, {
-                            childWidth: k.Ub.Small,
+                        }, s.createElement(k.W, null, Object(d.d)('You can find your chat badge in Chat Settings under "Edit Appearance".', "BadgesList"))), s.createElement(k.Ub, {
+                            childWidth: k.Vb.Small,
                             placeholderItems: 8
                         }, t))
                     }, t
                 }(s.Component),
-                b = Object(i.compose)(Object(v.c)("BadgesList", {
+                b = Object(i.compose)(Object(v.b)("BadgesList", {
                     autoReportInteractive: !0
                 }))(h),
                 y = n("SDEh"),
                 E = n("edgk");
-            var N, S = function(e) {
+            var O, N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderCrate = function(e) {
-                            return s.createElement(k.Va, {
+                            return s.createElement(k.Wa, {
                                 key: e.id
-                            }, s.createElement(k.Sa, {
+                            }, s.createElement(k.Ta, {
                                 onClick: t.handleOpenClick,
                                 "data-open-url": e.openURL
                             }, s.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, s.createElement(k.xb, {
+                            }, s.createElement(k.yb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
-                                display: k.W.Flex,
+                                display: k.X.Flex,
                                 padding: 2,
                                 border: !0
-                            }, s.createElement(k.Na, {
+                            }, s.createElement(k.Oa, {
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, s.createElement("img", {
                                 alt: Object(d.d)("Crate", "CratesList"),
                                 src: e.iconURL
-                            })))), s.createElement(k.V, null, Object(d.d)("Open Now", "CratesList"))))
+                            })))), s.createElement(k.W, null, Object(d.d)("Open Now", "CratesList"))))
                         }, t.handleOpenClick = function(e) {
                             ! function(e, t) {
                                 var n = window.open(e, "Twitch", "width=1024,height=600,scrollbars=yes");
@@ -606,46 +606,46 @@
                             t.props.refetchData && t.props.refetchData()
                         }, t
                     }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.loading) return s.createElement(k.Xa, {
+                    return c.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.loading) return s.createElement(k.Ya, {
                             fillContent: !0
                         });
                         if (!this.props.crates) return null;
                         var e = this.props.crates,
                             t = e.map(this.renderCrate);
-                        return s.createElement(k.Va, {
+                        return s.createElement(k.Wa, {
                             "data-test-selector": "crates-list__wrapper",
                             margin: {
                                 y: 1
                             }
-                        }, s.createElement(k.Va, {
-                            display: k.W.Flex,
+                        }, s.createElement(k.Wa, {
+                            display: k.X.Flex,
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.Va, {
+                        }, s.createElement(k.Wa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(k.V, {
-                            type: k.Nb.H3
-                        }, Object(d.d)("Twitch Crates", "CratesList"))), s.createElement(k.V, {
-                            type: k.Nb.H3,
+                        }, s.createElement(k.W, {
+                            type: k.Ob.H3
+                        }, Object(d.d)("Twitch Crates", "CratesList"))), s.createElement(k.W, {
+                            type: k.Ob.H3,
                             color: k.O.Alt2
-                        }, Object(d.e)(e.length))), s.createElement(k.Tb, {
-                            childWidth: k.Ub.Small,
+                        }, Object(d.f)(e.length))), s.createElement(k.Ub, {
+                            childWidth: k.Vb.Small,
                             placeholderItems: 8
                         }, t))
                     }, t
                 }(s.Component),
-                O = Object(i.compose)(Object(v.c)("CratesList", {
+                S = Object(i.compose)(Object(v.b)("CratesList", {
                     autoReportInteractive: !0
-                }))(S),
-                V = n("CgqK");
+                }))(N),
+                W = n("CgqK");
             n("HWNB");
             ! function(e) {
                 e.Drop = "drops-list__drop", e.DropName = "drops-list__drop-name", e.Wrapper = "drops-list__wrapper"
-            }(N || (N = {}));
+            }(O || (O = {}));
             var F = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -661,50 +661,50 @@
                         }, t.renderDrop = function(e) {
                             var n = e.drop.node,
                                 a = t.itemNamesEnabled ? n.name : n.game.name;
-                            return s.createElement(k.Va, {
+                            return s.createElement(k.Wa, {
                                 key: a,
                                 margin: {
                                     bottom: 2
                                 },
-                                "data-test-selector": N.Drop
-                            }, s.createElement(k.xb, {
-                                display: k.W.Flex,
+                                "data-test-selector": O.Drop
+                            }, s.createElement(k.yb, {
+                                display: k.X.Flex,
                                 alignItems: k.f.Center,
-                                justifyContent: k.Ua.Center,
+                                justifyContent: k.Va.Center,
                                 padding: 1,
                                 border: !0,
-                                position: k.db.Relative
+                                position: k.eb.Relative
                             }, s.createElement("img", {
                                 src: n.imageURL,
                                 alt: Object(d.d)("Drop image for {gameName}", {
                                     gameName: a
                                 }, "DropsListPresentation")
-                            }), s.createElement(k.xb, {
-                                position: k.db.Absolute,
+                            }), s.createElement(k.yb, {
+                                position: k.eb.Absolute,
                                 attachBottom: !0,
                                 attachRight: !0,
                                 className: "drops-list__count",
                                 color: k.O.Overlay,
                                 borderRadius: k.x.Small,
                                 padding: .5
-                            }, s.createElement(k.V, {
-                                fontSize: k.Aa.Size4,
+                            }, s.createElement(k.W, {
+                                fontSize: k.Ba.Size4,
                                 ariaLabel: Object(d.d)("Count of Drops awarded for {gameName}", {
                                     gameName: a
                                 }, "DropsListPresentation")
-                            }, e.count))), s.createElement(k.V, {
-                                type: k.Nb.Strong,
-                                "data-test-selector": N.DropName
+                            }, e.count))), s.createElement(k.W, {
+                                type: k.Ob.Strong,
+                                "data-test-selector": O.DropName
                             }, a))
                         }, t
                     }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.postRender()
                     }, t.prototype.componentDidUpdate = function() {
                         this.postRender()
                     }, t.prototype.render = function() {
                         var e = this;
-                        if (this.props.data.loading) return s.createElement(k.Xa, {
+                        if (this.props.data.loading) return s.createElement(k.Ya, {
                             fillContent: !0
                         });
                         if (!this.props.data || this.props.data.error || !this.props.data.currentUser || !this.props.data.currentUser.inventory.drops.nodes) return null;
@@ -726,35 +726,35 @@
                             a = Object.keys(n).map(function(t) {
                                 return e.renderDrop(n[t])
                             });
-                        return s.createElement(k.Va, {
-                            "data-test-selector": N.Wrapper,
+                        return s.createElement(k.Wa, {
+                            "data-test-selector": O.Wrapper,
                             margin: {
                                 y: 1
                             }
-                        }, s.createElement(k.Va, {
-                            display: k.W.Flex
-                        }, s.createElement(k.Va, {
+                        }, s.createElement(k.Wa, {
+                            display: k.X.Flex
+                        }, s.createElement(k.Wa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(k.V, {
-                            type: k.Nb.H3
-                        }, Object(d.d)("Drops", "DropsList"))), s.createElement(k.V, {
-                            type: k.Nb.H3,
+                        }, s.createElement(k.W, {
+                            type: k.Ob.H3
+                        }, Object(d.d)("Drops", "DropsList"))), s.createElement(k.W, {
+                            type: k.Ob.H3,
                             color: k.O.Alt2
-                        }, Object(d.e)(t.length))), s.createElement(k.Va, {
+                        }, Object(d.f)(t.length))), s.createElement(k.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.V, null, this.getDropsDescription(t))), s.createElement(k.Tb, {
-                            childWidth: k.Ub.Small,
+                        }, s.createElement(k.W, null, this.getDropsDescription(t))), s.createElement(k.Ub, {
+                            childWidth: k.Vb.Small,
                             noGrow: !0
                         }, a))
                     }, t.prototype.postRender = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t
                 }(s.Component),
-                C = Object(i.compose)(Object(u.a)(V, {
+                C = Object(i.compose)(Object(u.a)(W, {
                     name: "data",
                     options: function() {
                         return {
@@ -763,7 +763,7 @@
                             }
                         }
                     }
-                }), Object(v.c)("DropsList"))(F),
+                }), Object(v.b)("DropsList"))(F),
                 D = n("OpME"),
                 j = function(e) {
                     function t() {
@@ -771,33 +771,33 @@
                         return t.renderEmote = function(e) {
                             var t = Object(D.b)([e])[0],
                                 n = t.srcSet.split(", ").pop().split(" ").shift();
-                            return s.createElement(k.Va, {
+                            return s.createElement(k.Wa, {
                                 key: t.id,
                                 margin: {
                                     bottom: 2
                                 }
                             }, s.createElement(k.o, {
                                 ratio: k.p.Aspect1x1
-                            }, s.createElement(k.xb, {
+                            }, s.createElement(k.yb, {
                                 fullHeight: !0,
                                 fullWidth: !0,
-                                display: k.W.Flex,
+                                display: k.X.Flex,
                                 padding: 2,
                                 border: !0
-                            }, s.createElement(k.Na, {
+                            }, s.createElement(k.Oa, {
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, s.createElement("img", {
                                 src: n,
                                 title: t.displayName,
                                 alt: t.displayName
-                            })))), s.createElement(k.V, {
-                                type: k.Nb.Strong
+                            })))), s.createElement(k.W, {
+                                type: k.Ob.Strong
                             }, t.displayName))
                         }, t
                     }
-                    return l.__extends(t, e), t.prototype.render = function() {
-                        if (this.props.loading) return s.createElement(k.Xa, {
+                    return c.__extends(t, e), t.prototype.render = function() {
+                        if (this.props.loading) return s.createElement(k.Ya, {
                             fillContent: !0
                         });
                         if (!this.props.emoteSets) return null;
@@ -815,118 +815,118 @@
                             e[0];
                             return e[1]
                         }).map(this.renderEmote);
-                        return s.createElement(k.Va, {
+                        return s.createElement(k.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }, s.createElement(k.Va, {
-                            display: k.W.Flex,
+                        }, s.createElement(k.Wa, {
+                            display: k.X.Flex,
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.Va, {
+                        }, s.createElement(k.Wa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(k.V, {
-                            type: k.Nb.H3
-                        }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), s.createElement(k.V, {
-                            type: k.Nb.H3,
+                        }, s.createElement(k.W, {
+                            type: k.Ob.H3
+                        }, Object(d.d)("Emotes from Crates", "EmoticonsList"))), s.createElement(k.W, {
+                            type: k.Ob.H3,
                             color: k.O.Alt2
-                        }, Object(d.e)(t.length))), s.createElement(k.Va, {
+                        }, Object(d.f)(t.length))), s.createElement(k.Wa, {
                             margin: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.V, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), s.createElement(k.Tb, {
-                            childWidth: k.Ub.Small,
+                        }, s.createElement(k.W, null, Object(d.d)("You can find your new emote in the emote selector for Chat, Pulse, Feeds, and Whispers.", "EmoticonsList"))), s.createElement(k.Ub, {
+                            childWidth: k.Vb.Small,
                             placeholderItems: 8
                         }, t))
                     }, t
                 }(s.Component),
-                w = Object(i.compose)(Object(v.c)("EmoticonsList", {
+                w = Object(i.compose)(Object(v.b)("EmoticonsList", {
                     autoReportInteractive: !0
                 }))(j),
                 L = n("eJ65"),
-                x = n("KtNF"),
-                R = n("4h+t"),
-                U = function(e) {
+                R = n("KtNF"),
+                U = n("4h+t"),
+                I = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.bitsConfig = Object(R.a)(), t
+                        return t.bitsConfig = Object(U.a)(), t
                     }
-                    return l.__extends(t, e), t.prototype.render = function() {
+                    return c.__extends(t, e), t.prototype.render = function() {
                         var e = Object(d.d)("Inventory", "InventoryTitleBar");
-                        if (this.props.loading) return s.createElement(k.xb, {
+                        if (this.props.loading) return s.createElement(k.yb, {
                             className: "title-bar",
-                            display: k.W.Flex,
+                            display: k.X.Flex,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.Va, {
+                        }, s.createElement(k.Wa, {
                             flexGrow: 1
-                        }, s.createElement(k.V, {
-                            type: k.Nb.H2
-                        }, e)), s.createElement(k.Va, {
-                            display: k.W.Flex,
+                        }, s.createElement(k.W, {
+                            type: k.Ob.H2
+                        }, e)), s.createElement(k.Wa, {
+                            display: k.X.Flex,
                             margin: {
                                 right: 3
                             },
                             alignItems: k.f.Center
-                        }, s.createElement(k.cb, {
+                        }, s.createElement(k.db, {
                             width: 135,
                             height: 30
-                        })), s.createElement(k.Va, {
+                        })), s.createElement(k.Wa, {
                             alignSelf: k.g.Baseline
-                        }, s.createElement(k.cb, {
+                        }, s.createElement(k.db, {
                             width: 180,
                             height: 30
                         })));
                         var t = this.props.amazonMarketplaces.map(function(e) {
-                                return s.createElement(k.Sa, {
+                                return s.createElement(k.Ta, {
                                     key: e.id,
                                     linkTo: "https://" + e.orderHistoryRedirectURL,
                                     targetBlank: !0
                                 }, e.displayText)
                             }),
                             n = Object(d.d)("You have {bitsComponent}", {
-                                bitsComponent: s.createElement(x.a, {
+                                bitsComponent: s.createElement(R.a, {
                                     count: this.props.bitsBalance,
                                     bitsConfig: this.bitsConfig,
                                     withImage: !0,
                                     withText: !0
                                 })
                             }, "InventoryTitleBar");
-                        return s.createElement(k.xb, {
+                        return s.createElement(k.yb, {
                             className: "title-bar",
-                            display: k.W.Flex,
+                            display: k.X.Flex,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(k.Va, {
+                        }, s.createElement(k.Wa, {
                             flexGrow: 1
-                        }, s.createElement(k.V, {
-                            type: k.Nb.H2
-                        }, e)), s.createElement(k.Va, {
-                            display: k.W.Flex,
+                        }, s.createElement(k.W, {
+                            type: k.Ob.H2
+                        }, e)), s.createElement(k.Wa, {
+                            display: k.X.Flex,
                             margin: {
                                 right: 3
                             },
                             alignItems: k.f.Center
-                        }, s.createElement(k.V, null, n)), s.createElement(k.Va, {
+                        }, s.createElement(k.W, null, n)), s.createElement(k.Wa, {
                             alignSelf: k.g.Baseline
                         }, s.createElement(L.a, null, s.createElement(k.z, {
                             type: k.F.Hollow
-                        }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), s.createElement(k.u, null, s.createElement(k.Va, {
+                        }, Object(d.d)("View your Twitch Order History", "InventoryTitleBar")), s.createElement(k.u, null, s.createElement(k.Wa, {
                             padding: 1
                         }, t)))))
                     }, t
                 }(s.Component),
-                I = Object(i.compose)(Object(v.c)("TitleBar", {
+                _ = Object(i.compose)(Object(v.b)("TitleBar", {
                     autoReportInteractive: !0
-                }))(U),
-                _ = n("wdoW"),
+                }))(I),
+                x = n("wdoW"),
                 B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -934,8 +934,8 @@
                             t.props.data && t.props.data.refetch && t.props.data.refetch()
                         }, t
                     }
-                    return l.__extends(t, e), t.prototype.componentDidMount = function() {
-                        d.o.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
+                    return c.__extends(t, e), t.prototype.componentDidMount = function() {
+                        d.p.setPageTitle(Object(d.d)("Inventory", "InventoryPage"))
                     }, t.prototype.render = function() {
                         if (!this.props.isLoggedIn) return this.props.onAnonymousVisit(), s.createElement(m.a, {
                             message: Object(d.d)("You must be logged in to view this page", "InventoryPage")
@@ -946,14 +946,14 @@
                             a = [],
                             i = [],
                             r = [];
-                        return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, a = this.props.data.currentUser.availableBadges, i = this.props.data.currentUser.crates, r = this.props.data.currentUser.emoteSets), s.createElement(k.Va, {
+                        return this.props.data.loading || this.props.data.error || (e = !1, t = this.props.data.currentUser.amazonMarketplaces, n = this.props.data.currentUser.bitsBalance, a = this.props.data.currentUser.availableBadges, i = this.props.data.currentUser.crates, r = this.props.data.currentUser.emoteSets), s.createElement(k.Wa, {
                             className: "inventory",
                             padding: 3
-                        }, s.createElement(I, {
+                        }, s.createElement(_, {
                             bitsBalance: n,
                             loading: e,
                             amazonMarketplaces: t
-                        }), s.createElement(O, {
+                        }), s.createElement(S, {
                             refetchData: this.refetchData,
                             crates: i,
                             loading: e
@@ -964,17 +964,17 @@
                             badges: a,
                             loading: e
                         }), s.createElement(C, null))
-                    }, t = l.__decorate([Object(u.a)(_)], t)
+                    }, t = c.__decorate([Object(u.a)(x)], t)
                 }(s.Component),
-                T = Object(i.compose)(Object(v.c)("InventoryPage", {
+                T = Object(i.compose)(Object(v.b)("InventoryPage", {
                     autoReportInteractive: !0,
                     destination: f.a.Inventory
                 }), Object(p.a)({
                     location: g.PageviewLocation.Inventory
                 }))(B);
-            var W = Object(a.connect)(function(e) {
+            var A = Object(a.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(c.f)(e)
+                    isLoggedIn: Object(l.f)(e)
                 }
             }, function(e) {
                 return Object(i.bindActionCreators)({
@@ -984,7 +984,7 @@
                 }, e)
             })(T);
             n.d(t, "InventoryPage", function() {
-                return W
+                return A
             })
         },
         cpJf: function(e, t, n) {

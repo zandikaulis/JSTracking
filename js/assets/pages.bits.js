@@ -11,8 +11,8 @@
                 l = n("2INN"),
                 c = n("ZS2+"),
                 p = n("76Lv"),
-                d = n("5ELF"),
-                u = n("Ue10"),
+                u = n("5ELF"),
+                d = n("Ue10"),
                 h = c.a.wrap(function() {
                     return n.e(166).then(n.bind(null, "FD0w"))
                 }, "BitsLandingPage"),
@@ -21,10 +21,10 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(u.Va, {
+                        return s.createElement(d.Wa, {
                             className: "bits-root " + Object(p.b)(this.props.theme),
-                            position: u.db.Absolute,
-                            overflow: u.Ya.Hidden,
+                            position: d.eb.Absolute,
+                            overflow: d.Za.Hidden,
                             attachRight: !0,
                             attachTop: !0,
                             attachBottom: !0,
@@ -32,16 +32,16 @@
                             margin: {
                                 top: 5
                             }
-                        }, s.createElement(d.a, {
+                        }, s.createElement(u.a, {
                             darkModeEnabled: !0
-                        }), s.createElement(u.Va, {
-                            display: u.W.Flex,
-                            flexWrap: u.Z.NoWrap,
+                        }), s.createElement(d.Wa, {
+                            display: d.X.Flex,
+                            flexWrap: d.Aa.NoWrap,
                             fullHeight: !0,
-                            position: u.db.Relative
-                        }, s.createElement(u.Na, {
-                            display: u.W.Flex,
-                            position: u.db.Relative,
+                            position: d.eb.Relative
+                        }, s.createElement(d.Oa, {
+                            display: d.X.Flex,
+                            position: d.eb.Relative,
                             flexGrow: 1,
                             fullHeight: !0,
                             fullWidth: !0

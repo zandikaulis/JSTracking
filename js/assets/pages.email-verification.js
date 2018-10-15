@@ -5,8 +5,8 @@
             r.r(t);
             var i = r("mrSG"),
                 n = r("q1tI"),
-                o = r("fvjX"),
-                s = r("/7QA"),
+                s = r("fvjX"),
+                o = r("/7QA"),
                 a = r("V+GM"),
                 c = r("NvVO"),
                 u = r("2xye"),
@@ -21,58 +21,58 @@
                             isError: !1,
                             isEmailVerified: !1,
                             errorMessage: ""
-                        }, t.logger = s.o.logger.withCategory("email-verification"), t
+                        }, t.logger = o.p.logger.withCategory("email-verification"), t
                     }
                     return i.__extends(t, e), t.prototype.componentWillMount = function() {
                         this.verifyEmail().then(function() {})
                     }, t.prototype.render = function() {
-                        return n.createElement(d.Va, {
+                        return n.createElement(d.Wa, {
                             padding: 3
-                        }, n.createElement(d.V, {
+                        }, n.createElement(d.W, {
                             className: "title",
-                            type: d.Nb.H2
-                        }, Object(s.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
+                            type: d.Ob.H2
+                        }, Object(o.d)("Email Verification", "EmailVerification")), this.renderVerificationStatus())
                     }, t.prototype.renderVerificationStatus = function() {
-                        if (this.state.isLoading) return n.createElement(d.Va, {
+                        if (this.state.isLoading) return n.createElement(d.Wa, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": "verify-loading"
-                        }, n.createElement(d.V, {
-                            type: d.Nb.Strong
-                        }, Object(s.d)("Verifying Email...", "EmailVerification")));
-                        if (this.state.isEmailVerified) return n.createElement(d.Va, {
+                        }, n.createElement(d.W, {
+                            type: d.Ob.Strong
+                        }, Object(o.d)("Verifying Email...", "EmailVerification")));
+                        if (this.state.isEmailVerified) return n.createElement(d.Wa, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": "verify-success"
-                        }, Object(s.d)("Your email address has been successfully validated.", "EmailVerification"));
-                        var e = Object(s.d)("Couldn't validate your email: {errorMessage}", {
+                        }, Object(o.d)("Your email address has been successfully validated.", "EmailVerification"));
+                        var e = Object(o.d)("Couldn't validate your email: {errorMessage}", {
                             errorMessage: this.maybeGetLocalizedErrorMessage(this.state.errorMessage)
                         }, "EmailVerification");
-                        return n.createElement(d.Va, {
+                        return n.createElement(d.Wa, {
                             margin: {
                                 top: 1
                             },
                             "data-test-selector": "verify-error"
-                        }, n.createElement(d.V, {
+                        }, n.createElement(d.W, {
                             color: d.O.Error,
-                            type: d.Nb.Strong
+                            type: d.Ob.Strong
                         }, e))
                     }, t.prototype.maybeGetLocalizedErrorMessage = function(e) {
-                        return e ? "Not Found" === e ? Object(s.d)("Not Found", "EmailVerification") : e : Object(s.d)("Unknown Error", "EmailVerification")
+                        return e ? "Not Found" === e ? Object(o.d)("Not Found", "EmailVerification") : e : Object(o.d)("Unknown Error", "EmailVerification")
                     }, t.prototype.verifyEmail = function() {
                         return i.__awaiter(this, void 0, void 0, function() {
                             var e, t, r, n;
-                            return i.__generator(this, function(o) {
-                                switch (o.label) {
+                            return i.__generator(this, function(s) {
+                                switch (s.label) {
                                     case 0:
                                         if (this.state.isLoading || this.state.isError) return [2];
                                         this.setState({
                                             isLoading: !0
-                                        }), o.label = 1;
+                                        }), s.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, , 4]), [4, function(e) {
+                                        return s.trys.push([1, 3, , 4]), [4, function(e) {
                                             return i.__awaiter(this, void 0, Promise, function() {
                                                 var t, r, n;
                                                 return i.__generator(this, function(i) {
@@ -91,13 +91,13 @@
                                             })
                                         }(this.props.match.params.emailOpaqueId)];
                                     case 2:
-                                        return e = o.sent(), t = e.isEmailVerified, r = e.errorMessage, this.setState({
+                                        return e = s.sent(), t = e.isEmailVerified, r = e.errorMessage, this.setState({
                                             isEmailVerified: t,
                                             errorMessage: r,
                                             isLoading: !1
                                         }), [3, 4];
                                     case 3:
-                                        return n = o.sent(), this.logger.error(n, "Failed to verify email"), this.setState({
+                                        return n = s.sent(), this.logger.error(n, "Failed to verify email"), this.setState({
                                             isError: !0,
                                             isLoading: !1
                                         }), [3, 4];
@@ -108,7 +108,7 @@
                         })
                     }, t
                 }(n.Component),
-                g = Object(o.compose)(Object(h.c)("EmailVerificationPage", {
+                g = Object(s.compose)(Object(h.b)("EmailVerificationPage", {
                     destination: c.a.EmailVerification,
                     autoReportInteractive: !0
                 }), Object(a.a)({
@@ -121,12 +121,12 @@
         b6Yk: function(e, t, r) {
             "use strict";
             r.d(t, "a", function() {
-                return s
+                return o
             });
             var i = r("mrSG"),
                 n = r("/7QA"),
-                o = r("kRBY"),
-                s = function() {
+                s = r("kRBY"),
+                o = function() {
                     function e() {}
                     return e.get = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
@@ -234,13 +234,13 @@
                         })
                     }, e.request = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
-                            var n, o, s, a;
+                            var n, s, o, a;
                             return i.__generator(this, function(c) {
                                 switch (c.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, r), n = t.headers ? t.headers["Content-Type"] : void 0, o = this.serialize(t.body, n), s = i.__assign({}, t, {
-                                            body: o
-                                        }), [4, this._fetch(e, s)];
+                                        return t = this.constructOptions(t, r), n = t.headers ? t.headers["Content-Type"] : void 0, s = this.serialize(t.body, n), o = i.__assign({}, t, {
+                                            body: s
+                                        }), [4, this._fetch(e, o)];
                                     case 1:
                                         return a = c.sent(), [4, this.constructLegacyAPIResponse(a)];
                                     case 2:
@@ -251,28 +251,28 @@
                     }, e.requestOrThrow = function(e, t, r) {
                         return void 0 === t && (t = {}), void 0 === r && (r = {}), i.__awaiter(this, void 0, Promise, function() {
                             var n;
-                            return i.__generator(this, function(o) {
-                                switch (o.label) {
+                            return i.__generator(this, function(s) {
+                                switch (s.label) {
                                     case 0:
-                                        return o.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
+                                        return s.trys.push([0, 2, , 3]), [4, this.request(e, t, r)];
                                     case 1:
-                                        if ((n = o.sent()).requestError) throw n.requestError;
+                                        if ((n = s.sent()).requestError) throw n.requestError;
                                         if (n.error) throw new Error("Error while sending legacy-api request: " + n.error.status + " - " + n.error.message);
                                         return [2, i.__assign({}, n, {
                                             body: n.body
                                         })];
                                     case 2:
-                                        throw o.sent();
+                                        throw s.sent();
                                     case 3:
                                         return [2]
                                 }
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, n.o.config.apiBaseURL)
+                        return new URL(e, n.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
                         return i.__awaiter(this, void 0, Promise, function() {
-                            var t, r, n, o;
+                            var t, r, n, s;
                             return i.__generator(this, function(i) {
                                 switch (i.label) {
                                     case 0:
@@ -284,7 +284,7 @@
                                     case 2:
                                         return r = i.sent(), e.ok ? t.body = r : t.error = r, [3, 4];
                                     case 3:
-                                        return n = i.sent(), e.headers && e.headers.get && (o = e.headers.get("Content-Type")) && -1 !== o.indexOf("application/json") && (t.requestError = n), [3, 4];
+                                        return n = i.sent(), e.headers && e.headers.get && (s = e.headers.get("Content-Type")) && -1 !== s.indexOf("application/json") && (t.requestError = n), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
@@ -310,19 +310,19 @@
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var r = n.o.store.getState(),
+                        var r = n.p.store.getState(),
                             i = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": n.o.config.legacyClientID,
+                                "Client-ID": n.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
                         e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
-                        var s = Object(o.e)(r);
-                        return s && (i.Authorization = "OAuth " + s.authToken, s.legacyCSRFToken && (i["Twitch-Api-Token"] = s.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                        var o = Object(s.e)(r);
+                        return o && (i.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (i["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
                             i[e] && delete i[e]
                         }), i
-                    }, e.logger = n.o.logger.withCategory("legacy-api"), e
+                    }, e.logger = n.p.logger.withCategory("legacy-api"), e
                 }()
         }
     }

@@ -13,11 +13,11 @@
                         return this.props.incremental && Object(o.c)(this.props.name) || Object(o.b)(this.props.name) ? this.props.children : null
                     }, n
                 }(r.Component),
-                c = i;
+                d = i;
             t.d(n, "b", function() {
                 return i
             }), t.d(n, "a", function() {
-                return c
+                return d
             })
         },
         Ints: function(e, n, t) {
@@ -26,17 +26,17 @@
                 r = t("yR8l"),
                 o = t("GnwI"),
                 i = t("cUgj"),
-                c = function(e) {
+                d = function(e) {
                     var n = e.data.currentUser && e.data.currentUser.company;
                     return n && n.brandPortalSettings && n.brandPortalSettings.isEnabled ? e.children : null
                 },
-                d = Object(a.compose)(Object(o.c)("DevBountyDashboardFeatureGate", {
+                c = Object(a.compose)(Object(o.b)("DevBountyDashboardFeatureGate", {
                     autoReportInteractive: !0
-                }), Object(r.a)(i))(c);
+                }), Object(r.a)(i))(d);
             t.d(n, !1, function() {
-                return c
-            }), t.d(n, "a", function() {
                 return d
+            }), t.d(n, "a", function() {
+                return c
             })
         },
         PzZ8: function(e, n, t) {
@@ -46,8 +46,8 @@
                 r = t("kRBY"),
                 o = t("mrSG"),
                 i = t("q1tI"),
-                c = t("oJmH"),
-                d = t("2INN"),
+                d = t("oJmH"),
+                c = t("2INN"),
                 s = t("jKe7"),
                 u = t("/7QA"),
                 l = t("ZS2+"),
@@ -59,10 +59,10 @@
                     return t.e(106).then(t.bind(null, "Pi1p"))
                 }, "DevLoginPage")),
                 g = l.a.wrap(function() {
-                    return t.e(214).then(t.bind(null, "epaB"))
+                    return t.e(208).then(t.bind(null, "epaB"))
                 }, "DevBountyBoardCampaignManagerPage"),
                 y = l.a.wrap(function() {
-                    return t.e(213).then(t.bind(null, "aztO"))
+                    return t.e(207).then(t.bind(null, "aztO"))
                 }, "DevBountyBoardAnalyticsPage"),
                 h = function(e) {
                     function n() {
@@ -76,9 +76,9 @@
                     return o.__extends(n, e), n.prototype.render = function() {
                         return this.props.isLoggedIn ? i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(p.a, null, i.createElement(v.Va, {
+                        }, i.createElement(p.a, null, i.createElement(v.Wa, {
                             className: "dev-dashboard"
-                        }, i.createElement(v.xb, {
+                        }, i.createElement(v.yb, {
                             padding: {
                                 top: 1
                             },
@@ -87,23 +87,23 @@
                             },
                             borderBottom: !0,
                             background: v.r.Base
-                        }, i.createElement("header", null, i.createElement(v.Va, {
+                        }, i.createElement("header", null, i.createElement(v.Wa, {
                             className: "dev-dashboard__container",
                             margin: {
                                 x: "auto"
                             }
-                        }, i.createElement(v.Va, {
+                        }, i.createElement(v.Wa, {
                             padding: {
                                 y: 1
                             }
                         }, i.createElement(v.z, {
                             "data-test-selector": "dev-bounty-board-dashboard-dashboard-button-selector",
-                            icon: v.nb.GlyphArrLeft,
+                            icon: v.ob.GlyphArrLeft,
                             type: v.F.Text,
                             linkTo: "/console"
-                        }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.V, {
-                            type: v.Nb.H3
-                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.xb, {
+                        }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.W, {
+                            type: v.Ob.H3
+                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.yb, {
                             borderTop: !0,
                             margin: {
                                 top: 1
@@ -111,30 +111,30 @@
                             padding: {
                                 top: 1
                             },
-                            display: v.W.Flex
-                        }, i.createElement(v.yb, {
+                            display: v.X.Flex
+                        }, i.createElement(v.zb, {
                             "data-test-selector": "dev-bounty-board-dashboard-campaign-tab-selector",
                             linkTo: "/console/bounty-board",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Campaign Manager", "DevBountyBoardDashboardRoot")))))), i.createElement(v.Va, {
+                        }, Object(u.d)("Campaign Manager", "DevBountyBoardDashboardRoot")))))), i.createElement(v.Wa, {
                             "data-test-selector": "dev-bounty-board-dashboard-route-container-selector",
                             className: "dev-dashboard__container",
                             margin: {
                                 x: "auto"
                             },
-                            display: v.W.Block
-                        }, i.createElement(s.a, null, i.createElement(d.a, {
+                            display: v.X.Block
+                        }, i.createElement(s.a, null, i.createElement(c.a, {
                             exact: !0,
                             path: "/console/bounty-board",
                             component: g
-                        }), i.createElement(d.a, {
+                        }), i.createElement(c.a, {
                             exact: !0,
                             path: "/console/bounty-board/analytics",
                             component: y
                         })))))) : i.createElement(f, null)
                     }, n
                 }(i.Component),
-                S = Object(c.compose)(Object(m.c)("DevBountyBoardDashboardRootPresentation", {
+                S = Object(d.compose)(Object(m.b)("DevBountyBoardDashboardRootPresentation", {
                     autoReportInteractive: !0
                 }))(h);
             var D = Object(a.connect)(function(e) {
@@ -245,15 +245,15 @@
             t.d(n, "a", function() {
                 return a
             }), t.d(n, "b", function() {
-                return c
+                return d
             }), t.d(n, "c", function() {
                 return s
             });
             var a, r, o = t("/7QA"),
                 i = t("kRBY");
 
-            function c(e) {
-                var n = o.o.store.getState(),
+            function d(e) {
+                var n = o.p.store.getState(),
                     t = o.b.get(e, a.Off);
                 return !!(t === a.On || t === a.StaffOnly && Object(i.g)(n))
             }! function(e) {
@@ -262,18 +262,18 @@
             function(e) {
                 e[e.Enabled = 1] = "Enabled", e[e.Disabled = 0] = "Disabled"
             }(r || (r = {}));
-            var d = Math.pow(2, 32);
+            var c = Math.pow(2, 32);
 
             function s(e) {
                 var n = o.b.get(e, [0, r.Disabled]),
                     t = n[0],
                     a = n[1],
-                    c = o.o.session.deviceID,
-                    s = o.o.store.getState();
+                    d = o.p.session.deviceID,
+                    s = o.p.store.getState();
                 return !(a !== r.Enabled || !Object(i.g)(s)) || function(e, n) {
                     for (var t = void 0 === n ? 2166136261 : n, a = 0, r = e.length; a < r; a++) t ^= e.charCodeAt(a), t += (t << 1) + (t << 4) + (t << 7) + (t << 8) + (t << 24);
                     return t >>> 0
-                }(c + "-" + e) / d < t
+                }(d + "-" + e) / c < t
             }
         }
     }

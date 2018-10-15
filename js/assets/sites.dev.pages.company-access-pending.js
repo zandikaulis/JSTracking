@@ -3,8 +3,8 @@
         "V+GM": function(e, t, n) {
             "use strict";
             var i = n("mrSG"),
-                o = n("cr+I"),
-                a = n("q1tI"),
+                a = n("cr+I"),
+                o = n("q1tI"),
                 r = n("wIs1"),
                 c = n("/7QA");
 
@@ -12,28 +12,28 @@
                 return function(t) {
                     var n = function(n) {
                         function r(t) {
-                            var o = n.call(this, t) || this;
-                            return o.tracked = !1, o.referenceTracking = {}, o.trackPageview = function() {
-                                if (!(o.tracked || e.skip && e.skip(o.props))) {
-                                    o.tracked = !0;
+                            var a = n.call(this, t) || this;
+                            return a.tracked = !1, a.referenceTracking = {}, a.trackPageview = function() {
+                                if (!(a.tracked || e.skip && e.skip(a.props))) {
+                                    a.tracked = !0;
                                     var t = {};
-                                    "function" == typeof e.properties ? t = e.properties(o.props) : e.properties && (t = i.__assign({}, e.properties));
-                                    var n = i.__assign({}, o.props);
+                                    "function" == typeof e.properties ? t = e.properties(a.props) : e.properties && (t = i.__assign({}, e.properties));
+                                    var n = i.__assign({}, a.props);
                                     n.location && n.location.state && (t.medium = n.location.state.medium, t.content = n.location.state.content, t.content_index = n.location.state.content_index, t.email_id = n.location.state.email_id);
-                                    var a = o.referenceTracking,
-                                        r = a.content,
-                                        s = a.medium,
-                                        p = a.content_index,
-                                        d = a.email_id;
-                                    c.o.tracking.trackPageview(i.__assign({
+                                    var o = a.referenceTracking,
+                                        r = o.content,
+                                        s = o.medium,
+                                        p = o.content_index,
+                                        m = o.email_id;
+                                    c.p.tracking.trackPageview(i.__assign({
                                         content: r,
                                         medium: s,
                                         content_index: p,
-                                        email_id: d,
+                                        email_id: m,
                                         location: e.location
                                     }, t))
                                 }
-                            }, c.j.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.j.warn("No latency tracker exists! This means no data will be sent to Spade.", e), o
+                            }, c.k.debug("pageViewTracking", e), t.rootLatencyTracker ? t.rootLatencyTracker.setLocation(e.location) : c.k.warn("No latency tracker exists! This means no data will be sent to Spade.", e), a
                         }
                         return i.__extends(r, n), r.prototype.componentDidMount = function() {
                             var e = this;
@@ -43,9 +43,9 @@
                         }, r.prototype.componentDidUpdate = function() {
                             this.trackPageview()
                         }, r.prototype.render = function() {
-                            return a.createElement(t, i.__assign({}, this.props))
+                            return o.createElement(t, i.__assign({}, this.props))
                         }, r.prototype.stripTTParams = function(e) {
-                            var t = "" !== e.search ? o.parse(e.search) : {},
+                            var t = "" !== e.search ? a.parse(e.search) : {},
                                 n = {
                                     content: t.tt_content,
                                     content_index: t.tt_content_index,
@@ -54,8 +54,8 @@
                                 };
                             if (delete t.tt_content, delete t.tt_content_index, delete t.tt_medium, delete t.tt_email_id, n.medium || n.content || n.email_id) {
                                 var i = "",
-                                    a = o.stringify(t);
-                                a.length > 0 && (i = "?" + a), this.props.history.replace({
+                                    o = a.stringify(t);
+                                o.length > 0 && (i = "?" + o), this.props.history.replace({
                                     pathname: e.pathname,
                                     hash: e.hash,
                                     search: i
@@ -63,7 +63,7 @@
                             }
                             return n
                         }, r
-                    }(a.Component);
+                    }(o.Component);
                     return Object(r.a)(n)
                 }
             }
@@ -75,53 +75,53 @@
             "use strict";
             n.r(t);
             var i = n("/MKj"),
-                o = n("kRBY"),
-                a = n("q1tI"),
+                a = n("kRBY"),
+                o = n("q1tI"),
                 r = n("mLw1"),
                 c = n("fvjX"),
                 s = n("/7QA"),
                 p = n("V+GM"),
-                d = n("NvVO"),
-                m = n("2xye"),
+                m = n("NvVO"),
+                d = n("2xye"),
                 u = n("GnwI"),
                 l = n("Ue10"),
-                g = Object(c.compose)(Object(u.c)("DevCompanyAccessPending", {
+                g = Object(c.compose)(Object(u.b)("DevCompanyAccessPending", {
                     autoReportInteractive: !0,
-                    destination: d.a.DevSiteApplicationSubmitted
+                    destination: m.a.DevSiteApplicationSubmitted
                 }), Object(p.a)({
-                    location: m.PageviewLocation.DevSiteCompanyApplicationSubmitted
+                    location: d.PageviewLocation.DevSiteCompanyApplicationSubmitted
                 }))(function(e) {
-                    return e.isLoggedIn ? a.createElement(l.Va, {
+                    return e.isLoggedIn ? o.createElement(l.Wa, {
                         className: "dev-company-access-pending",
                         fullWidth: !0,
                         margin: {
                             top: 3
                         }
-                    }, a.createElement(l.lb, {
+                    }, o.createElement(l.mb, {
                         centered: !0
-                    }, a.createElement(l.Va, {
-                        textAlign: l.Jb.Center,
+                    }, o.createElement(l.Wa, {
+                        textAlign: l.Kb.Center,
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(l.V, {
-                        type: l.Nb.H2
-                    }, Object(s.d)("Your request is in progress!", "DevCompanyRequestPending"))), a.createElement(l.Va, {
-                        textAlign: l.Jb.Center,
+                    }, o.createElement(l.W, {
+                        type: l.Ob.H2
+                    }, Object(s.d)("Your request is in progress!", "DevCompanyRequestPending"))), o.createElement(l.Wa, {
+                        textAlign: l.Kb.Center,
                         margin: {
                             bottom: 2
                         }
-                    }, a.createElement(l.V, null, Object(s.d)("Please expect your access in 2-3 business days while we confirm your authorization to manage the game titles of the company you specified. We will send you a confirmation email using the address you provided. Be sure to check your spam filter if you haven't received a response in that timeframe.", "DevCompanyRequestPending"))), a.createElement(l.Va, {
-                        textAlign: l.Jb.Center
-                    }, a.createElement(l.T, {
+                    }, o.createElement(l.W, null, Object(s.d)("Please expect your access in 2-3 business days while we confirm your authorization to manage the game titles of the company you specified. We will send you a confirmation email using the address you provided. Be sure to check your spam filter if you haven't received a response in that timeframe.", "DevCompanyRequestPending"))), o.createElement(l.Wa, {
+                        textAlign: l.Kb.Center
+                    }, o.createElement(l.U, {
                         to: "/console"
-                    }, Object(s.d)("Click here to return to your dashboard!", "DevCompanyRequestPending"))))) : a.createElement(r.a, {
+                    }, Object(s.d)("Click here to return to your dashboard!", "DevCompanyRequestPending"))))) : o.createElement(r.a, {
                         to: "/login"
                     })
                 });
             var h = Object(i.connect)(function(e) {
                 return {
-                    isLoggedIn: Object(o.f)(e)
+                    isLoggedIn: Object(a.f)(e)
                 }
             })(g);
             n.d(t, "DevCompanyAccessPendingPage", function() {

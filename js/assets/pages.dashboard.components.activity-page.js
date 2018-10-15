@@ -119,14 +119,14 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.filterAction || n.All;
-                        return i.createElement(g.xb, {
+                        return i.createElement(g.yb, {
                             padding: 2,
                             borderBottom: !0
-                        }, i.createElement(g.Va, {
+                        }, i.createElement(g.Wa, {
                             className: "activity-page__select",
                             flexGrow: 0,
                             flexShrink: 0
-                        }, i.createElement(g.sb, r.__assign({
+                        }, i.createElement(g.tb, r.__assign({
                             name: "activity_type",
                             onChange: this.handleTypeChange,
                             value: e,
@@ -158,17 +158,17 @@
                         var e = this;
                         if (0 === this.props.audits.length) return this.renderNotEnoughDataPlaceholder();
                         var t = this.props.audits.map(function(t, a) {
-                            var r, o = Object(l.h)(new Date(t.created_at)),
+                            var r, o = Object(l.i)(new Date(t.created_at)),
                                 c = "https://static-cdn.jtvnw.net/user-default-pictures/27103734-3cda-44d6-a384-f2ab71e4bb85-profile_image-300x300.jpg",
                                 s = "unknown user",
-                                d = i.createElement(g.V, {
+                                d = i.createElement(g.W, {
                                     bold: !0
                                 }, s);
                             if (e.props.filterAction === n.All || t.action === e.props.filterAction) {
-                                switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(g.V, {
+                                switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(g.W, {
                                     bold: !0,
-                                    type: g.Nb.Span
-                                }, i.createElement(g.T, {
+                                    type: g.Ob.Span
+                                }, i.createElement(g.U, {
                                     to: "/" + t.actor.name
                                 }, s))), t.action) {
                                     case n.AdBreaks:
@@ -206,16 +206,16 @@
                                     default:
                                         r = ""
                                 }
-                                return i.createElement(g.xb, {
+                                return i.createElement(g.yb, {
                                     key: "audit" + a,
                                     alignItems: g.f.Center,
-                                    display: g.W.Flex,
+                                    display: g.X.Flex,
                                     background: g.r.Base,
                                     borderBottom: !0,
                                     padding: {
                                         y: 1
                                     }
-                                }, i.createElement(g.Va, {
+                                }, i.createElement(g.Wa, {
                                     flexGrow: 0,
                                     flexShrink: 0,
                                     margin: {
@@ -225,37 +225,37 @@
                                     src: c,
                                     alt: s,
                                     size: 40,
-                                    presenceStatus: g.fb.Online,
+                                    presenceStatus: g.gb.Online,
                                     borderRadius: g.x.Small
-                                })), i.createElement(g.Va, {
+                                })), i.createElement(g.Wa, {
                                     flexGrow: 1,
                                     flexShrink: 1
-                                }, i.createElement(g.Va, null, i.createElement(g.V, {
+                                }, i.createElement(g.Wa, null, i.createElement(g.W, {
                                     color: g.O.Alt,
-                                    fontSize: g.Aa.Size5
-                                }, r))), i.createElement(g.Va, {
+                                    fontSize: g.Ba.Size5
+                                }, r))), i.createElement(g.Wa, {
                                     flexGrow: 0,
                                     flexShrink: 0
-                                }, i.createElement(g.V, {
+                                }, i.createElement(g.W, {
                                     color: g.O.Alt2,
-                                    fontSize: g.Aa.Size6
+                                    fontSize: g.Ba.Size6
                                 }, o)))
                             }
                         });
-                        return i.createElement(g.Va, r.__assign({
+                        return i.createElement(g.Wa, r.__assign({
                             className: "activity-page__list",
                             flexGrow: 0,
                             flexShrink: 0
                         }, y), t)
                     }, t.prototype.renderNotEnoughDataPlaceholder = function() {
-                        return i.createElement(g.xb, r.__assign({
+                        return i.createElement(g.yb, r.__assign({
                             className: "activity-page__no-data",
-                            display: g.W.Flex,
+                            display: g.X.Flex,
                             flexGrow: 1,
-                            flexDirection: g.Y.Column,
+                            flexDirection: g.Z.Column,
                             alignItems: g.f.Center,
                             alignContent: g.e.Center,
-                            justifyContent: g.Ua.Center,
+                            justifyContent: g.Va.Center,
                             padding: {
                                 left: 2,
                                 right: 2
@@ -264,9 +264,9 @@
                             src: _,
                             alt: A,
                             size: 50
-                        }), i.createElement(g.V, {
+                        }), i.createElement(g.W, {
                             color: g.O.Alt2,
-                            fontSize: g.Aa.Size5
+                            fontSize: g.Ba.Size5
                         }, Object(l.d)("Not enough data for us to display", "DashboardActivity")))
                     }, t
                 }(i.PureComponent),
@@ -277,7 +277,7 @@
             ! function(e) {
                 e[e.Error = 0] = "Error", e[e.Loading = 1] = "Loading", e[e.Success = 2] = "Success"
             }(S || (S = {}));
-            var x = function(e) {
+            var N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -288,7 +288,7 @@
                                 audits: []
                             },
                             requestState: S.Loading
-                        }, t.logger = l.j.withCategory("activity-page"), t.handleActionChange = function(e) {
+                        }, t.logger = l.k.withCategory("activity-page"), t.handleActionChange = function(e) {
                             t.setState({
                                 filterAction: e
                             })
@@ -347,12 +347,12 @@
                         })
                     }, t.prototype.render = function() {
                         var e = this.state.requestState;
-                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(g.Va, {
+                        if (this.props.data.loading || e === S.Loading || e === S.Error) return i.createElement(w.a, null, i.createElement(g.Wa, {
                             margin: {
                                 top: 3,
                                 bottom: 1
                             }
-                        }, i.createElement(g.cb, {
+                        }, i.createElement(g.db, {
                             height: 448,
                             width: 1040
                         })));
@@ -360,21 +360,21 @@
                             a = t.filterAction,
                             n = t.list,
                             r = e === S.Success && n.audits.length > 0;
-                        return i.createElement(w.a, null, i.createElement(g.xb, {
+                        return i.createElement(w.a, null, i.createElement(g.yb, {
                             className: "activity-page",
                             background: g.r.Base,
                             elevation: 1,
-                            overflow: g.Ya.Hidden
+                            overflow: g.Za.Hidden
                         }, i.createElement(f, {
                             filterAction: a,
                             onActionChange: this.handleActionChange,
                             enabled: r
-                        }), i.createElement(g.Va, {
+                        }), i.createElement(g.Wa, {
                             className: "activity-page__scrollable",
-                            overflow: g.Ya.Hidden
+                            overflow: g.Za.Hidden
                         }, i.createElement(c.b, {
                             suppressScrollX: !0
-                        }, i.createElement(g.Va, {
+                        }, i.createElement(g.Wa, {
                             padding: {
                                 x: 2
                             }
@@ -422,7 +422,7 @@
                         })
                     }, t
                 }(i.PureComponent),
-                N = Object(o.compose)(Object(d.a)(C, {
+                D = Object(o.compose)(Object(d.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -430,13 +430,13 @@
                             }
                         }
                     }
-                }), Object(p.c)("ActivityPage", {
+                }), Object(p.b)("ActivityPage", {
                     destination: m.a.ChannelDashboardActivity
                 }), Object(u.a)({
                     location: h.PageviewLocation.DashboardActivity
-                }))(x);
+                }))(N);
             a.d(t, "ActivityPage", function() {
-                return N
+                return D
             }), a.d(t, "PublicProps", function() {})
         }
     }
