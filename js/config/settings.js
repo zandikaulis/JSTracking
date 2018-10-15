@@ -109,6 +109,7 @@ window.__twilightSettings = {
     "raids_use_legacy_api": false,
     "recurly_tax_enabled": "staff",
     "search_tracking_enabled": true,
+    "single_message_delete": "off",
     "sizmek_versatag_channels": ["riotgames", "tekken", "rocketleague"],
     "sizmek_versatag_events": ["YeUmkUI9R5GKR5WGtg046A", "f4aK8duASJKiAYAiETsUvw", "WN1Ly4NxRgOrSNWOSG40PQ", "YFCU_dppR6Oor32XLPrU2w", "2HsLVRMUTnqChbVy5YSsfg", "f4aK8duASJKiAYAiETsUvw"],
     "sizmek_versatag_games": ["496712", "Call of Duty: WWII", "497571", "Wrestling"],
