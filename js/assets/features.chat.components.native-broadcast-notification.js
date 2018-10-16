@@ -155,7 +155,7 @@
                         if (!e) return null;
                         if (this.hasDismissedForEvent(e.startDate)) return null;
                         var t = this.getChannelLinks(e);
-                        return t.length ? o.createElement(r.yb, {
+                        return t.length ? o.createElement(r.xb, {
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
@@ -168,7 +168,7 @@
                                 bottom: 1
                             }
                         }, o.createElement(r.W, {
-                            type: r.Ob.H4
+                            type: r.Nb.H4
                         }, e.title)), o.createElement(r.Wa, {
                             margin: {
                                 bottom: 1

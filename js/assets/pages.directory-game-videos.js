@@ -838,9 +838,9 @@
                         });
                         t = a.createElement(a.Fragment, null, s)
                     }
-                    return a.createElement(c.Ub, {
-                        gutterSize: c.Wb.Small,
-                        childWidth: e.videoCardSize || c.Vb.Large,
+                    return a.createElement(c.Tb, {
+                        gutterSize: c.Vb.Small,
+                        childWidth: e.videoCardSize || c.Ub.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -1257,7 +1257,7 @@
                                 className: "language-select-menu__balloon"
                             }, l.createElement(m.b, null, l.createElement(f.Wa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.yb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), l.createElement(f.xb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"

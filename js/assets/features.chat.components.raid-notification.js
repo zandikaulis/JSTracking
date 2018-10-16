@@ -3,18 +3,18 @@
         "6TSi": function(e, t) {},
         "6XEL": function(e, t, n) {
             "use strict";
-            var i = {};
+            var r = {};
 
-            function r(e) {
+            function i(e) {
                 return "/" + e + "/dashboard/achievements/"
             }
 
             function a(e) {
                 return "/" + e.channelName + "/dashboard/achievements/" + e.id
             }
-            n.d(i, "channelAchievements", function() {
-                return r
-            }), n.d(i, "achievement", function() {
+            n.d(r, "channelAchievements", function() {
+                return i
+            }), n.d(r, "achievement", function() {
                 return a
             });
             var o, s = n("dG1e"),
@@ -22,11 +22,11 @@
                 d = n("eAwD");
 
             function c(e, t, n) {
-                return e.sort(function(e, i) {
-                    for (var r = 0; r < t.length; r++) {
-                        var a = t[r],
-                            s = n[r] || o.Ascending,
-                            u = l(a(e), a(i)) * s;
+                return e.sort(function(e, r) {
+                    for (var i = 0; i < t.length; i++) {
+                        var a = t[i],
+                            s = n[i] || o.Ascending,
+                            u = l(a(e), a(r)) * s;
                         if (0 !== u) return u
                     }
                     return 0
@@ -35,12 +35,12 @@
 
             function l(e, t) {
                 var n = null !== e && void 0 !== e,
-                    i = null !== t && void 0 !== t;
-                return n && i ? e > t ? 1 : e < t ? -1 : 0 : n ? -1 : i ? 1 : 0
+                    r = null !== t && void 0 !== t;
+                return n && r ? e > t ? 1 : e < t ? -1 : 0 : n ? -1 : r ? 1 : 0
             }! function(e) {
                 e[e.Ascending = 1] = "Ascending", e[e.Descending = -1] = "Descending"
             }(o || (o = {})), n.d(t, "b", function() {
-                return i
+                return r
             }), n.d(t, "c", function() {
                 return s.a
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {
@@ -56,91 +56,16 @@
         "7htX": function(e, t, n) {
             "use strict";
             n.r(t);
-            var i = n("mrSG"),
-                r = n("q1tI"),
-                a = n("lZCe"),
-                o = n("D7An"),
+            var r = n("mrSG"),
+                i = n("q1tI"),
+                a = n("Kukq"),
+                o = n("oJmH"),
                 s = n("/MKj"),
                 u = n("9C/b"),
-                d = n("/7QA"),
-                c = n("/aPz"),
-                l = n("kRBY"),
-                p = n("ll/k"),
-                h = 5,
-                f = "raid_update",
-                m = "raid_cancel",
-                g = function() {
-                    function e(e, t) {
-                        this.id = e.raid.id, this.creatorID = e.raid.creator_id, this.sourceChannelID = e.raid.source_id, this.targetChannelID = e.raid.target_id, this.viewerCount = e.raid.viewer_count, t ? (this.jitterSeconds = t.jitterSeconds, this.totalDurationInSeconds = t.totalDurationInSeconds, this.clientCreatedAtTimestamp = t.clientCreatedAtTimestamp) : (this.jitterSeconds = Object(p.a)(e.raid.transition_jitter_seconds), this.totalDurationInSeconds = this.getTotalDurationInSeconds(e.raid.remaining_duration_seconds), this.clientCreatedAtTimestamp = (new Date).getTime()), this.isAnnouncing = e.type === f && this.totalDurationInSeconds > 0, this.hasTimeToJoin = this.totalDurationInSeconds > h
-                    }
-                    return e.prototype.withMessage = function(t) {
-                        return this.id !== t.raid.id ? new e(t) : new e(t, this)
-                    }, e.prototype.getRemainingJoinTime = function(e) {
-                        void 0 === e && (e = new Date);
-                        var t = e.getTime() - this.clientCreatedAtTimestamp;
-                        return 1e3 * this.totalDurationInSeconds - t
-                    }, e.prototype.getTotalDurationInSeconds = function(e) {
-                        var t = e + this.jitterSeconds;
-                        return Math.max(t, 0)
-                    }, e
-                }(),
-                v = n("2xye"),
-                b = {
-                    raid_type: "now"
-                },
-                y = {
-                    medium: "twitch_channel",
-                    content: "raid_channel"
-                };
-
-            function _(e, t) {
-                D(v.SpadeEventType.RaidPromptJoin, e, t)
-            }
-
-            function R(e, t) {
-                D(v.SpadeEventType.RaidPromptLeave, e, t)
-            }
-
-            function C(e, t) {
-                D(v.SpadeEventType.RaidPromptCancel, e, t)
-            }
-
-            function w(e, t) {
-                D(v.SpadeEventType.RaidPromptImpression, e, t)
-            }
-
-            function D(e, t, n) {
-                var r = i.__assign({
-                    raid_creator_id: Number(t.creatorID),
-                    raid_source_id: Number(t.sourceChannelID),
-                    raid_target_id: Number(t.targetChannelID),
-                    raid_id: t.id
-                }, n);
-                d.o.track(e, r)
-            }
-            var E = n("cr+I");
-
-            function S(e, t) {
-                var n;
-                if (function(e) {
-                        return !e.split("/")[2]
-                    }(e.pathname)) n = "/" + t;
-                else {
-                    if (! function(e) {
-                            return /^\/.+\/chat$/.test(e)
-                        }(e.pathname)) return "";
-                    n = "/" + t + "/chat"
-                }
-                var r = i.__assign({}, E.parse(e.search), {
-                    referrer: "raid"
-                });
-                return n + "?" + E.stringify(r)
-            }
-            var I = n("G8UE"),
-                k = n("aUoe"),
-                T = n("yR8l"),
-                O = n("oMhb");
-            var x = Object(T.a)(O, {
+                d = n("kRBY"),
+                c = n("yR8l"),
+                l = n("oMhb");
+            var p = Object(c.a)(l, {
                 options: function(e) {
                     return {
                         variables: {
@@ -150,396 +75,190 @@
                     }
                 }
             })(function(e) {
-                if (e.data.loading || e.data.error) return r.createElement("div", null);
+                if (e.data.loading || e.data.error) return i.createElement("div", null);
                 var t = e.component,
-                    n = i.__rest(e, ["component"]);
-                return r.createElement(t, i.__assign({}, n))
+                    n = r.__rest(e, ["component"]);
+                return i.createElement(t, r.__assign({}, n))
             });
-
-            function N(e) {
-                return function(t) {
-                    return r.createElement(x, i.__assign({}, t, {
-                        component: e
-                    }))
-                }
-            }
-            var P = n("Ue10"),
-                A = n("zyCo"),
-                j = (n("SUms"), {
-                    "data-test-selector": "current-raiders"
-                }),
-                L = N(function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.getRemainingTime = function() {
-                            return t.props.raid.getRemainingJoinTime()
-                        }, t.handleCountdownEnd = function() {
-                            t.props.onRaidInvitePeriodOver(t.props.data.targetChannel.login)
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        w(this.props.raid)
-                    }, t.prototype.render = function() {
-                        var e = this.props.data,
-                            t = e.sourceChannel,
-                            n = e.targetChannel;
-                        return r.createElement(P.yb, {
-                            className: "raid-notification",
-                            background: P.r.AccentAlt2,
-                            color: P.O.Overlay,
-                            position: P.eb.Absolute,
-                            zIndex: P.bc.Above,
-                            fullWidth: !0
-                        }, r.createElement(P.Wa, {
-                            className: "raid-notification__content",
-                            padding: {
-                                y: 1,
-                                x: 2
-                            },
-                            display: P.X.Flex,
-                            justifyContent: P.Va.Between
-                        }, r.createElement(P.Wa, {
-                            alignItems: P.f.Center,
-                            display: P.X.Flex
-                        }, r.createElement(P.q, {
-                            size: 36,
-                            src: t.profileImageURL,
-                            alt: t.displayName
-                        }), r.createElement(P.nb, {
-                            asset: P.ob.AngleRight,
-                            height: 10
-                        }), r.createElement(P.q, {
-                            size: 36,
-                            src: n.profileImageURL,
-                            alt: n.displayName
-                        }), r.createElement(P.Wa, {
-                            padding: {
-                                left: 1
-                            }
-                        }, r.createElement(P.W, {
-                            color: P.O.OverlayAlt,
-                            type: P.Ob.P,
-                            className: "raid-notification__channel-name"
-                        }, Object(d.d)("{sourceDisplayName} is", {
-                            sourceDisplayName: t.displayName
-                        }, "RaidCTASourceChannel")), r.createElement(P.W, null, Object(d.d)("raiding {targetDisplayName}", {
-                            targetDisplayName: n.displayName
-                        }, "RaidCTATargetChannel")), r.createElement(P.W, i.__assign({
-                            bold: !0
-                        }, j), Object(d.d)("{viewerCount, plural, one {# raider} other {# raiders}}", {
-                            viewerCount: this.props.raid.viewerCount
-                        }, "RaidCTATotalRaiders")))), this.props.children), r.createElement(A.a, {
-                            totalCountdownTime: 1e3 * this.props.raid.totalDurationInSeconds,
-                            getRemainingTime: this.getRemainingTime,
-                            onCountdownEnd: this.handleCountdownEnd
-                        }))
-                    }, t
-                }(r.Component)),
-                J = {
-                    "data-test-selector": "raid-cancel-button"
-                },
-                U = function(e) {
-                    return r.createElement(P.Wa, {
-                        alignSelf: P.g.Center
-                    }, r.createElement(P.z, i.__assign({
-                        size: P.D.Large,
-                        type: P.F.Hollow,
-                        overlay: !0,
-                        onClick: e.onCancelRaid
-                    }, J), Object(d.d)("Cancel", "RaidCTACancel")))
-                },
-                W = {
-                    "data-test-selector": "join-raid-button"
-                },
-                F = {
-                    "data-test-selector": "leave-raid-button"
-                },
-                q = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.timerID = 0, t.handleLeaveRaid = function() {
-                            clearTimeout(t.timerID), t.props.onLeaveRaid()
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.hasJoined && (this.timerID = setTimeout(this.props.onJoinRaid, Object(p.a)(5e3)))
-                    }, t.prototype.componentWillUnmount = function() {
-                        clearTimeout(this.timerID)
-                    }, t.prototype.render = function() {
-                        return this.props.hasJoined ? r.createElement(P.Wa, {
-                            alignSelf: P.g.Center
-                        }, r.createElement(P.z, i.__assign({
-                            size: P.D.Large,
-                            type: P.F.Hollow,
-                            overlay: !0,
-                            onClick: this.handleLeaveRaid
-                        }, F), Object(d.d)("Leave", "RaidCTALeave"))) : r.createElement(P.Wa, {
-                            alignSelf: P.g.Center
-                        }, r.createElement(P.z, i.__assign({
-                            size: P.D.Large,
-                            onClick: this.props.onJoinRaid
-                        }, W), Object(d.d)("Join", "RaidCTAJoin")))
-                    }, t
-                }(r.Component),
-                V = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.state = {
-                            raidStorage: new I.RaidStorage
-                        }, t.unsubscribe = function() {}, t.handlePubsubMessage = function(e) {
-                            switch (e.type) {
-                                case f:
-                                case m:
-                                    return t.setState(function(t) {
-                                        return t.raid ? i.__assign({}, t, {
-                                            raid: t.raid.withMessage(e)
-                                        }) : i.__assign({}, t, {
-                                            raid: new g(e)
-                                        })
-                                    });
-                                default:
-                                    return
-                            }
-                        }, t.handleRaidInvitePeriodOver = function(e) {
-                            var n = t.hasJoinedCurrentRaid;
-                            if (t.state.raid && t.setState({
-                                    raidStorage: t.state.raidStorage.expireRaid(t.state.raid)
-                                }), n) {
-                                var i = S(t.props.history.location || window.location, e);
-                                i && t.props.history.push(i, y)
-                            }
-                        }, t.handleJoinRaid = function() {
-                            if (t.state.raid) {
-                                var e = t.state.raid.id;
-                                Object(k.c)(e), _(t.state.raid), t.setState({
-                                    raidStorage: t.state.raidStorage.joinRaid(t.state.raid)
-                                })
-                            }
-                        }, t.handleLeaveRaid = function() {
-                            if (t.state.raid) {
-                                var e = t.state.raid.id;
-                                Object(k.d)(e), R(t.state.raid), t.setState({
-                                    raidStorage: t.state.raidStorage.leaveRaid(t.state.raid)
-                                })
-                            }
-                        }, t.handleCancelRaid = function() {
-                            t.state.raid && (C(t.state.raid), Object(k.a)(t.props.channelID))
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.subscribe(this.props.channelID)
-                    }, t.prototype.render = function() {
-                        return this.shouldRenderRaidNotification ? r.createElement(L, {
-                            raid: this.state.raid,
-                            onRaidInvitePeriodOver: this.handleRaidInvitePeriodOver
-                        }, this.renderCTAButton()) : null
-                    }, t.prototype.componentWillUnmount = function() {
-                        this.unsubscribe()
-                    }, t.prototype.componentWillReceiveProps = function(e) {
-                        var t = this;
-                        this.props.channelID !== e.channelID && (this.unsubscribe(), this.setState({
-                            raid: void 0
-                        }, function() {
-                            return t.subscribe(e.channelID)
-                        }))
-                    }, t.prototype.subscribe = function(e) {
-                        this.unsubscribe = d.p.pubsub.subscribe({
-                            topic: Object(c.t)(e),
-                            onMessage: this.handlePubsubMessage
-                        })
-                    }, t.prototype.renderCTAButton = function() {
-                        return this.isRaidCreator ? r.createElement(U, {
-                            onCancelRaid: this.handleCancelRaid
-                        }) : r.createElement(q, {
-                            onJoinRaid: this.handleJoinRaid,
-                            onLeaveRaid: this.handleLeaveRaid,
-                            hasJoined: this.hasJoinedCurrentRaid
-                        })
-                    }, Object.defineProperty(t.prototype, "shouldRenderRaidNotification", {
-                        get: function() {
-                            var e = this.state.raid;
-                            return e && e.isAnnouncing && !this.state.raidStorage.isExpired(e) && (e.hasTimeToJoin || this.hasJoinedCurrentRaid)
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "isRaidCreator", {
-                        get: function() {
-                            var e = this.state.raid;
-                            return e && this.props.user && this.props.user.id === e.creatorID
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), Object.defineProperty(t.prototype, "hasJoinedCurrentRaid", {
-                        get: function() {
-                            var e = this.state.raid;
-                            return !!e && (this.isRaidCreator || this.state.raidStorage.hasJoined(e))
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(r.Component);
-            var G = Object(s.connect)(function(e) {
-                    return {
-                        user: Object(l.e)(e)
-                    }
-                })(V),
-                M = Object(u.a)(G),
-                z = n("Kukq"),
-                B = n("oJmH"),
-                X = n("5zf8"),
-                H = function(e) {
+            var h = n("/7QA"),
+                f = n("5zf8"),
+                m = n("Ue10"),
+                g = function(e) {
                     var t = e.sourceChannel,
                         n = e.targetChannel;
-                    return r.createElement(P.Wa, {
-                        display: P.X.Flex
-                    }, r.createElement(P.q, {
+                    return i.createElement(m.Wa, {
+                        display: m.X.Flex
+                    }, i.createElement(m.q, {
                         size: 36,
                         src: t.profileImageURL,
                         alt: t.displayName
-                    }), r.createElement(P.nb, {
-                        asset: P.ob.AngleRight,
+                    }), i.createElement(m.nb, {
+                        asset: m.ob.AngleRight,
                         height: 10
-                    }), r.createElement(P.q, {
+                    }), i.createElement(m.q, {
                         size: 36,
                         src: n.profileImageURL,
                         alt: n.displayName
                     }))
                 },
-                Q = function(e) {
+                v = function(e) {
                     var t = e.seconds;
-                    return r.createElement(P.yb, {
-                        display: P.X.Flex,
-                        alignItems: P.f.Center,
-                        justifyContent: P.Va.Center,
-                        color: P.O.Overlay
-                    }, r.createElement(P.Ya, {
-                        size: P.wb.Large,
+                    return i.createElement(m.xb, {
+                        display: m.X.Flex,
+                        alignItems: m.f.Center,
+                        justifyContent: m.Va.Center,
+                        color: m.O.Overlay
+                    }, i.createElement(m.Ya, {
+                        size: m.vb.Large,
                         delay: 0,
                         inheritColor: !0
-                    }), r.createElement(P.Wa, {
-                        position: P.eb.Absolute
+                    }), i.createElement(m.Wa, {
+                        position: m.eb.Absolute
                     }, t))
                 },
-                Y = n("eRLD"),
-                Z = {
+                _ = n("2xye"),
+                y = {
+                    raid_type: "now"
+                },
+                b = {
+                    medium: "twitch_channel",
+                    content: "raid_channel"
+                };
+
+            function R(e, t) {
+                w(_.SpadeEventType.RaidPromptImpression, e, t)
+            }
+
+            function w(e, t, n) {
+                var i = r.__assign({
+                    raid_creator_id: Number(t.creatorID),
+                    raid_source_id: Number(t.sourceChannelID),
+                    raid_target_id: Number(t.targetChannelID),
+                    raid_id: t.id
+                }, n);
+                h.o.track(e, i)
+            }
+            var C = n("eRLD"),
+                E = {
                     "data-test-selector": "raid-message"
                 },
-                $ = {
+                D = {
                     "data-test-selector": "raid-cancel-button"
                 },
-                K = {
+                k = {
                     "data-test-selector": "raid-now-button"
                 },
-                ee = function(e) {
+                S = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        w(this.props.raid, b)
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        R(this.props.raid, y)
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.raid.isGoing && this.props.onRaidGo(this.props.targetChannel.login), this.props.timerPhase.isForced && this.props.onRaidNow()
                     }, t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            justifyContent: P.Va.Between
-                        }, r.createElement(P.Wa, {
-                            alignItems: P.f.Center,
-                            display: P.X.Flex
-                        }, r.createElement(H, {
+                        return i.createElement(i.Fragment, null, i.createElement(m.Wa, {
+                            display: m.X.Flex,
+                            justifyContent: m.Va.Between
+                        }, i.createElement(m.Wa, {
+                            alignItems: m.f.Center,
+                            display: m.X.Flex
+                        }, i.createElement(g, {
                             sourceChannel: this.props.sourceChannel,
                             targetChannel: this.props.targetChannel
-                        }), r.createElement(P.Wa, i.__assign({
+                        }), i.createElement(m.Wa, r.__assign({
                             padding: {
                                 left: 1
                             }
-                        }, Z), this.props.timerPhase.isWaiting ? te(this.props, this.props.timerPhase.secondsUntilTransition) : ne(this.props))), this.props.timerPhase.isReady && this.props.timerPhase.secondsUntilTransition <= 10 && r.createElement(Q, {
+                        }, E), this.props.timerPhase.isWaiting ? I(this.props, this.props.timerPhase.secondsUntilTransition) : x(this.props))), this.props.timerPhase.isReady && this.props.timerPhase.secondsUntilTransition <= 10 && i.createElement(v, {
                             seconds: this.props.timerPhase.secondsUntilTransition
-                        })), r.createElement(P.Wa, {
-                            display: P.X.Flex,
-                            justifyContent: P.Va.End,
+                        })), i.createElement(m.Wa, {
+                            display: m.X.Flex,
+                            justifyContent: m.Va.End,
                             margin: {
                                 top: 1
                             }
-                        }, r.createElement(P.Wa, {
+                        }, i.createElement(m.Wa, {
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.z, i.__assign({
-                            type: P.F.Hollow,
-                            size: P.D.Small,
+                        }, i.createElement(m.z, r.__assign({
+                            type: m.F.Hollow,
+                            size: m.D.Small,
                             onClick: this.props.onCancelRaid
-                        }, $), r.createElement(P.yb, {
+                        }, D), i.createElement(m.xb, {
                             padding: {
                                 x: 1
                             },
-                            color: P.O.Overlay
-                        }, Object(d.d)("Cancel", "RaidCreatorButton")))), r.createElement(P.Wa, null, r.createElement(P.z, i.__assign({
-                            size: P.D.Small,
+                            color: m.O.Overlay
+                        }, Object(h.d)("Cancel", "RaidCreatorButton")))), i.createElement(m.Wa, null, i.createElement(m.z, r.__assign({
+                            size: m.D.Small,
                             onClick: this.props.onRaidNow,
                             disabled: this.props.timerPhase.isWaiting
-                        }, K), r.createElement(P.Wa, {
+                        }, k), i.createElement(m.Wa, {
                             padding: {
                                 x: 1
                             }
-                        }, Object(d.d)("Raid Now", "RaidCreatorButton"))))))
+                        }, Object(h.d)("Raid Now", "RaidCreatorButton"))))))
                     }, t
-                }(r.Component),
-                te = function(e, t) {
-                    return Object(d.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}}", {
+                }(i.Component),
+                I = function(e, t) {
+                    return Object(h.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} in {secondsRemaining}</x:block>}}", {
                         "x:block": function(e) {
-                            return r.createElement(P.W, {
+                            return i.createElement(m.W, {
                                 bold: !0
                             }, e)
                         },
                         "x:strong": function(e) {
-                            return r.createElement(P.W, {
+                            return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: P.Ob.Strong
+                                type: m.Nb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
-                            return r.createElement(P.W, {
-                                type: P.Ob.Span
+                            return i.createElement(m.W, {
+                                type: m.Nb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
-                        secondsRemaining: Object(X.b)(t, X.a.HumanizedShort),
+                        secondsRemaining: Object(f.b)(t, f.a.HumanizedShort),
                         targetDisplayName: e.targetChannel.displayName
                     }, "RaidCreatorMessageTimeLeft")
                 },
-                ne = function(e) {
-                    return Object(d.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}}", {
+                x = function(e) {
+                    return Object(h.d)("{raiderCount, plural,       one {<x:strong># viewer </x:strong><x:span>is ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}       other {<x:strong># viewers </x:strong><x:span>are ready to raid</x:span><x:block>{targetDisplayName} now</x:block>}}", {
                         "x:block": function(e) {
-                            return r.createElement(P.W, {
+                            return i.createElement(m.W, {
                                 bold: !0
                             }, e)
                         },
                         "x:strong": function(e) {
-                            return r.createElement(P.W, {
+                            return i.createElement(m.W, {
                                 key: "raid-count",
-                                type: P.Ob.Strong
+                                type: m.Nb.Strong
                             }, e)
                         },
                         "x:span": function(e) {
-                            return r.createElement(P.W, {
-                                type: P.Ob.Span
+                            return i.createElement(m.W, {
+                                type: m.Nb.Span
                             }, e)
                         },
                         raiderCount: e.raid.viewerCount,
                         targetDisplayName: e.targetChannel.displayName
                     }, "RaidCreatorMessageCanRaid")
                 },
-                ie = function(e) {
-                    return r.createElement(Y.a, {
+                N = function(e) {
+                    return i.createElement(C.a, {
                         raid: e.raid
                     }, function(t) {
-                        return r.createElement(ee, i.__assign({}, e, {
+                        return i.createElement(S, r.__assign({}, e, {
                             timerPhase: t
                         }))
                     })
                 },
-                re = n("nIRf"),
-                ae = function(e) {
+                T = n("ll/k"),
+                O = n("nIRf"),
+                P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -555,8 +274,8 @@
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.countdownTimer = new re.a({
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.countdownTimer = new O.a({
                             onInterval: this.handleIntervalUpdate,
                             intervalMillis: 1e3
                         }), this.countdownTimer.start()
@@ -565,8 +284,8 @@
                     }, t.prototype.render = function() {
                         return null
                     }, t
-                }(r.Component),
-                oe = function(e) {
+                }(i.Component),
+                A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -581,109 +300,131 @@
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.props.hasJoined && (this.joinDelayTimerID = setTimeout(this.props.onJoinRaid, Object(p.a)(5e3))), w(this.props.raid, b)
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
+                        this.props.hasJoined && (this.joinDelayTimerID = setTimeout(this.props.onJoinRaid, Object(T.a)(5e3))), R(this.props.raid, y)
                     }, t.prototype.componentWillUnmount = function() {
                         clearTimeout(this.joinDelayTimerID)
                     }, t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(P.Wa, {
-                            justifyContent: P.Va.Between,
-                            display: P.X.Flex
-                        }, r.createElement(P.Wa, {
-                            alignItems: P.f.Center,
-                            display: P.X.Flex
-                        }, r.createElement(H, {
+                        return i.createElement(i.Fragment, null, i.createElement(m.Wa, {
+                            justifyContent: m.Va.Between,
+                            display: m.X.Flex
+                        }, i.createElement(m.Wa, {
+                            alignItems: m.f.Center,
+                            display: m.X.Flex
+                        }, i.createElement(g, {
                             sourceChannel: this.props.sourceChannel,
                             targetChannel: this.props.targetChannel
-                        }), r.createElement(P.Wa, {
+                        }), i.createElement(m.Wa, {
                             padding: {
                                 left: 1
                             }
-                        }, se(this.props))), r.createElement(P.Wa, {
-                            alignSelf: P.g.Center
-                        }, this.renderActionable())), this.props.raid.isGoing && r.createElement(ae, {
+                        }, j(this.props))), i.createElement(m.Wa, {
+                            alignSelf: m.g.Center
+                        }, this.renderActionable())), this.props.raid.isGoing && i.createElement(P, {
                             from: this.props.raid.jitterSeconds,
                             onSecondsUpdate: this.handleSecondsUpdate,
                             onCountdownEnd: this.handleCountdownEnd
                         }))
                     }, t.prototype.renderActionable = function() {
-                        return this.props.raid.isGoing && this.props.raid.jitterSeconds > 2 ? r.createElement(Q, {
+                        return this.props.raid.isGoing && this.props.raid.jitterSeconds > 2 ? i.createElement(v, {
                             seconds: this.state.remainingJitterSeconds
-                        }) : this.props.hasJoined ? r.createElement(ue, {
+                        }) : this.props.hasJoined ? i.createElement(L, {
                             onLeaveRaid: this.handleLeaveRaid
-                        }) : r.createElement(de, {
+                        }) : i.createElement(U, {
                             onJoinRaid: this.props.onJoinRaid
                         })
                     }, t
-                }(r.Component),
-                se = function(e) {
-                    return Object(d.d)("{viewerCount, plural,     one {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raider</x:block>}     other {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raiders</x:block>}}", {
+                }(i.Component),
+                j = function(e) {
+                    return Object(h.d)("{viewerCount, plural,     one {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raider</x:block>}     other {<x:block>{sourceDisplayName} is</x:block><x:block>raiding {targetDisplayName}</x:block><x:block>with # raiders</x:block>}}", {
                         "x:block": function(e) {
-                            return r.createElement(P.W, null, e)
+                            return i.createElement(m.W, null, e)
                         },
-                        sourceDisplayName: r.createElement(P.W, {
-                            type: P.Ob.Strong
+                        sourceDisplayName: i.createElement(m.W, {
+                            type: m.Nb.Strong
                         }, e.sourceChannel.displayName),
-                        targetDisplayName: r.createElement(P.W, {
-                            type: P.Ob.Strong
+                        targetDisplayName: i.createElement(m.W, {
+                            type: m.Nb.Strong
                         }, e.targetChannel.displayName),
                         viewerCount: e.raid.viewerCount
                     }, "RaidViewerMessage")
                 },
-                ue = function(e) {
+                L = function(e) {
                     var t = e.onLeaveRaid;
-                    return r.createElement(P.z, {
-                        size: P.D.Small,
-                        type: P.F.Hollow,
+                    return i.createElement(m.z, {
+                        size: m.D.Small,
+                        type: m.F.Hollow,
                         onClick: t
-                    }, r.createElement(P.yb, {
+                    }, i.createElement(m.xb, {
                         padding: {
                             x: 1
                         },
-                        color: P.O.Overlay
-                    }, Object(d.d)("Leave", "RaidViewerButton")))
+                        color: m.O.Overlay
+                    }, Object(h.d)("Leave", "RaidViewerButton")))
                 },
-                de = function(e) {
+                U = function(e) {
                     var t = e.onJoinRaid;
-                    return r.createElement(P.z, {
-                        size: P.D.Small,
+                    return i.createElement(m.z, {
+                        size: m.D.Small,
                         onClick: t
-                    }, r.createElement(P.Wa, {
+                    }, i.createElement(m.Wa, {
                         padding: {
                             x: 1
                         }
-                    }, Object(d.d)("Join", "RaidViewerButton")))
+                    }, Object(h.d)("Join", "RaidViewerButton")))
                 },
-                ce = {
+                F = n("cr+I");
+            var J = {
                     "data-test-selector": "raid-banner"
                 },
-                le = function(e) {
+                W = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleRaidGo = function(e) {
                             if (t.props.onExpire(t.props.raid), t.hasJoinedCurrentRaid) {
-                                var n = S(t.props.history.location, e);
-                                n && t.props.history.push(n, y)
+                                var n = function(e, t) {
+                                    var n;
+                                    if (function(e) {
+                                            return !e.split("/")[2]
+                                        }(e.pathname)) n = "/" + t;
+                                    else {
+                                        if (! function(e) {
+                                                return /^\/.+\/chat$/.test(e)
+                                            }(e.pathname)) return "";
+                                        n = "/" + t + "/chat"
+                                    }
+                                    var i = r.__assign({}, F.parse(e.search), {
+                                        referrer: "raid"
+                                    });
+                                    return n + "?" + F.stringify(i)
+                                }(t.props.history.location, e);
+                                n && t.props.history.push(n, b)
                             }
                         }, t.handleJoinRaid = function() {
-                            _(t.props.raid, b), t.props.onJoin(t.props.raid)
+                            ! function(e, t) {
+                                w(_.SpadeEventType.RaidPromptJoin, e, t)
+                            }(t.props.raid, y), t.props.onJoin(t.props.raid)
                         }, t.handleLeaveRaid = function() {
-                            R(t.props.raid, b), t.props.onLeave(t.props.raid)
+                            ! function(e, t) {
+                                w(_.SpadeEventType.RaidPromptLeave, e, t)
+                            }(t.props.raid, y), t.props.onLeave(t.props.raid)
                         }, t.handleRaidNow = function() {
                             ! function(e) {
-                                D(v.SpadeEventType.RaidPromptNow, e, b)
+                                w(_.SpadeEventType.RaidPromptNow, e, y)
                             }(t.props.raid), t.props.onRaidNow(t.props.raid)
                         }, t.handleCancelRaid = function() {
-                            C(t.props.raid, b), t.props.onCancel(t.props.raid)
+                            ! function(e, t) {
+                                w(_.SpadeEventType.RaidPromptCancel, e, t)
+                            }(t.props.raid, y), t.props.onCancel(t.props.raid)
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
+                    return r.__extends(t, e), t.prototype.render = function() {
                         if (this.shouldRenderRaidBanner) {
                             var e = this.props.raid,
                                 t = this.props.data,
                                 n = t.sourceChannel,
                                 a = t.targetChannel,
-                                o = r.createElement(oe, {
+                                o = i.createElement(A, {
                                     hasJoined: this.hasJoinedCurrentRaid,
                                     onJoinRaid: this.handleJoinRaid,
                                     onLeaveRaid: this.handleLeaveRaid,
@@ -692,20 +433,20 @@
                                     sourceChannel: n,
                                     targetChannel: a
                                 });
-                            return this.isRaidCreator && (o = r.createElement(ie, {
+                            return this.isRaidCreator && (o = i.createElement(N, {
                                 onCancelRaid: this.handleCancelRaid,
                                 onRaidNow: this.handleRaidNow,
                                 onRaidGo: this.handleRaidGo,
                                 raid: e,
                                 sourceChannel: n,
                                 targetChannel: a
-                            })), r.createElement(P.yb, i.__assign({
-                                background: P.r.AccentAlt2,
-                                color: P.O.Overlay,
-                                position: P.eb.Absolute,
-                                zIndex: P.bc.Above,
+                            })), i.createElement(m.xb, r.__assign({
+                                background: m.r.AccentAlt2,
+                                color: m.O.Overlay,
+                                position: m.eb.Absolute,
+                                zIndex: m.ac.Above,
                                 fullWidth: !0
-                            }, ce), r.createElement(P.Wa, {
+                            }, J), i.createElement(m.Wa, {
                                 padding: {
                                     y: 1,
                                     x: 2
@@ -736,18 +477,24 @@
                         enumerable: !0,
                         configurable: !0
                     }), t
-                }(r.Component);
-            var pe = Object(B.compose)(Object(s.connect)(function(e) {
+                }(i.Component);
+            var q = Object(o.compose)(Object(s.connect)(function(e) {
                     return {
-                        user: Object(l.e)(e)
+                        user: Object(d.e)(e)
                     }
-                }), u.a, N)(le),
-                he = function(e) {
+                }), u.a, function(e) {
+                    return function(t) {
+                        return i.createElement(p, r.__assign({}, t, {
+                            component: e
+                        }))
+                    }
+                })(W),
+                V = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.raid ? r.createElement(pe, {
+                    return r.__extends(t, e), t.prototype.render = function() {
+                        return this.props.raid ? i.createElement(q, {
                             raid: this.props.raid,
                             onJoin: this.props.onJoin,
                             onLeave: this.props.onLeave,
@@ -756,40 +503,24 @@
                             onRaidNow: this.props.onRaidNow
                         }) : null
                     }, t
-                }(r.Component),
-                fe = function(e) {
-                    return r.createElement(z.a, {
+                }(i.Component),
+                G = function(e) {
+                    return i.createElement(a.a, {
                         channelID: e.channelID
                     }, function(t) {
-                        return r.createElement(he, i.__assign({}, e, t))
-                    })
-                },
-                me = function(e) {
-                    return r.createElement(a.a, {
-                        name: o.b.RaidNow,
-                        channel: e.channelID,
-                        assignments: {
-                            fallback: function() {
-                                return r.createElement(M, i.__assign({}, e))
-                            },
-                            test: function() {
-                                return r.createElement(fe, {
-                                    channelID: e.channelID
-                                })
-                            }
-                        }
+                        return i.createElement(V, r.__assign({}, e, t))
                     })
                 };
-            n.d(t, "RaidNotification", function() {
-                return me
-            }), n.d(t, "RaidNotificationWithPubsub", function() {
+            n.d(t, "RaidNotificationComponent", function() {
+                return V
+            }), n.d(t, "RaidNotification", function() {
                 return G
-            }), n.d(t, "Props", function() {}), n.d(t, "PublicProps", function() {})
+            })
         },
         "7qJZ": function(e, t, n) {
             "use strict";
             n.d(t, "c", function() {
-                return r
+                return i
             }), n.d(t, "a", function() {
                 return a
             }), n.d(t, "b", function() {
@@ -797,13 +528,13 @@
             }), n.d(t, "d", function() {
                 return s
             });
-            var i = n("ll/k"),
-                r = "raid_update_v2",
+            var r = n("ll/k"),
+                i = "raid_update_v2",
                 a = "raid_cancel_v2",
                 o = "raid_go_v2",
                 s = function() {
                     function e(e, t, n) {
-                        this.message = e, this.id = e.raid.id, this.type = e.type, this.creatorID = e.raid.creator_id, this.sourceChannelID = e.raid.source_id, this.targetChannelID = e.raid.target_id, this.viewerCount = e.raid.viewer_count, this.remainingDurationSeconds = e.raid.remaining_duration_seconds, this.targetLogin = e.raid.target_login, this.targetDisplayName = e.raid.target_display_name, this.targetProfileImage = e.raid.target_profile_image, this.storage = t, this.hasJoined = t.hasJoined(this), this.isExpired = t.isExpired(this), this.jitterSeconds = n ? n.jitterSeconds : Object(i.a)(e.raid.transition_jitter_seconds), this.isAnnouncing = e.type === r, this.isGoing = Boolean(n && n.isAnnouncing) && e.type === o, this.hasEnded = e.type === o || e.type === a, n && n.hasEnded && (this.isAnnouncing = !1, this.isGoing = n.isGoing, this.hasEnded = !0)
+                        this.message = e, this.id = e.raid.id, this.type = e.type, this.creatorID = e.raid.creator_id, this.sourceChannelID = e.raid.source_id, this.targetChannelID = e.raid.target_id, this.viewerCount = e.raid.viewer_count, this.remainingDurationSeconds = e.raid.remaining_duration_seconds, this.targetLogin = e.raid.target_login, this.targetDisplayName = e.raid.target_display_name, this.targetProfileImage = e.raid.target_profile_image, this.storage = t, this.hasJoined = t.hasJoined(this), this.isExpired = t.isExpired(this), this.jitterSeconds = n ? n.jitterSeconds : Object(r.a)(e.raid.transition_jitter_seconds), this.isAnnouncing = e.type === i, this.isGoing = Boolean(n && n.isAnnouncing) && e.type === o, this.hasEnded = e.type === o || e.type === a, n && n.hasEnded && (this.isAnnouncing = !1, this.isGoing = n.isGoing, this.hasEnded = !0)
                     }
                     return e.prototype.withMessage = function(t) {
                         return this.id !== t.raid.id ? new e(t, this.storage) : new e(t, this.storage, this)
@@ -814,21 +545,21 @@
         },
         G8UE: function(e, t, n) {
             "use strict";
-            var i = n("J1ZQ");
+            var r = n("J1ZQ");
             n.d(t, "RaidStorage", function() {
-                return i.a
+                return r.a
             });
-            var r = n("6TSi");
-            n.o(r, "RAID_CANCEL_V2") && n.d(t, "RAID_CANCEL_V2", function() {
-                return r.RAID_CANCEL_V2
-            }), n.o(r, "RAID_GO_V2") && n.d(t, "RAID_GO_V2", function() {
-                return r.RAID_GO_V2
-            }), n.o(r, "RAID_UPDATE_V2") && n.d(t, "RAID_UPDATE_V2", function() {
-                return r.RAID_UPDATE_V2
-            }), n.o(r, "RaidV2") && n.d(t, "RaidV2", function() {
-                return r.RaidV2
-            }), n.o(r, "TimerPhase") && n.d(t, "TimerPhase", function() {
-                return r.TimerPhase
+            var i = n("6TSi");
+            n.o(i, "RAID_CANCEL_V2") && n.d(t, "RAID_CANCEL_V2", function() {
+                return i.RAID_CANCEL_V2
+            }), n.o(i, "RAID_GO_V2") && n.d(t, "RAID_GO_V2", function() {
+                return i.RAID_GO_V2
+            }), n.o(i, "RAID_UPDATE_V2") && n.d(t, "RAID_UPDATE_V2", function() {
+                return i.RAID_UPDATE_V2
+            }), n.o(i, "RaidV2") && n.d(t, "RaidV2", function() {
+                return i.RaidV2
+            }), n.o(i, "TimerPhase") && n.d(t, "TimerPhase", function() {
+                return i.TimerPhase
             });
             var a = n("7qJZ");
             n.d(t, "RAID_CANCEL_V2", function() {
@@ -850,14 +581,14 @@
             n.d(t, "a", function() {
                 return a
             });
-            var i, r = n("/7QA"),
+            var r, i = n("/7QA"),
                 a = function() {
                     function e(e) {
                         this.expiredRaids = new Set, this.leftRaids = new Set, e && (this.expiredRaids = e.expiredRaids, this.leftRaids = e.leftRaids)
                     }
                     return Object.defineProperty(e, "instance", {
                         get: function() {
-                            return i || (i = new e), i
+                            return r || (r = new e), r
                         },
                         enumerable: !0,
                         configurable: !0
@@ -874,32 +605,32 @@
                     }, e.prototype.joinRaid = function(t) {
                         var n = new Set(this.leftRaids);
                         n.delete(t.id);
-                        var i = this.getStorageData();
-                        return delete i[t.id], this.setStorageData(i), new e({
+                        var r = this.getStorageData();
+                        return delete r[t.id], this.setStorageData(r), new e({
                             expiredRaids: this.expiredRaids,
                             leftRaids: n
                         })
                     }, e.prototype.leaveRaid = function(t) {
                         var n = new Set(this.leftRaids);
                         n.add(t.id);
-                        var i = this.getStorageData();
-                        return i[t.id] = !0, this.setStorageData(i), new e({
+                        var r = this.getStorageData();
+                        return r[t.id] = !0, this.setStorageData(r), new e({
                             expiredRaids: this.expiredRaids,
                             leftRaids: n
                         })
                     }, e.prototype.destroy = function() {
-                        i = void 0
+                        r = void 0
                     }, e.prototype.setStorageData = function(e) {
-                        r.m.set("raids-left", e)
+                        i.m.set("raids-left", e)
                     }, e.prototype.getStorageData = function() {
-                        return r.m.get("raids-left", {})
+                        return i.m.get("raids-left", {})
                     }, e
                 }()
         },
         Kukq: function(e, t, n) {
             "use strict";
-            var i = n("mrSG"),
-                r = n("q1tI"),
+            var r = n("mrSG"),
+                i = n("q1tI"),
                 a = n("/7QA"),
                 o = n("/aPz"),
                 s = n("G8UE"),
@@ -929,9 +660,9 @@
                                 case s.RAID_CANCEL_V2:
                                 case s.RAID_GO_V2:
                                     return t.setState(function(n) {
-                                        return n.raid ? i.__assign({}, n, {
+                                        return n.raid ? r.__assign({}, n, {
                                             raid: n.raid.withMessage(e)
-                                        }) : i.__assign({}, n, {
+                                        }) : r.__assign({}, n, {
                                             raid: new s.RaidV2(e, t.raidStorage)
                                         })
                                     });
@@ -940,7 +671,7 @@
                             }
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.subscribe(this.props.channelID)
                     }, t.prototype.render = function() {
                         return this.props.children({
@@ -966,56 +697,54 @@
                             onMessage: this.handlePubsubMessage
                         })
                     }, t
-                }(r.Component);
+                }(i.Component);
             n.d(t, "a", function() {
                 return d
             })
         },
-        Leb6: function(e, t, n) {},
-        SUms: function(e, t, n) {},
         Tn5u: function(e, t, n) {
             "use strict";
-            var i;
+            var r;
             n.d(t, "a", function() {
-                    return r
+                    return i
                 }),
                 function(e) {
                     e[e.Waiting = 0] = "Waiting", e[e.Ready = 1] = "Ready", e[e.Forced = 2] = "Forced"
-                }(i || (i = {}));
-            var r = function() {
+                }(r || (r = {}));
+            var i = function() {
                 function e(e) {
                     this.status = e.status, this.secondsUntilTransition = e.secondsUntilTransition
                 }
                 return e.waitingFor = function(t) {
                     return new e({
-                        status: i.Waiting,
+                        status: r.Waiting,
                         secondsUntilTransition: t
                     })
                 }, e.readyFor = function(t) {
                     return new e({
-                        status: i.Ready,
+                        status: r.Ready,
                         secondsUntilTransition: t
                     })
                 }, e.forced = function() {
                     return new e({
-                        status: i.Forced,
+                        status: r.Forced,
                         secondsUntilTransition: 1 / 0
                     })
                 }, Object.defineProperty(e.prototype, "isWaiting", {
                     get: function() {
-                        return this.status === i.Waiting
+                        return this.status === r.Waiting
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(e.prototype, "isReady", {
                     get: function() {
-                        return this.status === i.Ready
+                        return this.status === r.Ready
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(e.prototype, "isForced", {
                     get: function() {
-                        return this.status === i.Forced
+                        return this.status === r.Forced
                     },
                     enumerable: !0,
                     configurable: !0
@@ -1035,8 +764,8 @@
             }), n.d(t, "b", function() {
                 return c
             });
-            var i = n("mrSG"),
-                r = n("/7QA"),
+            var r = n("mrSG"),
+                i = n("/7QA"),
                 a = n("6XEL");
 
             function o(e) {
@@ -1072,8 +801,8 @@
             }
 
             function c(e, t) {
-                return i.__awaiter(this, void 0, void 0, function() {
-                    return i.__generator(this, function(n) {
+                return r.__awaiter(this, void 0, void 0, function() {
+                    return r.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
                                 return [4, Object(a.c)({
@@ -1090,7 +819,7 @@
 
             function l() {
                 return {
-                    "X-Device-Id": r.p.session.deviceID
+                    "X-Device-Id": i.p.session.deviceID
                 }
             }
         },
@@ -1099,122 +828,122 @@
             n.d(t, "a", function() {
                 return o
             });
-            var i = n("mrSG"),
-                r = n("/7QA"),
+            var r = n("mrSG"),
+                i = n("/7QA"),
                 a = n("kRBY"),
                 o = function() {
                     function e() {}
                     return e.get = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return [4, this.request(e, i.__assign({}, t, {
+                                        return [4, this.request(e, r.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, r.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.getOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "GET"
                                         }), n)];
                                     case 1:
-                                        return [2, r.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.put = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return [4, this.request(e, i.__assign({}, t, {
+                                        return [4, this.request(e, r.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, r.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.putOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "PUT"
                                         }), n)];
                                     case 1:
-                                        return [2, r.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.post = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return [4, this.request(e, i.__assign({}, t, {
+                                        return [4, this.request(e, r.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, r.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.postOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "POST"
                                         }), n)];
                                     case 1:
-                                        return [2, r.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.delete = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return [4, this.request(e, i.__assign({}, t, {
+                                        return [4, this.request(e, r.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, r.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.deleteOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(r) {
-                                switch (r.label) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(i) {
+                                switch (i.label) {
                                     case 0:
-                                        return [4, this.requestOrThrow(e, i.__assign({}, t, {
+                                        return [4, this.requestOrThrow(e, r.__assign({}, t, {
                                             method: "DELETE"
                                         }), n)];
                                     case 1:
-                                        return [2, r.sent()]
+                                        return [2, i.sent()]
                                 }
                             })
                         })
                     }, e.request = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            var r, a, o, s;
-                            return i.__generator(this, function(u) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            var i, a, o, s;
+                            return r.__generator(this, function(u) {
                                 switch (u.label) {
                                     case 0:
-                                        return t = this.constructOptions(t, n), r = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, r), o = i.__assign({}, t, {
+                                        return t = this.constructOptions(t, n), i = t.headers ? t.headers["Content-Type"] : void 0, a = this.serialize(t.body, i), o = r.__assign({}, t, {
                                             body: a
                                         }), [4, this._fetch(e, o)];
                                     case 1:
@@ -1225,17 +954,17 @@
                             })
                         })
                     }, e.requestOrThrow = function(e, t, n) {
-                        return void 0 === t && (t = {}), void 0 === n && (n = {}), i.__awaiter(this, void 0, Promise, function() {
-                            var r;
-                            return i.__generator(this, function(a) {
+                        return void 0 === t && (t = {}), void 0 === n && (n = {}), r.__awaiter(this, void 0, Promise, function() {
+                            var i;
+                            return r.__generator(this, function(a) {
                                 switch (a.label) {
                                     case 0:
                                         return a.trys.push([0, 2, , 3]), [4, this.request(e, t, n)];
                                     case 1:
-                                        if ((r = a.sent()).requestError) throw r.requestError;
-                                        if (r.error) throw new Error("Error while sending legacy-api request: " + r.error.status + " - " + r.error.message);
-                                        return [2, i.__assign({}, r, {
-                                            body: r.body
+                                        if ((i = a.sent()).requestError) throw i.requestError;
+                                        if (i.error) throw new Error("Error while sending legacy-api request: " + i.error.status + " - " + i.error.message);
+                                        return [2, r.__assign({}, i, {
+                                            body: i.body
                                         })];
                                     case 2:
                                         throw a.sent();
@@ -1245,30 +974,30 @@
                             })
                         })
                     }, e.getAPIURL = function(e) {
-                        return new URL(e, r.p.config.apiBaseURL)
+                        return new URL(e, i.p.config.apiBaseURL)
                     }, e.constructLegacyAPIResponse = function(e) {
-                        return i.__awaiter(this, void 0, Promise, function() {
-                            var t, n, r, a;
-                            return i.__generator(this, function(i) {
-                                switch (i.label) {
+                        return r.__awaiter(this, void 0, Promise, function() {
+                            var t, n, i, a;
+                            return r.__generator(this, function(r) {
+                                switch (r.label) {
                                     case 0:
                                         t = {
                                             status: e.status
-                                        }, i.label = 1;
+                                        }, r.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, e.json()];
+                                        return r.trys.push([1, 3, , 4]), [4, e.json()];
                                     case 2:
-                                        return n = i.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
+                                        return n = r.sent(), e.ok ? t.body = n : t.error = n, [3, 4];
                                     case 3:
-                                        return r = i.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = r), [3, 4];
+                                        return i = r.sent(), e.headers && e.headers.get && (a = e.headers.get("Content-Type")) && -1 !== a.indexOf("application/json") && (t.requestError = i), [3, 4];
                                     case 4:
                                         return [2, t]
                                 }
                             })
                         })
                     }, e._fetch = function(e, t) {
-                        return void 0 === t && (t = {}), i.__awaiter(this, void 0, Promise, function() {
-                            return i.__generator(this, function(n) {
+                        return void 0 === t && (t = {}), r.__awaiter(this, void 0, Promise, function() {
+                            return r.__generator(this, function(n) {
                                 switch (n.label) {
                                     case 0:
                                         return [4, fetch(this.getAPIURL(e).toString(), t)];
@@ -1279,26 +1008,26 @@
                         })
                     }, e.constructOptions = function(e, t) {
                         return e = Object.assign({}, e, {
-                            headers: i.__assign({}, this.getDefaultHeaders(e, t), e.headers)
+                            headers: r.__assign({}, this.getDefaultHeaders(e, t), e.headers)
                         })
                     }, e.serialize = function(e, t) {
                         return "application/json; charset=UTF-8" === t ? JSON.stringify(e) : "string" == typeof e ? e : e && FormData.prototype.isPrototypeOf(e) ? e : e ? (this.logger.error(new Error("Could not serialize this request body for the content-type provided."), "attempting to serialize object with a non-JSON content-type", {
                             contentType: t
                         }), null) : null
                     }, e.getDefaultHeaders = function(e, t) {
-                        var n = r.p.store.getState(),
-                            i = {
+                        var n = i.p.store.getState(),
+                            r = {
                                 Accept: "application/vnd.twitchtv.v" + (t.version || 5) + "+json; charset=UTF-8",
                                 "Accept-Language": "en-us",
-                                "Client-ID": r.p.config.legacyClientID,
+                                "Client-ID": i.p.config.legacyClientID,
                                 "X-Requested-With": "XMLHttpRequest"
                             };
-                        e.body && FormData.prototype.isPrototypeOf(e.body) || (i["Content-Type"] = "application/json; charset=UTF-8");
+                        e.body && FormData.prototype.isPrototypeOf(e.body) || (r["Content-Type"] = "application/json; charset=UTF-8");
                         var o = Object(a.e)(n);
-                        return o && (i.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (i["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
-                            i[e] && delete i[e]
-                        }), i
-                    }, e.logger = r.p.logger.withCategory("legacy-api"), e
+                        return o && (r.Authorization = "OAuth " + o.authToken, o.legacyCSRFToken && (r["Twitch-Api-Token"] = o.legacyCSRFToken)), t.excludeHeaders && t.excludeHeaders.forEach(function(e) {
+                            r[e] && delete r[e]
+                        }), r
+                    }, e.logger = i.p.logger.withCategory("legacy-api"), e
                 }()
         },
         dG1e: function(e, t, n) {
@@ -1306,18 +1035,18 @@
             n.d(t, "a", function() {
                 return a
             });
-            var i = n("mrSG"),
-                r = n("b6Yk");
+            var r = n("mrSG"),
+                i = n("b6Yk");
 
             function a(e, t) {
-                return void 0 === t && (t = {}), i.__awaiter(this, void 0, void 0, function() {
+                return void 0 === t && (t = {}), r.__awaiter(this, void 0, void 0, function() {
                     var n;
-                    return i.__generator(this, function(i) {
-                        switch (i.label) {
+                    return r.__generator(this, function(r) {
+                        switch (r.label) {
                             case 0:
-                                return [4, r.a.request(e.path, e, t)];
+                                return [4, i.a.request(e.path, e, t)];
                             case 1:
-                                return n = i.sent(), [2, new o(n, e)]
+                                return n = r.sent(), [2, new o(n, e)]
                         }
                     })
                 })
@@ -1336,7 +1065,7 @@
         eAwD: function(e, t, n) {
             "use strict";
 
-            function i(e) {
+            function r(e) {
                 e && requestAnimationFrame(function() {
                     e.scrollIntoView({
                         behavior: "smooth"
@@ -1344,13 +1073,13 @@
                 })
             }
             n.d(t, "a", function() {
-                return i
+                return r
             })
         },
         eRLD: function(e, t, n) {
             "use strict";
-            var i = n("mrSG"),
-                r = n("q1tI"),
+            var r = n("mrSG"),
+                i = n("q1tI"),
                 a = n("G8UE"),
                 o = 10,
                 s = 90;
@@ -1367,21 +1096,21 @@
                             timerPhase: u(0)
                         }, t.stop = c, t
                     }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                    return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         var e = this;
                         this.stop = function(e, t) {
                             var n = d.get(e);
                             if (n) n.listeners.add(t);
                             else {
-                                var i = new Set([t]),
-                                    r = 0,
+                                var r = new Set([t]),
+                                    i = 0,
                                     a = setInterval(function() {
-                                        r++, i.forEach(function(e) {
-                                            return e(r)
+                                        i++, r.forEach(function(e) {
+                                            return e(i)
                                         })
                                     }, 1e3);
                                 n = {
-                                    listeners: i,
+                                    listeners: r,
                                     timerID: a
                                 }, d.set(e, n)
                             }
@@ -1398,7 +1127,7 @@
                     }, t.prototype.render = function() {
                         return this.props.children(this.state.timerPhase)
                     }, t
-                }(r.Component);
+                }(i.Component);
             n.d(t, "a", function() {
                 return l
             })
@@ -1406,7 +1135,7 @@
         "ll/k": function(e, t, n) {
             "use strict";
 
-            function i(e, t) {
+            function r(e, t) {
                 if (void 0 === t && (t = 0), t > e) {
                     var n = t;
                     t = e, e = n
@@ -1414,18 +1143,18 @@
                 return t + Math.floor(Math.random() * (e - t + 1))
             }
 
-            function r(e) {
-                return e[i(e.length - 1)]
+            function i(e) {
+                return e[r(e.length - 1)]
             }
 
             function a(e, t) {
-                for (var n = 0, i = []; n < e;) i.push(t(n)), n += 1;
-                return i
+                for (var n = 0, r = []; n < e;) r.push(t(n)), n += 1;
+                return r
             }
             n.d(t, "a", function() {
-                return i
-            }), n.d(t, "b", function() {
                 return r
+            }), n.d(t, "b", function() {
+                return i
             }), n.d(t, "c", function() {
                 return a
             })
@@ -1433,9 +1162,9 @@
         nIRf: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return i
+                return r
             });
-            var i = function() {
+            var r = function() {
                 return function(e) {
                     var t = this;
                     this.timerId = null, this.start = function() {
@@ -1665,67 +1394,22 @@
         rSo7: function(e, t, n) {
             "use strict";
             n.d(t, "a", function() {
-                return r
+                return i
             });
-            var i = n("/7QA");
+            var r = n("/7QA");
 
-            function r(e) {
+            function i(e) {
                 var t = Math.floor(e / 60),
                     n = e % 60;
-                return t && n ? Object(i.d)("{hours, number}h{minutes, number}m", {
+                return t && n ? Object(r.d)("{hours, number}h{minutes, number}m", {
                     hours: t,
                     minutes: n
-                }, "StreamSummaryDuration") : t ? Object(i.d)("{hours, number}h", {
+                }, "StreamSummaryDuration") : t ? Object(r.d)("{hours, number}h", {
                     hours: t
-                }, "StreamSummaryDuration") : Object(i.d)("{minutes, number}m", {
+                }, "StreamSummaryDuration") : Object(r.d)("{minutes, number}m", {
                     minutes: n
                 }, "StreamSummaryDuration")
             }
-        },
-        zyCo: function(e, t, n) {
-            "use strict";
-            var i = n("mrSG"),
-                r = n("q1tI"),
-                a = (n("Leb6"), {
-                    "data-test-selector": "countdown-fill-width"
-                }),
-                o = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = this,
-                            t = this.props.startPolling || setInterval;
-                        this.intervalID = t(function() {
-                            return e.forceUpdate()
-                        }, 1e3)
-                    }, t.prototype.componentWillUnmount = function() {
-                        clearInterval(this.intervalID)
-                    }, t.prototype.componentDidUpdate = function() {
-                        this.props.getRemainingTime() <= 0 && this.props.onCountdownEnd()
-                    }, t.prototype.render = function() {
-                        var e = this.countdownPercentage + "%";
-                        return r.createElement("div", {
-                            className: "raid-countdown-bar"
-                        }, r.createElement("div", i.__assign({
-                            className: "raid-countdown-bar__fill",
-                            style: {
-                                width: e
-                            }
-                        }, a)))
-                    }, Object.defineProperty(t.prototype, "countdownPercentage", {
-                        get: function() {
-                            return this.props.getRemainingTime() / this.props.totalCountdownTime * 100
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(r.PureComponent);
-            n.d(t, !1, function() {
-                return a
-            }), n.d(t, "a", function() {
-                return o
-            })
         }
     }
 ]);

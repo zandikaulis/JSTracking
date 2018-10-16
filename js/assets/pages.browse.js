@@ -640,12 +640,12 @@
                 }))(h),
                 v = n("Ue10"),
                 T = function() {
-                    return o.createElement(v.yb, {
+                    return o.createElement(v.xb, {
                         borderTop: !0,
                         padding: {
                             top: 3
                         },
-                        textAlign: v.Kb.Center
+                        textAlign: v.Jb.Center
                     }, o.createElement(v.W, {
                         fontSize: v.Ba.Size4,
                         color: v.O.Alt2
@@ -686,14 +686,14 @@
                 E = n("yoKv"),
                 _ = n("mf+E"),
                 D = n("ZS2+"),
-                O = n("yR8l"),
-                P = n("Uive"),
-                x = n("cTNz"),
+                x = n("yR8l"),
+                O = n("Uive"),
+                P = n("cTNz"),
                 F = n("vSJR");
             ! function(e) {
                 e.Categories = "categories", e.LiveChannels = "live-channels"
             }(a || (a = {}));
-            var L = function(e) {
+            var A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getLinkTo = function(e) {
@@ -748,7 +748,7 @@
                         }
                     }, t
                 }(o.Component),
-                A = n("si2W"),
+                L = n("si2W"),
                 R = n("C29h"),
                 j = n("AZIu"),
                 B = (n("TFM5"), function(e) {
@@ -769,14 +769,14 @@
                                 left: .5,
                                 top: 1
                             }
-                        }, o.createElement(v.W, null, Object(c.d)("Showing", "BrowseHeader"))), o.createElement(L, {
+                        }, o.createElement(v.W, null, Object(c.d)("Showing", "BrowseHeader"))), o.createElement(A, {
                             showingType: this.props.showingType
                         })), o.createElement(v.Wa, null, o.createElement(v.Wa, {
                             padding: {
                                 left: .5,
                                 top: 1
                             }
-                        }, o.createElement(v.W, null, Object(c.d)("Filters", "BrowseHeader"))), o.createElement(A.a, {
+                        }, o.createElement(v.W, null, Object(c.d)("Filters", "BrowseHeader"))), o.createElement(L.a, {
                             onAddTagFilter: this.props.addTagFilter,
                             onRemoveTagFilter: this.props.removeTagFilter,
                             section: this.props.showingType === a.Categories ? j.a.Categories : j.a.LiveChannels,
@@ -817,18 +817,18 @@
                         return t.renderSideNavInfoSection = function() {
                             return o.createElement(M.a, null, o.createElement(q.a, null))
                         }, t.renderAds = function() {
-                            return o.createElement(P.a, {
+                            return o.createElement(O.a, {
                                 injectStyles: {
                                     textAlign: "center",
                                     marginBottom: 0,
                                     marginTop: 30
                                 },
-                                adUnit: x.d.directory,
+                                adUnit: P.d.directory,
                                 "data-a-target": "browse-banner-ad-slot",
-                                slotID: x.b.directory.banner,
-                                adSize: x.c.directory.banner,
+                                slotID: P.b.directory.banner,
+                                adSize: P.c.directory.banner,
                                 targeting: {
-                                    pagetype: x.a.games
+                                    pagetype: P.a.games
                                 },
                                 autoEnable: !1
                             })
@@ -924,7 +924,7 @@
                         e === G.a.DirectoryCategory ? this.props.changeBrowseType(m.a.Games) : e === G.a.Communities ? this.props.changeBrowseType(m.a.Communities) : e === G.a.CreativeCommunities ? this.props.changeBrowseType(m.a.CreativeCommunities) : U(e) && this.props.changeBrowseType(m.a.Channels)
                     }, t
                 }(o.Component),
-                Y = Object(S.compose)(Object(O.a)(V, {
+                Y = Object(S.compose)(Object(x.a)(V, {
                     options: function(e) {
                         return {
                             variables: {
@@ -936,7 +936,7 @@
                         return !e.match.params.tagID
                     }
                 }))(Q);
-            var K = Object(C.connect)(function(e) {
+            var J = Object(C.connect)(function(e) {
                 return {
                     browseType: Object(r.b)(e),
                     lastBrowsePath: e.browse.lastBrowsePath,
@@ -957,7 +957,7 @@
             }), n.d(t, "BrowseGamesPage", function() {
                 return b.BrowseGamesPage
             }), n.d(t, "BrowseRootPage", function() {
-                return K
+                return J
             })
         },
         "9x/k": function(e, t, n) {
@@ -1242,7 +1242,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.N.TOP,
+                                tagType: h.M.TOP,
                                 limit: 50
                             }
                         }
@@ -1304,7 +1304,7 @@
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
             }(C || (C = {}));
-            var O = function(e) {
+            var x = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -1448,15 +1448,15 @@
                         })
                     }, t
                 }(r.Component),
-                P = Object(o.compose)(i.a)(O);
+                O = Object(o.compose)(i.a)(x);
             n.d(t, "b", function() {
                 return b
             }), n.d(t, !1, function() {
                 return C
             }), n.d(t, !1, function() {
-                return O
+                return x
             }), n.d(t, "a", function() {
-                return P
+                return O
             })
         },
         G1iw: function(e, t, n) {
@@ -1759,10 +1759,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: s.bc.Above
-                    }, r.createElement(s.yb, {
+                        zIndex: s.ac.Above
+                    }, r.createElement(s.xb, {
                         color: s.O.Alt2,
-                        textAlign: s.Kb.Center,
+                        textAlign: s.Jb.Center,
                         flexShrink: 1
                     }, r.createElement(s.nb, {
                         asset: s.ob.DeadGlitch,
@@ -1772,12 +1772,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Kb.Center
+                        textAlign: s.Jb.Center
                     }, r.createElement(s.W, {
-                        type: s.Ob.H4,
+                        type: s.Nb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(o.d)("Search is not available at this time", "DropdownSearchError"))), r.createElement(s.W, {
-                        type: s.Ob.P
+                        type: s.Nb.P
                     }, Object(o.d)("Please try again later", "DropdownSearchError")))
                 },
                 l = n("8Ad5"),
@@ -1836,13 +1836,13 @@
                             });
                         return this.props.inline ? r.createElement(i.a, {
                             onClickOut: this.onClickOut
-                        }, r.createElement(s.yb, {
+                        }, r.createElement(s.xb, {
                             background: this.state.isInputFocused || this.state.isOpen ? s.r.Base : void 0,
                             borderRadius: s.x.Large,
                             padding: .5,
                             position: s.eb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && r.createElement(s.yb, {
+                        }, n, e && r.createElement(s.xb, {
                             attachLeft: !0,
                             background: s.r.Base,
                             borderRadius: s.x.Large,
@@ -1852,7 +1852,7 @@
                                 y: 1
                             },
                             position: s.eb.Absolute,
-                            zIndex: s.bc.Above,
+                            zIndex: s.ac.Above,
                             elevation: 3
                         }, r.createElement("div", {
                             tabIndex: 0,
@@ -1920,12 +1920,12 @@
                 E = n("9x/k"),
                 _ = n("rShu"),
                 D = n("x/sq"),
-                O = n("yI6f"),
-                P = n("T2RZ"),
-                x = n("Ue10"),
+                x = n("yI6f"),
+                O = n("T2RZ"),
+                P = n("Ue10"),
                 F = n("0egc"),
-                L = Object(P.a)(T.PageviewMedium.Browse, O.b.Game, O.c.BrowseCategories)(b.a),
-                A = "directory-first-item",
+                A = Object(O.a)(T.PageviewMedium.Browse, x.b.Game, x.c.BrowseCategories)(b.a),
+                L = "directory-first-item",
                 R = "directory-container";
 
             function j(e) {
@@ -1942,7 +1942,7 @@
                             return requestAnimationFrame(t.updateDisplayAdOrder)
                         }, t.updateDisplayAdOrder = function() {
                             var e = document.querySelector('[data-target="' + R + '"]'),
-                                t = document.querySelector('[data-target="' + A + '"]'),
+                                t = document.querySelector('[data-target="' + L + '"]'),
                                 n = document.querySelector("#" + k.b.directory.rectangle);
                             if (t && e && n) {
                                 var a = Math.round((e.clientWidth - 300) / t.clientWidth).toString();
@@ -1986,7 +1986,7 @@
                             onClickRemoveLastTag: this.removeLastTag,
                             tagFilters: this.props.tagFilters
                         });
-                        if (this.props.data.loading) return l.createElement(x.Ya, {
+                        if (this.props.data.loading) return l.createElement(P.Ya, {
                             fillContent: !0
                         });
                         if (!this.props.data.directoriesWithTags) return l.createElement(p.a, {
@@ -2014,17 +2014,17 @@
                                         return e && e.applicableChannels && 0 === e.applicableChannels.length || !1
                                     })), l.createElement("div", {
                                         key: r.id,
-                                        "data-target": a ? "" : A,
+                                        "data-target": a ? "" : L,
                                         style: {
                                             order: a
                                         }
-                                    }, l.createElement(x.Wa, {
+                                    }, l.createElement(P.Wa, {
                                         margin: {
                                             bottom: 2
                                         },
                                         "data-target": "directory-page__card-container",
-                                        position: x.eb.Relative
-                                    }, l.createElement(L, {
+                                        position: P.eb.Relative
+                                    }, l.createElement(A, {
                                         linkTo: {
                                             pathname: e.getPathURL(r.name, r.directoryType),
                                             state: {
@@ -2056,13 +2056,13 @@
                                 }
                                 return null
                             });
-                        return l.createElement(x.Wa, null, l.createElement(S.b, {
+                        return l.createElement(P.Wa, null, l.createElement(S.b, {
                             addPaddingWhenPlayerIsPersisting: !0
                         }), l.createElement("div", {
                             "data-target": R
-                        }, l.createElement(x.Ub, {
-                            gutterSize: x.Wb.Small,
-                            childWidth: x.Vb.Small,
+                        }, l.createElement(P.Tb, {
+                            gutterSize: P.Vb.Small,
+                            childWidth: P.Ub.Small,
                             placeholderItems: 20
                         }, l.createElement(y.a, {
                             key: -1,
@@ -2955,7 +2955,7 @@
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     return i.createElement(s.Wa, null, i.createElement(s.W, {
-                        type: s.Ob.H3
+                        type: s.Nb.H3
                     }, this.getErrorMessage()), i.createElement(s.W, {
                         color: s.O.Alt2,
                         fontSize: s.Ba.Size5
@@ -3057,7 +3057,7 @@
                                 margin: {
                                     left: 1
                                 },
-                                textAlign: T.Kb.Left
+                                textAlign: T.Jb.Left
                             }, i.createElement(T.W, {
                                 color: T.O.Alt2,
                                 fontSize: T.Ba.Size6
@@ -3099,7 +3099,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.trackImpression()
                     }, t.prototype.render = function() {
-                        return i.createElement(T.yb, {
+                        return i.createElement(T.xb, {
                             background: T.r.AccentAlt2,
                             display: T.X.Flex,
                             flexDirection: T.Z.Column,
@@ -3109,7 +3109,7 @@
                             },
                             margin: 1
                         }, this.renderImage(), i.createElement(T.Wa, {
-                            textAlign: T.Kb.Center
+                            textAlign: T.Jb.Center
                         }, this.renderText(), i.createElement(T.z, {
                             onClick: this.signup,
                             size: T.D.Large
@@ -3143,7 +3143,7 @@
                         }, i.createElement(T.Wa, {
                             className: "upsell-center__avatar",
                             position: T.eb.Absolute,
-                            zIndex: T.bc.Above
+                            zIndex: T.ac.Above
                         }, i.createElement(T.q, {
                             src: this.props.data.user.profileImageURL,
                             alt: Object(c.d)("{displayName}'s Profile Image", {
@@ -3327,11 +3327,11 @@
                         position: o.eb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.cc)(e)), r.createElement(o.Rb, {
-                        direction: o.Tb.Top,
-                        align: o.Sb.Right,
+                    }, Object(o.bc)(e)), r.createElement(o.Qb, {
+                        direction: o.Sb.Top,
+                        align: o.Rb.Right,
                         label: Object(i.d)("Offers in-game Drops", "DropsBadge")
-                    }, r.createElement(o.yb, {
+                    }, r.createElement(o.xb, {
                         className: "drops-badge__drops-icon",
                         position: o.eb.Relative,
                         padding: {
@@ -3342,7 +3342,7 @@
                         },
                         overflow: o.Za.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.bc.Default
+                        zIndex: o.ac.Default
                     }, r.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
@@ -3383,20 +3383,29 @@
                     aspect: o.p.BoxArt,
                     borderRadius: o.x.Medium
                 }, d(e)))), r.createElement(o.H, null, r.createElement(o.Wa, {
+                    display: o.X.Flex
+                }, r.createElement(o.Wa, {
                     "data-test-selector": "tw-card-title",
                     "data-a-target": "tw-card-title",
                     flexGrow: 1,
                     flexShrink: 1,
                     margin: {
                         top: .5
-                    }
+                    },
+                    ellipsis: !0
                 }, r.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Ob.H3,
+                    type: o.Nb.H3,
                     fontSize: o.Ba.Size5,
                     lineHeight: o.Xa.Body,
                     ellipsis: !0
-                }, e.title)), r.createElement(o.W, {
+                }, e.title)), e.contextualCardActionProps && r.createElement(o.Wa, {
+                    margin: {
+                        top: .5
+                    },
+                    flexGrow: 0,
+                    flexShrink: 0
+                }, r.createElement(e.contextualCardActionProps.component, a.__assign({}, e.contextualCardActionProps.props)))), r.createElement(o.W, {
                     color: o.O.Alt2,
                     ellipsis: !0
                 }, e.info))), (e.linkTo || e.onClick || e.disabled) && (t = r.createElement(o.T, {
@@ -3413,7 +3422,7 @@
                     tabIndex: e.tabIndex
                 }, t)), r.createElement("div", a.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.cc)(e)), r.createElement(o.G, {
+                }, Object(o.bc)(e)), r.createElement(o.G, {
                     key: e.title
                 }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && r.createElement(o.Wa, {
                     margin: {
@@ -3677,7 +3686,7 @@
 
             function s(e) {
                 return a.createElement(o.W, {
-                    type: o.Ob.Strong
+                    type: o.Nb.Strong
                 }, e)
             }
 
@@ -3809,7 +3818,7 @@
                         onClick: this.handleInsideDropdownClick
                     }, e)), i.createElement(o.a, {
                         onClickOut: this.handleOnClickOut
-                    }, i.createElement(c.yb, r.__assign({
+                    }, i.createElement(c.xb, r.__assign({
                         background: this.state.isOpen ? c.r.Base : void 0,
                         borderRadius: c.x.Large,
                         className: "inline-dropdown",
@@ -3824,7 +3833,7 @@
                         onClick: this.handleButtonClick,
                         size: c.D.Large,
                         type: c.F.Hollow
-                    }, this.props.buttonLabel)), i.createElement(c.yb, {
+                    }, this.props.buttonLabel)), i.createElement(c.xb, {
                         attachLeft: !0,
                         background: c.r.Base,
                         borderRadius: c.x.Large,
@@ -3836,7 +3845,7 @@
                             y: 1
                         },
                         position: c.eb.Absolute,
-                        zIndex: c.bc.Above
+                        zIndex: c.ac.Above
                     }, e)))
                 }, t.prototype.toggleDropdown = function(e) {
                     void 0 === e && (e = !this.state.isOpen), this.setState({

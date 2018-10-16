@@ -1544,8 +1544,8 @@
                 c = n("/MKj"),
                 d = n("fvjX"),
                 p = n("/7QA"),
-                y = n("yR8l"),
-                h = n("/0dD"),
+                h = n("yR8l"),
+                y = n("/0dD"),
                 g = n("76Lv"),
                 f = n("1/iK"),
                 v = n("y5D0"),
@@ -1685,14 +1685,14 @@
                             onClick: this.followClicked,
                             text: c,
                             type: t || w.F.Default
-                        }, Object(w.cc)(this.props))) : i.createElement(w.z, u.__assign({
+                        }, Object(w.bc)(this.props))) : i.createElement(w.z, u.__assign({
                             ariaLabel: r,
                             "data-a-target": a,
                             "data-test-selector": s,
                             icon: m,
                             onClick: this.followClicked,
                             statusAlertIcon: this.props.isLoggedIn ? l : void 0
-                        }, Object(w.cc)(this.props), {
+                        }, Object(w.bc)(this.props), {
                             type: t || w.F.Default
                         }), c), i.createElement(w.Wa, {
                             display: this.showUnfollowButton() ? w.X.Flex : void 0,
@@ -1702,7 +1702,7 @@
                         }, o)
                     }, t.prototype.reportInteractive = function() {
                         this.props.isLoggedIn && this.props.directoryName && !this.communityDataLoaded() || this.props.latencyTracking.reportInteractive()
-                    }, t = u.__decorate([Object(y.a)(N, {
+                    }, t = u.__decorate([Object(h.a)(N, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -1713,9 +1713,9 @@
                         skip: function(e) {
                             return !e.isLoggedIn || !e.directoryName
                         }
-                    }), Object(y.a)(E, {
+                    }), Object(h.a)(E, {
                         name: "followCommunity"
-                    }), Object(y.a)(O, {
+                    }), Object(h.a)(O, {
                         name: "unfollowCommunity"
                     }), Object(_.b)("DirectoryFollowButton")], t)
                 }(i.Component);
@@ -1755,14 +1755,14 @@
                             backgroundImage: "url(" + this.props.data.community.coverURL + ")"
                         }, t = i.createElement(w.W, {
                             color: w.O.Overlay,
-                            type: w.Ob.H3
+                            type: w.Nb.H3
                         }, this.props.data.community.displayName), n = i.createElement(w.W, {
                             color: w.O.Overlay,
-                            type: w.Ob.P
+                            type: w.Nb.P
                         }, Object(p.d)("{followers, plural, one {# Follower} other {# Followers}}", {
                             followers: this.props.data.community.followersCount || 0
                         }, "CommunityModerationBanner")));
-                        var r = l("community-moderation-banner", Object(g.b)(h.a.Dark));
+                        var r = l("community-moderation-banner", Object(g.b)(y.a.Dark));
                         return i.createElement(w.Oa, {
                             className: r,
                             position: w.eb.Relative
@@ -1816,7 +1816,7 @@
                     return {
                         isLoggedIn: !!e.session.user
                     }
-                }), Object(y.a)(D, {
+                }), Object(h.a)(D, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1863,7 +1863,7 @@
                                 }
                             }, i.createElement(w.W, {
                                 color: w.O.Error,
-                                type: w.Ob.H4,
+                                type: w.Nb.H4,
                                 "data-test-selector": V
                             }, L(t.state.error))) : null
                         }, t.onReasonChange = function(e) {
@@ -1909,7 +1909,7 @@
                     return u.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(w.Oa, {
                             position: w.eb.Relative
-                        }, i.createElement(w.yb, {
+                        }, i.createElement(w.xb, {
                             background: w.r.Base,
                             className: "stream-ban-modal"
                         }, i.createElement(w.Wa, {
@@ -1919,10 +1919,10 @@
                                 bottom: 2
                             }
                         }, i.createElement(w.W, {
-                            type: w.Ob.H4
+                            type: w.Nb.H4
                         }, Object(p.d)("Are you sure you want to ban {name}?", {
                             name: this.props.username
-                        }, "StreamBanModal"))), i.createElement(w.yb, {
+                        }, "StreamBanModal"))), i.createElement(w.xb, {
                             borderTop: !0
                         }, i.createElement(w.Wa, {
                             margin: {
@@ -1935,13 +1935,13 @@
                             placeholder: Object(p.d)("Please be as detailed as possible", "StreamBanModal"),
                             onChange: this.onReasonChange,
                             "data-test-selector": "reason-input"
-                        }))), i.createElement(w.yb, {
+                        }))), i.createElement(w.xb, {
                             borderTop: !0
                         }, i.createElement(w.Wa, {
                             padding: {
                                 top: 2
                             },
-                            textAlign: w.Kb.Center
+                            textAlign: w.Jb.Center
                         }, i.createElement(w.Wa, {
                             display: w.X.Inline,
                             margin: {
@@ -1965,15 +1965,15 @@
                         })))
                     }, t
                 }(i.Component),
-                q = Object(R.compose)(Object(y.a)(W, {
+                q = Object(R.compose)(Object(h.a)(W, {
                     name: "banUserFromCommunity"
                 }))(P);
-            var z = Object(c.connect)(null, function(e) {
+            var G = Object(c.connect)(null, function(e) {
                     return Object(d.bindActionCreators)({
                         onCloseModal: x.c
                     }, e)
                 })(q),
-                G = function(e) {
+                z = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onSuccess = function() {
@@ -1981,7 +1981,7 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(z, {
+                        return i.createElement(G, {
                             communityID: this.props.communityID,
                             communityName: this.props.communityName,
                             userID: this.props.user.id,
@@ -2007,7 +2007,7 @@
                                 }
                             }, i.createElement(w.W, {
                                 color: w.O.Error,
-                                type: w.Ob.H4,
+                                type: w.Nb.H4,
                                 "data-test-selector": $
                             }, L(t.state.error))) : null
                         }, t.onReasonChange = function(e) {
@@ -2060,7 +2060,7 @@
                     return u.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(w.Oa, {
                             position: w.eb.Relative
-                        }, i.createElement(w.yb, {
+                        }, i.createElement(w.xb, {
                             background: w.r.Base,
                             className: "stream-timeout-modal"
                         }, i.createElement(w.Wa, {
@@ -2070,10 +2070,10 @@
                                 bottom: 2
                             }
                         }, i.createElement(w.W, {
-                            type: w.Ob.H4
+                            type: w.Nb.H4
                         }, Object(p.d)("Are you sure you want to timeout {name}?", {
                             name: this.props.username
-                        }, "StreamTimeoutModal"))), i.createElement(w.yb, {
+                        }, "StreamTimeoutModal"))), i.createElement(w.xb, {
                             borderTop: !0
                         }, i.createElement(w.Wa, {
                             margin: {
@@ -2105,13 +2105,13 @@
                             value: "12"
                         }, Object(p.d)("12 hours", "StreamTimeoutModal")), i.createElement("option", {
                             value: "24"
-                        }, Object(p.d)("24 hours", "StreamTimeoutModal")))), i.createElement(w.yb, {
+                        }, Object(p.d)("24 hours", "StreamTimeoutModal")))), i.createElement(w.xb, {
                             borderTop: !0
                         }, i.createElement(w.Wa, {
                             padding: {
                                 top: 2
                             },
-                            textAlign: w.Kb.Center
+                            textAlign: w.Jb.Center
                         }, i.createElement(w.Wa, {
                             display: w.X.Inline,
                             margin: {
@@ -2135,7 +2135,7 @@
                         })))
                     }, t
                 }(i.Component),
-                X = Object(R.compose)(Object(y.a)(H, {
+                X = Object(R.compose)(Object(h.a)(H, {
                     name: "timeoutUserFromCommunity"
                 }))(Q);
             var Y, Z = Object(c.connect)(null, function(e) {
@@ -2267,7 +2267,7 @@
                         });
                         return i.createElement(w.Wa, {
                             className: "user-search-form"
-                        }, i.createElement(w.yb, {
+                        }, i.createElement(w.xb, {
                             key: "user-search-form-input",
                             padding: 1,
                             border: !0
@@ -2298,7 +2298,7 @@
                             direction: w.v.TopCenter
                         }, i.createElement(K.b, {
                             className: "user-search-form__results"
-                        }, i.createElement(w.Wa, null, this.state.results.length > 0 && this.renderUsers(this.state.results)))))), this.props.displayUsers && this.props.displayUsers.length > 0 && i.createElement(w.yb, {
+                        }, i.createElement(w.Wa, null, this.state.results.length > 0 && this.renderUsers(this.state.results)))))), this.props.displayUsers && this.props.displayUsers.length > 0 && i.createElement(w.xb, {
                             key: "user-search-form-results",
                             className: e,
                             borderLeft: !0,
@@ -2379,7 +2379,7 @@
                                 }, e
                             }, {})
                         }, t.banUser = function(e) {
-                            t.props.showModal(G, {
+                            t.props.showModal(z, {
                                 user: e,
                                 communityID: t.props.communityID,
                                 communityName: t.props.communityName,
@@ -2475,9 +2475,9 @@
                     return Object(d.bindActionCreators)({
                         showModal: x.d
                     }, e)
-                }), Object(y.a)(re, {
+                }), Object(h.a)(re, {
                     name: "unbanUser"
-                }), Object(y.a)(ae, {
+                }), Object(h.a)(ae, {
                     name: "untimeoutUser"
                 }))(se),
                 ue = "community-moderation-page-error-message";
@@ -2496,15 +2496,15 @@
                                     bottom: 1
                                 }
                             }, i.createElement(w.W, {
-                                type: w.Ob.H2
+                                type: w.Nb.H2
                             }, Object(p.d)("Moderation", "CommunityModerationPage"))), i.createElement(w.Wa, {
                                 margin: {
                                     bottom: 1
                                 }
-                            }, i.createElement(w.Ab, null, i.createElement(w.zb, {
+                            }, i.createElement(w.zb, null, i.createElement(w.yb, {
                                 linkTo: "/communities/" + t.props.match.params.encodedCommunityName + "/moderation/log",
                                 active: t.props.activeTab === Y.Moderation
-                            }, Object(p.d)("Moderation", "CommunityModerationPageTab")), t.props.showSettingsTab && i.createElement(w.zb, {
+                            }, Object(p.d)("Moderation", "CommunityModerationPageTab")), t.props.showSettingsTab && i.createElement(w.yb, {
                                 linkTo: "/communities/" + t.props.match.params.encodedCommunityName + "/moderation/settings",
                                 active: t.props.activeTab === Y.Settings
                             }, Object(p.d)("Settings", "CommunityModerationPageTab")))), t.props.children)
@@ -2544,7 +2544,7 @@
                 de = n("2Ygb"),
                 pe = n("aDGs");
 
-            function ye(e) {
+            function he(e) {
                 return function(t) {
                     var n = function(e) {
                         function n() {
@@ -2591,7 +2591,7 @@
                                 login: e.session.user.login
                             } : null
                         }
-                    }), Object(y.a)(pe, {
+                    }), Object(h.a)(pe, {
                         options: function(t) {
                             return {
                                 variables: {
@@ -2605,7 +2605,7 @@
                     }))(n)
                 }
             }
-            var he, ge = function(e) {
+            var ye, ge = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2641,12 +2641,12 @@
                     destination: j.a.CommunityModeration
                 }), Object(M.a)({
                     location: C.PageviewLocation.CommunityModerationLog
-                }), ye({
+                }), he({
                     log: !0
                 }))(ge);
             ! function(e) {
                 e.TwoFactor = "two_factor_not_enabled", e.EmailVerification = "unverified_email"
-            }(he || (he = {}));
+            }(ye || (ye = {}));
             var ve, ke = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2671,7 +2671,7 @@
                                                 body: "owner_user_id=" + this.props.user.id
                                             })];
                                         case 2:
-                                            return t = r.sent(), n = null, t.requestError ? n = e : t.error && (i = t.error.message, n = i === he.TwoFactor ? Object(p.d)("User does not have Two Factor Authorization enabled.", "CommunityLeaderModal") : i === he.EmailVerification ? Object(p.d)("User has not verified their email.", "CommunityLeaderModal") : e), n ? (this.setState({
+                                            return t = r.sent(), n = null, t.requestError ? n = e : t.error && (i = t.error.message, n = i === ye.TwoFactor ? Object(p.d)("User does not have Two Factor Authorization enabled.", "CommunityLeaderModal") : i === ye.EmailVerification ? Object(p.d)("User has not verified their email.", "CommunityLeaderModal") : e), n ? (this.setState({
                                                 working: !1,
                                                 error: n
                                             }), [2]) : (this.props.closeModal(), this.props.onSuccess(this.props.user.id), [3, 4]);
@@ -2688,7 +2688,7 @@
                         }, t
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(w.yb, {
+                        return i.createElement(w.xb, {
                             padding: 2,
                             background: w.r.Base,
                             className: "ban-user-modal"
@@ -2696,7 +2696,7 @@
                             fontSize: w.Ba.Size4
                         }, Object(p.d)("Are you sure you want to make {user} the new community leader?", {
                             user: this.props.user.displayName
-                        }, "CommunityLeaderModal")), i.createElement(w.yb, {
+                        }, "CommunityLeaderModal")), i.createElement(w.xb, {
                             margin: {
                                 y: 2
                             },
@@ -3031,7 +3031,7 @@
                         })
                     }, t
                 }(i.Component),
-                Oe = Object(y.a)(Ne, {
+                Oe = Object(h.a)(Ne, {
                     name: "updateCommunity"
                 })(Ee),
                 Te = n("cr+I"),
@@ -3134,7 +3134,7 @@
                         }, i.createElement(Se, {
                             communityID: o,
                             onChange: this.onChangeCommunityLeader
-                        }), i.createElement(w.yb, {
+                        }), i.createElement(w.xb, {
                             border: !0,
                             padding: 1,
                             margin: {
@@ -3166,7 +3166,7 @@
                     destination: j.a.CommunityModeration
                 }), Object(M.a)({
                     location: C.PageviewLocation.CommunityModerationSettings
-                }), o.a, ye({
+                }), o.a, he({
                     settings: !0
                 }))(Fe),
                 Me = function(e) {

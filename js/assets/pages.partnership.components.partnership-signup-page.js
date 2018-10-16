@@ -1053,7 +1053,7 @@
                             alt: this.props.alt,
                             src: this.props.src
                         })), o.createElement(h.Wa, {
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, o.createElement(h.Wa, {
                             margin: {
                                 bottom: 2
@@ -1061,7 +1061,7 @@
                         }, o.createElement(h.W, {
                             bold: !0,
                             fontSize: h.Ba.Size3,
-                            type: h.Ob.H3
+                            type: h.Nb.H3
                         }, this.props.title)), o.createElement(h.W, {
                             fontSize: h.Ba.Size5,
                             color: h.O.Alt2
@@ -1117,7 +1117,7 @@
                                 "x:strong": function(e) {
                                     return o.createElement(h.W, {
                                         bold: !0,
-                                        type: h.Ob.Span
+                                        type: h.Nb.Span
                                     }, e)
                                 }
                             }, "SubmittedPage"),
@@ -1245,7 +1245,7 @@
                         var e = this.props,
                             t = e.borderTop,
                             r = e.margin;
-                        return o.createElement(h.yb, {
+                        return o.createElement(h.xb, {
                             background: this.props.background || h.r.Base,
                             borderRadius: this.props.borderRadius || h.x.Medium,
                             borderBottom: !0,
@@ -1404,7 +1404,7 @@
                                         "x:strong": function(e) {
                                             return o.createElement(h.W, {
                                                 bold: !0,
-                                                type: h.Ob.Span
+                                                type: h.Nb.Span
                                             }, e)
                                         }
                                     }, "PartnerSignupVerifyAchievements"),
@@ -1550,7 +1550,7 @@
                     }, t
                 }(o.Component),
                 K = function() {
-                    return o.createElement(h.yb, {
+                    return o.createElement(h.xb, {
                         background: h.r.Base,
                         padding: 2,
                         margin: {
@@ -1558,7 +1558,7 @@
                         },
                         border: !0,
                         borderRadius: h.x.Medium
-                    }, o.createElement(h.Xb, null, o.createElement("h3", null, Object(c.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), o.createElement("ul", null, o.createElement("li", null, Object(c.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
+                    }, o.createElement(h.Wb, null, o.createElement("h3", null, Object(c.d)("Partnership Guidelines", "PartnershipSignupGuidelines")), o.createElement("ul", null, o.createElement("li", null, Object(c.d)("Complete the <x:path-to-partner>Path to Partner Achievement</x:path-to-partner> or demonstrate large, engaged viewership/following on other services. Streamers who complete the Path to Partner achievements in your Achievements Dashboard will unlock a button to apply for Partnership, and receive priority for their application to be reviewed. Please note that these Achievements list the minimum criteria we look for in potential Partners, and completing them does not guarantee Partnership.", {
                         "x:path-to-partner": function(e) {
                             return o.createElement(h.U, {
                                 targetBlank: !0,
@@ -1620,7 +1620,7 @@
             function(e) {
                 e.Description = "partnership-signup-main-layout-description", e.LeftColumn = "partnership-signup-main-layout-left-column", e.RightColumn = "partnership-signup-main-layout-right-column"
             }(H || (H = {}));
-            var q, Z, z = function(e) {
+            var q, Z, J = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1643,14 +1643,14 @@
                             }
                         }, o.createElement(h.W, {
                             bold: !0,
-                            type: h.Ob.H1
+                            type: h.Nb.H1
                         }, Object(c.d)("Partner Application", "PartnershipSignupApplicationTitle"))), e && o.createElement(h.Wa, {
                             "data-test-selector": H.Description,
                             margin: {
                                 bottom: 2
                             }
                         }, o.createElement(h.W, {
-                            type: h.Ob.P,
+                            type: h.Nb.P,
                             fontSize: h.Ba.Size5
                         }, e))), o.createElement(h.Wa, {
                             display: h.X.Flex,
@@ -1671,7 +1671,7 @@
                         }, o.createElement(K, null)))))
                     }, t
                 }(o.Component),
-                J = r("nJta");
+                z = r("nJta");
             ! function(e) {
                 e.RadioNo = "radio-no", e.RadioYes = "radio-yes"
             }(q || (q = {})),
@@ -1740,7 +1740,7 @@
                             s = this.state.radioValue === Z.Yes,
                             l = a && a.username,
                             d = i && i.channelURL;
-                        return o.createElement(z, {
+                        return o.createElement(J, {
                             description: Object(c.d)("We just need to check a few things before you're able to apply for partnership.", "PartnershipSignupForm")
                         }, o.createElement(U, {
                             email: t.email,
@@ -1756,7 +1756,7 @@
                         })))
                     }, t
                 }(o.Component),
-                $ = Object(i.compose)(Object(s.a)(J))(X),
+                $ = Object(i.compose)(Object(s.a)(z))(X),
                 ee = r("/MKj"),
                 te = r("fvjX"),
                 re = r("1/iK"),
@@ -1771,10 +1771,10 @@
                 return a.__extends(t, e), t.prototype.componentDidMount = function() {
                     this.props.showModalOnLoginTab()
                 }, t.prototype.render = function() {
-                    return o.createElement(z, {
+                    return o.createElement(J, {
                         description: Object(c.d)("The Twitch Partnership Program is for those who are committed to streaming. Twitch Partners are creators who stream a variety of content, from games, music, talk shows, art, to just about anything else you can imagine. If you love sharing what you do with a live audience and have built up a sizeable, engaged community on Twitch or other services, we want to hear from you!", "PartnershipSignupLogin"),
                         flexDirection: h.Z.Column
-                    }, o.createElement(h.Xb, null, o.createElement("hr", null)), o.createElement(h.Wa, {
+                    }, o.createElement(h.Wb, null, o.createElement("hr", null)), o.createElement(h.Wa, {
                         alignItems: h.f.Center,
                         display: h.X.Flex,
                         fullWidth: !0,
@@ -1889,7 +1889,7 @@
                         var e = this.props.currentUser,
                             t = e.email,
                             r = e.login;
-                        return e.roles && r && t ? o.createElement(z, null, this.state.formErrorType && o.createElement(h.Wa, {
+                        return e.roles && r && t ? o.createElement(J, null, this.state.formErrorType && o.createElement(h.Wa, {
                             margin: {
                                 bottom: 2
                             }
@@ -1989,7 +1989,7 @@
                             "data-test-selector": oe.Description,
                             label: Object(c.d)("Details", "PartnershipSignupForm"),
                             hint: Object(c.d)("Tell us about your stream", "PartnershipSignupForm")
-                        }, o.createElement(h.Lb, {
+                        }, o.createElement(h.Kb, {
                             id: ue.Description,
                             onChange: this.registerHandleFieldChange(se.Description)
                         }))), o.createElement(h.z, {

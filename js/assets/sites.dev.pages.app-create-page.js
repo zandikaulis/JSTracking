@@ -33,9 +33,9 @@
                                 bottom: 1
                             }
                         }, n.createElement(h.W, {
-                            type: h.Ob.H2
+                            type: h.Nb.H2
                         }, Object(g.d)("Register Your Application", "DevCreateApp"))), n.createElement(h.W, {
-                            type: h.Ob.P
+                            type: h.Nb.P
                         }, Object(g.d)("Register a new application that uses the Twitch API to interact with Twitch", "DevCreateApp")))), n.createElement(f.a, {
                             onSave: this.props.onSave,
                             categories: this.props.categories,
@@ -226,13 +226,13 @@
                                 bottom: 1
                             }
                         }, n.createElement(c.W, {
-                            type: c.Ob.H5
+                            type: c.Nb.H5
                         }, Object(i.d)("Client Secret", "DevAppSecret"))), n.createElement(c.Oa, {
                             margin: {
                                 bottom: 1
                             }
                         }, n.createElement(c.W, {
-                            type: c.Ob.P,
+                            type: c.Nb.P,
                             color: c.O.Alt2
                         }, Object(i.d)("Passed to the token exchange endpoints to obtain a token. You must keep this confidential.", "DevAppSecret"))), this.props.showSecret && n.createElement(c.Wa, {
                             margin: {

@@ -1406,7 +1406,7 @@
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.N.TOP,
+                                tagType: h.M.TOP,
                                 limit: 50
                             }
                         }
@@ -1995,7 +1995,7 @@
                             display: s.X.Flex,
                             flexDirection: s.Z.Row,
                             padding: .5
-                        }, i.createElement(s.yb, {
+                        }, i.createElement(s.xb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
@@ -2005,7 +2005,7 @@
                         }, i.createElement(s.o, {
                             align: s.d.Center,
                             ratio: s.p.BoxArt
-                        }, i.createElement(s.S, a.__assign({}, e))), i.createElement(s.yb, {
+                        }, i.createElement(s.S, a.__assign({}, e))), i.createElement(s.xb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: s.f.Center,
                             background: s.r.Overlay,
@@ -2143,7 +2143,7 @@
                 },
                 v = n("N0BP"),
                 k = (n("XA5B"), function(e) {
-                    var t = i.createElement(s.yb, {
+                    var t = i.createElement(s.xb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: s.x.Small,
                         overflow: s.Za.Hidden
@@ -2178,7 +2178,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: s.O.Overlay,
                         bold: !0,
-                        transform: s.Nb.Uppercase
+                        transform: s.Mb.Uppercase
                     }, e.title)), e.subTitle && i.createElement(s.Wa, {
                         display: s.X.InlineFlex
                     }, i.createElement(s.W, {
@@ -2261,7 +2261,7 @@
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? i.createElement(s.yb, {
+                    return e.withBackground ? i.createElement(s.xb, {
                         alignItems: s.f.Center,
                         background: s.r.Overlay,
                         borderRadius: s.x.Small,
@@ -2270,7 +2270,7 @@
                         display: s.X.Flex,
                         fontSize: s.Ba.Size6,
                         justifyContent: s.Va.Center
-                    }, t, i.createElement(s.W, null, e.value)) : i.createElement(s.yb, {
+                    }, t, i.createElement(s.W, null, e.value)) : i.createElement(s.xb, {
                         className: "preview-card-stat",
                         color: s.O.Overlay,
                         display: s.X.Flex,
@@ -2320,7 +2320,7 @@
                             onBlur: this.handleBlur
                         }), i.createElement("div", a.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), i.createElement(s.yb, {
+                        }), i.createElement(s.xb, {
                             background: s.r.Alt2,
                             overflow: s.Za.Hidden
                         }, i.createElement(s.o, {
@@ -2366,7 +2366,7 @@
                         type: s.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), i.createElement(s.W, {
-                        type: s.Ob.H3,
+                        type: s.Nb.H3,
                         fontSize: s.Ba.Size5,
                         lines: 1,
                         bold: !0,
@@ -2394,7 +2394,7 @@
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(r.d)("unlocked", "VideoPreviewCardRestriction") : Object(r.d)("locked", "VideoPreviewCardRestriction"),
                         a = t ? s.ob.Unlock : s.ob.Lock;
-                    return i.createElement(s.Wa, null, !t && i.createElement(s.yb, {
+                    return i.createElement(s.Wa, null, !t && i.createElement(s.xb, {
                         background: s.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: s.O.Overlay,
@@ -2402,11 +2402,11 @@
                         position: s.eb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: s.bc.Default,
+                        zIndex: s.ac.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: s.Kb.Center,
+                        textAlign: s.Jb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: s.f.Center,
@@ -2432,21 +2432,21 @@
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), i.createElement(s.yb, {
+                    }, e))), i.createElement(s.xb, {
                         display: s.X.InlineFlex,
                         position: s.eb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: s.bc.Default,
+                        zIndex: s.ac.Default,
                         fontSize: s.Ba.Size6,
                         background: s.r.Overlay,
                         borderRadius: s.x.Medium,
                         color: s.O.Overlay
-                    }, i.createElement(s.Rb, {
-                        direction: this.props.attachTop ? s.Tb.Bottom : s.Tb.Top,
-                        align: s.Sb.Right,
+                    }, i.createElement(s.Qb, {
+                        direction: this.props.attachTop ? s.Sb.Bottom : s.Sb.Top,
+                        align: s.Rb.Right,
                         label: n
                     }, i.createElement(s.nb, {
                         asset: a,
@@ -2483,7 +2483,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         return i.createElement("div", a.__assign({
                             className: "preview-card"
-                        }, Object(v.a)(this.props)), i.createElement(s.yb, {
+                        }, Object(v.a)(this.props)), i.createElement(s.xb, {
                             position: s.eb.Relative,
                             borderRadius: s.x.Medium,
                             overflow: s.Za.Hidden
@@ -2894,7 +2894,7 @@
                     }
                 }, a.createElement(r.o, {
                     ratio: e.aspectRatio
-                }, a.createElement(r.yb, {
+                }, a.createElement(r.xb, {
                     background: r.r.Alt2,
                     fullHeight: !0
                 }, t))))
@@ -3255,10 +3255,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: s.bc.Above
-                    }, i.createElement(s.yb, {
+                        zIndex: s.ac.Above
+                    }, i.createElement(s.xb, {
                         color: s.O.Alt2,
-                        textAlign: s.Kb.Center,
+                        textAlign: s.Jb.Center,
                         flexShrink: 1
                     }, i.createElement(s.nb, {
                         asset: s.ob.DeadGlitch,
@@ -3268,12 +3268,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Kb.Center
+                        textAlign: s.Jb.Center
                     }, i.createElement(s.W, {
-                        type: s.Ob.H4,
+                        type: s.Nb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(o.d)("Search is not available at this time", "DropdownSearchError"))), i.createElement(s.W, {
-                        type: s.Ob.P
+                        type: s.Nb.P
                     }, Object(o.d)("Please try again later", "DropdownSearchError")))
                 },
                 c = n("8Ad5"),
@@ -3332,13 +3332,13 @@
                             });
                         return this.props.inline ? i.createElement(r.a, {
                             onClickOut: this.onClickOut
-                        }, i.createElement(s.yb, {
+                        }, i.createElement(s.xb, {
                             background: this.state.isInputFocused || this.state.isOpen ? s.r.Base : void 0,
                             borderRadius: s.x.Large,
                             padding: .5,
                             position: s.eb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && i.createElement(s.yb, {
+                        }, n, e && i.createElement(s.xb, {
                             attachLeft: !0,
                             background: s.r.Base,
                             borderRadius: s.x.Large,
@@ -3348,7 +3348,7 @@
                                 y: 1
                             },
                             position: s.eb.Absolute,
-                            zIndex: s.bc.Above,
+                            zIndex: s.ac.Above,
                             elevation: 3
                         }, i.createElement("div", {
                             tabIndex: 0,
@@ -4522,7 +4522,7 @@
                                 bottom: 2
                             }
                         }, c.createElement(p.W, {
-                            type: p.Ob.H4,
+                            type: p.Nb.H4,
                             color: p.O.Base,
                             "data-a-target": "international-section-header",
                             "data-test-selector": "international-section-header-tags"
@@ -4531,10 +4531,10 @@
                                 bottom: 2
                             }
                         }, c.createElement(p.W, {
-                            type: p.Ob.H4,
+                            type: p.Nb.H4,
                             color: p.O.Alt2,
                             fontSize: p.Ba.Size5,
-                            transform: p.Nb.Uppercase,
+                            transform: p.Mb.Uppercase,
                             "data-a-target": "international-section-header",
                             "data-test-selector": "international-section-header"
                         }, Object(m.b)(e)))
@@ -4840,7 +4840,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(m.yb, {
+                        return c.createElement(m.xb, {
                             className: this.getClassNames(),
                             color: m.O.Overlay,
                             background: m.r.Overlay,
@@ -4856,7 +4856,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), c.createElement(m.W, {
-                            type: m.Ob.Span
+                            type: m.Nb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -4864,7 +4864,7 @@
                         };
                         return e[p[this.props.type]] = !0, l(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? c.createElement(m.yb, {
+                        return this.props.hosting ? c.createElement(m.xb, {
                             borderRadius: m.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
@@ -4941,7 +4941,7 @@
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     return r.createElement(s.Wa, null, r.createElement(s.W, {
-                        type: s.Ob.H3
+                        type: s.Nb.H3
                     }, this.getErrorMessage()), r.createElement(s.W, {
                         color: s.O.Alt2,
                         fontSize: s.Ba.Size5
@@ -5044,7 +5044,7 @@
                                 margin: {
                                     left: 1
                                 },
-                                textAlign: k.Kb.Left
+                                textAlign: k.Jb.Left
                             }, r.createElement(k.W, {
                                 color: k.O.Alt2,
                                 fontSize: k.Ba.Size6
@@ -5086,7 +5086,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.trackImpression()
                     }, t.prototype.render = function() {
-                        return r.createElement(k.yb, {
+                        return r.createElement(k.xb, {
                             background: k.r.AccentAlt2,
                             display: k.X.Flex,
                             flexDirection: k.Z.Column,
@@ -5096,7 +5096,7 @@
                             },
                             margin: 1
                         }, this.renderImage(), r.createElement(k.Wa, {
-                            textAlign: k.Kb.Center
+                            textAlign: k.Jb.Center
                         }, this.renderText(), r.createElement(k.z, {
                             onClick: this.signup,
                             size: k.D.Large
@@ -5130,7 +5130,7 @@
                         }, r.createElement(k.Wa, {
                             className: "upsell-center__avatar",
                             position: k.eb.Absolute,
-                            zIndex: k.bc.Above
+                            zIndex: k.ac.Above
                         }, r.createElement(k.q, {
                             src: this.props.data.user.profileImageURL,
                             alt: Object(l.d)("{displayName}'s Profile Image", {
@@ -6782,9 +6782,9 @@
                             flexShrink: 0,
                             "data-target": P,
                             "data-test-selector": "direectory-grid-grid-layout"
-                        }, r.createElement(L.Ub, {
-                            gutterSize: L.Wb.Small,
-                            childWidth: L.Vb.Large,
+                        }, r.createElement(L.Tb, {
+                            gutterSize: L.Vb.Small,
+                            childWidth: L.Ub.Large,
                             placeholderItems: 20
                         }, r.createElement(O.a, {
                             injectStyles: {
@@ -6911,9 +6911,9 @@
                         return c.length > 0 ? r.createElement(L.Wa, null, r.createElement(q.a, {
                             languageCode: this.props.languageCode,
                             directoryName: this.props.directoryName
-                        }), r.createElement(L.Ub, {
-                            gutterSize: L.Wb.Small,
-                            childWidth: L.Vb.Large,
+                        }), r.createElement(L.Tb, {
+                            gutterSize: L.Vb.Small,
+                            childWidth: L.Ub.Large,
                             placeholderItems: 20
                         }, c, t)) : null
                     }, t.prototype.getViewAllPath = function() {
@@ -6936,13 +6936,13 @@
                 }), Object(C.b)("DirectoryInternationalSection", {
                     autoReportInteractive: !0
                 }))(Y),
-                K = function(e) {
+                J = function(e) {
                     var t = e.game;
                     return (t && t.streams && t.streams.edges || []).filter(function(e) {
                         return e && e.node && e.node.id
                     })
                 },
-                J = n("TJgk"),
+                K = n("TJgk"),
                 ee = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -7022,7 +7022,7 @@
                                     bottom: 2
                                 }
                             }, r.createElement(L.W, i.__assign({
-                                type: L.Ob.H4
+                                type: L.Nb.H4
                             }, o, {
                                 "data-a-target": "international-section-header"
                             }), Object(p.d)("All Channels", "DirectoryInternationalSection"))), this.props.tagFilters.length || this.props.languageTags.length || (n = r.createElement(Z, {
@@ -7036,7 +7036,7 @@
                             }))
                         }
                         var s, l = this.props.data.game,
-                            c = K(this.props.data).filter(function(e) {
+                            c = J(this.props.data).filter(function(e) {
                                 var t = e.node;
                                 return t && t.broadcaster && t.broadcaster.login && t.broadcaster.id
                             }).map(function(t, n) {
@@ -7089,9 +7089,9 @@
                             var d = this.renderPlaceholders();
                             s = r.createElement(L.Wa, {
                                 flexShrink: 0
-                            }, r.createElement(L.Ub, {
-                                gutterSize: L.Wb.Small,
-                                childWidth: L.Vb.Large,
+                            }, r.createElement(L.Tb, {
+                                gutterSize: L.Vb.Small,
+                                childWidth: L.Ub.Large,
                                 placeholderItems: 20
                             }, d))
                         } else {
@@ -7125,7 +7125,7 @@
                         scrollToTop: m.func
                     }, t
                 }(r.Component),
-                te = Object(s.compose)(Object(f.a)(J, {
+                te = Object(s.compose)(Object(f.a)(K, {
                     options: function(e) {
                         var t = decodeURIComponent(e.match.params.encodedCommunityName).toLowerCase(),
                             n = [],
@@ -7149,7 +7149,7 @@
                         return i.__assign({}, e, {
                             loadMore: function() {
                                 return e.data.fetchMore({
-                                    query: J,
+                                    query: K,
                                     variables: i.__assign({}, e.data.variables, {
                                         cursor: function(e) {
                                             var t = e.game;
@@ -7164,7 +7164,7 @@
                                         return {
                                             game: i.__assign({}, n.game, {
                                                 streams: i.__assign({}, n.game && n.game.streams, {
-                                                    edges: Object(k.c)(K(e), K(n))
+                                                    edges: Object(k.c)(J(e), J(n))
                                                 })
                                             })
                                         }
@@ -7247,7 +7247,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(L.yb, {
+                        return r.createElement(L.xb, {
                             className: "directory-header__filters",
                             display: L.X.Flex,
                             flexWrap: L.Aa.Wrap,
@@ -7502,7 +7502,7 @@
                         var e;
                         e = this.props.data.directory && this.props.data.directory.followersCount && this.props.data.directory.viewersCount ? r.createElement(L.W, {
                             color: L.O.Base,
-                            type: L.Ob.P
+                            type: L.Nb.P
                         }, function(e) {
                             return Object(p.d)("{followerCount,number} Followers", {
                                 followerCount: e
@@ -7571,7 +7571,7 @@
                             justifyContent: L.Va.End
                         }, i ? r.createElement(r.Fragment, null, r.createElement(L.W, {
                             color: L.O.Base,
-                            type: L.Ob.H1,
+                            type: L.Nb.H1,
                             bold: !0
                         }, i), this.renderDropsAvailable(), r.createElement(L.Wa, {
                             margin: {
@@ -7628,7 +7628,7 @@
                         }, r.createElement(De.a, {
                             tags: e.tags,
                             linkPath: ke.a.DirectoryTag,
-                            style: L.Jb.Default
+                            style: L.Ib.Default
                         }))
                     }, t
                 }(r.Component),
@@ -7826,11 +7826,11 @@
                         position: o.eb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.cc)(e)), i.createElement(o.Rb, {
-                        direction: o.Tb.Top,
-                        align: o.Sb.Right,
+                    }, Object(o.bc)(e)), i.createElement(o.Qb, {
+                        direction: o.Sb.Top,
+                        align: o.Rb.Right,
                         label: Object(r.d)("Offers in-game Drops", "DropsBadge")
-                    }, i.createElement(o.yb, {
+                    }, i.createElement(o.xb, {
                         className: "drops-badge__drops-icon",
                         position: o.eb.Relative,
                         padding: {
@@ -7841,7 +7841,7 @@
                         },
                         overflow: o.Za.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.bc.Default
+                        zIndex: o.ac.Default
                     }, i.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
@@ -7882,20 +7882,29 @@
                     aspect: o.p.BoxArt,
                     borderRadius: o.x.Medium
                 }, d(e)))), i.createElement(o.H, null, i.createElement(o.Wa, {
+                    display: o.X.Flex
+                }, i.createElement(o.Wa, {
                     "data-test-selector": "tw-card-title",
                     "data-a-target": "tw-card-title",
                     flexGrow: 1,
                     flexShrink: 1,
                     margin: {
                         top: .5
-                    }
+                    },
+                    ellipsis: !0
                 }, i.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Ob.H3,
+                    type: o.Nb.H3,
                     fontSize: o.Ba.Size5,
                     lineHeight: o.Xa.Body,
                     ellipsis: !0
-                }, e.title)), i.createElement(o.W, {
+                }, e.title)), e.contextualCardActionProps && i.createElement(o.Wa, {
+                    margin: {
+                        top: .5
+                    },
+                    flexGrow: 0,
+                    flexShrink: 0
+                }, i.createElement(e.contextualCardActionProps.component, a.__assign({}, e.contextualCardActionProps.props)))), i.createElement(o.W, {
                     color: o.O.Alt2,
                     ellipsis: !0
                 }, e.info))), (e.linkTo || e.onClick || e.disabled) && (t = i.createElement(o.T, {
@@ -7912,7 +7921,7 @@
                     tabIndex: e.tabIndex
                 }, t)), i.createElement("div", a.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.cc)(e)), i.createElement(o.G, {
+                }, Object(o.bc)(e)), i.createElement(o.G, {
                     key: e.title
                 }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && i.createElement(o.Wa, {
                     margin: {
@@ -8176,7 +8185,7 @@
 
             function s(e) {
                 return a.createElement(o.W, {
-                    type: o.Ob.Strong
+                    type: o.Nb.Strong
                 }, e)
             }
 
@@ -8309,7 +8318,7 @@
                         onClick: this.handleInsideDropdownClick
                     }, e)), r.createElement(o.a, {
                         onClickOut: this.handleOnClickOut
-                    }, r.createElement(l.yb, i.__assign({
+                    }, r.createElement(l.xb, i.__assign({
                         background: this.state.isOpen ? l.r.Base : void 0,
                         borderRadius: l.x.Large,
                         className: "inline-dropdown",
@@ -8324,7 +8333,7 @@
                         onClick: this.handleButtonClick,
                         size: l.D.Large,
                         type: l.F.Hollow
-                    }, this.props.buttonLabel)), r.createElement(l.yb, {
+                    }, this.props.buttonLabel)), r.createElement(l.xb, {
                         attachLeft: !0,
                         background: l.r.Base,
                         borderRadius: l.x.Large,
@@ -8336,7 +8345,7 @@
                             y: 1
                         },
                         position: l.eb.Absolute,
-                        zIndex: l.bc.Above
+                        zIndex: l.ac.Above
                     }, e)))
                 }, t.prototype.toggleDropdown = function(e) {
                     void 0 === e && (e = !this.state.isOpen), this.setState({

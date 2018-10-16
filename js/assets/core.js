@@ -130,7 +130,7 @@
                         return this.props.display ? r.createElement(y.Wa, {
                             className: Object(m.b)(p.a.Dark),
                             flexShrink: 0
-                        }, r.createElement(y.yb, {
+                        }, r.createElement(y.xb, {
                             className: "gdpr-consent-banner",
                             padding: {
                                 x: 2,
@@ -381,7 +381,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.state.content && this.reportInteractive()
                     }, t.prototype.render = function() {
-                        return !this.state.content || this.state.isError ? null : a.createElement(c.yb, {
+                        return !this.state.content || this.state.isError ? null : a.createElement(c.xb, {
                             className: "side-nav-page-info",
                             refDelegate: this.setContainerRef
                         }, this.state.content)
@@ -723,7 +723,7 @@
                     }, t.map(function(t) {
                         var n = i.__assign({}, e.linkTo) || {};
                         e.linkPath && (n.pathname = e.linkPath), n.pathname && (n.pathname = n.pathname.replace(":tagID", t.id));
-                        return r.createElement(s.yb, {
+                        return r.createElement(s.xb, {
                             key: t.id,
                             fontSize: s.Ba.Size7,
                             display: s.X.InlineBlock,
@@ -731,7 +731,7 @@
                                 right: .5,
                                 bottom: .5
                             }
-                        }, r.createElement(s.Hb, {
+                        }, r.createElement(s.Gb, {
                             label: t.localizedName,
                             type: e.style,
                             linkTo: Object(a.a)({
@@ -1026,15 +1026,15 @@
                         margin: {
                             right: .5
                         }
-                    }, c.createElement(k.Rb, {
-                        align: k.Sb.Left,
+                    }, c.createElement(k.Qb, {
+                        align: k.Rb.Left,
                         label: Object(y.d)("Accept Friend Request", "IncomingFriendRequestButton")
                     }, c.createElement(k.z, {
                         ariaLabel: t,
                         onClick: e.onAcceptFriendRequest,
                         "data-test-selector": "accept-button"
-                    }, t))), c.createElement(k.Rb, {
-                        align: k.Sb.Left,
+                    }, t))), c.createElement(k.Qb, {
+                        align: k.Rb.Left,
                         label: Object(y.d)("Reject Friend Request", "IncomingFriendRequestButton")
                     }, c.createElement(k.z, {
                         ariaLabel: n,
@@ -1592,7 +1592,7 @@
                             e = a.createElement(s.Oa, {
                                 className: "balloon-layer",
                                 position: s.eb.Fixed,
-                                zIndex: s.bc.Above
+                                zIndex: s.ac.Above
                             }, a.createElement("div", {
                                 style: t
                             }, a.createElement(s.u, {
@@ -2448,25 +2448,25 @@
                         var e = Object(s.d)("You'll get characters, vehicles, skins, and boosts for games like {hearthstone} and {smite}, plus surprises like a rotating selection of indie games.", {
                             hearthstone: a.createElement(d.W, {
                                 italic: !0,
-                                type: d.Ob.Span
+                                type: d.Nb.Span
                             }, Object(s.d)("Hearthstone", "PrimeEmpty")),
                             smite: a.createElement(d.W, {
                                 italic: !0,
-                                type: d.Ob.Span
+                                type: d.Nb.Span
                             }, Object(s.d)("Smite", "PrimeEmpty"))
                         }, "PrimeEmpty");
                         return a.createElement(d.Wa, {
                             className: "prime-empty",
                             margin: 2
                         }, a.createElement(d.Wa, {
-                            textAlign: d.Kb.Center,
+                            textAlign: d.Jb.Center,
                             margin: 2
                         }, a.createElement("img", {
                             className: "prime-empty__image",
                             src: "https://m.media-amazon.com/images/G/01/sm/landing/Trunk_w_Star_transparent._V530838660_.png",
                             alt: Object(s.d)("Prime Treasure Chest", "PrimeEmpty")
                         })), a.createElement(d.W, {
-                            type: d.Ob.P,
+                            type: d.Nb.P,
                             bold: !0
                         }, Object(s.d)("Free in-game loot every month, plus surprises", "PrimeEmpty")), a.createElement("div", null, e))
                     }, t
@@ -2596,14 +2596,14 @@
                                 index: n.props.index
                             })
                         }, n.renderVerticalDescriptionBlock = function() {
-                            return a.createElement(d.yb, {
+                            return a.createElement(d.xb, {
                                 className: "prime-claim-description__body",
                                 background: d.r.Alt2,
                                 border: !0,
                                 position: d.eb.Relative
                             }, n.renderDescription())
                         }, n.renderHorizontalDescriptionBlock = function() {
-                            return a.createElement(d.yb, {
+                            return a.createElement(d.xb, {
                                 className: "prime-claim-description__body",
                                 background: d.r.Base,
                                 border: !0,
@@ -2943,7 +2943,7 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.getClaimInstructions = function() {
-                            return a.createElement(d.Xb, null, a.createElement(h, {
+                            return a.createElement(d.Wb, null, a.createElement(h, {
                                 source: n.props.claimInstructions || "",
                                 escapeHtml: !0,
                                 renderers: {
@@ -2957,7 +2957,7 @@
                                 }
                             }))
                         }, n.renderVerticalLayout = function() {
-                            return a.createElement(d.yb, {
+                            return a.createElement(d.xb, {
                                 className: "prime-claim-instructions prime-claim-instructions--vertical",
                                 "data-a-target": "prime-claim-instructions--vertical",
                                 background: d.r.Alt2,
@@ -2966,7 +2966,7 @@
                                 fontSize: d.Ba.Size6
                             }, n.getClaimInstructions())
                         }, n.renderHorizontalLayout = function() {
-                            return a.createElement(d.yb, {
+                            return a.createElement(d.xb, {
                                 fullWidth: !0,
                                 className: "prime-claim-instructions prime-claim-instructions--horizontal",
                                 margin: {
@@ -2975,10 +2975,10 @@
                             }, a.createElement(d.Wa, {
                                 fullWidth: !0,
                                 justifyContent: d.Va.Center,
-                                textAlign: d.Kb.Center
+                                textAlign: d.Jb.Center
                             }, a.createElement(d.U, {
                                 onClick: n.toggleShowDescription
-                            }, n.getDescriptionButtonText())), n.state.showDescription && a.createElement(d.yb, {
+                            }, n.getDescriptionButtonText())), n.state.showDescription && a.createElement(d.xb, {
                                 className: "prime-claim-instructions__body",
                                 "data-a-target": "prime-claim-instructions--horizontal",
                                 border: !0,
@@ -3019,7 +3019,7 @@
                         return t.renderGiftRedeemedButton = function(e) {
                             if (!t.props.data || t.props.data.loading || t.props.data.error) return a.createElement(d.db, null);
                             var n = t.props.data.currentUser && t.props.data.currentUser.primeGift;
-                            return a.createElement(d.yb, {
+                            return a.createElement(d.xb, {
                                 fullWidth: !0,
                                 display: d.X.Flex,
                                 justifyContent: d.Va.Center,
@@ -3031,8 +3031,8 @@
                                 alignItems: d.f.Center,
                                 borderRadius: d.x.Medium
                             }, a.createElement(d.W, {
-                                type: d.Ob.Span,
-                                align: d.Yb.Middle,
+                                type: d.Nb.Span,
+                                align: d.Xb.Middle,
                                 color: d.O.Overlay
                             }, a.createElement(d.Wa, {
                                 display: d.X.InlineFlex,
@@ -3091,7 +3091,7 @@
                             offerID: this.props.offerID,
                             offer: this.props.offer,
                             toggleCrownMenu: this.props.toggleCrownMenu
-                        }))) : this.renderGiftRedeemedButton(n) : a.createElement(d.yb, {
+                        }))) : this.renderGiftRedeemedButton(n) : a.createElement(d.xb, {
                             display: d.X.Flex,
                             justifyContent: d.Va.Center,
                             margin: {
@@ -3103,8 +3103,8 @@
                             className: "prime-redeem__confirmation",
                             borderRadius: d.x.Medium
                         }, a.createElement(d.W, {
-                            type: t ? d.Ob.H4 : d.Ob.H6,
-                            align: d.Yb.Middle,
+                            type: t ? d.Nb.H4 : d.Nb.H6,
+                            align: d.Xb.Middle,
                             color: d.O.Overlay
                         }, a.createElement(d.Wa, {
                             display: d.X.InlineFlex,
@@ -3168,13 +3168,13 @@
                                 r = i && i.game && i.game.name || "",
                                 o = i && i.categories && i.categories[0] || "",
                                 s = i && i.publisher || "";
-                            return a.createElement(d.yb, {
+                            return a.createElement(d.xb, {
                                 "data-a-target": "prime-offer",
                                 className: "prime-offer prime-offer--vertical",
                                 alignItems: d.f.Center,
                                 display: d.X.Block,
                                 borderBottom: !n,
-                                textAlign: d.Kb.Left,
+                                textAlign: d.Jb.Left,
                                 position: d.eb.Relative,
                                 padding: {
                                     x: 2,
@@ -3184,7 +3184,7 @@
                                 padding: {
                                     y: .5
                                 }
-                            }, t.renderTitle(e), a.createElement(d.W, null, t.renderGiftText())), t.renderOfferImageOrVideo(e.imageURL), a.createElement(d.yb, {
+                            }, t.renderTitle(e), a.createElement(d.W, null, t.renderGiftText())), t.renderOfferImageOrVideo(e.imageURL), a.createElement(d.xb, {
                                 margin: {
                                     bottom: 2
                                 }
@@ -3194,11 +3194,11 @@
                                     top: .5
                                 }
                             }, a.createElement(d.W, {
-                                type: d.Ob.P
+                                type: d.Nb.P
                             }, r, " ", o)), a.createElement(d.Wa, {
                                 className: "prime-offer__publisher"
                             }, a.createElement(d.W, {
-                                type: d.Ob.P,
+                                type: d.Nb.P,
                                 color: d.O.Alt2,
                                 fontSize: d.Ba.Size7
                             }, s))), t.renderRedeemUpsellOrClaimSection(e))
@@ -3207,33 +3207,33 @@
                                 i = n && n.game && n.game.name || "",
                                 r = n && n.categories && n.categories[0] || "",
                                 o = n && n.publisher || "";
-                            return a.createElement(d.yb, {
+                            return a.createElement(d.xb, {
                                 "data-a-target": "prime-offer",
                                 className: "prime-offer prime-offer--horizontal",
                                 alignItems: d.f.Center,
                                 display: d.X.InlineBlock,
-                                textAlign: d.Kb.Left,
+                                textAlign: d.Jb.Left,
                                 position: d.eb.Relative,
                                 padding: {
                                     right: 1,
                                     y: .5
                                 },
                                 fullWidth: !0
-                            }, a.createElement(d.yb, {
+                            }, a.createElement(d.xb, {
                                 className: "prime-offer__content",
                                 margin: {
                                     bottom: 2
                                 }
-                            }, a.createElement(d.yb, {
+                            }, a.createElement(d.xb, {
                                 className: "prime-offer__content__text",
                                 background: d.r.Base
                             }, a.createElement(d.Wa, {
                                 className: "prime-offer__publisher"
                             }, a.createElement(d.W, {
-                                type: d.Ob.P,
+                                type: d.Nb.P,
                                 color: d.O.OverlayAlt,
                                 fontSize: d.Ba.Size7,
-                                transform: d.Nb.Uppercase
+                                transform: d.Mb.Uppercase
                             }, o)), a.createElement(d.Wa, {
                                 className: "prime-offer__title",
                                 alignItems: d.f.Start,
@@ -3243,7 +3243,7 @@
                             }, t.renderTitle(e)), a.createElement(d.Wa, {
                                 className: "prime-offer__description"
                             }, a.createElement(d.W, {
-                                type: d.Ob.P,
+                                type: d.Nb.P,
                                 color: d.O.Alt2
                             }, i, " ", r, " ", t.renderGiftText()))), t.renderOfferImageOrVideo(e.imageURL)), t.renderRedeemUpsellOrClaimSection(e))
                         }, t.renderOfferImageOrVideo = function(e) {
@@ -3410,7 +3410,7 @@
                         return this.props.giftData && this.props.giftData.currentUser && this.props.giftData.currentUser.primeGift && this.props.giftData.currentUser.primeGift.from && this.props.giftData.currentUser.primeGift.from.login ? Object(s.d)("from <x:bold>{gifterLogin}</x:bold>", {
                             "x:bold": function(e) {
                                 return a.createElement(d.W, {
-                                    type: d.Ob.Span,
+                                    type: d.Nb.Span,
                                     bold: !0
                                 }, e)
                             },
@@ -3452,7 +3452,7 @@
                     }, t.prototype.render = function() {
                         var e = this.props.orientation || y.c.Default,
                             t = Object(y.k)(e);
-                        return a.createElement(d.yb, {
+                        return a.createElement(d.xb, {
                             className: "prime-offer-placeholder",
                             alignItems: d.f.Center,
                             borderBottom: t,
@@ -3503,7 +3503,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(d.yb, {
+                        return a.createElement(d.xb, {
                             "data-test-target": "prime-offers-upsell",
                             "data-a-target": "prime-offers-upsell",
                             className: "prime-offers-upsell",
@@ -3514,21 +3514,21 @@
                             },
                             borderBottom: !0
                         }, a.createElement(d.W, {
-                            type: d.Ob.H4
+                            type: d.Nb.H4
                         }, Object(s.d)("Claim With Twitch Prime", "PrimeUpsell")), a.createElement(d.Wa, {
                             className: "prime-upsell__logo-container",
                             fullWidth: !0,
                             margin: {
                                 y: 2
                             },
-                            textAlign: d.Kb.Center
+                            textAlign: d.Jb.Center
                         }, a.createElement(d.nb, {
                             asset: d.ob.LogoTwitchPrime,
                             width: 330,
                             height: 150,
                             type: d.pb.Brand
                         })), a.createElement(d.W, {
-                            type: d.Ob.P
+                            type: d.Nb.P
                         }, Object(s.d)("Support your favorite streamer, plus get monthly games and in-game loot, and loads more with Twitch Prime.", "PrimeUpsell")), a.createElement(B, null))
                     }, t
                 }(a.Component)),
@@ -3549,9 +3549,9 @@
                         }, t.renderDesktopOffers = function() {
                             return a.createElement(d.Wa, {
                                 className: "prime-offer-list__content--desktop"
-                            }, t.renderSectionTitle(), a.createElement(d.Ub, {
-                                childWidth: d.Vb.Large,
-                                gutterSize: d.Wb.Small,
+                            }, t.renderSectionTitle(), a.createElement(d.Tb, {
+                                childWidth: d.Ub.Large,
+                                gutterSize: d.Vb.Small,
                                 center: !0,
                                 placeholderItems: 20
                             }, t.renderOfferExperience(b.a.Wide)))
@@ -3570,7 +3570,7 @@
                                 },
                                 className: "prime-offers__title"
                             }, a.createElement(d.W, {
-                                type: d.Ob.H3,
+                                type: d.Nb.H3,
                                 color: d.O.Base,
                                 bold: !0
                             }, t.props.sectionTitle)) : null
@@ -3933,7 +3933,7 @@
                     var h = e.formattedNumber ? Object(o.f)(e.amount) : e.amount;
                     p = a.createElement(u.Oa, {
                         padding: e.size === i.Small ? 0 : void 0,
-                        textAlign: e.size === i.Small ? u.Kb.Center : void 0
+                        textAlign: e.size === i.Small ? u.Jb.Center : void 0
                     }, a.createElement("strong", {
                         className: m,
                         style: {
@@ -5299,18 +5299,17 @@
                     }
                     return s.__extends(t, e), t.prototype.componentDidMount = function() {
                         l.extensionService.setEnvironmentOptions({
-                            apiUrl: u.a.apiBaseURL
-                        }), this.setExtensionServiceAuthToken(this.props)
-                    }, t.prototype.componentWillReceiveProps = function(e) {
-                        e.authToken !== this.props.authToken && this.setExtensionServiceAuthToken(e)
-                    }, t.prototype.shouldComponentUpdate = function() {
-                        return !1
+                            apiUrl: u.a.apiBaseURL,
+                            dynamicSettings: u.b
+                        }), this.setExtensionServiceAuthToken()
+                    }, t.prototype.componentDidUpdate = function(e) {
+                        e.authToken !== this.props.authToken && this.setExtensionServiceAuthToken()
                     }, t.prototype.render = function() {
                         return null
-                    }, t.prototype.setExtensionServiceAuthToken = function(e) {
-                        var t = e.authToken || "";
+                    }, t.prototype.setExtensionServiceAuthToken = function() {
+                        var e = this.props.authToken || "";
                         l.extensionService.setEnvironmentOptions({
-                            authToken: t
+                            authToken: e
                         })
                     }, t
                 }(c.Component);
@@ -6150,7 +6149,7 @@
                             }
                         }), m = null
                     }, t.prototype.render = function() {
-                        return s.createElement(p.yb, {
+                        return s.createElement(p.xb, {
                             background: p.r.Alt2,
                             position: p.eb.Absolute,
                             attachBottom: !0,
@@ -6627,7 +6626,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(v.Wa, null, s.createElement(v.yb, {
+                        return s.createElement(v.Wa, null, s.createElement(v.xb, {
                             className: "prime-offer-header",
                             borderBottom: !0,
                             background: v.r.Alt2,
@@ -6637,11 +6636,11 @@
                             }
                         }, s.createElement(v.W, {
                             bold: !0,
-                            type: v.Ob.H6
+                            type: v.Nb.H6
                         }, Object(c.d)("Free with Prime", "PrimeOfferHeader"))), this.getNumOfUnseenOffersDisplay())
                     }, t.prototype.getNumOfUnseenOffersDisplay = function() {
                         var e = this.props.numOfUnseenOffers;
-                        if (e) return s.createElement(v.yb, {
+                        if (e) return s.createElement(v.xb, {
                             className: "prime-offer__new-offer-header",
                             borderBottom: !0,
                             background: v.r.Alt2,
@@ -6657,11 +6656,11 @@
                             flexGrow: 1
                         }, s.createElement(v.W, {
                             bold: !0,
-                            type: v.Ob.H6
+                            type: v.Nb.H6
                         }, Object(c.d)("New Prime Loot", "PrimeOfferHeader"))), s.createElement(v.Wa, {
                             className: "prime-offer__new-offer-header-count",
-                            textAlign: v.Kb.Center
-                        }, s.createElement(v.yb, {
+                            textAlign: v.Jb.Center
+                        }, s.createElement(v.xb, {
                             className: "prime-offer__new-offer-header-count__text",
                             background: v.r.Base,
                             color: v.O.Base,
@@ -6822,8 +6821,8 @@
                             t = this.props.userData && this.props.userData.currentUser && this.props.userData.currentUser.hasPrime;
                         if (!e && !t) return null;
                         var n = {
-                            align: v.Sb.Center,
-                            direction: v.Tb.Bottom,
+                            align: v.Rb.Center,
+                            direction: v.Sb.Bottom,
                             label: ""
                         };
                         return this.state.numOfUnseenOffers > 0 ? n.label = Object(c.d)("New Prime Loot", "PrimeOffers") : n.label = Object(c.d)("Prime Loot", "PrimeOffers"), s.createElement(v.Wa, {
@@ -6973,13 +6972,13 @@
                         }), s.createElement(g.a, {
                             onHover: k.g,
                             onClick: k.f
-                        }, s.createElement(v.yb, {
+                        }, s.createElement(v.xb, {
                             color: v.O.Base,
                             className: "blue-bar",
                             "data-a-target": "blue-bar",
                             position: v.eb.Relative,
                             fullWidth: !0,
-                            zIndex: v.bc.Above
+                            zIndex: v.ac.Above
                         }, s.createElement(v.Wa, {
                             className: "blue-bar__bar",
                             display: v.X.Flex,
@@ -7008,7 +7007,7 @@
                             asset: v.ob.Crown
                         })), s.createElement(v.W, {
                             bold: !0,
-                            type: v.Ob.Span,
+                            type: v.Nb.Span,
                             noWrap: !0,
                             fontSize: v.Ba.Size6
                         }, s.createElement(v.Oa, {
@@ -7023,14 +7022,14 @@
                             rel: "noopener noreferrer"
                         }, o))), s.createElement(v.W, {
                             className: "blue-bar__headline",
-                            type: v.Ob.Span,
+                            type: v.Nb.Span,
                             fontSize: v.Ba.Size6
                         }, l)), s.createElement(v.Wa, {
                             display: v.X.InlineFlex,
                             flexShrink: 0
                         }, s.createElement(v.W, {
                             bold: !0,
-                            type: v.Ob.Span,
+                            type: v.Nb.Span,
                             noWrap: !0,
                             fontSize: v.Ba.Size6,
                             color: v.O.Base
@@ -7458,7 +7457,7 @@
                                 }
                             }),
                             s = null;
-                        return this.state.options ? s = o.createElement(c.Rb, {
+                        return this.state.options ? s = o.createElement(c.Qb, {
                             direction: this.state.options.direction,
                             align: this.state.options.align,
                             label: this.state.options.label,
@@ -7553,7 +7552,7 @@
                         fontSize: r.Ba.Size6,
                         color: e.error ? r.O.Error : r.O.Base,
                         bold: !0
-                    }, e.title))), i.createElement(r.yb, {
+                    }, e.title))), i.createElement(r.xb, {
                         padding: 2,
                         className: "settings-row",
                         fullWidth: !0
@@ -7715,7 +7714,7 @@
                                 t.props.tooltipLayer.show({
                                     from: t.buttonContainerRef,
                                     label: e,
-                                    direction: g.Tb.Right
+                                    direction: g.Sb.Right
                                 })
                             }
                         }, t.onMouseLeave = function() {
@@ -7748,7 +7747,7 @@
                             t = e ? g.ob.NotificationBellOff : g.ob.NotificationBell,
                             n = e ? g.ob.NotificationBell : g.ob.NotificationBellOff,
                             i = s("live-notifications__btn");
-                        return l.createElement(g.yb, {
+                        return l.createElement(g.xb, {
                             className: i,
                             refDelegate: this.setButtonContainerRef
                         }, l.createElement(m.a, {
@@ -7760,7 +7759,7 @@
                         }))
                     }, t.prototype.renderTypeToggle = function() {
                         var e, t;
-                        return this.state.isFollowing ? this.state.disableNotifications ? (t = "live-notifications-toggle__status-text--disabled", e = Object(u.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (t = "live-notifications-toggle__status-text--enabled", e = Object(u.d)("You will be notified on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (e = Object(u.d)("Follow this channel to receive notifications when they go live.", "LiveNotificationsToggle"), t = "live-notifications-toggle__status-text--not-following"), l.createElement(g.yb, {
+                        return this.state.isFollowing ? this.state.disableNotifications ? (t = "live-notifications-toggle__status-text--disabled", e = Object(u.d)("Opt in to notifications to receive updates on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (t = "live-notifications-toggle__status-text--enabled", e = Object(u.d)("You will be notified on this channel's activity, including when they go live.", "LiveNotificationsToggle")) : (e = Object(u.d)("Follow this channel to receive notifications when they go live.", "LiveNotificationsToggle"), t = "live-notifications-toggle__status-text--not-following"), l.createElement(g.xb, {
                             color: g.O.Base,
                             display: g.X.Flex,
                             flexWrap: g.Aa.Wrap
@@ -7780,7 +7779,7 @@
                         }, Object(u.d)("Notifications", "LiveNotificationsToggle")))), l.createElement(g.Wa, {
                             display: g.X.Flex,
                             flexShrink: 0
-                        }, l.createElement(g.Qb, {
+                        }, l.createElement(g.Pb, {
                             onChange: this.toggleNotificationsEnabled,
                             checked: !this.state.disableNotifications,
                             "data-test-selector": "live-notifications-toggle__toggle",
@@ -7792,7 +7791,7 @@
                                 bottom: 1
                             }
                         }, l.createElement(g.W, {
-                            type: g.Ob.Span,
+                            type: g.Nb.Span,
                             color: g.O.Alt2,
                             "data-test-selector": t
                         }, e)))
@@ -8309,7 +8308,7 @@
                             i = this.props.override,
                             r = void 0 !== i;
                         return "boolean" == typeof this.props.settingData ? t = a.createElement(g.Wa, null, this.renderToggle(this.props.settingKey, !!this.props.settingData, i)) : (t = a.createElement(g.W, {
-                            wordBreak: g.ac.BreakAll
+                            wordBreak: g.Zb.BreakAll
                         }, r ? JSON.stringify(i) : JSON.stringify(this.props.settingData)), e = a.createElement(g.Wa, {
                             margin: {
                                 left: 1
@@ -8322,7 +8321,7 @@
                                 return n.openEditing(n.props.settingKey)
                             },
                             blurAfterClick: !0
-                        }))), a.createElement(g.yb, {
+                        }))), a.createElement(g.xb, {
                             margin: {
                                 bottom: 1,
                                 right: 1
@@ -8339,7 +8338,7 @@
                         }, t), e)
                     }, t.prototype.renderToggle = function(e, t, n) {
                         var i = this;
-                        return a.createElement(g.Qb, {
+                        return a.createElement(g.Pb, {
                             onChange: function(n) {
                                 var r = n.currentTarget.checked;
                                 i.props.setOverride(e, r === t ? void 0 : r)
@@ -8367,7 +8366,7 @@
                         var e = "string" == typeof this.state.value ? this.state.value : JSON.stringify(this.props.value);
                         return a.createElement(h.b, {
                             contentClassName: "dynamic-setting-edit__content"
-                        }, a.createElement(g.yb, {
+                        }, a.createElement(g.xb, {
                             background: g.r.Alt,
                             padding: 1,
                             fullWidth: !0,
@@ -8384,7 +8383,7 @@
                                 y: 1
                             },
                             fullHeight: !0
-                        }, a.createElement(g.Lb, {
+                        }, a.createElement(g.Kb, {
                             placeholder: "(undefined)",
                             onChange: this.onValueChange,
                             value: e,
@@ -8535,7 +8534,7 @@
                                 openEditing: e.openEditing,
                                 setOverride: e.setOverride
                             })
-                        })))), this.state.editingOverrideKey && a.createElement(g.yb, {
+                        })))), this.state.editingOverrideKey && a.createElement(g.xb, {
                             position: g.eb.Absolute,
                             attachTop: !0,
                             attachLeft: !0,
@@ -8569,7 +8568,7 @@
                         if (!t) return null;
                         var n = this.props.experimentData,
                             i = void 0 !== this.props.override;
-                        return a.createElement(g.yb, {
+                        return a.createElement(g.xb, {
                             margin: {
                                 bottom: 1,
                                 right: 1
@@ -8727,9 +8726,9 @@
                         }, n.renderStaffTabButton = function(e, t, i) {
                             void 0 === i && (i = !1);
                             var r = n.state.selectedTab === e;
-                            return a.createElement(g.Rb, {
+                            return a.createElement(g.Qb, {
                                 label: e,
-                                direction: g.Tb.Right
+                                direction: g.Sb.Right
                             }, a.createElement(g.A, {
                                 onClick: function() {
                                     n.setState({
@@ -8777,15 +8776,15 @@
                         if (this.props.hidden) return null;
                         var e = Object.keys(Object(E.b)()).length > 0,
                             t = Object.keys(Object(E.a)()).length > 0;
-                        return a.createElement(g.yb, {
+                        return a.createElement(g.xb, {
                             className: "staff-console staff-console--size-" + this.state.size + " " + Object(d.b)(u.a.Dark),
                             position: g.eb.Fixed,
                             display: g.X.Flex
-                        }, a.createElement(g.yb, {
+                        }, a.createElement(g.xb, {
                             display: g.X.Flex,
                             border: !0,
                             fullWidth: !0
-                        }, a.createElement(g.yb, {
+                        }, a.createElement(g.xb, {
                             className: "staff-consol__select-bar",
                             flexShrink: 1,
                             flexGrow: 0,
@@ -8797,7 +8796,7 @@
                             display: g.X.Flex,
                             flexDirection: g.Z.Column,
                             overflow: g.Za.Hidden
-                        }, a.createElement(g.yb, {
+                        }, a.createElement(g.xb, {
                             className: "staff-console__top-bar",
                             flexGrow: 0,
                             flexShrink: 0,
@@ -8813,7 +8812,7 @@
                         }, a.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ba.Size4,
-                            type: g.Ob.Span
+                            type: g.Nb.Span
                         }, this.state.selectedTab)), a.createElement(g.Wa, {
                             display: g.X.Flex,
                             padding: {
@@ -8839,11 +8838,11 @@
                                 top: 1
                             },
                             overflow: g.Za.Hidden
-                        }, this.renderTabContent(this.state.selectedTab)), a.createElement(g.yb, {
+                        }, this.renderTabContent(this.state.selectedTab)), a.createElement(g.xb, {
                             flexShrink: 0,
                             flexGrow: 0,
                             borderTop: !0
-                        }, this.state.urgentMessage && a.createElement(g.yb, {
+                        }, this.state.urgentMessage && a.createElement(g.xb, {
                             background: g.r.Accent,
                             padding: {
                                 x: 1,
@@ -8912,7 +8911,7 @@
                     return c
                 }),
                 function(e) {
-                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoGladiator = "DISCO_GLADIATOR", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EmotePickerV2 = "TWILIGHT_EMOTE_PICKER_V2", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidNow = "TWILIGHT_RAID_NOW", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODColorsOfTheWind = "VOD_COLORS_OF_THE_WIND", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODKirk = "TWILIGHT_VOD_KIRK", e.VODPike = "TWILIGHT_VOD_PIKE", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.CVPPlayerVersion = "CVP_PLAYER_VERSION", e.CVPStaffVersion = "CVP_STAFF_VERSION", e.CVPPlayerType = "CVP_PLAYER_TYPE"
+                    e.AAXDisplay = "TWILIGHT_AAX_DISPLAY", e.AdDensityWidget = "TWILIGHT_AD_DENSITY_WIDGET", e.AMLRankingFollows = "TWILIGHT_AML_RANKING_FOLLOWS", e.Archer = "TWILIGHT_ARCHER", e.BrowserNotificationsUpsell = "TWILIGHT_BROWSER_NOTIFICATIONS_UPSELL", e.ChannelAnalyticsContentOverlapPanels = "TWILIGHT_CHANNEL_ANALYTICS_CONTENT_OVERLAP_PANELS", e.ChannelPageRedesign = "CHANNEL_PAGE_REDESIGN", e.ClipsOnTheBrain = "TWILIGHT_CLIPS_ON_THE_BRAIN", e.DashboardCollab = "TWILIGHT_DASHBOARD_COLLAB", e.DiscoGladiator = "DISCO_GLADIATOR", e.EditingImUpset = "TWILIGHT_EDITING_IM_UPSET", e.EditingLesPoissons = "TWILIGHT_EDITING_LES_POISSONS", e.EmotePickerV2 = "TWILIGHT_EMOTE_PICKER_V2", e.ExtendedPresence = "TWILIGHT_EXTENDED_PRESENCE", e.ExtensionConfigureModal = "extension_configure_modal", e.FollowingIndexLatestVideosV2 = "TWILIGHT_FOLLOWING_INDEX_LATEST_VIDEOS_V2", e.FrenchVanilla = "FRENCH_VANILLA", e.GrowthEmailVerifyBar = "TWILIGHT_GROWTH_EMAIL_VERIFY_BAR", e.InstreamCheckout = "TWILIGHT_INSTREAM_CHECKOUT", e.MobileSubsTierNames = "TWILIGHT_MOBILE_SUBS_TIER_NAMES", e.NewReportingWizard = "TWILIGHT_NEW_REPORTING_WIZARD", e.NewSearchBackend = "NEW_SEARCH_BACKEND", e.OWLRoomCheering = "TWILIGHT_OWL_ROOM_CHEERING", e.PrimeSubCreditAPIWexit = "TWILIGHT_PRIME_SUB_CREDIT_API_WEXIT", e.RaidUpsell = "TWILIGHT_RAID_UPSELL", e.SocialButtonsMove = "SOCIAL_BUTTONS_MOVE", e.SubsAffiliateBadges = "TWILIGHT_SUBS_AFFILIATE_BADGES", e.SubscribedChannelsSidenav = "TWILIGHT_SUBSCRIBED_CHANNELS_SIDENAV", e.Tags = "TWILIGHT_TAGS", e.TheatreFullscreen = "TWILIGHT_THEATRE_FULLSCREEN", e.VODColorsOfTheWind = "VOD_COLORS_OF_THE_WIND", e.VODEditingYoureWelcome = "TWILIGHT_VOD_EDITING_YOURE_WELCOME", e.VODKirk = "TWILIGHT_VOD_KIRK", e.VODPike = "TWILIGHT_VOD_PIKE", e.VODTopShelf = "TWILIGHT_VOD_TOP_SHELF", e.VODVoltron = "TWILIGHT_VOD_VOLTRON", e.VODThirdChance = "TWILIGHT_VOD_EDITING_THIRD_CHANCE", e.WatchSombra = "TWILIGHT_WATCH_SOMBRA", e.WatchWinston = "TWILIGHT_WATCH_WINSTON", e.WebOnboarding = "TWILIGHT_WEB_ONBOARDING", e.WebOnboardingCategories = "TWILIGHT_WEB_ONBOARDING_CATEGORIES", e.WebOnboardingChannelRanking = "TWILIGHT_WEB_ONBOARDING_CHANNEL_RANKING", e.WebOnboardingChannelSurfing = "TWILIGHT_WEB_ONBOARDING_CHANNEL_SURFING", e.WebOnboardingFollowCategories = "TWILIGHT_WEB_ONBOARDING_FOLLOW_CATEGORIES", e.WebSideNavUpsellCenterChannels = "TWILIGHT_WEB_SIDE_NAV_UPSELL_CENTER_CHANNELS", e.CVPPlayerVersion = "CVP_PLAYER_VERSION", e.CVPStaffVersion = "CVP_STAFF_VERSION", e.CVPPlayerType = "CVP_PLAYER_TYPE"
                 }(r || (r = {}));
             var a = ((i = {})[r.AAXDisplay] = {
                     id: "5fd568be-2073-4f99-84d5-565e8b2a3343",
@@ -9010,9 +9009,6 @@
                 }, i[r.RaidUpsell] = {
                     id: "40f4fd80-86ca-44f4-9abc-0324d24908bc",
                     default: "control"
-                }, i[r.RaidNow] = {
-                    id: "96bdeb52-260d-4b6d-8ff8-5f4c13f450c2",
-                    default: "control"
                 }, i[r.VODThirdChance] = {
                     id: "4834149f-513b-4f16-98f3-0f587e5a2e99",
                     default: "control"
@@ -9087,12 +9083,12 @@
         DBPb: function(e, t, n) {},
         DMoW: function(e, t, n) {
             "use strict";
-            var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, E, k, _, S, w, C, N, T, O, I, R, D, A, L, x, P, F, M, U, B, W, V, j, z, H, G, q, X, Q, K, Y, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, Ee, ke, _e, Se, we, Ce, Ne, Te, Oe, Ie, Re, De, Ae, Le, xe, Pe, Fe, Me, Ue, Be, We, Ve, je, ze, He, Ge, qe, Xe, Qe, Ke, Ye, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st, lt;
+            var i, r, a, o, s, l, c, u, d, p, m, h, f, g, v, b, y, E, k, _, S, w, C, N, T, O, I, R, D, A, L, x, P, F, M, U, B, W, V, j, z, H, G, q, X, Q, K, Y, Z, J, $, ee, te, ne, ie, re, ae, oe, se, le, ce, ue, de, pe, me, he, fe, ge, ve, be, ye, Ee, ke, _e, Se, we, Ce, Ne, Te, Oe, Ie, Re, De, Ae, Le, xe, Pe, Fe, Me, Ue, Be, We, Ve, je, ze, He, Ge, qe, Xe, Qe, Ke, Ye, Ze, Je, $e, et, tt, nt, it, rt, at, ot, st;
             n.d(t, "c", function() {
                     return r
-                }), n.d(t, "F", function() {
+                }), n.d(t, "E", function() {
                     return s
-                }), n.d(t, "y", function() {
+                }), n.d(t, "x", function() {
                     return l
                 }), n.d(t, "g", function() {
                     return f
@@ -9102,76 +9098,74 @@
                     return E
                 }), n.d(t, "j", function() {
                     return S
-                }), n.d(t, "O", function() {
+                }), n.d(t, "N", function() {
                     return w
-                }), n.d(t, "H", function() {
-                    return C
-                }), n.d(t, "o", function() {
-                    return N
                 }), n.d(t, "G", function() {
+                    return C
+                }), n.d(t, "n", function() {
+                    return N
+                }), n.d(t, "F", function() {
                     return I
                 }), n.d(t, "b", function() {
                     return P
-                }), n.d(t, "q", function() {
-                    return F
                 }), n.d(t, "p", function() {
+                    return F
+                }), n.d(t, "o", function() {
                     return U
-                }), n.d(t, "J", function() {
+                }), n.d(t, "I", function() {
                     return B
-                }), n.d(t, "L", function() {
-                    return W
-                }), n.d(t, "A", function() {
-                    return V
-                }), n.d(t, "M", function() {
-                    return j
-                }), n.d(t, "r", function() {
-                    return G
-                }), n.d(t, "n", function() {
-                    return q
                 }), n.d(t, "K", function() {
+                    return W
+                }), n.d(t, "z", function() {
+                    return V
+                }), n.d(t, "L", function() {
+                    return j
+                }), n.d(t, "q", function() {
+                    return G
+                }), n.d(t, "m", function() {
+                    return q
+                }), n.d(t, "J", function() {
                     return X
                 }), n.d(t, "a", function() {
                     return Q
-                }), n.d(t, "u", function() {
+                }), n.d(t, "t", function() {
                     return K
-                }), n.d(t, "w", function() {
+                }), n.d(t, "v", function() {
                     return Y
-                }), n.d(t, "C", function() {
-                    return J
-                }), n.d(t, "D", function() {
-                    return $
                 }), n.d(t, "B", function() {
+                    return J
+                }), n.d(t, "C", function() {
+                    return $
+                }), n.d(t, "A", function() {
                     return te
-                }), n.d(t, "E", function() {
+                }), n.d(t, "D", function() {
                     return ne
-                }), n.d(t, "N", function() {
+                }), n.d(t, "M", function() {
                     return he
                 }), n.d(t, "l", function() {
                     return Se
                 }), n.d(t, "k", function() {
                     return we
-                }), n.d(t, "P", function() {
+                }), n.d(t, "O", function() {
                     return Oe
-                }), n.d(t, "m", function() {
+                }), n.d(t, "y", function() {
                     return xe
-                }), n.d(t, "z", function() {
-                    return Pe
-                }), n.d(t, "t", function() {
-                    return Be
-                }), n.d(t, "i", function() {
-                    return Ve
-                }), n.d(t, "h", function() {
-                    return je
-                }), n.d(t, "v", function() {
-                    return ze
-                }), n.d(t, "I", function() {
-                    return Ge
-                }), n.d(t, "x", function() {
-                    return Je
-                }), n.d(t, "d", function() {
-                    return ot
                 }), n.d(t, "s", function() {
-                    return st
+                    return Ue
+                }), n.d(t, "i", function() {
+                    return We
+                }), n.d(t, "h", function() {
+                    return Ve
+                }), n.d(t, "u", function() {
+                    return je
+                }), n.d(t, "H", function() {
+                    return He
+                }), n.d(t, "w", function() {
+                    return Ze
+                }), n.d(t, "d", function() {
+                    return at
+                }), n.d(t, "r", function() {
+                    return ot
                 }),
                 function(e) {
                     e.CHANNEL_FEED_COMMENT_REPORT = "CHANNEL_FEED_COMMENT_REPORT", e.CHANNEL_FEED_POST_REPORT = "CHANNEL_FEED_POST_REPORT", e.CHAT_REPORT = "CHAT_REPORT", e.CLIP_REPORT = "CLIP_REPORT", e.COLLECTION_REPORT = "COLLECTION_REPORT", e.CURSE_PRIVATE_GROUP = "CURSE_PRIVATE_GROUP", e.CURSE_PUBLIC_GROUP = "CURSE_PUBLIC_GROUP", e.CURSE_WHISPER = "CURSE_WHISPER", e.EVENT_REPORT = "EVENT_REPORT", e.EXTENSION_REPORT = "EXTENSION_REPORT", e.LIVE_UP_REPORT = "LIVE_UP_REPORT", e.RAID_REPORT = "RAID_REPORT", e.ROOM_REPORT = "ROOM_REPORT", e.SINGS_DUET_SEED_REPORT = "SINGS_DUET_SEED_REPORT", e.SINGS_GROUP_BIO_REPORT = "SINGS_GROUP_BIO_REPORT", e.SINGS_GROUP_CHAT_REPORT = "SINGS_GROUP_CHAT_REPORT", e.SINGS_GROUP_NAME_REPORT = "SINGS_GROUP_NAME_REPORT", e.SINGS_VOD_COMMENT_REPORT = "SINGS_VOD_COMMENT_REPORT", e.USER_REPORT = "USER_REPORT", e.VOD_COMMENT_REPORT = "VOD_COMMENT_REPORT", e.VOD_REPORT = "VOD_REPORT", e.WHISPER_REPORT = "WHISPER_REPORT"
@@ -9429,92 +9423,89 @@
                     e.TIME = "TIME", e.VIEWS = "VIEWS"
                 }(Le || (Le = {})),
                 function(e) {
-                    e.CREATIVE = "CREATIVE", e.GAME = "GAME", e.OTHER = "OTHER"
+                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
                 }(xe || (xe = {})),
                 function(e) {
-                    e.DEFAULT = "DEFAULT", e.EXTENSION = "EXTENSION"
+                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
                 }(Pe || (Pe = {})),
                 function(e) {
-                    e.BITS_KEY_CODE = "BITS_KEY_CODE"
+                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
                 }(Fe || (Fe = {})),
                 function(e) {
-                    e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.REQUESTING_USER_NOT_PERMITTED = "REQUESTING_USER_NOT_PERMITTED", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG"
+                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
                 }(Me || (Me = {})),
                 function(e) {
-                    e.ACCOUNT_TOO_YOUNG = "ACCOUNT_TOO_YOUNG", e.COMMUNITY_NAME_EXISTS = "COMMUNITY_NAME_EXISTS", e.COMMUNITY_NAME_INVALID = "COMMUNITY_NAME_INVALID", e.COMMUNITY_NAME_RESERVED = "COMMUNITY_NAME_RESERVED", e.DESCRIPTION_TOO_LONG = "DESCRIPTION_TOO_LONG", e.DISPLAY_NAME_INVALID = "DISPLAY_NAME_INVALID", e.INVALID_LANGUAGE = "INVALID_LANGUAGE", e.OWN_TO_MANY_COMMUNITIES = "OWN_TO_MANY_COMMUNITIES", e.RULES_TOO_LONG = "RULES_TOO_LONG", e.SUMMARY_TOO_LONG = "SUMMARY_TOO_LONG", e.TWO_FACTOR_NOT_ENABLED = "TWO_FACTOR_NOT_ENABLED", e.UNVERIFIED_EMAIL = "UNVERIFIED_EMAIL"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
                 }(Ue || (Ue = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED", e.UNKNOWN = "UNKNOWN", e.UNSET = "UNSET"
+                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
                 }(Be || (Be = {})),
                 function(e) {
-                    e.ACTIVE = "ACTIVE", e.PENDING = "PENDING"
+                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(We || (We = {})),
                 function(e) {
-                    e.BOUNTY_ALREADY_CLAIMED = "BOUNTY_ALREADY_CLAIMED", e.BOUNTY_LIMIT_REACHED = "BOUNTY_LIMIT_REACHED", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(Ve || (Ve = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
                 }(je || (je = {})),
                 function(e) {
-                    e.PROMPT_FOR_PERMISSIONS = "PROMPT_FOR_PERMISSIONS", e.REQUIRES_CONFIGURATION = "REQUIRES_CONFIGURATION"
+                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(ze || (ze = {})),
                 function(e) {
-                    e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
                 }(He || (He = {})),
                 function(e) {
-                    e.BOUNTY_NOT_LIVE = "BOUNTY_NOT_LIVE", e.INVALID_PARAMETER = "INVALID_PARAMETER", e.UNAUTHORIZED = "UNAUTHORIZED", e.UNKNOWN_ERROR = "UNKNOWN_ERROR"
+                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
                 }(Ge || (Ge = {})),
                 function(e) {
-                    e.BASELINE = "BASELINE", e.HIGH = "HIGH", e.MAIN = "MAIN"
+                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(qe || (qe = {})),
                 function(e) {
                     e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
                 }(Xe || (Xe = {})),
                 function(e) {
-                    e.NOT_PERMITTED = "NOT_PERMITTED", e.TARGET_USER_MOD = "TARGET_USER_MOD", e.TARGET_USER_OWNER = "TARGET_USER_OWNER", e.TARGET_USER_SELF = "TARGET_USER_SELF", e.TARGET_USER_STAFF = "TARGET_USER_STAFF"
+                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
                 }(Qe || (Qe = {})),
                 function(e) {
-                    e.HYPE = "HYPE", e.STARTTIME = "STARTTIME"
+                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
                 }(Ke || (Ke = {})),
                 function(e) {
-                    e.CANCELLED = "CANCELLED", e.FAILED = "FAILED", e.SCHEDULED = "SCHEDULED", e.STARTED = "STARTED", e.SUCCESS = "SUCCESS", e.UNKNOWN = "UNKNOWN", e.UNSCHEDULED = "UNSCHEDULED"
+                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
                 }(Ye || (Ye = {})),
                 function(e) {
-                    e.PREMIERE = "PREMIERE", e.SEGMENT = "SEGMENT", e.SINGLE = "SINGLE", e.TIMETABLE = "TIMETABLE"
+                    e.ALL = "ALL", e.LIVE = "LIVE"
                 }(Ze || (Ze = {})),
                 function(e) {
-                    e.ALL = "ALL", e.LIVE = "LIVE"
+                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
                 }(Je || (Je = {})),
                 function(e) {
-                    e.PRICE_ASC = "PRICE_ASC", e.PRICE_DESC = "PRICE_DESC", e.PURCHASE_DATE_ASC = "PURCHASE_DATE_ASC", e.PURCHASE_DATE_DESC = "PURCHASE_DATE_DESC"
+                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
                 }($e || ($e = {})),
                 function(e) {
-                    e.ALL = "ALL", e.SUBSCRIPTIONS = "SUBSCRIPTIONS"
+                    e.SUBSCRIPTION = "SUBSCRIPTION"
                 }(et || (et = {})),
                 function(e) {
-                    e.SUBSCRIPTION = "SUBSCRIPTION"
+                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
                 }(tt || (tt = {})),
                 function(e) {
-                    e.MONKEYS = "MONKEYS", e.PURPLE = "PURPLE", e.ROBOTS = "ROBOTS"
+                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
                 }(nt || (nt = {})),
                 function(e) {
-                    e.ALL = "ALL", e.GIFT = "GIFT", e.PLATFORM = "PLATFORM"
+                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
                 }(it || (it = {})),
                 function(e) {
-                    e.INVALID_USER_ID = "INVALID_USER_ID", e.UNAUTHORIZED = "UNAUTHORIZED"
+                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
                 }(rt || (rt = {})),
                 function(e) {
-                    e.DELETED = "DELETED", e.PENDING_REVIEW = "PENDING_REVIEW", e.PENDING_REVIEW_SPAM = "PENDING_REVIEW_SPAM", e.PUBLISHED = "PUBLISHED", e.UNPUBLISHED = "UNPUBLISHED"
+                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
                 }(at || (at = {})),
                 function(e) {
-                    e.APPROVED = "APPROVED", e.COMPLETED = "COMPLETED", e.LIVE = "LIVE", e.PENDING = "PENDING", e.REJECTED = "REJECTED"
+                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
                 }(ot || (ot = {})),
                 function(e) {
-                    e.ITEM = "ITEM", e.LINK_NOTIFICATION = "LINK_NOTIFICATION"
-                }(st || (st = {})),
-                function(e) {
                     e.SERVICE_DEPENDENCY_FAILURE = "SERVICE_DEPENDENCY_FAILURE", e.UNKNOWN = "UNKNOWN", e.USER_UNAUTHORIZED = "USER_UNAUTHORIZED"
-                }(lt || (lt = {}))
+                }(st || (st = {}))
         },
         DS6v: function(e, t) {
             var n = {
@@ -10359,7 +10350,7 @@
                         var n = e.call(this, t) || this;
                         return n.renderTab = function(e, t, i) {
                             var a = n.state.selectedTab === e;
-                            return r.createElement(v.zb, {
+                            return r.createElement(v.yb, {
                                 active: a,
                                 onClick: function() {
                                     return n.onClickTab(e)
@@ -10414,7 +10405,7 @@
                             justifyContent: v.Va.Between,
                             flexWrap: v.Aa.NoWrap,
                             alignItems: v.f.Start
-                        }, r.createElement(v.Ab, null, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[l.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[l.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[l.a.Fail]))), r.createElement(v.Wa, {
+                        }, r.createElement(v.zb, null, this.renderTab("overview", "Overview"), this.renderTab("components", "Components", this.state.componentStats.countByStatus[l.a.Fail]), this.renderTab("queries", "Queries", this.state.queryStats.countByStatus[l.a.Fail]), this.renderTab("requests", "Requests", this.state.networkStats.countByStatus[l.a.Fail]))), r.createElement(v.Wa, {
                             className: "latency-metrics__body",
                             display: v.X.Flex,
                             flexDirection: v.Z.Column,
@@ -11226,7 +11217,7 @@
                             flexGrow: 0,
                             flexShrink: 0,
                             display: this.state.hideCollapseButton ? p.X.Hide : p.X.Flex,
-                            zIndex: p.bc.Default
+                            zIndex: p.ac.Default
                         }, s.createElement("button", {
                             onClick: this.handleToggleVisibility,
                             "data-a-target": "right-column__toggle-collapse-btn"
@@ -11658,7 +11649,7 @@
                             src: this.props.src,
                             alt: this.props.alt,
                             onLoad: this.handleLoad
-                        }, this.props, Object(a.cc)(this.props)))
+                        }, this.props, Object(a.bc)(this.props)))
                     }, t = i.__decorate([Object(o.a)("CriticalAvatar")], t)
                 }(r.Component),
                 l = function(e) {
@@ -11675,7 +11666,7 @@
                             src: this.props.src,
                             srcSet: this.props.srcSet,
                             onLoad: this.handleLoad
-                        }, Object(a.cc)(this.props)))
+                        }, Object(a.bc)(this.props)))
                     }, t = i.__decorate([Object(o.a)("CriticalImage")], t)
                 }(r.Component);
             n.d(t, !1, function() {
@@ -12066,9 +12057,9 @@
                                 x: 5,
                                 y: 2
                             },
-                            textAlign: T.Kb.Center
+                            textAlign: T.Jb.Center
                         }, u.createElement(T.W, {
-                            type: T.Ob.H4,
+                            type: T.Nb.H4,
                             bold: !0
                         }, Object(h.d)("Cheer Bits for your Favorite Streamer!", "Bits--FirstTimeUserPrompt"))), u.createElement(T.Wa, {
                             padding: {
@@ -12076,7 +12067,7 @@
                                 bottom: 1
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.Span,
+                            type: T.Nb.Span,
                             color: T.O.Alt
                         }, Object(h.d)("Bits are fun, animated emotes. Cheering Bits celebrates moments you love with the community right in chat and similar to subscribing, helps support Partners and Affiliates.", "Bits--FirstTimeUserPrompt"), u.createElement(T.Oa, {
                             margin: {
@@ -12088,13 +12079,13 @@
                             padding: {
                                 bottom: 2
                             },
-                            textAlign: T.Kb.Center
+                            textAlign: T.Jb.Center
                         }, u.createElement(T.Oa, {
                             margin: {
                                 bottom: 1
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.H6,
+                            type: T.Nb.H6,
                             bold: !0,
                             className: "bits-first-time-user-prompt__promo-header"
                         }, Object(h.d)("First Time Purchaser Discount Pack!", "Bits--FirstTimeUserPrompt"))), u.createElement(T.z, {
@@ -12118,7 +12109,7 @@
                             asset: T.ob.Play,
                             height: 8
                         }), " ", Object(h.d)("Back", "Bits--FirstTimeUserPrompt"))), u.createElement(T.Wa, {
-                            textAlign: T.Kb.Center,
+                            textAlign: T.Jb.Center,
                             padding: {
                                 x: 2,
                                 bottom: 2,
@@ -12167,13 +12158,13 @@
                     return c.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.loading) return u.createElement(T.yb, {
+                        if (this.props.loading) return u.createElement(T.xb, {
                             "data-a-target": "get-bits-button-content-loading",
                             display: T.X.Flex,
                             flexDirection: T.Z.Column,
                             alignItems: T.f.Center,
                             justifyContent: T.Va.Center,
-                            textAlign: T.Kb.Center,
+                            textAlign: T.Jb.Center,
                             padding: {
                                 y: 5
                             }
@@ -12203,13 +12194,13 @@
                         }
                         var n = null;
                         return void 0 !== this.props.bitsBalance ? n = u.createElement(T.Wa, {
-                            textAlign: T.Kb.Center,
+                            textAlign: T.Jb.Center,
                             fullWidth: !0,
                             padding: {
                                 y: .5
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.Span
+                            type: T.Nb.Span
                         }, Object(h.d)("You have {bitsBalance}", {
                             bitsBalance: u.createElement(_.a, {
                                 withImage: !0,
@@ -12218,13 +12209,13 @@
                                 bitsConfig: this.props.bitsConfig
                             })
                         }, "Bits--GetBitsButton"))) : void 0 === this.props.bitsBalance && (n = u.createElement(T.Wa, {
-                            textAlign: T.Kb.Center,
+                            textAlign: T.Jb.Center,
                             fullWidth: !0,
                             padding: {
                                 y: .5
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.Span
+                            type: T.Nb.Span
                         }, Object(h.d)("{bitsGem} Log in to see your Bits balance", {
                             bitsGem: u.createElement(_.a, {
                                 count: 100,
@@ -12233,7 +12224,7 @@
                             })
                         }, "Bits--GetBitsButton")))), u.createElement(E.b, {
                             className: "get-bits-button-content"
-                        }, u.createElement(T.Wa, null, n, e, u.createElement(T.yb, {
+                        }, u.createElement(T.Wa, null, n, e, u.createElement(T.xb, {
                             borderTop: !0,
                             fullWidth: !0
                         }, u.createElement(S.a, {
@@ -12331,7 +12322,7 @@
                         onClick: e.onClick,
                         linkTo: e.linkTo,
                         targetBlank: e.targetBlank
-                    }, Object(T.cc)(e), {
+                    }, Object(T.bc)(e), {
                         borderRadius: T.x.Small
                     }), u.createElement(T.Wa, {
                         padding: {
@@ -12439,7 +12430,7 @@
                                 x: .5,
                                 y: .5
                             }
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Overlay,
                             background: T.r.Overlay,
                             padding: {
@@ -12460,7 +12451,7 @@
                             status: T.M.Live,
                             size: T.L.Small
                         }))), u.createElement(T.W, {
-                            type: T.Ob.Span
+                            type: T.Nb.Span
                         }, Object(h.f)(this.props.viewerCount))))), u.createElement(T.H, {
                             overflow: T.Za.Hidden
                         }, u.createElement(T.Oa, {
@@ -12468,7 +12459,7 @@
                                 left: 1
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.H5,
+                            type: T.Nb.H5,
                             ellipsis: !0
                         }, this.props.channelName)), u.createElement(T.Oa, {
                             margin: {
@@ -12515,7 +12506,7 @@
                             alt: this.props.imageAlt,
                             aspect: T.p.Aspect16x9,
                             borderRadius: T.x.Small
-                        }), u.createElement(T.yb, {
+                        }), u.createElement(T.xb, {
                             className: "search-live-result-card__overlay",
                             position: T.eb.Absolute,
                             attachLeft: !0,
@@ -12531,7 +12522,7 @@
                             className: "search-live-result-card__body",
                             padding: .5
                         }, u.createElement(T.W, {
-                            type: T.Ob.H5,
+                            type: T.Nb.H5,
                             ellipsis: !0,
                             className: "search-live-result-card__title"
                         }, this.props.channelName), u.createElement(T.Wa, {
@@ -12590,7 +12581,7 @@
                             onClick: this.onHeaderClick,
                             tabIndex: -1,
                             type: T.Ua.Alpha
-                        }, Object(T.cc)(this.props), {
+                        }, Object(T.bc)(this.props), {
                             "data-ts_selectable": !0
                         }), u.createElement(T.Wa, {
                             display: T.X.Flex,
@@ -12633,13 +12624,13 @@
                         this.props.showBack && this.props.trackImpression(ee.a.Back, this.props.searchIndex)
                     }, t.prototype.render = function() {
                         var e = this.props.searchIndex;
-                        return u.createElement(T.yb, {
+                        return u.createElement(T.xb, {
                             className: "search-title-bar " + (this.props.showBack ? "search-title-bar--show" : ""),
                             background: T.r.Alt2,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
                             position: T.eb.Relative,
-                            zIndex: T.bc.Above,
+                            zIndex: T.ac.Above,
                             borderBottom: !0,
                             "data-a-target": "nav-search-title-bar"
                         }, u.createElement(T.Wa, {
@@ -12684,22 +12675,22 @@
                         })), t = u.createElement(ge, c.__assign({
                             onClick: this.props.onHeaderClick,
                             index: o
-                        }, Object(T.cc)(this.props)), u.createElement(T.Wa, {
+                        }, Object(T.bc)(this.props)), u.createElement(T.Wa, {
                             display: T.X.Inline,
                             margin: {
                                 right: 1
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.Span,
+                            type: T.Nb.Span,
                             color: T.O.Link,
                             fontSize: T.Ba.Size7,
-                            transform: T.Nb.Uppercase
+                            transform: T.Mb.Uppercase
                         }, be(o))), u.createElement("div", null, n), u.createElement(T.Wa, {
-                            textAlign: T.Kb.Right,
+                            textAlign: T.Jb.Right,
                             flexGrow: 1
                         }, u.createElement(T.W, {
                             fontSize: T.Ba.Size7,
-                            transform: T.Nb.Uppercase
+                            transform: T.Mb.Uppercase
                         }, e)))), (Array.isArray(a) && a.length > 0 || a && !Array.isArray(a)) && (i = u.createElement(T.Wa, {
                             className: "search-result-section__listing-wrapper",
                             margin: {
@@ -12752,7 +12743,7 @@
                                 x: 1
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.H5,
+                            type: T.Nb.H5,
                             ellipsis: !0
                         }, t))))))
                     }, t
@@ -12808,7 +12799,7 @@
                                 left: 1
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.H5,
+                            type: T.Nb.H5,
                             ellipsis: !0
                         }, n.title)), u.createElement(T.Oa, {
                             margin: {
@@ -12819,7 +12810,7 @@
                             ellipsis: !0
                         }, u.createElement(T.W, {
                             className: "search-results-panel__highlight-link",
-                            type: T.Ob.Span
+                            type: T.Nb.Span
                         }, i), "· ", r || "", "· ", n.createdAt ? Object(h.c)(new Date(1e3 * n.createdAt), "medium") : "")), this.props.data && this.props.data.video && this.props.data.video.contentTags && this.props.data.video.contentTags.length > 0 && u.createElement(T.Oa, {
                             margin: {
                                 left: 1
@@ -12859,7 +12850,7 @@
                                 left: 1
                             }
                         }, u.createElement(T.W, {
-                            type: T.Ob.H5,
+                            type: T.Nb.H5,
                             ellipsis: !0
                         }, n.title)), u.createElement(T.Oa, {
                             margin: {
@@ -12870,7 +12861,7 @@
                             ellipsis: !0
                         }, n.createdAt ? Object(h.c)(new Date(1e3 * n.createdAt), "medium") : "", " · ", r || "", " · ", u.createElement(T.W, {
                             className: "search-results-panel__highlight-link",
-                            type: T.Ob.Span
+                            type: T.Nb.Span
                         }, i)))))))
                     }, t
                 }(u.Component),
@@ -13016,7 +13007,7 @@
                         })), u.createElement("div", {
                             tabIndex: 0,
                             onKeyDown: this.props.onKeyDown
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             className: ne(i),
                             background: T.r.Base,
                             overflow: T.Za.Hidden,
@@ -13112,11 +13103,11 @@
                             alignItems: T.f.Center,
                             flexGrow: 1,
                             fullHeight: !0,
-                            zIndex: T.bc.Above,
+                            zIndex: T.ac.Above,
                             className: "search-results-panel__notice-wrap"
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt2,
-                            textAlign: T.Kb.Center,
+                            textAlign: T.Jb.Center,
                             flexShrink: 1
                         }, u.createElement(T.nb, {
                             asset: T.ob.SearchNoResults,
@@ -13126,13 +13117,13 @@
                             margin: {
                                 top: 1
                             },
-                            textAlign: T.Kb.Center
+                            textAlign: T.Jb.Center
                         }, u.createElement(T.W, {
-                            type: T.Ob.H4,
+                            type: T.Nb.H4,
                             "data-a-target": "nav-search-no-results",
                             "data-test-selector": "panel-body-no-results"
                         }, Object(h.d)("No results found", "SearchResultPanel"))), u.createElement(T.W, {
-                            type: T.Ob.P
+                            type: T.Nb.P
                         }, Object(h.d)("They're probably in another castle", "SearchResultPanel")))
                     }, t.prototype.getErrorMessage = function() {
                         return u.createElement(T.Wa, {
@@ -13142,11 +13133,11 @@
                             alignItems: T.f.Center,
                             flexGrow: 1,
                             fullHeight: !0,
-                            zIndex: T.bc.Above,
+                            zIndex: T.ac.Above,
                             className: "search-results-panel__notice-wrap"
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt2,
-                            textAlign: T.Kb.Center,
+                            textAlign: T.Jb.Center,
                             flexShrink: 1
                         }, u.createElement(T.nb, {
                             asset: T.ob.DeadGlitch,
@@ -13156,12 +13147,12 @@
                             margin: {
                                 top: 1
                             },
-                            textAlign: T.Kb.Center
+                            textAlign: T.Jb.Center
                         }, u.createElement(T.W, {
-                            type: T.Ob.H4,
+                            type: T.Nb.H4,
                             "data-test-selector": "search-error-message"
                         }, Object(h.d)("Search is not available at this time", "SearchResultPanel"))), u.createElement(T.W, {
-                            type: T.Ob.P
+                            type: T.Nb.P
                         }, Object(h.d)("Please try again later", "SearchResultPanel")))
                     }, t.contextTypes = {
                         requestVisibilityCheck: X.func
@@ -13204,9 +13195,9 @@
                             display: T.X.Flex,
                             alignItems: T.f.Center,
                             fullHeight: !0
-                        }, u.createElement(T.Hb, {
-                            type: T.Jb.Accent,
-                            action: T.Ib.Remove,
+                        }, u.createElement(T.Gb, {
+                            type: T.Ib.Accent,
+                            action: T.Hb.Remove,
                             label: this.state.currentCategory,
                             icon: e,
                             onClick: this.props.onClick,
@@ -13229,8 +13220,8 @@
                 }(u.Component)),
                 De = (n("1i0o"), "nav-search-input"),
                 Ae = {
-                    align: T.Sb.Center,
-                    direction: T.Tb.Bottom,
+                    align: T.Rb.Center,
+                    direction: T.Sb.Bottom,
                     label: ""
                 },
                 Le = function(e) {
@@ -13299,7 +13290,7 @@
                             tailOffset: 7,
                             tailBackground: T.r.Alt2,
                             "data-a-target": "nav-search-balloon"
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             background: T.r.Alt2,
                             padding: 1,
                             borderBottom: !0
@@ -13736,7 +13727,7 @@
                             return h.p.integrations.process && h.p.integrations.process.quit ? u.createElement(T.Ta, {
                                 "data-a-target": "dropdown-exit",
                                 onClick: t.onAppExitClick
-                            }, u.createElement(T.yb, {
+                            }, u.createElement(T.xb, {
                                 color: T.O.Alt,
                                 display: T.X.Flex,
                                 alignItems: T.f.Center,
@@ -13791,7 +13782,7 @@
                             }
                         }, p = "/" + this.props.data.currentUser.login + "/manager", m = "/" + this.props.data.currentUser.login + "/dashboard/live");
                         var f = !i || this.props.visibilityWorking;
-                        return u.createElement(T.yb, {
+                        return u.createElement(T.xb, {
                             overflow: T.Za.Hidden,
                             position: T.eb.Absolute,
                             className: e,
@@ -13800,11 +13791,11 @@
                             "data-a-target": t,
                             "data-test-selector": n,
                             attachRight: !0,
-                            zIndex: T.bc.Below
+                            zIndex: T.ac.Below
                         }, u.createElement(ie.b, {
                             className: "top-nav-user-menu-dropdown__scrollable",
                             suppressScrollX: !0
-                        }, u.createElement(T.Wa, null, u.createElement(T.yb, {
+                        }, u.createElement(T.Wa, null, u.createElement(T.xb, {
                             padding: {
                                 y: 1
                             },
@@ -13814,7 +13805,7 @@
                             onClick: this.onOnlineClick,
                             "data-a-target": "online-dropdown-button",
                             "data-test-selector": ot.OnlineAvailability
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt2,
                             display: T.X.Flex,
                             padding: ct
@@ -13832,7 +13823,7 @@
                             onClick: this.onInvisibleClick,
                             "data-a-target": "invisible-dropdown-button",
                             "data-test-selector": ot.InvisibleAvailability
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Base,
                             display: T.X.Flex,
                             padding: ct
@@ -13861,9 +13852,9 @@
                             onChange: this.onShareCheckboxClick,
                             disabled: s
                         }), u.createElement(T.W, {
-                            type: T.Ob.Span,
+                            type: T.Nb.Span,
                             color: T.O.Alt
-                        }, Object(h.d)("Share what you're watching, playing, or streaming with your friends.", "UserMenuDropdown"))), u.createElement(T.yb, {
+                        }, Object(h.d)("Share what you're watching, playing, or streaming with your friends.", "UserMenuDropdown"))), u.createElement(T.xb, {
                             borderBottom: !0,
                             margin: {
                                 x: 2,
@@ -13891,7 +13882,7 @@
                             linkTo: d,
                             "data-a-target": "channel-dropdown-link",
                             "data-test-selector": ot.ChannelLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -13909,7 +13900,7 @@
                             linkTo: p,
                             "data-a-target": "video-manager-dropdown-link",
                             "data-test-selector": ot.VideoManagerLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -13927,7 +13918,7 @@
                             linkTo: m,
                             "data-a-target": "dashboard-dropdown-link",
                             "data-test-selector": ot.DashboardLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -13940,7 +13931,7 @@
                             asset: T.ob.NavDashboard,
                             height: ut.height,
                             width: ut.width
-                        })), u.createElement(T.W, null, Object(h.d)("Dashboard", "UserMenuDropdown")))), u.createElement(T.yb, {
+                        })), u.createElement(T.W, null, Object(h.d)("Dashboard", "UserMenuDropdown")))), u.createElement(T.xb, {
                             borderBottom: !0,
                             margin: {
                                 x: 2,
@@ -13950,7 +13941,7 @@
                             linkTo: "/friends",
                             "data-a-target": "friends-dropdown-link",
                             "data-test-selector": ot.FriendsLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -13967,7 +13958,7 @@
                             linkTo: "/messages/inbox",
                             "data-a-target": "inbox-dropdown-link",
                             "data-test-selector": ot.InboxLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -13984,7 +13975,7 @@
                             linkTo: "/subscriptions",
                             "data-a-target": "subscriptions-dropdown-link",
                             "data-test-selector": ot.SubscriptionsLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -14001,7 +13992,7 @@
                             linkTo: "/inventory",
                             "data-a-target": "inventory-dropdown-link",
                             "data-test-selector": ot.InventoryLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -14018,7 +14009,7 @@
                             linkTo: "/payments",
                             "data-a-target": "payments-dropdown-link",
                             "data-test-selector": ot.PaymentsLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -14031,7 +14022,7 @@
                             asset: T.ob.NavBackpack,
                             height: ut.height,
                             width: ut.width
-                        })), u.createElement(T.W, null, Object(h.d)("Payments", "UserMenuDropdown")))), u.createElement(T.yb, {
+                        })), u.createElement(T.W, null, Object(h.d)("Payments", "UserMenuDropdown")))), u.createElement(T.xb, {
                             borderBottom: !0,
                             margin: {
                                 x: 2,
@@ -14041,7 +14032,7 @@
                             linkTo: "/settings",
                             "data-a-target": "settings-dropdown-link",
                             "data-test-selector": ot.SettingsLink
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -14058,7 +14049,7 @@
                             onClick: this.onLogoutClick,
                             "data-a-target": "dropdown-logout",
                             "data-test-selector": ot.LogoutButton
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Alt,
                             display: T.X.Flex,
                             alignItems: T.f.Center,
@@ -14255,7 +14246,7 @@
                         breakpointSmall: {
                             display: T.X.Flex
                         }
-                    }, u.createElement(T.yb, {
+                    }, u.createElement(T.xb, {
                         margin: {
                             y: .5
                         }
@@ -14267,7 +14258,7 @@
                         ellipsis: !0,
                         display: T.X.Flex,
                         alignItems: T.f.Center
-                    }, u.createElement(T.yb, {
+                    }, u.createElement(T.xb, {
                         display: T.X.InlineFlex,
                         margin: {
                             y: .5
@@ -14276,7 +14267,7 @@
                         width: 40,
                         height: 4,
                         overlay: !0
-                    }))))), u.createElement(T.yb, {
+                    }))))), u.createElement(T.xb, {
                         display: T.X.Flex,
                         flexShrink: 0,
                         color: T.O.Base,
@@ -14375,7 +14366,7 @@
                             breakpointSmall: {
                                 display: T.X.Block
                             }
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.Base,
                             fontSize: T.Ba.Size5,
                             className: "top-nav-user-menu__username",
@@ -14383,26 +14374,26 @@
                             "data-test-selector": yt.DisplayName
                         }, u.createElement(T.W, {
                             lineHeight: T.Xa.Heading
-                        }, n)), u.createElement(T.yb, {
+                        }, n)), u.createElement(T.xb, {
                             className: "top-nav-user-menu__status-wrapper",
                             ellipsis: !0,
                             fullWidth: !0,
                             alignItems: T.f.Center,
                             display: T.X.Flex,
                             flexWrap: T.Aa.NoWrap
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             ellipsis: !0,
                             color: T.O.Alt,
                             fontSize: T.Ba.Size7
                         }, u.createElement(T.W, {
-                            type: T.Ob.Span,
+                            type: T.Nb.Span,
                             noWrap: !0,
                             "data-a-target": "online-status",
                             lineHeight: T.Xa.Heading
                         }, this.props.data.currentUser && u.createElement(kt.a, {
                             activity: this.props.data.currentUser.activity,
                             availability: i === Ye.a.Offline ? Ye.a.Invisible : i
-                        }))))), u.createElement(T.yb, {
+                        }))))), u.createElement(T.xb, {
                             display: T.X.Flex,
                             flexShrink: 0,
                             color: T.O.Base,
@@ -14678,7 +14669,7 @@
                             },
                             className: "top-nav__home-link",
                             "data-a-target": "home-link"
-                        }, u.createElement(T.yb, {
+                        }, u.createElement(T.xb, {
                             color: T.O.OverlayAlt
                         }, u.createElement(T.h, {
                             width: 30,
@@ -15501,21 +15492,21 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         !e.data.loading && e.data.requestInfo && !1 === e.data.requestInfo.isFromEEA && this.dismiss()
                     }, t.prototype.render = function() {
-                        return this.props.data.requestInfo && this.props.data.requestInfo.isFromEEA || this.props.data.error ? r.createElement(c.Pb, {
+                        return this.props.data.requestInfo && this.props.data.requestInfo.isFromEEA || this.props.data.error ? r.createElement(c.Ob, {
                             onClose: this.dismiss
                         }, r.createElement(c.Wa, {
                             className: "eea-cookie-alert__body",
                             display: c.X.Flex,
                             alignItems: c.f.Center,
                             padding: 1
-                        }, r.createElement(c.yb, {
-                            textAlign: c.Kb.Center,
+                        }, r.createElement(c.xb, {
+                            textAlign: c.Jb.Center,
                             background: c.r.Base,
                             margin: {
                                 x: "auto"
                             }
                         }, r.createElement(c.W, {
-                            type: c.Ob.Span,
+                            type: c.Nb.Span,
                             color: c.O.Base,
                             fontSize: c.Ba.Size5
                         }, this.content)))) : null
@@ -15576,7 +15567,7 @@
                             flexDirection: c.Z.Column,
                             alignItems: c.f.Center,
                             justifyContent: c.Va.Center,
-                            zIndex: c.bc.Above
+                            zIndex: c.ac.Above
                         }, e)
                     }, t.prototype.removeToastAtIndex = function(e) {
                         var t = this.state.toastsToShow.slice();
@@ -17269,7 +17260,7 @@
                             type: this.getCurrentType(),
                             tabIndex: this.props.tabIndex,
                             ariaLabel: this.props.ariaLabel
-                        }, Object(a.cc)(this.props)), r.createElement(a.Wa, {
+                        }, Object(a.bc)(this.props)), r.createElement(a.Wa, {
                             display: a.X.Flex,
                             justifyContent: a.Va.Center,
                             alignItems: a.f.Center
@@ -19776,7 +19767,7 @@
                     return i
                 }),
                 function(e) {
-                    e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.DownloadKeyCodePage = "download-keys", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsModeration = "channel.dashboard.settings.moderation", e.DashboardSettingsModerationChatTerms = "channel.dashboard.settings.moderation.chat-terms", e.DashboardSettingsModerationBannedChatters = "channel.dashboard.settings.moderation.banned-chatters", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.RecoverAccount = "user.recover-account", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ExtensionsPopout = "extensions.popout", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesDisclosurePage = "messages-disclosure", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.RolesPage = "roles.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.SettingsRecommendatons = "settings.recommendations", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TurboLandingPage = "turbo.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DesktopLoginPage = "desktop.login", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteExtensionsEnableMonetization = "dev.extensions.enable-monetization", e.DevSiteGames = "dev.games", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteDropsCreateCampaign = "dev.drops.campaign.create", e.DevSiteDropsEditCampaign = "dev.drops.campaign.edit", e.DevSiteDropsItems = "dev.drops.items", e.DevSiteDropsCreateItem = "dev.drops.item.create", e.DevSiteDropsEditItem = "dev.drops.item.edit", e.DevSiteGamesOnePager = "dev.games.onepager", e.DevSiteLogin = "dev.login", e.Unknown = "unknown"
+                    e.AuthorizedStreamers = "channel.dashboard.settings.stream", e.AutohostSettings = "channel.dashboard.settings.autohost", e.BitsBuyCard = "bits-buy-card", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BroadcastPage = "broadcast", e.BrowseCommunities = "browse.communities", e.BrowseCreative = "browse.creative", e.BrowseGames = "browse.games", e.ChannelClips = "channel.clips", e.ChannelCollections = "channel.collections", e.ChannelClipsManager = "videoManager.clips.channel", e.ChannelDashboardActivity = "dashboards.activity", e.ChannelDashboardAchievements = "channel.dashboard.achievements", e.ChannelDashboardBounties = "channel.dashboard.bounties", e.ChannelDashboardChannelAnalytics = "channel.dashboard.channel-analytics", e.ChannelDashboardChannelAnalyticsPayouts = "channel.dashboard.channel-analytics.payouts", e.ChannelDashboardChannelAnalyticsReferrals = "channel.dashboard.channel-analytics.referrals", e.ChannelDashboardExtensionsLegacy = "channel.dashboard.extensions", e.ChannelDashboardExtensionsManagement = "channel.dashboard.extensions.management", e.ChannelDashboardExtensionsConfigure = "channel.dashboard.extensions.configure", e.ChannelDashboardModeration = "channel.dashboard.moderation", e.ChannelDashboardStreamSummary = "channel.dashboard.stream-summary", e.ChannelDashboardStreamSummaryReferrals = "channel.dashboard.stream-summary.referrals", e.ChannelEsportsLoot = "channel.esports-loot", e.ChannelEsportsPass = "channel.esports-pass", e.ChannelEsportsProgress = "channel.esports-progress", e.ChannelEvents = "channel.events", e.ChannelFollowers = "channel.followers", e.ChannelFollows = "channel.follows", e.ChannelIndex = "channel.index.index", e.ChangeEmail = "user.change-email", e.ChatEmbed = "chat.embed", e.ChatPopout = "chat", e.CheermoteCarousel = "cheermote-carousel", e.ClipsEditing = "clips.edit", e.ClipsError = "clips.error", e.ClipsViewing = "clips.view", e.ClipsWatchPage = "clips.watch", e.CodeRedemptionPage = "redeem", e.DownloadKeyCodePage = "download-keys", e.CommunityModeration = "community.moderation", e.CommunityCreate = "community.create", e.DashboardBroadcastPage = "channel.dashboard.broadcast", e.DashboardEventsAll = "channel.dashboard.events.index", e.DashboardEventsCollection = "channel.dashboard.events.collection", e.DashboardPermissions = "dashboards.permissions", e.DashboardSettingsAutoMod = "channel.dashboard.settings.automod", e.DashboardSettingsIndex = "channel.dashboard.settings.index", e.DashboardSettingsModeration = "channel.dashboard.settings.moderation", e.DashboardSettingsModerationChatTerms = "channel.dashboard.settings.moderation.chat-terms", e.DashboardSettingsModerationBannedChatters = "channel.dashboard.settings.moderation.banned-chatters", e.DashboardSettingsRevenue = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueCheer = "channel.dashboard.settings.revenue.cheer", e.DashboardSettingsRevenueCheerBadges = "channel.dashboard.settings.revenue.cheerbadges", e.DashboardSettingsRevenueCheermotes = "channel.dashboard.settings.revenue.cheermotes", e.DashboardSettingsRevenueIndex = "channel.dashboard.settings.revenue", e.DashboardSettingsRevenueSubsNameSettings = "channel.dashboard.settings.revenue.subscription.ticket", e.DashboardSettingsRevenueChatEmoticons = "channel.dashboard.settings.revenue.subscription.chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "channel.dashboard.settings.revenue.subscription.badges", e.DashboardSettingsRevenueGameCommerce = "channel.dashboard.settings.revenue.game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "channel.dashboard.settings.revenue.merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "channel.dashboard.settings.revenue.payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "channel.dashboard.settings.revenue.payouts", e.DashboardSettingsRevenueUpgradeTerms = "channel.dashboard.settings.revenue.upgrade-terms", e.DashboardSettingsRevenueViewTerms = "channel.dashboard.settings.revenue.view-terms", e.DevOnly = "dev", e.DirectoryCommunityByLanguage = "directory.community.language", e.DirectoryCommunityIndex = "directory.community.index", e.DirectoryCommunityDetails = "directory.community.details", e.DirectoryFollowingCommunities = "directory.following.communities", e.DirectoryFollowingGames = "directory.following.games", e.DirectoryFollowingHosts = "directory.following.hosts", e.DirectoryFollowingIndex = "directory.following.index", e.DirectoryFollowingLiveChannels = "directory.following.channels", e.DirectoryFollowingVideos = "directory.following.videos.video-type", e.DirectoryGameClips = "directory.game.clips", e.DirectoryGameDetails = "directory.game.details", e.DirectoryGameIndex = "directory.game.index", e.DirectoryGames = "directory.games", e.DirectoryPopular = "directory.popular", e.DirectoryPopularByLanguage = "directory.popular.language", e.DirectoryGameVideos = "directory.game.videos", e.DirectoryVideosHistory = "directory.videos.history", e.RecoverAccount = "user.recover-account", e.DisableAccount = "user.disable-account", e.DeleteAccount = "user.delete-account", e.EditableChannels = "channel.dashboard.settings.channel", e.EmailUnsubscribe = "emailUnsubscribe", e.EmailVerification = "emailVerification", e.EventDetails = "event.details", e.ExtensionDetails = "extensions.extension", e.ExtensionsDiscovery = "extensions.discovery", e.ExtensionsCategory = "extensions.category", e.ExtensionsSearch = "extensions.search", e.ExtensionsPopout = "extensions.popout", e.ForYou = "for-you", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.Index = "index", e.Inventory = "inventory", e.LivePage = "live.page", e.LoginRequired = "loginRequired", e.MessagesDisclosurePage = "messages-disclosure", e.MessagesPage = "messages", e.MyClipsManager = "videoManager.clips", e.NotificationSettingsPage = "settings.notificationSettings", e.OnboardingIndex = "onboarding.index", e.OnboardingSurf = "onboarding.surf", e.PaymentsLandingPage = "payments.landingPage", e.PartnershipSignupPage = "partnership.signup", e.ContentUnavailable = "404", e.ReportUserPage = "reportUser.page", e.RolesPage = "roles.page", e.SettingsConnections = "private/embed-components", e.SettingsChannel = "private/embed-components", e.SettingsNotifications = "settings.notifications", e.SettingsPrime = "settings.prime", e.SettingsProfile = "settings.profile", e.SettingsSecurity = "private/embed-components", e.SettingsTurbo = "settings.turbo", e.SettingsRecommendatons = "settings.recommendations", e.StoreMerchPage = "store.merch", e.SquadStreamPage = "squadStream.page", e.SubsLandingPage = "subs.landing", e.SubsCheckoutPage = "subs.checkout", e.SubsManagementPage = "backpack", e.TeamsDashboardRevenue = "teams.dashboard.revenue", e.TeamsDashboardStats = "teams.dashboard.stats", e.TeamsDashboardMembers = "teams.dashboard.members", e.TeamsDashboardFeaturedChannels = "teams.dashboard.featured-channels", e.TeamsDashboardSettings = "teams.dashboard.settings", e.TeamsLandingPage = "teams.landing", e.TurboLandingPage = "turbo.landing", e.TwitchPrimeFortnitePage = "prime.fortnite.landing", e.TwitchPrimeLinkingPage = "prime.fortnite.linking", e.TwitchPrimeOffersPage = "prime.landing", e.TwitchPrimeSuccessPage = "prime.fortnite.success", e.SubsBroadcasterPage = "subs.broadcaster", e.VideoManagerEditPropertiesPage = "videoManager.edit", e.VideoManagerPage = "videoManager.page", e.VideoManagerUploadListPage = "videoManager.upload-list", e.VideoManagerUploadPage = "videoManager.upload", e.VideoManagerCollectionsManager = "videoManager.collections", e.VideoManagerCollectionsEditor = "videoManager.collections.editor", e.VideoManagerHighlighter = "videoManager.highlighter", e.VideosPage = "videos", e.VideoWatchPage = "video", e.UnsubscribePage = "unsubscribe", e.DesktopLoginPage = "desktop.login", e.DevSiteApps = "dev.apps.list", e.DevSiteAppCreate = "dev.apps.create", e.DevSiteAppEdit = "dev.apps.edit", e.DevSiteExtensionsEnableMonetization = "dev.extensions.enable-monetization", e.DevSiteGames = "dev.games", e.DevSiteOverview = "dev.overview", e.DevSiteRequestAccess = "dev.company.request", e.DevSiteApplicationSubmitted = "dev.company.submitted", e.DevSiteCompanyOverview = "dev.company.overview", e.DevSiteDropsCampaigns = "dev.drops.campaigns", e.DevSiteDropsSettings = "dev.drops.settings", e.DevSiteDropsCreateCampaign = "dev.drops.campaign.create", e.DevSiteDropsEditCampaign = "dev.drops.campaign.edit", e.DevSiteDropsItems = "dev.drops.items", e.DevSiteDropsCreateItem = "dev.drops.item.create", e.DevSiteDropsEditItem = "dev.drops.item.edit", e.DevSiteGamesOnePager = "dev.games.onepager", e.DevSiteLogin = "dev.login", e.Unknown = "unknown"
                 }(i || (i = {}))
         },
         NvZ5: function(e, t, n) {},
@@ -20746,7 +20737,7 @@
                     return s
                 }),
                 function(e) {
-                    e.AutohostSettings = "autohost_settings", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.DownloadKeyCodePage = "code_redemption_download_keys", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsModeration = "dashboard/settings/moderation", e.DashboardSettingsModerationChatTerms = "dashboard/settings/moderation/chat-terms", e.DashboardSettingsModerationBannedChatters = "dashboard/settings/moderation/banned-chatters", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardSettingsRolesPage = "dashboard/settings/roles", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.RecoverAccount = "recover_account", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.ExtensionsPopout = "extensions_popout", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TurboLandingPage = "turbo", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DesktopLoginPage = "desktop/login", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteGames = "dev/games", e.DevSiteExtensionsEnableMonetization = "dev/extensions-enable-monetization", e.DevSiteCompanyOverview = "dev/company", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteDropsCreateCampaign = "dev/drops-create-campaign", e.DevSiteDropsEditCampaign = "dev/drops-edit-campaign", e.DevSiteDropsItems = "dev/drops-items", e.DevSiteDropsCreateItem = "dev/drops-create-item", e.DevSiteDropsEditItems = "dev/drops-items", e.DevSiteLogin = "dev/login"
+                    e.AutohostSettings = "autohost_settings", e.AuthorizedStreamers = "authorized_streamers", e.BitsCheckoutSelect = "bits-checkout.select", e.BitsCheckoutSummary = "bits-checkout.summary", e.BitsLandingPage = "bits_landing", e.Broadcast = "broadcast", e.Browse = "browse", e.BrowseCommunities = "browse_communities", e.BrowseCreative = "browse_creative", e.BrowseForYou = "browse_for_you", e.Channel = "channel", e.ChannelClips = "channel_clips", e.ChannelClipsManager = "my_clips_channel", e.ChannelEsportsLoot = "channel_esports_loot", e.ChannelEsportsPass = "channel_esports_pass", e.ChannelEsportsProgress = "channel_esports_progress", e.ChannelEvents = "channel_events", e.ChannelVideos = "channel_vods", e.ChannelCollections = "channel_collections", e.ChangeEmail = "change-email", e.Chat = "chat", e.ClipsGame = "clips_game", e.ClipsEditing = "clips_edit", e.ClipsError = "clips_error", e.ClipsViewing = "clips_viewing", e.ClipsWatchPage = "clips_watch", e.CodeRedemptionPage = "code_redemption", e.DownloadKeyCodePage = "code_redemption_download_keys", e.CommunityModerationLog = "community_moderation_log", e.CommunityModerationSettings = "community_moderation_settings", e.CommunityCreate = "community_create", e.Dashboard = "dashboard", e.DashboardAchievements = "dashboard/achievements", e.DashboardActivity = "dashboard/activity", e.DashboardBounties = "dashboard/bounties", e.DashboardBroadcast = "dashboard/broadcast", e.DashboardChannelAnalytics = "dashboard/channel-analytics", e.DashboardChannelAnalyticsReferrals = "dashboard/channel-analytics-referrals", e.DashboardChannelAnalyticsPayouts = "dashboard/channel-analytics/payouts", e.DashboardEventsCollection = "dashboard/events/collection", e.DashboardEventsAll = "dashboard/events", e.DashboardExtensionsLegacy = "dashboard/extensions", e.DashboardExtensionsManagement = "dashboard/extensions/management", e.DashboardExtensionsConfigure = "dashboard/extensions/configure", e.DashboardLivePage = "dashboard/live", e.DashboardPermissions = "dashboard/permissions", e.DashboardSettingsAutoMod = "dashboard/settings/automod", e.DashboardSettingsIndex = "dashboard/settings", e.DashboardSettingsModeration = "dashboard/settings/moderation", e.DashboardSettingsModerationChatTerms = "dashboard/settings/moderation/chat-terms", e.DashboardSettingsModerationBannedChatters = "dashboard/settings/moderation/banned-chatters", e.DashboardSettingsRevenueIndex = "dashboard/settings/revenue", e.DashboardSettingsRevenueSubsNameSettings = "dashboard/settings/revenue/subscription/ticket", e.DashboardSettingsRevenueChatEmoticons = "dashboard/settings/revenue/subscription/chatperks", e.DashboardSettingsRevenueLoyaltyBadges = "dashboard/settings/revenue/subscription/badges", e.DashboardSettingsRevenueCheer = "dashboard/settings/revenue/cheer", e.DashboardSettingsRevenueCheerBadges = "dashboard/settings/revenue/cheerbadges", e.DashboardSettingsRevenueCheermotes = "dashboard/settings/revenue/cheermotes", e.DashboardSettingsRevenueGameCommerce = "dashboard/settings/revenue/game-commerce", e.DashboardSettingsRevenueMerchByAmazon = "dashboard/settings/revenue/merch-by-amazon", e.DashboardSettingsRevenuePayoutOnboarding = "dashboard/settings/revenue/payout-onboarding", e.DashboardSettingsRevenuePayoutSettings = "dashboard/settings/revenue/payouts", e.DashboardSettingsRevenueUpgradeTerms = "dashboard/settings/revenue/upgrade-terms", e.DashboardSettingsRevenueViewTerms = "dashboard/settings/revenue/view-terms", e.DashboardSettingsRolesPage = "dashboard/settings/roles", e.DashboardStreamSummary = "dashboard/stream-summary", e.DashboardStreamSummaryReferrals = "dashboard/stream-summary-referrals", e.Directory = "directory", e.DirectoryPopular = "directory.popular", e.RecoverAccount = "recover_account", e.DisableAccount = "disable_account", e.DeleteAccount = "delete_account", e.EditableChannels = "editable_channels", e.EmailUnsubscribe = "email_unsubscribe", e.EmailVerification = "email_verification", e.EventDetails = "event_details", e.ExtensionDetails = "extension_details", e.ExtensionsCategory = "extensions_category", e.ExtensionsDiscovery = "extensions_discovery", e.ExtensionsSearch = "extensions_search", e.ExtensionsPopout = "extensions_popout", e.Followers = "followers", e.Follows = "follows", e.FriendRequests = "friends.requests", e.Friends = "friends.list", e.FrontPage = "home", e.GameDetail = "game_detail", e.Inventory = "inventory", e.LoginRequired = "loginRequired", e.MyClipsManager = "my_clips", e.None = "", e.OnboardingCommunitySelection = "onboarding/community-selection", e.OnboardingChannelSurfing = "onboarding/channel-surfing", e.PaymentsLandingPage = "payments_landing_page", e.PartnershipSignupPage = "partnership_signup_page", e.ContentUnavailable = "404", e.SquadStreamPage = "squad-stream", e.SubsLandingPage = "subs-landing", e.SubsCheckoutPage = "subs_checkout", e.SubsManagementPage = "subs_management", e.SettingsPage = "settings", e.SubsBroadcasterPage = "subs-broadcaster", e.TeamsLandingPage = "team", e.TurboLandingPage = "turbo", e.TwitchPrimeFortnitePage = "twitch_prime_fortnite_page", e.TwitchPrimeLinkingPage = "twitch_prime_linking_page", e.TwitchPrimeOffersPage = "twitch_prime_offers_page", e.TwitchPrimeSuccessPage = "twitch_prime_success_page", e.UnsubscribePage = "unsubscribe", e.VideoManager = "video_manager", e.VideoManagerCollectionManager = "video_manager_collections", e.VideoManagerCollectionEditor = "video_manager_collection_editor", e.VideoManagerHighlighter = "video_manager_highlighter", e.VideoWatchPage = "vod", e.DesktopLoginPage = "desktop/login", e.DevSiteOverview = "dev/overview", e.DevSiteApps = "dev/apps", e.DevSiteAppCreate = "dev/app-create", e.DevSiteAppEdit = "dev/app-edit", e.DevSiteGames = "dev/games", e.DevSiteExtensionsEnableMonetization = "dev/extensions-enable-monetization", e.DevSiteCompanyOverview = "dev/company", e.DevSiteRequestCompanyAccess = "dev/request-company-access", e.DevSiteCompanyApplicationSubmitted = "dev/company-application-submitted", e.DevSiteDropsCampaigns = "dev/drops-campaigns", e.DevSiteDropsSettings = "dev/drops-settings", e.DevSiteDropsCreateCampaign = "dev/drops-create-campaign", e.DevSiteDropsEditCampaign = "dev/drops-edit-campaign", e.DevSiteDropsItems = "dev/drops-items", e.DevSiteDropsCreateItem = "dev/drops-create-item", e.DevSiteDropsEditItems = "dev/drops-items", e.DevSiteLogin = "dev/login"
                 }(i || (i = {})),
                 function(e) {
                     e.Channels = "channels", e.Communities = "communities", e.Games = "games", e.Hosts = "hosts", e.Mixed = "mixed", e.Videos = "vods"
@@ -27189,7 +27180,7 @@
                 return he
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {}), n.d(t, "Pa", function() {
                 return ve
-            }), n.d(t, "yb", function() {
+            }), n.d(t, "xb", function() {
                 return be
             }), n.d(t, !1, function() {}), n.d(t, "e", function() {
                 return v
@@ -27215,13 +27206,13 @@
                 return w
             }), n.d(t, "eb", function() {
                 return C
-            }), n.d(t, "Kb", function() {
+            }), n.d(t, "Jb", function() {
                 return T
-            }), n.d(t, "Yb", function() {
+            }), n.d(t, "Xb", function() {
                 return O
-            }), n.d(t, "Zb", function() {
+            }), n.d(t, "Yb", function() {
                 return I
-            }), n.d(t, "bc", function() {
+            }), n.d(t, "ac", function() {
                 return R
             }), n.d(t, "K", function() {
                 return Lt
@@ -27231,15 +27222,15 @@
                 return At
             }), n.d(t, !1, function() {}), n.d(t, "Ya", function() {
                 return U
-            }), n.d(t, "wb", function() {
+            }), n.d(t, "vb", function() {
                 return D
-            }), n.d(t, !1, function() {}), n.d(t, "xb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "wb", function() {
                 return Mt
-            }), n.d(t, !1, function() {}), n.d(t, "Hb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Gb", function() {
                 return et
-            }), n.d(t, "Ib", function() {
+            }), n.d(t, "Hb", function() {
                 return $e
-            }), n.d(t, !1, function() {}), n.d(t, "Jb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Ib", function() {
                 return Je
             }), n.d(t, "bb", function() {
                 return Bt
@@ -27267,7 +27258,7 @@
                 return Ht
             }), n.d(t, !1, function() {}), n.d(t, "W", function() {
                 return le
-            }), n.d(t, "ac", function() {
+            }), n.d(t, "Zb", function() {
                 return ae
             }), n.d(t, "O", function() {
                 return $
@@ -27275,13 +27266,13 @@
                 return ee
             }), n.d(t, "Xa", function() {
                 return te
-            }), n.d(t, "Mb", function() {
+            }), n.d(t, "Lb", function() {
                 return ne
-            }), n.d(t, "Nb", function() {
+            }), n.d(t, "Mb", function() {
                 return ie
-            }), n.d(t, "Ob", function() {
+            }), n.d(t, "Nb", function() {
                 return re
-            }), n.d(t, !1, function() {}), n.d(t, "Qb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Pb", function() {
                 return qt
             }), n.d(t, !1, function() {}), n.d(t, "lb", function() {
                 return Xt
@@ -27295,49 +27286,49 @@
                 return Yt
             }), n.d(t, !1, function() {}), n.d(t, "tb", function() {
                 return $t
-            }), n.d(t, "ub", function() {
+            }), n.d(t, !1, function() {
                 return Jt
-            }), n.d(t, !1, function() {}), n.d(t, "zb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "yb", function() {
                 return en
-            }), n.d(t, !1, function() {}), n.d(t, "Ab", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "zb", function() {
                 return tn
-            }), n.d(t, !1, function() {}), n.d(t, "Lb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Kb", function() {
                 return nn
             }), n.d(t, !1, function() {}), n.d(t, !1, function() {
                 return rn
-            }), n.d(t, !1, function() {}), n.d(t, "Pb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Ob", function() {
                 return an
-            }), n.d(t, !1, function() {}), n.d(t, "Bb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Ab", function() {
                 return on
-            }), n.d(t, !1, function() {}), n.d(t, "Cb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Bb", function() {
                 return sn
-            }), n.d(t, !1, function() {}), n.d(t, "Db", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Cb", function() {
                 return ln
-            }), n.d(t, !1, function() {}), n.d(t, "Eb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Db", function() {
                 return cn
-            }), n.d(t, !1, function() {}), n.d(t, "Fb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Eb", function() {
                 return dn
-            }), n.d(t, "vb", function() {
+            }), n.d(t, "ub", function() {
                 return un
-            }), n.d(t, !1, function() {}), n.d(t, "Gb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Fb", function() {
                 return pn
-            }), n.d(t, !1, function() {}), n.d(t, "Rb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Qb", function() {
                 return Ft
-            }), n.d(t, "Tb", function() {
-                return xt
             }), n.d(t, "Sb", function() {
+                return xt
+            }), n.d(t, "Rb", function() {
                 return Pt
-            }), n.d(t, !1, function() {}), n.d(t, "Ub", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Tb", function() {
                 return fn
-            }), n.d(t, "Wb", function() {
-                return mn
             }), n.d(t, "Vb", function() {
+                return mn
+            }), n.d(t, "Ub", function() {
                 return hn
-            }), n.d(t, !1, function() {}), n.d(t, "Xb", function() {
+            }), n.d(t, !1, function() {}), n.d(t, "Wb", function() {
                 return bn
             }), n.d(t, !1, function() {}), n.d(t, "R", function() {
                 return gn
-            }), n.d(t, "cc", function() {
+            }), n.d(t, "bc", function() {
                 return m
             }), n.d(t, "mb", function() {
                 return pe
@@ -27805,7 +27796,7 @@
                     SelfRequested: "self_requested"
                 };
             ! function(e) {
-                e.AddBlockedTerm = "add_blocked_term", e.AddPermittedTerm = "add_permitted_term", e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.AutoModCheerRejected = "automod_cheer_rejected", e.Ban = "ban", e.Clear = "clear", e.Delete = "delete", e.DeleteBlockedTerm = "delete_blocked_term", e.DeletePermittedTerm = "delete_permitted_term", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.ModifiedAutoModProperties = "modified_automod_properties", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
+                e.AddBlockedTerm = "add_blocked_term", e.AddPermittedTerm = "add_permitted_term", e.AutoModEnabled = "automod_enabled", e.AutoModRejected = "automod_rejected", e.DeniedAutoModMessage = "denied_automod_message", e.ApprovedAutoModMessage = "approved_automod_message", e.AutoModCheerRejected = "automod_cheer_rejected", e.Ban = "ban", e.Clear = "clear", e.Delete = "delete", e.DeleteBlockedTerm = "delete_blocked_term", e.DeletePermittedTerm = "delete_permitted_term", e.EmoteOnly = "emoteonly", e.EmoteOnlyOff = "emoteonlyoff", e.FollowersOnly = "followers", e.FollowersOnlyOff = "followersoff", e.Host = "host", e.Mod = "mod", e.ModifiedAutoModProperties = "modified_automod_properties", e.R9kBeta = "r9kbeta", e.R9kBetaOff = "r9kbetaoff", e.Raid = "raid", e.Slow = "slow", e.SlowOff = "slowoff", e.SubsBeta = "subsbeta", e.SubscribersOnly = "subscribers", e.SubscribersOnlyOff = "subscribersoff", e.Timeout = "timeout", e.Unban = "unban", e.Unhost = "unhost", e.Unmod = "unmod", e.Unraid = "unraid", e.Untimeout = "untimeout"
             }(i || (i = {})),
             function(e) {
                 e.AutoModMessageRejected = "automod_message_rejected", e.AutoModMessageApproved = "automod_message_approved", e.AutoModMessageDenied = "automod_message_denied", e.AutoModCheerDenied = "automod_cheer_message_denied", e.AutoModCheerTimeout = "automod_cheer_message_timeout"
@@ -27883,7 +27874,7 @@
                             playerStyles: v(t.props)
                         }, t.renderMiniHoverControls = function() {
                             var e = t.state.isPaused ? Object(s.d)("Play", "PersistentPlayerMini") : Object(s.d)("Pause", "PersistentPlayerMini");
-                            return a.createElement(f.yb, {
+                            return a.createElement(f.xb, {
                                 className: "persistent-player__hover-controls",
                                 attachTop: !0,
                                 attachBottom: !0,
@@ -27892,7 +27883,7 @@
                                 borderRadius: f.x.Medium,
                                 overflow: f.Za.Hidden,
                                 position: f.eb.Absolute,
-                                zIndex: f.bc.Above,
+                                zIndex: f.ac.Above,
                                 "data-test-selector": "persistent-player-mini-hover"
                             }, a.createElement(f.Wa, {
                                 className: "persistent-player__title",
@@ -27905,7 +27896,7 @@
                                     y: .5,
                                     right: .5
                                 },
-                                zIndex: f.bc.Above,
+                                zIndex: f.ac.Above,
                                 "data-test-selector": "persistent-player-mini-title"
                             }, a.createElement(f.Wa, {
                                 ellipsis: !0,
@@ -27914,7 +27905,7 @@
                                 }
                             }, a.createElement(f.W, {
                                 fontSize: f.Ba.Size5,
-                                type: f.Ob.Span
+                                type: f.Nb.Span
                             }, t.props.options.miniPlayerTitle)), a.createElement(f.Wa, {
                                 flexShrink: 0
                             }, a.createElement(f.A, {
@@ -27959,7 +27950,7 @@
                                 attachBottom: !0,
                                 attachLeft: !0,
                                 attachRight: !0,
-                                zIndex: f.bc.Above,
+                                zIndex: f.ac.Above,
                                 "data-test-selector": "persistent-player-mini-cover"
                             })
                         }, t.togglePause = function() {
@@ -29263,7 +29254,7 @@
             var i = n("q1tI"),
                 r = n("Ue10"),
                 a = (n("ruwA"), function(e) {
-                    return i.createElement(r.yb, {
+                    return i.createElement(r.xb, {
                         className: "core-error",
                         color: r.O.Alt2,
                         display: r.X.Flex,
@@ -29276,7 +29267,7 @@
                         display: r.X.InlineFlex,
                         alignItems: r.f.Center,
                         flexWrap: r.Aa.NoWrap
-                    }, i.createElement(r.yb, {
+                    }, i.createElement(r.xb, {
                         margin: {
                             right: 2
                         },
@@ -29350,20 +29341,20 @@
                     }, t.prototype.componentWillUnmount = function() {
                         window.removeEventListener("message", this.handlePopoutMessage), this.popup && this.popup.close()
                     }, t.prototype.render = function() {
-                        return this.state.inProgress ? r.createElement(m.yb, {
+                        return this.state.inProgress ? r.createElement(m.xb, {
                             background: m.r.Base,
                             padding: 1
                         }, r.createElement(m.Ya, {
                             delay: 0,
                             fillContent: !0,
-                            size: m.wb.Large
+                            size: m.vb.Large
                         }), r.createElement(m.W, null, Object(l.d)("Waiting for log in from separate window...", "PopoutLogin"))) : (e = this.state.error ? r.createElement(m.W, {
                             color: m.O.Error
-                        }, Object(l.d)("Please disable popup blockers and try again.", "PopoutLogin")) : r.createElement(m.W, null, Object(l.d)("Log in will open in a separate window.", "PopoutLogin")), r.createElement(m.yb, {
+                        }, Object(l.d)("Please disable popup blockers and try again.", "PopoutLogin")) : r.createElement(m.W, null, Object(l.d)("Log in will open in a separate window.", "PopoutLogin")), r.createElement(m.xb, {
                             background: m.r.Base,
                             padding: 1
                         }, e, r.createElement(m.Wa, {
-                            textAlign: m.Kb.Center,
+                            textAlign: m.Jb.Center,
                             padding: {
                                 top: 1
                             }
@@ -29836,7 +29827,7 @@
                         onClick: this.handleInsideBalloonClick
                     }, l)));
                     var c = o;
-                    return this.props.tooltipProps && (c = a.createElement(s.Rb, r.__assign({}, this.props.tooltipProps), o)), a.createElement(s.Wa, {
+                    return this.props.tooltipProps && (c = a.createElement(s.Qb, r.__assign({}, this.props.tooltipProps), o)), a.createElement(s.Wa, {
                         "data-toggle-balloon-id": this.toggleBalloonId,
                         display: this.props.display,
                         position: s.eb.Relative
@@ -30808,7 +30799,7 @@
                             t.buttonContainerRef && t.state.isFollowing && t.props.showTooltips && t.props.tooltipLayer.show({
                                 from: t.buttonContainerRef,
                                 label: t.getUnfollowText(),
-                                direction: C.Tb.Top
+                                direction: C.Sb.Top
                             })
                         }, t.onMouseLeave = function() {
                             t.hideTooltip()
@@ -30894,7 +30885,7 @@
                             tabIndex: this.props.tabIndex,
                             type: this.props.followButtonType || C.F.Default,
                             fullWidth: this.props.fullWidthButton
-                        }, Object(C.cc)(this.props)), this.props.followUIType === y.IconOnly ? null : t)
+                        }, Object(C.bc)(this.props)), this.props.followUIType === y.IconOnly ? null : t)
                     }, t.prototype.renderUnfollowButton = function(e) {
                         var t = this.getUnfollowText(),
                             n = c("follow-btn follow-btn--following", {
@@ -30907,7 +30898,7 @@
                             "data-test-selector": "unfollow-button",
                             tabIndex: this.props.tabIndex,
                             onClick: this.toggleFollowing
-                        }, Object(C.cc)(this.props)), u.createElement(C.Wa, {
+                        }, Object(C.bc)(this.props)), u.createElement(C.Wa, {
                             padding: {
                                 x: .5
                             },
@@ -31039,7 +31030,7 @@
                         }, t
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isStaff || c.a.buildType !== u.a.Production ? l.createElement(m.yb, {
+                        return this.props.isStaff || c.a.buildType !== u.a.Production ? l.createElement(m.xb, {
                             margin: {
                                 bottom: 1
                             },
@@ -31064,13 +31055,13 @@
                             display: m.X.Flex,
                             alignItems: m.f.Center,
                             fullWidth: !0
-                        }, !c.a.forceBenchmarkingTools && !this.state.isEnabled && l.createElement(m.Rb, {
+                        }, !c.a.forceBenchmarkingTools && !this.state.isEnabled && l.createElement(m.Qb, {
                             label: "Enabling will reload the page"
                         }, l.createElement(m.nb, {
                             asset: m.ob.NotificationInfo,
                             width: 16,
                             height: 16
-                        })), c.a.forceBenchmarkingTools && l.createElement(m.Rb, {
+                        })), c.a.forceBenchmarkingTools && l.createElement(m.Qb, {
                             label: "Always enabled in dev"
                         }, l.createElement(m.nb, {
                             asset: m.ob.NotificationInfo,
@@ -31365,7 +31356,7 @@
                         justifyContent: s.Va.Center,
                         alignItems: s.f.Center
                     }, i.createElement(s.W, {
-                        type: s.Ob.H4,
+                        type: s.Nb.H4,
                         bold: !0
                     }, i.createElement(o.a, {
                         className: "cheermote-help__tutorial-image",
@@ -32189,7 +32180,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderBody = function() {
-                            return t.props.showPlaceholder ? r.createElement(s.Wa, null, r.createElement(s.db, null), t.props.children) : r.createElement(s.Wa, null, r.createElement(s.Qb, {
+                            return t.props.showPlaceholder ? r.createElement(s.Wa, null, r.createElement(s.db, null), t.props.children) : r.createElement(s.Wa, null, r.createElement(s.Pb, {
                                 checked: t.props.checked,
                                 error: t.props.error,
                                 disabled: t.props.disabled,
@@ -32272,7 +32263,7 @@
                                 x: 1
                             }
                         }, r.createElement(h.W, {
-                            type: h.Ob.H5,
+                            type: h.Nb.H5,
                             ellipsis: !0
                         }, this.props.title), this.isExperiment && this.props.tags && r.createElement(h.Wa, {
                             padding: {
@@ -34076,21 +34067,21 @@
                     }, o.createElement(g.o, {
                         ratio: g.p.Aspect16x9,
                         overflow: !0
-                    }, o.createElement(g.yb, {
+                    }, o.createElement(g.xb, {
                         fullWidth: !0,
                         fullHeight: !0,
                         borderRadius: g.x.Medium,
                         overflow: g.Za.Hidden
                     }, o.createElement("div", {
                         style: t
-                    })), o.createElement(g.yb, {
+                    })), o.createElement(g.xb, {
                         position: g.eb.Absolute,
                         attachTop: !0,
                         attachRight: !0,
                         attachBottom: !0,
                         attachLeft: !0,
                         borderRadius: g.x.Medium
-                    }, o.createElement(g.yb, {
+                    }, o.createElement(g.xb, {
                         padding: 1,
                         display: g.X.Flex,
                         flexDirection: g.Z.Column,
@@ -34105,7 +34096,7 @@
                         justifyContent: g.Va.Center,
                         display: g.X.Flex,
                         flexDirection: g.Z.Column,
-                        textAlign: g.Kb.Center,
+                        textAlign: g.Jb.Center,
                         fullWidth: !0,
                         flexGrow: 1,
                         overflow: g.Za.Hidden
@@ -34113,7 +34104,7 @@
                         src: e.profileImageURL,
                         size: 50,
                         alt: e.displayName || ""
-                    }), o.createElement(g.yb, {
+                    }), o.createElement(g.xb, {
                         padding: {
                             top: .5
                         },
@@ -35396,7 +35387,7 @@
                             position: L.eb.Relative,
                             refDelegate: this.setRef,
                             "data-test-selector": "persistent-notification"
-                        }, a.createElement(L.yb, {
+                        }, a.createElement(L.xb, {
                             display: L.X.Flex,
                             className: this.props.data.isRead ? "persistent-notification__read" : "persistent-notification__unread",
                             borderBottom: !0,
@@ -35434,7 +35425,7 @@
                             overflow: L.Za.Hidden,
                             "data-test-selector": "persistent-notification__body"
                         }, a.createElement(L.W, {
-                            type: L.Ob.Span,
+                            type: L.Nb.Span,
                             color: L.O.Alt
                         }, a.createElement(_, {
                             source: this.props.data.body || ""
@@ -35457,7 +35448,7 @@
                                 left: .5
                             }
                         }, a.createElement(L.W, {
-                            type: L.Ob.Span,
+                            type: L.Nb.Span,
                             color: L.O.Alt2
                         }, Object(o.h)(new Date(this.props.data.updatedAt)))))))), this.renderDeleteNotification()))
                     }, t.prototype.checkVisible = function(e) {
@@ -35546,7 +35537,7 @@
                                 flexDirection: L.Z.Column,
                                 justifyContent: L.Va.Center,
                                 alignItems: L.f.Center,
-                                textAlign: L.Kb.Center,
+                                textAlign: L.Jb.Center,
                                 padding: 1,
                                 flexGrow: 1
                             }, e)
@@ -35563,14 +35554,14 @@
                                 key: "friend-requests"
                             }, t.props.friendRequestsData))), e
                         }, t.renderEmptyCenterWindowElement = function() {
-                            return a.createElement(L.yb, {
+                            return a.createElement(L.xb, {
                                 "data-test-selector": B,
                                 className: "center-window__empty-state",
                                 background: L.r.Alt,
                                 display: L.X.Flex,
                                 justifyContent: L.Va.Center,
                                 alignItems: L.f.Center,
-                                textAlign: L.Kb.Center,
+                                textAlign: L.Jb.Center,
                                 flexDirection: L.Z.Column,
                                 padding: 2,
                                 fullWidth: !0
@@ -35584,7 +35575,7 @@
                                     top: 1
                                 }
                             }, a.createElement(L.W, {
-                                type: L.Ob.H5,
+                                type: L.Nb.H5,
                                 color: L.O.Alt2
                             }, Object(o.d)("Hooray! You're in the clear!", "OnsiteNotifications"))))
                         }, t.areAllNotificationsRead = function() {
@@ -35623,7 +35614,7 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return a.createElement(L.yb, {
+                        return a.createElement(L.xb, {
                             className: "center-window",
                             background: L.r.Alt
                         }, this.renderNotificationsHeaderElement(), a.createElement(g.b, {
@@ -35657,7 +35648,7 @@
                             onClick: this.props.onRedirectToSettings
                         }, Object(o.d)("Settings", "OnsiteNotifications"))
                     }, t.prototype.renderNotificationsHeaderElement = function() {
-                        return a.createElement(L.yb, {
+                        return a.createElement(L.xb, {
                             className: "center-window__header",
                             "data-test-selector": "center-window__header",
                             background: L.r.Alt,
@@ -35670,27 +35661,27 @@
                             justifyContent: L.Va.Between,
                             borderBottom: !0
                         }, a.createElement(L.W, {
-                            type: L.Ob.H6,
+                            type: L.Nb.H6,
                             color: L.O.Alt2,
                             bold: !0
-                        }, Object(o.d)("Notifications", "OnsiteNotifications")), a.createElement(L.yb, {
+                        }, Object(o.d)("Notifications", "OnsiteNotifications")), a.createElement(L.xb, {
                             color: L.O.Alt,
                             display: L.X.Flex
                         }, this.renderMarkAsRead(), this.renderSettingsLink()))
                     }, t.prototype.renderUnreadNotificationsFooterElement = function() {
                         var e = 0 === this.props.newNotificationsCount ? null : a.createElement(L.W, {
-                            type: L.Ob.H6,
+                            type: L.Nb.H6,
                             color: L.O.Alt2
                         }, Object(o.d)("{num, plural, one {1 New Notification} other {{num, number} New Notifications} }", {
                             num: this.props.newNotificationsCount
                         }, "OnsiteNotifications"));
-                        return a.createElement(L.yb, {
+                        return a.createElement(L.xb, {
                             className: "center-window__footer",
                             "data-test-selector": "center-window__footer",
                             background: L.r.Alt,
                             padding: .5,
                             alignItems: L.f.Center,
-                            textAlign: L.Kb.Center,
+                            textAlign: L.Jb.Center,
                             borderTop: !0
                         }, e)
                     }, t
@@ -35738,7 +35729,7 @@
                             onMouseEnter: this.onMouseEnter,
                             onMouseLeave: this.onMouseLeave,
                             "data-test-selector": "onsite-notification-toast__mouse-enter-detector"
-                        }, a.createElement(L.yb, {
+                        }, a.createElement(L.xb, {
                             className: "onsite-notification-toast",
                             background: L.r.Base,
                             display: L.X.Flex,
@@ -35775,7 +35766,7 @@
                         }, a.createElement(L.Wa, {
                             className: "onsite-notification-toast__body",
                             overflow: L.Za.Hidden
-                        }, a.createElement(L.yb, {
+                        }, a.createElement(L.xb, {
                             color: L.O.Alt
                         }, a.createElement(_, {
                             source: this.props.item.body
@@ -35784,11 +35775,11 @@
                                 top: .5
                             },
                             flexShrink: 0
-                        }, a.createElement(L.yb, {
+                        }, a.createElement(L.xb, {
                             color: L.O.Alt2
                         }, Object(o.h)(new Date(this.props.item.updatedAt))))))), this.renderActions())))
                     }, t.prototype.renderActions = function() {
-                        return a.createElement(L.yb, {
+                        return a.createElement(L.xb, {
                             className: "onsite-notification-toast__action-wrapper",
                             display: L.X.Flex,
                             alignContent: L.e.Stretch,
@@ -35796,7 +35787,7 @@
                             flexShrink: 0,
                             flexDirection: L.Z.Column,
                             borderLeft: !0
-                        }, a.createElement(L.yb, {
+                        }, a.createElement(L.xb, {
                             className: "onsite-notification-toast__action",
                             display: L.X.Flex,
                             alignContent: L.e.Stretch,
@@ -35806,7 +35797,7 @@
                             onClick: this.view,
                             "data-test-selector": "onsite-notification-toast__view",
                             type: L.Ua.Alpha
-                        }, C(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(L.yb, {
+                        }, C(this.props.item, S.PageviewMedium.NotificationToast)), a.createElement(L.xb, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
                             justifyContent: L.Va.Center,
@@ -35815,7 +35806,7 @@
                             padding: .5
                         }, a.createElement(L.W, {
                             color: L.O.Link
-                        }, this.primaryCTAText())))), a.createElement(L.yb, {
+                        }, this.primaryCTAText())))), a.createElement(L.xb, {
                             className: "onsite-notification-toast__action",
                             display: L.X.Flex,
                             alignContent: L.e.Stretch,
@@ -35824,7 +35815,7 @@
                             onClick: this.close,
                             "data-test-selector": "onsite-notification-toast__close",
                             type: L.Ua.Alpha
-                        }, a.createElement(L.yb, {
+                        }, a.createElement(L.xb, {
                             display: L.X.Flex,
                             alignItems: L.f.Center,
                             justifyContent: L.Va.Center,
@@ -36018,8 +36009,8 @@
                 pe = 10,
                 me = 100,
                 he = {
-                    align: L.Sb.Center,
-                    direction: L.Tb.Bottom,
+                    align: L.Rb.Center,
+                    direction: L.Sb.Bottom,
                     label: ""
                 },
                 fe = {
@@ -36629,7 +36620,7 @@
                     }, t.prototype.componentWillUnmount = function() {
                         window.removeEventListener("message", this.messageHandler)
                     }, t.prototype.render = function() {
-                        return c.createElement(v.yb, {
+                        return c.createElement(v.xb, {
                             background: v.r.Base
                         }, c.createElement("div", {
                             className: "t-watch-ads-modal",
@@ -36688,7 +36679,7 @@
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        return this.props.disableWatchAd && (e = Object(d.d)("Try again later", "Bits--WatchAdOffer")), c.createElement(v.yb, {
+                        return this.props.disableWatchAd && (e = Object(d.d)("Try again later", "Bits--WatchAdOffer")), c.createElement(v.xb, {
                             className: "bits-buy-card__offer-row",
                             display: v.X.Flex,
                             flexShrink: 0,
@@ -36718,7 +36709,7 @@
                         }, Object(d.d)("Watch Ad", "Bits--WatchAdOffer")), e && c.createElement(v.Wa, {
                             className: "bits-buy-card__sub-text",
                             alignSelf: v.g.Stretch,
-                            textAlign: v.Kb.Center,
+                            textAlign: v.Jb.Center,
                             margin: {
                                 top: .5
                             }
@@ -36798,19 +36789,19 @@
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "first-time-promo-form"
                         }, c.createElement(v.W, {
-                            type: v.Ob.Strong,
+                            type: v.Nb.Strong,
                             fontSize: v.Ba.Size6
                         }, Object(d.d)("Special Offer: 1st Time Buyers", "Bits--BuyCard"))) : Object(P.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === A.c ? t = c.createElement(v.Wa, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "black-friday-promo-form"
                         }, c.createElement(v.W, {
-                            type: v.Ob.Strong,
+                            type: v.Nb.Strong,
                             fontSize: v.Ba.Size6
                         }, Object(d.d)("Flash Sale: Now thru Nov. 27!", "Bits--BuyCard"))) : Object(P.d)(this.props.offer) && null !== this.props.offer.promotion && this.props.offer.promotion.id === A.d && (t = c.createElement(v.Wa, {
                             className: "bits-buy-card-offer-row__bonus-text bits-buy-card-offer-row__bonus-text-headline",
                             "data-test-selector": "prime-promo-promo-form"
                         }, c.createElement(v.W, {
-                            type: v.Ob.Strong,
+                            type: v.Nb.Strong,
                             fontSize: v.Ba.Size6
                         }, Object(d.d)("Twitch Prime Bits Discount", "Bits--BuyCard"))));
                         var n = null;
@@ -36843,7 +36834,7 @@
                             }, c.createElement(v.Wa, {
                                 flexGrow: 1
                             }, c.createElement(v.W, {
-                                type: v.Ob.H5,
+                                type: v.Nb.H5,
                                 color: v.O.Base,
                                 bold: !0
                             }, Object(d.d)("{bits} Bits", {
@@ -36860,12 +36851,12 @@
                                 "data-a-target": "bits-purchase-button-" + this.props.offer.bits
                             }, this.props.offer.price), (n || i) && c.createElement(v.Wa, {
                                 alignSelf: v.g.Stretch,
-                                textAlign: v.Kb.Right,
+                                textAlign: v.Jb.Right,
                                 margin: {
                                     top: .5
                                 }
                             }, n, i))));
-                        return c.createElement(c.Fragment, null, this.props.isLastRow ? c.createElement(v.Wa, l.__assign({}, r), a) : c.createElement(v.yb, l.__assign({}, r, {
+                        return c.createElement(c.Fragment, null, this.props.isLastRow ? c.createElement(v.Wa, l.__assign({}, r), a) : c.createElement(v.xb, l.__assign({}, r, {
                             borderBottom: !0
                         }), a))
                     }, t.prototype.getAvailableTiers = function(e) {
@@ -36929,12 +36920,12 @@
                 }),
                 W = function(e) {
                     var t = c.createElement(v.W, {
-                        type: v.Ob.P,
+                        type: v.Nb.P,
                         color: v.O.Alt
                     }, Object(d.d)("Prices are shown in <x:bold>{currencyCode}</x:bold>", {
                         "x:bold": function(e) {
                             return c.createElement(v.W, {
-                                type: v.Ob.Span,
+                                type: v.Nb.Span,
                                 bold: !0
                             }, e)
                         },
@@ -36942,12 +36933,12 @@
                     }, "Bits--BuyCard"));
                     e.pricesIncludeVAT && (t = c.createElement(v.W, {
                         "data-test-selector": "prices-include-vat-selector",
-                        type: v.Ob.P,
+                        type: v.Nb.P,
                         color: v.O.Alt
                     }, Object(d.d)("Prices are shown in <x:bold>{currencyCode}</x:bold> and <x:bold>include VAT</x:bold>", {
                         "x:bold": function(e) {
                             return c.createElement(v.W, {
-                                type: v.Ob.Span,
+                                type: v.Nb.Span,
                                 bold: !0
                             }, e)
                         },
@@ -36969,14 +36960,14 @@
                         totalBits: c.createElement("strong", {
                             "data-a-target": "buy-card-bits-count"
                         }, e.bitsBalance)
-                    }, "Bits--BuyCard"))), c.createElement(v.yb, {
+                    }, "Bits--BuyCard"))), c.createElement(v.xb, {
                         className: "bits-buy-card-header",
                         padding: 1,
                         borderBottom: !0,
                         flexShrink: 0,
                         fullWidth: !0
                     }, c.createElement(v.Wa, null, e.location === g.b.ChatTooltip && c.createElement(v.W, {
-                        type: v.Ob.H4,
+                        type: v.Nb.H4,
                         color: v.O.Alt
                     }, Object(d.d)("Purchase Bits", "Bits--BuyCard")), t), e.location === g.b.ChatTooltip && c.createElement(v.Wa, {
                         margin: {
@@ -37019,7 +37010,7 @@
                             alignItems: v.f.Center,
                             flexWrap: v.Aa.NoWrap
                         }, c.createElement(v.W, {
-                            type: v.Ob.H4,
+                            type: v.Nb.H4,
                             bold: !0
                         }, Object(d.d)("You got {bitsAmount,number} Bits!", {
                             bitsAmount: this.props.amount
@@ -37135,7 +37126,7 @@
                             bottom: 1
                         }
                     }, c.createElement(v.W, {
-                        type: v.Ob.H4,
+                        type: v.Nb.H4,
                         bold: !0
                     }, t)), c.createElement(v.W, {
                         color: v.O.Alt2
@@ -37170,7 +37161,7 @@
                         }, t.renderWatebTerms = function(e) {
                             return c.createElement(v.Wa, {
                                 className: e,
-                                textAlign: v.Kb.Left,
+                                textAlign: v.Jb.Left,
                                 fullWidth: !0,
                                 padding: {
                                     x: 2,
@@ -37194,7 +37185,7 @@
                                 onClick: t.onCloseWatebTerms
                             }, c.createElement(v.W, {
                                 color: v.O.Link,
-                                type: v.Ob.Span
+                                type: v.Nb.Span
                             }, c.createElement(v.nb, {
                                 asset: v.ob.ChatSettingsBack,
                                 height: 10,
@@ -37204,7 +37195,7 @@
                                     bottom: 2
                                 }
                             }, c.createElement(v.W, {
-                                type: v.Ob.Span
+                                type: v.Nb.Span
                             }, Object(d.d)("Before continuing to watch ads to earn Bits, we remind you that the <x:link>Bits Acceptable Use Policy</x:link> applies to your participation with this feature and any Bits you may obtain. As a reminder, you may not:", {
                                 "x:link": function(e) {
                                     return c.createElement("a", {
@@ -37264,7 +37255,7 @@
                         if (!this.props.data || this.props.data.loading) return c.createElement(C.a, null);
                         if (this.props.data.error) return c.createElement(v.Wa, {
                             className: _(t, "bits-buy-card--shorter"),
-                            textAlign: v.Kb.Center,
+                            textAlign: v.Jb.Center,
                             "data-a-target": "bits-buy-card-error",
                             alignItems: v.f.Center,
                             justifyContent: v.Va.Center,
@@ -37277,7 +37268,7 @@
                         if (this.state.showWatebTerms) return this.renderWatebTerms(t);
                         var n = this.renderWatebCard();
                         if (n) return c.createElement(v.Wa, {
-                            textAlign: v.Kb.Center,
+                            textAlign: v.Jb.Center,
                             className: _(t, "bits-buy-card--shorter"),
                             fullWidth: !0
                         }, n);
@@ -37418,7 +37409,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(s.yb, {
+                        return r.createElement(s.xb, {
                             className: "search__video-filters",
                             background: s.r.Alt,
                             padding: {
@@ -37956,9 +37947,9 @@
                                 "data-a-target": "usercard-whisper-button",
                                 "data-test-selector": "whisper-button"
                             }, t);
-                        return e ? n : u.createElement(m.Rb, {
-                            align: m.Sb.Left,
-                            direction: m.Tb.Top,
+                        return e ? n : u.createElement(m.Qb, {
+                            align: m.Rb.Left,
+                            direction: m.Sb.Top,
                             label: Object(d.d)("Whispers are disabled in popout chat", "WhispersDisabledText")
                         }, n)
                     }, t
@@ -38321,14 +38312,14 @@
                                 }, e)
                             }
                         }, "Namespace");
-                        return i.createElement(G.yb, {
+                        return i.createElement(G.xb, {
                             className: "red-banner",
                             display: G.X.Flex,
                             justifyContent: G.Va.Center,
                             alignItems: G.f.Center,
                             elevation: 1,
                             padding: 1
-                        }, i.createElement(G.yb, {
+                        }, i.createElement(G.xb, {
                             display: G.X.Flex,
                             alignItems: G.f.Center,
                             margin: {
@@ -38344,7 +38335,7 @@
                         })), i.createElement(G.W, {
                             fontSize: G.Ba.Size5,
                             color: G.O.Overlay
-                        }, e), i.createElement(G.yb, {
+                        }, e), i.createElement(G.xb, {
                             className: "red-banner__dismiss",
                             position: G.eb.Absolute,
                             attachRight: !0,
@@ -38770,8 +38761,8 @@
                             t.containerRef && (t.props.tooltipLabel ? t.props.tooltipLayer.show({
                                 label: t.props.tooltipLabel,
                                 from: t.containerRef,
-                                align: G.Sb.Center,
-                                direction: G.Tb.Right
+                                align: G.Rb.Center,
+                                direction: G.Sb.Right
                             }) : t.props.tooltipContent && t.props.tooltipLayer.showRich({
                                 from: t.containerRef,
                                 richContent: t.props.tooltipContent,
@@ -38844,7 +38835,7 @@
                             to: this.props.linkTo,
                             className: "side-nav-card__link",
                             onClick: this.props.onClick
-                        }, Object(G.cc)(this.props), {
+                        }, Object(G.bc)(this.props), {
                             hoverUnderlineNone: !0
                         }), i.createElement(G.Wa, {
                             className: ge("side-nav-card__avatar", {
@@ -38874,7 +38865,7 @@
                         }, i.createElement(G.W, {
                             ellipsis: !0,
                             fontSize: G.Ba.Size5
-                        }, this.props.titleElement || this.props.title)), i.createElement(G.yb, {
+                        }, this.props.titleElement || this.props.title)), i.createElement(G.xb, {
                             className: "side-nav-card__metadata",
                             fontSize: G.Ba.Size6,
                             display: G.X.Flex,
@@ -38885,7 +38876,7 @@
                             flexGrow: 1,
                             "data-a-target": "side-nav-game-title"
                         }, i.createElement(G.W, {
-                            type: G.Ob.Span,
+                            type: G.Nb.Span,
                             ellipsis: !0
                         }, this.props.metadataLeft)), i.createElement(G.Wa, {
                             flexShrink: 0,
@@ -38974,8 +38965,8 @@
                             t.props.tooltipLayer.show({
                                 from: t.ref,
                                 label: t.props.title,
-                                align: G.Sb.Center,
-                                direction: G.Tb.Right
+                                align: G.Rb.Center,
+                                direction: G.Sb.Right
                             })
                         }, t.onMouseLeave = function() {
                             t.props.tooltipLayer.hide()
@@ -39009,7 +39000,7 @@
                             asset: G.ob.FriendsSC,
                             width: 20,
                             height: 20
-                        }), r ? i.createElement(G.yb, {
+                        }), r ? i.createElement(G.xb, {
                             className: ge(t),
                             color: G.O.Alt2,
                             display: G.X.Flex,
@@ -39025,7 +39016,7 @@
                             },
                             "data-a-target": "side-nav-header-collapsed",
                             refDelegate: this.setRef
-                        }, e, i.createElement(G.yb, {
+                        }, e, i.createElement(G.xb, {
                             borderTop: !0,
                             fullWidth: !0,
                             margin: {
@@ -39042,9 +39033,9 @@
                             },
                             "data-a-target": "side-nav-header-expanded"
                         }, i.createElement(G.W, {
-                            type: G.Ob.H5,
+                            type: G.Nb.H5,
                             color: G.O.Alt
-                        }, o), i.createElement(G.yb, {
+                        }, o), i.createElement(G.xb, {
                             borderTop: !0,
                             fullWidth: !0,
                             margin: {
@@ -39120,7 +39111,7 @@
                             margin: {
                                 bottom: 2
                             },
-                            textAlign: G.Kb.Center
+                            textAlign: G.Jb.Center
                         }, i.createElement(G.W, {
                             color: G.O.Alt2,
                             fontSize: G.Ba.Size6
@@ -39170,21 +39161,21 @@
                         display: G.X.Flex,
                         fullWidth: !0,
                         overflow: G.Za.Hidden,
-                        textAlign: G.Kb.Left,
+                        textAlign: G.Jb.Left,
                         justifyContent: G.Va.Between
                     }, !e.moreDisabled && i.createElement(G.U, {
                         onClick: e.onClickMore,
                         "data-a-target": "side-nav-show-more-button",
                         "data-test-selector": Ie.ShowMore
                     }, i.createElement(G.W, {
-                        type: G.Ob.Span,
+                        type: G.Nb.Span,
                         fontSize: G.Ba.Size7
                     }, Object(a.d)("Show More", "SideNavShowMoreToggleButton"))), !e.lessDisabled && i.createElement(G.U, {
                         onClick: e.onClickLess,
                         "data-a-target": "side-nav-show-less-button",
                         "data-test-selector": Ie.ShowLess
                     }, i.createElement(G.W, {
-                        type: G.Ob.Span,
+                        type: G.Nb.Span,
                         fontSize: G.Ba.Size7
                     }, Object(a.d)("Show Less", "SideNavShowMoreToggleButton"))))
                 },
@@ -39205,10 +39196,10 @@
                             type: G.Ua.Alpha,
                             blurAfterClick: !0
                         }, i.createElement(G.Wa, {
-                            textAlign: G.Kb.Center,
+                            textAlign: G.Jb.Center,
                             padding: .5
                         }, i.createElement(G.W, {
-                            transform: G.Nb.Capitalize,
+                            transform: G.Mb.Capitalize,
                             color: G.O.Base
                         }, Object(a.d)("See all recent videos", "OfflineSideNavChannelTooltip"))))
                     }, t.prototype.getVideoSummary = function(e) {
@@ -39298,7 +39289,7 @@
                             }
                         }, i.createElement(G.W, {
                             color: G.O.Alt2,
-                            type: G.Ob.Span
+                            type: G.Nb.Span
                         }, t, this.props.collapsed && this.props.viewership ? " | " + Object(a.d)("{viewers} viewers", {
                             viewers: Object(a.f)(this.props.viewership)
                         }, "OnlineSideNavChannelTooltip") : null))))
@@ -39330,7 +39321,7 @@
                             title: t,
                             titleElement: Object(Ce.a)(this.props.user.login, this.props.user.displayName),
                             tooltipContent: this.getTooltipContent()
-                        }, Object(G.cc)(this.props)))
+                        }, Object(G.bc)(this.props)))
                     }, t.prototype.getMetadataLeft = function() {
                         return this.props.user.stream && this.props.user.stream.game ? this.props.user.stream.game.name : this.props.user.stream && this.props.user.stream.id && this.props.user.lastBroadcast && this.props.user.lastBroadcast.game && this.props.user.lastBroadcast.game.name ? this.props.user.lastBroadcast.game.name : this.props.recentChannelVideos && this.props.recentChannelVideos.length > 0 ? Object(a.d)("{numVideos, plural, one {{numVideos} new video} other {{numVideos} new videos}}", {
                             numVideos: this.props.recentChannelVideos.length
@@ -39344,7 +39335,7 @@
                                 left: .5
                             }
                         }, Object(a.f)(this.props.user.stream.viewersCount || 0))) : i.createElement(G.W, {
-                            type: G.Ob.Span
+                            type: G.Nb.Span
                         }, Object(a.d)("Offline", "SideNavChannel"))
                     }, t.prototype.getChannelStatusIndicator = function() {
                         if (!this.props.user.stream || !this.props.user.stream.id) return null;
@@ -39400,7 +39391,7 @@
                         return t.state = {
                             displayAmount: Ke
                         }, t.initialDisplayAmount = -1, t.renderChannels = function() {
-                            var e = Object(G.cc)(t.props),
+                            var e = Object(G.bc)(t.props),
                                 n = e["data-a-target"] || "side-nav-channel",
                                 r = e["data-a-id"] || "side-nav-channel";
                             return t.props.channels.slice(0, t.state.displayAmount).map(function(e, a) {
@@ -39853,7 +39844,7 @@
                         padding: {
                             x: 1
                         },
-                        textAlign: G.Kb.Center
+                        textAlign: G.Jb.Center
                     }, i.createElement(G.W, {
                         color: G.O.Alt2,
                         fontSize: G.Ba.Size6,
@@ -39963,7 +39954,7 @@
                             }),
                             slideInContent: this.renderJoinButton(),
                             collapsed: this.props.collapsed
-                        }, Object(G.cc)(this.props))))
+                        }, Object(G.bc)(this.props))))
                     }, t = m.__decorate([Object(H.b)("OnlineFriend"), Object(v.e)()], t)
                 }(i.Component);
             var Dt = Object(u.connect)(function(e) {
@@ -40125,7 +40116,7 @@
                             slideInContent: this.getSlideInContent(),
                             collapsed: this.props.collapsed,
                             tooltipLabel: t
-                        }, Object(G.cc)(this.props)))
+                        }, Object(G.bc)(this.props)))
                     }, t = m.__decorate([Object(H.b)("RecommendedChannel")], t)
                 }(i.Component);
             var Mt = Object(u.connect)(function(e) {
@@ -40265,7 +40256,7 @@
                             metadataLeft: "",
                             collapsed: this.props.collapsed,
                             slideInContent: this.getSlideInContent()
-                        }, Object(G.cc)(this.props))))
+                        }, Object(G.bc)(this.props))))
                     }, t = m.__decorate([Object(C.a)(jt, {
                         name: "createFriendRequest"
                     }), Object(C.a)(zt, {
@@ -40544,7 +40535,7 @@
                         }, t
                     }
                     return m.__extends(t, e), t.prototype.render = function() {
-                        return this.props.collapsed ? null : i.createElement(G.yb, {
+                        return this.props.collapsed ? null : i.createElement(G.xb, {
                             borderTop: !0,
                             padding: 1
                         }, i.createElement(G.qb, {
@@ -40698,7 +40689,7 @@
                             flexShrink: 0,
                             fullWidth: !0,
                             fullHeight: !0
-                        }, i.createElement(G.yb, {
+                        }, i.createElement(G.xb, {
                             className: "side-nav__theme-wrapper",
                             borderRight: !0,
                             flexShrink: 0,
@@ -40716,7 +40707,7 @@
                             display: this.props.collapsedByBreakpoint ? G.X.Hide : G.X.Block,
                             className: ge(s),
                             "data-a-target": "side-nav-arrow",
-                            zIndex: G.bc.Above
+                            zIndex: G.ac.Above
                         }, i.createElement("button", {
                             onClick: this.handleToggleVisibility,
                             "data-test-selector": "side-nav__visibility-toggle"
@@ -41566,7 +41557,7 @@
                             fullWidth: !0,
                             display: G.X.Flex,
                             flexDirection: G.Z.Column,
-                            zIndex: this.props.theatreModeEnabled || this.props.squadModeEnabled ? void 0 : G.bc.Default
+                            zIndex: this.props.theatreModeEnabled || this.props.squadModeEnabled ? void 0 : G.ac.Default
                         }, i.createElement("main", {
                             className: de.a
                         }, i.createElement(bn.b, null), i.createElement(fe.a, {
@@ -42420,7 +42411,7 @@
                             }, r.createElement(g.W, null, e))
                         }, n.renderToggles = function() {
                             var e = Object.keys(n.state.vendorPreferences);
-                            return r.createElement(g.yb, {
+                            return r.createElement(g.xb, {
                                 padding: {
                                     x: 2,
                                     top: 2
@@ -42438,7 +42429,7 @@
                             }, r.createElement(g.Da, {
                                 label: n.getToggleTitle(e),
                                 orientation: g.Ea.Horizontal
-                            }, r.createElement(g.Qb, {
+                            }, r.createElement(g.Pb, {
                                 checked: !!n.state.vendorPreferences[e],
                                 onChange: function() {
                                     return n.onToggle(e)
@@ -42481,13 +42472,13 @@
                         }, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(g.yb, {
+                        return r.createElement(g.xb, {
                             background: g.r.Base,
                             className: "gdpr-consent-modal"
-                        }, r.createElement(g.yb, {
+                        }, r.createElement(g.xb, {
                             padding: 2,
                             borderBottom: !0,
-                            textAlign: g.Kb.Center
+                            textAlign: g.Jb.Center
                         }, r.createElement(g.W, {
                             bold: !0,
                             fontSize: g.Ba.Size3
@@ -42513,7 +42504,7 @@
                                     targetBlank: !0
                                 }, e)
                             }
-                        }, "GDPRConsentModal")), this.renderBodyText(Object(s.d)("Please note that, if you elect to participate with incentivized ad products (e.g., Watch Ads for Bits), Twitch may show you personalized ads.", "GDPRConsentModal")), r.createElement(g.yb, {
+                        }, "GDPRConsentModal")), this.renderBodyText(Object(s.d)("Please note that, if you elect to participate with incentivized ad products (e.g., Watch Ads for Bits), Twitch may show you personalized ads.", "GDPRConsentModal")), r.createElement(g.xb, {
                             border: !0,
                             borderRadius: g.x.Small
                         }, r.createElement(f.a, {
@@ -42523,7 +42514,7 @@
                             label: Object(s.d)("Show me personalized ads", "GDPRConsentModal"),
                             "data-a-target": "gdpr-modal-change-all",
                             description: Object(s.d)("You can elect to opt out of the collection of information to engage in personalized advertising with all third parties by toggling personalized ads on or off. To customize your opt in options you may pick which specific third parties you'd like to have on or off below.", "GDPRConsentModal")
-                        }), this.renderToggles())), r.createElement(g.yb, {
+                        }), this.renderToggles())), r.createElement(g.xb, {
                             padding: 2,
                             background: g.r.Alt2
                         }, r.createElement(h.a, {
@@ -44325,7 +44316,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = Object(o.g)(this.props.errorType);
-                        return r.createElement(s.yb, {
+                        return r.createElement(s.xb, {
                             background: s.r.Alt2,
                             display: s.X.Flex,
                             justifyContent: s.Va.Center,
@@ -44335,19 +44326,19 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: s.Kb.Center,
+                            textAlign: s.Jb.Center,
                             "data-test-selector": this.props.testTarget,
                             "data-a-target": this.props.testTarget
                         }, r.createElement(s.W, {
-                            type: s.Ob.H4,
-                            align: s.Yb.Middle
-                        }, r.createElement(s.yb, {
+                            type: s.Nb.H4,
+                            align: s.Xb.Middle
+                        }, r.createElement(s.xb, {
                             padding: 1,
                             display: s.X.InlineFlex,
                             flexGrow: 1,
                             flexWrap: s.Aa.NoWrap,
                             alignItems: s.f.Center,
-                            textAlign: s.Kb.Left,
+                            textAlign: s.Jb.Left,
                             fontSize: this.props.fontSize ? this.props.fontSize : s.Ba.Size5,
                             "data-a-target": "prime-error-glitch"
                         }, r.createElement(s.Wa, {
@@ -44364,7 +44355,7 @@
                             width: 20,
                             height: 20
                         })), r.createElement(s.W, {
-                            type: s.Ob.P
+                            type: s.Nb.P
                         }, e))))
                     }, t
                 }(r.Component),

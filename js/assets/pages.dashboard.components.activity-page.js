@@ -119,7 +119,7 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.filterAction || n.All;
-                        return i.createElement(g.yb, {
+                        return i.createElement(g.xb, {
                             padding: 2,
                             borderBottom: !0
                         }, i.createElement(g.Wa, {
@@ -167,7 +167,7 @@
                             if (e.props.filterAction === n.All || t.action === e.props.filterAction) {
                                 switch (t.actor && (c = t.actor.logo, s = t.actor.display_name, d = i.createElement(g.W, {
                                     bold: !0,
-                                    type: g.Ob.Span
+                                    type: g.Nb.Span
                                 }, i.createElement(g.U, {
                                     to: "/" + t.actor.name
                                 }, s))), t.action) {
@@ -206,7 +206,7 @@
                                     default:
                                         r = ""
                                 }
-                                return i.createElement(g.yb, {
+                                return i.createElement(g.xb, {
                                     key: "audit" + a,
                                     alignItems: g.f.Center,
                                     display: g.X.Flex,
@@ -248,7 +248,7 @@
                             flexShrink: 0
                         }, y), t)
                     }, t.prototype.renderNotEnoughDataPlaceholder = function() {
-                        return i.createElement(g.yb, r.__assign({
+                        return i.createElement(g.xb, r.__assign({
                             className: "activity-page__no-data",
                             display: g.X.Flex,
                             flexGrow: 1,
@@ -277,7 +277,7 @@
             ! function(e) {
                 e[e.Error = 0] = "Error", e[e.Loading = 1] = "Loading", e[e.Success = 2] = "Success"
             }(S || (S = {}));
-            var N = function(e) {
+            var x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -360,7 +360,7 @@
                             a = t.filterAction,
                             n = t.list,
                             r = e === S.Success && n.audits.length > 0;
-                        return i.createElement(w.a, null, i.createElement(g.yb, {
+                        return i.createElement(w.a, null, i.createElement(g.xb, {
                             className: "activity-page",
                             background: g.r.Base,
                             elevation: 1,
@@ -422,7 +422,7 @@
                         })
                     }, t
                 }(i.PureComponent),
-                D = Object(o.compose)(Object(d.a)(C, {
+                N = Object(o.compose)(Object(d.a)(C, {
                     options: function(e) {
                         return {
                             variables: {
@@ -434,9 +434,9 @@
                     destination: m.a.ChannelDashboardActivity
                 }), Object(u.a)({
                     location: h.PageviewLocation.DashboardActivity
-                }))(N);
+                }))(x);
             a.d(t, "ActivityPage", function() {
-                return D
+                return N
             }), a.d(t, "PublicProps", function() {})
         }
     }

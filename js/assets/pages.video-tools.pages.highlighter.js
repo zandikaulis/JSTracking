@@ -1260,7 +1260,7 @@
                         alignItems: u.f.Center,
                         position: u.eb.Absolute
                     }, s.createElement(u.Wa, {
-                        textAlign: u.Kb.Center,
+                        textAlign: u.Jb.Center,
                         flexShrink: 1
                     }, s.createElement(u.nb, {
                         asset: e.icon,
@@ -1271,14 +1271,14 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: u.Kb.Center
+                        textAlign: u.Jb.Center
                     }, s.createElement(u.W, {
-                        type: u.Ob.H4,
+                        type: u.Nb.H4,
                         color: u.O.Alt2
                     }, e.titleText)), s.createElement(u.Wa, {
-                        textAlign: u.Kb.Center
+                        textAlign: u.Jb.Center
                     }, s.createElement(u.W, {
-                        type: u.Ob.P,
+                        type: u.Nb.P,
                         color: u.O.Alt2
                     }, e.subText)))
                 },
@@ -1309,7 +1309,7 @@
                                 x: 1
                             }
                         }, s.createElement(u.W, {
-                            type: u.Ob.H5,
+                            type: u.Nb.H5,
                             ellipsis: !0
                         }, this.props.title))))))
                     }, t
@@ -1420,7 +1420,7 @@
                     })), s.createElement("div", {
                         className: e,
                         tabIndex: 0
-                    }, s.createElement(u.yb, {
+                    }, s.createElement(u.xb, {
                         attachTop: !0,
                         attachRight: !0,
                         attachLeft: !0,
@@ -1487,19 +1487,19 @@
                 g = n("yR8l"),
                 v = n("V+GM"),
                 S = n("8Ad5"),
-                y = n("QzU5"),
+                b = n("QzU5"),
                 O = n("kduP"),
-                b = n("UWbL"),
+                y = n("UWbL"),
                 k = n("NvVO"),
                 D = n("2xye"),
                 E = n("GnwI"),
                 C = n("CLrI"),
-                I = n("eFQ3"),
-                w = function(e) {
-                    return r.createElement(I.b, {
+                x = n("eFQ3"),
+                I = function(e) {
+                    return r.createElement(x.b, {
                         vodID: e.videoID,
                         disableTheatreButton: !0,
-                        playerTypeOverride: I.a.Highlighter,
+                        playerTypeOverride: x.a.Highlighter,
                         paused: e.paused,
                         editing: e.editing,
                         nextVideoOffset: e.nextVideoOffset,
@@ -1509,9 +1509,9 @@
                         onSeeking: e.onVideoTimeChange
                     })
                 },
-                x = n("u5aL"),
-                T = n("geRD"),
-                N = n("hyVY"),
+                w = n("u5aL"),
+                N = n("geRD"),
+                T = n("hyVY"),
                 V = n("TSYQ"),
                 P = n("Ue10");
             n("uAdw");
@@ -1546,7 +1546,7 @@
                         className: "numbered-thumbnail"
                     }, r.createElement(P.o, {
                         ratio: P.p.Aspect16x9
-                    }, r.createElement(P.yb, {
+                    }, r.createElement(P.xb, {
                         background: P.r.AccentAlt2,
                         display: P.X.Flex,
                         alignItems: P.f.Center,
@@ -1554,18 +1554,18 @@
                     }, r.createElement(P.W, {
                         color: P.O.OverlayAlt,
                         fontSize: P.Ba.Size4,
-                        type: P.Ob.H4
+                        type: P.Nb.H4
                     }, e.displayNumber))))
                 }),
-                R = (n("HszP"), function(e) {
+                W = (n("HszP"), function(e) {
                     var t = null;
-                    return e.error ? t = r.createElement(P.yb, {
+                    return e.error ? t = r.createElement(P.xb, {
                         color: P.O.Error,
                         display: P.X.Flex,
                         alignItems: P.f.Center
                     }, r.createElement(P.nb, {
                         asset: P.ob.NotificationError
-                    })) : e.finished && (t = r.createElement(P.yb, {
+                    })) : e.finished && (t = r.createElement(P.xb, {
                         className: "status-thumbnail__icon--success",
                         display: P.X.Flex,
                         alignItems: P.f.Center
@@ -1575,7 +1575,7 @@
                         className: "status-thumbnail"
                     }, r.createElement(P.o, {
                         ratio: P.p.Aspect16x9
-                    }, r.createElement(P.yb, {
+                    }, r.createElement(P.xb, {
                         background: P.r.AccentAlt2,
                         display: P.X.Flex,
                         alignItems: P.f.Center,
@@ -1585,7 +1585,7 @@
             ! function(e) {
                 e.Title = "queue-card-title", e.Thumbnail = "queue-card-thumbnail", e.Timeline = "queue-card-timeline", e.Timestamps = "queue-card-timestamps", e.Game = "queue-card-game", e.SourceTitle = "queue-card-source-title"
             }(_ || (_ = {}));
-            var W, M = function(e) {
+            var R, M = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDurationLength = function() {
@@ -1594,13 +1594,13 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e;
-                        return e = this.props.finished ? r.createElement(R, {
+                        return e = this.props.finished ? r.createElement(W, {
                             finished: !0
-                        }) : this.props.error ? r.createElement(R, {
+                        }) : this.props.error ? r.createElement(W, {
                             error: !0
                         }) : r.createElement(H, {
                             displayNumber: this.props.listIndex + 1
-                        }), r.createElement(P.yb, {
+                        }), r.createElement(P.xb, {
                             padding: 1,
                             borderBottom: !0
                         }, r.createElement(P.Wa, {
@@ -1614,7 +1614,7 @@
                             }
                         }, r.createElement(P.W, {
                             ellipsis: !0
-                        }, this.props.title || "<" + Object(o.d)("Untitled", "HighlightQueueCard") + ">")), r.createElement(P.yb, {
+                        }, this.props.title || "<" + Object(o.d)("Untitled", "HighlightQueueCard") + ">")), r.createElement(P.xb, {
                             display: P.X.Flex
                         }, r.createElement(P.Wa, {
                             "data-test-selector": _.Thumbnail,
@@ -1629,7 +1629,7 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             "data-test-selector": _.Timeline,
                             margin: {
                                 bottom: .5
@@ -1648,7 +1648,7 @@
                                 right: 1
                             },
                             overflow: P.Za.Hidden
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             padding: {
                                 right: .5
                             },
@@ -1661,14 +1661,14 @@
                         })), r.createElement(P.W, {
                             ellipsis: !0,
                             color: P.O.Alt2
-                        }, Object(N.b)(this.getDurationLength()) + " (" + Object(N.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(N.b)(this.props.offsets.endOffsetSeconds) + ")")), this.props.game && r.createElement(P.Wa, {
+                        }, Object(T.b)(this.getDurationLength()) + " (" + Object(T.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(T.b)(this.props.offsets.endOffsetSeconds) + ")")), this.props.game && r.createElement(P.Wa, {
                             "data-test-selector": _.Game,
                             display: P.X.Flex,
                             margin: {
                                 right: 1
                             },
                             overflow: P.Za.Hidden
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             padding: {
                                 right: .5
                             },
@@ -1688,7 +1688,7 @@
                                 right: 1
                             },
                             overflow: P.Za.Hidden
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             padding: {
                                 right: .5
                             },
@@ -1704,12 +1704,12 @@
                         }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueCard") + ">"))))))
                     }, t
                 }(r.Component),
-                j = n("Rw/r");
+                L = n("Rw/r");
             n("lBPO");
             ! function(e) {
                 e.TitleInput = "queue-card-title-input", e.Thumbnail = "queue-card-thumbnail", e.Timeline = "queue-card-timeline", e.GameSelector = "queue-card-game-selector", e.SourceTitle = "queue-card-source-title", e.DeleteButton = "queue-card-delete-button"
-            }(W || (W = {}));
-            var L, A = function(e) {
+            }(R || (R = {}));
+            var j, A = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.getDurationLength = function() {
@@ -1745,13 +1745,13 @@
                             currentTitle: this.props.title
                         })
                     }, t.prototype.render = function() {
-                        return r.createElement(P.yb, {
+                        return r.createElement(P.xb, {
                             className: "highlight-queue-edit-card highlight-queue-edit-card__card",
                             padding: 1,
                             background: P.r.Alt2,
                             borderBottom: !0
                         }, r.createElement(P.Wa, {
-                            "data-test-selector": W.TitleInput,
+                            "data-test-selector": R.TitleInput,
                             margin: {
                                 bottom: 1
                             }
@@ -1764,22 +1764,22 @@
                             maxLength: 140,
                             onChange: this.onTitleChange
                         })), r.createElement(P.Wa, {
-                            "data-test-selector": W.GameSelector,
+                            "data-test-selector": R.GameSelector,
                             margin: {
                                 bottom: 1
                             }
-                        }, r.createElement(j.a, {
+                        }, r.createElement(L.a, {
                             currentGameTitle: this.props.game && this.props.game.name || "",
                             onChange: this.onGameChange,
                             compact: !0
-                        })), r.createElement(P.yb, {
+                        })), r.createElement(P.xb, {
                             display: P.X.Flex
                         }, r.createElement(P.Wa, {
-                            "data-test-selector": W.Thumbnail,
+                            "data-test-selector": R.Thumbnail,
                             margin: {
                                 right: 1
                             }
-                        }, this.props.error ? r.createElement(R, {
+                        }, this.props.error ? r.createElement(W, {
                             error: !0
                         }) : r.createElement(H, {
                             displayNumber: this.props.listIndex + 1
@@ -1790,8 +1790,8 @@
                             margin: {
                                 bottom: .5
                             }
-                        }, r.createElement(P.yb, {
-                            "data-test-selector": W.Timeline,
+                        }, r.createElement(P.xb, {
+                            "data-test-selector": R.Timeline,
                             margin: {
                                 bottom: .5
                             }
@@ -1808,7 +1808,7 @@
                                 right: 1
                             },
                             overflow: P.Za.Hidden
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             padding: {
                                 right: .5
                             },
@@ -1821,14 +1821,14 @@
                         })), r.createElement(P.W, {
                             ellipsis: !0,
                             color: P.O.Alt2
-                        }, Object(N.b)(this.getDurationLength()) + " (" + Object(N.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(N.b)(this.props.offsets.endOffsetSeconds) + ")")), r.createElement(P.Wa, {
+                        }, Object(T.b)(this.getDurationLength()) + " (" + Object(T.b)(this.props.offsets.startOffsetSeconds) + " - " + Object(T.b)(this.props.offsets.endOffsetSeconds) + ")")), r.createElement(P.Wa, {
                             display: P.X.Flex,
                             margin: {
                                 right: 1
                             },
                             overflow: P.Za.Hidden
-                        }, r.createElement(P.yb, {
-                            "data-test-selector": W.SourceTitle,
+                        }, r.createElement(P.xb, {
+                            "data-test-selector": R.SourceTitle,
                             padding: {
                                 right: .5
                             },
@@ -1841,8 +1841,8 @@
                         })), r.createElement(P.W, {
                             ellipsis: !0,
                             color: P.O.Alt2
-                        }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueEditCard") + ">"))))), r.createElement(P.yb, {
-                            "data-test-selector": W.DeleteButton,
+                        }, this.props.sourceVideoTitle || "<" + Object(o.d)("Untitled Source", "HighlightQueueEditCard") + ">"))))), r.createElement(P.xb, {
+                            "data-test-selector": R.DeleteButton,
                             display: P.X.Flex,
                             justifyContent: P.Va.End
                         }, r.createElement(P.A, {
@@ -1861,7 +1861,7 @@
             n("x4lo");
             ! function(e) {
                 e.AddButtonDropdown = "segmentqueue-addbuttondropdown", e.ErrorNotification = "segmentqueue-errornotification", e.ChangeVideoButton = "segmentqueue-changevideobutton", e.NoItems = "segmentqueue-noitems", e.SaveButton = "segmentqueue-savebutton", e.SegmentQueue = "segmentqueue-segmentqueue", e.SelectHighlightButton = "segmentqueue-selecthighlight", e.MaxQueueSizeTooltip = "segmentqueue-maxtooltip"
-            }(L || (L = {}));
+            }(j || (j = {}));
             var U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1936,7 +1936,7 @@
                                                 }
                                             }, i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, this.props.createHighlight(Object(T.a)(a))];
+                                            return i.trys.push([1, 3, , 4]), [4, this.props.createHighlight(Object(N.a)(a))];
                                         case 2:
                                             return (r = i.sent().data) && r.createVideoHighlight && r.createVideoHighlight.highlight && (t.success = r.createVideoHighlight.highlight), [3, 4];
                                         case 3:
@@ -1949,12 +1949,12 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(P.yb, {
+                        return r.createElement(P.xb, {
                             background: P.r.Base,
                             display: P.X.Flex,
                             flexDirection: P.Z.Column,
                             fullHeight: !0
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             background: P.r.Base,
                             borderBottom: !0,
                             padding: 1,
@@ -1976,7 +1976,7 @@
                             disabled: 0 === this.props.queue.length,
                             fullWidth: !0,
                             onClick: this.createHighlights,
-                            "data-test-selectors": L.SaveButton
+                            "data-test-selectors": j.SaveButton
                         }, this.state.failedSegments ? Object(o.d)("Retry Creating Highlights", "HighlighterVideoSegmentQueue") : Object(o.d)("Create Highlights", "HighlighterVideoSegmentQueue"))))
                     }, t.prototype.componentDidUpdate = function(e) {
                         this.props.queue.length > e.queue.length && this.scrollableAreaRef ? this.scrollableAreaRef.scrollToBottom() : this.state.failedSegments && this.successfulHighlightIDs.length > 0 && this.successfulHighlightIDs.length === this.props.queue.length ? this.props.onPostSaveFinishAndNavigate(this.successfulHighlightIDs) : this.state.failedSegments && 0 === this.successfulHighlightIDs.length && 0 === this.props.queue.length && this.setState({
@@ -1984,7 +1984,7 @@
                         })
                     }, t.prototype.renderEmptyQueue = function() {
                         return r.createElement(P.Wa, {
-                            "data-test-selector": L.NoItems,
+                            "data-test-selector": j.NoItems,
                             display: P.X.Flex,
                             flexDirection: P.Z.Column,
                             alignItems: P.f.Center,
@@ -2000,7 +2000,7 @@
                             height: 25,
                             width: 25
                         })), r.createElement(P.Wa, {
-                            textAlign: P.Kb.Center
+                            textAlign: P.Jb.Center
                         }, r.createElement(P.W, null, Object(o.d)("No highlights are queued. Click the New Highlight button above to start highlighting.", "HighlighterVideoSegmentQueue"))))
                     }, t.prototype.renderSegments = function() {
                         var e = this,
@@ -2045,7 +2045,7 @@
                             autoHide: !1,
                             suppressScrollX: !0,
                             scrollRef: this.scrollRefHandler,
-                            "data-test-selector": L.SegmentQueue
+                            "data-test-selector": j.SegmentQueue
                         }, r.createElement(P.Wa, {
                             margin: {
                                 bottom: 5
@@ -2059,19 +2059,19 @@
                             flexWrap: P.Aa.NoWrap
                         }, r.createElement(P.z, {
                             blurAfterClick: !0,
-                            "data-test-selector": L.SelectHighlightButton,
+                            "data-test-selector": j.SelectHighlightButton,
                             type: P.F.Hollow,
                             icon: P.ob.Plus,
                             onClick: this.props.onAddNewHighlight,
                             disabled: this.props.queue.length >= 25 || !!this.state.failedSegments
-                        }, Object(o.d)("New Highlight", "HighlighterVideoSegmentQueue")), r.createElement(x.a, {
+                        }, Object(o.d)("New Highlight", "HighlighterVideoSegmentQueue")), r.createElement(w.a, {
                             onClickOut: this.closeAddDropdown,
                             className: "highlight-select-dropdown__clickout"
                         }, r.createElement(P.z, {
                             icon: P.ob.GlyphArrDown,
                             type: P.F.Hollow,
                             onClick: this.toggleAddDropdown,
-                            "data-test-selector": L.AddButtonDropdown,
+                            "data-test-selector": j.AddButtonDropdown,
                             disabled: this.props.queue.length >= 25 || !!this.state.failedSegments
                         }), r.createElement(P.u, {
                             direction: P.v.BottomRight,
@@ -2081,7 +2081,7 @@
                         }, r.createElement(P.Ta, {
                             disabled: this.props.queue.length >= 25,
                             onClick: this.props.onChangeVideo,
-                            "data-test-selector": L.ChangeVideoButton
+                            "data-test-selector": j.ChangeVideoButton
                         }, r.createElement(P.Wa, {
                             padding: {
                                 x: 1,
@@ -2090,17 +2090,17 @@
                         }, r.createElement(P.W, {
                             noWrap: !0
                         }, Object(o.d)("New Highlight from Another Broadcast", "HighlighterVideoSegmentQueue")))))));
-                        return this.props.queue.length >= 25 ? r.createElement(P.Rb, {
-                            "data-test-selector": L.MaxQueueSizeTooltip,
+                        return this.props.queue.length >= 25 ? r.createElement(P.Qb, {
+                            "data-test-selector": j.MaxQueueSizeTooltip,
                             label: Object(o.d)("You can only create at most {max} highlights at once.", {
                                 max: 25
                             }, "VideoSegmentQueue")
                         }, e) : e
                     }, t.prototype.renderErrorMessage = function() {
-                        if (this.state.failedSegments) return r.createElement(P.yb, {
-                            "data-test-selector": L.ErrorNotification,
+                        if (this.state.failedSegments) return r.createElement(P.xb, {
+                            "data-test-selector": j.ErrorNotification,
                             borderBottom: !0
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             className: "highlight__segment-queue-error",
                             background: P.r.Alt2,
                             color: P.O.Error,
@@ -2118,11 +2118,11 @@
                             }
                         }, r.createElement(P.W, {
                             color: P.O.Base,
-                            type: P.Ob.Span,
+                            type: P.Nb.Span,
                             bold: !0
                         }, Object(o.d)("Error Processing", "VideoSegmentQueue"))), r.createElement(P.W, {
                             color: P.O.Base,
-                            type: P.Ob.Span
+                            type: P.Nb.Span
                         }, Object(o.d)("Retry again below.", "VideoSegmentQueue"))))
                     }, t
                 }(r.Component),
@@ -2151,7 +2151,7 @@
                             left: this.props.pixelX + "px"
                         };
                         return r.createElement(P.Pa, {
-                            zIndex: P.bc.Above,
+                            zIndex: P.ac.Above,
                             color: P.O.Link,
                             className: "playhead-pin__pin",
                             position: P.eb.Absolute
@@ -2180,13 +2180,13 @@
                             className: "playhead-pin__draggable",
                             borderRadius: P.x.Large,
                             position: P.eb.Absolute,
-                            zIndex: P.bc.Above
+                            zIndex: P.ac.Above
                         }, r.createElement("div", {
                             style: t,
                             ref: this.props.iconRef,
                             onMouseDown: this.props.onMouseDownHandler,
                             "data-test-selector": Q.PlayheadDraggable
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             display: P.X.Flex,
                             justifyContent: P.Va.Between,
                             alignItems: P.f.Stretch,
@@ -2194,7 +2194,7 @@
                             borderRadius: P.x.Large
                         }, e, r.createElement(P.W, {
                             className: "playhead-pin__text"
-                        }, Object(N.b)(this.props.currentPlayheadTime, {
+                        }, Object(T.b)(this.props.currentPlayheadTime, {
                             zeroPadAll: !0
                         })))))
                     }, t
@@ -2202,11 +2202,11 @@
                 K = function(e) {
                     return Math.floor(15 * e / 100)
                 },
-                Y = function(e) {
+                $ = function(e) {
                     return Math.ceil(85 * e / 100)
                 };
 
-            function $(e, t) {
+            function Y(e, t) {
                 var n = e.endOffset;
                 return t > e.endOffset && (n = Math.min(e.maxOffset, t + (e.endOffset - e.startOffset))), {
                     startOffset: t,
@@ -2232,7 +2232,7 @@
                     return t.state = {
                         showBalloon: !1
                     }, t.renderBalloon = function() {
-                        return r.createElement(x.a, {
+                        return r.createElement(w.a, {
                             onClickOut: t.closeBalloon
                         }, r.createElement(P.u, {
                             show: t.state.showBalloon,
@@ -2258,7 +2258,7 @@
                             justifyContent: P.Va.Between
                         }, r.createElement(P.W, {
                             color: P.O.Base
-                        }, Object(o.d)("Start segment here", "HighlightPlayheadDropdown")), r.createElement(P.yb, {
+                        }, Object(o.d)("Start segment here", "HighlightPlayheadDropdown")), r.createElement(P.xb, {
                             padding: {
                                 x: .5
                             },
@@ -2281,7 +2281,7 @@
                             justifyContent: P.Va.Between
                         }, r.createElement(P.W, {
                             color: P.O.Base
-                        }, Object(o.d)("End segment here", "HighlightPlayheadDropdown")), r.createElement(P.yb, {
+                        }, Object(o.d)("End segment here", "HighlightPlayheadDropdown")), r.createElement(P.xb, {
                             padding: {
                                 x: .5
                             },
@@ -2297,7 +2297,7 @@
                             }
                         })
                     }, t.startSegmentUpdate = function() {
-                        var e = $(t.props.activeSegment, t.props.currentPlayheadTime);
+                        var e = Y(t.props.activeSegment, t.props.currentPlayheadTime);
                         t.setState(function(e) {
                             return {
                                 showBalloon: !e.showBalloon
@@ -2336,7 +2336,7 @@
                             top: "95px"
                         };
                     return r.createElement(P.Pa, {
-                        zIndex: P.bc.Above,
+                        zIndex: P.ac.Above,
                         alignItems: P.f.Center,
                         className: "playhead-dropdown__dropdown",
                         display: P.X.InlineFlex,
@@ -2351,7 +2351,7 @@
                         selected: !1,
                         onClick: this.updateShowBalloon,
                         "data-test-selector": ee.PlayheadDropdownIcon
-                    }, r.createElement(P.yb, {
+                    }, r.createElement(P.xb, {
                         padding: {
                             x: .5
                         },
@@ -2526,56 +2526,55 @@
                 e.Broadcaster = "Broadcaster", e.Editor = "Editor"
             }(ce || (ce = {}));
             var ve, Se = function(e) {
-                    function t() {
-                        var t = null !== e && e.apply(this, arguments) || this;
-                        return t.downloadClipsData = function() {
-                            t.downloadDataHelper(t.props.clipsData), ge(t.getTrackingData(de.Clips))
-                        }, t.downloadMarkersData = function() {
-                            t.downloadDataHelper(t.props.markersData), ge(t.getTrackingData(de.Markers))
-                        }, t.getTrackingData = function(e) {
-                            return {
-                                channel_id: t.props.channelID,
-                                vod_id: t.props.videoID,
-                                user_type: t.props.userID === t.props.channelID ? oe.Creator : oe.Editor,
-                                list_type: e
-                            }
-                        }, t
-                    }
-                    return i.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(pe.a, null, r.createElement(P.A, {
-                            icon: P.ob.More,
-                            ariaLabel: Object(o.d)("Marker Settings", "HighlighterPinsDownload")
-                        }), r.createElement(P.u, {
-                            size: P.w.Small,
-                            direction: P.v.TopRight
-                        }, r.createElement(P.Ta, {
-                            onClick: this.downloadMarkersData
-                        }, r.createElement(P.Wa, {
-                            padding: 1
-                        }, Object(o.d)("Download Stream Markers (.csv)", "HighlighterPinsDownload"))), r.createElement(P.Ta, {
-                            onClick: this.downloadClipsData
-                        }, r.createElement(P.Wa, {
-                            padding: 1
-                        }, Object(o.d)("Download Clips data (.csv)", "HighlighterPinsDownload")))))
-                    }, t.prototype.downloadDataHelper = function(e) {
-                        Object(me.a)("download.csv", function(e, t) {
-                            return e.reduce(function(e, n) {
-                                return "" + e + [Object(fe.b)(n.videoOffset, fe.a.ClockHMS), n.creatorId === t ? ce.Broadcaster : ce.Editor, n.creatorDisplayName, n.title].join(",") + "\n"
-                            }, "")
-                        }(e, this.props.channelID))
+                function t() {
+                    var t = null !== e && e.apply(this, arguments) || this;
+                    return t.downloadClipsData = function() {
+                        t.downloadDataHelper(t.props.clipsData), ge(t.getTrackingData(de.Clips))
+                    }, t.downloadMarkersData = function() {
+                        t.downloadDataHelper(t.props.markersData), ge(t.getTrackingData(de.Markers))
+                    }, t.getTrackingData = function(e) {
+                        return {
+                            channel_id: t.props.channelID,
+                            vod_id: t.props.videoID,
+                            user_type: t.props.userID === t.props.channelID ? oe.Creator : oe.Editor,
+                            list_type: e
+                        }
                     }, t
-                }(r.Component),
-                ye = n("lbyP");
+                }
+                return i.__extends(t, e), t.prototype.render = function() {
+                    return r.createElement(pe.a, null, r.createElement(P.A, {
+                        icon: P.ob.More,
+                        ariaLabel: Object(o.d)("Marker Settings", "HighlighterPinsDownload")
+                    }), r.createElement(P.u, {
+                        size: P.w.Small,
+                        direction: P.v.TopRight
+                    }, r.createElement(P.Ta, {
+                        onClick: this.downloadMarkersData
+                    }, r.createElement(P.Wa, {
+                        padding: 1
+                    }, Object(o.d)("Download Stream Markers (.csv)", "HighlighterPinsDownload"))), r.createElement(P.Ta, {
+                        onClick: this.downloadClipsData
+                    }, r.createElement(P.Wa, {
+                        padding: 1
+                    }, Object(o.d)("Download Clips data (.csv)", "HighlighterPinsDownload")))))
+                }, t.prototype.downloadDataHelper = function(e) {
+                    Object(me.a)("download.csv", function(e, t) {
+                        return e.reduce(function(e, n) {
+                            return "" + e + [Object(fe.b)(n.videoOffset, fe.a.ClockHMS), n.creatorId === t ? ce.Broadcaster : ce.Editor, n.creatorDisplayName, n.title].join(",") + "\n"
+                        }, "")
+                    }(e, this.props.channelID))
+                }, t
+            }(r.Component);
             ! function(e) {
                 e.Clip = "Clip", e.Mark = "Mark"
             }(ve || (ve = {}));
             n("lMdv");
-            var Oe = 18,
-                be = 25,
-                ke = -23,
-                De = 18,
-                Ee = -25,
-                Ce = function(e) {
+            var be = 18,
+                Oe = 25,
+                ye = -23,
+                ke = 18,
+                De = -25,
+                Ee = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2596,36 +2595,36 @@
                             }))
                         }, t.renderIcon = function(e, n, a) {
                             var i, s = (e.pins[0].pixelX + e.pins[e.pins.length - 1].pixelX) / 2,
-                                o = s - Oe / 2,
+                                o = s - be / 2,
                                 l = e.pins.length > 1,
                                 d = z(t.props.activeSegment.startOffset, t.props.pinOffsetMax, a),
                                 c = z(t.props.activeSegment.endOffset, t.props.pinOffsetMax, a),
                                 u = s >= d && s < c,
-                                p = ke + "px";
+                                p = ye + "px";
                             if (l) {
-                                p = Ee + "px";
+                                p = De + "px";
                                 var f = {
-                                    width: Oe + "px",
-                                    height: Oe + "px"
+                                    width: be + "px",
+                                    height: be + "px"
                                 };
                                 i = r.createElement(P.Oa, {
-                                    textAlign: P.Kb.Center
+                                    textAlign: P.Jb.Center
                                 }, r.createElement("div", {
                                     className: "dynamic-pins__cluster",
                                     style: f
                                 }, e.pins.length > 9 ? "9+" : e.pins.length))
                             } else i = e.pins[0].type === ve.Clip ? r.createElement(P.nb, {
-                                width: Oe,
-                                height: Oe,
-                                asset: P.ob.Clip
-                            }) : r.createElement(P.nb, {
                                 width: be,
                                 height: be,
+                                asset: P.ob.Clip
+                            }) : r.createElement(P.nb, {
+                                width: Oe,
+                                height: Oe,
                                 asset: P.ob.GlyphArrDown
                             });
                             var m = {
-                                    width: Oe + "px",
-                                    height: Oe + "px",
+                                    width: be + "px",
+                                    height: be + "px",
                                     left: o + "px",
                                     top: p
                                 },
@@ -2682,8 +2681,8 @@
                                         right: 1
                                     }
                                 }, r.createElement(P.nb, {
-                                    width: De,
-                                    height: De,
+                                    width: ke,
+                                    height: ke,
                                     asset: e.type === ve.Clip ? P.ob.Clip : P.ob.GlyphArrDown
                                 })), r.createElement(P.Wa, {
                                     flexGrow: 0,
@@ -2694,7 +2693,7 @@
                                     onClick: function() {
                                         t.props.requestPlayerTimeChange(e.videoOffset), he(t.trackingFieldsForPin(e, 1))
                                     }
-                                }, Object(N.b)(e.videoOffset))), r.createElement(P.Wa, {
+                                }, Object(T.b)(e.videoOffset))), r.createElement(P.Wa, {
                                     display: P.X.Flex,
                                     flexDirection: P.Z.Column,
                                     flexGrow: 1
@@ -2727,7 +2726,7 @@
                                         })
                                     }(e.pins, e.pinOffsetMax, t.parentRef.clientWidth).filter(function(e) {
                                         return !(e.pixelX < 0 || e.pixelX > n)
-                                    }), Oe / 2);
+                                    }), be / 2);
                                 t.setState({
                                     clusterData: a
                                 })
@@ -2774,10 +2773,10 @@
                         })), this.props.children))
                     }, t
                 }(r.Component),
-                Ie = n("0vlg"),
-                we = n("QClN");
+                Ce = n("0vlg"),
+                xe = n("QClN");
 
-            function xe(e) {
+            function Ie(e) {
                 var t = null;
                 if (e && e.length) {
                     var n = e[e.length - 1];
@@ -2785,7 +2784,7 @@
                 }
                 return t
             }
-            var Te, Ne = function(e) {
+            var we, Ne = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2841,22 +2840,22 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         var t = this.props.dataClips && this.props.dataClips.video,
                             n = e.dataClips && e.dataClips.video,
-                            a = xe(t && t.clips && t.clips.edges),
+                            a = Ie(t && t.clips && t.clips.edges),
                             i = n && n.clips && n.clips.edges,
-                            r = xe(i),
+                            r = Ie(i),
                             s = n && n.clips && n.clips.pageInfo && n.clips.pageInfo.hasNextPage;
                         !((i ? i.length : 0) >= 500) && s && a !== r && this.props.clipsLoadMore && this.props.clipsLoadMore(r);
                         var o = this.props.dataMarkers.video,
                             l = e.dataMarkers.video,
-                            d = xe(o && o.bookmarks && o.bookmarks.edges),
+                            d = Ie(o && o.bookmarks && o.bookmarks.edges),
                             c = l && l.bookmarks && l.bookmarks.edges,
-                            u = xe(c),
+                            u = Ie(c),
                             p = l && l.bookmarks && l.bookmarks.pageInfo && l.bookmarks.pageInfo.hasNextPage;
                         !((c ? c.length : 0) >= 500) && p && d !== u && this.props.markersLoadMore(u), this.reportInteractive(e), this.setSortedFilteredPins(e)
                     }, t.prototype.render = function() {
                         return 0 === this.state.sortedFilteredPins.length ? this.renderChildrenWithoutPins() : r.createElement(P.Wa, {
                             className: "highlighter-pins"
-                        }, r.createElement(Ce, {
+                        }, r.createElement(Ee, {
                             pins: this.state.sortedFilteredPins,
                             pinOffsetMax: this.props.videoDuration,
                             requestPlayerTimeChange: this.props.requestPlayerTimeChange,
@@ -2875,7 +2874,7 @@
                         t && t.clips && t.clips.edges && n && e.latencyTracking.reportInteractive()
                     }, t
                 }(r.Component),
-                Ve = Object(f.compose)(Object(E.b)("HighlighterPins"), Object(g.a)(Ie, {
+                Te = Object(f.compose)(Object(E.b)("HighlighterPins"), Object(g.a)(Ce, {
                     name: "dataClips",
                     skip: function(e) {
                         return e.clipUserIDs.length < 1
@@ -2884,7 +2883,7 @@
                         return i.__assign({}, e, {
                             clipsLoadMore: function(t) {
                                 return e.dataClips.fetchMore({
-                                    query: Ie,
+                                    query: Ce,
                                     variables: i.__assign({}, e.dataClips.variables, {
                                         cursor: t
                                     }),
@@ -2895,7 +2894,7 @@
                                         return e.video && e.video.clips && e.video.clips.edges && (a = e.video.clips.edges), n.video && n.video.clips && n.video.clips.edges && (r = n.video.clips.edges), {
                                             video: i.__assign({}, n.video, {
                                                 clips: i.__assign({}, n.video && n.video.clips ? n.video.clips : {}, {
-                                                    edges: Object(T.c)(a, r)
+                                                    edges: Object(N.c)(a, r)
                                                 })
                                             })
                                         }
@@ -2904,13 +2903,13 @@
                             }
                         })
                     }
-                }), Object(g.a)(we, {
+                }), Object(g.a)(xe, {
                     name: "dataMarkers",
                     props: function(e) {
                         return i.__assign({}, e, {
                             markersLoadMore: function(t) {
                                 return e.dataMarkers.fetchMore({
-                                    query: we,
+                                    query: xe,
                                     variables: i.__assign({}, e.dataMarkers.variables, {
                                         cursor: t
                                     }),
@@ -2921,7 +2920,7 @@
                                         return e.video && e.video.bookmarks && e.video.bookmarks.edges && (a = e.video.bookmarks.edges), n.video && n.video.bookmarks && n.video.bookmarks.edges && (r = n.video.bookmarks.edges), {
                                             video: i.__assign({}, n.video, {
                                                 bookmarks: i.__assign({}, n.video && n.video.bookmarks ? n.video.bookmarks : {}, {
-                                                    edges: Object(T.c)(a, r)
+                                                    edges: Object(N.c)(a, r)
                                                 })
                                             })
                                         }
@@ -2933,8 +2932,8 @@
                 }))(Ne);
             ! function(e) {
                 e.Self = "Self", e.Owner = "Owner", e.Editor = "Editor"
-            }(Te || (Te = {}));
-            var Pe, _e = function(e) {
+            }(we || (we = {}));
+            var Ve, Pe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderOption = function(e) {
@@ -2956,11 +2955,11 @@
                             }))
                         }, t.getSelectableName = function(e) {
                             switch (e) {
-                                case Te.Self:
+                                case we.Self:
                                     return Object(o.d)("Me", "PinFilters");
-                                case Te.Owner:
+                                case we.Owner:
                                     return t.props.broadcasterDisplayName;
-                                case Te.Editor:
+                                case we.Editor:
                                     return Object(o.d)("All Editors", "PinFilters");
                                 default:
                                     return e
@@ -2991,13 +2990,13 @@
                                 direction: P.v.TopRight,
                                 tailOffset: 10,
                                 size: P.w.Small
-                            }, r.createElement(P.Wa, null, r.createElement(P.yb, {
+                            }, r.createElement(P.Wa, null, r.createElement(P.xb, {
                                 margin: 1
                             }, r.createElement(P.W, {
                                 color: P.O.Alt
-                            }, this.props.description)), r.createElement(P.yb, null, Object.keys(e).map(this.renderOption))))));
-                        return n && (a = r.createElement(P.Rb, {
-                            direction: P.Tb.Top,
+                            }, this.props.description)), r.createElement(P.xb, null, Object.keys(e).map(this.renderOption))))));
+                        return n && (a = r.createElement(P.Qb, {
+                            direction: P.Sb.Top,
                             label: this.props.disabledMessage
                         }, a)), r.createElement(P.Wa, {
                             position: P.eb.Relative,
@@ -3008,27 +3007,32 @@
                         }, a)
                     }, t
                 }(r.Component),
+                _e = n("pZqW"),
                 Fe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             markUserIDs: [],
                             clipUserIDs: []
-                        }, t.logger = o.k.withCategory("highlighter-pins-wrapper-component"), t.getUpdatedUserIDs = function(e, t, n, a) {
-                            var i = [];
-                            return e[Te.Self] && t && i.push(t), e[Te.Owner] && i.push(n), e[Te.Editor] && t === n && a.forEach(function(e) {
-                                return i.push(e.id)
-                            }), i
+                        }, t.getUpdatedUserIDs = function(e, t) {
+                            var n = t.channelID,
+                                a = t.data.user,
+                                i = t.userID,
+                                r = a && a.editors && a.editors.edges,
+                                s = [];
+                            return e[we.Self] && i && s.push(i), e[we.Owner] && s.push(n), e[we.Editor] && r && r.forEach(function(e) {
+                                e.node && e.node.id && s.push(e.node.id)
+                            }), s
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.fetchEditorsAndUpdateIDs()
+                        this.setUserIDs()
                     }, t.prototype.componentDidUpdate = function(e) {
-                        this.props.channelID !== e.channelID && this.fetchEditorsAndUpdateIDs()
+                        this.props.channelID !== e.channelID && this.setUserIDs()
                     }, t.prototype.render = function() {
                         return r.createElement(P.Wa, {
                             className: "highlighter-pins"
-                        }, r.createElement(Ve, {
+                        }, r.createElement(Te, {
                             channelID: this.props.channelID,
                             markUserIDs: this.state.markUserIDs,
                             clipUserIDs: this.state.clipUserIDs,
@@ -3039,49 +3043,41 @@
                             updateDownloadData: this.props.updateDownloadData,
                             activeSegment: this.props.activeSegment
                         }, this.props.children))
-                    }, t.prototype.fetchEditorsAndUpdateIDs = function() {
-                        return i.__awaiter(this, void 0, void 0, function() {
-                            var e, t = this;
-                            return i.__generator(this, function(n) {
-                                switch (n.label) {
-                                    case 0:
-                                        if (e = [], this.props.userID !== this.props.channelID) return [3, 4];
-                                        n.label = 1;
-                                    case 1:
-                                        return n.trys.push([1, 3, , 4]), [4, Object(ye.a)(this.props.channelID)];
-                                    case 2:
-                                        return e = n.sent(), [3, 4];
-                                    case 3:
-                                        return n.sent(), this.logger.warn("failed to fetch channel editors", this.props.channelID), [3, 4];
-                                    case 4:
-                                        return this.setState(function(n, a) {
-                                            var i = a.channelID,
-                                                r = a.userID;
-                                            return {
-                                                clipUserIDs: t.getUpdatedUserIDs(a.selectedClipCreators, r, i, e),
-                                                markUserIDs: t.getUpdatedUserIDs(a.selectedMarkerCreators, r, i, e)
-                                            }
-                                        }), [2]
-                                }
-                            })
+                    }, t.prototype.setUserIDs = function() {
+                        var e = this;
+                        this.setState(function(t, n) {
+                            return {
+                                clipUserIDs: e.getUpdatedUserIDs(n.selectedClipCreators, n),
+                                markUserIDs: e.getUpdatedUserIDs(n.selectedMarkerCreators, n)
+                            }
                         })
                     }, t
                 }(r.Component),
-                He = n("mZc/");
+                He = Object(g.a)(_e, {
+                    options: function(e) {
+                        return {
+                            variables: {
+                                channelID: e.channelID,
+                                includeEditors: e.channelID === e.userID
+                            }
+                        }
+                    }
+                })(Fe),
+                We = n("mZc/");
             n("L7ac");
             ! function(e) {
                 e[e.PrecisionTooltip = 0] = "PrecisionTooltip", e[e.StartSelection = 1] = "StartSelection", e[e.EndSelection = 2] = "EndSelection", e[e.UseVideoTimeButton = 3] = "UseVideoTimeButton", e[e.SelectHighlightButton = 4] = "SelectHighlightButton"
-            }(Pe || (Pe = {}));
+            }(Ve || (Ve = {}));
             var Re = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.inExperiment = o.p.experiments.getAssignment(q.b.VODColorsOfTheWind) === se.b.Variant1, n.onUpdateStartToCurrentVideoTime = function() {
                             n.setState(function(e, t) {
                                 if (null !== t.currentVideoOffset) {
-                                    var n = $(t.segment, t.currentVideoOffset);
+                                    var n = Y(t.segment, t.currentVideoOffset);
                                     return i.__assign({}, e, {
-                                        startOffset: Object(N.b)(n.startOffset),
-                                        endOffset: Object(N.b)(n.endOffset)
+                                        startOffset: Object(T.b)(n.startOffset),
+                                        endOffset: Object(T.b)(n.endOffset)
                                     })
                                 }
                             }, n.update)
@@ -3090,8 +3086,8 @@
                                 if (null !== t.currentVideoOffset) {
                                     var n = J(t.segment, t.currentVideoOffset);
                                     return i.__assign({}, e, {
-                                        startOffset: Object(N.b)(n.startOffset),
-                                        endOffset: Object(N.b)(n.endOffset)
+                                        startOffset: Object(T.b)(n.startOffset),
+                                        endOffset: Object(T.b)(n.endOffset)
                                     })
                                 }
                             }, n.update)
@@ -3110,8 +3106,8 @@
                         }, n.getTooltipLabel = function() {
                             return Object(o.d)("Use Playhead Time", "HighlighterOffsetSelector")
                         }, n.state = {
-                            startOffset: Object(N.b)(t.segment.startOffset),
-                            endOffset: Object(N.b)(t.segment.endOffset),
+                            startOffset: Object(T.b)(t.segment.startOffset),
+                            endOffset: Object(T.b)(t.segment.endOffset),
                             areOffsetsValid: !0
                         }, n
                     }
@@ -3122,8 +3118,8 @@
                             n = e.segment,
                             a = t.startOffset !== n.startOffset,
                             i = t.endOffset !== n.endOffset,
-                            r = Object(N.b)(n.startOffset),
-                            s = Object(N.b)(n.endOffset),
+                            r = Object(T.b)(n.startOffset),
+                            s = Object(T.b)(n.endOffset),
                             o = r !== this.state.startOffset,
                             l = s !== this.state.endOffset,
                             d = !1,
@@ -3137,19 +3133,19 @@
                         };
                         if (a || i) {
                             var f = this.checkOffsetsWithinBounds({
-                                startSeconds: Object(N.a)(c),
-                                endSeconds: Object(N.a)(u),
+                                startSeconds: Object(T.a)(c),
+                                endSeconds: Object(T.a)(u),
                                 startBound: n.minOffset,
                                 endBound: n.maxOffset
                             });
                             p.areOffsetsValid = f, d && f && this.props.onUpdate({
-                                startOffset: Object(N.a)(c),
-                                endOffset: Object(N.a)(u)
+                                startOffset: Object(T.a)(c),
+                                endOffset: Object(T.a)(u)
                             })
                         }
                         this.setState(p)
                     }, t.prototype.render = function() {
-                        var e = Object(N.a)(this.state.endOffset) - Object(N.a)(this.state.startOffset);
+                        var e = Object(T.a)(this.state.endOffset) - Object(T.a)(this.state.startOffset);
                         return (isNaN(e) || e < 0) && (e = 0), r.createElement(P.Wa, {
                             display: P.X.Flex,
                             justifyContent: P.Va.Start,
@@ -3160,7 +3156,7 @@
                         }, this.inExperiment ? this.renderStartInput() : this.renderLegacyStartInput(), this.inExperiment ? this.renderEndInput() : this.renderLegacyEndInput())
                     }, t.prototype.renderLegacyStartInput = function() {
                         var e = this.state.startOffset,
-                            t = !this.validClockValue(e) || Object(N.a)(e) >= this.props.segment.endOffset;
+                            t = !this.validClockValue(e) || Object(T.a)(e) >= this.props.segment.endOffset;
                         return r.createElement(P.Wa, {
                             display: P.X.Flex,
                             alignItems: P.f.Center,
@@ -3175,7 +3171,7 @@
                                     right: 2
                                 }
                             },
-                            "data-test-selector": Pe.StartSelection
+                            "data-test-selector": Ve.StartSelection
                         }, r.createElement(P.Oa, {
                             display: P.X.InlineFlex,
                             alignItems: P.f.Center,
@@ -3185,8 +3181,8 @@
                         }, r.createElement("label", null, r.createElement(P.Wa, {
                             display: P.X.InlineFlex,
                             alignItems: P.f.Center,
-                            "data-test-selector": Pe.PrecisionTooltip
-                        }, r.createElement(He.a, {
+                            "data-test-selector": Ve.PrecisionTooltip
+                        }, r.createElement(We.a, {
                             direction: P.v.BottomLeft
                         }, Object(o.d)("Your highlight may be a few seconds longer than the exact timestamps specified.", "HighlighterOffsetSelector"))), r.createElement(P.Wa, {
                             display: P.X.InlineFlex,
@@ -3194,7 +3190,7 @@
                                 right: 1
                             }
                         }, r.createElement(P.W, {
-                            type: P.Ob.Strong,
+                            type: P.Nb.Strong,
                             noWrap: !0
                         }, Object(o.d)("Start", "HighlighterOffsetSelector"))), r.createElement(P.Wa, {
                             className: "offset-selector__offset-input",
@@ -3212,11 +3208,11 @@
                         }, r.createElement(P.z, {
                             type: P.F.Hollow,
                             onClick: this.onUpdateStartToCurrentVideoTime,
-                            "data-test-selector": Pe.UseVideoTimeButton
+                            "data-test-selector": Ve.UseVideoTimeButton
                         }, Object(o.d)("Video Time", "HighlighterOffsetSelectorStart"))))
                     }, t.prototype.renderStartInput = function() {
                         var e = this.state.startOffset,
-                            t = !this.validClockValue(e) || Object(N.a)(e) >= this.props.segment.endOffset;
+                            t = !this.validClockValue(e) || Object(T.a)(e) >= this.props.segment.endOffset;
                         return r.createElement(P.Wa, {
                             display: P.X.Flex,
                             alignItems: P.f.Center,
@@ -3231,11 +3227,11 @@
                                     right: 2
                                 }
                             },
-                            "data-test-selector": Pe.StartSelection
+                            "data-test-selector": Ve.StartSelection
                         }, r.createElement(P.Oa, {
                             display: P.X.InlineFlex,
                             alignItems: P.f.Center,
-                            textAlign: P.Kb.Right
+                            textAlign: P.Jb.Right
                         }, r.createElement("label", null, r.createElement(P.Wa, {
                             className: "offset-selector__input-label",
                             display: P.X.InlineFlex,
@@ -3255,22 +3251,22 @@
                             required: !0,
                             type: P.Sa.Text,
                             value: this.state.startOffset
-                        })))), r.createElement(P.Rb, {
+                        })))), r.createElement(P.Qb, {
                             label: this.getTooltipLabel()
                         }, r.createElement(P.z, {
                             type: P.F.Hollow,
                             onClick: this.onUpdateStartToCurrentVideoTime,
                             icon: P.ob.Timer,
-                            "data-test-selector": Pe.UseVideoTimeButton
+                            "data-test-selector": Ve.UseVideoTimeButton
                         })))
                     }, t.prototype.renderLegacyEndInput = function() {
                         var e = this.state.endOffset,
-                            t = !this.validClockValue(e) || Object(N.a)(e) <= this.props.segment.startOffset;
+                            t = !this.validClockValue(e) || Object(T.a)(e) <= this.props.segment.startOffset;
                         return r.createElement(P.Wa, {
                             display: P.X.Flex,
                             alignItems: P.f.Center,
                             justifyContent: P.Va.End,
-                            "data-test-selector": Pe.EndSelection
+                            "data-test-selector": Ve.EndSelection
                         }, r.createElement(P.Oa, {
                             display: P.X.InlineFlex,
                             alignItems: P.f.Center,
@@ -3283,7 +3279,7 @@
                                 right: 1
                             }
                         }, r.createElement(P.W, {
-                            type: P.Ob.Strong,
+                            type: P.Nb.Strong,
                             noWrap: !0
                         }, Object(o.d)("End", "HighlighterOffsetSelector"))), r.createElement(P.Wa, {
                             display: P.X.InlineFlex,
@@ -3301,20 +3297,20 @@
                         }, r.createElement(P.z, {
                             type: P.F.Hollow,
                             onClick: this.onUpdateEndToCurrentVideoTime,
-                            "data-test-selector": Pe.UseVideoTimeButton
+                            "data-test-selector": Ve.UseVideoTimeButton
                         }, Object(o.d)("Video Time", "HighlighterOffsetSelectorEnd"))))
                     }, t.prototype.renderEndInput = function() {
                         var e = this.state.endOffset,
-                            t = !this.validClockValue(e) || Object(N.a)(e) <= this.props.segment.startOffset;
+                            t = !this.validClockValue(e) || Object(T.a)(e) <= this.props.segment.startOffset;
                         return r.createElement(P.Wa, {
                             display: P.X.Flex,
                             alignItems: P.f.Center,
                             justifyContent: P.Va.End,
-                            "data-test-selector": Pe.EndSelection
+                            "data-test-selector": Ve.EndSelection
                         }, r.createElement(P.Oa, {
                             display: P.X.InlineFlex,
                             alignItems: P.f.Center,
-                            textAlign: P.Kb.Right
+                            textAlign: P.Jb.Right
                         }, r.createElement("label", null, r.createElement(P.Wa, {
                             className: "offset-selector__input-label",
                             display: P.X.InlineFlex,
@@ -3334,24 +3330,24 @@
                             required: !0,
                             type: P.Sa.Text,
                             value: e
-                        })))), r.createElement(P.Rb, {
+                        })))), r.createElement(P.Qb, {
                             label: this.getTooltipLabel()
                         }, r.createElement(P.z, {
                             type: P.F.Hollow,
                             onClick: this.onUpdateEndToCurrentVideoTime,
                             icon: P.ob.Timer,
-                            "data-test-selector": Pe.UseVideoTimeButton
+                            "data-test-selector": Ve.UseVideoTimeButton
                         })))
                     }, t.prototype.validClockValue = function(e) {
-                        var t = Object(N.a)(e);
+                        var t = Object(T.a)(e);
                         return !isNaN(t)
                     }, t.prototype.canUpdate = function() {
                         if (!(this.validClockValue(this.state.startOffset) && this.validClockValue(this.state.endOffset))) return this.setState({
                             areOffsetsValid: !1
                         }), !1;
                         var e = this.props.segment,
-                            t = Object(N.a)(this.state.startOffset),
-                            n = Object(N.a)(this.state.endOffset),
+                            t = Object(T.a)(this.state.startOffset),
+                            n = Object(T.a)(this.state.endOffset),
                             a = this.checkOffsetsWithinBounds({
                                 startSeconds: t,
                                 endSeconds: n,
@@ -3365,17 +3361,17 @@
                         return !isNaN(e.startSeconds) && !isNaN(e.endSeconds) && (!(e.startSeconds < e.startBound || e.endSeconds > e.endBound) && !(e.endSeconds <= e.startSeconds))
                     }, t.prototype.update = function() {
                         this.canUpdate() && this.props.onUpdate({
-                            startOffset: Object(N.a)(this.state.startOffset),
-                            endOffset: Object(N.a)(this.state.endOffset)
+                            startOffset: Object(T.a)(this.state.startOffset),
+                            endOffset: Object(T.a)(this.state.endOffset)
                         })
                     }, t
                 }(r.Component),
-                We = n("lZCe"),
-                Me = n("ig/l"),
+                Me = n("lZCe"),
+                Le = n("ig/l"),
                 je = (n("Vt/k"), 25),
-                Le = 150,
-                Ae = 200,
-                Be = function(e) {
+                Ae = 150,
+                Be = 200,
+                Ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3386,7 +3382,7 @@
                             t.timelineRef = e
                         }, t.onWindowResize = function() {
                             var e = Date.now();
-                            t.finalizeTimer && clearTimeout(t.finalizeTimer), t.finalizeTimer = setTimeout(t.finalizeWidth, Le), e - t.resizeDebounce > Ae && (t.resizeDebounce = e, t.finalizeWidth())
+                            t.finalizeTimer && clearTimeout(t.finalizeTimer), t.finalizeTimer = setTimeout(t.finalizeWidth, Ae), e - t.resizeDebounce > Be && (t.resizeDebounce = e, t.finalizeWidth())
                         }, t.finalizeWidth = function() {
                             var e = t.timelineRef && t.timelineRef.clientWidth || 0;
                             if (e !== t.state.clientWidth && 0 !== e) {
@@ -3410,11 +3406,11 @@
                                         position: P.eb.Relative
                                     }, r.createElement("div", {
                                         className: "timeline-ruler__tick"
-                                    }), r.createElement(P.yb, {
+                                    }), r.createElement(P.xb, {
                                         className: "timeline-ruler__timestamp",
                                         color: P.O.Alt2,
                                         position: P.eb.Absolute
-                                    }, Object(N.b)(d, {
+                                    }, Object(T.b)(d, {
                                         zeroPadAll: !0
                                     }))))
                                 } else s.push(r.createElement("div", {
@@ -3453,7 +3449,7 @@
                         }))
                     }, t
                 }(r.Component),
-                Ue = function(e) {
+                Ge = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDrag = function(e) {
@@ -3470,16 +3466,16 @@
                                         return null
                                     }
                                 }, e[se.b.Variant1] = function() {
-                                    return r.createElement(Be, {
+                                    return r.createElement(Ue, {
                                         startOffset: 0,
                                         endOffset: t.props.duration
                                     })
                                 }, e),
                                 name: q.b.VODColorsOfTheWind
                             };
-                        return r.createElement(r.Fragment, null, r.createElement(Me.a, {
-                            color: Me.c.Orange,
-                            handleSize: Me.b.Small,
+                        return r.createElement(r.Fragment, null, r.createElement(Le.a, {
+                            color: Le.c.Orange,
+                            handleSize: Le.b.Small,
                             startOffset: n.startOffset,
                             endOffset: n.endOffset,
                             maxOffset: n.maxOffset,
@@ -3491,7 +3487,7 @@
                             onRightDragStart: this.props.onEndOffsetFocus,
                             onRightDragEnd: this.props.onDragEnd,
                             showTransition: this.props.showTransition
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             alignItems: P.f.Center,
                             display: P.X.Flex,
                             fullWidth: !0,
@@ -3499,15 +3495,15 @@
                             padding: {
                                 y: 3
                             },
-                            textAlign: P.Kb.Center
-                        })), r.createElement(We.a, i.__assign({}, a)))
+                            textAlign: P.Jb.Center
+                        })), r.createElement(Me.a, i.__assign({}, a)))
                     }, t
                 }(r.Component),
-                Ge = Object(X.compose)(Object(E.b)("VideoSegmentEditor", {
+                Xe = Object(X.compose)(Object(E.b)("VideoSegmentEditor", {
                     autoReportInteractive: !0
-                }))(Ue),
-                Xe = (n("f0Oh"), 250),
-                qe = function(e) {
+                }))(Ge),
+                qe = (n("f0Oh"), 250),
+                ze = function(e) {
                     function t(t) {
                         var n, a = e.call(this, t) || this;
                         a.addTransition = function() {
@@ -3520,7 +3516,7 @@
                                     a.setState({
                                         isTransitioning: !1
                                     })
-                                }, Xe)
+                                }, qe)
                             })
                         }, a.onManualInputChange = function(e) {
                             a.addTransition(), a.onOffsetChange(e)
@@ -3563,8 +3559,8 @@
                             })
                         };
                         var r = t.userID === t.channelID,
-                            s = ((n = {})[Te.Self] = !0, n);
-                        return r ? s[Te.Editor] = !0 : s[Te.Owner] = !0, a.state = {
+                            s = ((n = {})[we.Self] = !0, n);
+                        return r ? s[we.Editor] = !0 : s[we.Owner] = !0, a.state = {
                             isTransitioning: !1,
                             selectedMarkerCreators: i.__assign({}, s),
                             selectedClipCreators: i.__assign({}, s),
@@ -3597,7 +3593,7 @@
                             paused: this.props.paused,
                             activeSegment: t,
                             isDraggingSlider: this.state.isDraggingSlider
-                        }, r.createElement(Fe, {
+                        }, r.createElement(He, {
                             userID: this.props.userID,
                             channelID: this.props.channelID,
                             videoID: this.props.videoID,
@@ -3607,10 +3603,10 @@
                             requestPlayerTimeChange: this.props.requestPlayerTimeChange,
                             updateDownloadData: this.updateDownloadData,
                             activeSegment: t
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             className: "video-timeline__background",
                             border: !0
-                        }, r.createElement(Ge, {
+                        }, r.createElement(Xe, {
                             onStartOffsetFocus: this.onLeftSliderDrag,
                             onEndOffsetFocus: this.onRightSliderDrag,
                             onOffsetChange: this.onOffsetChange,
@@ -3645,7 +3641,7 @@
                                 flexDirection: P.Z.Row,
                                 justifyContent: P.Va.Start
                             }
-                        }, r.createElement(_e, {
+                        }, r.createElement(Pe, {
                             name: Object(o.d)("Markers", "VideoTimeline"),
                             description: Object(o.d)("Added by", "VideoTimeline"),
                             broadcasterDisplayName: this.props.channelDisplayName,
@@ -3663,7 +3659,7 @@
                                     top: 0
                                 }
                             }
-                        }, r.createElement(_e, {
+                        }, r.createElement(Pe, {
                             name: Object(o.d)("Clips", "VideoTimeline"),
                             description: Object(o.d)("Clipped by", "VideoTimeline"),
                             broadcasterDisplayName: this.props.channelDisplayName,
@@ -3691,11 +3687,11 @@
                         }
                     }, t
                 }(r.Component),
-                ze = Object(X.compose)(Object(E.b)("VideoTimeline", {
+                Qe = Object(X.compose)(Object(E.b)("VideoTimeline", {
                     autoReportInteractive: !0
-                }))(qe);
+                }))(ze);
 
-            function Qe(e) {
+            function Ze(e) {
                 return {
                     channel: e.channelLogin,
                     channel_id: e.channelID,
@@ -3705,10 +3701,10 @@
                 }
             }
 
-            function Ze(e) {
+            function Ke(e) {
                 var t = function(e) {
                     var t = Math.round((e.endTime.getTime() - e.startTime.getTime()) / 1e3);
-                    return i.__assign({}, Qe(e), {
+                    return i.__assign({}, Ze(e), {
                         curation_duration: t,
                         generated_video_count: e.generatedVideoIDs.length,
                         generated_video_ids: e.generatedVideoIDs.join(",")
@@ -3717,19 +3713,19 @@
                 o.o.track(D.SpadeEventType.HighlighterCurationFinish, t)
             }
 
-            function Ke() {
+            function $e() {
                 return "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".replace(/[xy]/g, function(e) {
                     var t = 16 * Math.random() | 0;
                     return ("x" === e ? t : 3 & t | 8).toString(16)
                 })
             }
-            var Ye, $e = n("8QND"),
-                Je = (n("uQjj"), 0),
-                et = -1;
+            var Ye, Je = n("8QND"),
+                et = (n("uQjj"), 0),
+                tt = -1;
             ! function(e) {
                 e[e.SourceVideoTitle = 0] = "SourceVideoTitle", e[e.SourceVideoDate = 1] = "SourceVideoDate", e[e.SourceVideoViews = 2] = "SourceVideoViews", e[e.SourceVideoGame = 3] = "SourceVideoGame"
             }(Ye || (Ye = {}));
-            var tt, nt = function(e) {
+            var nt, at = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         if (n.state = {
@@ -3739,7 +3735,7 @@
                                     endOffset: 0
                                 },
                                 lastVideoOffset: null,
-                                requestedPlayerOffset: Je,
+                                requestedPlayerOffset: et,
                                 shouldPlayerPause: !1,
                                 videoSegmentQueue: [],
                                 userMadeChanges: !1
@@ -3748,7 +3744,7 @@
                                     a = n.get(C.a.Start),
                                     i = n.get(C.a.End),
                                     r = n.get(C.b.VideoStartTime);
-                                return (t = {})[C.a.TrackingID] = n.get(C.a.TrackingID), t[C.a.GameName] = n.get(C.a.GameName), t[C.a.GameID] = n.get(C.a.GameID), t[C.a.Title] = n.get(C.a.Title), t[C.a.Start] = null !== a ? Number(a) : null, t[C.a.End] = null !== i ? Number(i) : null, t[C.b.VideoStartTime] = r ? Object(b.a)(r) : null, t
+                                return (t = {})[C.a.TrackingID] = n.get(C.a.TrackingID), t[C.a.GameName] = n.get(C.a.GameName), t[C.a.GameID] = n.get(C.a.GameID), t[C.a.Title] = n.get(C.a.Title), t[C.a.Start] = null !== a ? Number(a) : null, t[C.a.End] = null !== i ? Number(i) : null, t[C.b.VideoStartTime] = r ? Object(y.a)(r) : null, t
                             }(window.location.search), n.hasConsumedParams = !1, n.onChangeVODClick = function() {
                                 n.props.showSelectVODModal()
                             }, n.onAddNewHighlight = function() {
@@ -3757,14 +3753,14 @@
                                     if (!t) return e;
                                     var a = n.getSegmentByID(n.state.activeID),
                                         r = K(t.lengthSeconds),
-                                        s = Y(t.lengthSeconds);
+                                        s = $(t.lengthSeconds);
                                     a && Math.ceil(a.endOffsetSeconds) !== t.lengthSeconds && (r = Math.ceil(a.endOffsetSeconds), s = t.lengthSeconds);
                                     var o = {};
                                     a && a.metadata.game && (o = {
                                         game: a.metadata.game
                                     });
                                     var l = {
-                                            tempID: Ke(),
+                                            tempID: $e(),
                                             startOffsetSeconds: r,
                                             endOffsetSeconds: s,
                                             sourceVideoDetails: {
@@ -3812,7 +3808,7 @@
                                 if (t.video) {
                                     var a = n.curationStartTime || new Date,
                                         i = t.video.owner;
-                                    Ze({
+                                    Ke({
                                         channelLogin: i ? i.login : null,
                                         channelID: i ? i.id : null,
                                         generatedVideoIDs: e,
@@ -3882,7 +3878,7 @@
                                     shouldPlayerPause: !0,
                                     lastVideoOffset: t
                                 }) : n.state.requestedPlayerOffset === t && n.setState({
-                                    requestedPlayerOffset: et
+                                    requestedPlayerOffset: tt
                                 })
                             }, n.onChangeActiveSegment = function(e) {
                                 var t = n.getSegmentByID(e);
@@ -3958,7 +3954,7 @@
                             var a = n.videoSegmentFromSource(t.data.video);
                             n.state.currentSegmentOffsets = {
                                 startOffset: K(t.data.video.lengthSeconds),
-                                endOffset: Y(t.data.video.lengthSeconds)
+                                endOffset: $(t.data.video.lengthSeconds)
                             }, n.state.videoSegmentQueue = [a];
                             var r = n.paramOverrides[C.b.VideoStartTime] || n.paramOverrides[C.a.Start] || 0;
                             n.state.requestedPlayerOffset = r < t.data.video.lengthSeconds ? r : 0, n.state.activeID = a.tempID
@@ -3984,7 +3980,7 @@
                                 var a = i.__assign({}, n, {
                                         currentSegmentOffsets: {
                                             startOffset: K(e.data.video.lengthSeconds),
-                                            endOffset: Y(e.data.video.lengthSeconds)
+                                            endOffset: $(e.data.video.lengthSeconds)
                                         }
                                     }),
                                     r = t.props.data.video && e.data.video.id !== t.props.data.video.id,
@@ -4011,7 +4007,7 @@
                             this.curationStartTime = new Date;
                             var t = e.video.owner;
                             ! function(e) {
-                                o.o.track(D.SpadeEventType.HighlighterCurationStart, Qe(e))
+                                o.o.track(D.SpadeEventType.HighlighterCurationStart, Ze(e))
                             }({
                                 channelID: t ? t.id : null,
                                 channelLogin: t ? t.login : null,
@@ -4030,7 +4026,7 @@
                         if (!this.props.data.video || this.props.data.error || !this.props.data.video.owner) return r.createElement(l.a, {
                             message: Object(o.d)("Error loading video data. Please try again later.", "HighlighterPageComponent")
                         });
-                        if (this.props.data.video.broadcastType !== y.a.Archive) return r.createElement(l.a, {
+                        if (this.props.data.video.broadcastType !== b.a.Archive) return r.createElement(l.a, {
                             message: Object(o.d)("You can only highlight past broadcasts.", "HighlighterPageComponent")
                         });
                         if (this.props.data.video.owner && this.props.data.video.owner.login !== e) return r.createElement(l.a, {
@@ -4044,7 +4040,7 @@
                             content: n
                         }, r.createElement(h.b, null, r.createElement(P.mb, {
                             centered: !0
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             alignItems: P.f.Stretch,
                             background: P.r.Alt,
                             className: "highlighter-page",
@@ -4071,7 +4067,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             fullHeight: !0,
                             fullWidth: !0,
                             elevation: 1,
@@ -4101,7 +4097,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             elevation: 1,
                             background: P.r.Base,
                             fullHeight: !0
@@ -4114,7 +4110,7 @@
                             fontSize: P.Ba.Size5
                         }, Object(o.d)("Source Video", "HighlighterPageComponent"))), r.createElement(P.o, {
                             ratio: P.p.Aspect16x9
-                        }, r.createElement(w, {
+                        }, r.createElement(I, {
                             videoID: this.props.data.video.id,
                             paused: this.state.shouldPlayerPause,
                             onVideoTimeChange: this.onPlayerTimeChange,
@@ -4127,7 +4123,7 @@
                             margin: {
                                 y: 4
                             }
-                        }, r.createElement(ze, {
+                        }, r.createElement(Qe, {
                             activeSegment: this.getSegmentByID(this.state.activeID),
                             onStartOffsetFocus: this.onTimelineStartOffsetFocus,
                             onEndOffsetFocus: this.onTimelineEndOffsetFocus,
@@ -4161,13 +4157,13 @@
                             }
                         }, r.createElement(P.W, {
                             "data-test-selector": Ye.SourceVideoDate,
-                            type: P.Ob.Span
+                            type: P.Nb.Span
                         }, Object(o.c)(new Date(e.publishedAt), "medium"))), e.game && r.createElement(P.Wa, {
                             display: P.X.Flex,
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             padding: {
                                 right: .5
                             },
@@ -4185,7 +4181,7 @@
                             margin: {
                                 right: 1
                             }
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             padding: {
                                 right: .5
                             },
@@ -4216,14 +4212,14 @@
                         }
                     }, t.prototype.videoSegmentFromSource = function(e) {
                         return {
-                            tempID: Ke(),
+                            tempID: $e(),
                             sourceVideoDetails: {
                                 id: e.id,
                                 lengthSeconds: e.lengthSeconds,
                                 title: e.title
                             },
                             startOffsetSeconds: K(e.lengthSeconds),
-                            endOffsetSeconds: Y(e.lengthSeconds),
+                            endOffsetSeconds: $(e.lengthSeconds),
                             metadata: this.formatSourceVideoFields(e)
                         }
                     }, t.prototype.discardChangesMessage = function() {
@@ -4240,7 +4236,7 @@
                         }), e
                     }, t
                 }(r.Component),
-                at = Object(f.compose)(Object(g.a)($e, {
+                it = Object(f.compose)(Object(g.a)(Je, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4251,20 +4247,29 @@
                 }), Object(E.b)("HighlighterPage", {
                     destination: k.a.VideoManagerHighlighter
                 }), Object(v.a)({
-                    location: D.PageviewLocation.VideoManagerHighlighter
-                }))(nt),
-                it = n("cZKs"),
-                rt = n("YJDT");
+                    location: D.PageviewLocation.VideoManagerHighlighter,
+                    properties: function(e) {
+                        var t = null;
+                        return e.data.video && e.data.video.owner && e.data.video.owner.id && (t = Number(e.data.video.owner.id)), {
+                            channel_id: t
+                        }
+                    },
+                    skip: function(e) {
+                        return e.data.loading
+                    }
+                }))(at),
+                rt = n("cZKs"),
+                st = n("YJDT");
             ! function(e) {
                 e.ARCHIVE = "ARCHIVE", e.HIGHLIGHT = "HIGHLIGHT", e.PAST_PREMIERE = "PAST_PREMIERE", e.PREMIERE_UPLOAD = "PREMIERE_UPLOAD", e.UPLOAD = "UPLOAD"
-            }(tt || (tt = {}));
-            var st, ot = n("o4ss");
+            }(nt || (nt = {}));
+            var ot, lt = n("o4ss");
             n("al25");
             ! function(e) {
                 e[e.VideoCard = 0] = "VideoCard"
-            }(st || (st = {}));
-            var lt = 200,
-                dt = function(e) {
+            }(ot || (ot = {}));
+            var dt = 200,
+                ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.onLoadMoreHandler = function() {
@@ -4274,12 +4279,12 @@
                             if (!n) return Promise.reject(new Error("Encountered unexpected null value for last video, cannot load more."));
                             var a = n.cursor;
                             return t.props.data.fetchMore({
-                                query: ot,
+                                query: lt,
                                 variables: {
                                     creatorLogin: t.props.channelName,
                                     after: a
                                 },
-                                updateQuery: ct
+                                updateQuery: ut
                             }).then(function() {})
                         }, t.onSearchInputChangeHandler = function(e) {
                             var n = e.currentTarget.value;
@@ -4306,7 +4311,7 @@
                                         }
                                     })
                                 })
-                            }, lt);
+                            }, dt);
                             t.setState({
                                 searchChangeTimeoutID: a
                             })
@@ -4321,7 +4326,7 @@
                             delay: P.j.Medium,
                             duration: P.k.Medium,
                             enabled: !0
-                        }, r.createElement(P.yb, {
+                        }, r.createElement(P.xb, {
                             background: P.r.Base,
                             className: "highlighter-vod-selector",
                             display: P.X.Flex,
@@ -4353,7 +4358,7 @@
                         }, this.renderVideos(), r.createElement(h.a, {
                             enabled: e,
                             loadMore: this.onLoadMoreHandler
-                        }))), r.createElement(it.a, {
+                        }))), r.createElement(rt.a, {
                             closeOnBackdropClick: !0
                         })))
                     }, t.prototype.renderVideos = function() {
@@ -4369,16 +4374,16 @@
                         var t = this.props.data.user.searchVideos.edges && this.props.data.user.searchVideos.edges.map(function(e) {
                             return e && e.node
                         }).filter(function(e) {
-                            return null !== e && e.broadcastType === tt.ARCHIVE
+                            return null !== e && e.broadcastType === nt.ARCHIVE
                         });
                         return t && 0 !== t.length ? t.map(function(t, n) {
                             var a = !(!t || t.id !== e.props.currentVideoID);
                             return r.createElement(P.Ta, {
                                 key: n,
                                 onClick: e.onVideoClick.bind(e, t),
-                                "data-test-selector": st.VideoCard,
+                                "data-test-selector": ot.VideoCard,
                                 disabled: a
-                            }, r.createElement(P.yb, {
+                            }, r.createElement(P.xb, {
                                 alignItems: P.f.Center,
                                 display: P.X.Flex,
                                 flexDirection: P.Z.Row,
@@ -4394,7 +4399,7 @@
                                     right: .5
                                 },
                                 ellipsis: !0
-                            }, r.createElement(rt.a, {
+                            }, r.createElement(st.a, {
                                 video: t,
                                 selected: a
                             }))))
@@ -4404,7 +4409,7 @@
                         }, Object(o.d)("No results found.", "HighlighterVODSelectModal"))
                     }, t
                 }(r.Component),
-                ct = function(e, t) {
+                ut = function(e, t) {
                     if (!t.fetchMoreResult) return e;
                     var n = t.fetchMoreResult;
                     if (!n.user || !n.user.searchVideos) return e;
@@ -4414,13 +4419,13 @@
                     return {
                         user: i.__assign({}, n.user, {
                             searchVideos: i.__assign({}, n.user.searchVideos, {
-                                edges: Object(T.c)(e.user.searchVideos.edges, a)
+                                edges: Object(N.c)(e.user.searchVideos.edges, a)
                             })
                         }),
                         collection: e.collection
                     }
                 },
-                ut = Object(g.a)(ot, {
+                pt = Object(g.a)(lt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -4428,16 +4433,16 @@
                             }
                         }
                     }
-                })(dt);
-            var pt = Object(s.connect)(null, function(e) {
+                })(ct);
+            var ft = Object(s.connect)(null, function(e) {
                 return Object(f.bindActionCreators)({
                     closeModal: c.c
                 }, e)
-            })(ut);
-            var ft = Object(s.connect)(null, function(e, t) {
+            })(pt);
+            var mt = Object(s.connect)(null, function(e, t) {
                 return {
                     showSelectVODModal: function() {
-                        e(Object(c.d)(pt, {
+                        e(Object(c.d)(ft, {
                             channelName: t.match.params.channelName,
                             currentVideoID: t.match.params.videoID
                         }))
@@ -4453,13 +4458,13 @@
                 }, function(t) {
                     var n = t.loading,
                         a = t.permitted;
-                    return n || a ? r.createElement(at, i.__assign({}, e)) : r.createElement(l.a, {
+                    return n || a ? r.createElement(it, i.__assign({}, e)) : r.createElement(l.a, {
                         message: Object(o.d)("Something went wrong. Please try again.", "HighlighterErrorPage")
                     })
                 })
             });
             n.d(t, "HighlighterPage", function() {
-                return ft
+                return mt
             })
         },
         hudZ: function(e, t, n) {},
@@ -4743,8 +4748,8 @@
                         margin: {
                             bottom: 1
                         },
-                        zIndex: u.bc.Above
-                    }, this.props.popover))), l.createElement(u.yb, {
+                        zIndex: u.ac.Above
+                    }, this.props.popover))), l.createElement(u.xb, {
                         className: n,
                         fullWidth: !0,
                         display: u.X.Flex,
@@ -4811,26 +4816,6 @@
         },
         lBPO: function(e, t, n) {},
         lMdv: function(e, t, n) {},
-        lbyP: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return r
-            });
-            var a = n("mrSG"),
-                i = n("b6Yk"),
-                r = function(e) {
-                    return a.__awaiter(void 0, void 0, Promise, function() {
-                        return a.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, i.a.getOrThrow("https://api.twitch.tv/v5/permissions/channels/" + e + "/editors")];
-                                case 1:
-                                    return [2, t.sent().body.editors || []]
-                            }
-                        })
-                    })
-                }
-        },
         "mZc/": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
@@ -4859,13 +4844,13 @@
                         return i.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, i.createElement(r.yb, {
+                        }, i.createElement(r.xb, {
                             display: r.X.Flex,
                             margin: {
                                 x: 1
                             },
                             position: r.eb.Relative
-                        }, i.createElement(r.yb, {
+                        }, i.createElement(r.xb, {
                             className: "hoverable-icon",
                             display: r.X.InlineFlex,
                             color: r.O.Alt2,
@@ -5377,6 +5362,173 @@
             e.exports = n
         },
         "op9+": function(e, t, n) {},
+        pZqW: function(e, t) {
+            var n = {
+                kind: "Document",
+                definitions: [{
+                    kind: "OperationDefinition",
+                    operation: "query",
+                    name: {
+                        kind: "Name",
+                        value: "HighlighterEditors"
+                    },
+                    variableDefinitions: [{
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "channelID"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "ID"
+                                }
+                            }
+                        }
+                    }, {
+                        kind: "VariableDefinition",
+                        variable: {
+                            kind: "Variable",
+                            name: {
+                                kind: "Name",
+                                value: "includeEditors"
+                            }
+                        },
+                        type: {
+                            kind: "NonNullType",
+                            type: {
+                                kind: "NamedType",
+                                name: {
+                                    kind: "Name",
+                                    value: "Boolean"
+                                }
+                            }
+                        }
+                    }],
+                    directives: [],
+                    selectionSet: {
+                        kind: "SelectionSet",
+                        selections: [{
+                            kind: "Field",
+                            name: {
+                                kind: "Name",
+                                value: "user"
+                            },
+                            arguments: [{
+                                kind: "Argument",
+                                name: {
+                                    kind: "Name",
+                                    value: "id"
+                                },
+                                value: {
+                                    kind: "Variable",
+                                    name: {
+                                        kind: "Name",
+                                        value: "channelID"
+                                    }
+                                }
+                            }],
+                            directives: [],
+                            selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [{
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "id"
+                                    },
+                                    arguments: [],
+                                    directives: []
+                                }, {
+                                    kind: "Field",
+                                    name: {
+                                        kind: "Name",
+                                        value: "editors"
+                                    },
+                                    arguments: [],
+                                    directives: [{
+                                        kind: "Directive",
+                                        name: {
+                                            kind: "Name",
+                                            value: "include"
+                                        },
+                                        arguments: [{
+                                            kind: "Argument",
+                                            name: {
+                                                kind: "Name",
+                                                value: "if"
+                                            },
+                                            value: {
+                                                kind: "Variable",
+                                                name: {
+                                                    kind: "Name",
+                                                    value: "includeEditors"
+                                                }
+                                            }
+                                        }]
+                                    }],
+                                    selectionSet: {
+                                        kind: "SelectionSet",
+                                        selections: [{
+                                            kind: "Field",
+                                            name: {
+                                                kind: "Name",
+                                                value: "edges"
+                                            },
+                                            arguments: [],
+                                            directives: [],
+                                            selectionSet: {
+                                                kind: "SelectionSet",
+                                                selections: [{
+                                                    kind: "Field",
+                                                    name: {
+                                                        kind: "Name",
+                                                        value: "node"
+                                                    },
+                                                    arguments: [],
+                                                    directives: [],
+                                                    selectionSet: {
+                                                        kind: "SelectionSet",
+                                                        selections: [{
+                                                            kind: "Field",
+                                                            name: {
+                                                                kind: "Name",
+                                                                value: "id"
+                                                            },
+                                                            arguments: [],
+                                                            directives: []
+                                                        }]
+                                                    }
+                                                }]
+                                            }
+                                        }]
+                                    }
+                                }]
+                            }
+                        }]
+                    }
+                }],
+                loc: {
+                    start: 0,
+                    end: 163
+                }
+            };
+            n.loc.source = {
+                body: "query HighlighterEditors($channelID: ID! $includeEditors: Boolean!) {\nuser(id: $channelID) {\nid\neditors @include(if: $includeEditors) {\nedges {\nnode {\nid\n}\n}\n}\n}\n}",
+                name: "GraphQL request",
+                locationOffset: {
+                    line: 1,
+                    column: 1
+                }
+            };
+            e.exports = n
+        },
         tK6h: function(e, t, n) {},
         uAdw: function(e, t, n) {},
         uQjj: function(e, t, n) {},
@@ -5441,7 +5593,7 @@
                         fullWidth: !0,
                         overflow: o.Za.Hidden
                     }, i.createElement(o.W, {
-                        type: o.Ob.H3,
+                        type: o.Nb.H3,
                         fontSize: o.Ba.Size6,
                         title: e.video.title,
                         ellipsis: !0
@@ -5450,7 +5602,7 @@
                     }, t)))
                 },
                 d = function(e) {
-                    return e ? i.createElement(o.yb, {
+                    return e ? i.createElement(o.xb, {
                         background: o.r.Overlay,
                         attachTop: !0,
                         attachLeft: !0,

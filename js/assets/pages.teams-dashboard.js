@@ -39,7 +39,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: o.bc.Above
+                            zIndex: o.ac.Above
                         }, a.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -120,7 +120,7 @@
                 if (!(r instanceof n.Source)) throw new TypeError("Must provide Source. Received: " + String(r));
                 return function(e) {
                     var t = e.token;
-                    Z(e, o.TokenKind.SOF);
+                    J(e, o.TokenKind.SOF);
                     var r = [];
                     do {
                         r.push(u(e))
@@ -134,15 +134,15 @@
             }, t.parseValue = function(e, t) {
                 var r = "string" == typeof e ? new n.Source(e) : e,
                     a = (0, o.createLexer)(r, t || {});
-                Z(a, o.TokenKind.SOF);
+                J(a, o.TokenKind.SOF);
                 var i = T(a, !1);
-                return Z(a, o.TokenKind.EOF), i
+                return J(a, o.TokenKind.EOF), i
             }, t.parseType = function(e, t) {
                 var r = "string" == typeof e ? new n.Source(e) : e,
                     a = (0, o.createLexer)(r, t || {});
-                Z(a, o.TokenKind.SOF);
+                J(a, o.TokenKind.SOF);
                 var i = N(a);
-                return Z(a, o.TokenKind.EOF), i
+                return J(a, o.TokenKind.EOF), i
             }, t.parseConstValue = j, t.parseTypeReference = N, t.parseNamedType = w;
             var n = r("k84H"),
                 a = r("PUII"),
@@ -151,7 +151,7 @@
                 s = r("R1IW");
 
             function c(e) {
-                var t = Z(e, o.TokenKind.NAME);
+                var t = J(e, o.TokenKind.NAME);
                 return {
                     kind: i.NAME,
                     value: t.value,
@@ -180,7 +180,7 @@
                     if (Y(e, o.TokenKind.BRACE_L)) return l(e);
                     if (A(e)) return I(e)
                 }
-                throw q(e)
+                throw Q(e)
             }
 
             function l(e) {
@@ -192,11 +192,11 @@
                     case "fragment":
                         return function(e) {
                             var t = e.token;
-                            if (J(e, "fragment"), e.options.experimentalFragmentVariables) return {
+                            if (Z(e, "fragment"), e.options.experimentalFragmentVariables) return {
                                 kind: i.FRAGMENT_DEFINITION,
                                 name: E(e),
                                 variableDefinitions: h(e),
-                                typeCondition: (J(e, "on"), w(e)),
+                                typeCondition: (Z(e, "on"), w(e)),
                                 directives: C(e, !1),
                                 selectionSet: p(e),
                                 loc: H(e, t)
@@ -204,14 +204,14 @@
                             return {
                                 kind: i.FRAGMENT_DEFINITION,
                                 name: E(e),
-                                typeCondition: (J(e, "on"), w(e)),
+                                typeCondition: (Z(e, "on"), w(e)),
                                 directives: C(e, !1),
                                 selectionSet: p(e),
                                 loc: H(e, t)
                             }
                         }(e)
                 } else if (Y(e, o.TokenKind.BRACE_L)) return d(e);
-                throw q(e)
+                throw Q(e)
             }
 
             function d(e) {
@@ -239,7 +239,7 @@
             }
 
             function m(e) {
-                var t = Z(e, o.TokenKind.NAME);
+                var t = J(e, o.TokenKind.NAME);
                 switch (t.value) {
                     case "query":
                         return "query";
@@ -248,11 +248,11 @@
                     case "subscription":
                         return "subscription"
                 }
-                throw q(e, t)
+                throw Q(e, t)
             }
 
             function h(e) {
-                return Y(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, f, o.TokenKind.PAREN_R) : []
+                return Y(e, o.TokenKind.PAREN_L) ? q(e, o.TokenKind.PAREN_L, f, o.TokenKind.PAREN_R) : []
             }
 
             function f(e) {
@@ -260,7 +260,7 @@
                 return {
                     kind: i.VARIABLE_DEFINITION,
                     variable: b(e),
-                    type: (Z(e, o.TokenKind.COLON), N(e)),
+                    type: (J(e, o.TokenKind.COLON), N(e)),
                     defaultValue: X(e, o.TokenKind.EQUALS) ? T(e, !0) : void 0,
                     loc: H(e, t)
                 }
@@ -268,7 +268,7 @@
 
             function b(e) {
                 var t = e.token;
-                return Z(e, o.TokenKind.DOLLAR), {
+                return J(e, o.TokenKind.DOLLAR), {
                     kind: i.VARIABLE,
                     name: c(e),
                     loc: H(e, t)
@@ -279,7 +279,7 @@
                 var t = e.token;
                 return {
                     kind: i.SELECTION_SET,
-                    selections: Q(e, o.TokenKind.BRACE_L, g, o.TokenKind.BRACE_R),
+                    selections: q(e, o.TokenKind.BRACE_L, g, o.TokenKind.BRACE_R),
                     loc: H(e, t)
                 }
             }
@@ -287,7 +287,7 @@
             function g(e) {
                 return Y(e, o.TokenKind.SPREAD) ? function(e) {
                     var t = e.token;
-                    if (Z(e, o.TokenKind.SPREAD), Y(e, o.TokenKind.NAME) && "on" !== e.token.value) return {
+                    if (J(e, o.TokenKind.SPREAD), Y(e, o.TokenKind.NAME) && "on" !== e.token.value) return {
                         kind: i.FRAGMENT_SPREAD,
                         name: E(e),
                         directives: C(e, !1),
@@ -322,7 +322,7 @@
 
             function v(e, t) {
                 var r = t ? O : y;
-                return Y(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, r, o.TokenKind.PAREN_R) : []
+                return Y(e, o.TokenKind.PAREN_L) ? q(e, o.TokenKind.PAREN_L, r, o.TokenKind.PAREN_R) : []
             }
 
             function y(e) {
@@ -330,7 +330,7 @@
                 return {
                     kind: i.ARGUMENT,
                     name: c(e),
-                    value: (Z(e, o.TokenKind.COLON), T(e, !1)),
+                    value: (J(e, o.TokenKind.COLON), T(e, !1)),
                     loc: H(e, t)
                 }
             }
@@ -340,13 +340,13 @@
                 return {
                     kind: i.ARGUMENT,
                     name: c(e),
-                    value: (Z(e, o.TokenKind.COLON), j(e)),
+                    value: (J(e, o.TokenKind.COLON), j(e)),
                     loc: H(e, t)
                 }
             }
 
             function E(e) {
-                if ("on" === e.token.value) throw q(e);
+                if ("on" === e.token.value) throw Q(e);
                 return c(e)
             }
 
@@ -360,7 +360,7 @@
                             return {
                                 kind: i.LIST,
                                 values: function(e, t, r, n) {
-                                    Z(e, t);
+                                    J(e, t);
                                     var a = [];
                                     for (; !X(e, n);) a.push(r(e));
                                     return a
@@ -371,7 +371,7 @@
                     case o.TokenKind.BRACE_L:
                         return function(e, t) {
                             var r = e.token;
-                            Z(e, o.TokenKind.BRACE_L);
+                            J(e, o.TokenKind.BRACE_L);
                             var n = [];
                             for (; !X(e, o.TokenKind.BRACE_R);) n.push(k(e, t));
                             return {
@@ -411,7 +411,7 @@
                     case o.TokenKind.DOLLAR:
                         if (!t) return b(e)
                 }
-                throw q(e)
+                throw Q(e)
             }
 
             function D(e) {
@@ -437,7 +437,7 @@
                 return {
                     kind: i.OBJECT_FIELD,
                     name: c(e),
-                    value: (Z(e, o.TokenKind.COLON), T(e, t)),
+                    value: (J(e, o.TokenKind.COLON), T(e, t)),
                     loc: H(e, r)
                 }
             }
@@ -449,7 +449,7 @@
 
             function S(e, t) {
                 var r = e.token;
-                return Z(e, o.TokenKind.AT), {
+                return J(e, o.TokenKind.AT), {
                     kind: i.DIRECTIVE,
                     name: c(e),
                     arguments: v(e, t),
@@ -460,7 +460,7 @@
             function N(e) {
                 var t = e.token,
                     r = void 0;
-                return X(e, o.TokenKind.BRACKET_L) ? (r = N(e), Z(e, o.TokenKind.BRACKET_R), r = {
+                return X(e, o.TokenKind.BRACKET_L) ? (r = N(e), J(e, o.TokenKind.BRACKET_R), r = {
                     kind: i.LIST_TYPE,
                     type: r,
                     loc: H(e, t)
@@ -486,9 +486,9 @@
                     case "schema":
                         return function(e) {
                             var t = e.token;
-                            J(e, "schema");
+                            Z(e, "schema");
                             var r = C(e, !0),
-                                n = Q(e, o.TokenKind.BRACE_L, R, o.TokenKind.BRACE_R);
+                                n = q(e, o.TokenKind.BRACE_L, R, o.TokenKind.BRACE_R);
                             return {
                                 kind: i.SCHEMA_DEFINITION,
                                 directives: r,
@@ -500,7 +500,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            J(e, "scalar");
+                            Z(e, "scalar");
                             var n = c(e),
                                 a = C(e, !0);
                             return {
@@ -515,7 +515,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            J(e, "type");
+                            Z(e, "type");
                             var n = c(e),
                                 a = M(e),
                                 o = C(e, !0),
@@ -534,7 +534,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            J(e, "interface");
+                            Z(e, "interface");
                             var n = c(e),
                                 a = C(e, !0),
                                 o = P(e);
@@ -551,7 +551,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            J(e, "union");
+                            Z(e, "union");
                             var n = c(e),
                                 a = C(e, !0),
                                 o = U(e);
@@ -568,7 +568,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            J(e, "enum");
+                            Z(e, "enum");
                             var n = c(e),
                                 a = C(e, !0),
                                 o = W(e);
@@ -585,7 +585,7 @@
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            J(e, "input");
+                            Z(e, "input");
                             var n = c(e),
                                 a = C(e, !0),
                                 o = K(e);
@@ -605,10 +605,10 @@
                                 case "scalar":
                                     return function(e) {
                                         var t = e.token;
-                                        J(e, "extend"), J(e, "scalar");
+                                        Z(e, "extend"), Z(e, "scalar");
                                         var r = c(e),
                                             n = C(e, !0);
-                                        if (0 === n.length) throw q(e);
+                                        if (0 === n.length) throw Q(e);
                                         return {
                                             kind: i.SCALAR_TYPE_EXTENSION,
                                             name: r,
@@ -619,12 +619,12 @@
                                 case "type":
                                     return function(e) {
                                         var t = e.token;
-                                        J(e, "extend"), J(e, "type");
+                                        Z(e, "extend"), Z(e, "type");
                                         var r = c(e),
                                             n = M(e),
                                             a = C(e, !0),
                                             o = P(e);
-                                        if (0 === n.length && 0 === a.length && 0 === o.length) throw q(e);
+                                        if (0 === n.length && 0 === a.length && 0 === o.length) throw Q(e);
                                         return {
                                             kind: i.OBJECT_TYPE_EXTENSION,
                                             name: r,
@@ -637,11 +637,11 @@
                                 case "interface":
                                     return function(e) {
                                         var t = e.token;
-                                        J(e, "extend"), J(e, "interface");
+                                        Z(e, "extend"), Z(e, "interface");
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = P(e);
-                                        if (0 === n.length && 0 === a.length) throw q(e);
+                                        if (0 === n.length && 0 === a.length) throw Q(e);
                                         return {
                                             kind: i.INTERFACE_TYPE_EXTENSION,
                                             name: r,
@@ -653,11 +653,11 @@
                                 case "union":
                                     return function(e) {
                                         var t = e.token;
-                                        J(e, "extend"), J(e, "union");
+                                        Z(e, "extend"), Z(e, "union");
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = U(e);
-                                        if (0 === n.length && 0 === a.length) throw q(e);
+                                        if (0 === n.length && 0 === a.length) throw Q(e);
                                         return {
                                             kind: i.UNION_TYPE_EXTENSION,
                                             name: r,
@@ -669,11 +669,11 @@
                                 case "enum":
                                     return function(e) {
                                         var t = e.token;
-                                        J(e, "extend"), J(e, "enum");
+                                        Z(e, "extend"), Z(e, "enum");
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = W(e);
-                                        if (0 === n.length && 0 === a.length) throw q(e);
+                                        if (0 === n.length && 0 === a.length) throw Q(e);
                                         return {
                                             kind: i.ENUM_TYPE_EXTENSION,
                                             name: r,
@@ -685,11 +685,11 @@
                                 case "input":
                                     return function(e) {
                                         var t = e.token;
-                                        J(e, "extend"), J(e, "input");
+                                        Z(e, "extend"), Z(e, "input");
                                         var r = c(e),
                                             n = C(e, !0),
                                             a = K(e);
-                                        if (0 === n.length && 0 === a.length) throw q(e);
+                                        if (0 === n.length && 0 === a.length) throw Q(e);
                                         return {
                                             kind: i.INPUT_OBJECT_TYPE_EXTENSION,
                                             name: r,
@@ -699,16 +699,16 @@
                                         }
                                     }(e)
                             }
-                            throw q(e, t)
+                            throw Q(e, t)
                         }(e);
                     case "directive":
                         return function(e) {
                             var t = e.token,
                                 r = L(e);
-                            J(e, "directive"), Z(e, o.TokenKind.AT);
+                            Z(e, "directive"), J(e, o.TokenKind.AT);
                             var n = c(e),
-                                a = B(e);
-                            J(e, "on");
+                                a = x(e);
+                            Z(e, "on");
                             var s = function(e) {
                                 X(e, o.TokenKind.PIPE);
                                 var t = [];
@@ -727,7 +727,7 @@
                             }
                         }(e)
                 }
-                throw q(e, t)
+                throw Q(e, t)
             }
 
             function A(e) {
@@ -741,7 +741,7 @@
             function R(e) {
                 var t = e.token,
                     r = m(e);
-                Z(e, o.TokenKind.COLON);
+                J(e, o.TokenKind.COLON);
                 var n = w(e);
                 return {
                     kind: i.OPERATION_TYPE_DEFINITION,
@@ -763,15 +763,15 @@
             }
 
             function P(e) {
-                return Y(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, F, o.TokenKind.BRACE_R) : []
+                return Y(e, o.TokenKind.BRACE_L) ? q(e, o.TokenKind.BRACE_L, F, o.TokenKind.BRACE_R) : []
             }
 
             function F(e) {
                 var t = e.token,
                     r = L(e),
                     n = c(e),
-                    a = B(e);
-                Z(e, o.TokenKind.COLON);
+                    a = x(e);
+                J(e, o.TokenKind.COLON);
                 var s = N(e),
                     u = C(e, !0);
                 return {
@@ -785,15 +785,15 @@
                 }
             }
 
-            function B(e) {
-                return Y(e, o.TokenKind.PAREN_L) ? Q(e, o.TokenKind.PAREN_L, x, o.TokenKind.PAREN_R) : []
+            function x(e) {
+                return Y(e, o.TokenKind.PAREN_L) ? q(e, o.TokenKind.PAREN_L, B, o.TokenKind.PAREN_R) : []
             }
 
-            function x(e) {
+            function B(e) {
                 var t = e.token,
                     r = L(e),
                     n = c(e);
-                Z(e, o.TokenKind.COLON);
+                J(e, o.TokenKind.COLON);
                 var a = N(e),
                     s = void 0;
                 X(e, o.TokenKind.EQUALS) && (s = j(e));
@@ -821,7 +821,7 @@
             }
 
             function W(e) {
-                return Y(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, G, o.TokenKind.BRACE_R) : []
+                return Y(e, o.TokenKind.BRACE_L) ? q(e, o.TokenKind.BRACE_L, G, o.TokenKind.BRACE_R) : []
             }
 
             function G(e) {
@@ -839,14 +839,14 @@
             }
 
             function K(e) {
-                return Y(e, o.TokenKind.BRACE_L) ? Q(e, o.TokenKind.BRACE_L, x, o.TokenKind.BRACE_R) : []
+                return Y(e, o.TokenKind.BRACE_L) ? q(e, o.TokenKind.BRACE_L, B, o.TokenKind.BRACE_R) : []
             }
 
             function V(e) {
                 var t = e.token,
                     r = c(e);
                 if (s.DirectiveLocation.hasOwnProperty(r.value)) return r;
-                throw q(e, t)
+                throw Q(e, t)
             }
 
             function H(e, t) {
@@ -866,25 +866,25 @@
                 return r && e.advance(), r
             }
 
-            function Z(e, t) {
+            function J(e, t) {
                 var r = e.token;
                 if (r.kind === t) return e.advance(), r;
                 throw (0, a.syntaxError)(e.source, r.start, "Expected " + t + ", found " + (0, o.getTokenDesc)(r))
             }
 
-            function J(e, t) {
+            function Z(e, t) {
                 var r = e.token;
                 if (r.kind === o.TokenKind.NAME && r.value === t) return e.advance(), r;
                 throw (0, a.syntaxError)(e.source, r.start, 'Expected "' + t + '", found ' + (0, o.getTokenDesc)(r))
             }
 
-            function q(e, t) {
+            function Q(e, t) {
                 var r = t || e.token;
                 return (0, a.syntaxError)(e.source, r.start, "Unexpected " + (0, o.getTokenDesc)(r))
             }
 
-            function Q(e, t, r, n) {
-                Z(e, t);
+            function q(e, t, r, n) {
+                J(e, t);
                 for (var a = [r(e)]; !X(e, n);) a.push(r(e));
                 return a
             }
@@ -1524,8 +1524,8 @@
                         bold: !0,
                         color: a.O.Alt,
                         fontSize: a.Ba.Size7,
-                        transform: a.Nb.Uppercase,
-                        type: a.Ob.H4
+                        transform: a.Mb.Uppercase,
+                        type: a.Nb.H4
                     }, e.children))
                 };
             r.d(t, "a", function() {
@@ -1631,9 +1631,9 @@
                                     disabled: t.state.buttonDisabled,
                                     onClick: t.handleSubmit
                                 }, t.props.buttonText),
-                                r = h.createElement(j.Rb, {
+                                r = h.createElement(j.Qb, {
                                     label: t.props.errorString,
-                                    direction: j.Tb.Right,
+                                    direction: j.Sb.Right,
                                     show: !0
                                 }, e);
                             return t.props.errorString.length && !t.state.changedSinceSubmit ? r : e
@@ -1699,45 +1699,45 @@
                             var e = t.props.buttonConfiguration === a.AllButtons,
                                 r = e || t.props.buttonConfiguration === a.MoveUpAndRemoveOnly,
                                 o = e || t.props.buttonConfiguration === a.MoveDownAndRemoveOnly;
-                            return h.createElement(j.Wa, null, r && h.createElement(j.Rb, {
+                            return h.createElement(j.Wa, null, r && h.createElement(j.Qb, {
                                 label: Object(g.d)("Move Up", "TeamsDashboard"),
-                                direction: j.Tb.Left
+                                direction: j.Sb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
                                 icon: j.ob.ArrowUp,
                                 onClick: t.handleOnMoveClick(n.Up),
                                 disabled: t.props.isDisabled
-                            })), o && h.createElement(j.Rb, {
+                            })), o && h.createElement(j.Qb, {
                                 label: Object(g.d)("Move Down", "TeamsDashboard"),
-                                direction: j.Tb.Left
+                                direction: j.Sb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
                                 icon: j.ob.ArrowDown,
                                 onClick: t.handleOnMoveClick(n.Down),
                                 disabled: t.props.isDisabled
-                            })), r && h.createElement(j.Rb, {
+                            })), r && h.createElement(j.Qb, {
                                 label: Object(g.d)("Move To Top", "TeamsDashboard"),
-                                direction: j.Tb.Left
+                                direction: j.Sb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
                                 icon: j.ob.ToTop,
                                 onClick: t.handleOnMoveClick(n.ToTop),
                                 disabled: t.props.isDisabled
-                            })), o && h.createElement(j.Rb, {
+                            })), o && h.createElement(j.Qb, {
                                 label: Object(g.d)("Move To Bottom", "TeamsDashboard"),
-                                direction: j.Tb.Left
+                                direction: j.Sb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
                                 icon: j.ob.ToBottom,
                                 onClick: t.handleOnMoveClick(n.ToBottom),
                                 disabled: t.props.isDisabled
-                            })), h.createElement(j.Rb, {
+                            })), h.createElement(j.Qb, {
                                 label: Object(g.d)("Remove", "TeamsDashboard"),
-                                direction: j.Tb.Left
+                                direction: j.Sb.Left
                             }, h.createElement(j.z, {
                                 type: j.F.Text,
                                 blurAfterClick: !0,
@@ -1769,7 +1769,7 @@
                             "data-test-selector": this.props.listItemsSelector,
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, h.createElement(j.yb, {
+                        }, h.createElement(j.xb, {
                             background: this.state.isHovered ? j.r.Base : void 0,
                             display: j.X.Flex,
                             flexDirection: j.Z.Row,
@@ -1825,7 +1825,7 @@
                             bottom: 2
                         }
                     }, e.header && h.createElement(j.W, {
-                        type: j.Ob.H3
+                        type: j.Nb.H3
                     }, e.header), e.members.length ? function(r) {
                         var n = e.onMoveClick ? t : void 0;
                         return h.createElement(k.b, null, h.createElement(j.Wa, {
@@ -1864,7 +1864,7 @@
                         fullWidth: !0
                     }, h.createElement(j.W, {
                         "data-test-selector": e.titleSelector,
-                        type: j.Ob.H1
+                        type: j.Nb.H1
                     }, e.title)), e.children))
                 };
             ! function(e) {
@@ -1903,7 +1903,7 @@
                         avatarSrc: e.logo
                     }
                 },
-                B = function(e, t) {
+                x = function(e, t) {
                     return e.map(function(e, r) {
                         return {
                             id: e.id,
@@ -1913,7 +1913,7 @@
                         }
                     })
                 },
-                x = function(e) {
+                B = function(e) {
                     return e.filter(function(e) {
                         return e.checked
                     }).map(function(e) {
@@ -1979,12 +1979,12 @@
                     })
                 },
                 X = function(e, t, r) {
-                    return J("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", r)
+                    return Z("/v5/teams/" + e + "/dashboard/channels/" + t + "/membership", r)
                 },
-                Z = function(e, t, r) {
-                    return J("/v5/teams/" + e + "/dashboard/featured_channels/" + t, r)
+                J = function(e, t, r) {
+                    return Z("/v5/teams/" + e + "/dashboard/featured_channels/" + t, r)
                 },
-                J = function(e, t) {
+                Z = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         return l.__generator(this, function(r) {
                             switch (r.label) {
@@ -2000,7 +2000,7 @@
                         })
                     })
                 },
-                q = function(e) {
+                Q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -2058,7 +2058,7 @@
                                         case 0:
                                             return this.setState({
                                                 isDisabled: !0
-                                            }), [4, Z(this.props.teamName, e, r)];
+                                            }), [4, J(this.props.teamName, e, r)];
                                         case 1:
                                             return a.sent() && (t = this.state.featuredChannels.findIndex(function(t) {
                                                 return t.id === e
@@ -2121,7 +2121,7 @@
                         destination: T.a.TeamsDashboardFeaturedChannels
                     })], t)
                 }(h.Component),
-                Q = r("6XEL");
+                q = r("6XEL");
             ! function(e) {
                 e.StatsRevealed = "stats_revealed", e.RevenueRevealed = "revenue_revealed"
             }(A || (A = {}));
@@ -2131,7 +2131,7 @@
                         return l.__generator(this, function(o) {
                             switch (o.label) {
                                 case 0:
-                                    return r = "/v5/teams/" + e + "/dashboard/members" + (t ? "?" + t + "=true" : ""), [4, Object(Q.c)({
+                                    return r = "/v5/teams/" + e + "/dashboard/members" + (t ? "?" + t + "=true" : ""), [4, Object(q.c)({
                                         path: r
                                     })];
                                 case 1:
@@ -2259,7 +2259,7 @@
                                                 return l.__generator(this, function(a) {
                                                     switch (a.label) {
                                                         case 0:
-                                                            return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(Q.c)({
+                                                            return t = "/v5/teams/" + e + "/dashboard/invitations", [4, Object(q.c)({
                                                                 path: t
                                                             })];
                                                         case 1:
@@ -2596,7 +2596,7 @@
             var ye, Oe, Ee = function(e) {
                     var t, r;
                     return e.isLoading ? (t = h.createElement(j.W, {
-                        type: j.Ob.H5
+                        type: j.Nb.H5
                     }, h.createElement(j.db, {
                         width: 90
                     })), r = h.createElement(j.Wa, null, h.createElement(j.db, {
@@ -2604,7 +2604,7 @@
                         height: 40
                     }))) : (t = h.createElement(j.W, {
                         color: j.O.Alt2,
-                        type: j.Ob.H5,
+                        type: j.Nb.H5,
                         "data-test-selector": $.Title
                     }, e.title), r = h.createElement(j.Wa, {
                         alignItems: j.f.Start,
@@ -2616,10 +2616,10 @@
                         }
                     }, h.createElement(j.W, {
                         "data-test-selector": $.Symbol,
-                        type: j.Ob.H4
+                        type: j.Nb.H4
                     }, "$")), h.createElement(j.W, {
                         "data-test-selector": $.Dollars,
-                        type: j.Ob.H1
+                        type: j.Nb.H1
                     }, Object(g.f)(Math.floor(e.cents / 100))))), h.createElement(j.Wa, {
                         display: j.X.Flex,
                         flexDirection: j.Z.Column,
@@ -2639,7 +2639,7 @@
                                 title: t.title + " *"
                             })
                         });
-                    return h.createElement(j.yb, {
+                    return h.createElement(j.xb, {
                         borderMarked: !0,
                         border: !0,
                         fullWidth: !0,
@@ -2710,7 +2710,7 @@
                                 noTail: !0
                             }, h.createElement(k.b, {
                                 className: "team-members-select-menu__scroller"
-                            }, h.createElement(j.Wa, null, h.createElement(j.yb, {
+                            }, h.createElement(j.Wa, null, h.createElement(j.xb, {
                                 borderBottom: !0,
                                 padding: 1
                             }, h.createElement(j.N, {
@@ -2778,7 +2778,7 @@
                         return l.__generator(this, function(i) {
                             switch (i.label) {
                                 case 0:
-                                    return a = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + r + "&end_date=" + n + "&fraction=day", [4, Object(Q.c)({
+                                    return a = "/v5/teams/" + e + "/revenues?channel_ids=" + t + "&start_date=" + r + "&end_date=" + n + "&fraction=day", [4, Object(q.c)({
                                         path: a
                                     })];
                                 case 1:
@@ -2794,14 +2794,14 @@
                             if (le.includes(u))
                                 for (var l = 0, d = r[i][u]; l < d.length; l++) {
                                     var m = d[l],
-                                        h = Be(m.timestamp);
+                                        h = xe(m.timestamp);
                                     n[h] && (n[h][u] += m.cents)
                                 }
                         }
                     return n
                 },
                 Fe = function(e, t) {
-                    for (var r = {}, n = new Date(Be(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) r[n.toISOString()] = {
+                    for (var r = {}, n = new Date(xe(e)); n < new Date(t); n.setUTCDate(n.getUTCDate() + 1)) r[n.toISOString()] = {
                         gift_subscriptions: 0,
                         twitch_subscriptions: 0,
                         prime_subscriptions: 0,
@@ -2811,11 +2811,11 @@
                     };
                     return r
                 },
-                Be = function(e) {
+                xe = function(e) {
                     var t = new Date(e);
                     return new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate())).toISOString()
                 },
-                xe = function() {
+                Be = function() {
                     var e = Object(g.d)("Date", "TeamsDashboard") + "," + Ne(),
                         t = "," + Object(g.d)("Total", "TeamsDashboard") + "\n";
                     return le.reduce(function(e, t) {
@@ -2853,13 +2853,13 @@
                             })
                         }, r.toggleGroupChecked = function() {
                             var e = !r.state.groupChecked,
-                                t = B(r.state.members, e);
+                                t = x(r.state.members, e);
                             r.setState({
                                 groupChecked: e,
                                 members: t
                             })
                         }, r.renderChartLoadingSpinner = function() {
-                            return h.createElement(j.yb, {
+                            return h.createElement(j.xb, {
                                 attachTop: !0,
                                 attachLeft: !0,
                                 background: j.r.Base,
@@ -2869,7 +2869,7 @@
                             }, h.createElement(j.Ya, {
                                 delay: 100,
                                 fillContent: !0,
-                                size: j.wb.Large
+                                size: j.vb.Large
                             }))
                         }, r.handleTimeRangeChange = function(e, t) {
                             return l.__awaiter(r, void 0, void 0, function() {
@@ -2879,7 +2879,7 @@
                                         case 0:
                                             return this.setState({
                                                 isLoadingRevenues: !0
-                                            }), [4, Me(this.props.teamName, x(this.state.members), e.toISOString(), t.toISOString())];
+                                            }), [4, Me(this.props.teamName, B(this.state.members), e.toISOString(), t.toISOString())];
                                         case 1:
                                             return r = n.sent(), this.setState({
                                                 startTime: e,
@@ -2898,7 +2898,7 @@
                                         case 0:
                                             return this.setState({
                                                 isLoadingRevenues: !0
-                                            }), [4, Me(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                            }), [4, Me(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                         case 1:
                                             return e = t.sent(), this.setState({
                                                 revenues: e,
@@ -2908,7 +2908,7 @@
                                 })
                             })
                         }, r.handleCSVClick = function() {
-                            var e = Ce(r.state.revenues, Ue, xe());
+                            var e = Ce(r.state.revenues, Ue, Be());
                             Se(e, W(C.Revenue) + " - " + ne(r.state.startTime) + ".csv")
                         }, r.state = {
                             isLoadingMembers: !0,
@@ -2930,14 +2930,14 @@
                                     case 1:
                                         return e = r.sent(), this.setState({
                                             isLoadingMembers: !1,
-                                            members: B(e, !0)
+                                            members: x(e, !0)
                                         }, function() {
                                             return l.__awaiter(t, void 0, void 0, function() {
                                                 var e;
                                                 return l.__generator(this, function(t) {
                                                     switch (t.label) {
                                                         case 0:
-                                                            return [4, Me(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                                            return [4, Me(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                                         case 1:
                                                             return e = t.sent(), this.setState({
                                                                 isLoadingRevenues: !1,
@@ -2955,7 +2955,7 @@
                         return h.createElement(I, {
                             title: W(C.Revenue),
                             titleSelector: "revenue-page-title"
-                        }, h.createElement(j.yb, {
+                        }, h.createElement(j.xb, {
                             border: !0,
                             fullWidth: !0
                         }, h.createElement(j.Wa, {
@@ -3000,7 +3000,7 @@
                             }
                         }, h.createElement(j.W, {
                             color: j.O.Alt2
-                        }, Object(g.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), h.createElement(j.yb, {
+                        }, Object(g.d)("* All revenue values are estimated (in $USD)", "TeamsDashboard")))), h.createElement(j.xb, {
                             background: j.r.Base,
                             borderTop: !0,
                             padding: 2
@@ -3050,15 +3050,15 @@
             function(e) {
                 e.JPEG = "image/jpeg", e.PNG = "image/png"
             }(Oe || (Oe = {}));
-            var Ze, Je = function(e, t) {
+            var Je, Ze = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n;
                         return l.__generator(this, function(a) {
                             switch (a.label) {
                                 case 0:
-                                    return a.trys.push([0, 3, , 4]), [4, qe(e, t)];
+                                    return a.trys.push([0, 3, , 4]), [4, Qe(e, t)];
                                 case 1:
-                                    return r = a.sent(), [4, Qe(r.url, t)];
+                                    return r = a.sent(), [4, qe(r.url, t)];
                                 case 2:
                                     if (!a.sent()) throw new Error("failed to upload");
                                     return [2, l.__assign({}, t, {
@@ -3072,7 +3072,7 @@
                         })
                     })
                 },
-                qe = function(e, t) {
+                Qe = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n, a;
                         return l.__generator(this, function(o) {
@@ -3091,7 +3091,7 @@
                         })
                     })
                 },
-                Qe = function(e, t) {
+                qe = function(e, t) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var r, n;
                         return l.__generator(this, function(a) {
@@ -3117,7 +3117,7 @@
                 $e = r("/ZC1");
             ! function(e) {
                 e.HoverWrapper = "hover-wrapper", e.Image = "image", e.Placeholder = "placeholder", e.PlaceholderContainer = "placeholder-container"
-            }(Ze || (Ze = {}));
+            }(Je || (Je = {}));
             var et, tt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -3138,7 +3138,7 @@
                             t = this.state.isHoveringOver || this.props.isUploading;
                         return h.createElement(j.Pa, {
                             background: j.r.Alt2,
-                            "data-test-selector": Ze.HoverWrapper,
+                            "data-test-selector": Je.HoverWrapper,
                             fullHeight: !0,
                             fullWidth: !0
                         }, h.createElement("div", {
@@ -3148,7 +3148,7 @@
                             allowedFileTypes: this.props.allowedFileTypes,
                             error: this.props.hasErrored,
                             onFilesSubmitted: this.handleFilesSubmitted
-                        }, h.createElement(j.yb, {
+                        }, h.createElement(j.xb, {
                             alignItems: j.f.Center,
                             background: j.r.Alt2,
                             display: j.X.Flex,
@@ -3157,7 +3157,7 @@
                             fullWidth: !0,
                             justifyContent: j.Va.Center,
                             overflow: j.Za.Hidden,
-                            textAlign: j.Kb.Center
+                            textAlign: j.Jb.Center
                         }, h.createElement(j.i, {
                             duration: j.k.Long,
                             enabled: e,
@@ -3165,21 +3165,21 @@
                         }, e ? this.renderImage() : null), h.createElement(j.i, {
                             enabled: t,
                             type: j.n.FadeIn
-                        }, h.createElement(j.yb, {
+                        }, h.createElement(j.xb, {
                             attachBottom: !0,
                             attachLeft: !0,
                             attachRight: !0,
                             attachTop: !0,
                             background: t ? j.r.Overlay : void 0,
                             color: t ? j.O.Overlay : j.O.Alt2,
-                            "data-test-selector": Ze.PlaceholderContainer,
+                            "data-test-selector": Je.PlaceholderContainer,
                             display: !e || t ? j.X.Block : j.X.Hide,
                             position: j.eb.Absolute
                         }, this.props.isUploading ? this.renderLoadingSpinner() : this.renderPlaceholder()))))))
                     }, t.prototype.renderImage = function() {
                         return h.createElement(j.S, {
                             alt: this.props.imageAlt,
-                            "data-test-selector": Ze.Image,
+                            "data-test-selector": Je.Image,
                             src: this.props.imageSrc
                         })
                     }, t.prototype.renderLoadingSpinner = function() {
@@ -3188,9 +3188,9 @@
                             inheritColor: !0
                         })
                     }, t.prototype.renderPlaceholder = function() {
-                        return h.createElement(j.yb, {
+                        return h.createElement(j.xb, {
                             alignItems: j.f.Center,
-                            "data-test-selector": Ze.Placeholder,
+                            "data-test-selector": Je.Placeholder,
                             display: j.X.Flex,
                             flexDirection: j.Z.Column,
                             fullHeight: !0,
@@ -3233,7 +3233,7 @@
                                                     case 1:
                                                         return o.trys.push([1, 3, 4, 5]), this.setState({
                                                             isUploading: !0
-                                                        }), [4, Je(this.props.teamName, {
+                                                        }), [4, Ze(this.props.teamName, {
                                                             category: this.props.imageCategory,
                                                             fileType: e.type,
                                                             id: null,
@@ -3430,7 +3430,7 @@
                         label: Object(g.d)("Description", "TeamsDashboard"),
                         labelOptional: this.formatOptionalLabel(),
                         hint: Object(g.d)("Supports Markdown", "TeamsDashboard")
-                    }, h.createElement(j.Lb, {
+                    }, h.createElement(j.Kb, {
                         disabled: this.state.isSaving,
                         id: this.textAreaID,
                         maxLength: 1e4,
@@ -3605,7 +3605,7 @@
                         case ut.AverageViewers:
                             t = Object(g.d)("Average = {number}", {
                                 number: h.createElement(j.W, {
-                                    type: j.Ob.Strong
+                                    type: j.Nb.Strong
                                 }, a(o))
                             }, "TeamsDashboardMetricSummary");
                             break;
@@ -3617,7 +3617,7 @@
                         case ut.StreamDuration:
                             t = Object(g.d)("Total = {numberOrDuration}", {
                                 numberOrDuration: h.createElement(j.W, {
-                                    type: j.Ob.Strong
+                                    type: j.Nb.Strong
                                 }, a(o))
                             }, "TeamsDashboardMetricSummary");
                             break;
@@ -3856,7 +3856,7 @@
                             default: 2
                         }
                     }, h.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, h.createElement(j.W, {
                         bold: !0
                     }, Object(g.d)("Views", "TeamsDashboard")))), h.createElement(j.P, {
@@ -3864,7 +3864,7 @@
                             default: 2
                         }
                     }, h.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, h.createElement(j.W, {
                         bold: !0
                     }, Object(g.d)("Percent", "TeamsDashboard")))))
@@ -3893,13 +3893,13 @@
                             default: 2
                         }
                     }, h.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, h.createElement(j.W, null, Object(g.f)(t.views)))), h.createElement(j.P, {
                         cols: {
                             default: 2
                         }
                     }, h.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, h.createElement(j.W, null, Object(g.f)(t.percent), "%"))))
                 },
                 St = function(e, t, r, n) {
@@ -3963,14 +3963,14 @@
                             bottom: 1
                         }
                     }, h.createElement(j.W, {
-                        type: j.Ob.H4
+                        type: j.Nb.H4
                     }, t)), r)
                 },
                 Rt = function(e) {
                     var t = Object(g.d)("Referrer", "TeamsDashboard"),
                         r = Object(g.d)("Views by Referrer", "TeamsDashboard"),
                         n = "";
-                    return e.internalReferral && e.internalReferral.length && (r = Object(g.d)("Views from Outside Twitch", "TeamsDashboard"), n = h.createElement(j.yb, {
+                    return e.internalReferral && e.internalReferral.length && (r = Object(g.d)("Views from Outside Twitch", "TeamsDashboard"), n = h.createElement(j.xb, {
                         display: j.X.Flex,
                         flexGrow: 1,
                         borderBottom: !0,
@@ -3980,7 +3980,7 @@
                         tableName: Object(g.d)("Views from Twitch", "TeamsDashboard"),
                         columnName: t,
                         rowData: e.internalReferral
-                    }))), h.createElement(j.yb, {
+                    }))), h.createElement(j.xb, {
                         className: "all-tables-wrapper",
                         display: j.X.Flex,
                         flexDirection: j.Z.Row,
@@ -3990,7 +3990,7 @@
                         flexGrow: 1,
                         flexDirection: j.Z.Column,
                         flexWrap: j.Aa.NoWrap
-                    }, h.createElement(j.yb, {
+                    }, h.createElement(j.xb, {
                         display: j.X.Flex,
                         flexGrow: 1,
                         borderBottom: !0
@@ -4000,7 +4000,7 @@
                         columnName: Object(g.d)("Location", "TeamsDashboard"),
                         rowData: e.geographical,
                         isGeo: !0
-                    })), h.createElement(j.yb, {
+                    })), h.createElement(j.xb, {
                         display: j.X.Flex,
                         flexGrow: 1
                     }, h.createElement(Lt, {
@@ -4013,7 +4013,7 @@
                         flexGrow: 1,
                         flexDirection: j.Z.Column,
                         flexWrap: j.Aa.NoWrap
-                    }, n, h.createElement(j.yb, {
+                    }, n, h.createElement(j.xb, {
                         display: j.X.Flex,
                         flexGrow: 1,
                         borderLeft: !0
@@ -4032,22 +4032,22 @@
                     internalReferral: [],
                     externalReferral: []
                 },
-                Bt = function(e, t, r, n) {
+                xt = function(e, t, r, n) {
                     return l.__awaiter(void 0, void 0, Promise, function() {
                         var a, o, i, s;
                         return l.__generator(this, function(c) {
                             switch (c.label) {
                                 case 0:
-                                    return a = Ft, t.length < 1 ? [2, a] : (o = t.join(","), i = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + o + "&start_time=" + r + "&end_time=" + n, [4, Object(Q.c)({
+                                    return a = Ft, t.length < 1 ? [2, a] : (o = t.join(","), i = "/v5/teams/" + e + "/stats/video_play_demographics?channel_ids=" + o + "&start_time=" + r + "&end_time=" + n, [4, Object(q.c)({
                                         path: i
                                     })]);
                                 case 1:
-                                    return [2, (s = c.sent()).body ? xt(s.body) : a]
+                                    return [2, (s = c.sent()).body ? Bt(s.body) : a]
                             }
                         })
                     })
                 },
-                xt = function(e) {
+                Bt = function(e) {
                     for (var t = e.video_play_demographics, r = {
                             geographical: [],
                             platform: [],
@@ -4109,31 +4109,31 @@
                                     }
                                     return [3, 15];
                                 case 1:
-                                    return s = Jt, [4, Ht(o)];
+                                    return s = Zt, [4, Ht(o)];
                                 case 2:
                                     return i = s.apply(void 0, [l.sent(), n, a, nr]), [3, 16];
                                 case 3:
-                                    return c = Zt, [4, Kt(o)];
+                                    return c = Jt, [4, Kt(o)];
                                 case 4:
                                     return i = c.apply(void 0, [l.sent(), n, a, tr]), [3, 16];
                                 case 5:
-                                    return u = Zt, [4, Gt(o)];
+                                    return u = Jt, [4, Gt(o)];
                                 case 6:
-                                    return i = u.apply(void 0, [l.sent(), n, a, qt]), [3, 16];
+                                    return i = u.apply(void 0, [l.sent(), n, a, Qt]), [3, 16];
                                 case 7:
-                                    return d = Zt, [4, Kt(o)];
+                                    return d = Jt, [4, Kt(o)];
                                 case 8:
                                     return i = d.apply(void 0, [l.sent(), n, a, rr]), [3, 16];
                                 case 9:
                                     return [4, Gt(o)];
                                 case 10:
-                                    return m = l.sent(), h = Xt(m), i = Zt(h, n, a, Qt), [3, 16];
+                                    return m = l.sent(), h = Xt(m), i = Jt(h, n, a, qt), [3, 16];
                                 case 11:
-                                    return f = Zt, [4, Vt(o)];
+                                    return f = Jt, [4, Vt(o)];
                                 case 12:
                                     return i = f.apply(void 0, [l.sent(), n, a, er]), [3, 16];
                                 case 13:
-                                    return b = Zt, [4, zt(o)];
+                                    return b = Jt, [4, zt(o)];
                                 case 14:
                                     return i = b.apply(void 0, [l.sent(), n, a, ar]), [3, 16];
                                 case 15:
@@ -4150,7 +4150,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(Q.c)({
+                                    return [4, Object(q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4165,7 +4165,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(Q.c)({
+                                    return [4, Object(q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4180,7 +4180,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(Q.c)({
+                                    return [4, Object(q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4195,7 +4195,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(Q.c)({
+                                    return [4, Object(q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4210,7 +4210,7 @@
                         return l.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(Q.c)({
+                                    return [4, Object(q.c)({
                                         path: e
                                     })];
                                 case 1:
@@ -4246,13 +4246,6 @@
                     }
                     return t
                 },
-                Zt = function(e, t, r, n) {
-                    for (var a = {}, o = 0, i = Object.keys(e); o < i.length; o++) {
-                        var s = i[o];
-                        a[s] = n(t, r, e[s])
-                    }
-                    return a
-                },
                 Jt = function(e, t, r, n) {
                     for (var a = {}, o = 0, i = Object.keys(e); o < i.length; o++) {
                         var s = i[o];
@@ -4260,7 +4253,14 @@
                     }
                     return a
                 },
-                qt = function(e, t, r) {
+                Zt = function(e, t, r, n) {
+                    for (var a = {}, o = 0, i = Object.keys(e); o < i.length; o++) {
+                        var s = i[o];
+                        a[s] = n(t, r, e[s])
+                    }
+                    return a
+                },
+                Qt = function(e, t, r) {
                     return $t(e, t, r).map(function(e) {
                         var t = e.count / 48;
                         return {
@@ -4270,7 +4270,7 @@
                         }
                     })
                 },
-                Qt = function(e, t, r) {
+                qt = function(e, t, r) {
                     return $t(e, t, r).map(function(e) {
                         return {
                             timestamp: e.timestamp,
@@ -4427,7 +4427,7 @@
                             }))
                         }, r.toggleGroupChecked = function() {
                             var e = !r.state.groupChecked,
-                                t = B(r.state.members, e);
+                                t = x(r.state.members, e);
                             r.setState({
                                 groupChecked: e,
                                 members: t
@@ -4450,14 +4450,14 @@
                                 return l.__generator(this, function(u) {
                                     switch (u.label) {
                                         case 0:
-                                            return r = x(this.state.members), a = e.toISOString(), o = t.toISOString(), i = {
+                                            return r = B(this.state.members), a = e.toISOString(), o = t.toISOString(), i = {
                                                 isLoadingDemographics: !1,
                                                 demographics: Ft,
                                                 isLoadingStats: !1,
                                                 data: {}
                                             }, n !== ut.AverageViewers ? [3, 2] : (this.setState({
                                                 isLoadingDemographics: !0
-                                            }), s = i, [4, Bt(this.props.teamName, r, a, o)]);
+                                            }), s = i, [4, xt(this.props.teamName, r, a, o)]);
                                         case 1:
                                             s.demographics = u.sent(), u.label = 2;
                                         case 2:
@@ -4475,7 +4475,7 @@
                                 return l.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return [4, ur(this.props.teamName, x(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
+                                            return [4, ur(this.props.teamName, B(this.state.members), this.state.startTime.toISOString(), this.state.endTime.toISOString())];
                                         case 1:
                                             return e = r.sent(), 0 === Object.keys(e).length ? [2] : (t = Ce(e, dr, lr()), Se(t, W(C.Stats) + " - " + ne(this.state.startTime) + ".csv"), [2])
                                     }
@@ -4511,7 +4511,7 @@
                                 })
                             })
                         }, r.renderChartLoadingSpinner = function() {
-                            return h.createElement(j.yb, {
+                            return h.createElement(j.xb, {
                                 attachTop: !0,
                                 attachLeft: !0,
                                 background: j.r.Alt,
@@ -4521,7 +4521,7 @@
                             }, h.createElement(j.Ya, {
                                 delay: 100,
                                 fillContent: !0,
-                                size: j.wb.Large
+                                size: j.vb.Large
                             }))
                         }, r.renderViewershipTables = function() {
                             return h.createElement(Rt, l.__assign({
@@ -4550,7 +4550,7 @@
                                     case 1:
                                         return e = r.sent(), this.setState({
                                             isLoadingMembers: !1,
-                                            members: B(e, !0)
+                                            members: x(e, !0)
                                         }, function() {
                                             return l.__awaiter(t, void 0, void 0, function() {
                                                 var e;
@@ -4572,7 +4572,7 @@
                         return h.createElement(I, {
                             title: W(C.Stats),
                             titleSelector: "stats-page-title"
-                        }, h.createElement(j.yb, {
+                        }, h.createElement(j.xb, {
                             border: !0,
                             fullWidth: !0
                         }, h.createElement(j.Wa, {
@@ -4664,7 +4664,7 @@
                                 teamName: r.props.match.params.teamName
                             })
                         }, r.renderFeaturedChannelsPage = function() {
-                            return h.createElement(q, {
+                            return h.createElement(Q, {
                                 teamName: r.props.match.params.teamName
                             })
                         }, r.renderSettingsPage = function() {
@@ -4799,7 +4799,7 @@
                         className: "dashboard-side-nav__link",
                         exact: e.exact,
                         to: e.linkTo
-                    }, Object(i.cc)(e)), e.children))
+                    }, Object(i.bc)(e)), e.children))
                 });
             r.d(t, "a", function() {
                 return s

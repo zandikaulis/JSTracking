@@ -53,10 +53,10 @@
                 O = p.a.wrap(function() {
                     return n.e(202).then(n.bind(null, "635G"))
                 }, "DevGamesPage"),
-                j = p.a.wrap(function() {
+                y = p.a.wrap(function() {
                     return Promise.all([n.e(31), n.e(0), n.e(201)]).then(n.bind(null, "QH5d"))
                 }, "DevDropsDashboardRoot"),
-                y = p.a.wrap(function() {
+                j = p.a.wrap(function() {
                     return n.e(200).then(n.bind(null, "DrWK"))
                 }, "DevExtensionsEnableMonetizationPage"),
                 w = function(e) {
@@ -81,7 +81,7 @@
                             centered: !0
                         }, i.createElement("header", {
                             className: "dev-dashboard__header"
-                        }, i.createElement(f.yb, {
+                        }, i.createElement(f.xb, {
                             padding: {
                                 bottom: 2
                             },
@@ -90,33 +90,33 @@
                             },
                             borderBottom: !0
                         }, i.createElement(f.W, {
-                            type: f.Ob.H2
+                            type: f.Nb.H2
                         }, Object(u.d)("Dashboard", "DevDashboard"))), i.createElement(f.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, i.createElement(f.Ab, null, i.createElement(f.zb, {
+                        }, i.createElement(f.zb, null, i.createElement(f.yb, {
                             linkTo: "https://dev.twitch.tv/dashboard",
                             active: this.isActive("", !0)
-                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.zb, {
+                        }, Object(u.d)("Overview", "DevDashboard")), i.createElement(f.yb, {
                             onClick: Object(v.c)(v.a.ViewExtensions),
                             linkTo: "https://dev.twitch.tv/dashboard/extensions",
                             active: this.isActive("extensions")
-                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.zb, {
+                        }, Object(u.d)("Extensions", "DevDashboard")), i.createElement(f.yb, {
                             onClick: Object(v.c)(v.a.ViewApps),
                             linkTo: "/console/apps",
                             active: this.isActive("apps")
-                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.zb, {
+                        }, Object(u.d)("Apps", "DevDashboard")), i.createElement(f.yb, {
                             onClick: Object(v.c)(v.a.ViewGames),
                             linkTo: "/console/games",
                             active: this.isActive("games")
-                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.zb, {
+                        }, Object(u.d)("Games", "DevDashboard")), i.createElement(f.yb, {
                             onClick: Object(v.c)(v.a.ViewDrops),
                             linkTo: "/console/drops",
                             active: this.isActive("drops")
                         }, Object(u.d)("Drops", "DevDashboard")), i.createElement(b.a, {
                             name: "bounty_board_brand_portal_enabled"
-                        }, i.createElement(h.a, null, i.createElement(f.zb, {
+                        }, i.createElement(h.a, null, i.createElement(f.yb, {
                             linkTo: "/console/bounty-board",
                             active: this.isActive("bounty-board")
                         }, Object(u.d)("Bounty Board", "DevDashboard"))))))), i.createElement(f.Wa, {
@@ -144,10 +144,10 @@
                         }), i.createElement(s.a, {
                             exact: !0,
                             path: "/console/extensions/enable-monetization",
-                            component: y
+                            component: j
                         }), i.createElement(s.a, {
                             path: "/console/drops",
-                            component: j
+                            component: y
                         }))))) : i.createElement(d.a, {
                             to: "/login"
                         })

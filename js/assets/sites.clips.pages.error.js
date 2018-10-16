@@ -114,9 +114,9 @@
             }), n.d(t, "e", function() {
                 return O
             }), n.d(t, "i", function() {
-                return y
-            }), n.d(t, "h", function() {
                 return x
+            }), n.d(t, "h", function() {
+                return y
             }), n.d(t, "f", function() {
                 return E
             }), n.d(t, "k", function() {
@@ -148,8 +148,8 @@
                 v = "UNKNOWN",
                 b = "FIRST_PARTY",
                 O = "CUSTOM",
-                y = "SPONSORED",
-                x = "THIRD_PARTY",
+                x = "SPONSORED",
+                y = "THIRD_PARTY",
                 E = "DISPLAY_ONLY",
                 k = ((r = {})[i.a.Gray] = "#979797", r[i.a.Purple] = "#9c3ee8", r[i.a.Green] = "#1db2a5", r[i.a.Blue] = "#0099fe", r[i.a.Red] = "#f43021", r[i.a.Yellow] = "#f3a71a", r),
                 C = "bits_sponsored_cheermotes",
@@ -633,7 +633,7 @@
                                 }
                         }
                     }(this.props.match.params.error);
-                    return i.createElement(p.yb, {
+                    return i.createElement(p.xb, {
                         className: "clips-error-page",
                         background: p.r.Base,
                         margin: {
@@ -641,7 +641,7 @@
                         },
                         elevation: 3,
                         color: p.O.Base,
-                        textAlign: p.Kb.Center
+                        textAlign: p.Jb.Center
                     }, i.createElement(p.o, {
                         ratio: p.p.Aspect16x9
                     }, i.createElement(p.Wa, {
@@ -704,10 +704,10 @@
                     if (0 === b.length && (O = p), b += t, p !== v.length - 1 && !h(v[p + 1])) return e;
                     var f = d && Object(o.c)(b, O, d);
                     if (f) return e.concat(f);
-                    var y = n && Object(r.d)(b, n);
-                    if (y) return e.concat(y);
-                    var x = m && Object(a.a)(b, m);
+                    var x = n && Object(r.d)(b, n);
                     if (x) return e.concat(x);
+                    var y = m && Object(a.a)(b, m);
+                    if (y) return e.concat(y);
                     var E = g && function(e, t) {
                         var n = e.match(u);
                         if (!n) return l(e, t.sessionUser) ? [{

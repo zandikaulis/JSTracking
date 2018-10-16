@@ -265,7 +265,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(n, e), n.prototype.render = function() {
-                        return a.createElement(g.yb, {
+                        return a.createElement(g.xb, {
                             background: g.r.Base,
                             color: g.O.Alt
                         }, a.createElement(g.Wa, {
@@ -280,18 +280,18 @@
                             }
                         }, a.createElement(g.W, {
                             bold: !0,
-                            type: g.Ob.H5
+                            type: g.Nb.H5
                         }, Object(o.d)("Introducing: New Chatter Announcements!", "RitualsOnboardingSticky"))), a.createElement(g.Wa, {
                             margin: {
                                 bottom: .5
                             }
                         }, a.createElement(g.W, {
-                            type: g.Ob.Span
+                            type: g.Nb.Span
                         }, Object(o.d)("New chatter announcements are now active in your channel, making it easier to welcome new people.", "RitualsOnboardingSticky")), a.createElement(g.W, null, a.createElement(g.U, {
                             onClick: this.props.onClick,
                             to: "/" + this.props.channelLogin + "/dashboard/settings",
                             "data-test-selector": "rituals-sticky-link"
-                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(g.yb, {
+                        }, Object(o.d)("Manage in Dashboard", "RitualsOnboardingSticky"))))), a.createElement(g.xb, {
                             alignItems: g.f.Center,
                             background: g.r.Alt2,
                             borderBottom: !0,
@@ -312,8 +312,8 @@
                             }
                         }, a.createElement(g.W, {
                             fontSize: g.Ba.Size8,
-                            type: g.Ob.Span
-                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(g.yb, {
+                            type: g.Nb.Span
+                        }, Object(o.d)("You see this because you own this channel", "RitualsOnboardingSticky")))), a.createElement(g.xb, {
                             attachRight: !0,
                             attachTop: !0,
                             padding: {

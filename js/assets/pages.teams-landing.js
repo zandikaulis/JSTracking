@@ -61,7 +61,7 @@
                         svgAsset: s.ob.Team,
                         title: e.displayName,
                         tooltip: Object(r.d)("Team", "TeamLink")
-                    }, Object(s.cc)(e)))
+                    }, Object(s.bc)(e)))
                 };
             t.d(n, "a", function() {
                 return l
@@ -1903,7 +1903,7 @@
                             })
                         },
                         selected: e.isSelected
-                    }, i.createElement(k.yb, {
+                    }, i.createElement(k.xb, {
                         display: k.X.Flex,
                         alignItems: k.f.Center,
                         padding: {
@@ -2100,7 +2100,7 @@
                                     key: n.userID
                                 })
                             }),
-                            t = i.createElement(k.yb, {
+                            t = i.createElement(k.xb, {
                                 className: "member-list__scrollable-container",
                                 display: k.X.Flex,
                                 flexDirection: k.Z.Column,
@@ -2120,7 +2120,7 @@
                                 className: "member-list__back-to-top-placeholder",
                                 position: k.eb.Relative
                             }, this.backToTop()));
-                        return 0 === this.props.data.total && (t = i.createElement(k.yb, {
+                        return 0 === this.props.data.total && (t = i.createElement(k.xb, {
                             className: "member-list__scrollable-container",
                             display: k.X.Flex,
                             flexDirection: k.Z.Column,
@@ -2247,12 +2247,12 @@
                     }, i.createElement(k.W, {
                         bold: !0,
                         fontSize: k.Ba.Size4
-                    }, e.displayName), i.createElement(k.yb, {
+                    }, e.displayName), i.createElement(k.xb, {
                         color: k.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, i.createElement(k.Xb, null, i.createElement(L, {
+                    }, i.createElement(k.Wb, null, i.createElement(L, {
                         source: e.description
                     })))) : null
                 }),
@@ -2260,21 +2260,21 @@
                 D = t("eDVu"),
                 O = t("0Log"),
                 P = t("/aPz"),
-                U = t("DMoW"),
-                x = t("ZLqn"),
+                x = t("DMoW"),
+                U = t("ZLqn"),
                 j = t("eAAt"),
                 A = t("0EKw"),
                 W = t("5goO"),
                 R = t("QjI3"),
                 V = t("eFQ3"),
                 G = t("6J1Z"),
-                z = function(e) {
+                q = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.getGame = function() {
                             var e = n.props.data.user;
                             return e && e.directories ? e.directories.nodes.find(function(e) {
-                                return !(!e || e.directoryType !== U.r.GAME)
+                                return !(!e || e.directoryType !== x.q.GAME)
                             }) : null
                         }, n.getTitle = function() {
                             var e = n.props.data.user;
@@ -2318,7 +2318,7 @@
                     return d.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, n.prototype.render = function() {
-                        return i.createElement(k.yb, {
+                        return i.createElement(k.xb, {
                             className: "teams-player",
                             background: k.r.Base,
                             elevation: 1,
@@ -2335,7 +2335,7 @@
                         var e = this.props.data.user;
                         if (!e || !e.id) return null;
                         var n = Object(c.f)(e.stream && e.stream.viewersCount ? e.stream.viewersCount : 0);
-                        return i.createElement(k.yb, {
+                        return i.createElement(k.xb, {
                             display: k.X.Flex,
                             flexWrap: k.Aa.Wrap,
                             justifyContent: k.Va.Between,
@@ -2352,20 +2352,20 @@
                         }, i.createElement(k.U, {
                             to: "/" + this.props.channelLogin
                         }, i.createElement(k.W, {
-                            type: k.Ob.Span,
+                            type: k.Nb.Span,
                             fontSize: k.Ba.Size4,
                             title: e.displayName
-                        }, e.displayName))), i.createElement(k.yb, {
+                        }, e.displayName))), i.createElement(k.xb, {
                             display: k.X.Flex,
                             flexWrap: k.Aa.Wrap,
                             color: k.O.Alt2
-                        }, e.stream && e.stream.id && i.createElement(k.yb, {
+                        }, e.stream && e.stream.id && i.createElement(k.xb, {
                             color: k.O.Live,
                             display: k.X.InlineFlex,
                             margin: {
                                 right: 1
                             }
-                        }, i.createElement(k.xb, {
+                        }, i.createElement(k.wb, {
                             value: n,
                             label: Object(c.d)("Watching Now", "TeamPlayer"),
                             icon: k.ob.GlyphLive,
@@ -2375,7 +2375,7 @@
                                 right: 1
                             },
                             display: k.X.Flex
-                        }, i.createElement(k.xb, {
+                        }, i.createElement(k.wb, {
                             value: Object(c.d)("{followerCount, number}", {
                                 followerCount: e.followers && e.followers.totalCount ? e.followers.totalCount : 0
                             }, "TeamPlayer"),
@@ -2383,7 +2383,7 @@
                             icon: k.ob.GlyphFollowers
                         })), i.createElement(k.Wa, {
                             display: k.X.Flex
-                        }, i.createElement(k.xb, {
+                        }, i.createElement(k.wb, {
                             value: Object(c.d)("{channelCount, number}", {
                                 channelCount: e.profileViewCount || 0
                             }, "TeamPlayer"),
@@ -2398,10 +2398,10 @@
                             size: k.w.Medium,
                             direction: k.v.BottomRight
                         }, i.createElement(k.Wa, {
-                            zIndex: k.bc.Above,
+                            zIndex: k.ac.Above,
                             padding: 1
                         }, i.createElement(k.W, {
-                            type: k.Ob.Span,
+                            type: k.Nb.Span,
                             fontSize: k.Ba.Size6,
                             color: k.O.Alt2
                         }, e.description)))), i.createElement(k.Wa, {
@@ -2413,7 +2413,7 @@
                         }))))
                     }, n.prototype.renderBottomBar = function() {
                         var e = this.getTitle();
-                        return i.createElement(k.yb, {
+                        return i.createElement(k.xb, {
                             alignItems: k.f.Center,
                             display: k.X.Flex,
                             flexWrap: k.Aa.NoWrap,
@@ -2431,7 +2431,7 @@
                             },
                             ellipsis: !0
                         }, i.createElement(k.W, {
-                            type: k.Ob.Span,
+                            type: k.Nb.Span,
                             fontSize: k.Ba.Size4,
                             title: e
                         }, e)), i.createElement(k.Wa, {
@@ -2447,14 +2447,14 @@
                             margin: {
                                 x: 1
                             }
-                        }, this.props.data.user && i.createElement(x.a, {
+                        }, this.props.data.user && i.createElement(U.a, {
                             login: this.props.channelLogin,
                             displayName: this.props.data.user.displayName || "",
                             title: e || ""
                         }))))
                     }, n
                 }(i.Component),
-                q = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(G, {
+                z = Object(a.compose)(Object(l.b)("TeamsPlayer"), Object(g.a)(G, {
                     options: function(e) {
                         return {
                             variables: {
@@ -2475,7 +2475,7 @@
                             return n.user && n.user.broadcastSettings && n.user.broadcastSettings.id && (n.user.broadcastSettings.title = e.status || e.old_status), n
                         }
                     }
-                }))(z),
+                }))(q),
                 X = t("ST9J");
             t("GTf2");
             ! function(e) {
@@ -2513,7 +2513,7 @@
                                 left: 3,
                                 right: 3
                             }
-                        }, i.createElement(k.yb, {
+                        }, i.createElement(k.xb, {
                             className: "teams-page-body__inner-container",
                             background: k.r.Alt2,
                             display: k.X.Flex,
@@ -2568,7 +2568,7 @@
                         })
                     }, n.prototype.renderPlayer = function() {
                         var e = this.getPlayerLogin();
-                        return e ? i.createElement(q, {
+                        return e ? i.createElement(z, {
                             channelLogin: e
                         }) : null
                     }, n.prototype.getPlayerLogin = function() {
@@ -2720,18 +2720,18 @@
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.cc)(t.props), {
+                        }, Object(d.bc)(t.props), {
                             download: t.props.text
                         }), t.renderIcon()) : t.isLink() ? r.createElement("a", a.__assign({
                             href: t.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: t.onShareClickHandler
-                        }, Object(d.cc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
+                        }, Object(d.bc)(t.props)), t.renderIcon()) : r.createElement("button", a.__assign({
                             onClick: t.copyPageUrl,
                             onMouseLeave: t.clearIsCopiedStatus,
                             className: e
-                        }, Object(d.cc)(t.props)), t.renderIcon())
+                        }, Object(d.bc)(t.props)), t.renderIcon())
                     }, t.onShareClickHandler = function() {
                         t.props.onShareClick && t.props.onShareClick(t.props.type)
                     }, t.clearIsCopiedStatus = function() {
@@ -2831,9 +2831,9 @@
                 return a.__extends(n, e), n.prototype.render = function() {
                     return r.createElement(d.Wa, {
                         className: "social-button"
-                    }, r.createElement(d.Rb, {
+                    }, r.createElement(d.Qb, {
                         label: this.getTooltipFromType(),
-                        direction: d.Tb.Bottom
+                        direction: d.Sb.Bottom
                     }, this.renderLink()))
                 }, n
             }(r.Component)
@@ -3722,15 +3722,15 @@
                         },
                         display: r.X.Flex,
                         alignItems: r.f.Center
-                    }, a.createElement(r.Rb, {
-                        align: r.Sb.Left,
+                    }, a.createElement(r.Qb, {
+                        align: r.Rb.Left,
                         label: e.tooltip,
-                        direction: r.Tb.Bottom
+                        direction: r.Sb.Bottom
                     }, a.createElement(r.Wa, {
                         margin: {
                             right: .5
                         }
-                    }, a.createElement(r.yb, {
+                    }, a.createElement(r.xb, {
                         display: r.X.Flex,
                         alignItems: r.f.Center,
                         color: r.O.Alt2
@@ -3741,7 +3741,7 @@
                         ellipsis: !0
                     }, a.createElement(r.U, i.__assign({
                         to: e.linkTo
-                    }, Object(r.cc)(e), {
+                    }, Object(r.bc)(e), {
                         targetBlank: !0
                     }), e.title))))
                 };

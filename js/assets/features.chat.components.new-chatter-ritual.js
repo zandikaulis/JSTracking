@@ -445,7 +445,7 @@
                                 margin: {
                                     right: .5
                                 }
-                            }, a.createElement(o.Rb, {
+                            }, a.createElement(o.Qb, {
                                 label: n.alt
                             }, a.createElement(o.Ta, {
                                 type: o.Ua.Alpha,
@@ -459,7 +459,7 @@
                                 src: Object(s.d)(n.id, 3)
                             })))))
                         });
-                        return a.createElement(o.yb, {
+                        return a.createElement(o.xb, {
                             background: o.r.Base,
                             border: !0,
                             className: "new-chatter-ritual",
@@ -480,7 +480,7 @@
                             margin: {
                                 right: .5
                             }
-                        }, this.props.bannerMessage), t, a.createElement(o.yb, {
+                        }, this.props.bannerMessage), t, a.createElement(o.xb, {
                             borderLeft: !0,
                             flexShrink: 0
                         }, a.createElement(o.A, {

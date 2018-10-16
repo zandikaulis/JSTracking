@@ -55,66 +55,66 @@
                 _ = n("fy8Z"),
                 h = n("0xbx"),
                 f = n("/7QA"),
-                y = n("coZW"),
-                g = n("Ue10"),
-                v = function(t) {
+                g = n("coZW"),
+                v = n("Ue10"),
+                y = function(t) {
                     function e() {
                         return null !== t && t.apply(this, arguments) || this
                     }
                     return a.__extends(e, t), e.prototype.render = function() {
-                        return r.createElement(g.yb, {
+                        return r.createElement(v.xb, {
                             className: "tenant-panel",
-                            display: g.X.Flex,
-                            flexDirection: g.Z.Column,
+                            display: v.X.Flex,
+                            flexDirection: v.Z.Column,
                             border: !0
-                        }, r.createElement(g.Wa, {
+                        }, r.createElement(v.Wa, {
                             className: "tenant-panel__info",
-                            display: g.X.Block,
-                            textAlign: g.Kb.Center,
+                            display: v.X.Block,
+                            textAlign: v.Jb.Center,
                             margin: {
                                 y: 1
                             },
                             padding: {
                                 top: 2
                             }
-                        }, r.createElement(g.Oa, {
+                        }, r.createElement(v.Oa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, r.createElement(g.W, {
-                            type: g.Ob.H2,
+                        }, r.createElement(v.W, {
+                            type: v.Nb.H2,
                             className: "tenant-panel__count",
-                            color: g.O.Alt2
-                        }, this.props.tenant.count)), r.createElement(g.W, {
-                            type: g.Ob.H3,
-                            transform: g.Nb.Uppercase,
+                            color: v.O.Alt2
+                        }, this.props.tenant.count)), r.createElement(v.W, {
+                            type: v.Nb.H3,
+                            transform: v.Mb.Uppercase,
                             className: "tenant-panel__name",
-                            color: g.O.Alt2
-                        }, this.props.tenant.name)), r.createElement(g.yb, {
+                            color: v.O.Alt2
+                        }, this.props.tenant.name)), r.createElement(v.xb, {
                             className: "tenant-panel__action",
-                            display: g.X.Flex,
+                            display: v.X.Flex,
                             padding: {
                                 y: 1
                             },
-                            background: g.r.Alt2,
-                            justifyContent: g.Va.Center
-                        }, r.createElement(g.z, {
-                            type: g.F.Hollow,
-                            onClick: Object(y.c)(this.trackLabel()),
+                            background: v.r.Alt2,
+                            justifyContent: v.Va.Center
+                        }, r.createElement(v.z, {
+                            type: v.F.Hollow,
+                            onClick: Object(g.c)(this.trackLabel()),
                             linkTo: this.props.tenant.entryUrl
-                        }, r.createElement(g.W, {
-                            transform: g.Nb.Uppercase
+                        }, r.createElement(v.W, {
+                            transform: v.Mb.Uppercase
                         }, this.buttonText()))))
                     }, e.prototype.trackLabel = function() {
                         var t = this.props.tenant.name.toLowerCase();
-                        if (this.props.company) return Object(y.b)(t);
+                        if (this.props.company) return Object(g.b)(t);
                         switch (t) {
                             case "games":
-                                return y.a.ConsoleRegisterCompanyGames;
+                                return g.a.ConsoleRegisterCompanyGames;
                             case "drops":
-                                return y.a.ConsoleRegisterCompanyDrops;
+                                return g.a.ConsoleRegisterCompanyDrops;
                             default:
-                                return Object(y.b)(t)
+                                return Object(g.b)(t)
                         }
                     }, e.prototype.buttonText = function() {
                         var t = Object(f.d)("View {tenantName}", {
@@ -139,24 +139,24 @@
                     return a.__extends(e, t), e.prototype.render = function() {
                         var t = this,
                             e = this.props.tenants.map(function(e, n) {
-                                return r.createElement(g.P, {
+                                return r.createElement(v.P, {
                                     cols: {
                                         default: 12,
                                         sm: 6,
                                         md: 3
                                     },
                                     key: n
-                                }, r.createElement(g.Wa, {
+                                }, r.createElement(v.Wa, {
                                     margin: {
                                         bottom: 1
                                     }
-                                }, r.createElement(v, {
+                                }, r.createElement(y, {
                                     tenant: e,
                                     company: t.props.company
                                 })))
                             });
-                        return r.createElement(g.Ia, {
-                            gutterSize: g.Ja.Small
+                        return r.createElement(v.Ia, {
+                            gutterSize: v.Ja.Small
                         }, e)
                     }, e
                 }(r.Component),
@@ -180,7 +180,7 @@
                     entryUrl: "/console/drops",
                     count: 0
                 }];
-            var O = function(t) {
+            var C = function(t) {
                     function e() {
                         var e = null !== t && t.apply(this, arguments) || this;
                         return e.state = {
@@ -287,7 +287,7 @@
                         })
                     }, e
                 }(r.Component),
-                C = Object(o.compose)(Object(l.b)("DevOverviewPage", {
+                O = Object(o.compose)(Object(l.b)("DevOverviewPage", {
                     destination: p.a.DevSiteOverview
                 }), Object(i.a)({
                     location: u.PageviewLocation.DevSiteOverview
@@ -295,11 +295,11 @@
                     return {
                         company: Object(d.c)(t)
                     }
-                }))(O);
+                }))(C);
             n.d(e, "DevOverviewPageContainer", function() {
-                return O
-            }), n.d(e, "DevOverviewPage", function() {
                 return C
+            }), n.d(e, "DevOverviewPage", function() {
+                return O
             })
         },
         "V+GM": function(t, e, n) {

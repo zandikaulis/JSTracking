@@ -228,7 +228,7 @@
                         return i.createElement(d.b, {
                             className: "banned-chatters__list",
                             autoHide: !0
-                        }, i.createElement(m.yb, {
+                        }, i.createElement(m.xb, {
                             background: m.r.Base,
                             elevation: 1,
                             padding: {
@@ -241,22 +241,22 @@
                             "x:bold": function(e) {
                                 return i.createElement(m.W, {
                                     bold: !0,
-                                    type: m.Ob.Span
+                                    type: m.Nb.Span
                                 }, e)
                             }
-                        }, "BannedChatters")), i.createElement(m.Bb, null, i.createElement(m.Eb, null, i.createElement(m.Fb, {
+                        }, "BannedChatters")), i.createElement(m.Ab, null, i.createElement(m.Db, null, i.createElement(m.Eb, {
                             label: Object(o.d)("Username", "BannedChatters")
-                        }), i.createElement(m.Fb, {
+                        }), i.createElement(m.Eb, {
                             label: Object(o.d)("Added By", "BannedChatters")
-                        }), i.createElement(m.Fb, {
+                        }), i.createElement(m.Eb, {
                             label: Object(o.d)("Time Banned", "BannedChatters")
-                        }), i.createElement(m.Fb, {
-                            textAlign: m.Kb.Center,
+                        }), i.createElement(m.Eb, {
+                            textAlign: m.Jb.Center,
                             label: Object(o.d)("Actions", "BannedChatters")
-                        })), i.createElement(m.Cb, null, t.map(function(n) {
-                            return i.createElement(m.Gb, {
+                        })), i.createElement(m.Bb, null, t.map(function(n) {
+                            return i.createElement(m.Fb, {
                                 key: n.bannedUser.id
-                            }, i.createElement(m.Db, null, i.createElement(m.Oa, {
+                            }, i.createElement(m.Cb, null, i.createElement(m.Oa, {
                                 padding: {
                                     right: 4,
                                     bottom: .5
@@ -265,13 +265,13 @@
                                 ellipsis: !0,
                                 bold: !0,
                                 "data-test-selector": a.BannedUserName
-                            }, n.bannedUser && n.bannedUser.login))), i.createElement(m.Db, null, i.createElement(m.W, {
+                            }, n.bannedUser && n.bannedUser.login))), i.createElement(m.Cb, null, i.createElement(m.W, {
                                 "data-test-selector": a.BannedByUserName
-                            }, n.modUser && n.modUser.displayName || Object(o.d)("an unknown user", "BannedChatters"))), i.createElement(m.Db, null, i.createElement(m.W, {
+                            }, n.modUser && n.modUser.displayName || Object(o.d)("an unknown user", "BannedChatters"))), i.createElement(m.Cb, null, i.createElement(m.W, {
                                 "data-test-selector": a.BannedDate
-                            }, Object(o.c)(new Date(n.bannedAt)))), i.createElement(m.Db, {
-                                textAlign: m.Kb.Center
-                            }, i.createElement(m.Rb, {
+                            }, Object(o.c)(new Date(n.bannedAt)))), i.createElement(m.Cb, {
+                                textAlign: m.Jb.Center
+                            }, i.createElement(m.Qb, {
                                 label: Object(o.d)("Unban", "BannedChatters")
                             }, i.createElement(m.A, {
                                 "data-chatter-login": n.bannedUser ? n.bannedUser.login : "",
@@ -688,7 +688,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return c.__extends(n, e), n.prototype.render = function() {
-                        return this.props.sessionUser ? u.createElement(b.a, null, u.createElement(k.yb, {
+                        return this.props.sessionUser ? u.createElement(b.a, null, u.createElement(k.xb, {
                             background: k.r.Base,
                             border: !0,
                             padding: {
@@ -711,7 +711,7 @@
                         }, Object(m.d)("Banned Users", "BannedChattersPage")), u.createElement(k.W, {
                             fontSize: k.Ba.Size7,
                             color: k.O.Alt2
-                        }, Object(m.d)("View and modify your banned users list", "BannedChattersPage"))))), u.createElement(k.yb, {
+                        }, Object(m.d)("View and modify your banned users list", "BannedChattersPage"))))), u.createElement(k.xb, {
                             background: k.r.Base,
                             borderBottom: !0,
                             borderLeft: !0,

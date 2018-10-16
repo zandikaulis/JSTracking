@@ -425,7 +425,7 @@
                             fullHeight: !0
                         }, n)), d.createElement(m.P, {
                             cols: 1
-                        }, d.createElement(m.Rb, {
+                        }, d.createElement(m.Qb, {
                             label: o
                         }, d.createElement(m.A, {
                             "data-a-target": "edit-term",
@@ -435,7 +435,7 @@
                             onClick: this.handleEdit
                         }))), d.createElement(m.P, {
                             cols: 1
-                        }, d.createElement(m.Rb, {
+                        }, d.createElement(m.Qb, {
                             label: c
                         }, d.createElement(m.A, {
                             "data-a-target": "delete-term",
@@ -474,7 +474,7 @@
                             onKeyDown: this.handleEditKeyDown
                         })), d.createElement(m.Wa, {
                             flexShrink: 0
-                        }, d.createElement(m.Rb, {
+                        }, d.createElement(m.Qb, {
                             label: n
                         }, d.createElement(m.A, {
                             "data-a-target": "save-term-edit",
@@ -482,7 +482,7 @@
                             icon: m.ob.Check,
                             ariaLabel: n,
                             onClick: this.confirmEdit
-                        })), d.createElement(m.Rb, {
+                        })), d.createElement(m.Qb, {
                             label: i
                         }, d.createElement(m.A, {
                             "data-a-target": "cancel-term-edit",
@@ -509,7 +509,7 @@
                             show: !0
                         }, d.createElement(m.Wa, {
                             margin: 1
-                        }, d.createElement(m.yb, {
+                        }, d.createElement(m.xb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: .5
@@ -681,7 +681,7 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? d.createElement(m.Wa, null) : d.createElement(m.yb, {
+                        return !this.props.data || this.props.data.loading || this.props.data.error || !this.props.data.user ? d.createElement(m.Wa, null) : d.createElement(m.xb, {
                             padding: {
                                 top: 2
                             }
@@ -689,12 +689,12 @@
                             cols: 2
                         }, d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Ob.Strong
+                            type: m.Nb.Strong
                         }, Object(l.d)("Blocked and Permitted Terms", "AutoModTermsTitle"))), d.createElement(m.P, {
                             cols: 5
                         }, d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Ob.Strong
+                            type: m.Nb.Strong
                         }, Object(l.d)("Blocked Terms or Phrases", "AutoModBlockedTermsTitle")), d.createElement(m.W, {
                             color: m.O.Alt2
                         }, Object(l.d)("Messages containing these terms or phrases will be blocked from chat. Terms are automatically added when a mod denies a caught message.", "AutoModBlockedTermsDescription")), d.createElement(b, {
@@ -705,7 +705,7 @@
                             terms: this.props.data.user.blockedTerms
                         }), d.createElement(m.W, {
                             color: m.O.Alt2,
-                            type: m.Ob.Strong
+                            type: m.Nb.Strong
                         }, Object(l.d)("Permitted Terms or Phrases", "AutoModPermittedTermsTitle")), d.createElement(m.W, {
                             color: m.O.Alt2
                         }, Object(l.d)("Messages containing these terms, and no other blocked terms, will not be caught by AutoMod. Terms are automatically added when a mod allows a message.", "AutoModPermittedTermsDescription")), d.createElement(b, {

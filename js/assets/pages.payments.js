@@ -135,8 +135,8 @@
                 B = n("oQBz"),
                 U = n.n(B),
                 L = n("PwAB"),
-                H = n.n(L),
-                X = n("/0dD"),
+                X = n.n(L),
+                H = n("/0dD"),
                 V = n("XDQu");
             ! function(e) {
                 e.AmericanExpress = "american_express", e.Discover = "discover", e.MasterCard = "mastercard", e.Visa = "visa"
@@ -171,10 +171,10 @@
                             switch (this.props.paymentProvider) {
                                 case "xsolla_v3":
                                     return {
-                                        src: H.a,
+                                        src: X.a,
                                         srcSet: {
                                             "1x": U.a,
-                                            "2x": H.a
+                                            "2x": X.a
                                         },
                                         alt: Object(s.d)("Xsolla icon", "PaymentMethodImage")
                                     };
@@ -258,7 +258,7 @@
                 }(i.Component));
             var Z = Object(o.connect)(function(e) {
                 return {
-                    darkModeEnabled: Object(V.a)(e) === X.a.Dark
+                    darkModeEnabled: Object(V.a)(e) === H.a.Dark
                 }
             })(G);
             n.d(t, !1, function() {
@@ -706,7 +706,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(s.yb, {
+                        return i.createElement(s.xb, {
                             className: this.isExpired ? "payment-method-display--expired" : "",
                             display: s.X.Flex,
                             justifyContent: this.props.justifyContent || s.Va.Between,
@@ -1187,8 +1187,8 @@
                 B = n("2xEe"),
                 U = n.n(B),
                 L = n("q8H6"),
-                H = n.n(L),
-                X = n("x1M1"),
+                X = n.n(L),
+                H = n("x1M1"),
                 V = n("/0dD"),
                 Y = n("XDQu"),
                 q = n("6fcp"),
@@ -1562,7 +1562,7 @@
                                 top: 2,
                                 bottom: 1
                             },
-                            textAlign: k.Kb.Center
+                            textAlign: k.Jb.Center
                         }, d.createElement(k.Wa, {
                             display: this.state.walletLoaded ? k.X.Hide : k.X.Block
                         }, d.createElement("div", {
@@ -1736,7 +1736,7 @@
                             checked: this.state.selectedOption === K.PayWithAmazon
                         })), d.createElement("label", {
                             htmlFor: K.PayWithAmazon
-                        }, d.createElement(X.a, {
+                        }, d.createElement(H.a, {
                             alt: Object(p.d)("Amazon Pay", "RecurlyPaymentMethod"),
                             sources: {
                                 themed: !0,
@@ -1768,7 +1768,7 @@
                             checked: this.state.selectedOption === K.PayPal
                         })), d.createElement("label", {
                             htmlFor: K.PayPal
-                        }, d.createElement(X.a, {
+                        }, d.createElement(H.a, {
                             alt: Object(p.d)("PayPal", "RecurlyPaymentMethod"),
                             sources: {
                                 themed: !0,
@@ -1778,7 +1778,7 @@
                                 },
                                 dark: {
                                     "1x": U.a,
-                                    "2x": H.a
+                                    "2x": X.a
                                 }
                             }
                         }))), d.createElement(k.Wa, {
@@ -1836,7 +1836,7 @@
                         return t.state = {
                             showingMore: !1
                         }, t.renderNoRenewingSubscriptionsMessage = function() {
-                            return d.createElement(k.yb, {
+                            return d.createElement(k.xb, {
                                 alignItems: k.f.Center,
                                 background: k.r.Base,
                                 borderBottom: !0,
@@ -1869,7 +1869,7 @@
                         var e = this.props.subscriptions.slice(0, 5),
                             t = this.state.showingMore ? this.props.subscriptions : e,
                             n = this.state.showingMore ? Object(p.d)("Show Less", "SubscriptionRows") : Object(p.d)("Show More", "SubscriptionRows");
-                        return d.createElement(d.Fragment, null, d.createElement(k.yb, {
+                        return d.createElement(d.Fragment, null, d.createElement(k.xb, {
                             borderLeft: !0,
                             borderRight: !0,
                             display: k.X.Flex,
@@ -1881,9 +1881,9 @@
                         }, d.createElement(k.W, {
                             bold: !0,
                             color: k.O.Alt2,
-                            type: k.Ob.P,
+                            type: k.Nb.P,
                             "data-test-selector": ce.TOTAL_SUB_PRICE_TEXT
-                        }, this.numOfSubscriptionsCopy, " (", this.pricePerMonth, ")")), d.createElement(k.yb, {
+                        }, this.numOfSubscriptionsCopy, " (", this.pricePerMonth, ")")), d.createElement(k.xb, {
                             background: k.r.Base,
                             border: !0,
                             padding: {
@@ -1896,7 +1896,7 @@
                                 subExpirationDate: Object(se.c)(e.expiresAt)
                             }, "SubscriptionRows") : Object(p.d)("Expires {subExpirationDate, date, short}", {
                                 subExpirationDate: Object(se.c)(e.expiresAt)
-                            }, "SubscriptionRows"), d.createElement(k.yb, {
+                            }, "SubscriptionRows"), d.createElement(k.xb, {
                                 borderBottom: n !== t.length - 1,
                                 fullWidth: !0,
                                 key: e.id,
@@ -2399,10 +2399,10 @@
                             margin: {
                                 y: 3
                             }
-                        }, d.createElement(k.yb, {
+                        }, d.createElement(k.xb, {
                             border: !0,
                             background: k.r.Base
-                        }, d.createElement(k.yb, {
+                        }, d.createElement(k.xb, {
                             padding: {
                                 x: 2,
                                 y: 1
@@ -2493,7 +2493,7 @@
                             var e = Object(p.d)("Delete saved payment method", "DeletePaymentMethodModal");
                             return t.hasRenewingSubscriptions && (e = Object(p.d)("Unable to delete payment method", "DeletePaymentMethodModal")), d.createElement(k.W, {
                                 bold: !0,
-                                type: k.Ob.H1,
+                                type: k.Nb.H1,
                                 fontSize: k.Ba.Size4
                             }, e)
                         }, t.renderBodyContent = function() {
@@ -2544,7 +2544,7 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(k.yb, {
+                        return d.createElement(k.xb, {
                             className: "delete-payment-method-modal"
                         }, d.createElement(k.Wa, {
                             margin: {
@@ -2585,7 +2585,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(k.yb, {
+                        return d.createElement(k.xb, {
                             background: k.r.Base,
                             padding: 2
                         }, d.createElement(De, {
@@ -2636,7 +2636,7 @@
                         var e = this.renderPaymentMethodCards();
                         return e && e.length ? d.createElement(k.Wa, {
                             className: "payment-methods-tab"
-                        }, e) : d.createElement(k.yb, {
+                        }, e) : d.createElement(k.xb, {
                             background: k.r.Alt,
                             border: !0,
                             className: "payment-methods-tab",
@@ -2785,20 +2785,20 @@
             ! function(e) {
                 e.Tier1 = "1000", e.Tier2 = "2000", e.Tier3 = "3000"
             }(Me || (Me = {}));
-            var Ue, Le, He = function() {
+            var Ue, Le, Xe = function() {
                     return Object(p.d)("Twitch Turbo", "TransactionHistoryTab")
                 },
-                Xe = function(e) {
-                    return d.createElement(k.Gb, null, d.createElement(k.Db, {
-                        verticalAlign: k.Yb.Middle
-                    }, d.createElement(k.W, null, e.purchasedAt ? Object(p.c)(Object(se.c)(e.purchasedAt), "medium") : "-")), d.createElement(k.Db, {
-                        verticalAlign: k.Yb.Middle
+                He = function(e) {
+                    return d.createElement(k.Fb, null, d.createElement(k.Cb, {
+                        verticalAlign: k.Xb.Middle
+                    }, d.createElement(k.W, null, e.purchasedAt ? Object(p.c)(Object(se.c)(e.purchasedAt), "medium") : "-")), d.createElement(k.Cb, {
+                        verticalAlign: k.Xb.Middle
                     }, d.createElement(k.Wa, {
                         display: k.X.Flex
                     }, d.createElement(k.U, {
                         to: e.product.owner ? "/" + e.product.owner.login : void 0
                     }, d.createElement(k.q, {
-                        alt: "Turbo" === e.product.name ? He() : e.product.name,
+                        alt: "Turbo" === e.product.name ? Xe() : e.product.name,
                         src: "Turbo" === e.product.name ? oe.a : e.product.owner ? e.product.owner.profileImageURL : void 0,
                         size: 40
                     })), d.createElement(k.Wa, {
@@ -2813,8 +2813,8 @@
                         type: k.V.Inherit,
                         to: e.product.owner ? "/" + e.product.owner.login : void 0,
                         hoverUnderlineNone: !0
-                    }, "Turbo" === e.product.name ? He() : e.product.name))))), d.createElement(k.Db, {
-                        verticalAlign: k.Yb.Middle
+                    }, "Turbo" === e.product.name ? Xe() : e.product.name))))), d.createElement(k.Cb, {
+                        verticalAlign: k.Xb.Middle
                     }, d.createElement(k.W, null, function(e, t) {
                         if ("SUBSCRIPTION" === e.type) {
                             if ("Turbo" === e.name) return Object(p.d)("Turbo - Subscription", "TransactionHistoryTab");
@@ -2868,8 +2868,8 @@
                         gift: e.isGift,
                         recipient: e.recipient,
                         quantity: e.quantity
-                    }))), d.createElement(k.Db, {
-                        verticalAlign: k.Yb.Middle
+                    }))), d.createElement(k.Cb, {
+                        verticalAlign: k.Xb.Middle
                     }, d.createElement(k.Wa, {
                         display: k.X.Flex,
                         justifyContent: k.Va.End
@@ -2884,8 +2884,8 @@
                             return e < 0 ? "+" + n : n
                         }
                         return "-"
-                    }(e.grossAmount, e.currency)))), d.createElement(k.Db, {
-                        verticalAlign: k.Yb.Middle
+                    }(e.grossAmount, e.currency)))), d.createElement(k.Cb, {
+                        verticalAlign: k.Xb.Middle
                     }, d.createElement(Be.a, {
                         paymentProvider: e.paymentMethod.provider,
                         paymentInstrumentType: e.paymentMethod.paymentType,
@@ -2907,11 +2907,11 @@
                         return t.state = {
                             currentIndex: 0,
                             currentFilters: l.__assign({}, t.props.data.variables.filters),
-                            dateSortType: k.vb.Descending,
-                            costSortType: k.vb.Default,
+                            dateSortType: k.ub.Descending,
+                            costSortType: k.ub.Default,
                             refetching: !1
                         }, t.renderNoTransactionsMessage = function() {
-                            return d.createElement(k.yb, {
+                            return d.createElement(k.xb, {
                                 alignItems: k.f.Center,
                                 borderBottom: !0,
                                 borderLeft: !0,
@@ -3002,15 +3002,15 @@
                                 return l.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return e = this.state.dateSortType, t = e === k.vb.Default || e === k.vb.Ascending ? k.vb.Descending : k.vb.Ascending, n = l.__assign({}, this.state.currentFilters, {
-                                                sortBy: t === k.vb.Descending ? Ue.PurchaseDateDesc : Ue.PurchaseDateAsc
+                                            return e = this.state.dateSortType, t = e === k.ub.Default || e === k.ub.Ascending ? k.ub.Descending : k.ub.Ascending, n = l.__assign({}, this.state.currentFilters, {
+                                                sortBy: t === k.ub.Descending ? Ue.PurchaseDateDesc : Ue.PurchaseDateAsc
                                             }), [4, this.props.getFilteredQuery(n)];
                                         case 1:
                                             return r.sent(), this.setState({
                                                 currentIndex: 0,
                                                 currentFilters: n,
                                                 dateSortType: t,
-                                                costSortType: k.vb.Default
+                                                costSortType: k.ub.Default
                                             }), [2]
                                     }
                                 })
@@ -3021,15 +3021,15 @@
                                 return l.__generator(this, function(r) {
                                     switch (r.label) {
                                         case 0:
-                                            return e = this.state.costSortType, t = e === k.vb.Default || e === k.vb.Ascending ? k.vb.Descending : k.vb.Ascending, n = l.__assign({}, this.state.currentFilters, {
-                                                sortBy: t === k.vb.Descending ? Ue.PriceDesc : Ue.PriceAsc
+                                            return e = this.state.costSortType, t = e === k.ub.Default || e === k.ub.Ascending ? k.ub.Descending : k.ub.Ascending, n = l.__assign({}, this.state.currentFilters, {
+                                                sortBy: t === k.ub.Descending ? Ue.PriceDesc : Ue.PriceAsc
                                             }), [4, this.props.getFilteredQuery(n)];
                                         case 1:
                                             return r.sent(), this.setState({
                                                 currentIndex: 0,
                                                 currentFilters: n,
                                                 costSortType: t,
-                                                dateSortType: k.vb.Default
+                                                dateSortType: k.ub.Default
                                             }), [2]
                                     }
                                 })
@@ -3080,7 +3080,7 @@
                         });
                         var e = this.props.data.currentUser.paymentTransactions.edges.map(function(e) {
                             var t = e.node;
-                            return d.createElement(Xe, l.__assign({
+                            return d.createElement(He, l.__assign({
                                 key: t.id
                             }, t))
                         });
@@ -3141,31 +3141,31 @@
                             type: k.F.Hollow,
                             linkTo: "https://www.paypal.com/mep/dashboard",
                             targetBlank: !0
-                        }, Object(p.d)("View Your PayPal Order History", "TransactionHistoryTab"))))), d.createElement(k.yb, {
+                        }, Object(p.d)("View Your PayPal Order History", "TransactionHistoryTab"))))), d.createElement(k.xb, {
                             background: k.r.Base,
                             elevation: 2,
                             margin: {
                                 y: 2
                             }
-                        }, d.createElement(k.Bb, {
+                        }, d.createElement(k.Ab, {
                             alternateRows: !0
-                        }, d.createElement(k.Eb, null, d.createElement(k.Fb, {
+                        }, d.createElement(k.Db, null, d.createElement(k.Eb, {
                             label: Object(p.d)("Date", "TransactionHistoryTab"),
                             sorting: this.state.dateSortType,
                             onClick: this.handleSortDate,
                             "data-test-selector": "date-table-heading-selector"
-                        }), d.createElement(k.Fb, {
+                        }), d.createElement(k.Eb, {
                             label: Object(p.d)("Channel", "TransactionHistoryTab")
-                        }), d.createElement(k.Fb, {
+                        }), d.createElement(k.Eb, {
                             label: Object(p.d)("Product", "TransactionHistoryTab")
-                        }), d.createElement(k.Fb, {
+                        }), d.createElement(k.Eb, {
                             label: Object(p.d)("Price", "TransactionHistoryTab"),
                             sorting: this.state.costSortType,
                             onClick: this.handleSortCost,
                             "data-test-selector": "price-table-heading-selector"
-                        }), d.createElement(k.Fb, {
+                        }), d.createElement(k.Eb, {
                             label: Object(p.d)("Payment Method", "TransactionHistoryTab")
-                        })), d.createElement(k.Cb, null, e)), !e.length && this.renderNoTransactionsMessage()), d.createElement(ze, {
+                        })), d.createElement(k.Bb, null, e)), !e.length && this.renderNoTransactionsMessage()), d.createElement(ze, {
                             currentPage: this.getCurrentPage(),
                             totalNumberPages: this.getTotalPages(),
                             onNext: this.handleNextPage,
@@ -3251,7 +3251,7 @@
                         }, t
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return this.props.isLoggedIn ? d.createElement(k.yb, {
+                        return this.props.isLoggedIn ? d.createElement(k.xb, {
                             background: k.r.Alt,
                             fullWidth: !0,
                             alignContent: k.e.Center
@@ -3261,15 +3261,15 @@
                                 y: 3
                             }
                         }, d.createElement(k.W, {
-                            type: k.Ob.H2
+                            type: k.Nb.H2
                         }, Object(p.d)("Payments", "PaymentsLandingPagePresentationComponent")), d.createElement(k.Wa, {
                             margin: {
                                 top: 2
                             }
-                        }, d.createElement(k.Ab, null, d.createElement(k.zb, {
+                        }, d.createElement(k.zb, null, d.createElement(k.yb, {
                             active: !this.state.txnHistoryTabActive,
                             onClick: this.switchToPaymentMethodsTab
-                        }, Object(p.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), d.createElement(k.zb, {
+                        }, Object(p.d)("Payment Methods", "PaymentsLandingPagePresentationComponent")), d.createElement(k.yb, {
                             active: this.state.txnHistoryTabActive,
                             onClick: this.switchToTxnTab
                         }, Object(p.d)("Purchase History", "PaymentsLandingPagePresentationComponent"))), d.createElement(k.Wa, {

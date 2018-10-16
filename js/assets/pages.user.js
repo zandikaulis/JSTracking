@@ -119,7 +119,7 @@
                 i = n("Ue10"),
                 a = (n("KwO+"), function(e) {
                     var t = null;
-                    e.footer && (t = o.createElement(i.yb, {
+                    e.footer && (t = o.createElement(i.xb, {
                         padding: 2,
                         background: i.r.Alt2
                     }, e.footer));
@@ -132,7 +132,7 @@
                         bottomLeft: i.x.Medium,
                         bottomRight: i.x.Medium
                     }, n);
-                    return o.createElement(o.Fragment, null, e.header, o.createElement(i.yb, {
+                    return o.createElement(o.Fragment, null, e.header, o.createElement(i.xb, {
                         background: i.r.Base,
                         margin: {
                             bottom: 4
@@ -160,7 +160,7 @@
                         fontSize: o.Ba.Size6,
                         color: e.error ? o.O.Error : o.O.Base,
                         bold: !0
-                    }, e.title))), r.createElement(o.yb, {
+                    }, e.title))), r.createElement(o.xb, {
                         padding: 2,
                         className: "settings-row",
                         fullWidth: !0
@@ -403,7 +403,7 @@
                         bottom: 2
                     }
                 }, r.createElement(o.W, {
-                    type: o.Ob.H3,
+                    type: o.Nb.H3,
                     fontSize: o.Ba.Size4,
                     color: o.O.Alt,
                     bold: !0
@@ -681,7 +681,7 @@
                             value: this.props.user.login || ""
                         })), i.createElement(w.a, {
                             label: r
-                        }, i.createElement(j.Lb, {
+                        }, i.createElement(j.Kb, {
                             onChange: this.handleReasonChange
                         })))
                     }, t
@@ -705,7 +705,7 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.deleted && this.props.isLoggedIn ? window.location.replace("/user/delete-account") : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.deleted ? i.createElement(i.Fragment, null, i.createElement(j.yb, {
+                        return this.deleted ? i.createElement(i.Fragment, null, i.createElement(j.xb, {
                             borderBottom: !0
                         }, i.createElement(j.W, {
                             fontSize: j.Ba.Size1
@@ -735,14 +735,14 @@
                         isLoggedIn: Object(p.f)(e)
                     }
                 })(U),
-                L = function(e) {
+                N = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.disabled && this.props.isLoggedIn ? window.location.replace("/user/disable-account") : this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.disabled ? i.createElement(i.Fragment, null, i.createElement(j.yb, {
+                        return this.disabled ? i.createElement(i.Fragment, null, i.createElement(j.xb, {
                             borderBottom: !0
                         }, i.createElement(j.W, {
                             fontSize: j.Ba.Size1
@@ -761,16 +761,16 @@
                         configurable: !0
                     }), t
                 }(i.Component),
-                M = Object(f.compose)(Object(k.b)("DisableAccountPage", {
+                L = Object(f.compose)(Object(k.b)("DisableAccountPage", {
                     destination: g.a.DisableAccount
                 }), Object(b.a)({
                     location: v.PageviewLocation.DisableAccount
-                }))(L);
-            var N = Object(d.connect)(function(e) {
+                }))(N);
+            var M = Object(d.connect)(function(e) {
                     return {
                         isLoggedIn: Object(p.f)(e)
                     }
-                })(M),
+                })(L),
                 W = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
@@ -787,7 +787,7 @@
                             flexWrap: j.Aa.NoWrap
                         }, i.createElement(c.a, null, i.createElement(a.a, {
                             path: "/user/disable-account",
-                            component: N
+                            component: M
                         }), i.createElement(a.a, {
                             path: "/user/delete-account",
                             component: R
@@ -813,7 +813,7 @@
                     return o.__extends(t, e), t.prototype.componentDidMount = function() {
                         Object(B.b)("native_account_recovery") || window.location.replace(Object(q.e)())
                     }, t.prototype.render = function() {
-                        return i.createElement(j.yb, {
+                        return i.createElement(j.xb, {
                             className: "account-recovery__header",
                             alignItems: j.f.Center,
                             color: j.O.Overlay,

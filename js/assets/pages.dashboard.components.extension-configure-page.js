@@ -193,9 +193,9 @@
                             }), s.createElement(v.H, null, s.createElement(v.Wa, {
                                 padding: 1
                             }, s.createElement(v.W, {
-                                type: v.Ob.H4
+                                type: v.Nb.H4
                             }, h.name), s.createElement(v.W, {
-                                type: v.Ob.Span,
+                                type: v.Nb.Span,
                                 color: v.O.Alt2
                             }, Object(c.d)("Created by {extensionAuthor}", {
                                 extensionAuthor: h.authorName
@@ -219,7 +219,7 @@
                         });
                         return s.createElement(u.b, null, s.createElement(v.Wa, {
                             padding: 2
-                        }, x, s.createElement(v.yb, {
+                        }, x, s.createElement(v.xb, {
                             borderRight: !0,
                             borderLeft: !0,
                             borderBottom: !0,

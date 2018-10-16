@@ -24,7 +24,7 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.getPresetText();
-                        return this.props.isLoggedIn && 0 !== e.length ? o.createElement(c.yb, {
+                        return this.props.isLoggedIn && 0 !== e.length ? o.createElement(c.xb, {
                             className: "orbis",
                             display: c.X.Flex,
                             flexDirection: c.Z.Column,
@@ -51,7 +51,7 @@
                                 right: 1
                             }
                         }, o.createElement(c.W, {
-                            type: c.Ob.Span
+                            type: c.Nb.Span
                         }, Object(s.d)("Interactions Available", "Orbis"))), o.createElement(c.Wa, {
                             display: c.X.Flex,
                             justifyContent: c.Va.Between,

@@ -82,7 +82,7 @@
                         var e = this.props,
                             t = e.children,
                             n = e.className;
-                        return i.createElement(m.yb, {
+                        return i.createElement(m.xb, {
                             background: m.r.Base,
                             className: n,
                             elevation: 1,
@@ -197,7 +197,7 @@
                         }, n
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        var e = i.createElement(i.Fragment, null, i.createElement(m.yb, {
+                        var e = i.createElement(i.Fragment, null, i.createElement(m.xb, {
                                 borderBottom: !0
                             }, i.createElement(m.Wa, {
                                 padding: {
@@ -226,7 +226,7 @@
                                 }
                             }, i.createElement(m.W, {
                                 color: m.O.Alt2
-                            }, this.props.email))), i.createElement(m.yb, {
+                            }, this.props.email))), i.createElement(m.xb, {
                                 background: m.r.Alt,
                                 display: m.X.Flex,
                                 justifyContent: m.Va.Center,
@@ -246,11 +246,11 @@
                                 disabled: this.state.requestState === r.InFlight,
                                 onClick: this.onClickRemove
                             }), Object(s.d)("Yes, Remove Them", "PermissionsRemoveAuthorizedStreamerConfirmation")))));
-                        return i.createElement(m.yb, {
+                        return i.createElement(m.xb, {
                             background: m.r.Base,
                             elevation: 3,
                             className: "remove-streamer-modal"
-                        }, i.createElement(m.yb, {
+                        }, i.createElement(m.xb, {
                             borderBottom: !0,
                             padding: 2,
                             display: m.X.Flex,
@@ -263,19 +263,19 @@
                         }))
                     }, t
                 }(i.Component),
-                O = (n("DfXv"), {
+                W = (n("DfXv"), {
                     "data-test-selector": "email"
                 }),
-                W = {
+                w = {
                     "data-test-selector": "send"
                 },
                 P = {
                     "data-test-selector": "remove"
                 },
-                w = {
+                j = {
                     "data-test-selector": "empty"
                 },
-                j = {
+                O = {
                     "data-test-selector": "loading"
                 },
                 x = {
@@ -367,7 +367,7 @@
                                 onKeyDown: t.handleKeyDown,
                                 value: t.state.emailAddress,
                                 placeholder: Object(s.d)("Enter an email address", "PermissionsAuthorizedStreamers")
-                            })), i.createElement(m.Wa, null, i.createElement(m.z, a.__assign({}, W, {
+                            })), i.createElement(m.Wa, null, i.createElement(m.z, a.__assign({}, w, {
                                 onClick: function() {
                                     return t.sendInvite(t.state.emailAddress)
                                 }
@@ -384,7 +384,7 @@
                                 padding: {
                                     y: 5
                                 }
-                            }, w), i.createElement(m.Wa, {
+                            }, j), i.createElement(m.Wa, {
                                 padding: {
                                     bottom: .5
                                 }
@@ -396,7 +396,7 @@
                                 color: m.O.Alt2,
                                 fontSize: m.Ba.Size5
                             }, Object(s.d)("No authorized streamers to display", "PermissionsAuthorizedStreamers"))) : t.state.authorizedStreamers.map(function(e, n) {
-                                return i.createElement(m.yb, {
+                                return i.createElement(m.xb, {
                                     key: n,
                                     alignItems: m.f.Center,
                                     borderBottom: !0,
@@ -413,7 +413,7 @@
                                     margin: {
                                         left: 1
                                     }
-                                }, i.createElement(m.W, a.__assign({}, O), e.email))), i.createElement(m.Wa, null, i.createElement(m.Wa, {
+                                }, i.createElement(m.W, a.__assign({}, W), e.email))), i.createElement(m.Wa, null, i.createElement(m.Wa, {
                                     margin: {
                                         right: 1
                                     },
@@ -479,7 +479,7 @@
                             fontSize: m.Ba.Size5
                         }, Object(s.d)("People who can stream to your channel", "PermissionsAuthorizedStreamers")), i.createElement(u.a, {
                             size: m.w.Medium
-                        }, Object(s.d)("When you invite someone to stream to your channel, we'll send them a new stream key and instructions.", "PermissionsAuthorizedStreamers")))), this.state.requestState === _.Success ? this.renderSuccess() : this.renderError()) : i.createElement(m.db, a.__assign({}, j, {
+                        }, Object(s.d)("When you invite someone to stream to your channel, we'll send them a new stream key and instructions.", "PermissionsAuthorizedStreamers")))), this.state.requestState === _.Success ? this.renderSuccess() : this.renderError()) : i.createElement(m.db, a.__assign({}, O, {
                             height: 300,
                             width: 533
                         }))
@@ -526,11 +526,11 @@
                         })
                     }, t
                 }(i.Component),
-                B = n("rqzT"),
-                I = n("lbyP"),
-                k = n("jreu"),
-                q = n("NMMG"),
-                T = function(e) {
+                N = n("rqzT"),
+                B = n("b6Yk"),
+                I = n("jreu"),
+                k = n("NMMG"),
+                q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -543,39 +543,39 @@
                             }
                         }, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
-                        }, Object(s.d)("Editors can access your channel's Dashboard to help you manage the following activities:", "ChannelEditorsTooltip"))), i.createElement(m.Xb, null, i.createElement("ul", null, i.createElement("li", null, i.createElement(m.W, {
+                            type: m.Nb.P
+                        }, Object(s.d)("Editors can access your channel's Dashboard to help you manage the following activities:", "ChannelEditorsTooltip"))), i.createElement(m.Wb, null, i.createElement("ul", null, i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Editing stream info", "ChannelEditorsTooltip"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Running commercial breaks", "ChannelEditorsTooltip"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Editing video info", "ChannelEditorsTooltip"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Uploading videos", "ChannelEditorsTooltip"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Creating events", "ChannelEditorsTooltip"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Starting Reruns", "ChannelEditorsTooltip"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Adding stream markers", "ChannelEditorsTooltip"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Downloading VODs", "ChannelEditorsTooltip"))))))
                     }, t
                 }(i.Component),
-                N = n("yLwq"),
-                X = function(e) {
-                    return e.profile_image && e.profile_image["50x50"] ? e.profile_image["50x50"].url : Object(N.c)(e.id, 50)
+                T = n("yLwq"),
+                R = function(e) {
+                    return e.profile_image && e.profile_image["50x50"] ? e.profile_image["50x50"].url : Object(T.c)(e.id, 50)
                 },
-                R = (n("cQGI"), {
+                X = (n("cQGI"), {
                     "data-test-selector": "confirm-remove-editor"
                 }),
                 L = function(e) {
@@ -589,11 +589,11 @@
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.channel;
-                        return i.createElement(m.yb, {
+                        return i.createElement(m.xb, {
                             background: m.r.Base,
                             elevation: 3,
                             className: "remove-editor-confirmation"
-                        }, i.createElement(m.yb, {
+                        }, i.createElement(m.xb, {
                             borderBottom: !0,
                             padding: 2,
                             display: m.X.Flex,
@@ -612,7 +612,7 @@
                         }, i.createElement(m.q, {
                             alt: e.login,
                             size: 50,
-                            src: X(e)
+                            src: R(e)
                         }), i.createElement(m.Wa, {
                             margin: {
                                 top: 1
@@ -620,7 +620,7 @@
                         }, i.createElement(m.W, {
                             color: m.O.Alt2,
                             fontSize: m.Ba.Size5
-                        }, e.login)))), i.createElement(m.yb, {
+                        }, e.login)))), i.createElement(m.xb, {
                             background: m.r.Alt,
                             display: m.X.Flex,
                             justifyContent: m.Va.Center,
@@ -636,22 +636,21 @@
                             margin: {
                                 x: 1
                             }
-                        }, i.createElement(m.z, a.__assign({}, R, {
+                        }, i.createElement(m.z, a.__assign({}, X, {
                             onClick: this.handleRemoveEditor
                         }), Object(s.d)("Yes, Remove Editor", "PermissionsRemoveEditorConfirmation")))), i.createElement(E.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(i.Component),
-                M = n("b6Yk"),
-                V = function(e) {
+                M = function(e) {
                     var t = e.channelID,
                         n = e.editorLogin;
                     return a.__awaiter(void 0, void 0, Promise, function() {
                         return a.__generator(this, function(e) {
                             switch (e.label) {
                                 case 0:
-                                    return [4, M.a.postOrThrow("https://api.twitch.tv/v5/permissions/channels/" + t + "/editors", {
+                                    return [4, B.a.postOrThrow("https://api.twitch.tv/v5/permissions/channels/" + t + "/editors", {
                                         body: {
                                             granted_to_login: n
                                         }
@@ -662,34 +661,34 @@
                         })
                     })
                 },
-                G = {
+                V = {
                     "data-test-selector": "display-name"
                 },
-                H = {
+                G = {
                     "data-test-selector": "empty"
                 },
-                U = {
+                H = {
                     "data-test-selector": "loading"
                 },
-                Z = {
+                U = {
                     "data-test-selector": "error"
                 },
-                K = {
+                Z = {
                     "data-test-selector": "add-editor"
                 },
-                Y = {
+                K = {
                     "data-test-selector": "add-editor-input"
                 },
-                J = {
+                Y = {
                     "data-test-selector": "add-editor-error"
                 },
-                Q = {
+                J = {
                     "data-test-selector": "remove-editor"
                 };
             ! function(e) {
                 e[e.Loading = 0] = "Loading", e[e.Success = 1] = "Success", e[e.Error = 2] = "Error"
             }(A || (A = {}));
-            var $, ee = function(e) {
+            var Q, $ = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -700,7 +699,7 @@
                             return a.__awaiter(t, void 0, void 0, function() {
                                 var t;
                                 return a.__generator(this, function(n) {
-                                    return Object(k.a)({
+                                    return Object(I.a)({
                                         channelID: this.props.user.id,
                                         editorID: e.id
                                     }), t = this.state.channelEditors.filter(function(t) {
@@ -718,7 +717,7 @@
                                         case 0:
                                             return n.trys.push([0, 2, , 3]), this.setState({
                                                 addEditorRequestState: A.Loading
-                                            }), [4, V({
+                                            }), [4, M({
                                                 channelID: this.props.user.id,
                                                 editorLogin: e
                                             })];
@@ -757,20 +756,20 @@
                                 margin: {
                                     right: 1
                                 }
-                            }, i.createElement(m.Qa, a.__assign({}, Y, {
+                            }, i.createElement(m.Qa, a.__assign({}, K, {
                                 type: m.Sa.Text,
                                 placeholder: Object(s.d)("Add an editor", "ChannelEditors"),
                                 onChange: t.handleEditorLoginChange,
                                 onKeyDown: t.handleKeyDown,
                                 value: t.state.editorLogin
-                            }))), i.createElement(m.z, a.__assign({}, K, {
+                            }))), i.createElement(m.z, a.__assign({}, Z, {
                                 onClick: function() {
                                     return t.handleAddEditor(t.state.editorLogin)
                                 }
                             }), Object(s.d)("Add", "ChannelEditors"))), t.state.addEditorRequestState === A.Error && i.createElement(m.W, a.__assign({
                                 color: m.O.Error,
                                 fontSize: m.Ba.Size7
-                            }, J), Object(s.d)("Failed to add editor. Try again.", "PermissionsChannelEditors")))
+                            }, Y), Object(s.d)("Failed to add editor. Try again.", "PermissionsChannelEditors")))
                         }, t.isEmpty = function() {
                             return t.state.requestState === A.Success && 0 === t.state.channelEditors.length
                         }, t.renderSuccess = function() {
@@ -783,7 +782,7 @@
                                 padding: {
                                     y: 5
                                 }
-                            }, H), i.createElement(m.Wa, {
+                            }, G), i.createElement(m.Wa, {
                                 padding: {
                                     bottom: .5
                                 }
@@ -795,7 +794,7 @@
                                 color: m.O.Alt2,
                                 fontSize: m.Ba.Size5
                             }, Object(s.d)("No editors to display", "PermissionsChannelEditors"))) : t.state.channelEditors.map(function(e) {
-                                return i.createElement(m.yb, {
+                                return i.createElement(m.xb, {
                                     key: e.id,
                                     alignItems: m.f.Center,
                                     borderBottom: !0,
@@ -813,22 +812,22 @@
                                 }, i.createElement(m.q, {
                                     alt: e.displayname,
                                     size: 30,
-                                    src: X(e)
+                                    src: R(e)
                                 })), i.createElement(m.Wa, {
                                     margin: {
                                         left: 1
                                     }
                                 }, i.createElement(m.U, {
                                     to: "/" + e.login
-                                }, i.createElement(m.W, a.__assign({}, G), e.displayname)))), i.createElement(m.Wa, null, i.createElement(m.Wa, {
+                                }, i.createElement(m.W, a.__assign({}, V), e.displayname)))), i.createElement(m.Wa, null, i.createElement(m.Wa, {
                                     margin: {
                                         right: 1
                                     },
                                     display: m.X.InlineFlex
-                                }, i.createElement(B.a, {
+                                }, i.createElement(N.a, {
                                     buttonType: m.F.Hollow,
                                     isPopout: !1,
-                                    threadID: Object(q.a)(t.props.user.id, e.id)
+                                    threadID: Object(k.a)(t.props.user.id, e.id)
                                 })), i.createElement(d.a, {
                                     triggerModal: function(n) {
                                         return i.createElement(L, {
@@ -840,7 +839,7 @@
                                         })
                                     }
                                 }, function(e) {
-                                    return i.createElement(m.z, a.__assign({}, Q, {
+                                    return i.createElement(m.z, a.__assign({}, J, {
                                         onClick: e,
                                         type: m.F.Text
                                     }), Object(s.d)("Remove", "PermissionsChannelEditors"))
@@ -859,7 +858,7 @@
                                     bottom: 5,
                                     left: 0
                                 }
-                            }, Z), i.createElement(m.Wa, {
+                            }, U), i.createElement(m.Wa, {
                                 padding: {
                                     top: 5,
                                     bottom: .5
@@ -882,7 +881,7 @@
                             bold: !0,
                             color: m.O.Alt,
                             fontSize: m.Ba.Size5
-                        }, Object(s.d)("People who can manage your channel", "DashboardPermissionsPage")), i.createElement(T, null))), this.state.requestState === A.Success ? this.renderSuccess() : this.renderError()) : i.createElement(m.db, a.__assign({}, U, {
+                        }, Object(s.d)("People who can manage your channel", "DashboardPermissionsPage")), i.createElement(q, null))), this.state.requestState === A.Success ? this.renderSuccess() : this.renderError()) : i.createElement(m.db, a.__assign({}, H, {
                             height: 300,
                             width: 533
                         }))
@@ -899,7 +898,18 @@
                                         if (!this.props.user) return [2];
                                         t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, Object(I.a)(this.props.user.id)];
+                                        return t.trys.push([1, 3, , 4]), [4, function(e) {
+                                            return a.__awaiter(void 0, void 0, Promise, function() {
+                                                return a.__generator(this, function(t) {
+                                                    switch (t.label) {
+                                                        case 0:
+                                                            return [4, B.a.getOrThrow("https://api.twitch.tv/v5/permissions/channels/" + e + "/editors")];
+                                                        case 1:
+                                                            return [2, t.sent().body.editors || []]
+                                                    }
+                                                })
+                                            })
+                                        }(this.props.user.id)];
                                     case 2:
                                         return e = t.sent(), this.setState({
                                             channelEditors: e,
@@ -916,7 +926,7 @@
                         })
                     }, t
                 }(i.Component),
-                te = function(e) {
+                ee = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -929,52 +939,52 @@
                             }
                         }, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
-                        }, Object(s.d)("As an editor, you can access a channel's Dashboard to help the owner manage the following activities:", "DashboardPermissionsPage"))), i.createElement(m.Xb, null, i.createElement("ul", null, i.createElement("li", null, i.createElement(m.W, {
+                            type: m.Nb.P
+                        }, Object(s.d)("As an editor, you can access a channel's Dashboard to help the owner manage the following activities:", "DashboardPermissionsPage"))), i.createElement(m.Wb, null, i.createElement("ul", null, i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Editing stream info", "DashboardPermissionsPage"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Running commercial breaks", "DashboardPermissionPage"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Editing video info", "DashboardPermissionsPage"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Uploading videos", "DashboardPermissionsPage"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Creating events", "DashboardPermissionsPage"))), i.createElement("li", null, i.createElement(m.W, {
                             fontSize: m.Ba.Size6,
-                            type: m.Ob.P
+                            type: m.Nb.P
                         }, Object(s.d)("Starting Vodcasts", "DashboardPermissionsPage"))))))
                     }, t
                 }(i.Component),
-                ne = n("CEZT"),
-                re = {
+                te = n("CEZT"),
+                ne = {
                     "data-test-selector": "display-name"
                 },
-                ae = {
+                re = {
                     "data-test-selector": "empty"
                 },
-                ie = {
+                ae = {
                     "data-test-selector": "loading"
                 },
-                oe = {
+                ie = {
                     "data-test-selector": "error"
                 };
             ! function(e) {
                 e[e.Loading = 0] = "Loading", e[e.Success = 1] = "Success", e[e.Error = 2] = "Error"
-            }($ || ($ = {}));
-            var se = function(e) {
+            }(Q || (Q = {}));
+            var oe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             editableChannels: [],
-                            requestState: $.Loading
+                            requestState: Q.Loading
                         }, t.isEmpty = function() {
-                            return t.state.requestState === $.Success && 0 === t.state.editableChannels.length
+                            return t.state.requestState === Q.Success && 0 === t.state.editableChannels.length
                         }, t.renderSuccess = function() {
                             return t.isEmpty() ? i.createElement(m.Wa, a.__assign({
                                 display: m.X.Flex,
@@ -988,7 +998,7 @@
                                     bottom: 5,
                                     left: 0
                                 }
-                            }, ae), i.createElement(m.Wa, {
+                            }, re), i.createElement(m.Wa, {
                                 padding: {
                                     top: 5,
                                     bottom: .5
@@ -1001,7 +1011,7 @@
                                 color: m.O.Alt2,
                                 fontSize: m.Ba.Size5
                             }, Object(s.d)("No channels to display", "DashboardPermissionsPage"))) : t.state.editableChannels.map(function(e) {
-                                return i.createElement(m.yb, {
+                                return i.createElement(m.xb, {
                                     key: e.id,
                                     alignItems: m.f.Center,
                                     borderBottom: !0,
@@ -1019,21 +1029,21 @@
                                 }, i.createElement(m.q, {
                                     alt: e.displayname,
                                     size: 30,
-                                    src: X(e)
+                                    src: R(e)
                                 })), i.createElement(m.Wa, {
                                     margin: {
                                         left: 1
                                     }
                                 }, i.createElement(m.U, {
                                     to: "/" + e.login
-                                }, i.createElement(m.W, a.__assign({}, re), e.displayname)))), i.createElement(m.Wa, null, i.createElement(m.Wa, {
+                                }, i.createElement(m.W, a.__assign({}, ne), e.displayname)))), i.createElement(m.Wa, null, i.createElement(m.Wa, {
                                     margin: {
                                         right: 1
                                     },
                                     display: m.X.InlineFlex
-                                }, i.createElement(B.a, {
+                                }, i.createElement(N.a, {
                                     buttonType: m.F.Hollow,
-                                    threadID: Object(q.a)(t.props.user.id, e.id),
+                                    threadID: Object(k.a)(t.props.user.id, e.id),
                                     isPopout: !1
                                 })), i.createElement(m.z, {
                                     linkTo: "/" + e.login + "/dashboard/live",
@@ -1053,7 +1063,7 @@
                                     bottom: 5,
                                     left: 0
                                 }
-                            }, oe), i.createElement(m.Wa, {
+                            }, ie), i.createElement(m.Wa, {
                                 padding: {
                                     top: 5,
                                     bottom: .5
@@ -1069,16 +1079,16 @@
                         }, t
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return this.props.user && this.state.requestState !== $.Loading ? i.createElement(h, null, i.createElement(p, null, i.createElement(m.Wa, {
+                        return this.props.user && this.state.requestState !== Q.Loading ? i.createElement(h, null, i.createElement(p, null, i.createElement(m.Wa, {
                             alignItems: m.f.Center,
                             display: m.X.Flex
                         }, i.createElement(m.W, {
                             bold: !0,
                             color: m.O.Alt,
                             fontSize: m.Ba.Size5
-                        }, Object(s.d)("Channels you can manage", "DashboardPermissionsPage")), i.createElement(te, null)), i.createElement(m.U, {
+                        }, Object(s.d)("Channels you can manage", "DashboardPermissionsPage")), i.createElement(ee, null)), i.createElement(m.U, {
                             to: "/" + this.props.channelName
-                        }, Object(s.d)("Go to your Channel", "DashboardPermissionsPage"))), this.state.requestState === $.Success ? this.renderSuccess() : this.renderError()) : i.createElement(m.db, a.__assign({}, ie, {
+                        }, Object(s.d)("Go to your Channel", "DashboardPermissionsPage"))), this.state.requestState === Q.Success ? this.renderSuccess() : this.renderError()) : i.createElement(m.db, a.__assign({}, ae, {
                             height: 300,
                             width: 533
                         }))
@@ -1095,15 +1105,15 @@
                                         if (!this.props.user) return [2];
                                         t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, Object(ne.a)(this.props.user.id)];
+                                        return t.trys.push([1, 3, , 4]), [4, Object(te.a)(this.props.user.id)];
                                     case 2:
                                         return e = t.sent(), this.setState({
                                             editableChannels: e,
-                                            requestState: $.Success
+                                            requestState: Q.Success
                                         }), [3, 4];
                                     case 3:
                                         return t.sent(), this.setState({
-                                            requestState: $.Error
+                                            requestState: Q.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -1112,18 +1122,18 @@
                         })
                     }, t
                 }(i.Component),
-                le = n("GIFg"),
-                ce = function(e) {
+                se = n("GIFg"),
+                le = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return a.__extends(t, e), t.prototype.render = function() {
-                        return i.createElement(le.a, {
+                        return i.createElement(se.a, {
                             withWhispersButton: !0
                         })
                     }, t
                 }(i.Component),
-                de = function(e) {
+                ce = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1140,7 +1150,7 @@
                             bold: !0,
                             color: m.O.Alt,
                             fontSize: m.Ba.Size4,
-                            type: m.Ob.H3
+                            type: m.Nb.H3
                         }, Object(s.d)("Editors", "DashboardPermissionsPage"))), i.createElement(m.Ia, {
                             gutterSize: m.Ja.Medium
                         }, i.createElement(m.P, {
@@ -1148,7 +1158,7 @@
                                 default: 12,
                                 md: 6
                             }
-                        }, i.createElement(se, {
+                        }, i.createElement(oe, {
                             user: this.props.user,
                             channelName: this.props.match.params.channelName
                         })), i.createElement(m.P, {
@@ -1165,7 +1175,7 @@
                             margin: {
                                 top: 2
                             }
-                        }, i.createElement(ee, {
+                        }, i.createElement($, {
                             user: this.props.user,
                             channelName: this.props.match.params.channelName
                         })))), i.createElement(m.Wa, {
@@ -1177,7 +1187,7 @@
                             bold: !0,
                             color: m.O.Alt,
                             fontSize: m.Ba.Size4,
-                            type: m.Ob.H5
+                            type: m.Nb.H5
                         }, Object(s.d)("Authorized Streamers", "DashboardPermissionsPage"))), i.createElement(m.Ia, {
                             gutterSize: m.Ja.Medium
                         }, i.createElement(m.P, {
@@ -1193,32 +1203,32 @@
                                 default: 12,
                                 md: 6
                             }
-                        }))), i.createElement(ce, null))
+                        }))), i.createElement(le, null))
                     }, t
                 }(i.Component),
-                ue = n("oJmH"),
-                me = n("/MKj"),
-                he = n("V+GM"),
-                pe = n("NvVO"),
-                Ee = n("2xye"),
-                fe = n("kRBY"),
-                ge = n("GnwI");
-            var be = Object(ue.compose)(Object(ge.b)("PermissionsPage", {
-                destination: pe.a.DashboardPermissions,
+                de = n("oJmH"),
+                ue = n("/MKj"),
+                me = n("V+GM"),
+                he = n("NvVO"),
+                pe = n("2xye"),
+                Ee = n("kRBY"),
+                fe = n("GnwI");
+            var ge = Object(de.compose)(Object(fe.b)("PermissionsPage", {
+                destination: he.a.DashboardPermissions,
                 autoReportInteractive: !0
-            }), Object(he.a)({
-                location: Ee.PageviewLocation.DashboardPermissions
-            }), Object(me.connect)(function(e) {
-                var t = Object(fe.e)(e);
+            }), Object(me.a)({
+                location: pe.PageviewLocation.DashboardPermissions
+            }), Object(ue.connect)(function(e) {
+                var t = Object(Ee.e)(e);
                 return {
                     isStaff: t && t.roles && t.roles.isStaff,
                     user: t
                 }
-            }))(de);
+            }))(ce);
             n.d(t, "PermissionsPageComponent", function() {
-                return de
+                return ce
             }), n.d(t, "PermissionsPage", function() {
-                return be
+                return ge
             })
         },
         cQGI: function(e, t, n) {},
@@ -1239,26 +1249,6 @@
                                     return [4, a.a.deleteOrThrow("/v5/permissions/channels/" + t + "/editors/" + n)];
                                 case 1:
                                     return e.sent(), [2]
-                            }
-                        })
-                    })
-                }
-        },
-        lbyP: function(e, t, n) {
-            "use strict";
-            n.d(t, "a", function() {
-                return i
-            });
-            var r = n("mrSG"),
-                a = n("b6Yk"),
-                i = function(e) {
-                    return r.__awaiter(void 0, void 0, Promise, function() {
-                        return r.__generator(this, function(t) {
-                            switch (t.label) {
-                                case 0:
-                                    return [4, a.a.getOrThrow("https://api.twitch.tv/v5/permissions/channels/" + e + "/editors")];
-                                case 1:
-                                    return [2, t.sent().body.editors || []]
                             }
                         })
                     })
@@ -1292,13 +1282,13 @@
                         return a.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, a.createElement(i.yb, {
+                        }, a.createElement(i.xb, {
                             display: i.X.Flex,
                             margin: {
                                 x: 1
                             },
                             position: i.eb.Relative
-                        }, a.createElement(i.yb, {
+                        }, a.createElement(i.xb, {
                             className: "hoverable-icon",
                             display: i.X.InlineFlex,
                             color: i.O.Alt2,

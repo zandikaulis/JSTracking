@@ -74,27 +74,27 @@
                 }
                 return r.__extends(t, e), t.prototype.render = function() {
                     var e = this;
-                    return o.createElement(p.Wa, null, o.createElement(p.yb, {
+                    return o.createElement(p.Wa, null, o.createElement(p.xb, {
                         background: p.r.Alt,
                         borderRadius: p.x.Large
-                    }, o.createElement(p.yb, {
+                    }, o.createElement(p.xb, {
                         borderBottom: !0,
                         padding: {
                             y: 2
                         },
-                        textAlign: p.Kb.Center
+                        textAlign: p.Jb.Center
                     }, o.createElement(p.Wa, {
                         margin: {
                             x: 5
                         }
                     }, o.createElement(p.W, {
-                        type: p.Ob.H3,
+                        type: p.Nb.H3,
                         bold: !0
-                    }, Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal")))), o.createElement(p.yb, {
+                    }, Object(a.d)("Not interested? Tell us more...", "RecFeedbackModal")))), o.createElement(p.xb, {
                         borderBottom: !0,
                         padding: 2
                     }, o.createElement(p.W, {
-                        type: p.Ob.Span,
+                        type: p.Nb.Span,
                         fontSize: p.Ba.Size4
                     }, this.props.feedbackReasons.map(function(t, n) {
                         return o.createElement(p.Wa, {
@@ -108,7 +108,7 @@
                             onChange: e.onRadioChange,
                             value: n.toString()
                         }))
-                    }))), o.createElement(p.yb, {
+                    }))), o.createElement(p.xb, {
                         display: p.X.Flex,
                         justifyContent: p.Va.End,
                         alignItems: p.f.Center,
@@ -150,8 +150,8 @@
                 h = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
-                        return t.onClick = function() {
-                            t.props.showModal(f, {
+                        return t.onClick = function(e) {
+                            e.preventDefault(), e.stopPropagation(), t.props.showModal(f, {
                                 shelfID: t.props.shelfID,
                                 channelID: t.props.channelID,
                                 vodID: t.props.vodID,
@@ -162,9 +162,9 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(p.Rb, {
+                        return o.createElement(p.Qb, {
                             label: Object(a.d)("Not interested?", "RecFeedbackButton"),
-                            direction: p.Tb.Right
+                            direction: p.Sb.Right
                         }, o.createElement(p.A, {
                             icon: p.ob.VisibilityHidden,
                             size: p.B.Small,

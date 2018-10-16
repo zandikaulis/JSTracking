@@ -120,24 +120,58 @@
                 var t = p.b.get("community_sub_gifting_banner_timeouts", y);
                 return t.length !== y.length && (t = y), e < 5 ? t[0] : e <= 10 ? t[1] : e <= 30 ? t[2] : e <= 50 ? t[3] : e <= 70 ? t[4] : e <= 90 ? t[5] : t[6]
             }
-            var h, g = n("zyCo"),
-                b = n("GnwI"),
-                v = n("0WFu"),
-                C = n("Ue10"),
-                G = n("/2Fp"),
-                k = function(e) {
+            var h, g = n("GnwI"),
+                b = n("0WFu"),
+                v = n("Ue10"),
+                C = (n("xYER"), {
+                    "data-test-selector": "countdown-fill-width"
+                }),
+                G = function(e) {
+                    function t() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
+                        var e = this,
+                            t = this.props.startPolling || setInterval;
+                        this.intervalID = t(function() {
+                            return e.forceUpdate()
+                        }, 1e3)
+                    }, t.prototype.componentWillUnmount = function() {
+                        clearInterval(this.intervalID)
+                    }, t.prototype.componentDidUpdate = function() {
+                        this.props.getRemainingTime() <= 0 && this.props.onCountdownEnd()
+                    }, t.prototype.render = function() {
+                        var e = this.countdownPercentage + "%";
+                        return r.createElement("div", {
+                            className: "persistent-countdown-bar"
+                        }, r.createElement("div", i.__assign({
+                            className: "persistent-countdown-bar__fill",
+                            style: {
+                                width: e
+                            }
+                        }, C)))
+                    }, Object.defineProperty(t.prototype, "countdownPercentage", {
+                        get: function() {
+                            return this.props.getRemainingTime() / this.props.totalCountdownTime * 100
+                        },
+                        enumerable: !0,
+                        configurable: !0
+                    }), t
+                }(r.PureComponent),
+                k = n("/2Fp"),
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.bannerDuration = 1e3 * f(t.props.mysteryGiftCount), t.start = Date.now(), t.getBannerText = function() {
                             var e = null,
                                 n = null;
                             t.props.data && t.props.data.user && (t.props.data.user.displayName && (e = t.props.data.user.displayName), t.props.data.user.login && (n = t.props.data.user.login));
-                            var i = Object(v.a)(t.props.tier) || "";
+                            var i = Object(b.a)(t.props.tier) || "";
                             return n || e ? Object(p.d)("{mysteryGiftCount, plural, one {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gift!} other {{displayName} is giving out {mysteryGiftCount} Tier {tier} Community Sub Gifts!}}", {
-                                displayName: r.createElement(C.W, {
+                                displayName: r.createElement(v.W, {
                                     bold: !0,
-                                    color: C.O.Link,
-                                    type: C.Ob.Span
+                                    color: v.O.Link,
+                                    type: v.Nb.Span
                                 }, Object(m.a)(n, e)),
                                 mysteryGiftCount: t.props.mysteryGiftCount,
                                 tier: i
@@ -156,28 +190,28 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.props.mysteryGiftCount !== e.mysteryGiftCount && (this.bannerDuration = 1e3 * f(this.props.mysteryGiftCount), this.start = Date.now())
                     }, t.prototype.render = function() {
-                        return r.createElement(r.Fragment, null, r.createElement(C.Wa, {
-                            alignItems: C.f.Center,
-                            display: C.X.Flex,
+                        return r.createElement(r.Fragment, null, r.createElement(v.Wa, {
+                            alignItems: v.f.Center,
+                            display: v.X.Flex,
                             padding: {
                                 x: 2,
                                 y: 1
                             }
-                        }, r.createElement(C.Wa, {
+                        }, r.createElement(v.Wa, {
                             padding: {
                                 right: 1
                             }
-                        }, r.createElement(C.S, {
+                        }, r.createElement(v.S, {
                             src: c.a,
                             alt: Object(p.d)("Mystery gifts being given out!", "MysteryGiftChatBanner")
-                        })), r.createElement(C.W, null, this.getBannerText())), r.createElement(g.a, {
+                        })), r.createElement(v.W, null, this.getBannerText())), r.createElement(G, {
                             getRemainingTime: this.getRemainingTime,
                             onCountdownEnd: this.handleCountdownEnd,
                             totalCountdownTime: this.bannerDuration
                         }))
                     }, t
                 }(r.Component),
-                w = Object(o.compose)(Object(l.a)(G, {
+                D = Object(o.compose)(Object(l.a)(k, {
                     options: function(e) {
                         return {
                             variables: {
@@ -188,13 +222,13 @@
                     skip: function(e) {
                         return !e.userID
                     }
-                }), Object(b.b)("MysteryGiftChatBanner"))(k),
-                D = function(e) {
-                    return 0 === e.purchases.length ? null : r.createElement(C.yb, {
-                        background: C.r.Base,
+                }), Object(g.b)("MysteryGiftChatBanner"))(w),
+                T = function(e) {
+                    return 0 === e.purchases.length ? null : r.createElement(v.xb, {
+                        background: v.r.Base,
                         fullWidth: !0
                     }, e.purchases.slice(0, 2).map(function(t) {
-                        return r.createElement(w, {
+                        return r.createElement(D, {
                             key: "MysteryGiftChatBanner-" + t.uuid,
                             mysteryGiftCount: t.count,
                             onCountdownEnd: e.handleCountdownEnd,
@@ -204,7 +238,7 @@
                         })
                     }))
                 },
-                T = function(e) {
+                E = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -228,7 +262,7 @@
                         t && this.setState(function(e) {
                             if (!(t.uuid !== e.lastMessageUUID)) return e;
                             var n = i.__assign({}, t, {
-                                humanizedTier: Object(v.a)(t.tier) || 0
+                                humanizedTier: Object(b.a)(t.tier) || 0
                             });
                             return {
                                 lastMessageUUID: n.uuid,
@@ -238,72 +272,27 @@
                             }
                         })
                     }, t.prototype.render = function() {
-                        return r.createElement(D, {
+                        return r.createElement(T, {
                             handleCountdownEnd: this.handleCountdownEnd,
                             purchases: this.state.purchases
                         })
                     }, t
                 }(r.Component),
-                E = Object(o.compose)(Object(a.a)([{
+                N = Object(o.compose)(Object(a.a)([{
                     mapMessageTypesToProps: (h = {}, h[s.PubsubMessageType.MysteryGiftPurchase] = "purchase", h),
                     topic: function(e) {
                         return Object(u.p)(e.channelID)
                     }
-                }]), Object(b.b)("MysteryGiftChatBannerQueue"))(T);
+                }]), Object(g.b)("MysteryGiftChatBannerQueue"))(E);
             n.d(t, "MysteryGiftChatBannersQueueContainer", function() {
-                return T
-            }), n.d(t, "MysteryGiftChatBannerQueue", function() {
                 return E
+            }), n.d(t, "MysteryGiftChatBannerQueue", function() {
+                return N
             })
         },
-        Leb6: function(e, t, n) {},
         V6PS: function(e, t, n) {
             e.exports = n.p + "assets/community-gift-cf438a1a78c449fd2d4a.svg"
         },
-        zyCo: function(e, t, n) {
-            "use strict";
-            var i = n("mrSG"),
-                r = n("q1tI"),
-                o = (n("Leb6"), {
-                    "data-test-selector": "countdown-fill-width"
-                }),
-                a = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
-                        var e = this,
-                            t = this.props.startPolling || setInterval;
-                        this.intervalID = t(function() {
-                            return e.forceUpdate()
-                        }, 1e3)
-                    }, t.prototype.componentWillUnmount = function() {
-                        clearInterval(this.intervalID)
-                    }, t.prototype.componentDidUpdate = function() {
-                        this.props.getRemainingTime() <= 0 && this.props.onCountdownEnd()
-                    }, t.prototype.render = function() {
-                        var e = this.countdownPercentage + "%";
-                        return r.createElement("div", {
-                            className: "raid-countdown-bar"
-                        }, r.createElement("div", i.__assign({
-                            className: "raid-countdown-bar__fill",
-                            style: {
-                                width: e
-                            }
-                        }, o)))
-                    }, Object.defineProperty(t.prototype, "countdownPercentage", {
-                        get: function() {
-                            return this.props.getRemainingTime() / this.props.totalCountdownTime * 100
-                        },
-                        enumerable: !0,
-                        configurable: !0
-                    }), t
-                }(r.PureComponent);
-            n.d(t, !1, function() {
-                return o
-            }), n.d(t, "a", function() {
-                return a
-            })
-        }
+        xYER: function(e, t, n) {}
     }
 ]);

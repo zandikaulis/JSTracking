@@ -491,7 +491,7 @@
                             to: "/"
                         }) : i.createElement(i.Fragment, null, i.createElement(y.a, {
                             darkModeEnabled: !0
-                        }), i.createElement(w.yb, {
+                        }), i.createElement(w.xb, {
                             background: w.r.Alt,
                             className: "code-redemption-download-key-code-page",
                             fullWidth: !0,

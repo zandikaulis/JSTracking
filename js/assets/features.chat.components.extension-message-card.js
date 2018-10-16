@@ -39,7 +39,7 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.yb, {
+                        return a.createElement(u.xb, {
                             className: "reporting-modal__container",
                             background: u.r.Base,
                             padding: {
@@ -588,13 +588,13 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, a.createElement(u.W, {
-                        type: u.Ob.H4
-                    }, this.props.title), a.createElement(u.yb, {
+                        type: u.Nb.H4
+                    }, this.props.title), a.createElement(u.xb, {
                         color: u.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.yb, {
+                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.xb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -609,10 +609,10 @@
                     }), a.createElement(u.Da, {
                         id: "reporting__text-area",
                         label: Object(i.d)("Description (required)", "ReportUser")
-                    }, a.createElement(u.Lb, {
+                    }, a.createElement(u.Kb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), a.createElement(u.yb, {
+                    }))), a.createElement(u.xb, {
                         display: u.X.Flex,
                         justifyContent: u.Va.Center
                     }, a.createElement(u.z, {
@@ -647,7 +647,7 @@
                         "reporting__error-container": this.props.submitStatus !== g.Success,
                         "reporting__success-container": this.props.submitStatus === g.Success
                     });
-                    return a.createElement(u.yb, {
+                    return a.createElement(u.xb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== g.Success,
                         "data-test-selector": "reporting.error",
@@ -715,7 +715,7 @@
                                 }
                             }, a.createElement(f.W, {
                                 className: "block-user__success",
-                                type: f.Ob.Span
+                                type: f.Nb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), a.createElement(f.U, {
@@ -744,7 +744,7 @@
                     return o.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(b.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return a.createElement(f.yb, {
+                        return a.createElement(f.xb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -754,12 +754,12 @@
                             }
                         }, a.createElement(f.Wa, null, Object(l.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement(f.yb, {
+                        }, "ReportWizardBlockActions")), a.createElement(f.xb, {
                             color: f.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(f.Xb, {
+                        }, a.createElement(f.Wb, {
                             baseFontSize: f.Ba.Size6
                         }, a.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -1443,7 +1443,7 @@
                                     }, a.createElement(f.Da, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, a.createElement(f.Lb, {
+                                    }, a.createElement(f.Kb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -2046,7 +2046,7 @@
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? a.createElement(f.yb, {
+                            t = this.state.error ? a.createElement(f.xb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -2055,7 +2055,7 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             n = this.state.prevCards.length || this.state.currentCard.type === T.Info ? null : this.renderPrimer();
-                        return a.createElement(f.yb, {
+                        return a.createElement(f.xb, {
                             className: "reporting-wizard",
                             display: f.X.Flex,
                             margin: {
@@ -2443,14 +2443,14 @@
                             t = e.loading,
                             n = e.error,
                             r = e.extension;
-                        return t ? d.createElement(b.yb, {
+                        return t ? d.createElement(b.xb, {
                             background: b.r.Base,
                             fullHeight: !0,
                             fullWidth: !0,
                             padding: 2
                         }, d.createElement(b.Ya, {
                             fillContent: !0
-                        })) : n || !r ? this.renderErrorPlaceHolder() : d.createElement(b.yb, {
+                        })) : n || !r ? this.renderErrorPlaceHolder() : d.createElement(b.xb, {
                             border: !0,
                             className: "viewer-card",
                             elevation: 1
@@ -2464,7 +2464,7 @@
                             fullHeight: !0,
                             fullWidth: !0,
                             className: "viewer-card__overlay"
-                        }, d.createElement(b.yb, {
+                        }, d.createElement(b.xb, {
                             alignItems: b.f.Start,
                             background: b.r.Overlay,
                             className: "viewer-card__banner",
@@ -2475,7 +2475,7 @@
                             justifyContent: b.Va.Start,
                             padding: 1,
                             position: b.eb.Relative,
-                            textAlign: b.Kb.Center
+                            textAlign: b.Jb.Center
                         }, d.createElement(b.Wa, {
                             display: b.X.Flex,
                             flexDirection: b.Z.Row,
@@ -2489,7 +2489,7 @@
                             alt: r.name
                         })), d.createElement(b.Wa, {
                             alignItems: b.f.Center,
-                            textAlign: b.Kb.Left,
+                            textAlign: b.Jb.Left,
                             className: "viewer-card__display-name",
                             margin: {
                                 x: 1
@@ -2500,7 +2500,7 @@
                             }
                         }, d.createElement(h.a, null, d.createElement(b.W, {
                             color: b.O.Overlay,
-                            type: b.Ob.H5
+                            type: b.Nb.H5
                         }, d.createElement(b.U, {
                             hoverUnderlineNone: !0,
                             targetBlank: !0,
@@ -2508,21 +2508,21 @@
                             type: b.V.Inherit
                         }, r.name))), d.createElement(b.W, {
                             color: b.O.Overlay,
-                            type: b.Ob.H6
+                            type: b.Nb.H6
                         }, r.authorName)))), d.createElement(b.Wa, {
                             display: b.X.Flex,
                             flexDirection: b.Z.Row,
                             fullWidth: !0,
-                            textAlign: b.Kb.Left
+                            textAlign: b.Jb.Left
                         }, d.createElement(b.W, {
                             color: b.O.Overlay,
-                            type: b.Ob.P
+                            type: b.Nb.P
                         }, r.description)))))), this.renderControls())
                     }, t.prototype.renderControls = function() {
-                        return d.createElement(b.yb, {
+                        return d.createElement(b.xb, {
                             className: "viewer-card__actions",
                             attachBottom: !0
-                        }, d.createElement(b.yb, {
+                        }, d.createElement(b.xb, {
                             display: b.X.Flex,
                             background: b.r.Base,
                             flexDirection: b.Z.Row,
@@ -2558,12 +2558,12 @@
                             "data-test-selector": r.ReportButton
                         }, Object(p.d)("Report", "ExtensionMessageCard"))
                     }, t.prototype.renderErrorPlaceHolder = function() {
-                        return d.createElement(b.yb, {
+                        return d.createElement(b.xb, {
                             background: b.r.Base,
                             display: b.X.Flex,
                             flexWrap: b.Aa.NoWrap,
                             padding: .5
-                        }, d.createElement(b.yb, {
+                        }, d.createElement(b.xb, {
                             className: "chat-card__preview-img",
                             background: b.r.Alt2,
                             display: b.X.Flex,

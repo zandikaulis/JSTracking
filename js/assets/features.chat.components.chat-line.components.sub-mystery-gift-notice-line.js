@@ -53,7 +53,7 @@
                         }, "SubMysteryGiftNoticeLine")
                     }(e, n.channel, n.massGiftCount, n.senderCount, Object(a.a)(n.plan) || 1), i.createElement(f.W, {
                         color: f.O.Alt2,
-                        type: f.Ob.Span
+                        type: f.Nb.Span
                     }, c)
                 };
             c.displayName = "SubMysteryGiftNoticeLine", e.d(n, "SubMysteryGiftNoticeLine", function() {

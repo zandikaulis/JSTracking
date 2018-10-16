@@ -138,7 +138,7 @@
                 I = n("8n0m"),
                 D = n("/+vS"),
                 O = n("lBKM"),
-                _ = function(e) {
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -196,15 +196,15 @@
                         })))
                     }, t
                 }(r.Component),
-                w = Object(s.compose)(Object(S.a)(O, {
+                _ = Object(s.compose)(Object(S.a)(O, {
                     name: "createCollection"
-                }))(Object(E.a)(_)),
+                }))(Object(E.a)(w)),
                 N = n("7BY1"),
-                T = n("3udf");
+                x = n("3udf");
             ! function(e) {
                 e.CollectionsUnavailableError = "CollectionsUnavailableError", e.CreateCollection = "CreateCollection", e.noCollectionsCTA = "noCollectionsCTA"
             }(i || (i = {}));
-            var x = function(e) {
+            var T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.refetchCreatorCollection = function() {
@@ -228,7 +228,7 @@
                             margin: {
                                 bottom: 5
                             }
-                        }, r.createElement(w, {
+                        }, r.createElement(_, {
                             context: this.props.data.user && this.props.data.currentUser ? {
                                 ownerID: this.props.data.user.id,
                                 ownerLogin: this.props.match.params.creatorLogin,
@@ -279,11 +279,11 @@
                                 top: 5
                             }
                         }, r.createElement(k.W, {
-                            type: k.Ob.H4
+                            type: k.Nb.H4
                         }, Object(a.d)("Put all your best videos in one spot.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Ob.H4
+                            type: k.Nb.H4
                         }, Object(a.d)("Videos organized into collections help your viewers easily find related content.", "CollectionManager")), r.createElement(k.W, {
-                            type: k.Ob.H4
+                            type: k.Nb.H4
                         }, Object(a.d)("Your most recently updated Collection will be featured at the top of channel’s video page.", "CollectionManager")))
                     }, t.prototype.contentUnavaibleError = function() {
                         return r.createElement(k.Wa, {
@@ -298,7 +298,7 @@
                         }
                     }, t
                 }(r.Component),
-                M = Object(u.compose)(Object(s.graphql)(T, {
+                M = Object(u.compose)(Object(s.graphql)(x, {
                     options: function(e) {
                         return {
                             variables: {
@@ -312,7 +312,7 @@
                                 var t = e.data.user && e.data.user.collections ? e.data.user.collections.edges : [],
                                     n = t.length > 0 ? t[t.length - 1].cursor : void 0;
                                 return e.data.fetchMore({
-                                    query: T,
+                                    query: x,
                                     variables: o.__assign({}, e.data.variables, {
                                         after: n
                                     }),
@@ -346,7 +346,7 @@
                     skip: function(e) {
                         return e.data.loading
                     }
-                }))(x),
+                }))(T),
                 j = function(e) {
                     return r.createElement(c.a, {
                         ownerLogin: e.match.params.creatorLogin,
@@ -791,10 +791,10 @@
                             onClick: this.navigateToEdit
                         }, a.createElement(C.W, {
                             bold: !0,
-                            type: C.Ob.H4,
+                            type: C.Nb.H4,
                             color: C.O.Alt
-                        }, t.title), a.createElement(C.Rb, {
-                            direction: C.Tb.Bottom,
+                        }, t.title), a.createElement(C.Qb, {
+                            direction: C.Sb.Bottom,
                             label: Object(l.d)("Last Updated", "CollectionManagerCard")
                         }, a.createElement(C.W, {
                             color: C.O.Alt2
@@ -911,7 +911,7 @@
                                 fullHeight: !0,
                                 justifyContent: a.Va.Center,
                                 padding: 2
-                            }, o.createElement(a.xb, {
+                            }, o.createElement(a.wb, {
                                 icon: this.props.icon,
                                 label: this.props.label,
                                 value: this.props.value
@@ -1080,7 +1080,7 @@
                             delay: h.j.Short,
                             type: h.n.BounceIn,
                             enabled: !0
-                        }, r.createElement(h.yb, {
+                        }, r.createElement(h.xb, {
                             border: !0,
                             margin: {
                                 bottom: 1
@@ -1096,7 +1096,7 @@
                             delay: h.j.Medium,
                             duration: h.k.Medium,
                             enabled: !0
-                        }, r.createElement(h.yb, {
+                        }, r.createElement(h.xb, {
                             background: h.r.Base,
                             padding: {
                                 x: 3,
@@ -1226,7 +1226,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return o.createElement(r.yb, {
+                        return o.createElement(r.xb, {
                             background: r.r.Base,
                             elevation: 1,
                             display: r.X.Flex,
@@ -1284,7 +1284,7 @@
                             attachLeft: !0,
                             attachRight: !0,
                             attachBottom: !0
-                        }, l.createElement(f.yb, {
+                        }, l.createElement(f.xb, {
                             alignItems: f.f.Center,
                             attachRight: !0,
                             className: "collection-preview-image__wrapper",
@@ -1295,7 +1295,7 @@
                             fullHeight: !0,
                             justifyContent: f.Va.Center,
                             position: f.eb.Absolute,
-                            textAlign: f.Kb.Center
+                            textAlign: f.Jb.Center
                         }, l.createElement(f.nb, {
                             asset: f.ob.Collections,
                             height: 20,

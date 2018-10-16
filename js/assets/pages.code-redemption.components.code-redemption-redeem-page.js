@@ -33,17 +33,17 @@
             }), n.d(t, "e", function() {
                 return b
             }), n.d(t, "i", function() {
-                return y
-            }), n.d(t, "h", function() {
                 return S
+            }), n.d(t, "h", function() {
+                return y
             }), n.d(t, "f", function() {
                 return E
             }), n.d(t, "k", function() {
                 return _
             }), n.d(t, "u", function() {
-                return O
-            }), n.d(t, "s", function() {
                 return C
+            }), n.d(t, "s", function() {
+                return O
             }), n.d(t, "d", function() {
                 return N
             });
@@ -67,12 +67,12 @@
                 k = "UNKNOWN",
                 v = "FIRST_PARTY",
                 b = "CUSTOM",
-                y = "SPONSORED",
-                S = "THIRD_PARTY",
+                S = "SPONSORED",
+                y = "THIRD_PARTY",
                 E = "DISPLAY_ONLY",
                 _ = ((i = {})[o.a.Gray] = "#979797", i[o.a.Purple] = "#9c3ee8", i[o.a.Green] = "#1db2a5", i[o.a.Blue] = "#0099fe", i[o.a.Red] = "#f43021", i[o.a.Yellow] = "#f3a71a", i),
-                O = "bits_sponsored_cheermotes",
-                C = "bits_sponsored_cheermotes_announcement",
+                C = "bits_sponsored_cheermotes",
+                O = "bits_sponsored_cheermotes_announcement",
                 N = "bits_charity_event"
         },
         "8Ad5": function(e, t, n) {
@@ -460,8 +460,8 @@
                 k = n("GnwI"),
                 v = n("5ELF"),
                 b = n("yR8l"),
-                y = n("8Ad5"),
-                S = n("geRD"),
+                S = n("8Ad5"),
+                y = n("geRD"),
                 E = n("Ue10"),
                 _ = function() {
                     return c.createElement(E.Wa, {
@@ -479,12 +479,12 @@
                         }
                     }, c.createElement(E.Ya, null)))
                 },
-                O = n("KXOz");
+                C = n("KXOz");
             n("lAq8");
             ! function(e) {
                 e.CannotClaimMessage = "claimed", e.ExpiredMessage = "expired_message"
             }(i || (i = {}));
-            var C = function(e) {
+            var O = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -541,7 +541,7 @@
                         }
                     }, t
                 }(c.Component),
-                N = Object(d.compose)(Object(b.a)(O, {
+                N = Object(d.compose)(Object(b.a)(C, {
                     options: function(e) {
                         return {
                             fetchPolicy: "network-only",
@@ -551,7 +551,7 @@
                             }
                         }
                     }
-                }))(C);
+                }))(O);
             var w, R = Object(o.connect)(function(e) {
                     return {
                         user: Object(a.e)(e)
@@ -584,7 +584,7 @@
                         i = Object(u.d)("Bummer, this code is invalid ({description}). Please try again.", {
                             description: this.props.description ? this.props.description : "No description provided"
                         }, "RedeemPage");
-                    return c.createElement(E.yb, {
+                    return c.createElement(E.xb, {
                         elevation: 3,
                         margin: {
                             top: 1
@@ -690,7 +690,7 @@
                                             }, this.setState({
                                                 inputValue: "",
                                                 isCodeValid: !1
-                                            }), t = Object(S.a)(e), n.label = 1;
+                                            }), t = Object(y.a)(e), n.label = 1;
                                         case 1:
                                             return n.trys.push([1, 3, , 4]), [4, this.props.redeemKey(t)];
                                         case 2:
@@ -715,7 +715,7 @@
                                     switch (n.label) {
                                         case 0:
                                             switch (t = e.charCode || e.keyCode, t) {
-                                                case y.a.Enter:
+                                                case S.a.Enter:
                                                     return [3, 1]
                                             }
                                             return [3, 4];
@@ -754,7 +754,7 @@
                             padding: {
                                 bottom: 4
                             },
-                            textAlign: E.Kb.Left
+                            textAlign: E.Jb.Left
                         }, c.createElement(E.W, {
                             bold: !0,
                             fontSize: E.Ba.Size1,
@@ -771,7 +771,7 @@
                             "x:bold": function() {
                                 return c.createElement(E.W, {
                                     bold: !0,
-                                    type: E.Ob.Span
+                                    type: E.Nb.Span
                                 }, e.props.user.displayName)
                             }
                         }, "RedeemPage")))), c.createElement(E.Wa, {
@@ -794,7 +794,7 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: E.Kb.Left
+                            textAlign: E.Jb.Left
                         }, c.createElement(E.Qa, {
                             placeholder: "00000-00000-00000",
                             autoFocus: !0,
@@ -858,7 +858,7 @@
                         var t = s.parse(this.props.location.search);
                         return c.createElement(c.Fragment, null, c.createElement(v.a, {
                             darkModeEnabled: !0
-                        }), c.createElement(E.yb, {
+                        }), c.createElement(E.xb, {
                             background: E.r.Alt,
                             className: "code-redemption-page",
                             fullWidth: !0,
@@ -911,13 +911,13 @@
                 }), Object(p.a)({
                     location: g.PageviewLocation.CodeRedemptionPage
                 }))(M);
-            var K = Object(o.connect)(function(e) {
+            var U = Object(o.connect)(function(e) {
                 return {
                     user: Object(a.e)(e)
                 }
             })(G);
             n.d(t, "RedeemPageComponent", function() {
-                return K
+                return U
             })
         },
         lAq8: function(e, t, n) {},

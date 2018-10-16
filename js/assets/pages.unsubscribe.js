@@ -140,7 +140,7 @@
                 s = n("/7QA"),
                 o = n("GnwI"),
                 c = n("Ue10"),
-                u = (n("GOKC"), i.createElement(c.yb, {
+                u = (n("GOKC"), i.createElement(c.xb, {
                     alignItems: c.f.Center,
                     background: c.r.Overlay,
                     borderRadius: c.x.Small,
@@ -150,7 +150,7 @@
                     display: c.X.InlineFlex,
                     justifyContent: c.Va.Center,
                     position: c.eb.Absolute,
-                    zIndex: c.bc.Above
+                    zIndex: c.ac.Above
                 }, i.createElement(c.nb, {
                     asset: c.ob.Lock,
                     height: 10,
@@ -185,9 +185,9 @@
                     }
                     return i.createElement("div", {
                         className: "emote-button"
-                    }, i.createElement(c.Rb, {
+                    }, i.createElement(c.Qb, {
                         label: r || Object(s.d)("Emote", "EmoteButton"),
-                        direction: c.Tb.Bottom
+                        direction: c.Sb.Bottom
                     }, i.createElement(c.Oa, {
                         display: c.X.Flex,
                         alignItems: c.f.Center,
@@ -770,13 +770,13 @@
                         justifyContent: s.Va.Center,
                         flexWrap: s.Aa.Wrap
                     }, i.createElement(s.W, {
-                        type: s.Ob.Span,
+                        type: s.Nb.Span,
                         fontSize: s.Ba.Size4,
-                        decoration: this.props.productDiscountPrice ? s.Mb.Strikethrough : void 0,
+                        decoration: this.props.productDiscountPrice ? s.Lb.Strikethrough : void 0,
                         "data-a-target": "js-test-ticket-price-text"
                     }, Object(a.d)("{price} / {interval}", {
                         price: i.createElement(s.W, {
-                            type: s.Ob.Span,
+                            type: s.Nb.Span,
                             bold: !0
                         }, this.props.price),
                         interval: function(e) {
@@ -799,8 +799,8 @@
                         }
                     }, i.createElement(s.W, {
                         fontSize: s.Ba.Size4,
-                        type: s.Ob.Span,
-                        decoration: this.props.productDiscountPrice ? s.Mb.Strikethrough : void 0
+                        type: s.Nb.Span,
+                        decoration: this.props.productDiscountPrice ? s.Lb.Strikethrough : void 0
                     }, Object(a.d)("(Includes VAT)", "TicketDescription"))))) : i.createElement(s.Ya, {
                         fillContent: !0
                     })
@@ -1149,13 +1149,13 @@
                             type: a.Ua.Alpha
                         }, i.createElement(a.Wa, {
                             fullWidth: !0,
-                            textAlign: a.Kb.Center,
+                            textAlign: a.Jb.Center,
                             alignItems: a.f.Center,
                             padding: {
                                 y: 1
                             }
                         }, i.createElement(a.W, {
-                            type: a.Ob.Span,
+                            type: a.Nb.Span,
                             color: a.O.Link
                         }, this.state.collapsed ? this.props.showButtonLabel : this.props.hideButtonLabel))))) : i.createElement(a.H, null, this.props.children)
                     }, t
@@ -1248,14 +1248,14 @@
                         style: {
                             backgroundImage: "url(" + e.bannerImageURL
                         }
-                    }, s.createElement(g.yb, {
+                    }, s.createElement(g.xb, {
                         background: g.r.Overlay,
                         position: g.eb.Absolute,
                         fullHeight: !0,
                         fullWidth: !0
                     }), s.createElement(g.Wa, {
                         className: "channel-subscription-header__banner-background",
-                        textAlign: g.Kb.Center
+                        textAlign: g.Jb.Center
                     }, s.createElement(g.Wa, {
                         padding: {
                             top: 3
@@ -1267,7 +1267,7 @@
                         size: 96,
                         src: e.profileImageURL
                     })))), s.createElement(g.Wa, {
-                        textAlign: g.Kb.Center,
+                        textAlign: g.Jb.Center,
                         padding: {
                             bottom: .5
                         }
@@ -1276,12 +1276,12 @@
                             top: 3
                         }
                     }, s.createElement(g.W, {
-                        type: g.Ob.H4,
+                        type: g.Nb.H4,
                         bold: !0
                     }, e.ownerDisplayName)), s.createElement(g.Oa, {
                         margin: .5
                     }, s.createElement(g.W, {
-                        type: g.Ob.H5
+                        type: g.Nb.H5
                     }, e.productDisplayName)), s.createElement(k.a, {
                         price: e.productPrice,
                         interval: e.productPriceInterval,
@@ -1291,22 +1291,22 @@
                     })))
                 }),
                 E = n("ZDlU"),
-                O = n("QV0B"),
+                N = n("QV0B"),
                 w = n("mb7O"),
-                N = (n("ZsMu"), function() {
+                O = (n("ZsMu"), function() {
                     return s.createElement(w.a, null, s.createElement(g.Wa, {
                         className: "error-ticket-description__header",
                         padding: 2
-                    }, s.createElement(g.yb, {
+                    }, s.createElement(g.xb, {
                         fullHeight: !0,
                         background: g.r.Alt2
-                    }, s.createElement(E.a, null))), s.createElement(O.a, {
+                    }, s.createElement(E.a, null))), s.createElement(N.a, {
                         collapsable: !0
-                    }, s.createElement(g.yb, {
+                    }, s.createElement(g.xb, {
                         className: "error-ticket-description__body",
                         padding: 2,
                         borderTop: !0
-                    }, s.createElement(g.yb, {
+                    }, s.createElement(g.xb, {
                         fullHeight: !0,
                         background: g.r.Alt2
                     }, s.createElement(E.a, null)))))
@@ -1315,12 +1315,12 @@
                     return s.createElement(w.a, null, s.createElement(g.Wa, {
                         className: "placeholder-ticket-description__header",
                         padding: 2
-                    }, s.createElement(g.yb, {
+                    }, s.createElement(g.xb, {
                         fullHeight: !0,
                         background: g.r.Alt2
-                    })), s.createElement(O.a, {
+                    })), s.createElement(N.a, {
                         collapsable: !0
-                    }, s.createElement(g.yb, {
+                    }, s.createElement(g.xb, {
                         padding: 2,
                         borderTop: !0
                     }, s.createElement(g.db, {
@@ -1330,7 +1330,7 @@
                 _ = n("KYZ7"),
                 T = n.n(_),
                 I = (n("R9u/"), function(e) {
-                    return s.createElement(w.a, null, s.createElement(g.yb, {
+                    return s.createElement(w.a, null, s.createElement(g.xb, {
                         background: g.r.Base
                     }, s.createElement(g.Wa, {
                         className: "turbo-ticket-description__banner-image",
@@ -1342,16 +1342,16 @@
                         className: "turbo-ticket-description__banner-logo",
                         src: T.a,
                         alt: Object(c.d)("Twitch Turbo Logo", "TurboTicketDescription")
-                    })), s.createElement(g.yb, {
+                    })), s.createElement(g.xb, {
                         borderBottom: !0,
-                        textAlign: g.Kb.Center,
+                        textAlign: g.Jb.Center,
                         padding: 2
                     }, s.createElement(k.a, {
                         price: e.productPrice,
                         interval: e.productPriceInterval,
                         productPriceTaxInclusive: e.productPriceTaxInclusive,
                         showEuSubs: e.showEuSubs
-                    })), s.createElement(O.a, {
+                    })), s.createElement(N.a, {
                         collapsable: !0,
                         showButtonLabel: Object(c.d)("Show Turbo Benefits", "TurboTicketDescription"),
                         hideButtonLabel: Object(c.d)("Hide Turbo Benefits", "TurboTicketDescription")
@@ -1408,7 +1408,7 @@
                             t = e.product,
                             n = e.loading,
                             r = e.error;
-                        return !t && n ? s.createElement(S, null) : !t || r ? s.createElement(N, null) : this.isTurboProduct ? s.createElement(I, {
+                        return !t && n ? s.createElement(S, null) : !t || r ? s.createElement(O, null) : this.isTurboProduct ? s.createElement(I, {
                             productPrice: this.price,
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
@@ -1422,7 +1422,7 @@
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
                             showEuSubs: this.props.showEuSubs
-                        }) : s.createElement(w.a, null, s.createElement(g.yb, {
+                        }) : s.createElement(w.a, null, s.createElement(g.xb, {
                             background: g.r.Base
                         }, s.createElement(y, {
                             bannerImageURL: t.owner && t.owner.bannerImageURL,
@@ -1434,7 +1434,7 @@
                             productPriceInterval: t.interval && t.interval.unit,
                             productPriceTaxInclusive: this.taxInclusive,
                             showEuSubs: this.props.showEuSubs
-                        }), s.createElement(O.a, {
+                        }), s.createElement(N.a, {
                             collapsable: !0,
                             showButtonLabel: Object(c.d)("Show Subscription Benefits", "TicketDescription"),
                             hideButtonLabel: Object(c.d)("Hide Subscription Benefits", "TicketDescription")
@@ -1483,7 +1483,7 @@
                     }), Object.defineProperty(t.prototype, "productDisplayName", {
                         get: function() {
                             var e = this.props.data.product;
-                            return e && e.priceInfo && e.priceInfo.currency !== p.p.USD ? this.tierToDisplayMap[e.tier || ""] || Object(c.d)("Channel Subscription", "TicketDescription") : e && e.displayName
+                            return e && e.priceInfo && e.priceInfo.currency !== p.o.USD ? this.tierToDisplayMap[e.tier || ""] || Object(c.d)("Channel Subscription", "TicketDescription") : e && e.displayName
                         },
                         enumerable: !0,
                         configurable: !0
@@ -1534,7 +1534,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                j = Object(o.compose)(Object(C.b)("TicketDescription"), Object(l.a)(P, {
+                x = Object(o.compose)(Object(C.b)("TicketDescription"), Object(l.a)(P, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1544,13 +1544,13 @@
                         }
                     }
                 }))(D);
-            var U = Object(r.connect)(function(e) {
+            var j = Object(r.connect)(function(e) {
                 return {
                     sessionUser: Object(i.e)(e)
                 }
-            })(j);
+            })(x);
             n.d(t, "a", function() {
-                return U
+                return j
             })
         },
         VrOd: function(e, t, n) {},
@@ -1839,9 +1839,9 @@
                 k = n("DMoW"),
                 y = n("V+q8"),
                 E = n("NAv5"),
-                O = n("oJmH"),
+                N = n("oJmH"),
                 w = n("qyxT"),
-                N = n("Ue10"),
+                O = n("Ue10"),
                 S = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -1866,97 +1866,97 @@
                     }
                     return b.__extends(t, e), t.prototype.render = function() {
                         var e = this;
-                        return f.createElement(N.Wa, {
+                        return f.createElement(O.Wa, {
                             margin: {
                                 y: 1
                             },
                             padding: {
                                 x: 1
                             }
-                        }, f.createElement(N.Da, {
+                        }, f.createElement(O.Da, {
                             label: ""
                         }, this.props.reasons.map(function(t, n) {
-                            return f.createElement(N.Wa, {
+                            return f.createElement(O.Wa, {
                                 key: "reason-" + n,
                                 margin: {
                                     y: 2
                                 }
-                            }, f.createElement(N.kb, {
+                            }, f.createElement(O.kb, {
                                 name: e.radioName,
                                 onChange: e.handleReasonChange,
                                 disabled: e.props.disabled,
                                 value: t.value,
                                 label: t.translation()
                             }))
-                        }), f.createElement(N.Wa, {
+                        }), f.createElement(O.Wa, {
                             margin: {
                                 y: 2
                             }
-                        }, f.createElement(N.kb, {
+                        }, f.createElement(O.kb, {
                             name: this.radioName,
                             label: Object(g.d)("Other", "ReasonInput"),
                             onChange: this.handleOtherReasonRadioChange,
                             disabled: this.props.disabled
-                        })), this.state.otherTextAreaEnabled && f.createElement(N.Wa, {
+                        })), this.state.otherTextAreaEnabled && f.createElement(O.Wa, {
                             margin: {
                                 y: 2
                             }
-                        }, f.createElement(N.Lb, {
+                        }, f.createElement(O.Kb, {
                             onChange: this.handleOtherReasonTextAreaChange,
                             placeholder: Object(g.d)("Additional reasons or thoughts", "ReasonInput"),
                             maxLength: 500
                         }))))
                     }, t
                 }(f.Component),
-                _ = Object(O.compose)(Object(m.b)("ReasonInput", {
+                _ = Object(N.compose)(Object(m.b)("ReasonInput", {
                     autoReportInteractive: !0
                 }))(S),
                 T = function(e) {
-                    var t = f.createElement(f.Fragment, null, f.createElement(N.W, {
-                            type: N.Ob.H2,
+                    var t = f.createElement(f.Fragment, null, f.createElement(O.W, {
+                            type: O.Nb.H2,
                             bold: !0
-                        }, Object(g.d)("Subscription Canceled", "UnsubscribeConfirmation")), f.createElement(N.Wa, {
+                        }, Object(g.d)("Subscription Canceled", "UnsubscribeConfirmation")), f.createElement(O.Wa, {
                             margin: {
                                 top: 2
                             }
-                        }, f.createElement(N.W, null, Object(g.d)("Your subscription has been immediately canceled. You will be receiving an email detailing your refund.", "UnsubscribeConfirmation")))),
-                        n = f.createElement(f.Fragment, null, f.createElement(N.W, {
-                            type: N.Ob.H2,
+                        }, f.createElement(O.W, null, Object(g.d)("Your subscription has been immediately canceled. You will be receiving an email detailing your refund.", "UnsubscribeConfirmation")))),
+                        n = f.createElement(f.Fragment, null, f.createElement(O.W, {
+                            type: O.Nb.H2,
                             bold: !0
-                        }, Object(g.d)("Subscription No Longer Renewing", "UnsubscribeConfirmation")), f.createElement(N.Wa, {
+                        }, Object(g.d)("Subscription No Longer Renewing", "UnsubscribeConfirmation")), f.createElement(O.Wa, {
                             margin: {
                                 top: 2
                             }
-                        }, f.createElement(N.W, null, e.endsAt && Object(g.d)("Your subscription will no longer renew. You will have access to your benefits until {date}.", {
-                            date: f.createElement(N.W, {
+                        }, f.createElement(O.W, null, e.endsAt && Object(g.d)("Your subscription will no longer renew. You will have access to your benefits until {date}.", {
+                            date: f.createElement(O.W, {
                                 key: "benefit-end-date",
-                                type: N.Ob.Span,
+                                type: O.Nb.Span,
                                 bold: !0
                             }, Object(g.c)(new Date(e.endsAt), "medium"))
-                        }, "UnsubscribeConfirmation"))), f.createElement(N.Wa, {
+                        }, "UnsubscribeConfirmation"))), f.createElement(O.Wa, {
                             margin: {
                                 top: 2
                             }
-                        }, f.createElement(N.W, null, e.endsAt && Object(g.d)("If you change your mind and would like to resubscribe, you can do so as of {date}.", {
-                            date: f.createElement(N.W, {
+                        }, f.createElement(O.W, null, e.endsAt && Object(g.d)("If you change your mind and would like to resubscribe, you can do so as of {date}.", {
+                            date: f.createElement(O.W, {
                                 key: "resubscribe-date",
-                                type: N.Ob.Span,
+                                type: O.Nb.Span,
                                 bold: !0
                             }, Object(g.c)(Object(E.addDays)(new Date(e.endsAt), 1), "medium"))
                         }, "UnsubscribeConfirmation"))));
-                    return f.createElement(f.Fragment, null, e.unsubscribeType === r.Cancel ? t : n, f.createElement(N.Wa, {
+                    return f.createElement(f.Fragment, null, e.unsubscribeType === r.Cancel ? t : n, f.createElement(O.Wa, {
                         margin: {
                             top: 2
                         }
-                    }, f.createElement(N.W, null, Object(g.d)("We hope you enjoyed the service and will consider resubscribing some day.", "UnsubscribeConfirmation"))), f.createElement(N.Wa, {
+                    }, f.createElement(O.W, null, Object(g.d)("We hope you enjoyed the service and will consider resubscribing some day.", "UnsubscribeConfirmation"))), f.createElement(O.Wa, {
                         margin: {
                             top: 2
                         }
-                    }, f.createElement(N.W, null, Object(g.d)("- Your friends at Twitch", "UnsubscribeConfirmation"))), f.createElement(N.Wa, {
+                    }, f.createElement(O.W, null, Object(g.d)("- Your friends at Twitch", "UnsubscribeConfirmation"))), f.createElement(O.Wa, {
                         margin: {
                             top: 2
                         }
-                    }, f.createElement(N.z, {
+                    }, f.createElement(O.z, {
                         linkTo: "/subscriptions"
                     }, Object(g.d)("Return to Subscriptions", "UnsubscribeForm"))))
                 },
@@ -1985,19 +1985,19 @@
                         return Object(g.d)("I accidentally subscribed", "unsubscribe-reasons")
                     }
                 },
-                j = {
+                x = {
                     value: "I didn't use Turbo as much as I expected",
                     translation: function() {
                         return Object(g.d)("I didn't use Turbo as much as I expected", "unsubscribe-reasons")
                     }
                 },
-                U = {
+                j = {
                     value: "I still saw advertisements",
                     translation: function() {
                         return Object(g.d)("I still saw advertisements", "unsubscribe-reasons")
                     }
                 },
-                x = [{
+                U = [{
                     value: "I had a bad interaction with the broadcaster",
                     translation: function() {
                         return Object(g.d)("I had a bad interaction with the broadcaster", "unsubscribe-reasons")
@@ -2029,18 +2029,18 @@
                         return Object(g.d)("The channel benefits are not what I expected", "unsubscribe-reasons")
                     }
                 }],
-                R = [U, P, F, C, j, {
+                R = [j, P, F, C, x, {
                     value: "I don't feel like Turbo offers enough value",
                     translation: function() {
                         return Object(g.d)("I don't feel like Turbo offers enough value", "unsubscribe-reasons")
                     }
                 }],
-                W = [D, U, P, {
+                W = [D, j, P, {
                     value: "I only wanted ad-free viewing for one day",
                     translation: function() {
                         return Object(g.d)("I only wanted ad-free viewing for one day", "unsubscribe-reasons")
                     }
-                }, j, {
+                }, x, {
                     value: "Turbo's benefits were not what I expected",
                     translation: function() {
                         return Object(g.d)("Turbo's benefits were not what I expected", "unsubscribe-reasons")
@@ -2049,14 +2049,14 @@
             ! function(e) {
                 e[e.Cancel = 0] = "Cancel", e[e.DoNotRenew = 1] = "DoNotRenew"
             }(r || (r = {}));
-            var L = function(e) {
+            var B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             reason: "",
                             unsubscribing: !1,
                             showUnsubConfirmation: !1
-                        }, t.cancelReasons = "turbo" === t.props.productName ? W : A, t.doNotRenewReasons = "turbo" === t.props.productName ? R : x, t.isCancel = t.props.unsubscribeType === r.Cancel, t.reasons = t.isCancel ? Object(w.a)(t.cancelReasons.slice()) : Object(w.a)(t.doNotRenewReasons.slice()), t.updateReason = function(e) {
+                        }, t.cancelReasons = "turbo" === t.props.productName ? W : A, t.doNotRenewReasons = "turbo" === t.props.productName ? R : U, t.isCancel = t.props.unsubscribeType === r.Cancel, t.reasons = t.isCancel ? Object(w.a)(t.cancelReasons.slice()) : Object(w.a)(t.doNotRenewReasons.slice()), t.updateReason = function(e) {
                             t.setState({
                                 reason: e
                             })
@@ -2095,70 +2095,70 @@
                         return this.state.showUnsubConfirmation ? f.createElement(T, {
                             unsubscribeType: this.props.unsubscribeType,
                             endsAt: this.props.endsAt
-                        }) : f.createElement(f.Fragment, null, f.createElement(N.W, {
-                            type: N.Ob.H2,
+                        }) : f.createElement(f.Fragment, null, f.createElement(O.W, {
+                            type: O.Nb.H2,
                             bold: !0
-                        }, this.unsubscribeActionText), f.createElement(N.Wa, {
+                        }, this.unsubscribeActionText), f.createElement(O.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }, f.createElement(N.W, {
-                            color: N.O.Alt2
+                        }, f.createElement(O.W, {
+                            color: O.O.Alt2
                         }, Object(g.d)("Having issues with your subscription? Visit our <x:link1>Help Center</x:link1> or <x:link2>Contact Us</x:link2>.", {
                             "x:link1": function(e) {
-                                return f.createElement(N.U, {
+                                return f.createElement(O.U, {
                                     to: "https://help.twitch.tv/",
                                     targetBlank: !0
                                 }, e)
                             },
                             "x:link2": function(e) {
-                                return f.createElement(N.U, {
+                                return f.createElement(O.U, {
                                     to: "https://help.twitch.tv/customer/portal/emails/new",
                                     targetBlank: !0
                                 }, e)
                             }
-                        }, "UnsubscribeForm"))), f.createElement(N.Wa, {
+                        }, "UnsubscribeForm"))), f.createElement(O.Wa, {
                             margin: {
                                 y: 1
                             }
-                        }, f.createElement(N.W, null, this.warningText)), f.createElement(N.Wa, {
+                        }, f.createElement(O.W, null, this.warningText)), f.createElement(O.Wa, {
                             margin: {
                                 top: 2,
                                 bottom: 1
                             }
-                        }, f.createElement(N.W, {
-                            type: N.Ob.H4,
+                        }, f.createElement(O.W, {
+                            type: O.Nb.H4,
                             bold: !0
                         }, Object(g.d)("Please select your reason for canceling", "UnsubscribeForm"))), f.createElement(_, {
                             reasons: this.reasons,
                             updateReason: this.updateReason,
                             disabled: this.state.unsubscribing
-                        }), f.createElement(N.yb, {
+                        }), f.createElement(O.xb, {
                             padding: {
                                 top: 2
                             },
                             borderTop: !0,
                             fullWidth: !0
-                        }, f.createElement(N.Wa, {
-                            display: N.X.InlineFlex
-                        }, f.createElement(N.z, {
-                            type: N.F.Alert,
-                            state: this.state.unsubscribing ? N.E.Loading : N.E.Default,
+                        }, f.createElement(O.Wa, {
+                            display: O.X.InlineFlex
+                        }, f.createElement(O.z, {
+                            type: O.F.Alert,
+                            state: this.state.unsubscribing ? O.E.Loading : O.E.Default,
                             disabled: this.state.unsubscribing,
                             onClick: this.handleUnsubscribeClick
-                        }, this.unsubscribeActionText), f.createElement(N.Wa, {
+                        }, this.unsubscribeActionText), f.createElement(O.Wa, {
                             margin: {
                                 left: 1
                             }
-                        }, f.createElement(N.z, {
+                        }, f.createElement(O.z, {
                             linkTo: "/subscriptions",
                             disabled: this.state.unsubscribing
-                        }, Object(g.d)("Stay Subscribed", "UnsubscribeForm")))), this.props.unsubscribeType === r.DoNotRenew && f.createElement(N.Wa, {
+                        }, Object(g.d)("Stay Subscribed", "UnsubscribeForm")))), this.props.unsubscribeType === r.DoNotRenew && f.createElement(O.Wa, {
                             margin: {
                                 top: 1
                             }
-                        }, f.createElement(N.W, {
-                            color: N.O.Alt2
+                        }, f.createElement(O.W, {
+                            color: O.O.Alt2
                         }, this.canPurchaseAgainText))))
                     }, Object.defineProperty(t.prototype, "unsubscribeActionText", {
                         get: function() {
@@ -2172,10 +2172,10 @@
                             if (this.props.unsubscribeType === r.DoNotRenew) {
                                 var e = this.props.endsAt;
                                 return e ? Object(g.d)("If your renewal is stopped, your subscription will end on {endsAtDate}, at which time you will no longer have access to subscriber benefits and emotes.", {
-                                    endsAtDate: f.createElement(N.W, {
+                                    endsAtDate: f.createElement(O.W, {
                                         key: "ends-at-date",
                                         bold: !0,
-                                        type: N.Ob.Span
+                                        type: O.Nb.Span
                                     }, Object(g.c)(new Date(e), "medium"))
                                 }, "UnsubscribeForm") : null
                             }
@@ -2195,9 +2195,9 @@
                         configurable: !0
                     }), t
                 }(f.Component),
-                B = Object(O.compose)(Object(m.b)("UnsubscrbeForm", {
+                L = Object(N.compose)(Object(m.b)("UnsubscrbeForm", {
                     autoReportInteractive: !0
-                }))(L),
+                }))(B),
                 H = (n("9ELW"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2211,7 +2211,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.props.data.loading || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (!this.props.currentUser) return this.props.promptLogin(), f.createElement(N.Wa, {
+                        if (!this.props.currentUser) return this.props.promptLogin(), f.createElement(O.Wa, {
                             fullHeight: !0
                         }, f.createElement(v.a, {
                             message: Object(g.d)("You must be logged in to view this page", "UnsubscribePage")
@@ -2221,69 +2221,69 @@
                             n = e.loading,
                             r = e.error,
                             i = !n && !r;
-                        if (i && !t) return f.createElement(N.Wa, {
+                        if (i && !t) return f.createElement(O.Wa, {
                             fullHeight: !0
                         }, f.createElement(v.a, null));
-                        if (i && !this.hasSubscriptionBenefit) return this.redirectToLegacyCheckout(), f.createElement(N.Wa, {
+                        if (i && !this.hasSubscriptionBenefit) return this.redirectToLegacyCheckout(), f.createElement(O.Wa, {
                             fullHeight: !0
-                        }, f.createElement(N.Ya, {
+                        }, f.createElement(O.Ya, {
                             fillContent: !0
                         }));
                         if (i && !this.canUnsubscribe || r) {
                             if (this.isMobileSub) {
                                 var a = this.props.data.subscriptionProduct && this.props.data.subscriptionProduct.owner && this.props.data.subscriptionProduct.owner.displayName;
-                                return f.createElement(N.Wa, {
+                                return f.createElement(O.Wa, {
                                     fullHeight: !0
-                                }, f.createElement(v.a, null, f.createElement(N.W, {
+                                }, f.createElement(v.a, null, f.createElement(O.W, {
                                     bold: !0
                                 }, Object(g.d)("You purchased a subscription to {productDisplayName} on your mobile device.", {
                                     productDisplayName: a || this.props.match.params.productName
-                                }, "UnsubscribePage")), f.createElement(N.Wa, {
+                                }, "UnsubscribePage")), f.createElement(O.Wa, {
                                     margin: {
                                         top: 1
                                     }
-                                }, f.createElement(N.W, null, Object(g.d)("Please <x:link>cancel your subscription</x:link> from your mobile app.", {
+                                }, f.createElement(O.W, null, Object(g.d)("Please <x:link>cancel your subscription</x:link> from your mobile app.", {
                                     "x:link": function(e) {
-                                        return f.createElement(N.U, {
+                                        return f.createElement(O.U, {
                                             to: "https://help.twitch.tv/customer/portal/articles/2935963-how-to-purchase-and-manage-subscriptions-on-android"
                                         }, e)
                                     }
                                 }, "UnsubscribePage")))))
                             }
-                            return f.createElement(N.Wa, {
+                            return f.createElement(O.Wa, {
                                 fullHeight: !0
                             }, f.createElement(v.a, null))
                         }
                         var s = t && t.self && t.self.benefit && t.self.benefit.endsAt;
-                        return f.createElement(N.Wa, {
-                            display: N.X.Flex,
-                            justifyContent: N.Va.Center,
-                            flexWrap: N.Aa.Wrap,
+                        return f.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Center,
+                            flexWrap: O.Aa.Wrap,
                             padding: 3
-                        }, f.createElement(N.Wa, {
+                        }, f.createElement(O.Wa, {
                             className: "unsubscribe-page__ticket-description-container",
                             margin: {
                                 bottom: 2
                             },
-                            display: N.X.InlineBlock
+                            display: O.X.InlineBlock
                         }, f.createElement(y.a, {
                             productName: this.props.match.params.productName,
                             invoicePrice: this.price,
                             showEuSubs: this.showEuSubs
-                        })), f.createElement(N.Wa, {
-                            display: N.X.InlineBlock
-                        }, f.createElement(N.yb, {
+                        })), f.createElement(O.Wa, {
+                            display: O.X.InlineBlock
+                        }, f.createElement(O.xb, {
                             className: "unsubscribe-page__unsubscribe-form-container",
-                            background: N.r.Base,
+                            background: O.r.Base,
                             padding: 2,
                             border: !0,
                             elevation: 1,
                             margin: {
                                 x: 4
                             }
-                        }, n ? f.createElement(N.db, {
+                        }, n ? f.createElement(O.db, {
                             lineCount: 20
-                        }) : f.createElement(B, {
+                        }) : f.createElement(L, {
                             currentUserID: this.props.currentUser.id,
                             productName: this.props.match.params.productName,
                             originID: this.originID,
@@ -2295,11 +2295,11 @@
                             var e = this.props.data.subscriptionProduct;
                             if (!e) return !1;
                             switch (e.type.toUpperCase()) {
-                                case k.L.CHANSUB:
-                                case k.L.TEAMSUB:
+                                case k.K.CHANSUB:
+                                case k.K.TEAMSUB:
                                     return !!(e && e.self && e.self.benefit);
-                                case k.L.TURBO:
-                                    return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.productType.toUpperCase() === k.L.TURBO && e.self.purchase.details.state.toUpperCase() === k.M.ACTIVE);
+                                case k.K.TURBO:
+                                    return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.productType.toUpperCase() === k.K.TURBO && e.self.purchase.details.state.toUpperCase() === k.L.ACTIVE);
                                 default:
                                     return this.logger.error(new Error("Cannot determine if user has subscription benefit."), "Unexpected subscription product type:", e.type), !1
                             }
@@ -2312,10 +2312,10 @@
                             if (!e) return !1;
                             if (this.isMobileSub) return !1;
                             switch (e.type.toUpperCase()) {
-                                case k.L.CHANSUB:
-                                case k.L.TEAMSUB:
+                                case k.K.CHANSUB:
+                                case k.K.TEAMSUB:
                                     return this.unsubscribeType === r.DoNotRenew ? !!(e && e.self && e.self.benefit && e.self.benefit.renewsAt) : this.unsubscribeType === r.Cancel && !!(e && e.self && e.self.benefit && e.self.benefit.isRefundable);
-                                case k.L.TURBO:
+                                case k.K.TURBO:
                                     return this.hasSubscriptionBenefit;
                                 default:
                                     return !1
@@ -2326,7 +2326,7 @@
                     }), Object.defineProperty(t.prototype, "isMobileSub", {
                         get: function() {
                             var e = this.props.data.subscriptionProduct;
-                            return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.paymentProvider && e.self.purchase.details.paymentProvider.toUpperCase() === k.A.GOOGLE_IAB)
+                            return !!(e && e.self && e.self.purchase && e.self.purchase.details && e.self.purchase.details.paymentProvider && e.self.purchase.details.paymentProvider.toUpperCase() === k.z.GOOGLE_IAB)
                         },
                         enumerable: !0,
                         configurable: !0
@@ -2357,7 +2357,7 @@
                     }), t
                 }(f.Component)),
                 V = n("nI5l");
-            var M = Object(a.compose)(Object(m.b)("UnsubscribePage", {
+            var q = Object(a.compose)(Object(m.b)("UnsubscribePage", {
                 destination: l.a.UnsubscribePage
             }), Object(o.a)({
                 location: d.PageviewLocation.UnsubscribePage
@@ -2382,7 +2382,7 @@
                 }, e)
             }))(H);
             n.d(t, "UnsubscribePage", function() {
-                return M
+                return q
             })
         },
         cpJf: function(e, t, n) {
@@ -2910,8 +2910,8 @@
                         onClick: this.onBadgeClickHandler,
                         target: "_blank",
                         "data-a-target": "chat-badge"
-                    }, c)), this.state.isHovering ? i.createElement(s.Rb, {
-                        align: s.Sb.Left,
+                    }, c)), this.state.isHovering ? i.createElement(s.Qb, {
+                        align: s.Rb.Left,
                         "data-a-target": "chat-badge",
                         display: s.X.Inline,
                         key: n,

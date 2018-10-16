@@ -94,12 +94,12 @@
                     status: function(e) {
                         switch (e) {
                             case t.SquadStatus.Pending:
-                                return i.H.PENDING;
+                                return i.G.PENDING;
                             case t.SquadStatus.Live:
-                                return i.H.LIVE;
+                                return i.G.LIVE;
                             case t.SquadStatus.Ended:
                             default:
-                                return i.H.ENDED
+                                return i.G.ENDED
                         }
                     }(e.squad.status),
                     members: n
@@ -167,24 +167,24 @@
                             delay: h.j.Medium,
                             duration: h.k.Medium,
                             enabled: !0
-                        }, i.createElement(h.yb, {
+                        }, i.createElement(h.xb, {
                             display: h.X.Flex,
                             background: h.r.AccentAlt2,
                             alignItems: h.f.Center,
                             padding: 1
-                        }, i.createElement(h.yb, {
+                        }, i.createElement(h.xb, {
                             display: h.X.Flex,
                             color: h.O.Overlay
                         }, n), i.createElement(h.Wa, null, i.createElement(h.W, {
                             noWrap: !0,
-                            type: h.Ob.Span,
+                            type: h.Nb.Span,
                             color: h.O.Overlay,
                             fontSize: h.Ba.Size5
                         }, Object(d.d)("{squadLeader} is Squad Streaming", {
                             squadLeader: i.createElement(h.W, {
                                 bold: !0,
                                 noWrap: !0,
-                                type: h.Ob.Span,
+                                type: h.Nb.Span,
                                 color: h.O.Overlay,
                                 fontSize: h.Ba.Size5
                             }, this.props.channelDisplayName || this.props.channelLogin)
@@ -202,7 +202,7 @@
                             onClick: this.goToSquadPage
                         }, Object(d.d)("Watch Squad", "SquadStreamBanner")))))
                     }, n.prototype.shouldRender = function(e) {
-                        return !!Object(v.a)(e.channelLogin) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.H.LIVE || !1))
+                        return !!Object(v.a)(e.channelLogin) && (!e.data.loading && !e.data.error && (e.data.user && e.data.user.squadStream && e.data.user.squadStream.status === m.G.LIVE || !1))
                     }, n
                 }(i.Component),
                 y = Object(r.compose)(Object(s.a)(k, {

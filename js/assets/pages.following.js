@@ -1811,7 +1811,7 @@
                             display: l.X.Flex,
                             flexDirection: l.Z.Row,
                             padding: .5
-                        }, a.createElement(l.yb, {
+                        }, a.createElement(l.xb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
@@ -1821,7 +1821,7 @@
                         }, a.createElement(l.o, {
                             align: l.d.Center,
                             ratio: l.p.BoxArt
-                        }, a.createElement(l.S, i.__assign({}, e))), a.createElement(l.yb, {
+                        }, a.createElement(l.S, i.__assign({}, e))), a.createElement(l.xb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: l.f.Center,
                             background: l.r.Overlay,
@@ -1959,7 +1959,7 @@
                 },
                 f = n("N0BP"),
                 k = (n("XA5B"), function(e) {
-                    var t = a.createElement(l.yb, {
+                    var t = a.createElement(l.xb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: l.x.Small,
                         overflow: l.Za.Hidden
@@ -1994,7 +1994,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: l.O.Overlay,
                         bold: !0,
-                        transform: l.Nb.Uppercase
+                        transform: l.Mb.Uppercase
                     }, e.title)), e.subTitle && a.createElement(l.Wa, {
                         display: l.X.InlineFlex
                     }, a.createElement(l.W, {
@@ -2077,7 +2077,7 @@
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? a.createElement(l.yb, {
+                    return e.withBackground ? a.createElement(l.xb, {
                         alignItems: l.f.Center,
                         background: l.r.Overlay,
                         borderRadius: l.x.Small,
@@ -2086,7 +2086,7 @@
                         display: l.X.Flex,
                         fontSize: l.Ba.Size6,
                         justifyContent: l.Va.Center
-                    }, t, a.createElement(l.W, null, e.value)) : a.createElement(l.yb, {
+                    }, t, a.createElement(l.W, null, e.value)) : a.createElement(l.xb, {
                         className: "preview-card-stat",
                         color: l.O.Overlay,
                         display: l.X.Flex,
@@ -2136,7 +2136,7 @@
                             onBlur: this.handleBlur
                         }), a.createElement("div", i.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), a.createElement(l.yb, {
+                        }), a.createElement(l.xb, {
                             background: l.r.Alt2,
                             overflow: l.Za.Hidden
                         }, a.createElement(l.o, {
@@ -2182,7 +2182,7 @@
                         type: l.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), a.createElement(l.W, {
-                        type: l.Ob.H3,
+                        type: l.Nb.H3,
                         fontSize: l.Ba.Size5,
                         lines: 1,
                         bold: !0,
@@ -2192,8 +2192,8 @@
                     }, t))
                 }),
                 L = n("H1ft"),
-                T = n("ZbA5"),
-                x = n("QVaV"),
+                x = n("ZbA5"),
+                T = n("QVaV"),
                 I = n("hyVY"),
                 O = n("MXoD"),
                 P = n("0LAi");
@@ -2210,7 +2210,7 @@
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(r.d)("unlocked", "VideoPreviewCardRestriction") : Object(r.d)("locked", "VideoPreviewCardRestriction"),
                         i = t ? l.ob.Unlock : l.ob.Lock;
-                    return a.createElement(l.Wa, null, !t && a.createElement(l.yb, {
+                    return a.createElement(l.Wa, null, !t && a.createElement(l.xb, {
                         background: l.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: l.O.Overlay,
@@ -2218,11 +2218,11 @@
                         position: l.eb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: l.bc.Default,
+                        zIndex: l.ac.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: l.Kb.Center,
+                        textAlign: l.Jb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: l.f.Center,
@@ -2248,21 +2248,21 @@
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), a.createElement(l.yb, {
+                    }, e))), a.createElement(l.xb, {
                         display: l.X.InlineFlex,
                         position: l.eb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: l.bc.Default,
+                        zIndex: l.ac.Default,
                         fontSize: l.Ba.Size6,
                         background: l.r.Overlay,
                         borderRadius: l.x.Medium,
                         color: l.O.Overlay
-                    }, a.createElement(l.Rb, {
-                        direction: this.props.attachTop ? l.Tb.Bottom : l.Tb.Top,
-                        align: l.Sb.Right,
+                    }, a.createElement(l.Qb, {
+                        direction: this.props.attachTop ? l.Sb.Bottom : l.Sb.Top,
+                        align: l.Rb.Right,
                         label: n
                     }, a.createElement(l.nb, {
                         asset: i,
@@ -2299,7 +2299,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", i.__assign({
                             className: "preview-card"
-                        }, Object(f.a)(this.props)), a.createElement(l.yb, {
+                        }, Object(f.a)(this.props)), a.createElement(l.xb, {
                             position: l.eb.Relative,
                             borderRadius: l.x.Medium,
                             overflow: l.Za.Hidden
@@ -2332,7 +2332,7 @@
                         return function(e) {
                             return void 0 !== e.streamType
                         }(this.props) ? a.createElement(C, {
-                            topLeft: a.createElement(T.a, {
+                            topLeft: a.createElement(x.a, {
                                 type: this.props.streamType,
                                 hosting: !!this.props.hostedByChannelLogin
                             }),
@@ -2411,7 +2411,7 @@
                         var e = null,
                             t = [];
                         return this.shouldShowGameBalloon(this.props) || t.push({
-                            text: Object(x.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
+                            text: Object(T.a)(this.props.channelLogin, this.props.channelDisplayName, !0),
                             linkTo: Object(O.a)(this.getTrackingContext(g.PageviewContent.ChannelMetadata), this.props.channelLinkTo),
                             onClick: this.props.onChannelLoginClick,
                             automationSelector: "preview-card-channel-link"
@@ -2663,7 +2663,7 @@
                     }
                 }, i.createElement(r.o, {
                     ratio: e.aspectRatio
-                }, i.createElement(r.yb, {
+                }, i.createElement(r.xb, {
                     background: r.r.Alt2,
                     fullHeight: !0
                 }, t))))
@@ -3421,22 +3421,22 @@
                     }, t.prototype.render = function() {
                         if (!this.userDataLoaded()) return null;
                         var e = this.props.activeCategory,
-                            t = [d.createElement(y.zb, {
+                            t = [d.createElement(y.yb, {
                                 key: "following-overview-tab",
                                 active: void 0 === e,
                                 linkTo: "/directory/following",
                                 "data-a-target": "following-overview-tab"
-                            }, Object(m.d)("Overview", "FollowingHeaderTabs")), d.createElement(y.zb, {
+                            }, Object(m.d)("Overview", "FollowingHeaderTabs")), d.createElement(y.yb, {
                                 key: "following-channels-tab",
                                 active: e === w.SpadeFollowingCategory.Live,
                                 "data-a-target": "following-channels-tab",
                                 linkTo: "/directory/following/live"
-                            }, Object(m.d)("Channels", "FollowingHeaderTabs")), d.createElement(y.zb, {
+                            }, Object(m.d)("Channels", "FollowingHeaderTabs")), d.createElement(y.yb, {
                                 key: "following-hosts-tab",
                                 active: e === w.SpadeFollowingCategory.Hosts,
                                 "data-a-target": "following-hosts-tab",
                                 linkTo: "/directory/following/hosts"
-                            }, Object(m.d)("Hosts", "FollowingHeaderTabs")), d.createElement(y.zb, {
+                            }, Object(m.d)("Hosts", "FollowingHeaderTabs")), d.createElement(y.yb, {
                                 key: "following-games-tab",
                                 active: e === w.SpadeFollowingCategory.Games,
                                 "data-a-target": "following-games-tab",
@@ -3447,7 +3447,7 @@
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(y.Ab, null, t))
+                        }, d.createElement(y.zb, null, t))
                     }, t = s.__decorate([Object(g.b)("FollowingHeaderTabs"), Object(h.a)(C)], t)
                 }(d.Component),
                 N = n("aCAx"),
@@ -3455,8 +3455,8 @@
                 _ = n("8/mp"),
                 F = n("qyxT"),
                 L = n("yziQ"),
-                T = n("xugo"),
-                x = (n("nrVK"), function(e) {
+                x = n("xugo"),
+                T = (n("nrVK"), function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.state = {
@@ -3493,7 +3493,7 @@
                         }, n
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), d.createElement(y.yb, {
+                        return !this.props.data || this.props.data.loading ? null : (this.shuffledGameCards || this.getAndStoreShuffledGameCards(), d.createElement(y.xb, {
                             className: "following-games-modal",
                             background: y.r.Base,
                             padding: 2,
@@ -3511,7 +3511,7 @@
                             margin: {
                                 bottom: 1
                             },
-                            textAlign: y.Kb.Center,
+                            textAlign: y.Jb.Center,
                             display: y.X.Flex,
                             flexDirection: y.Z.Column,
                             alignContent: y.e.Center
@@ -3536,9 +3536,9 @@
                             suppressScrollX: !0
                         }, d.createElement(y.Wa, {
                             padding: 1
-                        }, d.createElement(y.Ub, {
-                            childWidth: y.Vb.Small,
-                            gutterSize: y.Wb.Small,
+                        }, d.createElement(y.Tb, {
+                            childWidth: y.Ub.Small,
+                            gutterSize: y.Vb.Small,
                             placeholderItems: 99
                         }, this.shuffledGameCards)))), d.createElement(y.Wa, {
                             display: y.X.Flex,
@@ -3553,7 +3553,7 @@
                             onClick: this.onClickContinue,
                             disabled: 0 === this.state.followCount
                         }, Object(m.d)("Continue", "FollowGamesModal"))), d.createElement(E.a, null)))
-                    }, t = s.__decorate([Object(h.a)(T, {
+                    }, t = s.__decorate([Object(h.a)(x, {
                         options: {
                             variables: {
                                 limit: 40
@@ -3578,7 +3578,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(y.W, {
-                            type: y.Ob.H4,
+                            type: y.Nb.H4,
                             color: y.O.Base,
                             bold: !0,
                             "data-a-target": "live-games-header"
@@ -3593,7 +3593,7 @@
                                 var n = e.name.toLowerCase(),
                                     i = t.name.toLowerCase();
                                 return n < i ? -1 : n > i ? 1 : 0
-                            })) || 0 === n.length) return d.createElement(y.yb, {
+                            })) || 0 === n.length) return d.createElement(y.xb, {
                             fullWidth: !0,
                             background: y.r.Alt2,
                             display: y.X.Flex,
@@ -3666,9 +3666,9 @@
                                 })
                             }))
                         });
-                        return d.createElement("div", null, e, d.createElement(y.Ub, {
-                            gutterSize: y.Wb.Small,
-                            childWidth: y.Vb.Small,
+                        return d.createElement("div", null, e, d.createElement(y.Tb, {
+                            gutterSize: y.Vb.Small,
+                            childWidth: y.Ub.Small,
                             placeholderItems: 30
                         }, a, t))
                     }, t
@@ -3676,7 +3676,7 @@
             var U = Object(i.connect)(null, function(e, t) {
                     return Object.assign(Object(a.bindActionCreators)({
                         showFollowGamesModal: function() {
-                            return Object(N.d)(x, {
+                            return Object(N.d)(T, {
                                 onFollowChange: t.onFollowChange
                             })
                         }
@@ -3727,7 +3727,7 @@
                         variables: {
                             isTagsExperiment: Object(j.a)(),
                             limit: 100,
-                            type: k.x.LIVE
+                            type: k.w.LIVE
                         }
                     }
                 }), Object(g.b)("FollowingGamesPage", {
@@ -3760,14 +3760,14 @@
                         x: "auto"
                     }
                 }, d.createElement(y.Wa, {
-                    textAlign: y.Kb.Center,
+                    textAlign: y.Jb.Center,
                     margin: {
                         bottom: 2
                     }
                 }, d.createElement(y.W, {
                     color: y.O.Alt2,
                     fontSize: y.Ba.Size4,
-                    type: y.Ob.H4
+                    type: y.Nb.H4
                 }, Object(m.d)("Never miss the Channels you love.", "EmptyChannelList"))), d.createElement(y.Wa, {
                     display: y.X.Flex,
                     justifyContent: y.Va.Between
@@ -3784,13 +3784,13 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_1.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ba.Size5
-                }, Object(m.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), d.createElement(y.yb, {
+                }, Object(m.d)("Like the channel you're watching? Follow it.", "EmptyChannelList")), d.createElement(y.xb, {
                     className: "following__empty-information-num",
                     position: y.eb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Kb.Center
+                    textAlign: y.Jb.Center
                 }, Object(m.f)(1))), d.createElement(y.Wa, {
                     className: "following__empty-information",
                     position: y.eb.Relative
@@ -3804,13 +3804,13 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_2.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ba.Size5
-                }, Object(m.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), d.createElement(y.yb, {
+                }, Object(m.d)("We'll let you know when the channel goes live again.", "EmptyChannelList")), d.createElement(y.xb, {
                     className: "following__empty-information-num",
                     position: y.eb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Kb.Center
+                    textAlign: y.Jb.Center
                 }, Object(m.f)(2))), d.createElement(y.Wa, {
                     className: "following__empty-information",
                     position: y.eb.Relative
@@ -3824,13 +3824,13 @@
                     src: "//s.jtvnw.net/jtv_user_pictures/hosted_images/guide_3.png"
                 }))), d.createElement(y.W, {
                     fontSize: y.Ba.Size5
-                }, Object(m.d)("Come back and watch your favorite channels.", "EmptyChannelList")), d.createElement(y.yb, {
+                }, Object(m.d)("Come back and watch your favorite channels.", "EmptyChannelList")), d.createElement(y.xb, {
                     className: "following__empty-information-num",
                     position: y.eb.Absolute,
                     attachLeft: !0,
                     attachTop: !0,
                     background: y.r.Alt,
-                    textAlign: y.Kb.Center
+                    textAlign: y.Jb.Center
                 }, Object(m.f)(3)))))
             }
             var Q = n("HrG3");
@@ -3842,13 +3842,13 @@
                             bottom: 2
                         }
                     }, d.createElement(y.W, {
-                        type: y.Ob.H4,
+                        type: y.Nb.H4,
                         color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-hosts-header"
                     }, t));
                 if (!e.hosts || 0 === e.hosts.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Wa, {
-                    textAlign: y.Kb.Center,
+                    textAlign: y.Jb.Center,
                     padding: {
                         y: 5
                     }
@@ -3938,19 +3938,19 @@
                         }))
                     }
                 });
-                return d.createElement("div", null, n, d.createElement(y.Ub, {
-                    gutterSize: y.Wb.Small,
-                    childWidth: y.Vb.Large,
+                return d.createElement("div", null, n, d.createElement(y.Tb, {
+                    gutterSize: y.Vb.Small,
+                    childWidth: y.Ub.Large,
                     placeholderItems: 20
                 }, o, i))
             }
             var Z = n("rJ4n"),
-                Y = 50,
-                J = function(e) {
+                J = 50,
+                Y = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            maxCount: Y
+                            maxCount: J
                         }, t.onClickViewAll = function() {
                             return s.__awaiter(t, void 0, void 0, function() {
                                 return s.__generator(this, function(e) {
@@ -4028,7 +4028,7 @@
                             num_host_channels: e.data.currentUser && e.data.currentUser.followedHosts.nodes.length || 0
                         }
                     }
-                }))(J),
+                }))(Y),
                 ee = n("MJbm"),
                 te = n("RXle");
 
@@ -4039,13 +4039,13 @@
                             bottom: 2
                         }
                     }, d.createElement(y.W, {
-                        type: y.Ob.H4,
+                        type: y.Nb.H4,
                         color: y.O.Base,
                         bold: !0,
                         "data-a-target": "live-channels-header"
                     }, t));
                 if (null !== e.users && 0 === e.users.length) return e.followsCount > 0 ? d.createElement("div", null, n, d.createElement(y.Wa, {
-                    textAlign: y.Kb.Center,
+                    textAlign: y.Jb.Center,
                     padding: {
                         y: 5
                     }
@@ -4116,9 +4116,9 @@
                     for (var l = 0; l < 5; l++) o.push(d.createElement(te.VideoPreviewCardPlaceholder, {
                         key: "live-channels-placeholder-" + l
                     }));
-                return d.createElement("div", null, n, d.createElement(y.Ub, {
-                    gutterSize: y.Wb.Small,
-                    childWidth: y.Vb.Large,
+                return d.createElement("div", null, n, d.createElement(y.Tb, {
+                    gutterSize: y.Vb.Small,
+                    childWidth: y.Ub.Large,
                     placeholderItems: 20
                 }, o, i))
             }
@@ -4138,7 +4138,7 @@
                                     bottom: 2
                                 }
                             }, d.createElement(y.W, {
-                                type: y.Ob.H4,
+                                type: y.Nb.H4,
                                 color: y.O.Base,
                                 bold: !0
                             }, Object(m.d)("Based on your viewing history", "SuggestedVideos"))),
@@ -4153,7 +4153,7 @@
                             listContext: ie.b.MixedGameAndChannelList,
                             trackingMedium: w.PageviewMedium.Following,
                             trackingContent: w.PageviewContent.SuggestedVideos,
-                            videoCardSize: y.Vb.Large,
+                            videoCardSize: y.Ub.Large,
                             videos: t
                         }))
                     }, t = s.__decorate([Object(h.a)(re, {
@@ -4736,7 +4736,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return l.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(m.yb, {
+                        return d.createElement(m.xb, {
                             className: this.getClassNames(),
                             color: m.O.Overlay,
                             background: m.r.Overlay,
@@ -4752,7 +4752,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), d.createElement(m.W, {
-                            type: m.Ob.Span
+                            type: m.Nb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -4760,7 +4760,7 @@
                         };
                         return e[p[this.props.type]] = !0, s(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? d.createElement(m.yb, {
+                        return this.props.hosting ? d.createElement(m.xb, {
                             borderRadius: m.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
@@ -5220,9 +5220,9 @@
                         });
                         t = a.createElement(a.Fragment, null, l)
                     }
-                    return a.createElement(c.Ub, {
-                        gutterSize: c.Wb.Small,
-                        childWidth: e.videoCardSize || c.Vb.Large,
+                    return a.createElement(c.Tb, {
+                        gutterSize: c.Vb.Small,
+                        childWidth: e.videoCardSize || c.Ub.Large,
                         placeholderItems: 20
                     }, t, n)
                 },
@@ -5789,11 +5789,11 @@
                         position: o.eb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.cc)(e)), a.createElement(o.Rb, {
-                        direction: o.Tb.Top,
-                        align: o.Sb.Right,
+                    }, Object(o.bc)(e)), a.createElement(o.Qb, {
+                        direction: o.Sb.Top,
+                        align: o.Rb.Right,
                         label: Object(r.d)("Offers in-game Drops", "DropsBadge")
-                    }, a.createElement(o.yb, {
+                    }, a.createElement(o.xb, {
                         className: "drops-badge__drops-icon",
                         position: o.eb.Relative,
                         padding: {
@@ -5804,7 +5804,7 @@
                         },
                         overflow: o.Za.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.bc.Default
+                        zIndex: o.ac.Default
                     }, a.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
@@ -5845,20 +5845,29 @@
                     aspect: o.p.BoxArt,
                     borderRadius: o.x.Medium
                 }, c(e)))), a.createElement(o.H, null, a.createElement(o.Wa, {
+                    display: o.X.Flex
+                }, a.createElement(o.Wa, {
                     "data-test-selector": "tw-card-title",
                     "data-a-target": "tw-card-title",
                     flexGrow: 1,
                     flexShrink: 1,
                     margin: {
                         top: .5
-                    }
+                    },
+                    ellipsis: !0
                 }, a.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Ob.H3,
+                    type: o.Nb.H3,
                     fontSize: o.Ba.Size5,
                     lineHeight: o.Xa.Body,
                     ellipsis: !0
-                }, e.title)), a.createElement(o.W, {
+                }, e.title)), e.contextualCardActionProps && a.createElement(o.Wa, {
+                    margin: {
+                        top: .5
+                    },
+                    flexGrow: 0,
+                    flexShrink: 0
+                }, a.createElement(e.contextualCardActionProps.component, i.__assign({}, e.contextualCardActionProps.props)))), a.createElement(o.W, {
                     color: o.O.Alt2,
                     ellipsis: !0
                 }, e.info))), (e.linkTo || e.onClick || e.disabled) && (t = a.createElement(o.T, {
@@ -5875,7 +5884,7 @@
                     tabIndex: e.tabIndex
                 }, t)), a.createElement("div", i.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.cc)(e)), a.createElement(o.G, {
+                }, Object(o.bc)(e)), a.createElement(o.G, {
                     key: e.title
                 }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && a.createElement(o.Wa, {
                     margin: {
@@ -6387,7 +6396,7 @@
                                 className: "language-select-menu__balloon"
                             }, d.createElement(p.b, null, d.createElement(f.Wa, {
                                 padding: .5
-                            }, Object(g.b)().map(t.renderLanguageOption)))), d.createElement(f.yb, {
+                            }, Object(g.b)().map(t.renderLanguageOption)))), d.createElement(f.xb, {
                                 background: f.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -6475,7 +6484,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         return a.createElement("div", i.__assign({
                             className: "live-channel-card"
-                        }, Object(l.cc)(this.props)), a.createElement(r.a, {
+                        }, Object(l.bc)(this.props)), a.createElement(r.a, {
                             context: r.b.MixedGameAndChannelList,
                             title: this.props.title,
                             linkTo: this.props.linkTo,
@@ -6557,7 +6566,7 @@
                         onClick: this.handleInsideDropdownClick
                     }, e)), r.createElement(o.a, {
                         onClickOut: this.handleOnClickOut
-                    }, r.createElement(s.yb, a.__assign({
+                    }, r.createElement(s.xb, a.__assign({
                         background: this.state.isOpen ? s.r.Base : void 0,
                         borderRadius: s.x.Large,
                         className: "inline-dropdown",
@@ -6572,7 +6581,7 @@
                         onClick: this.handleButtonClick,
                         size: s.D.Large,
                         type: s.F.Hollow
-                    }, this.props.buttonLabel)), r.createElement(s.yb, {
+                    }, this.props.buttonLabel)), r.createElement(s.xb, {
                         attachLeft: !0,
                         background: s.r.Base,
                         borderRadius: s.x.Large,
@@ -6584,7 +6593,7 @@
                             y: 1
                         },
                         position: s.eb.Absolute,
-                        zIndex: s.bc.Above
+                        zIndex: s.ac.Above
                     }, e)))
                 }, t.prototype.toggleDropdown = function(e) {
                     void 0 === e && (e = !this.state.isOpen), this.setState({
@@ -6886,7 +6895,7 @@
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave,
                         onClick: this.onClick
-                    }, Object(d.cc)(this.props)), a.createElement(d.G, {
+                    }, Object(d.bc)(this.props)), a.createElement(d.G, {
                         key: this.props.title
                     }, a.createElement(d.Wa, {
                         position: d.eb.Relative
@@ -6918,7 +6927,7 @@
                         width: 50,
                         height: 50,
                         asset: d.ob.Heart
-                    })), e ? a.createElement(d.yb, {
+                    })), e ? a.createElement(d.xb, {
                         className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
                         background: d.r.Overlay,
                         color: d.O.Overlay,
@@ -6927,7 +6936,7 @@
                         alignItems: d.f.Center,
                         justifyContent: d.Va.Center,
                         position: d.eb.Absolute,
-                        zIndex: d.bc.Above,
+                        zIndex: d.ac.Above,
                         attachBottom: !0,
                         attachTop: !0,
                         attachLeft: !0,

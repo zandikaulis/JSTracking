@@ -76,7 +76,7 @@
                         }
                     }, a.createElement(l, {
                         tooltip: n
-                    }, s), a.createElement(i.yb, {
+                    }, s), a.createElement(i.xb, {
                         borderRadius: Object(r.b)() ? i.x.Large : void 0,
                         elevation: 1,
                         background: i.r.Base
@@ -92,7 +92,7 @@
                             bottom: 1
                         }
                     }, a.createElement(i.W, {
-                        type: i.Ob.H5,
+                        type: i.Nb.H5,
                         bold: !0
                     }, t), n && a.createElement(s.a, {
                         direction: i.v.TopRight
@@ -350,7 +350,7 @@
                         targetBlank: !0,
                         linkTo: e.url + "?tt_content=" + s.PageviewContent.TopClips + "&tt_medium=" + s.PageviewMedium.ChannelAnalytics,
                         onClick: e.onClick
-                    }, a.createElement(i.yb, {
+                    }, a.createElement(i.xb, {
                         padding: {
                             x: 2,
                             y: 1
@@ -379,7 +379,7 @@
                         ellipsis: !0
                     }, a.createElement(i.W, {
                         color: i.O.Base,
-                        type: i.Ob.H5,
+                        type: i.Nb.H5,
                         ellipsis: !0
                     }, e.title), a.createElement(i.Wa, {
                         display: i.X.Flex,
@@ -394,7 +394,7 @@
                         },
                         ellipsis: !0
                     }, a.createElement(i.W, {
-                        type: i.Ob.Span
+                        type: i.Nb.Span
                     }, e.curatorName)))))), a.createElement(i.Wa, {
                         display: i.X.Flex,
                         flexGrow: 1,
@@ -414,7 +414,7 @@
                         bold: !0,
                         fontSize: i.Ba.Size5,
                         color: i.O.Alt,
-                        type: i.Ob.Span
+                        type: i.Nb.Span
                     }, Object(r.d)("{views, number}", {
                         views: e.views
                     }, "StreamSummaryClipViews"))))))))
@@ -446,7 +446,7 @@
                 S = n("NAv5"),
                 C = n("oJmH"),
                 E = n("FOa4"),
-                O = (n("WHSC"), function(e) {
+                w = (n("WHSC"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setContainerRef = function(e) {
@@ -470,7 +470,7 @@
                         })
                     }, t
                 }(s.Component)),
-                w = n("u2gS"),
+                O = n("u2gS"),
                 j = n("Ue10");
             ! function(e) {
                 e.Custom = "custom", e.Default = "default", e.Last7Days = "last_7_days", e.Last30Days = "last_30_days", e.CurrentMonth = "current_month", e.oneMonthAgo = "t_minus_1_month", e.twoMonthsAgo = "t_minus_2_month"
@@ -534,19 +534,19 @@
                         display: j.X.Flex,
                         flexDirection: j.Z.Column
                     }, this.presets.map(function(t, n) {
-                        return s.createElement(j.yb, {
+                        return s.createElement(j.xb, {
                             color: j.O.Link,
                             margin: {
                                 bottom: .5
                             },
                             key: n
                         }, s.createElement(j.Ta, {
-                            selected: Object(w.f)(e.props.interval, t.interval),
+                            selected: Object(O.f)(e.props.interval, t.interval),
                             onClick: e.handleClickFor(t.interval),
                             borderRadius: j.x.Small
-                        }, s.createElement(j.yb, {
+                        }, s.createElement(j.xb, {
                             padding: 1,
-                            textAlign: j.Kb.Center
+                            textAlign: j.Jb.Center
                         }, s.createElement(j.W, {
                             noWrap: !0,
                             fontSize: j.Ba.Size5
@@ -576,19 +576,19 @@
                     start: Object(S.subDays)(a.end, s)
                 }) : e
             }
-            var T = n("6XEL");
+            var x = n("6XEL");
 
-            function x(e) {
+            function T(e) {
                 return r.__awaiter(this, void 0, void 0, function() {
                     var t, n, a, s, i;
                     return r.__generator(this, function(r) {
                         switch (r.label) {
                             case 0:
-                                return t = "/api/channels/" + e + "/revenue_splits", n = "/api/channels/" + e + "/subscriber_count", [4, Promise.all([Object(T.c)({
+                                return t = "/api/channels/" + e + "/revenue_splits", n = "/api/channels/" + e + "/subscriber_count", [4, Promise.all([Object(x.c)({
                                     path: t
                                 }, {
                                     excludeHeaders: ["Twitch-Api-Token"]
-                                }), Object(T.c)({
+                                }), Object(x.c)({
                                     path: n
                                 }, {
                                     excludeHeaders: ["Twitch-Api-Token"]
@@ -620,9 +620,9 @@
                                             return n && (n.score = t.score, e.set(n.plan, n)), e
                                         }, n);
                                         var a = Array.from(n.values());
-                                        return Object(T.d)(a, [function(e) {
+                                        return Object(x.d)(a, [function(e) {
                                             return e.plan
-                                        }], [T.a.Ascending])
+                                        }], [x.a.Ascending])
                                     }(s.body, i.body)
                                 }]
                         }
@@ -632,19 +632,19 @@
             var D = n("bM8u");
 
             function _(e) {
-                return e === w.d.None ? D.e : D.a
+                return e === O.d.None ? D.e : D.a
             }
 
             function R(e) {
-                return e === w.d.None ? D.f : Object.keys(D.g)
+                return e === O.d.None ? D.f : Object.keys(D.g)
             }
             var P, W = {
                     "data-test-selector": "commit-button"
                 },
-                V = {
+                N = {
                     "data-test-selector": "cancel-button"
                 },
-                F = function(e) {
+                V = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleStartChange = function(e) {
@@ -681,11 +681,11 @@
                             padding: {
                                 right: 2
                             },
-                            textAlign: j.Kb.Center
+                            textAlign: j.Jb.Center
                         }, s.createElement(j.W, {
                             color: j.O.Alt2,
                             fontSize: j.Ba.Size4
-                        }, Object(u.d)("Start date", "ChannelAnalyticsDateRangePicker")), s.createElement(O, {
+                        }, Object(u.d)("Start date", "ChannelAnalyticsDateRangePicker")), s.createElement(w, {
                             date: this.state.interval.start,
                             startRange: this.state.interval.start,
                             endRange: this.state.interval.end,
@@ -695,18 +695,18 @@
                             padding: {
                                 right: 2
                             },
-                            textAlign: j.Kb.Center
+                            textAlign: j.Jb.Center
                         }, s.createElement(j.W, {
                             color: j.O.Alt2,
                             fontSize: j.Ba.Size4
-                        }, Object(u.d)("End date", "ChannelAnalyticsDateRangePicker")), s.createElement(O, {
+                        }, Object(u.d)("End date", "ChannelAnalyticsDateRangePicker")), s.createElement(w, {
                             date: this.state.interval.end,
                             startRange: this.state.interval.start,
                             endRange: this.state.interval.end,
                             minDate: this.state.interval.start,
                             maxDate: e,
                             onChange: this.handleEndChange
-                        })), s.createElement(j.yb, {
+                        })), s.createElement(j.xb, {
                             padding: {
                                 top: .5,
                                 left: 2
@@ -724,18 +724,18 @@
                             }
                         }, s.createElement(j.z, r.__assign({}, W, {
                             onClick: this.handleUpdateClick
-                        }), Object(u.d)("Update", "ChannelAnalyticsDateRangePicker"))), s.createElement(j.z, r.__assign({}, V, {
+                        }), Object(u.d)("Update", "ChannelAnalyticsDateRangePicker"))), s.createElement(j.z, r.__assign({}, N, {
                             type: j.F.Text,
                             onClick: this.props.onDismiss
                         }), Object(u.d)("Clear", "ChannelAnalyticsDateRangePicker"))))
                     }, t
                 }(s.Component);
 
-            function L(e, t) {
+            function F(e, t) {
                 return void 0 === t && (t = new Date), e.start <= e.end && e.end <= Object(S.endOfDay)(t)
             }
 
-            function N(e) {
+            function L(e) {
                 u.o.track(y.SpadeEventType.ChannelAnalyticsInteraction, e)
             }! function(e) {
                 e.OpenDatePicker = "open_date_picker", e.VisitPreviousDateRange = "visit_previous_date_range", e.VisitNextDateRange = "visit_next_date_range", e.ExportDataRevenue = "export_data_revenue", e.ExportDataStream = "export_data_stream", e.ViewDetailsReferrers = "view_details_referrers", e.ViewDetailsClips = "view_details_clips", e.TopStreamsSelectDate = "topstreams_select_date", e.TopStreamsSelectAvgViewers = "topstreams_select_avg_viewers", e.TopStreamsSelectNewFollowers = "topstreams_select_new_followers", e.TopStreamsSelectNewSubscribers = "topstreams_select_new_subscribers", e.TopStreamsStream = "topstreams_stream", e.TopClipsClip = "topclips_clip", e.DownloadMySubs = "download_my_subs", e.DownloadMySubsSuccess = "download_my_subs_success", e.EmailToSubs = "email_to_subs", e.OverlapChannel = "overlap_channel", e.OverlapGame = "overlap_game"
@@ -756,15 +756,15 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleDatePickerOpen = function() {
-                            N({
+                            L({
                                 action: P.OpenDatePicker
                             })
                         }, t.handlePrevious = function() {
-                            N({
+                            L({
                                 action: P.VisitPreviousDateRange
                             })
                         }, t.handleNext = function() {
-                            N({
+                            L({
                                 action: P.VisitNextDateRange
                             })
                         }, t
@@ -774,7 +774,7 @@
                             t = this.props.urlStore.params;
                         return s.createElement(j.Wa, {
                             position: j.eb.Relative,
-                            zIndex: j.bc.Above
+                            zIndex: j.ac.Above
                         }, s.createElement(M.a, {
                             onOpen: this.handleDatePickerOpen,
                             control: function(n) {
@@ -792,7 +792,7 @@
                                     type: j.Ua.Base,
                                     onClick: a
                                 }), s.createElement(j.Wa, {
-                                    textAlign: j.Kb.Center
+                                    textAlign: j.Jb.Center
                                 }, s.createElement(j.W, r.__assign({
                                     color: j.O.Link
                                 }, U, {
@@ -804,7 +804,7 @@
                             }
                         }, function(n) {
                             var a = n.close;
-                            return s.createElement(j.yb, {
+                            return s.createElement(j.xb, {
                                 margin: {
                                     top: 5
                                 },
@@ -812,11 +812,11 @@
                                 display: j.X.Flex,
                                 alignItems: j.f.Center,
                                 flexDirection: j.Z.Column,
-                                zIndex: j.bc.Above,
+                                zIndex: j.ac.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
-                            }, s.createElement(j.yb, {
+                            }, s.createElement(j.xb, {
                                 margin: {
                                     top: .5
                                 },
@@ -824,7 +824,7 @@
                                 position: j.eb.Relative,
                                 display: j.X.Flex,
                                 background: j.r.Base,
-                                zIndex: j.bc.Above,
+                                zIndex: j.ac.Above,
                                 attachTop: !0
                             }, s.createElement(j.Wa, {
                                 padding: {
@@ -833,7 +833,7 @@
                                     bottom: 1,
                                     left: 2
                                 }
-                            }, s.createElement(F, {
+                            }, s.createElement(V, {
                                 interval: t,
                                 onCommit: Object(C.compose)(a, e.props.onDateSelect),
                                 onDismiss: a
@@ -851,14 +851,14 @@
                         }, "ChannelAnalyticsNavBar")
                     }, t.prototype.pathWithShiftedInterval = function(e) {
                         var t = Object(B.h)(this.props.urlStore.params, e);
-                        return L(t) ? this.props.urlStore.buildPathWithParams(t) : ""
+                        return F(t) ? this.props.urlStore.buildPathWithParams(t) : ""
                     }, t
                 }(s.Component),
                 X = n("kduP"),
                 q = n("a7UW"),
                 Y = n("6E8S"),
-                K = n("vxFv"),
-                Z = (n("8kcC"), function(e) {
+                J = n("vxFv"),
+                K = (n("8kcC"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -869,13 +869,13 @@
                                 y: 1
                             }
                         }, this.props.gameOverlaps.slice(0, 5).map(function(e, t) {
-                            return s.createElement(Q, {
+                            return s.createElement(Z, {
                                 name: e.game.name,
                                 boxArtURL: e.game.boxArtURL,
                                 percentage: e.score,
                                 key: t
                             })
-                        }), s.createElement(Q, {
+                        }), s.createElement(Z, {
                             name: "",
                             boxArtURL: u.a.defaultBoxArtURL,
                             percentage: this.remainingPercentage()
@@ -889,13 +889,13 @@
                         }, 1)
                     }, t
                 }(s.Component)),
-                Q = function(e) {
+                Z = function(e) {
                     var t = function() {
-                        N({
+                        L({
                             action: P.OverlapGame
                         })
                     };
-                    return s.createElement(j.yb, {
+                    return s.createElement(j.xb, {
                         className: "game-card-row",
                         padding: {
                             y: 1,
@@ -963,7 +963,7 @@
                     }, s.createElement(j.W, {
                         color: j.O.Alt2,
                         ellipsis: !0
-                    }, Object(K.a)(e.percentage)))), s.createElement(j.P, {
+                    }, Object(J.a)(e.percentage)))), s.createElement(j.P, {
                         cols: {
                             default: 5,
                             xs: 4,
@@ -976,7 +976,7 @@
                     }, s.createElement(j.Wa, {
                         display: j.X.Flex,
                         flexGrow: 1
-                    }, s.createElement(j.yb, {
+                    }, s.createElement(j.xb, {
                         fullWidth: !0,
                         background: j.r.Alt2,
                         borderRadius: j.x.Small
@@ -984,7 +984,7 @@
                         value: Math.max(100 * e.percentage, 1)
                     })))))))
                 },
-                J = function() {
+                Q = function() {
                     return s.createElement(j.Wa, {
                         margin: {
                             bottom: 3
@@ -1032,7 +1032,7 @@
                             className: "breakdown-card-row",
                             onMouseEnter: this.handleHover,
                             onMouseLeave: this.handleHover
-                        }, s.createElement(j.yb, {
+                        }, s.createElement(j.xb, {
                             padding: {
                                 x: 2,
                                 y: 1
@@ -1055,14 +1055,14 @@
                                 left: 1
                             }
                         }, s.createElement(j.W, {
-                            type: j.Ob.H5
+                            type: j.Nb.H5
                         }, this.props.title))), s.createElement(j.Wa, {
-                            textAlign: j.Kb.Right
+                            textAlign: j.Jb.Right
                         }, s.createElement(j.W, {
-                            type: j.Ob.H5,
+                            type: j.Nb.H5,
                             bold: !0
                         }, this.props.revenue), s.createElement(j.W, {
-                            type: j.Ob.H6,
+                            type: j.Nb.H6,
                             color: j.O.Alt2
                         }, Object(u.d)("{lastRevenue} last period", {
                             lastRevenue: this.props.lastRevenue
@@ -1142,7 +1142,7 @@
                     "data-test-selector": "payout-link"
                 },
                 ye = function(e) {
-                    if (e.channel.role === w.d.None) return null;
+                    if (e.channel.role === O.d.None) return null;
                     if (e.revenue.isLoading) return s.createElement(ve, null);
                     var t = e.revenue,
                         n = t.streams,
@@ -1156,12 +1156,12 @@
                             bottom: 1
                         }
                     }, s.createElement(j.Wa, {
-                        textAlign: j.Kb.Right,
+                        textAlign: j.Jb.Right,
                         padding: {
                             x: 2
                         }
                     }, s.createElement(j.W, {
-                        type: j.Ob.H6,
+                        type: j.Nb.H6,
                         bold: !0,
                         color: j.O.Alt2
                     }, Object(u.d)("Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel"))), s.createElement(j.Wa, null, s.createElement(ce, {
@@ -1237,7 +1237,7 @@
                 },
                 Se = function(e) {
                     return s.createElement(j.Wa, r.__assign({
-                        textAlign: j.Kb.Center,
+                        textAlign: j.Jb.Center,
                         padding: {
                             y: 2
                         }
@@ -1245,7 +1245,7 @@
                         display: j.X.Flex,
                         justifyContent: j.Va.Center
                     }, s.createElement(j.W, {
-                        type: j.Ob.H2
+                        type: j.Nb.H2
                     }, Object(le.a)(e.totalAmount, function(e, t) {
                         switch (e.type) {
                             case "currency":
@@ -1256,42 +1256,42 @@
                                         top: .5,
                                         right: .5
                                     },
-                                    verticalAlign: 0 === t ? j.Yb.TextTop : j.Yb.Baseline
+                                    verticalAlign: 0 === t ? j.Xb.TextTop : j.Xb.Baseline
                                 }, s.createElement(j.W, {
                                     color: j.O.Alt2,
                                     fontSize: j.Ba.Size6,
-                                    type: j.Ob.Span
+                                    type: j.Nb.Span
                                 }, e.value));
                             case "integer":
                             case "group":
                                 return s.createElement(j.W, {
                                     key: t,
-                                    type: j.Ob.Span,
+                                    type: j.Nb.Span,
                                     bold: !0
                                 }, e.value);
                             case "decimal":
                             case "fraction":
                                 return s.createElement(j.W, {
                                     key: t,
-                                    type: j.Ob.Span,
+                                    type: j.Nb.Span,
                                     fontSize: j.Ba.Size6,
                                     bold: !0
                                 }, e.value);
                             default:
                                 return s.createElement(j.W, {
                                     key: t,
-                                    type: j.Ob.Span,
+                                    type: j.Nb.Span,
                                     bold: !0
                                 }, e.value)
                         }
                     }, function(e) {
                         return s.createElement(j.W, {
                             key: "key",
-                            type: j.Ob.Span,
+                            type: j.Nb.Span,
                             bold: !0
                         }, e)
                     }))), s.createElement(j.W, {
-                        type: j.Ob.H6
+                        type: j.Nb.H6
                     }, Object(u.d)("Total Estimated Revenue (USD)", "ChannelAnalyticsRevenueBreakdownPanel")))
                 },
                 Ce = function(e) {
@@ -1308,13 +1308,13 @@
                         }))
                     })
                 },
-                Oe = n("cZKs"),
-                we = n("x7UT"),
+                we = n("cZKs"),
+                Oe = n("x7UT"),
                 je = n("0Log"),
                 ke = n("geRD"),
                 Ae = n("/aPz"),
-                Te = n("fWgO"),
-                xe = (n("dxV6"), {
+                xe = n("fWgO"),
+                Te = (n("dxV6"), {
                     "data-test-selector": "cancel-button"
                 }),
                 De = function(e) {
@@ -1379,7 +1379,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         !this.downloaded && this.props.pubsub.messages.subscribersCSVComplete && (this.downloaded = !0, this.downloadFile())
                     }, t.prototype.render = function() {
-                        return s.createElement(j.yb, {
+                        return s.createElement(j.xb, {
                             className: "download-subs-list-modal",
                             background: j.r.Base,
                             elevation: 3,
@@ -1388,15 +1388,15 @@
                                 top: 3,
                                 bottom: 2
                             }
-                        }, s.createElement(j.yb, {
+                        }, s.createElement(j.xb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
                             }
                         }, s.createElement(j.W, {
-                            type: j.Ob.H4,
+                            type: j.Nb.H4,
                             color: j.O.Alt
-                        }, Object(u.d)("Download Subscriber List", "ChannelAnalyticsEmailSubsList"))), s.createElement(j.yb, {
+                        }, Object(u.d)("Download Subscriber List", "ChannelAnalyticsEmailSubsList"))), s.createElement(j.xb, {
                             borderBottom: !0
                         }, this.renderModalBody()), s.createElement(j.Wa, {
                             display: j.X.Flex,
@@ -1404,10 +1404,10 @@
                             padding: {
                                 top: 2
                             }
-                        }, s.createElement(j.z, r.__assign({}, xe, {
+                        }, s.createElement(j.z, r.__assign({}, Te, {
                             type: j.F.Text,
                             onClick: this.props.onClose
-                        }), Object(u.d)("Close", "ChannelAnalyticsEmailSubsList"))), s.createElement(Oe.a, {
+                        }), Object(u.d)("Close", "ChannelAnalyticsEmailSubsList"))), s.createElement(we.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t.prototype.renderModalBody = function() {
@@ -1443,14 +1443,14 @@
                     }, t.prototype.getDownloadProgress = function() {
                         return this.props.pubsub.messages.subscribersCSVInProgress ? this.props.pubsub.messages.subscribersCSVInProgress.percent : 0
                     }, t.prototype.trackDownloadSuccess = function() {
-                        N({
+                        L({
                             action: P.DownloadMySubsSuccess
                         })
                     }, t
                 }(s.Component),
-                We = Object(c.compose)(Object(p.a)(Te, {
+                We = Object(c.compose)(Object(p.a)(xe, {
                     name: "downloadSubsList"
-                }), Object(we.a)([{
+                }), Object(Oe.a)([{
                     topic: function(e) {
                         return Object(Ae.x)(e.channelID || "")
                     },
@@ -1459,16 +1459,16 @@
                         return !e.channelID
                     }
                 }]))(Pe),
-                Ve = {
+                Ne = {
                     "data-test-selector": "cancel-button"
                 },
-                Fe = {
+                Ve = {
                     "data-test-selector": "send-email-button"
                 };
             ! function(e) {
                 e[e.Pending = 0] = "Pending", e[e.InFlight = 1] = "InFlight", e[e.Failed = 2] = "Failed", e[e.Success = 3] = "Success"
             }(ie || (ie = {}));
-            var Le = function(e) {
+            var Fe = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.handleSendEmail = function() {
@@ -1478,7 +1478,7 @@
                                         case 0:
                                             return this.setState({
                                                 requestState: ie.InFlight
-                                            }), [4, Object(T.c)({
+                                            }), [4, Object(x.c)({
                                                 path: "/api/channels/" + this.props.channelLogin + "/subscriber_emails",
                                                 method: "POST",
                                                 body: {
@@ -1516,7 +1516,7 @@
                         var e = s.createElement(j.W, {
                                 color: j.O.Error
                             }, Object(u.d)("Oops, something went wrong. Please try again.", "ChannelAnalyticsEmailSubs")),
-                            t = s.createElement(s.Fragment, null, s.createElement(j.yb, {
+                            t = s.createElement(s.Fragment, null, s.createElement(j.xb, {
                                 borderBottom: !0
                             }, s.createElement(j.Wa, {
                                 padding: {
@@ -1542,7 +1542,7 @@
                                 }
                             }, s.createElement(j.Da, {
                                 label: Object(u.d)("Message Body", "ChannelAnalyticsEmailSubs")
-                            }, s.createElement(j.Lb, {
+                            }, s.createElement(j.Kb, {
                                 onChange: this.handleBodyChange,
                                 rows: 6
                             }))), this.state.requestState === ie.Failed && e)), s.createElement(j.Wa, {
@@ -1555,18 +1555,18 @@
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(j.z, r.__assign({}, Ve, {
+                            }, s.createElement(j.z, r.__assign({}, Ne, {
                                 onClick: this.props.onClose,
                                 type: j.F.Text
                             }), Object(u.d)("Cancel", "ChannelAnalyticsEmailSubs"))), s.createElement(j.Wa, {
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(j.z, r.__assign({}, Fe, {
+                            }, s.createElement(j.z, r.__assign({}, Ve, {
                                 disabled: "" === this.state.body || "" === this.state.title || this.state.requestState === ie.InFlight,
                                 onClick: this.handleSendEmail
                             }), this.state.requestState === ie.InFlight ? Object(u.d)("Sending Email...", "ChannelAnalyticsEmailSubs") : Object(u.d)("Send Email", "ChannelAnalyticsEmailSubs"))))),
-                            n = s.createElement(s.Fragment, null, s.createElement(j.yb, {
+                            n = s.createElement(s.Fragment, null, s.createElement(j.xb, {
                                 borderBottom: !0
                             }, s.createElement(j.Wa, {
                                 padding: {
@@ -1583,7 +1583,7 @@
                             }, s.createElement(j.z, {
                                 onClick: this.props.onClose
                             }, Object(u.d)("Close", "ChannelAnalyticsEmailSubs"))));
-                        return s.createElement(j.yb, {
+                        return s.createElement(j.xb, {
                             background: j.r.Base,
                             elevation: 3,
                             padding: {
@@ -1591,20 +1591,20 @@
                                 top: 3,
                                 bottom: 2
                             }
-                        }, s.createElement(j.yb, {
+                        }, s.createElement(j.xb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
                             }
                         }, s.createElement(j.W, {
-                            type: j.Ob.H4,
+                            type: j.Nb.H4,
                             color: j.O.Alt
-                        }, Object(u.d)("Send Email to Subscribers", "ChannelAnalyticsEmailSubs"))), this.state.requestState === ie.Success ? n : t, s.createElement(Oe.a, {
+                        }, Object(u.d)("Send Email to Subscribers", "ChannelAnalyticsEmailSubs"))), this.state.requestState === ie.Success ? n : t, s.createElement(we.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(s.Component),
-                Ne = n("B+LW"),
+                Le = n("B+LW"),
                 Me = n("1AsC"),
                 Ie = (n("N8uI"), {
                     1000: function() {
@@ -1627,9 +1627,9 @@
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.emailButtons = function(e) {
-                            return s.createElement(j.yb, {
+                            return s.createElement(j.xb, {
                                 display: j.X.Flex
-                            }, s.createElement(Ne.a, {
+                            }, s.createElement(Le.a, {
                                 triggerModal: function(e) {
                                     return s.createElement(We, {
                                         channelID: n.props.channel.id,
@@ -1641,16 +1641,16 @@
                                     message: Object(u.d)("Download my subscriber list", "ChannelAnalyticsSubscribersPanel"),
                                     onClick: Object(C.compose)(e, Xe)
                                 }))
-                            }), s.createElement(Ne.a, {
+                            }), s.createElement(Le.a, {
                                 triggerModal: function(t) {
-                                    return s.createElement(Le, {
+                                    return s.createElement(Fe, {
                                         channelLogin: n.props.channel.name,
                                         totalSubscribers: e,
                                         onClose: t
                                     })
                                 }
                             }, function(e) {
-                                return s.createElement(j.yb, {
+                                return s.createElement(j.xb, {
                                     borderLeft: !0,
                                     flexGrow: 1
                                 }, s.createElement(oe.a, r.__assign({}, Ue, {
@@ -1676,7 +1676,7 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.fetchSubscriptions()
                     }, t.prototype.render = function() {
-                        if (this.props.channel.role === w.d.None) return null;
+                        if (this.props.channel.role === O.d.None) return null;
                         if (this.state.isLoading) return s.createElement(Ye, null);
                         var e = s.createElement(q.a, null),
                             t = this.state.subscriptions.reduce(function(e, t) {
@@ -1685,7 +1685,7 @@
                             n = this.state.subscriptions.reduce(function(e, t) {
                                 return e + t.count
                             }, 0);
-                        return this.state.subscriptions.length && (e = s.createElement(s.Fragment, null, s.createElement(j.yb, {
+                        return this.state.subscriptions.length && (e = s.createElement(s.Fragment, null, s.createElement(j.xb, {
                             borderBottom: !0,
                             padding: {
                                 top: 1,
@@ -1704,13 +1704,13 @@
                             return r.__generator(this, function(t) {
                                 switch (t.label) {
                                     case 0:
-                                        return this.props.channel.role === w.d.None ? [2, this.setState({
+                                        return this.props.channel.role === O.d.None ? [2, this.setState({
                                             isLoading: !1,
                                             subscriptions: []
                                         })] : (this.setState({
                                             isLoading: !0,
                                             subscriptions: []
-                                        }), [4, x(this.props.channel.name)]);
+                                        }), [4, T(this.props.channel.name)]);
                                     case 1:
                                         return e = t.sent(), this.setState({
                                             isLoading: !1
@@ -1723,7 +1723,7 @@
                     }, t
                 }(s.Component),
                 He = function() {
-                    return s.createElement(j.yb, {
+                    return s.createElement(j.xb, {
                         padding: {
                             x: 2,
                             top: 2
@@ -1732,43 +1732,43 @@
                     }, s.createElement(j.Ia, null, s.createElement(j.P, {
                         cols: 8
                     }, s.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, s.createElement(j.W, {
-                        type: j.Ob.H6,
+                        type: j.Nb.H6,
                         bold: !0,
                         color: j.O.Alt2
                     }, Object(u.d)("Revenue Split", "ChannelAnalyticsSubscribersPanel")))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, s.createElement(j.W, {
-                        type: j.Ob.H6,
+                        type: j.Nb.H6,
                         bold: !0,
                         color: j.O.Alt2
                     }, Object(u.d)("Sub Points", "ChannelAnalyticsSubscribersPanel")))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, s.createElement(j.W, {
-                        type: j.Ob.H6,
+                        type: j.Nb.H6,
                         bold: !0,
                         color: j.O.Alt2
                     }, Object(u.d)("Subscribers", "ChannelAnalyticsSubscribersPanel"))))))
                 };
 
             function Ge() {
-                N({
+                L({
                     action: P.EmailToSubs
                 })
             }
 
             function Xe() {
-                N({
+                L({
                     action: P.DownloadMySubs
                 })
             }
             var qe = function(e) {
-                    return s.createElement(j.yb, {
+                    return s.createElement(j.xb, {
                         className: "subscribers-panel-row",
                         padding: {
                             x: 2,
@@ -1778,29 +1778,29 @@
                     }, s.createElement(j.Ia, null, s.createElement(j.P, {
                         cols: 6
                     }, s.createElement(j.Wa, {
-                        textAlign: j.Kb.Left
+                        textAlign: j.Jb.Left
                     }, s.createElement(j.W, {
-                        type: j.Ob.H5,
+                        type: j.Nb.H5,
                         color: j.O.Alt
                     }, e.name))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, s.createElement(j.W, {
-                        type: j.Ob.H5
+                        type: j.Nb.H5
                     }, e.revSplit))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, s.createElement(j.W, {
-                        type: j.Ob.H5,
+                        type: j.Nb.H5,
                         bold: !0
                     }, e.score))), s.createElement(j.P, {
                         cols: 2
                     }, s.createElement(j.Wa, {
-                        textAlign: j.Kb.Right
+                        textAlign: j.Jb.Right
                     }, s.createElement(j.W, {
-                        type: j.Ob.H5,
+                        type: j.Nb.H5,
                         bold: !0
                     }, e.count)))))
                 },
@@ -1813,8 +1813,8 @@
                         height: 510
                     }))
                 },
-                Ke = n("FXHi"),
-                Ze = function(e) {
+                Je = n("FXHi"),
+                Ke = function(e) {
                     var t = e.channel,
                         n = e.topClips;
                     if (n.isLoading) return s.createElement(et, null);
@@ -1828,11 +1828,11 @@
                                     content: y.PageviewContent.TopClipsDetails
                                 }
                             };
-                        a = s.createElement(s.Fragment, null, s.createElement(Qe, {
+                        a = s.createElement(s.Fragment, null, s.createElement(Ze, {
                             clipsAttrs: n
                         }), s.createElement(oe.a, {
                             message: r,
-                            onClick: Je,
+                            onClick: Qe,
                             linkTo: i
                         }))
                     }
@@ -1840,9 +1840,9 @@
                         title: Object(u.d)("What were my top clips?", "ChannelAnalyticsTopClipsPanel")
                     }, a)
                 },
-                Qe = function(e) {
+                Ze = function(e) {
                     if (e.clipsAttrs.isLoading)
-                        for (var t = [], n = 0; n < 5; n++) t.push(s.createElement(j.yb, {
+                        for (var t = [], n = 0; n < 5; n++) t.push(s.createElement(j.xb, {
                             borderBottom: !0,
                             padding: {
                                 x: 2,
@@ -1852,24 +1852,24 @@
                         }, s.createElement(j.db, {
                             height: 50
                         })));
-                    return s.createElement(j.yb, {
+                    return s.createElement(j.xb, {
                         borderBottom: !0
                     }, e.clipsAttrs.clips.slice(0, 5).map(function(e, t) {
-                        return s.createElement(Ke.a, r.__assign({}, e, {
+                        return s.createElement(Je.a, r.__assign({}, e, {
                             key: t,
                             onClick: $e
                         }))
                     }))
                 };
 
-            function Je() {
-                N({
+            function Qe() {
+                L({
                     action: P.ViewDetailsClips
                 })
             }
 
             function $e() {
-                N({
+                L({
                     action: P.TopClipsClip
                 })
             }
@@ -2077,9 +2077,9 @@
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.download = function() {
                             var e;
-                            t.props.dataGroup === D.b.StreamSummaries ? (N({
+                            t.props.dataGroup === D.b.StreamSummaries ? (L({
                                 action: P.ExportDataStream
-                            }), e = at(t.props.analyticsResponse.streamSessions.sessions, t.props.aggregation)) : (N({
+                            }), e = at(t.props.analyticsResponse.streamSessions.sessions, t.props.aggregation)) : (L({
                                 action: P.ExportDataRevenue
                             }), e = nt({
                                 revenue: t.props.analyticsResponse.revenue.streams,
@@ -2228,13 +2228,13 @@
                         }, function(a) {
                             var r = a.stats,
                                 i = a.onUpdateStat;
-                            return s.createElement(j.yb, {
+                            return s.createElement(j.xb, {
                                 margin: {
                                     bottom: 4
                                 },
                                 background: j.r.Base,
                                 elevation: 1
-                            }, s.createElement(j.yb, {
+                            }, s.createElement(j.xb, {
                                 display: j.X.Flex,
                                 flexWrap: j.Aa.Wrap
                             }, r.map(function(t, a) {
@@ -2252,7 +2252,7 @@
                                     index: a,
                                     onUpdateStat: i
                                 }))
-                            })), s.createElement(j.yb, {
+                            })), s.createElement(j.xb, {
                                 padding: 2,
                                 borderBottom: !0
                             }, s.createElement(j.Wa, {
@@ -2348,12 +2348,12 @@
                         return s.createElement(j.Wa, null, this.props.children({
                             firstItemIndex: a,
                             lastItemIndex: i
-                        }), s.createElement(j.yb, {
+                        }), s.createElement(j.xb, {
                             display: j.X.Flex,
                             justifyContent: j.Va.Between,
                             alignItems: j.f.Center,
                             borderTop: !0
-                        }, s.createElement(j.yb, {
+                        }, s.createElement(j.xb, {
                             borderRight: !0,
                             display: j.X.Flex
                         }, s.createElement(j.z, r.__assign({
@@ -2365,7 +2365,7 @@
                             display: j.X.Flex
                         }, s.createElement(j.nb, {
                             asset: j.ob.GlyphArrLeft
-                        })))), this.renderPageButtons(), s.createElement(j.yb, {
+                        })))), this.renderPageButtons(), s.createElement(j.xb, {
                             borderLeft: !0,
                             display: j.X.Flex
                         }, s.createElement(j.z, r.__assign({
@@ -2451,8 +2451,8 @@
                             pathname: "/" + t.channel.name + "/dashboard/stream-summary/" + t.id,
                             search: "?tt_content=" + y.PageviewContent.TopStreams + "&tt_medium=" + y.PageviewMedium.ChannelAnalytics
                         },
-                        onClick: Ot
-                    }, s.createElement(j.yb, {
+                        onClick: wt
+                    }, s.createElement(j.xb, {
                         padding: {
                             x: 2,
                             y: 1
@@ -2481,11 +2481,11 @@
                         ellipsis: !0
                     }, s.createElement(j.W, {
                         color: j.O.Base,
-                        type: j.Ob.H5,
+                        type: j.Nb.H5,
                         ellipsis: !0
                     }, t.startChannelStatus), s.createElement(j.W, {
                         color: j.O.Alt2,
-                        type: j.Ob.Span,
+                        type: j.Nb.Span,
                         ellipsis: !0
                     }, Object(u.d)("{start} - {end, time, short}", {
                         start: Object(u.c)(t.interval.start, {
@@ -2507,7 +2507,7 @@
                         bold: !0,
                         fontSize: j.Ba.Size5,
                         color: j.O.Alt,
-                        type: j.Ob.Span
+                        type: j.Nb.Span
                     }, Ct), Object(u.d)("{statNum, number}", {
                         statNum: function(e) {
                             if (e < 10) return Math.floor(10 * e) / 10;
@@ -2516,32 +2516,32 @@
                     }, "ChannelAnalyticsStreamCard")))))))
                 };
 
-            function Ot() {
-                N({
+            function wt() {
+                L({
                     action: P.TopStreamsStream
                 })
             }
-            var wt;
+            var Ot;
             ! function(e) {
                 e.Date = "date", e.AvgViewers = "avg_viewers", e.NewFollowers = "new_followers", e.NewSubscribers = "new_subscribers"
-            }(wt || (wt = {}));
+            }(Ot || (Ot = {}));
             var jt, kt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
-                            sortType: wt.Date
+                            sortType: Ot.Date
                         }, t.sortDropdown = function() {
                             return s.createElement(j.tb, {
                                 value: t.state.sortType,
                                 onChange: t.handleSortTypeChange
                             }, s.createElement("option", {
-                                value: wt.Date
+                                value: Ot.Date
                             }, Object(u.d)("Date", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
-                                value: wt.AvgViewers
+                                value: Ot.AvgViewers
                             }, Object(u.d)("Average Viewers", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
-                                value: wt.NewFollowers
+                                value: Ot.NewFollowers
                             }, Object(u.d)("New Followers", "ChannelAnalyticsTopStreamsPanel")), s.createElement("option", {
-                                value: wt.NewSubscribers
+                                value: Ot.NewSubscribers
                             }, Object(u.d)("New Subscriptions", "ChannelAnalyticsTopStreamsPanel")))
                         }, t.streamsListInView = function(e) {
                             var n = e.firstItemIndex,
@@ -2549,30 +2549,30 @@
                             return s.createElement(j.Wa, null, t.sortedStreamSummaries().slice(n, a).map(function(e, n) {
                                 return s.createElement(Et, {
                                     stream: e,
-                                    statNum: t.state.sortType !== wt.Date ? t.statNumForStreamSummary(e) : void 0,
+                                    statNum: t.state.sortType !== Ot.Date ? t.statNumForStreamSummary(e) : void 0,
                                     key: n
                                 })
                             }))
                         }, t.handleSortTypeChange = function(e) {
                             var n = e.target.value;
                             switch (n) {
-                                case wt.NewFollowers:
-                                    N({
+                                case Ot.NewFollowers:
+                                    L({
                                         action: P.TopStreamsSelectNewFollowers
                                     });
                                     break;
-                                case wt.AvgViewers:
-                                    N({
+                                case Ot.AvgViewers:
+                                    L({
                                         action: P.TopStreamsSelectAvgViewers
                                     });
                                     break;
-                                case wt.NewSubscribers:
-                                    N({
+                                case Ot.NewSubscribers:
+                                    L({
                                         action: P.TopStreamsSelectNewSubscribers
                                     });
                                     break;
-                                case wt.Date:
-                                    N({
+                                case Ot.Date:
+                                    L({
                                         action: P.TopStreamsSelectDate
                                     })
                             }
@@ -2581,34 +2581,34 @@
                             })
                         }, t.statNumForStreamSummary = function(e) {
                             switch (t.state.sortType) {
-                                case wt.NewFollowers:
+                                case Ot.NewFollowers:
                                     return e.followersChange;
-                                case wt.NewSubscribers:
+                                case Ot.NewSubscribers:
                                     return e.subscriptionsNew;
-                                case wt.AvgViewers:
+                                case Ot.AvgViewers:
                                 default:
                                     return e.avgViewerCount
                             }
                         }, t.sortedStreamSummaries = function() {
                             var e = t.props.streamSessions.sessions.slice();
                             switch (t.state.sortType) {
-                                case wt.NewFollowers:
-                                    return Object(T.d)(e, [function(e) {
+                                case Ot.NewFollowers:
+                                    return Object(x.d)(e, [function(e) {
                                         return e.followersChange
-                                    }], [T.a.Descending]);
-                                case wt.NewSubscribers:
-                                    return Object(T.d)(e, [function(e) {
+                                    }], [x.a.Descending]);
+                                case Ot.NewSubscribers:
+                                    return Object(x.d)(e, [function(e) {
                                         return e.subscriptionsNew
-                                    }], [T.a.Descending]);
-                                case wt.Date:
-                                    return Object(T.d)(e, [function(e) {
+                                    }], [x.a.Descending]);
+                                case Ot.Date:
+                                    return Object(x.d)(e, [function(e) {
                                         return e.interval.start
-                                    }], [T.a.Descending]);
-                                case wt.AvgViewers:
+                                    }], [x.a.Descending]);
+                                case Ot.AvgViewers:
                                 default:
-                                    return Object(T.d)(e, [function(e) {
+                                    return Object(x.d)(e, [function(e) {
                                         return e.avgViewerCount
-                                    }], [T.a.Descending])
+                                    }], [x.a.Descending])
                             }
                         }, t
                     }
@@ -2629,7 +2629,7 @@
                             display: j.X.Flex,
                             justifyContent: j.Va.Between
                         }, s.createElement(j.Wa, null, s.createElement(j.W, {
-                            type: j.Ob.H5,
+                            type: j.Nb.H5,
                             noWrap: !0
                         }, Object(u.d)("{count} streams", {
                             count: s.createElement("strong", null, n)
@@ -2667,7 +2667,7 @@
                         height: 448
                     }))
                 },
-                Tt = (n("mvbP"), function(e) {
+                xt = (n("mvbP"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2682,7 +2682,7 @@
                                     y: 1
                                 }
                             }, t.slice(0, 5).map(function(e, t) {
-                                return s.createElement(xt, {
+                                return s.createElement(Tt, {
                                     login: e.channel.login || "",
                                     displayName: e.channel.displayName || "",
                                     image: e.channel.profileImageURL,
@@ -2697,9 +2697,9 @@
                         }, e)
                     }, t
                 }(s.Component)),
-                xt = function(e) {
+                Tt = function(e) {
                     var t = function() {
-                            N({
+                            L({
                                 action: P.OverlapChannel
                             })
                         },
@@ -2719,7 +2719,7 @@
                         className: "channel-card-row__link-text",
                         fontSize: j.Ba.Size5,
                         ellipsis: !0
-                    }, e.displayName), s.createElement(j.yb, {
+                    }, e.displayName), s.createElement(j.xb, {
                         className: "channel-card-row",
                         padding: {
                             y: 1,
@@ -2777,7 +2777,7 @@
                     }, s.createElement(j.W, {
                         color: j.O.Alt2,
                         ellipsis: !0
-                    }, Object(K.a)(e.percentage)))), s.createElement(j.P, {
+                    }, Object(J.a)(e.percentage)))), s.createElement(j.P, {
                         cols: {
                             default: 5,
                             xs: 4,
@@ -2790,7 +2790,7 @@
                     }, s.createElement(j.Wa, {
                         display: j.X.Flex,
                         flexGrow: 1
-                    }, s.createElement(j.yb, {
+                    }, s.createElement(j.xb, {
                         fullWidth: !0,
                         background: j.r.Alt2,
                         borderRadius: j.x.Small
@@ -2869,10 +2869,10 @@
                         return new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate()))
                     }(e).getTime() / 1e3
                 };
-            var Vt = n("IFXb"),
-                Ft = n("VxtK"),
-                Lt = n("n/0j"),
-                Nt = (n("+zwc"), function(e) {
+            var Nt = n("IFXb"),
+                Vt = n("VxtK"),
+                Ft = n("n/0j"),
+                Lt = (n("+zwc"), function(e) {
                     return s.createElement(j.Wa, {
                         className: "channel-analytics-responsive-column",
                         display: j.X.Flex,
@@ -2886,7 +2886,7 @@
                     }, e.children)
                 }),
                 Mt = (n("ct6I"), function(e) {
-                    return s.createElement(j.yb, {
+                    return s.createElement(j.xb, {
                         className: "channel-analytics-responsive-column-container",
                         margin: {
                             top: 1,
@@ -2912,7 +2912,7 @@
 
             function zt(e) {
                 var t = function(e) {
-                    var t = e.role === w.d.Partner || e.role === w.d.Affiliate;
+                    var t = e.role === O.d.Partner || e.role === O.d.Affiliate;
                     return {
                         link: t ? "/" + e.name + "/dashboard/live" : "/" + e.name + "/dashboard/broadcast",
                         text: t ? Object(u.d)("Go to Live Dashboard", "NoAvailableChannelAnalyticsNotice") : Object(u.d)("Go to Streaming Tools", "NoAvailableChannelAnalyticsNotice")
@@ -2929,9 +2929,9 @@
                     margin: {
                         top: 5
                     },
-                    zIndex: j.bc.Default
-                }, s.createElement(j.Ub, {
-                    childWidth: j.Vb.Medium,
+                    zIndex: j.ac.Default
+                }, s.createElement(j.Tb, {
+                    childWidth: j.Ub.Medium,
                     center: !0
                 }, s.createElement("div", {
                     className: "ca-welcome-modal"
@@ -2940,7 +2940,7 @@
                     duration: j.k.Medium,
                     enabled: !0,
                     timing: j.m.EaseInOut
-                }, s.createElement(j.yb, {
+                }, s.createElement(j.xb, {
                     border: !0,
                     padding: 2,
                     background: j.r.Base,
@@ -2958,9 +2958,9 @@
                         left: .5
                     }
                 }, s.createElement(j.W, {
-                    type: j.Ob.H4,
+                    type: j.Nb.H4,
                     bold: !0
-                }, Object(u.d)("Welcome to Channel Analytics", "NoAvailableChannelAnalyticsNotice")))), s.createElement(j.Xb, null, s.createElement(j.W, {
+                }, Object(u.d)("Welcome to Channel Analytics", "NoAvailableChannelAnalyticsNotice")))), s.createElement(j.Wb, null, s.createElement(j.W, {
                     fontSize: j.Ba.Size5
                 }, Object(u.d)("Your stream and revenue stats – all in one place. Stream to get started!", "NoAvailableChannelAnalyticsNotice"))), s.createElement(j.Wa, {
                     padding: {
@@ -2981,7 +2981,7 @@
             var Ht = function(e) {
                     return s.createElement(s.Fragment, null, s.createElement(zt, {
                         channel: e.channel
-                    }), s.createElement(ht, null), s.createElement(Mt, null, s.createElement(Nt, null, s.createElement(ve, null), s.createElement(Ft.b, null), s.createElement(et, null)), s.createElement(Nt, null, s.createElement(Ye, null), s.createElement(At, null), s.createElement(Dt, null), s.createElement(J, null))))
+                    }), s.createElement(ht, null), s.createElement(Mt, null, s.createElement(Lt, null, s.createElement(ve, null), s.createElement(Vt.b, null), s.createElement(et, null)), s.createElement(Lt, null, s.createElement(Ye, null), s.createElement(At, null), s.createElement(Dt, null), s.createElement(Q, null))))
                 },
                 Gt = n("Pf3A");
             var Xt = function(e) {
@@ -3032,7 +3032,7 @@
                         return n.statsStorage = new ot(s), n.dateRangeSelection = a.Default, n
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
-                        this.track(jt.Pageview), u.m.set(Lt.a, !0)
+                        this.track(jt.Pageview), u.m.set(Ft.a, !0)
                     }, t.prototype.render = function() {
                         var e = this.props,
                             t = e.urlStore,
@@ -3047,7 +3047,7 @@
                                     r = t.isLoading || n.isLoading,
                                     s = n.hasSessions,
                                     i = t.hasSessions,
-                                    o = a !== w.d.None;
+                                    o = a !== O.d.None;
                                 return !(r || s || i || o)
                             }({
                                 viewingSessions: {
@@ -3060,7 +3060,7 @@
                                 },
                                 role: n.role
                             });
-                        return s.createElement(s.Fragment, null, s.createElement(Vt.a, null, s.createElement(G, {
+                        return s.createElement(s.Fragment, null, s.createElement(Nt.a, null, s.createElement(G, {
                             urlStore: t,
                             onDateSelect: this.handleDateSelect
                         }), o ? s.createElement(Ht, {
@@ -3081,13 +3081,13 @@
                             onStatsSelect: this.handleSelectStat,
                             onAggregationSelect: this.handleAggregationSelect,
                             onTabSelect: this.handleTabSelect
-                        }), s.createElement(Mt, null, s.createElement(Nt, null, s.createElement(Ee, {
+                        }), s.createElement(Mt, null, s.createElement(Lt, null, s.createElement(Ee, {
                             channel: a,
                             revenue: n.revenue,
                             subCounts: n.subCounts
                         }), s.createElement(m.a, null, function(e) {
                             var t = e.location;
-                            return s.createElement(Ft.a, {
+                            return s.createElement(Vt.a, {
                                 streamSessionsQuery: r,
                                 onViewDetails: Yt,
                                 linkToDetails: {
@@ -3099,10 +3099,10 @@
                                     }
                                 }
                             })
-                        }), s.createElement(Ze, {
+                        }), s.createElement(Ke, {
                             channel: a,
                             topClips: i
-                        })), s.createElement(Nt, null, s.createElement(ze, {
+                        })), s.createElement(Lt, null, s.createElement(ze, {
                             channel: a
                         }), s.createElement(kt, {
                             streamSessions: r
@@ -3116,9 +3116,9 @@
                                     return null
                                 },
                                 yes: function() {
-                                    return s.createElement(s.Fragment, null, s.createElement(Tt, {
+                                    return s.createElement(s.Fragment, null, s.createElement(xt, {
                                         channelOverlaps: o.channels
-                                    }), s.createElement(Z, {
+                                    }), s.createElement(K, {
                                         gameOverlaps: o.games
                                     }))
                                 }
@@ -3145,14 +3145,14 @@
                 }))(Xt);
 
             function Yt() {
-                N({
+                L({
                     action: P.ViewDetailsReferrers
                 })
             }
-            var Kt = n("LA8z"),
-                Zt = n("4rCz"),
-                Qt = n("lBsv"),
-                Jt = n("MDe2");
+            var Jt = n("LA8z"),
+                Kt = n("4rCz"),
+                Zt = n("lBsv"),
+                Qt = n("MDe2");
 
             function $t(e) {
                 return e.sessionUser && e.sessionUser.login === e.channelLogin
@@ -3190,17 +3190,17 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e, t = this,
-                            n = s.createElement(Qt.a, {
-                                message: Object(Zt.d)("Payout History", "ChannelAnalyticsPayoutsPage"),
+                            n = s.createElement(Zt.a, {
+                                message: Object(Kt.d)("Payout History", "ChannelAnalyticsPayoutsPage"),
                                 backLinkTo: this.returnLocation
                             });
-                        if (!re()) return s.createElement(Kt.a, null);
+                        if (!re()) return s.createElement(Jt.a, null);
                         if ($t(this.props))
-                            if (!this.props.data || this.props.data.error) e = this.renderError(Object(Zt.d)("Sorry, something went wrong loading your payout history. Please try again later", "ChannelAnalyticsPayoutsPage"));
+                            if (!this.props.data || this.props.data.error) e = this.renderError(Object(Kt.d)("Sorry, something went wrong loading your payout history. Please try again later", "ChannelAnalyticsPayoutsPage"));
                             else if (this.props.data.loading) e = s.createElement(j.Wa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            textAlign: j.Kb.Center,
+                            textAlign: j.Jb.Center,
                             padding: {
                                 y: 4
                             },
@@ -3217,11 +3217,11 @@
                                 width: "100%",
                                 src: a.payout.history.iframeURL
                             }), s.createElement(j.Wa, {
-                                textAlign: j.Kb.Left,
+                                textAlign: j.Jb.Left,
                                 margin: 1
                             }, s.createElement(j.W, {
-                                type: j.Ob.P
-                            }, Object(Zt.d)("Showing all payouts since October 2016. For information regarding payouts before that date, please <x:link>contact support</x:link>.", {
+                                type: j.Nb.P
+                            }, Object(Kt.d)("Showing all payouts since October 2016. For information regarding payouts before that date, please <x:link>contact support</x:link>.", {
                                 "x:link": function(e) {
                                     return s.createElement(j.U, {
                                         to: "https://help.twitch.tv/customer/portal/emails/new",
@@ -3229,17 +3229,17 @@
                                     }, e)
                                 }
                             }, "ChannelAnalyticsPayoutsPage"))), s.createElement(j.Wa, {
-                                textAlign: j.Kb.Left,
+                                textAlign: j.Jb.Left,
                                 margin: 1
                             }, s.createElement(j.W, {
-                                type: j.Ob.P
-                            }, Object(Zt.d)("This page shows your earnings from Twitch for each pay period. These numbers may not exactly match your revenue on the Channel Analytics page, as the latter is an estimate of your earnings.", "ChannelAnalyticsPayoutsPage"))), s.createElement(j.Wa, {
-                                textAlign: j.Kb.Left,
+                                type: j.Nb.P
+                            }, Object(Kt.d)("This page shows your earnings from Twitch for each pay period. These numbers may not exactly match your revenue on the Channel Analytics page, as the latter is an estimate of your earnings.", "ChannelAnalyticsPayoutsPage"))), s.createElement(j.Wa, {
+                                textAlign: j.Jb.Left,
                                 margin: 1
                             }, s.createElement(j.W, {
-                                type: j.Ob.P,
+                                type: j.Nb.P,
                                 bold: !0
-                            }, Object(Zt.d)("Have a new payout method you would like to use? <x:link>Change your payout method.</x:link>", {
+                            }, Object(Kt.d)("Have a new payout method you would like to use? <x:link>Change your payout method.</x:link>", {
                                 "x:link": function(e) {
                                     return s.createElement(j.U, {
                                         to: "/" + t.props.channelLogin + "/dashboard/settings/revenue/payouts",
@@ -3247,8 +3247,8 @@
                                     }, e)
                                 }
                             }, "ChannelAnalyticsPayoutsPage"))))
-                        } else e = this.renderError(Object(Zt.d)("This page is restricted to the channel owner only. For further help, please contact the channel owner or Twitch support.", "ChannelAnalyticsPayoutsPage"));
-                        return s.createElement(Vt.a, null, n, s.createElement(j.yb, {
+                        } else e = this.renderError(Object(Kt.d)("This page is restricted to the channel owner only. For further help, please contact the channel owner or Twitch support.", "ChannelAnalyticsPayoutsPage"));
+                        return s.createElement(Nt.a, null, n, s.createElement(j.xb, {
                             margin: {
                                 top: 2
                             },
@@ -3273,7 +3273,7 @@
                     return {
                         sessionUser: Object(d.e)(e)
                     }
-                }), Object(p.a)(Jt, {
+                }), Object(p.a)(Qt, {
                     skip: function(e) {
                         return !$t(e)
                     },
@@ -3309,9 +3309,9 @@
                             t = this.props.channelAnalyticsResponse.streamSessions,
                             n = t.isLoading,
                             a = t.sessions;
-                        return s.createElement(s.Fragment, null, s.createElement(Vt.a, null, s.createElement(o.a, null, function(t) {
+                        return s.createElement(s.Fragment, null, s.createElement(Nt.a, null, s.createElement(o.a, null, function(t) {
                             var n = t.location;
-                            return s.createElement(Qt.a, {
+                            return s.createElement(Zt.a, {
                                 backLinkTo: {
                                     pathname: "/" + e.props.channel.name + "/dashboard/channel-analytics",
                                     search: n.search,
@@ -3344,7 +3344,7 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = new sn.URLStore(this.props.location, this.props.history, this.props.now);
-                        return L(e.params, this.props.now) ? this.props.children(e) : (e.replace({
+                        return F(e.params, this.props.now) ? this.props.children(e) : (e.replace({
                             start: void 0,
                             end: void 0
                         }), null)
@@ -3429,7 +3429,7 @@
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.fetchTopClips(), this.fetchRevenues(), this.fetchSubCounts(), this.fetchStreamSessions()
                     }, t.prototype.componentDidUpdate = function(e) {
-                        Object(w.f)(this.props.interval, e.interval) || (this.fetchTopClips(), this.fetchRevenues(), this.fetchSubCounts(), this.fetchStreamSessions())
+                        Object(O.f)(this.props.interval, e.interval) || (this.fetchTopClips(), this.fetchRevenues(), this.fetchSubCounts(), this.fetchStreamSessions())
                     }, t.prototype.render = function() {
                         return this.props.channel ? this.props.children(this.state) : s.createElement("span", null)
                     }, t.prototype.fetchStreamSessions = function() {
@@ -3514,12 +3514,12 @@
                                                 return r.__generator(this, function(o) {
                                                     switch (o.label) {
                                                         case 0:
-                                                            return e.role === w.d.None ? [2, {
+                                                            return e.role === O.d.None ? [2, {
                                                                 isError: !1,
                                                                 streams: mn
                                                             }] : (n = "/kraken/channels/" + e.id + "/dashboard/revenues", a = un.stringify(r.__assign({}, Object(dn.a)(t.start, Object(S.addDays)(t.end, 1)), {
                                                                 fraction: "day"
-                                                            })), s = [n, a].join("?"), [4, Object(T.c)({
+                                                            })), s = [n, a].join("?"), [4, Object(x.c)({
                                                                 path: s
                                                             })]);
                                                         case 1:
@@ -3590,7 +3590,7 @@
                         u.p.setPageTitle(Object(u.d)("Channel Analytics", "DashboardChannelAnalyticsPage"))
                     }, t.prototype.render = function() {
                         var e = this,
-                            t = w.c.fromChannelData(this.props.data);
+                            t = O.c.fromChannelData(this.props.data);
                         if (!t) return null;
                         if (!this.props.data.loading && this.props.data.channel) {
                             var n = this.props.userID === this.props.data.channel.id,
@@ -4478,7 +4478,7 @@
                             return e.videoPlayExternalReferrers
                         })),
                         v = a.createElement(i.a, null);
-                    return (b.total || f.total || y.total) && (v = a.createElement(a.Fragment, null, a.createElement(p.yb, {
+                    return (b.total || f.total || y.total) && (v = a.createElement(a.Fragment, null, a.createElement(p.xb, {
                         borderBottom: !0,
                         padding: {
                             bottom: 1
@@ -4940,7 +4940,7 @@
                         }
                     }, t
                 }(s.Component),
-                O = function(e) {
+                w = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDataFromSession = function(e) {
@@ -4972,7 +4972,7 @@
                         })
                     }, t
                 }(s.Component),
-                w = function(e) {
+                O = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.formatTooltipLabel = function(e) {
@@ -5112,7 +5112,7 @@
                         })
                     }, t
                 }(s.Component),
-                T = function(e) {
+                x = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getDataFromSession = function(e) {
@@ -5143,7 +5143,7 @@
                         })
                     }, t
                 }(s.Component),
-                x = function(e) {
+                T = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.formatTooltipLabel = function(e) {
@@ -5360,16 +5360,16 @@
                     }, t
                 }(s.Component),
                 W = n("TSYQ"),
-                V = (n("H+Kr"), {
+                N = (n("H+Kr"), {
                     "data-test-selector": "up-trend-indicator"
                 }),
-                F = {
+                V = {
                     "data-test-selector": "down-trend-indicator"
                 },
-                L = {
+                F = {
                     "data-test-selector": "tab-selector"
                 },
-                N = function(e) {
+                L = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5381,10 +5381,10 @@
                             className: e,
                             display: p.X.Flex,
                             flexGrow: 1
-                        }, L), s.createElement(p.Oa, {
+                        }, F), s.createElement(p.Oa, {
                             flexGrow: 1,
                             flexDirection: p.Z.Column,
-                            textAlign: p.Kb.Center
+                            textAlign: p.Jb.Center
                         }, s.createElement(p.U, {
                             onClick: this.props.onClick,
                             to: this.props.linkTo,
@@ -5403,9 +5403,9 @@
                             ellipsis: !0
                         }, s.createElement(p.W, {
                             className: "top-stats-tab__title",
-                            type: p.Ob.H3
+                            type: p.Nb.H3
                         }, this.props.title, this.renderTrendIndicator()), s.createElement(p.W, {
-                            type: p.Ob.H6,
+                            type: p.Nb.H6,
                             color: p.O.Alt2,
                             title: this.props.subtitle,
                             ellipsis: !0
@@ -5419,7 +5419,7 @@
                         }, s.createElement(p.nb, r.__assign({
                             asset: p.ob.GlyphArrUp,
                             type: p.pb.Success
-                        }, V))) : this.props.trend < 0 ? s.createElement(p.Wa, {
+                        }, N))) : this.props.trend < 0 ? s.createElement(p.Wa, {
                             display: p.X.Inline,
                             margin: {
                                 left: .5
@@ -5427,7 +5427,7 @@
                         }, s.createElement(p.nb, r.__assign({
                             asset: p.ob.GlyphArrDown,
                             type: p.pb.Warn
-                        }, F))) : null : null
+                        }, V))) : null : null
                     }, t
                 }(s.Component),
                 M = function(e) {
@@ -5438,7 +5438,7 @@
                         var e, t = this.adBreaks,
                             n = this.previousAdBreaks,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t, i.a.HumanizedShort), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t, i.a.HumanizedShort), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Ad Breaks", "ChannelAnalyticsTopStats"),
@@ -5472,7 +5472,7 @@
                         var e, t = this.adTimePerHour,
                             n = this.previousAdTimePerHour,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t, i.a.HumanizedShort), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(i.b)(t, i.a.HumanizedShort), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Ad Time Per Hour", "ChannelAnalyticsTopStats"),
@@ -5510,7 +5510,7 @@
                         var e, t = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.sessions || []),
                             n = this.averageUniqueViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Average Unique Viewers", "ChannelAnalyticsTopStats"),
@@ -5548,7 +5548,7 @@
                         var e, t = this.averageViewers(this.props.analyticsResponse.streamSessions.sessions || []),
                             n = this.averageViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Average Viewers", "ChannelAnalyticsTopStats"),
@@ -5582,7 +5582,7 @@
                             r = this.props.analyticsResponse.streamSessions.sessions;
                         return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t, {
                             maximumFractionDigits: 0
-                        }), s.createElement(N, {
+                        }), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Average Chat Messages", "ChannelAnalyticsTopStats"),
@@ -5609,7 +5609,7 @@
                             r = this.props.analyticsResponse.streamSessions.sessions;
                         return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t, {
                             maximumFractionDigits: 0
-                        }), s.createElement(N, {
+                        }), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Average Chatters", "ChannelAnalyticsTopStats"),
@@ -5636,7 +5636,7 @@
                             r = this.props.analyticsResponse.streamSessions.sessions;
                         return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(n, {
                             maximumFractionDigits: 0
-                        }), s.createElement(N, {
+                        }), s.createElement(L, {
                             title: e,
                             subtitle: Object(a.d)("Clip Views", "ChannelAnalyticsTopStats"),
                             linkTo: this.props.linkTo,
@@ -5670,7 +5670,7 @@
                         var e, t = this.clipsCreated,
                             n = this.previousClipsCreated,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Clips Created", "ChannelAnalyticsTopStats"),
@@ -5704,7 +5704,7 @@
                         var e, t = this.hostRaidViewers(this.props.analyticsResponse.streamSessions.sessions || []),
                             n = this.hostRaidViewers(this.props.analyticsResponse.streamSessions.lookbackSessions || []),
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : this.formatTitle(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Host/Raid Viewers", "ChannelAnalyticsTopStats"),
@@ -5727,7 +5727,7 @@
                         })
                     }, t
                 }(s.Component),
-                K = function(e) {
+                J = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5735,7 +5735,7 @@
                         var e, t = this.liveViews,
                             n = this.previousLiveViews,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Live Views", "ChannelAnalyticsTopStats"),
@@ -5761,7 +5761,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                Z = function(e) {
+                K = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5769,7 +5769,7 @@
                         var e, t = this.maxViewers,
                             n = this.previousMaxViewers,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Max Viewers", "ChannelAnalyticsTopStats"),
@@ -5795,7 +5795,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                Q = function(e) {
+                Z = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5803,7 +5803,7 @@
                         var e, t = this.minutesWatched,
                             n = this.previousMinutesWatched,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(a.f)(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Minutes Watched", "ChannelAnalyticsTopStats"),
@@ -5829,7 +5829,7 @@
                         configurable: !0
                     }), t
                 }(s.Component),
-                J = function(e) {
+                Q = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5844,7 +5844,7 @@
                                 followersDiff: Math.abs(e),
                                 sign: t
                             }, "ChannelAnalyticsTopStats")
-                        }(t), s.createElement(N, {
+                        }(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("New Followers", "ChannelAnalyticsTopStats"),
@@ -5878,7 +5878,7 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.analyticsResponse.revenue.lookbackStreams.getTotalAmountAllStreams(),
                             t = this.props.analyticsResponse.revenue.streams.getTotalAmountAllStreams();
-                        return s.createElement(N, {
+                        return s.createElement(L, {
                             title: this.renderTitle(t),
                             trend: t ? Math.sign(t - e) : 0,
                             subtitle: Object(a.d)("Revenue", "ChannelAnalyticsTopStats"),
@@ -5893,7 +5893,7 @@
                                     return s.createElement(p.W, {
                                         className: "top-stats-tab-revenue__currency",
                                         fontSize: p.Ba.Size5,
-                                        type: p.Ob.Span,
+                                        type: p.Nb.Span,
                                         key: t
                                     }, e.value);
                                 case "fraction":
@@ -5901,7 +5901,7 @@
                                     return s.createElement(p.W, {
                                         className: "top-stats-tab-revenue__fraction",
                                         fontSize: p.Ba.Size4,
-                                        type: p.Ob.Span,
+                                        type: p.Nb.Span,
                                         key: t
                                     }, e.value);
                                 default:
@@ -5921,7 +5921,7 @@
                             n = this.props.analyticsResponse.subCounts.lookbackStreams.getTotalSubCount();
                         return e = this.props.analyticsResponse.subCounts.isLoading || !t ? "—" : Object(a.f)(t, {
                             maximumFractionDigits: 0
-                        }), s.createElement(N, {
+                        }), s.createElement(L, {
                             title: e,
                             trend: t ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Subscriptions", "ChannelAnalyticsTopStats"),
@@ -5939,7 +5939,7 @@
                         var e, t = this.timeStreamed,
                             n = this.previousTimeStreamed,
                             r = this.props.analyticsResponse.streamSessions.sessions;
-                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(R.a)(t), s.createElement(N, {
+                        return e = this.props.analyticsResponse.streamSessions.isLoading || !r.length ? "—" : Object(R.a)(t), s.createElement(L, {
                             title: e,
                             trend: r.length ? Math.sign(t - n) : 0,
                             subtitle: Object(a.d)("Time Streamed", "ChannelAnalyticsTopStats"),
@@ -5982,15 +5982,15 @@
                     title: function() {
                         return Object(a.d)("Live Views", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: K,
+                    Tab: J,
                     Chart: j,
                     dataGroup: te.StreamSummaries
                 }, $[ee.NewFollowers] = {
                     title: function() {
                         return Object(a.d)("New Followers", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: J,
-                    Chart: T,
+                    Tab: Q,
+                    Chart: x,
                     dataGroup: te.StreamSummaries
                 }, $[ee.Subscriptions] = {
                     title: function() {
@@ -6004,13 +6004,13 @@
                         return Object(a.d)("Revenue", "ChannelAnalyticsTopStatsDropdown")
                     },
                     Tab: ae,
-                    Chart: x,
+                    Chart: T,
                     dataGroup: te.Revenue
                 }, $[ee.MinutesWatched] = {
                     title: function() {
                         return Object(a.d)("Minutes Watched", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: Q,
+                    Tab: Z,
                     Chart: A,
                     dataGroup: te.StreamSummaries
                 }, $[ee.TimeStreamed] = {
@@ -6024,7 +6024,7 @@
                     title: function() {
                         return Object(a.d)("Max Viewers", "ChannelAnalyticsTopStatsDropdown")
                     },
-                    Tab: Z,
+                    Tab: K,
                     Chart: k,
                     dataGroup: te.StreamSummaries
                 }, $[ee.AverageUniqueViewers] = {
@@ -6039,7 +6039,7 @@
                         return Object(a.d)("Host/Raid Viewers", "ChannelAnalyticsTopStatsDropdown")
                     },
                     Tab: Y,
-                    Chart: w,
+                    Chart: O,
                     dataGroup: te.StreamSummaries
                 }, $[ee.Chatters] = {
                     title: function() {
@@ -6060,7 +6060,7 @@
                         return Object(a.d)("Clips Created", "ChannelAnalyticsTopStatsDropdown")
                     },
                     Tab: q,
-                    Chart: O,
+                    Chart: w,
                     dataGroup: te.StreamSummaries
                 }, $[ee.ClipViews] = {
                     title: function() {
@@ -6446,52 +6446,6 @@
                     }, e
                 }()
         },
-        m9vr: function(e, t, n) {
-            "use strict";
-            var a = n("mrSG"),
-                r = n("q1tI"),
-                s = n("/7QA"),
-                i = n("Ue10"),
-                o = function(e) {
-                    function t() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return a.__extends(t, e), t.prototype.render = function() {
-                        return r.createElement(i.Wa, {
-                            fullWidth: !0,
-                            fullHeight: !0
-                        }, r.createElement(i.Wa, {
-                            display: i.X.Flex,
-                            flexGrow: 1,
-                            alignItems: i.f.Center,
-                            justifyContent: i.Va.Center,
-                            flexDirection: i.Z.Column,
-                            fullHeight: !0
-                        }, r.createElement(i.nb, {
-                            width: 48,
-                            height: 48,
-                            asset: i.ob.Lock,
-                            type: i.pb.Alt2
-                        }), r.createElement(i.Wa, {
-                            display: i.X.Flex,
-                            alignItems: i.f.Center,
-                            flexDirection: i.Z.Column,
-                            margin: {
-                                top: 1
-                            }
-                        }, r.createElement(i.W, {
-                            bold: !0,
-                            fontSize: i.Ba.Size3
-                        }, Object(s.d)("Access Denied", "DashboardAccessDenied")), r.createElement(i.W, {
-                            fontSize: i.Ba.Size4,
-                            color: i.O.Alt2
-                        }, Object(s.d)("You don't have access to this dashboard", "DashboardAccessDenied")))))
-                    }, t
-                }(r.Component);
-            n.d(t, "a", function() {
-                return o
-            })
-        },
         "mZc/": function(e, t, n) {
             "use strict";
             var a = n("mrSG"),
@@ -6520,13 +6474,13 @@
                         return r.createElement("div", {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave
-                        }, r.createElement(s.yb, {
+                        }, r.createElement(s.xb, {
                             display: s.X.Flex,
                             margin: {
                                 x: 1
                             },
                             position: s.eb.Relative
-                        }, r.createElement(s.yb, {
+                        }, r.createElement(s.xb, {
                             className: "hoverable-icon",
                             display: s.X.InlineFlex,
                             color: s.O.Alt2,
@@ -6565,7 +6519,7 @@
             n("qnLe");
 
             function s(e) {
-                return a.createElement(r.yb, {
+                return a.createElement(r.xb, {
                     className: "insight-panel-btn",
                     background: e.background || r.r.Alt,
                     display: r.X.Flex,

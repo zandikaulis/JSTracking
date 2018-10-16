@@ -78,7 +78,7 @@
                             name: "bounty_board_brand_portal_enabled"
                         }, i.createElement(p.a, null, i.createElement(v.Wa, {
                             className: "dev-dashboard"
-                        }, i.createElement(v.yb, {
+                        }, i.createElement(v.xb, {
                             padding: {
                                 top: 1
                             },
@@ -102,8 +102,8 @@
                             type: v.F.Text,
                             linkTo: "/console"
                         }, Object(u.d)("Dashboard", "DevBountyBoardDashboardRoot"))), i.createElement(v.W, {
-                            type: v.Ob.H3
-                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.yb, {
+                            type: v.Nb.H3
+                        }, Object(u.d)("Bounty Board Dashboard", "DevBountyBoardDashboardRoot")), i.createElement(v.xb, {
                             borderTop: !0,
                             margin: {
                                 top: 1
@@ -112,7 +112,7 @@
                                 top: 1
                             },
                             display: v.X.Flex
-                        }, i.createElement(v.zb, {
+                        }, i.createElement(v.yb, {
                             "data-test-selector": "dev-bounty-board-dashboard-campaign-tab-selector",
                             linkTo: "/console/bounty-board",
                             active: this.isActive("", !0)

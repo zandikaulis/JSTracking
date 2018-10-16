@@ -136,11 +136,11 @@
                         className: "community-requirements",
                         flexGrow: 0,
                         flexShrink: 0
-                    }, u.createElement(_.yb, {
+                    }, u.createElement(_.xb, {
                         border: !0,
                         background: _.r.Base,
                         padding: 1
-                    }, u.createElement(_.Xb, null, u.createElement("h4", null, Object(d.d)("Requirements", "CommunityRequirements")), u.createElement("ul", {
+                    }, u.createElement(_.Wb, null, u.createElement("h4", null, Object(d.d)("Requirements", "CommunityRequirements")), u.createElement("ul", {
                         className: "community-requirements__list"
                     }, u.createElement("li", null, Object(d.d)("Your account must be at least 90 days old", "CommunityRequirements")), u.createElement("li", null, Object(d.d)("You must have <x:link>two-factor authentication</x:link> enabled", {
                         "x:link": function(e) {
@@ -299,12 +299,12 @@
                                 bottom: 2
                             }
                         }, u.createElement(_.W, {
-                            type: _.Ob.H2
+                            type: _.Nb.H2
                         }, e)), u.createElement(_.Wa, {
                             display: _.X.Flex,
                             flexDirection: _.Z.Row,
                             flexWrap: _.Aa.Wrap
-                        }, u.createElement(_.yb, {
+                        }, u.createElement(_.xb, {
                             className: "create-community-page__form-wrapper",
                             background: _.r.Base,
                             flexShrink: 0,
@@ -346,7 +346,7 @@
                             id: "create-community-page__form-short-description",
                             label: Object(d.d)("Short Description *", "CreateCommunityPage"),
                             hint: n
-                        }, Object(d.d)("A short description used in search results and social media links. 160 characters max.", "CreateCommunityPage"), u.createElement(_.Lb, {
+                        }, Object(d.d)("A short description used in search results and social media links. 160 characters max.", "CreateCommunityPage"), u.createElement(_.Kb, {
                             id: "create-community-page__form-short-description",
                             onChange: this.onShortDescriptionChange,
                             "data-test-selector": N.ShortDescription
@@ -357,7 +357,7 @@
                         }, u.createElement(_.Da, {
                             id: "create-community-page__form-long-description",
                             label: Object(d.d)("Long Description *", "CreateCommunityPage")
-                        }, Object(d.d)("A long description that appears on the community page.", "CreateCommunityPage"), u.createElement(_.Lb, {
+                        }, Object(d.d)("A long description that appears on the community page.", "CreateCommunityPage"), u.createElement(_.Kb, {
                             id: "create-community-page__form-long-description",
                             onChange: this.onLongDescriptionChange,
                             "data-test-selector": N.LongDescription
@@ -377,7 +377,7 @@
                                     targetBlank: !0
                                 }, e)
                             }
-                        }, "CreateCommunityPage"), u.createElement(_.Lb, {
+                        }, "CreateCommunityPage"), u.createElement(_.Kb, {
                             id: "create-community-page__form-rules",
                             onChange: this.onRulesChange,
                             "data-test-selector": N.Rules

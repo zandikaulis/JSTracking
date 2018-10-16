@@ -63,7 +63,7 @@
                         if (0 === this.props.friendRequestsUserData.filter(function(e) {
                                 return e && e.node && e.node.id
                             }).length) return i.createElement(R.Wa, {
-                            textAlign: R.Kb.Center,
+                            textAlign: R.Jb.Center,
                             padding: {
                                 y: 5
                             }
@@ -86,10 +86,10 @@
                                 }
                             })) : null
                         });
-                        return i.createElement(R.Ub, {
+                        return i.createElement(R.Tb, {
                             center: !0,
-                            childWidth: R.Vb.Large,
-                            gutterSize: R.Wb.Small,
+                            childWidth: R.Ub.Large,
+                            gutterSize: R.Vb.Small,
                             placeholderItems: 10
                         }, e, i.createElement(b.a, {
                             enabled: this.props.canLoadMore,
@@ -139,7 +139,7 @@
                         }, n
                     }
                     return r.__extends(n, e), n.prototype.componentDidMount = function() {
-                        o.p.setPageTitle(Object(o.d)("Friend Requests", "FriendsPage")), w(this.props) && this.props.latencyTracking.reportInteractive()
+                        o.p.setPageTitle(Object(o.d)("Friend Requests", "FriendsPage")), N(this.props) && this.props.latencyTracking.reportInteractive()
                     }, n.prototype.componentWillReceiveProps = function(e) {
                         this.props.data && 1 === this.props.data.networkStatus && e.data && 1 !== e.data.networkStatus && (this.props.latencyTracking.reportInteractive(), e.data.currentUser && e.data.currentUser.incomingFriendRequests && this.props.clearUnreadFriendRequests())
                     }, n.prototype.render = function() {
@@ -158,10 +158,10 @@
                     }, n
                 }(i.Component);
 
-            function w(e) {
+            function N(e) {
                 return !e.isLoggedIn
             }
-            var N = Object(s.compose)(Object(a.connect)(function(e) {
+            var w = Object(s.compose)(Object(a.connect)(function(e) {
                 return {
                     isLoggedIn: Object(p.f)(e)
                 }
@@ -172,7 +172,7 @@
                     }
                 }, e)
             }), Object(d.a)(y, {
-                skip: w,
+                skip: N,
                 options: function() {
                     return {
                         notifyOnNetworkStatusChange: !0,
@@ -189,7 +189,7 @@
                 location: k.PageviewLocation.FriendRequests
             }))(S);
             t.d(n, "FriendRequestsPage", function() {
-                return N
+                return w
             })
         },
         ff13: function(e, n, t) {
@@ -206,15 +206,15 @@
                         bottom: 2
                     }
                 }, i.createElement(s.W, {
-                    type: s.Ob.H2
+                    type: s.Nb.H2
                 }, Object(a.d)("Friends", "FriendsHeader")), i.createElement(s.Wa, {
                     margin: {
                         top: 1
                     }
-                }, i.createElement(s.Ab, null, i.createElement(s.zb, {
+                }, i.createElement(s.zb, null, i.createElement(s.yb, {
                     active: e.activeTab === r.Friends,
                     linkTo: "/friends"
-                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.zb, {
+                }, Object(a.d)("Your Friends", "FriendsHeader")), i.createElement(s.yb, {
                     active: e.activeTab === r.Requests,
                     linkTo: "/friends/requests"
                 }, Object(a.d)("Friend Requests", "FriendsHeader")))))

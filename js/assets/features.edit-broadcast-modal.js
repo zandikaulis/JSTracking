@@ -332,7 +332,7 @@
                 h = a("DMoW"),
                 f = a("GIun"),
                 v = a("Ue10"),
-                b = function(e) {
+                k = function(e) {
                     var t, a = e.onClick,
                         n = e.tag;
                     a && (t = function() {
@@ -350,11 +350,11 @@
                         title: r
                     }, n.localizedName))))
                 };
-            var k, T = a("Ryvb");
+            var T, b = a("Ryvb");
             ! function(e) {
                 e.SuggestedTags = "suggested-tags"
-            }(k || (k = {}));
-            var y, S, N = function(e) {
+            }(T || (T = {}));
+            var S, y, N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -372,8 +372,8 @@
                                 }
                             }, e)
                         }, t.renderSuggestedTag = function(e) {
-                            return i.createElement(b, {
-                                "data-test-selector": k.SuggestedTags,
+                            return i.createElement(k, {
+                                "data-test-selector": T.SuggestedTags,
                                 key: e.id,
                                 onClick: function() {
                                     return t.props.onAddTag(e)
@@ -423,12 +423,12 @@
                         }, Object(o.d)("All Tags", "AllTagsTitle")))) : null
                     }, t
                 }(i.Component),
-                C = Object(p.a)(T, {
+                C = Object(p.a)(b, {
                     options: function(e) {
                         return {
                             variables: {
                                 gameName: e.gameName,
-                                tagType: h.N.TOP,
+                                tagType: h.M.TOP,
                                 limit: 50
                             }
                         }
@@ -486,10 +486,10 @@
             a("97MP");
             ! function(e) {
                 e[e.TagAll = 0] = "TagAll", e[e.TagAllMinusAutomation = 1] = "TagAllMinusAutomation", e[e.TagCategory = 2] = "TagCategory", e[e.StreamTag = 3] = "StreamTag"
-            }(y || (y = {})),
+            }(S || (S = {})),
             function(e) {
                 e.SearchContent = "tag-search-search-content", e.SearchDropdown = "search-dropdown-selector"
-            }(S || (S = {}));
+            }(y || (y = {}));
             var I = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
@@ -499,16 +499,16 @@
                             searchTerm: ""
                         }, a.languageCode = Object(F.a)(), a.renderSearchContent = function() {
                             var e = null;
-                            return e = a.props.type === y.StreamTag ? a.renderStreamTagResults() : a.renderTagResults(), i.createElement(d.b, {
+                            return e = a.props.type === S.StreamTag ? a.renderStreamTagResults() : a.renderTagResults(), i.createElement(d.b, {
                                 className: "tag-search__scrollable-area",
                                 suppressScrollX: !0
                             }, i.createElement(v.Wa, {
-                                "data-test-selector": S.SearchContent
+                                "data-test-selector": y.SearchContent
                             }, a.renderSuggestedTags(), e))
                         }, a.renderTagSearchResult = function(e) {
                             var t = Object(F.b)(e),
                                 n = "tag_scope" in e ? e.tag_scope : void 0;
-                            return i.createElement(b, {
+                            return i.createElement(k, {
                                 key: t.id,
                                 onClick: function() {
                                     return a.onTagResultSelected(t, n)
@@ -516,22 +516,22 @@
                                 tag: t
                             })
                         }, a.renderStreamTagResults = function() {
-                            return a.props.type === y.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? i.createElement(O, {
+                            return a.props.type === S.StreamTag && a.state.isOpen ? "" === a.state.searchTerm ? i.createElement(O, {
                                 categoryName: a.props.categoryName,
                                 onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.streamTags && a.state.searchResults.streamTags.hits.length ? a.state.searchResults.streamTags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
                         }, a.renderTagResults = function() {
-                            return a.state.isOpen ? a.props.type === y.TagAll && "" === a.state.searchTerm ? i.createElement(O, {
+                            return a.state.isOpen ? a.props.type === S.TagAll && "" === a.state.searchTerm ? i.createElement(O, {
                                 onAddTag: a.onTagResultSelected,
                                 tagsLimit: 100
                             }) : !a.state.searchResults && a.state.searching ? a.renderLoading() : a.state.searchResults && a.state.searchResults.tags && a.state.searchResults.tags.hits.length ? a.state.searchResults.tags.hits.map(a.renderTagSearchResult) : a.renderNoResults() : null
                         }, a.setTagSearchRef = function(e) {
                             a.tagSearch = e
                         }, a.onTagResultSelected = function(e, t) {
-                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === y.TagCategory && "SCOPE_ALL" === t ? o.p.history.push(u.a.Popular, {
+                            if (a.toggleTagSearch(!1), a.clearSearchTerm(), a.props.type === S.TagCategory && "SCOPE_ALL" === t ? o.p.history.push(u.a.Popular, {
                                     persistTags: !0
-                                }) : a.props.type === y.TagAll && "SCOPE_CATEGORY" === t && o.p.history.push(u.a.Games, {
+                                }) : a.props.type === S.TagAll && "SCOPE_CATEGORY" === t && o.p.history.push(u.a.Games, {
                                     persistTags: !0
                                 }), a.props.onTagClick && (a.props.onTagClick(e), a.props.section && a.props.numSelectedTags)) {
                                 var n = {
@@ -548,7 +548,7 @@
                                 searchTerm: e,
                                 searching: !0
                             }, function() {
-                                (a.props.type !== y.TagAll && a.props.type !== y.StreamTag || a.props.type === y.TagAll && "" !== a.state.searchTerm || a.props.type === y.StreamTag && "" !== a.state.searchTerm) && (a.inputTimeout = setTimeout(function() {
+                                (a.props.type !== S.TagAll && a.props.type !== S.StreamTag || a.props.type === S.TagAll && "" !== a.state.searchTerm || a.props.type === S.StreamTag && "" !== a.state.searchTerm) && (a.inputTimeout = setTimeout(function() {
                                     a.search(a.state.searchTerm)
                                 }, 200))
                             })
@@ -577,7 +577,7 @@
                     return n.__extends(t, e), t.prototype.render = function() {
                         return i.createElement(l.a, {
                             autoFocus: this.props.autoFocus,
-                            "data-test-selector": S.SearchDropdown,
+                            "data-test-selector": y.SearchDropdown,
                             inline: this.props.inline,
                             inputSize: this.props.inputSize,
                             onChange: this.onInputChange,
@@ -605,7 +605,7 @@
                             }
                         }, Object(o.d)("No results found", "TagSearch"))
                     }, t.prototype.renderSuggestedTags = function() {
-                        if (this.props.type !== y.TagAllMinusAutomation || "" !== this.state.searchTerm) return null;
+                        if (this.props.type !== S.TagAllMinusAutomation || "" !== this.state.searchTerm) return null;
                         var e = this.props.selectedTags && this.props.selectedTags.map(function(e) {
                             return e.id
                         }) || [];
@@ -623,7 +623,7 @@
                                         return e = e || "", t = {
                                             hitsPerPage: 100,
                                             restrictSearchableAttributes: ["localizations." + this.languageCode, "tag_name"]
-                                        }, a = g.a.Tags, this.props.type === y.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:SCOPE_ALL"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === y.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_ALL" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === y.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_CATEGORY" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === y.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, c.a(), t)];
+                                        }, a = g.a.Tags, this.props.type === S.TagAllMinusAutomation ? (t.facetFilters = '["automated:false", "tag_scope:SCOPE_ALL"]', this.props.showAllDashboardTags && (t.hitsPerPage = 300)) : this.props.type === S.TagAll ? this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_ALL" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === S.TagCategory ? "" === e || this.props.selectedTags && this.props.selectedTags.length ? t.facetFilters = "tag_scope:SCOPE_CATEGORY" : t.facetFilters = '[["tag_scope:SCOPE_ALL", "tag_scope:SCOPE_CATEGORY"]]' : this.props.type === S.StreamTag && (a = g.a.StreamTags, t.facetFilters = "category_id:" + this.props.categoryID), [4, this.searchClient.queryForType(a, e, c.a(), t)];
                                     case 1:
                                         return i = n.sent(), this.setState({
                                             searchResults: i,
@@ -636,9 +636,9 @@
                 }(i.Component),
                 A = Object(s.compose)(r.a)(I);
             a.d(t, "b", function() {
-                return y
-            }), a.d(t, !1, function() {
                 return S
+            }), a.d(t, !1, function() {
+                return y
             }), a.d(t, !1, function() {
                 return I
             }), a.d(t, "a", function() {
@@ -1022,10 +1022,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.bc.Above
-                    }, i.createElement(o.yb, {
+                        zIndex: o.ac.Above
+                    }, i.createElement(o.xb, {
                         color: o.O.Alt2,
-                        textAlign: o.Kb.Center,
+                        textAlign: o.Jb.Center,
                         flexShrink: 1
                     }, i.createElement(o.nb, {
                         asset: o.ob.DeadGlitch,
@@ -1035,12 +1035,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Kb.Center
+                        textAlign: o.Jb.Center
                     }, i.createElement(o.W, {
-                        type: o.Ob.H4,
+                        type: o.Nb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(s.d)("Search is not available at this time", "DropdownSearchError"))), i.createElement(o.W, {
-                        type: o.Ob.P
+                        type: o.Nb.P
                     }, Object(s.d)("Please try again later", "DropdownSearchError")))
                 },
                 d = a("8Ad5"),
@@ -1099,13 +1099,13 @@
                             });
                         return this.props.inline ? i.createElement(r.a, {
                             onClickOut: this.onClickOut
-                        }, i.createElement(o.yb, {
+                        }, i.createElement(o.xb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
                             position: o.eb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, a, e && i.createElement(o.yb, {
+                        }, a, e && i.createElement(o.xb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -1115,7 +1115,7 @@
                                 y: 1
                             },
                             position: o.eb.Absolute,
-                            zIndex: o.bc.Above,
+                            zIndex: o.ac.Above,
                             elevation: 3
                         }, i.createElement("div", {
                             tabIndex: 0,
@@ -2137,7 +2137,7 @@
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
-                    return r.createElement(g.yb, {
+                    return r.createElement(g.xb, {
                         className: "edit-broadcast__container",
                         background: g.r.Base,
                         padding: {
@@ -2150,8 +2150,8 @@
                             bottom: 1
                         }
                     }, r.createElement(g.W, {
-                        type: g.Ob.H4
-                    }, Object(l.d)("Broadcast Options", "EditBroadcastModal"))), r.createElement(g.yb, {
+                        type: g.Nb.H4
+                    }, Object(l.d)("Broadcast Options", "EditBroadcastModal"))), r.createElement(g.xb, {
                         borderTop: !0,
                         margin: {
                             top: 2
@@ -2200,11 +2200,11 @@
                 h = a("DMoW"),
                 f = a("b6Yk"),
                 v = a("f00E"),
-                b = a("N3I0"),
-                k = a("GIun"),
-                T = a("8/mp"),
-                y = a("N0BP"),
-                S = a("Ue10"),
+                k = a("N3I0"),
+                T = a("GIun"),
+                b = a("8/mp"),
+                S = a("N0BP"),
+                y = a("Ue10"),
                 N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2213,29 +2213,29 @@
                         }, t
                     }
                     return o.__extends(t, e), t.prototype.render = function() {
-                        return d.createElement(S.Ta, o.__assign({
+                        return d.createElement(y.Ta, o.__assign({
                             onClick: this.onClick,
                             tabIndex: -1
-                        }, Object(y.a)(this.props)), d.createElement(S.Wa, {
+                        }, Object(S.a)(this.props)), d.createElement(y.Wa, {
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, d.createElement(S.G, {
+                        }, d.createElement(y.G, {
                             row: !0
-                        }, d.createElement(S.I, {
+                        }, d.createElement(y.I, {
                             alt: this.props.game.name,
                             src: "https://static-cdn.jtvnw.net/ttv-boxart/" + this.props.game.name + "-40x55.jpg",
-                            size: S.J.Size3,
-                            aspect: S.p.BoxArt
-                        }), d.createElement(S.H, {
-                            overflow: S.Za.Hidden
-                        }, d.createElement(S.Oa, {
+                            size: y.J.Size3,
+                            aspect: y.p.BoxArt
+                        }), d.createElement(y.H, {
+                            overflow: y.Za.Hidden
+                        }, d.createElement(y.Oa, {
                             padding: {
                                 x: 1
                             }
-                        }, d.createElement(S.W, {
-                            type: S.Ob.P
+                        }, d.createElement(y.W, {
+                            type: y.Nb.P
                         }, this.props.game.name))))))
                     }, t
                 }(d.Component),
@@ -2254,23 +2254,23 @@
                         var e = this,
                             t = Object(u.d)("Category", "GameSearch"),
                             a = Object(u.d)("Search for a category", "GameSearch");
-                        return d.createElement(S.Da, {
+                        return d.createElement(y.Da, {
                             error: this.props.error,
                             errorMessage: this.props.errorMessage,
                             label: t
-                        }, d.createElement(b.a, {
+                        }, d.createElement(k.a, {
                             onChange: this.props.onGameInputChange,
                             ref: this.setGameSearchRef,
                             placeholder: a,
                             balloonProps: {
                                 show: this.props.isGameSearchOpen,
-                                direction: S.v.Bottom
+                                direction: y.v.Bottom
                             }
-                        }, d.createElement(T.b, {
+                        }, d.createElement(b.b, {
                             className: "edit-broadcast__game-search",
                             suppressScrollX: !0
                         }, d.createElement("div", null, this.props.gameResults && this.props.gameResults.hits.map(function(t) {
-                            return d.createElement(k.a, {
+                            return d.createElement(T.a, {
                                 key: t.objectID
                             }, d.createElement(N, {
                                 game: t,
@@ -2377,7 +2377,7 @@
                 R = a("X6el");
             a("iUE2");
 
-            function G(e) {
+            function x(e) {
                 switch (e) {
                     default: return e;
                     case i.Empty:
@@ -2392,7 +2392,7 @@
                             return Object(u.d)("Title too long.", "EditBroadcastComponent")
                 }
             }
-            var x = 2500,
+            var G = 2500,
                 B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -2551,7 +2551,7 @@
                                                     requestState: s.Ready,
                                                     buttonDisabled: !1
                                                 })
-                                            }, x), l.label = 3;
+                                            }, G), l.label = 3;
                                         case 3:
                                             return [2]
                                     }
@@ -2592,36 +2592,36 @@
                     }, t.prototype.render = function() {
                         var e = this.props.cancelComponent,
                             t = this.state.requestState;
-                        return this.props.data.error ? null : d.createElement(S.Wa, {
+                        return this.props.data.error ? null : d.createElement(y.Wa, {
                             fullHeight: !0,
-                            display: S.X.Flex,
-                            flexDirection: S.Z.Column,
-                            alignItems: S.f.Center,
-                            justifyContent: S.Va.Center
-                        }, d.createElement(S.Wa, {
+                            display: y.X.Flex,
+                            flexDirection: y.Z.Column,
+                            alignItems: y.f.Center,
+                            justifyContent: y.Va.Center
+                        }, d.createElement(y.Wa, {
                             fullWidth: !0
-                        }, this.getContent(), d.createElement(S.Wa, {
+                        }, this.getContent(), d.createElement(y.Wa, {
                             margin: {
                                 bottom: 2
                             }
-                        }, d.createElement(S.U, {
+                        }, d.createElement(y.U, {
                             targetBlank: !0,
                             to: w.b
-                        }, Object(u.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), d.createElement(S.Wa, {
-                            alignItems: S.f.Start,
-                            display: S.X.Flex,
-                            flexDirection: S.Z.Row,
+                        }, Object(u.d)("Your content must follow our guidelines", "EditBroadcastComponent"))), d.createElement(y.Wa, {
+                            alignItems: y.f.Start,
+                            display: y.X.Flex,
+                            flexDirection: y.Z.Row,
                             fullWidth: !0,
-                            justifyContent: S.Va.Start,
+                            justifyContent: y.Va.Start,
                             margin: {
                                 top: 1
                             }
-                        }, d.createElement(S.z, {
+                        }, d.createElement(y.z, {
                             disabled: !this.state.loaded || this.state.buttonDisabled || t === s.Fetching || t === s.Errored,
                             fullWidth: !e,
-                            icon: t === s.Complete ? S.ob.Check : void 0,
+                            icon: t === s.Complete ? y.ob.Check : void 0,
                             onClick: this.handleSubmit,
-                            state: t === s.Complete ? S.E.Success : S.E.Default
+                            state: t === s.Complete ? y.E.Success : y.E.Default
                         }, this.getButtonText()), e || null)))
                     }, t.prototype.getButtonText = function() {
                         switch (this.state.requestState) {
@@ -2643,37 +2643,37 @@
                                 a = t.title,
                                 i = t.goLiveNotification,
                                 s = t.gameCategory,
-                                o = G(a.errorType),
-                                l = G(i.errorType),
-                                c = G(s.errorType);
-                            e = d.createElement(d.Fragment, null, d.createElement(S.Wa, {
+                                o = x(a.errorType),
+                                l = x(i.errorType),
+                                c = x(s.errorType);
+                            e = d.createElement(d.Fragment, null, d.createElement(y.Wa, {
                                 "data-test-selector": r.PrimaryContent,
                                 margin: {
                                     bottom: 2
                                 }
-                            }, d.createElement(S.Da, {
+                            }, d.createElement(y.Da, {
                                 "data-test-selector": r.TitleLabel,
                                 error: !!o,
                                 errorMessage: o,
                                 label: Object(u.d)("Title", "EditBroadcastComponent"),
                                 labelOptional: this.getRemainingCharacters(a.value)
-                            }, d.createElement(S.Lb, {
+                            }, d.createElement(y.Kb, {
                                 "data-test-selector": r.TitleInput,
                                 onChange: this.handleChangeByType(n.Title),
                                 noResize: !0,
                                 placeholder: Object(u.d)("Enter a title", "EditBroadcastComponent"),
                                 rows: 3,
                                 value: this.state.fields.title.value
-                            }))), this.state.fields.goLiveNotification.isEnabled && d.createElement(S.Wa, {
+                            }))), this.state.fields.goLiveNotification.isEnabled && d.createElement(y.Wa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, d.createElement(S.Da, {
+                            }, d.createElement(y.Da, {
                                 error: !!l,
                                 errorMessage: l,
                                 label: Object(u.d)("Go Live Notification", "EditBroadcastComponent"),
                                 labelOptional: this.getRemainingCharacters(i.value)
-                            }, d.createElement(S.Lb, {
+                            }, d.createElement(y.Kb, {
                                 "data-test-selector": r.GoLiveNotification,
                                 noResize: !0,
                                 onChange: this.handleChangeByType(n.GoLiveNotification),
@@ -2682,7 +2682,7 @@
                                 }, "EditBroadcastComponent"),
                                 rows: 3,
                                 value: this.state.fields.goLiveNotification.value
-                            }))), d.createElement(S.Wa, {
+                            }))), d.createElement(y.Wa, {
                                 margin: {
                                     bottom: 2
                                 }
@@ -2692,7 +2692,7 @@
                                 onGameResultSelected: this.handleGameResultSelected,
                                 onGameCleared: this.handleGameCleared,
                                 selectedGame: this.state.selectedGame
-                            })), this.renderTagSelect(), d.createElement(S.Wa, {
+                            })), this.renderTagSelect(), d.createElement(y.Wa, {
                                 margin: {
                                     bottom: 1
                                 }
@@ -2701,28 +2701,28 @@
                                 onChange: this.handleLanguageChange,
                                 defaultLanguage: this.state.fields.language.value || "en",
                                 disabled: !1
-                            }), d.createElement(S.Wa, {
+                            }), d.createElement(y.Wa, {
                                 margin: {
                                     top: .5
                                 }
-                            }, d.createElement(S.N, {
+                            }, d.createElement(y.N, {
                                 label: Object(u.d)("Restrict Chat Language", "EditBroadcastComponent"),
                                 onChange: this.handleBroadcastLanguageModeEnabledChange,
                                 checked: this.state.broadcasterLanguageModeEnabled,
                                 "data-test-selector": r.BroadcastLanguageMode
                             }))))
-                        } else e = d.createElement(S.Wa, {
+                        } else e = d.createElement(y.Wa, {
                             fullWidth: !0,
                             padding: {
                                 y: 2
                             }
-                        }, d.createElement(S.Ya, {
+                        }, d.createElement(y.Ya, {
                             fillContent: !0
                         }));
                         return e
                     }, t.prototype.renderTagSelect = function() {
-                        var e = G(this.state.fields.tags.errorType);
-                        return d.createElement(S.Wa, {
+                        var e = x(this.state.fields.tags.errorType);
+                        return d.createElement(y.Wa, {
                             margin: {
                                 bottom: 2
                             }
@@ -2832,7 +2832,7 @@
                                         for (i in t = [], a = [], n = this.state.modifiedTags) !0 === n[i] ? t.push(i) : a.push(i);
                                         return 0 === t.length && 0 === a.length ? [2] : (r = {
                                             contentID: e,
-                                            contentType: h.n.LIVE_CHANNEL,
+                                            contentType: h.m.LIVE_CHANNEL,
                                             addedTagIDs: t,
                                             removedTagIDs: a,
                                             authorID: e
@@ -2958,9 +2958,9 @@
                                     bottom: .5
                                 },
                                 key: t.id + "_" + a
-                            }, r.createElement(d.Hb, {
+                            }, r.createElement(d.Gb, {
                                 "data-test-selector": n.SelectedTag,
-                                action: t.isAutomated ? void 0 : d.Ib.Remove,
+                                action: t.isAutomated ? void 0 : d.Hb.Remove,
                                 label: t.localizedName || t.tagName,
                                 key: t.id,
                                 onClick: t.isAutomated ? void 0 : e.props.onRemoveTag,

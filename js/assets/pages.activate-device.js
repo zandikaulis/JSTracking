@@ -78,18 +78,18 @@
                         return v.createElement(S.Wa, {
                             className: "activate-device-wrapper",
                             alignSelf: S.g.Center,
-                            textAlign: S.Kb.Center,
+                            textAlign: S.Jb.Center,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, v.createElement(S.yb, {
+                        }, v.createElement(S.xb, {
                             className: "activate-device-wrapper__background-container",
                             background: S.r.Base,
                             display: S.X.InlineBlock,
                             position: S.eb.Relative,
-                            textAlign: S.Kb.Center
+                            textAlign: S.Jb.Center
                         }, v.createElement(S.Ia, null, v.createElement(S.P, {
                             cols: 6
-                        }, v.createElement(S.yb, {
+                        }, v.createElement(S.xb, {
                             padding: 2
                         }, v.createElement(S.nb, {
                             asset: S.ob.LogoTwitch,
@@ -98,20 +98,20 @@
                             width: 129
                         }))), v.createElement(S.P, {
                             cols: 6
-                        }, v.createElement(S.yb, {
+                        }, v.createElement(S.xb, {
                             padding: 3
                         }, v.createElement(S.z, {
                             type: S.F.Default,
                             linkTo: "/"
                         }, Object(m.d)("Return To Twitch", "ActivateDevice"))))), this.renderInputForm(), this.renderSuccessPage(), v.createElement(S.Ia, null, v.createElement(S.P, {
                             cols: 6
-                        }, v.createElement(S.yb, {
+                        }, v.createElement(S.xb, {
                             padding: 2
                         }, v.createElement(S.W, {
                             color: S.O.Alt2
                         }, "© ", (new Date).getFullYear(), " Twitch Interactive, Inc."))), v.createElement(S.P, {
                             cols: 6
-                        }, v.createElement(S.yb, {
+                        }, v.createElement(S.xb, {
                             padding: 2
                         }, v.createElement(S.U, {
                             to: "https://www.twitch.tv/p/legal/terms-of-service/"
@@ -134,7 +134,7 @@
                                 className: "activate-device-wrapper__success",
                                 alignItems: S.f.Center,
                                 position: S.eb.Relative,
-                                textAlign: S.Kb.Center,
+                                textAlign: S.Jb.Center,
                                 "data-test-selector": i.ActivationSuccessMessage
                             }, v.createElement(S.Wa, {
                                 className: "activate-device-wrapper__check_mark",
@@ -149,7 +149,7 @@
                                     bottom: 1
                                 }
                             }, v.createElement(S.W, {
-                                type: S.Ob.H2
+                                type: S.Nb.H2
                             }, Object(m.d)("You've Done It!", "ActivateDevice"))), v.createElement(S.Wa, {
                                 margin: {
                                     x: 1
@@ -178,13 +178,13 @@
                             className: "activate-device-wrapper__form",
                             alignItems: S.f.Center,
                             position: S.eb.Relative,
-                            textAlign: S.Kb.Center
+                            textAlign: S.Jb.Center
                         }, v.createElement(S.Wa, {
                             padding: {
                                 top: 2
                             }
                         }, v.createElement(S.W, {
-                            type: S.Ob.H2
+                            type: S.Nb.H2
                         }, Object(m.d)("Activate Your Device", "ActivateDevice"))), v.createElement(S.Wa, {
                             padding: 1
                         }, v.createElement(S.W, {
@@ -195,7 +195,7 @@
                             className: "activate-device-wrapper__input",
                             alignItems: S.f.Center,
                             position: S.eb.Relative,
-                            textAlign: S.Kb.Center
+                            textAlign: S.Jb.Center
                         }, v.createElement(S.Qa, {
                             type: S.Sa.Text,
                             onChange: this.onChange,
@@ -224,9 +224,9 @@
                             default:
                                 e = Object(m.d)("Incorrect code!", "ActivateDevice")
                         }
-                        return v.createElement(S.yb, {
+                        return v.createElement(S.xb, {
                             className: "activate-device-form__error",
-                            textAlign: S.Kb.Center,
+                            textAlign: S.Jb.Center,
                             fontSize: S.Ba.Size4
                         }, v.createElement(S.bb, {
                             label: e,
@@ -249,7 +249,7 @@
                         }
                     }, e)
                 })(A),
-                y = function(e) {
+                w = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -266,7 +266,7 @@
                         })))
                     }, t
                 }(v.Component);
-            var w = Object(r.connect)(function(e) {
+            var D = Object(r.connect)(function(e) {
                 return {
                     isLoggedIn: Object(d.f)(e)
                 }
@@ -276,9 +276,9 @@
                         return Object(l.e)(s.a.ActivateDevice)
                     }
                 }, e)
-            })(y);
+            })(w);
             n.d(t, "ActivateDevicePage", function() {
-                return w
+                return D
             }), n.d(t, "ActivateDevice", function() {
                 return O
             })

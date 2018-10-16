@@ -68,7 +68,7 @@
                 u = a("kYGc"),
                 v = a("ctvI"),
                 f = a("Ue10"),
-                h = (a("YCie"), function(e) {
+                x = (a("YCie"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.login = function(e) {
@@ -95,7 +95,7 @@
                                 flexDirection: f.Z.Row
                             },
                             className: "dev-login-page"
-                        }, m.createElement(f.yb, {
+                        }, m.createElement(f.xb, {
                             flexGrow: 1,
                             flexShrink: 1,
                             display: f.X.Flex,
@@ -105,7 +105,7 @@
                             className: "dev-login-page__logo-panel"
                         }, m.createElement(f.U, {
                             to: "/"
-                        }, m.createElement(f.yb, {
+                        }, m.createElement(f.xb, {
                             color: f.O.Overlay
                         }, m.createElement(f.nb, {
                             asset: f.ob.LogoTwitchDevelopers,
@@ -128,7 +128,7 @@
                                 bottom: 2
                             }
                         }, m.createElement(f.W, {
-                            type: f.Ob.P,
+                            type: f.Nb.P,
                             fontSize: f.Ba.Size3
                         }, Object(d.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), m.createElement(f.z, {
                             onClick: this.login,
@@ -138,7 +138,7 @@
                         }, Object(d.d)("Login with Twitch", "DevLogin")))))
                     }, t
                 }(m.Component));
-            var x = Object(r.compose)(Object(n.connect)(function(e) {
+            var h = Object(r.compose)(Object(n.connect)(function(e) {
                 return {
                     isLoggedIn: Object(o.f)(e)
                 }
@@ -147,9 +147,9 @@
                 destination: i.a.DevSiteLogin
             }), Object(s.a)({
                 location: c.PageviewLocation.DevSiteLogin
-            }))(h);
+            }))(x);
             a.d(t, "DevLoginPage", function() {
-                return x
+                return h
             })
         },
         R5NJ: function(e, t, a) {},
@@ -247,32 +247,32 @@
                 u = a("kRBY"),
                 v = a("GnwI"),
                 f = a("1mFg"),
-                h = a("Ue10");
+                x = a("Ue10");
             a("tAC9");
             ! function(e) {
                 e[e.TopBroadcaster = 0] = "TopBroadcaster", e[e.DedicatedBroadcaster = 1] = "DedicatedBroadcaster", e[e.RisingStar = 2] = "RisingStar", e[e.Default = 3] = "Default"
             }(n || (n = {}));
-            var x, b, _ = function() {
+            var h, b, _ = function() {
                     return Object(c.d)("Top Broadcaster", "DevBroadcasterCard")
                 },
-                y = function() {
+                E = function() {
                     return Object(c.d)("Dedicated Broadcaster", "DevBroadcasterCard")
                 },
-                E = function() {
+                C = function() {
                     return Object(c.d)("Rising Star", "DevBroadcasterCard")
                 },
-                C = function(e) {
+                y = function(e) {
                     if (e.cardType === n.Default && e.popularBroadcaster) {
                         var t = e.popularBroadcaster;
-                        return s.createElement(h.yb, {
+                        return s.createElement(x.xb, {
                             padding: 1,
-                            justifyContent: h.Va.Start,
-                            alignItems: h.f.Start,
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.Wa, {
-                            justifyContent: h.Va.Start,
-                            alignItems: h.f.Start,
-                            textAlign: h.Kb.Left,
+                            justifyContent: x.Va.Start,
+                            alignItems: x.f.Start,
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.Wa, {
+                            justifyContent: x.Va.Start,
+                            alignItems: x.f.Start,
+                            textAlign: x.Jb.Left,
                             className: "dev-insights-video-player"
                         }, s.createElement("iframe", {
                             src: "https://player.twitch.tv/?channel=" + t.name + "&muted=true",
@@ -281,17 +281,17 @@
                             frameBorder: "0",
                             scrolling: "no",
                             allowFullScreen: !0
-                        })), s.createElement(h.Wa, {
+                        })), s.createElement(x.Wa, {
                             padding: {
                                 top: 2,
                                 left: 1,
                                 right: 2,
                                 bottom: 1
                             },
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Link,
-                            fontSize: h.Ba.Size4,
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Link,
+                            fontSize: x.Ba.Size4,
                             bold: !0
                         }, s.createElement("a", {
                             href: "https://www.twitch.tv/" + t.name
@@ -299,24 +299,24 @@
                     }
                     if (e.broadcasterStats) {
                         var a = e.broadcasterStats;
-                        return s.createElement(h.yb, {
+                        return s.createElement(x.xb, {
                             padding: 1,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center
-                        }, s.createElement(h.Wa, {
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center
+                        }, s.createElement(x.Wa, {
                             padding: {
                                 bottom: 1
                             },
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Alt,
-                            fontSize: h.Ba.Size3,
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Alt,
+                            fontSize: x.Ba.Size3,
                             ellipsis: !0,
                             lines: 1
-                        }, D(e.cardType))), s.createElement(h.Wa, {
-                            justifyContent: h.Va.Start,
-                            alignItems: h.f.Start,
-                            textAlign: h.Kb.Left,
+                        }, W(e.cardType))), s.createElement(x.Wa, {
+                            justifyContent: x.Va.Start,
+                            alignItems: x.f.Start,
+                            textAlign: x.Jb.Left,
                             className: "dev-insights-video-player"
                         }, s.createElement("iframe", {
                             src: "https://player.twitch.tv/?channel=" + S(e.cardType, a) + "&muted=true",
@@ -325,28 +325,28 @@
                             frameBorder: "0",
                             scrolling: "no",
                             allowFullScreen: !0
-                        })), s.createElement(h.Wa, {
+                        })), s.createElement(x.Wa, {
                             padding: {
                                 top: 2,
                                 left: 1,
                                 right: 2,
                                 bottom: 1
                             },
-                            textAlign: h.Kb.Left
+                            textAlign: x.Jb.Left
                         }, s.createElement("a", {
                             href: "https://www.twitch.tv/" + S(e.cardType, a)
-                        }, s.createElement(h.W, {
-                            color: h.O.Link,
-                            fontSize: h.Ba.Size4,
+                        }, s.createElement(x.W, {
+                            color: x.O.Link,
+                            fontSize: x.Ba.Size4,
                             bold: !0,
                             ellipsis: !0,
                             lines: 1
-                        }, W(e.cardType, a)))), s.createElement(h.Wa, {
+                        }, D(e.cardType, a)))), s.createElement(x.Wa, {
                             padding: 1,
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Alt,
-                            fontSize: h.Ba.Size5
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Alt,
+                            fontSize: x.Ba.Size5
                         }, A(e.cardType, a))))
                     }
                     return null
@@ -354,11 +354,11 @@
                 S = function(e, t) {
                     return e === n.TopBroadcaster && t.top_broadcaster ? t.top_broadcaster.name : e === n.DedicatedBroadcaster && t.dedicated_broadcaster ? t.dedicated_broadcaster.name : t.rising_star ? t.rising_star.name : null
                 },
-                W = function(e, t) {
+                D = function(e, t) {
                     return e === n.TopBroadcaster && t.top_broadcaster ? t.top_broadcaster.display_name : e === n.DedicatedBroadcaster && t.dedicated_broadcaster ? t.dedicated_broadcaster.display_name : t.rising_star ? t.rising_star.display_name : null
                 },
-                D = function(e) {
-                    return e === n.TopBroadcaster ? _() : e === n.DedicatedBroadcaster ? y() : E()
+                W = function(e) {
+                    return e === n.TopBroadcaster ? _() : e === n.DedicatedBroadcaster ? E() : C()
                 },
                 A = function(e, t) {
                     return e === n.TopBroadcaster && t.top_broadcaster ? Object(c.d)("Streamed your game for {TopBroadcasterHoursStreamed} hours and generated {TopBroadcasterHoursWatched} hours watched with {avgConcurrentViewers} avg concurrent viewers.", {
@@ -386,97 +386,97 @@
                         var e = Object(c.d)("What's Trending", "DevGameFactSheet");
                         if (this.props.gameData.broadcaster_stats) {
                             var t = this.props.gameData.broadcaster_stats;
-                            return s.createElement(h.Wa, {
+                            return s.createElement(x.Wa, {
                                 className: "broadcasters__wrapper",
-                                zIndex: h.bc.Above,
+                                zIndex: x.ac.Above,
                                 fullWidth: !0,
-                                display: h.X.Flex,
-                                justifyContent: h.Va.Center,
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.Wa, {
+                                display: x.X.Flex,
+                                justifyContent: x.Va.Center,
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.Wa, {
                                 className: "broadcasters__content",
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.Wa, {
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.Wa, {
                                 className: "broadcasters__content-cards",
-                                position: h.eb.Relative
-                            }, s.createElement(h.Wa, {
+                                position: x.eb.Relative
+                            }, s.createElement(x.Wa, {
                                 padding: {
                                     bottom: 1,
                                     top: 1
                                 },
-                                textAlign: h.Kb.Left
-                            }, s.createElement(h.W, {
-                                color: h.O.Link,
-                                fontSize: h.Ba.Size4,
+                                textAlign: x.Jb.Left
+                            }, s.createElement(x.W, {
+                                color: x.O.Link,
+                                fontSize: x.Ba.Size4,
                                 bold: !0
-                            }, e)), s.createElement(h.Wa, {
-                                display: h.X.Flex,
-                                textAlign: h.Kb.Center,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.Ub, {
-                                childWidth: h.Vb.Large,
-                                gutterSize: h.Wb.Small,
+                            }, e)), s.createElement(x.Wa, {
+                                display: x.X.Flex,
+                                textAlign: x.Jb.Center,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.Tb, {
+                                childWidth: x.Ub.Large,
+                                gutterSize: x.Vb.Small,
                                 placeholderItems: 6,
                                 center: !0
-                            }, t.top_broadcaster ? s.createElement(C, {
+                            }, t.top_broadcaster ? s.createElement(y, {
                                 broadcasterStats: t,
                                 cardType: n.TopBroadcaster
-                            }) : null, t.dedicated_broadcaster ? s.createElement(C, {
+                            }) : null, t.dedicated_broadcaster ? s.createElement(y, {
                                 broadcasterStats: t,
                                 cardType: n.DedicatedBroadcaster
-                            }) : null, t.rising_star ? s.createElement(C, {
+                            }) : null, t.rising_star ? s.createElement(y, {
                                 broadcasterStats: t,
                                 cardType: n.RisingStar
                             }) : null)))))
                         }
                         if (this.props.gameData.popular_broadcasters) {
                             var a = (t = this.props.gameData.popular_broadcasters).map(function(e) {
-                                return s.createElement(C, {
+                                return s.createElement(y, {
                                     key: e.name,
                                     popularBroadcaster: e,
                                     cardType: n.Default
                                 })
                             });
-                            return s.createElement(h.Wa, {
+                            return s.createElement(x.Wa, {
                                 className: "broadcasters__wrapper",
                                 fullWidth: !0,
-                                display: h.X.Flex,
-                                justifyContent: h.Va.Center,
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.Wa, {
+                                display: x.X.Flex,
+                                justifyContent: x.Va.Center,
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.Wa, {
                                 className: "broadcasters__content",
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.Wa, {
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.Wa, {
                                 className: "broadcasters__content-cards"
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 padding: {
                                     top: 3,
                                     bottom: 3
                                 },
-                                textAlign: h.Kb.Left
-                            }, s.createElement(h.W, {
-                                color: h.O.Link,
-                                fontSize: h.Ba.Size4,
+                                textAlign: x.Jb.Left
+                            }, s.createElement(x.W, {
+                                color: x.O.Link,
+                                fontSize: x.Ba.Size4,
                                 bold: !0
-                            }, w())), s.createElement(h.Wa, {
-                                display: h.X.Flex,
-                                textAlign: h.Kb.Center,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.Ub, {
-                                childWidth: h.Vb.Large,
-                                gutterSize: h.Wb.Small,
+                            }, w())), s.createElement(x.Wa, {
+                                display: x.X.Flex,
+                                textAlign: x.Jb.Center,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.Tb, {
+                                childWidth: x.Ub.Large,
+                                gutterSize: x.Vb.Small,
                                 placeholderItems: 6,
                                 center: !0
                             }, a)))))
@@ -488,8 +488,8 @@
             ! function(e) {
                 e.Afghanistan = "AF", e.AlandIslands = "AX", e.Albania = "AL", e.Algeria = "DZ", e.AmericanSamoa = "AS", e.Andorra = "AD", e.Angola = "AO", e.Anguilla = "AI", e.Antarctica = "AQ", e.AntiguaAndBarbuda = "AG", e.Argentina = "AR", e.Armenia = "AM", e.Aruba = "AW", e.Australia = "AU", e.Austria = "AT", e.Azerbaijan = "AZ", e.Bahamas = "BS", e.Bahrain = "BH", e.Bangladesh = "BD", e.Barbados = "BB", e.Belarus = "BY", e.Belgium = "BE", e.Belize = "BZ", e.Benin = "BJ", e.Bermuda = "BM", e.Bhutan = "BT", e.Bolivia = "BO", e.BosniaAndHerzegovina = "BA", e.Botswana = "BW", e.BouvetIsland = "BV", e.Brazil = "BR", e.BritishIndianOceanTerritory = "IO", e.BruneiDarussalam = "BN", e.Bulgaria = "BG", e.BurkinaFaso = "BF", e.Burundi = "BI", e.Cambodia = "KH", e.Cameroon = "CM", e.Canada = "CA", e.CapeVerde = "CV", e.CaymanIslands = "KY", e.CentralAfricanRepublic = "CF", e.Chad = "TD", e.Chile = "CL", e.China = "CN", e.ChristmasIsland = "CX", e.CocosKeelingIslands = "CC", e.Colombia = "CO", e.Comoros = "KM", e.Congo = "CG", e.CongoDemocraticRepublic = "CD", e.CookIslands = "CK", e.CostaRica = "CR", e.CoteDIvoire = "CI", e.Croatia = "HR", e.Cuba = "CU", e.Cyprus = "CY", e.CzechRepublic = "CZ", e.Denmark = "DK", e.Djibouti = "DJ", e.Dominica = "DM", e.DominicanRepublic = "DO", e.Ecuador = "EC", e.Egypt = "EG", e.ElSalvador = "SV", e.EquatorialGuinea = "GQ", e.Eritrea = "ER", e.Estonia = "EE", e.Ethiopia = "ET", e.FalklandIslands = "FK", e.FaroeIslands = "FO", e.Fiji = "FJ", e.Finland = "FI", e.France = "FR", e.FrenchGuiana = "GF", e.FrenchPolynesia = "PF", e.FrenchSouthernTerritories = "TF", e.Gabon = "GA", e.Gambia = "GM", e.Georgia = "GE", e.Germany = "DE", e.Ghana = "GH", e.Gibraltar = "GI", e.Greece = "GR", e.Greenland = "GL", e.Grenada = "GD", e.Guadeloupe = "GP", e.Guam = "GU", e.Guatemala = "GT", e.Guernsey = "GG", e.Guinea = "GN", e.GuineaBissau = "GW", e.Guyana = "GY", e.Haiti = "HT", e.HeardIslandMcdonaldIslands = "HM", e.HolySeeVaticanCityState = "VA", e.Honduras = "HN", e.HongKong = "HK", e.Hungary = "HU", e.Iceland = "IS", e.India = "IN", e.Indonesia = "ID", e.Iran = "IR", e.Iraq = "IQ", e.Ireland = "IE", e.IsleOfMan = "IM", e.Israel = "IL", e.Italy = "IT", e.Jamaica = "JM", e.Japan = "JP", e.Jersey = "JE", e.Jordan = "JO", e.Kazakhstan = "KZ", e.Kenya = "KE", e.Kiribati = "KI", e.Kuwait = "KW", e.Kyrgyzstan = "KG", e.LaoPeoplesDemocraticRepublic = "LA", e.Latvia = "LV", e.Lebanon = "LB", e.Lesotho = "LS", e.Liberia = "LR", e.Libyan = "LY", e.Liechtenstein = "LI", e.Lithuania = "LT", e.Luxembourg = "LU", e.Macao = "MO", e.Macedonia = "MK", e.Madagascar = "MG", e.Malawi = "MW", e.Malaysia = "MY", e.Maldives = "MV", e.Mali = "ML", e.Malta = "MT", e.MarshallIslands = "MH", e.Martinique = "MQ", e.Mauritania = "MR", e.Mauritius = "MU", e.Mayotte = "YT", e.Mexico = "MX", e.Micronesia = "FM", e.Moldova = "MD", e.Monaco = "MC", e.Mongolia = "MN", e.Montenegro = "ME", e.Montserrat = "MS", e.Morocco = "MA", e.Mozambique = "MZ", e.Myanmar = "MM", e.Namibia = "NA", e.Nauru = "NR", e.Nepal = "NP", e.Netherlands = "NL", e.NewCaledonia = "NC", e.NewZealand = "NZ", e.Nicaragua = "NI", e.Niger = "NE", e.Nigeria = "NG", e.Niue = "NU", e.NorfolkIsland = "NF", e.NorthernMarianaIslands = "MP", e.Norway = "NO", e.NorthKorea = "KP", e.Oman = "OM", e.Pakistan = "PK", e.Palau = "PW", e.PalestinianTerritory = "PS", e.Panama = "PA", e.PapuaNewGuinea = "PG", e.Paraguay = "PY", e.Peru = "PE", e.Philippines = "PH", e.Pitcairn = "PN", e.Poland = "PL", e.Portugal = "PT", e.PuertoRico = "PR", e.Qatar = "QA", e.Reunion = "RE", e.Romania = "RO", e.RussianFederation = "RU", e.Rwanda = "RW", e.SaintBarthelemy = "BL", e.SaintHelena = "SH", e.SaintKittsAndNevis = "KN", e.SaintLucia = "LC", e.SaintMartin = "MF", e.SaintPierreAndMiquelon = "PM", e.SaintVincentAndGrenadines = "VC", e.Samoa = "WS", e.SanMarino = "SM", e.SaoTomeAndPrincipe = "ST", e.SaudiArabia = "SA", e.Senegal = "SN", e.Serbia = "RS", e.Seychelles = "SC", e.SierraLeone = "SL", e.Singapore = "SG", e.Slovakia = "SK", e.Slovenia = "SI", e.SolomonIslands = "SB", e.Somalia = "SO", e.SouthAfrica = "ZA", e.SouthSudan = "SS", e.SouthGeorgiaAndSandwichIsl = "GS", e.SouthKorea = "KR", e.Spain = "ES", e.SriLanka = "LK", e.Sudan = "SD", e.Suriname = "SR", e.SvalbardAndJanMayen = "SJ", e.Swaziland = "SZ", e.Sweden = "SE", e.Switzerland = "CH", e.SyrianArabRepublic = "SY", e.Taiwan = "TW", e.Tajikistan = "TJ", e.Tanzania = "TZ", e.Thailand = "TH", e.TimorLeste = "TL", e.Togo = "TG", e.Tokelau = "TK", e.Tonga = "TO", e.TrinidadAndTobago = "TT", e.Tunisia = "TN", e.Turkey = "TR", e.Turkmenistan = "TM", e.TurksAndCaicosIslands = "TC", e.Tuvalu = "TV", e.Uganda = "UG", e.Ukraine = "UA", e.UnitedArabEmirates = "AE", e.UnitedKingdom = "GB", e.UnitedStates = "US", e.UnitedStatesOutlyingIslands = "UM", e.Uruguay = "UY", e.Uzbekistan = "UZ", e.Vanuatu = "VU", e.Venezuela = "VE", e.VietNam = "VN", e.VirginIslandsBritish = "VG", e.VirginIslandsUS = "VI", e.WallisAndFutuna = "WF", e.WesternSahara = "EH", e.Yemen = "YE", e.Zambia = "ZM", e.Zimbabwe = "ZW"
             }(b || (b = {}));
-            var I = ((x = {})[h.p.Aspect1x1] = "1x1", x[h.p.Aspect4x3] = "4x3", x),
-                z = function(e) {
+            var I = ((h = {})[x.p.Aspect1x1] = "1x1", h[x.p.Aspect4x3] = "4x3", h),
+                P = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -502,7 +502,7 @@
                             return r.__generator(this, function(r) {
                                 switch (r.label) {
                                     case 0:
-                                        return e = this.props.country.toLowerCase(), t = this.props.aspect ? I[this.props.aspect] : I[h.p.Aspect4x3], [4, a("h4Vz")("./" + t + "/" + e + ".svg")];
+                                        return e = this.props.country.toLowerCase(), t = this.props.aspect ? I[this.props.aspect] : I[x.p.Aspect4x3], [4, a("h4Vz")("./" + t + "/" + e + ".svg")];
                                     case 1:
                                         return n = r.sent(), this.setState({
                                             src: n.default
@@ -511,25 +511,25 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        var e = this.props.aspect ? this.props.aspect : h.p.Aspect4x3;
-                        return "" === this.state.src ? s.createElement(h.o, {
+                        var e = this.props.aspect ? this.props.aspect : x.p.Aspect4x3;
+                        return "" === this.state.src ? s.createElement(x.o, {
                             ratio: e
                         }, s.createElement("img", {
                             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAQAAAAe/WZNAAAADklEQVR42mNkgAJGDAYAAFEABCaLYqoAAAAASUVORK5CYII=",
                             alt: this.props.alt
-                        })) : s.createElement(h.o, {
+                        })) : s.createElement(x.o, {
                             ratio: e
-                        }, s.createElement(h.S, r.__assign({
+                        }, s.createElement(x.S, r.__assign({
                             className: B({
                                 "tw-flag": !0
                             })
-                        }, Object(h.cc)(this.props), {
+                        }, Object(x.bc)(this.props), {
                             src: this.state.src,
                             alt: this.props.alt
                         })))
                     }, t
                 }(s.Component),
-                P = {
+                z = {
                     AD: b.Andorra,
                     AE: b.UnitedArabEmirates,
                     AF: b.Afghanistan,
@@ -783,9 +783,9 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.countryCode.toUpperCase();
-                        return P[e] ? s.createElement(z, {
+                        return z[e] ? s.createElement(P, {
                             alt: this.props.alt,
-                            country: P[e],
+                            country: z[e],
                             aspect: this.props.aspect
                         }) : null
                     }, t
@@ -804,8 +804,9 @@
                 var a = (new Date).getFullYear(),
                     n = (new Date).getDate(),
                     r = !1,
-                    s = Math.floor((new Date).getMonth() / 3);
-                return 2017 === e && t < 4 ? r = !0 : e === a && t > s ? r = !0 : e === a && (new Date).getMonth() === 3 * t && n < 6 ? r = !0 : e < 2017 ? r = !0 : e > a && (r = !0), r
+                    s = Math.floor((new Date).getMonth() / 3),
+                    i = (new Date).getDate() < 6 && (new Date).getMonth() === 3 * s ? s - 1 : s;
+                return 2017 === e && t < 4 ? r = !0 : e === a && t > i ? r = !0 : e === a && (new Date).getMonth() === 3 * t && n < 6 ? r = !0 : e < 2017 ? r = !0 : e > a && (r = !0), r
             }
             a("gpTY");
             var F, T = function(e) {
@@ -813,46 +814,46 @@
                             "dev-country-flag__one-pager": !e.ifPoster,
                             "dev-country-flag__poster": e.ifPoster
                         },
-                        a = e.ifPoster ? h.Ba.Size4 : h.Ba.Size5;
-                    return s.createElement(h.yb, {
-                        display: h.X.Flex,
-                        flexDirection: h.Z.Column,
-                        background: h.r.Alt2,
-                        textAlign: h.Kb.Center
+                        a = e.ifPoster ? x.Ba.Size4 : x.Ba.Size5;
+                    return s.createElement(x.xb, {
+                        display: x.X.Flex,
+                        flexDirection: x.Z.Column,
+                        background: x.r.Alt2,
+                        textAlign: x.Jb.Center
                     }, e.countryData.map(function(e) {
                         return M(e, t, a)
                     }))
                 },
                 M = function(e, t, a) {
-                    return s.createElement(h.Wa, {
+                    return s.createElement(x.Wa, {
                         className: "dev-country-flag"
-                    }, s.createElement(h.Ia, {
-                        alignItems: h.f.Center
-                    }, s.createElement(h.P, {
+                    }, s.createElement(x.Ia, {
+                        alignItems: x.f.Center
+                    }, s.createElement(x.P, {
                         cols: 2
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         className: B(t)
                     }, s.createElement(N, {
                         alt: e.code,
-                        aspect: h.p.Aspect4x3,
+                        aspect: x.p.Aspect4x3,
                         countryCode: e.code
-                    }))), s.createElement(h.P, {
+                    }))), s.createElement(x.P, {
                         cols: 6
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: 1,
-                        display: h.X.Flex,
-                        textAlign: h.Kb.Left
-                    }, s.createElement(h.W, {
-                        color: h.O.Alt,
+                        display: x.X.Flex,
+                        textAlign: x.Jb.Left
+                    }, s.createElement(x.W, {
+                        color: x.O.Alt,
                         fontSize: a
-                    }, e.name))), s.createElement(h.P, {
+                    }, e.name))), s.createElement(x.P, {
                         cols: 4
-                    }, s.createElement(h.Wa, {
-                        textAlign: h.Kb.Right,
-                        display: h.X.Flex,
+                    }, s.createElement(x.Wa, {
+                        textAlign: x.Jb.Right,
+                        display: x.X.Flex,
                         padding: 1
-                    }, s.createElement(h.W, {
-                        color: h.O.Alt,
+                    }, s.createElement(x.W, {
+                        color: x.O.Alt,
                         fontSize: a
                     }, function(e) {
                         return Math.abs(e) > 500 ? e > 0 ? ">500% Q/Q" : "<-500% Q/Q" : k(e)
@@ -862,62 +863,62 @@
             ! function(e) {
                 e[e.topViewed = 0] = "topViewed", e[e.topStreamed = 1] = "topStreamed", e[e.default = 2] = "default"
             }(F || (F = {}));
-            var K = function(e) {
+            var V = function(e) {
                     var t = e.topGame.img || "https://static-cdn.jtvnw.net/ttv-boxart/404_boxart.png",
                         a = {
                             "rank-card": !0,
                             "rank-card__one-pager": !e.ifPoster,
                             "rank-card__poster": e.ifPoster
                         };
-                    return s.createElement(h.Wa, null, s.createElement(h.yb, {
+                    return s.createElement(x.Wa, null, s.createElement(x.xb, {
                         padding: 1,
                         margin: {
                             bottom: 1
                         },
-                        display: h.X.Flex,
-                        justifyContent: h.Va.Start,
-                        alignItems: h.f.Start
-                    }, s.createElement(h.yb, {
+                        display: x.X.Flex,
+                        justifyContent: x.Va.Start,
+                        alignItems: x.f.Start
+                    }, s.createElement(x.xb, {
                         className: B(a),
-                        position: h.eb.Relative,
+                        position: x.eb.Relative,
                         margin: 1
-                    }, s.createElement(h.o, {
-                        ratio: h.p.Aspect3x4,
-                        align: h.d.Bottom,
+                    }, s.createElement(x.o, {
+                        ratio: x.p.Aspect3x4,
+                        align: x.d.Bottom,
                         overflow: !0
-                    }, s.createElement(h.S, {
+                    }, s.createElement(x.S, {
                         src: t,
                         alt: e.topGame.name
-                    })), s.createElement(h.yb, {
+                    })), s.createElement(x.xb, {
                         className: "rank-card__num",
-                        background: h.r.AccentAlt,
-                        position: h.eb.Absolute,
+                        background: x.r.AccentAlt,
+                        position: x.eb.Absolute,
                         attachBottom: !0,
                         attachRight: !0,
-                        textAlign: h.Kb.Center
-                    }, s.createElement(h.W, {
-                        color: h.O.Overlay,
-                        fontSize: h.Ba.Size3,
+                        textAlign: x.Jb.Center
+                    }, s.createElement(x.W, {
+                        color: x.O.Overlay,
+                        fontSize: x.Ba.Size3,
                         bold: !0
-                    }, e.rank)))), s.createElement(h.Wa, {
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center
-                    }, V(e), s.createElement(h.Wa, {
-                        display: h.X.Flex,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center
-                    }, s.createElement(h.W, {
-                        color: h.O.Link
+                    }, e.rank)))), s.createElement(x.Wa, {
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center
+                    }, L(e), s.createElement(x.Wa, {
+                        display: x.X.Flex,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center
+                    }, s.createElement(x.W, {
+                        color: x.O.Link
                     }, e.topGame.name))))
                 },
-                V = function(e) {
-                    return e.topGame.percentage ? s.createElement(h.Wa, null, s.createElement(h.W, {
-                        color: h.O.Alt2
+                L = function(e) {
+                    return e.topGame.percentage ? s.createElement(x.Wa, null, s.createElement(x.W, {
+                        color: x.O.Alt2
                     }, Math.round(e.topGame.percentage || 0) + function(e) {
                         return e === F.topStreamed ? "% streamed" : "% viewed"
                     }(e.type))) : null
                 },
-                L = (a("Uxnk"), function(e) {
+                R = (a("Uxnk"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -941,10 +942,10 @@
                                     "recommendation__poster-wrapper-missing-country": o
                                 },
                                 g = a.map(function(t, a) {
-                                    return s.createElement(h.P, {
+                                    return s.createElement(x.P, {
                                         cols: 4,
                                         key: t.name
-                                    }, s.createElement(K, {
+                                    }, s.createElement(V, {
                                         topGame: t,
                                         rank: a + 1,
                                         type: F.topStreamed,
@@ -952,67 +953,67 @@
                                     }))
                                 }),
                                 m = n.map(function(t, a) {
-                                    return s.createElement(h.P, {
+                                    return s.createElement(x.P, {
                                         cols: 4,
                                         key: t.name
-                                    }, s.createElement(K, {
+                                    }, s.createElement(V, {
                                         topGame: t,
                                         rank: a + 1,
                                         type: F.topViewed,
                                         ifPoster: e.props.ifPoster
                                     }))
                                 });
-                            return s.createElement(h.yb, {
+                            return s.createElement(x.xb, {
                                 className: B(l),
-                                position: h.eb.Relative,
-                                display: h.X.Flex,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.yb, {
+                                position: x.eb.Relative,
+                                display: x.X.Flex,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.xb, {
                                 className: "recommendation__content",
                                 fullWidth: !0,
-                                position: h.eb.Relative,
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column,
-                                background: h.r.Base,
-                                textAlign: h.Kb.Center,
-                                justifyContent: h.Va.Center
-                            }, s.createElement(h.Wa, {
+                                position: x.eb.Relative,
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column,
+                                background: x.r.Base,
+                                textAlign: x.Jb.Center,
+                                justifyContent: x.Va.Center
+                            }, s.createElement(x.Wa, {
                                 className: B(t),
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
                                 fullHeight: !0,
                                 padding: {
                                     bottom: 3
                                 }
-                            }, this.renderCustomizedTitle(), s.createElement(h.Ia, null, s.createElement(h.P, {
+                            }, this.renderCustomizedTitle(), s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 6
-                            }, this.renderCommunityGamesTitle(a.length, Object(c.d)("Games Your Community Loves to Stream", "DevGameFactSheet"))), s.createElement(h.P, {
+                            }, this.renderCommunityGamesTitle(a.length, Object(c.d)("Games Your Community Loves to Stream", "DevGameFactSheet"))), s.createElement(x.P, {
                                 cols: 6
-                            }, this.renderCommunityGamesTitle(n.length, Object(c.d)("Games Your Community Loves to Watch", "DevGameFactSheet")))), s.createElement(h.Ia, null, s.createElement(h.P, {
+                            }, this.renderCommunityGamesTitle(n.length, Object(c.d)("Games Your Community Loves to Watch", "DevGameFactSheet")))), s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 6
-                            }, s.createElement(h.Wa, {
-                                display: h.X.Flex
-                            }, g)), s.createElement(h.P, {
+                            }, s.createElement(x.Wa, {
+                                display: x.X.Flex
+                            }, g)), s.createElement(x.P, {
                                 cols: 6
-                            }, s.createElement(h.Wa, {
-                                display: h.X.Flex
-                            }, m))), s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
+                                display: x.X.Flex
+                            }, m))), s.createElement(x.Wa, {
                                 padding: {
                                     top: 3
                                 }
-                            }, s.createElement(h.Ia, null, s.createElement(h.P, {
+                            }, s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 6
-                            }, this.countryBoardTitle(i.length, Object(c.d)("Top Broadcaster By Geo Growth", "DevCommunityDataBoard"))), s.createElement(h.P, {
+                            }, this.countryBoardTitle(i.length, Object(c.d)("Top Broadcaster By Geo Growth", "DevCommunityDataBoard"))), s.createElement(x.P, {
                                 cols: 6
-                            }, this.countryBoardTitle(i.length, Object(c.d)("Top Viewer By Geo Growth", "DevCommunityDataBoard")))), s.createElement(h.Ia, null, s.createElement(h.P, {
+                            }, this.countryBoardTitle(i.length, Object(c.d)("Top Viewer By Geo Growth", "DevCommunityDataBoard")))), s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 6
-                            }, s.createElement(h.yb, {
+                            }, s.createElement(x.xb, {
                                 className: "country-board-card",
-                                textAlign: h.Kb.Left,
-                                justifyContent: h.Va.Start,
-                                alignItems: h.f.Start,
+                                textAlign: x.Jb.Left,
+                                justifyContent: x.Va.Start,
+                                alignItems: x.f.Start,
                                 margin: {
                                     right: 2,
                                     left: 1
@@ -1020,17 +1021,17 @@
                             }, s.createElement(T, {
                                 countryData: i,
                                 ifPoster: this.props.ifPoster
-                            })), s.createElement(h.Wa, {
+                            })), s.createElement(x.Wa, {
                                 margin: {
                                     top: 2
                                 }
-                            }, this.countryBoardDescription(i.length))), s.createElement(h.P, {
+                            }, this.countryBoardDescription(i.length))), s.createElement(x.P, {
                                 cols: 6
-                            }, s.createElement(h.yb, {
+                            }, s.createElement(x.xb, {
                                 className: "country-board-card",
-                                textAlign: h.Kb.Left,
-                                justifyContent: h.Va.Start,
-                                alignItems: h.f.Start,
+                                textAlign: x.Jb.Left,
+                                justifyContent: x.Va.Start,
+                                alignItems: x.f.Start,
                                 margin: {
                                     right: 2,
                                     left: 2
@@ -1038,7 +1039,7 @@
                             }, s.createElement(T, {
                                 countryData: r,
                                 ifPoster: this.props.ifPoster
-                            })), s.createElement(h.Wa, {
+                            })), s.createElement(x.Wa, {
                                 margin: {
                                     top: 2
                                 }
@@ -1054,155 +1055,155 @@
                                 recommendation__ears: !this.props.ifPoster,
                                 "recommendation__poster-wrapper-generic": this.props.ifPoster
                             };
-                            var p = this.props.ifPoster ? h.Ba.Size3 : h.Ba.Size4;
+                            var p = this.props.ifPoster ? x.Ba.Size3 : x.Ba.Size4;
                             g = a.map(function(t, a) {
-                                return s.createElement(h.P, {
+                                return s.createElement(x.P, {
                                     cols: 2,
                                     key: t.name
-                                }, s.createElement(K, {
+                                }, s.createElement(V, {
                                     topGame: t,
                                     rank: a + 1,
                                     type: F.default,
                                     ifPoster: e.props.ifPoster
                                 }))
                             }), m = n.map(function(t, a) {
-                                return s.createElement(h.P, {
+                                return s.createElement(x.P, {
                                     cols: 2,
                                     key: t.name
-                                }, s.createElement(K, {
+                                }, s.createElement(V, {
                                     topGame: t,
                                     rank: a + 1,
                                     type: F.default,
                                     ifPoster: e.props.ifPoster
                                 }))
                             });
-                            return s.createElement(h.yb, {
+                            return s.createElement(x.xb, {
                                 className: B(l),
-                                position: h.eb.Relative,
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column,
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.Wa, {
+                                position: x.eb.Relative,
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column,
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.Wa, {
                                 className: "recommendation__content",
                                 fullWidth: !0,
-                                position: h.eb.Relative,
-                                display: h.X.Flex
-                            }, s.createElement(h.Wa, {
+                                position: x.eb.Relative,
+                                display: x.X.Flex
+                            }, s.createElement(x.Wa, {
                                 className: "recommendation__content-cards",
-                                textAlign: h.Kb.Center,
-                                alignItems: h.f.Center,
+                                textAlign: x.Jb.Center,
+                                alignItems: x.f.Center,
                                 fullHeight: !0,
                                 padding: {
                                     bottom: 3
                                 }
-                            }, this.renderGenericTitle(), s.createElement(h.Ia, null, s.createElement(h.P, {
+                            }, this.renderGenericTitle(), s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 6
-                            }, s.createElement(h.yb, {
+                            }, s.createElement(x.xb, {
                                 padding: 1,
                                 margin: {
                                     bottom: 1,
                                     right: 2
                                 },
-                                display: h.X.Flex,
-                                textAlign: h.Kb.Left,
-                                justifyContent: h.Va.Start,
-                                alignItems: h.f.Start
-                            }, s.createElement(h.W, {
-                                color: h.O.Alt,
+                                display: x.X.Flex,
+                                textAlign: x.Jb.Left,
+                                justifyContent: x.Va.Start,
+                                alignItems: x.f.Start
+                            }, s.createElement(x.W, {
+                                color: x.O.Alt,
                                 fontSize: p
-                            }, Object(c.d)("Games the Community Loves to Stream", "DevGameFactSheet")))), s.createElement(h.P, {
+                            }, Object(c.d)("Games the Community Loves to Stream", "DevGameFactSheet")))), s.createElement(x.P, {
                                 cols: 6
-                            }, s.createElement(h.yb, {
+                            }, s.createElement(x.xb, {
                                 padding: 1,
                                 margin: {
                                     bottom: 1,
                                     right: 2
                                 },
-                                display: h.X.Flex,
-                                textAlign: h.Kb.Left,
-                                justifyContent: h.Va.Start,
-                                alignItems: h.f.Start
-                            }, s.createElement(h.W, {
-                                color: h.O.Alt,
+                                display: x.X.Flex,
+                                textAlign: x.Jb.Left,
+                                justifyContent: x.Va.Start,
+                                alignItems: x.f.Start
+                            }, s.createElement(x.W, {
+                                color: x.O.Alt,
                                 fontSize: p
-                            }, Object(c.d)("Games the Community Loves to Watch", "DevGameFactSheet"))))), s.createElement(h.Ia, null, g, m))), this.props.ifPoster ? this.renderPosterViewNote({
+                            }, Object(c.d)("Games the Community Loves to Watch", "DevGameFactSheet"))))), s.createElement(x.Ia, null, g, m))), this.props.ifPoster ? this.renderPosterViewNote({
                                 top: .5
                             }) : null)
                         }
                     }, t.prototype.renderCommunityGamesTitle = function(e, t) {
-                        var a = this.props.ifPoster ? h.Ba.Size3 : h.Ba.Size4;
-                        return 0 !== e ? s.createElement(h.yb, {
+                        var a = this.props.ifPoster ? x.Ba.Size3 : x.Ba.Size4;
+                        return 0 !== e ? s.createElement(x.xb, {
                             padding: 1,
                             margin: {
                                 bottom: 1,
                                 right: 2
                             },
-                            display: h.X.Flex,
-                            textAlign: h.Kb.Left,
-                            justifyContent: h.Va.Start,
-                            alignItems: h.f.Start
-                        }, s.createElement(h.W, {
-                            color: h.O.Alt,
+                            display: x.X.Flex,
+                            textAlign: x.Jb.Left,
+                            justifyContent: x.Va.Start,
+                            alignItems: x.f.Start
+                        }, s.createElement(x.W, {
+                            color: x.O.Alt,
                             fontSize: a
-                        }, t)) : s.createElement(h.Wa, null)
+                        }, t)) : s.createElement(x.Wa, null)
                     }, t.prototype.countryBoardDescription = function(e) {
-                        return 0 === e || this.props.ifPoster ? null : s.createElement(h.W, {
-                            fontSize: h.Ba.Size5,
-                            color: h.O.Alt2
+                        return 0 === e || this.props.ifPoster ? null : s.createElement(x.W, {
+                            fontSize: x.Ba.Size5,
+                            color: x.O.Alt2
                         }, Object(c.d)("Based on rising popularity", "DevGameFactSheet"))
                     }, t.prototype.countryBoardTitle = function(e, t) {
-                        return 0 !== e ? s.createElement(h.yb, {
+                        return 0 !== e ? s.createElement(x.xb, {
                             padding: 1,
                             margin: {
                                 bottom: 1,
                                 right: 2,
                                 left: 1
                             },
-                            display: h.X.Flex,
-                            textAlign: h.Kb.Left,
-                            justifyContent: h.Va.Start,
-                            alignItems: h.f.Start
-                        }, s.createElement(h.W, {
-                            color: h.O.Alt,
-                            fontSize: h.Ba.Size4
+                            display: x.X.Flex,
+                            textAlign: x.Jb.Left,
+                            justifyContent: x.Va.Start,
+                            alignItems: x.f.Start
+                        }, s.createElement(x.W, {
+                            color: x.O.Alt,
+                            fontSize: x.Ba.Size4
                         }, t)) : null
                     }, t.prototype.renderCustomizedTitle = function() {
-                        return this.props.ifPoster ? null : s.createElement(h.Wa, null, s.createElement(h.Wa, {
+                        return this.props.ifPoster ? null : s.createElement(x.Wa, null, s.createElement(x.Wa, {
                             padding: 1,
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Link,
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Link,
                             bold: !0,
-                            fontSize: h.Ba.Size4
-                        }, Object(c.d)("Audience Insights", "DevGameFactSheet"))), s.createElement(h.Wa, {
+                            fontSize: x.Ba.Size4
+                        }, Object(c.d)("Audience Insights", "DevGameFactSheet"))), s.createElement(x.Wa, {
                             padding: 1,
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Alt,
-                            fontSize: h.Ba.Size3
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Alt,
+                            fontSize: x.Ba.Size3
                         }, Object(c.d)("Learn about the game preferences and geo growth of your Twitch Community", "DevCommunityDataBoard"))))
                     }, t.prototype.renderGenericTitle = function() {
-                        return this.props.ifPoster ? null : s.createElement(h.Wa, null, s.createElement(h.Wa, {
+                        return this.props.ifPoster ? null : s.createElement(x.Wa, null, s.createElement(x.Wa, {
                             padding: 1,
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Link,
-                            fontSize: h.Ba.Size4,
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Link,
+                            fontSize: x.Ba.Size4,
                             bold: !0
-                        }, Object(c.d)("Games", "DevGameFactSheet"))), s.createElement(h.Wa, {
+                        }, Object(c.d)("Games", "DevGameFactSheet"))), s.createElement(x.Wa, {
                             padding: 1,
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Alt,
-                            fontSize: h.Ba.Size3
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Alt,
+                            fontSize: x.Ba.Size3
                         }, Object(c.d)("Learn about the game preferences of the Twitch community", "DevGameFactSheet"))))
                     }, t.prototype.renderPosterViewNote = function(e) {
-                        return s.createElement(h.Wa, {
+                        return s.createElement(x.Wa, {
                             padding: e,
-                            zIndex: h.bc.Above
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size3,
-                            color: h.O.Alt
+                            zIndex: x.ac.Above
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size3,
+                            color: x.O.Alt
                         }, function(e) {
                             return Object(c.d)("Visit <x:link>dev.twitch.tv</x:link> to grow and engage your {game} Twitch community!", {
                                 "x:link": function(e) {
@@ -1213,16 +1214,16 @@
                         }(this.props.gameData.game_info.game_name)))
                     }, t
                 }(s.Component)),
-                R = a("fgkf"),
-                X = a.n(R),
+                J = a("fgkf"),
+                X = a.n(J),
                 q = a("064O"),
                 U = a.n(q),
                 Q = a("B9MZ"),
                 Z = a.n(Q),
                 Y = a("/XS/"),
                 H = a.n(Y),
-                J = a("p4Zc"),
-                $ = a.n(J),
+                K = a("p4Zc"),
+                $ = a.n(K),
                 ee = a("/pg0"),
                 te = a.n(ee),
                 ae = a("2xye");
@@ -1266,134 +1267,134 @@
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return this.props.type === re.White ? s.createElement(h.Wa, {
+                        return this.props.type === re.White ? s.createElement(x.Wa, {
                             padding: {
                                 top: .5,
                                 bottom: .5,
                                 right: 1,
                                 left: 1
                             },
-                            display: h.X.Flex,
+                            display: x.X.Flex,
                             className: "insights-white-btn",
-                            zIndex: h.bc.Above
+                            zIndex: x.ac.Above
                         }, s.createElement("button", {
                             onClick: this.handleClick,
                             className: "insights-white-btn__text"
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size6
-                        }, this.props.text))) : this.props.type === re.Transparent ? s.createElement(h.Wa, {
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size6
+                        }, this.props.text))) : this.props.type === re.Transparent ? s.createElement(x.Wa, {
                             padding: {
                                 top: .5,
                                 bottom: .5,
                                 right: 1,
                                 left: 1
                             },
-                            display: h.X.Flex,
+                            display: x.X.Flex,
                             className: "insights-btn",
-                            zIndex: h.bc.Above
+                            zIndex: x.ac.Above
                         }, s.createElement("button", {
                             onClick: this.handleClick,
                             className: "insights-btn__text"
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size6
-                        }, this.props.text))) : s.createElement(h.Oa, {
-                            display: h.X.InlineBlock,
-                            zIndex: h.bc.Above
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size6
+                        }, this.props.text))) : s.createElement(x.Oa, {
+                            display: x.X.InlineBlock,
+                            zIndex: x.ac.Above
                         }, s.createElement("button", {
                             onClick: this.handleClick
-                        }, s.createElement(h.W, {
+                        }, s.createElement(x.W, {
                             className: "insights-link",
-                            fontSize: h.Ba.Size5,
+                            fontSize: x.Ba.Size5,
                             bold: !0,
-                            decoration: h.Mb.Underline
+                            decoration: x.Lb.Underline
                         }, this.props.text)))
                     }, t
                 }(s.Component),
                 ie = (a("aGo8"), function(e) {
                     var t = e.percentage ? e.percentage : 0;
-                    return s.createElement(h.yb, {
+                    return s.createElement(x.xb, {
                         className: "stats-card",
                         padding: 1,
-                        display: h.X.Flex,
-                        position: h.eb.Relative,
-                        textAlign: h.Kb.Center,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center
-                    }, s.createElement(h.yb, {
+                        display: x.X.Flex,
+                        position: x.eb.Relative,
+                        textAlign: x.Jb.Center,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center
+                    }, s.createElement(x.xb, {
                         className: "stats-card-body gradient-border",
-                        display: h.X.Flex,
-                        flexDirection: h.Z.Column,
-                        position: h.eb.Relative,
-                        textAlign: h.Kb.Center,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
+                        display: x.X.Flex,
+                        flexDirection: x.Z.Column,
+                        position: x.eb.Relative,
+                        textAlign: x.Jb.Center,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
                         padding: {
                             top: 1,
                             bottom: 1,
                             left: 3,
                             right: 3
                         },
-                        background: h.r.AccentAlt2,
+                        background: x.r.AccentAlt2,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, s.createElement(h.Wa, {
-                        display: h.X.Flex,
-                        position: h.eb.Relative,
+                    }, s.createElement(x.Wa, {
+                        display: x.X.Flex,
+                        position: x.eb.Relative,
                         padding: 2,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center,
                         fullWidth: !0,
                         fullHeight: !0
-                    }, s.createElement(h.Wa, {
-                        display: h.X.Inline,
-                        position: h.eb.Relative,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center
-                    }, s.createElement(h.W, {
-                        color: h.O.Overlay,
-                        fontSize: h.Ba.Size1,
+                    }, s.createElement(x.Wa, {
+                        display: x.X.Inline,
+                        position: x.eb.Relative,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center
+                    }, s.createElement(x.W, {
+                        color: x.O.Overlay,
+                        fontSize: x.Ba.Size1,
                         lines: 1
-                    }, j(e.value))), s.createElement(h.Wa, {
-                        display: h.X.Inline,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center
-                    }, oe(t))), le(e.topic, t, !1, h.O.Overlay)))
+                    }, j(e.value))), s.createElement(x.Wa, {
+                        display: x.X.Inline,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center
+                    }, oe(t))), le(e.topic, t, !1, x.O.Overlay)))
                 }),
                 oe = function(e) {
-                    return e > 0 ? s.createElement(h.nb, {
-                        asset: h.ob.GlyphArrUp,
-                        type: h.pb.Success
-                    }) : e < 0 ? s.createElement(h.nb, {
-                        asset: h.ob.GlyphArrDown,
-                        type: h.pb.Warn
+                    return e > 0 ? s.createElement(x.nb, {
+                        asset: x.ob.GlyphArrUp,
+                        type: x.pb.Success
+                    }) : e < 0 ? s.createElement(x.nb, {
+                        asset: x.ob.GlyphArrDown,
+                        type: x.pb.Warn
                     }) : null
                 },
                 le = function(e, t, a, n) {
-                    return 0 !== t ? s.createElement(h.Wa, null, s.createElement(h.Wa, {
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center
-                    }, s.createElement(h.W, {
+                    return 0 !== t ? s.createElement(x.Wa, null, s.createElement(x.Wa, {
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center
+                    }, s.createElement(x.W, {
                         color: n,
-                        fontSize: h.Ba.Size5
-                    }, e)), s.createElement(h.Wa, {
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center
-                    }, s.createElement(h.W, {
+                        fontSize: x.Ba.Size5
+                    }, e)), s.createElement(x.Wa, {
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center
+                    }, s.createElement(x.W, {
                         color: n,
-                        fontSize: h.Ba.Size5
-                    }, k(t)))) : s.createElement(h.Wa, null, s.createElement(h.Wa, {
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center
-                    }, s.createElement(h.W, {
+                        fontSize: x.Ba.Size5
+                    }, k(t)))) : s.createElement(x.Wa, null, s.createElement(x.Wa, {
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center
+                    }, s.createElement(x.W, {
                         color: n,
-                        fontSize: h.Ba.Size5
-                    }, e)), a ? null : s.createElement(h.Wa, {
+                        fontSize: x.Ba.Size5
+                    }, e)), a ? null : s.createElement(x.Wa, {
                         padding: {
                             top: 1,
                             bottom: 1
@@ -1414,18 +1415,18 @@
                 },
                 de = function(e) {
                     if (e.gameData.drops_stats) {
-                        var t = s.createElement(h.Wa, {
+                        var t = s.createElement(x.Wa, {
                                 padding: {
                                     top: 1
                                 },
-                                display: h.X.Flex,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.Pa, {
-                                zIndex: h.bc.Above
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size5,
+                                display: x.X.Flex,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.Pa, {
+                                zIndex: x.ac.Above
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size5,
                                 italic: !0
                             }, Object(c.d)("Have you checked out <x:notification>Drops Notifications</x:notification>? Tell your viewers when they've earned a reward and we'll compile those into this report.", {
                                 "x:notification": function(t) {
@@ -1439,42 +1440,42 @@
                                 }
                             }, "DevDropsCardBoard")))),
                             a = e.gameData.drops_stats;
-                        return s.createElement(h.yb, {
-                            display: h.X.Flex,
+                        return s.createElement(x.xb, {
+                            display: x.X.Flex,
                             className: "drop-stats__wrapper",
-                            position: h.eb.Relative,
+                            position: x.eb.Relative,
                             padding: {
                                 top: 3,
                                 bottom: 3
                             }
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             className: "drop-stats__content",
                             fullWidth: !0
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             className: "drop-stats__content-cards",
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
                             fullHeight: !0
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             padding: {
                                 top: 3
                             }
-                        }, s.createElement(h.W, {
-                            color: h.O.Overlay,
-                            fontSize: h.Ba.Size2
+                        }, s.createElement(x.W, {
+                            color: x.O.Overlay,
+                            fontSize: x.Ba.Size2
                         }, Object(c.d)("Drops and {gameName}", {
                             gameName: e.gameData.game_info.game_name
-                        }, "DevGameFactSheet"))), s.createElement(h.Wa, {
+                        }, "DevGameFactSheet"))), s.createElement(x.Wa, {
                             padding: {
                                 top: 3,
                                 bottom: 3
                             }
-                        }, s.createElement(h.W, {
-                            color: h.O.Overlay,
-                            fontSize: h.Ba.Size3
-                        }, ce())), s.createElement(h.Ub, {
-                            childWidth: h.Vb.Large,
-                            gutterSize: h.Wb.Small,
+                        }, s.createElement(x.W, {
+                            color: x.O.Overlay,
+                            fontSize: x.Ba.Size3
+                        }, ce())), s.createElement(x.Tb, {
+                            childWidth: x.Ub.Large,
+                            gutterSize: x.Vb.Small,
                             placeholderItems: 3,
                             center: !0
                         }, s.createElement(ie, {
@@ -1489,15 +1490,15 @@
                             topic: pe(),
                             value: a.num_of_campaigns,
                             percentage: a.num_of_campaigns_changes
-                        })), 0 === a.num_of_drops_received && 0 === a.num_of_unique_receiving_users && 0 !== a.num_of_campaigns ? t : null, s.createElement(h.Wa, {
+                        })), 0 === a.num_of_drops_received && 0 === a.num_of_unique_receiving_users && 0 !== a.num_of_campaigns ? t : null, s.createElement(x.Wa, {
                             margin: {
                                 top: 5,
                                 bottom: 4
                             },
-                            display: h.X.Flex,
-                            justifyContent: h.Va.Center,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center
+                            display: x.X.Flex,
+                            justifyContent: x.Va.Center,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center
                         }, s.createElement(se, {
                             type: re.Transparent,
                             linkTo: "/console/drops",
@@ -1518,28 +1519,28 @@
                             left: 4,
                             right: 4
                         } : 0;
-                    return s.createElement(h.yb, {
+                    return s.createElement(x.xb, {
                         className: B(n),
-                        position: h.eb.Relative
-                    }, s.createElement(h.Wa, {
+                        position: x.eb.Relative
+                    }, s.createElement(x.Wa, {
                         className: "drop-stats__content",
                         fullWidth: !0
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         className: B(r),
-                        textAlign: h.Kb.Center,
-                        alignItems: h.f.Center,
+                        textAlign: x.Jb.Center,
+                        alignItems: x.f.Center,
                         fullHeight: !0
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: {
                             top: 5
                         }
-                    }, s.createElement(h.W, {
-                        fontSize: h.Ba.Size2
-                    }, Object(c.d)("Twitch Drops Campaigns", "DevGameFactSheet"))), e.ifPoster ? s.createElement(h.Wa, {
+                    }, s.createElement(x.W, {
+                        fontSize: x.Ba.Size2
+                    }, Object(c.d)("Twitch Drops Campaigns", "DevGameFactSheet"))), e.ifPoster ? s.createElement(x.Wa, {
                         padding: {
                             bottom: 3
                         }
-                    }) : s.createElement(h.Wa, {
+                    }) : s.createElement(x.Wa, {
                         padding: {
                             top: 3,
                             bottom: 3
@@ -1547,15 +1548,15 @@
                         margin: {
                             bottom: 1
                         }
-                    }, s.createElement(h.W, {
-                        color: h.O.Overlay,
-                        fontSize: h.Ba.Size3
+                    }, s.createElement(x.W, {
+                        color: x.O.Overlay,
+                        fontSize: x.Ba.Size3
                     }, Object(c.d)("Reward your viewers with in-game loot!", "DevGameFactSheet"))), s.createElement(ve, {
                         ifPoster: !1,
                         paddingBetween: i
-                    }), s.createElement(h.Ia, null, s.createElement(h.P, {
+                    }), s.createElement(x.Ia, null, s.createElement(x.P, {
                         cols: 4
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: {
                             left: 5,
                             top: 2,
@@ -1564,30 +1565,30 @@
                         margin: {
                             left: 3
                         },
-                        display: h.X.Flex,
-                        justifyContent: h.Va.End,
-                        alignItems: h.f.End
+                        display: x.X.Flex,
+                        justifyContent: x.Va.End,
+                        alignItems: x.f.End
                     }, s.createElement("img", {
                         className: "drop-stats__default-logo",
                         src: X.a,
                         alt: Object(c.d)("gwent logo", "DevDropsCardBoard")
-                    }))), s.createElement(h.P, {
+                    }))), s.createElement(x.P, {
                         cols: 4
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: {
                             top: 2,
                             bottom: 2
                         },
-                        display: h.X.Flex,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center
+                        display: x.X.Flex,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center
                     }, s.createElement("img", {
                         className: "drop-stats__default-logo",
                         src: $.a,
                         alt: Object(c.d)("runeScape logo", "DevDropsCardBoard")
-                    }))), s.createElement(h.P, {
+                    }))), s.createElement(x.P, {
                         cols: 4
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: {
                             right: 5,
                             top: 2,
@@ -1596,23 +1597,23 @@
                         margin: {
                             right: 3
                         },
-                        display: h.X.Flex,
-                        justifyContent: h.Va.Start,
-                        alignItems: h.f.Start
+                        display: x.X.Flex,
+                        justifyContent: x.Va.Start,
+                        alignItems: x.f.Start
                     }, s.createElement("img", {
                         className: "drop-stats__default-logo",
                         src: te.a,
                         alt: Object(c.d)("warFrame logo", "DevDropsCardBoard")
-                    })))), e.ifPoster ? null : s.createElement(h.Wa, {
+                    })))), e.ifPoster ? null : s.createElement(x.Wa, {
                         margin: {
                             top: 2
                         },
                         padding: {
                             bottom: 5
                         },
-                        display: h.X.Flex,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center
+                        display: x.X.Flex,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center
                     }, s.createElement(se, {
                         linkTo: "/console/drops",
                         type: re.Transparent,
@@ -1646,102 +1647,102 @@
                             top: 2,
                             bottom: 1
                         };
-                    return s.createElement(h.Wa, {
+                    return s.createElement(x.Wa, {
                         className: B(t),
-                        position: h.eb.Relative,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center
-                    }, s.createElement(h.Wa, {
+                        position: x.eb.Relative,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center
+                    }, s.createElement(x.Wa, {
                         className: B(n),
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        position: h.eb.Relative,
-                        textAlign: h.Kb.Center,
-                        display: h.X.Flex
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        position: x.eb.Relative,
+                        textAlign: x.Jb.Center,
+                        display: x.X.Flex
                     }, s.createElement("img", {
                         className: B(a),
                         src: e.src,
                         alt: e.name
-                    })), s.createElement(h.yb, {
-                        background: h.r.Overlay,
+                    })), s.createElement(x.xb, {
+                        background: x.r.Overlay,
                         className: B(r)
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: i
-                    }, s.createElement(h.W, {
-                        color: h.O.Overlay,
-                        fontSize: h.Ba.Size4
-                    }, e.name)), s.createElement(h.Wa, {
+                    }, s.createElement(x.W, {
+                        color: x.O.Overlay,
+                        fontSize: x.Ba.Size4
+                    }, e.name)), s.createElement(x.Wa, {
                         padding: {
                             bottom: 1
                         }
                     }, e.description)))
                 },
                 ve = function(e) {
-                    var t = e.ifPoster ? h.Ba.Size7 : h.Ba.Size5;
-                    return s.createElement(h.Ia, {
-                        justifyContent: h.Va.Center
-                    }, s.createElement(h.P, {
+                    var t = e.ifPoster ? x.Ba.Size7 : x.Ba.Size5;
+                    return s.createElement(x.Ia, {
+                        justifyContent: x.Va.Center
+                    }, s.createElement(x.P, {
                         cols: 4
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: e.paddingBetween,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center,
                         fullWidth: !0,
-                        position: h.eb.Relative,
-                        display: h.X.Flex
+                        position: x.eb.Relative,
+                        display: x.X.Flex
                     }, s.createElement(ue, {
                         src: U.a,
                         name: Object(c.d)("Hi-Rez Expo", "DevDropsCardBoard"),
                         ifPoster: !!e.ifPoster && e.ifPoster,
-                        description: s.createElement(h.Wa, null, s.createElement(h.W, {
-                            color: h.O.Overlay,
+                        description: s.createElement(x.Wa, null, s.createElement(x.W, {
+                            color: x.O.Overlay,
                             fontSize: t
-                        }, Object(c.d)("+34% peak concurrent viewers", "DevDropsCardBoard")), s.createElement(h.W, {
-                            color: h.O.Overlay,
+                        }, Object(c.d)("+34% peak concurrent viewers", "DevDropsCardBoard")), s.createElement(x.W, {
+                            color: x.O.Overlay,
                             fontSize: t
-                        }, Object(c.d)("+61% minutes watched", "DevDropsCardBoard")), s.createElement(h.W, {
-                            color: h.O.Overlay,
+                        }, Object(c.d)("+61% minutes watched", "DevDropsCardBoard")), s.createElement(x.W, {
+                            color: x.O.Overlay,
                             fontSize: t
                         }, Object(c.d)("90k total accounts linked", "DevDropsCardBoard")))
-                    }))), s.createElement(h.P, {
+                    }))), s.createElement(x.P, {
                         cols: 4
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: e.paddingBetween,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center,
                         fullWidth: !0,
-                        position: h.eb.Relative,
-                        display: h.X.Flex
+                        position: x.eb.Relative,
+                        display: x.X.Flex
                     }, s.createElement(ue, {
                         src: H.a,
                         name: Object(c.d)("Rocket League", "DevDropsCardBoard"),
                         ifPoster: !!e.ifPoster && e.ifPoster,
-                        description: s.createElement(h.Wa, null, s.createElement(h.W, {
-                            color: h.O.Overlay,
+                        description: s.createElement(x.Wa, null, s.createElement(x.W, {
+                            color: x.O.Overlay,
                             fontSize: t
-                        }, Object(c.d)("196k peak concurrent viewers", "DevDropsCardBoard")), s.createElement(h.W, {
-                            color: h.O.Overlay,
+                        }, Object(c.d)("196k peak concurrent viewers", "DevDropsCardBoard")), s.createElement(x.W, {
+                            color: x.O.Overlay,
                             fontSize: t
                         }, Object(c.d)("+322% from Season 2", "DevDropsCardBoard")))
-                    }))), s.createElement(h.P, {
+                    }))), s.createElement(x.P, {
                         cols: 4
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         padding: e.paddingBetween,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center,
                         fullWidth: !0,
-                        position: h.eb.Relative,
-                        display: h.X.Flex
+                        position: x.eb.Relative,
+                        display: x.X.Flex
                     }, s.createElement(ue, {
                         src: Z.a,
                         name: Object(c.d)("Overwatch League", "DevDropsCardBoard"),
                         ifPoster: !!e.ifPoster && e.ifPoster,
-                        description: s.createElement(h.W, {
-                            color: h.O.Overlay,
+                        description: s.createElement(x.W, {
+                            color: x.O.Overlay,
                             fontSize: t
                         }, 2018)
                     }))))
@@ -1749,59 +1750,59 @@
                 fe = (a("FwQb"), {
                     size: "200x300"
                 }),
-                he = function(e) {
+                xe = function(e) {
                     var t = {
                         "info-card": !0,
                         "info-card__poster-view": e.ifPoster
                     };
-                    return s.createElement(h.Wa, {
+                    return s.createElement(x.Wa, {
                         padding: {
                             top: 3
                         }
-                    }, s.createElement(h.yb, {
+                    }, s.createElement(x.xb, {
                         className: B(t),
-                        position: h.eb.Relative,
-                        background: h.r.AccentAlt2,
-                        textAlign: h.Kb.Center
-                    }, s.createElement(h.yb, {
+                        position: x.eb.Relative,
+                        background: x.r.AccentAlt2,
+                        textAlign: x.Jb.Center
+                    }, s.createElement(x.xb, {
                         className: "info-card__thumbnail",
                         border: !0,
-                        background: h.r.AccentAlt2,
-                        display: h.X.Flex,
-                        position: h.eb.Relative,
-                        overflow: h.Za.Hidden,
-                        justifyContent: h.Va.Center
-                    }, s.createElement(h.o, {
-                        ratio: h.p.Aspect3x2
-                    }, s.createElement(h.yb, {
-                        display: h.X.Flex,
-                        alignItems: h.f.Center,
-                        justifyContent: h.Va.Center,
-                        position: h.eb.Absolute,
+                        background: x.r.AccentAlt2,
+                        display: x.X.Flex,
+                        position: x.eb.Relative,
+                        overflow: x.Za.Hidden,
+                        justifyContent: x.Va.Center
+                    }, s.createElement(x.o, {
+                        ratio: x.p.Aspect3x2
+                    }, s.createElement(x.xb, {
+                        display: x.X.Flex,
+                        alignItems: x.f.Center,
+                        justifyContent: x.Va.Center,
+                        position: x.eb.Absolute,
                         attachRight: !0,
                         attachTop: !0,
                         attachLeft: !0,
                         attachBottom: !0,
-                        zIndex: h.bc.Above
-                    }, xe(e))))), s.createElement(h.Wa, {
+                        zIndex: x.ac.Above
+                    }, he(e))))), s.createElement(x.Wa, {
                         padding: {
                             top: 3
                         },
                         textAlign: _e(e),
-                        overflow: h.Za.Hidden
-                    }, s.createElement(h.W, {
+                        overflow: x.Za.Hidden
+                    }, s.createElement(x.W, {
                         className: "info-card__title",
-                        color: h.O.Link,
-                        fontSize: h.Ba.Size4,
+                        color: x.O.Link,
+                        fontSize: x.Ba.Size4,
                         bold: !0
                     }, e.extensionStats.name)), be(e))
                 },
-                xe = function(e) {
-                    return e.extensionStats.splash_url && !e.ifPoster ? s.createElement(h.S, {
+                he = function(e) {
+                    return e.extensionStats.splash_url && !e.ifPoster ? s.createElement(x.S, {
                         src: e.extensionStats.splash_url,
                         sizes: [fe],
                         alt: e.extensionStats.id
-                    }) : e.extensionStats.icon_url ? s.createElement(h.S, {
+                    }) : e.extensionStats.icon_url ? s.createElement(x.S, {
                         "data-test-selector": "dev-extension-info-card-icon-selector",
                         className: "info-card__thumbnail__icon",
                         src: e.extensionStats.icon_url,
@@ -1809,54 +1810,54 @@
                     }) : null
                 },
                 be = function(e) {
-                    return e.ifPoster ? null : s.createElement(h.Wa, {
-                        textAlign: h.Kb.Left,
-                        overflow: h.Za.Hidden,
+                    return e.ifPoster ? null : s.createElement(x.Wa, {
+                        textAlign: x.Jb.Left,
+                        overflow: x.Za.Hidden,
                         padding: {
                             top: 1
                         },
                         margin: {
                             bottom: 1
                         }
-                    }, s.createElement(h.W, {
+                    }, s.createElement(x.W, {
                         className: "info-card__text",
-                        color: h.O.Alt2,
-                        fontSize: h.Ba.Size6
+                        color: x.O.Alt2,
+                        fontSize: x.Ba.Size6
                     }, e.extensionStats.description))
                 },
                 _e = function(e) {
-                    return e.ifPoster ? h.Kb.Center : h.Kb.Left
+                    return e.ifPoster ? x.Jb.Center : x.Jb.Left
                 },
-                ye = (a("aWRw"), function(e) {
+                Ee = (a("aWRw"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.extensionStatsRow = function(e) {
                             return e ? e.map(function(e) {
-                                return s.createElement(h.Wa, {
+                                return s.createElement(x.Wa, {
                                     key: e.id,
-                                    position: h.eb.Relative
-                                }, s.createElement(h.yb, {
+                                    position: x.eb.Relative
+                                }, s.createElement(x.xb, {
                                     padding: {
                                         bottom: 2
                                     },
                                     margin: {
                                         bottom: 1
                                     },
-                                    display: h.X.Flex
-                                }, s.createElement(he, {
+                                    display: x.X.Flex
+                                }, s.createElement(xe, {
                                     extensionStats: e
-                                })), s.createElement(h.Wa, {
+                                })), s.createElement(x.Wa, {
                                     attachBottom: !0,
                                     padding: {
                                         bottom: 1
                                     },
-                                    textAlign: h.Kb.Left,
-                                    position: h.eb.Absolute
+                                    textAlign: x.Jb.Left,
+                                    position: x.eb.Absolute
                                 }, s.createElement("a", {
                                     onClick: t.handleClick(e)
-                                }, s.createElement(h.W, {
-                                    color: h.O.Link,
-                                    fontSize: h.Ba.Size6
+                                }, s.createElement(x.W, {
+                                    color: x.O.Link,
+                                    fontSize: x.Ba.Size6
                                 }, Object(c.d)("View Extension", "DevExtensionStatsBoard")))))
                             }) : null
                         }, t.handleClick = function(e) {
@@ -1875,65 +1876,65 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.gameData.extension_stats ? this.props.gameData.extension_stats : this.props.gameData.popular_extensions ? this.props.gameData.popular_extensions : null;
-                        if (e) return s.createElement(h.Wa, {
+                        if (e) return s.createElement(x.Wa, {
                             className: "extension-stats__wrapper",
                             fullWidth: !0,
-                            position: h.eb.Relative,
-                            textAlign: h.Kb.Center,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center,
-                            display: h.X.Flex,
+                            position: x.eb.Relative,
+                            textAlign: x.Jb.Center,
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center,
+                            display: x.X.Flex,
                             padding: {
                                 top: 2
                             }
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             className: "extension-stats__content",
                             fullWidth: !0,
                             fullHeight: !0,
-                            position: h.eb.Relative,
-                            textAlign: h.Kb.Center,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center,
-                            display: h.X.Flex
-                        }, s.createElement(h.Wa, {
+                            position: x.eb.Relative,
+                            textAlign: x.Jb.Center,
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center,
+                            display: x.X.Flex
+                        }, s.createElement(x.Wa, {
                             className: "extension-stats__content-cards",
-                            textAlign: h.Kb.Center,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center
-                        }, s.createElement(h.Wa, {
+                            textAlign: x.Jb.Center,
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center
+                        }, s.createElement(x.Wa, {
                             padding: {
                                 top: 5
                             },
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Link,
-                            fontSize: h.Ba.Size4,
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Link,
+                            fontSize: x.Ba.Size4,
                             bold: !0
-                        }, Object(c.d)("Extensions", "DevExtensionStatsBoard"))), s.createElement(h.Wa, {
+                        }, Object(c.d)("Extensions", "DevExtensionStatsBoard"))), s.createElement(x.Wa, {
                             padding: {
                                 top: 2,
                                 bottom: 1
                             },
-                            textAlign: h.Kb.Left
-                        }, s.createElement(h.W, {
-                            color: h.O.Alt,
-                            fontSize: h.Ba.Size3
-                        }, Ee(this.props.gameData))), s.createElement(h.Ub, {
-                            childWidth: h.Vb.Large,
-                            gutterSize: h.Wb.Small,
+                            textAlign: x.Jb.Left
+                        }, s.createElement(x.W, {
+                            color: x.O.Alt,
+                            fontSize: x.Ba.Size3
+                        }, Ce(this.props.gameData))), s.createElement(x.Tb, {
+                            childWidth: x.Ub.Large,
+                            gutterSize: x.Vb.Small,
                             placeholderItems: 3,
                             center: !0
-                        }, this.extensionStatsRow(e)), s.createElement(h.Wa, {
+                        }, this.extensionStatsRow(e)), s.createElement(x.Wa, {
                             padding: {
                                 top: 5
                             }
-                        }, s.createElement(h.W, {
-                            color: h.O.Link,
-                            fontSize: h.Ba.Size3
-                        }, Object(c.d)("Curious about building an extension?", "DevExtensionStatsBoard"))), s.createElement(h.Wa, {
-                            display: h.X.Flex,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center,
+                        }, s.createElement(x.W, {
+                            color: x.O.Link,
+                            fontSize: x.Ba.Size3
+                        }, Object(c.d)("Curious about building an extension?", "DevExtensionStatsBoard"))), s.createElement(x.Wa, {
+                            display: x.X.Flex,
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center,
                             padding: {
                                 top: 2,
                                 bottom: 5
@@ -1947,20 +1948,20 @@
                         })))))
                     }, t
                 }(s.Component)),
-                Ee = function(e) {
-                    return Object(c.d)("Over {numOfExtensions} extensions in the wild, here are the most popular for {gameName}", {
+                Ce = function(e) {
+                    return Object(c.d)("Over {numOfExtensions} extensions in the wild — here are the most popular for {gameName}", {
                         numOfExtensions: j(e.num_of_extensions),
                         gameName: e.extension_stats ? e.game_info.game_name : "Twitch"
                     }, "DevExtensionStatsBoard")
                 },
-                Ce = a("bket"),
+                ye = a("bket"),
                 Se = (a("SWWJ"), {
                     "data-test-selector": "dev-insights-nav-bar"
                 }),
-                We = {
+                De = {
                     "data-test-selector": "dev-insights-nav-bar-time-range"
                 },
-                De = {
+                We = {
                     "data-test-selector": "dev-insights-nav-bar-date-picker-toggle"
                 },
                 Ae = {
@@ -1981,7 +1982,7 @@
                     3: ["Q3", "Jul", "Aug", "Sep", "July", "August", "September"],
                     4: ["Q4", "Oct", "Nov", "Dec", "October", "November", "December"]
                 },
-                ze = function(e) {
+                Pe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -1989,25 +1990,25 @@
                             selectedQuarter: t.props.quarter
                         }, t.closeCalendar = function(e) {
                             var a = e.close;
-                            return s.createElement(h.yb, {
+                            return s.createElement(x.xb, {
                                 margin: {
                                     top: 5
                                 },
-                                position: h.eb.Absolute,
-                                display: h.X.Flex,
-                                alignItems: h.f.Center,
-                                flexDirection: h.Z.Column,
-                                zIndex: h.bc.Above,
+                                position: x.eb.Absolute,
+                                display: x.X.Flex,
+                                alignItems: x.f.Center,
+                                flexDirection: x.Z.Column,
+                                zIndex: x.ac.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
-                            }, s.createElement(h.yb, {
-                                position: h.eb.Relative,
-                                background: h.r.Base,
-                                zIndex: h.bc.Above,
+                            }, s.createElement(x.xb, {
+                                position: x.eb.Relative,
+                                background: x.r.Base,
+                                zIndex: x.ac.Above,
                                 attachTop: !0,
-                                flexDirection: h.Z.Row,
-                                flexWrap: h.Aa.Wrap,
+                                flexDirection: x.Z.Row,
+                                flexWrap: x.Aa.Wrap,
                                 padding: {
                                     top: 2,
                                     bottom: 1,
@@ -2019,27 +2020,27 @@
                                     left: 2,
                                     right: 2
                                 }
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 margin: {
                                     left: 2,
                                     right: 2
                                 }
-                            }, s.createElement(h.W, {
+                            }, s.createElement(x.W, {
                                 bold: !0,
-                                fontSize: h.Ba.Size5,
-                                color: h.O.Alt2
-                            }, Object(c.d)("Year and Quarters", "DevInsightsNavBar"))), s.createElement(h.Wa, {
-                                display: h.X.Flex
-                            }, s.createElement(h.Wa, {
+                                fontSize: x.Ba.Size5,
+                                color: x.O.Alt2
+                            }, Object(c.d)("Year and Quarters", "DevInsightsNavBar"))), s.createElement(x.Wa, {
+                                display: x.X.Flex
+                            }, s.createElement(x.Wa, {
                                 padding: {
                                     right: 3
                                 }
-                            }, s.createElement(Pe, {
+                            }, s.createElement(ze, {
                                 ifForward: !1,
                                 year: t.state.selectedYear,
                                 quarter: t.state.selectedQuarter,
                                 onClick: t.onCalendarDateChange(t.state.selectedQuarter, t.state.selectedYear - 1)
-                            }, "◀")), s.createElement(h.Wa, r.__assign({
+                            }, "◀")), s.createElement(x.Wa, r.__assign({
                                 padding: {
                                     top: 1,
                                     bottom: 1
@@ -2048,54 +2049,54 @@
                                     left: 2,
                                     right: 2
                                 }
-                            }, Be), s.createElement(h.W, {
+                            }, Be), s.createElement(x.W, {
                                 bold: !0,
-                                fontSize: h.Ba.Size5,
-                                color: h.O.Alt
-                            }, t.state.selectedYear)), s.createElement(h.Wa, {
+                                fontSize: x.Ba.Size5,
+                                color: x.O.Alt
+                            }, t.state.selectedYear)), s.createElement(x.Wa, {
                                 padding: {
                                     left: 3
                                 }
-                            }, s.createElement(Pe, {
+                            }, s.createElement(ze, {
                                 ifForward: !0,
                                 year: t.state.selectedYear,
                                 quarter: t.state.selectedQuarter,
                                 onClick: t.onCalendarDateChange(t.state.selectedQuarter, t.state.selectedYear + 1)
-                            }, "▶"))), s.createElement(h.Wa, null, t.quarterColumns(1), t.quarterColumns(2), t.quarterColumns(3), t.quarterColumns(4)), t.renderUpdateButton(a)))
+                            }, "▶"))), s.createElement(x.Wa, null, t.quarterColumns(1), t.quarterColumns(2), t.quarterColumns(3), t.quarterColumns(4)), t.renderUpdateButton(a)))
                         }, t.openCalendar = function(e) {
                             var a = e.toggle;
-                            return s.createElement(h.Wa, {
+                            return s.createElement(x.Wa, {
                                 padding: {
                                     bottom: 2
                                 }
-                            }, s.createElement(h.yb, {
+                            }, s.createElement(x.xb, {
                                 elevation: 1,
-                                background: h.r.Base,
-                                display: h.X.Flex,
-                                flexWrap: h.Aa.NoWrap
-                            }, s.createElement(Pe, r.__assign({}, Ae, {
+                                background: x.r.Base,
+                                display: x.X.Flex,
+                                flexWrap: x.Aa.NoWrap
+                            }, s.createElement(ze, r.__assign({}, Ae, {
                                 ifForward: !1,
                                 year: t.state.selectedYear,
                                 quarter: t.state.selectedQuarter,
                                 onClick: t.onDisplayDateChange(t.state.selectedQuarter - 1, t.state.selectedYear)
-                            }), "◀"), s.createElement(h.yb, {
-                                display: h.X.Flex,
+                            }), "◀"), s.createElement(x.xb, {
+                                display: x.X.Flex,
                                 flexGrow: 1,
-                                flexWrap: h.Aa.NoWrap,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
+                                flexWrap: x.Aa.NoWrap,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
                                 borderRight: !0,
                                 borderLeft: !0
-                            }, s.createElement(h.z, r.__assign({}, De, {
-                                type: h.F.Text,
+                            }, s.createElement(x.z, r.__assign({}, We, {
+                                type: x.F.Text,
                                 onClick: a,
                                 fullWidth: !0,
                                 blurAfterClick: !0
-                            }), s.createElement(h.Wa, {
+                            }), s.createElement(x.Wa, {
                                 padding: .5
-                            }, s.createElement(h.W, r.__assign({}, We, {
-                                fontSize: h.Ba.Size4
-                            }), t.formatDateRange())))), s.createElement(Pe, r.__assign({}, we, {
+                            }, s.createElement(x.W, r.__assign({}, De, {
+                                fontSize: x.Ba.Size4
+                            }), t.formatDateRange())))), s.createElement(ze, r.__assign({}, we, {
                                 ifForward: !0,
                                 year: t.state.selectedYear,
                                 quarter: t.state.selectedQuarter,
@@ -2133,14 +2134,14 @@
                                 };
                             return s.createElement("div", {
                                 onClick: t.clickQuarterColumns(e)
-                            }, s.createElement(h.Wa, null, s.createElement(h.Wa, r.__assign({}, Oe, {
+                            }, s.createElement(x.Wa, null, s.createElement(x.Wa, r.__assign({}, Oe, {
                                 className: B(n),
                                 padding: {
                                     right: .5
                                 }
-                            }), s.createElement(h.Ia, null, s.createElement(h.P, {
+                            }), s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 3
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 className: "quarter-row__quarter-selector",
                                 padding: {
                                     top: .5,
@@ -2148,67 +2149,67 @@
                                     left: 1,
                                     right: 2
                                 }
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size5,
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size5,
                                 bold: !0
-                            }, a[0]))), s.createElement(h.P, {
+                            }, a[0]))), s.createElement(x.P, {
                                 cols: 3
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 padding: {
                                     top: .5,
                                     bottom: .5,
                                     right: .5
                                 }
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size5,
-                                color: h.O.Link
-                            }, a[1]))), s.createElement(h.P, {
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size5,
+                                color: x.O.Link
+                            }, a[1]))), s.createElement(x.P, {
                                 cols: 3
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 padding: {
                                     top: .5,
                                     bottom: .5,
                                     left: .5,
                                     right: .5
                                 }
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size5,
-                                color: h.O.Link
-                            }, a[2]))), s.createElement(h.P, {
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size5,
+                                color: x.O.Link
+                            }, a[2]))), s.createElement(x.P, {
                                 cols: 3
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 padding: {
                                     top: .5,
                                     bottom: .5,
                                     left: .5,
                                     right: 1
                                 }
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size5,
-                                color: h.O.Link
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size5,
+                                color: x.O.Link
                             }, a[3])))))))
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(h.Wa, r.__assign({}, Se, {
-                            flexWrap: h.Aa.NoWrap,
-                            alignItems: h.f.Stretch,
-                            position: h.eb.Relative,
-                            zIndex: h.bc.Above,
+                        return s.createElement(x.Wa, r.__assign({}, Se, {
+                            flexWrap: x.Aa.NoWrap,
+                            alignItems: x.f.Stretch,
+                            position: x.eb.Relative,
+                            zIndex: x.ac.Above,
                             className: "insights-nav-bar-layout__width"
-                        }), s.createElement(Ce.a, {
+                        }), s.createElement(ye.a, {
                             control: this.openCalendar
                         }, this.closeCalendar))
                     }, t.prototype.renderUpdateButton = function(e) {
-                        return s.createElement(h.Wa, {
+                        return s.createElement(x.Wa, {
                             padding: {
                                 top: .5,
                                 bottom: .5
                             }
-                        }, s.createElement(h.z, {
+                        }, s.createElement(x.z, {
                             onClick: this.onUpdateButtonClicked(e),
                             disabled: G(this.state.selectedYear, this.state.selectedQuarter)
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             padding: {
                                 left: 1,
                                 right: 1
@@ -2218,22 +2219,22 @@
                         return Ne(this.state.selectedYear, this.state.selectedQuarter)
                     }, t
                 }(s.Component),
-                Pe = function(e) {
-                    var t, a = G(e.ifForward ? 1 === (t = (e.quarter + 1) % 4) ? e.year + 1 : e.year : 4 === (t = 1 === e.quarter ? 4 : e.quarter - 1) ? e.year - 1 : e.year, t);
-                    return s.createElement(h.Wa, {
-                        display: h.X.Flex,
+                ze = function(e) {
+                    var t, a = G(e.ifForward ? 1 === (t = (e.quarter + 1) % 4 == 0 ? 4 : (e.quarter + 1) % 4) ? e.year + 1 : e.year : 4 === (t = 1 === e.quarter ? 4 : e.quarter - 1) ? e.year - 1 : e.year, t);
+                    return s.createElement(x.Wa, {
+                        display: x.X.Flex,
                         className: "insights-nav-bar-btn-wrapper"
-                    }, s.createElement(h.z, r.__assign({
+                    }, s.createElement(x.z, r.__assign({
                         fullWidth: !0,
                         disabled: a,
                         onClick: e.onClick,
-                        type: h.F.Text,
+                        type: x.F.Text,
                         blurAfterClick: !0
-                    }, Object(h.cc)(e)), s.createElement(h.Wa, {
+                    }, Object(x.bc)(e)), s.createElement(x.Wa, {
                         fullWidth: !0,
-                        display: h.X.Flex
-                    }, s.createElement(h.W, {
-                        fontSize: h.Ba.Size8
+                        display: x.X.Flex
+                    }, s.createElement(x.W, {
+                        fontSize: x.Ba.Size8
                     }, e.children))))
                 },
                 Ne = function(e, t) {
@@ -2265,97 +2266,97 @@
                                 "social-impacts__poster-wrapper": t.props.ifPoster,
                                 "social-impacts__ears": t.props.ifPoster
                             };
-                            return s.createElement(h.Wa, {
+                            return s.createElement(x.Wa, {
                                 className: B(a),
-                                display: h.X.Flex,
-                                position: h.eb.Relative,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.Wa, r.__assign({
-                                position: h.eb.Relative,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center,
+                                display: x.X.Flex,
+                                position: x.eb.Relative,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.Wa, r.__assign({
+                                position: x.eb.Relative,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center,
                                 padding: 3,
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column
-                            }, ke), s.createElement(h.Wa, {
-                                zIndex: h.bc.Above,
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.W, {
-                                color: h.O.Alt,
-                                fontSize: h.Ba.Size3
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column
+                            }, ke), s.createElement(x.Wa, {
+                                zIndex: x.ac.Above,
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.W, {
+                                color: x.O.Alt,
+                                fontSize: x.Ba.Size3
                             }, Object(c.d)("Your game received {numOfChatMessages} Chat Messages with {percentageOfEngagement}% audience engagement.", {
                                 numOfChatMessages: j(e.num_of_chat_messages),
                                 percentageOfEngagement: e.percent_of_engagement
-                            }, "DevGameFactSheet"))), s.createElement(h.Wa, {
-                                zIndex: h.bc.Above,
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center,
-                                alignItems: h.f.Center
-                            }, s.createElement(h.W, {
-                                color: h.O.Alt,
-                                fontSize: h.Ba.Size3
+                            }, "DevGameFactSheet"))), s.createElement(x.Wa, {
+                                zIndex: x.ac.Above,
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center,
+                                alignItems: x.f.Center
+                            }, s.createElement(x.W, {
+                                color: x.O.Alt,
+                                fontSize: x.Ba.Size3
                             }, Ge(e.num_of_partners_streamed)))))
                         }, t.renderDefaultMessage = function() {
                             var e = {
                                 "social-impacts__poster-wrapper": t.props.ifPoster,
                                 "social-impacts__ears": t.props.ifPoster
                             };
-                            return s.createElement(h.Wa, r.__assign({
+                            return s.createElement(x.Wa, r.__assign({
                                 className: B(e),
-                                position: h.eb.Relative,
-                                justifyContent: h.Va.Center,
+                                position: x.eb.Relative,
+                                justifyContent: x.Va.Center,
                                 padding: {
                                     top: 2
                                 }
-                            }, je), s.createElement(h.Wa, {
+                            }, je), s.createElement(x.Wa, {
                                 className: "social-impacts__ears"
-                            }), s.createElement(h.Wa, {
+                            }), s.createElement(x.Wa, {
                                 padding: 1,
-                                zIndex: h.bc.Above,
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.W, {
-                                color: h.O.Alt,
-                                fontSize: h.Ba.Size3
-                            }, Object(c.d)("Grow your streamer community with Bounty Board to stream your game at scale.", "DevOnePagerSocialImpacts"))), s.createElement(h.Wa, {
-                                zIndex: h.bc.Above,
+                                zIndex: x.ac.Above,
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.W, {
+                                color: x.O.Alt,
+                                fontSize: x.Ba.Size3
+                            }, Object(c.d)("Grow your streamer community with Bounty Board to stream your game at scale.", "DevOnePagerSocialImpacts"))), s.createElement(x.Wa, {
+                                zIndex: x.ac.Above,
                                 padding: {
                                     bottom: 3
                                 },
-                                position: h.eb.Relative,
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.W, {
-                                color: h.O.Alt,
-                                fontSize: h.Ba.Size3
+                                position: x.eb.Relative,
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.W, {
+                                color: x.O.Alt,
+                                fontSize: x.Ba.Size3
                             }, Object(c.d)("Contact our team at bountyboard@justin.tv to learn about sponsoring Twitch influencers.", "DevOnePagerSocialImpacts"))))
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         return this.renderSocialImpacts()
                     }, t.prototype.renderBountyBoardMessage = function() {
-                        return s.createElement(h.Wa, {
-                            textAlign: h.Kb.Center,
+                        return s.createElement(x.Wa, {
+                            textAlign: x.Jb.Center,
                             padding: {
                                 top: 2
                             },
                             "data-test-selector": $e
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             padding: 1
-                        }, s.createElement(h.W, {
-                            color: h.O.Alt,
-                            fontSize: h.Ba.Size3
-                        }, Object(c.d)("Sponsor Twitch Influencers to stream your game", "DevGameFactSheet"))), s.createElement(h.Wa, {
+                        }, s.createElement(x.W, {
+                            color: x.O.Alt,
+                            fontSize: x.Ba.Size3
+                        }, Object(c.d)("Sponsor Twitch Influencers to stream your game", "DevGameFactSheet"))), s.createElement(x.Wa, {
                             padding: {
                                 top: 1
                             },
-                            display: h.X.Flex,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center
+                            display: x.X.Flex,
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center
                         }, s.createElement(se, {
                             linkTo: "https://link.twitch.tv/bb-insights",
                             type: re.White,
@@ -2366,43 +2367,43 @@
                     }, t.prototype.renderSocialImpacts = function() {
                         if (this.props.gameData.social_stats) {
                             var e = this.props.gameData.social_stats;
-                            return this.props.ifPoster ? this.renderSocialImpactsMessage(e) : s.createElement(h.yb, {
+                            return this.props.ifPoster ? this.renderSocialImpactsMessage(e) : s.createElement(x.xb, {
                                 className: "social-impacts__wrapper",
-                                "data-test-selector": Je,
-                                display: h.X.Flex,
-                                position: h.eb.Relative
-                            }, s.createElement(h.Wa, {
+                                "data-test-selector": Ke,
+                                display: x.X.Flex,
+                                position: x.eb.Relative
+                            }, s.createElement(x.Wa, {
                                 className: "social-impacts__content",
                                 fullWidth: !0,
-                                position: h.eb.Relative,
-                                zIndex: h.bc.Above,
-                                textAlign: h.Kb.Center,
+                                position: x.eb.Relative,
+                                zIndex: x.ac.Above,
+                                textAlign: x.Jb.Center,
                                 padding: {
                                     bottom: 5
                                 }
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 className: "social-impacts__content-info",
-                                textAlign: h.Kb.Left,
-                                alignItems: h.f.Start
+                                textAlign: x.Jb.Left,
+                                alignItems: x.f.Start
                             }, this.renderSocialImpactsMessage(e), this.renderBountyBoardMessage())))
                         }
-                        return this.props.ifPoster ? this.renderDefaultMessage() : s.createElement(h.yb, {
+                        return this.props.ifPoster ? this.renderDefaultMessage() : s.createElement(x.xb, {
                             className: "social-impacts__wrapper",
-                            display: h.X.Flex,
-                            position: h.eb.Relative
-                        }, s.createElement(h.Wa, {
+                            display: x.X.Flex,
+                            position: x.eb.Relative
+                        }, s.createElement(x.Wa, {
                             className: "social-impacts__content",
                             fullWidth: !0,
-                            position: h.eb.Relative,
-                            textAlign: h.Kb.Center,
-                            zIndex: h.bc.Above,
+                            position: x.eb.Relative,
+                            textAlign: x.Jb.Center,
+                            zIndex: x.ac.Above,
                             padding: {
                                 bottom: 5
                             }
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             className: "social-impacts__content-info",
-                            textAlign: h.Kb.Left,
-                            alignItems: h.f.Start
+                            textAlign: x.Jb.Left,
+                            alignItems: x.f.Start
                         }, this.renderBountyBoardMessage())))
                     }, t
                 }(s.Component),
@@ -2412,16 +2413,16 @@
                 Me = function() {
                     return Object(c.d)("unique viewers", "DevGameFactSheet")
                 },
-                Ke = function() {
+                Ve = function() {
                     return Object(c.d)("viewing sessions", "DevGameFactSheet")
                 },
-                Ve = function() {
+                Le = function() {
                     return Object(c.d)("hours broadcast", "DevGameFactSheet")
                 },
-                Le = function() {
+                Re = function() {
                     return Object(c.d)("unique broadcasters", "DevGameFactSheet")
                 },
-                Re = function() {
+                Je = function() {
                     return Object(c.d)("broadcasting sessions", "DevGameFactSheet")
                 },
                 Xe = function() {
@@ -2445,17 +2446,17 @@
                 He = function(e) {
                     if (e.gameData.overview_stats) {
                         var t = e.gameData.overview_stats;
-                        return s.createElement(h.Wa, {
+                        return s.createElement(x.Wa, {
                             className: "dev-stats-card-group",
                             fullWidth: !0,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
-                            position: h.eb.Absolute,
-                            justifyContent: h.Va.Center,
-                            display: h.X.Flex
-                        }, s.createElement(h.Ub, {
-                            childWidth: h.Vb.Large,
-                            gutterSize: h.Wb.Small,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
+                            position: x.eb.Absolute,
+                            justifyContent: x.Va.Center,
+                            display: x.X.Flex
+                        }, s.createElement(x.Tb, {
+                            childWidth: x.Ub.Large,
+                            gutterSize: x.Vb.Small,
                             placeholderItems: 6,
                             center: !0
                         }, s.createElement(ie, {
@@ -2468,41 +2469,41 @@
                             value: t.unique_viewers
                         }), s.createElement(ie, {
                             percentage: t.viewing_sessions_changes,
-                            topic: Ke(),
+                            topic: Ve(),
                             value: t.viewing_sessions
                         }), s.createElement(ie, {
                             percentage: t.hours_broadcast_changes,
-                            topic: Ve(),
+                            topic: Le(),
                             value: t.hours_broadcast
                         }), s.createElement(ie, {
                             percentage: t.unique_broadcasters_changes,
-                            topic: Le(),
+                            topic: Re(),
                             value: t.unique_broadcasters
                         }), s.createElement(ie, {
                             percentage: t.broadcasting_sessions_changes,
-                            topic: Re(),
+                            topic: Je(),
                             value: t.broadcasting_sessions
                         })))
                     }
                     if (e.gameData.general_stats) {
                         t = e.gameData.general_stats;
-                        return s.createElement(h.Wa, {
+                        return s.createElement(x.Wa, {
                             className: "dev-stats-card-group",
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
-                            justifyContent: h.Va.Center,
-                            position: h.eb.Absolute
-                        }, s.createElement(h.Wa, {
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
+                            justifyContent: x.Va.Center,
+                            position: x.eb.Absolute
+                        }, s.createElement(x.Wa, {
                             margin: {
                                 top: 5,
                                 bottom: 2
                             }
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size3,
-                            color: h.O.Overlay
-                        }, Object(c.d)("Twitch has an incredible community, in 2017...", "DevGameFactSheet"))), s.createElement(h.Ub, {
-                            childWidth: h.Vb.Large,
-                            gutterSize: h.Wb.Small,
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size3,
+                            color: x.O.Overlay
+                        }, Object(c.d)("Twitch has an incredible community, in 2017...", "DevGameFactSheet"))), s.createElement(x.Tb, {
+                            childWidth: x.Ub.Large,
+                            gutterSize: x.Vb.Small,
                             placeholderItems: 6,
                             center: !0
                         }, s.createElement(ie, {
@@ -2527,7 +2528,7 @@
                     }
                     return null
                 },
-                Je = (a("R5NJ"), "dev_game_fact_sheet_social_impacts_selector"),
+                Ke = (a("R5NJ"), "dev_game_fact_sheet_social_impacts_selector"),
                 $e = "dev_game_fact_sheet_bounty_board_selector",
                 et = function() {
                     return Object(c.d)("Quarterly Twitch Insights", "DevGameFactSheet")
@@ -2544,92 +2545,92 @@
                             quarter: this.props.quarter,
                             companyName: this.props.gameData.game_info.company_name
                         };
-                        return s.createElement(h.Wa, {
+                        return s.createElement(x.Wa, {
                             className: "game-fact-sheet",
-                            justifyContent: h.Va.Center,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
-                            position: h.eb.Relative,
+                            justifyContent: x.Va.Center,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
+                            position: x.eb.Relative,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, this.renderPrintSticker(), s.createElement(h.Wa, {
+                        }, this.renderPrintSticker(), s.createElement(x.Wa, {
                             className: "game-fact-sheet__header",
-                            position: h.eb.Relative,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
-                            display: h.X.Block
-                        }, s.createElement(h.yb, {
+                            position: x.eb.Relative,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
+                            display: x.X.Block
+                        }, s.createElement(x.xb, {
                             className: "game-fact-sheet__background",
-                            background: h.r.AccentAlt,
+                            background: x.r.AccentAlt,
                             fullWidth: !0,
                             fullHeight: !0,
-                            position: h.eb.Absolute,
-                            textAlign: h.Kb.Center
-                        }), s.createElement(h.Wa, {
+                            position: x.eb.Absolute,
+                            textAlign: x.Jb.Center
+                        }), s.createElement(x.Wa, {
                             className: "game-fact-sheet__info",
-                            alignItems: h.f.Center,
-                            textAlign: h.Kb.Center,
-                            position: h.eb.Absolute,
-                            zIndex: h.bc.Default,
+                            alignItems: x.f.Center,
+                            textAlign: x.Jb.Center,
+                            position: x.eb.Absolute,
+                            zIndex: x.ac.Default,
                             fullWidth: !0
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             margin: {
                                 bottom: 1,
                                 top: 1
                             }
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size3,
-                            color: h.O.Overlay
-                        }, et())), s.createElement(h.W, {
-                            fontSize: h.Ba.Size1,
-                            color: h.O.Overlay
-                        }, this.props.gameData.game_info.game_name), s.createElement(h.Wa, {
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size3,
+                            color: x.O.Overlay
+                        }, et())), s.createElement(x.W, {
+                            fontSize: x.Ba.Size1,
+                            color: x.O.Overlay
+                        }, this.props.gameData.game_info.game_name), s.createElement(x.Wa, {
                             margin: {
                                 top: 1
                             }
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size3,
-                            color: h.O.Overlay
-                        }, this.props.gameData.game_info.company_name)))), s.createElement(h.Wa, {
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size3,
+                            color: x.O.Overlay
+                        }, this.props.gameData.game_info.company_name)))), s.createElement(x.Wa, {
                             className: "game-fact-sheet__nav-bar-wrapper",
-                            display: h.X.Flex,
+                            display: x.X.Flex,
                             fullWidth: !0,
-                            position: h.eb.Absolute,
-                            justifyContent: h.Va.Center,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center
-                        }, s.createElement(h.Wa, {
+                            position: x.eb.Absolute,
+                            justifyContent: x.Va.Center,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center
+                        }, s.createElement(x.Wa, {
                             className: "game-fact-sheet__nav-bar",
                             padding: {
                                 top: 5,
                                 bottom: 2
                             },
                             fullWidth: !0,
-                            display: h.X.Flex,
-                            justifyContent: h.Va.Center,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
-                            zIndex: h.bc.Above,
-                            position: h.eb.Absolute
-                        }, s.createElement(ze, {
+                            display: x.X.Flex,
+                            justifyContent: x.Va.Center,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
+                            zIndex: x.ac.Above,
+                            position: x.eb.Absolute
+                        }, s.createElement(Pe, {
                             year: this.props.year,
                             quarter: this.props.quarter,
                             onQuarterChange: this.props.onQuarterChange
-                        }))), s.createElement(h.Wa, {
+                        }))), s.createElement(x.Wa, {
                             className: "game-overview-stats__wrapper game-overview-stats__ears",
-                            display: h.X.Flex,
+                            display: x.X.Flex,
                             fullWidth: !0,
-                            position: h.eb.Relative,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center
-                        }, s.createElement(h.Wa, {
+                            position: x.eb.Relative,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center
+                        }, s.createElement(x.Wa, {
                             className: "game-overview-stats__content",
                             fullWidth: !0,
-                            position: h.eb.Absolute,
-                            display: h.X.Flex,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
-                            justifyContent: h.Va.Center
+                            position: x.eb.Absolute,
+                            display: x.X.Flex,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
+                            justifyContent: x.Va.Center
                         }, s.createElement(He, {
                             gameData: this.props.gameData
                         }))), s.createElement(O, {
@@ -2638,59 +2639,59 @@
                             ifPoster: !1,
                             gameData: this.props.gameData,
                             option: e
-                        }), s.createElement(L, {
+                        }), s.createElement(R, {
                             gameData: this.props.gameData,
                             ifPoster: !1
                         }), s.createElement(de, {
                             gameData: this.props.gameData,
                             options: e,
                             ifPoster: !1
-                        }), s.createElement(ye, {
+                        }), s.createElement(Ee, {
                             gameData: this.props.gameData,
                             options: e
                         }), this.renderInsightsFooter(e))
                     }, t.prototype.renderInsightsFooter = function(e) {
-                        return s.createElement(h.yb, {
+                        return s.createElement(x.xb, {
                             className: "insights-footer__wrapper",
                             "data-test-selector": "dev_game_fact_sheet_footer_selector",
-                            position: h.eb.Relative,
+                            position: x.eb.Relative,
                             padding: {
                                 top: 5,
                                 bottom: 5
                             },
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center
-                        }, s.createElement(h.Wa, {
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center
+                        }, s.createElement(x.Wa, {
                             className: "insights-footer__content",
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center
-                        }, s.createElement(h.Wa, {
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center
+                        }, s.createElement(x.Wa, {
                             className: "insights-footer__content-text",
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
                             fullHeight: !0
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             padding: 1
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size2,
-                            color: h.O.Overlay
-                        }, Object(c.d)("Powered by the Twitch Insights Team", "DevGameFactSheet"))), s.createElement(h.Wa, {
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size2,
+                            color: x.O.Overlay
+                        }, Object(c.d)("Powered by the Twitch Insights Team", "DevGameFactSheet"))), s.createElement(x.Wa, {
                             padding: {
                                 top: 1,
                                 bottom: 2
                             }
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size3,
-                            color: h.O.Overlay
-                        }, Object(c.d)("Interested in diving deeper on analytics and insights surrounding your games?", "DevGameFactSheet")))), s.createElement(h.Wa, {
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size3,
+                            color: x.O.Overlay
+                        }, Object(c.d)("Interested in diving deeper on analytics and insights surrounding your games?", "DevGameFactSheet")))), s.createElement(x.Wa, {
                             padding: 1,
-                            textAlign: h.Kb.Center,
-                            alignItems: h.f.Center,
-                            display: h.X.Flex,
-                            justifyContent: h.Va.Center
-                        }, s.createElement(h.Wa, {
+                            textAlign: x.Jb.Center,
+                            alignItems: x.f.Center,
+                            display: x.X.Flex,
+                            justifyContent: x.Va.Center
+                        }, s.createElement(x.Wa, {
                             className: "insights-footer__btn",
-                            display: h.X.Flex,
+                            display: x.X.Flex,
                             margin: {
                                 right: 2
                             }
@@ -2700,9 +2701,9 @@
                             text: Object(c.d)("FAQ and Data Definitions", "DevGameFactSheet"),
                             options: e,
                             actionName: "one_pager_faq_and_definitions"
-                        })), "" !== this.props.reportURL && this.props.gameData.overview_stats ? s.createElement(h.Wa, {
+                        })), "" !== this.props.reportURL && this.props.gameData.overview_stats ? s.createElement(x.Wa, {
                             className: "insights-footer__btn",
-                            display: h.X.Flex,
+                            display: x.X.Flex,
                             margin: {
                                 right: 2
                             }
@@ -2712,50 +2713,50 @@
                             text: Object(c.d)("Download CSV Data", "DevGameFactSheet"),
                             options: e,
                             actionName: "one_pager_download_csv_data"
-                        })) : null, s.createElement(h.Wa, {
+                        })) : null, s.createElement(x.Wa, {
                             className: "insights-footer__btn",
-                            display: h.X.Flex
+                            display: x.X.Flex
                         }, s.createElement(se, {
                             linkTo: "/console/games",
                             type: re.Transparent,
                             text: Object(c.d)("Visit Your Games Dashboard", "DevGameFactSheet"),
                             options: e,
                             actionName: "one_pager_visit_games_dashboard"
-                        }))), s.createElement(h.Wa, {
+                        }))), s.createElement(x.Wa, {
                             padding: 1,
-                            display: h.X.Flex,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
-                        }, s.createElement(h.Pa, {
-                            zIndex: h.bc.Above
+                            display: x.X.Flex,
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center,
+                            textAlign: x.Jb.Center
+                        }, s.createElement(x.Pa, {
+                            zIndex: x.ac.Above
                         }, s.createElement("a", {
                             className: "insights-footer__contact",
                             href: "mailto:insights@twitch.tv"
-                        }, s.createElement(h.W, {
-                            fontSize: h.Ba.Size4
+                        }, s.createElement(x.W, {
+                            fontSize: x.Ba.Size4
                         }, Object(c.d)("Contact Twitch Insights Team", "DevGameFactSheet")))))))
                     }, t.prototype.renderPrintSticker = function() {
-                        return s.createElement(h.Ta, {
+                        return s.createElement(x.Ta, {
                             linkTo: "/insights/poster/games/" + this.props.gameData.game_info.game_id + "?year=" + this.props.year + "&quarter=" + this.props.quarter,
                             targetBlank: !0
-                        }, s.createElement(h.yb, {
-                            justifyContent: h.Va.End,
-                            position: h.eb.Fixed,
-                            display: h.X.Flex,
+                        }, s.createElement(x.xb, {
+                            justifyContent: x.Va.End,
+                            position: x.eb.Fixed,
+                            display: x.X.Flex,
                             className: "game-fact-sheet__sticker-container"
-                        }, s.createElement(h.yb, {
-                            display: h.X.Flex,
+                        }, s.createElement(x.xb, {
+                            display: x.X.Flex,
                             className: "game-fact-sheet__sticker"
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             padding: {
                                 top: 1,
                                 bottom: 1,
                                 left: 2,
                                 right: 5
                             }
-                        }, s.createElement(h.W, {
-                            color: h.O.Overlay,
+                        }, s.createElement(x.W, {
+                            color: x.O.Overlay,
                             bold: !0
                         }, Object(c.d)("Print Poster View", "DevGameFactSheet"))))))
                     }, t
@@ -2855,12 +2856,12 @@
                         })
                     }, t.prototype.render = function() {
                         if (!this.props.isLoggedIn) return s.createElement(at.DevLoginPage, null);
-                        var e = s.createElement(h.Wa, {
+                        var e = s.createElement(x.Wa, {
                             margin: 3
                         }, s.createElement(g.a, {
                             message: nt()
                         }));
-                        return this.state.errorCode && this.state.errorCode >= 400 ? e : this.state.errorCode && this.state.errorCode >= 500 ? s.createElement(h.Wa, {
+                        return this.state.errorCode && this.state.errorCode >= 400 ? e : this.state.errorCode && this.state.errorCode >= 500 ? s.createElement(x.Wa, {
                             margin: 3
                         }, s.createElement(g.a, {
                             message: rt()
@@ -2872,7 +2873,7 @@
                             year: this.state.year,
                             quarter: this.state.quarter,
                             onQuarterChange: this.onQuarterChange
-                        })) : s.createElement(h.Ya, {
+                        })) : s.createElement(x.Ya, {
                             fillContent: !0
                         })
                     }, t
@@ -2892,41 +2893,41 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderGeneralStats = function(e) {
-                            return s.createElement(h.Wa, {
+                            return s.createElement(x.Wa, {
                                 className: "dev-poster-view-stats",
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column
-                            }, s.createElement(h.Ia, null, s.createElement(h.P, {
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column
+                            }, s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 topic: Xe(),
                                 value: e.minutes_watched,
                                 percentage: 0
-                            })), s.createElement(h.P, {
+                            })), s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 topic: qe(),
                                 value: e.unique_monthly_broadcasters,
                                 percentage: 0
-                            })), s.createElement(h.P, {
+                            })), s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 topic: Ue(),
                                 value: e.unique_daily_visitors,
                                 percentage: 0
-                            }))), s.createElement(h.Ia, null, s.createElement(h.P, {
+                            }))), s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 topic: Qe(),
                                 value: e.partnered_streamers,
                                 percentage: 0
-                            })), s.createElement(h.P, {
+                            })), s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 topic: Ze(),
                                 value: e.affiliate_streamers,
                                 percentage: 0
-                            })), s.createElement(h.P, {
+                            })), s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 topic: Ye(),
@@ -2934,45 +2935,45 @@
                                 percentage: 0
                             }))))
                         }, t.renderGameStats = function(e) {
-                            return s.createElement(h.Wa, {
+                            return s.createElement(x.Wa, {
                                 className: "dev-poster-view-stats",
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column
-                            }, s.createElement(h.Ia, null, s.createElement(h.P, {
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column
+                            }, s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 percentage: e.hours_watched_changes,
                                 topic: Te(),
                                 value: e.hours_watched
-                            })), s.createElement(h.P, {
+                            })), s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 percentage: e.unique_viewers_change,
                                 topic: Me(),
                                 value: e.unique_viewers
-                            })), s.createElement(h.P, {
+                            })), s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 percentage: e.viewing_sessions_changes,
-                                topic: Ke(),
+                                topic: Ve(),
                                 value: e.viewing_sessions
-                            }))), s.createElement(h.Ia, null, s.createElement(h.P, {
+                            }))), s.createElement(x.Ia, null, s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 percentage: e.hours_broadcast_changes,
-                                topic: Ve(),
+                                topic: Le(),
                                 value: e.hours_broadcast
-                            })), s.createElement(h.P, {
+                            })), s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 percentage: e.unique_broadcasters_changes,
-                                topic: Le(),
+                                topic: Re(),
                                 value: e.unique_broadcasters
-                            })), s.createElement(h.P, {
+                            })), s.createElement(x.P, {
                                 cols: 4
                             }, s.createElement(mt, {
                                 percentage: e.broadcasting_sessions_changes,
-                                topic: Re(),
+                                topic: Je(),
                                 value: e.broadcasting_sessions
                             }))))
                         }, t
@@ -2990,51 +2991,51 @@
                     }, t
                 }(s.Component)),
                 mt = function(e) {
-                    var t = e.ifDropsCard ? h.O.Alt : h.O.Overlay,
+                    var t = e.ifDropsCard ? x.O.Alt : x.O.Overlay,
                         a = {
                             "dev-poster-stats-card-drops": e.ifDropsCard,
                             "dev-poster-stats-card": e.ifDropsCard
                         };
-                    return s.createElement(h.yb, {
-                        display: h.X.Flex,
-                        flexDirection: h.Z.Column,
-                        position: h.eb.Relative,
-                        textAlign: h.Kb.Center,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
+                    return s.createElement(x.xb, {
+                        display: x.X.Flex,
+                        flexDirection: x.Z.Column,
+                        position: x.eb.Relative,
+                        textAlign: x.Jb.Center,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
                         padding: 1,
                         fullHeight: !0
-                    }, s.createElement(h.Wa, {
+                    }, s.createElement(x.Wa, {
                         className: B(a),
-                        display: h.X.Flex,
-                        position: h.eb.Relative,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center,
+                        display: x.X.Flex,
+                        position: x.eb.Relative,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center,
                         fullHeight: !0
-                    }, s.createElement(h.Wa, {
-                        display: h.X.Inline,
-                        position: h.eb.Relative,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center
-                    }, s.createElement(h.W, {
+                    }, s.createElement(x.Wa, {
+                        display: x.X.Inline,
+                        position: x.eb.Relative,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center
+                    }, s.createElement(x.W, {
                         color: t,
-                        fontSize: h.Ba.Size1,
+                        fontSize: x.Ba.Size1,
                         lines: 1
-                    }, j(e.value))), s.createElement(h.Wa, {
-                        display: h.X.Inline,
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center
-                    }, oe(e.percentage))), e.percentage ? le(e.topic, e.percentage, !0, t) : s.createElement(h.Wa, {
-                        justifyContent: h.Va.Center,
-                        alignItems: h.f.Center,
-                        textAlign: h.Kb.Center,
+                    }, j(e.value))), s.createElement(x.Wa, {
+                        display: x.X.Inline,
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center
+                    }, oe(e.percentage))), e.percentage ? le(e.topic, e.percentage, !0, t) : s.createElement(x.Wa, {
+                        justifyContent: x.Va.Center,
+                        alignItems: x.f.Center,
+                        textAlign: x.Jb.Center,
                         className: "dev-poster-view-stats__topics"
-                    }, s.createElement(h.W, {
+                    }, s.createElement(x.W, {
                         color: t,
-                        fontSize: h.Ba.Size5,
+                        fontSize: x.Ba.Size5,
                         lines: 2
                     }, e.topic)))
                 },
@@ -3048,55 +3049,55 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         if (this.props.gameData.drops_stats) {
                             var e = this.props.gameData.drops_stats;
-                            return s.createElement(h.yb, {
+                            return s.createElement(x.xb, {
                                 className: "dev-game-fact-sheet-poster-view-drops__customized",
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center,
-                                position: h.eb.Relative,
-                                background: h.r.Alt2,
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center,
+                                position: x.eb.Relative,
+                                background: x.r.Alt2,
                                 fullWidth: !0
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 className: "dev-game-fact-sheet-poster-view-drops__customized-contents"
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 padding: {
                                     bottom: 2,
                                     top: 1
                                 }
-                            }, s.createElement(h.W, {
-                                color: h.O.Base,
-                                fontSize: h.Ba.Size3
-                            }, ce())), s.createElement(h.Wa, r.__assign({
+                            }, s.createElement(x.W, {
+                                color: x.O.Base,
+                                fontSize: x.Ba.Size3
+                            }, ce())), s.createElement(x.Wa, r.__assign({
                                 fullWidth: !0,
-                                justifyContent: h.Va.Center,
-                                textAlign: h.Kb.Center
+                                justifyContent: x.Va.Center,
+                                textAlign: x.Jb.Center
                             }, pt), this.renderDropsStats(e))))
                         }
-                        return this.props.gameData.audience_stats && 0 !== this.props.gameData.audience_stats.top_broadcaster_countries.length && 0 !== this.props.gameData.audience_stats.top_viewer_countries.length ? s.createElement(h.yb, {
+                        return this.props.gameData.audience_stats && 0 !== this.props.gameData.audience_stats.top_broadcaster_countries.length && 0 !== this.props.gameData.audience_stats.top_viewer_countries.length ? s.createElement(x.xb, {
                             className: "dev-game-fact-sheet-poster-view-drops__default-smaller",
-                            display: h.X.Flex,
-                            flexDirection: h.Z.Column,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center,
-                            textAlign: h.Kb.Center,
-                            position: h.eb.Relative,
-                            background: h.r.Alt2,
-                            zIndex: h.bc.Above
-                        }, s.createElement(h.Wa, {
+                            display: x.X.Flex,
+                            flexDirection: x.Z.Column,
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center,
+                            textAlign: x.Jb.Center,
+                            position: x.eb.Relative,
+                            background: x.r.Alt2,
+                            zIndex: x.ac.Above
+                        }, s.createElement(x.Wa, {
                             className: "dev-game-fact-sheet-poster-view-drops__default-smaller-content"
-                        }, s.createElement(h.Wa, {
+                        }, s.createElement(x.Wa, {
                             padding: {
                                 bottom: 4
                             }
-                        }, s.createElement(h.W, {
-                            color: h.O.Base,
-                            fontSize: h.Ba.Size3
-                        }, ce())), s.createElement(h.Wa, {
+                        }, s.createElement(x.W, {
+                            color: x.O.Base,
+                            fontSize: x.Ba.Size3
+                        }, Object(c.d)("Use Twitch Drops to reward your viewers with in-game loot!", "DevGameFactSheetPosterViewDrops"))), s.createElement(x.Wa, {
                             fullWidth: !0,
-                            justifyContent: h.Va.Center,
-                            textAlign: h.Kb.Center
+                            justifyContent: x.Va.Center,
+                            textAlign: x.Jb.Center
                         }, s.createElement(ve, {
                             ifPoster: !0,
                             paddingBetween: {
@@ -3109,21 +3110,21 @@
                             ifPoster: !0
                         })
                     }, t.prototype.renderDropsStats = function(e) {
-                        return s.createElement(h.Ia, null, s.createElement(h.P, {
+                        return s.createElement(x.Ia, null, s.createElement(x.P, {
                             cols: 4
                         }, s.createElement(mt, {
                             percentage: e.num_of_drops_received_change,
                             topic: ge(),
                             value: e.num_of_drops_received,
                             ifDropsCard: !0
-                        })), s.createElement(h.P, {
+                        })), s.createElement(x.P, {
                             cols: 4
                         }, s.createElement(mt, {
                             percentage: e.num_of_unique_receiving_users_changes,
                             topic: me(),
                             value: e.num_of_unique_receiving_users,
                             ifDropsCard: !0
-                        })), s.createElement(h.P, {
+                        })), s.createElement(x.P, {
                             cols: 4
                         }, s.createElement(mt, {
                             percentage: e.num_of_campaigns_changes,
@@ -3141,36 +3142,36 @@
                         var e = this.props.gameData.extension_stats ? this.props.gameData.extension_stats : this.props.gameData.popular_extensions ? this.props.gameData.popular_extensions : null,
                             t = [];
                         return e ? (e.map(function(e) {
-                            t.push(s.createElement(h.Wa, {
+                            t.push(s.createElement(x.Wa, {
                                 padding: {
                                     left: 1,
                                     right: 1
                                 }
-                            }, s.createElement(he, {
+                            }, s.createElement(xe, {
                                 extensionStats: e,
                                 ifPoster: !0
                             })))
-                        }), s.createElement(h.yb, {
-                            background: h.r.Base,
+                        }), s.createElement(x.xb, {
+                            background: x.r.Base,
                             className: "poster-view-extensions",
                             padding: {
                                 top: 4,
                                 bottom: 4
                             },
-                            justifyContent: h.Va.Center,
-                            textAlign: h.Kb.Center
-                        }, s.createElement(h.Wa, null, s.createElement(h.W, {
-                            color: h.O.Alt,
-                            fontSize: h.Ba.Size3
-                        }, Ee(this.props.gameData))), s.createElement(h.Wa, {
-                            display: h.X.Flex,
+                            justifyContent: x.Va.Center,
+                            textAlign: x.Jb.Center
+                        }, s.createElement(x.Wa, null, s.createElement(x.W, {
+                            color: x.O.Alt,
+                            fontSize: x.Ba.Size3
+                        }, Ce(this.props.gameData))), s.createElement(x.Wa, {
+                            display: x.X.Flex,
                             margin: {
                                 top: 2
                             },
                             fullWidth: !0,
-                            justifyContent: h.Va.Center,
-                            alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            justifyContent: x.Va.Center,
+                            alignItems: x.f.Center,
+                            textAlign: x.Jb.Center
                         }, t))) : null
                     }, t
                 }(s.Component)),
@@ -3180,24 +3181,24 @@
                 ft = {
                     "data-test-selector": "insights-poster-broadcasters-incomplete"
                 },
-                ht = function(e) {
+                xt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderPopularBroadcaster = function(e) {
-                            return s.createElement(h.P, {
+                            return s.createElement(x.P, {
                                 cols: 3,
                                 key: e.name
-                            }, s.createElement(h.Wa, null, s.createElement(h.S, {
+                            }, s.createElement(x.Wa, null, s.createElement(x.S, {
                                 src: e.profile_image,
                                 alt: e.name
-                            })), s.createElement(h.Wa, {
+                            })), s.createElement(x.Wa, {
                                 margin: {
                                     top: 1
                                 },
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.W, {
-                                color: h.O.Overlay,
-                                fontSize: h.Ba.Size4
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.W, {
+                                color: x.O.Overlay,
+                                fontSize: x.Ba.Size4
                             }, e.display_name)))
                         }, t.renderTopBroadcastersForGame = function(e) {
                             var t = [];
@@ -3214,7 +3215,7 @@
                                 t.push({
                                     display_name: a.display_name,
                                     img: a.profile_image,
-                                    title: y()
+                                    title: E()
                                 })
                             }
                             if (e.rising_star) {
@@ -3222,17 +3223,17 @@
                                 t.push({
                                     display_name: a.display_name,
                                     img: a.profile_image,
-                                    title: E()
+                                    title: C()
                                 })
                             }
                             if (0 === t.length) return null;
                             var n = [];
                             if (3 === t.length)
-                                for (var i = 1; i <= 2; i++) n.push(s.createElement(h.Wa, {
-                                    display: h.X.Flex,
-                                    position: h.eb.Relative,
+                                for (var i = 1; i <= 2; i++) n.push(s.createElement(x.Wa, {
+                                    display: x.X.Flex,
+                                    position: x.eb.Relative,
                                     className: "dev-game-fact-sheet-poster-view-broadcasters__smaller-broadcaster-group"
-                                }, s.createElement(h.Wa, {
+                                }, s.createElement(x.Wa, {
                                     padding: {
                                         left: 3
                                     },
@@ -3240,120 +3241,120 @@
                                         left: 3
                                     },
                                     className: "dev-game-fact-sheet-poster-view-broadcasters__small-title"
-                                }, s.createElement(h.W, {
-                                    color: h.O.Overlay,
-                                    fontSize: h.Ba.Size4
-                                }, t[i].title)), s.createElement(h.Wa, {
-                                    display: h.X.Flex,
-                                    flexDirection: h.Z.Column,
-                                    position: h.eb.Absolute,
+                                }, s.createElement(x.W, {
+                                    color: x.O.Overlay,
+                                    fontSize: x.Ba.Size4
+                                }, t[i].title)), s.createElement(x.Wa, {
+                                    display: x.X.Flex,
+                                    flexDirection: x.Z.Column,
+                                    position: x.eb.Absolute,
                                     attachRight: !0,
-                                    justifyContent: h.Va.Center,
+                                    justifyContent: x.Va.Center,
                                     className: "dev-game-fact-sheet-poster-view-broadcasters__smaller-img-container"
-                                }, s.createElement(h.Wa, {
-                                    display: h.X.Flex,
+                                }, s.createElement(x.Wa, {
+                                    display: x.X.Flex,
                                     className: "dev-game-fact-sheet-poster-view-broadcasters__smaller-img",
-                                    justifyContent: h.Va.Center,
-                                    textAlign: h.Kb.Center
+                                    justifyContent: x.Va.Center,
+                                    textAlign: x.Jb.Center
                                 }, s.createElement("img", {
                                     src: t[i].img,
                                     alt: t[i].display_name
-                                })), s.createElement(h.Wa, {
-                                    display: h.X.Flex,
-                                    justifyContent: h.Va.Center,
-                                    textAlign: h.Kb.Center,
+                                })), s.createElement(x.Wa, {
+                                    display: x.X.Flex,
+                                    justifyContent: x.Va.Center,
+                                    textAlign: x.Jb.Center,
                                     className: "dev-game-fact-sheet-poster-view-broadcasters__smaller-title"
-                                }, s.createElement(h.W, {
-                                    fontSize: h.Ba.Size5,
-                                    color: h.O.Overlay
+                                }, s.createElement(x.W, {
+                                    fontSize: x.Ba.Size5,
+                                    color: x.O.Overlay
                                 }, t[i].display_name)))));
-                            else 2 === t.length && n.push(s.createElement(h.Wa, r.__assign({
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center,
+                            else 2 === t.length && n.push(s.createElement(x.Wa, r.__assign({
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center,
                                 margin: {
                                     left: 5
                                 }
-                            }, ft), s.createElement(h.Wa, {
+                            }, ft), s.createElement(x.Wa, {
                                 padding: {
                                     bottom: 1
                                 },
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size3,
-                                color: h.O.Overlay
-                            }, t[1].title), s.createElement(h.Wa, {
-                                display: h.X.Flex,
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size3,
+                                color: x.O.Overlay
+                            }, t[1].title), s.createElement(x.Wa, {
+                                display: x.X.Flex,
                                 className: "dev-game-fact-sheet-poster-view-broadcasters__larger_img",
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center,
                                 padding: {
                                     top: 1
                                 }
                             }, s.createElement("img", {
                                 src: t[1].img,
                                 alt: t[1].display_name
-                            })), s.createElement(h.Wa, {
-                                justifyContent: h.Va.Center,
-                                textAlign: h.Kb.Center,
+                            })), s.createElement(x.Wa, {
+                                justifyContent: x.Va.Center,
+                                textAlign: x.Jb.Center,
                                 padding: {
                                     top: 1
                                 }
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size5,
-                                color: h.O.Overlay
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size5,
+                                color: x.O.Overlay
                             }, t[1].display_name)))));
-                            return s.createElement(h.Wa, r.__assign({
-                                display: h.X.Flex,
+                            return s.createElement(x.Wa, r.__assign({
+                                display: x.X.Flex,
                                 className: "dev-game-fact-sheet-poster-view-broadcasters",
                                 margin: {
                                     top: 2
                                 }
-                            }, vt), s.createElement(h.Wa, {
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.Wa, {
+                            }, vt), s.createElement(x.Wa, {
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.Wa, {
                                 padding: {
                                     bottom: 1
                                 },
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column,
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size3,
-                                color: h.O.Overlay
-                            }, t[0].title), s.createElement(h.Wa, {
-                                display: h.X.Flex,
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size3,
+                                color: x.O.Overlay
+                            }, t[0].title), s.createElement(x.Wa, {
+                                display: x.X.Flex,
                                 className: "dev-game-fact-sheet-poster-view-broadcasters__larger_img",
-                                justifyContent: h.Va.Center,
-                                alignItems: h.f.Center,
-                                textAlign: h.Kb.Center,
+                                justifyContent: x.Va.Center,
+                                alignItems: x.f.Center,
+                                textAlign: x.Jb.Center,
                                 padding: {
                                     top: 1
                                 }
                             }, s.createElement("img", {
                                 src: t[0].img,
                                 alt: t[0].display_name
-                            })), s.createElement(h.Wa, {
-                                justifyContent: h.Va.Center,
-                                textAlign: h.Kb.Center,
+                            })), s.createElement(x.Wa, {
+                                justifyContent: x.Va.Center,
+                                textAlign: x.Jb.Center,
                                 padding: {
                                     top: 1
                                 }
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size5,
-                                color: h.O.Overlay
-                            }, t[0].display_name)))), 3 === t.length ? s.createElement(h.Wa, r.__assign({
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size5,
+                                color: x.O.Overlay
+                            }, t[0].display_name)))), 3 === t.length ? s.createElement(x.Wa, r.__assign({
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column
                             }, ft), n) : null, 2 === t.length ? n : null)
                         }, t
                     }
@@ -3364,22 +3365,22 @@
                             var t = [];
                             return this.props.gameData.popular_broadcasters.map(function(a) {
                                 t.push(e.renderPopularBroadcaster(a))
-                            }), s.createElement(h.Wa, {
+                            }), s.createElement(x.Wa, {
                                 className: "dev-game-fact-sheet-poster-view-broadcasters"
-                            }, s.createElement(h.Wa, {
+                            }, s.createElement(x.Wa, {
                                 margin: {
                                     bottom: 2
                                 }
-                            }, s.createElement(h.W, {
-                                color: h.O.Overlay,
-                                fontSize: h.Ba.Size3,
+                            }, s.createElement(x.W, {
+                                color: x.O.Overlay,
+                                fontSize: x.Ba.Size3,
                                 bold: !0
-                            }, w())), s.createElement(h.Ia, null, t))
+                            }, w())), s.createElement(x.Ia, null, t))
                         }
                         return null
                     }, t
                 }(s.Component),
-                xt = (a("FnU6"), {
+                ht = (a("FnU6"), {
                     "data-test-selector": "insights-poster-game-info"
                 }),
                 bt = {
@@ -3389,8 +3390,8 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderGeneralInfoHeader = function() {
-                            return s.createElement(h.Wa, {
-                                display: h.X.Flex,
+                            return s.createElement(x.Wa, {
+                                display: x.X.Flex,
                                 fullWidth: !0,
                                 className: "dev-game-fact-sheet-poster-view-header__title",
                                 padding: {
@@ -3398,88 +3399,88 @@
                                     left: 5,
                                     right: 5
                                 }
-                            }, s.createElement(h.yb, {
+                            }, s.createElement(x.xb, {
                                 className: "dev-game-fact-sheet-poster-view-header__logo",
-                                justifyContent: h.Va.Center,
-                                textAlign: h.Kb.Center,
+                                justifyContent: x.Va.Center,
+                                textAlign: x.Jb.Center,
                                 margin: {
                                     top: 1
                                 }
-                            }, s.createElement(h.nb, {
-                                asset: h.ob.LogoTwitchDevelopers,
+                            }, s.createElement(x.nb, {
+                                asset: x.ob.LogoTwitchDevelopers,
                                 height: 70,
                                 width: 120
-                            })), s.createElement(h.Wa, r.__assign({
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column,
+                            })), s.createElement(x.Wa, r.__assign({
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column,
                                 className: "dev-game-fact-sheet-poster-view-header__info",
-                                justifyContent: h.Va.Center,
-                                textAlign: h.Kb.Center
-                            }, xt), s.createElement(h.Wa, {
+                                justifyContent: x.Va.Center,
+                                textAlign: x.Jb.Center
+                            }, ht), s.createElement(x.Wa, {
                                 margin: {
                                     bottom: 1,
                                     top: 1
                                 }
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size3,
-                                color: h.O.Overlay
-                            }, et())), s.createElement(h.Wa, {
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size3,
+                                color: x.O.Overlay
+                            }, et())), s.createElement(x.Wa, {
                                 className: "dev-game-fact-sheet-poster-view-header__game-name"
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size1,
-                                color: h.O.Overlay
-                            }, t.props.gameData.game_info.game_name)), s.createElement(h.Wa, {
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size1,
+                                color: x.O.Overlay
+                            }, t.props.gameData.game_info.game_name)), s.createElement(x.Wa, {
                                 margin: {
                                     top: 1,
                                     bottom: 1
                                 }
-                            }, s.createElement(h.W, {
-                                fontSize: h.Ba.Size3,
-                                color: h.O.Overlay
-                            }, t.props.gameData.game_info.company_name))), s.createElement(h.Wa, r.__assign({
-                                display: h.X.Flex,
-                                flexDirection: h.Z.Column,
+                            }, s.createElement(x.W, {
+                                fontSize: x.Ba.Size3,
+                                color: x.O.Overlay
+                            }, t.props.gameData.game_info.company_name))), s.createElement(x.Wa, r.__assign({
+                                display: x.X.Flex,
+                                flexDirection: x.Z.Column,
                                 className: "dev-game-fact-sheet-poster-view-header__contact",
                                 margin: {
                                     top: 1
                                 },
-                                textAlign: h.Kb.Center
-                            }, bt), s.createElement(h.Wa, null, s.createElement(h.W, {
-                                color: h.O.Overlay
-                            }, Ne(t.props.year, t.props.quarter))), s.createElement(h.Wa, {
-                                display: h.X.Flex,
-                                justifyContent: h.Va.Center
-                            }, s.createElement(h.yb, {
+                                textAlign: x.Jb.Center
+                            }, bt), s.createElement(x.Wa, null, s.createElement(x.W, {
+                                color: x.O.Overlay
+                            }, Ne(t.props.year, t.props.quarter))), s.createElement(x.Wa, {
+                                display: x.X.Flex,
+                                justifyContent: x.Va.Center
+                            }, s.createElement(x.xb, {
                                 className: "dev-game-fact-sheet-poster-view-header__twitter"
-                            }, s.createElement(h.nb, {
-                                asset: h.ob.Twitter,
+                            }, s.createElement(x.nb, {
+                                asset: x.ob.Twitter,
                                 fill: !0
-                            })), s.createElement(h.Wa, null, s.createElement(h.W, {
-                                color: h.O.Overlay
-                            }, Object(c.d)("@TwitchDev", "DevGameFactSheet")))), s.createElement(h.Wa, null, s.createElement(h.W, {
-                                color: h.O.Overlay
+                            })), s.createElement(x.Wa, null, s.createElement(x.W, {
+                                color: x.O.Overlay
+                            }, Object(c.d)("@TwitchDev", "DevGameFactSheet")))), s.createElement(x.Wa, null, s.createElement(x.W, {
+                                color: x.O.Overlay
                             }, Object(c.d)("Insights@twitch.tv", "DevGameFactSheet")))))
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(h.yb, {
-                            background: h.r.AccentAlt,
+                        return s.createElement(x.xb, {
+                            background: x.r.AccentAlt,
                             className: "dev-game-fact-sheet-poster-view-header",
-                            display: h.X.Flex,
-                            flexDirection: h.Z.Column,
+                            display: x.X.Flex,
+                            flexDirection: x.Z.Column,
                             fullWidth: !0
-                        }, this.renderGeneralInfoHeader(), s.createElement(h.Wa, {
-                            display: h.X.Flex,
+                        }, this.renderGeneralInfoHeader(), s.createElement(x.Wa, {
+                            display: x.X.Flex,
                             fullWidth: !0,
-                            justifyContent: h.Va.Center
+                            justifyContent: x.Va.Center
                         }, s.createElement(gt, {
                             gameData: this.props.gameData
-                        }), s.createElement(ht, {
+                        }), s.createElement(xt, {
                             gameData: this.props.gameData
                         })))
                     }, t
                 }(s.Component),
-                yt = (a("+ZFl"), function(e) {
+                Et = (a("+ZFl"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -3491,9 +3492,9 @@
                             quarter: this.props.quarter,
                             companyName: this.props.gameData.game_info.company_name
                         };
-                        return s.createElement(h.yb, {
+                        return s.createElement(x.xb, {
                             className: "dev-game-fact-sheet-poster-view__container",
-                            background: h.r.Base,
+                            background: x.r.Base,
                             fullHeight: !0,
                             fullWidth: !0
                         }, s.createElement(_t, {
@@ -3504,7 +3505,7 @@
                             gameData: this.props.gameData,
                             ifPoster: !0,
                             option: e
-                        }), s.createElement(L, {
+                        }), s.createElement(R, {
                             gameData: this.props.gameData,
                             ifPoster: !0
                         }), s.createElement(dt, {
@@ -3515,7 +3516,7 @@
                         }))
                     }, t
                 }(s.Component));
-            var Et = function(e) {
+            var Ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {}, t.fetchGameData = function() {
@@ -3567,38 +3568,38 @@
                         })
                     }, t.prototype.render = function() {
                         if (!this.props.isLoggedIn) return s.createElement(at.DevLoginPage, null);
-                        var e = s.createElement(h.Wa, {
+                        var e = s.createElement(x.Wa, {
                             margin: 3
                         }, s.createElement(g.a, {
                             message: nt()
                         }));
                         if (this.state.respCode && this.state.respCode >= 400) return e;
-                        if (this.state.respCode && this.state.respCode >= 500) return s.createElement(h.Wa, {
+                        if (this.state.respCode && this.state.respCode >= 500) return s.createElement(x.Wa, {
                             margin: 3
                         }, s.createElement(g.a, {
                             message: rt()
                         }));
-                        if (!this.state.gameData) return s.createElement(h.Ya, {
+                        if (!this.state.gameData) return s.createElement(x.Ya, {
                             fillContent: !0
                         });
                         var t = ot.parse(this.props.location.search),
                             a = parseInt(t.year, 10),
                             n = parseInt(t.quarter, 10);
-                        return s.createElement(yt, {
+                        return s.createElement(Et, {
                             gameData: this.state.gameData,
                             year: a,
                             quarter: n
                         })
                     }, t
                 }(s.Component),
-                Ct = Object(lt.compose)(Object(v.b)("DevGameFactSheetPosterPage", {
+                yt = Object(lt.compose)(Object(v.b)("DevGameFactSheetPosterPage", {
                     autoReportInteractive: !0,
                     destination: d.a.DevSiteGamesOnePager
                 }), Object(i.connect)(function(e) {
                     return {
                         isLoggedIn: Object(u.f)(e)
                     }
-                }), ct.a)(Et);
+                }), ct.a)(Ct);
             a.d(t, "onePagerNotFound", function() {
                 return nt
             }), a.d(t, "onePagerTroubleLoading", function() {
@@ -3608,9 +3609,9 @@
             }), a.d(t, "DevGameFactSheetPage", function() {
                 return it
             }), a.d(t, "DevGameFactSheetPosterViewContainer", function() {
-                return Et
-            }), a.d(t, "DevGameFactSheetPosterView", function() {
                 return Ct
+            }), a.d(t, "DevGameFactSheetPosterView", function() {
+                return yt
             })
         },
         bket: function(e, t, a) {

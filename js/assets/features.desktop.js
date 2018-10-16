@@ -180,62 +180,62 @@
                         updateAppLoadMetric: o
                     }, e)
                 })(_),
-                T = a("8/mp"),
-                v = a("j9uj"),
-                w = a("Ue10"),
-                g = "twilight.desktop-tab",
-                S = function(e) {
+                v = a("8/mp"),
+                T = a("j9uj"),
+                S = a("Ue10"),
+                w = "twilight.desktop-tab",
+                g = function(e) {
                     function t(t) {
                         var a = e.call(this, t) || this;
                         return a.renderTabButton = function(e, t, n) {
                             var r = a.state.selectedTab === e;
-                            return E.createElement(w.zb, {
+                            return E.createElement(S.yb, {
                                 active: r,
                                 onClick: function() {
                                     return a.onClickTab(e)
                                 }
-                            }, E.createElement(w.Wa, {
-                                display: w.X.Flex
+                            }, E.createElement(S.Wa, {
+                                display: S.X.Flex
                             }, t, n && a.renderTabBubble(n)))
                         }, a.renderTabBubble = function(e) {
-                            return E.createElement(w.Wa, {
+                            return E.createElement(S.Wa, {
                                 margin: {
                                     left: .5
                                 }
-                            }, E.createElement(w.bb, {
+                            }, E.createElement(S.bb, {
                                 label: e.toString(),
-                                type: w.cb.Notification
+                                type: S.cb.Notification
                             }))
                         }, a.onClickTab = function(e) {
-                            r.m.set(g, e), a.setState({
+                            r.m.set(w, e), a.setState({
                                 selectedTab: e
                             })
                         }, a.state = {
-                            selectedTab: r.m.get(g, "overview")
+                            selectedTab: r.m.get(w, "overview")
                         }, a
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return E.createElement(w.Wa, {
-                            display: w.X.Flex,
-                            flexDirection: w.Z.Column,
+                        return E.createElement(S.Wa, {
+                            display: S.X.Flex,
+                            flexDirection: S.Z.Column,
                             fullHeight: !0,
                             fullWidth: !0
-                        }, E.createElement(w.Wa, {
+                        }, E.createElement(S.Wa, {
                             className: "latency-metrics__header-container",
-                            display: w.X.Flex,
-                            justifyContent: w.Va.Between,
-                            flexWrap: w.Aa.NoWrap,
-                            alignItems: w.f.Start
-                        }, E.createElement(w.Ab, null, this.renderTabButton("overview", "Overview"), this.props.samples.electronProcessStartTime && this.renderTabButton("electron", "Electron"), this.props.samples.launcherProcessStartTime && this.renderTabButton("launcher", "Launcher"))), E.createElement(w.Wa, {
+                            display: S.X.Flex,
+                            justifyContent: S.Va.Between,
+                            flexWrap: S.Aa.NoWrap,
+                            alignItems: S.f.Start
+                        }, E.createElement(S.zb, null, this.renderTabButton("overview", "Overview"), this.props.samples.electronProcessStartTime && this.renderTabButton("electron", "Electron"), this.props.samples.launcherProcessStartTime && this.renderTabButton("launcher", "Launcher"))), E.createElement(S.Wa, {
                             className: "latency-metrics__body",
-                            display: w.X.Flex,
-                            flexDirection: w.Z.Column,
+                            display: S.X.Flex,
+                            flexDirection: S.Z.Column,
                             flexGrow: 1,
-                            overflow: w.Za.Hidden,
+                            overflow: S.Za.Hidden,
                             fullHeight: !0
-                        }, E.createElement(T.b, {
+                        }, E.createElement(v.b, {
                             className: "latency-metrics__scroller"
-                        }, E.createElement(w.Wa, {
+                        }, E.createElement(S.Wa, {
                             margin: {
                                 y: 1,
                                 right: 1
@@ -253,80 +253,80 @@
                                 return null
                         }
                     }, t.prototype.renderOverviewTab = function() {
-                        return E.createElement(w.Wa, null, E.createElement(w.Wa, {
+                        return E.createElement(S.Wa, null, E.createElement(S.Wa, {
                             className: "latency-metrics__item",
-                            display: w.X.Flex,
-                            justifyContent: w.Va.Between,
-                            flexWrap: w.Aa.NoWrap
-                        }, E.createElement(w.Rb, {
+                            display: S.X.Flex,
+                            justifyContent: S.Va.Between,
+                            flexWrap: S.Aa.NoWrap
+                        }, E.createElement(S.Qb, {
                             label: "= Launcher Window Shown - Launcher Start Time",
-                            direction: w.Tb.Right
-                        }, E.createElement(w.Wa, {
+                            direction: S.Sb.Right
+                        }, E.createElement(S.Wa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, E.createElement("span", null, "First Paint"))), E.createElement("div", {
                             className: "latency-metrics__item-number"
-                        }, this.props.samples.launcherProcessStartTime ? E.createElement(v.a, {
+                        }, this.props.samples.launcherProcessStartTime ? E.createElement(T.a, {
                             metric: this.props.samples.firstPaintDuration
-                        }) : E.createElement("span", null, "n/a"))), E.createElement(w.Wa, {
+                        }) : E.createElement("span", null, "n/a"))), E.createElement(S.Wa, {
                             className: "latency-metrics__item",
-                            display: w.X.Flex,
-                            justifyContent: w.Va.Between,
-                            flexWrap: w.Aa.NoWrap
-                        }, E.createElement(w.Rb, {
+                            display: S.X.Flex,
+                            justifyContent: S.Va.Between,
+                            flexWrap: S.Aa.NoWrap
+                        }, E.createElement(S.Qb, {
                             label: "= Twilight Complete - Launcher Start",
-                            direction: w.Tb.Right
-                        }, E.createElement(w.Wa, {
+                            direction: S.Sb.Right
+                        }, E.createElement(S.Wa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, E.createElement("span", null, "Loaded"))), E.createElement("div", {
                             className: "latency-metrics__item-number"
-                        }, this.props.samples.launcherProcessStartTime ? E.createElement(v.a, {
+                        }, this.props.samples.launcherProcessStartTime ? E.createElement(T.a, {
                             metric: this.props.appLoadDuration
-                        }) : E.createElement("span", null, "n/a"))), E.createElement(w.Wa, {
+                        }) : E.createElement("span", null, "n/a"))), E.createElement(S.Wa, {
                             className: "latency-metrics__item",
-                            display: w.X.Flex,
-                            justifyContent: w.Va.Between,
-                            flexWrap: w.Aa.NoWrap
-                        }, E.createElement(w.Rb, {
+                            display: S.X.Flex,
+                            justifyContent: S.Va.Between,
+                            flexWrap: S.Aa.NoWrap
+                        }, E.createElement(S.Qb, {
                             label: "= Launcher End Update - Launcher Start Update",
-                            direction: w.Tb.Right
-                        }, E.createElement(w.Wa, {
+                            direction: S.Sb.Right
+                        }, E.createElement(S.Wa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, E.createElement("span", null, "Update Time"))), E.createElement("div", {
                             className: "latency-metrics__item-number"
-                        }, this.props.samples.launcherProcessStartTime ? E.createElement(v.a, {
+                        }, this.props.samples.launcherProcessStartTime ? E.createElement(T.a, {
                             metric: this.props.samples.updateDuration
-                        }) : E.createElement("span", null, "n/a"))), E.createElement(w.Wa, {
+                        }) : E.createElement("span", null, "n/a"))), E.createElement(S.Wa, {
                             className: "latency-metrics__item",
-                            display: w.X.Flex,
-                            justifyContent: w.Va.Between,
-                            flexWrap: w.Aa.NoWrap
-                        }, E.createElement(w.Rb, {
+                            display: S.X.Flex,
+                            justifyContent: S.Va.Between,
+                            flexWrap: S.Aa.NoWrap
+                        }, E.createElement(S.Qb, {
                             label: "= Electron Launch - Launcher Process Start",
-                            direction: w.Tb.Right
-                        }, E.createElement(w.Wa, {
+                            direction: S.Sb.Right
+                        }, E.createElement(S.Wa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, E.createElement("span", null, "Launcher Total"))), E.createElement("div", {
                             className: "latency-metrics__item-number"
-                        }, this.props.samples.launcherProcessStartTime ? E.createElement(v.a, {
+                        }, this.props.samples.launcherProcessStartTime ? E.createElement(T.a, {
                             metric: this.props.samples.launcherTotalDuration
-                        }) : E.createElement("span", null, "n/a"))), E.createElement(w.Wa, {
+                        }) : E.createElement("span", null, "n/a"))), E.createElement(S.Wa, {
                             className: "latency-metrics__item",
-                            display: w.X.Flex,
-                            justifyContent: w.Va.Between,
-                            flexWrap: w.Aa.NoWrap
-                        }, E.createElement(w.Rb, {
+                            display: S.X.Flex,
+                            justifyContent: S.Va.Between,
+                            flexWrap: S.Aa.NoWrap
+                        }, E.createElement(S.Qb, {
                             label: "= Show Window - Electron Process Start",
-                            direction: w.Tb.Right
-                        }, E.createElement(w.Wa, {
+                            direction: S.Sb.Right
+                        }, E.createElement(S.Wa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, E.createElement("span", null, "Electron Total"))), E.createElement("div", {
                             className: "latency-metrics__item-number"
-                        }, E.createElement(v.a, {
+                        }, E.createElement(T.a, {
                             metric: this.props.samples.electronTotalDuration
                         }))))
                     }, t.prototype.renderCustomEventGroup = function(e) {
@@ -337,21 +337,21 @@
                             return t.renderEvent(e)
                         }) : null
                     }, t.prototype.renderEvent = function(e) {
-                        return E.createElement(w.Wa, {
+                        return E.createElement(S.Wa, {
                             key: e.key,
                             className: "latency-metrics__item",
-                            display: w.X.Flex,
-                            justifyContent: w.Va.Between,
-                            flexWrap: w.Aa.NoWrap
-                        }, E.createElement(w.Rb, {
+                            display: S.X.Flex,
+                            justifyContent: S.Va.Between,
+                            flexWrap: S.Aa.NoWrap
+                        }, E.createElement(S.Qb, {
                             label: "Start Time: " + e.startTime,
-                            direction: w.Tb.Right
-                        }, E.createElement(w.Wa, {
+                            direction: S.Sb.Right
+                        }, E.createElement(S.Wa, {
                             className: "latency-metrics__item-left latency-metrics__item-name",
                             ellipsis: !0
                         }, E.createElement("span", null, e.label))), E.createElement("div", {
                             className: "latency-metrics__item-number"
-                        }, E.createElement(v.a, {
+                        }, E.createElement(T.a, {
                             metric: e.duration
                         })))
                     }, t
@@ -361,7 +361,7 @@
                     appLoadDuration: u(e),
                     samples: p(e)
                 }
-            })(S);
+            })(g);
             a.d(t, "DesktopBenchmarkingManager", function() {
                 return b
             }), a.d(t, "DesktopInformation", function() {

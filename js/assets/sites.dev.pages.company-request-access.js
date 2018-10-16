@@ -44,13 +44,13 @@
                 q = "company-request-access-form-city",
                 D = "company-request-access-form-state",
                 w = "company-request-access-form-country",
-                O = "company-request-form-contact-first-name",
-                j = "company-request-form-contact-last-name",
+                j = "company-request-form-contact-first-name",
+                O = "company-request-form-contact-last-name",
                 R = "company-request-form-contact-title",
                 k = "company-request-form-contact-email",
                 W = "company-request-form-product-interest",
                 G = "company-request-form-join-reason",
-                A = function(e) {
+                N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -309,7 +309,7 @@
                             required: !0,
                             type: S.Sa.Text,
                             onChange: this.setContactFirstName,
-                            "data-test-selector": O
+                            "data-test-selector": j
                         }))), r.createElement(S.Wa, {
                             margin: {
                                 bottom: 1
@@ -321,7 +321,7 @@
                             required: !0,
                             type: S.Sa.Text,
                             onChange: this.setcontactLastName,
-                            "data-test-selector": j
+                            "data-test-selector": O
                         }))), r.createElement(S.Wa, {
                             margin: {
                                 bottom: 1
@@ -378,9 +378,9 @@
                         }, Object(i.d)("Submit", "DevRequestAccess")))
                     }, t
                 }(r.Component),
-                N = Object(c.compose)(Object(g.b)("DevRequestAccessForm", {
+                A = Object(c.compose)(Object(g.b)("DevRequestAccessForm", {
                     autoReportInteractive: !0
-                }))(A),
+                }))(N),
                 F = "request-access-form-error",
                 x = function(e) {
                     function t() {
@@ -398,9 +398,9 @@
                                     bottom: .5
                                 }
                             }, r.createElement(S.W, {
-                                type: S.Ob.H4
+                                type: S.Nb.H4
                             }, Object(i.d)("Error", "DevRequestAccess"))), r.createElement(S.W, {
-                                type: S.Ob.P
+                                type: S.Nb.P
                             }, t.props.errorMessage))
                         }, t
                     }
@@ -431,16 +431,16 @@
                                 bottom: 1
                             }
                         }, r.createElement(S.W, {
-                            type: S.Ob.H2
+                            type: S.Nb.H2
                         }, Object(i.d)("Register your company and game with Twitch", "DevRequestAccess"))), r.createElement(S.W, {
-                            type: S.Ob.P
+                            type: S.Nb.P
                         }, Object(i.d)("The Twitch Developer Console helps you to link and manage your games and their assets on Twitch. Before providing access, we just need to capture some simple details. We will need to confirm that you are authorized for the company you specify. Communications will be sent to the email you have on file with your Twitch.tv account.", "DevRequestAccess")))), r.createElement(S.Ia, null, r.createElement(S.P, {
                             cols: {
                                 default: 12,
                                 md: 9,
                                 lg: 6
                             }
-                        }, e, r.createElement(N, {
+                        }, e, r.createElement(A, {
                             onSubmit: this.props.onSubmit
                         }))))))
                     }, t
@@ -546,7 +546,7 @@
                         }, t
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(i.Hb, {
+                        return s.createElement(i.Gb, {
                             onClick: this.onClick,
                             label: this.props.game.name
                         })

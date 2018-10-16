@@ -506,8 +506,8 @@
         "43KI": function(e, t, n) {
             (t = e.exports = n("rXFu")).Stream = t, t.Readable = t, t.Writable = n("3BRs"), t.Duplex = n("sZro"), t.Transform = n("J78i"), t.PassThrough = n("eA/Y")
         },
-        452: function(e, t) {},
-        453: function(e, t) {},
+        450: function(e, t) {},
+        451: function(e, t) {},
         "49sm": function(e, t) {
             var n = {}.toString;
             e.exports = Array.isArray || function(e) {
@@ -932,7 +932,7 @@
                 U(e, k, t)
             }
 
-            function Z(e, t) {
+            function J(e, t) {
                 var n, r, i, o = t.dyn_tree,
                     a = t.stat_desc.static_tree,
                     s = t.stat_desc.has_stree,
@@ -968,7 +968,7 @@
                     }(e, t), q(o, c, e.bl_count)
             }
 
-            function J(e, t, n) {
+            function Z(e, t, n) {
                 var r, i, o = -1,
                     a = t[1],
                     s = 0,
@@ -1029,9 +1029,9 @@
                     for (t = 32; t < p; t++)
                         if (0 !== e.dyn_ltree[2 * t]) return a;
                     return o
-                }(e)), Z(e, e.l_desc), Z(e, e.d_desc), h = function(e) {
+                }(e)), J(e, e.l_desc), J(e, e.d_desc), h = function(e) {
                     var t;
-                    for (J(e, e.dyn_ltree, e.l_desc.max_code), J(e, e.dyn_dtree, e.d_desc.max_code), Z(e, e.bl_desc), t = g - 1; t >= 3 && 0 === e.bl_tree[2 * T[t] + 1]; t--);
+                    for (Z(e, e.dyn_ltree, e.l_desc.max_code), Z(e, e.dyn_dtree, e.d_desc.max_code), J(e, e.bl_desc), t = g - 1; t >= 3 && 0 === e.bl_tree[2 * T[t] + 1]; t--);
                     return e.opt_len += 3 * (t + 1) + 5 + 5 + 4, t
                 }(e), l = e.opt_len + 3 + 7 >>> 3, (c = e.static_len + 3 + 7 >>> 3) <= l && (l = c)) : l = c = n + 5, n + 4 <= l && -1 !== t ? te(e, t, n, r) : e.strategy === i || c === l ? (W(e, (u << 1) + (r ? 1 : 0), 3), X(e, F, L)) : (W(e, (d << 1) + (r ? 1 : 0), 3), function(e, t, n, r) {
                     var i;
@@ -12074,13 +12074,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-onboarding-choose-type__container dev-sandbox-onboarding-choose-type__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-onboarding-choose-type",
                             fullHeight: !0,
@@ -12088,7 +12088,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: 1
                         }, l.createElement(h.W, {
@@ -12144,13 +12144,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-onboarding-code-section__container dev-sandbox-onboarding-code-section__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-onboarding-code-section",
                             fullHeight: !0,
@@ -12158,7 +12158,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: 1
                         }, l.createElement(h.W, {
@@ -12229,13 +12229,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-onboarding-continue-building__container dev-sandbox-onboarding-intro__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-onboarding-continue-building",
                             fullHeight: !0,
@@ -12243,7 +12243,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: 1
                         }, l.createElement(h.W, {
@@ -12295,13 +12295,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-onboarding-done__container dev-sandbox-onboarding-intro__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-onboarding-done",
                             fullHeight: !0,
@@ -12309,7 +12309,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: 1
                         }, l.createElement(h.W, {
@@ -12362,13 +12362,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-onboarding-intro__container dev-sandbox-onboarding-intro__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-onboarding-intro",
                             fullHeight: !0,
@@ -12376,7 +12376,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: 1
                         }, l.createElement(h.W, {
@@ -12422,13 +12422,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-onboarding-preview-panel__container dev-sandbox-onboarding-intro__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-onboarding-preview-panel",
                             fullHeight: !0,
@@ -12436,7 +12436,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: 1
                         }, l.createElement(h.W, {
@@ -12500,13 +12500,13 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-onboarding-switch-window__container dev-sandbox-onboarding-intro__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-onboarding-switch-window",
                             fullHeight: !0,
@@ -12514,7 +12514,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: 1
                         }, l.createElement(h.W, {
@@ -12557,13 +12557,13 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-onboarding-welcome-back__container dev-sandbox-onboarding-welcome-back__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-onboarding-welcome-back",
                             fullHeight: !0,
@@ -12571,7 +12571,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: 1
                         }, l.createElement(h.W, {
@@ -12792,14 +12792,14 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         for (var e = [], t = 0; t < 4; t++) e.push(this.renderHeaderPlaceHolder(t));
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             display: h.X.Flex,
                             position: h.eb.Relative,
                             attachTop: !0,
                             className: "dev-channel-header-mock",
                             fullWidth: !0,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center,
+                            textAlign: h.Jb.Center,
                             margin: {
                                 bottom: 1
                             }
@@ -12910,7 +12910,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e, t = q("dev-channel-panel-mock__placeholder-box", ((e = {})["dev-channel-panel-mock__placeholder-box-both"] = this.props.sandboxMode === ne.both, e["dev-channel-panel-mock__placeholder-box-channel-only"] = this.props.sandboxMode === ne.channelOnly, e));
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             flexDirection: h.Z.Column,
                             display: h.X.Flex,
                             position: h.eb.Relative,
@@ -12932,7 +12932,7 @@
                                 top: 1
                             },
                             className: "dev-channel-panel-mock__placeholder-long"
-                        }), l.createElement(h.yb, {
+                        }), l.createElement(h.xb, {
                             margin: {
                                 top: 1
                             },
@@ -12957,7 +12957,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         for (var e = [], t = 0; t < 3; t++) e.push(this.renderLogoMockGroup(t));
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             display: h.X.Flex,
                             flexDirection: h.Z.Column,
                             className: "dev-channel-side-nav-mock",
@@ -12971,7 +12971,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             background: h.r.Base,
                             position: h.eb.Relative,
                             className: "channel-placeholder__menu-bar",
@@ -12979,7 +12979,7 @@
                                 left: 2,
                                 right: 2
                             }
-                        }, l.createElement(h.yb, {
+                        }, l.createElement(h.xb, {
                             display: h.X.Flex,
                             position: h.eb.Relative,
                             className: "dev-channel-video-bar-mock",
@@ -13037,7 +13037,7 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e, t = q("dev-ip-address-bar", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.previewPanel, e));
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             display: h.X.Flex,
                             position: h.eb.Relative,
                             className: t,
@@ -13050,11 +13050,11 @@
                             className: "dev-ip-address-bar__minimize-btn dev-ip-address-bar__btn"
                         }), l.createElement("div", {
                             className: "dev-ip-address-bar__maximize-btn dev-ip-address-bar__btn"
-                        }), l.createElement(h.yb, {
+                        }), l.createElement(h.xb, {
                             className: "dev-ip-address-bar__address-text-bar",
                             display: h.X.Flex,
                             margin: 1
-                        }, l.createElement(h.yb, {
+                        }, l.createElement(h.xb, {
                             background: h.r.Base,
                             display: h.X.Flex,
                             alignItems: h.f.Center
@@ -13107,10 +13107,10 @@
                         })))
                     }, t
                 }(l.Component),
-                Z = (n("D38J"), {
+                J = (n("D38J"), {
                     "data-test-selector": "dev-extension-nav-btn"
                 }),
-                J = {
+                Z = {
                     "data-test-selector": "dev-extension-nav-btn-dropdown"
                 },
                 Q = {
@@ -13156,7 +13156,7 @@
                                 color: h.O.Link
                             }, n)) : null
                         }, t.showDropDown = function(e, n) {
-                            return l.createElement(h.yb, i.__assign({
+                            return l.createElement(h.xb, i.__assign({
                                 className: "dev-editor-extension-type-btn__dropdown",
                                 position: h.eb.Absolute,
                                 background: h.r.Base,
@@ -13164,7 +13164,7 @@
                                 alignItems: h.f.Center,
                                 flexDirection: h.Z.Column,
                                 justifyContent: h.Va.Start
-                            }, J), l.createElement(h.Wa, {
+                            }, Z), l.createElement(h.Wa, {
                                 position: h.eb.Relative,
                                 fullHeight: !0,
                                 fullWidth: !0
@@ -13251,7 +13251,7 @@
                             onClick: this.onClickButton,
                             fullWidth: !0,
                             type: h.F.Hollow
-                        }, Z), l.createElement(h.Oa, {
+                        }, J), l.createElement(h.Oa, {
                             padding: {
                                 left: 2
                             }
@@ -13286,7 +13286,7 @@
                                 display: h.X.Flex,
                                 flexGrow: 1,
                                 flexShrink: 1
-                            }, l.createElement(h.yb, {
+                            }, l.createElement(h.xb, {
                                 background: h.r.Alt2,
                                 display: h.X.Flex,
                                 fullWidth: !0,
@@ -13317,18 +13317,18 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e, t, n = q("sandbox-top-nav-bar__window", ((e = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.switchWindow, e)),
                             i = q("sandbox-top-nav-bar__start-building-btn", ((t = {})["dev-onboarding-on-going"] = this.props.onBoardingStep === r.continueBuilding, t));
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             display: h.X.Flex,
                             className: "sandbox-top-nav-bar",
                             background: h.r.Alt2,
                             fullWidth: !0
-                        }, this.renderDropDown(), l.createElement(h.yb, {
+                        }, this.renderDropDown(), l.createElement(h.xb, {
                             background: h.r.Alt2,
                             className: n,
                             display: h.X.Flex,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center
-                        }, l.createElement(h.yb, {
+                        }, l.createElement(h.xb, {
                             background: h.r.Accent,
                             display: h.X.Flex,
                             className: "sandbox-top-nav-bar__window-btn-group"
@@ -13360,7 +13360,7 @@
                             width: 25
                         })), l.createElement(h.W, {
                             bold: !0
-                        }, Object(u.d)("Share", "DevSandboxTopNavBar"))))), l.createElement(h.yb, {
+                        }, Object(u.d)("Share", "DevSandboxTopNavBar"))))), l.createElement(h.xb, {
                             background: h.r.Alt2,
                             className: "sandbox-top-nav-bar__guide-btn",
                             display: h.X.Flex,
@@ -13427,7 +13427,7 @@
                             }, l.createElement(V, {
                                 sandboxMode: t.props.windowType
                             })));
-                            return l.createElement(h.yb, {
+                            return l.createElement(h.xb, {
                                 background: h.r.Alt2,
                                 fullWidth: !0,
                                 position: h.eb.Relative
@@ -13477,9 +13477,9 @@
                                 allowFullScreen: !0
                             }) : void 0
                         }, t.renderChannelPanel = function() {
-                            var e = h.Zb.Hidden;
-                            t.props.extensionType !== j.panel && (e = h.Zb.Visible);
-                            var n = l.createElement(h.yb, {
+                            var e = h.Yb.Hidden;
+                            t.props.extensionType !== j.panel && (e = h.Yb.Visible);
+                            var n = l.createElement(h.xb, {
                                 background: h.r.Alt2,
                                 className: "channel-placeholder__panel-group",
                                 display: h.X.Flex,
@@ -13487,31 +13487,31 @@
                                 fullWidth: !0,
                                 position: h.eb.Relative
                             }, t.renderPanelPlaceholderGroup());
-                            return l.createElement(h.yb, {
+                            return l.createElement(h.xb, {
                                 display: h.X.Flex,
                                 background: h.r.Alt2,
                                 position: h.eb.Relative,
                                 justifyContent: h.Va.Center,
                                 alignItems: h.f.Start,
-                                textAlign: h.Kb.Center,
+                                textAlign: h.Jb.Center,
                                 fullHeight: !0,
                                 fullWidth: !0
                             }, n, l.createElement(X, null))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return this.props.ifHideChannel ? l.createElement(h.yb, {
+                        return this.props.ifHideChannel ? l.createElement(h.xb, {
                             className: "channel-placeholder",
                             justifyContent: h.Va.Center,
                             display: h.X.Flex,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center,
+                            textAlign: h.Jb.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
                                 bottom: 2
                             }
-                        }, l.createElement(h.yb, {
+                        }, l.createElement(h.xb, {
                             margin: {
                                 top: 1
                             },
@@ -13535,18 +13535,18 @@
                             fullWidth: !0
                         }, this.renderVideoPlayer()), l.createElement("div", {
                             id: "overlay-extension-preview"
-                        })))) : l.createElement(h.yb, {
+                        })))) : l.createElement(h.xb, {
                             className: "channel-placeholder",
                             justifyContent: h.Va.Center,
                             display: h.X.Flex,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center,
+                            textAlign: h.Jb.Center,
                             padding: {
                                 left: 3,
                                 right: 3,
                                 bottom: 2
                             }
-                        }, l.createElement(h.yb, {
+                        }, l.createElement(h.xb, {
                             margin: {
                                 top: 1
                             },
@@ -13582,7 +13582,7 @@
                             flexDirection: h.Z.Column,
                             className: "channel-placeholder__video",
                             fullWidth: !0
-                        }, l.createElement(z, null), l.createElement(h.yb, {
+                        }, l.createElement(z, null), l.createElement(h.xb, {
                             background: h.r.Alt2,
                             display: h.X.Flex,
                             position: h.eb.Relative,
@@ -13595,7 +13595,7 @@
                             }
                         }, this.renderVideoPlayer(), l.createElement("div", {
                             id: "overlay-extension-preview"
-                        })), l.createElement(h.yb, {
+                        })), l.createElement(h.xb, {
                             background: h.r.Alt2,
                             position: h.eb.Relative,
                             alignItems: h.f.Start
@@ -13621,7 +13621,7 @@
                                 className: e
                             }, l.createElement("button", {
                                 onClick: t.props.onRun
-                            }, l.createElement(h.yb, {
+                            }, l.createElement(h.xb, {
                                 color: h.O.Overlay,
                                 padding: {
                                     right: .5
@@ -13642,7 +13642,7 @@
                             }, l.createElement("button", {
                                 className: "dev-editor-tabs__reset-btn",
                                 onClick: t.showUndoModal
-                            }, l.createElement(h.yb, {
+                            }, l.createElement(h.xb, {
                                 color: h.O.Overlay,
                                 padding: {
                                     right: .5
@@ -13682,23 +13682,23 @@
                             }
                         }, t.closeCalendar = function(e) {
                             var n = e.close;
-                            return l.createElement(h.yb, {
+                            return l.createElement(h.xb, {
                                 className: "dev-editor-tabs__dropdown",
                                 background: h.r.Base,
                                 position: h.eb.Absolute,
                                 display: h.X.Flex,
                                 alignItems: h.f.Center,
                                 flexDirection: h.Z.Column,
-                                zIndex: h.bc.Above,
+                                zIndex: h.ac.Above,
                                 attachTop: !0,
                                 attachLeft: !0,
                                 attachRight: !0
-                            }, l.createElement(h.yb, {
+                            }, l.createElement(h.xb, {
                                 position: h.eb.Relative,
                                 className: "dev-editor-tabs__dropdown-content",
                                 fullWidth: !0,
                                 background: h.r.Base,
-                                zIndex: h.bc.Above,
+                                zIndex: h.ac.Above,
                                 attachTop: !0,
                                 flexDirection: h.Z.Row,
                                 flexWrap: h.Aa.Wrap,
@@ -13711,12 +13711,12 @@
                             var n = e.toggle;
                             return l.createElement(h.Wa, {
                                 className: "dev-editor-tabs__selection"
-                            }, l.createElement(h.yb, {
+                            }, l.createElement(h.xb, {
                                 className: "dev-editor-tabs__selection-content",
                                 background: h.r.Base,
                                 display: h.X.Flex,
                                 alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
+                                textAlign: h.Jb.Center
                             }, l.createElement(h.z, {
                                 type: h.F.Text,
                                 onClick: n,
@@ -13729,7 +13729,7 @@
                                 className: "dev-editor-tabs__selection-text-wrapper",
                                 justifyContent: h.Va.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
+                                textAlign: h.Jb.Center
                             }, l.createElement(h.Wa, {
                                 padding: {
                                     left: .5,
@@ -13738,7 +13738,7 @@
                                 className: "dev-editor-tabs__selection-text",
                                 justifyContent: h.Va.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
+                                textAlign: h.Jb.Center
                             }, l.createElement(h.W, {
                                 fontSize: h.Ba.Size4
                             }, t.filenameForType(t.props.activeTab))), l.createElement(h.Wa, {
@@ -13750,7 +13750,7 @@
                                 className: "dev-editor-tabs__selection-arrow",
                                 justifyContent: h.Va.Center,
                                 alignItems: h.f.Center,
-                                textAlign: h.Kb.Center
+                                textAlign: h.Jb.Center
                             }, l.createElement(h.nb, {
                                 asset: h.ob.AngleDown,
                                 height: 15,
@@ -13802,7 +13802,7 @@
                             flexWrap: h.Aa.NoWrap,
                             alignItems: h.f.Stretch,
                             position: h.eb.Relative,
-                            zIndex: h.bc.Above,
+                            zIndex: h.ac.Above,
                             padding: {
                                 left: 1
                             }
@@ -13826,7 +13826,7 @@
                         return l.createElement(h.Wa, {
                             display: h.X.Flex,
                             fullWidth: !0
-                        }, l.createElement(h.yb, {
+                        }, l.createElement(h.xb, {
                             display: h.X.Flex,
                             flexDirection: h.Z.Column,
                             fullWidth: !0,
@@ -13981,7 +13981,7 @@
                                 className: "dev-sandbox__editor"
                             }, l.createElement(h.Ia, null, l.createElement(h.Wa, {
                                 className: "dev-sandbox__editor-text-area"
-                            }, t.renderDevEditor()), l.createElement(h.yb, {
+                            }, t.renderDevEditor()), l.createElement(h.xb, {
                                 display: h.X.Flex,
                                 className: "dev-sandbox__editor-separator",
                                 background: h.r.Accent
@@ -13989,7 +13989,7 @@
                                 className: "dev-sandbox__channel",
                                 display: h.X.Flex,
                                 flexDirection: h.Z.Column,
-                                textAlign: h.Kb.Center,
+                                textAlign: h.Jb.Center,
                                 fullHeight: !0
                             }, t.renderChannelMock()))
                         }, t.renderChannelOnlyWindow = function() {
@@ -13997,13 +13997,13 @@
                                 display: h.X.Flex,
                                 className: "dev-sandbox__channel-fullscreen-container",
                                 justifyContent: h.Va.Center,
-                                textAlign: h.Kb.Center,
+                                textAlign: h.Jb.Center,
                                 alignItems: h.f.Start
                             }, l.createElement(h.Wa, {
                                 className: "dev-sandbox__channel-fullscreen",
                                 display: h.X.Flex,
                                 flexDirection: h.Z.Column,
-                                textAlign: h.Kb.Center,
+                                textAlign: h.Jb.Center,
                                 fullHeight: !0
                             }, t.renderChannelMock()))
                         }, t.renderEditorOnlyWindow = function() {
@@ -14032,13 +14032,13 @@
                                 js: e
                             })
                         }, t.renderExtensionOnlyModeSticker = function() {
-                            if (t.state.sandboxMode !== ne.editorOnly) return l.createElement(h.yb, {
-                                zIndex: h.bc.Above,
+                            if (t.state.sandboxMode !== ne.editorOnly) return l.createElement(h.xb, {
+                                zIndex: h.ac.Above,
                                 justifyContent: h.Va.End,
                                 position: h.eb.Fixed,
                                 display: h.X.Flex,
                                 className: "dev-sandbox__extension-only-mode-sticker-container"
-                            }, l.createElement(h.yb, {
+                            }, l.createElement(h.xb, {
                                 background: h.r.Alt2,
                                 display: h.X.Flex,
                                 className: "dev-sandbox__extension-only-mode-sticker"
@@ -14053,7 +14053,7 @@
                                     right: 1,
                                     bottom: 1
                                 }
-                            }, l.createElement(h.Qb, i.__assign({
+                            }, l.createElement(h.Pb, i.__assign({
                                 onChange: t.onHideChannelMockClick,
                                 checked: t.state.ifHideChannelMock
                             }, xe)))))
@@ -14192,13 +14192,13 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-share-modal__container dev-sandbox-share-modal__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Start,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-share-modal",
                             fullHeight: !0,
@@ -14206,8 +14206,8 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Start,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
-                        }, l.createElement(h.yb, {
+                            textAlign: h.Jb.Center
+                        }, l.createElement(h.xb, {
                             color: h.O.Link
                         }, l.createElement(h.nb, {
                             asset: h.ob.LogoTwitch,
@@ -14222,7 +14222,7 @@
                             display: h.X.Flex,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-share-modal__facebook-icon",
                             margin: 1
@@ -14239,7 +14239,7 @@
                             type: h.pb.Inherit,
                             height: 50,
                             width: 50
-                        })), l.createElement(h.yb, {
+                        })), l.createElement(h.xb, {
                             color: h.O.Link,
                             margin: 1
                         }, l.createElement(h.nb, {
@@ -14247,7 +14247,7 @@
                             type: h.pb.Inherit,
                             height: 50,
                             width: 50
-                        }))), l.createElement(h.yb, {
+                        }))), l.createElement(h.xb, {
                             className: "dev-sandbox-share-modal__copy-link-box",
                             background: h.r.Alt2,
                             margin: {
@@ -14256,7 +14256,7 @@
                             display: h.X.Flex,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             padding: {
                                 right: 5,
@@ -14298,13 +14298,13 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return l.createElement(h.yb, {
+                        return l.createElement(h.xb, {
                             className: "dev-sandbox-undo-modal__container dev-sandbox-undo-modal__gradient-border",
                             background: h.r.Base,
                             position: h.eb.Relative,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, {
                             className: "dev-sandbox-undo-modal",
                             fullHeight: !0,
@@ -14312,7 +14312,7 @@
                             flexDirection: h.Z.Column,
                             justifyContent: h.Va.Center,
                             alignItems: h.f.Center,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, l.createElement(h.Wa, null, l.createElement(h.nb, {
                             asset: h.ob.VideoRerun,
                             height: 80,
@@ -16108,8 +16108,8 @@
                         var e = /[^.]+$/.exec(G && G.keys && G.keys.IE_PROTO || "");
                         return e ? "Symbol(src)_1." + e : ""
                     }(),
-                    Z = V.toString,
-                    J = RegExp("^" + K.call(Y).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
+                    J = V.toString,
+                    Z = RegExp("^" + K.call(Y).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
                     Q = j ? O.Buffer : void 0,
                     ee = O.Symbol,
                     te = O.Uint8Array,
@@ -16204,11 +16204,11 @@
                             e[ie] = void 0;
                             var r = !0
                         } catch (e) {}
-                        var i = Z.call(e);
+                        var i = J.call(e);
                         r && (t ? e[ie] = n : delete e[ie]);
                         return i
                     }(e) : function(e) {
-                        return Z.call(e)
+                        return J.call(e)
                     }(e)
                 }
 
@@ -16309,7 +16309,7 @@
                 function Re(e) {
                     return !(!Ge(e) || function(e) {
                         return !!X && X in e
-                    }(e)) && (qe(e) ? J : T).test($e(e))
+                    }(e)) && (qe(e) ? Z : T).test($e(e))
                 }
 
                 function Be(e) {
@@ -16555,7 +16555,7 @@
         Xhqo: function(e, t, n) {
             "use strict";
             var r = n("hwdV").Buffer,
-                i = n(452);
+                i = n(450);
 
             function o(e, t, n) {
                 e.copy(t, n)
@@ -18438,8 +18438,8 @@
                 K = 27,
                 Y = 28,
                 X = 29,
-                Z = 30,
-                J = 31,
+                J = 30,
+                Z = 31,
                 Q = 32,
                 ee = 852,
                 te = 592,
@@ -18516,16 +18516,16 @@
                             break
                         }
                         if (n.flags = 0, n.head && (n.head.done = !1), !(1 & n.wrap) || (((255 & se) << 8) + (se >> 8)) % 31) {
-                            e.msg = "incorrect header check", n.mode = Z;
+                            e.msg = "incorrect header check", n.mode = J;
                             break
                         }
                         if ((15 & se) !== k) {
-                            e.msg = "unknown compression method", n.mode = Z;
+                            e.msg = "unknown compression method", n.mode = J;
                             break
                         }
                         if (le -= 4, xe = 8 + (15 & (se >>>= 4)), 0 === n.wbits) n.wbits = xe;
                         else if (xe > n.wbits) {
-                            e.msg = "invalid window size", n.mode = Z;
+                            e.msg = "invalid window size", n.mode = J;
                             break
                         }
                         n.dmax = 1 << xe, e.adler = n.check = 1, n.mode = 512 & se ? R : O, se = 0, le = 0;
@@ -18536,11 +18536,11 @@
                             oe--, se += ee[ne++] << le, le += 8
                         }
                         if (n.flags = se, (255 & n.flags) !== k) {
-                            e.msg = "unknown compression method", n.mode = Z;
+                            e.msg = "unknown compression method", n.mode = J;
                             break
                         }
                         if (57344 & n.flags) {
-                            e.msg = "unknown header flags set", n.mode = Z;
+                            e.msg = "unknown header flags set", n.mode = J;
                             break
                         }
                         n.head && (n.head.text = se >> 8 & 1), 512 & n.flags && (Ae[0] = 255 & se, Ae[1] = se >>> 8 & 255, n.check = o(n.check, Ae, 2, 0)), se = 0, le = 0, n.mode = _;
@@ -18595,7 +18595,7 @@
                                 oe--, se += ee[ne++] << le, le += 8
                             }
                             if (se !== (65535 & n.check)) {
-                                e.msg = "header crc mismatch", n.mode = Z;
+                                e.msg = "header crc mismatch", n.mode = J;
                                 break
                             }
                             se = 0, le = 0
@@ -18636,7 +18636,7 @@
                                 n.mode = N;
                                 break;
                             case 3:
-                                e.msg = "invalid block type", n.mode = Z
+                                e.msg = "invalid block type", n.mode = J
                         }
                         se >>>= 2, le -= 2;
                         break;
@@ -18646,7 +18646,7 @@
                             oe--, se += ee[ne++] << le, le += 8
                         }
                         if ((65535 & se) != (se >>> 16 ^ 65535)) {
-                            e.msg = "invalid stored block lengths", n.mode = Z;
+                            e.msg = "invalid stored block lengths", n.mode = J;
                             break
                         }
                         if (n.length = 65535 & se, se = 0, le = 0, n.mode = j, t === p) break e;
@@ -18666,7 +18666,7 @@
                             oe--, se += ee[ne++] << le, le += 8
                         }
                         if (n.nlen = 257 + (31 & se), se >>>= 5, le -= 5, n.ndist = 1 + (31 & se), se >>>= 5, le -= 5, n.ncode = 4 + (15 & se), se >>>= 4, le -= 4, n.nlen > 286 || n.ndist > 30) {
-                            e.msg = "too many length or distance symbols", n.mode = Z;
+                            e.msg = "too many length or distance symbols", n.mode = J;
                             break
                         }
                         n.have = 0, n.mode = P;
@@ -18682,7 +18682,7 @@
                         if (n.lencode = n.lendyn, n.lenbits = 7, _e = {
                                 bits: n.lenbits
                             }, Ee = s(l, n.lens, 0, 19, n.lencode, 0, n.work, _e), n.lenbits = _e.bits, Ee) {
-                            e.msg = "invalid code lengths set", n.mode = Z;
+                            e.msg = "invalid code lengths set", n.mode = J;
                             break
                         }
                         n.have = 0, n.mode = $;
@@ -18700,7 +18700,7 @@
                                         oe--, se += ee[ne++] << le, le += 8
                                     }
                                     if (se >>>= ge, le -= ge, 0 === n.have) {
-                                        e.msg = "invalid bit length repeat", n.mode = Z;
+                                        e.msg = "invalid bit length repeat", n.mode = J;
                                         break
                                     }
                                     xe = n.lens[n.have - 1], pe = 3 + (3 & se), se >>>= 2, le -= 2
@@ -18718,27 +18718,27 @@
                                     le -= ge, xe = 0, pe = 11 + (127 & (se >>>= ge)), se >>>= 7, le -= 7
                                 }
                                 if (n.have + pe > n.nlen + n.ndist) {
-                                    e.msg = "invalid bit length repeat", n.mode = Z;
+                                    e.msg = "invalid bit length repeat", n.mode = J;
                                     break
                                 }
                                 for (; pe--;) n.lens[n.have++] = xe
                             }
                         }
-                        if (n.mode === Z) break;
+                        if (n.mode === J) break;
                         if (0 === n.lens[256]) {
-                            e.msg = "invalid code -- missing end-of-block", n.mode = Z;
+                            e.msg = "invalid code -- missing end-of-block", n.mode = J;
                             break
                         }
                         if (n.lenbits = 9, _e = {
                                 bits: n.lenbits
                             }, Ee = s(c, n.lens, 0, n.nlen, n.lencode, 0, n.work, _e), n.lenbits = _e.bits, Ee) {
-                            e.msg = "invalid literal/lengths set", n.mode = Z;
+                            e.msg = "invalid literal/lengths set", n.mode = J;
                             break
                         }
                         if (n.distbits = 6, n.distcode = n.distdyn, _e = {
                                 bits: n.distbits
                             }, Ee = s(u, n.lens, n.nlen, n.ndist, n.distcode, 0, n.work, _e), n.distbits = _e.bits, Ee) {
-                            e.msg = "invalid distances set", n.mode = Z;
+                            e.msg = "invalid distances set", n.mode = J;
                             break
                         }
                         if (n.mode = z, t === p) break e;
@@ -18769,7 +18769,7 @@
                             break
                         }
                         if (64 & be) {
-                            e.msg = "invalid literal/length code", n.mode = Z;
+                            e.msg = "invalid literal/length code", n.mode = J;
                             break
                         }
                         n.extra = 15 & be, n.mode = U;
@@ -18795,7 +18795,7 @@
                             se >>>= ye, le -= ye, n.back += ye
                         }
                         if (se >>>= ge, le -= ge, n.back += ge, 64 & be) {
-                            e.msg = "invalid distance code", n.mode = Z;
+                            e.msg = "invalid distance code", n.mode = J;
                             break
                         }
                         n.offset = ve, n.extra = 15 & be, n.mode = q;
@@ -18808,7 +18808,7 @@
                             n.offset += se & (1 << n.extra) - 1, se >>>= n.extra, le -= n.extra, n.back += n.extra
                         }
                         if (n.offset > n.dmax) {
-                            e.msg = "invalid distance too far back", n.mode = Z;
+                            e.msg = "invalid distance too far back", n.mode = J;
                             break
                         }
                         n.mode = V;
@@ -18816,7 +18816,7 @@
                         if (0 === ae) break e;
                         if (pe = ue - ae, n.offset > pe) {
                             if ((pe = n.offset - pe) > n.whave && n.sane) {
-                                e.msg = "invalid distance too far back", n.mode = Z;
+                                e.msg = "invalid distance too far back", n.mode = J;
                                 break
                             }
                             pe > n.wnext ? (pe -= n.wnext, fe = n.wsize - pe) : fe = n.wnext - pe, pe > n.length && (pe = n.length), me = n.window
@@ -18838,7 +18838,7 @@
                                 oe--, se |= ee[ne++] << le, le += 8
                             }
                             if (ue -= ae, e.total_out += ue, n.total += ue, ue && (e.adler = n.check = n.flags ? o(n.check, te, ue, ie - ue) : i(n.check, te, ue, ie - ue)), ue = ae, (n.flags ? se : re(se)) !== n.check) {
-                                e.msg = "incorrect data check", n.mode = Z;
+                                e.msg = "incorrect data check", n.mode = J;
                                 break
                             }
                             se = 0, le = 0
@@ -18851,7 +18851,7 @@
                                 oe--, se += ee[ne++] << le, le += 8
                             }
                             if (se !== (4294967295 & n.total)) {
-                                e.msg = "incorrect length check", n.mode = Z;
+                                e.msg = "incorrect length check", n.mode = J;
                                 break
                             }
                             se = 0, le = 0
@@ -18860,16 +18860,16 @@
                     case X:
                         Ee = m;
                         break e;
-                    case Z:
+                    case J:
                         Ee = v;
                         break e;
-                    case J:
+                    case Z:
                         return y;
                     case Q:
                     default:
                         return b
                 }
-                return e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, (n.wsize || ue !== e.avail_out && n.mode < Z && (n.mode < K || t !== d)) && he(e, e.output, e.next_out, ue - e.avail_out) ? (n.mode = J, y) : (ce -= e.avail_in, ue -= e.avail_out, e.total_in += ce, e.total_out += ue, n.total += ue, n.wrap && ue && (e.adler = n.check = n.flags ? o(n.check, te, ue, e.next_out - ue) : i(n.check, te, ue, e.next_out - ue)), e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === O ? 128 : 0) + (n.mode === z || n.mode === j ? 256 : 0), (0 === ce && 0 === ue || t === d) && Ee === f && (Ee = w), Ee)
+                return e.next_out = ie, e.avail_out = ae, e.next_in = ne, e.avail_in = oe, n.hold = se, n.bits = le, (n.wsize || ue !== e.avail_out && n.mode < J && (n.mode < K || t !== d)) && he(e, e.output, e.next_out, ue - e.avail_out) ? (n.mode = Z, y) : (ce -= e.avail_in, ue -= e.avail_out, e.total_in += ce, e.total_out += ue, n.total += ue, n.wrap && ue && (e.adler = n.check = n.flags ? o(n.check, te, ue, e.next_out - ue) : i(n.check, te, ue, e.next_out - ue)), e.data_type = n.bits + (n.last ? 64 : 0) + (n.mode === O ? 128 : 0) + (n.mode === z || n.mode === j ? 256 : 0), (0 === ce && 0 === ue || t === d) && Ee === f && (Ee = w), Ee)
             }, t.inflateEnd = function(e) {
                 if (!e || !e.state) return b;
                 var t = e.state;
@@ -18879,7 +18879,7 @@
                 return e && e.state ? 0 == (2 & (n = e.state).wrap) ? b : (n.head = t, t.done = !1, f) : b
             }, t.inflateSetDictionary = function(e, t) {
                 var n, r = t.length;
-                return e && e.state ? 0 !== (n = e.state).wrap && n.mode !== B ? b : n.mode === B && i(1, t, r, 0) !== n.check ? v : he(e, t, r, r) ? (n.mode = J, y) : (n.havedict = 1, f) : b
+                return e && e.state ? 0 !== (n = e.state).wrap && n.mode !== B ? b : n.mode === B && i(1, t, r, 0) !== n.check ? v : he(e, t, r, r) ? (n.mode = Z, y) : (n.havedict = 1, f) : b
             }, t.inflateInfo = "pako inflate (from Nodeca project)"
         },
         oQ3n: function(e, t, n) {},
@@ -18933,11 +18933,11 @@
                 Y = 4,
                 X = 3;
 
-            function Z(e, t) {
+            function J(e, t) {
                 return e.msg = l[t], t
             }
 
-            function J(e) {
+            function Z(e) {
                 return (e << 1) - (e > 4 ? 9 : 0)
             }
 
@@ -19059,7 +19059,7 @@
 
             function ue(e) {
                 var t;
-                return e && e.state ? (e.total_in = e.total_out = 0, e.data_type = C, (t = e.state).pending = 0, t.pending_out = 0, t.wrap < 0 && (t.wrap = -t.wrap), t.status = t.wrap ? P : H, e.adler = 2 === t.wrap ? 0 : 1, t.last_flush = c, o._tr_init(t), f) : Z(e, g)
+                return e && e.state ? (e.total_in = e.total_out = 0, e.data_type = C, (t = e.state).pending = 0, t.pending_out = 0, t.wrap < 0 && (t.wrap = -t.wrap), t.status = t.wrap ? P : H, e.adler = 2 === t.wrap ? 0 : 1, t.last_flush = c, o._tr_init(t), f) : J(e, g)
             }
 
             function de(e) {
@@ -19072,7 +19072,7 @@
             function he(e, t, n, r, o, a) {
                 if (!e) return g;
                 var s = 1;
-                if (t === y && (t = 6), r < 0 ? (s = 0, r = -r) : r > 15 && (s = 2, r -= 16), o < 1 || o > A || n !== S || r < 8 || r > 15 || t < 0 || t > 9 || a < 0 || a > E) return Z(e, g);
+                if (t === y && (t = 6), r < 0 ? (s = 0, r = -r) : r > 15 && (s = 2, r -= 16), o < 1 || o > A || n !== S || r < 8 || r > 15 || t < 0 || t > 9 || a < 0 || a > E) return J(e, g);
                 8 === r && (r = 9);
                 var l = new function() {
                     this.strm = null, this.status = 0, this.pending_buf = null, this.pending_buf_size = 0, this.pending_out = 0, this.pending = 0, this.wrap = 0, this.gzhead = null, this.gzindex = 0, this.method = S, this.last_flush = -1, this.w_size = 0, this.w_bits = 0, this.w_mask = 0, this.window = null, this.window_size = 0, this.prev = null, this.head = null, this.ins_h = 0, this.hash_size = 0, this.hash_bits = 0, this.hash_mask = 0, this.hash_shift = 0, this.block_start = 0, this.match_length = 0, this.prev_match = 0, this.match_available = 0, this.strstart = 0, this.match_start = 0, this.lookahead = 0, this.prev_length = 0, this.max_chain_length = 0, this.max_lazy_match = 0, this.level = 0, this.strategy = 0, this.good_match = 0, this.nice_match = 0, this.dyn_ltree = new i.Buf16(2 * O), this.dyn_dtree = new i.Buf16(2 * (2 * R + 1)), this.bl_tree = new i.Buf16(2 * (2 * B + 1)), Q(this.dyn_ltree), Q(this.dyn_dtree), Q(this.bl_tree), this.l_desc = null, this.d_desc = null, this.bl_desc = null, this.bl_count = new i.Buf16(D + 1), this.heap = new i.Buf16(2 * L + 1), Q(this.heap), this.heap_len = 0, this.heap_max = 0, this.depth = new i.Buf16(2 * L + 1), Q(this.depth), this.l_buf = 0, this.lit_bufsize = 0, this.last_lit = 0, this.d_buf = 0, this.opt_len = 0, this.static_len = 0, this.matches = 0, this.insert = 0, this.bi_buf = 0, this.bi_valid = 0
@@ -19098,8 +19098,8 @@
                 return e && e.state ? 2 !== e.state.wrap ? g : (e.state.gzhead = t, f) : g
             }, t.deflate = function(e, t) {
                 var n, i, a, l;
-                if (!e || !e.state || t > p || t < 0) return e ? Z(e, g) : g;
-                if (i = e.state, !e.output || !e.input && 0 !== e.avail_in || i.status === q && t !== h) return Z(e, 0 === e.avail_out ? v : g);
+                if (!e || !e.state || t > p || t < 0) return e ? J(e, g) : g;
+                if (i = e.state, !e.output || !e.input && 0 !== e.avail_in || i.status === q && t !== h) return J(e, 0 === e.avail_out ? v : g);
                 if (i.strm = e, n = i.last_flush, i.last_flush = t, i.status === P)
                     if (2 === i.wrap) e.adler = 0, ne(i, 31), ne(i, 139), ne(i, 8), i.gzhead ? (ne(i, (i.gzhead.text ? 1 : 0) + (i.gzhead.hcrc ? 2 : 0) + (i.gzhead.extra ? 4 : 0) + (i.gzhead.name ? 8 : 0) + (i.gzhead.comment ? 16 : 0)), ne(i, 255 & i.gzhead.time), ne(i, i.gzhead.time >> 8 & 255), ne(i, i.gzhead.time >> 16 & 255), ne(i, i.gzhead.time >> 24 & 255), ne(i, 9 === i.level ? 2 : i.strategy >= k || i.level < 2 ? 4 : 0), ne(i, 255 & i.gzhead.os), i.gzhead.extra && i.gzhead.extra.length && (ne(i, 255 & i.gzhead.extra.length), ne(i, i.gzhead.extra.length >> 8 & 255)), i.gzhead.hcrc && (e.adler = s(e.adler, i.pending_buf, i.pending, 0)), i.gzindex = 0, i.status = $) : (ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 0), ne(i, 9 === i.level ? 2 : i.strategy >= k || i.level < 2 ? 4 : 0), ne(i, X), i.status = H);
                     else {
@@ -19137,8 +19137,8 @@
                     } else i.status = U;
                 if (i.status === U && (i.gzhead.hcrc ? (i.pending + 2 > i.pending_buf_size && ee(e), i.pending + 2 <= i.pending_buf_size && (ne(i, 255 & e.adler), ne(i, e.adler >> 8 & 255), e.adler = 0, i.status = H)) : i.status = H), 0 !== i.pending) {
                     if (ee(e), 0 === e.avail_out) return i.last_flush = -1, f
-                } else if (0 === e.avail_in && J(t) <= J(n) && t !== h) return Z(e, v);
-                if (i.status === q && 0 !== e.avail_in) return Z(e, v);
+                } else if (0 === e.avail_in && Z(t) <= Z(n) && t !== h) return J(e, v);
+                if (i.status === q && 0 !== e.avail_in) return J(e, v);
                 if (0 !== e.avail_in || 0 !== i.lookahead || t !== c && i.status !== q) {
                     var y = i.strategy === k ? function(e, t) {
                         for (var n;;) {
@@ -19170,7 +19170,7 @@
                 return t !== h ? f : i.wrap <= 0 ? m : (2 === i.wrap ? (ne(i, 255 & e.adler), ne(i, e.adler >> 8 & 255), ne(i, e.adler >> 16 & 255), ne(i, e.adler >> 24 & 255), ne(i, 255 & e.total_in), ne(i, e.total_in >> 8 & 255), ne(i, e.total_in >> 16 & 255), ne(i, e.total_in >> 24 & 255)) : (re(i, e.adler >>> 16), re(i, 65535 & e.adler)), ee(e), i.wrap > 0 && (i.wrap = -i.wrap), 0 !== i.pending ? f : m)
             }, t.deflateEnd = function(e) {
                 var t;
-                return e && e.state ? (t = e.state.status) !== P && t !== $ && t !== z && t !== W && t !== U && t !== H && t !== q ? Z(e, g) : (e.state = null, t === H ? Z(e, b) : f) : g
+                return e && e.state ? (t = e.state.status) !== P && t !== $ && t !== z && t !== W && t !== U && t !== H && t !== q ? J(e, g) : (e.state = null, t === H ? J(e, b) : f) : g
             }, t.deflateSetDictionary = function(e, t) {
                 var n, r, o, s, l, c, u, d, h = t.length;
                 if (!e || !e.state) return g;
@@ -19246,7 +19246,7 @@
                     u = t.Uint8Array || function() {};
                 var d = n("Onz0");
                 d.inherits = n("P7XM");
-                var h = n(453),
+                var h = n(451),
                     p = void 0;
                 p = h && h.debuglog ? h.debuglog("stream") : function() {};
                 var f, m = n("Xhqo"),

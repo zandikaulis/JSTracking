@@ -372,7 +372,7 @@
                             attachLeft: !0,
                             attachRight: !0,
                             position: k.eb.Absolute
-                        }, r.createElement(k.yb, {
+                        }, r.createElement(k.xb, {
                             className: "share-input__container",
                             position: k.eb.Relative,
                             border: !0,
@@ -390,7 +390,7 @@
                             "data-a-target": "resub-notification-close-form-btn",
                             "data-test-selector": "share-input__close-form-btn"
                         })), r.createElement(k.Wa, {
-                            textAlign: k.Kb.Center,
+                            textAlign: k.Jb.Center,
                             padding: {
                                 top: 1,
                                 bottom: 2
@@ -729,14 +729,14 @@
                         overflow: k.Za.Hidden,
                         className: "rare-emote"
                     }, r.createElement(k.Oa, {
-                        zIndex: k.bc.Above,
+                        zIndex: k.ac.Above,
                         position: k.eb.Relative
                     }, r.createElement("img", {
                         className: t,
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/" + e.emoteID + "/2.0"
                     })), r.createElement(k.Wa, {
                         position: k.eb.Relative,
-                        zIndex: k.bc.Default,
+                        zIndex: k.ac.Default,
                         className: n
                     }, r.createElement(k.nb, {
                         width: 28,
@@ -883,7 +883,7 @@
                         return P.c[e]
                     }, t
                 }(r.Component),
-                W = Object(w.compose)(Object(u.a)(F, {
+                x = Object(w.compose)(Object(u.a)(F, {
                     options: function(e) {
                         return {
                             variables: {
@@ -905,16 +905,16 @@
                         return !e.currentUserId
                     }
                 }]))(O);
-            var j, x = Object(o.connect)(function(e) {
+            var W, j = Object(o.connect)(function(e) {
                 var t = Object(R.e)(e);
                 return {
                     currentUserId: t ? t.id : null
                 }
-            })(W);
+            })(x);
             n("z5b3");
             ! function(e) {
                 e[e.Resub = 1] = "Resub", e[e.Purchase = 2] = "Purchase"
-            }(j || (j = {}));
+            }(W || (W = {}));
             var M = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -935,27 +935,27 @@
                             }
                         })
                     }, t.requestResubSpace = function() {
-                        t.addSpace(j.Resub)
+                        t.addSpace(W.Resub)
                     }, t.dismissResubSpace = function() {
-                        t.removeSpace(j.Resub)
+                        t.removeSpace(W.Resub)
                     }, t.requestPurchaseSpace = function() {
-                        t.addSpace(j.Purchase)
+                        t.addSpace(W.Purchase)
                     }, t.dismissPurchaseSpace = function() {
-                        t.removeSpace(j.Purchase)
+                        t.removeSpace(W.Purchase)
                     }, t
                 }
                 return i.__extends(t, e), t.prototype.render = function() {
                     var e = null;
                     this.state.requestedSpaces.size && (e = Array.from(this.state.requestedSpaces.values()).sort()[0]);
                     var t = s({
-                            "share-to-chat__space--hidden": e !== j.Resub
+                            "share-to-chat__space--hidden": e !== W.Resub
                         }),
                         n = s({
-                            "share-to-chat__space--hidden": e !== j.Purchase
+                            "share-to-chat__space--hidden": e !== W.Purchase
                         });
                     return r.createElement(k.Wa, null, r.createElement(k.Wa, {
                         className: t
-                    }, r.createElement(x, {
+                    }, r.createElement(j, {
                         authToken: this.props.authToken,
                         channelDisplayName: this.props.channelDisplayName,
                         channelLogin: this.props.channelLogin,

@@ -648,75 +648,99 @@
         qcBk: function(e, n, t) {
             "use strict";
             t.r(n);
-            var a, i, r = t("mrSG"),
+            var i, a, r = t("mrSG"),
                 s = t("q1tI"),
                 l = t("fvjX"),
                 o = t("V+GM"),
                 d = t("NvVO"),
                 u = t("2xye"),
                 c = t("GnwI"),
-                m = t("IFXb"),
-                p = t("/7QA"),
-                h = function(e) {
-                    function n() {
-                        return null !== e && e.apply(this, arguments) || this
-                    }
-                    return r.__extends(n, e), n.prototype.render = function() {
-                        return ""
-                    }, n
-                }(s.Component),
-                v = t("NAv5"),
-                k = t("yR8l"),
-                g = t("1rIY"),
-                f = t("Ue10"),
-                y = t("3nJb");
+                m = t("1rIY");
             ! function(e) {
-                e.IS_EDITOR = "isEditor", e.IS_MOD = "isMod", e.IS_VIP = "isVIP"
-            }(i || (i = {}));
-            var N = (a = Object(g.a)("UserRolesContext", {
-                    userCache: {}
+                e[e.ADD_USER = 0] = "ADD_USER", e[e.DEFAULT = 1] = "DEFAULT", e[e.LOADING = 2] = "LOADING", e[e.NO_USERS = 3] = "NO_USERS"
+            }(a || (a = {}));
+            var p = (i = Object(m.a)("RolesPageViewContext", {
+                    setView: function() {
+                        return null
+                    },
+                    view: a.LOADING
                 })).InnerProvider,
-                S = a.withContext,
-                C = function(e) {
+                h = i.withContext,
+                v = function(e) {
                     return e
                 };
-            var b, E = function(e) {
+
+            function f(e) {
+                return h(v)(e)
+            }
+            var k, g, C = function(e) {
+                    function n(n) {
+                        var t = e.call(this, n) || this;
+                        return t.setView = function(e) {
+                            t.setState({
+                                view: e
+                            })
+                        }, t.state = {
+                            setView: t.setView,
+                            view: a.LOADING
+                        }, t
+                    }
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return s.createElement(p, {
+                            value: this.state
+                        }, this.props.children)
+                    }, n
+                }(s.Component),
+                y = t("NAv5"),
+                N = t("yR8l"),
+                E = t("Ue10"),
+                S = t("3nJb");
+            ! function(e) {
+                e.IS_EDITOR = "isEditor", e.IS_MOD = "isMod", e.IS_VIP = "isVIP"
+            }(g || (g = {}));
+            var b = (k = Object(m.a)("UserRolesContext", {
+                    userCache: {}
+                })).InnerProvider,
+                I = k.withContext,
+                O = function(e) {
+                    return e
+                };
+            var _, U = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
-                            loading: !0,
                             userCache: {}
                         }, n.setUserCache = function(e, n, t) {
-                            for (var a, r, s = 0, l = n; s < l.length; s++) {
-                                var o = l[s],
-                                    d = o.node;
-                                if (d) {
-                                    var u = d.id;
-                                    if (u) {
-                                        r = o.cursor;
-                                        var c = o.grantedAt,
-                                            m = e[u] || ((a = {
-                                                displayName: d.displayName,
-                                                channelLogin: d.login,
-                                                lastModified: c,
-                                                profileImageURL: d.profileImageURL
-                                            })[i.IS_EDITOR] = !1, a[i.IS_MOD] = !1, a[i.IS_VIP] = !1, a);
-                                        m[t] = !0, m.lastModified = Object(v.max)(m.lastModified, new Date(c)), e[u] = m
+                            for (var i, a, r = 0, s = n; r < s.length; r++) {
+                                var l = s[r],
+                                    o = l.node;
+                                if (o) {
+                                    var d = o.id;
+                                    if (d) {
+                                        a = l.cursor;
+                                        var u = l.grantedAt,
+                                            c = e[d] || ((i = {
+                                                displayName: o.displayName,
+                                                channelLogin: o.login,
+                                                lastModified: u,
+                                                profileImageURL: o.profileImageURL
+                                            })[g.IS_EDITOR] = !1, i[g.IS_MOD] = !1, i[g.IS_VIP] = !1, i);
+                                        c[t] = !0, c.lastModified = Object(y.max)(c.lastModified, new Date(u)), e[d] = c
                                     }
                                 }
                             }
                             return {
-                                cursor: r,
+                                cursor: a,
                                 userCache: e
                             }
                         }, n.fetchMore = function(e, t) {
                             return r.__awaiter(n, void 0, void 0, function() {
                                 var n;
-                                return r.__generator(this, function(a) {
-                                    switch (a.label) {
+                                return r.__generator(this, function(i) {
+                                    switch (i.label) {
                                         case 0:
                                             return [4, this.props.data.fetchMore({
-                                                query: y,
+                                                query: S,
                                                 variables: {
                                                     channelLogin: this.props.channelLogin,
                                                     includeEditors: !1,
@@ -728,18 +752,18 @@
                                                 updateQuery: function(e, n) {
                                                     if (!n.fetchMoreResult.user) return e;
                                                     var t = n.fetchMoreResult.user,
-                                                        a = t.mods,
-                                                        i = t.vips;
+                                                        i = t.mods,
+                                                        a = t.vips;
                                                     return {
                                                         user: r.__assign({}, n.fetchMoreResult.user, {
-                                                            mods: a || null,
-                                                            vips: i || null
+                                                            mods: i || null,
+                                                            vips: a || null
                                                         })
                                                     }
                                                 }
                                             })];
                                         case 1:
-                                            return n = a.sent(), this.updateUserCache(n.data), [2]
+                                            return n = i.sent(), this.updateUserCache(n.data), [2]
                                     }
                                 })
                             })
@@ -749,52 +773,49 @@
                         this.updateUserCache()
                     }, n.prototype.componentDidUpdate = function(e) {
                         e.channelLogin !== this.props.channelLogin && this.setState({
-                            loading: !0,
                             userCache: {}
                         }), e.data.loading && this.updateUserCache()
                     }, n.prototype.render = function() {
-                        return this.state.loading ? s.createElement(f.Ya, {
+                        return this.props.view === a.LOADING ? s.createElement(E.Ya, {
                             fillContent: !0
-                        }) : s.createElement(N, {
+                        }) : s.createElement(b, {
                             value: this.state
                         }, this.props.children)
                     }, n.prototype.updateUserCache = function(e) {
                         var n = this;
                         void 0 === e && (e = this.props.data);
-                        var t, a, s = e.error,
+                        var t, i, s = e.error,
                             l = e.loading,
                             o = e.user;
-                        !s && !l && o && this.state.loading && this.setState(function(e) {
-                            var s = r.__assign({}, e);
-                            if (s.userCache || (s.userCache = {}), o.editors && o.editors.edges) {
-                                var l = n.setUserCache(s.userCache, o.editors.edges, i.IS_EDITOR).userCache;
-                                s.userCache = r.__assign({}, s.userCache, l)
+                        s || l || !o || this.props.view !== a.LOADING || this.setState(function(e) {
+                            var a = r.__assign({}, e);
+                            if (a.userCache || (a.userCache = {}), o.editors && o.editors.edges) {
+                                var s = n.setUserCache(a.userCache, o.editors.edges, g.IS_EDITOR).userCache;
+                                a.userCache = r.__assign({}, a.userCache, s)
                             }
                             if (o.mods && o.mods.edges) {
-                                var d = n.setUserCache(s.userCache, o.mods.edges, i.IS_MOD),
-                                    u = d.cursor;
-                                l = d.userCache;
-                                t = u, s.userCache = r.__assign({}, s.userCache, l)
+                                var l = n.setUserCache(a.userCache, o.mods.edges, g.IS_MOD),
+                                    d = l.cursor;
+                                s = l.userCache;
+                                t = d, a.userCache = r.__assign({}, a.userCache, s)
                             }
                             if (o.vips && o.vips.edges) {
-                                var c = n.setUserCache(s.userCache, o.vips.edges, i.IS_VIP);
-                                u = c.cursor, l = c.userCache;
-                                a = u, s.userCache = r.__assign({}, s.userCache, l)
+                                var u = n.setUserCache(a.userCache, o.vips.edges, g.IS_VIP);
+                                d = u.cursor, s = u.userCache;
+                                i = d, a.userCache = r.__assign({}, a.userCache, s)
                             }
-                            var m = o.id;
-                            return m && s.userCache && s.userCache[m] && delete s.userCache[m], s
+                            var c = o.id;
+                            return c && a.userCache && a.userCache[c] && delete a.userCache[c], a
                         }, function() {
                             return r.__awaiter(n, void 0, void 0, function() {
                                 return r.__generator(this, function(e) {
                                     switch (e.label) {
                                         case 0:
-                                            return t || a ? [4, this.fetchMore(t, a)] : [3, 2];
+                                            return t || i ? [4, this.fetchMore(t, i)] : [3, 2];
                                         case 1:
                                             return e.sent(), [3, 3];
                                         case 2:
-                                            this.props.latencyTracking.reportInteractive(), this.setState({
-                                                loading: !1
-                                            }), e.label = 3;
+                                            this.props.latencyTracking.reportInteractive(), this.props.setView(0 === Object.keys(this.state.userCache).length ? a.NO_USERS : a.DEFAULT), e.label = 3;
                                         case 3:
                                             return [2]
                                     }
@@ -803,7 +824,7 @@
                         })
                     }, n
                 }(s.Component),
-                U = Object(l.compose)(Object(c.b)("WithUserRolesContext"), Object(k.a)(y, {
+                D = Object(l.compose)(f, Object(c.b)("WithUserRolesContext"), Object(N.a)(S, {
                     options: function(e) {
                         return {
                             variables: {
@@ -814,44 +835,142 @@
                             }
                         }
                     }
-                }))(E),
-                I = function(e) {
+                }))(U),
+                A = t("IFXb"),
+                F = t("9C/b"),
+                R = t("/7QA"),
+                V = (t("vsHg"), function(e) {
+                    function n() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex,
+                            fullWidth: !0,
+                            justifyContent: E.Va.Center,
+                            position: E.eb.Absolute,
+                            zIndex: E.ac.Above
+                        }, s.createElement(E.i, {
+                            type: E.n.SlideInBottom,
+                            duration: E.k.Medium,
+                            enabled: !0,
+                            timing: E.m.EaseInOut
+                        }, s.createElement(E.xb, {
+                            background: E.r.Base,
+                            borderBottom: !0,
+                            borderRadius: E.x.Medium,
+                            className: "dashboard-centered-banner",
+                            display: E.X.Flex,
+                            elevation: 3,
+                            flexDirection: E.Z.Column,
+                            padding: 2
+                        }, s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex,
+                            justifyContent: E.Va.Start,
+                            margin: {
+                                bottom: 1
+                            }
+                        }, s.createElement(E.Wa, {
+                            margin: {
+                                right: .5
+                            }
+                        }, s.createElement(E.q, {
+                            alt: Object(R.d)("VoHiYo", "CenteredBanner"),
+                            src: "https://static-cdn.jtvnw.net/emoticons/v1/81274/2.0",
+                            size: 30
+                        })), s.createElement(E.W, {
+                            bold: !0,
+                            type: E.Nb.H5
+                        }, this.props.title)), s.createElement(E.Wa, {
+                            margin: {
+                                bottom: 2
+                            }
+                        }, s.createElement(E.W, {
+                            fontSize: E.Ba.Size5
+                        }, this.props.body)), this.props.children)))
+                    }, n
+                }(s.Component));
+            ! function(e) {
+                e.ADD_A_ROLE = "no-users-banner-add-a-role", e.LEARN_MORE = "no-users-banner-learn-more"
+            }(_ || (_ = {}));
+            var w, L = function(e) {
+                    function n() {
+                        var n = null !== e && e.apply(this, arguments) || this;
+                        return n.handleAddARoleClick = function() {
+                            n.props.setView(a.DEFAULT)
+                        }, n.handleLearnMoreClick = function() {
+                            n.props.history.push("https://help.twitch.tv/customer/en/portal/articles/659115-twitch-chat-badges-guide")
+                        }, n
+                    }
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return s.createElement(V, {
+                            body: Object(R.d)("Manage the permissions users have for your community. Start by adding your first role.", "NoUsersBanner"),
+                            title: Object(R.d)("Welcome to Roles", "NoUsersBanner")
+                        }, s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex,
+                            justifyContent: E.Va.Start
+                        }, s.createElement(E.Wa, {
+                            margin: {
+                                right: 1
+                            }
+                        }, s.createElement(E.z, {
+                            "data-test-selector": _.ADD_A_ROLE,
+                            onClick: this.handleAddARoleClick
+                        }, Object(R.d)("Add a Role", "NoUsersBanner"))), s.createElement(E.z, {
+                            "data-test-selector": _.LEARN_MORE,
+                            onClick: this.handleLearnMoreClick,
+                            type: E.F.Text
+                        }, Object(R.d)("Learn More", "NoUsersBanner"))))
+                    }, n
+                }(s.Component),
+                x = Object(l.compose)(f, F.a)(L),
+                M = function(e) {
+                    function n() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return ""
+                    }, n
+                }(s.Component),
+                j = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.user;
-                        return s.createElement(f.Wa, null, e[i.IS_EDITOR] && s.createElement(h, null), e[i.IS_MOD] && s.createElement(h, null), e[i.IS_VIP] && s.createElement(h, null), s.createElement(f.A, {
-                            icon: f.ob.Plus,
-                            size: f.B.Small
+                        return s.createElement(E.Wa, null, e[g.IS_EDITOR] && s.createElement(M, null), e[g.IS_MOD] && s.createElement(M, null), e[g.IS_VIP] && s.createElement(M, null), s.createElement(E.A, {
+                            icon: E.ob.Plus,
+                            size: E.B.Small
                         }))
                     }, n
                 }(s.Component),
-                _ = function(e) {
+                B = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(f.yb, {
-                            alignItems: f.f.Center,
-                            background: f.r.Base,
+                        return s.createElement(E.xb, {
+                            alignItems: E.f.Center,
+                            background: E.r.Base,
                             borderBottom: !0,
-                            borderRadius: f.x.Large,
-                            display: f.X.Flex,
+                            borderRadius: E.x.Large,
+                            display: E.X.Flex,
                             fullWidth: !0,
                             padding: 1
                         }, this.props.children)
                     }, n
                 }(s.Component),
-                D = t("9C/b"),
-                F = t("u5aL"),
-                O = t("f00E"),
-                V = t("H/lO"),
-                w = t("NZDK"),
-                A = t("8/mp"),
-                R = (t("sZ5a"), "data-component-type"),
-                x = "roles-page-search-user-option",
-                L = function(e) {
+                T = t("u5aL"),
+                P = t("f00E"),
+                W = t("H/lO"),
+                X = t("NZDK"),
+                z = t("8/mp"),
+                $ = (t("sZ5a"), "data-component-type"),
+                q = "roles-page-search-user-option",
+                G = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -888,90 +1007,90 @@
                             onMouseOver: this.handleMouseOver,
                             onMouseOut: this.handleMouseOut,
                             tabIndex: 0
-                        }, ((e = {})[R] = [x], e)), s.createElement(f.Ta, r.__assign({
+                        }, ((e = {})[$] = [q], e)), s.createElement(E.Ta, r.__assign({
                             hover: this.state.hovered,
                             onClick: this.handleClick,
                             selected: this.state.focused,
                             tabIndex: -1,
-                            type: f.Ua.Base
-                        }, ((n = {})[R] = [x], n)), s.createElement(f.Wa, {
-                            alignItems: f.f.Center,
-                            display: f.X.Flex,
-                            justifyContent: f.Va.Start,
+                            type: E.Ua.Base
+                        }, ((n = {})[$] = [q], n)), s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex,
+                            justifyContent: E.Va.Start,
                             padding: {
                                 x: 1,
                                 y: .5
                             }
-                        }, s.createElement(f.Wa, {
+                        }, s.createElement(E.Wa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(f.q, {
-                            alt: Object(p.d)("Avatar", "RolesPageOption"),
+                        }, s.createElement(E.q, {
+                            alt: Object(R.d)("Avatar", "SearchUsersOption"),
                             src: t.profile_image,
                             size: 30
                         })), t.name)))
                     }, n
                 }(s.Component),
-                T = function(e) {
+                Q = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
                         var e = this,
                             n = this.props.users;
-                        return s.createElement(f.u, {
+                        return s.createElement(E.u, {
                             noTail: !0,
                             offsetY: "-0.5px",
                             show: !!n && this.props.show
-                        }, s.createElement(A.b, null, s.createElement(f.Wa, {
-                            alignItems: f.f.Center,
-                            display: f.X.Flex,
-                            flexDirection: f.Z.Column,
-                            justifyContent: f.Va.Center
+                        }, s.createElement(z.b, null, s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex,
+                            flexDirection: E.Z.Column,
+                            justifyContent: E.Va.Center
                         }, n && n.length > 0 ? n.map(function(n, t) {
-                            return s.createElement(L, {
+                            return s.createElement(G, {
                                 key: t,
                                 onBlur: e.props.onOptionBlur,
                                 onClick: e.props.onOptionClick,
                                 user: n
                             })
-                        }) : s.createElement(f.Wa, {
-                            alignItems: f.f.Center,
-                            display: f.X.Flex,
-                            flexDirection: f.Z.Column,
-                            justifyContent: f.Va.Center,
+                        }) : s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex,
+                            flexDirection: E.Z.Column,
+                            justifyContent: E.Va.Center,
                             padding: {
                                 x: 1,
                                 y: 5
                             }
-                        }, s.createElement(f.nb, {
-                            asset: f.ob.SearchNoResults
-                        }), s.createElement(f.W, null, Object(p.d)("No users found", "SearchUser"))))))
+                        }, s.createElement(E.nb, {
+                            asset: E.ob.SearchNoResults
+                        }), s.createElement(E.W, null, Object(R.d)("No users found", "SearchUsersDropdown"))))))
                     }, n
                 }(s.Component),
-                B = t("gD7V"),
-                M = function(e) {
+                H = t("gD7V"),
+                Z = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
                             defaultSelectedUserName: "",
                             showDropdown: !1,
                             searchedUsers: null
-                        }, n.searchClient = new w.a({
-                            appId: p.a.algoliaApplicationID,
-                            apiKey: p.a.algoliaAPIKey,
-                            apolloClient: p.p.apollo.client,
-                            logger: p.k,
-                            config: p.a,
-                            stats: p.p.stats
+                        }, n.searchClient = new X.a({
+                            appId: R.a.algoliaApplicationID,
+                            apiKey: R.a.algoliaAPIKey,
+                            apolloClient: R.p.apollo.client,
+                            logger: R.k,
+                            config: R.a,
+                            stats: R.p.stats
                         }), n.filterUsersResults = function(e) {
                             var t = n.props.data.user,
-                                a = t && t.id,
-                                i = n.props.userCache;
+                                i = t && t.id,
+                                a = n.props.userCache;
                             return e.hits.filter(function(e) {
                                 var n = e.objectID;
-                                return n && n !== a && !i[n]
+                                return n && n !== i && !a[n]
                             })
                         }, n.handleChange = function(e) {
                             var t = e.currentTarget.value;
@@ -980,7 +1099,7 @@
                                 return r.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return t ? [4, this.searchClient.queryForType(V.a.Users, t, Object(O.a)(), {
+                                            return t ? [4, this.searchClient.queryForType(W.a.Users, t, Object(P.a)(), {
                                                 hitsPerPage: 10
                                             })] : [3, 2];
                                         case 1:
@@ -998,7 +1117,7 @@
                             })
                         }, n.handleBlur = function(e) {
                             n.setState({
-                                showDropdown: e && e.getAttribute(R) === x
+                                showDropdown: e && e.getAttribute($) === q
                             })
                         }, n.handleInputBlur = function(e) {
                             e.persist(), n.handleBlur(e.relatedTarget)
@@ -1021,40 +1140,40 @@
                     return r.__extends(n, e), n.prototype.render = function() {
                         if (this.props.data.loading) return null;
                         var e = this.props.selectedUser,
-                            n = s.createElement(f.Wa, {
+                            n = s.createElement(E.Wa, {
                                 margin: {
                                     right: e ? 1 : .5
                                 }
-                            }, s.createElement(f.q, {
-                                alt: Object(p.d)("Avatar", "SearchUser"),
+                            }, s.createElement(E.q, {
+                                alt: Object(R.d)("Avatar", "SearchUsers"),
                                 size: 30,
                                 src: e && e.profileImageURL
                             }));
-                        return s.createElement(f.Wa, null, e && s.createElement(f.Ta, {
+                        return s.createElement(E.Wa, null, e && s.createElement(E.Ta, {
                             onClick: this.handleUserDeselected,
-                            type: f.Ua.Overlay
-                        }, s.createElement(f.Wa, {
-                            alignItems: f.f.Center,
-                            display: f.X.Flex
-                        }, n, s.createElement(f.W, {
+                            type: E.Ua.Overlay
+                        }, s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex
+                        }, n, s.createElement(E.W, {
                             bold: !0,
-                            type: f.Ob.P
-                        }, e.displayName))), !e && s.createElement(F.a, {
+                            type: E.Nb.P
+                        }, e.displayName))), !e && s.createElement(T.a, {
                             onClickOut: this.handleClickOut
-                        }, s.createElement(f.Wa, {
-                            alignItems: f.f.Center,
-                            display: f.X.Flex
-                        }, n, s.createElement(f.Wa, {
-                            position: f.eb.Relative
-                        }, s.createElement(f.Qa, {
+                        }, s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex
+                        }, n, s.createElement(E.Wa, {
+                            position: E.eb.Relative
+                        }, s.createElement(E.Qa, {
                             autoFocus: !0,
                             defaultValue: this.state.defaultSelectedUserName,
                             onBlur: this.handleInputBlur,
                             onChange: this.handleChange,
                             onFocus: this.handleFocus,
-                            placeholder: Object(p.d)("Search", "SearchUser"),
-                            type: f.Sa.Text
-                        }), s.createElement(T, {
+                            placeholder: Object(R.d)("Search", "SearchUsers"),
+                            type: E.Sa.Text
+                        }), s.createElement(Q, {
                             onOptionClick: this.props.onUserSelected,
                             onOptionBlur: this.handleOptionBlur,
                             show: this.state.showDropdown,
@@ -1062,9 +1181,9 @@
                         })))))
                     }, n
                 }(s.Component),
-                P = Object(l.compose)(function(e) {
-                    return S(C)(e)
-                }, D.a, Object(k.a)(B, {
+                J = Object(l.compose)(function(e) {
+                    return I(O)(e)
+                }, F.a, Object(N.a)(H, {
                     options: function(e) {
                         return {
                             variables: {
@@ -1072,8 +1191,8 @@
                             }
                         }
                     }
-                }))(M),
-                j = function(e) {
+                }))(Z),
+                Y = function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
                         return n.state = {
@@ -1086,7 +1205,7 @@
                                     channelLogin: e.login,
                                     profileImageURL: e.profile_image || "",
                                     lastModified: new Date
-                                }, t[i.IS_EDITOR] = !1, t[i.IS_MOD] = !1, t[i.IS_VIP] = !1, t)
+                                }, t[g.IS_EDITOR] = !1, t[g.IS_MOD] = !1, t[g.IS_VIP] = !1, t)
                             })
                         }, n.handleUserDeselected = function() {
                             n.setState({
@@ -1096,110 +1215,118 @@
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
                         var e = this.state.selectedUser;
-                        return s.createElement(f.Ia, null, s.createElement(_, null, s.createElement(f.P, {
+                        return s.createElement(E.Ia, null, s.createElement(B, null, s.createElement(E.P, {
                             cols: 3
-                        }, s.createElement(P, {
+                        }, s.createElement(J, {
                             onUserDeselected: this.handleUserDeselected,
                             onUserSelected: this.handleUserSelected,
                             selectedUser: e
-                        })), s.createElement(f.P, {
+                        })), s.createElement(E.P, {
                             cols: 7
-                        }, e && s.createElement(I, {
+                        }, e && s.createElement(j, {
                             user: e
-                        })), s.createElement(f.P, {
+                        })), s.createElement(E.P, {
                             cols: 2
-                        }, s.createElement(f.Wa, {
-                            alignItems: f.f.Center,
-                            display: f.X.Flex,
-                            justifyContent: f.Va.End
-                        }, s.createElement(f.Wa, {
+                        }, s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex,
+                            justifyContent: E.Va.End
+                        }, s.createElement(E.Wa, {
                             margin: {
                                 right: .5
                             }
-                        }, s.createElement(f.z, {
+                        }, s.createElement(E.z, {
                             onClick: this.props.onCancel,
-                            type: f.F.Hollow
-                        }, Object(p.d)("Cancel", "AddUser"))), s.createElement(f.z, {
+                            type: E.F.Hollow
+                        }, Object(R.d)("Cancel", "AddUserComponent"))), s.createElement(E.z, {
                             onClick: this.props.onSave,
-                            type: f.F.Success
-                        }, Object(p.d)("Save", "AddUser"))))))
+                            type: E.F.Success
+                        }, Object(R.d)("Save", "AddUserComponent"))))))
                     }, n
-                }(s.Component),
-                W = function(e) {
+                }(s.Component);
+            ! function(e) {
+                e[e.ALL_ROLES = 0] = "ALL_ROLES", e[e.EDITOR = 1] = "EDITOR", e[e.MODERATOR = 2] = "MODERATOR", e[e.VIP = 3] = "VIP"
+            }(w || (w = {}));
+            var K = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
-                        return s.createElement(f.Wa, {
-                            alignItems: f.f.Center,
-                            display: f.X.Flex
-                        }, s.createElement(f.Wa, {
+                        return s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex
+                        }, s.createElement(E.Wa, {
                             margin: {
                                 right: 1
                             }
-                        }, s.createElement(f.W, null, Object(p.d)("Display", "FilterUsers"))), s.createElement(f.tb, null, [s.createElement("option", {
-                            key: 0,
-                            value: "TODO"
-                        })]))
+                        }, s.createElement(E.W, null, Object(R.d)("Display", "FilterUsersComponent"))), s.createElement(E.tb, null, s.createElement(s.Fragment, null, s.createElement("option", {
+                            value: w.ALL_ROLES
+                        }, Object(R.d)("All Roles", "FilterUsersComponent")), s.createElement("option", {
+                            value: w.MODERATOR
+                        }, Object(R.d)("Moderator", "FilterUsersComponent")), s.createElement("option", {
+                            value: w.VIP
+                        }, Object(R.d)("VIP", "FilterUsersComponent")), s.createElement("option", {
+                            value: w.EDITOR
+                        }, Object(R.d)("Editor", "FilterUsersComponent")))))
                     }, n
-                }(s.Component);
-            ! function(e) {
-                e[e.ADD_USER = 0] = "ADD_USER", e[e.DEFAULT = 1] = "DEFAULT"
-            }(b || (b = {}));
-            var $ = function(e) {
+                }(s.Component),
+                ee = f(function(e) {
                     function n() {
                         var n = null !== e && e.apply(this, arguments) || this;
-                        return n.state = {
-                            view: b.DEFAULT
-                        }, n.handleAddUserCancel = function() {
-                            n.setState({
-                                view: b.DEFAULT
-                            })
+                        return n.handleAddUserCancel = function() {
+                            n.props.setView(a.DEFAULT)
                         }, n.handleAddUserSave = function() {}, n.handleButtonClick = function() {
-                            n.setState({
-                                view: b.ADD_USER
-                            })
+                            n.props.setView(a.ADD_USER)
                         }, n
                     }
                     return r.__extends(n, e), n.prototype.render = function() {
-                        var e = this.state.view === b.ADD_USER;
-                        return s.createElement(s.Fragment, null, s.createElement(f.Wa, {
-                            alignItems: f.f.Center,
-                            display: f.X.Flex,
+                        var e = this.props.view === a.ADD_USER;
+                        return s.createElement(s.Fragment, null, s.createElement(E.Wa, {
+                            alignItems: E.f.Center,
+                            display: E.X.Flex,
                             fullWidth: !0,
-                            justifyContent: f.Va.Between
-                        }, s.createElement(W, null), s.createElement(f.z, {
+                            justifyContent: E.Va.Between
+                        }, s.createElement(K, null), s.createElement(E.z, {
                             disabled: e,
                             onClick: this.handleButtonClick
-                        }, Object(p.d)("Add New", "TopBar"))), s.createElement(f.Xb, {
-                            baseFontSize: f.Ba.Size8
-                        }, s.createElement("hr", null)), e && s.createElement(j, {
+                        }, Object(R.d)("Add New", "TopBar"))), s.createElement(E.Wb, {
+                            baseFontSize: E.Ba.Size8
+                        }, s.createElement("hr", null)), e && s.createElement(Y, {
                             onCancel: this.handleAddUserCancel,
                             onSave: this.handleAddUserSave
                         }))
                     }, n
-                }(s.Component),
-                q = function(e) {
+                }(s.Component)),
+                ne = f(function(e) {
+                    function n() {
+                        return null !== e && e.apply(this, arguments) || this
+                    }
+                    return r.__extends(n, e), n.prototype.render = function() {
+                        return this.props.view === a.NO_USERS ? s.createElement(x, null) : s.createElement(A.a, null, s.createElement(ee, null))
+                    }, n
+                }(s.Component)),
+                te = function(e) {
                     function n() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return r.__extends(n, e), n.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive(1)
                     }, n.prototype.render = function() {
-                        return s.createElement(U, {
+                        return s.createElement(C, null, s.createElement(D, {
                             channelLogin: this.props.match.params.channelLogin
-                        }, s.createElement(m.a, null, s.createElement($, null)))
+                        }, s.createElement(ne, null)))
                     }, n
                 }(s.Component),
-                X = Object(l.compose)(Object(c.b)("RolesPage", {
+                ie = Object(l.compose)(Object(c.b)("RolesPage", {
                     destination: d.a.RolesPage
                 }), Object(o.a)({
                     location: u.PageviewLocation.DashboardSettingsRolesPage
-                }))(q);
+                }))(te);
             t.d(n, "RolesPage", function() {
-                return X
+                return ie
             })
         },
-        sZ5a: function(e, n, t) {}
+        sZ5a: function(e, n, t) {},
+        vsHg: function(e, n, t) {}
     }
 ]);

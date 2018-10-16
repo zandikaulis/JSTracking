@@ -660,8 +660,8 @@
                                     x: 1,
                                     top: 2
                                 }
-                            }, r.createElement(D.Ub, {
-                                gutterSize: D.Wb.Small,
+                            }, r.createElement(D.Tb, {
+                                gutterSize: D.Vb.Small,
                                 childWidth: t.props.cardSize,
                                 placeholderItems: t.props.placeholderItems ? t.props.placeholderItems : a,
                                 noWrap: e
@@ -809,7 +809,7 @@
                             }, r.createElement(D.Wa, {
                                 padding: .5,
                                 position: D.eb.Absolute,
-                                zIndex: D.bc.Above
+                                zIndex: D.ac.Above
                             }, r.createElement(R.a, {
                                 type: M.a.Live
                             })), r.createElement(H, {
@@ -965,9 +965,9 @@
                             margin: {
                                 x: 1
                             }
-                        }, r.createElement(D.Ub, {
-                            gutterSize: D.Wb.Small,
-                            childWidth: D.Vb.Large,
+                        }, r.createElement(D.Tb, {
+                            gutterSize: D.Vb.Small,
+                            childWidth: D.Ub.Large,
                             placeholderItems: e,
                             noWrap: !0
                         }, this.renderStreams()))
@@ -1118,7 +1118,7 @@
                                 default:
                                     return e
                             }
-                        }(this.props.data.name))), this.state.isFollowCategoriesExperimentEnabled && !this.props.withStreams && !this.props.withBoxArtGameCards && r.createElement(D.yb, {
+                        }(this.props.data.name))), this.state.isFollowCategoriesExperimentEnabled && !this.props.withStreams && !this.props.withBoxArtGameCards && r.createElement(D.xb, {
                             margin: {
                                 left: 2
                             }
@@ -1201,7 +1201,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.userFollowedGamesDataLoaded(this.props) && this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? r.createElement(D.yb, {
+                        return this.userFollowedGamesDataLoaded(this.props) && this.state.inOnboardingExperiment ? r.createElement(D.xb, {
                             className: "community-selection-page",
                             "data-a-target": "community-selection-page",
                             "data-test-selector": "onboarding-community-selection",
@@ -1209,7 +1209,7 @@
                             display: D.X.Flex,
                             flexDirection: D.Z.Column,
                             fullHeight: !0
-                        }, r.createElement(D.yb, {
+                        }, r.createElement(D.xb, {
                             background: D.r.Alt,
                             display: D.X.Flex,
                             alignItems: D.f.Center,
@@ -1242,7 +1242,7 @@
                         })), this.renderTitleText(), this.renderCTA()), r.createElement(D.hb, {
                             size: D.jb.Small,
                             value: this.calculateProgress()
-                        }), r.createElement(w.b, null, r.createElement(D.yb, {
+                        }), r.createElement(w.b, null, r.createElement(D.xb, {
                             background: D.r.Alt2,
                             overflow: D.Za.Hidden,
                             padding: {
@@ -1342,7 +1342,7 @@
                             return r.createElement(j, {
                                 games: this.props.gameData,
                                 directoryType: G.a.Games,
-                                cardSize: D.Vb.Small,
+                                cardSize: D.Ub.Small,
                                 followGameCardOptions: t,
                                 placeholderItems: 99
                             })
@@ -1354,7 +1354,7 @@
                                 return r.createElement(ne, {
                                     key: t.name,
                                     data: t,
-                                    cardSize: D.Vb.ExtraSmall,
+                                    cardSize: D.Ub.ExtraSmall,
                                     trackingMedium: p.PageviewMedium.BrowseForYou,
                                     isFollowingAllGamesInCategory: a,
                                     onFollow: e.onFollow,
@@ -1868,7 +1868,7 @@
                             display: s.X.Flex,
                             flexDirection: s.Z.Row,
                             padding: .5
-                        }, r.createElement(s.yb, {
+                        }, r.createElement(s.xb, {
                             className: "preview-card-game-balloon-row__image-wrapper",
                             flexGrow: 0,
                             flexShrink: 0,
@@ -1878,7 +1878,7 @@
                         }, r.createElement(s.o, {
                             align: s.d.Center,
                             ratio: s.p.BoxArt
-                        }, r.createElement(s.S, a.__assign({}, e))), r.createElement(s.yb, {
+                        }, r.createElement(s.S, a.__assign({}, e))), r.createElement(s.xb, {
                             className: "preview-card-game-balloon-row__image-play-overlay",
                             alignItems: s.f.Center,
                             background: s.r.Overlay,
@@ -2016,7 +2016,7 @@
                 },
                 v = n("N0BP"),
                 y = (n("XA5B"), function(e) {
-                    var t = r.createElement(s.yb, {
+                    var t = r.createElement(s.xb, {
                         className: "preview-card-iconic-image__wrapper",
                         borderRadius: s.x.Small,
                         overflow: s.Za.Hidden
@@ -2051,7 +2051,7 @@
                         "data-test-selector": "top-bar-title-selector",
                         color: s.O.Overlay,
                         bold: !0,
-                        transform: s.Nb.Uppercase
+                        transform: s.Mb.Uppercase
                     }, e.title)), e.subTitle && r.createElement(s.Wa, {
                         display: s.X.InlineFlex
                     }, r.createElement(s.W, {
@@ -2134,7 +2134,7 @@
                         width: 10,
                         height: 10
                     }));
-                    return e.withBackground ? r.createElement(s.yb, {
+                    return e.withBackground ? r.createElement(s.xb, {
                         alignItems: s.f.Center,
                         background: s.r.Overlay,
                         borderRadius: s.x.Small,
@@ -2143,7 +2143,7 @@
                         display: s.X.Flex,
                         fontSize: s.Ba.Size6,
                         justifyContent: s.Va.Center
-                    }, t, r.createElement(s.W, null, e.value)) : r.createElement(s.yb, {
+                    }, t, r.createElement(s.W, null, e.value)) : r.createElement(s.xb, {
                         className: "preview-card-stat",
                         color: s.O.Overlay,
                         display: s.X.Flex,
@@ -2193,7 +2193,7 @@
                             onBlur: this.handleBlur
                         }), r.createElement("div", a.__assign({}, e, {
                             onClick: this.props.onClick
-                        }), r.createElement(s.yb, {
+                        }), r.createElement(s.xb, {
                             background: s.r.Alt2,
                             overflow: s.Za.Hidden
                         }, r.createElement(s.o, {
@@ -2239,7 +2239,7 @@
                         type: s.V.Inherit,
                         "data-test-selector": "preview-card-titles__primary-link"
                     }), r.createElement(s.W, {
-                        type: s.Ob.H3,
+                        type: s.Nb.H3,
                         fontSize: s.Ba.Size5,
                         lines: 1,
                         bold: !0,
@@ -2267,7 +2267,7 @@
                         t = this.props.restriction.canViewRestricted,
                         n = t ? Object(i.d)("unlocked", "VideoPreviewCardRestriction") : Object(i.d)("locked", "VideoPreviewCardRestriction"),
                         a = t ? s.ob.Unlock : s.ob.Lock;
-                    return r.createElement(s.Wa, null, !t && r.createElement(s.yb, {
+                    return r.createElement(s.Wa, null, !t && r.createElement(s.xb, {
                         background: s.r.Overlay,
                         className: "video-preview-card-restriction",
                         color: s.O.Overlay,
@@ -2275,11 +2275,11 @@
                         position: s.eb.Absolute,
                         attachTop: !0,
                         attachLeft: !0,
-                        zIndex: s.bc.Default,
+                        zIndex: s.ac.Default,
                         padding: {
                             x: 5
                         },
-                        textAlign: s.Kb.Center,
+                        textAlign: s.Jb.Center,
                         fullWidth: !0,
                         fullHeight: !0,
                         alignItems: s.f.Center,
@@ -2305,21 +2305,21 @@
                         disabled: "" === this.props.restriction.upsellLinkTo,
                         linkTo: this.props.restriction.upsellLinkTo,
                         overlay: !0
-                    }, e))), r.createElement(s.yb, {
+                    }, e))), r.createElement(s.xb, {
                         display: s.X.InlineFlex,
                         position: s.eb.Absolute,
                         attachTop: this.props.attachTop,
                         attachBottom: !this.props.attachTop,
                         attachRight: !0,
                         margin: .5,
-                        zIndex: s.bc.Default,
+                        zIndex: s.ac.Default,
                         fontSize: s.Ba.Size6,
                         background: s.r.Overlay,
                         borderRadius: s.x.Medium,
                         color: s.O.Overlay
-                    }, r.createElement(s.Rb, {
-                        direction: this.props.attachTop ? s.Tb.Bottom : s.Tb.Top,
-                        align: s.Sb.Right,
+                    }, r.createElement(s.Qb, {
+                        direction: this.props.attachTop ? s.Sb.Bottom : s.Sb.Top,
+                        align: s.Rb.Right,
                         label: n
                     }, r.createElement(s.nb, {
                         asset: a,
@@ -2356,7 +2356,7 @@
                     return a.__extends(t, e), t.prototype.render = function() {
                         return r.createElement("div", a.__assign({
                             className: "preview-card"
-                        }, Object(v.a)(this.props)), r.createElement(s.yb, {
+                        }, Object(v.a)(this.props)), r.createElement(s.xb, {
                             position: s.eb.Relative,
                             borderRadius: s.x.Medium,
                             overflow: s.Za.Hidden
@@ -3136,7 +3136,7 @@
                         }, this.props.data.currentUser.displayName))));
                         if (this.props.isLoggedIn) {
                             var e = null;
-                            this.props.darkModeEnabled && (e = m.createElement(k.yb, {
+                            this.props.darkModeEnabled && (e = m.createElement(k.xb, {
                                 borderBottom: !0,
                                 margin: {
                                     y: 1
@@ -3196,13 +3196,13 @@
                                 className: "minimal-top-nav__username",
                                 "data-a-target": "user-display-name",
                                 ellipsis: !0
-                            }, this.props.data.currentUser.displayName)), m.createElement(k.yb, {
+                            }, this.props.data.currentUser.displayName)), m.createElement(k.xb, {
                                 display: k.X.Flex,
                                 flexShrink: 0,
                                 className: "minimal-top-nav__expand"
                             }, m.createElement(k.nb, {
                                 asset: k.ob.GlyphArrDown
-                            }))))), m.createElement(k.yb, {
+                            }))))), m.createElement(k.xb, {
                                 fullWidth: !0,
                                 overflow: k.Za.Hidden,
                                 position: k.eb.Absolute,
@@ -3215,7 +3215,7 @@
                             }, e, m.createElement(k.Ta, {
                                 onClick: this.onLogoutClick,
                                 "data-test-selector": a.Logout
-                            }, m.createElement(k.yb, {
+                            }, m.createElement(k.xb, {
                                 color: k.O.Alt,
                                 display: k.X.Flex,
                                 alignItems: k.f.Center,
@@ -3389,7 +3389,7 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return s.__extends(t, e), t.prototype.render = function() {
-                        return c.createElement(m.yb, {
+                        return c.createElement(m.xb, {
                             className: this.getClassNames(),
                             color: m.O.Overlay,
                             background: m.r.Overlay,
@@ -3405,7 +3405,7 @@
                                 right: .5
                             }
                         }, this.getIcon()), c.createElement(m.W, {
-                            type: m.Ob.Span
+                            type: m.Nb.Span
                         }, this.getLabel()))
                     }, t.prototype.getClassNames = function() {
                         var e = {
@@ -3413,7 +3413,7 @@
                         };
                         return e[p[this.props.type]] = !0, l(e)
                     }, t.prototype.getIcon = function() {
-                        return this.props.hosting ? c.createElement(m.yb, {
+                        return this.props.hosting ? c.createElement(m.xb, {
                             borderRadius: m.x.Rounded,
                             className: "stream-type-indicator__hosting-dot",
                             "data-test-selector": o.HostingDot
@@ -4517,11 +4517,11 @@
                         position: o.eb.Absolute,
                         attachTop: !0,
                         attachRight: !0
-                    }, Object(o.cc)(e)), r.createElement(o.Rb, {
-                        direction: o.Tb.Top,
-                        align: o.Sb.Right,
+                    }, Object(o.bc)(e)), r.createElement(o.Qb, {
+                        direction: o.Sb.Top,
+                        align: o.Rb.Right,
                         label: Object(i.d)("Offers in-game Drops", "DropsBadge")
-                    }, r.createElement(o.yb, {
+                    }, r.createElement(o.xb, {
                         className: "drops-badge__drops-icon",
                         position: o.eb.Relative,
                         padding: {
@@ -4532,7 +4532,7 @@
                         },
                         overflow: o.Za.Hidden,
                         color: o.O.Overlay,
-                        zIndex: o.bc.Default
+                        zIndex: o.ac.Default
                     }, r.createElement(o.U, {
                         type: o.V.Inherit,
                         hoverColorInherit: !0,
@@ -4573,20 +4573,29 @@
                     aspect: o.p.BoxArt,
                     borderRadius: o.x.Medium
                 }, d(e)))), r.createElement(o.H, null, r.createElement(o.Wa, {
+                    display: o.X.Flex
+                }, r.createElement(o.Wa, {
                     "data-test-selector": "tw-card-title",
                     "data-a-target": "tw-card-title",
                     flexGrow: 1,
                     flexShrink: 1,
                     margin: {
                         top: .5
-                    }
+                    },
+                    ellipsis: !0
                 }, r.createElement(o.W, {
                     className: "tw-box-art-card__title",
-                    type: o.Ob.H3,
+                    type: o.Nb.H3,
                     fontSize: o.Ba.Size5,
                     lineHeight: o.Xa.Body,
                     ellipsis: !0
-                }, e.title)), r.createElement(o.W, {
+                }, e.title)), e.contextualCardActionProps && r.createElement(o.Wa, {
+                    margin: {
+                        top: .5
+                    },
+                    flexGrow: 0,
+                    flexShrink: 0
+                }, r.createElement(e.contextualCardActionProps.component, a.__assign({}, e.contextualCardActionProps.props)))), r.createElement(o.W, {
                     color: o.O.Alt2,
                     ellipsis: !0
                 }, e.info))), (e.linkTo || e.onClick || e.disabled) && (t = r.createElement(o.T, {
@@ -4603,7 +4612,7 @@
                     tabIndex: e.tabIndex
                 }, t)), r.createElement("div", a.__assign({
                     className: "tw-box-art-card"
-                }, Object(o.cc)(e)), r.createElement(o.G, {
+                }, Object(o.bc)(e)), r.createElement(o.G, {
                     key: e.title
                 }, t), e.tagListProps && 0 !== e.tagListProps.tags.length && r.createElement(o.Wa, {
                     margin: {
@@ -5101,7 +5110,7 @@
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave,
                         onClick: this.onClick
-                    }, Object(c.cc)(this.props)), r.createElement(c.G, {
+                    }, Object(c.bc)(this.props)), r.createElement(c.G, {
                         key: this.props.title
                     }, r.createElement(c.Wa, {
                         position: c.eb.Relative
@@ -5133,7 +5142,7 @@
                         width: 50,
                         height: 50,
                         asset: c.ob.Heart
-                    })), e ? r.createElement(c.yb, {
+                    })), e ? r.createElement(c.xb, {
                         className: "follow-game-card__overlay " + (t ? "follow-game-card__overlay--followed" : ""),
                         background: c.r.Overlay,
                         color: c.O.Overlay,
@@ -5142,7 +5151,7 @@
                         alignItems: c.f.Center,
                         justifyContent: c.Va.Center,
                         position: c.eb.Absolute,
-                        zIndex: c.bc.Above,
+                        zIndex: c.ac.Above,
                         attachBottom: !0,
                         attachTop: !0,
                         attachLeft: !0,

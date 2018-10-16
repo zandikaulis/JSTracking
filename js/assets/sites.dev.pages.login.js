@@ -58,7 +58,7 @@
                                 flexDirection: h.Z.Row
                             },
                             className: "dev-login-page"
-                        }, d.createElement(h.yb, {
+                        }, d.createElement(h.xb, {
                             flexGrow: 1,
                             flexShrink: 1,
                             display: h.X.Flex,
@@ -68,7 +68,7 @@
                             className: "dev-login-page__logo-panel"
                         }, d.createElement(h.U, {
                             to: "/"
-                        }, d.createElement(h.yb, {
+                        }, d.createElement(h.xb, {
                             color: h.O.Overlay
                         }, d.createElement(h.nb, {
                             asset: h.ob.LogoTwitchDevelopers,
@@ -91,7 +91,7 @@
                                 bottom: 2
                             }
                         }, d.createElement(h.W, {
-                            type: h.Ob.P,
+                            type: h.Nb.P,
                             fontSize: h.Ba.Size3
                         }, Object(g.d)("Welcome to the Twitch Developer Console, where code enhances live streaming experiences", "DevLogin"))), d.createElement(h.z, {
                             onClick: this.login,

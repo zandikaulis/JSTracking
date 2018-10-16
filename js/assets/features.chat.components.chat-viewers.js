@@ -41,7 +41,7 @@
                                     "data-username": t,
                                     onClick: e.usernameClickHandler
                                 }, a.createElement(m.W, {
-                                    transform: m.Nb.Capitalize
+                                    transform: m.Mb.Capitalize
                                 }, t)))
                             }),
                             s = "chat-viewers-list-header-" + i;
@@ -139,7 +139,7 @@
                                 display: m.X.Flex,
                                 alignItems: m.f.Center,
                                 justifyContent: m.Va.Center,
-                                zIndex: m.bc.Above,
+                                zIndex: m.ac.Above,
                                 position: m.eb.Absolute,
                                 attachTop: !0,
                                 attachBottom: !0,
@@ -151,7 +151,7 @@
                             fullWidth: !0,
                             fullHeight: !0,
                             flexShrink: 0,
-                            zIndex: m.bc.Default
+                            zIndex: m.ac.Default
                         }, a.createElement("section", {
                             "aria-labelledby": "chat-viewers__header"
                         }, a.createElement(m.Wa, {

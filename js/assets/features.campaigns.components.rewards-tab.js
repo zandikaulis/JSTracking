@@ -1047,10 +1047,10 @@
                         }, {
                             "esports-square__svg": !0
                         });
-                    return o.createElement(d.yb, {
+                    return o.createElement(d.xb, {
                         "data-test-selector": n,
                         className: p,
-                        textAlign: d.Kb.Center,
+                        textAlign: d.Jb.Center,
                         position: d.eb.Relative,
                         borderRadius: d.x.Large,
                         overflow: d.Za.Hidden,
@@ -1861,7 +1861,7 @@
                             margin: {
                                 right: 1
                             },
-                            verticalAlign: p.Yb.Bottom
+                            verticalAlign: p.Xb.Bottom
                         }, a.createElement(p.z, {
                             "data-test-selector": "esports-claim-all-button",
                             onClick: this.claimAllRewards,
@@ -2107,12 +2107,12 @@
                             className: "esports-milestone-balloon__threshold",
                             bold: !0,
                             fontSize: y.Ba.Size5,
-                            type: y.Ob.Span
+                            type: y.Nb.Span
                         }, Object(u.f)(this.props.threshold))));
                         var r = R("esports-milestone-balloon__image", {
                             "esports-milestone-balloon__image--blizzard": this.props.isHexagon
                         });
-                        return o.createElement(y.yb, {
+                        return o.createElement(y.xb, {
                             borderBottom: !0,
                             display: y.X.Flex,
                             alignItems: y.f.Center,
@@ -2129,7 +2129,7 @@
                         }, e, o.createElement(y.W, {
                             bold: !0
                         }, this.props.reward.name)), o.createElement(y.Wa, {
-                            textAlign: y.Kb.Right,
+                            textAlign: y.Jb.Right,
                             margin: {
                                 left: "auto"
                             }
@@ -2185,7 +2185,7 @@
                             d = !!this.props.insiderType;
                         return o.createElement(y.Wa, {
                             className: "esports-milestone-balloon",
-                            textAlign: y.Kb.Left
+                            textAlign: y.Jb.Left
                         }, o.createElement(F, {
                             reward: this.props.reward,
                             threshold: this.props.threshold,
@@ -2218,12 +2218,12 @@
                         name: "claimMilestone"
                     })], t)
                 }(o.Component));
-            var B = Object(p.connect)(function(e) {
+            var x = Object(p.connect)(function(e) {
                     return {
                         user: Object(c.e)(e)
                     }
                 })(T),
-                x = n("uLiP"),
+                B = n("uLiP"),
                 O = n("rC/K"),
                 M = (n("JPbf"), n("Ar2k")),
                 A = function(e) {
@@ -2234,11 +2234,11 @@
                         }, t.onMouseEnter = function() {
                             if (t.containerRef) {
                                 var e = !t.props.startDate || t.props.startDate <= new Date(Date.now()),
-                                    n = t.props.reward && t.props.reward.id === x.d,
-                                    i = t.props.reward && t.props.reward.id === x.a;
+                                    n = t.props.reward && t.props.reward.id === B.d,
+                                    i = t.props.reward && t.props.reward.id === B.a;
                                 t.props.reward && e && t.props.tooltipLayer.showRich({
                                     from: t.containerRef,
-                                    richContent: o.createElement(B, {
+                                    richContent: o.createElement(x, {
                                         milestoneID: t.props.milestoneID,
                                         type: t.props.type,
                                         emoteType: t.props.emoteType,
@@ -2283,7 +2283,7 @@
                             a = this.props.type === v.a.Twitch && this.props.emoteType || this.props.type === v.a.Insider && this.props.insiderType !== v.c.HeroSkin;
                         if (this.props.big) {
                             var p = this.props.reward ? this.props.reward.imageURL : "";
-                            this.props.reward && this.props.reward.id === x.c && (p = l.c + "/owl-2017/insider-test/lucio-emote-static-alt.png"), e = o.createElement(y.yb, {
+                            this.props.reward && this.props.reward.id === B.c && (p = l.c + "/owl-2017/insider-test/lucio-emote-static-alt.png"), e = o.createElement(y.xb, {
                                 className: "esports-milestone__insider--players-pack",
                                 margin: {
                                     top: 2
@@ -2480,7 +2480,7 @@
                             }
                         }, a.createElement(v.W, {
                             "data-test-selector": "campaign-reward-group-title",
-                            type: v.Ob.H3
+                            type: v.Nb.H3
                         }, this.props.title), this.props.totalRewards > 0 && a.createElement(v.Wa, {
                             className: "campaign-reward-group__entitled-amount",
                             attachRight: !0,
@@ -2549,7 +2549,7 @@
                                 right: 0,
                                 bottom: 2
                             },
-                            textAlign: v.Kb.Center
+                            textAlign: v.Jb.Center
                         }, a.createElement("li", null, a.createElement(w.a, {
                             milestoneID: t ? t.id : "",
                             type: this.props.type,
@@ -2677,7 +2677,7 @@
                                 top: 2,
                                 right: 2
                             }
-                        }, a.createElement(v.yb, {
+                        }, a.createElement(v.xb, {
                             "data-test-selector": "esports-reward-group-title",
                             borderBottom: !0
                         }, a.createElement(v.Wa, {
@@ -2686,7 +2686,7 @@
                             }
                         }, a.createElement(v.W, {
                             color: v.O.Link,
-                            transform: v.Nb.Uppercase,
+                            transform: v.Mb.Uppercase,
                             bold: !0
                         }, this.props.title)), a.createElement(v.Wa, {
                             padding: {
@@ -2968,7 +2968,7 @@
                         })))
                     }, t
                 }(a.PureComponent),
-                B = function(e) {
+                x = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -2990,7 +2990,7 @@
                         })))
                     }, t
                 }(a.Component),
-                x = function(e) {
+                B = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.getRewardCounts = function() {
@@ -3060,7 +3060,7 @@
                             padding: {
                                 top: 2
                             }
-                        }, a.createElement(B, {
+                        }, a.createElement(x, {
                             milestones: this.props.teamMilestones,
                             rewards: this.props.rewards.team
                         })), this.props.rewards.cheerbomb.length > 0 && a.createElement(v.Wa, {
@@ -3136,7 +3136,7 @@
                         if (!this.props.data || this.props.data.loading) return a.createElement(v.Wa, {
                             fullHeight: !0,
                             fullWidth: !0,
-                            textAlign: v.Kb.Center,
+                            textAlign: v.Jb.Center,
                             padding: {
                                 top: 4
                             }
@@ -3194,7 +3194,7 @@
                             canClaimRewards: this.state.canClaimRewards,
                             hasInsiderPass: s,
                             subscriptionProducts: this.props.data.user.subscriptionProducts
-                        })), a.createElement(x, {
+                        })), a.createElement(B, {
                             inidividualMilestones: t,
                             teamMilestones: n,
                             insiderMilestones: i,
@@ -3276,12 +3276,12 @@
                             className: "insider-pass-full-skin-reward__image",
                             src: this.props.imageURL
                         }), s.createElement(c.Wa, {
-                            textAlign: c.Kb.Center
+                            textAlign: c.Jb.Center
                         }, s.createElement(c.W, {
                             fontSize: c.Ba.Size4,
                             bold: !0
                         }, this.props.name)), s.createElement(c.Wa, {
-                            textAlign: c.Kb.Center
+                            textAlign: c.Jb.Center
                         }, s.createElement(c.W, {
                             color: c.O.Alt2
                         }, this.props.subText)))
@@ -3369,7 +3369,7 @@
                                         x: 1
                                     },
                                     key: n.name,
-                                    textAlign: c.Kb.Center
+                                    textAlign: c.Jb.Center
                                 }, s.createElement(p.a, {
                                     imageURL: n.imageURL,
                                     size: e ? p.c.Large : p.c.Medium,
@@ -3399,7 +3399,7 @@
                             padding: {
                                 y: 3
                             },
-                            textAlign: c.Kb.Center
+                            textAlign: c.Jb.Center
                         }, s.createElement(c.W, {
                             fontSize: c.Ba.Size3,
                             color: c.O.Link,
@@ -3459,9 +3459,9 @@
                                 left: 1,
                                 right: 1
                             }
-                        }, s.createElement(c.yb, {
+                        }, s.createElement(c.xb, {
                             className: "insider-pass-rewards__players-pack",
-                            textAlign: c.Kb.Center,
+                            textAlign: c.Jb.Center,
                             fullWidth: !0
                         }, s.createElement(c.S, {
                             className: "insider-pass-rewards__players-pack__image",
@@ -3493,9 +3493,9 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, s.createElement(c.yb, {
+                        }, s.createElement(c.xb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: c.Kb.Center,
+                            textAlign: c.Jb.Center,
                             fullWidth: !0
                         }, s.createElement(c.S, {
                             className: "insider-pass-rewards__new-item__image",
@@ -3527,9 +3527,9 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, s.createElement(c.yb, {
+                        }, s.createElement(c.xb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: c.Kb.Center,
+                            textAlign: c.Jb.Center,
                             fullWidth: !0
                         }, s.createElement(c.S, {
                             className: "insider-pass-rewards__new-item__image",

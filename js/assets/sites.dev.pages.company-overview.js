@@ -138,7 +138,7 @@
                             },
                             flexGrow: 1
                         }, a.createElement(b.W, {
-                            type: b.Ob.Span,
+                            type: b.Nb.Span,
                             ellipsis: !0
                         }, this.props.user.name))))))
                     }, t
@@ -189,10 +189,10 @@
                         }, e)))))
                     }, t
                 }(a.Component),
-                k = Object(p.compose)(Object(f.b)("DevUserSearchDropdown", {
+                S = Object(p.compose)(Object(f.b)("DevUserSearchDropdown", {
                     autoReportInteractive: !0
                 }))(_),
-                S = 100,
+                k = 100,
                 C = function(e) {
                     function t(t) {
                         var r = e.call(this, t) || this;
@@ -209,7 +209,7 @@
                                 waiting: !0
                             }), r.inputTimer = setTimeout(function() {
                                 return r.doUserSearch(e)
-                            }, S)) : r.setState({
+                            }, k)) : r.setState({
                                 userResult: [],
                                 waiting: !1,
                                 searchTerm: ""
@@ -280,7 +280,7 @@
                         }), r
                     }
                     return n.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(k, {
+                        return a.createElement(S, {
                             userResults: this.state.userResult,
                             open: this.state.searchOpen,
                             waiting: this.state.waiting,
@@ -297,7 +297,7 @@
                 }
             })(C);
             r.d(t, !1, function() {
-                return S
+                return k
             }), r.d(t, !1, function() {
                 return C
             }), r.d(t, "a", function() {
@@ -322,10 +322,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: o.bc.Above
-                    }, a.createElement(o.yb, {
+                        zIndex: o.ac.Above
+                    }, a.createElement(o.xb, {
                         color: o.O.Alt2,
-                        textAlign: o.Kb.Center,
+                        textAlign: o.Jb.Center,
                         flexShrink: 1
                     }, a.createElement(o.nb, {
                         asset: o.ob.DeadGlitch,
@@ -335,12 +335,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: o.Kb.Center
+                        textAlign: o.Jb.Center
                     }, a.createElement(o.W, {
-                        type: o.Ob.H4,
+                        type: o.Nb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), a.createElement(o.W, {
-                        type: o.Ob.P
+                        type: o.Nb.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 u = r("8Ad5"),
@@ -399,13 +399,13 @@
                             });
                         return this.props.inline ? a.createElement(s.a, {
                             onClickOut: this.onClickOut
-                        }, a.createElement(o.yb, {
+                        }, a.createElement(o.xb, {
                             background: this.state.isInputFocused || this.state.isOpen ? o.r.Base : void 0,
                             borderRadius: o.x.Large,
                             padding: .5,
                             position: o.eb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, r, e && a.createElement(o.yb, {
+                        }, r, e && a.createElement(o.xb, {
                             attachLeft: !0,
                             background: o.r.Base,
                             borderRadius: o.x.Large,
@@ -415,7 +415,7 @@
                                 y: 1
                             },
                             position: o.eb.Absolute,
-                            zIndex: o.bc.Above,
+                            zIndex: o.ac.Above,
                             elevation: 3
                         }, a.createElement("div", {
                             tabIndex: 0,
@@ -544,7 +544,7 @@
                             }, "DevAddUserModal");
                         return o.createElement(h.Wa, {
                             className: "dev-add-user-modal"
-                        }, o.createElement(h.yb, {
+                        }, o.createElement(h.xb, {
                             background: h.r.Base,
                             padding: 2
                         }, o.createElement(h.Wa, {
@@ -622,12 +622,12 @@
                 b = r("mLw1"),
                 y = r("ZDlU"),
                 _ = r("V+GM"),
-                k = r("Svt6"),
-                S = r("NvVO"),
+                S = r("Svt6"),
+                k = r("NvVO"),
                 C = r("2xye"),
                 E = r("1mFg"),
-                O = r("uLRL"),
-                w = r("Dtp2"),
+                w = r("uLRL"),
+                O = r("Dtp2"),
                 D = r("+GjP"),
                 N = r("tl6o");
 
@@ -637,7 +637,7 @@
                     return n.__generator(this, function(n) {
                         switch (n.label) {
                             case 0:
-                                r = Object(D.e)(k.a + "/v5/rbac/validate", {
+                                r = Object(D.e)(S.a + "/v5/rbac/validate", {
                                     domain_id: N.c,
                                     permission_name: t,
                                     resource: e
@@ -690,10 +690,10 @@
                         }, o.createElement(h.W, null, e)), t)
                     }, t
                 }(o.Component),
-                A = Object(s.compose)(Object(l.b)("DevMemberItem", {
+                x = Object(s.compose)(Object(l.b)("DevMemberItem", {
                     autoReportInteractive: !0
                 }))(T);
-            var U = function(e) {
+            var A = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderMembers = function() {
@@ -713,7 +713,7 @@
                                     padding: {
                                         x: 1
                                     }
-                                }, o.createElement(A, {
+                                }, o.createElement(x, {
                                     member: e,
                                     canRemoveUser: t.props.canRemoveUser,
                                     onRemoveClick: t.onRemoveClick
@@ -745,8 +745,8 @@
                             padding: 2,
                             display: h.X.Flex,
                             justifyContent: h.Va.Between
-                        }, o.createElement("header", null, o.createElement(h.Rb, {
-                            direction: h.Tb.Right,
+                        }, o.createElement("header", null, o.createElement(h.Qb, {
+                            direction: h.Sb.Right,
                             label: function(e) {
                                 var t = "";
                                 switch (e) {
@@ -765,14 +765,14 @@
                                 return t
                             }(this.props.title)
                         }, o.createElement(h.W, {
-                            type: h.Ob.H4
+                            type: h.Nb.H4
                         }, e)), r)), o.createElement(h.Wa, null, o.createElement(h.Ia, null, t)))
                     }, t
                 }(o.Component),
-                I = Object(s.compose)(Object(l.b)("DevMemberGroup", {
+                U = Object(s.compose)(Object(l.b)("DevMemberGroup", {
                     autoReportInteractive: !0
-                }))(U),
-                x = r("t04z"),
+                }))(A),
+                I = r("t04z"),
                 j = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -791,7 +791,7 @@
                         }, t.renderGroups = function() {
                             return Object.keys(t.state.members).map(function(e) {
                                 var r = t.state.members[e];
-                                return o.createElement(I, {
+                                return o.createElement(U, {
                                     title: e,
                                     members: r,
                                     key: e,
@@ -834,7 +834,7 @@
                         return o.createElement(h.Wa, null, e)
                     }, t
                 }(o.Component),
-                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(R.a)(x, {
+                M = Object(s.compose)(Object(l.b)("DevCompanyMember"), Object(R.a)(I, {
                     options: function(e) {
                         return {
                             variables: {
@@ -851,7 +851,7 @@
                         }
                     }
                 }))(j),
-                P = k.a + "/v5/rbac/users",
+                P = S.a + "/v5/rbac/users",
                 q = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
@@ -871,23 +871,23 @@
                                 return n.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return n.trys.push([0, 5, , 6]), [4, Object(E.a)(k.a + "/v5/rbac/companies/" + e.id + "/members")];
+                                            return n.trys.push([0, 5, , 6]), [4, Object(E.a)(S.a + "/v5/rbac/companies/" + e.id + "/members")];
                                         case 1:
                                             return 200 !== (t = n.sent()).status ? [3, 3] : [4, t.json()];
                                         case 2:
                                             return r = n.sent(), this.setState({
                                                 members: {
                                                     administrator: r.administrator.map(function(e) {
-                                                        return Object(w.c)(e)
+                                                        return Object(O.c)(e)
                                                     }),
                                                     manager: r.manager.map(function(e) {
-                                                        return Object(w.c)(e)
+                                                        return Object(O.c)(e)
                                                     }),
                                                     marketer: r.marketer.map(function(e) {
-                                                        return Object(w.c)(e)
+                                                        return Object(O.c)(e)
                                                     }),
                                                     developer: r.developer.map(function(e) {
-                                                        return Object(w.c)(e)
+                                                        return Object(O.c)(e)
                                                     })
                                                 }
                                             }), [3, 4];
@@ -944,7 +944,7 @@
                                             if ("administrator" === r && this.state.members.administrator.length < 2) return [2];
                                             n.label = 1;
                                         case 1:
-                                            return n.trys.push([1, 5, , 6]), "administrator" === r && (r = "admin"), t = k.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(t, {
+                                            return n.trys.push([1, 5, , 6]), "administrator" === r && (r = "admin"), t = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(t, {
                                                 method: "DELETE"
                                             })];
                                         case 2:
@@ -985,7 +985,7 @@
                                                 body: JSON.stringify(t)
                                             })];
                                         case 2:
-                                            return n.sent(), "administrator" === r && (r = "admin"), l = k.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(l, {
+                                            return n.sent(), "administrator" === r && (r = "admin"), l = S.a + "/v5/rbac/companies/" + this.props.company.id + "/members/" + e + "/roles/" + this.props.company.identifier + "::" + r, [4, Object(E.a)(l, {
                                                 method: "POST"
                                             })];
                                         case 3:
@@ -1040,9 +1040,9 @@
                                 top: 2,
                                 bottom: 4
                             },
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, o.createElement(h.W, {
-                            type: h.Ob.H1
+                            type: h.Nb.H1
                         }, Object(c.d)("{name} Role Management", {
                             name: e
                         }, "DevCompanyMembers"))), o.createElement(h.Wa, null, o.createElement(M, {
@@ -1055,10 +1055,10 @@
                     }, t
                 }(o.Component),
                 L = Object(s.compose)(Object(l.b)("DevCompanyOverview", {
-                    destination: S.a.DevSiteCompanyOverview
+                    destination: k.a.DevSiteCompanyOverview
                 }), Object(_.a)({
                     location: C.PageviewLocation.DevSiteCompanyOverview
-                }), Object(O.a)())(q);
+                }), Object(w.a)())(q);
             var W = Object(a.connect)(null, function(e) {
                 return Object(s.bindActionCreators)({
                     showAddUserModal: function(e) {

@@ -39,7 +39,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: i.bc.Above
+                            zIndex: i.ac.Above
                         }, n.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -91,7 +91,7 @@
                         "aria-label": Object(d.d)("Click to select Default Avatar Number {index, number}", {
                             index: e.index
                         }, "Default Avatar")
-                    }, c.createElement(h.yb, {
+                    }, c.createElement(h.xb, {
                         fullHeight: !0,
                         fullWidth: !0,
                         position: h.eb.Relative,
@@ -249,7 +249,7 @@
                                 "profile-edit__image-preview": !0,
                                 "profile-edit__image-preview-tall": this.state.currentImageHasTallAspectRatio
                             };
-                            a = c.createElement(h.yb, {
+                            a = c.createElement(h.xb, {
                                 className: u(n),
                                 position: h.eb.Relative,
                                 background: h.r.Base
@@ -270,7 +270,7 @@
                             height: 20,
                             width: 20
                         })), c.createElement(h.W, {
-                            type: h.Ob.H3,
+                            type: h.Nb.H3,
                             color: h.O.Alt2,
                             fontSize: h.Ba.Size4
                         }, Object(d.d)("Upload a Photo", "Profile Edit"))));
@@ -291,7 +291,7 @@
                             className: "profile-edit",
                             position: h.eb.Relative,
                             fullHeight: !0
-                        }, c.createElement(h.yb, {
+                        }, c.createElement(h.xb, {
                             className: "profile-edit__background-container",
                             background: h.r.Base,
                             fullWidth: !0
@@ -299,10 +299,10 @@
                             padding: 2,
                             display: h.X.InlineBlock,
                             position: h.eb.Relative,
-                            textAlign: h.Kb.Center,
+                            textAlign: h.Jb.Center,
                             fullWidth: !0
-                        }, c.createElement(h.yb, {
-                            textAlign: h.Kb.Left,
+                        }, c.createElement(h.xb, {
+                            textAlign: h.Jb.Left,
                             borderBottom: !0,
                             padding: {
                                 bottom: 1
@@ -311,7 +311,7 @@
                                 bottom: 2
                             }
                         }, c.createElement(h.W, {
-                            type: h.Ob.H3,
+                            type: h.Nb.H3,
                             color: h.O.Alt2,
                             fontSize: h.Ba.Size4
                         }, Object(d.d)("Edit Profile Picture for {userName}", {
@@ -320,7 +320,7 @@
                             className: "profile-edit__upload-container",
                             display: h.X.InlineBlock,
                             position: h.eb.Relative,
-                            textAlign: h.Kb.Center,
+                            textAlign: h.Jb.Center,
                             margin: {
                                 bottom: 1
                             }
@@ -328,17 +328,17 @@
                             className: "profile-edit__upload",
                             display: h.X.InlineBlock,
                             position: h.eb.Relative,
-                            textAlign: h.Kb.Center
+                            textAlign: h.Jb.Center
                         }, c.createElement(m.a, {
                             allowedFileTypes: O,
                             onFilesSubmitted: this.onImageInputChange
-                        }, i), a)), c.createElement(h.yb, {
+                        }, i), a)), c.createElement(h.xb, {
                             "data-test-selector": r.StatusMessage,
                             fontSize: h.Ba.Size4,
                             position: h.eb.Relative,
-                            textAlign: h.Kb.Center,
+                            textAlign: h.Jb.Center,
                             className: "profile-edit__status-message"
-                        }, o), c.createElement(h.yb, {
+                        }, o), c.createElement(h.xb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: .5
@@ -347,17 +347,17 @@
                                 bottom: 2
                             }
                         }, c.createElement(h.Wa, {
-                            textAlign: h.Kb.Left,
+                            textAlign: h.Jb.Left,
                             margin: {
                                 bottom: 1
                             }
                         }, c.createElement(h.W, {
-                            type: h.Ob.H3,
+                            type: h.Nb.H3,
                             color: h.O.Alt2,
                             fontSize: h.Ba.Size5
-                        }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(h.Ub, {
-                            childWidth: h.Vb.ExtraSmall,
-                            gutterSize: h.Wb.ExtraSmall,
+                        }, Object(d.d)("Or select one of these", "Profile Edit"))), c.createElement(h.Tb, {
+                            childWidth: h.Ub.ExtraSmall,
+                            gutterSize: h.Vb.ExtraSmall,
                             placeholderItems: 3
                         }, t)), c.createElement(h.Wa, {
                             display: h.X.Flex,

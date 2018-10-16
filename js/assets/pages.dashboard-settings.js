@@ -88,7 +88,7 @@
                             attachLeft: !0,
                             fullWidth: !0,
                             fullHeight: !0,
-                            zIndex: o.bc.Above
+                            zIndex: o.ac.Above
                         }, a.createElement("input", {
                             "data-a-target": "file-picker-input",
                             "data-test-selector": "file-picker-input",
@@ -112,7 +112,7 @@
             var r = n("q1tI"),
                 a = n("Ue10"),
                 o = function(e) {
-                    return r.createElement(a.yb, {
+                    return r.createElement(a.xb, {
                         className: "settings-page-header",
                         borderTop: !0,
                         borderRight: !0,
@@ -266,7 +266,7 @@
                 o = n("Ue10"),
                 i = (n("KwO+"), function(e) {
                     var t = null;
-                    e.footer && (t = a.createElement(o.yb, {
+                    e.footer && (t = a.createElement(o.xb, {
                         padding: 2,
                         background: o.r.Alt2
                     }, e.footer));
@@ -279,7 +279,7 @@
                         bottomLeft: o.x.Medium,
                         bottomRight: o.x.Medium
                     }, n);
-                    return a.createElement(a.Fragment, null, e.header, a.createElement(o.yb, {
+                    return a.createElement(a.Fragment, null, e.header, a.createElement(o.xb, {
                         background: o.r.Base,
                         margin: {
                             bottom: 4
@@ -308,8 +308,8 @@
                 p = n("cZKs"),
                 h = n("yR8l"),
                 m = n("/aPz"),
-                f = n("94Uw"),
-                g = n("Sejb"),
+                g = n("94Uw"),
+                f = n("Sejb"),
                 b = n("kMGJ"),
                 v = n("vpah"),
                 y = n("GnwI"),
@@ -330,12 +330,12 @@
                                     loading: !0,
                                     statusMessage: null
                                 }), n = e[0];
-                                var r = Object(g.a)(n),
+                                var r = Object(f.a)(n),
                                     a = (n.size / 1024 / 1024).toFixed(4);
                                 parseInt(a, 10) > 10 ? t.setState({
                                     loading: !1,
                                     statusMessage: v.b.BadSizeError
-                                }) : Object(g.b)(n, function(e) {
+                                }) : Object(f.b)(n, function(e) {
                                     return s.__awaiter(t, void 0, void 0, function() {
                                         var t, n, a, o, i = this;
                                         return s.__generator(this, function(s) {
@@ -416,7 +416,7 @@
                         var t = Object(d.d)("Editing profile banner for {userName}", {
                             userName: e
                         }, "UserImageUploader");
-                        this.props.imageType === f.a.ChannelOfflineImage && (t = Object(d.d)("Editing video banner for {userName}", {
+                        this.props.imageType === g.a.ChannelOfflineImage && (t = Object(d.d)("Editing video banner for {userName}", {
                             userName: e
                         }, "UserImageUploader"));
                         var n = null;
@@ -432,7 +432,7 @@
                         }));
                         else {
                             var r = Object(d.d)("Recommended image size: 1200x380 and less than 10MB.", "UserImageUploader");
-                            this.props.imageType === f.a.ChannelOfflineImage && (r = Object(d.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(S.Wa, null, l.createElement(S.Wa, {
+                            this.props.imageType === g.a.ChannelOfflineImage && (r = Object(d.d)("Recommended image size: 1920x1080 and less than 10MB.", "UserImageUploader")), n = l.createElement(S.Wa, null, l.createElement(S.Wa, {
                                 className: "user-image-uploader__upload-info"
                             }, l.createElement(S.Wa, null, l.createElement(S.nb, {
                                 asset: S.ob.Plus,
@@ -440,13 +440,13 @@
                                 height: 20,
                                 width: 20
                             })), l.createElement(S.W, {
-                                type: S.Ob.H3,
+                                type: S.Nb.H3,
                                 color: S.O.Alt2,
                                 fontSize: S.Ba.Size4
                             }, Object(d.d)("Upload a Photo", "User Image Uploader"))), l.createElement(S.Wa, {
                                 className: "user-image-uploader__upload-recommendation",
                                 position: S.eb.Absolute,
-                                textAlign: S.Kb.Left,
+                                textAlign: S.Jb.Left,
                                 attachLeft: !0,
                                 attachBottom: !0,
                                 margin: {
@@ -454,10 +454,10 @@
                                     bottom: 1
                                 }
                             }, l.createElement(S.W, {
-                                type: S.Ob.H6,
+                                type: S.Nb.H6,
                                 color: S.O.Alt2,
                                 fontSize: S.Ba.Size8,
-                                align: S.Yb.TextBottom
+                                align: S.Xb.TextBottom
                             }, r)))
                         }
                         var a = null;
@@ -474,7 +474,7 @@
                             className: "user-image-uploader",
                             position: S.eb.Relative,
                             fullHeight: !0
-                        }, l.createElement(S.yb, {
+                        }, l.createElement(S.xb, {
                             className: "user-image-uploader__background-container",
                             background: S.r.Base,
                             fullWidth: !0
@@ -482,21 +482,21 @@
                             padding: 2,
                             display: S.X.InlineBlock,
                             position: S.eb.Relative,
-                            textAlign: S.Kb.Center,
+                            textAlign: S.Jb.Center,
                             fullWidth: !0
-                        }, l.createElement(S.yb, {
+                        }, l.createElement(S.xb, {
                             borderBottom: !0,
                             margin: {
                                 bottom: 2
                             }
                         }, l.createElement(S.W, {
-                            type: S.Ob.H3,
+                            type: S.Nb.H3,
                             fontSize: S.Ba.Size4
                         }, t)), l.createElement(S.Wa, {
                             className: "user-image-uploader__upload-container",
                             display: S.X.InlineBlock,
                             position: S.eb.Relative,
-                            textAlign: S.Kb.Center,
+                            textAlign: S.Jb.Center,
                             margin: {
                                 bottom: 1
                             }
@@ -504,15 +504,15 @@
                             className: "user-image-uploader__upload",
                             display: S.X.InlineBlock,
                             position: S.eb.Relative,
-                            textAlign: S.Kb.Center
+                            textAlign: S.Jb.Center
                         }, l.createElement(u.a, {
                             allowedFileTypes: C,
                             onFilesSubmitted: this.onImageInputChange
-                        }, n))), l.createElement(S.yb, {
+                        }, n))), l.createElement(S.xb, {
                             "data-test-selector": "status-message",
                             fontSize: S.Ba.Size4,
                             position: S.eb.Relative,
-                            textAlign: S.Kb.Center,
+                            textAlign: S.Jb.Center,
                             className: "user-image-uploader__status-message"
                         }, o))), a)
                     }, t
@@ -974,9 +974,9 @@
             }), n.d(t, "m", function() {
                 return m
             }), n.d(t, "k", function() {
-                return f
-            }), n.d(t, "j", function() {
                 return g
+            }), n.d(t, "j", function() {
+                return f
             }), n.d(t, "g", function() {
                 return b
             }), n.d(t, "i", function() {
@@ -1022,14 +1022,14 @@
                         update_successful: e
                     })
                 },
-                f = function(e) {
+                g = function(e) {
                     d.p.tracking.track(u.SpadeEventType.LiveDashboardStreamStats, {
                         action: i.Hover,
                         target_name: e,
                         stats_configuration: JSON.stringify(d.m.get("streamStatsConfiguration", p.a))
                     })
                 },
-                g = function(e) {
+                f = function(e) {
                     d.p.tracking.track(u.SpadeEventType.LiveDashboardStreamHealthEvent, {
                         action: o.Click,
                         target_name: e
@@ -1318,13 +1318,13 @@
                         return null
                     }
                 })).InnerProvider,
-                f = r.withContext,
-                g = function(e) {
+                g = r.withContext,
+                f = function(e) {
                     return e
                 };
 
             function b(e) {
-                return f(g)(e)
+                return g(f)(e)
             }
             var v = 3e5,
                 y = function(e) {
@@ -1400,7 +1400,7 @@
             n.d(t, !1, function() {
                 return m
             }), n.d(t, !1, function() {
-                return f
+                return g
             }), n.d(t, "b", function() {
                 return b
             }), n.d(t, !1, function() {
@@ -1658,10 +1658,10 @@
                         padding: {
                             y: 1
                         },
-                        zIndex: s.bc.Above
-                    }, a.createElement(s.yb, {
+                        zIndex: s.ac.Above
+                    }, a.createElement(s.xb, {
                         color: s.O.Alt2,
-                        textAlign: s.Kb.Center,
+                        textAlign: s.Jb.Center,
                         flexShrink: 1
                     }, a.createElement(s.nb, {
                         asset: s.ob.DeadGlitch,
@@ -1671,12 +1671,12 @@
                         margin: {
                             top: 1
                         },
-                        textAlign: s.Kb.Center
+                        textAlign: s.Jb.Center
                     }, a.createElement(s.W, {
-                        type: s.Ob.H4,
+                        type: s.Nb.H4,
                         "data-test-selector": "search-error-message"
                     }, Object(i.d)("Search is not available at this time", "DropdownSearchError"))), a.createElement(s.W, {
-                        type: s.Ob.P
+                        type: s.Nb.P
                     }, Object(i.d)("Please try again later", "DropdownSearchError")))
                 },
                 c = n("8Ad5"),
@@ -1735,13 +1735,13 @@
                             });
                         return this.props.inline ? a.createElement(o.a, {
                             onClickOut: this.onClickOut
-                        }, a.createElement(s.yb, {
+                        }, a.createElement(s.xb, {
                             background: this.state.isInputFocused || this.state.isOpen ? s.r.Base : void 0,
                             borderRadius: s.x.Large,
                             padding: .5,
                             position: s.eb.Relative,
                             elevation: this.state.isInputFocused || this.state.isOpen ? 3 : void 0
-                        }, n, e && a.createElement(s.yb, {
+                        }, n, e && a.createElement(s.xb, {
                             attachLeft: !0,
                             background: s.r.Base,
                             borderRadius: s.x.Large,
@@ -1751,7 +1751,7 @@
                                 y: 1
                             },
                             position: s.eb.Absolute,
-                            zIndex: s.bc.Above,
+                            zIndex: s.ac.Above,
                             elevation: 3
                         }, a.createElement("div", {
                             tabIndex: 0,
@@ -2079,7 +2079,7 @@
                         bottom: 2
                     }
                 }, r.createElement(a.W, {
-                    type: a.Ob.H3,
+                    type: a.Nb.H3,
                     fontSize: a.Ba.Size4,
                     color: a.O.Alt,
                     bold: !0
@@ -2208,17 +2208,17 @@
                                     d = n.node,
                                     u = n.collection,
                                     h = d.sortableInfo.index,
-                                    f = (0, p.getElementMargin)(d),
-                                    g = t.container.getBoundingClientRect(),
+                                    g = (0, p.getElementMargin)(d),
+                                    f = t.container.getBoundingClientRect(),
                                     b = o({
                                         index: h,
                                         node: d,
                                         collection: u
                                     });
-                                t.node = d, t.margin = f, t.width = b.width, t.height = b.height, t.marginOffset = {
+                                t.node = d, t.margin = g, t.width = b.width, t.height = b.height, t.marginOffset = {
                                     x: t.margin.left + t.margin.right,
                                     y: Math.max(t.margin.top, t.margin.bottom)
-                                }, t.boundingClientRect = d.getBoundingClientRect(), t.containerBoundingRect = g, t.index = h, t.newIndex = h, t.axis = {
+                                }, t.boundingClientRect = d.getBoundingClientRect(), t.containerBoundingRect = f, t.index = h, t.newIndex = h, t.axis = {
                                     x: a.indexOf("x") >= 0,
                                     y: a.indexOf("y") >= 0
                                 }, t.offsetEdge = t.getEdgeOffset(d), t.initialOffset = t.getOffset(e), t.initialScroll = {
@@ -2233,7 +2233,7 @@
                                     E = [].concat(m(S.querySelectorAll("input, textarea, select")));
                                 if (E.forEach(function(e, t) {
                                         "file" !== e.type && y[t] && (e.value = y[t].value)
-                                    }), t.helper = t.document.body.appendChild(S), t.helper.style.position = "fixed", t.helper.style.top = t.boundingClientRect.top - f.top + "px", t.helper.style.left = t.boundingClientRect.left - f.left + "px", t.helper.style.width = t.width + "px", t.helper.style.height = t.height + "px", t.helper.style.boxSizing = "border-box", t.helper.style.pointerEvents = "none", s && (t.sortableGhost = d, d.style.visibility = "hidden", d.style.opacity = 0), t.minTranslate = {}, t.maxTranslate = {}, t.axis.x && (t.minTranslate.x = (c ? 0 : g.left) - t.boundingClientRect.left - t.width / 2, t.maxTranslate.x = (c ? t.contentWindow.innerWidth : g.left + g.width) - t.boundingClientRect.left - t.width / 2), t.axis.y && (t.minTranslate.y = (c ? 0 : g.top) - t.boundingClientRect.top - t.height / 2, t.maxTranslate.y = (c ? t.contentWindow.innerHeight : g.top + g.height) - t.boundingClientRect.top - t.height / 2), i)(v = t.helper.classList).add.apply(v, m(i.split(" ")));
+                                    }), t.helper = t.document.body.appendChild(S), t.helper.style.position = "fixed", t.helper.style.top = t.boundingClientRect.top - g.top + "px", t.helper.style.left = t.boundingClientRect.left - g.left + "px", t.helper.style.width = t.width + "px", t.helper.style.height = t.height + "px", t.helper.style.boxSizing = "border-box", t.helper.style.pointerEvents = "none", s && (t.sortableGhost = d, d.style.visibility = "hidden", d.style.opacity = 0), t.minTranslate = {}, t.maxTranslate = {}, t.axis.x && (t.minTranslate.x = (c ? 0 : f.left) - t.boundingClientRect.left - t.width / 2, t.maxTranslate.x = (c ? t.contentWindow.innerWidth : f.left + f.width) - t.boundingClientRect.left - t.width / 2), t.axis.y && (t.minTranslate.y = (c ? 0 : f.top) - t.boundingClientRect.top - t.height / 2, t.maxTranslate.y = (c ? t.contentWindow.innerHeight : f.top + f.height) - t.boundingClientRect.top - t.height / 2), i)(v = t.helper.classList).add.apply(v, m(i.split(" ")));
                                 t.listenerNode = e.touches ? d : t.contentWindow, p.events.move.forEach(function(e) {
                                     return t.listenerNode.addEventListener(e, t.handleSortMove, !1)
                                 }), p.events.end.forEach(function(e) {
@@ -2451,15 +2451,15 @@
                                         width: this.width > u ? u / 2 : this.width / 2,
                                         height: this.height > h ? h / 2 : this.height / 2
                                     },
-                                    f = {
+                                    g = {
                                         x: 0,
                                         y: 0
                                     },
-                                    g = r[s].edgeOffset;
-                                g || (r[s].edgeOffset = g = this.getEdgeOffset(c));
+                                    f = r[s].edgeOffset;
+                                f || (r[s].edgeOffset = f = this.getEdgeOffset(c));
                                 var b = s < r.length - 1 && r[s + 1],
                                     v = s > 0 && r[s - 1];
-                                b && !b.edgeOffset && (b.edgeOffset = this.getEdgeOffset(b.node)), d !== this.index ? (t && (c.style[p.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? d < this.index && (o.left + i.left - m.width <= g.left && o.top + i.top <= g.top + m.height || o.top + i.top + m.height <= g.top) ? (f.x = this.width + this.marginOffset.x, g.left + f.x > this.containerBoundingRect.width - m.width && (f.x = b.edgeOffset.left - g.left, f.y = b.edgeOffset.top - g.top), null === this.newIndex && (this.newIndex = d)) : d > this.index && (o.left + i.left + m.width >= g.left && o.top + i.top + m.height >= g.top || o.top + i.top + m.height >= g.top + h) && (f.x = -(this.width + this.marginOffset.x), g.left + f.x < this.containerBoundingRect.left + m.width && (f.x = v.edgeOffset.left - g.left, f.y = v.edgeOffset.top - g.top), this.newIndex = d) : d > this.index && o.left + i.left + m.width >= g.left ? (f.x = -(this.width + this.marginOffset.x), this.newIndex = d) : d < this.index && o.left + i.left <= g.left + m.width && (f.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = d)) : this.axis.y && (d > this.index && o.top + i.top + m.height >= g.top ? (f.y = -(this.height + this.marginOffset.y), this.newIndex = d) : d < this.index && o.top + i.top <= g.top + m.height && (f.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = d))), c.style[p.vendorPrefix + "Transform"] = "translate3d(" + f.x + "px," + f.y + "px,0)") : n && (this.sortableGhost = c, c.style.visibility = "hidden", c.style.opacity = 0)
+                                b && !b.edgeOffset && (b.edgeOffset = this.getEdgeOffset(b.node)), d !== this.index ? (t && (c.style[p.vendorPrefix + "TransitionDuration"] = t + "ms"), this.axis.x ? this.axis.y ? d < this.index && (o.left + i.left - m.width <= f.left && o.top + i.top <= f.top + m.height || o.top + i.top + m.height <= f.top) ? (g.x = this.width + this.marginOffset.x, f.left + g.x > this.containerBoundingRect.width - m.width && (g.x = b.edgeOffset.left - f.left, g.y = b.edgeOffset.top - f.top), null === this.newIndex && (this.newIndex = d)) : d > this.index && (o.left + i.left + m.width >= f.left && o.top + i.top + m.height >= f.top || o.top + i.top + m.height >= f.top + h) && (g.x = -(this.width + this.marginOffset.x), f.left + g.x < this.containerBoundingRect.left + m.width && (g.x = v.edgeOffset.left - f.left, g.y = v.edgeOffset.top - f.top), this.newIndex = d) : d > this.index && o.left + i.left + m.width >= f.left ? (g.x = -(this.width + this.marginOffset.x), this.newIndex = d) : d < this.index && o.left + i.left <= f.left + m.width && (g.x = this.width + this.marginOffset.x, null == this.newIndex && (this.newIndex = d)) : this.axis.y && (d > this.index && o.top + i.top + m.height >= f.top ? (g.y = -(this.height + this.marginOffset.y), this.newIndex = d) : d < this.index && o.top + i.top <= f.top + m.height && (g.y = this.height + this.marginOffset.y, null == this.newIndex && (this.newIndex = d))), c.style[p.vendorPrefix + "Transform"] = "translate3d(" + g.x + "px," + g.y + "px,0)") : n && (this.sortableGhost = c, c.style.visibility = "hidden", c.style.opacity = 0)
                             }
                             null == this.newIndex && (this.newIndex = this.index)
                         }
@@ -2940,18 +2940,18 @@
                             e[t.props.statType] = !e[t.props.statType], i.m.set("streamStatsConfiguration", e)
                         }, t.renderStat = function() {
                             var e = Object(i.d)("Offline", "LiveDashboard");
-                            return t.state.hidden ? a.createElement(u.Rb, {
+                            return t.state.hidden ? a.createElement(u.Qb, {
                                 label: t.props.statDescription || e,
-                                direction: u.Tb.Right
-                            }, Object(i.d)("Hover to view", "LiveDashboard")) : a.createElement(u.Rb, {
+                                direction: u.Sb.Right
+                            }, Object(i.d)("Hover to view", "LiveDashboard")) : a.createElement(u.Qb, {
                                 label: Object(i.d)("Click to hide", "LiveDashboard"),
-                                direction: u.Tb.Right
+                                direction: u.Sb.Right
                             }, t.props.statDescription || e)
                         }, t
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.color;
-                        return a.createElement(u.yb, {
+                        return a.createElement(u.xb, {
                             margin: {
                                 left: 1
                             },
@@ -2965,8 +2965,8 @@
                 }(a.Component),
                 h = n("xTFG"),
                 m = n("NkOX"),
-                f = n("qYDK"),
-                g = n("4mBO"),
+                g = n("qYDK"),
+                f = n("4mBO"),
                 b = n("JBqe"),
                 v = n("6XEL"),
                 y = n("9kwc");
@@ -3039,16 +3039,16 @@
                                     return e + t.count
                                 }, 0)),
                                 l = Object(i.f)(r.current);
-                            return r.next ? a.createElement(u.yb, {
+                            return r.next ? a.createElement(u.xb, {
                                 color: u.O.Alt2,
                                 display: u.X.Flex,
                                 alignItems: u.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(u.Rb, {
+                            }, a.createElement(u.Qb, {
                                 label: Object(i.d)("Subscribers shows number of active subs.\n Sub points unlock additional emote slots.", "LiveDashboard"),
-                                direction: u.Tb.Right
+                                direction: u.Sb.Right
                             }, a.createElement(u.nb, {
                                 asset: u.ob.Star
                             })), a.createElement(p, {
@@ -3056,16 +3056,16 @@
                                 statType: E.SUBSCRIPTIONS,
                                 showStat: n.state.statsConfig && n.state.statsConfig[E.SUBSCRIPTIONS],
                                 color: u.O.Base
-                            })) : a.createElement(u.yb, {
+                            })) : a.createElement(u.xb, {
                                 color: u.O.Alt2,
                                 display: u.X.Flex,
                                 alignItems: u.f.Center,
                                 margin: {
                                     bottom: .5
                                 }
-                            }, a.createElement(u.Rb, {
+                            }, a.createElement(u.Qb, {
                                 label: Object(i.d)("Congrats on reaching the max number of emote slots", "LiveDashboard"),
-                                direction: u.Tb.Right
+                                direction: u.Sb.Right
                             }, a.createElement(u.nb, {
                                 asset: u.ob.Star
                             })), a.createElement(p, {
@@ -3111,61 +3111,61 @@
                             t = e && e.followers,
                             n = Object(i.f)(e && e.profileViewCount || 0),
                             r = e && t && null !== t.totalCount ? Object(i.f)(t.totalCount) : 0;
-                        return a.createElement(f.a, {
+                        return a.createElement(g.a, {
                             title: Object(i.d)("Stats", "LiveDashboard")
                         }, a.createElement(u.Wa, {
                             padding: 2
-                        }, a.createElement(u.yb, {
+                        }, a.createElement(u.xb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(u.Rb, {
+                        }, a.createElement(u.Qb, {
                             label: Object(i.d)("The number of people currently watching your channel", "LiveDashboard"),
-                            direction: u.Tb.Right
+                            direction: u.Sb.Right
                         }, a.createElement(u.nb, {
                             asset: u.ob.GlyphLive
-                        })), this.renderViewersCount()), a.createElement(u.yb, {
+                        })), this.renderViewersCount()), a.createElement(u.xb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(u.Rb, {
+                        }, a.createElement(u.Qb, {
                             label: Object(i.d)("How long you have been broadcasting for this session", "LiveDashboard"),
-                            direction: u.Tb.Right
+                            direction: u.Sb.Right
                         }, a.createElement(u.nb, {
                             asset: u.ob.Timeout
-                        })), this.renderStreamTime()), a.createElement(u.yb, {
+                        })), this.renderStreamTime()), a.createElement(u.xb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(u.Rb, {
+                        }, a.createElement(u.Qb, {
                             label: Object(i.d)("The number of clips that have been created", "LiveDashboard"),
-                            direction: u.Tb.Right
-                        }, a.createElement(u.yb, {
+                            direction: u.Sb.Right
+                        }, a.createElement(u.xb, {
                             className: "stats-widget-clips-icon",
                             display: u.X.InlineFlex
                         }, a.createElement(u.nb, {
                             asset: u.ob.Clip,
                             height: 20,
                             width: 20
-                        }))), this.renderNumberOfClips()), a.createElement(u.yb, {
+                        }))), this.renderNumberOfClips()), a.createElement(u.xb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(u.Rb, {
+                        }, a.createElement(u.Qb, {
                             label: Object(i.d)("The number of people who have viewed the channel", "LiveDashboard"),
-                            direction: u.Tb.Right
+                            direction: u.Sb.Right
                         }, a.createElement(u.nb, {
                             asset: u.ob.GlyphViews
                         })), a.createElement(p, {
@@ -3173,16 +3173,16 @@
                             statType: E.TOTAL_VIEWS,
                             showStat: !this.state.statsConfig || this.state.statsConfig[E.TOTAL_VIEWS],
                             color: u.O.Base
-                        })), a.createElement(u.yb, {
+                        })), a.createElement(u.xb, {
                             color: u.O.Alt2,
                             display: u.X.Flex,
                             alignItems: u.f.Center,
                             margin: {
                                 bottom: .5
                             }
-                        }, a.createElement(u.Rb, {
+                        }, a.createElement(u.Qb, {
                             label: Object(i.d)("The number of people currently following your channel", "LiveDashboard"),
-                            direction: u.Tb.Right
+                            direction: u.Sb.Right
                         }, a.createElement(u.nb, {
                             asset: u.ob.Heart
                         })), a.createElement(p, {
@@ -3193,7 +3193,7 @@
                         })), this.renderSubscriptionStat()))
                     }, t
                 }(a.Component),
-                w = Object(o.compose)(Object(g.b)(m.a.Stats), b.b, Object(h.b)(m.a.Stats, {
+                w = Object(o.compose)(Object(f.b)(m.a.Stats), b.b, Object(h.b)(m.a.Stats, {
                     autoReportCardVisibility: !0
                 }), Object(s.a)(y, {
                     options: function(e) {
@@ -3218,7 +3218,7 @@
                     }, r.createElement(a.Ta, {
                         linkTo: e.linkTo,
                         type: a.Ua.Alpha
-                    }, r.createElement(a.yb, {
+                    }, r.createElement(a.xb, {
                         padding: 2,
                         alignItems: a.f.Center,
                         display: a.X.Flex,
@@ -3229,7 +3229,7 @@
                         fontSize: a.Ba.Size6,
                         bold: !0
                     }, e.text), r.createElement(a.W, {
-                        type: a.Ob.Span
+                        type: a.Nb.Span
                     }, e.description)), r.createElement(a.Wa, null, r.createElement(a.nb, {
                         asset: a.ob.AngleRight
                     })))))
@@ -3349,19 +3349,24 @@
                 c = n("mLw1"),
                 d = n("jKe7"),
                 u = n("EOHf"),
-                p = n("/7QA"),
-                h = n("8Ad5"),
-                m = n("3hKJ"),
-                f = n("7PeK"),
-                g = n("cZKs"),
-                b = n("6XEL"),
-                v = function(e, t) {
+                p = n("fvjX"),
+                h = n("/7QA"),
+                m = n("V+GM"),
+                g = n("8Ad5"),
+                f = n("NvVO"),
+                b = n("2xye"),
+                v = n("GnwI"),
+                y = n("3hKJ"),
+                S = n("7PeK"),
+                E = n("cZKs"),
+                C = n("6XEL"),
+                _ = function(e, t) {
                     return i.__awaiter(void 0, void 0, void 0, function() {
                         var n;
                         return i.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(b.c)({
+                                    return [4, Object(C.c)({
                                         path: "/v5/channels/" + e + "/channel_properties/authorized_stream_key",
                                         method: "POST",
                                         body: {
@@ -3382,13 +3387,13 @@
                         })
                     })
                 },
-                y = function(e, t) {
+                w = function(e, t) {
                     return i.__awaiter(void 0, void 0, void 0, function() {
                         var n;
                         return i.__generator(this, function(r) {
                             switch (r.label) {
                                 case 0:
-                                    return [4, Object(b.c)({
+                                    return [4, Object(C.c)({
                                         path: "/v5/channels/" + e + "/channel_properties/authorized_stream_key/" + t,
                                         method: "DELETE"
                                     })];
@@ -3404,20 +3409,20 @@
                         })
                     })
                 },
-                S = n("Ue10"),
-                E = (n("3aEF"), {
+                O = n("Ue10"),
+                k = (n("3aEF"), {
                     "data-test-selector": "cancel-button"
                 }),
-                C = {
+                x = {
                     "data-test-selector": "close-button"
                 },
-                _ = {
+                I = {
                     "data-test-selector": "remove-button"
                 };
             ! function(e) {
                 e[e.Pending = 0] = "Pending", e[e.InFlight = 1] = "InFlight", e[e.Failed = 2] = "Failed", e[e.Success = 3] = "Success"
             }(r || (r = {}));
-            var w, O, k = function(e) {
+            var T, R, D = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onClickRemove = function() {
@@ -3428,7 +3433,7 @@
                                         case 0:
                                             return this.setState({
                                                 requestState: r.InFlight
-                                            }), [4, y(this.props.channelID, this.props.email)];
+                                            }), [4, w(this.props.channelID, this.props.email)];
                                         case 1:
                                             return (e = t.sent()).isError ? this.setState({
                                                 requestState: r.Failed
@@ -3443,106 +3448,106 @@
                         }, n
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = s.createElement(s.Fragment, null, s.createElement(S.yb, {
+                        var e = s.createElement(s.Fragment, null, s.createElement(O.xb, {
                                 borderBottom: !0
-                            }, s.createElement(S.Wa, {
+                            }, s.createElement(O.Wa, {
                                 padding: {
                                     y: 2
                                 }
-                            }, s.createElement(S.W, {
-                                color: S.O.Alt2
-                            }, Object(p.d)("Failed to remove authorized streamer. Try again.", "ChannelSettingsAuthorizedStreamersPage")))), s.createElement(S.Wa, {
-                                display: S.X.Flex,
-                                justifyContent: S.Va.Center,
+                            }, s.createElement(O.W, {
+                                color: O.O.Alt2
+                            }, Object(h.d)("Failed to remove authorized streamer. Try again.", "ChannelSettingsAuthorizedStreamersPage")))), s.createElement(O.Wa, {
+                                display: O.X.Flex,
+                                justifyContent: O.Va.Center,
                                 padding: {
                                     top: 2
                                 }
-                            }, s.createElement(S.Wa, {
+                            }, s.createElement(O.Wa, {
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(S.z, i.__assign({}, C, {
+                            }, s.createElement(O.z, i.__assign({}, x, {
                                 onClick: this.props.onClose
-                            }), Object(p.d)("Close", "ChannelSettingsAuthorizedStreamersPage"))))),
-                            t = s.createElement(s.Fragment, null, s.createElement(S.Wa, null, s.createElement(S.Wa, {
-                                display: S.X.Flex,
-                                justifyContent: S.Va.Center,
+                            }), Object(h.d)("Close", "ChannelSettingsAuthorizedStreamersPage"))))),
+                            t = s.createElement(s.Fragment, null, s.createElement(O.Wa, null, s.createElement(O.Wa, {
+                                display: O.X.Flex,
+                                justifyContent: O.Va.Center,
                                 padding: {
                                     y: 2
                                 }
-                            }, s.createElement(S.W, {
-                                color: S.O.Alt2
-                            }, this.props.email))), s.createElement(S.yb, {
-                                background: S.r.Alt,
-                                display: S.X.Flex,
-                                justifyContent: S.Va.Center,
+                            }, s.createElement(O.W, {
+                                color: O.O.Alt2
+                            }, this.props.email))), s.createElement(O.xb, {
+                                background: O.r.Alt,
+                                display: O.X.Flex,
+                                justifyContent: O.Va.Center,
                                 padding: 2
-                            }, s.createElement(S.Wa, {
+                            }, s.createElement(O.Wa, {
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(S.z, i.__assign({}, E, {
+                            }, s.createElement(O.z, i.__assign({}, k, {
                                 onClick: this.props.onClose,
-                                type: S.F.Hollow
-                            }), Object(p.d)("No, Keep Them", "ChannelSettingsAuthorizedStreamersPage"))), s.createElement(S.Wa, {
+                                type: O.F.Hollow
+                            }), Object(h.d)("No, Keep Them", "ChannelSettingsAuthorizedStreamersPage"))), s.createElement(O.Wa, {
                                 margin: {
                                     x: 1
                                 }
-                            }, s.createElement(S.z, i.__assign({}, _, {
+                            }, s.createElement(O.z, i.__assign({}, I, {
                                 disabled: this.state.requestState === r.InFlight,
                                 onClick: this.onClickRemove
-                            }), Object(p.d)("Yes, Remove Them", "ChannelSettingsAuthorizedStreamersPage")))));
-                        return s.createElement(S.yb, {
-                            background: S.r.Base,
+                            }), Object(h.d)("Yes, Remove Them", "ChannelSettingsAuthorizedStreamersPage")))));
+                        return s.createElement(O.xb, {
+                            background: O.r.Base,
                             elevation: 3,
                             className: "remove-streamer-modal"
-                        }, s.createElement(S.yb, {
+                        }, s.createElement(O.xb, {
                             borderBottom: !0,
                             padding: 2,
-                            display: S.X.Flex,
-                            justifyContent: S.Va.Center
-                        }, s.createElement(S.W, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Center
+                        }, s.createElement(O.W, {
                             bold: !0,
-                            fontSize: S.Ba.Size4
-                        }, Object(p.d)("Remove This Authorized Streamer?", "ChannelSettingsAuthorizedStreamersPage"))), this.state.requestState === r.Failed ? e : t, s.createElement(g.a, {
+                            fontSize: O.Ba.Size4
+                        }, Object(h.d)("Remove This Authorized Streamer?", "ChannelSettingsAuthorizedStreamersPage"))), this.state.requestState === r.Failed ? e : t, s.createElement(E.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(s.Component),
-                I = n("IFXb"),
-                x = n("B+LW"),
-                T = (n("m1a8"), {
+                P = n("IFXb"),
+                j = n("B+LW"),
+                M = (n("m1a8"), {
                     "data-test-selector": "email"
                 }),
-                R = {
+                F = {
                     "data-test-selector": "send"
                 },
-                D = {
+                L = {
                     "data-test-selector": "remove"
                 },
-                P = {
+                N = {
                     "data-test-selector": "empty"
                 },
-                M = {
+                A = {
                     "data-test-selector": "error"
                 },
-                j = {
+                W = {
                     "data-test-selector": "not-found"
                 };
             ! function(e) {
                 e.Waiting = "waiting", e.Error = "error", e.NotFound = "notFound", e.Success = "success"
-            }(w || (w = {})),
+            }(T || (T = {})),
             function(e) {
                 e.Loading = "loading", e.Success = "success", e.Error = "error"
-            }(O || (O = {}));
-            var F = function(e) {
+            }(R || (R = {}));
+            var U = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             authorizedStreamers: [],
                             emailAddress: "",
-                            inviteState: w.Waiting,
-                            requestState: O.Loading
+                            inviteState: T.Waiting,
+                            requestState: R.Loading
                         }, t.updateAuthorizedStreamers = function(e) {
                             t.setState({
                                 authorizedStreamers: e
@@ -3552,7 +3557,7 @@
                                 emailAddress: e.currentTarget.value
                             })
                         }, t.handleKeyDown = function(e) {
-                            e.keyCode === h.a.Enter && t.sendInvite(t.state.emailAddress)
+                            e.keyCode === g.a.Enter && t.sendInvite(t.state.emailAddress)
                         }, t.sendInvite = function(e) {
                             return i.__awaiter(t, void 0, void 0, function() {
                                 var t;
@@ -3560,17 +3565,17 @@
                                     switch (n.label) {
                                         case 0:
                                             return this.setState({
-                                                inviteState: w.Waiting
-                                            }), e.length > 0 ? [4, v(this.props.user.id, e)] : [3, 2];
+                                                inviteState: T.Waiting
+                                            }), e.length > 0 ? [4, _(this.props.user.id, e)] : [3, 2];
                                         case 1:
                                             (t = n.sent()).isNotFound ? this.setState({
-                                                inviteState: w.NotFound
+                                                inviteState: T.NotFound
                                             }) : t.isError ? this.setState({
-                                                inviteState: w.Error
+                                                inviteState: T.Error
                                             }) : this.setState({
                                                 authorizedStreamers: t.authorizedStreamers,
                                                 emailAddress: "",
-                                                inviteState: w.Success
+                                                inviteState: T.Success
                                             }), n.label = 2;
                                         case 2:
                                             return [2]
@@ -3583,7 +3588,7 @@
                                 return i.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return [4, v(this.props.user.id, e)];
+                                            return [4, _(this.props.user.id, e)];
                                         case 1:
                                             return (t = n.sent()).isError || this.setState({
                                                 authorizedStreamers: t.authorizedStreamers
@@ -3592,92 +3597,92 @@
                                 })
                             })
                         }, t.renderSuccess = function() {
-                            var e = t.state.inviteState === w.Error || t.state.inviteState === w.NotFound,
-                                n = s.createElement(S.Wa, {
+                            var e = t.state.inviteState === T.Error || t.state.inviteState === T.NotFound,
+                                n = s.createElement(O.Wa, {
                                     margin: {
                                         bottom: 2
                                     }
-                                }, s.createElement(S.Wa, {
-                                    display: S.X.Flex,
+                                }, s.createElement(O.Wa, {
+                                    display: O.X.Flex,
                                     flexGrow: 1,
                                     padding: {
                                         bottom: 1
                                     }
-                                }, s.createElement(S.Wa, {
+                                }, s.createElement(O.Wa, {
                                     flexGrow: 1,
                                     margin: {
                                         right: 1
                                     }
-                                }, s.createElement(S.Qa, {
+                                }, s.createElement(O.Qa, {
                                     error: e,
-                                    type: S.Sa.Text,
+                                    type: O.Sa.Text,
                                     onChange: t.handleEmailAddressChange,
                                     onKeyDown: t.handleKeyDown,
                                     value: t.state.emailAddress,
-                                    placeholder: Object(p.d)("Enter an email address", "ChannelSettingsAuthorizedStreamersPage")
-                                }), s.createElement(S.Wa, {
+                                    placeholder: Object(h.d)("Enter an email address", "ChannelSettingsAuthorizedStreamersPage")
+                                }), s.createElement(O.Wa, {
                                     margin: {
                                         top: 1
                                     }
-                                }, t.state.inviteState === w.NotFound && s.createElement(S.W, i.__assign({}, j, {
-                                    color: S.O.Error,
-                                    fontSize: S.Ba.Size6
-                                }), Object(p.d)("That email address isn't linked to a Twitch account. Make sure the email is linked to a Twitch account.", "ChannelSettingsAuthorizedStreamersPage")))), s.createElement(S.Wa, null, s.createElement(S.z, i.__assign({}, R, {
+                                }, t.state.inviteState === T.NotFound && s.createElement(O.W, i.__assign({}, W, {
+                                    color: O.O.Error,
+                                    fontSize: O.Ba.Size6
+                                }), Object(h.d)("That email address isn't linked to a Twitch account. Make sure the email is linked to a Twitch account.", "ChannelSettingsAuthorizedStreamersPage")))), s.createElement(O.Wa, null, s.createElement(O.z, i.__assign({}, F, {
                                     onClick: function() {
                                         return t.sendInvite(t.state.emailAddress)
                                     }
-                                }), s.createElement(S.Wa, {
+                                }), s.createElement(O.Wa, {
                                     padding: {
                                         x: 1
                                     }
-                                }, Object(p.d)("Send Invite", "ChannelSettingsAuthorizedStreamersPage"))))));
-                            return s.createElement(s.Fragment, null, n, 0 === t.state.authorizedStreamers.length ? s.createElement(S.Wa, i.__assign({
-                                display: S.X.Flex,
-                                flexDirection: S.Z.Column,
-                                alignItems: S.f.Center,
-                                alignContent: S.e.Center,
-                                justifyContent: S.Va.Center,
+                                }, Object(h.d)("Send Invite", "ChannelSettingsAuthorizedStreamersPage"))))));
+                            return s.createElement(s.Fragment, null, n, 0 === t.state.authorizedStreamers.length ? s.createElement(O.Wa, i.__assign({
+                                display: O.X.Flex,
+                                flexDirection: O.Z.Column,
+                                alignItems: O.f.Center,
+                                alignContent: O.e.Center,
+                                justifyContent: O.Va.Center,
                                 padding: {
                                     y: 5
                                 }
-                            }, P), s.createElement(S.Wa, {
+                            }, N), s.createElement(O.Wa, {
                                 padding: {
                                     bottom: .5
                                 }
-                            }, s.createElement(S.q, {
+                            }, s.createElement(O.q, {
                                 src: "https://static-cdn.jtvnw.net/emoticons/v1/58127/2.0",
                                 alt: "CoolCat",
                                 size: 50
-                            })), s.createElement(S.W, {
-                                color: S.O.Alt2,
-                                fontSize: S.Ba.Size5
-                            }, Object(p.d)("No authorized streamers to display", "ChannelSettingsAuthorizedStreamersPage"))) : t.state.authorizedStreamers.map(function(e, n) {
-                                return s.createElement(S.yb, {
+                            })), s.createElement(O.W, {
+                                color: O.O.Alt2,
+                                fontSize: O.Ba.Size5
+                            }, Object(h.d)("No authorized streamers to display", "ChannelSettingsAuthorizedStreamersPage"))) : t.state.authorizedStreamers.map(function(e, n) {
+                                return s.createElement(O.xb, {
                                     key: n,
-                                    alignItems: S.f.Center,
+                                    alignItems: O.f.Center,
                                     borderBottom: !0,
-                                    display: S.X.Flex,
-                                    justifyContent: S.Va.Between,
+                                    display: O.X.Flex,
+                                    justifyContent: O.Va.Between,
                                     padding: {
                                         bottom: 1,
                                         top: 1
                                     }
-                                }, s.createElement(S.Wa, {
-                                    display: S.X.Flex,
-                                    alignItems: S.f.Center
-                                }, s.createElement(S.W, i.__assign({}, T), e.email)), s.createElement(S.Wa, null, s.createElement(S.Wa, {
+                                }, s.createElement(O.Wa, {
+                                    display: O.X.Flex,
+                                    alignItems: O.f.Center
+                                }, s.createElement(O.W, i.__assign({}, M), e.email)), s.createElement(O.Wa, null, s.createElement(O.Wa, {
                                     margin: {
                                         right: 1
                                     },
-                                    display: S.X.InlineFlex
-                                }, s.createElement(S.z, {
-                                    type: S.F.Hollow,
+                                    display: O.X.InlineFlex
+                                }, s.createElement(O.z, {
+                                    type: O.F.Hollow,
                                     onClick: function() {
                                         return t.resendInvite(e.email)
                                     }
-                                }, Object(p.d)("Resend Invite", "ChannelSettingsAuthorizedStreamersPage"))), s.createElement(x.a, {
+                                }, Object(h.d)("Resend Invite", "ChannelSettingsAuthorizedStreamersPage"))), s.createElement(j.a, {
                                     triggerModal: function(n) {
-                                        return s.createElement(k, {
+                                        return s.createElement(D, {
                                             channelID: t.props.user.id,
                                             email: e.email,
                                             onClose: n,
@@ -3685,70 +3690,70 @@
                                         })
                                     }
                                 }, function(e) {
-                                    return s.createElement(S.z, i.__assign({
-                                        type: S.F.Text,
+                                    return s.createElement(O.z, i.__assign({
+                                        type: O.F.Text,
                                         onClick: e
-                                    }, D), Object(p.d)("Remove", "ChannelSettingsAuthorizedStreamersPage"))
+                                    }, L), Object(h.d)("Remove", "ChannelSettingsAuthorizedStreamersPage"))
                                 })))
                             }))
                         }, t.renderError = function() {
-                            return s.createElement(S.Wa, i.__assign({
-                                display: S.X.Flex,
-                                flexDirection: S.Z.Column,
-                                alignItems: S.f.Center,
-                                alignContent: S.e.Center,
-                                justifyContent: S.Va.Center,
+                            return s.createElement(O.Wa, i.__assign({
+                                display: O.X.Flex,
+                                flexDirection: O.Z.Column,
+                                alignItems: O.f.Center,
+                                alignContent: O.e.Center,
+                                justifyContent: O.Va.Center,
                                 padding: {
                                     top: 5,
                                     right: 0,
                                     bottom: 5,
                                     left: 0
                                 }
-                            }, M), s.createElement(S.Wa, {
+                            }, A), s.createElement(O.Wa, {
                                 padding: {
                                     top: 5,
                                     bottom: .5
                                 }
-                            }, s.createElement(S.q, {
+                            }, s.createElement(O.q, {
                                 src: "https://static-cdn.jtvnw.net/emoticons/v1/86/2.0",
                                 alt: "BibleThump",
                                 size: 50
-                            })), s.createElement(S.W, {
-                                color: S.O.Alt2,
-                                fontSize: S.Ba.Size5
-                            }, Object(p.d)("An error occurred while loading authorized streamers for your channel.", "ChannelSettingsAuthorizedStreamersPage")))
+                            })), s.createElement(O.W, {
+                                color: O.O.Alt2,
+                                fontSize: O.Ba.Size5
+                            }, Object(h.d)("An error occurred while loading authorized streamers for your channel.", "ChannelSettingsAuthorizedStreamersPage")))
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        if (!this.props.user || this.state.requestState === O.Loading) return s.createElement(I.a, null, s.createElement(S.db, {
+                        if (!this.props.user || this.state.requestState === R.Loading) return s.createElement(P.a, null, s.createElement(O.db, {
                             height: 600
                         }));
-                        var e = s.createElement(m.a, {
-                            title: Object(p.d)("People who can stream to your channel", "ChannelSettingsAuthorizedStreamersPage"),
+                        var e = s.createElement(y.a, {
+                            title: Object(h.d)("People who can stream to your channel", "ChannelSettingsAuthorizedStreamersPage"),
                             linkToParent: "/" + this.props.user.login + "/dashboard/settings"
                         });
-                        return s.createElement(I.a, null, s.createElement(f.a, {
+                        return s.createElement(P.a, null, s.createElement(S.a, {
                             header: e
-                        }, s.createElement(S.yb, {
-                            background: S.r.Base,
+                        }, s.createElement(O.xb, {
+                            background: O.r.Base,
                             elevation: 1,
                             padding: 2,
                             flexGrow: 1,
                             fullWidth: !0,
                             className: "editable-channels-page"
-                        }, s.createElement(S.yb, {
+                        }, s.createElement(O.xb, {
                             fullWidth: !0,
                             fullHeight: !0,
-                            display: S.X.Flex,
-                            justifyContent: S.Va.Center,
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Center,
                             margin: 1
-                        }, s.createElement(S.P, {
+                        }, s.createElement(O.P, {
                             cols: 6
-                        }, this.state.requestState === O.Success ? this.renderSuccess() : this.renderError())))))
+                        }, this.state.requestState === R.Success ? this.renderSuccess() : this.renderError())))))
                     }, t.prototype.componentDidMount = function() {
                         this.fetchAuthorizedStreamers()
-                    }, t.prototype.componentDidUpdate = function(e) {
-                        this.props.user && this.props.channelLogin !== e.channelLogin && this.fetchAuthorizedStreamers()
+                    }, t.prototype.componentDidUpdate = function(e, t) {
+                        this.props.user && this.props.channelLogin !== e.channelLogin && this.fetchAuthorizedStreamers(), t.requestState === this.state.requestState || this.state.requestState === R.Loading || this.state.requestState !== R.Success && this.state.requestState !== R.Error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.fetchAuthorizedStreamers = function() {
                         return i.__awaiter(this, void 0, void 0, function() {
                             var e;
@@ -3761,7 +3766,7 @@
                                                 return i.__generator(this, function(n) {
                                                     switch (n.label) {
                                                         case 0:
-                                                            return [4, Object(b.c)({
+                                                            return [4, Object(C.c)({
                                                                 path: "/v5/channels/" + e + "/channel_properties"
                                                             })];
                                                         case 1:
@@ -3778,30 +3783,30 @@
                                         }(this.props.user.id)] : [2];
                                     case 1:
                                         return (e = t.sent()).isError ? this.setState({
-                                            requestState: O.Error
+                                            requestState: R.Error
                                         }) : this.setState({
                                             authorizedStreamers: e.authorizedStreamers,
-                                            requestState: O.Success
+                                            requestState: R.Success
                                         }), [2]
                                 }
                             })
                         })
                     }, t
                 }(s.Component),
-                L = n("fvjX"),
-                N = n("V+GM"),
-                A = n("NvVO"),
-                W = n("2xye"),
-                U = n("GnwI"),
-                B = n("BK8n"),
+                B = Object(p.compose)(Object(v.b)("AuthorizedStreamersPage", {
+                    destination: f.a.AuthorizedStreamers
+                }), Object(m.a)({
+                    location: b.PageviewLocation.AuthorizedStreamers
+                }))(U),
+                q = n("BK8n"),
                 z = n("G1cX"),
-                q = n("Nxrd"),
-                K = n("f00E"),
-                V = n("b6Yk"),
-                H = n("H/lO"),
-                G = n("NZDK");
+                K = n("Nxrd"),
+                V = n("f00E"),
+                H = n("b6Yk"),
+                G = n("H/lO"),
+                X = n("NZDK");
 
-            function X(e) {
+            function Q(e) {
                 var t = e.settings;
                 return {
                     vodcastHosting: !t.deprioritize_vodcast,
@@ -3819,7 +3824,7 @@
                                 i = Array.prototype.indexOf.call(a, o),
                                 s = i;
                             switch (e) {
-                                case h.a.Space:
+                                case g.a.Space:
                                     return n ? (r && (a.item(r).tabIndex = 0), {
                                         isSorting: !1,
                                         selectedIndex: null
@@ -3827,11 +3832,11 @@
                                         isSorting: !0,
                                         selectedIndex: i
                                     }) : void 0;
-                                case h.a.Up:
+                                case g.a.Up:
                                     if (0 === i) return;
                                     s = i < 0 ? a.length - 1 : i - 1;
                                     break;
-                                case h.a.Down:
+                                case g.a.Down:
                                     if ((s = i + 1) >= a.length) return;
                                     break;
                                 default:
@@ -3842,7 +3847,7 @@
                                 l.focus(), l.tabIndex = 0, r && (a.item(r).tabIndex = -1)
                             }
                             if (null !== r) {
-                                var c = Object(q.arrayMove)(t, i, s);
+                                var c = Object(K.arrayMove)(t, i, s);
                                 return n ? {
                                     autohostChannels: c,
                                     selectedIndex: s
@@ -3853,27 +3858,27 @@
                         }
                     }
                 },
-                Q = function(e, t) {
-                    return !(e !== h.a.Space || !t)
+                J = function(e, t) {
+                    return !(e !== g.a.Space || !t)
                 },
                 Z = n("+XQV");
 
-            function J(e) {
+            function $(e) {
                 return {
                     publishingMode: e.publishing_mode,
                     followersOnlyDurationSeconds: e.followers_only_duration_seconds || Z.FollowersDurationSeconds.Off
                 }
             }
-            var $ = n("yLwq"),
-                ee = function(e) {
-                    return e.profile_image && e.profile_image["50x50"] ? e.profile_image["50x50"].url : Object($.c)(e.id, 50)
+            var ee = n("yLwq"),
+                te = function(e) {
+                    return e.profile_image && e.profile_image["50x50"] ? e.profile_image["50x50"].url : Object(ee.c)(e.id, 50)
                 },
-                te = n("N3I0"),
-                ne = n("GIun"),
-                re = n("8/mp"),
-                ae = n("TSYQ"),
-                oe = n("N0BP"),
-                ie = (n("ne2S"), function(e) {
+                ne = n("N3I0"),
+                re = n("GIun"),
+                ae = n("8/mp"),
+                oe = n("TSYQ"),
+                ie = n("N0BP"),
+                se = (n("ne2S"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -3891,7 +3896,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = Object(p.d)("Remove", "AutohostListItem"),
+                        var e = Object(h.d)("Remove", "AutohostListItem"),
                             t = !this.props.isSorting && this.state.hovered,
                             n = {
                                 "autohost-list-item": !0,
@@ -3899,64 +3904,64 @@
                                 "autohost-list-item--selected": this.props.selected
                             },
                             r = null;
-                        (t || this.props.selected) && (r = s.createElement(S.Wa, {
+                        (t || this.props.selected) && (r = s.createElement(O.Wa, {
                             className: "autohost-list-item--remove",
                             padding: {
                                 right: 1
                             },
-                            display: S.X.Flex,
+                            display: O.X.Flex,
                             attachRight: !0
-                        }, s.createElement(S.Rb, {
+                        }, s.createElement(O.Qb, {
                             label: e,
-                            direction: S.Tb.Left
-                        }, s.createElement(S.A, {
+                            direction: O.Sb.Left
+                        }, s.createElement(O.A, {
                             "data-test-selector": "AUTO_HOST_REMOVE_BUTTON",
                             ariaLabel: e,
-                            icon: S.ob.Trash,
+                            icon: O.ob.Trash,
                             onClick: this.onRemoveClick,
                             overlay: !0
                         }))));
-                        var a = this.props.user.avatar || Object($.c)(this.props.user.id, 64);
-                        return s.createElement(S.Oa, i.__assign({
-                            className: ae(n),
+                        var a = this.props.user.avatar || Object(ee.c)(this.props.user.id, 64);
+                        return s.createElement(O.Oa, i.__assign({
+                            className: oe(n),
                             padding: {
                                 y: 1,
                                 x: 1
                             }
-                        }, Object(oe.a)(this.props)), s.createElement("div", {
+                        }, Object(ie.a)(this.props)), s.createElement("div", {
                             onMouseEnter: this.onMouseEnter,
                             onMouseLeave: this.onMouseLeave,
                             tabIndex: -1
-                        }, s.createElement(S.G, {
+                        }, s.createElement(O.G, {
                             row: !0
-                        }, s.createElement(S.Wa, {
+                        }, s.createElement(O.Wa, {
                             className: "autohost-list-item__avatar"
-                        }, s.createElement(S.o, {
-                            ratio: S.p.Aspect1x1
+                        }, s.createElement(O.o, {
+                            ratio: O.p.Aspect1x1
                         }, s.createElement("img", {
                             alt: this.props.user.name,
                             src: a,
                             draggable: !1
-                        }))), s.createElement(S.Wa, {
+                        }))), s.createElement(O.Wa, {
                             flexGrow: 1,
-                            display: S.X.Flex,
-                            position: S.eb.Relative
-                        }, s.createElement(S.Oa, {
+                            display: O.X.Flex,
+                            position: O.eb.Relative
+                        }, s.createElement(O.Oa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, s.createElement(S.W, {
-                            type: S.Ob.Span,
+                        }, s.createElement(O.W, {
+                            type: O.Nb.Span,
                             ellipsis: !0
                         }, this.props.user.name))), r)))
                     }, t
                 }(s.Component)),
-                se = Object(q.SortableElement)(function(e) {
-                    return s.createElement(ie, i.__assign({}, e))
+                le = Object(K.SortableElement)(function(e) {
+                    return s.createElement(se, i.__assign({}, e))
                 }),
-                le = (n("r6fx"), function(e) {
-                    return s.createElement(re.b, {
+                ce = (n("r6fx"), function(e) {
+                    return s.createElement(ae.b, {
                         className: "autohost-list-edit",
                         suppressScrollX: !0
                     }, s.createElement("ul", {
@@ -3967,7 +3972,7 @@
                     }, e.autohostChannels && e.autohostChannels.map(function(t, n) {
                         return s.createElement("li", {
                             key: t.id
-                        }, s.createElement(se, {
+                        }, s.createElement(le, {
                             user: t,
                             index: n,
                             onRemoveClick: e.onHostRemoved,
@@ -3976,10 +3981,10 @@
                         }))
                     })))
                 }),
-                ce = Object(q.SortableContainer)(function(e) {
-                    return s.createElement(le, i.__assign({}, e))
+                de = Object(K.SortableContainer)(function(e) {
+                    return s.createElement(ce, i.__assign({}, e))
                 }),
-                de = function(e) {
+                ue = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onAddClick = function() {
@@ -3990,46 +3995,46 @@
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = null;
-                        e = this.props.user.added ? s.createElement(S.z, {
+                        e = this.props.user.added ? s.createElement(O.z, {
                             onClick: this.onAddedClick,
                             "data-test-selector": "AUTO_HOST_REMOVE_BUTTON",
-                            icon: S.ob.Check,
-                            statusAlertIcon: S.ob.Trash,
-                            statusAlertText: Object(p.d)("Remove", "AutohostUserResultCard")
-                        }, Object(p.d)("Added", "AutohostUserResultCard")) : s.createElement(S.z, {
-                            type: S.F.Hollow,
+                            icon: O.ob.Check,
+                            statusAlertIcon: O.ob.Trash,
+                            statusAlertText: Object(h.d)("Remove", "AutohostUserResultCard")
+                        }, Object(h.d)("Added", "AutohostUserResultCard")) : s.createElement(O.z, {
+                            type: O.F.Hollow,
                             onClick: this.onAddClick,
                             "data-test-selector": "AUTO_HOST_ADD_BUTTON"
-                        }, Object(p.d)("Add", "AutohostUserResultCard"));
-                        var t = this.props.user.avatar || Object($.c)(this.props.user.id, 64);
-                        return s.createElement(S.Wa, i.__assign({
+                        }, Object(h.d)("Add", "AutohostUserResultCard"));
+                        var t = this.props.user.avatar || Object(ee.c)(this.props.user.id, 64);
+                        return s.createElement(O.Wa, i.__assign({
                             padding: {
                                 y: .5,
                                 x: 1
                             }
-                        }, Object(oe.a)(this.props)), s.createElement(S.G, {
+                        }, Object(ie.a)(this.props)), s.createElement(O.G, {
                             row: !0
-                        }, s.createElement(S.I, {
+                        }, s.createElement(O.I, {
                             alt: this.props.user.name,
                             src: t,
-                            size: S.J.Size4,
-                            aspect: S.p.Aspect1x1
-                        }), s.createElement(S.Wa, {
+                            size: O.J.Size4,
+                            aspect: O.p.Aspect1x1
+                        }), s.createElement(O.Wa, {
                             flexGrow: 1,
-                            display: S.X.Flex,
-                            position: S.eb.Relative
-                        }, s.createElement(S.Oa, {
+                            display: O.X.Flex,
+                            position: O.eb.Relative
+                        }, s.createElement(O.Oa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, s.createElement(S.W, {
-                            type: S.Ob.Span,
+                        }, s.createElement(O.W, {
+                            type: O.Nb.Span,
                             ellipsis: !0
                         }, this.props.user.name))), e))
                     }, t
                 }(s.Component),
-                ue = (n("B2xO"), function(e) {
+                pe = (n("B2xO"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.userSearch = null, t.setUserSearchRef = function(e) {
@@ -4041,48 +4046,48 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = null;
-                        return this.props.isWaiting ? t = s.createElement(S.Ya, {
+                        return this.props.isWaiting ? t = s.createElement(O.Ya, {
                             fillContent: !0
                         }) : this.props.userResults && (t = this.props.userResults.map(function(t) {
-                            return s.createElement(ne.a, {
+                            return s.createElement(re.a, {
                                 key: t.id
-                            }, s.createElement(de, {
+                            }, s.createElement(ue, {
                                 user: t,
                                 onAddClick: e.props.onHostAdded,
                                 onAddedClick: e.props.onHostRemoved,
                                 key: t.id
                             }))
-                        })), s.createElement(S.Wa, {
+                        })), s.createElement(O.Wa, {
                             className: "autohost-list",
-                            alignContent: S.e.Center
-                        }, s.createElement(S.Wa, {
-                            position: S.eb.Relative,
+                            alignContent: O.e.Center
+                        }, s.createElement(O.Wa, {
+                            position: O.eb.Relative,
                             margin: {
                                 y: 1
                             }
-                        }, s.createElement(te.a, {
+                        }, s.createElement(ne.a, {
                             onChange: this.props.onUserInputChange,
                             onFocusInput: this.props.onFocusInput,
                             ref: this.setUserSearchRef,
-                            placeholder: Object(p.d)("Search channels to host", "AutohostList"),
+                            placeholder: Object(h.d)("Search channels to host", "AutohostList"),
                             balloonProps: {
                                 show: this.props.isUserSearchOpen,
-                                direction: S.v.Bottom,
-                                size: S.w.Large
+                                direction: O.v.Bottom,
+                                size: O.w.Large
                             },
                             onClose: this.props.onSearchClose,
                             isErrored: this.props.isSearchErrored
-                        }, s.createElement(S.Wa, {
+                        }, s.createElement(O.Wa, {
                             className: "autohost-list__user-search"
-                        }, s.createElement(re.b, {
+                        }, s.createElement(ae.b, {
                             contentClassName: "autohost-list__user-search-content",
                             suppressScrollX: !0
-                        }, s.createElement(S.Wa, {
+                        }, s.createElement(O.Wa, {
                             fullWidth: !0
-                        }, t, s.createElement(re.a, {
+                        }, t, s.createElement(ae.a, {
                             enabled: !this.props.isWaiting && this.props.isUserSearchOpen,
                             loadMore: this.props.loadMore
-                        })))))), s.createElement(ce, {
+                        })))))), s.createElement(de, {
                             onHostRemoved: this.props.onHostRemoved,
                             autohostChannels: this.props.autohostChannels,
                             onSortEnd: this.props.onSortEnd,
@@ -4097,9 +4102,9 @@
                         }))
                     }, t
                 }(s.Component)),
-                pe = 100,
-                he = "/kraken/streams/recommended",
-                me = "kraken/autohost/list",
+                he = 100,
+                me = "/kraken/streams/recommended",
+                ge = "kraken/autohost/list",
                 fe = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -4128,7 +4133,7 @@
                                 currentPage: 0
                             }), n.inputTimer = setTimeout(function() {
                                 return n.doUserSearch(e)
-                            }, pe)
+                            }, he)
                         }, n.loadMore = function() {
                             return i.__awaiter(n, void 0, void 0, function() {
                                 var e, t, n, r, a;
@@ -4138,13 +4143,13 @@
                                             if (!this.state.userTerm || this.state.queryID || this.state.isWaiting || !0 === this.state.exhaustedHits) return [2];
                                             e = this.state.currentPage + 1, t = null, o.label = 1;
                                         case 1:
-                                            return o.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(H.a.Users, this.state.userTerm, "", {
+                                            return o.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(G.a.Users, this.state.userTerm, "", {
                                                 page: e
                                             })];
                                         case 2:
                                             return t = o.sent(), [3, 4];
                                         case 3:
-                                            return n = o.sent(), p.k.error(n, "Algolia page search failed"), this.setState({
+                                            return n = o.sent(), h.k.error(n, "Algolia page search failed"), this.setState({
                                                 isUserSearchOpen: !0
                                             }), this.props.onError(""), [2];
                                         case 4:
@@ -4171,7 +4176,7 @@
                                                 return e.id
                                             })).push(e.id), o.label = 1;
                                         case 1:
-                                            return o.trys.push([1, 3, , 4]), [4, V.a.putOrThrow(me, {
+                                            return o.trys.push([1, 3, , 4]), [4, H.a.putOrThrow(ge, {
                                                 body: {
                                                     targets: t.join(",")
                                                 }
@@ -4179,7 +4184,7 @@
                                         case 2:
                                             return o.sent(), [3, 4];
                                         case 3:
-                                            return n = o.sent(), r = Object(p.d)("Unable to add user to auto host list", "AutohostList"), p.k.error(n, r, {
+                                            return n = o.sent(), r = Object(h.d)("Unable to add user to auto host list", "AutohostList"), h.k.error(n, r, {
                                                 target: e
                                             }), this.props.onError(r), [2];
                                         case 4:
@@ -4211,11 +4216,11 @@
                                             }), [2];
                                             a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, V.a.getOrThrow(he)];
+                                            return a.trys.push([1, 3, , 4]), [4, H.a.getOrThrow(me)];
                                         case 2:
                                             return e = a.sent(), [3, 4];
                                         case 3:
-                                            return t = a.sent(), p.k.error(t, "Unable to retrieve recomended channels"), [2];
+                                            return t = a.sent(), h.k.error(t, "Unable to retrieve recomended channels"), [2];
                                         case 4:
                                             return e.body && (n = e.body.recommended_streams.map(function(e) {
                                                 var t = String(e.channel._id);
@@ -4246,11 +4251,11 @@
                                 return i.__generator(this, function(a) {
                                     switch (a.label) {
                                         case 0:
-                                            return a.trys.push([0, 2, , 3]), [4, V.a.getOrThrow(me)];
+                                            return a.trys.push([0, 2, , 3]), [4, H.a.getOrThrow(ge)];
                                         case 1:
                                             return e = a.sent(), [3, 3];
                                         case 2:
-                                            return t = a.sent(), n = Object(p.d)("Unable to fetch auto host list", "AutohostList"), p.k.error(t, n), this.props.onError(n), [2];
+                                            return t = a.sent(), n = Object(h.d)("Unable to fetch auto host list", "AutohostList"), h.k.error(t, n), this.props.onError(n), [2];
                                         case 3:
                                             return e.body && (r = e.body.targets.map(function(e) {
                                                 return {
@@ -4278,7 +4283,7 @@
                                                 }), t = [], 1 !== this.state.autohostChannels.length) return [3, 5];
                                             i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, V.a.deleteOrThrow(me)];
+                                            return i.trys.push([1, 3, , 4]), [4, H.a.deleteOrThrow(ge)];
                                         case 2:
                                             return i.sent(), [3, 4];
                                         case 3:
@@ -4293,7 +4298,7 @@
                                                 return e.id
                                             }), i.label = 6;
                                         case 6:
-                                            return i.trys.push([6, 8, , 9]), [4, V.a.putOrThrow(me, {
+                                            return i.trys.push([6, 8, , 9]), [4, H.a.putOrThrow(ge, {
                                                 body: {
                                                     targets: a.join(",")
                                                 }
@@ -4325,14 +4330,14 @@
                             })), a
                         }, n.onKeyDown = function(e) {
                             var t = Y(e.keyCode, n.state.autohostChannels, n.state.isSorting, n.state.selectedIndex);
-                            t && n.setState(t), Q(e.keyCode, n.state.isSorting) && n.updateList(n.state.autohostChannels)
+                            t && n.setState(t), J(e.keyCode, n.state.isSorting) && n.updateList(n.state.autohostChannels)
                         }, n.onChannelOrderChange = function(e) {
                             return i.__awaiter(n, void 0, void 0, function() {
                                 var t;
                                 return i.__generator(this, function(n) {
                                     return e.newIndex === e.oldIndex ? (this.setState({
                                         isSorting: !1
-                                    }), [2]) : (t = Object(q.arrayMove)(this.state.autohostChannels, e.oldIndex, e.newIndex), this.setState({
+                                    }), [2]) : (t = Object(K.arrayMove)(this.state.autohostChannels, e.oldIndex, e.newIndex), this.setState({
                                         autohostChannels: t,
                                         isSorting: !1
                                     }), this.updateList(t), [2])
@@ -4342,13 +4347,13 @@
                             return n.setState({
                                 isSorting: !0
                             })
-                        }, n.searchClient = new G.a({
-                            appId: p.a.algoliaApplicationID,
-                            apiKey: p.a.algoliaAPIKey,
-                            apolloClient: p.p.apollo.client,
-                            logger: p.k,
-                            config: p.a,
-                            stats: p.p.stats
+                        }, n.searchClient = new X.a({
+                            appId: h.a.algoliaApplicationID,
+                            apiKey: h.a.algoliaAPIKey,
+                            apolloClient: h.p.apollo.client,
+                            logger: h.k,
+                            config: h.a,
+                            stats: h.p.stats
                         }), n
                     }
                     return i.__extends(t, e), t.prototype.componentWillMount = function() {
@@ -4358,7 +4363,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return s.createElement(ue, {
+                        return s.createElement(pe, {
                             onUserInputChange: this.onUserInputChange,
                             isUserSearchOpen: this.state.isUserSearchOpen,
                             userResults: this.state.userResults,
@@ -4382,15 +4387,15 @@
                             return i.__generator(this, function(o) {
                                 switch (o.label) {
                                     case 0:
-                                        this.inputTimer = 0, t = Object(K.a)(), this.setState({
+                                        this.inputTimer = 0, t = Object(V.a)(), this.setState({
                                             queryID: t
                                         }), n = null, o.label = 1;
                                     case 1:
-                                        return o.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(H.a.Users, e, t)];
+                                        return o.trys.push([1, 3, , 4]), [4, this.searchClient.queryForType(G.a.Users, e, t)];
                                     case 2:
                                         return n = o.sent(), [3, 4];
                                     case 3:
-                                        return r = o.sent(), p.k.error(r, "Algolia autohost user search failed"), this.setState({
+                                        return r = o.sent(), h.k.error(r, "Algolia autohost user search failed"), this.setState({
                                             isWaiting: !1,
                                             isUserSearchOpen: !0
                                         }), this.props.onError(""), [2];
@@ -4421,8 +4426,8 @@
                             }
                         }) : []
                     }, t.prototype.reportChannelError = function(e, t) {
-                        var n = Object(p.d)("Unable to remove channel from auto host list", "AutohostList");
-                        p.k.error(t, n, {
+                        var n = Object(h.d)("Unable to remove channel from auto host list", "AutohostList");
+                        h.k.error(t, n, {
                             target: e
                         }), this.props.onError(n)
                     }, t.prototype.updateList = function(e) {
@@ -4435,7 +4440,7 @@
                                             return e.id
                                         }), a.label = 1;
                                     case 1:
-                                        return a.trys.push([1, 3, , 4]), [4, V.a.putOrThrow(me, {
+                                        return a.trys.push([1, 3, , 4]), [4, H.a.putOrThrow(ge, {
                                             body: {
                                                 targets: t.join(",")
                                             }
@@ -4443,7 +4448,7 @@
                                     case 2:
                                         return a.sent(), [3, 4];
                                     case 3:
-                                        return n = a.sent(), r = Object(p.d)("Unable to re order auto host list", "AutohostList"), p.k.error(n, r), this.props.onError(r), [3, 4];
+                                        return n = a.sent(), r = Object(h.d)("Unable to re order auto host list", "AutohostList"), h.k.error(n, r), this.props.onError(r), [3, 4];
                                     case 4:
                                         return [2]
                                 }
@@ -4451,12 +4456,12 @@
                         })
                     }, t
                 }(s.Component);
-            var ge, be = Object(a.connect)(function(e) {
+            var be, ve = Object(a.connect)(function(e) {
                     return {
                         user: Object(o.e)(e)
                     }
                 })(fe),
-                ve = function(e) {
+                ye = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4472,38 +4477,38 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = s.createElement(m.a, {
-                            title: Object(p.d)("Host list", "AuthohostListPage"),
+                        var e = s.createElement(y.a, {
+                            title: Object(h.d)("Host list", "AuthohostListPage"),
                             linkToParent: "/" + this.props.match.params.channelLogin + "/dashboard/settings"
                         });
-                        return s.createElement(I.a, null, s.createElement(f.a, {
+                        return s.createElement(P.a, null, s.createElement(S.a, {
                             header: e
-                        }, s.createElement(B.a, {
+                        }, s.createElement(q.a, {
                             error: !!this.state.autohostError,
                             errorMessage: this.state.autohostError
-                        }, s.createElement(S.Wa, {
-                            display: S.X.Flex,
-                            justifyContent: S.Va.Center
-                        }, s.createElement(be, {
+                        }, s.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Center
+                        }, s.createElement(ve, {
                             onError: this.handleAutohostError,
                             onUserInput: this.handleAutohostInput,
                             isSearchErrored: !!this.state.autohostError
                         })))))
                     }, t
                 }(s.Component),
-                ye = Object(L.compose)(Object(U.b)("AutohostListPage", {
+                Se = Object(p.compose)(Object(v.b)("AutohostListPage", {
                     autoReportInteractive: !0,
-                    destination: A.a.AutohostSettings
-                }), Object(N.a)({
-                    location: W.PageviewLocation.AutohostSettings
-                }))(ve),
-                Se = n("yR8l"),
-                Ee = n("c0Zc"),
-                Ce = n("EpBn"),
-                _e = n("mAXC"),
-                we = n("fWal"),
-                Oe = n("+vgv"),
-                ke = function(e) {
+                    destination: f.a.AutohostSettings
+                }), Object(m.a)({
+                    location: b.PageviewLocation.AutohostSettings
+                }))(ye),
+                Ee = n("yR8l"),
+                Ce = n("c0Zc"),
+                _e = n("EpBn"),
+                we = n("mAXC"),
+                Oe = n("fWal"),
+                ke = n("+vgv"),
+                xe = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleToggleEnabled = function(e) {
@@ -4529,62 +4534,62 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        var e = !this.props.saving && this.props.requestState === Oe.a.Loading,
+                        var e = !this.props.saving && this.props.requestState === ke.a.Loading,
                             t = this.props.saving;
-                        return s.createElement(f.a, null, this.props.requestState === Oe.a.Error && s.createElement(B.a, null, s.createElement(S.W, {
-                            color: S.O.Error
-                        }, Object(p.d)("Something went wrong. Give it another try later.", "AutohostSettings"))), s.createElement(we.a, {
-                            label: Object(p.d)("Auto host channels", "AutohostSettings"),
+                        return s.createElement(S.a, null, this.props.requestState === ke.a.Error && s.createElement(q.a, null, s.createElement(O.W, {
+                            color: O.O.Error
+                        }, Object(h.d)("Something went wrong. Give it another try later.", "AutohostSettings"))), s.createElement(Oe.a, {
+                            label: Object(h.d)("Auto host channels", "AutohostSettings"),
                             name: "enabled",
                             showPlaceholder: e,
                             disabled: t,
                             checked: this.props.autohostSettings.enabled,
                             onChange: this.handleToggleEnabled,
-                            description: Object(p.d)("Automatically host channels from your host list when you're offline", "AutohostSettings"),
+                            description: Object(h.d)("Automatically host channels from your host list when you're offline", "AutohostSettings"),
                             id: "auto-host-channels-toggle",
                             "data-test-selector": "auto-host-channels-toggle"
-                        }), s.createElement(we.a, {
-                            label: Object(p.d)("Host team channels", "AutohostSettings"),
+                        }), s.createElement(Oe.a, {
+                            label: Object(h.d)("Host team channels", "AutohostSettings"),
                             name: "teamHost",
                             showPlaceholder: e,
                             disabled: t,
                             checked: this.props.autohostSettings.teamHost,
                             onChange: this.handleToggleTeamHost,
                             id: "team-host",
-                            description: Object(p.d)("Include team channels in your host list", "AutohostSettings")
-                        }), s.createElement(we.a, {
-                            label: Object(p.d)("Host pre-recorded videos", "AutohostSettings"),
+                            description: Object(h.d)("Include team channels in your host list", "AutohostSettings")
+                        }), s.createElement(Oe.a, {
+                            label: Object(h.d)("Host pre-recorded videos", "AutohostSettings"),
                             name: "vodcastHosting",
                             showPlaceholder: e,
                             disabled: t,
                             checked: this.props.autohostSettings.vodcastHosting,
                             onChange: this.handleToggleVodcastHosting,
-                            description: Object(p.d)("Include channels streaming pre-recorded video, like Premieres or Reruns", "AutohostSettings"),
+                            description: Object(h.d)("Include channels streaming pre-recorded video, like Premieres or Reruns", "AutohostSettings"),
                             id: "vodcast-hosting-toggle"
-                        }), s.createElement(Ce.a, {
-                            orientation: S.Ea.Horizontal,
-                            label: Object(p.d)("Hosting priority", "AutohostSettings")
-                        }, s.createElement(S.Wa, {
+                        }), s.createElement(_e.a, {
+                            orientation: O.Ea.Horizontal,
+                            label: Object(h.d)("Hosting priority", "AutohostSettings")
+                        }, s.createElement(O.Wa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(S.kb, {
-                            disabled: this.props.requestState === Oe.a.Loading,
+                        }, s.createElement(O.kb, {
+                            disabled: this.props.requestState === ke.a.Loading,
                             checked: this.props.autohostSettings.strategy === Z.AutohostStrategy.Ordered,
                             onChange: this.handleSetOrderedAutohostStrategy,
-                            label: Object(p.d)("Host channels by the order they appear in the list", "AutohostSettings"),
+                            label: Object(h.d)("Host channels by the order they appear in the list", "AutohostSettings"),
                             name: "hostPriority",
                             value: Z.AutohostStrategy.Ordered
-                        })), s.createElement(S.kb, {
-                            disabled: this.props.requestState === Oe.a.Loading,
+                        })), s.createElement(O.kb, {
+                            disabled: this.props.requestState === ke.a.Loading,
                             checked: this.props.autohostSettings.strategy === Z.AutohostStrategy.Random,
                             onChange: this.handleSetRandomAutohostStrategy,
-                            label: Object(p.d)("Host channels randomly from the list", "AutohostSettings"),
+                            label: Object(h.d)("Host channels randomly from the list", "AutohostSettings"),
                             name: "hostPriority",
                             value: Z.AutohostStrategy.Random
-                        })), s.createElement(_e.a, {
-                            text: Object(p.d)("Host list", "AutohostSettings"),
-                            description: Object(p.d)("Add and manage your hosted channels", "AutohostSettings"),
+                        })), s.createElement(we.a, {
+                            text: Object(h.d)("Host list", "AutohostSettings"),
+                            description: Object(h.d)("Add and manage your hosted channels", "AutohostSettings"),
                             linkTo: "/" + this.props.channelName + "/dashboard/settings/autohost"
                         }))
                     }, t
@@ -4605,73 +4610,73 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(f.a, null, this.props.requestState === Oe.a.Error && s.createElement(B.a, null, s.createElement(S.W, {
-                            color: S.O.Error
-                        }, Object(p.d)("Something went wrong. Give it another try later.", "RaidSettingsForm"))), s.createElement(Ce.a, {
-                            orientation: S.Ea.Horizontal,
-                            label: Object(p.d)("Raid", "RaidSettingsForm")
-                        }, s.createElement(S.Wa, {
+                        return s.createElement(S.a, null, this.props.requestState === ke.a.Error && s.createElement(q.a, null, s.createElement(O.W, {
+                            color: O.O.Error
+                        }, Object(h.d)("Something went wrong. Give it another try later.", "RaidSettingsForm"))), s.createElement(_e.a, {
+                            orientation: O.Ea.Horizontal,
+                            label: Object(h.d)("Raid", "RaidSettingsForm")
+                        }, s.createElement(O.Wa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(S.kb, {
-                            disabled: this.props.requestState === Oe.a.Loading,
+                        }, s.createElement(O.kb, {
+                            disabled: this.props.requestState === ke.a.Loading,
                             checked: this.props.raidPreference === Z.RaidPreference.All,
                             onChange: this.handleSetRaidPreference,
-                            label: Object(p.d)("Allow all raids", "RaidSettingsForm"),
+                            label: Object(h.d)("Allow all raids", "RaidSettingsForm"),
                             name: "raidPreference",
                             value: Z.RaidPreference.All
-                        })), s.createElement(S.Wa, {
+                        })), s.createElement(O.Wa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(S.kb, {
-                            disabled: this.props.requestState === Oe.a.Loading,
+                        }, s.createElement(O.kb, {
+                            disabled: this.props.requestState === ke.a.Loading,
                             checked: this.props.raidPreference === Z.RaidPreference.Network,
                             onChange: this.handleSetRaidPreference,
-                            label: Object(p.d)("Only allow raids from friends, teammates, and followed channels", "RaidSettingsForm"),
+                            label: Object(h.d)("Only allow raids from friends, teammates, and followed channels", "RaidSettingsForm"),
                             name: "raidPreference",
                             value: Z.RaidPreference.Network
-                        })), s.createElement(S.Wa, {
+                        })), s.createElement(O.Wa, {
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(S.kb, {
-                            disabled: this.props.requestState === Oe.a.Loading,
+                        }, s.createElement(O.kb, {
+                            disabled: this.props.requestState === ke.a.Loading,
                             checked: this.props.raidPreference === Z.RaidPreference.None,
                             onChange: this.handleSetRaidPreference,
-                            label: Object(p.d)("Block all raids", "RaidSettingsForm"),
+                            label: Object(h.d)("Block all raids", "RaidSettingsForm"),
                             name: "raidPreference",
                             value: Z.RaidPreference.None
                         }))))
                     }, t
                 }(s.Component),
-                xe = Object(U.b)("RaidSettingsForm")(Ie),
-                Te = function(e) {
-                    return s.createElement(s.Fragment, null, s.createElement(Ee.a, {
-                        title: Object(p.d)("Auto Hosting", "DashboardSettings")
-                    }), s.createElement(ke, {
+                Te = Object(v.b)("RaidSettingsForm")(Ie),
+                Re = function(e) {
+                    return s.createElement(s.Fragment, null, s.createElement(Ce.a, {
+                        title: Object(h.d)("Auto Hosting", "DashboardSettings")
+                    }), s.createElement(xe, {
                         channelName: e.channelName,
                         autohostSettings: e.autohostSettings,
                         requestState: e.requestState,
                         saving: e.saving,
                         saveSettings: e.saveSettings
-                    }), s.createElement(Ee.a, {
-                        title: Object(p.d)("Raids", "DashboardSettings")
-                    }), s.createElement(xe, {
+                    }), s.createElement(Ce.a, {
+                        title: Object(h.d)("Raids", "DashboardSettings")
+                    }), s.createElement(Te, {
                         raidPreference: e.autohostSettings.raidPreference,
                         requestState: e.requestState,
                         saveSettings: e.saveSettings
                     }))
                 },
-                Re = function(e) {
+                De = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             autohostSettings: Z.DEFAULT_AUTOHOST_SETTINGS,
                             requestState: Z.RequestState.Loading,
                             saving: !1
-                        }, t.logger = p.p.logger.withCategory("raid-settings-form"), t.saveSettings = function(e) {
+                        }, t.logger = h.p.logger.withCategory("raid-settings-form"), t.saveSettings = function(e) {
                             return i.__awaiter(t, void 0, void 0, function() {
                                 var t, n;
                                 return i.__generator(this, function(r) {
@@ -4686,7 +4691,7 @@
                                                     return i.__generator(this, function(n) {
                                                         switch (n.label) {
                                                             case 0:
-                                                                return [4, V.a.put("/kraken/autohost/settings", {
+                                                                return [4, H.a.put("/kraken/autohost/settings", {
                                                                     body: function(e) {
                                                                         return {
                                                                             deprioritize_vodcast: !e.vodcastHosting,
@@ -4704,7 +4709,7 @@
                                                                     error: t.error || t.requestError
                                                                 }] : [2, {
                                                                     isError: !1,
-                                                                    autohostSettings: X(t.body)
+                                                                    autohostSettings: Q(t.body)
                                                                 }]
                                                         }
                                                     })
@@ -4736,14 +4741,14 @@
                                                 return i.__generator(this, function(t) {
                                                     switch (t.label) {
                                                         case 0:
-                                                            return [4, V.a.get("/kraken/autohost/settings")];
+                                                            return [4, H.a.get("/kraken/autohost/settings")];
                                                         case 1:
                                                             return (e = t.sent()).error || e.requestError ? [2, {
                                                                 isError: !0,
                                                                 autohostSettings: void 0
                                                             }] : [2, {
                                                                 isError: !1,
-                                                                autohostSettings: X(e.body)
+                                                                autohostSettings: Q(e.body)
                                                             }]
                                                     }
                                                 })
@@ -4760,7 +4765,7 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return s.createElement(Te, {
+                        return s.createElement(Re, {
                             channelName: this.props.channelName,
                             autohostSettings: this.state.autohostSettings,
                             requestState: this.state.requestState,
@@ -4769,15 +4774,15 @@
                         })
                     }, t
                 }(s.Component),
-                De = n("EkNY"),
-                Pe = n("Jxh/"),
+                Pe = n("EkNY"),
+                je = n("Jxh/"),
                 Me = n("geRD"),
-                je = function(e) {
+                Fe = function(e) {
                     var t = e.saving || e.errorLoading;
-                    return s.createElement(we.a, {
+                    return s.createElement(Oe.a, {
                         id: "settings-channel-page-mature-content",
-                        label: Object(p.d)("Mature Content", "MatureContentToggle"),
-                        description: Object(p.d)("Enable this setting if your stream contains content that may be inappropriate for younger audiences. You may never broadcast sexual activity, nudity, threats or extreme violence. Doing so will result in immediate, irrevocable termination of your account. Please make sure your content will comply with the <x:link>Terms of Service</x:link> before broadcasting", {
+                        label: Object(h.d)("Mature Content", "MatureContentToggle"),
+                        description: Object(h.d)("Enable this setting if your stream contains content that may be inappropriate for younger audiences. You may never broadcast sexual activity, nudity, threats or extreme violence. Doing so will result in immediate, irrevocable termination of your account. Please make sure your content will comply with the <x:link>Terms of Service</x:link> before broadcasting", {
                             "x:link": function(e) {
                                 return s.createElement("a", {
                                     href: "https://www.twitch.tv/p/terms-of-service/"
@@ -4791,16 +4796,16 @@
                         showPlaceholder: e.loading
                     })
                 },
-                Fe = n("K1Va"),
-                Le = n("sZD3"),
-                Ne = function(e) {
+                Le = n("K1Va"),
+                Ne = n("sZD3"),
+                Ae = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             checked: !1,
                             saving: !1,
                             errorSaving: !1
-                        }, t.logger = p.p.logger.withCategory("settings").withCategory("mature-content"), t.onCheckBoxChange = function(e) {
+                        }, t.logger = h.p.logger.withCategory("settings").withCategory("mature-content"), t.onCheckBoxChange = function(e) {
                             t.setState({
                                 checked: e,
                                 saving: !0
@@ -4833,7 +4838,7 @@
                                                         })
                                                     })
                                                 } : t
-                                            }, Object(Me.e)(Le, {}, n), this.logger.debug("Updated broadcast settings", {
+                                            }, Object(Me.e)(Ne, {}, n), this.logger.debug("Updated broadcast settings", {
                                                 isMature: e
                                             }), this.setState({
                                                 saving: !1,
@@ -4869,7 +4874,7 @@
                         var e = this.props.data.currentUser,
                             t = e && e.broadcastSettings,
                             n = !!this.props.data.error || !this.props.data.loading && !t;
-                        return s.createElement(je, {
+                        return s.createElement(Fe, {
                             checked: this.state.checked,
                             saving: this.state.saving,
                             loading: this.props.data.loading,
@@ -4879,70 +4884,70 @@
                         })
                     }, t
                 }(s.Component),
-                Ae = Object(L.compose)(Object(U.b)("MatureContentToggle"), Object(Se.a)(Le, {
+                We = Object(p.compose)(Object(v.b)("MatureContentToggle"), Object(Ee.a)(Ne, {
                     options: {
                         fetchPolicy: "network-only"
                     }
-                }), Object(Se.a)(Fe, {
+                }), Object(Ee.a)(Le, {
                     name: "updateBroadcastSettings"
-                }))(Ne),
-                We = (n("oz3/"), {
+                }))(Ae),
+                Ue = (n("oz3/"), {
                     "data-test-selector": "i-understand-button"
                 }),
-                Ue = function(e) {
+                Be = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(S.yb, {
+                        return s.createElement(O.xb, {
                             className: "stream-key-confirm-modal",
                             borderBottom: !0,
-                            background: S.r.Base,
+                            background: O.r.Base,
                             elevation: 3,
                             padding: {
                                 x: 2,
                                 top: 3,
                                 bottom: 2
                             }
-                        }, s.createElement(S.yb, {
+                        }, s.createElement(O.xb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
                             }
-                        }, s.createElement(S.W, {
-                            type: S.Ob.H4,
-                            color: S.O.Alt
-                        }, Object(p.d)("Stream Key", "StreamKeySettingsForm"))), s.createElement(S.Wa, {
+                        }, s.createElement(O.W, {
+                            type: O.Nb.H4,
+                            color: O.O.Alt
+                        }, Object(h.d)("Stream Key", "StreamKeySettingsForm"))), s.createElement(O.Wa, {
                             padding: {
                                 y: 2
                             }
-                        }, s.createElement(S.W, {
-                            color: S.O.Error,
+                        }, s.createElement(O.W, {
+                            color: O.O.Error,
                             bold: !0
-                        }, Object(p.d)("Never share your stream key with anyone or show it on stream! Twitch Staff, Admins, or Global Moderators will never ask you for this information.", "StreamKeySettingsForm"))), s.createElement(S.yb, {
+                        }, Object(h.d)("Never share your stream key with anyone or show it on stream! Twitch Staff, Admins, or Global Moderators will never ask you for this information.", "StreamKeySettingsForm"))), s.createElement(O.xb, {
                             borderBottom: !0,
                             padding: {
                                 bottom: 2
                             }
-                        }, Object(p.d)('Please click "I Understand" if you understand the above and would like to view your stream key.', "StreamKeySettingsForm")), s.createElement(S.Wa, {
-                            display: S.X.Flex,
-                            justifyContent: S.Va.Center,
+                        }, Object(h.d)('Please click "I Understand" if you understand the above and would like to view your stream key.', "StreamKeySettingsForm")), s.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Center,
                             padding: {
                                 top: 2
                             }
-                        }, s.createElement(S.z, i.__assign({}, We, {
-                            onClick: Object(L.compose)(this.props.showStreamKey, this.props.onClose)
-                        }), Object(p.d)("I Understand", "StreamKeySettingsForm"))), s.createElement(g.a, {
+                        }, s.createElement(O.z, i.__assign({}, Ue, {
+                            onClick: Object(p.compose)(this.props.showStreamKey, this.props.onClose)
+                        }), Object(h.d)("I Understand", "StreamKeySettingsForm"))), s.createElement(E.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(s.Component),
-                Be = "TOGGLE_ID_STORE_PAST_BROADCASTS",
+                qe = "TOGGLE_ID_STORE_PAST_BROADCASTS",
                 ze = 5e3;
             ! function(e) {
                 e.ChannelPropertiesError = "channel-properties-settings-form-channel-properties-error", e.CopyButton = "channel-properties-settings-form-copy-button", e.ResetButton = "channel-properties-settings-form-reset-buton", e.ToggleIdIngestResilience = "toggle-id-ingest-resilience"
-            }(ge || (ge = {}));
-            var qe, Ke, Ve = function(e) {
+            }(be || (be = {}));
+            var Ke, Ve, He = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -4952,62 +4957,62 @@
                             return t.props.channelProperties && 0 === t.props.channelProperties.numBackupStreamsAllowed && 0 === t.props.channelProperties.disconnectSlateDuration || !1
                         }, t.onToggleResilentIngest = function(e) {
                             var n;
-                            n = t.isResilienceIngestTurnedOff() && e ? Ke.BackupSlate : Ke.Off, t.props.handleResilientIngestPreference(n)
+                            n = t.isResilienceIngestTurnedOff() && e ? Ve.BackupSlate : Ve.Off, t.props.handleResilientIngestPreference(n)
                         }, t.renderStorePastBroadcasts = function() {
-                            return s.createElement(we.a, {
-                                id: Be,
-                                label: Object(p.d)("Store past broadcasts", "StreamKeySettingsForm"),
-                                description: Object(p.d)("Automatically save broadcasts for up to 14 days (60 days for Partners, Turbo and Prime users)", "StreamKeySettingsForm"),
+                            return s.createElement(Oe.a, {
+                                id: qe,
+                                label: Object(h.d)("Store past broadcasts", "StreamKeySettingsForm"),
+                                description: Object(h.d)("Automatically save broadcasts for up to 14 days (60 days for Partners, Turbo and Prime users)", "StreamKeySettingsForm"),
                                 error: !!t.props.saveVodsError,
                                 errorMessage: t.props.saveVodsError || "",
                                 disabled: t.props.saveVodsSaving,
                                 checked: !(!t.props.channelProperties || !t.props.channelProperties.saveVods),
                                 onChange: t.props.handleSaveVodsToggled,
-                                showPlaceholder: t.props.saveVodsState === Oe.a.Loading
+                                showPlaceholder: t.props.saveVodsState === ke.a.Loading
                             })
                         }, t.renderMatureContent = function() {
-                            return s.createElement(Ae, null)
+                            return s.createElement(We, null)
                         }, t.renderOptimizationPreference = function() {
-                            return s.createElement(Ce.a, {
-                                orientation: S.Ea.Horizontal,
-                                label: Object(p.d)("Optimization preference", "StreamKeySettingsForm"),
+                            return s.createElement(_e.a, {
+                                orientation: O.Ea.Horizontal,
+                                label: Object(h.d)("Optimization preference", "StreamKeySettingsForm"),
                                 error: !!t.props.latencyPrefError,
                                 errorMessage: t.props.latencyPrefError || ""
-                            }, s.createElement(S.Wa, {
+                            }, s.createElement(O.Wa, {
                                 padding: {
                                     bottom: 1
                                 }
-                            }, s.createElement(S.kb, {
-                                disabled: t.props.latencyPrefState === Oe.a.Loading,
-                                checked: !(!t.props.channelProperties || t.props.channelProperties.latencyPreference !== qe.Normal),
+                            }, s.createElement(O.kb, {
+                                disabled: t.props.latencyPrefState === ke.a.Loading,
+                                checked: !(!t.props.channelProperties || t.props.channelProperties.latencyPreference !== Ke.Normal),
                                 onChange: t.handleSetLatencyPreference,
-                                label: Object(p.d)("Normal latency: Best for highest video quality, highest resolution, and to reduce video buffering", "StreamKeySettingsForm"),
+                                label: Object(h.d)("Normal latency: Best for highest video quality, highest resolution, and to reduce video buffering", "StreamKeySettingsForm"),
                                 name: "optPreference",
-                                value: qe.Normal
-                            })), s.createElement(S.kb, {
-                                disabled: t.props.latencyPrefState === Oe.a.Loading,
-                                checked: !(!t.props.channelProperties || t.props.channelProperties.latencyPreference !== qe.Low),
+                                value: Ke.Normal
+                            })), s.createElement(O.kb, {
+                                disabled: t.props.latencyPrefState === ke.a.Loading,
+                                checked: !(!t.props.channelProperties || t.props.channelProperties.latencyPreference !== Ke.Low),
                                 onChange: t.handleSetLatencyPreference,
-                                label: Object(p.d)("Low latency: Best for near real-time interactions with viewers", "StreamKeySettingsForm"),
+                                label: Object(h.d)("Low latency: Best for near real-time interactions with viewers", "StreamKeySettingsForm"),
                                 name: "optPreference",
-                                value: qe.Low
+                                value: Ke.Low
                             }))
                         }, t.hideStreamKeyLink = function() {
-                            return s.createElement(S.U, {
+                            return s.createElement(O.U, {
                                 onClick: t.props.handleStreamKeyDisplayToggled
-                            }, Object(p.d)("Hide", "StreamKeySettingsForm"))
+                            }, Object(h.d)("Hide", "StreamKeySettingsForm"))
                         }, t.showStreamKeyLink = function() {
-                            return s.createElement(x.a, {
+                            return s.createElement(j.a, {
                                 triggerModal: function(e) {
-                                    return s.createElement(Ue, {
+                                    return s.createElement(Be, {
                                         onClose: e,
                                         showStreamKey: t.props.handleStreamKeyDisplayToggled
                                     })
                                 }
                             }, function(e) {
-                                return s.createElement(S.U, {
+                                return s.createElement(O.U, {
                                     onClick: e
-                                }, Object(p.d)("Show", "StreamKeySettingsForm"))
+                                }, Object(h.d)("Show", "StreamKeySettingsForm"))
                             })
                         }, t.setKeyInputRef = function(e) {
                             return t.keyInput = e
@@ -5026,7 +5031,7 @@
                                 })
                             })
                         }, t.copyToClipboard = function(e, n) {
-                            e && (Object(Pe.a)(e.value) && (n ? t.setState({
+                            e && (Object(je.a)(e.value) && (n ? t.setState({
                                 backupStreamKeyCopied: !0
                             }, t.handleResetStreamKeyCopiedState) : t.setState({
                                 streamKeyCopied: !0
@@ -5049,65 +5054,65 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.channelPropertiesError) return s.createElement(f.a, {
-                            "data-test-selector": ge.ChannelPropertiesError
-                        }, s.createElement(B.a, null, s.createElement(S.W, {
-                            color: S.O.Error
+                        if (this.props.channelPropertiesError) return s.createElement(S.a, {
+                            "data-test-selector": be.ChannelPropertiesError
+                        }, s.createElement(q.a, null, s.createElement(O.W, {
+                            color: O.O.Error
                         }, this.props.channelPropertiesError)));
                         var e = this.props.channelProperties && (this.props.channelProperties.backupControlsEnabled || this.props.channelProperties.disconnectSlateControlsEnabled) || !1;
-                        return s.createElement(f.a, null, this.renderStreamKey(), e && this.renderResilientIngest(), this.renderStorePastBroadcasts(), this.renderMatureContent(), this.props.channelProperties && this.props.channelProperties.latencyControlsEnabled && this.renderOptimizationPreference())
+                        return s.createElement(S.a, null, this.renderStreamKey(), e && this.renderResilientIngest(), this.renderStorePastBroadcasts(), this.renderMatureContent(), this.props.channelProperties && this.props.channelProperties.latencyControlsEnabled && this.renderOptimizationPreference())
                     }, t.prototype.renderResilientIngest = function() {
                         var e = this.isResilienceIngestTurnedOff();
-                        return s.createElement(we.a, {
-                            id: ge.ToggleIdIngestResilience,
-                            label: Object(p.d)("Ingest Resilience", "ResilienceStreamKeySettingsForm"),
-                            description: Object(p.d)("Improve resilience against ingest failures by either starting a backup ingest stream or a slate", "ResilienceStreamKeySettingsForm"),
+                        return s.createElement(Oe.a, {
+                            id: be.ToggleIdIngestResilience,
+                            label: Object(h.d)("Ingest Resilience", "ResilienceStreamKeySettingsForm"),
+                            description: Object(h.d)("Improve resilience against ingest failures by either starting a backup ingest stream or a slate", "ResilienceStreamKeySettingsForm"),
                             error: !(!this.props.streamKeyError || !this.props.resilientIngestError),
                             errorMessage: this.props.streamKeyError && this.props.resilientIngestError || "",
-                            disabled: this.props.resilientIngestState === Oe.a.Loading || this.props.resilientIngestState === Oe.a.Error,
+                            disabled: this.props.resilientIngestState === ke.a.Loading || this.props.resilientIngestState === ke.a.Error,
                             checked: !e,
                             onChange: this.onToggleResilentIngest
                         }, this.renderResilientIngestOption())
                     }, t.prototype.renderFallbackKeyOption = function() {
                         var e = this.props.channelProperties ? this.props.channelProperties.backupStreamKey : "";
-                        return s.createElement(S.Wa, {
-                            display: S.X.Flex,
-                            flexDirection: S.Z.Column,
+                        return s.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            flexDirection: O.Z.Column,
                             padding: {
                                 top: 1
                             }
-                        }, s.createElement(S.Wa, {
+                        }, s.createElement(O.Wa, {
                             padding: {
                                 bottom: .5
                             }
-                        }, s.createElement(S.W, {
-                            color: S.O.Alt,
+                        }, s.createElement(O.W, {
+                            color: O.O.Alt,
                             bold: !0
-                        }, Object(p.d)("Fallback Stream key", "ResilienceStreamKeySettingsForm"))), s.createElement(S.Wa, {
-                            display: S.X.Flex,
+                        }, Object(h.d)("Fallback Stream key", "ResilienceStreamKeySettingsForm"))), s.createElement(O.Wa, {
+                            display: O.X.Flex,
                             padding: {
                                 bottom: 1
                             }
-                        }, s.createElement(S.Wa, {
+                        }, s.createElement(O.Wa, {
                             flexGrow: 1,
                             padding: {
                                 right: .5
                             }
-                        }, s.createElement(S.Qa, {
+                        }, s.createElement(O.Qa, {
                             readOnly: !0,
-                            type: this.props.showStreamKey ? S.Sa.Text : S.Sa.Password,
+                            type: this.props.showStreamKey ? O.Sa.Text : O.Sa.Password,
                             value: e,
                             refDelegate: this.setBackupKeyInputRef
-                        })), s.createElement(S.z, {
-                            ariaLabel: Object(p.d)("Copy Stream Key", "ResilienceStreamKeySettingsForm"),
-                            "data-test-selector": ge.CopyButton,
+                        })), s.createElement(O.z, {
+                            ariaLabel: Object(h.d)("Copy Stream Key", "ResilienceStreamKeySettingsForm"),
+                            "data-test-selector": be.CopyButton,
                             disabled: this.state.backupStreamKeyCopied,
                             onClick: this.handleBackupKeyCopyToClipboard
-                        }, this.state.backupStreamKeyCopied ? Object(p.d)("Copied", "ResilienceStreamKeySettingsForm") : Object(p.d)("Copy", "ResilienceStreamKeySettingsForm"))), s.createElement(S.Wa, {
-                            display: S.X.Flex
-                        }, s.createElement(S.W, {
-                            color: S.O.Alt
-                        }, Object(p.d)("If your primary stream fails, we will automatically fallback to a backup stream", "ResilienceStreamKeySettingsForm"))), s.createElement(S.Wa, {
+                        }, this.state.backupStreamKeyCopied ? Object(h.d)("Copied", "ResilienceStreamKeySettingsForm") : Object(h.d)("Copy", "ResilienceStreamKeySettingsForm"))), s.createElement(O.Wa, {
+                            display: O.X.Flex
+                        }, s.createElement(O.W, {
+                            color: O.O.Alt
+                        }, Object(h.d)("If your primary stream fails, we will automatically fallback to a backup stream", "ResilienceStreamKeySettingsForm"))), s.createElement(O.Wa, {
                             padding: {
                                 top: .5
                             }
@@ -5115,108 +5120,108 @@
                     }, t.prototype.renderResilientIngestOption = function() {
                         var e = this.props.channelProperties && this.props.channelProperties.disconnectSlateControlsEnabled && this.props.channelProperties.disconnectSlateDuration > 0 || !1,
                             t = this.props.channelProperties && this.props.channelProperties.backupControlsEnabled && this.props.channelProperties.numBackupStreamsAllowed > 0 || !1;
-                        return s.createElement(S.Wa, {
-                            display: S.X.Flex,
+                        return s.createElement(O.Wa, {
+                            display: O.X.Flex,
                             margin: {
                                 top: 1
                             }
-                        }, s.createElement(S.Wa, {
+                        }, s.createElement(O.Wa, {
                             flexGrow: 1,
                             padding: {
                                 right: .5,
                                 bottom: 1
                             }
-                        }, this.props.channelProperties && this.props.channelProperties.disconnectSlateControlsEnabled && s.createElement(S.Wa, {
+                        }, this.props.channelProperties && this.props.channelProperties.disconnectSlateControlsEnabled && s.createElement(O.Wa, {
                             padding: {
                                 bottom: .5
                             }
-                        }, s.createElement(S.kb, {
+                        }, s.createElement(O.kb, {
                             disabled: !1,
                             checked: e,
                             onChange: this.handleSetResilientIngestPreference,
-                            label: Object(p.d)("<x:bold>Backup Slate</x:bold>: If your primary stream fails, keep your channel LIVE for 90 seconds, while you troubleshoot and re-ingest", {
+                            label: Object(h.d)("<x:bold>Backup Slate</x:bold>: If your primary stream fails, keep your channel LIVE for 90 seconds, while you troubleshoot and re-ingest", {
                                 "x:bold": function(e) {
-                                    return s.createElement(S.W, {
-                                        type: S.Ob.Span,
+                                    return s.createElement(O.W, {
+                                        type: O.Nb.Span,
                                         bold: !0
                                     }, e)
                                 }
                             }, "ResilienceStreamKeySettingsForm"),
                             name: "optResiliencePreference",
-                            value: Ke.BackupSlate
-                        })), this.props.channelProperties && this.props.channelProperties.backupControlsEnabled && s.createElement(S.Wa, {
+                            value: Ve.BackupSlate
+                        })), this.props.channelProperties && this.props.channelProperties.backupControlsEnabled && s.createElement(O.Wa, {
                             padding: {
                                 bottom: .5
                             }
-                        }, s.createElement(S.kb, {
+                        }, s.createElement(O.kb, {
                             disabled: !1,
                             checked: t,
                             onChange: this.handleSetResilientIngestPreference,
-                            label: Object(p.d)("<x:bold>Backup Ingest Stream</x:bold>: Ingest a backup stream to Twitch. If your primary stream fails, we will automatically fallback to your backup setup", {
+                            label: Object(h.d)("<x:bold>Backup Ingest Stream</x:bold>: Ingest a backup stream to Twitch. If your primary stream fails, we will automatically fallback to your backup setup", {
                                 "x:bold": function(e) {
-                                    return s.createElement(S.W, {
-                                        type: S.Ob.Span,
+                                    return s.createElement(O.W, {
+                                        type: O.Nb.Span,
                                         bold: !0
                                     }, e)
                                 }
                             }, "ResilienceStreamKeySettingsForm"),
                             name: "optResiliencePreference",
-                            value: Ke.BackupIngest
+                            value: Ve.BackupIngest
                         }), t && this.renderFallbackKeyOption())))
                     }, t.prototype.renderStreamKey = function() {
-                        var e = S.E.Default,
+                        var e = O.E.Default,
                             t = this.props.resetStatus,
-                            n = t === Oe.a.Loading;
-                        t === Oe.a.Success ? e = S.E.Success : t === Oe.a.Error ? n = !0 : t === Oe.a.Loading && (e = S.E.Loading);
+                            n = t === ke.a.Loading;
+                        t === ke.a.Success ? e = O.E.Success : t === ke.a.Error ? n = !0 : t === ke.a.Loading && (e = O.E.Loading);
                         var r = this.state.streamKeyCopied;
-                        return s.createElement(Ce.a, {
-                            label: Object(p.d)("Primary Stream key", "StreamKeySettingsForm"),
+                        return s.createElement(_e.a, {
+                            label: Object(h.d)("Primary Stream key", "StreamKeySettingsForm"),
                             error: !!this.props.streamKeyError,
                             errorMessage: this.props.streamKeyError || ""
-                        }, s.createElement(S.Wa, {
-                            display: S.X.Flex
-                        }, s.createElement(S.Wa, {
+                        }, s.createElement(O.Wa, {
+                            display: O.X.Flex
+                        }, s.createElement(O.Wa, {
                             flexGrow: 1,
                             padding: {
                                 right: .5
                             }
-                        }, s.createElement(S.Qa, {
+                        }, s.createElement(O.Qa, {
                             readOnly: !0,
-                            type: this.props.showStreamKey ? S.Sa.Text : S.Sa.Password,
+                            type: this.props.showStreamKey ? O.Sa.Text : O.Sa.Password,
                             value: this.props.channelProperties ? this.props.channelProperties.streamKey : "",
                             refDelegate: this.setKeyInputRef
-                        })), s.createElement(S.z, {
-                            ariaLabel: Object(p.d)("Copy Stream Key", "StreamKeySettingsForm"),
-                            "data-test-selector": ge.CopyButton,
-                            disabled: r || t === Oe.a.Error || t === Oe.a.Loading,
+                        })), s.createElement(O.z, {
+                            ariaLabel: Object(h.d)("Copy Stream Key", "StreamKeySettingsForm"),
+                            "data-test-selector": be.CopyButton,
+                            disabled: r || t === ke.a.Error || t === ke.a.Loading,
                             onClick: this.handleCopyToClipboard
-                        }, r ? Object(p.d)("Copied", "StreamKeySettingsForm") : Object(p.d)("Copy", "StreamKeySettingsForm")), s.createElement(S.Wa, {
+                        }, r ? Object(h.d)("Copied", "StreamKeySettingsForm") : Object(h.d)("Copy", "StreamKeySettingsForm")), s.createElement(O.Wa, {
                             padding: {
                                 left: 1
                             }
-                        }, s.createElement(S.z, {
-                            ariaLabel: Object(p.d)("Reset Stream Key", "StreamKeySettingsForm"),
-                            "data-test-selector": ge.ResetButton,
+                        }, s.createElement(O.z, {
+                            ariaLabel: Object(h.d)("Reset Stream Key", "StreamKeySettingsForm"),
+                            "data-test-selector": be.ResetButton,
                             disabled: n,
                             onClick: this.handleResetStreamKeyClicked,
                             state: e,
-                            type: S.F.Hollow
-                        }, Object(p.d)("Reset", "StreamKeySettings")))), s.createElement(S.Wa, {
+                            type: O.F.Hollow
+                        }, Object(h.d)("Reset", "StreamKeySettings")))), s.createElement(O.Wa, {
                             padding: {
                                 top: .5
                             }
                         }, this.props.showStreamKey ? this.hideStreamKeyLink() : this.showStreamKeyLink()))
                     }, t
                 }(s.Component),
-                He = Object(U.b)("ChannelPropertiesSettingsForm")(Ve),
-                Ge = 1,
-                Xe = 90;
+                Ge = Object(v.b)("ChannelPropertiesSettingsForm")(He),
+                Xe = 1,
+                Qe = 90;
             ! function(e) {
                 e.Normal = "normal", e.Low = "low"
-            }(qe || (qe = {})),
+            }(Ke || (Ke = {})),
             function(e) {
                 e.BackupSlate = "backup_slate", e.BackupIngest = "backup_ingest", e.Off = "off"
-            }(Ke || (Ke = {}));
+            }(Ve || (Ve = {}));
             var Ye = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
@@ -5225,15 +5230,15 @@
                         channelPropertiesError: null,
                         streamKeyError: null,
                         showStreamKey: !1,
-                        resetKeyState: Oe.a.Loading,
-                        saveVodsState: Oe.a.Loading,
+                        resetKeyState: ke.a.Loading,
+                        saveVodsState: ke.a.Loading,
                         saveVodsError: null,
                         saveVodsSaving: !1,
-                        latencyPrefState: Oe.a.Loading,
+                        latencyPrefState: ke.a.Loading,
                         latencyPrefError: null,
-                        resilientIngestState: Oe.a.Loading,
+                        resilientIngestState: ke.a.Loading,
                         resilientIngestError: null
-                    }, t.logger = p.p.logger.withCategory("stream-key-settings"), t.fetchChannelProperties = function() {
+                    }, t.logger = h.p.logger.withCategory("stream-key-settings"), t.fetchChannelProperties = function() {
                         return i.__awaiter(t, void 0, void 0, function() {
                             var e, t, n, r, a, o;
                             return i.__generator(this, function(i) {
@@ -5242,7 +5247,7 @@
                                         if (!this.props.user) return [2];
                                         r = "/v5/channels/" + this.props.user.id + "/channel_properties", i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, V.a.get(r)];
+                                        return i.trys.push([1, 3, , 4]), [4, H.a.get(r)];
                                     case 2:
                                         return n = i.sent(), this.setState({
                                             channelProperties: this.deserializeChannelProperties(n),
@@ -5254,7 +5259,7 @@
                                     case 3:
                                         return a = i.sent(), e = a, [3, 4];
                                     case 4:
-                                        return n && n.error && (e = new Error("Channel Properties Settings error"), t = n.error), e ? (o = Object(p.d)("Failed to load channel properties.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to load channel data", t), this.setState({
+                                        return n && n.error && (e = new Error("Channel Properties Settings error"), t = n.error), e ? (o = Object(h.d)("Failed to load channel properties.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to load channel data", t), this.setState({
                                             channelPropertiesError: o
                                         }), [2]) : [2]
                                 }
@@ -5274,21 +5279,21 @@
                                     case 0:
                                         if (!this.props.user) return [2];
                                         this.resetStreamKeyTimeout && clearTimeout(this.resetStreamKeyTimeout), this.setState({
-                                            resetKeyState: Oe.a.Loading
+                                            resetKeyState: ke.a.Loading
                                         }), r = "/v5/channels/" + this.props.user.id + "/channel_properties/regenerate_stream_key", i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, V.a.put(r)];
+                                        return i.trys.push([1, 3, , 4]), [4, H.a.put(r)];
                                     case 2:
                                         return n = i.sent(), this.setState({
                                             channelProperties: this.deserializeChannelProperties(n),
-                                            resetKeyState: Oe.a.Success
+                                            resetKeyState: ke.a.Success
                                         }), [3, 4];
                                     case 3:
                                         return a = i.sent(), e = a, [3, 4];
                                     case 4:
-                                        return n && n.error && (e = new Error("Channel Properties Settings error"), t = n.error), e && (o = Object(p.d)("Failed to reset stream key.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to reset stream key", t), this.setState({
+                                        return n && n.error && (e = new Error("Channel Properties Settings error"), t = n.error), e && (o = Object(h.d)("Failed to reset stream key.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to reset stream key", t), this.setState({
                                             streamKeyError: o,
-                                            resetKeyState: Oe.a.Error
+                                            resetKeyState: ke.a.Error
                                         })), this.resetStreamKeyTimeout = setTimeout(function() {
                                             return s.setState({
                                                 resetKeyState: null,
@@ -5309,7 +5314,7 @@
                                             saveVodsSaving: !0
                                         }), r = "/v5/channels/" + this.props.user.id + "/channel_properties", i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, V.a.put(r, {
+                                        return i.trys.push([1, 3, , 4]), [4, H.a.put(r, {
                                             body: {
                                                 save_vods: !this.state.channelProperties.saveVods
                                             }
@@ -5322,12 +5327,12 @@
                                     case 3:
                                         return a = i.sent(), e = a, [3, 4];
                                     case 4:
-                                        return n && n.error && (e = new Error("Channel Properties Settings error"), t = n.error), e ? (o = Object(p.d)("Failed to update broadcast preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to update vods preference", t), this.setState({
+                                        return n && n.error && (e = new Error("Channel Properties Settings error"), t = n.error), e ? (o = Object(h.d)("Failed to update broadcast preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to update vods preference", t), this.setState({
                                             saveVodsError: o,
-                                            saveVodsState: Oe.a.Error,
+                                            saveVodsState: ke.a.Error,
                                             saveVodsSaving: !1
-                                        }), [2]) : (s = p.o.getLastPageview(), l = null, c = null, s && (l = s.medium || null, c = s.content || null), Object(De.f)({
-                                            settingName: De.b.StorePastBroadcasts,
+                                        }), [2]) : (s = h.o.getLastPageview(), l = null, c = null, s && (l = s.medium || null, c = s.content || null), Object(Pe.f)({
+                                            settingName: Pe.b.StorePastBroadcasts,
                                             settingValue: this.state.channelProperties.saveVods.toString(),
                                             content: c,
                                             medium: l,
@@ -5344,10 +5349,10 @@
                                     case 0:
                                         if (!this.props.user || !this.state.channelProperties) return [2];
                                         this.setState({
-                                            latencyPrefState: Oe.a.Loading
+                                            latencyPrefState: ke.a.Loading
                                         }), a = "/v5/channels/" + this.props.user.id + "/channel_properties", i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, V.a.put(a, {
+                                        return i.trys.push([1, 3, , 4]), [4, H.a.put(a, {
                                             body: {
                                                 latency: e
                                             }
@@ -5355,14 +5360,14 @@
                                     case 2:
                                         return r = i.sent(), this.setState({
                                             channelProperties: this.deserializeChannelProperties(r),
-                                            latencyPrefState: Oe.a.Success
+                                            latencyPrefState: ke.a.Success
                                         }), [3, 4];
                                     case 3:
                                         return o = i.sent(), t = o, [3, 4];
                                     case 4:
-                                        return r && r.error && (t = new Error("Channel Properties Settings error"), n = r.error), t ? (s = Object(p.d)("Failed to update optimization preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to update latency preference", n), this.setState({
+                                        return r && r.error && (t = new Error("Channel Properties Settings error"), n = r.error), t ? (s = Object(h.d)("Failed to update optimization preference.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to update latency preference", n), this.setState({
                                             latencyPrefError: s,
-                                            latencyPrefState: Oe.a.Error
+                                            latencyPrefState: ke.a.Error
                                         }), [2]) : [2]
                                 }
                             })
@@ -5374,11 +5379,11 @@
                                 switch (i.label) {
                                     case 0:
                                         if (!this.props.user || !this.state.channelProperties) return [2];
-                                        e === Ke.BackupSlate ? (t = 0, n = Xe) : e === Ke.BackupIngest ? (t = Ge, n = 0) : e === Ke.Off && (t = 0, n = 0), this.setState({
-                                            resilientIngestState: Oe.a.Loading
+                                        e === Ve.BackupSlate ? (t = 0, n = Qe) : e === Ve.BackupIngest ? (t = Xe, n = 0) : e === Ve.Off && (t = 0, n = 0), this.setState({
+                                            resilientIngestState: ke.a.Loading
                                         }), s = "/v5/channels/" + this.props.user.id + "/channel_properties", i.label = 1;
                                     case 1:
-                                        return i.trys.push([1, 3, , 4]), [4, V.a.put(s, {
+                                        return i.trys.push([1, 3, , 4]), [4, H.a.put(s, {
                                             body: {
                                                 num_backup_streams_allowed: t,
                                                 disconnect_slate_duration: n
@@ -5387,13 +5392,13 @@
                                     case 2:
                                         return o = i.sent(), this.setState({
                                             channelProperties: this.deserializeChannelProperties(o),
-                                            resilientIngestState: Oe.a.Success
+                                            resilientIngestState: ke.a.Success
                                         }), [3, 4];
                                     case 3:
                                         return l = i.sent(), r = l, [3, 4];
                                     case 4:
-                                        return o && o.error && (r = new Error("Channel Properties Settings error"), a = o.error), r ? (c = Object(p.d)("Failed to update ingest resilience preference. Please refresh the page and try again.", "ResilienceStreamKeySettingsForm"), this.logger.error(r, "Failed to update ingest resilience preference", a), this.setState({
-                                            resilientIngestState: Oe.a.Error,
+                                        return o && o.error && (r = new Error("Channel Properties Settings error"), a = o.error), r ? (c = Object(h.d)("Failed to update ingest resilience preference. Please refresh the page and try again.", "ResilienceStreamKeySettingsForm"), this.logger.error(r, "Failed to update ingest resilience preference", a), this.setState({
+                                            resilientIngestState: ke.a.Error,
                                             resilientIngestError: c
                                         }), [2]) : [2]
                                 }
@@ -5404,7 +5409,7 @@
                 return i.__extends(t, e), t.prototype.componentWillMount = function() {
                     this.fetchChannelProperties()
                 }, t.prototype.render = function() {
-                    return s.createElement(He, {
+                    return s.createElement(Ge, {
                         channelProperties: this.state.channelProperties,
                         channelPropertiesError: this.state.channelPropertiesError,
                         showStreamKey: this.state.showStreamKey,
@@ -5437,31 +5442,31 @@
                     } : null
                 }, t
             }(s.Component);
-            var Qe, Ze = Object(a.connect)(function(e) {
+            var Je, Ze = Object(a.connect)(function(e) {
                     return {
                         user: Object(o.e)(e)
                     }
                 })(Ye),
-                Je = n("oJmH"),
-                $e = function(e) {
+                $e = n("oJmH"),
+                et = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        if (this.props.dropsSettingsError) return s.createElement(f.a, null, s.createElement(B.a, null, s.createElement(S.W, {
-                            color: S.O.Error
+                        if (this.props.dropsSettingsError) return s.createElement(S.a, null, s.createElement(q.a, null, s.createElement(O.W, {
+                            color: O.O.Error
                         }, this.props.dropsSettingsError)));
-                        var e = s.createElement(S.U, {
+                        var e = s.createElement(O.U, {
                                 to: "https://help.twitch.tv/customer/en/portal/articles/2754380-how-to-earn-drops"
-                            }, Object(p.d)("Learn more", "DropSettingsForm")),
-                            t = Object(p.d)("Alert your viewers when they have a chance to earn in-game loot. {learnMoreLink}", {
+                            }, Object(h.d)("Learn more", "DropSettingsForm")),
+                            t = Object(h.d)("Alert your viewers when they have a chance to earn in-game loot. {learnMoreLink}", {
                                 learnMoreLink: e
                             }, "DropSettingsForm");
-                        return s.createElement(f.a, null, s.createElement(we.a, {
-                            label: Object(p.d)("Drops", "DropSettingsForm"),
-                            showPlaceholder: null === this.props.requestState || this.props.requestState === Oe.a.Loading,
+                        return s.createElement(S.a, null, s.createElement(Oe.a, {
+                            label: Object(h.d)("Drops", "DropSettingsForm"),
+                            showPlaceholder: null === this.props.requestState || this.props.requestState === ke.a.Loading,
                             checked: !!this.props.isDropsEnabled,
                             onChange: this.props.handleDropSettingsToggle,
                             description: t,
@@ -5469,16 +5474,16 @@
                         }))
                     }, t
                 }(s.Component),
-                et = Object(U.b)("DropsSettingsForm")($e),
-                tt = n("NmtA"),
-                nt = function(e) {
+                tt = Object(v.b)("DropsSettingsForm")(et),
+                nt = n("NmtA"),
+                rt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isDropsEnabled: null,
                             dropsSettingsError: null,
                             requestState: null
-                        }, t.logger = p.p.logger.withCategory("stream-key-settings"), t.fetchDrops = function(e) {
+                        }, t.logger = h.p.logger.withCategory("stream-key-settings"), t.fetchDrops = function(e) {
                             return i.__awaiter(t, void 0, void 0, function() {
                                 var t, n, r, a, o, s;
                                 return i.__generator(this, function(i) {
@@ -5486,19 +5491,19 @@
                                         case 0:
                                             if (null !== this.state.requestState || !e.data || !e.data.user) return [2];
                                             this.setState({
-                                                requestState: Oe.a.Loading
+                                                requestState: ke.a.Loading
                                             }), a = "/kraken/channels/" + e.data.user.id + "/vhs", i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, V.a.get(a)];
+                                            return i.trys.push([1, 3, , 4]), [4, H.a.get(a)];
                                         case 2:
                                             return (r = i.sent()).body && this.setState({
                                                 isDropsEnabled: !r.body.opt_out_status,
-                                                requestState: Oe.a.Success
+                                                requestState: ke.a.Success
                                             }), [3, 4];
                                         case 3:
                                             return o = i.sent(), t = o, [3, 4];
                                         case 4:
-                                            return r && r.error && (t = new Error("Drops Settings error"), n = r.error), t ? (s = Object(p.d)("Failed to load Drops.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to load channel data", n), this.setState({
+                                            return r && r.error && (t = new Error("Drops Settings error"), n = r.error), t ? (s = Object(h.d)("Failed to load Drops.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(t, "Failed to load channel data", n), this.setState({
                                                 dropsSettingsError: s
                                             }), [2]) : [2]
                                     }
@@ -5512,27 +5517,27 @@
                                         case 0:
                                             if (!this.props.data || !this.props.data.user) return [2];
                                             this.setState({
-                                                requestState: Oe.a.Loading
+                                                requestState: ke.a.Loading
                                             }), r = "/kraken/channels/" + this.props.data.user.id + "/vhs", i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 6, , 7]), this.state.isDropsEnabled ? [4, V.a.delete(r)] : [3, 3];
+                                            return i.trys.push([1, 6, , 7]), this.state.isDropsEnabled ? [4, H.a.delete(r)] : [3, 3];
                                         case 2:
                                             return n = i.sent(), [3, 5];
                                         case 3:
-                                            return [4, V.a.put(r)];
+                                            return [4, H.a.put(r)];
                                         case 4:
                                             n = i.sent(), i.label = 5;
                                         case 5:
                                             return this.setState({
                                                 isDropsEnabled: !this.state.isDropsEnabled,
-                                                requestState: Oe.a.Success
+                                                requestState: ke.a.Success
                                             }), [3, 7];
                                         case 6:
                                             return a = i.sent(), e = a, [3, 7];
                                         case 7:
-                                            return n && n.error && (e = new Error("Drops Settings error"), t = n.error), e ? (o = Object(p.d)("Failed to update drops.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to update drops preference", t), this.setState({
+                                            return n && n.error && (e = new Error("Drops Settings error"), t = n.error), e ? (o = Object(h.d)("Failed to update drops.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to update drops preference", t), this.setState({
                                                 dropsSettingsError: o,
-                                                requestState: Oe.a.Error
+                                                requestState: ke.a.Error
                                             }), [2]) : [2]
                                     }
                                 })
@@ -5544,7 +5549,7 @@
                     }, t.prototype.componentWillReceiveProps = function(e) {
                         this.fetchDrops(e)
                     }, t.prototype.render = function() {
-                        return s.createElement(et, {
+                        return s.createElement(tt, {
                             isDropsEnabled: this.state.isDropsEnabled,
                             dropsSettingsError: this.state.dropsSettingsError,
                             requestState: this.state.requestState,
@@ -5552,7 +5557,7 @@
                         })
                     }, t
                 }(s.Component),
-                rt = Object(Je.compose)(Object(Se.a)(tt, {
+                at = Object($e.compose)(Object(Ee.a)(nt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -5560,14 +5565,32 @@
                             }
                         }
                     }
-                }))(nt),
-                at = n("pXWX"),
-                ot = n.n(at);
+                }))(rt),
+                ot = function(e) {
+                    return s.createElement(O.xb, {
+                        background: O.r.Base,
+                        border: !0,
+                        borderRadius: O.x.Large,
+                        margin: {
+                            bottom: 4
+                        }
+                    }, s.createElement(we.a, {
+                        text: Object(h.d)("Channels you can manage", "ChannelPermissionsSettings"),
+                        description: Object(h.d)("As an editor, you can access a channel's Dashboard", "ChannelPermissionsSettings"),
+                        linkTo: "/" + e.channelLogin + "/dashboard/settings/managed-channels"
+                    }), s.createElement(we.a, {
+                        text: Object(h.d)("People who can stream to your channel", "ChannelPermissionsSettings"),
+                        description: Object(h.d)("When you invite someone to stream on your channel, we'll send them a new stream key and instructions", "ChannelPermissionsSettings"),
+                        linkTo: "/" + e.channelLogin + "/dashboard/settings/authorized-streamers"
+                    }))
+                },
+                it = n("pXWX"),
+                st = n.n(it);
             n("bS3I");
             ! function(e) {
                 e.AcceptLink = "team-invitations-item__accept-link", e.DeclineLink = "team-invitations-item__decline-link"
-            }(Qe || (Qe = {}));
-            var it, st = function(e) {
+            }(Je || (Je = {}));
+            var lt, ct = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onDeclineClicked = function() {
@@ -5579,57 +5602,57 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = Object(p.d)("Accept", "TeamInvitationsItem"),
-                            t = Object(p.d)("Decline", "TeamInvitationsItem");
-                        return s.createElement(S.Wa, i.__assign({
+                        var e = Object(h.d)("Accept", "TeamInvitationsItem"),
+                            t = Object(h.d)("Decline", "TeamInvitationsItem");
+                        return s.createElement(O.Wa, i.__assign({
                             padding: {
                                 y: 1,
                                 x: 1
                             }
-                        }, Object(oe.a)(this.props), {
+                        }, Object(ie.a)(this.props), {
                             className: "team-invitations-item"
-                        }), s.createElement(S.G, {
+                        }), s.createElement(O.G, {
                             row: !0
-                        }, s.createElement(S.Wa, {
+                        }, s.createElement(O.Wa, {
                             className: "team-invitations-item__avatar"
-                        }, s.createElement(S.o, {
-                            ratio: S.p.Aspect1x1
-                        }, s.createElement(U.a, {
-                            src: this.props.invitation.logo || ot.a,
-                            alt: Object(p.d)("{displayName} Team Logo", {
+                        }, s.createElement(O.o, {
+                            ratio: O.p.Aspect1x1
+                        }, s.createElement(v.a, {
+                            src: this.props.invitation.logo || st.a,
+                            alt: Object(h.d)("{displayName} Team Logo", {
                                 displayName: this.props.invitation.displayName
                             }, "TeamInvitationsItem")
-                        }))), s.createElement(S.Wa, {
+                        }))), s.createElement(O.Wa, {
                             flexGrow: 1,
-                            display: S.X.Flex,
-                            position: S.eb.Relative
-                        }, s.createElement(S.Oa, {
+                            display: O.X.Flex,
+                            position: O.eb.Relative
+                        }, s.createElement(O.Oa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, s.createElement(S.W, {
-                            type: S.Ob.Span,
+                        }, s.createElement(O.W, {
+                            type: O.Nb.Span,
                             ellipsis: !0
-                        }, this.props.invitation.name))), s.createElement(S.Wa, {
+                        }, this.props.invitation.name))), s.createElement(O.Wa, {
                             padding: {
                                 right: 2
                             }
-                        }, s.createElement(S.z, {
+                        }, s.createElement(O.z, {
                             ariaLabel: e,
                             onClick: this.onAcceptClick,
-                            type: S.F.Success,
-                            "data-test-selector": Qe.AcceptLink
-                        }, e)), s.createElement(S.Wa, null, s.createElement(S.z, {
+                            type: O.F.Success,
+                            "data-test-selector": Je.AcceptLink
+                        }, e)), s.createElement(O.Wa, null, s.createElement(O.z, {
                             ariaLabel: t,
                             onClick: this.onDeclineClicked,
-                            type: S.F.Alert,
-                            "data-test-selector": Qe.DeclineLink
+                            type: O.F.Alert,
+                            "data-test-selector": Je.DeclineLink
                         }, t))))
                     }, t
                 }(s.Component),
-                lt = Object(U.b)("TeamInvitationsItem")(st),
-                ct = function(e) {
+                dt = Object(v.b)("TeamInvitationsItem")(ct),
+                ut = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5637,12 +5660,12 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this;
-                        return this.props.invitations.length < 1 && !this.props.formErrorMessage ? null : s.createElement(Ce.a, {
-                            label: Object(p.d)("Invitations", "TeamInvitations"),
+                        return this.props.invitations.length < 1 && !this.props.formErrorMessage ? null : s.createElement(_e.a, {
+                            label: Object(h.d)("Invitations", "TeamInvitations"),
                             error: !!this.props.formErrorMessage,
                             errorMessage: this.props.formErrorMessage
                         }, this.props.invitations.map(function(t, n) {
-                            return s.createElement(lt, {
+                            return s.createElement(dt, {
                                 key: t.name,
                                 invitation: t,
                                 index: n,
@@ -5652,87 +5675,87 @@
                         }))
                     }, t
                 }(s.Component),
-                dt = Object(U.b)("TeamInvitations")(ct);
+                pt = Object(v.b)("TeamInvitations")(ut);
             n("b/5F");
             ! function(e) {
                 e.EditLink = "team-manager-item__edit-link", e.ViewLink = "team-manager-item__view-link"
-            }(it || (it = {}));
-            var ut = function(e) {
+            }(lt || (lt = {}));
+            var ht = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(S.Wa, i.__assign({
+                        return s.createElement(O.Wa, i.__assign({
                             padding: {
                                 y: 1,
                                 x: 1
                             }
-                        }, Object(oe.a)(this.props), {
+                        }, Object(ie.a)(this.props), {
                             className: "team-manager-item"
-                        }), s.createElement(S.G, {
+                        }), s.createElement(O.G, {
                             row: !0
-                        }, s.createElement(S.yb, {
+                        }, s.createElement(O.xb, {
                             className: "team-manager-item__avatar",
-                            borderRadius: S.x.Medium,
-                            overflow: S.Za.Hidden
-                        }, s.createElement(S.o, {
-                            ratio: S.p.Aspect1x1
-                        }, s.createElement(U.a, {
-                            src: this.props.team.logo || ot.a,
-                            alt: Object(p.d)("{displayName} Team Logo", {
+                            borderRadius: O.x.Medium,
+                            overflow: O.Za.Hidden
+                        }, s.createElement(O.o, {
+                            ratio: O.p.Aspect1x1
+                        }, s.createElement(v.a, {
+                            src: this.props.team.logo || st.a,
+                            alt: Object(h.d)("{displayName} Team Logo", {
                                 displayName: this.props.team.displayName
                             }, "TeamManagerItem")
-                        }))), s.createElement(S.Wa, {
+                        }))), s.createElement(O.Wa, {
                             flexGrow: 1,
-                            display: S.X.Flex,
-                            position: S.eb.Relative
-                        }, s.createElement(S.Oa, {
+                            display: O.X.Flex,
+                            position: O.eb.Relative
+                        }, s.createElement(O.Oa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1
-                        }, s.createElement(S.W, {
-                            type: S.Ob.Span,
+                        }, s.createElement(O.W, {
+                            type: O.Nb.Span,
                             ellipsis: !0
-                        }, this.props.team.name))), s.createElement(S.Wa, {
+                        }, this.props.team.name))), s.createElement(O.Wa, {
                             padding: {
                                 right: 2
                             }
-                        }, s.createElement(S.U, {
+                        }, s.createElement(O.U, {
                             to: "/teams/" + this.props.team.name + "/dashboard",
-                            "data-test-selector": it.EditLink
-                        }, Object(p.d)("Edit", "TeamManagerItem"))), s.createElement(S.Wa, null, s.createElement(S.U, {
+                            "data-test-selector": lt.EditLink
+                        }, Object(h.d)("Edit", "TeamManagerItem"))), s.createElement(O.Wa, null, s.createElement(O.U, {
                             to: "/team/" + this.props.team.name,
-                            "data-test-selector": it.ViewLink
-                        }, Object(p.d)("View", "TeamManagerItem")))))
+                            "data-test-selector": lt.ViewLink
+                        }, Object(h.d)("View", "TeamManagerItem")))))
                     }, t
                 }(s.Component),
-                pt = Object(U.b)("TeamManagerItem")(ut),
-                ht = function(e) {
+                mt = Object(v.b)("TeamManagerItem")(ht),
+                gt = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return this.props.teams.length < 1 && !this.props.formErrorMessage ? null : s.createElement(Ce.a, {
-                            label: Object(p.d)("Manager", "TeamManager"),
+                        return this.props.teams.length < 1 && !this.props.formErrorMessage ? null : s.createElement(_e.a, {
+                            label: Object(h.d)("Manager", "TeamManager"),
                             error: !!this.props.formErrorMessage,
                             errorMessage: this.props.formErrorMessage
                         }, this.props.teams.map(function(e) {
-                            return s.createElement(pt, {
+                            return s.createElement(mt, {
                                 key: e.name,
                                 team: e
                             })
                         }))
                     }, t
                 }(s.Component),
-                mt = Object(U.b)("TeamManager")(ht),
-                ft = n("fbdC"),
-                gt = n("aCAx"),
-                bt = function(e) {
+                ft = Object(v.b)("TeamManager")(gt),
+                bt = n("fbdC"),
+                vt = n("aCAx"),
+                yt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleClick = function() {
@@ -5744,19 +5767,19 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(S.A, i.__assign({}, this.props, {
+                        return s.createElement(O.A, i.__assign({}, this.props, {
                             onClick: this.handleClick
                         }))
                     }, t
                 }(s.Component);
-            var vt = Object(a.connect)(null, function(e) {
+            var St = Object(a.connect)(null, function(e) {
                     return {
                         showModal: function(t) {
-                            return e(Object(gt.d)(ft.a, t))
+                            return e(Object(vt.d)(bt.a, t))
                         }
                     }
-                })(bt),
-                yt = (n("irnM"), function(e) {
+                })(yt),
+                Et = (n("irnM"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.onClickRemove = function() {
@@ -5772,91 +5795,91 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        var e = Object(p.d)("Remove", "TeamMembershipsItem"),
-                            t = Object(p.d)("Do you want to remove yourself from this team?", "TeamMembershipsItem"),
+                        var e = Object(h.d)("Remove", "TeamMembershipsItem"),
+                            t = Object(h.d)("Do you want to remove yourself from this team?", "TeamMembershipsItem"),
                             n = null;
-                        return this.props.showPrimaryInput && (n = s.createElement(S.Wa, {
+                        return this.props.showPrimaryInput && (n = s.createElement(O.Wa, {
                             padding: {
                                 right: 2
                             }
-                        }, s.createElement(S.kb, {
+                        }, s.createElement(O.kb, {
                             "data-test-selector": "TEAM_MEMBERSHIPS_ITEM_PRIMARY_INPUT",
                             name: "team-memberships-main-radio",
                             onChange: this.onChangePrimary,
-                            label: Object(p.d)("Main", "TeamMembershipsItem"),
+                            label: Object(h.d)("Main", "TeamMembershipsItem"),
                             disabled: this.props.updating,
                             checked: this.props.membership.primary
-                        }))), s.createElement(S.Wa, i.__assign({
+                        }))), s.createElement(O.Wa, i.__assign({
                             padding: {
                                 y: 1,
                                 x: 1
                             }
-                        }, Object(oe.a)(this.props), {
+                        }, Object(ie.a)(this.props), {
                             className: "team-memberships-item"
-                        }), s.createElement(S.G, {
+                        }), s.createElement(O.G, {
                             row: !0
-                        }, s.createElement(S.yb, {
+                        }, s.createElement(O.xb, {
                             className: "team-memberships-item__avatar",
                             flexShrink: 0,
-                            borderRadius: S.x.Medium,
-                            overflow: S.Za.Hidden
-                        }, s.createElement(S.o, {
-                            ratio: S.p.Aspect1x1
-                        }, s.createElement(U.a, {
-                            src: this.props.membership.team.logo || ot.a,
-                            alt: Object(p.d)("{displayName} Team Logo", {
+                            borderRadius: O.x.Medium,
+                            overflow: O.Za.Hidden
+                        }, s.createElement(O.o, {
+                            ratio: O.p.Aspect1x1
+                        }, s.createElement(v.a, {
+                            src: this.props.membership.team.logo || st.a,
+                            alt: Object(h.d)("{displayName} Team Logo", {
                                 displayName: this.props.membership.team.displayName
                             }, "TeamMembershipsItem")
-                        }))), s.createElement(S.Wa, {
+                        }))), s.createElement(O.Wa, {
                             padding: {
                                 x: 1
                             },
                             flexGrow: 1,
-                            position: S.eb.Relative,
+                            position: O.eb.Relative,
                             ellipsis: !0
-                        }, s.createElement(S.U, {
+                        }, s.createElement(O.U, {
                             to: "/team/" + this.props.membership.team.name
-                        }, s.createElement(S.W, {
-                            type: S.Ob.Span,
+                        }, s.createElement(O.W, {
+                            type: O.Nb.Span,
                             ellipsis: !0
-                        }, this.props.membership.team.displayName))), s.createElement(S.Wa, {
+                        }, this.props.membership.team.displayName))), s.createElement(O.Wa, {
                             padding: {
                                 right: 2
                             }
-                        }, s.createElement(S.N, {
+                        }, s.createElement(O.N, {
                             "data-test-selector": "TEAM_MEMBERSHIPS_ITEM_STATS_INPUT",
                             onChange: this.onChangeStats,
-                            label: Object(p.d)("Stats", "TeamMembershipsItem"),
+                            label: Object(h.d)("Stats", "TeamMembershipsItem"),
                             disabled: this.props.updating,
                             checked: this.props.membership.statsRevealed
-                        })), s.createElement(S.Wa, {
+                        })), s.createElement(O.Wa, {
                             padding: {
                                 right: 2
                             }
-                        }, s.createElement(S.N, {
+                        }, s.createElement(O.N, {
                             "data-test-selector": "TEAM_MEMBERSHIPS_ITEM_REVENUE_INPUT",
                             onChange: this.onChangeRevenue,
-                            label: Object(p.d)("Revenue", "TeamMembershipsItem"),
+                            label: Object(h.d)("Revenue", "TeamMembershipsItem"),
                             disabled: this.props.updating,
                             checked: this.props.membership.revenueRevealed
-                        })), n, s.createElement(S.Rb, {
+                        })), n, s.createElement(O.Qb, {
                             label: e
-                        }, s.createElement(vt, {
+                        }, s.createElement(St, {
                             ariaLabel: e,
-                            icon: S.ob.Trash,
+                            icon: O.ob.Trash,
                             onConfirmClick: this.onClickRemove,
                             disabled: this.props.updating,
-                            message: s.createElement(S.W, {
-                                fontSize: S.Ba.Size4
+                            message: s.createElement(O.W, {
+                                fontSize: O.Ba.Size4
                             }, t),
-                            confirmButton: s.createElement(S.z, {
-                                type: S.F.Alert
-                            }, Object(p.d)("Leave Team", "TeamMembershipsItem"))
+                            confirmButton: s.createElement(O.z, {
+                                type: O.F.Alert
+                            }, Object(h.d)("Leave Team", "TeamMembershipsItem"))
                         }))))
                     }, t
                 }(s.Component)),
-                St = Object(U.b)("TeamMembershipsItem")(yt),
-                Et = function(e) {
+                Ct = Object(v.b)("TeamMembershipsItem")(Et),
+                _t = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -5864,12 +5887,12 @@
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this;
-                        return this.props.memberships.length < 1 && !this.props.formErrorMessage ? null : s.createElement(Ce.a, {
-                            label: Object(p.d)("Member", "TeamMemberships"),
+                        return this.props.memberships.length < 1 && !this.props.formErrorMessage ? null : s.createElement(_e.a, {
+                            label: Object(h.d)("Member", "TeamMemberships"),
                             error: !!this.props.formErrorMessage,
                             errorMessage: this.props.formErrorMessage
                         }, this.props.memberships.map(function(t, n) {
-                            return s.createElement(St, {
+                            return s.createElement(Ct, {
                                 index: n,
                                 key: t.team.name,
                                 onClickRemove: e.props.onClickRemove,
@@ -5883,23 +5906,23 @@
                         }))
                     }, t
                 }(s.Component),
-                Ct = Object(U.b)("TeamMemberships")(Et),
-                _t = function(e) {
+                wt = Object(v.b)("TeamMemberships")(_t),
+                Ot = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(f.a, null, s.createElement(mt, {
+                        return s.createElement(S.a, null, s.createElement(ft, {
                             teams: this.props.managedTeams,
                             formErrorMessage: this.props.managedError
-                        }), s.createElement(dt, {
+                        }), s.createElement(pt, {
                             invitations: this.props.invitations,
                             acceptInvitation: this.props.acceptInvitation,
                             declineInvitation: this.props.declineInvitation,
                             formErrorMessage: this.props.invitationsError
-                        }), s.createElement(Ct, {
+                        }), s.createElement(wt, {
                             memberships: this.props.memberships,
                             formErrorMessage: this.props.membershipsError,
                             onClickRemove: this.props.onClickRemove,
@@ -5910,8 +5933,8 @@
                         }))
                     }, t
                 }(s.Component),
-                wt = Object(U.b)("TeamSettings")(_t),
-                Ot = function(e) {
+                kt = Object(v.b)("TeamSettings")(Ot),
+                xt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -5923,7 +5946,7 @@
                             updatingInvitations: !1,
                             managedError: "",
                             managedTeams: []
-                        }, t.logger = p.p.logger.withCategory("team-settings"), t.deleteMembership = function(e) {
+                        }, t.logger = h.p.logger.withCategory("team-settings"), t.deleteMembership = function(e) {
                             return i.__awaiter(t, void 0, void 0, function() {
                                 var t, n, r, a, o, s, l;
                                 return i.__generator(this, function(i) {
@@ -5934,13 +5957,13 @@
                                                 updatingToggles: !0
                                             }), a = this.state.memberships[e], o = "/v5/channels/" + this.props.user.id + "/teams/" + a.team.name + "/membership", i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, V.a.deleteOrThrow(o)];
+                                            return i.trys.push([1, 3, , 4]), [4, H.a.deleteOrThrow(o)];
                                         case 2:
                                             return r = i.sent(), [3, 4];
                                         case 3:
                                             return s = i.sent(), t = s, [3, 4];
                                         case 4:
-                                            return r && r.error && (t = new Error("Team Memberships error"), n = r.error), t ? (l = Object(p.d)("Unable to remove team membership", "TeamMemberships"), this.logger.error(t, l, n), this.setState({
+                                            return r && r.error && (t = new Error("Team Memberships error"), n = r.error), t ? (l = Object(h.d)("Unable to remove team membership", "TeamMemberships"), this.logger.error(t, l, n), this.setState({
                                                 membershipsError: l,
                                                 updatingToggles: !1
                                             }), [2]) : (this.setState(function(t) {
@@ -5972,7 +5995,7 @@
                                         case 3:
                                             return a = l.sent(), t = a, [3, 4];
                                         case 4:
-                                            return n && n.error && (t = new Error("Team Memberships error"), r = n.error), t ? (o = Object(p.d)("Unable to update main team", "TeamMemberships"), this.logger.error(t, o, r), this.setState({
+                                            return n && n.error && (t = new Error("Team Memberships error"), r = n.error), t ? (o = Object(h.d)("Unable to update main team", "TeamMemberships"), this.logger.error(t, o, r), this.setState({
                                                 membershipsError: o,
                                                 updatingToggles: !1
                                             }), [2]) : (this.setState(function(t) {
@@ -6010,7 +6033,7 @@
                                         case 3:
                                             return a = s.sent(), t = a, [3, 4];
                                         case 4:
-                                            return n && n.error && (t = new Error("Team Memberships error"), r = n.error), t ? (o = Object(p.d)("Unable to update revenue preferences", "TeamMemberships"), this.logger.error(t, o, r), this.setState({
+                                            return n && n.error && (t = new Error("Team Memberships error"), r = n.error), t ? (o = Object(h.d)("Unable to update revenue preferences", "TeamMemberships"), this.logger.error(t, o, r), this.setState({
                                                 membershipsError: o,
                                                 updatingToggles: !1
                                             }), [2]) : (this.setState(function(t) {
@@ -6044,7 +6067,7 @@
                                         case 3:
                                             return a = s.sent(), t = a, [3, 4];
                                         case 4:
-                                            return n && n.error && (t = new Error("Team Memberships error"), r = n.error), t ? (o = Object(p.d)("Unable to update stats preferences", "TeamMemberships"), this.logger.error(t, o, r), this.setState({
+                                            return n && n.error && (t = new Error("Team Memberships error"), r = n.error), t ? (o = Object(h.d)("Unable to update stats preferences", "TeamMemberships"), this.logger.error(t, o, r), this.setState({
                                                 membershipsError: o,
                                                 updatingToggles: !1
                                             }), [2]) : (this.setState(function(t) {
@@ -6066,7 +6089,7 @@
                                 return i.__generator(this, function(n) {
                                     switch (n.label) {
                                         case 0:
-                                            return this.props.user ? (t = "/v5/channels/" + this.props.user.id + "/teams/" + e.team.name + "/membership", [4, V.a.put(t, {
+                                            return this.props.user ? (t = "/v5/channels/" + this.props.user.id + "/teams/" + e.team.name + "/membership", [4, H.a.put(t, {
                                                 body: {
                                                     primary: e.primary,
                                                     revenue_revealed: e.revenueRevealed,
@@ -6087,7 +6110,7 @@
                                             if (!this.props.user) return [2];
                                             r = "/v5/channels/" + this.props.user.id + "/memberships", i.label = 1;
                                         case 1:
-                                            return i.trys.push([1, 3, , 4]), [4, V.a.get(r)];
+                                            return i.trys.push([1, 3, , 4]), [4, H.a.get(r)];
                                         case 2:
                                             return t = i.sent(), this.setState({
                                                 memberships: this.deserializeMemberships(t),
@@ -6096,7 +6119,7 @@
                                         case 3:
                                             return a = i.sent(), e = a, [3, 4];
                                         case 4:
-                                            return t && t.error && (e = new Error("Team Memberships error"), n = t.error), e ? (o = Object(p.d)("Failed to load Team data.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to load Team data", n), this.setState({
+                                            return t && t.error && (e = new Error("Team Memberships error"), n = t.error), e ? (o = Object(h.d)("Failed to load Team data.  Please refresh the page and try again.", "TeamMemberships"), this.logger.error(e, "Failed to load Team data", n), this.setState({
                                                 membershipsError: o
                                             }), [2]) : [2]
                                     }
@@ -6124,13 +6147,13 @@
                                             if (!this.props.user) return [2];
                                             e = "/v5/channels/" + this.props.user.id + "/invitations", a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, V.a.getOrThrow(e)];
+                                            return a.trys.push([1, 3, , 4]), [4, H.a.getOrThrow(e)];
                                         case 2:
                                             return t = a.sent(), this.setState({
                                                 invitations: this.deserializeInvitations(t)
                                             }), [3, 4];
                                         case 3:
-                                            return n = a.sent(), r = Object(p.d)("Failed to load Team data.  Please refresh the page and try again", "TeamInvitations"), this.logger.error(n, "Failed to load Team data"), this.setState({
+                                            return n = a.sent(), r = Object(h.d)("Failed to load Team data.  Please refresh the page and try again", "TeamInvitations"), this.logger.error(n, "Failed to load Team data"), this.setState({
                                                 invitationsError: r
                                             }), [2];
                                         case 4:
@@ -6171,7 +6194,7 @@
                                                 updatingInvitations: !0
                                             }), o = this.state.invitations[e], s = "/v5/channels/" + this.props.user.id + "/teams/" + o.name + "/invitation", d.label = 1;
                                         case 1:
-                                            return d.trys.push([1, 3, , 4]), [4, V.a.put(s, {
+                                            return d.trys.push([1, 3, , 4]), [4, H.a.put(s, {
                                                 body: {
                                                     accepted: n
                                                 }
@@ -6181,7 +6204,7 @@
                                         case 3:
                                             return l = d.sent(), t = l, [3, 4];
                                         case 4:
-                                            return a && a.error && (t = new Error("Team Invitations error"), r = a.error), t ? (c = Object(p.d)("Unable to respond to invitation", "TeamInvitations"), this.logger.error(t, c, r), this.setState({
+                                            return a && a.error && (t = new Error("Team Invitations error"), r = a.error), t ? (c = Object(h.d)("Unable to respond to invitation", "TeamInvitations"), this.logger.error(t, c, r), this.setState({
                                                 invitationsError: c,
                                                 updatingInvitations: !1
                                             }), [2]) : (this.setState(function(t) {
@@ -6219,13 +6242,13 @@
                                             if (!this.props.user) return [2];
                                             e = "/v5/users/" + this.props.user.id + "/teams", a.label = 1;
                                         case 1:
-                                            return a.trys.push([1, 3, , 4]), [4, V.a.getOrThrow(e)];
+                                            return a.trys.push([1, 3, , 4]), [4, H.a.getOrThrow(e)];
                                         case 2:
                                             return t = a.sent(), this.setState({
                                                 managedTeams: this.deserializeTeams(t)
                                             }), [3, 4];
                                         case 3:
-                                            return n = a.sent(), r = Object(p.d)("Failed to load Team data.  Please refresh the page and try again", "TeamManager"), this.logger.error(n, "Failed to load Team data"), this.setState({
+                                            return n = a.sent(), r = Object(h.d)("Failed to load Team data.  Please refresh the page and try again", "TeamManager"), this.logger.error(n, "Failed to load Team data"), this.setState({
                                                 managedError: r
                                             }), [2];
                                         case 4:
@@ -6246,10 +6269,10 @@
                     return i.__extends(t, e), t.prototype.componentWillMount = function() {
                         this.fetchTeamsMembership(), this.fetchInvitations(), this.fetchManagedTeams()
                     }, t.prototype.render = function() {
-                        return this.hasTeamContentToShow() ? s.createElement(s.Fragment, null, s.createElement(Ee.a, {
-                            title: Object(p.d)("My Teams", "TeamMemberships"),
-                            description: Object(p.d)("Manage your teams here", "TeamMemberships")
-                        }), s.createElement(wt, {
+                        return this.hasTeamContentToShow() ? s.createElement(s.Fragment, null, s.createElement(Ce.a, {
+                            title: Object(h.d)("My Teams", "TeamMemberships"),
+                            description: Object(h.d)("Manage your teams here", "TeamMemberships")
+                        }), s.createElement(kt, {
                             memberships: this.state.memberships,
                             membershipsError: this.state.membershipsError,
                             onClickRemove: this.deleteMembership,
@@ -6268,20 +6291,20 @@
                         return this.state.invitations.length > 0 || this.state.managedTeams.length > 0 || this.state.memberships.length > 0
                     }, t
                 }(s.Component);
-            var kt, It = Object(a.connect)(function(e) {
+            var It, Tt = Object(a.connect)(function(e) {
                     return {
                         user: Object(o.e)(e)
                     }
-                })(Ot),
-                xt = n("4rCz"),
-                Tt = n("7lJP"),
-                Rt = n("94Uw"),
-                Dt = n("Ww25"),
-                Pt = n("FEav");
+                })(xt),
+                Rt = n("4rCz"),
+                Dt = n("7lJP"),
+                Pt = n("94Uw"),
+                jt = n("Ww25"),
+                Mt = n("FEav");
             ! function(e) {
                 e.Banner = "upload-video-player__banner", e.OfflineImage = "upload-video-player__offline-image", e.ErrorMessage = "upload-video-player__error-message"
-            }(kt || (kt = {}));
-            var Mt = function(e) {
+            }(It || (It = {}));
+            var Ft = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6298,13 +6321,13 @@
                                                 working: !0
                                             }), e = !1, t.label = 1;
                                         case 1:
-                                            return t.trys.push([1, 3, , 4]), [4, V.a.putOrThrow("/kraken/users/" + this.props.data.user.id + "/default_images?client_id=" + p.a.authSettings.clientID + "&api_version=" + p.a.defaultAPIVersion, {
+                                            return t.trys.push([1, 3, , 4]), [4, H.a.putOrThrow("/kraken/users/" + this.props.data.user.id + "/default_images?client_id=" + h.a.authSettings.clientID + "&api_version=" + h.a.defaultAPIVersion, {
                                                 body: {
                                                     default_channel_offline_image: "empty_channel_offline_image"
                                                 }
                                             })];
                                         case 2:
-                                            return t.sent(), Object(Me.e)(Pt, {
+                                            return t.sent(), Object(Me.e)(Mt, {
                                                 login: this.props.user && this.props.user.login
                                             }, function(e) {
                                                 return e.user && (e.user.offlineImageURL = null), e
@@ -6323,11 +6346,11 @@
                             t.props.data && t.props.data.refetch()
                         }, t.showModal = function() {
                             var e = t.props.user;
-                            e && t.props.showModal(Tt.UserImageUploader, {
+                            e && t.props.showModal(Dt.UserImageUploader, {
                                 userID: e.id,
                                 login: e.login,
                                 displayName: e.displayName,
-                                imageType: Rt.a.ChannelOfflineImage,
+                                imageType: Pt.a.ChannelOfflineImage,
                                 showCloser: !0,
                                 successCallback: t.imageUploaded
                             })
@@ -6338,60 +6361,60 @@
                             t = null;
                         if (this.props.data && this.props.data.user && this.props.data.user.offlineImageURL) {
                             e = s.createElement("img", {
-                                "data-test-selector": kt.OfflineImage,
+                                "data-test-selector": It.OfflineImage,
                                 height: 90,
                                 width: 160,
                                 src: this.props.data.user.offlineImageURL
                             });
-                            var n = Object(xt.d)("Remove my Video Player Banner Image", "UploadVideoPlayerBanner");
-                            t = s.createElement(S.Wa, {
+                            var n = Object(Rt.d)("Remove my Video Player Banner Image", "UploadVideoPlayerBanner");
+                            t = s.createElement(O.Wa, {
                                 margin: {
                                     x: 2
                                 }
-                            }, s.createElement(S.A, {
+                            }, s.createElement(O.A, {
                                 ariaLabel: n,
                                 disabled: this.state.working,
-                                icon: S.ob.Trash,
+                                icon: O.ob.Trash,
                                 onClick: this.onClickDelete
                             }))
-                        } else e = s.createElement(S.nb, {
-                            asset: S.ob.Camera,
-                            type: S.pb.Alt2,
+                        } else e = s.createElement(O.nb, {
+                            asset: O.ob.Camera,
+                            type: O.pb.Alt2,
                             height: 90,
                             width: 160
                         });
-                        return s.createElement(S.Wa, null, s.createElement(Ee.a, {
-                            title: Object(xt.d)("Video Player Banner", "UploadVideoPlayerBanner"),
-                            description: Object(xt.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
-                        }), s.createElement(f.a, null, s.createElement(B.a, null, s.createElement(S.Wa, {
-                            display: S.X.Flex
-                        }, s.createElement(S.yb, {
-                            borderRadius: S.x.Medium,
-                            overflow: S.Za.Hidden
-                        }, e), s.createElement(S.Wa, {
+                        return s.createElement(O.Wa, null, s.createElement(Ce.a, {
+                            title: Object(Rt.d)("Video Player Banner", "UploadVideoPlayerBanner"),
+                            description: Object(Rt.d)("This is displayed on the player when your channel is offline.", "UploadVideoPlayerBanner")
+                        }), s.createElement(S.a, null, s.createElement(q.a, null, s.createElement(O.Wa, {
+                            display: O.X.Flex
+                        }, s.createElement(O.xb, {
+                            borderRadius: O.x.Medium,
+                            overflow: O.Za.Hidden
+                        }, e), s.createElement(O.Wa, {
                             padding: {
                                 left: 2,
                                 top: 1
                             }
-                        }, s.createElement(S.Wa, {
-                            display: S.X.Flex
-                        }, s.createElement(S.z, {
-                            "data-test-selector": kt.Banner,
+                        }, s.createElement(O.Wa, {
+                            display: O.X.Flex
+                        }, s.createElement(O.z, {
+                            "data-test-selector": It.Banner,
                             onClick: this.showModal,
-                            type: S.F.Hollow
-                        }, s.createElement(S.Wa, {
+                            type: O.F.Hollow
+                        }, s.createElement(O.Wa, {
                             padding: {
                                 x: 1
                             }
-                        }, Object(xt.d)("Update", "UploadVideoPlayerBanner"))), t), s.createElement(Dt.a, {
-                            text: Object(xt.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
-                        }), this.state.deletionError && s.createElement(S.W, {
-                            color: S.O.Error,
-                            "data-test-selector": kt.ErrorMessage
-                        }, Object(xt.d)("Sorry, something went wrong. Please try again later.", "UploadVideoPlayerBanner")))))))
+                        }, Object(Rt.d)("Update", "UploadVideoPlayerBanner"))), t), s.createElement(jt.a, {
+                            text: Object(Rt.d)("Max 10mb GIF, JPG, or PNG", "UploadVideoPlayerBanner")
+                        }), this.state.deletionError && s.createElement(O.W, {
+                            color: O.O.Error,
+                            "data-test-selector": It.ErrorMessage
+                        }, Object(Rt.d)("Sorry, something went wrong. Please try again later.", "UploadVideoPlayerBanner")))))))
                     }, t
                 }(s.Component),
-                jt = Object(Se.a)(Pt, {
+                Lt = Object(Ee.a)(Mt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6399,89 +6422,89 @@
                             }
                         }
                     }
-                })(Mt);
-            var Ft, Lt = Object(a.connect)(function(e) {
+                })(Ft);
+            var Nt, At = Object(a.connect)(function(e) {
                     return {
                         user: Object(o.e)(e)
                     }
                 }, function(e) {
-                    return Object(L.bindActionCreators)({
-                        showModal: gt.d
+                    return Object(p.bindActionCreators)({
+                        showModal: vt.d
                     }, e)
-                })(jt),
-                Nt = function(e) {
-                    return s.createElement(Ce.a, {
-                        orientation: S.Ea.Horizontal,
-                        label: Object(p.d)("Followers-only mode", "DashboardSettingsModPrefFollowersOnly")
-                    }, s.createElement(S.Wa, {
+                })(Lt),
+                Wt = function(e) {
+                    return s.createElement(_e.a, {
+                        orientation: O.Ea.Horizontal,
+                        label: Object(h.d)("Followers-only mode", "DashboardSettingsModPrefFollowersOnly")
+                    }, s.createElement(O.Wa, {
                         margin: {
                             bottom: .5
                         }
-                    }, s.createElement(S.Wa, {
-                        display: S.X.Flex
-                    }, s.createElement(S.Wa, null, s.createElement(S.tb, {
+                    }, s.createElement(O.Wa, {
+                        display: O.X.Flex
+                    }, s.createElement(O.Wa, null, s.createElement(O.tb, {
                         onChange: e.onSetFollowersOnlyDuration,
                         value: e.followersOnlyDurationSeconds.toString()
                     }, s.createElement("option", {
                         value: Z.FollowersDurationSeconds.Off
-                    }, Object(p.d)("Off", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
+                    }, Object(h.d)("Off", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
                         value: Z.FollowersDurationSeconds.TenMinutes
-                    }, Object(p.d)("10 Minutes", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
+                    }, Object(h.d)("10 Minutes", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
                         value: Z.FollowersDurationSeconds.ThirtyMinutes
-                    }, Object(p.d)("30 Minutes", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
+                    }, Object(h.d)("30 Minutes", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
                         value: Z.FollowersDurationSeconds.OneHour
-                    }, Object(p.d)("1 Hour", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
+                    }, Object(h.d)("1 Hour", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
                         value: Z.FollowersDurationSeconds.OneDay
-                    }, Object(p.d)("1 Day", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
+                    }, Object(h.d)("1 Day", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
                         value: Z.FollowersDurationSeconds.OneWeek
-                    }, Object(p.d)("1 Week", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
+                    }, Object(h.d)("1 Week", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
                         value: Z.FollowersDurationSeconds.OneMonth
-                    }, Object(p.d)("1 Month", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
+                    }, Object(h.d)("1 Month", "DashboardSettingsModPrefFollowersOnly")), s.createElement("option", {
                         value: Z.FollowersDurationSeconds.ThreeMonths
-                    }, Object(p.d)("3 Months", "DashboardSettingsModPrefFollowersOnly"))))), s.createElement(Dt.a, {
-                        text: Object(p.d)("When enabled, viewers must follow you for the specified amount of time before they are allowed to post messages on your videos.", "DashboardSettingsModPrefFollowersOnly")
+                    }, Object(h.d)("3 Months", "DashboardSettingsModPrefFollowersOnly"))))), s.createElement(jt.a, {
+                        text: Object(h.d)("When enabled, viewers must follow you for the specified amount of time before they are allowed to post messages on your videos.", "DashboardSettingsModPrefFollowersOnly")
                     })))
                 },
-                At = function(e) {
-                    return s.createElement(Ce.a, {
-                        orientation: S.Ea.Horizontal,
-                        label: Object(p.d)("Messages on videos", "DashboardSettingsModPrefMessages")
-                    }, s.createElement(S.Wa, {
+                Ut = function(e) {
+                    return s.createElement(_e.a, {
+                        orientation: O.Ea.Horizontal,
+                        label: Object(h.d)("Messages on videos", "DashboardSettingsModPrefMessages")
+                    }, s.createElement(O.Wa, {
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(S.kb, {
-                        disabled: e.requestState === Oe.a.Loading,
+                    }, s.createElement(O.kb, {
+                        disabled: e.requestState === ke.a.Loading,
                         checked: e.publishingMode === Z.ChommentsPublishingMode.Open,
                         onChange: e.onSetPublishingMode,
-                        label: Object(p.d)("Allow all messages on videos except for those caught by AutoMod", "DashboardSettingsModPrefMessages"),
+                        label: Object(h.d)("Allow all messages on videos except for those caught by AutoMod", "DashboardSettingsModPrefMessages"),
                         name: "chommentsPublishingMode",
                         value: Z.ChommentsPublishingMode.Open
-                    })), s.createElement(S.Wa, {
+                    })), s.createElement(O.Wa, {
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(S.kb, {
-                        disabled: e.requestState === Oe.a.Loading,
+                    }, s.createElement(O.kb, {
+                        disabled: e.requestState === ke.a.Loading,
                         checked: e.publishingMode === Z.ChommentsPublishingMode.Review,
                         onChange: e.onSetPublishingMode,
-                        label: Object(p.d)("Hold all messages on videos for review", "DashboardSettingsModPrefMessages"),
+                        label: Object(h.d)("Hold all messages on videos for review", "DashboardSettingsModPrefMessages"),
                         name: "chommentsPublishingMode",
                         value: Z.ChommentsPublishingMode.Review
-                    })), s.createElement(S.Wa, {
+                    })), s.createElement(O.Wa, {
                         padding: {
                             bottom: 1
                         }
-                    }, s.createElement(S.kb, {
-                        disabled: e.requestState === Oe.a.Loading,
+                    }, s.createElement(O.kb, {
+                        disabled: e.requestState === ke.a.Loading,
                         checked: e.publishingMode === Z.ChommentsPublishingMode.Disabled,
                         onChange: e.onSetPublishingMode,
-                        label: Object(p.d)("Disable all messages on videos", "DashboardSettingsModPrefMessages"),
+                        label: Object(h.d)("Disable all messages on videos", "DashboardSettingsModPrefMessages"),
                         name: "chommentsPublishingMode",
                         value: Z.ChommentsPublishingMode.Disabled
                     })))
                 },
-                Wt = function(e) {
+                Bt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.handleSetPublishingMode = function(e) {
@@ -6505,28 +6528,28 @@
                     return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
-                        return s.createElement(S.Wa, null, s.createElement(Ee.a, {
-                            title: Object(p.d)("Video Moderation", "DashboardSettingsModPref")
-                        }), s.createElement(f.a, null, this.props.requestState === Oe.a.Error && s.createElement(B.a, null, s.createElement(S.W, {
-                            color: S.O.Error
-                        }, Object(p.d)("Something went wrong. Give it another try later.", "DashboardSettingsModPrefMessagesError"))), s.createElement(At, {
+                        return s.createElement(O.Wa, null, s.createElement(Ce.a, {
+                            title: Object(h.d)("Video Moderation", "DashboardSettingsModPref")
+                        }), s.createElement(S.a, null, this.props.requestState === ke.a.Error && s.createElement(q.a, null, s.createElement(O.W, {
+                            color: O.O.Error
+                        }, Object(h.d)("Something went wrong. Give it another try later.", "DashboardSettingsModPrefMessagesError"))), s.createElement(Ut, {
                             onSetPublishingMode: this.handleSetPublishingMode,
                             publishingMode: this.props.moderationSettings.publishingMode,
                             requestState: this.props.requestState
-                        }), s.createElement(Nt, {
+                        }), s.createElement(Wt, {
                             onSetFollowersOnlyDuration: this.handleSetFollowersOnlyDuration,
                             followersOnlyDurationSeconds: this.props.moderationSettings.followersOnlyDurationSeconds
                         })))
                     }, t
                 }(s.Component),
-                Ut = Object(U.b)("VideoModerationSettings")(Wt),
-                Bt = function(e) {
+                qt = Object(v.b)("VideoModerationSettings")(Bt),
+                zt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             moderationSettings: Z.DEFAULT_VIDEO_MODERATION_SETTINGS,
                             requestState: Z.RequestState.Loading
-                        }, t.logger = p.p.logger.withCategory("followers-only-settings-form"), t.saveSettings = function(e) {
+                        }, t.logger = h.p.logger.withCategory("followers-only-settings-form"), t.saveSettings = function(e) {
                             return i.__awaiter(t, void 0, void 0, function() {
                                 var t, n;
                                 return i.__generator(this, function(r) {
@@ -6540,7 +6563,7 @@
                                                     return i.__generator(this, function(r) {
                                                         switch (r.label) {
                                                             case 0:
-                                                                return [4, V.a.put("/kraken/videos/channels/" + e + "/settings", {
+                                                                return [4, H.a.put("/kraken/videos/channels/" + e + "/settings", {
                                                                     body: function(e) {
                                                                         return {
                                                                             publishing_mode: e.publishingMode,
@@ -6555,7 +6578,7 @@
                                                                     error: n.error || n.requestError
                                                                 }] : [2, {
                                                                     isError: !1,
-                                                                    moderationSettings: J(n.body)
+                                                                    moderationSettings: $(n.body)
                                                                 }]
                                                         }
                                                     })
@@ -6585,14 +6608,14 @@
                                                 return i.__generator(this, function(n) {
                                                     switch (n.label) {
                                                         case 0:
-                                                            return [4, V.a.get("/kraken/videos/channels/" + e + "/settings")];
+                                                            return [4, H.a.get("/kraken/videos/channels/" + e + "/settings")];
                                                         case 1:
                                                             return (t = n.sent()).error || t.requestError ? [2, {
                                                                 isError: !0,
                                                                 moderationSettings: void 0
                                                             }] : [2, {
                                                                 isError: !1,
-                                                                moderationSettings: J(t.body)
+                                                                moderationSettings: $(t.body)
                                                             }]
                                                     }
                                                 })
@@ -6609,17 +6632,17 @@
                             })
                         })
                     }, t.prototype.render = function() {
-                        return s.createElement(Ut, {
+                        return s.createElement(qt, {
                             moderationSettings: this.state.moderationSettings,
                             requestState: this.state.requestState,
                             saveSettings: this.saveSettings
                         })
                     }, t
                 }(s.Component),
-                zt = n("wo8Z"),
-                qt = n("bDCY"),
-                Kt = n("HOmj"),
-                Vt = function(e) {
+                Kt = n("wo8Z"),
+                Vt = n("bDCY"),
+                Ht = n("HOmj"),
+                Gt = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
@@ -6660,7 +6683,7 @@
                                         case 3:
                                             return r = a.sent(), this.setState({
                                                 isLastRequestErrored: !0
-                                            }), p.k.warn(r, "Failed to toggle ritual"), [3, 4];
+                                            }), h.k.warn(r, "Failed to toggle ritual"), [3, 4];
                                         case 4:
                                             return this.setState({
                                                 isInFlight: !1
@@ -6673,27 +6696,27 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         if (!this.show) return null;
                         var e = this.props.data;
-                        return s.createElement(s.Fragment, null, s.createElement(Ee.a, {
-                            title: Object(p.d)("Viewer milestones", "RitualsSettingsSection")
-                        }), s.createElement(f.a, null, s.createElement(we.a, {
+                        return s.createElement(s.Fragment, null, s.createElement(Ce.a, {
+                            title: Object(h.d)("Viewer milestones", "RitualsSettingsSection")
+                        }), s.createElement(S.a, null, s.createElement(Oe.a, {
                             showPlaceholder: !e || e.loading,
                             id: "new-chatter-ritual",
-                            label: Object(p.d)("New chatter announcements", "RitualsSettingsSection"),
+                            label: Object(h.d)("New chatter announcements", "RitualsSettingsSection"),
                             checked: !!(e && e.channel && e.channel.settings && e.channel.settings.isRitualsEnabled),
-                            description: Object(p.d)("Allow your community to celebrate their first time chatting on your channel.", "RitualsSettingsSection"),
+                            description: Object(h.d)("Allow your community to celebrate their first time chatting on your channel.", "RitualsSettingsSection"),
                             disabled: this.state.isInFlight,
                             error: this.state.isLastRequestErrored || !(!e || !e.error),
                             onChange: this.onNewChatterRitualToggled
                         })))
                     }, Object.defineProperty(t.prototype, "show", {
                         get: function() {
-                            return Object(zt.a)() && this.props.data && !this.props.data.error && this.props.data.channel && this.props.data.channel.settings && this.props.data.channel.settings.isRitualsWhitelisted
+                            return Object(Kt.a)() && this.props.data && !this.props.data.error && this.props.data.channel && this.props.data.channel.settings && this.props.data.channel.settings.isRitualsWhitelisted
                         },
                         enumerable: !0,
                         configurable: !0
                     }), t
                 }(s.Component),
-                Ht = Object(Je.compose)(Object(Se.a)(qt, {
+                Xt = Object($e.compose)(Object(Ee.a)(Vt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6702,34 +6725,38 @@
                         }
                     },
                     skip: function(e) {
-                        return !e.channelID || !Object(zt.a)()
+                        return !e.channelID || !Object(Kt.a)()
                     }
-                }), Object(Se.a)(Kt, {
+                }), Object(Ee.a)(Ht, {
                     name: "toggleRitualsEnabled"
-                }))(Vt),
-                Gt = n("izCx"),
-                Xt = function(e) {
+                }))(Gt),
+                Qt = n("izCx"),
+                Yt = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.props.data.channel;
-                        return s.createElement(I.a, null, s.createElement(Ee.a, {
-                            title: Object(p.d)("Stream Key & Preferences", "DashboardSettings")
-                        }), s.createElement(Ze, null), s.createElement(Lt, null), s.createElement(Re, {
+                        return s.createElement(P.a, null, s.createElement(Ce.a, {
+                            title: Object(h.d)("Stream Key & Preferences", "DashboardSettings")
+                        }), s.createElement(Ze, null), s.createElement(Ce.a, {
+                            title: Object(h.d)("Permissions", "DashboardSettings")
+                        }), s.createElement(ot, {
+                            channelLogin: this.props.match.params.channelName
+                        }), s.createElement(At, null), s.createElement(De, {
                             channelName: this.props.match.params.channelName
-                        }), s.createElement(It, null), s.createElement(Ee.a, {
-                            title: Object(p.d)("Drops", "DashboardSettings")
-                        }), s.createElement(rt, {
+                        }), s.createElement(Tt, null), s.createElement(Ce.a, {
+                            title: Object(h.d)("Drops", "DashboardSettings")
+                        }), s.createElement(at, {
                             channelName: this.props.match.params.channelName
-                        }), e && e.id && s.createElement(Bt, {
+                        }), e && e.id && s.createElement(zt, {
                             channelID: e.id
-                        }), s.createElement(Ht, {
+                        }), s.createElement(Xt, {
                             channelID: e && e.id
                         }))
                     }, t
                 }(s.Component),
-                Yt = Object(L.compose)(Object(Se.a)(Gt, {
+                Jt = Object(p.compose)(Object(Ee.a)(Qt, {
                     options: function(e) {
                         return {
                             variables: {
@@ -6737,81 +6764,81 @@
                             }
                         }
                     }
-                }), Object(U.b)("DashboardSettingsIndexPage", {
+                }), Object(v.b)("DashboardSettingsIndexPage", {
                     autoReportInteractive: !0,
-                    destination: A.a.DashboardSettingsIndex
-                }), Object(N.a)({
-                    location: W.PageviewLocation.DashboardSettingsIndex
-                }))(Xt),
-                Qt = n("3iFw"),
-                Zt = n("rqzT"),
-                Jt = n("NMMG"),
-                $t = n("jreu");
+                    destination: f.a.DashboardSettingsIndex
+                }), Object(m.a)({
+                    location: b.PageviewLocation.DashboardSettingsIndex
+                }))(Yt),
+                Zt = n("3iFw"),
+                $t = n("rqzT"),
+                en = n("NMMG"),
+                tn = n("jreu");
             n("wKRU");
             ! function(e) {
                 e.CancelButton = "cancel-button", e.ErrorMessage = "error-message", e.KeepButton = "keep-button", e.RemoveButton = "remove-button", e.RetryButton = "retry-button"
-            }(Ft || (Ft = {}));
-            var en, tn = function(e) {
+            }(Nt || (Nt = {}));
+            var nn, rn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             isRequestInFlight: !1,
                             retryable: !1
                         }, t.renderRetry = function() {
-                            return s.createElement(s.Fragment, null, s.createElement(nn, null, s.createElement(S.W, {
-                                color: S.O.Error,
-                                "data-test-selector": Ft.ErrorMessage
-                            }, Object(p.d)("Failed to remove yourself as an editor on this channel.", "EditableChannelsRemoveConfirmation"))), s.createElement(rn, null, s.createElement(S.Wa, {
+                            return s.createElement(s.Fragment, null, s.createElement(an, null, s.createElement(O.W, {
+                                color: O.O.Error,
+                                "data-test-selector": Nt.ErrorMessage
+                            }, Object(h.d)("Failed to remove yourself as an editor on this channel.", "EditableChannelsRemoveConfirmation"))), s.createElement(on, null, s.createElement(O.Wa, {
                                 margin: {
                                     right: .5
                                 }
-                            }, s.createElement(S.z, {
-                                "data-test-selector": Ft.CancelButton,
+                            }, s.createElement(O.z, {
+                                "data-test-selector": Nt.CancelButton,
                                 onClick: t.props.onClose,
-                                type: S.F.Hollow
-                            }, Object(p.d)("Cancel", "EditableChannelsRemoveConfirmation"))), s.createElement(S.Wa, {
+                                type: O.F.Hollow
+                            }, Object(h.d)("Cancel", "EditableChannelsRemoveConfirmation"))), s.createElement(O.Wa, {
                                 margin: {
                                     left: .5
                                 }
-                            }, s.createElement(S.z, {
-                                "data-test-selector": Ft.RetryButton,
+                            }, s.createElement(O.z, {
+                                "data-test-selector": Nt.RetryButton,
                                 disabled: t.state.isRequestInFlight,
                                 onClick: t.onRemoveClick,
-                                state: t.state.isRequestInFlight ? S.E.Loading : S.E.Default
-                            }, Object(p.d)("Retry", "EditableChannelsRemoveConfirmation")))))
+                                state: t.state.isRequestInFlight ? O.E.Loading : O.E.Default
+                            }, Object(h.d)("Retry", "EditableChannelsRemoveConfirmation")))))
                         }, t.renderConfirmation = function() {
                             var e = t.props.channel,
                                 n = t.state.isRequestInFlight;
-                            return s.createElement(s.Fragment, null, s.createElement(nn, null, s.createElement(S.q, {
+                            return s.createElement(s.Fragment, null, s.createElement(an, null, s.createElement(O.q, {
                                 alt: e.login,
                                 size: 50,
-                                src: ee(e)
-                            }), s.createElement(S.Wa, {
+                                src: te(e)
+                            }), s.createElement(O.Wa, {
                                 margin: {
                                     top: .5
                                 }
-                            }, s.createElement(S.W, {
-                                color: S.O.Alt2,
-                                fontSize: S.Ba.Size5
-                            }, e.displayname))), s.createElement(rn, null, s.createElement(S.Wa, {
+                            }, s.createElement(O.W, {
+                                color: O.O.Alt2,
+                                fontSize: O.Ba.Size5
+                            }, e.displayname))), s.createElement(on, null, s.createElement(O.Wa, {
                                 margin: {
                                     right: .5
                                 }
-                            }, s.createElement(S.z, {
-                                "data-test-selector": Ft.KeepButton,
+                            }, s.createElement(O.z, {
+                                "data-test-selector": Nt.KeepButton,
                                 disabled: n,
                                 onClick: t.props.onClose,
-                                type: S.F.Hollow
-                            }, Object(p.d)("No, Keep", "EditableChannelsRemoveConfirmation"))), s.createElement(S.Wa, {
+                                type: O.F.Hollow
+                            }, Object(h.d)("No, Keep", "EditableChannelsRemoveConfirmation"))), s.createElement(O.Wa, {
                                 margin: {
                                     left: 1
                                 }
-                            }, s.createElement(S.z, {
-                                "data-test-selector": Ft.RemoveButton,
+                            }, s.createElement(O.z, {
+                                "data-test-selector": Nt.RemoveButton,
                                 disabled: n,
                                 onClick: t.onRemoveClick,
-                                state: n ? S.E.Loading : S.E.Default
-                            }, Object(p.d)("Yes, Remove", "EditableChannelsRemoveConfirmation")))))
+                                state: n ? O.E.Loading : O.E.Default
+                            }, Object(h.d)("Yes, Remove", "EditableChannelsRemoveConfirmation")))))
                         }, t.onRemoveClick = function() {
                             return i.__awaiter(t, void 0, void 0, function() {
                                 var e, t, n, r, a;
@@ -6822,7 +6849,7 @@
                                                 isRequestInFlight: !0
                                             }), o.label = 1;
                                         case 1:
-                                            return o.trys.push([1, 3, , 4]), [4, Object($t.a)({
+                                            return o.trys.push([1, 3, , 4]), [4, Object(tn.a)({
                                                 channelID: t,
                                                 editorID: a
                                             })];
@@ -6845,121 +6872,121 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return s.createElement(S.yb, {
-                            background: S.r.Base,
+                        return s.createElement(O.xb, {
+                            background: O.r.Base,
                             className: "remove-confirmation",
                             elevation: 3
-                        }, s.createElement(S.yb, {
+                        }, s.createElement(O.xb, {
                             borderBottom: !0,
-                            display: S.X.Flex,
-                            justifyContent: S.Va.Center,
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Center,
                             padding: 2
-                        }, s.createElement(S.W, {
+                        }, s.createElement(O.W, {
                             bold: !0,
-                            fontSize: S.Ba.Size4
-                        }, Object(p.d)("Remove Yourself as an Editor on This Channel?", "EditableChannelsRemoveConfirmation"))), this.state.retryable ? this.renderRetry() : this.renderConfirmation(), s.createElement(g.a, {
+                            fontSize: O.Ba.Size4
+                        }, Object(h.d)("Remove Yourself as an Editor on This Channel?", "EditableChannelsRemoveConfirmation"))), this.state.retryable ? this.renderRetry() : this.renderConfirmation(), s.createElement(E.a, {
                             closeOnBackdropClick: !0
                         }))
                     }, t
                 }(s.Component),
-                nn = function(e) {
+                an = function(e) {
                     var t = e.children;
-                    return s.createElement(S.Wa, {
-                        alignItems: S.f.Center,
-                        display: S.X.Flex,
-                        flexDirection: S.Z.Column,
-                        justifyContent: S.Va.Center,
+                    return s.createElement(O.Wa, {
+                        alignItems: O.f.Center,
+                        display: O.X.Flex,
+                        flexDirection: O.Z.Column,
+                        justifyContent: O.Va.Center,
                         padding: {
                             y: 2
                         }
                     }, t)
                 },
-                rn = function(e) {
+                on = function(e) {
                     var t = e.children;
-                    return s.createElement(S.yb, {
-                        background: S.r.Alt,
-                        display: S.X.Flex,
-                        justifyContent: S.Va.Center,
+                    return s.createElement(O.xb, {
+                        background: O.r.Alt,
+                        display: O.X.Flex,
+                        justifyContent: O.Va.Center,
                         padding: 2
                     }, t)
                 },
-                an = {
+                sn = {
                     "data-test-selector": "display-name"
                 },
-                on = {
+                ln = {
                     "data-test-selector": "empty"
                 },
-                sn = function(e) {
+                cn = function(e) {
                     var t = e.channels,
                         n = e.user.id;
-                    if (0 === t.length) return s.createElement(S.Wa, i.__assign({
-                        display: S.X.Flex,
-                        flexDirection: S.Z.Column,
-                        alignItems: S.f.Center,
-                        alignContent: S.e.Center,
-                        justifyContent: S.Va.Center,
+                    if (0 === t.length) return s.createElement(O.Wa, i.__assign({
+                        display: O.X.Flex,
+                        flexDirection: O.Z.Column,
+                        alignItems: O.f.Center,
+                        alignContent: O.e.Center,
+                        justifyContent: O.Va.Center,
                         padding: {
                             top: 5,
                             right: 0,
                             bottom: 5,
                             left: 0
                         }
-                    }, on), s.createElement(S.Wa, {
+                    }, ln), s.createElement(O.Wa, {
                         padding: {
                             bottom: .5
                         }
-                    }, s.createElement(S.q, {
+                    }, s.createElement(O.q, {
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/58127/2.0",
-                        alt: Object(p.d)("CoolCat", "ChannelSettingsEditableChannelsPage"),
+                        alt: Object(h.d)("CoolCat", "ChannelSettingsEditableChannelsPage"),
                         size: 50
-                    })), s.createElement(S.W, {
-                        color: S.O.Alt2,
-                        fontSize: S.Ba.Size5
-                    }, Object(p.d)("No channels to display", "ChannelSettingsEditableChannelsPage")));
-                    var r = Object(p.d)("Remove yourself as an editor", "EditableChannelList");
-                    return s.createElement(S.P, {
+                    })), s.createElement(O.W, {
+                        color: O.O.Alt2,
+                        fontSize: O.Ba.Size5
+                    }, Object(h.d)("No channels to display", "ChannelSettingsEditableChannelsPage")));
+                    var r = Object(h.d)("Remove yourself as an editor", "EditableChannelList");
+                    return s.createElement(O.P, {
                         cols: 6
                     }, t.map(function(t) {
-                        return s.createElement(S.yb, {
+                        return s.createElement(O.xb, {
                             key: t.id,
-                            alignItems: S.f.Center,
+                            alignItems: O.f.Center,
                             borderBottom: !0,
-                            display: S.X.Flex,
-                            justifyContent: S.Va.Between,
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Between,
                             padding: {
                                 bottom: 1,
                                 top: 1
                             }
-                        }, s.createElement(S.Wa, {
-                            display: S.X.Flex,
-                            alignItems: S.f.Center
-                        }, s.createElement(S.U, {
+                        }, s.createElement(O.Wa, {
+                            display: O.X.Flex,
+                            alignItems: O.f.Center
+                        }, s.createElement(O.U, {
                             to: "/" + t.login
-                        }, s.createElement(S.q, {
+                        }, s.createElement(O.q, {
                             alt: t.displayname,
                             size: 30,
-                            src: ee(t)
-                        })), s.createElement(S.Wa, {
+                            src: te(t)
+                        })), s.createElement(O.Wa, {
                             margin: {
                                 left: 1
                             }
-                        }, s.createElement(S.U, {
+                        }, s.createElement(O.U, {
                             to: "/" + t.login
-                        }, s.createElement(S.W, i.__assign({}, an), t.displayname)))), s.createElement(S.Wa, null, s.createElement(S.Wa, {
+                        }, s.createElement(O.W, i.__assign({}, sn), t.displayname)))), s.createElement(O.Wa, null, s.createElement(O.Wa, {
                             margin: {
                                 right: 1
                             },
-                            display: S.X.InlineFlex
-                        }, s.createElement(Zt.a, {
-                            buttonType: S.F.Hollow,
-                            threadID: Object(Jt.a)(n, t.id),
+                            display: O.X.InlineFlex
+                        }, s.createElement($t.a, {
+                            buttonType: O.F.Hollow,
+                            threadID: Object(en.a)(n, t.id),
                             isPopout: !1
-                        })), s.createElement(S.z, {
+                        })), s.createElement(O.z, {
                             linkTo: "/" + t.login + "/dashboard/live",
-                            type: S.F.Text
-                        }, Object(p.d)("Dashboard", "ChannelSettingsEditableChannelsPage")), s.createElement(x.a, {
+                            type: O.F.Text
+                        }, Object(h.d)("Dashboard", "ChannelSettingsEditableChannelsPage")), s.createElement(j.a, {
                             triggerModal: function(r) {
-                                return s.createElement(tn, {
+                                return s.createElement(rn, {
                                     channel: t,
                                     onClose: r,
                                     onSuccess: e.onChannelRemoved,
@@ -6967,57 +6994,57 @@
                                 })
                             }
                         }, function(e) {
-                            return s.createElement(S.Rb, {
+                            return s.createElement(O.Qb, {
                                 label: r
-                            }, s.createElement(S.A, {
+                            }, s.createElement(O.A, {
                                 ariaLabel: r,
-                                icon: S.ob.Trash,
+                                icon: O.ob.Trash,
                                 onClick: e
                             }))
                         })))
                     }))
                 },
-                ln = {
+                dn = {
                     "data-test-selector": "error"
                 },
-                cn = function() {
-                    return s.createElement(S.Wa, i.__assign({
-                        display: S.X.Flex,
-                        flexDirection: S.Z.Column,
-                        alignItems: S.f.Center,
-                        alignContent: S.e.Center,
-                        justifyContent: S.Va.Center,
+                un = function() {
+                    return s.createElement(O.Wa, i.__assign({
+                        display: O.X.Flex,
+                        flexDirection: O.Z.Column,
+                        alignItems: O.f.Center,
+                        alignContent: O.e.Center,
+                        justifyContent: O.Va.Center,
                         padding: {
                             top: 5,
                             right: 0,
                             bottom: 5,
                             left: 0
                         }
-                    }, ln), s.createElement(S.Wa, {
+                    }, dn), s.createElement(O.Wa, {
                         padding: {
                             top: 5,
                             bottom: .5
                         }
-                    }, s.createElement(S.q, {
+                    }, s.createElement(O.q, {
                         src: "https://static-cdn.jtvnw.net/emoticons/v1/86/2.0",
-                        alt: Object(p.d)("BibleThump", "ChannelSettingsEditableChannelsPage"),
+                        alt: Object(h.d)("BibleThump", "ChannelSettingsEditableChannelsPage"),
                         size: 50
-                    })), s.createElement(S.W, {
-                        color: S.O.Alt2,
-                        fontSize: S.Ba.Size5
-                    }, Object(p.d)("An error occured while loading channels you can manage.", "ChannelSettingsEditableChannelsPage")))
+                    })), s.createElement(O.W, {
+                        color: O.O.Alt2,
+                        fontSize: O.Ba.Size5
+                    }, Object(h.d)("An error occured while loading channels you can manage.", "ChannelSettingsEditableChannelsPage")))
                 },
-                dn = n("CEZT");
+                pn = n("CEZT");
             n("rCIv");
             ! function(e) {
                 e[e.Loading = 0] = "Loading", e[e.Success = 1] = "Success", e[e.Error = 2] = "Error"
-            }(en || (en = {}));
-            var un = function(e) {
+            }(nn || (nn = {}));
+            var hn = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.state = {
                             editableChannels: [],
-                            requestState: en.Loading
+                            requestState: nn.Loading
                         }, t.handleChannelRemoved = function(e) {
                             t.setState(function(t) {
                                 return {
@@ -7028,40 +7055,40 @@
                             })
                         }, t
                     }
-                    return i.__extends(t, e), t.prototype.componentWillMount = function() {
+                    return i.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.setEditableChannels()
-                    }, t.prototype.componentDidUpdate = function(e) {
-                        this.props.user && this.props.channelLogin !== e.channelLogin && this.setEditableChannels()
+                    }, t.prototype.componentDidUpdate = function(e, t) {
+                        this.props.user && this.props.channelLogin !== e.channelLogin && this.setEditableChannels(), t.requestState === this.state.requestState || this.state.requestState === nn.Loading || this.state.requestState !== nn.Success && this.state.requestState !== nn.Error || this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = this.props.user,
                             t = this.state.requestState;
-                        if (!e || t === en.Loading) return s.createElement(I.a, null, s.createElement(S.db, {
+                        if (!e || t === nn.Loading) return s.createElement(P.a, null, s.createElement(O.db, {
                             height: 600
                         }));
-                        var n = s.createElement(m.a, {
-                            title: Object(p.d)("Channels you can manage", "ChannelSettingsEditableChannelsPage"),
+                        var n = s.createElement(y.a, {
+                            title: Object(h.d)("Channels you can manage", "ChannelSettingsEditableChannelsPage"),
                             linkToParent: "/" + e.login + "/dashboard/settings"
                         });
-                        return s.createElement(s.Fragment, null, s.createElement(I.a, null, s.createElement(f.a, {
+                        return s.createElement(s.Fragment, null, s.createElement(P.a, null, s.createElement(S.a, {
                             header: n
-                        }, s.createElement(S.yb, {
-                            background: S.r.Base,
+                        }, s.createElement(O.xb, {
+                            background: O.r.Base,
                             elevation: 1,
                             padding: 2,
                             flexGrow: 1,
                             fullWidth: !0,
                             className: "editable-channels-page"
-                        }, s.createElement(S.yb, {
+                        }, s.createElement(O.xb, {
                             fullWidth: !0,
                             fullHeight: !0,
-                            display: S.X.Flex,
-                            justifyContent: S.Va.Center,
+                            display: O.X.Flex,
+                            justifyContent: O.Va.Center,
                             margin: 1
-                        }, t === en.Success && s.createElement(sn, {
+                        }, t === nn.Success && s.createElement(cn, {
                             channels: this.state.editableChannels,
                             onChannelRemoved: this.handleChannelRemoved,
                             user: e
-                        }), t === en.Error && s.createElement(cn, null))))), s.createElement(Qt.Whispers, null))
+                        }), t === nn.Error && s.createElement(un, null))))), s.createElement(Zt.Whispers, null))
                     }, t.prototype.setEditableChannels = function() {
                         return i.__awaiter(this, void 0, void 0, function() {
                             var e;
@@ -7071,15 +7098,15 @@
                                         if (!this.props.user) return [2];
                                         t.label = 1;
                                     case 1:
-                                        return t.trys.push([1, 3, , 4]), [4, Object(dn.a)(this.props.user.id)];
+                                        return t.trys.push([1, 3, , 4]), [4, Object(pn.a)(this.props.user.id)];
                                     case 2:
                                         return e = t.sent(), this.setState({
                                             editableChannels: e,
-                                            requestState: en.Success
+                                            requestState: nn.Success
                                         }), [3, 4];
                                     case 3:
                                         return t.sent(), this.setState({
-                                            requestState: en.Error
+                                            requestState: nn.Error
                                         }), [3, 4];
                                     case 4:
                                         return [2]
@@ -7088,7 +7115,12 @@
                         })
                     }, t
                 }(s.Component),
-                pn = function(e) {
+                mn = Object(p.compose)(Object(v.b)("EditableChannelsPage", {
+                    destination: f.a.EditableChannels
+                }), Object(m.a)({
+                    location: b.PageviewLocation.EditableChannels
+                }))(hn),
+                gn = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -7098,19 +7130,19 @@
                             n = t && t.login,
                             r = t && t.roles && t.roles.isStaff;
                         return this.props.match.params.channelLogin === n || r ? s.createElement(d.a, null, s.createElement(l.a, {
-                            path: "/:channelLogin/dashboard/settings/channel",
+                            path: "/:channelLogin/dashboard/settings/managed-channels",
                             exact: !0,
                             render: function() {
-                                return s.createElement(un, {
+                                return s.createElement(mn, {
                                     user: e.props.user,
                                     channelLogin: e.props.match.params.channelLogin
                                 })
                             }
                         }), s.createElement(l.a, {
-                            path: "/:channelLogin/dashboard/settings/stream",
+                            path: "/:channelLogin/dashboard/settings/authorized-streamers",
                             exact: !0,
                             render: function() {
-                                return s.createElement(F, {
+                                return s.createElement(B, {
                                     user: e.props.user,
                                     channelLogin: e.props.match.params.channelLogin
                                 })
@@ -7118,7 +7150,7 @@
                         }), s.createElement(l.a, {
                             path: "/:channelLogin/dashboard/settings/autohost",
                             exact: !0,
-                            component: ye
+                            component: Se
                         }), s.createElement(l.a, {
                             path: "/:channelLogin/dashboard/settings/moderation",
                             exact: !0,
@@ -7140,7 +7172,7 @@
                         }), s.createElement(l.a, {
                             path: "/:channelName/dashboard/settings",
                             exact: !0,
-                            component: Yt
+                            component: Jt
                         }), s.createElement(l.a, {
                             component: u.a
                         })) : s.createElement(c.a, {
@@ -7148,13 +7180,13 @@
                         })
                     }, t
                 }(s.Component);
-            var hn = Object(a.connect)(function(e) {
+            var fn = Object(a.connect)(function(e) {
                 return {
                     user: Object(o.e)(e)
                 }
-            })(pn);
+            })(gn);
             n.d(t, "DashboardSettingsRoot", function() {
-                return hn
+                return fn
             })
         },
         qYDK: function(e, t, n) {
@@ -7177,8 +7209,8 @@
                 p = n("q1tI"),
                 h = n("/7QA"),
                 m = n("odMz"),
-                f = n("Ue10"),
-                g = (n("7WKn"), function(e) {
+                g = n("Ue10"),
+                f = (n("7WKn"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.setContainerRef = function(e) {
@@ -7190,7 +7222,7 @@
                     }, t.prototype.componentDidUpdate = function() {
                         this.setPlaceholderStyles()
                     }, t.prototype.render = function() {
-                        return p.createElement(f.Wa, {
+                        return p.createElement(g.Wa, {
                             breakpointLarge: {
                                 margin: {
                                     bottom: 2
@@ -7229,17 +7261,17 @@
                     }, t.prototype.componentWillUnmount = function() {
                         this.containerRef.removeEventListener("mousedown", this.handleMouseDown)
                     }, t.prototype.render = function() {
-                        return p.createElement(f.Wa, {
-                            position: f.eb.Relative,
+                        return p.createElement(g.Wa, {
+                            position: g.eb.Relative,
                             refDelegate: this.setContainerRef
-                        }, p.createElement(b.a, null, p.createElement(f.A, u.__assign({
+                        }, p.createElement(b.a, null, p.createElement(g.A, u.__assign({
                             ariaLabel: Object(h.d)("Options", "CogWheelComponent"),
-                            icon: f.ob.Gear
-                        }, Object(v.a)(this.props))), p.createElement(f.u, {
+                            icon: g.ob.Gear
+                        }, Object(v.a)(this.props))), p.createElement(g.u, {
                             offsetY: "0",
                             offsetX: "1rem",
-                            direction: f.v.Left,
-                            size: f.w.Small
+                            direction: g.v.Left,
+                            size: g.w.Small
                         }, this.props.children)))
                     }, t
                 }(p.Component),
@@ -7248,10 +7280,10 @@
                         return null !== e && e.apply(this, arguments) || this
                     }
                     return u.__extends(t, e), t.prototype.render = function() {
-                        return p.createElement(f.yb, {
+                        return p.createElement(g.xb, {
                             className: "drag-and-drop-card-title",
-                            color: f.O.Base,
-                            fontSize: f.Ba.Size5,
+                            color: g.O.Base,
+                            fontSize: g.Ba.Size5,
                             margin: {
                                 y: "auto"
                             }
@@ -7364,16 +7396,16 @@
                         s = n.isGrabbed,
                         l = n.placeholderPosition,
                         c = e.grabbedCard;
-                    return p.createElement(f.Wa, {
+                    return p.createElement(g.Wa, {
                         "data-test-selector": o.Container,
-                        display: f.X.Flex,
-                        flexDirection: f.Z.Column,
+                        display: g.X.Flex,
+                        flexDirection: g.Z.Column,
                         refDelegate: this.registerRef(i.Container)
-                    }, p.createElement(g, {
+                    }, p.createElement(f, {
                         cloneStyleRef: c && c.cardRef,
                         show: l === m.c.Top
-                    }), p.createElement(f.yb, {
-                        background: f.r.Base,
+                    }), p.createElement(g.xb, {
+                        background: g.r.Base,
                         border: !0,
                         breakpointLarge: {
                             margin: {
@@ -7382,58 +7414,58 @@
                         },
                         className: "drag-and-drop-card-container" + (s ? " drag-and-drop-card-container__grabbed" : ""),
                         "data-test-selector": o.Card,
-                        display: f.X.Flex,
+                        display: g.X.Flex,
                         elevation: s ? 4 : 1,
-                        flexDirection: f.Z.Column,
+                        flexDirection: g.Z.Column,
                         margin: {
                             bottom: 1
                         },
                         refDelegate: this.registerRef(i.Card)
-                    }, p.createElement(f.yb, {
-                        alignContent: f.e.Center,
-                        alignItems: f.f.Center,
+                    }, p.createElement(g.xb, {
+                        alignContent: g.e.Center,
+                        alignItems: g.f.Center,
                         borderBottom: !0,
                         className: "drag-and-drop-card-header",
-                        display: f.X.Flex,
-                        justifyContent: f.Va.Between,
+                        display: g.X.Flex,
+                        justifyContent: g.Va.Between,
                         padding: {
                             x: 1
                         },
-                        position: f.eb.Relative,
+                        position: g.eb.Relative,
                         refDelegate: this.registerRef(i.Header)
-                    }, p.createElement(f.Wa, {
-                        display: f.X.Flex,
-                        justifyContent: f.Va.Center
-                    }, p.createElement(f.Wa, {
+                    }, p.createElement(g.Wa, {
+                        display: g.X.Flex,
+                        justifyContent: g.Va.Center
+                    }, p.createElement(g.Wa, {
                         margin: {
                             right: 1
                         }
-                    }, p.createElement(f.Wa, {
+                    }, p.createElement(g.Wa, {
                         className: "drag-and-drop-card-carat" + (r ? "__collapsed" : ""),
                         refDelegate: this.registerRef(i.Carat)
-                    }, p.createElement(f.A, {
+                    }, p.createElement(g.A, {
                         ariaLabel: Object(h.d)("Collapse/Expand", "DragAndDropCard"),
-                        icon: f.ob.GlyphArrDown,
+                        icon: g.ob.GlyphArrDown,
                         onClick: this.handleCaratClick
                     }))), p.createElement(S, {
                         title: this.props.title
-                    })), p.createElement(f.Wa, {
-                        display: f.X.Flex,
-                        alignItems: f.f.Center
+                    })), p.createElement(g.Wa, {
+                        display: g.X.Flex,
+                        alignItems: g.f.Center
                     }, t && p.createElement(y, {
                         "data-a-target": this.props.cogWheelTarget
-                    }, t), p.createElement(f.Wa, {
+                    }, t), p.createElement(g.Wa, {
                         margin: {
                             top: .5,
                             left: 1
                         }
-                    }, p.createElement(f.nb, {
-                        asset: f.ob.DragHandle
-                    })))), p.createElement(f.Wa, {
+                    }, p.createElement(g.nb, {
+                        asset: g.ob.DragHandle
+                    })))), p.createElement(g.Wa, {
                         className: "drag-and-drop-card-content" + (r ? " " + a.ContentCollapsed : ""),
                         "data-test-selector": o.Content,
-                        position: f.eb.Relative
-                    }, r && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(g, {
+                        position: g.eb.Relative
+                    }, r && this.props.unmountOnCollapse ? null : this.props.children)), p.createElement(f, {
                         cloneStyleRef: c && c.cardRef,
                         show: l === m.c.Bottom
                     }))
@@ -7464,8 +7496,8 @@
                 }), O(function(e) {
                     return e
                 }))(_),
-                I = n("i8i4"),
-                x = n("8/mp"),
+                x = n("i8i4"),
+                I = n("8/mp"),
                 T = n("b+ID"),
                 R = function(e) {
                     function t() {
@@ -7477,7 +7509,7 @@
                     return u.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.rootContainerRef.appendChild(this.props.element)
                     }, t.prototype.render = function() {
-                        return p.createElement(f.Wa, {
+                        return p.createElement(g.Wa, {
                             refDelegate: this.setRootContainerRef
                         })
                     }, t
@@ -7506,9 +7538,9 @@
                         var e = this.props,
                             t = e.grabbedCard,
                             n = e.targetCard;
-                        return p.createElement(f.yb, {
-                            alignContent: f.e.Stretch,
-                            alignItems: f.f.Stretch,
+                        return p.createElement(g.xb, {
+                            alignContent: g.e.Stretch,
+                            alignItems: g.f.Stretch,
                             breakpointLarge: {
                                 margin: {
                                     right: 2
@@ -7518,11 +7550,11 @@
                                 }
                             },
                             className: "drag-and-drop-layout-column",
-                            display: f.X.Flex,
-                            flexDirection: f.Z.Column,
+                            display: g.X.Flex,
+                            flexDirection: g.Z.Column,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: f.Va.Start,
+                            justifyContent: g.Va.Start,
                             margin: {
                                 right: 1
                             },
@@ -7530,7 +7562,7 @@
                                 y: 1
                             },
                             refDelegate: this.setContainerRef
-                        }, this.props.children, p.createElement(g, {
+                        }, this.props.children, p.createElement(f, {
                             cloneStyleRef: t && t.cardRef,
                             show: !(!n || n.name !== this.placeholderName)
                         }))
@@ -7642,17 +7674,17 @@
                     }, t.prototype.render = function() {
                         var e = this,
                             t = this.props.isExpandedView;
-                        return p.createElement(p.Fragment, null, p.createElement(x.b, {
+                        return p.createElement(p.Fragment, null, p.createElement(I.b, {
                             className: "drag-and-drop-layout-scrollable-area" + (t ? "__expanded-view" : "")
-                        }, p.createElement(f.Wa, {
-                            alignContent: f.e.Stretch,
-                            alignItems: f.f.Stretch,
+                        }, p.createElement(g.Wa, {
+                            alignContent: g.e.Stretch,
+                            alignItems: g.f.Stretch,
                             className: "drag-and-drop-layout",
-                            display: f.X.Flex,
-                            flexDirection: f.Z.Row,
+                            display: g.X.Flex,
+                            flexDirection: g.Z.Row,
                             fullHeight: !0,
                             fullWidth: !0,
-                            justifyContent: f.Va.Between
+                            justifyContent: g.Va.Between
                         }, this.state.roots.map(function(t, n) {
                             return p.createElement(D, {
                                 column: n,
@@ -7673,7 +7705,7 @@
                             value: this.state.common
                         }, Object.keys(this.state.cards).map(function(t) {
                             var n = e.state.cards[t];
-                            return I.createPortal(p.createElement(w, {
+                            return x.createPortal(p.createElement(w, {
                                 value: {
                                     card: n
                                 }
@@ -7681,7 +7713,7 @@
                         })))
                     }, t
                 }(p.Component));
-            var M = Object(T.b)(function(e) {
+            var j = Object(T.b)(function(e) {
                 return {
                     isExpandedView: e.isExpandedView
                 }
@@ -7689,7 +7721,7 @@
             n.d(t, "a", function() {
                 return k
             }), n.d(t, "b", function() {
-                return M
+                return j
             })
         },
         qzvl: function(e, t, n) {

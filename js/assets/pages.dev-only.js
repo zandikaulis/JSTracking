@@ -968,7 +968,7 @@
                     }, Object(v.e)("Log a fatal-level message with error", "DevOnly")), " ", a.createElement(c.z, {
                         onClick: C
                     }, Object(v.e)("Log message with unserializable argument", "DevOnly")), " ", a.createElement(c.z, {
-                        onClick: W
+                        onClick: N
                     }, Object(v.e)("Throw an error", "DevOnly"))), a.createElement("h2", {
                         style: {
                             margin: "2rem 0"
@@ -1040,7 +1040,7 @@
                             top: 2
                         }
                     }, a.createElement(c.W, {
-                        type: c.Ob.H2
+                        type: c.Nb.H2
                     }, Object(v.e)("Infinite Scroll Test", "DevOnly")), a.createElement(b, null))))
                 });
 
@@ -1077,11 +1077,11 @@
                 }
             }
 
-            function W() {
+            function N() {
                 throw new Error("Throwing an uncaught error.")
             }
-            var x = n("VQbD"),
-                N = (n("NrqC"), function(e) {
+            var W = n("VQbD"),
+                x = (n("NrqC"), function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -1090,7 +1090,7 @@
                             className: "testing-carousel",
                             padding: 3
                         }, a.createElement(c.W, {
-                            type: c.Ob.H2
+                            type: c.Nb.H2
                         }, "Media Carousel - Standard"), a.createElement(c.Wa, {
                             "data-a-target": "carousel-standard"
                         }, a.createElement(c.Oa, {
@@ -1098,10 +1098,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(W.a, {
                             items: this.renderStandardItems()
                         }))), a.createElement(c.W, {
-                            type: c.Ob.H2
+                            type: c.Nb.H2
                         }, "Media Carousel - Tiny"), a.createElement(c.Wa, {
                             "data-a-target": "carousel-standard-tiny"
                         }, a.createElement(c.Oa, {
@@ -1109,10 +1109,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(W.a, {
                             items: this.renderStandardTinyItems()
                         }))), a.createElement(c.W, {
-                            type: c.Ob.H2
+                            type: c.Nb.H2
                         }, "Media Carousel - HUGE"), a.createElement(c.Wa, {
                             "data-a-target": "carousel-standard-huge"
                         }, a.createElement(c.Oa, {
@@ -1120,10 +1120,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(W.a, {
                             items: this.renderStandardHugeItems()
                         }))), a.createElement(c.W, {
-                            type: c.Ob.H2
+                            type: c.Nb.H2
                         }, "Media Carousel - Single"), a.createElement(c.Wa, {
                             "data-a-target": "carousel-single"
                         }, a.createElement(c.Oa, {
@@ -1131,10 +1131,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(W.a, {
                             items: this.renderSingleItem()
                         }))), a.createElement(c.W, {
-                            type: c.Ob.H2
+                            type: c.Nb.H2
                         }, "Media Carousel - Single and HUGE"), a.createElement(c.Wa, {
                             "data-a-target": "carousel-single-huge"
                         }, a.createElement(c.Oa, {
@@ -1142,10 +1142,10 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(W.a, {
                             items: this.renderSingleHugeItem()
                         }))), a.createElement(c.W, {
-                            type: c.Ob.H2
+                            type: c.Nb.H2
                         }, "Media Carousel - Various Widths"), a.createElement(c.Wa, {
                             "data-a-target": "carousel-various-widths"
                         }, a.createElement(c.Oa, {
@@ -1153,7 +1153,7 @@
                                 bottom: 3,
                                 top: 1
                             }
-                        }, a.createElement(x.a, {
+                        }, a.createElement(W.a, {
                             items: this.renderVariousWidthItems()
                         })))))
                     }, t.prototype.renderStandardItems = function() {
@@ -1171,7 +1171,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Ob.H1,
+                                type: c.Nb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1190,7 +1190,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Ob.H1,
+                                type: c.Nb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1209,7 +1209,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Ob.H1,
+                                type: c.Nb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1228,7 +1228,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Ob.H1,
+                                type: c.Nb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1247,7 +1247,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Ob.H1,
+                                type: c.Nb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1266,7 +1266,7 @@
                                     height: 100
                                 }
                             }, a.createElement(c.W, {
-                                type: c.Ob.H1,
+                                type: c.Nb.H1,
                                 color: c.O.Overlay
                             }, e)))
                         })
@@ -1275,14 +1275,14 @@
                 T = n("/MKj"),
                 j = n("fvjX"),
                 U = n("KxT4"),
-                R = n("IX50"),
-                P = (n("+6bW"), U.c.Google),
+                P = n("IX50"),
+                R = (n("+6bW"), U.c.Google),
                 A = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.onToggleTwitchAdsConsent = function() {
                             var e, t = !n.props.twitchAdsConsent;
-                            n.props.saveVendorPreferences(((e = {})[P] = t, e))
+                            n.props.saveVendorPreferences(((e = {})[R] = t, e))
                         }, n.state = {
                             gdprStates: [t.gdpr],
                             toggleValue: t.twitchAdsConsent
@@ -1311,10 +1311,10 @@
                         }, t ? "Enabled" : "Disabled"), a.createElement(c.W, null, "Query String: ?gdpr_override / ?eea"), a.createElement(c.W, null, "Dynamic Settings: gdpr_consent_enabled"), a.createElement(c.Da, {
                             label: "Grant test consent",
                             orientation: c.Ea.Horizontal
-                        }, a.createElement(c.Qb, {
+                        }, a.createElement(c.Pb, {
                             onChange: this.onToggleTwitchAdsConsent,
                             checked: this.props.twitchAdsConsent
-                        }))), a.createElement(c.yb, {
+                        }))), a.createElement(c.xb, {
                             padding: {
                                 y: 1
                             },
@@ -1325,7 +1325,7 @@
                         }, this.state.gdprStates.map(function(e, t) {
                             var n = e.status,
                                 r = e.blockConsentRequiredContent ? "gdpr-status-text" : "gdpr-status-text--safe";
-                            return a.createElement(c.yb, {
+                            return a.createElement(c.xb, {
                                 border: !0,
                                 margin: {
                                     right: 1
@@ -1359,21 +1359,21 @@
                     destination: y.a.Unknown
                 }), Object(T.connect)(function(e) {
                     return {
-                        twitchAdsConsent: !!e.gdpr.vendorPreferences[P]
+                        twitchAdsConsent: !!e.gdpr.vendorPreferences[R]
                     }
                 }, function(e) {
                     return Object(j.bindActionCreators)({
-                        saveVendorPreferences: R.c,
-                        resetConsent: R.b
+                        saveVendorPreferences: P.c,
+                        resetConsent: P.b
                     }, e)
-                }), Object(U.j)(P))(A),
+                }), Object(U.j)(R))(A),
                 I = n("yR8l"),
                 q = n("cViM"),
                 F = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.renderPropState = function(e, t) {
-                            return a.createElement(c.yb, {
+                            return a.createElement(c.xb, {
                                 border: !0,
                                 margin: 1,
                                 padding: 1,
@@ -1540,7 +1540,7 @@
                         component: te
                     }), a.createElement(i.a, {
                         path: "/_dev/testing/carousel",
-                        component: N
+                        component: x
                     }), a.createElement(i.a, {
                         path: "/_dev/context",
                         component: g

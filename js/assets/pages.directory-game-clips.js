@@ -39,7 +39,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.render = function() {
-                        return a.createElement(u.yb, {
+                        return a.createElement(u.xb, {
                             className: "reporting-modal__container",
                             background: u.r.Base,
                             padding: {
@@ -305,8 +305,8 @@
                 C = n("L4bB"),
                 S = n("HStj"),
                 T = n("Ue10"),
-                O = n("EgD6"),
-                _ = (n("gY/c"), function(e) {
+                _ = n("EgD6"),
+                O = (n("gY/c"), function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.loadMoreTopClips = function() {
@@ -365,7 +365,7 @@
                         })))
                     }, t = r.__decorate([Object(d.b)("DirectoryGameClipsContent", {
                         autoReportInteractive: !0
-                    }), Object(b.a)(O, {
+                    }), Object(b.a)(_, {
                         options: function(e) {
                             return {
                                 variables: {
@@ -382,7 +382,7 @@
                             return r.__assign({}, e, {
                                 loadMore: function() {
                                     return e.data.fetchMore({
-                                        query: O,
+                                        query: _,
                                         variables: r.__assign({}, e.data.variables, {
                                             cursor: e.data.game.clips.edges[e.data.game.clips.edges.length - 1].cursor
                                         }),
@@ -406,7 +406,7 @@
                     return {
                         languagePreferences: Object(m.a)(e)
                     }
-                })(_),
+                })(O),
                 E = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
@@ -1511,9 +1511,9 @@
                         var e = this;
                         return 0 === this.props.clips.length ? a.createElement("div", null, this.renderEmpty()) : a.createElement(y.Wa, {
                             fullWidth: !0
-                        }, a.createElement(y.Ub, {
-                            gutterSize: y.Wb.Small,
-                            childWidth: y.Vb.Large,
+                        }, a.createElement(y.Tb, {
+                            gutterSize: y.Vb.Small,
+                            childWidth: y.Ub.Large,
                             placeholderItems: 20
                         }, this.props.clips.map(function(t, n) {
                             return a.createElement(y.Wa, {
@@ -1600,7 +1600,7 @@
                         }), a.createElement(y.P, {
                             cols: 6
                         }, a.createElement(y.Wa, {
-                            textAlign: y.Kb.Center
+                            textAlign: y.Jb.Center
                         }, e)), a.createElement(y.P, {
                             cols: 3
                         })))
@@ -1609,7 +1609,7 @@
                 S = Object(f.b)("ClipCards", {
                     autoReportInteractive: !0
                 })(C);
-            var T, O = Object(u.connect)(null, function(e, t) {
+            var T, _ = Object(u.connect)(null, function(e, t) {
                     return Object.assign(Object(p.bindActionCreators)({
                         onCardClick: function(e, n, r) {
                             var i = t.context === s.b.SingleChannelList ? g.b.Channel : g.b.Game;
@@ -1623,14 +1623,14 @@
                         }
                     }, e), t)
                 })(S),
-                _ = n("L4bB"),
+                O = n("L4bB"),
                 w = n("0Rl0"),
                 E = n("cERj"),
                 R = n("mHR/");
             ! function(e) {
                 e[e.Filters = 0] = "Filters"
             }(T || (T = {}));
-            var M = function(e) {
+            var N = function(e) {
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.showAllClipsHandler = function() {
@@ -1644,12 +1644,12 @@
                             for (var n = [], r = 0; r < 20; r++) n.push(a.createElement(w.a, {
                                 key: r
                             }));
-                            e = a.createElement(y.Ub, {
-                                gutterSize: y.Wb.Small,
-                                childWidth: y.Vb.Large,
+                            e = a.createElement(y.Tb, {
+                                gutterSize: y.Vb.Small,
+                                childWidth: y.Ub.Large,
                                 placeholderItems: 20
                             }, n)
-                        } else e = a.createElement(O, {
+                        } else e = a.createElement(_, {
                             clips: this.props.clips || [],
                             context: t ? s.b.SingleChannelList : s.b.SingleGameList,
                             loadMoreClips: this.props.loadMoreClips,
@@ -1669,7 +1669,7 @@
                                 margin: {
                                     bottom: 2
                                 }
-                            }, o, a.createElement(_.a, {
+                            }, o, a.createElement(O.a, {
                                 hideLanguageFilter: !!t
                             }))
                         }
@@ -1678,15 +1678,15 @@
                         }, i, a.createElement("div", null, e))
                     }, t
                 }(a.Component),
-                N = Object(o.a)(M);
+                M = Object(o.a)(N);
             n.d(t, !1, function() {
                 return T
             }), n.d(t, !1, function() {
                 return 20
             }), n.d(t, !1, function() {
-                return M
-            }), n.d(t, "a", function() {
                 return N
+            }), n.d(t, "a", function() {
+                return M
             })
         },
         "Jxh/": function(e, t, n) {
@@ -2122,17 +2122,17 @@
                 C = n("kduP"),
                 S = n("f00E"),
                 T = n("vhpE"),
-                O = n("bq0i"),
-                _ = n("yR8l"),
+                _ = n("bq0i"),
+                O = n("yR8l"),
                 w = n("4rCz"),
                 E = n("ndwU");
             ! function(e) {
                 e[e.View = 0] = "View", e[e.Report = 1] = "Report", e[e.Delete = 2] = "Delete", e[e.DeleteAll = 3] = "DeleteAll", e[e.Ban = 4] = "Ban", e[e.Timeout = 5] = "Timeout"
             }(r || (r = {}));
             var R = n("Ue10"),
-                M = n("WsU7"),
-                N = [r.Delete, r.DeleteAll],
-                j = function(e) {
+                N = n("WsU7"),
+                M = [r.Delete, r.DeleteAll],
+                x = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.clipsMaintenance = Object(E.a)(), n.renderMenuItem = function(e) {
@@ -2141,7 +2141,7 @@
                                 key: t.display,
                                 onClick: t.destinationHandler,
                                 "data-a-target": "clip-moderation-button-" + t.display,
-                                disabled: n.clipsMaintenance && N.includes(e)
+                                disabled: n.clipsMaintenance && M.includes(e)
                             }, c.createElement(R.Wa, {
                                 padding: {
                                     x: 1,
@@ -2195,7 +2195,7 @@
                             l = [r.Report];
                         return o && l.push(r.Delete), s && (l.push(r.DeleteAll), t.curator && t.broadcaster && (l.push(r.Ban), l.push(r.Timeout))), c.createElement(R.Wa, {
                             className: "moderation-menu"
-                        }, c.createElement(O.a, null, c.createElement(R.z, {
+                        }, c.createElement(_.a, null, c.createElement(R.z, {
                             type: R.F.Hollow,
                             icon: R.ob.More,
                             ariaLabel: Object(w.d)("More Options", "ModerationMenu"),
@@ -2212,9 +2212,9 @@
                         return e.map(function(e) {
                             return t.renderMenuItem(e)
                         })
-                    }, t = s.__decorate([Object(_.a)(M), Object(m.b)("ModerationMenu")], t)
+                    }, t = s.__decorate([Object(O.a)(N), Object(m.b)("ModerationMenu")], t)
                 }(c.Component),
-                x = n("MLDe"),
+                j = n("MLDe"),
                 D = (n("n/Dx"), 2e3),
                 I = function(e) {
                     function t() {
@@ -2235,7 +2235,7 @@
                                 t.setState({
                                     isShowingBalloon: !1
                                 })
-                            }, D), Object(x.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(k.b.CopyInput))
+                            }, D), Object(j.c)(t.props.clip.id, t.props.clip.game && t.props.clip.game.name, t.props.clip.broadcaster && t.props.clip.broadcaster.id, t.props.clip.broadcaster && t.props.clip.broadcaster.login, t.props.pageType)(k.b.CopyInput))
                         }, t.dismissBalloon = function() {
                             t.setState({
                                 isShowingBalloon: !1
@@ -2257,7 +2257,7 @@
                                 onClick: this.props.closeModal,
                                 "data-a-target": "clip-modal-game-link"
                             }, this.props.clip.game.name)
-                        }, "ClipsViewModalContent") : t, c.createElement(R.yb, {
+                        }, "ClipsViewModalContent") : t, c.createElement(R.xb, {
                             className: "clips-view-modal-content",
                             background: R.r.Base
                         }, c.createElement(R.Wa, {
@@ -2304,7 +2304,7 @@
                         }, Object(d.d)("Link copied to clipboard", "ClipsViewModalContent")))))))), c.createElement(T.a, {
                             clip: this.props.clip,
                             pageType: this.props.pageType
-                        }), c.createElement(j, {
+                        }), c.createElement(x, {
                             clip: this.props.clip,
                             updateModalViewState: this.props.updateModalViewState
                         }))), c.createElement(R.Wa, {
@@ -2322,7 +2322,7 @@
                             ellipsis: !0
                         }, c.createElement(R.Oa, {
                             ellipsis: !0
-                        }, c.createElement(R.yb, {
+                        }, c.createElement(R.xb, {
                             display: R.X.Flex,
                             fontSize: R.Ba.Size5
                         }, c.createElement(R.Wa, {
@@ -2330,13 +2330,13 @@
                         }, this.props.clip.title), c.createElement(R.Wa, {
                             flexShrink: 0
                         }, c.createElement(R.W, {
-                            type: R.Ob.Span,
+                            type: R.Nb.Span,
                             color: R.O.Alt2
                         }, " • ", Object(d.d)("{created, date, medium}", {
                             created: new Date(this.props.clip.createdAt)
                         }, "ClipsViewModalContent"))))), c.createElement(R.Oa, {
                             ellipsis: !0
-                        }, c.createElement(R.yb, {
+                        }, c.createElement(R.xb, {
                             color: R.O.Alt2
                         }, e, e && !!this.props.clip.curator && c.createElement("span", null, " • "), this.props.clip.curator && Object(d.d)("Clipped by {curator}", {
                             curator: c.createElement(R.U, {
@@ -2344,7 +2344,7 @@
                                 onClick: this.props.closeModal,
                                 "data-a-target": "clip-modal-curator-link"
                             }, this.props.clip.curator.login)
-                        }, "ClipsViewModalContent")))), c.createElement(R.yb, {
+                        }, "ClipsViewModalContent")))), c.createElement(R.xb, {
                             display: R.X.Flex,
                             padding: {
                                 bottom: 2,
@@ -2753,13 +2753,13 @@
                         },
                         "data-a-target": "reporting-channel-name"
                     }, a.createElement(u.W, {
-                        type: u.Ob.H4
-                    }, this.props.title), a.createElement(u.yb, {
+                        type: u.Nb.H4
+                    }, this.props.title), a.createElement(u.xb, {
                         color: u.O.Alt2,
                         margin: {
                             top: 1
                         }
-                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.yb, {
+                    }, this.headerMessage)), a.createElement("form", null, a.createElement(u.xb, {
                         borderTop: !0,
                         borderBottom: !0,
                         margin: {
@@ -2774,10 +2774,10 @@
                     }), a.createElement(u.Da, {
                         id: "reporting__text-area",
                         label: Object(o.d)("Description (required)", "ReportUser")
-                    }, a.createElement(u.Lb, {
+                    }, a.createElement(u.Kb, {
                         defaultValue: this.props.defaultDescription,
                         onChange: this.handleTextAreaChange
-                    }))), a.createElement(u.yb, {
+                    }))), a.createElement(u.xb, {
                         display: u.X.Flex,
                         justifyContent: u.Va.Center
                     }, a.createElement(u.z, {
@@ -2812,7 +2812,7 @@
                         "reporting__error-container": this.props.submitStatus !== g.Success,
                         "reporting__success-container": this.props.submitStatus === g.Success
                     });
-                    return a.createElement(u.yb, {
+                    return a.createElement(u.xb, {
                         className: t,
                         fullWidth: this.props.submitStatus !== g.Success,
                         "data-test-selector": "reporting.error",
@@ -3450,7 +3450,7 @@
                                 }
                             }, a.createElement(f.W, {
                                 className: "block-user__success",
-                                type: f.Ob.Span
+                                type: f.Nb.Span
                             }, Object(l.d)("{user} blocked", {
                                 user: t.props.targetUser.displayName
                             }, "ReportWizardBlockActions"))), a.createElement(f.U, {
@@ -3479,7 +3479,7 @@
                     return i.__extends(t, e), t.prototype.render = function() {
                         var e = this.state.userBlocked ? this.renderUnblock() : this.renderBlock(),
                             t = Object(v.a)(this.props.targetUser.login, this.props.targetUser.displayName, !0);
-                        return a.createElement(f.yb, {
+                        return a.createElement(f.xb, {
                             borderTop: !0,
                             padding: {
                                 y: 1
@@ -3489,12 +3489,12 @@
                             }
                         }, a.createElement(f.Wa, null, Object(l.d)("Would you like to block {user}?", {
                             user: t
-                        }, "ReportWizardBlockActions")), a.createElement(f.yb, {
+                        }, "ReportWizardBlockActions")), a.createElement(f.xb, {
                             color: f.O.Alt2,
                             margin: {
                                 y: 1
                             }
-                        }, a.createElement(f.Xb, {
+                        }, a.createElement(f.Wb, {
                             baseFontSize: f.Ba.Size6
                         }, a.createElement("p", null, Object(l.d)("Blocking {user} will:", {
                             user: t
@@ -3509,7 +3509,7 @@
             ! function(e) {
                 e.Link = "link", e.MultipleChoice = "multiple choice", e.Text = "text", e.Textarea = "textarea"
             }(r || (r = {}));
-            var T, O = {
+            var T, _ = {
                     generalFilter: function() {
                         return Object(l.d)("I don't think their content or behavior is allowed on Twitch", "ReportModalWizard")
                     },
@@ -3535,7 +3535,7 @@
                         return Object(l.d)("being hateful, harassing, or abusive", "ReportModalWizard")
                     }
                 },
-                _ = {
+                O = {
                     input_description: {
                         getTitle: function() {
                             return Object(l.d)("Could you provide more detail about this issue? You may include links to videos, clips, and content outside Twitch.", "ReportModalWizard")
@@ -3630,12 +3630,12 @@
                         type: r.Link
                     },
                     messaging_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_messaging",
                         omitFromDescription: !0
                     },
                     profile_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_profile",
                         omitFromDescription: !0
                     },
@@ -3775,7 +3775,7 @@
                         reportReason: S.b.Miscategorized
                     },
                     video_general: {
-                        getTitle: O.generalFilter,
+                        getTitle: _.generalFilter,
                         value: "general_video",
                         omitFromDescription: !0
                     },
@@ -3794,12 +3794,12 @@
                         reportReason: S.b.Harassment
                     },
                     abusiveViolence: {
-                        getTitle: O.abusiveViolence,
+                        getTitle: _.abusiveViolence,
                         value: "threatening violence",
                         reportReason: S.b.Harm
                     },
                     commitingViolence: {
-                        getTitle: O.commitingViolence,
+                        getTitle: _.commitingViolence,
                         value: "committing violence",
                         reportReason: S.b.Harm
                     },
@@ -3928,7 +3928,7 @@
                         reportReason: S.b.ChatBanEvasion
                     },
                     impersonation_me: {
-                        getTitle: O.me,
+                        getTitle: _.me,
                         value: "impersonating me",
                         reportReason: S.b.Impersonation
                     },
@@ -3940,7 +3940,7 @@
                         reportReason: S.b.Impersonation
                     },
                     impersonation_other: {
-                        getTitle: O.someoneElse,
+                        getTitle: _.someoneElse,
                         value: "impersonating someone else",
                         reportReason: S.b.Impersonation
                     },
@@ -4056,20 +4056,20 @@
                         value: "brigading/raids"
                     },
                     external_threatening: {
-                        getTitle: O.threatening,
+                        getTitle: _.threatening,
                         value: "threatening"
                     },
                     external_harassment: {
-                        getTitle: O.abusive,
+                        getTitle: _.abusive,
                         value: "hateful/harassing"
                     },
                     external_abusiveViolence: {
-                        getTitle: O.abusiveViolence,
+                        getTitle: _.abusiveViolence,
                         value: "external site; threatening violence",
                         reportReason: S.b.Harm
                     },
                     external_commitingViolence: {
-                        getTitle: O.commitingViolence,
+                        getTitle: _.commitingViolence,
                         value: "external site; committing violence",
                         reportReason: S.b.Harm
                     },
@@ -4178,7 +4178,7 @@
                                     }, a.createElement(f.Da, {
                                         label: t.getTitle(),
                                         labelOptional: t.required ? "" : Object(l.d)("Optional", "ReportModalWizardCard")
-                                    }, a.createElement(f.Lb, {
+                                    }, a.createElement(f.Kb, {
                                         onChange: e.onChange,
                                         rows: t.rows || 3,
                                         name: t.value,
@@ -4209,7 +4209,7 @@
             ! function(e) {
                 e.Confirm = "Confirm", e.MultipleChoice = "MultipleChoice", e.Info = "End Card"
             }(T || (T = {}));
-            var R, M, N, j = {
+            var R, N, M, x = {
                     contentGeneral: function() {
                         return Object(l.d)("What would you like to report?", "ReportModalWizard")
                     },
@@ -4226,7 +4226,7 @@
                         return Object(l.d)("What would you like to report? (Please choose the most relevant statement that applies.)", "ReportModalWizard")
                     }
                 },
-                x = {
+                j = {
                     report: function(e) {
                         return Object(l.d)("Report {username}", {
                             username: e
@@ -4267,89 +4267,89 @@
                         return Object(l.d)("Reports are reviewed by Twitch Staff 24 hours a day. We will issue penalties, such as account suspension and/or content removal, once we verify that a violation of our policies has occurred.", "ReportModalWizard")
                     },
                     blockPrompt: !0,
-                    getTitle: x.thanks,
+                    getTitle: j.thanks,
                     type: T.Info,
                     value: "end card"
                 },
                 I = {
                     socialMedia: i.__assign({}, D, {
-                        items: [_.endBlurb_socialmedia]
+                        items: [O.endBlurb_socialmedia]
                     }),
                     violence: i.__assign({}, D, {
-                        items: [_.endBlurb_threat]
+                        items: [O.endBlurb_threat]
                     }),
                     legal: {
-                        getTitle: x.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(l.d)("To submit a claim or report a violation of this type, you will need to follow the steps listed on the relevant page below.", "ReportModalWizard")
                         },
-                        items: [_.endLink_DMCA, _.endLink_trademark, _.endLink_devAgreement],
+                        items: [O.endLink_DMCA, O.endLink_trademark, O.endLink_devAgreement],
                         type: T.Info,
                         value: "ip end"
                     },
                     selfharm: {
-                        getTitle: x.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(l.d)("If you know the user personally, and you believe them to be in danger, please contact their local authorities immediately. The link below contains some general information that may be of use.", "ReportModalWizard")
                         },
-                        items: [_.endLink_selfharm],
+                        items: [O.endLink_selfharm],
                         type: T.Info,
                         value: "selfharm end"
                     },
                     twitchEvent: {
-                        getTitle: x.thanksConcern,
+                        getTitle: j.thanksConcern,
                         getDescription: function() {
                             return Object(l.d)("Please bring this concern to the attention of staff or security at the event if you have not already done so. More information is available at the link below.", "ReportModalWizard")
                         },
-                        items: [_.endLink_eventCoC],
+                        items: [O.endLink_eventCoC],
                         value: "twitch event end",
                         type: T.Info
                     }
                 },
                 U = {
-                    getTitle: x.report,
+                    getTitle: j.report,
                     getLabel: function() {
                         return Object(l.d)("Where is the problem?", "ReportModalWizard")
                     },
-                    items: [_.video, _.whisper, _.chat, _.room, _.profile, _.username, _.report_other],
+                    items: [O.video, O.whisper, O.chat, O.room, O.profile, O.username, O.report_other],
                     type: T.MultipleChoice,
                     value: "content type"
                 },
                 W = {
                     identifyUser: {
-                        getTitle: x.reportVideo,
-                        getLabel: j.identifyUser,
-                        items: [_.video_streamer, _.video_someoneElse, _.video_chatSomeone],
+                        getTitle: j.reportVideo,
+                        getLabel: x.identifyUser,
+                        items: [O.video_streamer, O.video_someoneElse, O.video_chatSomeone],
                         type: T.MultipleChoice,
                         value: "video identify user"
                     },
                     content: {
-                        getTitle: x.reportVideo,
-                        getLabel: j.contentGeneral,
-                        items: [_.revealPersonalInfo, _.video_labeling, _.video_inactive, _.video_general, _.report_ip, _.violateDevAgreement, _.selfharm],
+                        getTitle: j.reportVideo,
+                        getLabel: x.contentGeneral,
+                        items: [O.revealPersonalInfo, O.video_labeling, O.video_inactive, O.video_general, O.report_ip, O.violateDevAgreement, O.selfharm],
                         type: T.MultipleChoice,
                         value: "video report reason"
                     },
                     general: {
-                        getTitle: x.reportVideo,
-                        getLabel: j.content,
-                        items: [_.report_username, _.violence, _.abusive, _.cheating, _.scam, _.inappropriateContent, _.evasion, _.impersonation, _.underage, _.bitsViolation],
+                        getTitle: j.reportVideo,
+                        getLabel: x.content,
+                        items: [O.report_username, O.violence, O.abusive, O.cheating, O.scam, O.inappropriateContent, O.evasion, O.impersonation, O.underage, O.bitsViolation],
                         type: T.MultipleChoice,
                         value: "video general report reason"
                     }
                 },
                 F = {
                     content: {
-                        getTitle: x.reportMessage,
-                        getLabel: j.contentGeneral,
-                        items: [_.revealPersonalInfo, _.evasion, _.spam, _.maliciousRaid, _.report_username, _.messaging_general, _.selfharm],
+                        getTitle: j.reportMessage,
+                        getLabel: x.contentGeneral,
+                        items: [O.revealPersonalInfo, O.evasion, O.spam, O.maliciousRaid, O.report_username, O.messaging_general, O.selfharm],
                         type: T.MultipleChoice,
                         value: "message report reason"
                     },
                     general: {
-                        getTitle: x.reportMessage,
-                        getLabel: j.content,
-                        items: [_.report_emotes, _.violence, _.abusive, _.inappropriateContent, _.impersonation, _.underage, _.bitsViolation],
+                        getTitle: j.reportMessage,
+                        getLabel: x.content,
+                        items: [O.report_emotes, O.violence, O.abusive, O.inappropriateContent, O.impersonation, O.underage, O.bitsViolation],
                         type: T.MultipleChoice,
                         value: "message general report reason"
                     }
@@ -4361,16 +4361,16 @@
                 }),
                 A = {
                     content: {
-                        getTitle: x.reportProfile,
-                        getLabel: j.contentGeneral,
-                        items: [_.revealPersonalInfo, _.inappropriateBadge, _.inappropriateExtension, _.noModeration, _.profile_general, _.report_ip, _.violateDevAgreement, _.selfharm],
+                        getTitle: j.reportProfile,
+                        getLabel: x.contentGeneral,
+                        items: [O.revealPersonalInfo, O.inappropriateBadge, O.inappropriateExtension, O.noModeration, O.profile_general, O.report_ip, O.violateDevAgreement, O.selfharm],
                         type: T.MultipleChoice,
                         value: "profile report reason"
                     },
                     general: {
-                        getTitle: x.reportProfile,
-                        getLabel: j.content,
-                        items: [_.report_username, _.violence, _.abusive, _.scam, _.inappropriateContent, _.evasion, _.impersonation, _.underage, _.bitsViolation],
+                        getTitle: j.reportProfile,
+                        getLabel: x.content,
+                        items: [O.report_username, O.violence, O.abusive, O.scam, O.inappropriateContent, O.evasion, O.impersonation, O.underage, O.bitsViolation],
                         type: T.MultipleChoice,
                         value: "profile general report reason"
                     }
@@ -4381,33 +4381,33 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: j.identifyUser,
-                    items: [_.report_channelOwner, _.report_member],
+                    getLabel: x.identifyUser,
+                    items: [O.report_channelOwner, O.report_member],
                     value: "room report user",
                     type: T.MultipleChoice
                 },
                 z = {
-                    getTitle: x.tellUsMore,
-                    items: [_.input_description],
+                    getTitle: j.tellUsMore,
+                    items: [O.input_description],
                     type: T.Confirm,
                     value: "tell us more"
                 },
                 V = {
                     banEvasion: i.__assign({}, z, {
-                        items: [_.input_usernames, _.input_description],
+                        items: [O.input_usernames, O.input_description],
                         value: "ban evasion tell us more"
                     }),
                     socialMedia: i.__assign({}, z, {
-                        items: [_.input_link, _.input_connection, _.input_description],
+                        items: [O.input_link, O.input_connection, O.input_description],
                         nextCard: I.socialMedia,
                         value: "social media tell us more"
                     })
                 },
                 P = {
                     content: {
-                        getTitle: x.reportAbusive,
-                        getLabel: j.relevantStatements,
-                        items: [_.hateSpeech, _.harassment, _.abusiveViolence, _.commitingViolence, _.swatting, _.personalInfo],
+                        getTitle: j.reportAbusive,
+                        getLabel: x.relevantStatements,
+                        items: [O.hateSpeech, O.harassment, O.abusiveViolence, O.commitingViolence, O.swatting, O.personalInfo],
                         type: T.MultipleChoice,
                         value: "abuse type"
                     },
@@ -4420,7 +4420,7 @@
                         getLabel: function() {
                             return Object(l.d)("Are the threats or actions directed at you or someone else?", "ReportModalWizard")
                         },
-                        items: [_.threat_me, _.threat_person, _.threat_group, _.threat_selfharm],
+                        items: [O.threat_me, O.threat_person, O.threat_group, O.threat_selfharm],
                         type: T.MultipleChoice,
                         value: "violence type"
                     }
@@ -4435,7 +4435,7 @@
                         getLabel: function() {
                             return Object(l.d)("Where did the problem happen?", "ReportModalWizard")
                         },
-                        items: [_.location_onTwitch, _.location_anotherSite, _.location_TwitchEvent],
+                        items: [O.location_onTwitch, O.location_anotherSite, O.location_TwitchEvent],
                         type: T.MultipleChoice,
                         value: "off-site conduct location"
                     },
@@ -4445,21 +4445,21 @@
                                 username: e
                             }, "ReportModalWizard")
                         },
-                        getLabel: j.thisPersonIs,
+                        getLabel: x.thisPersonIs,
                         getDescription: function() {
                             return Object(l.d)("Please note that incidents reported through this form must involve Twitch community members. If possible, please submit a report to the site or service where the incident occurred as well.", "ReportModalWizard")
                         },
-                        items: [_.external_incitingRaids, _.external_threatening, _.external_harassment],
+                        items: [O.external_incitingRaids, O.external_threatening, O.external_harassment],
                         type: T.MultipleChoice,
                         nextCard: V.socialMedia,
                         value: "external site conduct"
                     },
                     external_violence: i.__assign({}, P.violence, {
-                        items: [_.threat_me, _.threat_person, _.threat_group],
+                        items: [O.threat_me, O.threat_person, O.threat_group],
                         nextCard: V.socialMedia
                     }),
                     external_abusive: i.__assign({}, P.content, {
-                        items: [_.hateSpeech, _.harassment, _.external_abusiveViolence, _.external_commitingViolence, _.swatting, _.personalInfo],
+                        items: [O.hateSpeech, O.harassment, O.external_abusiveViolence, O.external_commitingViolence, O.swatting, O.personalInfo],
                         nextCard: V.socialMedia
                     })
                 },
@@ -4469,8 +4469,8 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: j.contentGeneral,
-                    items: [_.spam_bot, _.spam_scam, _.spam_repeated],
+                    getLabel: x.contentGeneral,
+                    items: [O.spam_bot, O.spam_scam, O.spam_repeated],
                     type: T.MultipleChoice,
                     value: "spam type"
                 },
@@ -4480,8 +4480,8 @@
                             username: e
                         }, "ReportModalWizard")
                     },
-                    getLabel: j.relevantStatements,
-                    items: [_.inappropriate_game, _.gory, _.sexuallyViolent, _.childAnimal, _.pornographic, _.suggestive, _.nudity, _.other],
+                    getLabel: x.relevantStatements,
+                    items: [O.inappropriate_game, O.gory, O.sexuallyViolent, O.childAnimal, O.pornographic, O.suggestive, O.nudity, O.other],
                     type: T.MultipleChoice,
                     value: "inappropriate content type"
                 },
@@ -4495,7 +4495,7 @@
                         return Object(l.d)("What kind of ban are they evading?", "ReportModalWizard")
                     },
                     value: "ban type",
-                    items: [_.evasion_chat, _.evasion_sitewide, _.evasion_messaging],
+                    items: [O.evasion_chat, O.evasion_sitewide, O.evasion_messaging],
                     type: T.MultipleChoice,
                     nextCard: V.banEvasion
                 },
@@ -4511,7 +4511,7 @@
                     getDescription: function() {
                         return Object(l.d)("Parody, cosplay, and other portrayals without the intent to deceive or defraud are allowed under Twitch's Community Guidelines. If you would still like to submit a report, please continue.", "ReportModalWizard")
                     },
-                    items: [_.impersonation_me, _.impersonation_brand, _.impersonation_other],
+                    items: [O.impersonation_me, O.impersonation_brand, O.impersonation_other],
                     type: T.MultipleChoice,
                     value: "impersonation type"
                 },
@@ -4639,7 +4639,7 @@
                             t.setState({
                                 modalCloseTracked: !0
                             }, function() {
-                                return t.props.trackClose(N.Finish, t.state.currentCard.value)
+                                return t.props.trackClose(M.Finish, t.state.currentCard.value)
                             }), t.props.onClose()
                         }, t.handleNext = function() {
                             if (t.state.currentSelection && t.state.currentSelection.value) {
@@ -4663,7 +4663,7 @@
                                     displacedSelections: t.state.displacedSelections.slice(0, -1),
                                     reportContext: o
                                 }, function() {
-                                    return t.trackNavigation(M.Next, e.value)
+                                    return t.trackNavigation(N.Next, e.value)
                                 })
                             }
                         }, t.createReportDescription = function() {
@@ -4705,7 +4705,7 @@
                                                         userTextInput: {},
                                                         error: ""
                                                     }, function() {
-                                                        return a.trackNavigation(M.Submit)
+                                                        return a.trackNavigation(N.Submit)
                                                     });
                                                     break;
                                                 case E.b.UserError:
@@ -4742,7 +4742,7 @@
                                         error: "",
                                         targetUnknown: r
                                     }, function() {
-                                        return o.trackNavigation(M.Back, e.value)
+                                        return o.trackNavigation(N.Back, e.value)
                                     }), [2]
                                 })
                             })
@@ -4773,7 +4773,7 @@
                         }, t
                     }
                     return i.__extends(t, e), t.prototype.componentWillUnmount = function() {
-                        this.state.modalCloseTracked || this.props.trackClose(N.Close, this.state.currentCard.value)
+                        this.state.modalCloseTracked || this.props.trackClose(M.Close, this.state.currentCard.value)
                     }, t.prototype.render = function() {
                         var e = this.state.currentCard.type === T.Info && this.state.currentCard.blockPrompt ? a.createElement(C, {
                                 targetUser: this.props.targetUser,
@@ -4781,7 +4781,7 @@
                                 onUnblock: this.props.onUnblock,
                                 userBlocked: this.props.userBlocked
                             }) : null,
-                            t = this.state.error ? a.createElement(f.yb, {
+                            t = this.state.error ? a.createElement(f.xb, {
                                 fullWidth: !0,
                                 margin: {
                                     bottom: 1
@@ -4790,7 +4790,7 @@
                                 className: "reporting__error-container"
                             }, this.state.error) : null,
                             n = this.state.prevCards.length || this.state.currentCard.type === T.Info ? null : this.renderPrimer();
-                        return a.createElement(f.yb, {
+                        return a.createElement(f.xb, {
                             className: "reporting-wizard",
                             display: f.X.Flex,
                             margin: {
@@ -4823,9 +4823,9 @@
                 le = n("s8Ou"),
                 ce = n("0hI/");
             n.d(t, "c", function() {
-                    return M
-                }), n.d(t, "a", function() {
                     return N
+                }), n.d(t, "a", function() {
+                    return M
                 }), n.d(t, "b", function() {
                     return ue
                 }),
@@ -4834,10 +4834,10 @@
                 }(R || (R = {})),
                 function(e) {
                     e.Back = "back", e.Close = "close", e.Open = "open", e.Next = "next", e.Submit = "submit_report", e.ToggleSettings = "modal_settings"
-                }(M || (M = {})),
+                }(N || (N = {})),
                 function(e) {
                     e.Close = "close", e.Finish = "finish"
-                }(N || (N = {}));
+                }(M || (M = {}));
             var de = function(e) {
                 function t(t) {
                     var n = e.call(this, t) || this;
@@ -4929,11 +4929,11 @@
                             userBlocked: !1
                         })
                     }, n.trackOpen = function(e) {
-                        n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(M.Open, void 0, e) : n.trackAction(R.Open), n.setState({
+                        n.state.openEventSent || (n.state.showWizard ? n.trackWizardAction(N.Open, void 0, e) : n.trackAction(R.Open), n.setState({
                             openEventSent: !0
                         }))
                     }, n.trackClose = function(e, t) {
-                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(M.Close, t, void 0, e) : n.trackAction(R.Close), n.setState({
+                        n.state.closeEventSent || (n.state.showWizard ? n.trackWizardAction(N.Close, t, void 0, e) : n.trackAction(R.Close), n.setState({
                             closeEventSent: !0
                         }))
                     }, n.trackWizardAction = function(e, t, r, i) {
@@ -5307,7 +5307,7 @@
                     function t() {
                         var t = null !== e && e.apply(this, arguments) || this;
                         return t.renderSuccess = function() {
-                            return t.props.successContent ? i.createElement(s.yb, {
+                            return t.props.successContent ? i.createElement(s.xb, {
                                 "data-test-selector": l.SUCCESS_BODY,
                                 padding: {
                                     x: 2,
@@ -5320,10 +5320,10 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, i.createElement(s.W, {
-                                type: s.Ob.Strong
+                                type: s.Nb.Strong
                             }, t.props.successContent)) : null
                         }, t.renderError = function() {
-                            return t.props.errorContent ? i.createElement(s.yb, {
+                            return t.props.errorContent ? i.createElement(s.xb, {
                                 "data-test-selector": l.ERROR_BODY,
                                 padding: {
                                     x: 1,
@@ -5336,7 +5336,7 @@
                                 background: s.r.Alt,
                                 fullWidth: !0
                             }, i.createElement(s.W, {
-                                type: s.Ob.Strong,
+                                type: s.Nb.Strong,
                                 color: s.O.Error
                             }, t.props.errorContent)) : null
                         }, t.onSubmit = function() {
@@ -5346,7 +5346,7 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         return this.props.successContent ? i.createElement(o.a, {
                             onClickOut: this.props.onClose
-                        }, i.createElement(s.yb, {
+                        }, i.createElement(s.xb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
@@ -5362,11 +5362,11 @@
                             onClick: this.props.onClose
                         }, Object(a.d)("Close", "ClipsModal")))))) : i.createElement(o.a, {
                             onClickOut: this.props.onClose
-                        }, i.createElement(s.yb, {
+                        }, i.createElement(s.xb, {
                             padding: 2,
                             background: s.r.Base,
                             className: "clip-modal"
-                        }, i.createElement(s.yb, {
+                        }, i.createElement(s.xb, {
                             "data-test-selector": l.TITLE,
                             borderBottom: !0,
                             margin: {
@@ -5375,7 +5375,7 @@
                             padding: {
                                 bottom: 1
                             }
-                        }, this.props.title), i.createElement(s.yb, {
+                        }, this.props.title), i.createElement(s.xb, {
                             "data-test-selector": l.MAIN_BODY,
                             borderBottom: !0,
                             margin: {
@@ -5421,10 +5421,10 @@
                             hasSucceeded: !1
                         }, t.renderTitle = function() {
                             return t.props.isTemporary ? i.createElement(s.W, {
-                                type: s.Ob.H5,
+                                type: s.Nb.H5,
                                 ellipsis: !0
                             }, Object(a.d)("Timeout this Clip Creator for 24 hours from Your Channel", "ClipsModalBanUser")) : i.createElement(s.W, {
-                                type: s.Ob.H5,
+                                type: s.Nb.H5,
                                 ellipsis: !0
                             }, Object(a.d)("Ban this Clip Creator from Your Channel", "ClipsModalBanUser"))
                         }, t.renderBodyText = function() {
@@ -5541,14 +5541,14 @@
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = [i.createElement(s.W, {
                             key: "title",
-                            type: s.Ob.H4
+                            type: s.Nb.H4
                         }, Object(a.d)("Delete This Clip", "ClipsModalDelete")), i.createElement(s.Wa, {
                             key: "message",
                             margin: {
                                 top: 1
                             }
                         }, i.createElement(s.W, {
-                            type: s.Ob.P,
+                            type: s.Nb.P,
                             color: s.O.Alt2
                         }, Object(a.d)("This clip will be permanently deleted.", "ClipsModalDelete")))];
                         if (!this.props.data.clip) return null;
@@ -5556,7 +5556,7 @@
                         this.props.data.clip.curator && (t = i.createElement("span", null, " • ", Object(a.d)("Clipped by {curator}", {
                             curator: this.props.data.clip.curator.login
                         }, "ClipsModalDelete")));
-                        var n = i.createElement(s.yb, {
+                        var n = i.createElement(s.xb, {
                             display: s.X.Flex,
                             flexWrap: s.Aa.NoWrap
                         }, i.createElement(s.Wa, {
@@ -5569,7 +5569,7 @@
                         }, i.createElement("img", {
                             src: this.props.data.clip.thumbnailURL
                         }))), i.createElement(s.Wa, null, i.createElement(s.W, {
-                            type: s.Ob.H5
+                            type: s.Nb.H5
                         }, this.props.data.clip.title), i.createElement(s.W, {
                             color: s.O.Alt2
                         }, Object(a.d)("{created, date, medium}", {
@@ -5624,12 +5624,12 @@
                 })(y)),
                 S = n("oJmH"),
                 T = n("Vsf8"),
-                O = {
+                _ = {
                     isLoading: !1,
                     hasErrored: !1,
                     hasSucceeded: !1
                 },
-                _ = function(e) {
+                O = function(e) {
                     function t(t) {
                         var n = e.call(this, t) || this;
                         return n.deleteAll = function() {
@@ -5663,19 +5663,19 @@
                             return n.state.hasSucceeded ? Object(a.d)("A request has been made to delete the clip. Please wait a few minutes for this to take effect.", "ClipsModalDeleteAll") : null
                         }, n.renderFailure = function() {
                             return n.state.hasErrored ? Object(a.d)("There was a problem deleting this clip.", "ClipsModalDeleteAll") : null
-                        }, n.state = O, n
+                        }, n.state = _, n
                     }
                     return r.__extends(t, e), t.prototype.componentDidMount = function() {
                         this.props.latencyTracking.reportInteractive()
                     }, t.prototype.render = function() {
                         var e = i.createElement(s.W, {
-                            type: s.Ob.P
+                            type: s.Nb.P
                         }, Object(a.d)("This clip and all other clips created from the same video will be permanently deleted.", "ClipsModalDeleteAll"));
                         return i.createElement(c, {
                             onSubmit: this.deleteAll,
                             onClose: this.props.onClose,
                             title: i.createElement(s.W, {
-                                type: s.Ob.H4
+                                type: s.Nb.H4
                             }, Object(a.d)("Delete All Clips from Related Video", "ClipsModalDeleteAll")),
                             body: e,
                             buttonContent: Object(a.d)("Delete", "ClipsModalDeleteAll"),
@@ -5747,7 +5747,7 @@
                             }
                         }
                     }
-                }))(_),
+                }))(O),
                 E = {
                     isLoading: !1,
                     hasErrored: !1,
@@ -5791,10 +5791,10 @@
                     }
                     return r.__extends(t, e), t.prototype.render = function() {
                         var e = i.createElement(s.W, {
-                                type: s.Ob.H4
+                                type: s.Nb.H4
                             }, Object(a.d)("Delete these clips?", "ClipsModalBatchDelete")),
                             t = i.createElement(s.W, {
-                                type: s.Ob.P
+                                type: s.Nb.P
                             }, Object(a.d)("These clips will be permanently deleted. Are you sure?", "ClipsModalBatchDelete"));
                         return i.createElement(c, {
                             onSubmit: this.onDeleteClick,
@@ -5810,7 +5810,7 @@
                         })
                     }, t
                 }(i.Component),
-                M = v({
+                N = v({
                     props: function(e) {
                         return {
                             deleteClips: function() {
@@ -5848,7 +5848,7 @@
             }), n.d(t, "e", function() {
                 return w
             }), n.d(t, "c", function() {
-                return M
+                return N
             })
         },
         kSkr: function(e, t) {
@@ -6252,7 +6252,7 @@
                                 className: "language-select-menu__balloon"
                             }, c.createElement(m.b, null, c.createElement(v.Wa, {
                                 padding: .5
-                            }, Object(h.b)().map(t.renderLanguageOption)))), c.createElement(v.yb, {
+                            }, Object(h.b)().map(t.renderLanguageOption)))), c.createElement(v.xb, {
                                 background: v.r.Alt,
                                 borderTop: !0,
                                 className: "language-select-menu__footer"
@@ -6349,7 +6349,7 @@
                         return i.createElement(s.Wa, r.__assign({
                             position: s.eb.Relative,
                             className: "selectable-input-wrapper"
-                        }, Object(s.cc)(this.props)), i.createElement(s.Qa, {
+                        }, Object(s.bc)(this.props)), i.createElement(s.Qa, {
                             type: s.Sa.Text,
                             value: this.props.text,
                             readOnly: !0,
@@ -6733,18 +6733,18 @@
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.cc)(n.props), {
+                        }, Object(c.bc)(n.props), {
                             download: n.props.text
                         }), n.renderIcon()) : n.isLink() ? a.createElement("a", i.__assign({
                             href: n.getLinkTarget(),
                             target: "_blank",
                             className: e,
                             onClick: n.onShareClickHandler
-                        }, Object(c.cc)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
+                        }, Object(c.bc)(n.props)), n.renderIcon()) : a.createElement("button", i.__assign({
                             onClick: n.copyPageUrl,
                             onMouseLeave: n.clearIsCopiedStatus,
                             className: e
-                        }, Object(c.cc)(n.props)), n.renderIcon())
+                        }, Object(c.bc)(n.props)), n.renderIcon())
                     }, n.onShareClickHandler = function() {
                         n.props.onShareClick && n.props.onShareClick(n.props.type)
                     }, n.clearIsCopiedStatus = function() {
@@ -6844,9 +6844,9 @@
                 return i.__extends(t, e), t.prototype.render = function() {
                     return a.createElement(c.Wa, {
                         className: "social-button"
-                    }, a.createElement(c.Rb, {
+                    }, a.createElement(c.Qb, {
                         label: this.getTooltipFromType(),
-                        direction: c.Tb.Bottom
+                        direction: c.Sb.Bottom
                     }, this.renderLink()))
                 }, t
             }(a.Component)

@@ -45,9 +45,9 @@
             }), t.d(n, "u", function() {
                 return _
             }), t.d(n, "s", function() {
-                return C
+                return x
             }), t.d(n, "d", function() {
-                return N
+                return C
             });
             var a, i = t("uYEN"),
                 r = {
@@ -74,8 +74,8 @@
                 S = "DISPLAY_ONLY",
                 y = ((a = {})[i.a.Gray] = "#979797", a[i.a.Purple] = "#9c3ee8", a[i.a.Green] = "#1db2a5", a[i.a.Blue] = "#0099fe", a[i.a.Red] = "#f43021", a[i.a.Yellow] = "#f3a71a", a),
                 _ = "bits_sponsored_cheermotes",
-                C = "bits_sponsored_cheermotes_announcement",
-                N = "bits_charity_event"
+                x = "bits_sponsored_cheermotes_announcement",
+                C = "bits_charity_event"
         },
         "7QWs": function(e, n) {
             var t = {
@@ -766,10 +766,10 @@
                         }, {
                             "esports-square__svg": !0
                         });
-                    return l.createElement(d.yb, {
+                    return l.createElement(d.xb, {
                         "data-test-selector": t,
                         className: c,
-                        textAlign: d.Kb.Center,
+                        textAlign: d.Jb.Center,
                         position: d.eb.Relative,
                         borderRadius: d.x.Large,
                         overflow: d.Za.Hidden,
@@ -1084,7 +1084,7 @@
                             margin: {
                                 right: 1
                             },
-                            verticalAlign: c.Yb.Bottom
+                            verticalAlign: c.Xb.Bottom
                         }, s.createElement(c.z, {
                             "data-test-selector": "esports-claim-all-button",
                             onClick: this.claimAllRewards,
@@ -1369,7 +1369,7 @@
                     }
                     return a.__extends(n, e), n.prototype.render = function() {
                         var e = this.props.productPrice;
-                        return this.props.productDiscountPrice && (e = this.props.productDiscountPrice), i.createElement(g.a, null, i.createElement(h.yb, {
+                        return this.props.productDiscountPrice && (e = this.props.productDiscountPrice), i.createElement(g.a, null, i.createElement(h.xb, {
                             background: h.r.Base
                         }, i.createElement(h.Wa, {
                             className: "ticket-description__banner-image",
@@ -1380,9 +1380,9 @@
                             src: o.c + "/owl-2017/all-access-logo.svg",
                             alt: Object(s.d)("Overwatch League All-Access Pass on Twitch", "CampaignsTicketDescription"),
                             height: "80px"
-                        })), i.createElement(h.yb, {
+                        })), i.createElement(h.xb, {
                             borderBottom: !0,
-                            textAlign: h.Kb.Center,
+                            textAlign: h.Jb.Center,
                             padding: 2
                         }, i.createElement(p.a, {
                             price: e,
@@ -1487,12 +1487,12 @@
                             className: "insider-pass-full-skin-reward__image",
                             src: this.props.imageURL
                         }), r.createElement(m.Wa, {
-                            textAlign: m.Kb.Center
+                            textAlign: m.Jb.Center
                         }, r.createElement(m.W, {
                             fontSize: m.Ba.Size4,
                             bold: !0
                         }, this.props.name)), r.createElement(m.Wa, {
-                            textAlign: m.Kb.Center
+                            textAlign: m.Jb.Center
                         }, r.createElement(m.W, {
                             color: m.O.Alt2
                         }, this.props.subText)))
@@ -1580,7 +1580,7 @@
                                         x: 1
                                     },
                                     key: t.name,
-                                    textAlign: m.Kb.Center
+                                    textAlign: m.Jb.Center
                                 }, r.createElement(c.a, {
                                     imageURL: t.imageURL,
                                     size: e ? c.c.Large : c.c.Medium,
@@ -1610,7 +1610,7 @@
                             padding: {
                                 y: 3
                             },
-                            textAlign: m.Kb.Center
+                            textAlign: m.Jb.Center
                         }, r.createElement(m.W, {
                             fontSize: m.Ba.Size3,
                             color: m.O.Link,
@@ -1670,9 +1670,9 @@
                                 left: 1,
                                 right: 1
                             }
-                        }, r.createElement(m.yb, {
+                        }, r.createElement(m.xb, {
                             className: "insider-pass-rewards__players-pack",
-                            textAlign: m.Kb.Center,
+                            textAlign: m.Jb.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__players-pack__image",
@@ -1704,9 +1704,9 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, r.createElement(m.yb, {
+                        }, r.createElement(m.xb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: m.Kb.Center,
+                            textAlign: m.Jb.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__new-item__image",
@@ -1738,9 +1738,9 @@
                                 bottom: 2,
                                 top: 2
                             }
-                        }, r.createElement(m.yb, {
+                        }, r.createElement(m.xb, {
                             className: "insider-pass-rewards__new-item",
-                            textAlign: m.Kb.Center,
+                            textAlign: m.Jb.Center,
                             fullWidth: !0
                         }, r.createElement(m.S, {
                             className: "insider-pass-rewards__new-item__image",
