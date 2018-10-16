@@ -2305,7 +2305,7 @@ MediaPlayer.prototype.getVideoBitRate = function () {
 }
 
 MediaPlayer.prototype.getVersion = function () {
-    return "2.6.28-5f291c42";
+    return "2.6.28-81dd0c08";
 }
 
 MediaPlayer.prototype.isLooping = function () {
@@ -3416,10 +3416,14 @@ SafeSourceBuffer.prototype.remove = function (start, end) {
         var buffered = srcBuf.buffered;
         if (buffered.length) {
             // Edge doesn't like large remove ranges, so we'll
-            // clamp remove calls to the range of the current buffer
+            // clamp remove calls to the range of the current buffer.
+            // 'start' can become greater than 'end' if the remove
+            // range doesn't contain the current buffer.
             start = Math.max(start, buffered.start(0));
             end = Math.min(end, buffered.end(buffered.length - 1));
-            srcBuf.remove(start, end);
+            if (start < end) {
+                srcBuf.remove(start, end);
+            }
         }
     });
 };
