@@ -24,6 +24,7 @@ window.__twilightSettings = {
     "cc_v2_trial_test_enabled": false,
     "channel_feed_enabled": false,
     "chat_input_box_restrictions_enabled": true,
+    "chat_input_box_verified_only_restriction_enabled": "off",
     "chatrooms_enabled": true,
     "chatrooms_staff_beta": true,
     "code_redemption_redeem_page": "staff",
