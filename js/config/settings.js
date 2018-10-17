@@ -1380,18 +1380,6 @@ window.__twilightSettings = {
                 "value": "affiliate_access"
             }]
         },
-        "cc8f3a72-0b42-4f44-88ab-c63fd6211e97": {
-            "name": "TWILIGHT_VOD_LINNAEUS",
-            "v": 4252,
-            "t": 2,
-            "groups": [{
-                "weight": 100,
-                "value": "on"
-            }, {
-                "weight": 0,
-                "value": "control"
-            }]
-        },
         "d02fef29-1d9f-4ad1-b44e-6359d96a8501": {
             "name": "pushy_device_token_pruning",
             "v": 4005,
