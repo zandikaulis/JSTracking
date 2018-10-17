@@ -1639,6 +1639,18 @@ window.__twilightSettings = {
                 "value": "variant"
             }]
         },
+        "f52e0abb-ac6e-41d9-8a2b-71eb6941a3f2": {
+            "name": "vod_mr_potato_head",
+            "v": 4895,
+            "t": 1,
+            "groups": [{
+                "weight": 100,
+                "value": "control"
+            }, {
+                "weight": 0,
+                "value": "on"
+            }]
+        },
         "f75ab09d-daf7-46db-bdd5-bb5a2f413cf7": {
             "name": "twilight_clips_on_the_brain",
             "v": 4094,
